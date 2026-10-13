@@ -43,6 +43,8 @@ export const SW = {
   quality: { auto: ['隨宜', 'by device'], low: ['簡筆', 'light'], mid: ['兼工', 'balanced'], high: ['工筆', 'full'] },
   boats: { auto: ['隨宜', 'by device'], moored: ['繫泊', 'moored'], painted: ['行舟', 'sailing'], waves: ['往來', 'busy river'] },
   shading: { lambert: ['柔光', 'soft'], toon: ['分階', 'stepped'], unlit: ['無光', 'unlit'], pbr: ['寫實', 'physical'] },
+  // the language of the story (prefs.lang): Chinese only, or English under the Chinese
+  langs: { zh: ['中文', 'Chinese'], zh_en: ['中英', 'Chinese and English'] },
 
   // one entry per row: label, gloss, then the description panel: what it does, in 繁體 and English, and its cost
   rows: {
@@ -108,6 +110,12 @@ export const SW = {
       label: ['音量', 'volume'],
       zh: '整體的音量。展開畫卷時會自動放輕。',
       en: 'The overall loudness. It drops a little while the painting is open.',
+      cost: 'none',
+    },
+    lang: {
+      label: ['語言', 'language'],
+      zh: '畫中人的話、名勝的記述與地名，都用中文寫。選「中英」，便在中文之下附上英文。時辰、印章與按鍵仍只用中文。',
+      en: 'What the painted people say, the notes on landmarks and the place names are in Chinese. Pick 中英 to add English under the Chinese. The time, the seals and the keys stay in Chinese.',
       cost: 'none',
     },
     expandDescriptions: {

@@ -17,9 +17,12 @@ A walkable 清明上河图 in the browser. The quality bar is https://messenger.
 
       hf download ranxxx/qingming-assets --repo-type dataset --local-dir gen
 
-- **Not published:** third-party study material (`reference/messenger_study/`, `reference/jiangnan/`, the 江南百景圖
-  reference crops in `gen/ui/look/`) and the raw font downloads (`gen/ui/fonts/src/`; `gen/ui/fonts/CHOICE.md` says
-  where each font comes from).
+- **Study material:** our notes on the works we studied are here (`reference/messenger_study/*.md`,
+  `reference/jiangnan/**/*.md`, `gen/ui/look/*.md`). Their models, code and art stay out of the repo; they belong to
+  their makers. The raw font downloads stay out too (`gen/ui/fonts/src/`; `gen/ui/fonts/CHOICE.md` says where each font
+  comes from).
+- **Thanks:** we studied [Messenger](https://messenger.abeto.co/) by Abeto and 江南百景圖 by Coconut Island Games
+  (椰島遊戲) closely as references for art and textures, and learned a great deal from them. Thank you.
 - **Setup:** WSL2 drives Blender 5.2 on Windows through `tools/blender_wsl.sh` (set `BLENDER_EXE` for another
   install). Node runs the tools (`npm install` in `tools/` and in `web/`). API keys stay outside the repo:
   `~/.meshy_keys`, `~/.elevenlabs_key`, `~/.shyfai_key`.

@@ -152,12 +152,14 @@ export class Journal {
 
   renderRegion(r, found, focusId) {
     const lore = this.lore, seen = found.has(`r:${r.id}`);
+    // with prefs.lang 'zh_en' the place names and lines have their English under them (the long texts: places.js loreBody)
+    const en = (t) => (prefs.get('lang') === 'zh_en' && t ? h('span', 'qm-gloss qm-en', { text: t, lang: 'en' }) : null);
     const head = h('div', `qm-jn-rhead${seen ? '' : ' qm-jn-faint'}`, {}, [
       h('div', 'qm-jn-rname', {}, [h('span', 'qm-jn-rname-v', { text: r.name }), seal(r.seal || r.name[0], 'qm-jn-rseal')]),
       h('div', 'qm-jn-rtext', {}, seen ? [
-        h('p', 'qm-jn-rsub', { text: r.sub }),
+        h('p', 'qm-jn-rsub', { text: r.sub }, [en([r.name_en, r.sub_en].filter(Boolean).join(' · '))]),
         (() => { const d = h('div', 'qm-jn-rbody'); loreBody(d, r); return d; })(),
-      ] : [h('p', 'qm-jn-rsub', { text: r.sub }), h('p', 'qm-jn-not', { text: JW.regionNotYet })]),
+      ] : [h('p', 'qm-jn-rsub', { text: r.sub }, [en([r.name_en, r.sub_en].filter(Boolean).join(' · '))]), h('p', 'qm-jn-not', { text: JW.regionNotYet })]),
     ]);
     const grid = h('div', 'qm-jn-grid');
     for (const m of this.landmarksOf(r.id)) {
@@ -176,8 +178,8 @@ export class Journal {
       loreBody(body, L);
       grid.append(h('article', 'qm-jn-entry', { 'data-id': m.id }, [
         fig,
-        h('h4', 'qm-jn-ename', {}, [seal(m.seal || '名'), h('span', '', { text: m.name })]),
-        h('p', 'qm-jn-eline', { text: m.line }),
+        h('h4', 'qm-jn-ename', {}, [seal(m.seal || '名'), h('span', '', { text: m.name }), en(m.name_en)]),
+        h('p', 'qm-jn-eline', { text: m.line }, [en(m.line_en)]),
         body,
       ]));
     }

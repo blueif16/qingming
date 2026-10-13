@@ -40,6 +40,7 @@ import { ScrollHud } from './scroll_hud.js';
 import { Boats } from './boats.js';
 import { Sound } from './sound.js';
 import { createUI } from './ui/index.js';
+import { waitForStart } from './ui/start.js';
 
 const query = new URLSearchParams(location.search);
 const NAMES = (query.get('sections') || document.body.dataset.sections || 'gate').split(',').map((x) => x.trim()).filter(Boolean);
@@ -1237,6 +1238,7 @@ async function rebuildBackdrop() {
 }
 
 try {
+  await waitForStart(query); // the start screen (ui/start.js): nothing heavy loads before you press 入畫
   applyLight();
   resize();
   // every section's painted area and camera spots, then the section you start in and only the characters it casts

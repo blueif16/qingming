@@ -1,9 +1,9 @@
 // The scroll HUD (the user, 2026-10-12: "whenever we press the space key ... the middle is going to show our current
 // position in the original painting ... that's going to create a feeling that we are actually living in the scroll").
 // Space (or the scroll button on a touch screen) masks the street and shows the original painting, centred on the spot
-// you stand on: you as a cinnabar ring with a wedge for the way you look, and the people and animals around you boxed
-// on their painted figures. Those who walk away from their painted spot also show a dot where they are now and a faint
-// line back to their figure. Hover (or tap) names them. Wheel or pinch zooms, drag pans, the ring button snaps back to
+// you stand on: you as a small robed figure on a cinnabar seal (drawYou) with a wedge for the way you look, and the
+// people and animals around you boxed on their painted figures. Those who walk away from their painted spot also show a dot where they are now and a faint
+// line back to their figure. Hover (or tap) names them. Wheel or pinch zooms, drag pans, the seal button snaps back to
 // you, and a strip of the whole scroll below marks the built range and where you are. The developer's tuning panel
 // (lil-gui) shows only while the HUD is open, and only with ?tune=1 (or the settings screen's 進階 row; `tune`); H hides
 // it there. The player's settings are the settings screen (ui/settings_screen.js). Space or Esc goes back to the street.
@@ -16,6 +16,7 @@
 // grow while it is shut. Nothing here touches WebGL; the page stops rendering while the HUD is open (world.js tick).
 // No numbers or coordinates are ever shown to the player.
 import { ScrollProjection } from './scroll_projection.js';
+import { prefs } from './ui/prefs.js';
 
 const BASE = 'assets/scroll/';
 const NEAR_M = 15; // people and animals within this many metres of you are boxed (the painting is dense: 15 m round you
@@ -23,7 +24,13 @@ const NEAR_M = 15; // people and animals within this many metres of you are boxe
 const FULL_M = 5;
 const MAX_LIVE = 40; // decoded tiles kept while open (512 x 512 each)
 const INFLIGHT = 6;
-const INK = '#2a2420', CINNABAR = '#b5321e', PAPER = '#efe4cc', MOUNT = '#4e4033';
+const INK = '#2a2420', CINNABAR = '#b5321e', PAPER = '#efe4cc', MOUNT = '#4e4033', SEAL = '#ae3a26';
+// you (the user, 2026-10-13: "better than the circle and make it a little bit bigger ... this icon drawing style for a
+// small character"): the robed figure from behind of the view tiles (ui/icons.js `figure`: topknot, head, robe) in paper
+// on a cinnabar seal, on a short stem over the spot where your feet are
+const ROBE = 'M8.6 9.3 Q12 7.8 15.4 9.3 Q18.5 10.6 18.9 14.3 L16.7 14.6 L17.6 19.5 Q12 20.8 6.4 19.5 L7.3 14.6 L5.1 14.3 Q5.5 10.6 8.6 9.3 Z';
+let figurePath = null; // Path2D in the icon's 24-unit box, made on first draw
+const YOU_SEAL = 32, YOU_STEM = 18; // px on screen, whatever the zoom
 const isTouch = matchMedia('(pointer: coarse)').matches;
 const editable = (t) => t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
 const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
@@ -52,6 +59,7 @@ const CSS = `
 .sh-tip { position: absolute; pointer-events: none; max-width: 260px; padding: 6px 9px 7px; background: rgba(247, 239, 220, 0.97); border-radius: 2px;
   border-left: 3px solid ${CINNABAR}; font-size: 13px; line-height: 1.35; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); display: none; }
 .sh-tip b { display: block; font-weight: 600; margin-bottom: 1px; }
+.sh-tip i { display: block; margin-bottom: 2px; font: italic 0.92em/1.3 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; color: rgba(42, 36, 32, 0.72); }
 .sh-tip:first-letter { text-transform: uppercase; }
 .sh-strip { position: relative; width: min(1200px, calc(100vw - 2 * var(--side))); padding: 4px 7px; box-sizing: border-box; background: ${MOUNT};
   border-radius: 2px; box-shadow: 0 4px 14px rgba(30, 20, 10, 0.45); }
@@ -78,7 +86,7 @@ const CSS = `
 export const ICON = { // exported for the UI kit page (web/ui.html)
   plus: '<svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
   minus: '<svg viewBox="0 0 20 20"><path d="M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
-  you: `<svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="5.2" fill="none" stroke="${CINNABAR}" stroke-width="2"/><circle cx="10" cy="10" r="1.6" fill="${CINNABAR}"/><path d="M10 1.5v3M10 15.5v3M1.5 10h3M15.5 10h3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>`,
+  you: `<svg viewBox="0 0 20 20"><rect x="2.6" y="2.6" width="14.8" height="14.8" rx="2" fill="${SEAL}" transform="rotate(-3 10 10)"/><g fill="${PAPER}" transform="translate(10 10.2) scale(0.56) translate(-12 -11.2)"><circle cx="12" cy="2.9" r="1.25"/><circle cx="12" cy="6.1" r="2.65"/><path d="${ROBE}"/></g></svg>`,
   back: '<svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
   scroll: `<svg viewBox="0 0 28 28"><rect x="5" y="9" width="18" height="10" rx="1" fill="#e7d6ae" stroke="${INK}" stroke-width="1.2"/><path d="M8 12.5c3-1.5 5 1.5 8 0s4 .8 4 .8M8 16c2.5-1 4.5 1 7 0" fill="none" stroke="${INK}" stroke-width=".9" opacity=".7"/><rect x="3" y="7" width="3" height="14" rx="1.5" fill="#7a2a1a" stroke="${INK}" stroke-width="1"/><rect x="22" y="7" width="3" height="14" rx="1.5" fill="#7a2a1a" stroke="${INK}" stroke-width="1"/><circle cx="17.5" cy="15.5" r="1.6" fill="${CINNABAR}"/></svg>`,
 };
@@ -456,24 +464,10 @@ export class ScrollHud {
     const me = this.you();
     if (me) {
       const x = X(me.u), y = Y(me.v);
-      if (me.dir != null) {
-        ctx.save();
-        ctx.translate(x, y);
-        ctx.rotate(me.dir);
-        const g = ctx.createRadialGradient(0, 0, 4, 0, 0, 46);
-        g.addColorStop(0, 'rgba(181, 50, 30, 0.55)');
-        g.addColorStop(1, 'rgba(181, 50, 30, 0)');
-        ctx.fillStyle = g;
-        ctx.beginPath(); ctx.moveTo(0, 0); ctx.arc(0, 0, 46, -0.5, 0.5); ctx.closePath(); ctx.fill();
-        ctx.restore();
-      }
-      ctx.lineWidth = 4; ctx.strokeStyle = 'rgba(250, 242, 222, 0.85)';
-      ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.stroke();
-      ctx.lineWidth = 2.2; ctx.strokeStyle = CINNABAR;
-      ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.stroke();
-      dot(ctx, x, y, 2.6, CINNABAR);
+      const box = drawYou(ctx, x, y, me.dir);
       const name = this.meta.get(me.section)?.name || '';
-      this.drawn.push({ id: 'you', x0: x - 10, y0: y - 10, x1: x + 10, y1: y + 10, area: 0, tip: { n: 'you', w: name ? `Standing in ${sectionWords(name)}.` : '' } });
+      const where = this.titleFor?.(me.section, this.meta.get(me.section)) || '';
+      this.drawn.push({ id: 'you', ...box, area: 0, tip: { n_zh: '你', n: 'you', w: name ? `Standing in ${sectionWords(name)}.` : '', w_zh: where ? `身在${where}` : '' } });
       this.secEl.textContent = this.titleFor?.(me.section, this.meta.get(me.section)) || sectionWords(name); // titleFor: the page's 繁體 region name (ui/index.js)
     }
     this.drawStrip(me);
@@ -579,8 +573,12 @@ export class ScrollHud {
     if (!hv) { t.style.display = 'none'; return; }
     const d = this.drawn.find((q) => q.id === hv.id && (hv.now ? q.tip.now : !q.tip.now)) || this.drawn.find((q) => q.id === hv.id);
     if (!d) { t.style.display = 'none'; return; }
-    const it = d.tip;
-    t.innerHTML = `<b>${esc(it.n)}${it.now ? ' (walking here now)' : ''}</b>${it.w ? esc(it.w) : ''}`;
+    // the 繁體 name by default (n_zh, map/names_zh via scroll_index.json); with prefs.lang 'zh_en' its English name (n)
+    // and the map's English note (w) under it. A tip without n_zh (the landmark marks) comes already worded.
+    const it = d.tip, bi = prefs.get('lang') === 'zh_en';
+    const now = it.now ? '（正在走動）' : '';
+    if (it.n_zh) t.innerHTML = `<b>${esc(it.n_zh)}${now}</b>${bi ? `<i>${esc(it.n)}${it.now ? ', walking here now' : ''}</i>${it.w ? esc(it.w) : ''}` : esc(it.w_zh || '')}`;
+    else t.innerHTML = `<b>${esc(it.n)}${now}</b>${it.w ? esc(it.w) : ''}`;
     t.style.display = 'block';
     const [w, h] = this.frameSize(), tw = t.offsetWidth, th = t.offsetHeight;
     let x = d.x1 + 10, y = d.y0;
@@ -667,6 +665,55 @@ function dot(ctx, x, y, r, fill) {
   ctx.beginPath(); ctx.arc(x, y, r + 1.6, 0, Math.PI * 2); ctx.fill();
   ctx.fillStyle = fill;
   ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+}
+
+// you at (x, y), your feet on the painting: the wedge of the way you look (dir), an ellipse on the ground, and the seal
+// with the robed figure on a short stem above, all on paper halos so they hold on dark and busy silk. Returns the
+// hit box (for the tip).
+function drawYou(ctx, x, y, dir) {
+  const S = YOU_SEAL, top = y - YOU_STEM - S, halo = 'rgba(250, 242, 222, 0.88)';
+  ctx.save();
+  if (dir != null) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(dir);
+    const g = ctx.createRadialGradient(0, 0, 6, 0, 0, 60);
+    g.addColorStop(0, 'rgba(181, 50, 30, 0.55)');
+    g.addColorStop(1, 'rgba(181, 50, 30, 0)');
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.arc(0, 0, 60, -0.5, 0.5); ctx.closePath(); ctx.fill();
+    ctx.restore();
+  }
+  // the spot: an ellipse lying on the ground, and the stem up to the seal
+  ctx.beginPath(); ctx.ellipse(x, y, 12, 5, 0, 0, Math.PI * 2);
+  ctx.lineWidth = 4.5; ctx.strokeStyle = halo; ctx.stroke();
+  ctx.lineWidth = 2.2; ctx.strokeStyle = CINNABAR; ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x, top + S - 2); ctx.lineTo(x, y - 1);
+  ctx.lineWidth = 4; ctx.strokeStyle = halo; ctx.stroke();
+  ctx.lineWidth = 1.8; ctx.strokeStyle = CINNABAR; ctx.stroke();
+  // the seal, tilted a little as a stamp is, with a paper rim and a soft shadow
+  ctx.translate(x, top + S / 2);
+  ctx.rotate(-0.05);
+  const rect = (h, r) => { ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(-h / 2, -h / 2, h, h, r); else ctx.rect(-h / 2, -h / 2, h, h); };
+  ctx.shadowColor = 'rgba(30, 20, 10, 0.35)'; ctx.shadowBlur = 5; ctx.shadowOffsetY = 1.5;
+  rect(S + 5, 5); ctx.fillStyle = halo; ctx.fill();
+  ctx.shadowColor = 'transparent';
+  rect(S, 3.5); ctx.fillStyle = SEAL; ctx.fill();
+  // the figure, in paper: the icon's 24-unit box, its body (y 1.6-20.8) centred in the seal
+  if (!figurePath) {
+    figurePath = new Path2D();
+    figurePath.arc(12, 2.9, 1.25, 0, Math.PI * 2);
+    figurePath.moveTo(14.65, 6.1);
+    figurePath.arc(12, 6.1, 2.65, 0, Math.PI * 2);
+    figurePath.addPath(new Path2D(ROBE));
+  }
+  const k = (S * 0.78) / 19.2;
+  ctx.scale(k, k);
+  ctx.translate(-12, -11.2);
+  ctx.fillStyle = PAPER;
+  ctx.fill(figurePath);
+  ctx.restore();
+  return { x0: x - S / 2 - 4, y0: top - 4, x1: x + S / 2 + 4, y1: y + 7 };
 }
 
 // a box drawn as four corner brackets in ink on a paper halo (cinnabar when hovered); an animal's corners are rounder

@@ -166,6 +166,7 @@ export class SettingsScreen {
           set: (v) => { const sd = sound(); if (!sd) return; sd.setVolume(v); if (!sd.on && v > 0) sd.setOn(true); }, disabled: () => (sound() ? null : SW.noSound) },
       ];
       case 'ui': return [
+        { id: 'lang', kind: 'step', values: ['zh', 'zh_en'], get: () => prefs.get('lang') || 'zh', set: (v) => prefs.set('lang', v), text: (v) => SW.langs[v] },
         pref('expandDescriptions'), pref('placeNotes'), pref('plaques'),
         { id: 'help', kind: 'action', act: SW.open, run: () => { this.close(); c.help?.()?.set(true); } },
         ...(journal ? [{ id: 'journal', kind: 'action', act: SW.open, run: () => { this.close(); (journal.open || journal.toggle)?.call(journal); } }] : []),

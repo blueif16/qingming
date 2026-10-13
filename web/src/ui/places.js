@@ -29,6 +29,9 @@ const openDur = (m) => Math.min(45, Math.max(16, 9 + [...(m.lore?.long || '')].l
 const PLAQUE_M = 30, MAX_PLAQUES = 3;
 const pv = new THREE.Vector3(), ray = new THREE.Ray(), dir = new THREE.Vector3();
 const CINNABAR = '#b5321e';
+// the English under the Chinese when the viewer picks 中英 (prefs.lang; each text's `_en` sibling, tools/ui_data.mjs)
+const bi = () => prefs.get('lang') === 'zh_en';
+const en = (t, cls) => (bi() && t ? h('span', `qm-gloss qm-en ${cls}`, { text: t }) : null);
 
 // distance from (x, y) to a polygon (0 inside), or to a point
 function distTo(lm, x, y) {
@@ -56,7 +59,9 @@ function loreToast(m, { touch }) {
     seal(m.seal || '名'),
     h('div', 'qm-toast-text', {}, [
       h('b', 'qm-toast-name', { text: m.name }),
+      en(m.name_en, 'qm-en-name'),
       m.line ? h('span', 'qm-toast-line', { text: m.line }) : null,
+      en(m.line_en, 'qm-en-line'),
       more, body,
     ]),
   ]);
@@ -68,8 +73,9 @@ export function loreBody(body, lore, { journalHint = null } = {}) {
   if (!lore) { body.replaceChildren(h('p', 'qm-lt-wait', { text: '……' })); return; }
   body.replaceChildren(...[
     h('p', 'qm-lt-long', { text: lore.long }),
-    lore.quote ? h('blockquote', 'qm-lt-quote', {}, [h('span', '', { text: `「${lore.quote}」` }), h('cite', '', { text: lore.quoteSrc || '' })]) : null,
-    lore.cite ? h('p', 'qm-lt-cite', { text: `${W.lore.cite}${lore.cite}` }) : null,
+    bi() && lore.long_en ? h('p', 'qm-gloss qm-en qm-lt-long-en', { text: lore.long_en }) : null,
+    lore.quote ? h('blockquote', 'qm-lt-quote', {}, [h('span', '', { text: `「${lore.quote}」` }), en(lore.quote_en, 'qm-en-quote'), h('cite', '', { text: lore.quoteSrc || '' })]) : null,
+    lore.cite ? h('p', 'qm-lt-cite', { text: `${W.lore.cite}${lore.cite}` }, [en(lore.cite_en, 'qm-en-cite')]) : null,
     journalHint,
   ].filter(Boolean));
 }
@@ -182,6 +188,8 @@ export class Places {
       const p = this.plaques.get(m);
       if (p) { if (p.gone) { p.gone = false; p.el.classList.remove('qm-gone'); } continue; }
       const el = plaque(m), anchor = h('div', 'qm-anchor');
+      const pe = en(m.name_en, 'qm-plaque-en'); // the map name in English, under the slip
+      if (pe) el.insertBefore(pe, el.lastChild);
       anchor.append(el);
       anchor.style.visibility = 'hidden';
       this.layer.anchors.append(anchor);
@@ -235,6 +243,8 @@ export class Places {
       this.toast = null;
     }
     const el = regionBanner(r);
+    const be = en([r.name_en, r.sub_en].filter(Boolean).join(' · '), 'qm-banner-en');
+    if (be) el.append(be);
     this.layer.banner.append(el);
     this.banner = { el, until: this.t + BANNER_S, r };
     this.shownRegion.set(r.id, this.t);
@@ -318,7 +328,7 @@ export class Places {
         ctx.strokeStyle = 'rgba(181, 50, 30, 0.75)';
         ctx.lineWidth = 1.2;
         ctx.beginPath(); ctx.moveTo(x, y - 8); ctx.lineTo(x, y - 1); ctx.stroke();
-        hud?.drawn?.push({ id: `lm:${m.id}`, x0: x - 9, y0: y - 25, x1: x + 9, y1: y, area: 1, tip: { n: m.name, w: m.line } });
+        hud?.drawn?.push({ id: `lm:${m.id}`, x0: x - 9, y0: y - 25, x1: x + 9, y1: y, area: 1, tip: bi() ? { n: m.name_en ? `${m.name} · ${m.name_en}` : m.name, w: m.line_en ? `${m.line} ${m.line_en}` : m.line } : { n: m.name, w: m.line } });
       }
     } else if (kind === 'strip') {
       const k = a, kv = b, H = c;

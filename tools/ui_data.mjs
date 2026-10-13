@@ -64,7 +64,10 @@ const places = { about: 'Built by tools/ui_data.mjs from sections/*/places.json;
 const lore = { about: 'Built by tools/ui_data.mjs from sections/*/places.json and gen/ui/lore/colophons.json; do not edit. Fetched by the page only when a toast unfolds or the 圖志 journal opens.', regions: {}, landmarks: {}, colophons: null };
 const talk = { about: 'Built by tools/ui_data.mjs from sections/*/talk.json; do not edit.', scenes: [] };
 const regionNames = new Map();
-const loreOf = (o) => ({ long: o.long, ...(o.quote ? { quote: o.quote, quoteSrc: o.quoteSrc } : {}), cite: o.cite });
+// the English under the Chinese (prefs.lang 'zh_en'; the user, 2026-10-13): each shown field's `<field>_en` sibling
+const en = (o, ...ks) => Object.fromEntries(ks.filter((k) => o[`${k}_en`]).map((k) => [`${k}_en`, o[`${k}_en`]]));
+const needEn = (where, o, ...ks) => { for (const k of ks) if (o[k] && !(typeof o[`${k}_en`] === 'string' && o[`${k}_en`].trim())) fail(`${where}: ${k} has no ${k}_en`); };
+const loreOf = (o) => ({ long: o.long, ...(o.quote ? { quote: o.quote, quoteSrc: o.quoteSrc } : {}), cite: o.cite, ...en(o, 'long', 'quote', 'cite') });
 
 for (const name of sections) {
   const L = read(path.join(SEC, name, 'layout.json'));
@@ -97,9 +100,10 @@ for (const name of sections) {
       const prev = regionNames.get(r.id);
       if (prev && prev !== r.name) fail(`region ${r.id}: two names (${prev}, ${r.name})`);
       regionNames.set(r.id, r.name);
-      places.regions[name] = { id: r.id, name: r.name, sub: r.sub, seal: r.seal };
+      needEn(`${name} region`, r, 'name', 'sub', 'long', 'quote', 'cite');
+      places.regions[name] = { id: r.id, name: r.name, sub: r.sub, seal: r.seal, ...en(r, 'name', 'sub') };
       // the region's lore: written once per region id (in any of its sections)
-      const lr = (lore.regions[r.id] ??= { name: r.name, sub: r.sub, seal: r.seal, folders: [], area: null });
+      const lr = (lore.regions[r.id] ??= { name: r.name, sub: r.sub, seal: r.seal, ...en(r, 'name', 'sub'), folders: [], area: null });
       lr.folders.push(name);
       const a = areaOf.get(name);
       if (a) lr.area = lr.area ? [Math.min(lr.area[0], a[0]), Math.max(lr.area[1], a[1])] : [...a];
@@ -122,7 +126,8 @@ for (const name of sections) {
       const b = box([m.id]);
       if (!b) fail(`${name} landmark ${m.id}: no strokes on the scan (map/strokes)`);
       const [u, v] = b?.foot || (b ? [(b.u0 + b.u1) / 2, b.v1] : [0, 0]);
-      places.landmarks.push({ id: m.id, section: name, name: m.name, line: m.line, seal: m.seal, r: m.r || 6, X: +at.X.toFixed(2), D: +at.D.toFixed(2), H: at.H, top: +(m.top ?? at.top).toFixed(2), poly: at.poly, u: Math.round(u), v: Math.round(v) });
+      needEn(`${name} ${m.id}`, m, 'name', 'line', 'long', 'quote', 'cite');
+      places.landmarks.push({ id: m.id, section: name, name: m.name, line: m.line, seal: m.seal, ...en(m, 'name', 'line'), r: m.r || 6, X: +at.X.toFixed(2), D: +at.D.toFixed(2), H: at.H, top: +(m.top ?? at.top).toFixed(2), poly: at.poly, u: Math.round(u), v: Math.round(v) });
       // lore
       lookLong(`${name} ${m.id} long`, m.long, [90, 220]);
       if (m.quote) { look(`${name} ${m.id} quote`, m.quote, 44, loreShown); look(`${name} ${m.id} quoteSrc`, m.quoteSrc, 24, loreShown); }

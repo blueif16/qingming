@@ -12,9 +12,13 @@ __pycache__/
 /*.jpg
 /*.png
 
-# Third-party material: study only, never published (CLAUDE.md)
-reference/messenger_study/
-reference/jiangnan/
+# Third-party study material: our notes on it are published; their models, code and art are not (CLAUDE.md)
+reference/messenger_study/**
+!reference/messenger_study/**/
+!reference/messenger_study/**/*.md
+reference/jiangnan/**
+!reference/jiangnan/**/
+!reference/jiangnan/**/*.md
 reference/settings_battlefield_ref.png
 
 # gen/: the generated assets (images, meshes, motions, Meshy dumps, cache keys) live in the Hugging Face dataset
@@ -40,3 +44,8 @@ gen/v1/bodies/
 gen/ui/fonts/src/
 gen/**/jn[0-9]*
 gen/ui/look/ref_small/
+
+# details pass: regenerable check data (tools/joint_tracks.mjs rebuilds it in ~30 s; owners from tools/owners_build.sh)
+gen/details/joints/
+gen/details/contacts/build/
+gen/sections/*/owners.json

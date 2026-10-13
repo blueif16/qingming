@@ -1,0 +1,38 @@
+/* The start screen's 卷記 under the painting's band (src/ui/start.js, data src/ui/about.json). The screen above it is
+   inline in world.html; this part comes with the script, below the fold. The ink UI's paper, ink and cinnabar
+   (gen/ui/STYLE.md), the essay ruled faintly as Song manuscripts rule their paper (朱絲欄), the maker on a paper slip
+   at its side (under it on a phone). */
+.ld.ld-wait { display: block; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
+.ld.ld-wait > .ld-in { position: relative; inset: auto; height: 100%; }
+.ld .ld-more { display: inline-block; margin-top: 0.8vh; color: rgba(42, 36, 32, 0.7); text-decoration: none; letter-spacing: 0.2em; font-size: 13px; }
+.ld .ld-more .ld-gloss { display: inline; margin-left: 6px; letter-spacing: 0; }
+.ld .ld-more:hover { color: #b5321e; }
+.ld-about { position: relative; display: flex; justify-content: center; align-items: flex-start; gap: 40px; padding: 8vh 16px 10vh;
+            background: linear-gradient(#efe4cc, #ebdfc4); color: #2a2420; }
+.ld-about-main { width: min(640px, 100%); }
+.ld-about h2 { margin: 0 0 4vh; text-align: center; font: 34px/1.2 "QM Display", "QM Text", "BiauKai", "DFKai-SB", "Kaiti TC", "STKaiti", "KaiTi", serif;
+               letter-spacing: 0.4em; text-indent: 0.4em; font-weight: normal; }
+.ld-about h2 .ld-gloss { margin-top: 6px; font-size: 13px; letter-spacing: 0.12em; text-indent: 0; text-transform: uppercase; }
+.ld-about section { padding: 3.4vh 0; border-top: 1px solid rgba(181, 50, 30, 0.22); }
+.ld-about h3 { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; font: 22px/1.3 "QM Display", "QM Text", "BiauKai", "DFKai-SB", "Kaiti TC", "STKaiti", "KaiTi", serif;
+               letter-spacing: 0.18em; font-weight: normal; }
+.ld-about h3 .ld-gloss { display: inline; margin: 0 0 0 4px; font-size: 13px; letter-spacing: 0; }
+.ld-seal { flex: none; display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 3px; background: #ae3a26; color: #f7efdc;
+           font: 19px/1 "QM Display", "QM Text", "KaiTi", serif; transform: rotate(-3deg); box-shadow: inset 0 0 0 1.5px rgba(247, 239, 220, 0.3); }
+.ld-about p { margin: 0 0 16px; font-size: 16.5px; line-height: 1.9; text-align: justify; }
+.ld-about p .ld-gloss { margin-top: 6px; font-size: 14px; line-height: 1.6; text-align: left; }
+.ld-maker { position: sticky; top: 6vh; width: 220px; flex: none; padding: 18px 20px 16px; background: #f7efdc; border-radius: 3px;
+            box-shadow: 0 2px 6px rgba(30, 20, 10, 0.18), 0 1px 1px rgba(30, 20, 10, 0.12); font-size: 14px; line-height: 1.6; }
+.ld-maker h4 { margin: 0 0 8px; font: 15px/1.3 "QM Text", "KaiTi", serif; letter-spacing: 0.3em; font-weight: normal; color: rgba(42, 36, 32, 0.7); }
+.ld-maker h4 .ld-gloss { display: inline; margin-left: 6px; letter-spacing: 0; }
+.ld-maker .ld-name { margin: 0 0 6px; font: 20px/1.3 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+.ld-maker p { margin: 0 0 12px; }
+.ld-maker .ld-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.ld-maker .ld-links a { padding: 4px 10px; border: 1px solid rgba(42, 36, 32, 0.4); border-radius: 3px; color: #2a2420; text-decoration: none;
+                        font: 13px/1.3 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; letter-spacing: 0.04em; }
+.ld-maker .ld-links a:hover { border-color: #b5321e; color: #b5321e; }
+@media (max-width: 900px) {
+  .ld-about { flex-direction: column; align-items: center; gap: 4vh; }
+  .ld-maker { position: static; width: min(640px, 100%); box-sizing: border-box; }
+  .ld-about p { font-size: 15.5px; line-height: 1.8; }
+}

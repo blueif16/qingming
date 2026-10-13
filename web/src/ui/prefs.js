@@ -6,6 +6,9 @@
 const KEY = 'qingming-ui-prefs-v1';
 
 export const PREF_DEFAULTS = {
+  lang: 'zh',                // 'zh' | 'zh_en': the story's words (talk, place notes, lore, map names) in Chinese, or with
+                             // English under the Chinese (each text's `_en` sibling); the chrome (time, seals, keys) stays
+                             // Chinese either way (settings 介面 語言; the user, 2026-10-13)
   expandDescriptions: false, // landmark toasts open with their long description (true) or only name + one line (false)
   helpSeen: false,           // the controls help has been shown once in full
   placeNotes: true,          // region banners and landmark toasts (settings 介面; settings agent)
