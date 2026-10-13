@@ -1,0 +1,37 @@
+/* The landmark toast with its fold (places.js; gen/ui/r2_lore.md). Builds on ui.css's .qm-toast (the slip, the seal, the
+   name and line) and adds: pointer events (a click or tap folds it, the pointer resting on it holds it), the fold hint,
+   and the long text under the fold. Colour stays ink, paper and cinnabar. */
+.qm-lt { pointer-events: auto; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: max-width var(--qm-t-mid) var(--qm-ease); }
+.qm-lt .qm-toast-text { gap: 2px; }
+/* the fold hint under the short line: R 詳 (desktop) or a small brush chevron 詳 (touch); gone once open */
+.qm-lt-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 3px; font: 400 12.5px/1 var(--qm-font-text); color: var(--qm-ink-faint);
+  letter-spacing: 0.12em; animation: qm-fade-in 400ms ease both 900ms; }
+.qm-lt-more .qm-kbd { font-size: 10.5px; min-width: 1.6em; height: 1.6em; box-shadow: 0 0 0 1px var(--qm-ink-faint), 0 1.5px 0 1px var(--qm-ink-faint); color: var(--qm-ink-soft); }
+.qm-lt-chev { width: 8px; height: 8px; border-right: 1.6px solid var(--qm-ink-soft); border-bottom: 1.6px solid var(--qm-ink-soft); transform: translateY(-2px) rotate(45deg); }
+.qm-lt.qm-open .qm-lt-more { display: none; }
+/* the fold: hidden (and its glyphs never drawn, so the lore font is not fetched) until it opens */
+.qm-lt-body { display: none; }
+.qm-lt.qm-open { align-items: flex-start; max-width: 430px; cursor: default; }
+.qm-lt.qm-open .qm-seal { margin-top: 4px; }
+.qm-lt.qm-open .qm-lt-body { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(42, 36, 32, 0.22); max-height: calc(100vh - 220px);
+  overflow-y: auto; overscroll-behavior: contain; animation: qm-bleed 420ms ease both; cursor: auto; scrollbar-width: thin; scrollbar-color: rgba(42, 36, 32, 0.3) transparent; }
+.qm-lt-long { margin: 0; font: 400 15.5px/1.72 var(--qm-font-text); color: var(--qm-ink); text-align: justify; line-break: strict; user-select: text; -webkit-user-select: text; }
+.qm-lt-quote { margin: 9px 0 0; padding: 0 0 0 10px; border-left: 2px solid var(--qm-cinnabar); font: 400 14.5px/1.6 var(--qm-font-text); color: var(--qm-ink-soft); }
+.qm-lt-quote cite { display: block; margin-top: 2px; font: 400 12px/1.4 var(--qm-font-text); font-style: normal; color: var(--qm-ink-faint); letter-spacing: 0.04em; }
+.qm-lt-cite { margin: 8px 0 0; font: 400 12px/1.45 var(--qm-font-text); color: var(--qm-ink-faint); letter-spacing: 0.04em; }
+.qm-lt-wait { margin: 0; color: var(--qm-ink-faint); }
+/* the way to the journal at the foot of the fold */
+.qm-lt-journal { display: inline-flex; align-items: center; gap: 6px; margin: 9px 0 1px; padding: 3px 9px 3px 5px; border: 0; border-radius: 999px; cursor: pointer;
+  background: rgba(42, 36, 32, 0.07); color: var(--qm-ink); font: 400 14px/1 var(--qm-font-title); letter-spacing: 0.1em; }
+.qm-lt-journal:hover, .qm-lt-journal:focus-visible { background: rgba(181, 50, 30, 0.12); outline: none; }
+.qm-lt-journal .qm-kbd { font-size: 11px; }
+@media (max-width: 640px) {
+  .qm-lt.qm-open { max-width: min(400px, calc(100vw - 2 * var(--qm-right))); }
+  .qm-lt-long { font-size: 14px; line-height: 1.66; }
+  .qm-lt-quote { font-size: 13px; }
+  .qm-lt.qm-open .qm-lt-body { max-height: calc(100vh - 260px); }
+}
+@media (prefers-reduced-motion: reduce) { .qm-lt { transition: none; } }
+/* J's tap target on touch screens (index.js): a 志 seal in a brush ring beside the 說明 seal, bottom left */
+.qm-jn-open { position: fixed; z-index: 806; left: calc(var(--qm-left) + 54px); bottom: var(--qm-bottom); }
+.qm-jn-open .qm-seal { font-size: 17px; width: 1.75em; height: 1.75em; }

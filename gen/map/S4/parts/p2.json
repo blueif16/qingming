@@ -1,0 +1,146 @@
+{
+ "section": "S4",
+ "entities": [
+  {
+   "id": "S4.fig.child_in_arms_10430",
+   "kind": "figure",
+   "name": "small child held at the shoulder",
+   "what": "Small child held up at the left shoulder of the person in the long robe at the west end of the roadside stall (S4.fig.person_with_child_10430); its round dark-haired head shows just east of the carrier's head and its small body is pressed against the carrier's chest and shoulder. Painted about 50 px of child against the carrier's 129 px.",
+   "pts": {
+    "foot": [
+     10430,
+     474,
+     "est"
+    ],
+    "head": [
+     10441,
+     349
+    ]
+   },
+   "support": "carried in arms: S4.fig.person_with_child_10430",
+   "pose": "seated",
+   "facing_deg": 200,
+   "group": "S4.grp.person_with_child_10430",
+   "vis": "part: only the head and a little of the body show against the carrier",
+   "conf": "med",
+   "src": "",
+   "note": "SECOND PASS (west): missed as its own entity; t2 named the child only inside the carrier's `what` and `note` (map/README.md rule 6: a painted thing named in a note gets an entry; precedent S6.fig.child_on_back_2795, S6.fig.child_on_shoulders_4977). Strokes: child's head u 10433-10450, v 348-368 (top ~349), body u 10433-10455, v 368-397, against the carrier's left shoulder (carrier's head u 10415-10433, v 343-363). Foot = the carrier's foot point (the ground under the child), est, as for a rider. Which way the child faces is not legible; facing set to the carrier's. CHILD: build at child scale (about 0.4 of the carrier's height). Crops: gen/map/S4/look/p2w_e_z_child10440.jpg, p2w_inspect_10435_410.jpg (the restyle also paints a child at the shoulder)."
+  },
+  {
+   "id": "S4.grp.person_with_child_10430",
+   "kind": "group",
+   "name": "person carrying a small child",
+   "what": "A person in a long robe stands at the west end of the roadside stall at the top of the side road, facing west toward the porter with the baskets, holding a small child up at the shoulder.",
+   "members": [
+    "S4.fig.person_with_child_10430",
+    "S4.fig.child_in_arms_10430"
+   ],
+   "note": "SECOND PASS (west): the lead sets `group` on the existing S4.fig.person_with_child_10430 (it is in no group now)."
+  },
+  {
+   "id": "S4.tree.behind_house_9640",
+   "kind": "tree",
+   "name": "pine-like crown above the house at the top of the silk",
+   "what": "Fans of pine-like needle clusters showing above and over the tiled roof of the house at the top of the silk (S4.bld.house_9590): one fan at the roof's west part, a broad fan rising from the roof's east eave corner with a few sprays drooping east of it over the railing, and a branch running up from that fan to the silk's top edge; the trunk is not shown (behind the house or above the top edge).",
+   "pts": {
+    "base": [
+     9640,
+     42,
+     "est"
+    ],
+    "top": [
+     9680,
+     2
+    ],
+    "crown_w": [
+     9497,
+     30
+    ],
+    "crown_e": [
+     9775,
+     95
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk hidden behind the house; crown cut off by the silk's top edge",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): no entity covers these sprays. S4.tree.gnarled_9445 stops at top (9440, 105) and S4.tree.leaning_9776's crown is at v 240-335; S4.tree.behind_roof_10405 is the same kind of case further east. Strokes: west fan u 9500-9580, v 7-57; middle sprays u 9593-9677, v 0-40; east fan u 9677-9777, v 0-87, radiating from about (9712, 75) at the roof's east eave corner (9720, 77), sprays drooping to (9755, 102); a branch (9680, 5) -> (9715, 70). Between the sprays and the house front (v 80-140) the roof and the front are clear of needles, so I read the crown as a tree behind (north of) the house, not as the top of a grove tree in front of it. OTHER READING: the fans are the tops of S4.tree.gnarled_9445 (west fan) and S4.tree.leaning_9776 (east fan), whose crowns would then reach the top edge; then drop this entity and raise those trees' `top` to (9545, 7) and (9712, 2). It may also be two trees (west fan, east fan). Base est just behind the house's back line (back corners est at v 50-52), under the crown's middle; a pure guess. The restyle draws bare branches above the roof. Crops: gen/map/S4/look/p2w_e_z_crown_behind_house.jpg, p2w_e_z_fan9710.jpg, p2w_e_house_crowns.jpg, p2w_inspect_9640_100.jpg."
+  },
+  {
+   "id": "S4.fig.figure_under_eave_11382",
+   "kind": "figure",
+   "name": "half-hidden figure under the eating house's front eave",
+   "what": "Figure in a long loose robe standing at the back of the eating house's open front, behind the small table and the slatted box; the head and shoulders are hidden behind the front beam and the mat pent roof, and a sleeve or arm reaches down to the east toward the slatted box (S4.prop.bench_11435). Could instead be a garment or a cloth hung from the beam.",
+   "pts": {
+    "foot": [
+     11382,
+     1556
+    ],
+    "head": [
+     11390,
+     1420,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: head and shoulders behind the front beam and the mat pent roof (v 1400-1490); legs partly behind the slatted box",
+   "conf": "low",
+   "note": "SECOND PASS (east): not recorded by t3, whose note on S4.prop.slatted_box_11355 mentions 'diagonal strokes that may be a chair back or something leaning' here. Strokes: vertical robe folds 11376-11404 from the front beam (v ~1480) down to a curved hem 11366-11396 at v 1554-1558 (foot = the hem's middle; a small dark mark at 11366-11372, v 1552-1556 may be a shoe); diagonal sleeve/arm strokes 11386-11420, v 1496-1512, running down to the east. Head est 136 px above the foot (the doorway figure S4.fig.doorway_figure_11738 is ~138 px tall), so it falls behind the pent roof. facing_deg 0 from the arm reaching east, uncertain. The restyle paints a pale sack and a basket here, not a person. If the lead reads it as hanging cloth, record a prop instead. Crops: gen/map/S4/look/p2e_c_eating2.jpg, p2e_c_eating3.jpg, p2e_inspect_11380_1530.jpg."
+  },
+  {
+   "id": "S4.str.stair_or_roof_end_11755",
+   "kind": "structure",
+   "name": "dark sloping block in front of the doorway (a stair or a low roof's end)",
+   "what": "A dark, stepped, sloping block on the ground in front of the doorway where the person in the pale robe stands, with a long double rail line rising from it up to the north-east along the lattice window: either a short stair with a hand rail coming down from the hall's raised floor, or the end of a low tiled roof of a smaller building in front.",
+   "pts": {
+    "base": {
+     "sw": [
+      11705,
+      1686,
+      "est"
+     ],
+     "se": [
+      11805,
+      1662,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: south side lost in the grass stems; lower edge near the silk's bottom",
+   "conf": "low",
+   "note": "SECOND PASS (east): S4.bld.south_pavilion_11760's note lists only the diagonal '(11770,1600)->(11850,1540)'; the block itself has no entity. Strokes: dark block 11705-11810, v 1605-1688 (top edge (11730,1632)-(11780,1630), a darker plank 11738-11780 at v 1625-1640 right under the doorway figure's feet, horizontal row lines 11730-11780 at v 1640-1648, its west foot at (11705,1685)); the double rail from (11762,1617) up to (11845,1552), slope -0.78. The restyle paints the end of a low grey tiled roof with a ridge tile at (11735,1660). If it is a stair, the doorway figure stands at its top. Crops: p2e_c_lowroof.jpg, p2e_inspect_11770_1620.jpg, p2e_c_bottom11600.jpg."
+  },
+  {
+   "id": "S4.ani.bird_12433",
+   "kind": "animal",
+   "name": "small dark bird (?) in the big willow's whips",
+   "what": "A small, solid black, elongated blot among the big willow's whips high above the fortune-teller's awning, rounded at its east end and tapering to the west like a perched crow with its tail to the west; a smaller dark dot lies just west of it.",
+   "pts": {
+    "fore": [
+     12437,
+     267,
+     "est"
+    ],
+    "hind": [
+     12427,
+     267,
+     "est"
+    ],
+    "head": [
+     12441,
+     259
+    ]
+   },
+   "support": "perched: S4.tree.gnarled_willow_12390",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "low",
+   "note": "SECOND PASS (east): S4.tree.gnarled_willow_12390's note mentions it ('a small dark spot at (12425-12441, 258-266) in the whips may be a bird (not recorded)'), so per README rule 6 it gets an entry for the lead to accept or drop. Blot 12425-12442, v 257-268 (17 x 11 px), solid ink, unlike the line work of the whips; second dot 12403-12410, v 267-272. fore/hind = the underside of the blot (it sits on a whip, not on the ground). It could be ink damage or a knot; the restyle paints nothing here. Crops: p2e_c_bird.jpg, p2e_inspect_12433_262.jpg."
+  }
+ ]
+}

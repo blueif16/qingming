@@ -1,0 +1,3169 @@
+{
+ "section": "S3",
+ "status": "frame step 2026-10-12 (round 2). Continues S4b east of u 15500 with S5's origin and scales, S4b's seam knot [15500, 31.6] and S4b's route station at the seam (+110.35). Three measured knots (west 47.9 at the tavern, middle 39.2, east 30.4 at the bridge's north end). Water copied from S4b (-0.7). The bridge deck's heights: see supports, bridge deck, and the first question.",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    15350,
+    20650
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    31.6,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     15500,
+     31.6
+    ],
+    [
+     16880,
+     47.9
+    ],
+    [
+     18290,
+     39.2
+    ],
+    [
+     19830,
+     30.4
+    ]
+   ],
+   "derivation": [
+    "Seed (mapping_rules.md, frame, \"S3, S2, S1\"): S5's origin (S5.str.moat_bridge:base.sw, scan 8248, 1565), 77 px per metre across the street and in height, 51.25 px of v per metre of depth (map/README.md, Frames, One world across sections), from map/frames/S4b.json. Covers u 15350-20650, the area's look range.",
+    "Seam knot [15500, 31.6]: S4b's dx at u 15500 (its only knot [12600, 31.6], constant to the seam; map/frames/S4b.json). A point on the seam maps to the same metres in both sections: S3's painted area's west corners are S4b's east corners (map_layout: se (95.98, -4.39), ne (81.65, 30.54)). If the lead changes S4b's knots (S4b's first question), this seam knot changes with them.",
+    "MEASURED KNOTS (ground-level receding edges, dx = 51.25 / |dv/du|; stroke points from gen/map/S3/reports/structures_w.md and structures_e.md, re-read by the frame agent on zoom-2.5 and zoom-4 crops, scratchpad S3_frame/chazi.jpg, shopboard.jpg):",
+    "  WEST, [16880, 47.9]: 十千脚店's forecourt barrier S3.str.chazi_barrier_16800 (a low 杈子 of crossed bars between two rails lying along the ground): its foot (16820, 1788) -> (16956, 1636) -1.12 (45.8); its near rail's foot read by t2 (16810, 1753) -> (16983, 1563) -1.10 (46.6); its top rail (1.2 m) (16740, 1775) -> (16955, 1560) -1.00 (51.3). Mean 47.9 at u ~16880 (scatter +-3). Checks that agree: the far-bank tables at u 17400-17520 (15-19 px edges, +-0.3 in slope): (17401, 149) -> (17420, 134) -0.8 (64), (17464, 141) -> (17482, 125) -0.89 (58), (17505, 150) -> (17520, 135) -1.0 (51), (17502, 150) -> (17515, 135) -1.15 (45), mean 54; the high lines here do not flatten (the wing's east eave -1.00, its ridge -1.05, the gate's east eave -1.04: 49-51).",
+    "  MIDDLE, [18290, 39.2]: the tile-capped wall S3.str.tiled_wall_18450, its coping (1.5-2 m up, parallel to its foot) (18330, 1775) -> (18490, 1525) -1.56 (32.8), and t5's display board at the parasol stall (18120, 1192) -> (18217, 1083) -1.12 (45.6, a sloping board: approximate). Mean 39.2 at u ~18290 (the line between the west and east knots gives 39.6 there, so this knot changes almost nothing; it records the group). Not used: the mat awnings on the ramp (-0.91 to -1.19; mats in the air, on the deck), the stall table's legs on the ramp (-0.97; on the sloping deck), the sedan's poles (-0.56; the sedan's axis up the ramp).",
+    "  EAST, [19830, 30.4]: the low board lying at the open shop's floor line, S3.prop.shop_low_table_19797: its west side (19792, 1612) -> (19817, 1574) -1.52 (33.7) and east side (19840, 1612) -> (19860, 1574) -1.90 (27.0) (structures_e); the frame agent's zoom-4 re-read -1.46 and -1.9 (35, 27); t8's reading of the west side (19797, 1604) -> (19813, 1571) -2.1 (24.4). Mean of structures_e's two sides 30.4 at u ~19830. Constant east of it to S2's seam (S2 starts from 30.4 at u 20500).",
+    "  NOT A KNOT, the north bank at the east end: the north-bank tavern's table tops (0.8 m up) (20142, 242) -> (20160, 220) -1.22 (42.0), (20187, 244) -> (20207, 220) -1.20 (42.7), t9 (20125, 240) -> (20140, 220) -1.3 (39.4): mean 41.4 at u ~20160, against 30.4 on the south bank 330 px west. Same sign (unlike S4b's seam), but a knot of 41 at 20160 after 30.4 at 19830 would compress the silk's top rows about 6:1 there (dx changes 3.4 px/m per 100 px, against the 1.5 px/m per 100 px S4b's frame agent gives as the limit); the painter draws the far bank's furniture less steep (questions).",
+    "RAMP RATES (a constant dx gives 1.30 m of X per 100 px of u at every row; a drifting dx scales that by 1 - dx' * D, D up to 30.5 m at the silk's top): 15500-16880 +1.19 px/m per 100 px (the silk's top rows at 0.64, the road at ~0.92); 16880-18290 -0.62 (top rows 1.19); 18290-19830 -0.57 (1.17). No fold, no stretch beyond 1.2x.",
+    "WALL CHECKS (direction of mapped lines at their height, checks): the big hall at the bridge's south foot, S3.bld.bridge_foot_hall_19000, its ridge apex_s (18861, 1507) -> apex_n (19128, 1155) and both eaves are parallel at -1.30 to -1.32 (structures_e) and should run north (90 deg) from a front square to the street: the frame gives 87.9 deg; 十千脚店's gate, its east eave se_eave (17150, 1375) -> ne_eave (17330, 1185), -1.06: 88.1 deg. The bridge: the deck's width lies east-west in the picture (bridge agent), and its axis se (18810, 1090, est) -> ne (20025, 396) slopes -0.571, so the bridge is square only if dx ~90 there; with 30-39 it is a parallelogram (checks; questions)."
+   ],
+   "assumptions": [
+    "East-west and height 77 px per metre, depth 51.25 px of v per metre, as every section (S5). Things far up the silk are painted smaller (questions: the diminution); positions only come from the map (BUILDING.md rule 5).",
+    "dx drifts along S3 by the knots above, from S4b's 31.6 at the seam to 47.9 at the tavern, 39.2 at the bridge's south foot and 30.4 at the bridge's north end, linear between and constant beyond. The drift is the painter's (the lead's note: keep the seam knot and add S3's measured knots).",
+    "Painted figure size is not a scale (street figures 152-208 px, 2.0-2.7 m at 77 px/m; the men at the bridge's south foot up to 230 px). Place by foot point.",
+    "The bank tops on both sides of the river and the far bank are at street level (ground, H 0); the banks' shore lines stand on the water (support_by).",
+    "The bridge deck's heights are the bridge agent's: H = (v of the east face's ground line straight below - v of deck_e)/77, the ground line through the feet se (18810, 1090, est) and ne (20025, 396); the south foot is est (the edge is visible to (18815, 1072)), the north foot firm."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "street level"
+  },
+  "water": {
+   "H": -0.7,
+   "how": "COPIED FROM map/frames/S4b.json (one H for the whole 汴河, Phase 0). S4b's derivation: MEASURED AS A BOUND (conf low), the river agent's reading (gen/map/S4b/reports/river.md, Water level): H = -(v_waterline - v_ground) / 77 at the same u, the ground at street level (H 0), at the three places where flat ground meets the first water on S4b's moorings: M1 the bank path at the gangplank, ground (14778, 401) under the porter's feet and the plank's foot, over the first ripple swirl (14778, 456): 55 px, -0.71; M2a the top-left building's front wall foot (14920, 166) over the landing's lower wash edge (14920, 224): 58 px, -0.75; M2b the same wall foot (14990, 151) over the landing's edge (14990, 203): 52 px, -0.68. Spread 0.07 m; M2a and M2b (a wall foot, the narrowest bank) are the surest. The bank is a wash-drawn slope with no vertical face, stair, revetment or jetty, so each reading is an upper bound on the depth: a landing s m deep puts the water 0.67 s m higher (plausible range -0.3 to -0.75). S3's river agents found no vertical face either; river_e's bounds at the far-bank hall on posts (18446-18542: -0.86 to -1.0) fit. 1 m of H moves every boat and shore point 1.5 m north or south (77 / 51.25). One H for the whole 汴河: S3, S2 and S1 copy it; a revetment, stair or abutment foot read later replaces it only with the lead's agreement. Replaces the seed's -1.5 (S5's moat, assumed). S3's OWN CHECK (not used): no vertical bank face, stair, revetment or abutment foot meets the water in u 15500-20650 (river_w: none measurable in 15500-18300; river_e: the arch's feet are hidden behind the south-bank crowd and the mast lines). Bounds only, H = -(v_waterline - v_ground)/77 under the far-bank hall on stilts: post feet (18446, 290), (18492, 297), (18542, 310) over the lowest wash streaks (18446, 367), (18492, 373), (18542, 376): -1.00, -0.99, -0.86 (the posts may stand partway down the slope, so these are loose bounds on the depth; they fit -0.7 and say nothing against it)."
+  },
+  "bridge deck: 50 px west of the near edge": {
+   "H_profile": [
+    [
+     18760,
+     0
+    ],
+    [
+     18765,
+     0.2
+    ],
+    [
+     18774,
+     0.49
+    ],
+    [
+     18792,
+     0.96
+    ],
+    [
+     18820,
+     1.59
+    ],
+    [
+     18840,
+     2.04
+    ],
+    [
+     18861,
+     2.46
+    ],
+    [
+     18885,
+     2.86
+    ],
+    [
+     18911,
+     3.28
+    ],
+    [
+     18938,
+     3.6
+    ],
+    [
+     18969,
+     3.93
+    ],
+    [
+     18995,
+     4.27
+    ],
+    [
+     19025,
+     4.54
+    ],
+    [
+     19057,
+     4.78
+    ],
+    [
+     19090,
+     4.98
+    ],
+    [
+     19124,
+     5.18
+    ],
+    [
+     19160,
+     5.33
+    ],
+    [
+     19200,
+     5.4
+    ],
+    [
+     19240,
+     5.44
+    ],
+    [
+     19282,
+     5.44
+    ],
+    [
+     19325,
+     5.43
+    ],
+    [
+     19369,
+     5.37
+    ],
+    [
+     19415,
+     5.26
+    ],
+    [
+     19462,
+     5.1
+    ],
+    [
+     19511,
+     4.88
+    ],
+    [
+     19560,
+     4.59
+    ],
+    [
+     19609,
+     4.22
+    ],
+    [
+     19659,
+     3.76
+    ],
+    [
+     19706,
+     3.29
+    ],
+    [
+     19758,
+     2.73
+    ],
+    [
+     19804,
+     2.19
+    ],
+    [
+     19847,
+     1.6
+    ],
+    [
+     19891,
+     1
+    ],
+    [
+     19940,
+     0.39
+    ],
+    [
+     19975,
+     0
+    ]
+   ],
+   "how": "the deck 50 px west of the painted near edge at the same v: the heights of `bridge deck` read 50 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 50 px west"
+  },
+  "bridge deck: 100 px west of the near edge": {
+   "H_profile": [
+    [
+     18710,
+     0
+    ],
+    [
+     18715,
+     0.2
+    ],
+    [
+     18724,
+     0.49
+    ],
+    [
+     18742,
+     0.96
+    ],
+    [
+     18770,
+     1.59
+    ],
+    [
+     18790,
+     2.04
+    ],
+    [
+     18811,
+     2.46
+    ],
+    [
+     18835,
+     2.86
+    ],
+    [
+     18861,
+     3.28
+    ],
+    [
+     18888,
+     3.6
+    ],
+    [
+     18919,
+     3.93
+    ],
+    [
+     18945,
+     4.27
+    ],
+    [
+     18975,
+     4.54
+    ],
+    [
+     19007,
+     4.78
+    ],
+    [
+     19040,
+     4.98
+    ],
+    [
+     19074,
+     5.18
+    ],
+    [
+     19110,
+     5.33
+    ],
+    [
+     19150,
+     5.4
+    ],
+    [
+     19190,
+     5.44
+    ],
+    [
+     19232,
+     5.44
+    ],
+    [
+     19275,
+     5.43
+    ],
+    [
+     19319,
+     5.37
+    ],
+    [
+     19365,
+     5.26
+    ],
+    [
+     19412,
+     5.1
+    ],
+    [
+     19461,
+     4.88
+    ],
+    [
+     19510,
+     4.59
+    ],
+    [
+     19559,
+     4.22
+    ],
+    [
+     19609,
+     3.76
+    ],
+    [
+     19656,
+     3.29
+    ],
+    [
+     19708,
+     2.73
+    ],
+    [
+     19754,
+     2.19
+    ],
+    [
+     19797,
+     1.6
+    ],
+    [
+     19841,
+     1
+    ],
+    [
+     19890,
+     0.39
+    ],
+    [
+     19925,
+     0
+    ]
+   ],
+   "how": "the deck 100 px west of the painted near edge at the same v: the heights of `bridge deck` read 100 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 100 px west"
+  },
+  "bridge deck: 150 px west of the near edge": {
+   "H_profile": [
+    [
+     18660,
+     0
+    ],
+    [
+     18665,
+     0.2
+    ],
+    [
+     18674,
+     0.49
+    ],
+    [
+     18692,
+     0.96
+    ],
+    [
+     18720,
+     1.59
+    ],
+    [
+     18740,
+     2.04
+    ],
+    [
+     18761,
+     2.46
+    ],
+    [
+     18785,
+     2.86
+    ],
+    [
+     18811,
+     3.28
+    ],
+    [
+     18838,
+     3.6
+    ],
+    [
+     18869,
+     3.93
+    ],
+    [
+     18895,
+     4.27
+    ],
+    [
+     18925,
+     4.54
+    ],
+    [
+     18957,
+     4.78
+    ],
+    [
+     18990,
+     4.98
+    ],
+    [
+     19024,
+     5.18
+    ],
+    [
+     19060,
+     5.33
+    ],
+    [
+     19100,
+     5.4
+    ],
+    [
+     19140,
+     5.44
+    ],
+    [
+     19182,
+     5.44
+    ],
+    [
+     19225,
+     5.43
+    ],
+    [
+     19269,
+     5.37
+    ],
+    [
+     19315,
+     5.26
+    ],
+    [
+     19362,
+     5.1
+    ],
+    [
+     19411,
+     4.88
+    ],
+    [
+     19460,
+     4.59
+    ],
+    [
+     19509,
+     4.22
+    ],
+    [
+     19559,
+     3.76
+    ],
+    [
+     19606,
+     3.29
+    ],
+    [
+     19658,
+     2.73
+    ],
+    [
+     19704,
+     2.19
+    ],
+    [
+     19747,
+     1.6
+    ],
+    [
+     19791,
+     1
+    ],
+    [
+     19840,
+     0.39
+    ],
+    [
+     19875,
+     0
+    ]
+   ],
+   "how": "the deck 150 px west of the painted near edge at the same v: the heights of `bridge deck` read 150 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 150 px west"
+  },
+  "bridge deck: 200 px west of the near edge": {
+   "H_profile": [
+    [
+     18610,
+     0
+    ],
+    [
+     18615,
+     0.2
+    ],
+    [
+     18624,
+     0.49
+    ],
+    [
+     18642,
+     0.96
+    ],
+    [
+     18670,
+     1.59
+    ],
+    [
+     18690,
+     2.04
+    ],
+    [
+     18711,
+     2.46
+    ],
+    [
+     18735,
+     2.86
+    ],
+    [
+     18761,
+     3.28
+    ],
+    [
+     18788,
+     3.6
+    ],
+    [
+     18819,
+     3.93
+    ],
+    [
+     18845,
+     4.27
+    ],
+    [
+     18875,
+     4.54
+    ],
+    [
+     18907,
+     4.78
+    ],
+    [
+     18940,
+     4.98
+    ],
+    [
+     18974,
+     5.18
+    ],
+    [
+     19010,
+     5.33
+    ],
+    [
+     19050,
+     5.4
+    ],
+    [
+     19090,
+     5.44
+    ],
+    [
+     19132,
+     5.44
+    ],
+    [
+     19175,
+     5.43
+    ],
+    [
+     19219,
+     5.37
+    ],
+    [
+     19265,
+     5.26
+    ],
+    [
+     19312,
+     5.1
+    ],
+    [
+     19361,
+     4.88
+    ],
+    [
+     19410,
+     4.59
+    ],
+    [
+     19459,
+     4.22
+    ],
+    [
+     19509,
+     3.76
+    ],
+    [
+     19556,
+     3.29
+    ],
+    [
+     19608,
+     2.73
+    ],
+    [
+     19654,
+     2.19
+    ],
+    [
+     19697,
+     1.6
+    ],
+    [
+     19741,
+     1
+    ],
+    [
+     19790,
+     0.39
+    ],
+    [
+     19825,
+     0
+    ]
+   ],
+   "how": "the deck 200 px west of the painted near edge at the same v: the heights of `bridge deck` read 200 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 200 px west"
+  },
+  "bridge deck: 250 px west of the near edge": {
+   "H_profile": [
+    [
+     18560,
+     0
+    ],
+    [
+     18565,
+     0.2
+    ],
+    [
+     18574,
+     0.49
+    ],
+    [
+     18592,
+     0.96
+    ],
+    [
+     18620,
+     1.59
+    ],
+    [
+     18640,
+     2.04
+    ],
+    [
+     18661,
+     2.46
+    ],
+    [
+     18685,
+     2.86
+    ],
+    [
+     18711,
+     3.28
+    ],
+    [
+     18738,
+     3.6
+    ],
+    [
+     18769,
+     3.93
+    ],
+    [
+     18795,
+     4.27
+    ],
+    [
+     18825,
+     4.54
+    ],
+    [
+     18857,
+     4.78
+    ],
+    [
+     18890,
+     4.98
+    ],
+    [
+     18924,
+     5.18
+    ],
+    [
+     18960,
+     5.33
+    ],
+    [
+     19000,
+     5.4
+    ],
+    [
+     19040,
+     5.44
+    ],
+    [
+     19082,
+     5.44
+    ],
+    [
+     19125,
+     5.43
+    ],
+    [
+     19169,
+     5.37
+    ],
+    [
+     19215,
+     5.26
+    ],
+    [
+     19262,
+     5.1
+    ],
+    [
+     19311,
+     4.88
+    ],
+    [
+     19360,
+     4.59
+    ],
+    [
+     19409,
+     4.22
+    ],
+    [
+     19459,
+     3.76
+    ],
+    [
+     19506,
+     3.29
+    ],
+    [
+     19558,
+     2.73
+    ],
+    [
+     19604,
+     2.19
+    ],
+    [
+     19647,
+     1.6
+    ],
+    [
+     19691,
+     1
+    ],
+    [
+     19740,
+     0.39
+    ],
+    [
+     19775,
+     0
+    ]
+   ],
+   "how": "the deck 250 px west of the painted near edge at the same v: the heights of `bridge deck` read 250 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 250 px west"
+  },
+  "bridge deck: 300 px west of the near edge": {
+   "H_profile": [
+    [
+     18510,
+     0
+    ],
+    [
+     18515,
+     0.2
+    ],
+    [
+     18524,
+     0.49
+    ],
+    [
+     18542,
+     0.96
+    ],
+    [
+     18570,
+     1.59
+    ],
+    [
+     18590,
+     2.04
+    ],
+    [
+     18611,
+     2.46
+    ],
+    [
+     18635,
+     2.86
+    ],
+    [
+     18661,
+     3.28
+    ],
+    [
+     18688,
+     3.6
+    ],
+    [
+     18719,
+     3.93
+    ],
+    [
+     18745,
+     4.27
+    ],
+    [
+     18775,
+     4.54
+    ],
+    [
+     18807,
+     4.78
+    ],
+    [
+     18840,
+     4.98
+    ],
+    [
+     18874,
+     5.18
+    ],
+    [
+     18910,
+     5.33
+    ],
+    [
+     18950,
+     5.4
+    ],
+    [
+     18990,
+     5.44
+    ],
+    [
+     19032,
+     5.44
+    ],
+    [
+     19075,
+     5.43
+    ],
+    [
+     19119,
+     5.37
+    ],
+    [
+     19165,
+     5.26
+    ],
+    [
+     19212,
+     5.1
+    ],
+    [
+     19261,
+     4.88
+    ],
+    [
+     19310,
+     4.59
+    ],
+    [
+     19359,
+     4.22
+    ],
+    [
+     19409,
+     3.76
+    ],
+    [
+     19456,
+     3.29
+    ],
+    [
+     19508,
+     2.73
+    ],
+    [
+     19554,
+     2.19
+    ],
+    [
+     19597,
+     1.6
+    ],
+    [
+     19641,
+     1
+    ],
+    [
+     19690,
+     0.39
+    ],
+    [
+     19725,
+     0
+    ]
+   ],
+   "how": "the deck 300 px west of the painted near edge at the same v: the heights of `bridge deck` read 300 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 300 px west"
+  },
+  "bridge deck: 350 px west of the near edge": {
+   "H_profile": [
+    [
+     18460,
+     0
+    ],
+    [
+     18465,
+     0.2
+    ],
+    [
+     18474,
+     0.49
+    ],
+    [
+     18492,
+     0.96
+    ],
+    [
+     18520,
+     1.59
+    ],
+    [
+     18540,
+     2.04
+    ],
+    [
+     18561,
+     2.46
+    ],
+    [
+     18585,
+     2.86
+    ],
+    [
+     18611,
+     3.28
+    ],
+    [
+     18638,
+     3.6
+    ],
+    [
+     18669,
+     3.93
+    ],
+    [
+     18695,
+     4.27
+    ],
+    [
+     18725,
+     4.54
+    ],
+    [
+     18757,
+     4.78
+    ],
+    [
+     18790,
+     4.98
+    ],
+    [
+     18824,
+     5.18
+    ],
+    [
+     18860,
+     5.33
+    ],
+    [
+     18900,
+     5.4
+    ],
+    [
+     18940,
+     5.44
+    ],
+    [
+     18982,
+     5.44
+    ],
+    [
+     19025,
+     5.43
+    ],
+    [
+     19069,
+     5.37
+    ],
+    [
+     19115,
+     5.26
+    ],
+    [
+     19162,
+     5.1
+    ],
+    [
+     19211,
+     4.88
+    ],
+    [
+     19260,
+     4.59
+    ],
+    [
+     19309,
+     4.22
+    ],
+    [
+     19359,
+     3.76
+    ],
+    [
+     19406,
+     3.29
+    ],
+    [
+     19458,
+     2.73
+    ],
+    [
+     19504,
+     2.19
+    ],
+    [
+     19547,
+     1.6
+    ],
+    [
+     19591,
+     1
+    ],
+    [
+     19640,
+     0.39
+    ],
+    [
+     19675,
+     0
+    ]
+   ],
+   "how": "the deck 350 px west of the painted near edge at the same v: the heights of `bridge deck` read 350 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 350 px west"
+  },
+  "bridge deck: 375 px west of the near edge": {
+   "H_profile": [
+    [
+     18435,
+     0
+    ],
+    [
+     18440,
+     0.2
+    ],
+    [
+     18449,
+     0.49
+    ],
+    [
+     18467,
+     0.96
+    ],
+    [
+     18495,
+     1.59
+    ],
+    [
+     18515,
+     2.04
+    ],
+    [
+     18536,
+     2.46
+    ],
+    [
+     18560,
+     2.86
+    ],
+    [
+     18586,
+     3.28
+    ],
+    [
+     18613,
+     3.6
+    ],
+    [
+     18644,
+     3.93
+    ],
+    [
+     18670,
+     4.27
+    ],
+    [
+     18700,
+     4.54
+    ],
+    [
+     18732,
+     4.78
+    ],
+    [
+     18765,
+     4.98
+    ],
+    [
+     18799,
+     5.18
+    ],
+    [
+     18835,
+     5.33
+    ],
+    [
+     18875,
+     5.4
+    ],
+    [
+     18915,
+     5.44
+    ],
+    [
+     18957,
+     5.44
+    ],
+    [
+     19000,
+     5.43
+    ],
+    [
+     19044,
+     5.37
+    ],
+    [
+     19090,
+     5.26
+    ],
+    [
+     19137,
+     5.1
+    ],
+    [
+     19186,
+     4.88
+    ],
+    [
+     19235,
+     4.59
+    ],
+    [
+     19284,
+     4.22
+    ],
+    [
+     19334,
+     3.76
+    ],
+    [
+     19381,
+     3.29
+    ],
+    [
+     19433,
+     2.73
+    ],
+    [
+     19479,
+     2.19
+    ],
+    [
+     19522,
+     1.6
+    ],
+    [
+     19566,
+     1
+    ],
+    [
+     19615,
+     0.39
+    ],
+    [
+     19650,
+     0
+    ]
+   ],
+   "how": "the deck 375 px west of the painted near edge at the same v (the centre line deck_c, the route's deck stretch): the heights of `bridge deck` read 375 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 375 px west"
+  },
+  "bridge deck: 400 px west of the near edge": {
+   "H_profile": [
+    [
+     18410,
+     0
+    ],
+    [
+     18415,
+     0.2
+    ],
+    [
+     18424,
+     0.49
+    ],
+    [
+     18442,
+     0.96
+    ],
+    [
+     18470,
+     1.59
+    ],
+    [
+     18490,
+     2.04
+    ],
+    [
+     18511,
+     2.46
+    ],
+    [
+     18535,
+     2.86
+    ],
+    [
+     18561,
+     3.28
+    ],
+    [
+     18588,
+     3.6
+    ],
+    [
+     18619,
+     3.93
+    ],
+    [
+     18645,
+     4.27
+    ],
+    [
+     18675,
+     4.54
+    ],
+    [
+     18707,
+     4.78
+    ],
+    [
+     18740,
+     4.98
+    ],
+    [
+     18774,
+     5.18
+    ],
+    [
+     18810,
+     5.33
+    ],
+    [
+     18850,
+     5.4
+    ],
+    [
+     18890,
+     5.44
+    ],
+    [
+     18932,
+     5.44
+    ],
+    [
+     18975,
+     5.43
+    ],
+    [
+     19019,
+     5.37
+    ],
+    [
+     19065,
+     5.26
+    ],
+    [
+     19112,
+     5.1
+    ],
+    [
+     19161,
+     4.88
+    ],
+    [
+     19210,
+     4.59
+    ],
+    [
+     19259,
+     4.22
+    ],
+    [
+     19309,
+     3.76
+    ],
+    [
+     19356,
+     3.29
+    ],
+    [
+     19408,
+     2.73
+    ],
+    [
+     19454,
+     2.19
+    ],
+    [
+     19497,
+     1.6
+    ],
+    [
+     19541,
+     1
+    ],
+    [
+     19590,
+     0.39
+    ],
+    [
+     19625,
+     0
+    ]
+   ],
+   "how": "the deck 400 px west of the painted near edge at the same v: the heights of `bridge deck` read 400 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 400 px west"
+  },
+  "bridge deck: 450 px west of the near edge": {
+   "H_profile": [
+    [
+     18360,
+     0
+    ],
+    [
+     18365,
+     0.2
+    ],
+    [
+     18374,
+     0.49
+    ],
+    [
+     18392,
+     0.96
+    ],
+    [
+     18420,
+     1.59
+    ],
+    [
+     18440,
+     2.04
+    ],
+    [
+     18461,
+     2.46
+    ],
+    [
+     18485,
+     2.86
+    ],
+    [
+     18511,
+     3.28
+    ],
+    [
+     18538,
+     3.6
+    ],
+    [
+     18569,
+     3.93
+    ],
+    [
+     18595,
+     4.27
+    ],
+    [
+     18625,
+     4.54
+    ],
+    [
+     18657,
+     4.78
+    ],
+    [
+     18690,
+     4.98
+    ],
+    [
+     18724,
+     5.18
+    ],
+    [
+     18760,
+     5.33
+    ],
+    [
+     18800,
+     5.4
+    ],
+    [
+     18840,
+     5.44
+    ],
+    [
+     18882,
+     5.44
+    ],
+    [
+     18925,
+     5.43
+    ],
+    [
+     18969,
+     5.37
+    ],
+    [
+     19015,
+     5.26
+    ],
+    [
+     19062,
+     5.1
+    ],
+    [
+     19111,
+     4.88
+    ],
+    [
+     19160,
+     4.59
+    ],
+    [
+     19209,
+     4.22
+    ],
+    [
+     19259,
+     3.76
+    ],
+    [
+     19306,
+     3.29
+    ],
+    [
+     19358,
+     2.73
+    ],
+    [
+     19404,
+     2.19
+    ],
+    [
+     19447,
+     1.6
+    ],
+    [
+     19491,
+     1
+    ],
+    [
+     19540,
+     0.39
+    ],
+    [
+     19575,
+     0
+    ]
+   ],
+   "how": "the deck 450 px west of the painted near edge at the same v: the heights of `bridge deck` read 450 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 450 px west"
+  },
+  "bridge deck: 500 px west of the near edge": {
+   "H_profile": [
+    [
+     18310,
+     0
+    ],
+    [
+     18315,
+     0.2
+    ],
+    [
+     18324,
+     0.49
+    ],
+    [
+     18342,
+     0.96
+    ],
+    [
+     18370,
+     1.59
+    ],
+    [
+     18390,
+     2.04
+    ],
+    [
+     18411,
+     2.46
+    ],
+    [
+     18435,
+     2.86
+    ],
+    [
+     18461,
+     3.28
+    ],
+    [
+     18488,
+     3.6
+    ],
+    [
+     18519,
+     3.93
+    ],
+    [
+     18545,
+     4.27
+    ],
+    [
+     18575,
+     4.54
+    ],
+    [
+     18607,
+     4.78
+    ],
+    [
+     18640,
+     4.98
+    ],
+    [
+     18674,
+     5.18
+    ],
+    [
+     18710,
+     5.33
+    ],
+    [
+     18750,
+     5.4
+    ],
+    [
+     18790,
+     5.44
+    ],
+    [
+     18832,
+     5.44
+    ],
+    [
+     18875,
+     5.43
+    ],
+    [
+     18919,
+     5.37
+    ],
+    [
+     18965,
+     5.26
+    ],
+    [
+     19012,
+     5.1
+    ],
+    [
+     19061,
+     4.88
+    ],
+    [
+     19110,
+     4.59
+    ],
+    [
+     19159,
+     4.22
+    ],
+    [
+     19209,
+     3.76
+    ],
+    [
+     19256,
+     3.29
+    ],
+    [
+     19308,
+     2.73
+    ],
+    [
+     19354,
+     2.19
+    ],
+    [
+     19397,
+     1.6
+    ],
+    [
+     19441,
+     1
+    ],
+    [
+     19490,
+     0.39
+    ],
+    [
+     19525,
+     0
+    ]
+   ],
+   "how": "the deck 500 px west of the painted near edge at the same v: the heights of `bridge deck` read 500 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 500 px west"
+  },
+  "bridge deck: 550 px west of the near edge": {
+   "H_profile": [
+    [
+     18260,
+     0
+    ],
+    [
+     18265,
+     0.2
+    ],
+    [
+     18274,
+     0.49
+    ],
+    [
+     18292,
+     0.96
+    ],
+    [
+     18320,
+     1.59
+    ],
+    [
+     18340,
+     2.04
+    ],
+    [
+     18361,
+     2.46
+    ],
+    [
+     18385,
+     2.86
+    ],
+    [
+     18411,
+     3.28
+    ],
+    [
+     18438,
+     3.6
+    ],
+    [
+     18469,
+     3.93
+    ],
+    [
+     18495,
+     4.27
+    ],
+    [
+     18525,
+     4.54
+    ],
+    [
+     18557,
+     4.78
+    ],
+    [
+     18590,
+     4.98
+    ],
+    [
+     18624,
+     5.18
+    ],
+    [
+     18660,
+     5.33
+    ],
+    [
+     18700,
+     5.4
+    ],
+    [
+     18740,
+     5.44
+    ],
+    [
+     18782,
+     5.44
+    ],
+    [
+     18825,
+     5.43
+    ],
+    [
+     18869,
+     5.37
+    ],
+    [
+     18915,
+     5.26
+    ],
+    [
+     18962,
+     5.1
+    ],
+    [
+     19011,
+     4.88
+    ],
+    [
+     19060,
+     4.59
+    ],
+    [
+     19109,
+     4.22
+    ],
+    [
+     19159,
+     3.76
+    ],
+    [
+     19206,
+     3.29
+    ],
+    [
+     19258,
+     2.73
+    ],
+    [
+     19304,
+     2.19
+    ],
+    [
+     19347,
+     1.6
+    ],
+    [
+     19391,
+     1
+    ],
+    [
+     19440,
+     0.39
+    ],
+    [
+     19475,
+     0
+    ]
+   ],
+   "how": "the deck 550 px west of the painted near edge at the same v: the heights of `bridge deck` read 550 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 550 px west"
+  },
+  "bridge deck: 600 px west of the near edge": {
+   "H_profile": [
+    [
+     18210,
+     0
+    ],
+    [
+     18215,
+     0.2
+    ],
+    [
+     18224,
+     0.49
+    ],
+    [
+     18242,
+     0.96
+    ],
+    [
+     18270,
+     1.59
+    ],
+    [
+     18290,
+     2.04
+    ],
+    [
+     18311,
+     2.46
+    ],
+    [
+     18335,
+     2.86
+    ],
+    [
+     18361,
+     3.28
+    ],
+    [
+     18388,
+     3.6
+    ],
+    [
+     18419,
+     3.93
+    ],
+    [
+     18445,
+     4.27
+    ],
+    [
+     18475,
+     4.54
+    ],
+    [
+     18507,
+     4.78
+    ],
+    [
+     18540,
+     4.98
+    ],
+    [
+     18574,
+     5.18
+    ],
+    [
+     18610,
+     5.33
+    ],
+    [
+     18650,
+     5.4
+    ],
+    [
+     18690,
+     5.44
+    ],
+    [
+     18732,
+     5.44
+    ],
+    [
+     18775,
+     5.43
+    ],
+    [
+     18819,
+     5.37
+    ],
+    [
+     18865,
+     5.26
+    ],
+    [
+     18912,
+     5.1
+    ],
+    [
+     18961,
+     4.88
+    ],
+    [
+     19010,
+     4.59
+    ],
+    [
+     19059,
+     4.22
+    ],
+    [
+     19109,
+     3.76
+    ],
+    [
+     19156,
+     3.29
+    ],
+    [
+     19208,
+     2.73
+    ],
+    [
+     19254,
+     2.19
+    ],
+    [
+     19297,
+     1.6
+    ],
+    [
+     19341,
+     1
+    ],
+    [
+     19390,
+     0.39
+    ],
+    [
+     19425,
+     0
+    ]
+   ],
+   "how": "the deck 600 px west of the painted near edge at the same v: the heights of `bridge deck` read 600 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 600 px west"
+  },
+  "bridge deck: 650 px west of the near edge": {
+   "H_profile": [
+    [
+     18160,
+     0
+    ],
+    [
+     18165,
+     0.2
+    ],
+    [
+     18174,
+     0.49
+    ],
+    [
+     18192,
+     0.96
+    ],
+    [
+     18220,
+     1.59
+    ],
+    [
+     18240,
+     2.04
+    ],
+    [
+     18261,
+     2.46
+    ],
+    [
+     18285,
+     2.86
+    ],
+    [
+     18311,
+     3.28
+    ],
+    [
+     18338,
+     3.6
+    ],
+    [
+     18369,
+     3.93
+    ],
+    [
+     18395,
+     4.27
+    ],
+    [
+     18425,
+     4.54
+    ],
+    [
+     18457,
+     4.78
+    ],
+    [
+     18490,
+     4.98
+    ],
+    [
+     18524,
+     5.18
+    ],
+    [
+     18560,
+     5.33
+    ],
+    [
+     18600,
+     5.4
+    ],
+    [
+     18640,
+     5.44
+    ],
+    [
+     18682,
+     5.44
+    ],
+    [
+     18725,
+     5.43
+    ],
+    [
+     18769,
+     5.37
+    ],
+    [
+     18815,
+     5.26
+    ],
+    [
+     18862,
+     5.1
+    ],
+    [
+     18911,
+     4.88
+    ],
+    [
+     18960,
+     4.59
+    ],
+    [
+     19009,
+     4.22
+    ],
+    [
+     19059,
+     3.76
+    ],
+    [
+     19106,
+     3.29
+    ],
+    [
+     19158,
+     2.73
+    ],
+    [
+     19204,
+     2.19
+    ],
+    [
+     19247,
+     1.6
+    ],
+    [
+     19291,
+     1
+    ],
+    [
+     19340,
+     0.39
+    ],
+    [
+     19375,
+     0
+    ]
+   ],
+   "how": "the deck 650 px west of the painted near edge at the same v: the heights of `bridge deck` read 650 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 650 px west"
+  },
+  "bridge deck: 700 px west of the near edge": {
+   "H_profile": [
+    [
+     18110,
+     0
+    ],
+    [
+     18115,
+     0.2
+    ],
+    [
+     18124,
+     0.49
+    ],
+    [
+     18142,
+     0.96
+    ],
+    [
+     18170,
+     1.59
+    ],
+    [
+     18190,
+     2.04
+    ],
+    [
+     18211,
+     2.46
+    ],
+    [
+     18235,
+     2.86
+    ],
+    [
+     18261,
+     3.28
+    ],
+    [
+     18288,
+     3.6
+    ],
+    [
+     18319,
+     3.93
+    ],
+    [
+     18345,
+     4.27
+    ],
+    [
+     18375,
+     4.54
+    ],
+    [
+     18407,
+     4.78
+    ],
+    [
+     18440,
+     4.98
+    ],
+    [
+     18474,
+     5.18
+    ],
+    [
+     18510,
+     5.33
+    ],
+    [
+     18550,
+     5.4
+    ],
+    [
+     18590,
+     5.44
+    ],
+    [
+     18632,
+     5.44
+    ],
+    [
+     18675,
+     5.43
+    ],
+    [
+     18719,
+     5.37
+    ],
+    [
+     18765,
+     5.26
+    ],
+    [
+     18812,
+     5.1
+    ],
+    [
+     18861,
+     4.88
+    ],
+    [
+     18910,
+     4.59
+    ],
+    [
+     18959,
+     4.22
+    ],
+    [
+     19009,
+     3.76
+    ],
+    [
+     19056,
+     3.29
+    ],
+    [
+     19108,
+     2.73
+    ],
+    [
+     19154,
+     2.19
+    ],
+    [
+     19197,
+     1.6
+    ],
+    [
+     19241,
+     1
+    ],
+    [
+     19290,
+     0.39
+    ],
+    [
+     19325,
+     0
+    ]
+   ],
+   "how": "the deck 700 px west of the painted near edge at the same v: the heights of `bridge deck` read 700 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 700 px west"
+  },
+  "bridge deck: 750 px west of the near edge": {
+   "H_profile": [
+    [
+     18060,
+     0
+    ],
+    [
+     18065,
+     0.2
+    ],
+    [
+     18074,
+     0.49
+    ],
+    [
+     18092,
+     0.96
+    ],
+    [
+     18120,
+     1.59
+    ],
+    [
+     18140,
+     2.04
+    ],
+    [
+     18161,
+     2.46
+    ],
+    [
+     18185,
+     2.86
+    ],
+    [
+     18211,
+     3.28
+    ],
+    [
+     18238,
+     3.6
+    ],
+    [
+     18269,
+     3.93
+    ],
+    [
+     18295,
+     4.27
+    ],
+    [
+     18325,
+     4.54
+    ],
+    [
+     18357,
+     4.78
+    ],
+    [
+     18390,
+     4.98
+    ],
+    [
+     18424,
+     5.18
+    ],
+    [
+     18460,
+     5.33
+    ],
+    [
+     18500,
+     5.4
+    ],
+    [
+     18540,
+     5.44
+    ],
+    [
+     18582,
+     5.44
+    ],
+    [
+     18625,
+     5.43
+    ],
+    [
+     18669,
+     5.37
+    ],
+    [
+     18715,
+     5.26
+    ],
+    [
+     18762,
+     5.1
+    ],
+    [
+     18811,
+     4.88
+    ],
+    [
+     18860,
+     4.59
+    ],
+    [
+     18909,
+     4.22
+    ],
+    [
+     18959,
+     3.76
+    ],
+    [
+     19006,
+     3.29
+    ],
+    [
+     19058,
+     2.73
+    ],
+    [
+     19104,
+     2.19
+    ],
+    [
+     19147,
+     1.6
+    ],
+    [
+     19191,
+     1
+    ],
+    [
+     19240,
+     0.39
+    ],
+    [
+     19275,
+     0
+    ]
+   ],
+   "how": "the deck 750 px west of the painted near edge at the same v (the far edge deck_w; the route's edge_n on the deck): the heights of `bridge deck` read 750 px further east (the deck is level across the picture, the bridge agent), i.e. its [u, H] pairs shifted 750 px west"
+  },
+  "animal S3.ani.horse_19055": {
+   "H_profile": [
+    [
+     18510,
+     0
+    ],
+    [
+     18515,
+     0.2
+    ],
+    [
+     18524,
+     0.49
+    ],
+    [
+     18542,
+     0.96
+    ],
+    [
+     18570,
+     1.59
+    ],
+    [
+     18590,
+     2.04
+    ],
+    [
+     18611,
+     2.46
+    ],
+    [
+     18635,
+     2.86
+    ],
+    [
+     18661,
+     3.28
+    ],
+    [
+     18688,
+     3.6
+    ],
+    [
+     18719,
+     3.93
+    ],
+    [
+     18745,
+     4.27
+    ],
+    [
+     18775,
+     4.54
+    ],
+    [
+     18807,
+     4.78
+    ],
+    [
+     18840,
+     4.98
+    ],
+    [
+     18874,
+     5.18
+    ],
+    [
+     18910,
+     5.33
+    ],
+    [
+     18950,
+     5.4
+    ],
+    [
+     18990,
+     5.44
+    ],
+    [
+     19032,
+     5.44
+    ],
+    [
+     19075,
+     5.43
+    ],
+    [
+     19119,
+     5.37
+    ],
+    [
+     19165,
+     5.26
+    ],
+    [
+     19212,
+     5.1
+    ],
+    [
+     19261,
+     4.88
+    ],
+    [
+     19310,
+     4.59
+    ],
+    [
+     19359,
+     4.22
+    ],
+    [
+     19409,
+     3.76
+    ],
+    [
+     19456,
+     3.29
+    ],
+    [
+     19508,
+     2.73
+    ],
+    [
+     19554,
+     2.19
+    ],
+    [
+     19597,
+     1.6
+    ],
+    [
+     19641,
+     1
+    ],
+    [
+     19690,
+     0.39
+    ],
+    [
+     19725,
+     0
+    ]
+   ],
+   "how": "the rider of S3.ani.horse_19055, which stands on the bridge deck: his foot point (the seat's foot on the deck, est) [19112,332] is 300 px west of the painted near edge at its v, so the deck profile shifted 300 px west (as `bridge deck: 300 px west of the near edge`); without this key world() would take the rider's support as the ground"
+  },
+  "animal S3.ani.donkey_ridden_18690": {
+   "H_profile": [
+    [
+     18560,
+     0
+    ],
+    [
+     18565,
+     0.2
+    ],
+    [
+     18574,
+     0.49
+    ],
+    [
+     18592,
+     0.96
+    ],
+    [
+     18620,
+     1.59
+    ],
+    [
+     18640,
+     2.04
+    ],
+    [
+     18661,
+     2.46
+    ],
+    [
+     18685,
+     2.86
+    ],
+    [
+     18711,
+     3.28
+    ],
+    [
+     18738,
+     3.6
+    ],
+    [
+     18769,
+     3.93
+    ],
+    [
+     18795,
+     4.27
+    ],
+    [
+     18825,
+     4.54
+    ],
+    [
+     18857,
+     4.78
+    ],
+    [
+     18890,
+     4.98
+    ],
+    [
+     18924,
+     5.18
+    ],
+    [
+     18960,
+     5.33
+    ],
+    [
+     19000,
+     5.4
+    ],
+    [
+     19040,
+     5.44
+    ],
+    [
+     19082,
+     5.44
+    ],
+    [
+     19125,
+     5.43
+    ],
+    [
+     19169,
+     5.37
+    ],
+    [
+     19215,
+     5.26
+    ],
+    [
+     19262,
+     5.1
+    ],
+    [
+     19311,
+     4.88
+    ],
+    [
+     19360,
+     4.59
+    ],
+    [
+     19409,
+     4.22
+    ],
+    [
+     19459,
+     3.76
+    ],
+    [
+     19506,
+     3.29
+    ],
+    [
+     19558,
+     2.73
+    ],
+    [
+     19604,
+     2.19
+    ],
+    [
+     19647,
+     1.6
+    ],
+    [
+     19691,
+     1
+    ],
+    [
+     19740,
+     0.39
+    ],
+    [
+     19775,
+     0
+    ]
+   ],
+   "how": "the rider of S3.ani.donkey_ridden_18690, which stands on the bridge deck: his foot point (the seat's foot on the deck, est) [18650,850] is 250 px west of the painted near edge at its v, so the deck profile shifted 250 px west (as `bridge deck: 250 px west of the near edge`); without this key world() would take the rider's support as the ground"
+  },
+  "bridge deck": {
+   "H_profile": [
+    [
+     18810,
+     0
+    ],
+    [
+     18815,
+     0.2
+    ],
+    [
+     18824,
+     0.49
+    ],
+    [
+     18842,
+     0.96
+    ],
+    [
+     18870,
+     1.59
+    ],
+    [
+     18890,
+     2.04
+    ],
+    [
+     18911,
+     2.46
+    ],
+    [
+     18935,
+     2.86
+    ],
+    [
+     18961,
+     3.28
+    ],
+    [
+     18988,
+     3.6
+    ],
+    [
+     19019,
+     3.93
+    ],
+    [
+     19045,
+     4.27
+    ],
+    [
+     19075,
+     4.54
+    ],
+    [
+     19107,
+     4.78
+    ],
+    [
+     19140,
+     4.98
+    ],
+    [
+     19174,
+     5.18
+    ],
+    [
+     19210,
+     5.33
+    ],
+    [
+     19250,
+     5.4
+    ],
+    [
+     19290,
+     5.44
+    ],
+    [
+     19332,
+     5.44
+    ],
+    [
+     19375,
+     5.43
+    ],
+    [
+     19419,
+     5.37
+    ],
+    [
+     19465,
+     5.26
+    ],
+    [
+     19512,
+     5.1
+    ],
+    [
+     19561,
+     4.88
+    ],
+    [
+     19610,
+     4.59
+    ],
+    [
+     19659,
+     4.22
+    ],
+    [
+     19709,
+     3.76
+    ],
+    [
+     19756,
+     3.29
+    ],
+    [
+     19808,
+     2.73
+    ],
+    [
+     19854,
+     2.19
+    ],
+    [
+     19897,
+     1.6
+    ],
+    [
+     19941,
+     1
+    ],
+    [
+     19990,
+     0.39
+    ],
+    [
+     20025,
+     0
+    ]
+   ],
+   "how": "the painted near (east) edge deck_e of S3.str.rainbow_bridge, the bridge agent's heights at its 35 points (gen/map/S3/reports/bridge.md): H = (v of the east face's ground line straight below - v of deck_e)/77, the ground line through the feet se (18810, 1090, est) and ne (20025, 396), slope -0.571; crown 5.44 m at u 19290-19332, the picture's highest deck point (19610, 280) at 4.59 m. THE DECK'S WIDTH LIES EAST-WEST IN THE PICTURE AND ITS HEIGHTS ARE LEVEL ACROSS IT, so a point on the deck has the H of deck_e at u* = max(u, u_s(v)) (u_s(v): deck_e's u on the south flank at the point's own v; the bridge agent's rule). world() reads a u-keyed profile at the point's own u, so each line and thing on the deck names its offset west of the near edge, measured on the strokes in 50-px steps (merge_fixes.mjs section 9e: support \"bridge deck: <N> px west of the near edge\", the profiles above). This support (offset 0) is for deck_e itself, the near railing's crowd and the north ramp. Banding error: at most 25 px of u, i.e. up to 0.55 m on the steepest flank (u 18810-18900) and under 0.25 m elsewhere; the deck lines and the route are exact. NOT an H_profile_X (the lead's note): with S3's knots the bridge's axis runs ~49 deg from east, so world X does not fix the place along the deck, and the tool's 8-step solve diverges on the painted flanks; the comparison is in questions and merge_notes.md"
+  },
+  "upper floor: S3.bld.tavern_river_hall_15540": {
+   "H": 3.83,
+   "how": "structures_w: the balcony's floor line (bottom rail and floor beam) at v ~1475 over u 15750-16330 ((16320, 1478) measured), over the ground straight below at the hall's south front, hidden under the pent roof and the silk's bottom edge, est v ~1770 (the base corners sw/se at v 1775 are placeholders): (1770 - 1475)/77 = 3.83 m (est; the ground could be lower, off the silk). The diners, the table, the rack's pot and the basin stand on it; the side gallery's figures too (its floor runs (16330, 1500) -> (16520, 1350), receding)"
+  },
+  "upper floor: S3.bld.far_bank_hall_18520": {
+   "H": 0.39,
+   "how": "measured by the frame agent on a zoom-3 crop (scratchpad S3_frame/farhall.jpg): the deck's front beam's top (18540, ~274) over the foot of the stilt below it (18540, ~304), 30 px = 0.39 m above the bank (the stilts' feet are the far bank's bank_top, S3.grd.far_bank_18450, H 0; structures_e and t5: the deck 25-40 px above the stilts' feet). Its six tables, benches and chairs stand on it"
+  },
+  "table top: S3.prop.table_16145": {
+   "H": 4.28,
+   "how": "the upper floor (3.83) + the table: its top's front edge v ~1390 over its legs' feet v ~1425 (t1: top v 1377-1392, legs to v ~1405-1425), 35 px = 0.45 m. The dishes stand on it"
+  },
+  "table top: S3.prop.basin_16180": {
+   "H": 4.27,
+   "how": "the upper floor (3.83) + the basin: its rim under the heap (v ~1380) over its est bottom (16180, 1414), 34 px = 0.44 m (second pass west). The heap of fruit or flowers lies on it"
+  },
+  "table top: S3.prop.bottle_stand_17600": {
+   "H": 0.87,
+   "how": "derived: the box's top v ~1190 over its leg's foot (17597, 1257), 67 px (t4). The bottles stand on it"
+  },
+  "table top: S3.prop.goods_table_17708": {
+   "H": 0.65,
+   "how": "derived: the top's front edge v ~1217 (the dark front band v 1217-1237) over the east leg's foot (17772, 1267), 50 px (t4). The jars stand on it"
+  },
+  "table top: S3.prop.food_stand_17815": {
+   "H": 1.01,
+   "how": "derived: the top with its tray v ~1195 over the legs' feet v ~1273 (u 17788-17812), 78 px (t4: a tall stand or high table). The round tray stands on it"
+  },
+  "table top: S3.prop.far_bank_long_table_17945": {
+   "H": 0.36,
+   "how": "derived: the top line v ~149 over the legs' feet v ~177 (u 17895-17985), 28 px (painted small up the silk; the height keeps the thing on it at the table's depth). The thing on the table stands on it"
+  },
+  "table top: S3.prop.shop_table_19776": {
+   "H": 0.62,
+   "how": "derived: the top's front edge v ~1513 over the front legs' feet v 1557-1565 (t8), 48 px. The bowl stands on it"
+  },
+  "boat bow deck: S3.veh.boat_under_way_15595": {
+   "H": 1.12,
+   "how": "water -0.7 + 1.82 m: the raised bow deck, level with the bow top (15597, 300), over the front waterline straight below it (15595, 440, est; river_w), 140 px. The three bowmen stand on it (river_w: floor v ~298)"
+  },
+  "boat deck: S3.veh.boat_under_way_15595": {
+   "H": -0.13,
+   "how": "water -0.7 + 0.57 m: the stern deck's near gunwale (15850, ~476) over the hull's near-side bottom (15850, ~520), 44 px (frame agent, zoom-2 crop scratchpad S3_frame/boatway.jpg; river_w: stern_top (15952, 482) over rear (15955, 522, est), 40 px). The sweep men stand on it"
+  },
+  "boat deck: S3.veh.boat_towed_mast_16228": {
+   "H": -0.05,
+   "how": "water -0.7 + 0.65 m: bow_top (16222, 262, est) over front (16228, 312, est), 50 px (river_w; est). The poler stands on it; the two men on the cargo heap stand higher (their height above the deck is the builder's choice)"
+  },
+  "boat deck: S3.veh.boat_passenger_long_16398": {
+   "H": -0.36,
+   "how": "water -0.7 + 0.34 m: the near gunwale under the cabin's windows (16553, ~326) over the hull's near-side bottom (16553, ~352), 26 px (frame agent, zoom-2.5 crop; est). Painted far up the silk (diminution ~0.4). The passenger in the door stands on it"
+  },
+  "boat deck: S3.veh.boat_awning_17442": {
+   "H": -0.44,
+   "how": "water -0.7 + 0.26 m: the near gunwale (17600, ~342) over beam_s (17600, 362), 20 px (frame agent, zoom-2 crop; est; painted far up the silk). The seated passenger and the boatman under the awning are on it"
+  },
+  "boat deck: S3.veh.boat_mat_cabin_18005": {
+   "H": -0.23,
+   "how": "water -0.7 + 0.47 m: the near gunwale (18160, ~348) over beam_s (18160, 384), 36 px (frame agent, zoom-2.5 crop; est). The two seated passengers are on it"
+  },
+  "boat deck: S3.veh.boat_unloading_17705": {
+   "H": 0.21,
+   "how": "water -0.7 + 0.91 m: the near gunwale amidships (17870, ~830) over the hull's near-side bottom (17870, 900; river_w's waterline point), 70 px (frame agent, zoom-2 crop scratchpad S3_frame/unloading.jpg). The six porters on the foredeck stand on it. (bow_top (17700, 830) over front (17705, 868, est) gives 0.49 m at the raised bow beam)"
+  },
+  "boat deck: S3.veh.boat_mast_lowering_19518": {
+   "H": 0.08,
+   "how": "water -0.7 + 0.78 m: river_e's mid-ship gunwale (19800, 732) over the waterline (19800, 792), 60 px (the bow: (19515, 700) over (19518, 766), 0.86 m). Sixteen crew stand on it"
+  },
+  "boat roof: S3.veh.boat_mast_lowering_19518": {
+   "H": 2.29,
+   "how": "water -0.7 + 2.99 m: the poop deck over the after cabin, its south eave (20200, 470) over the near waterline (20200, 700), 230 px (river_e, est: 2.5-3 m). The three stern hands haul the mast's lines on it"
+  },
+  "boat deck: S3.veh.boat_cabin_under_arch_19225": {
+   "H": 0.01,
+   "how": "water -0.7 + 0.71 m: the cabin floor (19400, 525) over the waterline (19400, 580), 55 px (river_e). The two passengers at the railing stand on it"
+  },
+  "boat roof: S3.veh.boat_moored_south_bank_19745": {
+   "H": 0.48,
+   "how": "water -0.7 + 1.18 m: the roof (19952, 1097) over the est waterline (19952, 1188), 91 px (river_e; the hull is hidden under the shops' roofs). The two wavers and the round ribbed object are on it"
+  },
+  "boat deck: S3.veh.boat_moored_south_bank_19745": {
+   "H": 0.4,
+   "how": "water -0.7 + 1.1 m: the hatch floor, river_e's est (about 85 px above the hidden waterline). The two men in the hatch stand on it"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S3.road.main:lines.centre.0"
+  ],
+  "station": 110.35,
+  "about": "where the route crosses the seam with S4b (u 15500): S3.road.main's centre-line point 0, exactly S4b.road.main's last centre point (15500, 1530, est; read from map/strokes/S4b.json by merge_fixes.mjs on every run). Station +110.35 there, S4b's route station at that point (sections/outer_road_2/layout.json), so stations run on."
+ },
+ "checks": [
+  {
+   "what": "十千脚店's gate: front eave above its south-west corner (sw -> sw_eave), m",
+   "a": "S3.bld.tavern_gate_16870:base.sw",
+   "b": "S3.bld.tavern_gate_16870:sw_eave",
+   "measure": "height",
+   "expect": "a gate hall's front eave, roughly 3.5-4.5 m (the base corner is est at the silk's bottom edge, so this is an upper bound)"
+  },
+  {
+   "what": "the riverside hall: upper eave above its south-west corner (sw -> sw_eave), m",
+   "a": "S3.bld.tavern_river_hall_15540:base.sw",
+   "b": "S3.bld.tavern_river_hall_15540:sw_eave",
+   "measure": "height",
+   "expect": "a two-storey hall's upper eave, roughly 6-7 m (its floor 3.83 m; base est at the silk's edge)"
+  },
+  {
+   "what": "mat shed under the arch: eave height (sw -> sw_eave), m",
+   "a": "S3.bld.mat_shed_19160:base.sw",
+   "b": "S3.bld.mat_shed_19160:sw_eave",
+   "measure": "height",
+   "expect": "a mat-roofed shed's eave, roughly 2.2-2.8 m"
+  },
+  {
+   "what": "far-bank hall west of the bridge: eave height (sw -> sw_eave), m",
+   "a": "S3.bld.far_hall_17875:base.sw",
+   "b": "S3.bld.far_hall_17875:sw_eave",
+   "measure": "height",
+   "expect": "a shop hall's eave, roughly 3 m; at the top of the silk (v 200), where figures are painted at 0.3-0.35 of the road's size"
+  },
+  {
+   "what": "north-bank tavern: eave height (sw -> sw_eave), m",
+   "a": "S3.bld.tavern_20230:base.sw",
+   "b": "S3.bld.tavern_20230:sw_eave",
+   "measure": "height",
+   "expect": "a tavern's front eave, roughly 3 m; on the north bank (v 288), painted at 0.5-0.7 of the road's size"
+  },
+  {
+   "what": "the 新酒 pole: top above its est foot (base -> top), m",
+   "a": "S3.prop.xinjiu_flagpole_17630:base",
+   "b": "S3.prop.xinjiu_flagpole_17630:top",
+   "measure": "height",
+   "expect": "a tavern's banner pole, roughly 8-10 m (foot est)"
+  },
+  {
+   "what": "the saddled horse at the gate: fore to hind hooves, m",
+   "a": "S3.ani.horse_17222:fore",
+   "b": "S3.ani.horse_17222:hind",
+   "measure": "distance",
+   "expect": "a horse's hoof-to-hoof length, roughly 1.2-1.5 m; on the street (v 1770)"
+  },
+  {
+   "what": "the 串车: front to rear (ground under the ends), m",
+   "a": "S3.veh.chuanche_17775:front",
+   "b": "S3.veh.chuanche_17775:rear",
+   "measure": "distance",
+   "expect": "a one-wheeled barrow with its load and handles, roughly 3-4 m"
+  },
+  {
+   "what": "big hall at the bridge's south foot: ridge direction (apex_s -> apex_n at ~5.5 m), degrees from east",
+   "a": "S3.bld.bridge_foot_hall_19000:apex_s",
+   "b": "S3.bld.bridge_foot_hall_19000:apex_n",
+   "measure": "direction",
+   "Ha": 5.5,
+   "expect": "about 90 (north): a hall square to the street (its eaves are parallel to the ridge)"
+  },
+  {
+   "what": "十千脚店's gate: east eave direction (se_eave -> ne_eave at ~4.5 m), degrees from east",
+   "a": "S3.bld.tavern_gate_16870:se_eave",
+   "b": "S3.bld.tavern_gate_16870:ne_eave",
+   "measure": "direction",
+   "Ha": 4.5,
+   "expect": "about 90 (north): a gate square to its street"
+  },
+  {
+   "what": "the Rainbow Bridge: deck width at the crown (deck_e -> deck_w, point 19, both at the crown's H 5.44), m",
+   "a": "S3.str.rainbow_bridge:lines.deck_e.19",
+   "b": "S3.str.rainbow_bridge:lines.deck_w.19",
+   "measure": "distance",
+   "Ha": 5.44,
+   "expect": "about 8 m (张临生's hint; the kit builds 7.8-8 m); the bridge agent's 750 px across"
+  },
+  {
+   "what": "the Rainbow Bridge: foot to foot along the painted east edge (base se -> ne, ground), m",
+   "a": "S3.str.rainbow_bridge:base.se",
+   "b": "S3.str.rainbow_bridge:base.ne",
+   "measure": "distance",
+   "expect": "the bridge's length over its ramps, roughly 25-30 m real (the kit fits 25 m and extends the ramps to walk)"
+  },
+  {
+   "what": "the Rainbow Bridge: axis direction (base se -> ne), degrees from east",
+   "a": "S3.str.rainbow_bridge:base.se",
+   "b": "S3.str.rainbow_bridge:base.ne",
+   "measure": "direction",
+   "expect": "about 90 for a bridge square to its width (the width lies east-west in the picture); anything less is the parallelogram skew the kit warns of"
+  },
+  {
+   "what": "the Rainbow Bridge: near railing above the deck edge at the crown (deck_e.25 -> rail_e_top.10, u ~19610), m",
+   "a": "S3.str.rainbow_bridge:lines.deck_e.25",
+   "b": "S3.str.rainbow_bridge:rail_e_top.10",
+   "measure": "height",
+   "expect": "a bridge railing, roughly 1.0-1.1 m (the crown's figures are painted at 0.85-0.9 of the frame's scale)"
+  },
+  {
+   "what": "the big boat: hull length between the bow's and stern's waterlines (front -> rear, on the water), m",
+   "a": "S3.veh.boat_mast_lowering_19518:front",
+   "b": "S3.veh.boat_mast_lowering_19518:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "a big 汴河 cargo boat with an after cabin, roughly 20-25 m"
+  },
+  {
+   "what": "the boat under way: hull length (front -> rear, on the water), m",
+   "a": "S3.veh.boat_under_way_15595:front",
+   "b": "S3.veh.boat_under_way_15595:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "a river boat with a stern sweep, roughly 12-18 m; mid-river (v 440-522), figures at ~0.4"
+  },
+  {
+   "what": "the long passenger boat: hull length (front -> rear, on the water), m",
+   "a": "S3.veh.boat_passenger_long_16398:front",
+   "b": "S3.veh.boat_passenger_long_16398:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "a long cabin boat, roughly 20-30 m; far up the silk (v 340-388)"
+  },
+  {
+   "what": "the river at the S4b seam: near shore to far shore at u 15500 (on the water), m",
+   "a": "S3.water.bian_west_15500:lines.shore_s.0",
+   "b": "S3.grd.far_bank_seam_15500:lines.shore.0",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "the same as S4b's check (16.54 m): the same two points"
+  },
+  {
+   "what": "the river at u 18300: near shore to far shore (on the water), m",
+   "a": "S3.water.bian_river_18300:lines.shore_s.0",
+   "b": "S3.water.bian_river_18300:lines.shore_n.0",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "boats moored on both banks and a channel between: 20-30 m real; both shores est"
+  }
+ ],
+ "questions": [
+  "FOR THE LEAD FIRST, THE BRIDGE DECK'S HEIGHTS: the lead's note asked for an H_profile_X built from the bridge kit's table. It cannot give this deck's heights, so the frame does not use it. With S3's measured knots the bridge's axis (foot se (18810, 1090) to foot ne (20025, 396)) runs 50.6 deg from east (checks), and the deck's width lies east-west in the picture with its heights level across it (the bridge agent). So world X does not fix a point's place along the deck: deck_e and deck_w at the same height lie 9.7-10.6 m apart in X. Measured on the 88 deck entities and the 105 deck-line points (scratchpad S3_frame/kiteval.py, deckcheck.py): an H_profile_X from the kit's table gives the tool's H minus the kit's own on_deck H rms 2.1 m (max 4.4), and minus the painted heights rms 2.9 m (max 5.4); deck_w's points are off by rms 4.0 m. The tool's 8-step solve also runs away on the painted flanks: dX/dH is about 0.7 m per m, and the flanks rise more than 1.4 m per m of X, so many south-ramp figures fall back to H 0, the failure the note was meant to fix. USED INSTEAD: u-keyed profiles of the painted near edge, one per offset west of it. A thing on the deck names the offset it stands at, measured on the strokes at its own v in 50-px steps ('bridge deck: <N> px west of the near edge', merge_fixes.mjs section 9e). This is the bridge agent's rule u* = max(u, u_s(v)). Result in map/world/S3.json: deck_e, deck_c and deck_w's lines_H equal the painted heights exactly, and so do the route's three lines (support_by per line; the merge's support_ranges is gone). The 88 deck entities are within rms 0.17 m (max 0.52) of the rule, and the two riders take their animal's deck height. TOOL REQUEST: a deck support that world() reads at u* = max(u, u_s(v)), or an H_profile keyed by depth D with a damped solve. On the visible deck the painted H is a function of D alone (D runs monotonically from 9.27 to 22.81 m along deck_e). Either would let the 17 offset supports collapse back into one 'bridge deck'. The kit's X profile, if wanted anyway: [[126.47, 0], [127.79, 0.33], [129.11, 1.25], [130.43, 2.52], [131.75, 3.82], [133.07, 4.82], [134.4, 5.28], [135.72, 5.09], [137.03, 4.36], [138.36, 3.24], [139.68, 1.99], [141.0, 0.88], [142.32, 0.17], [143.31, 0]].",
+  "THE BRIDGE: MAP AND BUILD. The kit (python3 blender/kit_rainbow_bridge.py table sections/rainbow_bridge/layout.json map/frames/S3.json) builds the deck square and walkable: 8.25 m wide, 25.5 m long, crown 5.29 m, both ramps extended (south 2.5 m, north 3.0 m), steepest 33.9 deg. It fits the mapped heights with rms 2.51 m and warns that the mapped ends are skewed 41 deg. Its on_deck H differs from the map's by rms 1.76 m (max 3.29), and 58 of the 88 deck entities' world positions lie on the built deck. Each deck entity's painted H, world H and kit H are in scratchpad S3_frame/deck_entities.json. The builder places deck people with the kit's on_deck (or records moves in build_choices.json). A local knot that squares the bridge is not an option: dx would need about 90 over u 18810-20025, against the measured 30-39 on the ground nearby. Ramping to it within S3 folds the plan above D 10 m (from 39.2 at 18290) or compresses the silk's top 3:1 and then stretches it about 5x down to S2's seam. The kit also warns that the soffit is 2.86 m above the water (-0.7) over the middle 40%, less than its 3.5 m for the big boat.",
+  "THE RECEDING DIRECTION: dx rises from S4b's 31.6 at the seam to 47.9 at the tavern's 杈子 (u 16880), and falls to 39.2 at the bridge's south foot and 30.4 at the bridge's north end. All three groups are ground-level edges; each knot is its group's mean (derivation). Wall check: the big hall at the bridge's south foot has its ridge at 87.9 deg, and 十千脚店's gate's east eave is at 88.1 deg (expected 90). If the lead changes S4b's knots (S4b's first question), S3's seam knot changes with them. At the east end the north-bank tavern's table tops (u ~20160) read 41 (three edges, 39-43), against 30.4 for the south bank's floor board 330 px west. The sign is the same, but 41 there would compress the silk's top rows 6:1. Not a knot: the painter draws the north bank's furniture less steep.",
+  "THE ROUTE AT THE S4b SEAM: S3.road.main's point 0 is S4b's road point (15500, 1530, est), along the front of S4b.bld.house_behind_willow_15414. The lead's reading (c) runs the road behind the riverside hall at v ~1235, so the hidden stretch turns 5.8 m north within 1.2 m of X between u 15500 and 15800 (world (93.90, 0.68) -> (95.14, 6.44)). It is all est, under roofs. The builder lays only what the walkable area needs (a recorded choice).",
+  "THE FAR BANK AT THE S4b SEAM: S4b ends a strip of far bank at u 15500 (bank_top v 75, shore v 112, est). S3's water had no north shore west of u 16150, and the scan there is plain silk. The frame step added S3.grd.far_bank_seam_15500 (conf low), the shortest join: S4b's points turn up off the silk's top edge by u 15600-15650. The second pass's willow crown S3.tree.willow_crown_top_15520 (base est (15520, 70), S4b's own note) stands on it. The other reading is that the far bank runs on along the top edge to u ~16150. The willow is S3's by main point, 20 px east of the seam; the lead may give it to S4b.",
+  "THE WATER LEVEL: copied from S4b (-0.7, a bound). S3 has no reading of its own: no vertical bank face, stair, revetment or abutment foot meets the water in u 15500-20650. river_e's bounds under the far-bank hall on stilts (-0.86 to -1.0) fit it. The banks' shore lines stand on the water (support_by), like S4b's.",
+  "THE FAR (NORTH) BANK'S FACE, as S4b found: with the water at -0.7 a bank's waterline must be painted at least 54 px below its top for the shore to lie south of the bank top in the world. S3's north shores are est, hidden behind the moored boats, and run only 10-46 px below the bank tops. So they map 0.15-0.86 m NORTH of the bank top along u 16150-18300 (S3.water.bian_west_15500 shore_n against S3.grd.bank_n_16150), at u 18300, and along the north bank east of the bridge (u 20200-20500, 0.78-0.86 m; S3.grd.north_bank_20250). Under the far-bank hall on stilts (u 18450-18600, 67-77 px) they lie south as they should. AT S2's SEAM the route's centre (20500, 258) maps to (149.05, 25.50) and the north shore (20500, 310) to (149.03, 25.54): the route runs along the water's edge, and its edge_s (v 280) maps 0.5 m out over the water. Either the far shores lie lower on the silk than est (under the boats), or the far bank stands 0.2-0.5 m below the street. The builder should take the water plane to the bank_top lines and treat the far shore as hidden (a choice), as S4b's frame says. S2 starts from this point.",
+  "THE DIMINUTION AND THE STRIPS (BUILDING.md rule 5; the one-scale frame is kept). Standing figures, painted height against foot v: the street at v 1300-1790 is 152-208 px (1.0). The men at the bridge's south foot reach 230 px at v 1288 (1.2), and the deck crowd is 95-146 px. The unloading boat's crew is 110-135 at v ~810 (0.72), and the open shop's interior at the bottom edge 78-82 at v 1550 (0.43; size does not follow v alone). Mid-river crew are 62-90 at v 300-470 (0.4). The far bank west of the bridge is 45-70 at v 105-165 (0.22-0.35), and the north bank by the bridge's north end 81-105 at v 108-224 (0.5-0.7). The upper-floor diners are painted at about 1.4 times the frame's scale. Strip depths at the one depth rate: the north bank east of the bridge runs 5.8 m from the water's edge (v ~300) to the silk's top edge. Within it the tavern's front to its back is 1.6 m, and the route's two edges are 1.0-1.3 m apart (v 215-288). The far bank west of the bridge runs 3.9-4.7 m from its bank top (v 200-240) to the top edge, and the far bank at the S4b seam 1.5 m. Checks (real size, painted place): the big boat is 11.0 m, the boat under way 4.5 m and the long passenger boat 11.9 m. The river is 8.2 m wide at u 18300 and 16.5 m at u 15500. The far-bank hall's eave is 1.5 m and the north-bank tavern's 2.2 m. The bridge measures 17.5 m foot to foot, and its near railing 0.65 m above the deck edge. Sizes are the builder's.",
+  "TOOL QUIRK: plan.jpg labels the datum 'station 0' even when datum.station is set (here +110.35; S4b reported the same, tools/scroll_map.mjs plan())."
+ ],
+ "checks_result": [
+  {
+   "what": "十千脚店's gate: front eave above its south-west corner (sw -> sw_eave), m",
+   "expect": "a gate hall's front eave, roughly 3.5-4.5 m (the base corner is est at the silk's bottom edge, so this is an upper bound)",
+   "got": 5.49
+  },
+  {
+   "what": "the riverside hall: upper eave above its south-west corner (sw -> sw_eave), m",
+   "expect": "a two-storey hall's upper eave, roughly 6-7 m (its floor 3.83 m; base est at the silk's edge)",
+   "got": 7.27
+  },
+  {
+   "what": "mat shed under the arch: eave height (sw -> sw_eave), m",
+   "expect": "a mat-roofed shed's eave, roughly 2.2-2.8 m",
+   "got": 1.92
+  },
+  {
+   "what": "far-bank hall west of the bridge: eave height (sw -> sw_eave), m",
+   "expect": "a shop hall's eave, roughly 3 m; at the top of the silk (v 200), where figures are painted at 0.3-0.35 of the road's size",
+   "got": 1.53
+  },
+  {
+   "what": "north-bank tavern: eave height (sw -> sw_eave), m",
+   "expect": "a tavern's front eave, roughly 3 m; on the north bank (v 288), painted at 0.5-0.7 of the road's size",
+   "got": 2.18
+  },
+  {
+   "what": "the 新酒 pole: top above its est foot (base -> top), m",
+   "expect": "a tavern's banner pole, roughly 8-10 m (foot est)",
+   "got": 9
+  },
+  {
+   "what": "the saddled horse at the gate: fore to hind hooves, m",
+   "expect": "a horse's hoof-to-hoof length, roughly 1.2-1.5 m; on the street (v 1770)",
+   "got": 1.27
+  },
+  {
+   "what": "the 串车: front to rear (ground under the ends), m",
+   "expect": "a one-wheeled barrow with its load and handles, roughly 3-4 m",
+   "got": 4.54
+  },
+  {
+   "what": "big hall at the bridge's south foot: ridge direction (apex_s -> apex_n at ~5.5 m), degrees from east",
+   "expect": "about 90 (north): a hall square to the street (its eaves are parallel to the ridge)",
+   "got": 87.86
+  },
+  {
+   "what": "十千脚店's gate: east eave direction (se_eave -> ne_eave at ~4.5 m), degrees from east",
+   "expect": "about 90 (north): a gate square to its street",
+   "got": 88.13
+  },
+  {
+   "what": "the Rainbow Bridge: deck width at the crown (deck_e -> deck_w, point 19, both at the crown's H 5.44), m",
+   "expect": "about 8 m (张临生's hint; the kit builds 7.8-8 m); the bridge agent's 750 px across",
+   "got": 10.58
+  },
+  {
+   "what": "the Rainbow Bridge: foot to foot along the painted east edge (base se -> ne, ground), m",
+   "expect": "the bridge's length over its ramps, roughly 25-30 m real (the kit fits 25 m and extends the ramps to walk)",
+   "got": 17.53
+  },
+  {
+   "what": "the Rainbow Bridge: axis direction (base se -> ne), degrees from east",
+   "expect": "about 90 for a bridge square to its width (the width lies east-west in the picture); anything less is the parallelogram skew the kit warns of",
+   "got": 50.57
+  },
+  {
+   "what": "the Rainbow Bridge: near railing above the deck edge at the crown (deck_e.25 -> rail_e_top.10, u ~19610), m",
+   "expect": "a bridge railing, roughly 1.0-1.1 m (the crown's figures are painted at 0.85-0.9 of the frame's scale)",
+   "got": 0.65
+  },
+  {
+   "what": "the big boat: hull length between the bow's and stern's waterlines (front -> rear, on the water), m",
+   "expect": "a big 汴河 cargo boat with an after cabin, roughly 20-25 m",
+   "got": 11.02
+  },
+  {
+   "what": "the boat under way: hull length (front -> rear, on the water), m",
+   "expect": "a river boat with a stern sweep, roughly 12-18 m; mid-river (v 440-522), figures at ~0.4",
+   "got": 4.47
+  },
+  {
+   "what": "the long passenger boat: hull length (front -> rear, on the water), m",
+   "expect": "a long cabin boat, roughly 20-30 m; far up the silk (v 340-388)",
+   "got": 11.89
+  },
+  {
+   "what": "the river at the S4b seam: near shore to far shore at u 15500 (on the water), m",
+   "expect": "the same as S4b's check (16.54 m): the same two points",
+   "got": 16.54
+  },
+  {
+   "what": "the river at u 18300: near shore to far shore (on the water), m",
+   "expect": "boats moored on both banks and a channel between: 20-30 m real; both shores est",
+   "got": 8.21
+  }
+ ]
+}

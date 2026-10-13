@@ -1,0 +1,57 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Paint a material sheet in exactly image 1's style (hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette). Flat, front-on, no perspective, no lighting gradient, no shadows, no text. A 2x3 grid of six square, seamlessly tileable swatches with thin gaps between them.\n\nThese are surface paints only. The joints, board edges, block outlines and course lines are modelled in 3D and inked by the renderer, so no swatch may contain any joint, seam, outline, gap, nail, grid or repeated motif. Each swatch is a soft, even, low-contrast painted wash with gentle mottling and a few faint brush marks spread evenly, so that it can repeat many times without any spot standing out:\n1. pale weathered timber surface, only fine wood grain running left to right, a few faint long streaks, no board edges, no knots, no nails\n2. light grey dressed stone surface, soft chisel texture and faint mottling, no joints, no block outlines, no cracks\n3. grey-blue fired brick surface seen up close as a soft blue-grey wash with faint warm mottling, no bricks drawn, no mortar lines\n4. warm ochre rammed earth surface, soft faint horizontal banding, a few very faint hairline cracks, no hard lines\n5. packed earth ground, warm sandy ochre wash with faint dry speckle, no grass, no pebbles, no clumps\n6. bare trodden road earth, slightly darker and browner than swatch 5, faint long soft streaks running left to right, no ruts, no stones",
+ "refs": [
+  "gen/v1/target_street_B1.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "material_sheet"
+ },
+ "format": "png",
+ "generation_s": 33.8,
+ "attempts": 1,
+ "idempotency_key": "7d333ecd-60e0-4550-90a1-2672061912c5",
+ "request_id": "909ce0c8-3b08-42d0-9fae-6b5478ee5716",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 2461,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 361
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 2461,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 361
+  },
+  "total_tokens": 4045
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/19fae631-34af-4c09-a4a0-7b84b43db7fc"
+ ],
+ "files": [
+  "gen/sections/gate/textures_v2/material_sheet_0.png"
+ ]
+}

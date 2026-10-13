@@ -1,0 +1,57 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is a section of the Northern Song handscroll \"Along the River During the Qingming Festival\".\nRepaint image 1 as a game scene. Art style: stylized low-poly real-time 3D game render, simple clean readable shapes, flat colour fills with only one soft darker shadow tone, no surface textures, no PBR, no photorealism. Thin dark ink-brown outlines around shapes and along major folds, like a hand-inked illustration. Muted palette taken from an aged Northern Song painting on silk: warm silk ochre, pale beige plaster, ink-brown timber, soft grey-blue clay roof tiles, undyed hemp white, faded indigo, dull vermilion and malachite-green accents, sage-green willow. Calm, airy, cozy indie-game look.\nImage 1 is the ground truth for layout: keep its exact framing and its high oblique bird's-eye view, and keep every building, wall, stair, bridge, railing, tree, person, animal, cart and load in the same place, at the same size, facing the same way, in the same pose and in the same number. Do not add, remove, merge or move anything, and do not change the perspective or the crop. Where the old silk is faded, dark or damaged, paint the detail it clearly shows: roof tile rows, brackets and timber joinery, rammed-earth walls, plank railings, trunks and branches, clothing, loads, harnesses and wheels. The bare silk becomes packed-earth ground, grass and soft warm haze. Remove the red collector's seals, silk cracks and stains. No text, no UI, no watermark.",
+ "refs": [
+  "gen/v2/gate/src/test_tower_x6000_y0_1792.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "2048x2048",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "tower_text_g25"
+ },
+ "format": "png",
+ "generation_s": 50.3,
+ "attempts": 1,
+ "idempotency_key": "f0918fe8-3359-44d7-90d9-07d63304ab3f",
+ "request_id": "e4fe48a0-d392-40a2-93fd-56667989322f",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 2807,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2465,
+   "text_tokens": 342
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 2807,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2465,
+   "text_tokens": 342
+  },
+  "total_tokens": 4457
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/1a1a36f6-1b60-4438-a374-1f4dcaef02c5"
+ ],
+ "files": [
+  "gen/v2/gate/test/tower_text_g25_0.png"
+ ]
+}

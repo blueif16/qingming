@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is one of the labourers idling at the foot of the city wall outside the gate: adult working man, about 6.5 heads tall, tanned skin, simple small face with dark dot eyes and short brows, no detailed mouth. A dark grey-blue cloth head-wrap over a topknot. A short undyed off-white hemp jacket to the hip, crossed collar closing to the right, tied with a cloth sash, sleeves to the wrist. Loose off-white trousers gathered below the knee, white leggings, woven straw sandals with straps around the ankle.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/idler/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 33.6,
+ "attempts": 1,
+ "idempotency_key": "667150cc-a78e-4216-a767-604f41f0355b",
+ "request_id": "ad5ae3dc-1656-4476-b22e-a8e7be8fb33d",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3196,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2826,
+   "text_tokens": 370
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3196,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2826,
+   "text_tokens": 370
+  },
+  "total_tokens": 4780
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/66b8b4ac-d99b-42f4-9d82-6c4d9412fd8e"
+ ],
+ "files": [
+  "gen/characters/idler/sheet_0.png"
+ ]
+}

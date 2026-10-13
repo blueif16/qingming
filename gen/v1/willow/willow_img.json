@@ -1,0 +1,57 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Paint one single weeping willow tree in exactly image 1's style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette. The whole tree from the base of the trunk to the top of the crown, centred, front view. A thick, slightly leaning, gnarled trunk splitting into several upward branches, with long fine drooping strands of pale sage-green early-spring leaves hanging in a full curtain almost to the ground. Isolated on a plain flat light-grey background: no ground, no shadow, no buildings, no other objects, no text.",
+ "refs": [
+  "gen/v1/target_street_B1.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "willow_img"
+ },
+ "format": "png",
+ "generation_s": 38.4,
+ "attempts": 1,
+ "idempotency_key": "76e73452-c508-473e-8c90-52b6a936eba4",
+ "request_id": "631e18dd-e202-492f-83ef-446b06b5c8b0",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 2234,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 134
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 2234,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 134
+  },
+  "total_tokens": 3884
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/a608a22f-0bda-4010-958b-71e9ec311614"
+ ],
+ "files": [
+  "gen/v1/willow/willow_img_0.png"
+ ]
+}

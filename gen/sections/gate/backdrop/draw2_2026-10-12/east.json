@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 (Along the River During the Qingming Festival) and the only source for what this panel shows. Paint one very wide panel of a painted backdrop in exactly image 1's painting style (hand-inked dark-brown outlines, light hatching, flat muted painted colours, clean readable shapes), showing what image 2 paints, but as a view seen at eye level by a person standing on the ground at the edge of our scene and looking out: looking east along the outer road from the end of the moat bridge: the next stretch of the scroll (image 2), seen from its west end at eye level. Image 2's left end is nearest to us and its right end farthest away; its top edge is on our left and its bottom edge on our right. The broad bare-earth road runs straight away from us to the horizon. On it, small and far off: a big two-wheeled covered cart with a barrel-vaulted roof of woven mat, seen from behind, its team of oxen ahead led by a bearded man on foot, a rider with a round fan coming the other way, porters with loads on shoulder poles, a few riders on donkeys and some walkers. On the left of the road, nearest: stalls under flat woven-mat awnings and two or three big dark parasols; behind them dark pines and old willows, and a bare open ground climbing away to a temple's tiled gate hall and a small open-fronted shop among pines; farther along the left, a plain earthen wall topped with crossed spikes, with a small tiled gate building in it and a few soldiers idling in front of it; then a fortune-teller's flat mat awning with narrow signboards hanging under it, beside a huge old pollard willow with a dark, gnarled, burled trunk and long bare whips. On the right of the road: the long grey tiled roofs of halls and a tea house, one behind another, a rounded thatched hut, a tall pole with a long striped cloth banner, and a few bare trees.\n\nRules for the panel:\n- Only what image 2 paints. Add nothing that image 2 does not show: no hills or mountains, no distant tree lines or forests, no lakes, rivers or islands, no towers, pagodas, city walls, flags, clouds, birds, sun or haze banks, unless the description above names them. Leave out image 2's red seals, inscriptions and silk damage.\n- Eye level. The viewer's eye is at the height of a standing person's eyes, so the horizon is one straight, level line across the whole image, a quarter of the way up from the bottom edge. The heads of all standing people are on that line, near or far; buildings, trees, carts and animals rise above it with their feet just under it. Below the horizon there is only a thin strip of level ground, a tenth of the image height at most. We never look down onto roofs, courtyards or the surface of a road: a road running away from us is a thin wedge of ground narrowing to the horizon.\n- Plain white everywhere else. The sky is flat pure white from the top edge down to the horizon, behind everything: no clouds, no blue, no gradient, no haze, no texture, no paper grain. Below the strip of ground the bottom of the image is the same pure white: the ground ends in soft white mist. The upper part of the image, above the tallest trees and roofs, is empty white.\n- Clear and crisp: every outline and colour as clear as in image 1, with no atmospheric haze and no fading toward the distance (the world adds its own mist). Trees keep clear branches and twigs with white showing between them.\n- The left and right eighths of the image hold only low ground and a few small things; they will fade into mist.\n- Colours of the real town in soft spring daylight, as in image 1: grey-blue clay tiles, white lime plaster, weathered brown timber, tan rammed earth and dusty roads, pale fresh-green willows, dark green pines, bare ink-brown branches. Not the yellow-brown of the aged silk in image 2; no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/gate/backdrop/east_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "3584x1280",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "east"
+ },
+ "format": "png",
+ "generation_s": 33.0,
+ "attempts": 1,
+ "idempotency_key": "17209672-e64a-45db-9a81-6f3ffdfd8c77",
+ "request_id": "554729dd-81f1-489b-8072-bbe604e92e4b",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3268,
+  "completion_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5458,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4543,
+   "text_tokens": 915
+  },
+  "output_tokens": 3268,
+  "output_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5458,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4543,
+   "text_tokens": 915
+  },
+  "total_tokens": 8726
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/81e98835-6f38-4c64-b2f6-50846db2630e",
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/829d7791-1eb8-4779-a62b-31a2d1611701"
+ ],
+ "files": [
+  "gen/sections/gate/backdrop/east_0.png",
+  "gen/sections/gate/backdrop/east_1.png"
+ ]
+}

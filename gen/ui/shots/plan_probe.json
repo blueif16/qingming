@@ -1,0 +1,9 @@
+{ "url": "http://127.0.0.1:5190/world.html",
+  "pages": [
+    { "device": "desktop", "loading": "probe_loading", "loadingWait": 900,
+      "shots": [
+        { "name": "probe_start", "hour": 10, "wait": 1500, "js": "await new Promise(r=>setTimeout(r,600)); return t.ui.state().places;" },
+        { "name": "probe_plaques", "wait": 1200, "js": "t.ui.help(false); await t.goto(-30, 3); t.player.yaw = 180*Math.PI/180 - Math.PI/2; await new Promise(r=>setTimeout(r,1500)); return t.ui.state().places;" },
+        { "name": "probe_gate", "wait": 1200, "js": "await t.goto(-6, 3); t.player.yaw = 180*Math.PI/180 - Math.PI/2; await new Promise(r=>setTimeout(r,2500)); return t.ui.state().places;" }
+      ] }
+  ] }

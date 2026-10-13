@@ -1,0 +1,810 @@
+{
+ "section": "S3",
+ "entities": [
+  {
+   "id": "S3.bld.far_bank_shed_18280",
+   "kind": "building",
+   "name": "small open shed between the far-bank shop and the hall",
+   "what": "A small open-sided shed on the far bank between the railed shop and the long hall: a dark roof on three or four slender posts, a table and benches under it and a seated man; a big parasol on its own pole stands just east of it.",
+   "pts": {
+    "base": {
+     "sw": [
+      18218,
+      165,
+      "est"
+     ],
+     "se": [
+      18345,
+      150,
+      "est"
+     ],
+     "ne": [
+      18375,
+      100,
+      "est"
+     ],
+     "nw": [
+      18248,
+      112,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     18215,
+     50
+    ],
+    "se_eave": [
+     18340,
+     67
+    ],
+    "bays": [
+     [
+      18227,
+      155,
+      "est"
+     ],
+     [
+      18266,
+      148,
+      "est"
+     ],
+     [
+      18337,
+      145,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: roof top at the silk's top edge; feet hidden by the table",
+   "conf": "low",
+   "note": "Roof: dark mass u 18215-18335, v 10-50, its lower edge a light band from (18213,50) to (18340,67). Posts at u 18227 (v 97-153 visible), 18266 (67-147), 18337 (60-143); post feet v ~145-155, so the floor is about v 150-165. A table top 18240-18303 (v 120-167) and a smaller one 18290-18330 (v 115-140) (tiles' props); a seated man at (18315, 85-125) (t5's). The restyle paints it as a separate tiled lean-to shed with a table and benches, which agrees; it could also be the west wing of S3.bld.far_bank_hall_18520 (the hall's west corner post is at u 18361). A round parasol (18340-18450, v 35-75) stands beside it on its own pole (t5's prop). SCALE CUES (px): ~125 wide; posts ~85 tall."
+  },
+  {
+   "id": "S3.bld.far_bank_hall_18520",
+   "kind": "building",
+   "name": "long open hall on posts on the far bank (raised deck with tables)",
+   "what": "A long open hall on the far bank west of the bridge: a big tiled roof on slender posts over a raised plank deck that stands on short stilts over the sloping bank; a railing runs along the deck's front, and tables and long benches stand inside (an eating or tea hall); its east end has a wall of vertical boards.",
+   "pts": {
+    "base": {
+     "sw": [
+      18360,
+      248
+     ],
+     "se": [
+      18690,
+      305,
+      "est"
+     ],
+     "ne": [
+      18740,
+      200,
+      "est"
+     ],
+     "nw": [
+      18420,
+      110,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     18355,
+     100
+    ],
+    "se_eave": [
+     18690,
+     205
+    ],
+    "bays": [
+     [
+      18360,
+      248
+     ],
+     [
+      18451,
+      293
+     ],
+     [
+      18492,
+      297
+     ],
+     [
+      18553,
+      302
+     ],
+     [
+      18597,
+      303
+     ],
+     [
+      18663,
+      305
+     ]
+    ],
+    "deck_corner": [
+     18553,
+     278
+    ],
+    "deck_w": [
+     18355,
+     202
+    ],
+    "deck_e": [
+     18665,
+     285
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 250,
+   "vis": "part: back half under its own roof; east end behind willow crowns",
+   "conf": "med",
+   "src": "tile plan: the long open hall on posts (setup's first look)",
+   "note": "The roof's lower edge (a light fascia band under the tiles) runs from (18355,100) down-right to (18597,181) and (18676,202); tiles fill up to the silk's top edge (ridge not seen; a second roof behind it is S3.bld.far_bank_house_18850). Deck: its railing top runs from (18355,202) down-right to a corner at (18553,278), then turns east to (18665,285); the deck stands on stilts whose feet are at v ~293-305 (posts at u 18451, 18492, 18553, 18597, 18663) and on the west corner posts at u 18361-18378 (v 114-247). So the hall's long front faces south-west, toward the water west of the bridge's south approach, and is turned against the shops at the top edge: facing_deg 250 is a reading, not a measurement. East end: a wall of vertical boards u 18597-18676, v 177-268, under the roof's east end (18690,205); willow crowns (trees of the tiles) cover the roof east of ~18740. Tables and benches inside at v 190-260 (props for t5/t6). Back corners est (placeholder): the back wall is hidden under the roof. SCALE CUES (px): front 200 px along the diagonal plus 112 px along the east stretch; deck raised ~25-40 px above the stilts' feet; posts ~140 px from fascia to deck. DEPTH DIRECTION: the deck's long side (18355,202)->(18553,278), slope +0.38, is the hall's front line, not a receding edge; the tables' short sides read -0.6 to -0.9 (low, the hall is turned)."
+  },
+  {
+   "id": "S3.bld.far_bank_house_18850",
+   "kind": "building",
+   "name": "tiled house behind the far-bank hall (roof only)",
+   "what": "A tiled roof behind (north of) the long hall, running off the silk's top edge, with a gable end and a post at its east end; its lower part is hidden behind the hall's roof and a stand of bare willow crowns.",
+   "pts": {
+    "base": {
+     "sw": [
+      18700,
+      150,
+      "est"
+     ],
+     "se": [
+      19015,
+      140,
+      "est"
+     ],
+     "ne": [
+      19055,
+      60,
+      "est"
+     ],
+     "nw": [
+      18745,
+      70,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: roof only; lower part behind the hall's roof and willow crowns; top off the silk",
+   "conf": "low",
+   "note": "Tiles at u 18686-19014, v 18-86; its west edge a line from (18614,50) up to (18686,29); its top runs along the silk's top edge (v 16-20). East end: a small gable (two slanted lines) with a post at u 19021 (v 68-118) and a horizontal at v 105-114, at u 18990-19010. Footprint is a placeholder (front est v ~140-150, behind the willows), said here; the builder settles it. It could be the upper part of the hall's own roof (a hip running up to the right) rather than a second building: the line (18668,52)->(18855,105) between the two tile fields is read as the boundary between two roofs. SCALE CUES (px): visible roof ~330 wide."
+  },
+  {
+   "id": "S3.bld.north_bank_shop_19290",
+   "kind": "building",
+   "name": "shop at the silk's top edge on the north bank (front only)",
+   "what": "A shop on the north bank whose roof is cut off by the silk's top edge: only a band of lattice or boarded front shows under the edge, with tables and benches set out on the ground in front of it.",
+   "pts": {
+    "base": {
+     "sw": [
+      19180,
+      42,
+      "est"
+     ],
+     "se": [
+      19400,
+      42,
+      "est"
+     ],
+     "ne": [
+      19420,
+      8,
+      "est"
+     ],
+     "nw": [
+      19200,
+      8,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: roof off the silk's top edge; only the lower front shows",
+   "conf": "low",
+   "note": "Vertical strokes (lattice or boards) at v 18-37 from u 19180 to 19400, a horizontal at v 37-40 (the front's foot or a sill); a post at u 19180-19183 (v 17-67). Tables and benches in front at v 60-97 (u 19190-19230, 19253-19307, 19297-19383; tiles' props, t7/t8) and a stall under a parasol at 19390-19480 (v 20-125). The overview restyle reads a tiled-roof shop with an open front here (u ~19220-19580); position from the scan. Footprint placeholder (back corners at the silk's edge). SCALE CUES (px): ~220 wide."
+  },
+  {
+   "id": "S3.bld.north_bank_shed_19620",
+   "kind": "building",
+   "name": "open shed frame at the silk's top edge, north bank (posts and beams)",
+   "what": "Slender posts and two long horizontal beams just under the silk's top edge on the north bank, east of the shop: read as an open shed whose roof is off the silk; a porter with two baskets and other figures stand under it.",
+   "pts": {
+    "base": {
+     "sw": [
+      19535,
+      100,
+      "est"
+     ],
+     "se": [
+      19760,
+      100,
+      "est"
+     ],
+     "ne": [
+      19775,
+      25,
+      "est"
+     ],
+     "nw": [
+      19550,
+      25,
+      "est"
+     ]
+    },
+    "bays": [
+     [
+      19537,
+      90,
+      "est"
+     ],
+     [
+      19660,
+      95,
+      "est"
+     ],
+     [
+      19697,
+      100,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: roof off the silk; posts behind figures",
+   "conf": "low",
+   "note": "Beams at v 23-27 (u 19550-19760) and v 55-58 (u 19550-19750); posts at u 19535-19540 (v 23-83), 19660 (v 23-57), 19693-19700. Figures under it (t8/t9's): a man at 19560-19640 (v 25-110), a porter with two baskets on a pole at 19640-19700 (v 30-128), a man at 19740-19800 (v 20-90). BOTH READINGS: an open shed (roof off the silk) or the frame of a stall or rack; recorded so the miss is not silent. SCALE CUES (px): ~225 wide; figures here ~95 px tall."
+  },
+  {
+   "id": "S3.bld.tavern_20230",
+   "kind": "building",
+   "name": "tavern on the north bank at the bridge's north foot (虹桥边的小酒馆)",
+   "what": "An open-fronted tavern on the north bank just east of where the bridge comes down: a large roof with a lattice-filled gable at its east, a lower roof skirt with tile ends over a band of lattice windows, open bays on slender posts, and tables, benches and chairs under it at the water's edge; the bridge's tall end post with its crossed top stands at its west corner.",
+   "pts": {
+    "base": {
+     "sw": [
+      20070,
+      288,
+      "est"
+     ],
+     "se": [
+      20395,
+      290,
+      "est"
+     ],
+     "ne": [
+      20445,
+      205,
+      "est"
+     ],
+     "nw": [
+      20120,
+      205,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     20056,
+     120
+    ],
+    "se_eave": [
+     20375,
+     108
+    ],
+    "gable_apex": [
+     20300,
+     25
+    ],
+    "bays": [
+     [
+      20072,
+      285,
+      "est"
+     ],
+     [
+      20107,
+      285,
+      "est"
+     ],
+     [
+      20242,
+      288,
+      "est"
+     ],
+     [
+      20312,
+      288,
+      "est"
+     ],
+     [
+      20382,
+      290,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: crossed by the big boat's lowered mast and lines (u 20100-20280, v 170-380); east end behind willow branches",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)",
+   "note": "Roof: a long double line with hatching runs from the west eave corner (20056,120) up to the right through (20195,35) toward (20300,25); a gable at the east with its apex at ~(20300,25), its east slope down to (20375,105); inside the gable a row of vertical lattice bars, u 20245-20345, v 78-105. Below, a horizontal skirt with hatched tile ends at v 128-150 from u 20085 to 20390, and under it a lattice window band, u 20105-20230, v 150-200. Posts at u 20070-20075 (v 120-280), 20105-20110, 20215 (v 145-210), 20240-20245 (v 150-280), 20305-20320, 20375-20390 (v 100-280). Tables: one with a square top (20142-20207, v 220-244) and legs to v ~262-280; benches and chairs 20290-20380, v 190-280 (tiles' props, t9). Front base line est v ~285-290 (table feet); the boats' hulls start at v ~290-300 (river_e), so the tavern stands right at the water's edge. UPPER FLOOR? 刘涤宇 counts a two-storey building opposite 十千脚店 at the bridge. TWO READINGS: (a) one storey with a hip-and-gable roof: the lattice at v 78-105 is the gable's infill and the skirt at v 128-150 the main eave; (b) two storeys: an upper floor with lattice windows at v ~75-110 under the gable roof, and the skirt a pent roof over the ground floor. Under (b) the upper floor line is at about v 150 over u 20085-20390, straight above the ground at v ~288. The strokes at this resolution don't settle it; conf low for the storey count. The bridge's end post (crossed top at v 20-40, u 20040-20055) is the bridge agent's. Back corners est (placeholder, behind the lattice band). SCALE CUES (px): front ~325 wide; a table top ~65 x 24; posts ~165 px from skirt to floor. DEPTH DIRECTION: the table top's sides (20142,242)->(20160,220) and (20187,244)->(20207,220), slope -1.2 (table height, low-med); the roof's west eave line (20055,120)->(20195,35), slope -0.61 (high)."
+  },
+  {
+   "id": "S3.bld.bridge_foot_hall_19000",
+   "kind": "building",
+   "name": "big gable-roofed building at the bridge's south foot (roof seen from above)",
+   "what": "The biggest roof on the south bank, at the bottom edge east of the bridge's south foot: an overhanging-gable (悬山) roof of round tiles seen from above, its ridge running back (north) from a south gable at the silk's edge to a north gable with a ridge-end ornament at the bridge's foot. The south gable is open: a log tie beam on four columns, a king post with a hanging-fish ornament and two small star-shaped ornaments, and two struts.",
+   "pts": {
+    "base": {
+     "sw": [
+      18420,
+      1795,
+      "est"
+     ],
+     "se": [
+      19300,
+      1795,
+      "est"
+     ],
+     "ne": [
+      19580,
+      1540,
+      "est"
+     ],
+     "nw": [
+      18680,
+      1540,
+      "est"
+     ]
+    },
+    "apex_s": [
+     18861,
+     1507
+    ],
+    "apex_n": [
+     19128,
+     1155
+    ],
+    "eave_nw": [
+     18595,
+     1560
+    ],
+    "eave_ne": [
+     19650,
+     1400
+    ],
+    "tie_beam_w": [
+     18708,
+     1680
+    ],
+    "tie_beam_e": [
+     19003,
+     1675
+    ],
+    "bays": [
+     [
+      18716,
+      1790,
+      "est"
+     ],
+     [
+      18808,
+      1790,
+      "est"
+     ],
+     [
+      18922,
+      1790,
+      "est"
+     ],
+     [
+      19027,
+      1790,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: roof only; walls and ground below the silk's bottom edge or under the roof",
+   "conf": "med",
+   "note": "RIDGE: a straight double line from the south gable's apex (18861,1507) to the north gable's ridge-end ornament (19128,1155), slope -1.32. SOUTH GABLE: curved bargeboards from the apex, west through (18760,1640), (18640,1705), (18538,1748) to the silk's edge at ~(18505,1771); east through (19160,1717) to ~(19260,1790). Tie beam (a log) v 1670-1690 from u 18708 to 19003; king post with a hanging fish (悬鱼) at u 18861-18872, v 1544-1660; two star ornaments (惹草) at (18835,1600) and (18895,1600); columns at u 18708-18724, 18803-18814, 18914-18930, 19019-19035 from the beam (v ~1680) down past the silk's edge. A small figure stands inside the gable at (18819-18850, v 1723-1775) (t6's). NORTH GABLE: bargeboards from (19128,1155) west down to the NW eave corner (18595,1560) (curving: (19015,1255), (18840,1346), (18778,1380), (18677,1480)) and east through (19294,1312), (19550,1375) to the NE eave corner (19650,1400). EAVES: west eave (18418,1771)->(18580,1561), slope -1.30; east eave (19362,1775)->(19650,1400), slope -1.30; both parallel to the ridge. The SW and SE eave corners are just below the silk's edge (about (18450,1800) and (19330,1810)). FOOTPRINT is a placeholder, as S4's south halls: the ridge's ground line from under the north apex (19128, 1155 + ~5 m = 1540) toward under the south apex (18861, 1507 + ~5 m = 1892, below the silk), ± ~450 px of u (the north gable's eave span is 1055 px). The south corners are clamped to the silk's edge (v 1795); their true estimate is v ~1890. The builder settles size and depth as choice:. The north gable stands right behind the mat sheds S3.bld.mat_shed_19160 and S3.bld.mat_shed_19530; its ridge-end ornament overlaps the first's lower edge. SCALE CUES (px): south gable column span 311 (18716-19027); north eave span 1055 (18595-19650); tie beam 295 long. DEPTH DIRECTION: ridge (18861,1507)->(19128,1155), slope -1.32, and both eaves -1.30 (high lines, med conf)."
+  },
+  {
+   "id": "S3.str.tiled_wall_18450",
+   "kind": "structure",
+   "name": "tile-capped wall west of the big building at the bridge's south foot",
+   "what": "A wall with a coping of round tiles running back (north) from the silk's bottom edge beside the big building's west eave, then turning east at its north end; its face is plain and light; porters with shoulder-pole baskets stand in front of (west of) it, and a man's head and shoulders show behind its north end.",
+   "pts": {
+    "line": [
+     [
+      18411,
+      1790,
+      "est"
+     ],
+     [
+      18450,
+      1729,
+      "est"
+     ],
+     [
+      18490,
+      1667,
+      "est"
+     ]
+    ],
+    "coping_s": [
+     18330,
+     1775
+    ],
+    "coping_turn": [
+     18490,
+     1525
+    ],
+    "coping_e": [
+     18600,
+     1548
+    ]
+   },
+   "role": "foot",
+   "support": "ground",
+   "facing_deg": 180,
+   "vis": "part: south end runs off the silk; foot hidden by the big building's west eave",
+   "conf": "low",
+   "note": "The coping is a band ~20 px wide of overlapping tile ends between two lines, from (18330,1775) at the silk's edge up to (18490,1525), slope -1.56, then turning east as a short band to (18600,1548) near the big roof's NW eave corner (18595,1560). East of the coping lies a light, plain parallelogram (u 18350-18580, v 1540-1790) bounded on the right by the big roof's west eave (18418,1771)->(18580,1561). READINGS: (a) a tile-capped wall ~1.8 m high whose plain west face is that light strip (142 px of v between coping and roof edge at u 18450), its foot hidden by the roof's eave; the foot line here is the coping dropped by ~142 px (est); (b) the tiled edge of a lower roof or a raised walkway's kerb (the restyle paints a stone-edged ramp here, but its tile is 'unreliable', alignment 0.08). Things on or behind its north end: a lamp-box or chest (18660-18690, v 1475-1510) and a small box (18470-18490, v 1515-1530) (tiles' props), a man at (18615, 1495-1545) behind it (t6's). SCALE CUES (px): coping 20 px wide; 295 px long on the silk (18330,1775)->(18490,1525). DEPTH DIRECTION: coping (18330,1775)->(18490,1525), slope -1.56 (wall top, ~1.5-2 m above ground: near ground level)."
+  },
+  {
+   "id": "S3.bld.mat_shed_19160",
+   "kind": "building",
+   "name": "mat-roofed shed on the south bank under the arch's south side",
+   "what": "A shed with a woven-mat (diagonally plaited) gable roof on the south bank right at the water's edge, just east of the bridge's south end post: people sit at tables under it eating or drinking; a mat flap closes its west gable end.",
+   "pts": {
+    "base": {
+     "sw": [
+      18995,
+      1290,
+      "est"
+     ],
+     "se": [
+      19335,
+      1290,
+      "est"
+     ],
+     "ne": [
+      19390,
+      1200,
+      "est"
+     ],
+     "nw": [
+      19050,
+      1200,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     19032,
+     1014
+    ],
+    "ridge_e": [
+     19320,
+     1015
+    ],
+    "sw_eave": [
+     19000,
+     1142
+    ],
+    "se_eave": [
+     19330,
+     1139
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: lower front behind the big building's north gable ornament and seated figures",
+   "conf": "med",
+   "src": "tile plan: the mat-awning stall under the arch (≈ 19000–19300)",
+   "note": "Mat roof u 19032-19320+, from its top edge (ridge) at v 1014 down to the front eave at v 1139-1145; west gable end a slanted mat flap from (19032,1014) down to (18986,1145); east end a mat panel at u 19300-19320 (v 1040-1200) and a post at u 19330-19340 (v 1140-1300). The bridge's tall south end post (u 19015-19027, v 850 to 1250+) stands just west of it (bridge's). Under the eave: seated men at tables, u 19080-19300, v 1140-1250 (t7's), a table top at 19155-19218, v 1190-1200 (t7's prop). The water's ripples reach v ~1010 just behind its ridge, so it stands on the bank's edge. Base est: front wall foot ~v 1290 (eave ~2 m above), back wall ~v 1200 (behind the ridge), back corners shifted +55 px of u along the receding slope; placeholder. t7's hint calls it a 'mat-awning stall': it has a gable roof on posts with people inside, so it is recorded here as a shed; t7 may also record it as a stall prop (a duplicate across kinds: drop one at merge). SCALE CUES (px): roof 290-345 wide; ridge to eave 125 px of v.",
+   "group": "S3.grp.stall_under_arch"
+  },
+  {
+   "id": "S3.bld.mat_shed_19530",
+   "kind": "building",
+   "name": "mat-roofed shed with board walls, south bank under the arch's crown",
+   "what": "A low shed on the south bank under the arch: a single-pitch roof of cross-hatched woven mat sloping down to the front, over a front of vertical boards and door-like panels; a big parasol on its own pole stands in front of it and people crowd at its east end by the water.",
+   "pts": {
+    "base": {
+     "sw": [
+      19340,
+      1330,
+      "est"
+     ],
+     "se": [
+      19700,
+      1320,
+      "est"
+     ],
+     "ne": [
+      19755,
+      1245,
+      "est"
+     ],
+     "nw": [
+      19395,
+      1255,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     19340,
+     1235
+    ],
+    "se_eave": [
+     19605,
+     1215
+    ],
+    "roof_back_w": [
+     19415,
+     1140
+    ],
+    "roof_back_e": [
+     19720,
+     1145
+    ],
+    "bays": [
+     [
+      19400,
+      1320,
+      "est"
+     ],
+     [
+      19470,
+      1320,
+      "est"
+     ],
+     [
+      19525,
+      1320,
+      "est"
+     ],
+     [
+      19560,
+      1320,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: wall feet hidden behind the big building's north bargeboard (v 1310-1390); roof crossed by a parasol",
+   "conf": "med",
+   "note": "Roof: back edge (19415,1140)->(19720,1145), front eave (19340,1235)->(19605,1215). Front wall: posts and vertical boards at u 19400, 19470, 19520-19530, 19555-19570, v 1240-1320; its foot is hidden behind the long curved bargeboard of S3.bld.bridge_foot_hall_19000's north gable, which passes (19294,1312) and (19550,1375). It is not a boat: no hull is drawn under it; the curved line below it is that bargeboard. A big parasol (19400-19630, v 1070-1125; pole at u 19510-19535 to v ~1205) and a second parasol (19650-19800, v 1180-1240) stand by it (tiles' props, t8); heads at 19600-19700, v 1080-1260 are people on the bank behind and beside it (t8's), or at the west end of the boat moored along the bank (river_e). The restyle turns it into a tiled shop with round basins (unusable here). SCALE CUES (px): roof ~380 wide, wall ~85 px tall."
+  },
+  {
+   "id": "S3.bld.open_shop_20000",
+   "kind": "building",
+   "name": "long tiled building with an open front, south bank east of the bridge",
+   "what": "A long single-storey building along the south bank east of the big building: a big tiled roof (its ridge hidden under the hull of the boat moored at the bank) with a hipped west end, and an open front under the eave where people sit and stand at long tables and benches; plain wall panels and doors in the middle, a wall of vertical boards at its east end, and a pole from that end carries a hanging sack.",
+   "pts": {
+    "base": {
+     "sw": [
+      19545,
+      1615,
+      "est"
+     ],
+     "se": [
+      20445,
+      1605,
+      "est"
+     ],
+     "ne": [
+      20575,
+      1400,
+      "est"
+     ],
+     "nw": [
+      19675,
+      1400,
+      "est"
+     ]
+    },
+    "eave_w": [
+     19685,
+     1450
+    ],
+    "eave_e": [
+     20440,
+     1450
+    ],
+    "hip_w_low": [
+     19650,
+     1395
+    ],
+    "hip_w_high": [
+     19790,
+     1200
+    ],
+    "bays": [
+     [
+      19548,
+      1615
+     ],
+     [
+      19686,
+      1615
+     ],
+     [
+      19717,
+      1615
+     ],
+     [
+      19879,
+      1615,
+      "est"
+     ],
+     [
+      20016,
+      1615,
+      "est"
+     ],
+     [
+      20094,
+      1615,
+      "est"
+     ],
+     [
+      20390,
+      1605,
+      "est"
+     ],
+     [
+      20440,
+      1605,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: ridge under the moored boat's hull; front's foot behind the front building's roof (west) and a parasol stall (east); east end behind the big tree's trunk",
+   "conf": "med",
+   "note": "Roof tiles from v ~1195 (under the boat's hull) to the front eave at v 1443-1457, u 19685-20440; west end a hip (19650,1395)->(19750,1293)->(~19790,1200); east end hidden by the big tree (u 20410-20590). Open front: posts at u 19686, 19707-19717 (v 1430-1615), 19853-19880, 20016-20039 and 20053-20094 (plain light wall panels or doors, v 1465-1556), 20387-20444 (east end wall of vertical boards, v 1493-1590). Floor line: a horizontal beam at v 1607-1621 from u 19548 to 20000. Inside: a long table 19762-19850 (top v 1505, legs to v 1563-1565), a bench 19875-19920 (v 1505-1545), a low board or bench lying at 19792-19862 (v 1572-1612), a seated man at (19753-19775, 1440-1530), a standing man at (19853-19880, 1470-1552) (tiles' props and figures, t8/t9). A leaning framed board with small marks (a signboard? its writing unreadable: □□□□) at 19962-20007, v 1543-1588, standing on its own (t9's prop). East end: a pole at v ~1600-1610 from u 20340 to 20420 with a sack hanging from it (20380-20430, v 1590-1690): part of this building unless a tile reads it as a rack. WEST BAY (u 19548-19690): posts, a railing at v 1490-1530 and a diagonal plank from (19650,1530) to (19598,1615) (a stair?), under the big building's east eave; read as this building's open west bay (or a veranda on the big building's east side). A parasol stall stands in front of the east part on the ground at v ~1675-1714 (t9's props), so the ground in front is lower on the silk than the floor line: S3.road.south_street_20250. Back corners est (placeholder): 215 px of v behind the front, shifted along the west hip's slope. NOTE: the standing man inside is only 82 px tall at foot v 1552, against 160-190 px for figures on the open ground at v 1300-1700: this building's interior is painted at about half the near scale. SCALE CUES (px): eave to floor line ~165 px; front ~900 wide. DEPTH DIRECTION: the low board's sides (19792,1612)->(19817,1574) slope -1.52 and (19840,1612)->(19860,1574) slope -1.90 (ground level, med-low); west hip (19650,1395)->(19750,1293), slope -1.02 (high). Merge: t8 names two objects hung inside its west part at u 19620-19647, v 1453-1484 (hanging goods: part of this building), and plank or ladder lines at 19615-19685, v 1275-1441 west of its west hip, between it and S3.bld.mat_shed_19530 (unassigned: for the second pass). t9 reads its door posts at u 20014-20025, 20037-20060 and 20080-20095, the slatted panel at 20383-20458 (v 1497-1576) and the corner post at 20375-20383, as this note does. SECOND PASS (east): t8's unassigned 'plank or ladder lines at 19615-19685, v 1275-1441' belong to a planked sloping plane between the mat shed S3.bld.mat_shed_19530 and this building's west hip. The plane runs 19550-19775, v 1244-1375: boards run up to the east, parallel to the hip line (19650,1395)->(19790,1200), with a double-line edge on their west side. An upright post stands at u ~19560-19570 (v 1240-1330). The plane is bounded by the shed's front (west), the big hall's north bargeboard (south), the hip line (east), and the feet of S3.fig.parasol_capped_man_19652 under the tilted parasol (north). TWO READINGS, conf low: (a) this building's west hip face, drawn in boards rather than tiles (the hip face lies exactly here); (b) the board roof of a small lean-to between the shed and this building, which would need its own entity. Under either reading it is no ladder or loose plank, so no prop. Crops: p2e_c_shedeast_col.jpg, p2e_c_underarch_col.jpg, p2e_c_ladder_w.jpg, p2e_c_ladder_plain.jpg.",
+   "group": "S3.grp.south_shop_19920"
+  },
+  {
+   "id": "S3.bld.front_roof_19800",
+   "kind": "building",
+   "name": "building in front at the silk's bottom edge, south bank (roof only)",
+   "what": "A tiled roof at the silk's bottom edge in front of (south of) the long open shop: its top edge runs straight along the shop's floor line and its east end is a hip running down to the right; two posts show at its west end.",
+   "pts": {
+    "base": {
+     "sw": [
+      19500,
+      1795,
+      "est"
+     ],
+     "se": [
+      20250,
+      1795,
+      "est"
+     ],
+     "ne": [
+      20000,
+      1700,
+      "est"
+     ],
+     "nw": [
+      19500,
+      1700,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     19550,
+     1617
+    ],
+    "ridge_e": [
+     19993,
+     1607
+    ],
+    "hip_e_low": [
+     20290,
+     1780
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: roof only; walls below the silk's bottom edge",
+   "conf": "med",
+   "note": "Top edge (read as its ridge or back eave) a straight double line at v 1607-1621 from u 19550 to 19993; tiles in rows below it to the silk's edge (v ~1775); east end a hip from (19993,1607) through (20150,1700) to (20290,1780); west end posts at u 19498-19507 (v 1634-1775) and 19535-19548 (v 1593-1693), with a diagonal brace. READINGS: a separate building in front of the open shop (its ridge touching the shop's floor line), or a pent roof over a lower storey of S3.bld.open_shop_20000; the parasol stall standing on the ground at v ~1700 just east of the hip, lower on the silk than the shop's floor line (v 1615), argues for a separate building with a street between them east of u 20000. Footprint is a placeholder below its roof (walls off the silk). SCALE CUES (px): ridge ~445 long. SECOND PASS (east): this closes t8's left-to item 'a building front with posts and a stair or ladder at 19330-19580, v 1660-1772', which was never assigned. The diagonal double band from (19506, 1774) to (19577, 1671) (slope about -1.45, the receding direction of the hall's eaves, -1.30) is this roof's west verge, seen running back. It is not a stair: no treads are drawn, only a few short marks. More upright posts with panels between them stand west of the posts named above: at u 19460-19470 and 19483-19493 (v ~1640-1770) and at 19507-19513. They are this building's west front, under the big hall's east eave, so its west end reaches u ~19460 rather than 19500 (placeholder footprint). Crops: p2e_c_bottomw_col.jpg, p2e_c_stair_col.jpg, p2e_c_stair_plain.jpg."
+  },
+  {
+   "id": "S3.road.south_street_20250",
+   "kind": "road",
+   "name": "ground in front of the open shop, south bank east of u 20000",
+   "what": "Bare ground between the long open shop's front and the front building's hipped roof, where a parasol stall with a table and seated people stands; it opens east toward the big tree and the seam with S2.",
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       20020,
+       1650,
+       "est"
+      ],
+      [
+       20200,
+       1690,
+       "est"
+      ],
+      [
+       20450,
+       1700,
+       "est"
+      ],
+      [
+       20500,
+       1705,
+       "est"
+      ]
+     ],
+     "edge_n": [
+      [
+       20000,
+       1618,
+       "est"
+      ],
+      [
+       20200,
+       1620,
+       "est"
+      ],
+      [
+       20445,
+       1608,
+       "est"
+      ],
+      [
+       20500,
+       1610,
+       "est"
+      ]
+     ],
+     "edge_s": [
+      [
+       20000,
+       1608,
+       "est"
+      ],
+      [
+       20150,
+       1700,
+       "est"
+      ],
+      [
+       20290,
+       1780
+      ],
+      [
+       20500,
+       1790,
+       "est"
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: west end under the front building's roof; east end behind the big tree",
+   "conf": "low",
+   "note": "Seen only between u ~20000 and 20450: edge_n is the open shop's front (v ~1605-1620), edge_s the front building's east hip ((19993,1607)->(20290,1780)) and then the silk's edge. The parasol stall's legs stand at (20177,1689), (20214,1674), (20277,1714), (20320,1694) (t9's props), a figure walks at (20165-20185, 1720-1790) (t9's). It may be the south-bank street running on east into S2 (a roof at (20570,1560)->(20656,1495) east of the tree is S2's), or only a yard in front of the shop. Not the route (S3.road.main is structures_w's)."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+  "section": "S4",
+  "entities": [
+    {
+      "id": "S4.fig.figure_under_eave_11382",
+      "kind": "figure",
+      "name": "half-hidden figure under the eating house's front eave",
+      "what": "Figure in a long loose robe standing at the back of the eating house's open front, behind the small table and the slatted box; the head and shoulders are hidden behind the front beam and the mat pent roof, and a sleeve or arm reaches down to the east toward the slatted box (S4.prop.bench_11435). Could instead be a garment or a cloth hung from the beam.",
+      "pts": { "foot": [11382, 1556], "head": [11390, 1420, "est"] },
+      "support": "ground",
+      "pose": "standing",
+      "facing_deg": 0,
+      "vis": "part: head and shoulders behind the front beam and the mat pent roof (v 1400-1490); legs partly behind the slatted box",
+      "conf": "low",
+      "note": "SECOND PASS (east): not recorded by t3, whose note on S4.prop.slatted_box_11355 mentions 'diagonal strokes that may be a chair back or something leaning' here. Strokes: vertical robe folds 11376-11404 from the front beam (v ~1480) down to a curved hem 11366-11396 at v 1554-1558 (foot = the hem's middle; a small dark mark at 11366-11372, v 1552-1556 may be a shoe); diagonal sleeve/arm strokes 11386-11420, v 1496-1512, running down to the east. Head est 136 px above the foot (the doorway figure S4.fig.doorway_figure_11738 is ~138 px tall), so it falls behind the pent roof. facing_deg 0 from the arm reaching east, uncertain. The restyle paints a pale sack and a basket here, not a person. If the lead reads it as hanging cloth, record a prop instead. Crops: gen/map/S4/look/p2e_c_eating2.jpg, p2e_c_eating3.jpg, p2e_inspect_11380_1530.jpg."
+    },
+    {
+      "id": "S4.bld.roof_corner_top_11270",
+      "kind": "building",
+      "name": "roof corner at the top edge, north-west of the courier post",
+      "what": "The corner of a tiled roof showing at the very top of the silk above the willows west of the courier post's west wing: a double edge line rising to the right out of the top edge, with rows of tiles slanting down to the right below it; the rest of the building (walls, columns, foot) is not drawn or is lost behind the willow whips.",
+      "pts": { "base": { "sw": [11270, 160, "est"], "se": [11420, 160, "est"] }, "sw_eave": [11270, 32] },
+      "support": "ground",
+      "facing_deg": 270,
+      "vis": "part: only the roof corner shows (u 11265-11420, v 0-40); body above the silk's top edge and behind willow whips",
+      "conf": "low",
+      "note": "SECOND PASS (east): no entity covers it (only the willows' crown tops reach here). Edge line (11270,32) -> (11350,2), slope -0.38; tile-row bands 11315-11400, v 5-40, slanting down to the right; a dark knot at 11255-11270, v 5-25 (a branch or a ridge-end ornament). It is not the courier post's west wing (S4.bld.post_west_wing_11650): that roof's eave (slope -0.61) would be at v ~405 at u 11270. Base est: straight below the corner, 128 px down as for the west wing's nearest column (eave 145 -> foot 272); below v 40 only willow whips and blank silk are drawn, so walls and foot are guesses. The restyle also paints a grey roof corner here (u 11330-11400, v 10-60). Structures agent's domain; recorded so the lead decides. Crops: p2e_c_toproof.jpg, p2e_c_toproof2.jpg, p2e_inspect_11380_60.jpg."
+    },
+    {
+      "id": "S4.str.stair_or_roof_end_11755",
+      "kind": "structure",
+      "name": "dark sloping block in front of the doorway (a stair or a low roof's end)",
+      "what": "A dark, stepped, sloping block on the ground in front of the doorway where the person in the pale robe stands, with a long double rail line rising from it up to the north-east along the lattice window: either a short stair with a hand rail coming down from the hall's raised floor, or the end of a low tiled roof of a smaller building in front.",
+      "pts": { "base": { "sw": [11705, 1686, "est"], "se": [11805, 1662, "est"] } },
+      "support": "ground",
+      "facing_deg": 270,
+      "vis": "part: south side lost in the grass stems; lower edge near the silk's bottom",
+      "conf": "low",
+      "note": "SECOND PASS (east): S4.bld.south_pavilion_11760's note lists only the diagonal '(11770,1600)->(11850,1540)'; the block itself has no entity. Strokes: dark block 11705-11810, v 1605-1688 (top edge (11730,1632)-(11780,1630), a darker plank 11738-11780 at v 1625-1640 right under the doorway figure's feet, horizontal row lines 11730-11780 at v 1640-1648, its west foot at (11705,1685)); the double rail from (11762,1617) up to (11845,1552), slope -0.78. The restyle paints the end of a low grey tiled roof with a ridge tile at (11735,1660). If it is a stair, the doorway figure stands at its top. Crops: p2e_c_lowroof.jpg, p2e_inspect_11770_1620.jpg, p2e_c_bottom11600.jpg."
+    },
+    {
+      "id": "S4.prop.staff_or_rolled_mat_12588",
+      "kind": "prop",
+      "name": "long pale wedge leaning from the seated man's knee to the ground",
+      "what": "A long, thin, pale wedge-shaped thing (a staff, a rolled mat or a long bundle) propped from the right knee of the man sitting at the willow's foot (S4.fig.man_seated_by_tree_12512) down to the ground east of him, thick at the knee end and pointed at the ground end.",
+      "pts": { "base": [12588, 970] },
+      "support": "ground",
+      "vis": "full",
+      "conf": "low",
+      "note": "SECOND PASS (east): described inside S4.fig.man_seated_by_tree_12512's 'what' and note but has no entity of its own (README rule 6), so a builder would not place it. Wedge (12520,943) -> (12593,973), slope +0.41; base = its east tip on the ground. It is not his leg: both his feet are already at (12500-12529, 960-967). If the lead reads it as part of his clothing, drop this and reword the figure's 'what'. Crop: p2e_c_stair.jpg."
+    },
+    {
+      "id": "S4.ani.bird_12433",
+      "kind": "animal",
+      "name": "small dark bird (?) in the big willow's whips",
+      "what": "A small, solid black, elongated blot among the big willow's whips high above the fortune-teller's awning, rounded at its east end and tapering to the west like a perched crow with its tail to the west; a smaller dark dot lies just west of it.",
+      "pts": { "fore": [12437, 267, "est"], "hind": [12427, 267, "est"], "head": [12441, 259] },
+      "support": "tree S4.tree.gnarled_willow_12390 (perched in its whips)",
+      "facing_deg": 0,
+      "vis": "full",
+      "conf": "low",
+      "note": "SECOND PASS (east): S4.tree.gnarled_willow_12390's note mentions it ('a small dark spot at (12425-12441, 258-266) in the whips may be a bird (not recorded)'), so per README rule 6 it gets an entry for the lead to accept or drop. Blot 12425-12442, v 257-268 (17 x 11 px), solid ink, unlike the line work of the whips; second dot 12403-12410, v 267-272. fore/hind = the underside of the blot (it sits on a whip, not on the ground). It could be ink damage or a knot; the restyle paints nothing here. Crops: p2e_c_bird.jpg, p2e_inspect_12433_262.jpg."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a slender bare tree as the scroll paints it between the houses: a thin, tall trunk with dark grey-brown bark and a few knots, bare of branches for most of its height, with only a few thin bare branches near the top. Early spring: no leaves, only tiny buds.\nColours: dark grey-brown bark with darker knots; twigs dark grey-brown; buds dark, with only specks of pale green (about #a3b56e).\n\nThis one: Like the broadest tree of the pale grove in images 2 and 3: a straight upright pale grey trunk outlined in darker ink, branchless for its lower two-thirds, ending in a knobbly head from which a dense spray of long, fine, straight, unbranched shoots radiates upward and outward in a wide, open fan, like a whisk broom spread open, the fan about half as wide as the tree is tall. The shoots are single straight lines from the knob, not a branching crown, never drooping; tiny pale green buds along them.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/slender_3.jpg",
+  "gen/trees/refs/slender_4.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "b9587c4878c3",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 41.9,
+ "attempts": 1,
+ "idempotency_key": "465e19f3-cd35-4fb8-979a-dbbba76cdebf",
+ "request_id": "2bd3b11b-f880-42d0-98f1-065ec412a4e9",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3607,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3118,
+   "text_tokens": 489
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3607,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3118,
+   "text_tokens": 489
+  },
+  "total_tokens": 5191
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/f2fa267f-4b70-41b5-8118-912a47326b62"
+ ],
+ "files": [
+  "gen/trees/raw/slender_7/b9587c4878c3_0.png"
+ ]
+}

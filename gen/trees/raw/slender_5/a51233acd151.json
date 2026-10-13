@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a slender bare tree as the scroll paints it between the houses: a thin, tall trunk with dark grey-brown bark and a few knots, bare of branches for most of its height, with only a few thin bare branches near the top. Early spring: no leaves, only tiny buds.\nColours: dark grey-brown bark with darker knots; twigs dark grey-brown; buds dark, with only specks of pale green (about #a3b56e).\n\nThis one: Like the slender trees of the pale grove in images 2 and 3: a young tree with a smooth pale grey trunk outlined in darker ink, bare for most of its height and leaning a little to the left, ending in a small fan-shaped head of fine, straight, rising shoots that spread upward like an open fan, with sky between them (not drooping); tiny pale green buds on the shoots.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/slender_3.jpg",
+  "gen/trees/refs/slender_4.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "a51233acd151",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 41.9,
+ "attempts": 1,
+ "idempotency_key": "3f0e2c44-18e4-4e3d-aa92-4ddb3c63e4a4",
+ "request_id": "43b5093e-64ec-471a-8861-57dab0ed4a7d",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3574,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3118,
+   "text_tokens": 456
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3574,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3118,
+   "text_tokens": 456
+  },
+  "total_tokens": 5158
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/4ad78d38-387a-4487-88fe-12c3f735b97c"
+ ],
+ "files": [
+  "gen/trees/raw/slender_5/a51233acd151_0.png"
+ ]
+}

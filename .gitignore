@@ -1,0 +1,42 @@
+# Dependencies, build output, caches
+node_modules/
+web/dist/
+deploy/.vercel/
+__pycache__/
+*.pyc
+*.log
+*.blend1
+.DS_Store
+
+# Scratch at the top level (tile tests and the like)
+/*.jpg
+/*.png
+
+# Third-party material: study only, never published (CLAUDE.md)
+reference/messenger_study/
+reference/jiangnan/
+reference/settings_battlefield_ref.png
+
+# gen/: the generated assets (images, meshes, motions, Meshy dumps, cache keys) live in the Hugging Face dataset
+# ranxxx/qingming-assets (README, "Generated assets"). Git keeps gen's notes, briefs, specs, small data and scripts.
+gen/**
+!gen/**/
+!gen/**/*.md
+!gen/**/*.txt
+!gen/**/*.json
+!gen/**/*.jsonl
+!gen/**/*.mjs
+!gen/**/*.js
+!gen/**/*.py
+!gen/**/*.sh
+!gen/**/*.css
+!gen/**/*.html
+!gen/**/*.svg
+gen/**/meshy/**
+gen/**/task.json
+gen/**/body.json
+gen/**/tasks/
+gen/v1/bodies/
+gen/ui/fonts/src/
+gen/**/jn[0-9]*
+gen/ui/look/ref_small/

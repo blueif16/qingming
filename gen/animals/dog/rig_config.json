@@ -1,0 +1,61 @@
+{
+ "name": "dog",
+ "title": "Dog: the dark street dog of the inner city (S6 dog_4335, walking west under the south-side parasol; low confidence)",
+ "plan": "canid",
+ "figure": {
+  "section": "inner_city",
+  "id": "dog_4335",
+  "map_id": "S6.ani.dog_4335",
+  "src": "scan",
+  "crop": [
+   4290,
+   1338,
+   4378,
+   1400
+  ]
+ },
+ "prompt": "animal_dog",
+ "back_m": 0.52,
+ "graze_z": 0.05,
+ "mesh": {
+  "from": "side",
+  "test": [
+   "side"
+  ],
+  "polys": 3000
+ },
+ "clips": [
+  "idle",
+  "walk",
+  "sniff",
+  "lie"
+ ],
+ "joints": {
+  "tail_path": [
+   [
+    0.4,
+    0.93
+   ],
+   [
+    0.36,
+    1.08
+   ],
+   [
+    0.4,
+    1.22
+   ],
+   [
+    0.5,
+    1.26
+   ],
+   [
+    0.59,
+    1.15
+   ],
+   [
+    0.57,
+    1
+   ]
+  ]
+ }
+}

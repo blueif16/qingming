@@ -1,0 +1,99 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "shots": [
+    {
+     "name": "desktop_day_hud",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.help(false); t.ui.night(false); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().settings;",
+     "wait": 400
+    },
+    {
+     "name": "desktop_day_set_time",
+     "js": "await t.ui.settings.open('time'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_view",
+     "js": "t.ui.settings.page('view'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_sound",
+     "js": "t.ui.settings.page('sound'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_ui",
+     "js": "t.ui.settings.page('ui'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_display",
+     "js": "t.ui.settings.page('display'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_adv",
+     "js": "t.ui.settings.page('adv'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_closed",
+     "js": "t.ui.settings.close(); await new Promise(r=>setTimeout(r,500)); return t.ui.state().settings;",
+     "wait": 200
+    }
+   ]
+  },
+  {
+   "device": "phone",
+   "shots": [
+    {
+     "name": "phone_day_hud",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.help(false); t.ui.night(false); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().settings;",
+     "wait": 400
+    },
+    {
+     "name": "phone_day_set_time",
+     "js": "await t.ui.settings.open('time'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_view",
+     "js": "t.ui.settings.page('view'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_sound",
+     "js": "t.ui.settings.page('sound'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_ui",
+     "js": "t.ui.settings.page('ui'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_display",
+     "js": "t.ui.settings.page('display'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_adv",
+     "js": "t.ui.settings.page('adv'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_closed",
+     "js": "t.ui.settings.close(); await new Promise(r=>setTimeout(r,500)); return t.ui.state().settings;",
+     "wait": 200
+    }
+   ]
+  }
+ ]
+}

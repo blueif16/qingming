@@ -1,0 +1,190 @@
+{
+ "section": "S2",
+ "pass": "second pass, east: u 27600-29050 (looked at 27450-29200)",
+ "how_to_read": "entities: new entities in the strokes format, ready to copy into a part (as S4's merge_fixes accept()). retire: entities to drop in merge_fixes.mjs, with the reason. changes: edits to existing entities; 'set' keys are fields or 'pts.<name>' points, 'add_note' is text to append to the note, 'conf' is the confidence of the proposal itself. checked: the merge notes' list for this range (gen/map/S2/merge_notes.md, 'Second pass', row east) and my own sweep, read again on the scan, with no change proposed. Crops are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S2_second_east/ (ng.mjs: gridless contrast-stretched crops with border ticks every 20 px; crop.mjs: the same with a grid; i_*.jpg: tools/scroll_inspect.mjs scan over restyle; ov*_*.jpg: scroll_map overlays of the merged map).",
+ "entities": [
+  {
+   "id": "S2.tree.stems_behind_top_house_27790",
+   "kind": "tree",
+   "name": "two straight stems behind the long top roof, west of the willow (a small tree, faint)",
+   "what": "Two straight, dark, nearly parallel stems rising from behind the east end of the long tiled roof at the top of the silk to the silk's top edge, about 15 px apart; their crown is above the silk and their foot behind the building: a small tree (or a forked trunk) standing behind the roof, west of the willow S2.tree.willow_27925.",
+   "pts": {
+    "base": [
+     27790,
+     52,
+     "est"
+    ],
+    "top": [
+     27790,
+     18
+    ]
+   },
+   "support": "ground",
+   "vis": "part: only the stems between the roof's top edge (v ~50) and the silk's top edge (v ~18) show; foot behind the roof, crown cut by the silk's top edge",
+   "conf": "low",
+   "note": "SECOND PASS (east): not an entity; t10 folded these strokes into S2.tree.willow_27925's crown ('whips hang over u 27800-27995', crown_w (27800, 40)). Strokes (zoom 5, scratchpad S2_second_east/z_stems.jpg): west stem u 27778-27788, east stem u 27794-27800, both from the silk's top edge (v ~18) down to the roof's top edge (v ~48-52), even in width over their length, of the same dark ink as the trunks nearby. TWO READINGS: (a) a separate small tree behind the roof (recorded); (b) the westmost hanging whips or branches of S2.tree.willow_27925 (the restyle paints hanging willow whips here, i_stems.jpg). For (a): the stems are 6-10 px thick, 2-3 times a willow whip's width on this scan (the whips behind the 望楼饭铺, n_willow2.jpg, are 2-4 px), straight and parallel; between them and the willow's trunk complex (u ~27860-27960, n_toptrees.jpg, n_willow27925.jpg) the silk at u 27805-27855, v 20-50 carries only faint dabs, no branch joining them. Base est where the roof hides them, as for the other trees here; the true foot is north of the building (S2.bld.top_long_house_27560's east end; t10's 'north shed'), a builder choice:. The tree count matters to the user: drop it if the lead reads whips. Crops: scratchpad S2_second_east/z_stems.jpg, n_toptrees.jpg, n_willow27925.jpg, i_stems.jpg."
+  }
+ ],
+ "retire": [
+  {
+   "id": "S2.fig.man_by_mat_27935",
+   "reason": "No figure is painted. Read at zoom 2, 3 and 5 on gridless and gridded crops: there is no head anywhere at u 27900-27950, v 380-440, where a man standing at foot v ~500 would show his head (about 100 px tall at this depth: the basket porter is 95 px at foot v 440). That spot holds the bench or low table S2.prop.bench_27922 (top u 27900-27947, v 390-410, legs to v 440), drawn whole and unobstructed, and the mat's ragged west edge with its vertical hatching (u 27927-27940). The 'faint curved outline' is a rounded light contour at u 27899-27935, v 441-481, below the bench's feet and in front of it: the mat's lower west fold billowing over the pennant frame's apex (27930, 502), with no head, arms or feet. The restyle's man in blue here (i_mat.jpg) is invented, like its children in red nearby. t10's own note asks for it to be dropped if the second pass reads only the mat.",
+   "conf": "med",
+   "crops": "scratchpad S2_second_east/z_mat.jpg (zoom 3, grid), n_mat.jpg (zoom 3), n_mat2.jpg (zoom 2), n_mat5.jpg (zoom 5), i_mat.jpg (scan over restyle)"
+  },
+  {
+   "id": "S2.fig.boatman_coils_28562",
+   "reason": "Not a second person in either reading that the strokes allow. The mark (u 28554-28569, v 1304-1321) is 14 x 17 px, solid dark, with no light face, outline or body of its own on the zoom-6 crop; it sits 15 px east and 20 px below the flat-topped upright S2.fig.boatman_coils_28543. If 28543 is a man, this mark is his shoulder and raised arm: the restyle, which crowds this boat with about seven invented crew, paints exactly one man in a black cap here and puts his dark collar and raised hand on this mark (i_bitts.jpg, i_coils_wide.jpg). If 28543 is a bitt, this is the second bitt or the cable round it. River_e recorded it 'so the second reading is not lost' and named both other readings (the second bitt, or the first man's hand).",
+   "conf": "low",
+   "crops": "scratchpad S2_second_east/z_bitts.jpg (zoom 6, grid), n_coils.jpg (zoom 2.5), i_bitts.jpg, i_coils_wide.jpg (scan over restyle)"
+  }
+ ],
+ "changes": [
+  {
+   "id": "S2.fig.man_at_railing_27650",
+   "set": {
+    "conf": "med"
+   },
+   "add_note": "Second pass: conf low -> med. On the contrast-stretched crops (zoom 3 gridded, zoom 5 soft) a round face with features shows at u 27636-27660, v 285-307 under a dark cap brim at v 283-289, above the upper rail (which passes u 27650 at v ~305); below the face his arms or sleeves lie forward on the rail at v 305-315, and his shoulders run to u 27630-27670. It is a man leaning on the rail and looking down to the west, not a knot of poles. Points unchanged (head 27650, 282 is the cap's top; the face's middle is about (27648, 296)).",
+   "conf": "med",
+   "crops": "scratchpad S2_second_east/z_railing.jpg (zoom 3, grid), n_railman.jpg (zoom 5)"
+  },
+  {
+   "id": "S2.tree.far_tree_28603",
+   "set": {
+    "conf": "med"
+   },
+   "add_note": "Second pass: conf low -> med for the tree reading. The dark band (u 28589-28610) runs continuously from the silk's top edge (v ~22) down through the far roof's band (v 37-78) and across its eave line (v ~78-84) to v ~130, tapering, with a fork at its top. A post or a dark doorway of S2.bld.far_shed_top_28720 would stop at the eave; a trunk standing in front (south) of the building runs across it. The restyle paints a tree here too.",
+   "conf": "med",
+   "crops": "scratchpad S2_second_east/n_fartrees.jpg (zoom 3.5), n_willows.jpg (zoom 2), i_fartrees.jpg (scan over restyle)"
+  },
+  {
+   "id": "S2.tree.far_tree_28655",
+   "set": {
+    "conf": "med"
+   },
+   "add_note": "Second pass: conf low -> med for the tree reading, as for S2.tree.far_tree_28603: its dark bands (u 28620-28660) start inside the far roof's band at v ~55 and run down across the eave line (v ~80) to the rounded dark mass at v 125-150, so it stands in front of the building, not under its eave. The rounded mass at its foot stays open (a shrub, a swollen base or a rock). The restyle paints a second trunk and a round bush here.",
+   "conf": "med",
+   "crops": "scratchpad S2_second_east/n_fartrees.jpg (zoom 3.5), n_willows.jpg (zoom 2), i_fartrees.jpg"
+  },
+  {
+   "id": "S2.fig.boatman_coils_28543",
+   "add_note": "Second pass: still one man or a bitt (conf low kept). The dark upright is 11-13 px wide (u 28537-28550) with a flat, two-lobed top at v 1280-1290 and a narrower dark stem down to v 1316, dark all the way, with no lighter face below the 'cap'. The heads of the figures painted at this size nearby are 17-33 px wide (the bank porter 25 px, the shed keeper 26 px), which favours a bitt; the restyle paints one man in a black cap with his hand raised to his face exactly here, which favours a man. See the retirement of S2.fig.boatman_coils_28562.",
+   "conf": "low",
+   "crops": "scratchpad S2_second_east/z_bitts.jpg, n_coils.jpg, i_bitts.jpg, i_coils_wide.jpg"
+  },
+  {
+   "id": "S2.fig.steersman_27890",
+   "add_note": "Second pass: still open (conf low kept). On a gridless zoom-2.5 crop the blob (u 27877-27907, v 1222-1246) is dome-topped with a flat brim, over a lighter patch at v 1246-1266 just above the tiller bar (v 1266-1278): it reads like a capped head over a face. The bottom boat's rudder head, where no man stands, is drawn differently: a squarish block with a hole, a windlass and ropes (n_bbrudder.jpg). The restyle's second, white-robed figure at (27813-27857, 1247-1273) is only the gallery's curved rails on the scan.",
+   "conf": "low",
+   "crops": "scratchpad S2_second_east/n_steer.jpg (zoom 2.5), n_bbrudder.jpg (zoom 2.5), n_gb1deck.jpg (zoom 1.5)"
+  }
+ ],
+ "checked": [
+  {
+   "what": "S2.prop.stake_27708 (t10, low)",
+   "verdict": "no change",
+   "reading": "One thin wavy upright stroke at u 27707-27712, v 845-940 on the bare bank in front of the lower shed, faint but continuous; no head, arms or second leg (the restyle's child in red). A stake or pole stuck in the ground, as recorded. Crop: n_stake.jpg (zoom 2)."
+  },
+  {
+   "what": "S2.fig.staff_man_28266 (one man or two at the staff)",
+   "verdict": "no change (both readings stay)",
+   "reading": "On a gridless zoom-3 crop the narrow head (u 28257-28272, v 630-657) has a pointed cap outline and a lighter patch below it like a face, directly behind the leaning man's shoulder, with the staff rising past it to (28263, 607); the leaning man's head (28213-28247, 640-677) is clearly his own. Still not settled between a second man and a wrapped staff top. Crop: n_staff.jpg."
+  },
+  {
+   "what": "the porters' estimated points (youth_topknot_28222, sack_porter_28343, sack_porter_bent_28432, bank_porter_28355, grain_owner_28045)",
+   "verdict": "no change",
+   "reading": "Every head and every measured foot sits on its stroke at zoom 1.5 (ov2_crowd.jpg) and zoom 2 (n_porters.jpg). Porter D (28432): dark hair at 28393-28420, v 780-807, a face in profile looking down-left at v 807-837 and the load's arc to (28480, 813); below it only willow whips, so his foot stays est. No further porter is hidden in the whips at u 28440-28560, v 780-960 (n_porterD.jpg)."
+  },
+  {
+   "what": "the ridge knob on S2.bld.rear_shed_28380 at (28423-28437, 278-287): ornament or bird",
+   "verdict": "no change (in the building's what)",
+   "reading": "A solid dark blob about 14 x 9 px sitting flat on the roof's top edge, where the platform's brick face disappears behind the roof; two or three lobes, no tail, beak or wing stroke at zoom 6 (n_knob6.jpg). The restyle draws a ridge ornament (i_knob.jpg). Too small to settle; the builder may place a ridge ornament or nothing."
+  },
+  {
+   "what": "S2.tree.willow_behind_shed_28555 against S2.tree.willow_behind_shed_28612",
+   "verdict": "no change",
+   "reading": "There are two separate convergence points: 28612's whips meet at (28610-28620, 273-287) and fan up and east; a second set meets at (28550-28567, 300-313) and fans west and up-west over the roof (n_willow2.jpg, zoom 3). So two knobbed heads are painted; whether they are two trees or two knobs of one pollard 60 px apart cannot be told (no trunk shows). The pale lens on the thatch (28560-28577, 330-350) sits right under the second head: a gourd, a hole, or the knob itself."
+  },
+  {
+   "what": "t12's low things under the far roof: S2.prop.far_shed_furniture_28728, S2.tree.small_tree_or_post_28880, S2.prop.tub_or_trough_28923; t11's 'small vertical marks at 28780-28830, v 70-120'",
+   "verdict": "no change",
+   "reading": "The slanted stroke with a crossbar (28855-28886, 75-125) is a frame or post with a bracket plus a second upright at u 28843-28847; at zoom 6 it has no head (z_fig28870.jpg), so it is not a small far figure even though it looks like one at zoom 0.9. The restyle paints a well sweep there. The marks at u 28775-28845 under the eave are uprights with no heads (n_farmarks.jpg, zoom 5). The tub at 28905-28937, v 97-113 is a low rounded outline as recorded (n_fartop.jpg)."
+  },
+  {
+   "what": "the donkey's rider reading (S2.fig.man_leaning_over_donkey_29000)",
+   "verdict": "no change (seated on the bench)",
+   "reading": "On a gridless zoom-2.5 crop of the shed's east end (n_donkey.jpg) his light robe ends at the donkey's back line (v ~622-638) and nothing light crosses its dark flank; his seat is level with the bench at u 29008-29052. All points sit on their strokes (donkey head 28920-28940, 578-602; hooves 28908-28920, 670-678 and 28968-29000, 670-690)."
+  },
+  {
+   "what": "the dark fan under the round-faced man (t11's 'dark shape at 28817-28860, v 627-680')",
+   "verdict": "no change",
+   "reading": "Radial fold lines converging to a point at (28855, 640) and spreading to u 28825-28890, v 640-680, crossed by his staff: his robe's hem fanned over his knees, as S2.fig.donkey_owner_seated_28850 says. No dog, bag or second person (the restyle's kneeling woman in red is invented). Crops: n_hem.jpg (zoom 5), i_hem.jpg."
+  },
+  {
+   "what": "S2.prop.stool_28665 against t12's 'dark boot- or animal-like shape at 28654-28689, v 639-656'",
+   "verdict": "no change",
+   "reading": "The same X-legged stool between the posts (n_shedw.jpg, zoom 2.2); no dog or shoes."
+  },
+  {
+   "what": "S2.fig.shed_customer_28535 (low)",
+   "verdict": "no change",
+   "reading": "A dark rounded blob at (28530-28545, 540-552) over the table's top, then posts; unreadable at zoom 4.5 (n_cust535.jpg). A jar on the table stays the other reading."
+  },
+  {
+   "what": "grain boat 2's bow (S2.veh.boat_grain_28095)",
+   "verdict": "no change",
+   "reading": "The dark tapering blade under the mat hood runs from (28030, 1285) down and east to about (28110, 1445) (z_gb2bow.jpg, zoom 2): a raked stem descending into the hull, as river_e reads it. The ladder between the boats runs from about (28500, 1398-1410) at the coils to (28580, 1534) (z_ladder.jpg): within 20 px of river_e's ladder_top and ladder_foot."
+  },
+  {
+   "what": "S2.prop.ribbed_object_28878 (a small boat?)",
+   "verdict": "no change",
+   "reading": "A light, cross-ribbed, 70 px object lying on the massive willow's knobbed limb at the waterline level (n_ribbed.jpg, n_willowbig.jpg). Too small for a boat at this scale (the boats here are 415-743 px). It lies at grain boat 2's waterline (v 1468-1470) 145-210 px east of that boat's est rear (28700), so it could also be a bit of that boat's stern seen through the willow, but grain boat 1's stern gallery is drawn 250-300 px above its waterline, not at it. The restyle paints a small prow with a cabin here."
+  },
+  {
+   "what": "S2.prop.mooring_post_rope_28272 (post with a coil, or a hooded person)",
+   "verdict": "no change",
+   "reading": "A round top about 30-45 px wide with concentric loops (u 28245-28290, v 1093-1140) over two long near-vertical lines down to the grain boat's mat-roof edge at v ~1190 (n_post.jpg, zoom 3). Readings: a post with a coiled rope (recorded), a man in a round woven hat and cape seen from behind (his size, about 110-130 px to the roof's edge, would fit beside the 141 px bank porter), or the head-on horse the restyle paints (i_post.jpg). Not settled; it stays low."
+  },
+  {
+   "what": "S2.prop.ladder_28538 and the brief's 'small dark shapes' (birds?)",
+   "verdict": "no change",
+   "reading": "A pair of long parallel poles (28493, 1153) to (28583, 1103) with three short straight bars, each with a dark knob at its west end, lying across or beside them at a shallower angle (n_ladderbank.jpg, zoom 3; n_ladderctx.jpg, zoom 2). The bars have no wing or tail strokes, so they are not birds; ladder, poles with dark iron tips, or oars all fit."
+  },
+  {
+   "what": "the leaf clusters between the two elms (u 28145-28255, v 160-262)",
+   "verdict": "no change (open; the merge's reading in S2.tree.bare_28130's note stands)",
+   "reading": "The restyle paints a third, small leafy tree here, its stems rising from behind the roofs at about (28180, 290) (i_midtree.jpg). On the scan the clusters lie in horizontal tiers 80-110 px below the elms' lowest branches, and no twig joins the western tiers to S2.tree.bare_28130's trunk, but the eastern tiers may hang from S2.tree.elm_top_28292's low west branch at about (28260, 215) (n_elms.jpg, n_midtree.jpg, n_midtree2.jpg). No stem of their own shows above the roofs. If the lead counts a third tree, its base is est at about (28200, 262), top (28175, 165), crown_w (28144, 205), crown_e (28252, 225)."
+  },
+  {
+   "what": "S2.prop.bench_27840 (t10, low)",
+   "verdict": "no change",
+   "reading": "At zoom 6 (z_bench27840.jpg) a horizontal at v 760-775 runs from u ~27823 east to the big table, with two legs at u 27857-27863 and 27867-27873 down to v ~817; the pennant pole holder's hands and the pole's lower end (u 27830-27845, v 782-808) lie over its west part. It may be the big table S2.prop.table_27918's west end reaching further west than recorded (27853) rather than a separate bench. Not settled."
+  },
+  {
+   "what": "the restyle's inventions in this range, checked on the scan",
+   "verdict": "nothing painted",
+   "reading": "A figure in red with a white bucket at u 27740-27790, v 420-500 (i_redchild.jpg: bare silk); a child with a basket at u 28310-28400, v 650-790 (i_e28350.jpg: bare silk); the white-robed figure at grain boat 1's stern (curved gallery rails); people at the tiled shed's two tables and under the lower shed beyond the one server (n_tiledshed.jpg, n_shedE.jpg: furniture only); the crowd on the bottom boat."
+  },
+  {
+   "what": "the bank between the gangplank's landing and the porters (u 27900-28320, v 900-1130), and grain boat 1's deck",
+   "verdict": "no change",
+   "reading": "Only the gangplank's upper end (27900-28025, 1045-1120), the rope's frayed end and bank wash; the pale vertical strip at u 28220-28260 is damaged silk (n_bankmid.jpg). On grain boat 1's deck (27450-28060, v 960-1300) nobody besides the steersman reading (n_gb1deck.jpg)."
+  },
+  {
+   "what": "the lower shed's capped east post and the 望火楼",
+   "verdict": "no change",
+   "reading": "No figure at the capped post (27977-28000, v 650-840; z_capfig.jpg). Nobody on the 望火楼's stair, platform or in the pavilion (n_tower.jpg); the thin vertical line inside the pavilion at u 28450 (v 152-202) is pale (a silk crease), not a bell rope (n_pav4.jpg)."
+  },
+  {
+   "what": "the massive willow's 'trunk at ~28750-28850' (t12) and the bank under the crown (u 28400-29050, v 700-1300)",
+   "verdict": "no change",
+   "reading": "The thick stroke at u 28787-28850, v 925-1100 rises from the knobbed limb head (28700-28975, 1275-1600) to a fork at about (28820, 1020): a branch of S1's massive willow, as t12 read it (n_willowbig.jpg). Under the crown only whips and bank wash; no figure besides porter D."
+  },
+  {
+   "what": "west of my range, for the east_middle pass",
+   "verdict": "left to east_middle",
+   "reading": "At the pole frame's east end, u 27540-27563, v 240-263, a head-like shape among the poles (the restyle paints a man in a white cap here, i_framefig.jpg, n_framefig.jpg); unreadable at zoom 3 on the scan."
+  }
+ ]
+}

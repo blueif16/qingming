@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a pine-like tree as the scroll paints it, its needles drawn as fan-shaped clusters. A twisting, knotty trunk with pale grey bark scarred by dark knots leans and bends into a few heavy, crooked limbs. Along the limbs and at their ends sit dense, rounded fans of fine, short, straight needles radiating from one point like half-open fans, layered in flat tiers with sky between them.\nColours: pale grey-brown bark with dark knots; needles deep blue-green (about #4f6a58), a lighter fresh green on the upper fans; no yellow.\n\nThis one: Like the old tree in image 2: a thick twisting trunk with spreading roots leaning to the right and forking into heavy limbs at about half its height, with needle fans along every limb; the crown wider than it is tall. Its needle fans are loose, open and irregular, half-circles of fine needles with sky between the strokes: a wild old tree, never clipped into cloud-shaped pads and never shaped like a bonsai.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/pine_fan_1.jpg",
+  "gen/trees/refs/pine_fan_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "49fe54bd14fa",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 37.8,
+ "attempts": 1,
+ "idempotency_key": "23ffeed9-3000-4580-b044-86e1d1e859db",
+ "request_id": "1ea97b2e-2ab8-42f1-9509-d88ea4b3e005",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4213,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3728,
+   "text_tokens": 485
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4213,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3728,
+   "text_tokens": 485
+  },
+  "total_tokens": 5797
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/4407e7f6-28c6-4075-bdca-391372ab6600"
+ ],
+ "files": [
+  "gen/trees/raw/pine_fan_1/49fe54bd14fa_0.png"
+ ]
+}

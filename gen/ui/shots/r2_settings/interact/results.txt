@@ -1,0 +1,41 @@
+PASS  direct HUD: two view tiles and the ›  {"dial":[14,14,250,114],"hud":[14,122,146,162],"tiles":2,"more":[106,122,146,162],"bell":"none"}
+PASS  direct HUD clear of the time instrument  dial 14,14,250,114 hud 14,122,146,162
+PASS  bell off the street  none
+PASS  eye tile: first person
+PASS  figure tile: third person
+PASS  V switches and the tiles follow  {"view":"first","first":"true"}
+PASS  O opens the settings screen  "time"
+PASS  mouse free and walking held while open
+PASS  no walking while open  0.000 m
+PASS  Space does not open the scroll HUD over it, and changes nothing
+PASS  ↓ moves to the hour row  hour
+PASS  → steps the hour  10 -> 11
+PASS  → steps the pace  0 -> 1
+PASS  E: next page (視角)  view
+PASS  Enter switches the view
+PASS  Q wraps to the last page (進階)
+PASS  Tab goes on (時辰)
+PASS  a seal opens its page
+PASS  a click on the switch flips it
+PASS  and back
+PASS  the brush slider drags  55 -> 81.782
+PASS  Esc closes
+PASS  walking resumes after close  1.34 m
+PASS  O closes it again
+PASS  › opens it
+PASS  返回 closes it
+PASS  H opens the help  false -> true
+PASS  H folds it
+PASS  phone: HUD clear of the instrument and the scroll button  {"dial":[10,10,190,92],"hud":[198,33,315,69],"scroll":[334,10,380,56],"w":390}
+PASS  phone: HUD tap targets at least 34 px  [36,38,36]
+PASS  phone: a tap on the eye: first person
+PASS  phone: › opens the settings
+PASS  phone: the screen fits the width  {"scrollW":390,"w":390,"h":844,"tabs":[10,84,380,136],"list":[10,179,380,447],"desc":[10,570,380,834],"close":[287,12,380,74]}
+PASS  phone: description under the list
+PASS  phone: a tap on a row selects it
+PASS  phone: the description follows  時辰
+PASS  phone: a tap on › steps the hour  10 -> 11
+PASS  phone: a tap on a seal changes the page
+PASS  phone: 返回 closes it
+PASS  phone: the 說明 seal opens the help
+no console errors/warnings

@@ -1,0 +1,57 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/generations",
+ "prompt": "A seamless, tileable square texture of the current lines of a river, drawn the way the Song dynasty handscroll\n\"Along the River During the Qingming Festival\" draws the fierce current of the Bian river: thin, fine ink lines of\neven weight, in dark grey ink on plain white. The lines run left to right, roughly parallel, about twelve to sixteen\nof them across the square, each a long, gently undulating stroke that swells and narrows slightly, breaks off, and\nstarts again a little offset; here and there two strokes close into a small eye-shaped eddy or a tight curl, as the\npainting does. Loose, hand-drawn, calm, sparse: more white than ink. The pattern continues across all four edges so\nthe tile repeats with no seam.\nNothing else: no boats, no banks, no shading, no wash, no colour, no paper or silk texture, no border, no signature,\nno seals, no text. Pure white background, only the ink lines.",
+ "refs": [],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "lines"
+ },
+ "format": "png",
+ "generation_s": 39.0,
+ "attempts": 1,
+ "idempotency_key": "e790b123-a2c9-455f-b30e-aa81d9eee1fd",
+ "request_id": "cdc0d08c-cecc-4c8f-8a0e-b8c681f037e8",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3300,
+  "completion_tokens_details": {
+   "image_tokens": 3300,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 210,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 0,
+   "text_tokens": 210
+  },
+  "output_tokens": 3300,
+  "output_tokens_details": {
+   "image_tokens": 3300,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 210,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 0,
+   "text_tokens": 210
+  },
+  "total_tokens": 3510
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/7ec7cdf4-6bef-4a5d-b8b0-43a6909a59cc",
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/4b757116-2f33-4048-947f-90fb9a07ae57"
+ ],
+ "files": [
+  "qingming/gen/boats/water/lines_0.png",
+  "qingming/gen/boats/water/lines_1.png"
+ ]
+}

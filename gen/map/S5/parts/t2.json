@@ -1,0 +1,500 @@
+{
+ "section": "S5",
+ "entities": [
+  {
+   "id": "S5.fig.tower_watchman",
+   "kind": "figure",
+   "name": "tower watchman",
+   "what": "The figure in the tower's central doorway, painted at about half the size of the street figures: cap on his head, a dark blue-grey coat over a lighter inner garment, seen three-quarter from behind with his head turned left toward the city side. Only the head and upper body show above the threshold. 余辉 and the museum read him as a watchman looking down at the tax-office quarrel; Hansen and Columbia read him as a sightseer.",
+   "pts": {
+    "foot": [
+     6855,
+     545,
+     "est"
+    ],
+    "head": [
+     6855,
+     452
+    ]
+   },
+   "support": "tower floor",
+   "pose": "standing",
+   "facing_deg": 200,
+   "vis": "part: below the waist hidden by the doorway threshold and the rails at the head of the upper stair",
+   "conf": "high",
+   "src": "余辉 2014: 城上暮鼓 (watchman); Hansen: sightseer",
+   "note": "Seed re-checked 2026-10-11. Head confirmed at v 452. Foot u moved 6858 -> 6855 so it sits under the body (the body spans u 6843-6873). Support renamed from 'gate tower floor' to 'tower floor', the frame file's name. Foot v 545 kept: it is on the hall floor behind the threshold (the sill line is at v ~525-530, and the front edge of the balcony floor at v ~560). The light rounded shape at u 6859-6873, v 477-507 is read as part of his clothing, not as the drum."
+  },
+  {
+   "id": "S5.prop.tower_drum_6898",
+   "kind": "prop",
+   "name": "tower drum (uncertain)",
+   "what": "The drum the sources place inside the tower. It is not clearly legible on the scan. The best candidate is the framed shape inside the doorway right of the watchman (u 6885-6912, v 447-500), possibly the drum stand (鼓架) seen through the door.",
+   "pts": {
+    "base": [
+     6898,
+     540,
+     "est"
+    ]
+   },
+   "support": "tower floor",
+   "vis": "faded",
+   "conf": "low",
+   "src": "名画记; 余辉 2014: 城上暮鼓",
+   "note": "Recorded because the scholarship says a drum is visible. The restyle paints a plain dark interior door at this spot. The base is estimated on the hall floor, level with the watchman's feet."
+  },
+  {
+   "id": "S5.fig.tower_balcony_man_6600",
+   "kind": "figure",
+   "name": "man on the tower balcony",
+   "what": "A small figure at the west end of the tower's front balcony, leaning forward on the railing. He has dark hair or a dark cap and light-coloured clothes, and his face is in profile to the left: he looks west over the willow toward the tax office. He is painted at the same reduced scale as the watchman.",
+   "pts": {
+    "foot": [
+     6600,
+     555,
+     "est"
+    ],
+    "head": [
+     6585,
+     490
+    ]
+   },
+   "support": "tower floor",
+   "pose": "leaning",
+   "facing_deg": 200,
+   "vis": "part: below the waist hidden by the front balcony railing (top rail at v ~532); willow shoots cross him",
+   "conf": "med",
+   "src": "",
+   "note": "Not in sections.md, which speaks of a lone figure (the watchman). The strokes show a dark head with a face profile and a light body bordered by a contour, wider than a railing post. The restyle draws a post knob with a small figure here. His foot is estimated on the balcony floor just behind the railing."
+  },
+  {
+   "id": "S5.fig.carter_6418",
+   "kind": "figure",
+   "name": "carter at the ramp foot",
+   "what": "A man in a short light jacket belted over loose trousers and cloth shoes, with his hands clasped at his belly. He stands at the west foot of the ramp beside the tax-office bales, his head turned left in profile toward the office. By dress and place he is one of the carters of the tax-office scene (余辉: four carters, one of whom gapes at the sum).",
+   "pts": {
+    "foot": [
+     6418,
+     1000
+    ],
+    "head": [
+     6409,
+     824
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 200,
+   "vis": "full",
+   "conf": "high",
+   "src": "余辉: 货到税讫 (setting)",
+   "note": "Belongs with the tax-office group recorded by the tile west of u 6400; I set no group ID because I don't know that tile's group name. Which carter he is (the gaper or the fourth) is an inference.",
+   "group": "S5.grp.tax_quarrel"
+  },
+  {
+   "id": "S5.fig.hidden_man_6452",
+   "kind": "figure",
+   "name": "man half hidden behind the carter",
+   "what": "A second man standing just behind S5.fig.carter_6418, against the ramp's west edge. Only a shoulder and a sleeve outline show. The restyle paints him in a white jacket and blue trousers.",
+   "pts": {
+    "foot": [
+     6452,
+     985,
+     "est"
+    ],
+    "head": [
+     6455,
+     805,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "vis": "part: almost all hidden behind S5.fig.carter_6418 and the willow trunk; only outlines at u 6438-6460, v 825-945 show",
+   "conf": "low",
+   "src": "",
+   "note": "The outline could also be the lower willow trunk or the ramp edge. The head point is where a head would sit above the visible shoulder, at the foot of the willow trunk. The foot is estimated slightly behind the carter's.",
+   "group": "S5.grp.tax_quarrel"
+  },
+  {
+   "id": "S5.fig.distant_figure_6715",
+   "kind": "figure",
+   "name": "distant figure (west of a pair)",
+   "what": "The western of two tiny upright marks far up the silk, under the distant trees beyond the tower roof, about 20 px tall. The restyle reads both marks as small standing people.",
+   "pts": {
+    "foot": [
+     6715,
+     168
+    ],
+    "head": [
+     6715,
+     148
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "These could also be posts or stumps: posts of a similar size stand on the open ground at the top left (u ~6290-6335, v 100-125, tile t1)."
+  },
+  {
+   "id": "S5.fig.distant_figure_6729",
+   "kind": "figure",
+   "name": "distant figure (east of a pair)",
+   "what": "The eastern of two tiny upright marks far up the silk beside S5.fig.distant_figure_6715, under the distant trees beyond the tower roof.",
+   "pts": {
+    "foot": [
+     6729,
+     162
+    ],
+    "head": [
+     6729,
+     144
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Same caveat as S5.fig.distant_figure_6715."
+  },
+  {
+   "id": "S5.tree.willow_6460",
+   "kind": "tree",
+   "name": "willow at the ramp foot",
+   "what": "A willow between the tax office and the west foot of the ramp. Its dark, gnarled trunk (visible at u 6447-6474, v 717-811) forks into a big rounded head of long, straight, leafless shoots. The crown fills the space in front of the tower's west end up to the eaves. Medium-large and upright.",
+   "pts": {
+    "base": [
+     6450,
+     975,
+     "est"
+    ],
+    "top": [
+     6470,
+     290
+    ],
+    "crown_w": [
+     6385,
+     520
+    ],
+    "crown_e": [
+     6600,
+     450
+    ]
+   },
+   "support": "ground",
+   "vis": "part: lower trunk hidden behind S5.fig.carter_6418 and S5.fig.hidden_man_6452; crown overlaps the tax-office roof and the tower's west bracket sets",
+   "conf": "med",
+   "src": "",
+   "note": "Base estimated at ground level just west of the ramp's side and behind the two men at the ramp foot (their feet are at v ~985-1000); the trunk's visible part (v 717-811) stands over the ramp's west edge, so the tree grows beside the ramp, not on it. The willow mass west of u ~6390 above the tax office is probably a second tree (tile t1)."
+  },
+  {
+   "id": "S5.tree.far_6533",
+   "kind": "tree",
+   "name": "distant tree above the tower's west roof end",
+   "what": "A distant tree north of the tower, seen above its west roof end. A broad head of fine shoots radiates from a branch point at about (6520, 185); the trunk is hidden by the roof.",
+   "pts": {
+    "base": [
+     6533,
+     270,
+     "est"
+    ],
+    "top": [
+     6530,
+     30
+    ],
+    "crown_w": [
+     6405,
+     150
+    ],
+    "crown_e": [
+     6625,
+     150
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk and base hidden behind the tower's west roof end",
+   "conf": "med",
+   "src": "",
+   "note": "The fine-shoot crown at the very top left (u 6400-6520, v 0-85) may be a separate tree. Whether these distant trees stand on open ground or on the wall north of the tower can't be told."
+  },
+  {
+   "id": "S5.tree.far_6643",
+   "kind": "tree",
+   "name": "small distant tree",
+   "what": "A small distant tree beyond the tower roof: a thin dark trunk (v 85-127) under a faint head of fine shoots.",
+   "pts": {
+    "base": [
+     6643,
+     127
+    ],
+    "top": [
+     6650,
+     30
+    ],
+    "crown_w": [
+     6600,
+     70
+    ],
+    "crown_e": [
+     6690,
+     60
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S5.tree.far_6673",
+   "kind": "tree",
+   "name": "small distant tree",
+   "what": "A small distant tree beside S5.tree.far_6643: a thin trunk (v 119-155). Its crown is faint and merges with its neighbours'.",
+   "pts": {
+    "base": [
+     6673,
+     151
+    ],
+    "top": [
+     6680,
+     55
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S5.tree.far_6765",
+   "kind": "tree",
+   "name": "distant leaning tree",
+   "what": "A distant tree just above the tower roof's west slope. Its trunk leans right, from (6765, 138) to (6790, 88), into a broad, faint head of fine radiating shoots that reaches the top edge of the silk.",
+   "pts": {
+    "base": [
+     6765,
+     138
+    ],
+    "top": [
+     6760,
+     8
+    ],
+    "crown_w": [
+     6670,
+     60
+    ],
+    "crown_e": [
+     6835,
+     70
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "The restyle paints a large willow here whose trunk runs behind the roof at about (6795, 110)."
+  },
+  {
+   "id": "S5.tree.willow_6880",
+   "kind": "tree",
+   "name": "old willow below the ramp",
+   "what": "An old, gnarled willow at the bottom of the silk below the ramp. A thick, light-barked trunk rising from the bottom edge sends one long limb up-left (from (6846, 1448) to (6539, 1219)) and others upward. All of them carry big fans of long, straight, leafless shoots, which fill the space in front of the lower ramp from u 6400 to 6970. Large, leaning left.",
+   "pts": {
+    "base": [
+     6880,
+     1766,
+     "est"
+    ],
+    "top": [
+     6800,
+     928
+    ],
+    "crown_w": [
+     6395,
+     1330
+    ],
+    "crown_e": [
+     6970,
+     1330
+    ]
+   },
+   "support": "ground",
+   "vis": "part: base runs off the silk's bottom edge; trunk interlocked with S5.tree.elm_6935",
+   "conf": "med",
+   "src": "土墙杂树 (trees in front of the wing)",
+   "note": "The trunk complex at u 6840-6990 carries both fine-shoot willow fans and dark crab-claw elm twigs. I read it as an old willow and an elm whose trunks touch. Both bases are estimates at the bottom edge of the silk (v ~1766)."
+  },
+  {
+   "id": "S5.tree.elm_6935",
+   "kind": "tree",
+   "name": "big bare elm below the gate",
+   "what": "A big, bare, elm-like tree. Its thick, twisted trunk with pale bark patches rises from the bottom edge and splits into a left limb (up to about (6840, 1180)) and a near-vertical right limb (u ~7000, up to v 850). The crown is a dense mass of dark crab-claw twigs with knobby tips and no leaves, spreading from the lower ramp to the foot of the gate block.",
+   "pts": {
+    "base": [
+     6935,
+     1766,
+     "est"
+    ],
+    "top": [
+     6985,
+     850
+    ],
+    "crown_w": [
+     6650,
+     1320
+    ],
+    "crown_e": [
+     7045,
+     1000
+    ]
+   },
+   "support": "ground",
+   "vis": "part: base runs off the silk's bottom edge; trunk interlocked with S5.tree.willow_6880; crown merges with S5.tree.elm_7118",
+   "conf": "med",
+   "src": "土墙杂树 (trees in front of the wing)",
+   "note": "See S5.tree.willow_6880 for the shared trunk. Splitting the crown from elm_7118's east of u ~7000 is approximate."
+  },
+  {
+   "id": "S5.tree.willow_6775",
+   "kind": "tree",
+   "name": "slender willow at the bottom edge",
+   "what": "A slender young willow at the bottom of the silk: a single straight stem (visible from v 1545 to 1700) that forks at about v 1545 into a small head of fans of long, straight shoots.",
+   "pts": {
+    "base": [
+     6775,
+     1766,
+     "est"
+    ],
+    "top": [
+     6770,
+     1400
+    ],
+    "crown_w": [
+     6640,
+     1490
+    ],
+    "crown_e": [
+     6860,
+     1480
+    ]
+   },
+   "support": "ground",
+   "vis": "part: stem runs off the bottom edge; crown mixed with S5.tree.willow_6880's fans",
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S5.tree.elm_6580",
+   "kind": "tree",
+   "name": "small bare tree at the lower left",
+   "what": "A small bare tree at the bottom left, east of the small gatehouse with the studded door. Only a low, spreading crown of dark crab-claw twigs (u 6475-6690, v 1580-1660) shows above a screen of willow shoots; the trunk is not visible.",
+   "pts": {
+    "base": [
+     6580,
+     1766,
+     "est"
+    ],
+    "top": [
+     6560,
+     1585
+    ],
+    "crown_w": [
+     6475,
+     1625
+    ],
+    "crown_e": [
+     6690,
+     1595
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk hidden by willow shoots and the bottom edge",
+   "conf": "low",
+   "src": "",
+   "note": "These twigs could also be the low end of S5.tree.willow_6880's limb. The base is a guess at the bottom edge."
+  },
+  {
+   "id": "S5.tree.willow_shoots_6600",
+   "kind": "tree",
+   "name": "willow shoots at the lower left",
+   "what": "Fans of long, straight shoots rising from the bottom edge at the lower left (u 6470-6700, v 1640-1766), as from a pollarded willow head or young willows whose stems lie below the painted edge.",
+   "pts": {
+    "base": [
+     6600,
+     1766,
+     "est"
+    ],
+    "top": [
+     6580,
+     1640
+    ],
+    "crown_w": [
+     6470,
+     1700
+    ],
+    "crown_e": [
+     6700,
+     1680
+    ]
+   },
+   "support": "ground",
+   "vis": "part: only the upper shoots are painted; any stem is below the silk's bottom edge",
+   "conf": "low",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S5.tree.elm_7118",
+   "kind": "tree",
+   "name": "knotted elm west of the gate block",
+   "what": "A gnarled, elm-like tree on the slope of the earthen wing just west of the gate block. A pale, knotted trunk with a large hollow at v ~1235-1255 rises from a flared root foot to a crown of dark crab-claw twigs without leaves. Medium-large and upright.",
+   "pts": {
+    "base": [
+     7118,
+     1540
+    ],
+    "top": [
+     7085,
+     880
+    ],
+    "crown_w": [
+     6985,
+     1200
+    ],
+    "crown_e": [
+     7190,
+     1300
+    ]
+   },
+   "support": "mound slope",
+   "vis": "part: crown merges with S5.tree.elm_6935 on the west",
+   "conf": "high",
+   "src": "土墙杂树",
+   "note": "The base is where the root flare meets the ink-washed earth (v ~1540). 'bank slope' means the slumped flank of the rammed-earth wing; the structures agent defines the wing itself."
+  },
+  {
+   "id": "S5.prop.canopy_6186",
+   "kind": "prop",
+   "name": "stall canopy on two poles",
+   "what": "A flat mat-and-plank canopy, its high (north-east) edge against the west end of the bracketed house, its low front edge carried by a straight pole on the west and a slanting prop on the east. Two men talk under it and a third sits in the house's open front behind the prop.",
+   "pts": {
+    "base": [
+     6186,
+     1778,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: pole feet below the silk's edge",
+   "conf": "high",
+   "src": "",
+   "note": "Measured in the loyalty pass (gen/map/S5/loyalty/canopy.jpg). Canopy corners: high edge (6140,1465)-(6315,1422) against the house; low edge (6082,1592)-(6270,1565). West pole straight at u 6100-6105 from the low edge down past the silk edge (foot est 6103,1785); east prop slants from (6240,1565) to about (6270,1770). base = between the two pole feet (est). Canopy low edge about 2.3 m above the pole feet (v 1592 -> 1770). The sack S5.prop.sack_6132 leans at the west pole."
+  }
+ ]
+}

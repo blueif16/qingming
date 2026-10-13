@@ -1,0 +1,111 @@
+{
+ "name": "horse",
+ "title": "Horse: the small pale horse (S4: the rider coming the other way, the white horse lying in the courier post's yard; S6: riders)",
+ "plan": "equid",
+ "figure": {
+  "section": "outer_road",
+  "id": "white_horse_courier_post",
+  "src": "scan",
+  "crop": [
+   11700,
+   100,
+   11960,
+   300
+  ]
+ },
+ "prompt": "animal_horse",
+ "back_m": 1.28,
+ "mesh": {
+  "from": "side",
+  "test": [
+   "side"
+  ],
+  "polys": 3500
+ },
+ "clips": [
+  "idle",
+  "walk",
+  "graze",
+  "lie",
+  "head_low",
+  "walk_low"
+ ],
+ "tack": {
+  "saddle": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_red",
+    "hem": "cloth_dark",
+    "span": [
+     -0.2,
+     0.2
+    ],
+    "down": 72
+   },
+   {
+    "kind": "girth",
+    "at": -0.08
+   },
+   {
+    "kind": "saddle",
+    "length": 0.32
+   }
+  ],
+  "saddle_dark": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_indigo",
+    "hem": "cloth_dark",
+    "span": [
+     -0.2,
+     0.2
+    ],
+    "down": 72
+   },
+   {
+    "kind": "skirt",
+    "mat": "cloth_indigo",
+    "hem": "cloth_dark",
+    "span": [
+     -0.17,
+     0.17
+    ],
+    "z_bot": 0.42,
+    "fringe": 0
+   },
+   {
+    "kind": "girth",
+    "at": -0.08
+   },
+   {
+    "kind": "saddle",
+    "length": 0.32
+   },
+   {
+    "kind": "crupper",
+    "tassels": 1
+   },
+   {
+    "kind": "bridle"
+   }
+  ],
+  "girth_cloth": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_dark",
+    "span": [
+     -0.13,
+     0.11
+    ],
+    "down": 62
+   },
+   {
+    "kind": "girth",
+    "at": -0.08
+   }
+  ]
+ },
+ "graze_z": 0.3,
+ "seat_back": 0.02,
+ "head_low_z": 0.32
+}

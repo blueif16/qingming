@@ -1,0 +1,197 @@
+{
+ "section": "S5",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    5000,
+    10000
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    32.125,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     7800,
+     58.24
+    ],
+    [
+     8250,
+     32.125
+    ]
+   ],
+   "derivation": [
+    "Origin = the moat bridge's south-west deck corner, S5.str.moat_bridge:base.sw (8248, 1565).",
+    "Depth rate: the bridge's west end runs from base.sw (8248, 1565) to base.nw (8505, 1155): 410 px of v for the assumed 8 m deck width, so 51.25 px of v per metre north, everywhere on the ground.",
+    "Receding direction at the bridge: the same edge, 257 px of u per 8 m, so dx = 32.1 px per metre north (slope -1.60).",
+    "Receding direction at the gate: the passage mouth's floor line and lintel both run at slope -0.88 (S5.str.gate_passage jamb feet (7442, 1415) -> (7584, 1290); lintel (7282, 773) -> (7418, 653)), so dx = 51.25 / 0.88 = 58.2. The gate block's terrace edge (-0.96) and the hatching on its east face (about -1.0) agree within 10%.",
+    "Between the gate block and the bridge (u 7800-8250) the direction is blended linearly. West of the gate no building shows a reliable receding edge (the tax office's brace, -0.67, is low confidence), so the gate's value is kept."
+   ],
+   "assumptions": [
+    "The moat bridge deck is 8 m wide (north-south). This sets the depth scale for the whole section.",
+    "East-west and height share one scale, 77 px per metre (the placement test's frontal scale). With it the bridge railing is 1.2 m tall, the tax office columns 2.8 m, the passage opening 8.3 m tall, and painted street figures about 1.3x life size.",
+    "A metre of depth is the same height on the silk (51.25 px) at the gate as at the bridge. The painter draws each structure with its own receding angle, but the ground recedes up the silk at one rate: the open ground outside the gate (v 1045-1475) is as deep as the bridge deck (v 1155-1570), as painted.",
+    "Tall structures are compressed in depth beyond this: the gate tower hall is painted 3 bays wide and 5 bays along the wall (名画记), yet its east side covers only 155 px of v, which the ground rate reads as 3.0 m. Its true depth is not recoverable from the strokes (see the text map's open questions)."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "street level; small undulations ignored"
+  },
+  "bridge deck": {
+   "H": 0,
+   "how": "level with the road at both ends, as painted (no rise drawn)"
+  },
+  "bank slope": {
+   "H": 0,
+   "how": "unknown rise; taken as street level, so a base on a 1 m bank reads about 1.5 m too far north"
+  },
+  "office floor": {
+   "H": 0.35,
+   "how": "assumed: a low plinth under the tax office (column base plates at v 918-922 against the street at about 935)"
+  },
+  "gate terrace": {
+   "H": 10,
+   "how": "derived: the gate block's south-east arris rises 770 px from its foot (7242, 1591, est) to the terrace corner (7068, 821)"
+  },
+  "tower floor": {
+   "H": 12.1,
+   "how": "derived: the podium's front rises 159 px from the terrace (v 719) to the balcony floor (v 560), 2.1 m above the terrace"
+  },
+  "water": {
+   "H": -1.5,
+   "how": "assumed: the water under the bridge is not painted at its surface; 1.5 m below the deck"
+  },
+  "mound slope": {
+   "H": 1.5,
+   "how": "assumed: the slope of the earth-and-rock mound (S5.grd.rock_mound_7200) in front of the gate block's south face, about 1.5 m above the street; at street level the knotted elm there would stand inside the block"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S5.str.gate_passage:base.se",
+   "S5.str.gate_passage:base.ne"
+  ],
+  "about": "the centre of the gate passage's outer (east) mouth, between its jamb feet"
+ },
+ "checks": [
+  {
+   "what": "passage mouth width (jamb foot to jamb foot), m",
+   "a": "S5.str.gate_passage:base.se",
+   "b": "S5.str.gate_passage:base.ne",
+   "measure": "distance",
+   "expect": "a Song city-gate passage, roughly 3-6 m"
+  },
+  {
+   "what": "passage mouth direction (S jamb -> N jamb), deg",
+   "a": "S5.str.gate_passage:base.se",
+   "b": "S5.str.gate_passage:base.ne",
+   "measure": "direction",
+   "expect": 90
+  },
+  {
+   "what": "gate block outer face foot direction (se -> ne), deg",
+   "a": "S5.str.gate_block:base.se",
+   "b": "S5.str.gate_block:base.ne",
+   "measure": "direction",
+   "expect": 90
+  },
+  {
+   "what": "gate block inner face foot direction (sw -> nw), deg",
+   "a": "S5.str.gate_block:base.sw",
+   "b": "S5.str.gate_block:base.nw",
+   "measure": "direction",
+   "expect": 90
+  },
+  {
+   "what": "gate block thickness at the foot (sw -> se), m",
+   "a": "S5.str.gate_block:base.sw",
+   "b": "S5.str.gate_block:base.se",
+   "measure": "distance",
+   "expect": "a Song rammed-earth city wall, roughly 10-20 m at the foot"
+  },
+  {
+   "what": "bridge near railing height, m",
+   "a": "S5.str.moat_bridge:base.sw",
+   "b": "S5.str.moat_bridge:sw_top",
+   "measure": "height",
+   "expect": "about 1.0-1.2"
+  },
+  {
+   "what": "passage opening height (S jamb foot to lintel), m",
+   "a": "S5.str.gate_passage:base.se",
+   "b": "S5.str.gate_passage:se_top",
+   "measure": "height",
+   "expect": "Song gate passages, roughly 5-7 m"
+  },
+  {
+   "what": "bridge deck length along the near railing (sw -> se), m",
+   "a": "S5.str.moat_bridge:base.sw",
+   "b": "S5.str.moat_bridge:base.se",
+   "measure": "distance",
+   "expect": "not known; was assumed 14 m before the map"
+  }
+ ],
+ "checks_result": [
+  {
+   "what": "passage mouth width (jamb foot to jamb foot), m",
+   "expect": "a Song city-gate passage, roughly 3-6 m",
+   "got": 2.44
+  },
+  {
+   "what": "passage mouth direction (S jamb -> N jamb), deg",
+   "expect": 90,
+   "got": 90.01
+  },
+  {
+   "what": "gate block outer face foot direction (se -> ne), deg",
+   "expect": 90,
+   "got": 90.01
+  },
+  {
+   "what": "gate block inner face foot direction (sw -> nw), deg",
+   "expect": 90,
+   "got": 90.01
+  },
+  {
+   "what": "gate block thickness at the foot (sw -> se), m",
+   "expect": "a Song rammed-earth city wall, roughly 10-20 m at the foot",
+   "got": 11.27
+  },
+  {
+   "what": "bridge near railing height, m",
+   "expect": "about 1.0-1.2",
+   "got": 1.23
+  },
+  {
+   "what": "passage opening height (S jamb foot to lintel), m",
+   "expect": "Song gate passages, roughly 5-7 m",
+   "got": 8.34
+  },
+  {
+   "what": "bridge deck length along the near railing (sw -> se), m",
+   "expect": "not known; was assumed 14 m before the map",
+   "got": 12.42
+  }
+ ],
+ "questions": [
+  "Depth of the tall structures. The ground rate reads the gate block as 9.0 m along the wall, the passage as 2.4 m wide (Song passages are roughly 3-6 m) and 8.3 m tall, and the tower hall as 6.6 m by 3.3 m although it is painted 3 bays by 5. The painter compresses tall structures in depth more than the ground. The strokes fix their positions along the road and their east-west sizes; their north-south sizes are a builder choice, to be recorded in the build notes.",
+  "The tax office and the wall. Sources say the office stands against the city wall (名画记: 在街北紧贴城墙的第一家), and it is painted touching the gate block. On the ground its east end is 9.4 m west of the wall's inner face, and it stands north of the gate block (front at D 12.3, block's north end at D 8.5). The wall north of the gate block is not painted, so nothing fixes where its inner face runs there.",
+  "The wings (settled in the loyalty pass, 2026-10-11): the gate stands without walls. North of the block only trees and bare ground are painted; the earthen mass below the block's east half is a mound of earth and rock with trees (S5.grd.rock_mound_7200), which scholars read as the slumped earthen wall (土墙杂树). Neither is built as a wall.",
+  "The moat. Water is painted only under and beside the bridge. A moat parallel to the wall would cross the open ground north and south of the bridge, where the painting has pines, willows and the bush bank. The bridge's 12.4 m deck spans the water east-west.",
+  "The inner ramp (马道). Its flight is painted against the gate block's south face, rising north to the terrace; its foot is below the silk's edge.",
+  "The south-side houses. Only their roofs show, cut by the silk's bottom edge; their bases and depths are estimates, and their roof lines slope against the section's receding direction."
+ ]
+}

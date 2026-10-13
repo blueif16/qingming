@@ -1,0 +1,127 @@
+{
+ "checks": [
+  {
+   "name": "drag sets the hour (17.6 + 2 h)",
+   "pass": true,
+   "data": {
+    "before": 17.6,
+    "during": 19.59999991330234,
+    "after": 19.59999991330234,
+    "scrubbingDuring": true
+   }
+  },
+  {
+   "name": "no hour sounds while scrubbing across dusk and the first watch, three times",
+   "pass": true,
+   "data": {
+    "before": [],
+    "after": []
+   }
+  },
+  {
+   "name": "frames keep coming while dragging",
+   "pass": true,
+   "data": {
+    "n": 3210,
+    "median": 3,
+    "worst": 17.2
+   }
+  },
+  {
+   "name": "left your clock: 歸今 shows, the hour holds (靜)",
+   "pass": true,
+   "data": {
+    "pace": "靜",
+    "name": "戌時",
+    "sub": "一更二點"
+   }
+  },
+  {
+   "name": "a fling runs on and settles",
+   "pass": true,
+   "data": {
+    "atRelease": 22.124027659713327,
+    "settled": 23.615716725876645
+   }
+  },
+  {
+   "name": "double-click returns to your own clock (今)",
+   "pass": true,
+   "data": {
+    "hour": 23.449444444444445,
+    "pace": "今"
+   }
+  },
+  {
+   "name": "T takes the keys; → twice is two 刻 later; ↑ quickens the pace; the walker stays",
+   "pass": true,
+   "data": {
+    "focus": true,
+    "hour": 10.505386666666665,
+    "pace": "緩",
+    "pos0": [
+     -44.5,
+     -0.015,
+     -6.8
+    ],
+    "pos1": [
+     -44.5,
+     -0.015,
+     -6.8
+    ]
+   }
+  },
+  {
+   "name": "Home returns to your own clock; Esc gives the keys back",
+   "pass": true,
+   "data": {
+    "local": true,
+    "focus": false
+   }
+  },
+  {
+   "name": "the pace word cycles from 今: 緩 常 疾 靜",
+   "pass": true,
+   "data": [
+    "緩",
+    "常",
+    "疾",
+    "靜"
+   ]
+  },
+  {
+   "name": "at 疾 the dusk drum fires once as time passes it",
+   "pass": true,
+   "data": {
+    "hour": 18.627074999999916,
+    "events": [
+     "dusk @18.36 (drum)"
+    ]
+   }
+  },
+  {
+   "name": "touch drag sets the hour (12 + 1.5 h) and does not turn the camera",
+   "pass": true,
+   "data": {
+    "hour": 13.5,
+    "yaw0": 1.5708,
+    "yaw1": 1.5708,
+    "frames": {
+     "n": 884,
+     "median": 1.8,
+     "worst": 6.4
+    }
+   }
+  },
+  {
+   "name": "double tap returns to your own clock",
+   "pass": true,
+   "data": {
+    "local": true,
+    "pace": "今"
+   }
+  }
+ ],
+ "logs": [],
+ "result": "PASS (12/12)"
+}

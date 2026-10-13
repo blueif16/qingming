@@ -1,0 +1,48 @@
+{
+ "name": "ox_longhorn",
+ "title": "Long-horned ox: the yellow ox with long horns curving up and out (kit-built, part of the body) (S4b ox_lead_13458)",
+ "plan": "bovid",
+ "body_from": "ox",
+ "back_m": 1.2,
+ "clips": [
+  "idle",
+  "walk",
+  "graze",
+  "lie"
+ ],
+ "tone": {
+  "hue": 5,
+  "saturation": 0.8,
+  "value": 0.98
+ },
+ "tack": {
+  "draught": [
+   {
+    "kind": "girth",
+    "at": -0.18,
+    "traces": true,
+    "trace_z": 0.62
+   },
+   {
+    "kind": "breast_strap",
+    "z": 0.6,
+    "tassels": 5
+   },
+   {
+    "kind": "nose_rope",
+    "end_z": 0.62,
+    "sag": 0.12
+   }
+  ]
+ },
+ "horns": {
+  "shape": "lyre",
+  "span": 0.2,
+  "back": 0.85,
+  "rise": 0.08,
+  "r0": 0.035,
+  "flat": 0.85,
+  "sweep": 135,
+  "uv_from": "ear"
+ }
+}

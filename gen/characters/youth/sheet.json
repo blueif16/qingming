@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a Song youth of about fourteen who works on the boats and the bridge: a slim teenage boy, about 6 heads tall, a round smooth face with dark dot eyes and a small mouth, no beard, black hair gathered in a small topknot on the crown tied with a dark cord. A short pale grey-white hemp jacket with a crossed collar to the hips, sleeves to the wrist, belted at the waist with a light blue cloth sash; loose pale trousers gathered at the calf and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/youth/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 37.0,
+ "attempts": 1,
+ "idempotency_key": "48a7500a-2f70-41da-b39a-1c3294848a07",
+ "request_id": "04483470-1676-47c9-98ac-ae004c5487b8",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3343,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 361
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3343,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 361
+  },
+  "total_tokens": 4927
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/6163da4e-87c6-46db-9939-03bbe57a43bd"
+ ],
+ "files": [
+  "gen/characters/youth/sheet_0.png"
+ ]
+}

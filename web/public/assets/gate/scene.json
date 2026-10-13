@@ -1,0 +1,35 @@
+{
+ "about": "Camera spots for the walkable gate scene, in the section frame (metres: X east = out of the city, D north, H height; facing_deg 0 = +X, 90 = north). Everything placed in the world (structures, the road, trees, figures) comes from the scroll map through layout.json (tools/map_layout.mjs); this file only says where the camera can stand.",
+ "spawn": {
+  "X": 11,
+  "D": 4,
+  "facing_deg": 180
+ },
+ "views": {
+  "bridge": {
+   "X": 11,
+   "D": 4,
+   "H": 0,
+   "facing_deg": 180,
+   "pitch_deg": 0,
+   "about": "on the moat bridge looking into the city (the spawn)"
+  },
+  "street": {
+   "X": -40,
+   "D": 7,
+   "H": 0,
+   "facing_deg": 0,
+   "pitch_deg": 0,
+   "about": "inside the city looking out through the gate"
+  },
+  "tower": {
+   "X": -19.39,
+   "D": 2.62,
+   "H": 12.1,
+   "facing_deg": 0,
+   "pitch_deg": -20,
+   "about": "beside the watchman on the tower balcony, looking down the road to the bridge"
+  }
+ },
+ "crowd_note": "The gate section holds roughly 60 people by the research notes' figure groups (a rough count, not an inventory)."
+}

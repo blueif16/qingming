@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is a screenshot of our 3D walkable world: the Rainbow Bridge (Hongqiao) of Northern Song Kaifeng at mid-morning, seen from the south bank: the timber arch bridge rising on the left with people on it, a moored boat, market stalls under parasols, a crowd of townspeople on the bank. Image 2 is a style reference.\nKeep exactly the composition, camera angle, perspective, buildings, objects, people, their poses and positions from image 1; change only how it is rendered. Render it as a Chinese ink-and-colour painting on paper in the painting language of image 2 (study its line, washes and colour handling, not its content): fine ink outlines of varying weight that break into dry-brush strokes on timber, tiles and bark; flat mineral-pigment washes that bleed slightly past the lines, with soft gradients inside each wash; roof tiles drawn row by row in grey-blue ink wash; white lime walls with faint ink edges; flat soft cast shadows as grey washes; distance fading into pale mist. Colours are the true daylight colours of a real Northern Song town, NOT aged yellow paper and NOT sepia: neutral grey brick and tiles, white plaster, weathered brown timber, red-ochre paint, dusty grey-brown ground, muted malachite greens, azurite and indigo blues for water, small cinnabar accents. The sky is a clear blue day sky painted as a few flat horizontal wash bands with a few soft white cloud blocks edged by thin broken ink lines, with plenty of empty space. No text, no calligraphy, no seals, no UI, no border.",
+ "refs": [
+  "gen/ui/look/concepts/src/bridge_west_a.jpg",
+  "gen/ui/look/ref_small/jn3_ingame_iso_1600.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x864",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "bridge_west_a_A"
+ },
+ "format": "png",
+ "generation_s": 39.9,
+ "attempts": 1,
+ "idempotency_key": "910b5122-6b4a-4bda-885d-cec976e2dd4a",
+ "request_id": "82bab1e4-c298-4ebb-91e8-178d3ee2ac88",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1640,
+  "completion_tokens_details": {
+   "image_tokens": 1640,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5121,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4779,
+   "text_tokens": 342
+  },
+  "output_tokens": 1640,
+  "output_tokens_details": {
+   "image_tokens": 1640,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5121,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4779,
+   "text_tokens": 342
+  },
+  "total_tokens": 6761
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/fc27dd29-d63b-4c69-b3df-4f99edb525ef"
+ ],
+ "files": [
+  "gen/ui/look/concepts/bridge_west_a_A_0.png"
+ ]
+}

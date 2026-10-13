@@ -1,0 +1,289 @@
+{
+ "section": "S4b",
+ "status": "frame step 2026-10-12 (round 2). Continues S4 part 1 east of u 12600 with S5's origin and scales and the seam knot [12600, 31.6], kept constant through S4b as a stated assumption: the ground-level receding edges near the seam read OUTSIDE 31.6 +/- 5 on both sides of the road, in opposite directions (north side about -57, south side about +97), so no group mean is a knot. The lead decides between a ramp inside S4b and re-knotting S4 part 1 (questions, first item, with what each option does to the plan).",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    12450,
+    15900
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    31.6,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     12600,
+     31.6
+    ]
+   ],
+   "derivation": [
+    "Seed (round 2 Phase 0, the lead): S5's origin (S5.str.moat_bridge:base.sw, scan 8248, 1565), 77 px per metre across the street and in height, 51.25 px of v per metre of depth (map/README.md, Frames, One world across sections). Covers u 12450-15900: the area's look range plus S4b.veh.boat_big_cabin_14928's after end, which runs past the seam to its stern (15745, 865) and sweep blade (15855, 897).",
+    "Seam knot [12600, 31.6]: S4 part 1's receding direction at the seam (constant east of its last knot [11420, 31.6], map/frames/S4.json). A point on the seam maps to the same metres in both sections, so S4b's painted area meets part 1's (map_layout: sw (58.32, -4.39), nw (43.99, 30.54)).",
+    "NO MEASURED KNOT IS ADDED; dx stays 31.6 to the S3 seam (u 15500). The ground-level receding edges (dx = -51.25 / slope; the units' stroke points, gen/map/S4b/reports/structures_w.md W1-W7 and structures_e.md, re-read by the frame agent on zoom-2.5 crops, scratchpad S4b_frame/) fall into groups that disagree in sign, so a group mean cannot be a knot for the whole width of the silk:",
+    "  NORTH OF THE ROAD, WEST (u 12560-13260; furniture and stair, recede up to the LEFT): S4.bld.official_hall_12530's stair rails less the 0.45 m floor (12605, 844)->(12677, 939) and (12564, 848)->(12650, 957), ground slope +0.83/+0.86, dx -61/-60; shop table A, S4b.prop.table_13010, east side (13036, 898)->(13074, 936) +1.00 and west side (12952, 912)->(12976, 936) +1.0, dx -51/-51; table B, S4b.prop.table_13205, west side (13145, 907)->(13173, 932) +0.89, dx -58; the counter S4b.prop.table_bowls_13275's west side (13217, 953)->(13253, 983) +0.83, dx -62. Mean -57 at about u 12940 (6 edges, -51 to -62). The second pass's bench S4b.prop.bench_13200, seat (13152, 926)->(13235, 970) +0.53, dx -97, is set at a slant (not used). The sedan's west face (13062, 1130)->(13080, 1140) +0.56, dx -92, is 18 px long (not used).",
+    "  SOUTH OF THE ROAD, WEST (u 12660-12910; furniture under S4.bld.south_hall_12350's east eave, recede up to the RIGHT, shallow): S4b.prop.table_12645's top (12687, 1639)->(12663, 1652) -0.54, dx +95 (24 px); the bottom shop's tables (12790, 1550)->(12907, 1480) -0.60, dx +85, and (12795, 1590)->(12870, 1540) -0.67, dx +77; the counter top (12820, 1482)->(12887, 1450) -0.48, dx +107; S4b.prop.bench_12835's front (12780, 1557)->(12890, 1510) -0.43, dx +119. Mean +97 at about u 12810 (5 edges, +77 to +119). High lines agree with it: S4.bld.south_hall_12350's ridge (12090, 1395)->(12600, 1110) -0.56 (+92) and east eave (12988, 1260)->(12700, 1440) -0.63 (+81), the same type as part 1's own lines east of u 11420 (-0.56 to -0.61, S4's question).",
+    "  MIDDLE (u 13560-13750): the wheel lying on the ground, S4b.prop.loose_wheel_13665 (rim u 13574-13752, v 761-799), long axis tilted down to the right, dx about -27 (low: 5 px of reading moves it over 0 to -60). The top street's tables, far up the silk (v ~240): (13570, 252)->(13595, 235) -0.68 (+75) and (13635, 250)->(13660, 232) -0.72 (+71). The open square S4b.road.cross_13530, the one large-scale line that runs north from the road: its edges, the shop hall's east end (13392, 1072)->(13385, 835) and the wheelwright shed's west side (13700, 1005)->(13715, 470), stand almost upright on the silk (dx -8 to 0; est points).",
+    "  NORTH OF THE ROAD, EAST (u 14140-14890; the tea house's platform and furniture, recede up to the LEFT): platform west edge (14143, 1050)->(14300, 1150) +0.64 (-80); table B1 top (14155, 967)->(14240, 1013) +0.54 (-95) and its feet (14163, 1032)->(14247, 1067) +0.42 (-122, low); table B2 top (14270, 1050)->(14327, 1093) +0.75 (-68) and feet (14277, 1107)->(14310, 1135) +0.85 (-60); hall table H1 (14604, 1030)->(14654, 1066) +0.72 (-71); bench H2 top (14637, 1105)->(14685, 1144) +0.81 (-63) and feet (14637, 1156)->(14666, 1183) +0.93 (-55); the east bay's bench (14837, 1078)->(14881, 1140) +1.41 (-36, low). Median -68 at about u 14500. South of the road there are only roof lines, receding up to the right: ridges (13715, 1370)->(14146, 1115) -0.59, (14165, 1519)->(14538, 1304) -0.58, (14985, 1765)->(15500, 1304) -0.90 (dx +87, +88, +57).",
+    "  Every option that puts a measured value into the knot list breaks the plan (scratchpad S4b_frame/knot_options.mjs; X in metres along silk rows; a constant dx gives 1.30 m per 100 px of u at every row): a ramp inside S4b from 31.6 at 12600 to the north value -57 at 12940 stretches the road 2.8x and the top of the silk 8.8x over those 340 px (11.5 m per 100 px); a ramp to the south value +97 at 12810 FOLDS every row north of the road (X falls as u rises, down to -10.9 m per 100 px at the silk's top); a slow ramp to -57 at 15500 stretches the top 1.9x and hands S3 -57 against S3's own +46 to +51; re-knotting part 1 to -57 at 12600 moves part 1's built east end by 8 m at the road and 35 m at the silk's top; re-knotting it to +97 folds part 1's top rows. Only the constant 31.6 keeps both seams, no fold and no stretch, so it is kept until the lead decides."
+   ],
+   "assumptions": [
+    "East-west and height 77 px per metre, depth 51.25 px of v per metre, as every section (S5). Things far up the silk are painted smaller (questions: the diminution); positions only come from the map (BUILDING.md rule 5).",
+    "dx = 31.6 px per metre north everywhere in S4b (the seam knot, constant). It is not a measurement here: the painter draws each group of furniture from its own side (questions). With it, a north-south edge of the shop hall's or the tea house's furniture maps 49-52 degrees west of north, and one of the bottom shop's 40 degrees east of north; builders orient furniture by their own choice (choice:), and only base points are placed from the map.",
+    "Painted figure size is not a scale (street figures 150-176 px on the road, 1.9-2.3 m at 77 px/m). Place by foot point.",
+    "The bank top on both sides of the river and the far bank are at street level (supports `bank top`, `far bank`)."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "street level"
+  },
+  "official hall floor": {
+   "H": 0.45,
+   "how": "S4 part 1's builder choice for S4.bld.official_hall_12530's floor (blender/outer_road_scene.py); the seated official at u 12700-12755 and the funnel-shaped vessel at its east bays stand on it"
+  },
+  "water": {
+   "H": -0.7,
+   "how": "MEASURED AS A BOUND (conf low), the river agent's reading (gen/map/S4b/reports/river.md, Water level): H = -(v_waterline - v_ground) / 77 at the same u, the ground at street level (H 0), at the three places where flat ground meets the first water on S4b's moorings: M1 the bank path at the gangplank, ground (14778, 401) under the porter's feet and the plank's foot, over the first ripple swirl (14778, 456): 55 px, -0.71; M2a the top-left building's front wall foot (14920, 166) over the landing's lower wash edge (14920, 224): 58 px, -0.75; M2b the same wall foot (14990, 151) over the landing's edge (14990, 203): 52 px, -0.68. Spread 0.07 m; M2a and M2b (a wall foot, the narrowest bank) are the surest. The bank is a wash-drawn slope with no vertical face, stair, revetment or jetty, so each reading is an upper bound on the depth: a landing s m deep puts the water 0.67 s m higher (plausible range -0.3 to -0.75). S3's river agents found no vertical face either; river_e's bounds at the far-bank hall on posts (18446-18542: -0.86 to -1.0) fit. 1 m of H moves every boat and shore point 1.5 m north or south (77 / 51.25). One H for the whole 汴河: S3, S2 and S1 copy it; a revetment, stair or abutment foot read later replaces it only with the lead's agreement. Replaces the seed's -1.5 (S5's moat, assumed)."
+  },
+  "boat deck: S4b.veh.boat_big_cabin_14928": {
+   "H": 0.03,
+   "how": "water -0.7 + the deck's freeboard 0.73 m (river agent): deck edge with its nail row (15200, 773) over the bottom strake (15200, 830), 57 px = 0.74 m; (15300, 790) over (15300, 845), 55 px = 0.71 m. The head in the cabin door stands on it"
+  },
+  "boat roof: S4b.veh.boat_big_cabin_14928": {
+   "H": 1.39,
+   "how": "water -0.7 + 2.09 m: the west cabin's roof eave ~v 585 over its posts (u 14972-15010) against the deck at ~v 690 below it, 105 px = 1.36 m, plus the deck's 0.73 m (river agent; est). The seated man on the roof sits on it"
+  },
+  "boat deck: S4b.veh.boat_arched_awning_14945": {
+   "H": 0.14,
+   "how": "water -0.7 + 0.84 m: the stern deck under the seated boatman (15372, 535) over the hull's end curve behind the big boat's rail (15372, ~600, est), 65 px (river agent; est)"
+  },
+  "boat deck: S4b.veh.boat_long_cabin_14850": {
+   "H": -0.12,
+   "how": "water -0.7 + 0.58 m: the south deck edge behind the mat cargo at ~v 410 (the east deckhouse's floor, u 15270-15355) over its hidden waterline est ~v 455, 45 px (river agent; est). The two faint boatmen stand on it"
+  },
+  "tea house floor": {
+   "H": 0.18,
+   "how": "measured by the frame agent on a zoom-4 crop (scratchpad S4b_frame/platform.jpg): the platform's front face, its top edge (14340, 1153) over its foot (14340, 1167), 14 px = 0.18 m; structures_e read the west edge's face as 10-15 px (0.13-0.19). The tea house's customers, tables and benches stand on it"
+  },
+  "bank top": {
+   "H": 0,
+   "how": "assumed street level, with the strokes' support: the top street (ground) runs onto the bank at (14450, 370) with no step drawn, and the bank path's figures stand at v 401-410 on the same open ground (river agent: S4b.grd.near_bank_14850's bank_top is taken at H 0). The houses, sheds, stump and canopy on the bank and the people on it stand here"
+  },
+  "far bank": {
+   "H": 0,
+   "how": "assumed street level: the far bank's top is the open shed's ground line, its posts' feet at u 15040-15160, v 75-85 (S4b.grd.far_bank_15330); its face toward the water is hidden behind the small cabin boat, so no drop can be read. Its two willows stand on it"
+  },
+  "cart bed: S4b.veh.palm_cart_13070": {
+   "H": 0.71,
+   "how": "derived: the bed at the front frame under the thatch, the seated person's feet est (13000, 1170) on the front frame (u 13023-13073, v 1150-1185), over the cart's ground line v 1225 (its front (13070, 1225) and rear (12700, 1225), est): 55 px = 0.71 m (est; S4's driver on S5's cart front was 0.9)"
+  },
+  "table top: S4b.prop.table_tray_12845": {
+   "H": 0.56,
+   "how": "derived: the table's top front edge at v ~1477 over its leg's foot (12840-12847, ~1520), 43 px = 0.56 m (t1's points). The tray stands on it"
+  },
+  "table top: S4b.prop.goods_table_13892": {
+   "H": 0.82,
+   "how": "derived: the top's front edge at v ~920 over the front leg's foot (13927, 983), 63 px = 0.82 m (t3: table height 63-67 px). The goods heap lies on it"
+  },
+  "table top: S4b.prop.long_table_15050": {
+   "H": 0.63,
+   "how": "derived: the tea house floor (0.18) + the table's height, its top's front edge v ~1155 over its front-west leg's foot (15015, 1190), 35 px = 0.45 m (t5). The slatted box stands on it"
+  },
+  "perched: S4.tree.willow_12588": {
+   "H": 5.29,
+   "how": "derived like S4's perched bird: the bird S4b.ani.bird_12827 (underside v 363) taken at the depth of the tree's trunk foot, S4.tree.willow_12588's base (12588, 770, est): D = (770 - 1565) / -51.25 = 15.51 m, so H = (770 - 363) / 77 = 5.29 m, inside the 10 m crown (top v 2)"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S4b.road.main:lines.centre.0"
+  ],
+  "station": 67.95,
+  "about": "where the main road crosses the seam with S4 part 1 (u 12600): S4b.road.main's centre-line point 0, exactly scan (12600, 1206), S4's centre line there (between part 1's (12500, 1200) and (12750, 1215)). Station +67.95 there, S4's station at that point, so stations run on."
+ },
+ "checks": [
+  {
+   "what": "tea house: front eave height above its south-west post's foot (sw -> sw_eave), m",
+   "a": "S4b.bld.tea_house_14531:base.sw",
+   "b": "S4b.bld.tea_house_14531:sw_eave",
+   "measure": "height",
+   "expect": "an open hall's front eave, roughly 3 m; on the road's north edge (v 1183)"
+  },
+  {
+   "what": "shop hall: front eave height above its south-east corner (se -> se_eave), m",
+   "a": "S4b.bld.shop_hall_13170:base.se",
+   "b": "S4b.bld.shop_hall_13170:se_eave",
+   "measure": "height",
+   "expect": "a shop hall's front eave (the official hall's roof run on), roughly 3-3.5 m; on the road's north edge (v 1072)"
+  },
+  {
+   "what": "mat shed east of the tea house: eave height (sw -> sw_eave), m",
+   "a": "S4b.bld.mat_shed_15038:base.sw",
+   "b": "S4b.bld.mat_shed_15038:sw_eave",
+   "measure": "height",
+   "expect": "a mat-roofed shed's eave, roughly 2.2-2.8 m; by the road (v 1185)"
+  },
+  {
+   "what": "shop behind the crowd: eave height (sw -> sw_eave), m",
+   "a": "S4b.bld.crowd_shop_13180:base.sw",
+   "b": "S4b.bld.crowd_shop_13180:sw_eave",
+   "measure": "height",
+   "expect": "a shop's front eave, roughly 3 m; up the silk (v 500), where figures are painted at about 0.6 of the road's size"
+  },
+  {
+   "what": "open shop at the top edge: eave height (sw -> sw_eave), m",
+   "a": "S4b.bld.top_open_shop_13990:base.sw",
+   "b": "S4b.bld.top_open_shop_13990:sw_eave",
+   "measure": "height",
+   "expect": "a shop's front eave, roughly 3 m; at the top of the silk (v 150)"
+  },
+  {
+   "what": "house with tables on the bank top: eave height (sw -> sw_eave), m",
+   "a": "S4b.bld.top_house_tables_14876:base.sw",
+   "b": "S4b.bld.top_house_tables_14876:sw_eave",
+   "measure": "height",
+   "expect": "a house's eave, roughly 2.5-3 m; at the top of the silk (v 200)"
+  },
+  {
+   "what": "saddled horse: fore to hind hooves (fore -> hind), m",
+   "a": "S4b.ani.horse_saddled_13378:fore",
+   "b": "S4b.ani.horse_saddled_13378:hind",
+   "measure": "distance",
+   "expect": "a horse's hoof-to-hoof length, roughly 1.2-1.5 m; on the road (v 1065)"
+  },
+  {
+   "what": "the second palm-covered cart's shaft ox: fore to hind hooves, m",
+   "a": "S4b.ani.ox_shaft_13442:fore",
+   "b": "S4b.ani.ox_shaft_13442:hind",
+   "measure": "distance",
+   "expect": "an ox's hoof-to-hoof length, roughly 1.3-1.7 m; at the bottom of the silk (v 1495-1545)"
+  },
+  {
+   "what": "sedan chair: front to rear (the box), m",
+   "a": "S4b.veh.sedan_chair_13140:front",
+   "b": "S4b.veh.sedan_chair_13140:rear",
+   "measure": "distance",
+   "expect": "a sedan box, roughly 1.0-1.3 m long without its poles"
+  },
+  {
+   "what": "the biggest boat: hull length between the bow's and stern's waterlines (front -> rear, on the water), m",
+   "a": "S4b.veh.boat_big_cabin_14928:front",
+   "b": "S4b.veh.boat_big_cabin_14928:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "a big 汴河 cabin boat with an after cabin and a sweep, roughly 18-25 m; painted mid-silk (v 703-865), where figures are about 0.6-0.9 of the road's size"
+  },
+  {
+   "what": "the round mat boat: beam at its widest (beam_n -> beam_s, on the water), m",
+   "a": "S4b.veh.boat_round_mat_15025:beam_n",
+   "b": "S4b.veh.boat_round_mat_15025:beam_s",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "a river boat's beam, roughly 3-5 m; far up the silk (v 280)"
+  },
+  {
+   "what": "the biggest boat: bow gunwale above the waterline (front -> bow_top), m",
+   "a": "S4b.veh.boat_big_cabin_14928:front",
+   "b": "S4b.veh.boat_big_cabin_14928:bow_top",
+   "measure": "height",
+   "expect": "the raised bow of a loaded river boat, roughly 1-1.5 m above the water"
+  },
+  {
+   "what": "the river's width at the S3 seam: near shore to far shore at u 15500 (on the water), m",
+   "a": "S4b.water.bian_river:lines.shore_s.26",
+   "b": "S4b.water.bian_river:lines.shore_n.3",
+   "measure": "distance",
+   "Ha": -0.7,
+   "expect": "wide enough for five rafted hulls, a channel and a boat along the far bank: at least 15-20 m at real size; both shores est here"
+  }
+ ],
+ "questions": [
+  "FOR THE LEAD FIRST, THE RECEDING DIRECTION AT THE SEAM: the nearest ground evidence reads OUTSIDE 31.6 +/- 5 on both sides of the road, in opposite directions. North side (the official hall's stair rails at u 12564-12677, -60/-61; the shop tables at 12952-13253, -51 to -62): mean -57 at u ~12940. South side (the bottom shop's tables, counter and bench at 12663-12907, +77 to +119): mean +97 at u ~12810, agreeing with S4.bld.south_hall_12350's ridge (+92) and part 1's high lines east of 11420 (+84 to +91). East, the tea house group: median -68 at u ~14500 (-36 to -122). The open square's edges (u 13390-13715, the one north-running large line) stand almost upright (-8 to 0, est). Stroke points in derivation. The painter draws each furniture group from its own side, so one dx per u cannot hold both sides. Options, computed (derivation, last item): a ramp inside S4b to either side's value stretches (x2.8 at the road, x8.8 at the silk's top, to -57) or folds (to +97) the plan within 200-340 px; a slow ramp to -57 over all of S4b stretches the top 1.9x and hands S3 -57 against its +46 to +51; re-knotting part 1 moves its built east end 8-35 m (to -57) or folds its top rows (to +97). The frame keeps the constant 31.6 so both seams hold and nothing folds; furniture orientation is then a builder choice. Changing it is one edit of dx_knots and `scroll_map.mjs S4b all` plus `map_layout.mjs S4b`.",
+  "THE WATER LEVEL is a bound, not a reading (supports, water): no vertical bank face, stair, revetment or jetty is painted on S4b's moorings, and S3's agents found none in 15500-20650 either. If a later section (S2's wharves, S1) paints a revetment or a stair meeting the water, its two-point reading should replace -0.7 for the whole river, with the lead's agreement.",
+  "THE DIMINUTION UP THE SILK (standing figures, painted height against foot v; the evidence for BUILDING.md rule 5): about 170 px on the road (v 1500-1770: 168 at 1768, 163 at 1093), about 150 at the crowd (v 640-690: 146-155, 0.88), 99 at v 490-550 (the youth and the muleteer: 0.58), 57-69 at v 400-406 on the bank (0.35-0.4); seated crew on the boats 38-54 px at v 535-556. Buildings agree (checks): the eaves on the road's edge come out about 2.3-3.1 m, the shop behind the crowd (v 500) 1.5 m, and the top-edge shops (v 150-200) 0.9-1.0 m. Sizes up the silk are builder choices (real size, painted place); the big boat's painted 12 m hull is the same diminution, not a small boat.",
+  "THE ROAD EAST OF u 15215 is hidden behind the south row and the willows; structures_w and structures_e both read it bending south-east past the long hall's east gable to (15500, 1530, est, conf low), along the front of S3's riverside hall (reading b). That point is S3's datum (the lead's call for S3: reading c starts at it). If S3's mapping places its road differently, S4b.road.main's last three centre points move with it.",
+  "THE FAR BANK AND THE TOP-OF-SILK STRIP: at the one depth rate the far bank's top at v 75-85 lies about 29 m north of the street's datum row and 15 m beyond the near shore at u 15500 (checks). It is painted small (the far-bank willows, the open shed): keep the one-scale frame and settle room at build time (BUILDING.md rule 5).",
+  "THE TWO SIDES' FURNITURE IN THE WORLD: with dx 31.6 the shop hall's and tea house's furniture map as parallelograms skewed 49-52 degrees west of north, and the bottom shop's 40 degrees east of north. Builders should place each table, bench and stall by its base point and orient it square to the road (or to its hall) as a recorded choice, not along the mapped skew.",
+  "THE FAR BANK'S FACE: with water at -0.7 the far shore's est line (v 112-122, hidden behind the small cabin boat) maps 0.3 m NORTH of the far bank's top (v 75-82, H 0): a far-bank face 0.7 m high, seen from the south, needs its waterline at least 54 px below its top (v >= 129 at u 15500). Either the far shore lies lower on the silk than est (under the boat), or the far bank stands about 0.2-0.5 m below the street. The builder should take the water plane to the far bank_top line and treat the shore there as hidden (choice)."
+ ],
+ "checks_result": [
+  {
+   "what": "tea house: front eave height above its south-west post's foot (sw -> sw_eave), m",
+   "expect": "an open hall's front eave, roughly 3 m; on the road's north edge (v 1183)",
+   "got": 2.75
+  },
+  {
+   "what": "shop hall: front eave height above its south-east corner (se -> se_eave), m",
+   "expect": "a shop hall's front eave (the official hall's roof run on), roughly 3-3.5 m; on the road's north edge (v 1072)",
+   "got": 3.12
+  },
+  {
+   "what": "mat shed east of the tea house: eave height (sw -> sw_eave), m",
+   "expect": "a mat-roofed shed's eave, roughly 2.2-2.8 m; by the road (v 1185)",
+   "got": 2.34
+  },
+  {
+   "what": "shop behind the crowd: eave height (sw -> sw_eave), m",
+   "expect": "a shop's front eave, roughly 3 m; up the silk (v 500), where figures are painted at about 0.6 of the road's size",
+   "got": 1.45
+  },
+  {
+   "what": "open shop at the top edge: eave height (sw -> sw_eave), m",
+   "expect": "a shop's front eave, roughly 3 m; at the top of the silk (v 150)",
+   "got": 0.91
+  },
+  {
+   "what": "house with tables on the bank top: eave height (sw -> sw_eave), m",
+   "expect": "a house's eave, roughly 2.5-3 m; at the top of the silk (v 200)",
+   "got": 0.97
+  },
+  {
+   "what": "saddled horse: fore to hind hooves (fore -> hind), m",
+   "expect": "a horse's hoof-to-hoof length, roughly 1.2-1.5 m; on the road (v 1065)",
+   "got": 1.67
+  },
+  {
+   "what": "the second palm-covered cart's shaft ox: fore to hind hooves, m",
+   "expect": "an ox's hoof-to-hoof length, roughly 1.3-1.7 m; at the bottom of the silk (v 1495-1545)",
+   "got": 1.51
+  },
+  {
+   "what": "sedan chair: front to rear (the box), m",
+   "expect": "a sedan box, roughly 1.0-1.3 m long without its poles",
+   "got": 1.04
+  },
+  {
+   "what": "the biggest boat: hull length between the bow's and stern's waterlines (front -> rear, on the water), m",
+   "expect": "a big 汴河 cabin boat with an after cabin and a sweep, roughly 18-25 m; painted mid-silk (v 703-865), where figures are about 0.6-0.9 of the road's size",
+   "got": 12.32
+  },
+  {
+   "what": "the round mat boat: beam at its widest (beam_n -> beam_s, on the water), m",
+   "expect": "a river boat's beam, roughly 3-5 m; far up the silk (v 280)",
+   "got": 3
+  },
+  {
+   "what": "the biggest boat: bow gunwale above the waterline (front -> bow_top), m",
+   "expect": "the raised bow of a loaded river boat, roughly 1-1.5 m above the water",
+   "got": 1.25
+  },
+  {
+   "what": "the river's width at the S3 seam: near shore to far shore at u 15500 (on the water), m",
+   "expect": "wide enough for five rafted hulls, a channel and a boat along the far bank: at least 15-20 m at real size; both shores est here",
+   "got": 16.54
+  }
+ ]
+}

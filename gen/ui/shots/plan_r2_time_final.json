@@ -1,0 +1,24 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "shots": [
+    { "name": "desktop_day_banner", "at": "inner_city:spawn", "js": "t.ui.help(false); t.time.setHour(10); t.ui.banner('inner_city'); await new Promise(r=>setTimeout(r,1800)); return t.time.get().full;", "wait": 200 },
+    { "name": "desktop_dusk_dragged", "js": "t.time.setHour(18.45, { scrub: true }); await new Promise(r=>setTimeout(r,600)); t.time.setHour(18.45); await new Promise(r=>setTimeout(r,600)); return t.time.get().full;", "wait": 300 },
+    { "name": "desktop_night_set", "js": "t.time.setHour(21.5); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 },
+    { "name": "desktop_local", "js": "t.time.toLocal(); await new Promise(r=>setTimeout(r,800)); return t.time.get();", "wait": 300 },
+    { "name": "desktop_focus", "js": "t.time.setHour(13.2); window.dispatchEvent(new KeyboardEvent('keydown', { code: 'KeyT', key: 't', bubbles: true })); await new Promise(r=>setTimeout(r,500)); return document.querySelector('.qm-time').className;", "wait": 300 }
+   ]
+  },
+  {
+   "device": "phone",
+   "shots": [
+    { "name": "phone_day_banner", "at": "inner_city:spawn", "js": "t.ui.help(false); t.time.setHour(10); t.ui.banner('inner_city'); await new Promise(r=>setTimeout(r,1800)); return t.time.get().full;", "wait": 200 },
+    { "name": "phone_dusk_dragged", "js": "t.time.setHour(18.45); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 },
+    { "name": "phone_night_set", "js": "t.time.setHour(21.5); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 },
+    { "name": "phone_local", "js": "t.time.toLocal(); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 }
+   ]
+  }
+ ]
+}

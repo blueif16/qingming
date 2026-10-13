@@ -1,0 +1,18 @@
+{
+ "about": "Where the build of S7 (the scroll's end) departs from the scroll map, each with its reason (map/BUILDING.md rule 7). moves: shift an entity (tools/map_layout.mjs applies them to layout.json); how: an entity built other than as its kind's default; unbuilt: mapped entities not built yet, with the reason and who decided; edges: the walkable area's sides. Sizes the strokes can't give are marked choice: in blender/city_end_scene.py and listed in sections/city_end/notes.md.",
+ "moves": {
+  "S7.tree.twig_bush_bottom_1648": {"dD": -0.9, "why": "its base is estimated at the silk's bottom edge (D -4.1), 0.2 m inside the 解 building's mapped south wall (D -4.29), so its card stood inside the building; it rises from below the silk's edge 'under the 解 building's roof' (in front of it, seen from the scroll's viewer): moved 0.9 m south along its painted receding line, just past the building's south eave, under the mist"},
+  "S7.tree.twig_bush_bottom_1468": {"dD": -0.9, "why": "as twig_bush_bottom_1648: its estimated base (D -4.1) lay inside the 解 building's mapped footprint; moved 0.9 m south along its receding line, past the building's south eave"}
+ },
+ "how": {},
+ "unbuilt": {
+  "S7.ani.pale_shape_1905": {"why": "conf low: the map leaves two readings, (a) a pale animal with its head down (pig, sheep or calf size) or (b) a mat, cloth or straw, or the foot of the wall behind (its top line runs on east as the line S6 reads as its house's wall foot). The needs list asks to make nothing until the lead settles it; the casting script (gen/sections/city_end/make_people.py, PALE_SHAPE) turns reading (a) on in one line (an existing body, no credits)", "who": "S7 area agent, round 2 Run 2 (2026-10-12), waiting for the lead"}
+ },
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): layout painted_area, i.e. the section's seam with S6 at u 2000 (east), the silk's cut edge at u 815 (west, the scroll's end), and the silk's top and bottom edges, on the ground",
+   "why": "outside the painted area the scroll paints nothing for this section; inside it everything stays walkable as in S6 (the lead, 2026-10-12: real size everywhere, no stage set): the street, the shop and the gate passage, and the courtyards of the official's compound behind them",
+   "beyond": "painting, not models: mist on every side. West: the scroll's cut end (nothing is painted beyond it, map/BUILDING.md rule 4); north and south: the silk's edges; east: S6, built (always loaded with S7 in the streaming window, so no panel: sections/city_end/backdrop.json)"
+  }
+ }
+}

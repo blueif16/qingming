@@ -1,0 +1,360 @@
+{
+ "about": "Round 2's sounds (2026-10-12): S7 the city end, S4 part 2, S3 the Rainbow Bridge, S2 the canal, S1 the countryside. From gen/life/sound_needs_round2.md (where each plays, painted sources, period notes); core.json units are reused by name, not regenerated. Held until the maps show their sources: whip_crack, oar_stroke, paper_goods_rustle, hoe_soil. Dropped: bed_mist_edge (two prompts gave silence, -60 and -68 LUFS); the mist edges play bed_bare_trees_wind low instead.",
+ "units": {
+  "bed_river_flow": {
+   "kind": "sfx",
+   "group": "bed",
+   "priority": 1,
+   "use": "The 汴河 under S4b's moorings, S3 and S2, day and night",
+   "seconds": 15.0,
+   "prompt": "A broad, slow river flowing past an earthen bank and moored wooden boats: a steady soft current, small gurgles and swirls along the hulls, water moving against the bank, open air with a light breeze. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "bed_wharf_day": {
+   "kind": "sfx",
+   "group": "bed",
+   "priority": 1,
+   "use": "Worked banks by day: S2's east bank and terrace, S3's south bank, S4b's moorings (half level)",
+   "seconds": 15.0,
+   "prompt": "A busy riverside wharf by day, heard from the bank: footsteps on wooden planks, heavy sacks thudding down, hemp ropes creaking, wooden hulls knocking softly, water lapping, a low indistinct murmur of workers far off. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "bed_bridge_crowd": {
+   "kind": "sfx",
+   "group": "bed",
+   "priority": 1,
+   "use": "The Rainbow Bridge's deck and feet by day",
+   "seconds": 15.0,
+   "prompt": "Many people crossing a large arched timber bridge by day: hollow footsteps on thick wooden planks, shuffling cloth shoes, creaking boards, an occasional hoof knock, a river rushing far below, a distant wordless hum of a crowd with no words. No music, no speech, no voices, no engines.",
+   "loop": true,
+   "influence": 0.6,
+   "note": "Take 0 of the first prompt held an English sentence (speech-to-text); prompt rewritten 2026-10-12."
+  },
+  "bed_country_day": {
+   "kind": "sfx",
+   "group": "bed",
+   "priority": 1,
+   "use": "S1 by day: fields, willows, farmhouses",
+   "seconds": 15.0,
+   "prompt": "Open farmland in early spring by day: a light breeze over bare fields and leafless trees, swallows twittering, tree sparrows by a farmhouse, a magpie chattering far off, wide quiet open air. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "hull_creak": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 1,
+   "use": "Every moored or working boat; pitched down for the deep-laden grain boats",
+   "seconds": 3.0,
+   "prompt": "A large old wooden boat hull creaking slowly as it shifts against its mooring, one long deep groan of timber, close, dry."
+  },
+  "hull_water_slap": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 1,
+   "use": "Water against hulls: moored, under way, S1's possible skiff",
+   "seconds": 3.0,
+   "prompt": "Four separate small river waves slapping against the side of a moored wooden boat hull, hollow wet knocks with short gaps, close, dry.",
+   "slice": 4
+  },
+  "mooring_rope_creak": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 1,
+   "use": "S4b's mooring post and anchor line, S2's post with the coiled rope, moored boats",
+   "seconds": 2.0,
+   "prompt": "A thick hemp mooring rope tightening twice around a wooden post under load, creaking and squeaking stretch, close, dry.",
+   "slice": 2
+  },
+  "sweep_scull": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 1,
+   "use": "摇橹向前 (S3), the boats under way in S2: one stroke, sequenced",
+   "seconds": 3.0,
+   "prompt": "One stroke of a long wooden stern sweep oar sculling a heavy river boat: the wooden pivot creaking, the blade swishing through the water, close, dry."
+  },
+  "mast_lower": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 1,
+   "use": "大船抢险 under the arch (S3), once per cycle",
+   "seconds": 4.0,
+   "prompt": "A tall wooden boat mast being lowered: heavy timber creaking and groaning as it tilts, ropes straining, then a dull heavy wooden thud on the deck, close, dry."
+  },
+  "rope_haul": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 1,
+   "use": "The big boat's crew (S3), mooring work, boats setting off",
+   "seconds": 3.0,
+   "prompt": "Two strong hand-over-hand pulls on a thick hemp rope, the rope rasping and squeaking under tension, close, dry.",
+   "slice": 2
+  },
+  "horse_gallop_earth": {
+   "kind": "sfx",
+   "group": "animal",
+   "priority": 1,
+   "use": "惊马闯市's runaway horse (S1), while it runs",
+   "seconds": 4.0,
+   "prompt": "A loose horse galloping fast on packed earth, heavy drumming hooves, a snort, outdoors, close, dry.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "wheelwright_mallet": {
+   "kind": "sfx",
+   "group": "trade",
+   "priority": 1,
+   "use": "车铺劳作 (S4b.fig.wheelwright_bending_13620), on the strike frame",
+   "seconds": 3.0,
+   "prompt": "Three separate strikes of a wooden mallet on the hub of a wooden cart wheel, solid resonant knocks on hard timber, outdoors, close, dry.",
+   "slice": 3
+  },
+  "bed_open_night": {
+   "kind": "sfx",
+   "group": "bed",
+   "priority": 2,
+   "use": "Night outside the walls (S4b, S3, S2, S1), replacing the summer `bed_night` there",
+   "seconds": 15.0,
+   "prompt": "Open land by water on a cool early-spring night: still air, a faint breeze, a few frogs croaking far off, very sparse insects, wide and quiet, no summer cricket chorus. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "bed_bare_trees_wind": {
+   "kind": "sfx",
+   "group": "bed",
+   "priority": 2,
+   "use": "Leafless elms and shoots: S1, S7's cut edge, S4b's and S3's bare trees",
+   "seconds": 12.0,
+   "prompt": "Wind through tall leafless trees in early spring: dry twigs ticking and clattering softly, branches creaking, an airy whoosh rising and falling, no leaves, outdoors. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "stream_trickle": {
+   "kind": "sfx",
+   "group": "water",
+   "priority": 2,
+   "use": "S1's stream and the small bridge (point bed)",
+   "seconds": 12.0,
+   "prompt": "A small shallow stream trickling over pebbles and around wooden bridge posts in open country: gentle bubbling and babbling, soft and close, calm air. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "river_swift": {
+   "kind": "sfx",
+   "group": "water",
+   "priority": 2,
+   "use": "The current at the Rainbow Bridge's abutments and under the arch; 汴水悍激 (S2 pin 7)",
+   "seconds": 12.0,
+   "prompt": "A strong river current rushing past timber bridge abutments and wooden piles: fast swirling water, eddies gurgling and sucking, a deep steady rush, outdoors, mid distance. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "hull_bump": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 2,
+   "use": "S4b's rafted boats knocking together",
+   "seconds": 2.0,
+   "prompt": "Two moored wooden boat hulls bumping together twice, heavy dull wooden knocks with a short grinding rub, close, dry.",
+   "slice": 2
+  },
+  "pole_push": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 2,
+   "use": "Fending off the arch (S3), S2's poling boats, boats setting off",
+   "seconds": 3.0,
+   "prompt": "A long bamboo punting pole plunged into a river and pushed hard against the bottom from a wooden boat: a splash, bamboo creaking under strain, water dripping, close, dry."
+  },
+  "rope_throw": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 2,
+   "use": "上下呼救: ropes thrown from the railings (S3)",
+   "seconds": 2.0,
+   "prompt": "A coiled hemp rope thrown through the air with a soft whoosh, then slapping down onto a wooden boat deck, close, dry."
+  },
+  "tow_rope_strain": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 2,
+   "use": "The tow lines: S3's masted boat, S2's 逆水行舟 (at the trackers and at the mast)",
+   "seconds": 4.0,
+   "prompt": "A very long taut hemp tow rope under heavy strain outdoors, slow creaking and stretching groans, a light twang as it tightens, close, dry."
+  },
+  "tracker_strain": {
+   "kind": "sfx",
+   "group": "boat",
+   "priority": 2,
+   "use": "The trackers (S3.grp.trackers_16380; S2's five): wordless effort, reject takes with words",
+   "seconds": 4.0,
+   "prompt": "Several men leaning into a heavy tow rope together: deep rhythmic effort breaths and low wordless grunts, feet scraping on earth, outdoors, close, dry."
+  },
+  "step_boat_deck": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 2,
+   "use": "The player or crew on a boat deck (if the pilot opens decks)",
+   "seconds": 3.0,
+   "prompt": "Four footsteps in cloth shoes on the plank deck of a floating wooden boat, hollow boomy knocks with a slight creak and faint water slosh under the hull, close, dry.",
+   "slice": 4
+  },
+  "gangplank_flex": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 2,
+   "use": "S4b's plank to the mat-cargo boat, S2's gangplank, S3's unloading boats",
+   "seconds": 2.0,
+   "prompt": "Two footsteps on a long wooden gangplank between a boat and a bank, the board bending with a springy creak and a hollow knock, close, dry.",
+   "slice": 2
+  },
+  "step_mud": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 2,
+   "use": "Wet bank mud at every shore (S4b, S3, S2) and S1's stream",
+   "seconds": 3.0,
+   "prompt": "Four footsteps in cloth shoes on wet, sticky river-bank mud, a soft squelch and suck as each foot pulls free, close, dry.",
+   "slice": 4
+  },
+  "bridge_arch_creak": {
+   "kind": "sfx",
+   "group": "structure",
+   "priority": 2,
+   "use": "The Rainbow Bridge under its crowd and under the player",
+   "seconds": 4.0,
+   "prompt": "A huge timber arch bridge under the weight of a crowd: massive wooden beams creaking and groaning deeply, low knocks in the joints, outdoors, close, dry."
+  },
+  "hooves_timber": {
+   "kind": "sfx",
+   "group": "animal",
+   "priority": 2,
+   "use": "车轿相争's horseman on the deck; any animal on a bridge",
+   "seconds": 3.0,
+   "prompt": "A horse stamping and shifting on a thick timber bridge deck, four hollow hoof knocks on wooden planks, close, dry.",
+   "slice": 4
+  },
+  "crowd_alarm": {
+   "kind": "sfx",
+   "group": "trade",
+   "priority": 2,
+   "use": "上下呼救's peak on the bridge (S3), wordless; reject takes with words",
+   "seconds": 3.0,
+   "prompt": "A crowd on a bridge crying out in alarm together, a sudden rising wordless clamour of many voices, outdoors, close, dry, no intelligible words."
+  },
+  "cart_two_wheel_earth": {
+   "kind": "sfx",
+   "group": "cart",
+   "priority": 2,
+   "use": "Moving two-wheeled carts without a bell: S4b's palm cart 13455, S3's and S2's north-bank carts",
+   "seconds": 5.0,
+   "prompt": "A large two-wheeled wooden cart rolling slowly on a dirt road: big wooden wheels crunching grit, the wooden axle creaking and knocking with each turn, no bell, close, dry.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "pannier_creak": {
+   "kind": "sfx",
+   "group": "animal",
+   "priority": 2,
+   "use": "S1's charcoal donkeys, S3's loaded donkey (while walking)",
+   "seconds": 5.0,
+   "prompt": "A donkey walking with two heavy wicker panniers of charcoal on a wooden pack saddle: wicker and wood creaking with each step, lumps of charcoal shifting, close, dry.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "mule_call": {
+   "kind": "sfx",
+   "group": "animal",
+   "priority": 2,
+   "use": "S4b's pack mules, S2's mule cart (if a mule)",
+   "seconds": 3.0,
+   "prompt": "A mule calling once, a whinny that breaks into a hoarse bray, outdoors, close, dry."
+  },
+  "bucket_slosh": {
+   "kind": "sfx",
+   "group": "trade",
+   "priority": 2,
+   "use": "S7.fig.bucket_man_1872 at the well's west end",
+   "seconds": 2.0,
+   "prompt": "A full wooden water bucket lifted and set down, water sloshing and the bail handle creaking, close, dry."
+  },
+  "sack_shoulder": {
+   "kind": "sfx",
+   "group": "trade",
+   "priority": 3,
+   "use": "私粮进京's porters (S2), S3's unloading",
+   "seconds": 2.0,
+   "prompt": "A porter heaving a heavy grain sack onto his shoulder: coarse hemp cloth rubbing, grain shifting and settling inside, close, dry."
+  },
+  "railing_creak": {
+   "kind": "sfx",
+   "group": "structure",
+   "priority": 3,
+   "use": "The bridge railings: leaners and the player",
+   "seconds": 2.0,
+   "prompt": "Someone leaning on an old wooden bridge railing: the rail creaks and its post knocks softly, close, dry."
+  },
+  "scaffold_creak": {
+   "kind": "sfx",
+   "group": "structure",
+   "priority": 3,
+   "use": "十千脚店's 彩楼欢门 scaffold (S3), S2's roof scaffold, in gusts",
+   "seconds": 3.0,
+   "prompt": "Tall wooden poles lashed together with rope, creaking and knocking softly as a gust pushes them, outdoors, close, dry."
+  },
+  "wind_vane_turn": {
+   "kind": "sfx",
+   "group": "structure",
+   "priority": 3,
+   "use": "The bird vane on the 新酒 pole (S3), and the bridge's end posts if vaned",
+   "seconds": 2.0,
+   "prompt": "A small wooden wind vane swinging on a squeaky wooden pivot atop a tall pole in a gust, outdoors, close, dry."
+  },
+  "twig_brush": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 3,
+   "use": "Walking into bare shoots and saplings (S1, S7, S3)",
+   "seconds": 2.0,
+   "prompt": "Clothes brushing through dry leafless twigs and bare shoots: light scratching and small snapping ticks, close, dry."
+  },
+  "straw_reed_brush": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 3,
+   "use": "Thatch, reed fences and mats, wattle, palm-cart fringes (S4b, S1)",
+   "seconds": 2.0,
+   "prompt": "A sleeve brushing along dry straw thatch, a reed mat screen and a woven wattle fence: dry rustle, rattle and scrape, close, dry."
+  },
+  "wood_bump": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 3,
+   "use": "Bumping signboards (S7's boards), leaning poles and timber (S4b), the scaffold (S3)",
+   "seconds": 2.0,
+   "prompt": "Two separate bumps against a free-standing wooden signboard and a stack of leaning poles: hollow wooden knocks and a short rattle, close, dry.",
+   "slice": 2
+  },
+  "jar_knock": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 3,
+   "use": "Bumping big jars and barrels (S4b's big jar, taverns)",
+   "seconds": 2.0,
+   "prompt": "A shoulder bumping a big glazed earthenware storage jar, three separate hollow ceramic thunks, close, dry.",
+   "slice": 3
+  },
+  "step_splash": {
+   "kind": "sfx",
+   "group": "player",
+   "priority": 3,
+   "use": "Ankle-deep water at open shores and S1's stream",
+   "seconds": 3.0,
+   "prompt": "Three footsteps splashing through ankle-deep water at a muddy stream edge, close, dry.",
+   "slice": 3
+  }
+ }
+}

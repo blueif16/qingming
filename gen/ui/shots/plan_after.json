@@ -1,0 +1,127 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "loading": "desktop_loading",
+   "loadingWait": 800,
+   "shots": [
+    {
+     "name": "desktop_day_start",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.help(true); t.ui.banner('inner_city'); await new Promise(r=>setTimeout(r,1500)); return t.ui.state().places;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_toast",
+     "js": "t.ui.help(false); t.ui.toast('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,1300)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_prompt",
+     "js": "await t.goto(-11.6, 7.4); t.player.yaw = 118*Math.PI/180 - Math.PI/2; t.player.pitch=-0.12; await new Promise(r=>setTimeout(r,1800)); return t.ui.state().talk;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_talk_barber",
+     "js": "t.ui.talk('V5.5'); await new Promise(r=>setTimeout(r,2600)); t.ui.next(); await new Promise(r=>setTimeout(r,900)); t.ui.next(); await new Promise(r=>setTimeout(r,1300)); return t.ui.state().talk.conv;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_talk_tax",
+     "js": "t.ui.close(); await t.goto(-36.4, 7.3); t.player.yaw = 84*Math.PI/180 - Math.PI/2; t.player.pitch=-0.14; await new Promise(r=>setTimeout(r,800)); t.ui.talk('V5.1'); await new Promise(r=>setTimeout(r,2500)); t.ui.next(); t.ui.next(); await new Promise(r=>setTimeout(r,1300)); return t.ui.state().talk.conv;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_plaques_gate",
+     "js": "t.ui.close(); await t.goto(-28.5, 3.5); t.player.yaw = 0*Math.PI/180 - Math.PI/2; t.player.pitch=-0.05; await new Promise(r=>setTimeout(r,1500)); return t.ui.state().places.plaques;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_night_banner_toast",
+     "hour": 21.5,
+     "js": "await t.view('inner_city:spawn'); t.ui.banner('gate'); await new Promise(r=>setTimeout(r,400)); t.ui.toast('S5.str.moat_bridge'); await new Promise(r=>setTimeout(r,2200)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_night_talk",
+     "js": "await t.goto(-36.4, 7.3); t.player.yaw = 84*Math.PI/180 - Math.PI/2; t.player.pitch=-0.14; await new Promise(r=>setTimeout(r,800)); t.ui.talk('V5.1'); await new Promise(r=>setTimeout(r,2500)); t.ui.next(); t.ui.next(); await new Promise(r=>setTimeout(r,1300)); return t.ui.state();",
+     "wait": 200
+    },
+    {
+     "name": "desktop_night_help",
+     "js": "t.ui.close(); t.ui.help(true); await new Promise(r=>setTimeout(r,600));",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_hud",
+     "hour": 10,
+     "js": "t.ui.help(false); await t.hud.show(); await new Promise(r=>setTimeout(r,3000)); return t.hud.stats();",
+     "wait": 200
+    }
+   ]
+  },
+  {
+   "device": "phone",
+   "loading": "phone_loading",
+   "loadingWait": 800,
+   "shots": [
+    {
+     "name": "phone_day_start",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.help(true); t.ui.banner('inner_city'); await new Promise(r=>setTimeout(r,1500)); return t.ui.state().places;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_toast",
+     "js": "t.ui.help(false); t.ui.toast('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,1300)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_prompt",
+     "js": "await t.goto(-11.6, 7.4); t.player.yaw = 118*Math.PI/180 - Math.PI/2; t.player.pitch=-0.12; await new Promise(r=>setTimeout(r,1800)); return t.ui.state().talk;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_talk_barber",
+     "js": "t.ui.talk('V5.5'); await new Promise(r=>setTimeout(r,2600)); t.ui.next(); await new Promise(r=>setTimeout(r,900)); t.ui.next(); await new Promise(r=>setTimeout(r,1300)); return t.ui.state().talk.conv;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_talk_tax",
+     "js": "t.ui.close(); await t.goto(-36.4, 7.3); t.player.yaw = 84*Math.PI/180 - Math.PI/2; t.player.pitch=-0.14; await new Promise(r=>setTimeout(r,800)); t.ui.talk('V5.1'); await new Promise(r=>setTimeout(r,2500)); t.ui.next(); t.ui.next(); await new Promise(r=>setTimeout(r,1300)); return t.ui.state().talk.conv;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_plaques_gate",
+     "js": "t.ui.close(); await t.goto(-28.5, 3.5); t.player.yaw = 0*Math.PI/180 - Math.PI/2; t.player.pitch=-0.05; await new Promise(r=>setTimeout(r,1500)); return t.ui.state().places.plaques;",
+     "wait": 200
+    },
+    {
+     "name": "phone_night_banner_toast",
+     "hour": 21.5,
+     "js": "await t.view('inner_city:spawn'); t.ui.banner('gate'); await new Promise(r=>setTimeout(r,400)); t.ui.toast('S5.str.moat_bridge'); await new Promise(r=>setTimeout(r,2200)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "phone_night_talk",
+     "js": "await t.goto(-36.4, 7.3); t.player.yaw = 84*Math.PI/180 - Math.PI/2; t.player.pitch=-0.14; await new Promise(r=>setTimeout(r,800)); t.ui.talk('V5.1'); await new Promise(r=>setTimeout(r,2500)); t.ui.next(); t.ui.next(); await new Promise(r=>setTimeout(r,1300)); return t.ui.state();",
+     "wait": 200
+    },
+    {
+     "name": "phone_night_help",
+     "js": "t.ui.close(); t.ui.help(true); await new Promise(r=>setTimeout(r,600));",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_hud",
+     "hour": 10,
+     "js": "t.ui.help(false); await t.hud.show(); await new Promise(r=>setTimeout(r,3000)); return t.hud.stats();",
+     "wait": 200
+    }
+   ]
+  }
+ ]
+}

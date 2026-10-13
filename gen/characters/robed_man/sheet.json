@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a countryman in his best robe: adult man, about 6.5 heads tall, a lean face with dark dot eyes and a short black beard and moustache, black hair in a top-knot with no cap. A long loose white robe with a crossed collar and wide sleeves reaching to the shins, tied at the waist with a pale blue sash; white trousers, white socks and black cloth shoes.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/robed_man/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 45.0,
+ "attempts": 1,
+ "idempotency_key": "d399f0a6-6bcf-42a8-b100-31d07925c4aa",
+ "request_id": "0d7d5ff0-62dd-4697-9873-d3fba07e26f8",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3219,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2878,
+   "text_tokens": 341
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3219,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2878,
+   "text_tokens": 341
+  },
+  "total_tokens": 4803
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/3d34942f-d851-4ee3-b1de-0cd23b6ed6b9"
+ ],
+ "files": [
+  "gen/characters/robed_man/sheet_0.png"
+ ]
+}

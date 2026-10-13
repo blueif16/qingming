@@ -1,0 +1,341 @@
+{
+ "at": "2026-10-13T06:19:53.964Z",
+ "results": [
+  {
+   "name": "first load fetches no lore (lore.json, lore fonts, journal chunk, crops)",
+   "pass": true,
+   "info": []
+  },
+  {
+   "name": "toast shows folded, about 9 s",
+   "pass": true,
+   "info": {
+    "region": "shizijie",
+    "banner": null,
+    "toast": "平橋",
+    "toastOpen": false,
+    "toastLeft": 8.6,
+    "queue": [],
+    "plaques": [
+     "街頭說書"
+    ],
+    "found": 3,
+    "log": [
+     [
+      0.26,
+      "region",
+      "shizijie"
+     ],
+     [
+      4.06,
+      "landmark",
+      "S6.bld.inn_wang_yuanwai"
+     ],
+     [
+      6.98,
+      "landmark",
+      "S5.str.moat_bridge"
+     ]
+    ]
+   }
+  },
+  {
+   "name": "R unfolds it and it stays long enough to read",
+   "pass": true,
+   "info": {
+    "region": "shizijie",
+    "banner": null,
+    "toast": "平橋",
+    "toastOpen": true,
+    "toastLeft": 30.5,
+    "queue": [],
+    "plaques": [
+     "街頭說書"
+    ],
+    "found": 3,
+    "log": [
+     [
+      0.26,
+      "region",
+      "shizijie"
+     ],
+     [
+      4.06,
+      "landmark",
+      "S6.bld.inn_wang_yuanwai"
+     ],
+     [
+      6.98,
+      "landmark",
+      "S5.str.moat_bridge"
+     ]
+    ]
+   }
+  },
+  {
+   "name": "the long text and its sources are in the fold",
+   "pass": true,
+   "info": "護城河上一座平平的木橋，兩側有木欄，欄邊擠滿了看水的人，有的"
+  },
+  {
+   "name": "unfolding fetched lore.json and the lore text font",
+   "pass": true,
+   "info": [
+    {
+     "name": "assets/ui/lore.json",
+     "kb": 0.1
+    },
+    {
+     "name": "assets/ui/fonts/text-lore.woff2",
+     "kb": 0.2
+    }
+   ]
+  },
+  {
+   "name": "R folds it again",
+   "pass": true,
+   "info": {
+    "region": "shizijie",
+    "banner": null,
+    "toast": "平橋",
+    "toastOpen": false,
+    "toastLeft": 8.7,
+    "queue": [],
+    "plaques": [
+     "街頭說書"
+    ],
+    "found": 3,
+    "log": [
+     [
+      0.26,
+      "region",
+      "shizijie"
+     ],
+     [
+      4.06,
+      "landmark",
+      "S6.bld.inn_wang_yuanwai"
+     ],
+     [
+      6.98,
+      "landmark",
+      "S5.str.moat_bridge"
+     ]
+    ]
+   }
+  },
+  {
+   "name": "a click unfolds it",
+   "pass": true,
+   "info": ""
+  },
+  {
+   "name": "a click folds it",
+   "pass": true,
+   "info": ""
+  },
+  {
+   "name": "the pointer on it holds it",
+   "pass": true,
+   "info": {
+    "before": 8.6,
+    "after": 5.4
+   }
+  },
+  {
+   "name": "with 「展開說明」 on, a toast opens by itself",
+   "pass": true,
+   "info": {
+    "region": "shizijie",
+    "banner": null,
+    "toast": "城樓",
+    "toastOpen": true,
+    "toastLeft": 34.8,
+    "queue": [],
+    "plaques": [
+     "街頭說書"
+    ],
+    "found": 4,
+    "log": [
+     [
+      0.26,
+      "region",
+      "shizijie"
+     ],
+     [
+      4.06,
+      "landmark",
+      "S6.bld.inn_wang_yuanwai"
+     ],
+     [
+      6.98,
+      "landmark",
+      "S5.str.moat_bridge"
+     ],
+     [
+      13.45,
+      "landmark",
+      "S5.str.gate_tower"
+     ]
+    ]
+   }
+  },
+  {
+   "name": "J opens the journal at the latest place (城樓 -> 城門)",
+   "pass": true,
+   "info": {
+    "open": true,
+    "leaf": "r:chengmen",
+    "entries": 2,
+    "empty": 2,
+    "imgs": 2
+   }
+  },
+  {
+   "name": "the leaf shows its crops",
+   "pass": true,
+   "info": {
+    "open": true,
+    "leaf": "r:chengmen",
+    "entries": 2,
+    "empty": 2,
+    "imgs": 2
+   }
+  },
+  {
+   "name": "the latest place is marked",
+   "pass": true,
+   "info": "S5.str.gate_tower"
+  },
+  {
+   "name": "→ turns east (城門口外)",
+   "pass": true,
+   "info": {
+    "open": true,
+    "leaf": "r:chengmenkouwai",
+    "entries": 0,
+    "empty": 6,
+    "imgs": 0
+   }
+  },
+  {
+   "name": "← ← turns west (十字街)",
+   "pass": true,
+   "info": {
+    "open": true,
+    "leaf": "r:shizijie",
+    "entries": 1,
+    "empty": 6,
+    "imgs": 1
+   }
+  },
+  {
+   "name": "Esc closes it",
+   "pass": true,
+   "info": ""
+  },
+  {
+   "name": "the player walks again after it closes",
+   "pass": true,
+   "info": ""
+  },
+  {
+   "name": "the scroll HUD marks the places reached, by name",
+   "pass": true,
+   "info": [
+    "久住王員外家"
+   ]
+  },
+  {
+   "name": "no console errors from the UI",
+   "pass": true,
+   "info": []
+  }
+ ],
+ "lazy": {
+  "all": [
+   {
+    "name": "assets/ui/lore.json",
+    "kb": 0.1
+   },
+   {
+    "name": "assets/ui/fonts/text-lore.woff2",
+    "kb": 0.2
+   },
+   {
+    "name": "src/ui/journal.js",
+    "kb": 102.4
+   },
+   {
+    "name": "src/ui/journal.css",
+    "kb": 9.4
+   },
+   {
+    "name": "src/ui/journal_words.js",
+    "kb": 5.3
+   },
+   {
+    "name": "assets/scroll/strip.webp",
+    "kb": 30.9
+   },
+   {
+    "name": "assets/ui/fonts/display-lore.woff2",
+    "kb": 22.4
+   },
+   {
+    "name": "assets/ui/places/S5.str.gate_tower.webp",
+    "kb": 16.7
+   },
+   {
+    "name": "assets/ui/places/S5.str.moat_bridge.webp",
+    "kb": 14.7
+   },
+   {
+    "name": "assets/ui/places/S6.bld.inn_wang_yuanwai.webp",
+    "kb": 19.6
+   },
+   {
+    "name": "assets/scroll/strip.webp",
+    "kb": 0.1
+   }
+  ],
+  "kb": 221.8,
+  "journalOpen": [
+   {
+    "name": "src/ui/journal.js",
+    "kb": 102.4
+   },
+   {
+    "name": "src/ui/journal.css",
+    "kb": 9.4
+   },
+   {
+    "name": "src/ui/journal_words.js",
+    "kb": 5.3
+   },
+   {
+    "name": "assets/scroll/strip.webp",
+    "kb": 30.9
+   },
+   {
+    "name": "assets/ui/fonts/display-lore.woff2",
+    "kb": 22.4
+   },
+   {
+    "name": "assets/ui/places/S5.str.gate_tower.webp",
+    "kb": 16.7
+   },
+   {
+    "name": "assets/ui/places/S5.str.moat_bridge.webp",
+    "kb": 14.7
+   },
+   {
+    "name": "assets/ui/places/S6.bld.inn_wang_yuanwai.webp",
+    "kb": 19.6
+   }
+  ],
+  "journalKb": 221.4
+ },
+ "errors": [],
+ "otherErrors": 0
+}

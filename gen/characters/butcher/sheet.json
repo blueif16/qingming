@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a mutton butcher at his shop: a burly middle-aged man, about 6.5 heads tall, thick arms, a round pale face with dark dot eyes and a short stubbly beard, bare-headed with his black hair in a small knot. A plain off-white short jacket with its sleeves rolled up to the elbow, a long brown cloth apron tied at the waist reaching to the shins, dark trousers and black cloth shoes.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/butcher/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 48.0,
+ "attempts": 1,
+ "idempotency_key": "c8c970c5-381a-4103-b38c-c46f480d6893",
+ "request_id": "71d27897-67e9-4fa3-98dd-0a970cbe69ab",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3692,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3345,
+   "text_tokens": 347
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3692,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3345,
+   "text_tokens": 347
+  },
+  "total_tokens": 5276
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/b9754528-3ba4-4a60-95b0-f0c53d8d01e4"
+ ],
+ "files": [
+  "gen/characters/butcher/sheet_0.png"
+ ]
+}

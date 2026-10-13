@@ -1,0 +1,536 @@
+{
+ "about": "The life layer's core sounds (2026-10-12): the player in the world, the painted animals, carts, trades and hours of S4-S6, and the HUD. group/use say where each one plays; slice = number of single hits cut out of a multi-hit take (tools/sound_slice.mjs), varied in code instead of more files. Prompts follow gen/life/sound_research.md (beds end 'No music, no speech, no engines'; one-shots close and dry). Run: node tools/eleven.mjs sounds/core.json sfx",
+ "units": {
+  "steps_earth": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "walk on the road and yards (ground/road blend)",
+   "seconds": 4,
+   "prompt": "Footsteps of one person in soft cloth shoes walking slowly on dry packed earth, six even steps with slight grit, close, dry, no music.",
+   "slice": 6
+  },
+  "steps_earth_run": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "run (Shift) on earth",
+   "seconds": 3,
+   "prompt": "One person in cloth shoes running on a dry packed-earth road, eight quick steps with dust and grit, close, dry, no music.",
+   "slice": 8
+  },
+  "steps_stone": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "stone and brick paving, the gate passage floor",
+   "seconds": 4,
+   "prompt": "Footsteps of one person in soft cloth shoes walking on old stone paving slabs, six even steps, close, dry, no music.",
+   "slice": 6
+  },
+  "steps_timber": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "the moat bridge deck, the tower hall floor, stairs",
+   "seconds": 4,
+   "prompt": "Footsteps of one person in cloth shoes walking on an old timber plank bridge, six steps, hollow wooden knock with a slight creak of planks, close, dry, no music.",
+   "slice": 6
+  },
+  "steps_brick_top": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "the wall top and the ramp (rammed earth and brick)",
+   "seconds": 4,
+   "prompt": "Footsteps of one person in cloth shoes walking on worn bricks covered with sand and grit, six steps, gritty scuffs, close, dry, no music.",
+   "slice": 6
+  },
+  "steps_grass": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "grass texture areas, the mound",
+   "seconds": 4,
+   "prompt": "Footsteps of one person walking slowly through short dry grass and weeds, six soft swishing steps, close, dry, no music.",
+   "slice": 6
+  },
+  "bump_cloth": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "the player brushes or bumps into a person (pushOut)",
+   "seconds": 4,
+   "prompt": "Two people in loose cotton robes brushing shoulders as they pass in a crowd: soft cloth rustles and a muffled bump, four separate short brushes, close, dry, no speech, no music.",
+   "slice": 4
+  },
+  "willow_brush": {
+   "kind": "sfx",
+   "group": "player",
+   "use": "walking through hanging willow strands",
+   "seconds": 3,
+   "prompt": "Walking through long hanging willow branches: thin leafy strands swishing and sliding over cloth clothing, close, dry, no music."
+  },
+  "donkey_snort": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "a donkey near the player",
+   "seconds": 3,
+   "prompt": "A donkey snorting and shaking its head, its rope halter and wooden saddle creaking, close, outdoors, dry."
+  },
+  "horse_snort_stamp": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "a waiting or ridden horse near the player",
+   "seconds": 3,
+   "prompt": "A horse snorting softly and stamping one hoof on packed earth, bridle jingling lightly, close, outdoors, dry."
+  },
+  "horse_whinny": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "an occasional call from a horse",
+   "seconds": 3,
+   "prompt": "A horse whinnying once, outdoors, mid distance, dry recording."
+  },
+  "ox_low": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "the three-ox family carts, ox carts",
+   "seconds": 4,
+   "prompt": "A calm ox lowing once, deep and long, outdoors, mid distance, dry recording."
+  },
+  "ox_breath": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "close to an ox: breath and chewing",
+   "seconds": 4,
+   "prompt": "Close-up of a standing ox breathing heavily through its nose and chewing cud slowly, outdoors, dry."
+  },
+  "pig_grunts": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "the pig herd",
+   "seconds": 4,
+   "prompt": "Several pigs grunting and snuffling while rooting in dirt, outdoors, close, dry."
+  },
+  "dog_bark": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "the painted dog",
+   "seconds": 3,
+   "prompt": "A medium village dog barking three times at a passer-by, outdoors, mid distance, dry."
+  },
+  "crow_caw": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "the crow in the big willow (S4)",
+   "seconds": 3,
+   "prompt": "A crow cawing a few times from a tall tree, outdoors, mid distance, dry."
+  },
+  "bird_takeoff": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "the painted bird flies up as you come close",
+   "seconds": 2,
+   "prompt": "A small bird taking off from a tree branch, quick flutter of wings and a short chirp, close, outdoors, dry."
+  },
+  "sparrows_tree": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "sparrows in a tree near you (point emitter on painted trees)",
+   "seconds": 8,
+   "prompt": "Sparrows chirping and chattering in a leafy tree, close, outdoors, daytime, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "hooves_donkey_walk": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "a donkey or mule walking (loop while it moves)",
+   "seconds": 5,
+   "prompt": "A donkey walking at a slow steady pace on a packed earth road, small hooves clopping, a loose harness creaking, close, dry, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "hooves_horse_walk": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "a horse walking with a rider (loop while it moves)",
+   "seconds": 5,
+   "prompt": "A horse walking slowly on a packed earth road carrying a rider, steady hoof beats, saddle leather creaking, close, dry, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "camel_steps": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "camels walking out of the gate (loop while they move)",
+   "seconds": 5,
+   "prompt": "A camel walking slowly on packed earth, soft heavy padded footsteps and a load of bales creaking on its back, close, dry, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "harness_jingle": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "tack shifting on a standing animal",
+   "seconds": 2,
+   "prompt": "A standing donkey shifting its weight, rope harness and wooden pack frame creaking with a small metal ring clinking, close, dry."
+  },
+  "barrow_wheel_earth": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "the 串车 wheelbarrows rolling on earth",
+   "seconds": 5,
+   "prompt": "A heavy wooden wheelbarrow with a single wooden wheel rolling slowly on a dirt road, the wooden axle squeaking and the load creaking, close, dry, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "cart_on_timber": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "any cart crossing the moat bridge deck",
+   "seconds": 5,
+   "prompt": "A heavy wooden cart rolling slowly across a timber plank bridge, wheels thumping over each plank, hollow wooden rumble, close, dry, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "sedan_creak": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "sedan chairs carried by bearers (S4, S6)",
+   "seconds": 5,
+   "prompt": "A wooden sedan chair carried on two long bamboo poles by bearers walking, the poles and the chair creaking rhythmically with each step, close, dry, no speech, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "sack_drop": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "sacks loaded onto the sack cart at the wine house door",
+   "seconds": 2,
+   "prompt": "A heavy grain sack dropped onto a wooden cart bed, a dull thud and grain shifting inside, close, dry."
+  },
+  "basket_set_down": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "porters setting down their shoulder-pole baskets",
+   "seconds": 2,
+   "prompt": "Two heavy woven bamboo baskets set down on the ground off a shoulder pole, wicker creak and a soft thud, close, dry."
+  },
+  "coins_cash": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "copper cash: the tax payment, coins given to the beggar boys, buying",
+   "seconds": 3,
+   "prompt": "A string of old copper coins with square holes jingling, then a few coins dropped one by one into a wooden tray, close, dry, no music."
+  },
+  "brush_writing": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the tax official and scholars writing",
+   "seconds": 4,
+   "prompt": "A soft calligraphy brush writing quickly on paper, then the brush tapped on an ink stone, quiet, close, dry, no music."
+  },
+  "frame_scale": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the big frame scale at the tax office weighing a bale",
+   "seconds": 3,
+   "prompt": "A large wooden frame scale creaking as a heavy cloth bale is hung on it with ropes, the beam swinging and settling, close, dry."
+  },
+  "bowls_cups": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the wine houses (正店, 脚店): bowls and cups",
+   "seconds": 4,
+   "prompt": "Ceramic bowls and small cups clinking on a wooden table in a tavern, a bowl set down, gentle, close, dry, no speech, no music."
+  },
+  "pour_wine": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "wine poured from a jar into a bowl",
+   "seconds": 3,
+   "prompt": "Liquid poured from a narrow ceramic jar into a ceramic bowl, short gurgling pour, close, dry."
+  },
+  "fry_griddle": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the food stalls (fried twists, cakes): sizzling while you stand near",
+   "seconds": 6,
+   "prompt": "Dough frying in hot oil in an iron pan at a street stall, steady sizzling and bubbling, close, dry, no speech, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "steamer_lid": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "a steamer basket opened at a food stall",
+   "seconds": 2,
+   "prompt": "A bamboo steamer lid lifted off with a puff of hissing steam, close, dry."
+  },
+  "banner_flap": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the shops' cloth signs and wine banners in the wind",
+   "seconds": 6,
+   "prompt": "A long cloth shop banner hanging from a wooden pole flapping and snapping in a gusty wind, close, outdoors, no music.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "shutters": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "shop shutters taken down at dawn and put up at night",
+   "seconds": 4,
+   "prompt": "Wooden shop shutter boards being lifted out of their grooves one by one and stacked against a wall, knocking wood, close, dry, no speech."
+  },
+  "crowd_laugh": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the storyteller's listeners laugh together (a ring of 17)",
+   "seconds": 4,
+   "prompt": "A small outdoor crowd of men bursting into hearty laughter together and then murmuring, no intelligible words, mid distance, no music."
+  },
+  "crowd_gasp": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the listeners gasp at a twist in the story",
+   "seconds": 3,
+   "prompt": "A small outdoor crowd of men gasping in surprise together, then a short excited murmur, no intelligible words, mid distance, no music."
+  },
+  "razor_strop": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the barber strops his razor between customers",
+   "seconds": 3,
+   "prompt": "A straight razor stropped quickly back and forth on a leather strap, six strokes, close, dry."
+  },
+  "drum_hit": {
+   "kind": "sfx",
+   "group": "time",
+   "use": "single strokes of the gate tower drum, sequenced in code for dusk and the night watches",
+   "seconds": 4,
+   "prompt": "One single heavy stroke on a large barrel drum on a city gate tower, deep boom with a long natural decay, heard outdoors from the street below, no other sounds."
+  },
+  "watch_clapper": {
+   "kind": "sfx",
+   "group": "time",
+   "use": "the night watchman's wooden clapper between the drum strokes",
+   "seconds": 2,
+   "prompt": "A night watchman striking a hollow wooden clapper block twice, sharp wooden knocks echoing in an empty street at night, mid distance, no speech, no music."
+  },
+  "temple_bell": {
+   "kind": "sfx",
+   "group": "time",
+   "use": "the temple in S4 at dawn and dusk",
+   "seconds": 8,
+   "prompt": "One strike of a large bronze temple bell with a wooden beam, deep warm tone with a very long shimmering decay, outdoors, mid distance, no other sounds."
+  },
+  "dawn_round": {
+   "kind": "sfx",
+   "group": "time",
+   "use": "五更 dawn round: a temple servant beats an iron plate along the street (东京梦华录; unpainted, heard only)",
+   "seconds": 8,
+   "prompt": "At dawn a temple servant walks along an empty street beating a small iron plate with a stick in a slow steady rhythm, getting nearer then passing, distant roosters, no speech, no music."
+  },
+  "rooster_far": {
+   "kind": "sfx",
+   "group": "time",
+   "use": "roosters at first light",
+   "seconds": 3,
+   "prompt": "A rooster crowing once in the distance at dawn, outdoors, quiet village."
+  },
+  "water_lap_posts": {
+   "kind": "sfx",
+   "group": "water",
+   "use": "lapping at the moat bridge trestles (point emitter, close)",
+   "seconds": 8,
+   "prompt": "Gentle water lapping and gurgling against old wooden posts under a bridge, calm moat, close, steady, no music, no speech.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "frogs_pond": {
+   "kind": "sfx",
+   "group": "water",
+   "use": "frogs in the moat at night",
+   "seconds": 10,
+   "prompt": "Frogs croaking in a reedy pond on a warm night, several frogs, mid distance, no music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "crickets_close": {
+   "kind": "sfx",
+   "group": "water",
+   "use": "crickets in grass and wall cracks at night (close layer)",
+   "seconds": 8,
+   "prompt": "Field crickets chirping close by in grass on a calm night, steady, no music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "bed_street_evening": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "the inner city at dusk and night: the wine houses still busy (夜市)",
+   "seconds": 12,
+   "prompt": "Evening in an old town street outside busy taverns: distant laughter and indistinct talk from inside, bowls clinking, a few unhurried footsteps, a quiet breeze. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "bed_moat_v2": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "the moat bridge by day (the first takes were too quiet)",
+   "seconds": 12,
+   "prompt": "Daytime on a wooden bridge over a calm moat outside a town gate: water lapping softly at the posts, footsteps and hooves crossing the planks now and then, distant murmur of people, a light breeze. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "bed_temple_yard": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "the temple yard in S4",
+   "seconds": 12,
+   "prompt": "A quiet temple courtyard by day: wind in old trees, sparrows, a faint distant bell hum, gravel underfoot far away. No music, no speech, no engines.",
+   "loop": true,
+   "influence": 0.4
+  },
+  "wind_gust": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "an occasional gust through the willows (event)",
+   "seconds": 5,
+   "prompt": "A single gust of wind rising and falling through willow trees, leaves rustling then settling, outdoors, no music."
+  },
+  "scroll_unroll": {
+   "kind": "sfx",
+   "group": "ui",
+   "use": "the painting HUD opens (Space): a silk hand scroll unrolled",
+   "seconds": 2,
+   "prompt": "Close-miked: a silk hand scroll on a wooden roller unrolled briskly across a wooden table, a clear rustle of paper and silk and the roller knocking softly, dry.",
+   "note": "first take too faint (-50 LUFS or below); prompt rewritten 2026-10-12"
+  },
+  "bubble_tap": {
+   "kind": "sfx",
+   "group": "ui",
+   "use": "a speech bubble appears: a soft paper tap",
+   "seconds": 2,
+   "prompt": "Four separate light but clear taps of a small wooden stick on a sheet of thick paper, crisp papery ticks with short gaps, close-miked, dry.",
+   "slice": 4,
+   "note": "first take too faint (-50 LUFS or below); prompt rewritten 2026-10-12"
+  },
+  "bed_inner_street": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "the inner city street by day",
+   "seconds": 15,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Ambience of a busy open-air street market in an ancient town, daytime: indistinct murmur of many people talking at a distance, footsteps on packed earth, a wooden cart creaking slowly past, a donkey's hooves, occasional distant calls of street vendors. No music, no modern vehicles, no engines, no intelligible words.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "bed_gate_passage": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "inside the gate passage (with the reverb zone)",
+   "seconds": 12,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Inside a long brick-vaulted city gate tunnel: echoing footsteps and slow hooves on packed earth, the soft padding of a camel, muffled street noise from both open ends, strong reverberation. No music, no speech, no engines.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "bed_outer_road": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "the outer road and its willows by day",
+   "seconds": 15,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Countryside dirt road lined with old willow trees on a spring morning: wind rustling through willow leaves, songbirds chirping, a distant rooster, a faint cart creaking far away. No music, no speech, no engines, no traffic.",
+   "from": "samples take 2 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "bed_night": {
+   "kind": "sfx",
+   "group": "bed",
+   "use": "every section at night, under the local layers",
+   "seconds": 15,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Night in an ancient town in late summer: crickets and frogs chirping, a dog barking far away, a light wind, very quiet empty streets. No music, no speech, no engines.",
+   "from": "samples take 1 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "drum_dusk": {
+   "kind": "sfx",
+   "group": "time",
+   "use": "the gate tower drum at dusk (城上暮鼓)",
+   "seconds": 10,
+   "prompt": "A large Chinese barrel drum on a city gate tower struck slowly with heavy wooden beaters at dusk: deep booming hits with a long decay, heard from the street below at a distance, outdoors. No music, no other instruments.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "ox_cart_bell": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "the big ox carts rolling, with the 太平车 iron bell (东京梦华录)",
+   "seconds": 10,
+   "prompt": "A heavy wooden ox cart rolling slowly on a dirt road: the wooden axle creaking rhythmically, wheels crunching on gravel, a small iron bell hanging from the cart clinking with each jolt, slow ox hoof steps. No music, no speech.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "donkey_bray": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "an occasional bray from a painted donkey",
+   "seconds": 4,
+   "prompt": "A single donkey braying loudly, outdoors, close, dry recording.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "camel_grumble": {
+   "kind": "sfx",
+   "group": "animal",
+   "use": "the camels at the gate",
+   "seconds": 5,
+   "prompt": "A Bactrian camel grumbling and groaning low, close, outdoors, dry recording.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "razor_shave": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the barber at the wall foot",
+   "seconds": 5,
+   "prompt": "Close-up foley of a straight razor shaving stubble on a man's chin: slow scraping strokes, then the blade wiped on a cloth. Quiet, dry, no music.",
+   "from": "samples take 2 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "cleaver_chop": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the butcher's block (S6)",
+   "seconds": 5,
+   "prompt": "A butcher chopping meat on a thick wooden block with a heavy cleaver: several solid thuds, outdoors, dry foley. No music.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "pole_creak": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "porters with shoulder poles walking",
+   "seconds": 6,
+   "prompt": "A porter walking with a bamboo shoulder pole carrying two heavy baskets: the bamboo pole creaking rhythmically with each step, baskets swaying, footsteps on dirt. Close, dry, no music, no speech.",
+   "from": "samples take 0 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "bowstring": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the archer testing his bow in the wine depot",
+   "seconds": 4,
+   "prompt": "Close-miked: a strong wooden bow drawn slowly, the string and bow limbs creaking under tension, then released with a loud resonant twang, no arrow impact, dry.",
+   "note": "first take too faint (-50 LUFS or below); prompt rewritten 2026-10-12"
+  },
+  "monk_clappers": {
+   "kind": "sfx",
+   "group": "trade",
+   "use": "the itinerant monk with wooden clappers (museum caption)",
+   "seconds": 5,
+   "prompt": "A wandering monk walking down a street clapping two wooden boards together in a slow steady rhythm, outdoors, mid distance. No music, no speech.",
+   "from": "samples take 1 (auditioned and approved by the user, 2026-10-12)"
+  },
+  "whip_crack": {
+   "kind": "sfx",
+   "group": "cart",
+   "use": "figures painted with a whip (the carters and drivers; S4 people.json stand_whip): a crack over the team now and then",
+   "seconds": 2,
+   "slice": 2,
+   "prompt": "A short leather whip cracked twice over a draft animal, two sharp snaps with a gap, outdoors, close, dry."
+  }
+ }
+}

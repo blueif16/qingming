@@ -1,0 +1,383 @@
+{
+ "about": "Who the gate's people are and what they do. figures: scroll figures from figures.json, played at their spots; do = [clip, seconds] steps cycled with cross-fades; nudge = [dX, dD] metres where our model needs it (reasons in nudge_why). walkers: people who follow a path back and forth. traffic: a seeded crowd along a path (lanes = sideways offsets from it, + = left of the direction of travel), with stops to look at the view and pairs who walk together and stop to talk. Clips are the characters' clips in web/public/assets/chars/characters.json. Paths are [X, D] in the section frame, or {route: [from, to]}: stations (metres from the gate passage's outer mouth, + east) along the mapped road, resolved by the page from layout.json. Walk clips play at the rate that matches the walker speed (stride measured from the planted foot in people.js).",
+ "figures": {
+  "tax_official": {
+   "character": "official",
+   "do": [
+    [
+     "write",
+     18
+    ],
+    [
+     "sit_talk",
+     6
+    ]
+   ],
+   "nudge": [
+    0,
+    0.1
+   ]
+  },
+  "tax_inspector": {
+   "character": "inspector",
+   "do": [
+    [
+     "point",
+     6
+    ],
+    [
+     "argue",
+     5
+    ],
+    [
+     "idle",
+     3
+    ],
+    [
+     "talk",
+     4
+    ]
+   ]
+  },
+  "tax_carter_manifest": {
+   "character": "carter",
+   "do": [
+    [
+     "hand_over",
+     6
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "tax_declarer": {
+   "character": "townsman",
+   "do": [
+    [
+     "talk",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "camel_driver": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     6
+    ]
+   ]
+  },
+  "tower_watchman": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     11
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.6,
+    0
+   ]
+  },
+  "bridge_sightseer": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     40
+    ]
+   ],
+   "nudge": [
+    0.6,
+    0.21
+   ]
+  },
+  "rail_watcher_2": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     40
+    ]
+   ],
+   "nudge": [
+    0,
+    0.21
+   ]
+  },
+  "rail_watcher_3": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     40
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    0.21
+   ]
+  },
+  "rail_watcher_4": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     40
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    0.21
+   ]
+  },
+  "wall_recliner": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_wall",
+     30
+    ]
+   ],
+   "nudge": [
+    1.07,
+    0
+   ]
+  },
+  "wall_idler_white": {
+   "character": "idler",
+   "do": [
+    [
+     "chat",
+     7
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "wall_idler_blue": {
+   "character": "inspector",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "wall_idler_grey": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     4
+    ],
+    [
+     "talk",
+     6
+    ]
+   ]
+  },
+  "wall_idler_stick": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "chat",
+     4
+    ]
+   ]
+  },
+  "wall_squatter": {
+   "character": "idler",
+   "do": [
+    [
+     "sit_floor",
+     30
+    ]
+   ]
+  }
+ },
+ "nudge_why": {
+  "tax_official": "sits on the bench behind the desk (bench at D 12.9-13.2); his feet are hidden in the painting",
+  "rail watchers": "legs hidden behind the railing: stand 0.3 m behind the near railing's inner face so the elbows rest on its top rail (lean_chin keeps the feet under the hips); bridge_sightseer steps off the post at X 3.5, and watchers 3 and 4 stand 0.8 m apart so their elbows don't meet",
+  "wall_recliner": "his foot (hidden, estimated) maps 1.1 m inside the north wing that the build runs north from the gate block (the strokes show no wall there, only trees); he leans against its outer face as painted",
+  "tower_watchman": "painted in the middle of the hall doorway (bay X -21.05..-19.15); now that people have bodies he would block the way in, so he stands 0.6 m to the side of it"
+ },
+ "walkers": [
+  {
+   "id": "bridge_porter",
+   "figure": "bridge_porter",
+   "character": "porter",
+   "clip": "walk",
+   "speed": 1.1,
+   "pause": [
+    "idle",
+    4
+   ],
+   "path": {
+    "route": [
+     13.2,
+     -30
+    ]
+   }
+  }
+ ],
+ "traffic": {
+  "count": 26,
+  "seed": 7,
+  "pairs": 0.35,
+  "path": {
+   "route": [
+    -30,
+    27
+   ]
+  },
+  "path_why": "the mapped road (layout.json route, S5.road.main) from the street inside the city, through the passage and over the bridge; walkers route round anyone standing on it",
+  "lanes": [
+   -0.4,
+   0.2
+  ],
+  "pause": [
+   "look",
+   4
+  ],
+  "stop_every": [
+   18,
+   45
+  ],
+  "stop_for": [
+   3,
+   7
+  ],
+  "kinds": [
+   {
+    "character": "townsman",
+    "clip": "walk",
+    "speed": 1.25,
+    "weight": 3,
+    "stops": [
+     "look",
+     "idle"
+    ],
+    "talk": [
+     "talk"
+    ]
+   },
+   {
+    "character": "porter",
+    "clip": "walk",
+    "speed": 1.15,
+    "weight": 2,
+    "stops": [
+     "idle"
+    ]
+   },
+   {
+    "character": "carter",
+    "clip": "walk",
+    "speed": 1.3,
+    "weight": 3,
+    "stops": [
+     "idle"
+    ],
+    "talk": [
+     "idle"
+    ]
+   },
+   {
+    "character": "idler",
+    "clip": "quick",
+    "speed": 1.6,
+    "weight": 2,
+    "stops": [
+     "idle"
+    ],
+    "talk": [
+     "chat"
+    ]
+   },
+   {
+    "character": "idler",
+    "clip": "walk",
+    "speed": 1.2,
+    "weight": 1,
+    "stops": [
+     "idle"
+    ],
+    "talk": [
+     "chat"
+    ]
+   },
+   {
+    "character": "sightseer",
+    "clip": "walk",
+    "speed": 1,
+    "weight": 2,
+    "stops": [
+     "look"
+    ],
+    "talk": [
+     "chat"
+    ]
+   },
+   {
+    "character": "inspector",
+    "clip": "walk",
+    "speed": 1.25,
+    "weight": 1,
+    "stops": [
+     "idle"
+    ],
+    "talk": [
+     "talk",
+     "argue"
+    ]
+   },
+   {
+    "character": "camel_driver",
+    "clip": "stroll",
+    "speed": 0.9,
+    "weight": 1,
+    "stops": [
+     "look"
+    ]
+   },
+   {
+    "character": "official",
+    "clip": "walk",
+    "speed": 1.1,
+    "weight": 1,
+    "stops": [
+     "idle"
+    ]
+   }
+  ],
+  "pair_gap": 0.55
+ },
+ "clips_why": "2026-10-10 audit (gen/characters/audit_walks/): nobody walks with 'carry' (carter: Carry Heavy Object Walk = both arms held straight out, a zombie without the box; porter: Carry Water Bucket Walk = bends double to the ground) or the sightseer's 'stroll' (Thoughtful Walk = head hanging, arms limp); 'gape' (Look Around Dumbfounded) is out of every cycle. 'idle' is Meshy Idle 3 (243), a calm stand, on every character (the old idle 0 turned round and flung an arm behind). Carrying comes back with props (shoulder pole, baskets)."
+}

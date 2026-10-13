@@ -1,0 +1,3287 @@
+{
+ "mode": "bench",
+ "url": "http://127.0.0.1:5190/world.html",
+ "date": "2026-10-13T04:00:57.843Z",
+ "viewport": [
+  1920,
+  1080,
+  1
+ ],
+ "loadMs": 2560,
+ "env": {
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4070 SUPER (0x00002783) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "gpuTimer": true,
+  "loaded": [
+   "inner_city",
+   "gate",
+   "city_end"
+  ],
+  "dpr": 1,
+  "requests": 244,
+  "totalKB": 44475,
+  "byType": {
+   "code.other": {
+    "n": 1,
+    "kb": 217
+   },
+   "code.js": {
+    "n": 29,
+    "kb": 9743
+   },
+   "code.mjs": {
+    "n": 1,
+    "kb": 3
+   },
+   "panels.js": {
+    "n": 1,
+    "kb": 103
+   },
+   "trees.json": {
+    "n": 1,
+    "kb": 15
+   },
+   "cast.json": {
+    "n": 2,
+    "kb": 43
+   },
+   "data.json": {
+    "n": 27,
+    "kb": 1360
+   },
+   "data.webp": {
+    "n": 2,
+    "kb": 40
+   },
+   "sections.glb": {
+    "n": 3,
+    "kb": 4565
+   },
+   "panels.json": {
+    "n": 3,
+    "kb": 6
+   },
+   "cast.glb": {
+    "n": 33,
+    "kb": 14570
+   },
+   "data.ktx2": {
+    "n": 32,
+    "kb": 2641
+   },
+   "kit.ktx2": {
+    "n": 14,
+    "kb": 1718
+   },
+   "transcoder": {
+    "n": 2,
+    "kb": 571
+   },
+   "trees.ktx2": {
+    "n": 31,
+    "kb": 7392
+   },
+   "panels.ktx2": {
+    "n": 3,
+    "kb": 680
+   },
+   "data.webm": {
+    "n": 59,
+    "kb": 808
+   }
+  }
+ },
+ "throttle": 1,
+ "views": {
+  "crown": {
+   "warmup": {
+    "frames": 307,
+    "fps": 204.2,
+    "cpu": {
+     "player": 0.23,
+     "crowd": 0.228,
+     "people": 0.505,
+     "boats": 0.116,
+     "shadow": 1.002,
+     "color": 1.741,
+     "normal": 0.617,
+     "overlay": 0.281,
+     "post": 0.033,
+     "frame": 4.709,
+     "other": 0.184
+    },
+    "cpuP95": 6.6,
+    "cpuMax": 15.1,
+    "uploadKB": {
+     "mean": 328.4,
+     "max": 8744
+    },
+    "bakeMs": {
+     "mean": 0.13,
+     "max": 6.3
+    },
+    "gpu": {},
+    "gpuFrame": 0,
+    "calls": {
+     "shadow": 203,
+     "color": 166,
+     "normal": 82,
+     "overlay": 43,
+     "post": 1
+    },
+    "tris": {
+     "shadow": 1298528,
+     "color": 1153004,
+     "normal": 273081,
+     "overlay": 648770,
+     "post": 1
+    },
+    "people": 466
+   },
+   "inventory": {
+    "sky": {
+     "meshes": 1,
+     "tris": 960,
+     "instances": 1
+    },
+    "crowd": {
+     "meshes": 76,
+     "tris": 877624,
+     "instances": 229
+    },
+    "other": {
+     "meshes": 1,
+     "tris": 4177,
+     "instances": 1
+    },
+    "world": {
+     "meshes": 104,
+     "tris": 342996,
+     "instances": 104
+    },
+    "water": {
+     "meshes": 3,
+     "tris": 1301,
+     "instances": 3
+    },
+    "boats": {
+     "meshes": 32,
+     "tris": 171578,
+     "instances": 317
+    },
+    "trees": {
+     "meshes": 25,
+     "tris": 106,
+     "instances": 53
+    },
+    "backdrop": {
+     "meshes": 2,
+     "tris": 261,
+     "instances": 2
+    },
+    "peopleInView": {
+     "<15": 74,
+     "15-25": 44,
+     "25-40": 24,
+     "40-60": 14,
+     ">60": 39
+    }
+   },
+   "runs": {
+    "base_nogpu": {
+     "frames": 341,
+     "fps": 226.7,
+     "cpu": {
+      "player": 0.214,
+      "crowd": 0.092,
+      "people": 0.302,
+      "boats": 0.106,
+      "shadow": 0.937,
+      "color": 1.624,
+      "normal": 0.587,
+      "overlay": 0.257,
+      "post": 0.035,
+      "frame": 4.232,
+      "other": 0.17
+     },
+     "cpuP95": 5.1,
+     "cpuMax": 7,
+     "uploadKB": {
+      "mean": 185.7,
+      "max": 186
+     },
+     "bakeMs": {
+      "mean": 0,
+      "max": 0.1
+     },
+     "gpu": {},
+     "gpuFrame": 0,
+     "calls": {
+      "shadow": 203,
+      "color": 166,
+      "normal": 82,
+      "overlay": 43,
+      "post": 1
+     },
+     "tris": {
+      "shadow": 1298528,
+      "color": 1154780,
+      "normal": 274857,
+      "overlay": 648770,
+      "post": 1
+     },
+     "people": 466
+    },
+    "base": {
+     "frames": 304,
+     "fps": 201.8,
+     "cpu": {
+      "player": 0.237,
+      "crowd": 0.098,
+      "people": 0.323,
+      "boats": 0.121,
+      "shadow": 1.059,
+      "color": 1.816,
+      "normal": 0.658,
+      "overlay": 0.298,
+      "post": 0.036,
+      "frame": 4.732,
+      "other": 0.184
+     },
+     "cpuP95": 6.3,
+     "cpuMax": 10.8,
+     "uploadKB": {
+      "mean": 185.7,
+      "max": 186
+     },
+     "bakeMs": {
+      "mean": 0,
+      "max": 0.1
+     },
+     "gpu": {
+      "pre": 0.04,
+      "color": 2.269,
+      "shadow": 2.192,
+      "gap": 0.016,
+      "normal": 0,
+      "overlay": 0,
+      "post": 0
+     },
+     "gpuFrame": 4.461,
+     "calls": {
+      "shadow": 203,
+      "color": 166,
+      "normal": 82,
+      "overlay": 43,
+      "post": 1
+     },
+     "tris": {
+      "shadow": 1298528,
+      "color": 1154780,
+      "normal": 274857,
+      "overlay": 648770,
+      "post": 1
+     },
+     "people": 466
+    },
+    "base_end": {
+     "frames": 328,
+     "fps": 218.6,
+     "cpu": {
+      "player": 0.207,
+      "crowd": 0.087,
+      "people": 0.29,
+      "boats": 0.105,
+      "shadow": 1.003,
+      "color": 1.652,
+      "normal": 0.598,
+      "overlay": 0.274,
+      "post": 0.037,
+      "frame": 4.366,
+      "other": 0.2
+     },
+     "cpuP95": 5.4,
+     "cpuMax": 8.9,
+     "uploadKB": {
+      "mean": 185.7,
+      "max": 186
+     },
+     "bakeMs": {
+      "mean": 0,
+      "max": 0.1
+     },
+     "gpu": {
+      "pre": 0.04,
+      "color": 2.102,
+      "shadow": 2.051,
+      "gap": 0.013,
+      "normal": 0,
+      "overlay": 0,
+      "post": 0
+     },
+     "gpuFrame": 4.153,
+     "calls": {
+      "shadow": 203,
+      "color": 166,
+      "normal": 82,
+      "overlay": 43,
+      "post": 1
+     },
+     "tris": {
+      "shadow": 1298528,
+      "color": 1153012,
+      "normal": 273089,
+      "overlay": 648770,
+      "post": 1
+     },
+     "people": 466
+    },
+    "base_live": {
+     "frames": 332,
+     "fps": 220.1,
+     "cpu": {
+      "player": 0.206,
+      "crowd": 0.09,
+      "people": 0.353,
+      "boats": 0.101,
+      "shadow": 0.987,
+      "color": 1.646,
+      "normal": 0.589,
+      "overlay": 0.262,
+      "post": 0.03,
+      "frame": 4.346,
+      "other": 0.172
+     },
+     "cpuP95": 5.3,
+     "cpuMax": 8.9,
+     "uploadKB": {
+      "mean": 185.7,
+      "max": 186
+     },
+     "bakeMs": {
+      "mean": 0,
+      "max": 0.1
+     },
+     "gpu": {
+      "pre": 0.04,
+      "color": 2.108,
+      "shadow": 2.028,
+      "gap": 0.014,
+      "normal": 0.001,
+      "overlay": 0,
+      "post": 0
+     },
+     "gpuFrame": 4.137,
+     "calls": {
+      "shadow": 203,
+      "color": 166,
+      "normal": 82,
+      "overlay": 43,
+      "post": 1
+     },
+     "tris": {
+      "shadow": 1298528,
+      "color": 1153012,
+      "normal": 273089,
+      "overlay": 648770,
+      "post": 1
+     },
+     "people": 466
+    }
+   },
+   "quiet": {
+    "quiet": true,
+    "waitedS": 2,
+    "others": 0,
+    "blender": 0,
+    "load": 0.92
+   },
+   "frozen": true,
+   "pageMeasure": {
+    "fps": 224.5847176079741,
+    "cpuMs": 4.281360946733439,
+    "animMs": 0.46715976330920084,
+    "gpuMs": 3.995384426035499,
+    "calls": 495,
+    "tris": 3376936,
+    "people": 466,
+    "dpr": 1
+   },
+   "ab": {
+    "noop": {
+     "fps": {
+      "base": 215,
+      "exp": 222.433,
+      "delta": 7.433,
+      "ratio": 1.035
+     },
+     "cpu": {
+      "base": 4.45,
+      "exp": 4.294,
+      "delta": -0.157,
+      "ratio": 0.965
+     },
+     "gpu": {
+      "base": 4.23,
+      "exp": 4.099,
+      "delta": -0.131,
+      "ratio": 0.969
+     },
+     "calls": {
+      "base": 495,
+      "exp": 495,
+      "delta": 0,
+      "ratio": 1
+     },
+     "color": {
+      "base": 1.711,
+      "exp": 1.647,
+      "delta": -0.064,
+      "ratio": 0.963
+     },
+     "shadow": {
+      "base": 1.021,
+      "exp": 0.99,
+      "delta": -0.031,
+      "ratio": 0.969
+     },
+     "normal": {
+      "base": 0.896,
+      "exp": 0.864,
+      "delta": -0.033,
+      "ratio": 0.964
+     },
+     "people": {
+      "base": 0.299,
+      "exp": 0.291,
+      "delta": -0.008,
+      "ratio": 0.974
+     },
+     "p95": {
+      "base": 5.6,
+      "exp": 5.433,
+      "delta": -0.167,
+      "ratio": 0.97
+     },
+     "runs": [
+      {
+       "frames": 320,
+       "fps": 212.9,
+       "cpu": {
+        "player": 0.217,
+        "crowd": 0.093,
+        "people": 0.308,
+        "boats": 0.104,
+        "shadow": 1.04,
+        "color": 1.711,
+        "normal": 0.631,
+        "overlay": 0.276,
+        "post": 0.032,
+        "frame": 4.491,
+        "other": 0.172
+       },
+       "cpuP95": 6,
+       "cpuMax": 8.7,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.109,
+        "shadow": 2.164,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.273,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154780,
+        "normal": 274857,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 354,
+       "fps": 236,
+       "cpu": {
+        "player": 0.195,
+        "crowd": 0.087,
+        "people": 0.276,
+        "boats": 0.093,
+        "shadow": 0.926,
+        "color": 1.55,
+        "normal": 0.573,
+        "overlay": 0.245,
+        "post": 0.031,
+        "frame": 4.033,
+        "other": 0.144
+       },
+       "cpuP95": 4.9,
+       "cpuMax": 9.5,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.044,
+        "color": 1.93,
+        "shadow": 1.927,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.857,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154780,
+        "normal": 274857,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 328,
+       "fps": 218.4,
+       "cpu": {
+        "player": 0.217,
+        "crowd": 0.09,
+        "people": 0.289,
+        "boats": 0.105,
+        "shadow": 1.003,
+        "color": 1.679,
+        "normal": 0.6,
+        "overlay": 0.266,
+        "post": 0.035,
+        "frame": 4.357,
+        "other": 0.163
+       },
+       "cpuP95": 5.4,
+       "cpuMax": 7.4,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.091,
+        "shadow": 2.075,
+        "gap": 0.016,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.166,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154728,
+        "normal": 274865,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      }
+     ],
+     "bases": [
+      {
+       "frames": 315,
+       "fps": 209.7,
+       "cpu": {
+        "player": 0.217,
+        "crowd": 0.091,
+        "people": 0.299,
+        "boats": 0.11,
+        "shadow": 1.055,
+        "color": 1.746,
+        "normal": 0.642,
+        "overlay": 0.276,
+        "post": 0.038,
+        "frame": 4.553,
+        "other": 0.17
+       },
+       "cpuP95": 5.4,
+       "cpuMax": 6.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.173,
+        "shadow": 2.173,
+        "gap": 0.017,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.346,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154722.057,
+        "normal": 274859.057,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 299,
+       "fps": 199.3,
+       "cpu": {
+        "player": 0.228,
+        "crowd": 0.099,
+        "people": 0.318,
+        "boats": 0.116,
+        "shadow": 1.101,
+        "color": 1.849,
+        "normal": 0.66,
+        "overlay": 0.298,
+        "post": 0.037,
+        "frame": 4.789,
+        "other": 0.182
+       },
+       "cpuP95": 6.2,
+       "cpuMax": 10.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.293,
+        "shadow": 2.221,
+        "gap": 0.017,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.514,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154780,
+        "normal": 274857,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 335,
+       "fps": 222.4,
+       "cpu": {
+        "player": 0.207,
+        "crowd": 0.093,
+        "people": 0.296,
+        "boats": 0.095,
+        "shadow": 0.974,
+        "color": 1.638,
+        "normal": 0.605,
+        "overlay": 0.27,
+        "post": 0.035,
+        "frame": 4.285,
+        "other": 0.165
+       },
+       "cpuP95": 5.4,
+       "cpuMax": 6.7,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.3
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.076,
+        "shadow": 2.017,
+        "gap": 0.014,
+        "normal": 0.001,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.094,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154748.907,
+        "normal": 274857.788,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 345,
+       "fps": 228.6,
+       "cpu": {
+        "player": 0.201,
+        "crowd": 0.089,
+        "people": 0.282,
+        "boats": 0.091,
+        "shadow": 0.954,
+        "color": 1.61,
+        "normal": 0.582,
+        "overlay": 0.252,
+        "post": 0.032,
+        "frame": 4.174,
+        "other": 0.17
+       },
+       "cpuP95": 5.4,
+       "cpuMax": 7.5,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 1.985,
+        "shadow": 1.981,
+        "gap": 0.022,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.966,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154562.957,
+        "normal": 274641,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      }
+     ]
+    },
+    "mrt": {
+     "fps": {
+      "base": 222,
+      "exp": 269.367,
+      "delta": 47.367,
+      "ratio": 1.213
+     },
+     "cpu": {
+      "base": 4.285,
+      "exp": 3.514,
+      "delta": -0.771,
+      "ratio": 0.82
+     },
+     "gpu": {
+      "base": 4.097,
+      "exp": 3.427,
+      "delta": -0.67,
+      "ratio": 0.836
+     },
+     "calls": {
+      "base": 495,
+      "exp": 370,
+      "delta": -125,
+      "ratio": 0.747
+     },
+     "color": {
+      "base": 1.644,
+      "exp": 1.674,
+      "delta": 0.029,
+      "ratio": 1.018
+     },
+     "shadow": {
+      "base": 0.978,
+      "exp": 1.021,
+      "delta": 0.043,
+      "ratio": 1.044
+     },
+     "normal": {
+      "base": 0.858,
+      "exp": 0,
+      "delta": -0.858,
+      "ratio": 0
+     },
+     "people": {
+      "base": 0.293,
+      "exp": 0.301,
+      "delta": 0.008,
+      "ratio": 1.027
+     },
+     "p95": {
+      "base": 5.3,
+      "exp": 4.433,
+      "delta": -0.867,
+      "ratio": 0.836
+     },
+     "info": {
+      "materials": 141,
+      "samples": 4
+     },
+     "runs": [
+      {
+       "frames": 402,
+       "fps": 267.7,
+       "cpu": {
+        "player": 0.208,
+        "crowd": 0.096,
+        "people": 0.307,
+        "boats": 0.104,
+        "shadow": 1.017,
+        "color": 1.688,
+        "post": 0.037,
+        "frame": 3.534,
+        "other": 0.173
+       },
+       "cpuP95": 4.5,
+       "cpuMax": 5.5,
+       "uploadKB": {
+        "mean": 183.1,
+        "max": 183
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.1,
+        "color": 1.58,
+        "shadow": 1.873,
+        "gap": 0.003,
+        "post": 0
+       },
+       "gpuFrame": 3.453,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1152952,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 413,
+       "fps": 274.7,
+       "cpu": {
+        "player": 0.203,
+        "crowd": 0.094,
+        "people": 0.293,
+        "boats": 0.103,
+        "shadow": 1.001,
+        "color": 1.64,
+        "post": 0.038,
+        "frame": 3.446,
+        "other": 0.168
+       },
+       "cpuP95": 4.3,
+       "cpuMax": 5.4,
+       "uploadKB": {
+        "mean": 183.1,
+        "max": 183
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.102,
+        "color": 1.558,
+        "shadow": 1.8,
+        "gap": 0.005,
+        "post": 0
+       },
+       "gpuFrame": 3.358,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154780,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 399,
+       "fps": 265.7,
+       "cpu": {
+        "player": 0.215,
+        "crowd": 0.09,
+        "people": 0.303,
+        "boats": 0.105,
+        "shadow": 1.045,
+        "color": 1.693,
+        "post": 0.038,
+        "frame": 3.563,
+        "other": 0.164
+       },
+       "cpuP95": 4.5,
+       "cpuMax": 6.5,
+       "uploadKB": {
+        "mean": 183.1,
+        "max": 183
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.1,
+        "color": 1.604,
+        "shadow": 1.866,
+        "gap": 0.003,
+        "post": 0
+       },
+       "gpuFrame": 3.47,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154780,
+        "post": 1
+       },
+       "people": 466
+      }
+     ],
+     "bases": [
+      {
+       "frames": 337,
+       "fps": 224.1,
+       "cpu": {
+        "player": 0.213,
+        "crowd": 0.088,
+        "people": 0.29,
+        "boats": 0.105,
+        "shadow": 0.951,
+        "color": 1.612,
+        "normal": 0.593,
+        "overlay": 0.269,
+        "post": 0.03,
+        "frame": 4.241,
+        "other": 0.178
+       },
+       "cpuP95": 5.4,
+       "cpuMax": 9.5,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.058,
+        "shadow": 2.007,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.065,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153012,
+        "normal": 273089,
+        "overlay": 645071.16,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 335,
+       "fps": 222.5,
+       "cpu": {
+        "player": 0.207,
+        "crowd": 0.091,
+        "people": 0.295,
+        "boats": 0.102,
+        "shadow": 0.976,
+        "color": 1.639,
+        "normal": 0.592,
+        "overlay": 0.265,
+        "post": 0.031,
+        "frame": 4.273,
+        "other": 0.166
+       },
+       "cpuP95": 5.1,
+       "cpuMax": 6.7,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 1.994,
+        "shadow": 2.067,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.061,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154680.251,
+        "normal": 274804.176,
+        "overlay": 646139.045,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 335,
+       "fps": 222.7,
+       "cpu": {
+        "player": 0.205,
+        "crowd": 0.085,
+        "people": 0.286,
+        "boats": 0.093,
+        "shadow": 0.976,
+        "color": 1.653,
+        "normal": 0.587,
+        "overlay": 0.262,
+        "post": 0.036,
+        "frame": 4.28,
+        "other": 0.182
+       },
+       "cpuP95": 5.3,
+       "cpuMax": 6.5,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.097,
+        "shadow": 2.018,
+        "gap": 0.014,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.115,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154780,
+        "normal": 274857,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 329,
+       "fps": 218.7,
+       "cpu": {
+        "player": 0.199,
+        "crowd": 0.091,
+        "people": 0.301,
+        "boats": 0.107,
+        "shadow": 1.009,
+        "color": 1.674,
+        "normal": 0.594,
+        "overlay": 0.271,
+        "post": 0.034,
+        "frame": 4.347,
+        "other": 0.158
+       },
+       "cpuP95": 5.4,
+       "cpuMax": 9.4,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.079,
+        "shadow": 2.069,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.148,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154726.274,
+        "normal": 274863.274,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      }
+     ]
+    },
+    "msaa_off": {
+     "fps": {
+      "base": 225.05,
+      "exp": 236.633,
+      "delta": 11.583,
+      "ratio": 1.051
+     },
+     "cpu": {
+      "base": 4.239,
+      "exp": 4.025,
+      "delta": -0.214,
+      "ratio": 0.949
+     },
+     "gpu": {
+      "base": 4.048,
+      "exp": 3.808,
+      "delta": -0.24,
+      "ratio": 0.941
+     },
+     "calls": {
+      "base": 495,
+      "exp": 495,
+      "delta": 0,
+      "ratio": 1
+     },
+     "color": {
+      "base": 1.627,
+      "exp": 1.545,
+      "delta": -0.083,
+      "ratio": 0.949
+     },
+     "shadow": {
+      "base": 0.966,
+      "exp": 0.918,
+      "delta": -0.048,
+      "ratio": 0.95
+     },
+     "normal": {
+      "base": 0.849,
+      "exp": 0.809,
+      "delta": -0.041,
+      "ratio": 0.952
+     },
+     "people": {
+      "base": 0.287,
+      "exp": 0.275,
+      "delta": -0.012,
+      "ratio": 0.958
+     },
+     "p95": {
+      "base": 5.25,
+      "exp": 4.933,
+      "delta": -0.317,
+      "ratio": 0.94
+     },
+     "runs": [
+      {
+       "frames": 344,
+       "fps": 229.2,
+       "cpu": {
+        "player": 0.198,
+        "crowd": 0.086,
+        "people": 0.28,
+        "boats": 0.092,
+        "shadow": 0.955,
+        "color": 1.588,
+        "normal": 0.58,
+        "overlay": 0.251,
+        "post": 0.035,
+        "frame": 4.157,
+        "other": 0.178
+       },
+       "cpuP95": 5.2,
+       "cpuMax": 9.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.006,
+        "color": 1.969,
+        "shadow": 1.969,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.938,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154788,
+        "normal": 274865,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 365,
+       "fps": 242.7,
+       "cpu": {
+        "player": 0.195,
+        "crowd": 0.085,
+        "people": 0.269,
+        "boats": 0.092,
+        "shadow": 0.887,
+        "color": 1.512,
+        "normal": 0.55,
+        "overlay": 0.24,
+        "post": 0.033,
+        "frame": 3.919,
+        "other": 0.141
+       },
+       "cpuP95": 4.7,
+       "cpuMax": 9.3,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.007,
+        "color": 1.811,
+        "shadow": 1.894,
+        "gap": 0.014,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.705,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153773.118,
+        "normal": 273850.118,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 357,
+       "fps": 238,
+       "cpu": {
+        "player": 0.196,
+        "crowd": 0.083,
+        "people": 0.276,
+        "boats": 0.085,
+        "shadow": 0.912,
+        "color": 1.534,
+        "normal": 0.566,
+        "overlay": 0.239,
+        "post": 0.032,
+        "frame": 3.999,
+        "other": 0.159
+       },
+       "cpuP95": 4.9,
+       "cpuMax": 6.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.006,
+        "color": 1.896,
+        "shadow": 1.884,
+        "gap": 0.023,
+        "normal": 0.002,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.782,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1152952,
+        "normal": 273089,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      }
+     ],
+     "bases": [
+      {
+       "frames": 332,
+       "fps": 221.2,
+       "cpu": {
+        "player": 0.217,
+        "crowd": 0.083,
+        "people": 0.287,
+        "boats": 0.103,
+        "shadow": 0.986,
+        "color": 1.641,
+        "normal": 0.598,
+        "overlay": 0.268,
+        "post": 0.035,
+        "frame": 4.305,
+        "other": 0.17
+       },
+       "cpuP95": 5.1,
+       "cpuMax": 7.2,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.042,
+        "color": 2.036,
+        "shadow": 2.092,
+        "gap": 0.018,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.128,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154728,
+        "normal": 274865,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 322,
+       "fps": 214.2,
+       "cpu": {
+        "player": 0.212,
+        "crowd": 0.091,
+        "people": 0.304,
+        "boats": 0.102,
+        "shadow": 1.013,
+        "color": 1.711,
+        "normal": 0.621,
+        "overlay": 0.28,
+        "post": 0.033,
+        "frame": 4.449,
+        "other": 0.173
+       },
+       "cpuP95": 5.5,
+       "cpuMax": 7.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.133,
+        "shadow": 2.119,
+        "gap": 0.018,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.252,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154788,
+        "normal": 274865,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 356,
+       "fps": 237,
+       "cpu": {
+        "player": 0.199,
+        "crowd": 0.084,
+        "people": 0.274,
+        "boats": 0.09,
+        "shadow": 0.913,
+        "color": 1.551,
+        "normal": 0.558,
+        "overlay": 0.241,
+        "post": 0.031,
+        "frame": 4.017,
+        "other": 0.16
+       },
+       "cpuP95": 4.9,
+       "cpuMax": 6.2,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 1.934,
+        "shadow": 1.892,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.826,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153008.292,
+        "normal": 273089,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 343,
+       "fps": 227.8,
+       "cpu": {
+        "player": 0.206,
+        "crowd": 0.091,
+        "people": 0.283,
+        "boats": 0.098,
+        "shadow": 0.952,
+        "color": 1.606,
+        "normal": 0.579,
+        "overlay": 0.253,
+        "post": 0.034,
+        "frame": 4.186,
+        "other": 0.175
+       },
+       "cpuP95": 5.5,
+       "cpuMax": 7,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 1.942,
+        "shadow": 2.045,
+        "gap": 0.012,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.987,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1152978.81,
+        "normal": 273081,
+        "overlay": 647668.746,
+        "post": 1
+       },
+       "people": 466
+      }
+     ]
+    },
+    "mrt_nomsaa": {
+     "fps": {
+      "base": 223.25,
+      "exp": 283.733,
+      "delta": 60.483,
+      "ratio": 1.271
+     },
+     "cpu": {
+      "base": 4.268,
+      "exp": 3.339,
+      "delta": -0.928,
+      "ratio": 0.782
+     },
+     "gpu": {
+      "base": 4.079,
+      "exp": 3.224,
+      "delta": -0.855,
+      "ratio": 0.79
+     },
+     "calls": {
+      "base": 495,
+      "exp": 370,
+      "delta": -125,
+      "ratio": 0.747
+     },
+     "color": {
+      "base": 1.637,
+      "exp": 1.593,
+      "delta": -0.045,
+      "ratio": 0.973
+     },
+     "shadow": {
+      "base": 0.981,
+      "exp": 0.974,
+      "delta": -0.007,
+      "ratio": 0.993
+     },
+     "normal": {
+      "base": 0.852,
+      "exp": 0,
+      "delta": -0.852,
+      "ratio": 0
+     },
+     "people": {
+      "base": 0.296,
+      "exp": 0.283,
+      "delta": -0.013,
+      "ratio": 0.956
+     },
+     "p95": {
+      "base": 5.35,
+      "exp": 4.233,
+      "delta": -1.117,
+      "ratio": 0.791
+     },
+     "info": {
+      "materials": 141,
+      "samples": 0
+     },
+     "runs": [
+      {
+       "frames": 454,
+       "fps": 301.6,
+       "cpu": {
+        "player": 0.178,
+        "crowd": 0.081,
+        "people": 0.266,
+        "boats": 0.085,
+        "shadow": 0.917,
+        "color": 1.501,
+        "post": 0.032,
+        "frame": 3.128,
+        "other": 0.149
+       },
+       "cpuP95": 3.9,
+       "cpuMax": 5.4,
+       "uploadKB": {
+        "mean": 183.1,
+        "max": 183
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.023,
+        "color": 1.042,
+        "shadow": 1.998,
+        "gap": 0.004,
+        "post": 0
+       },
+       "gpuFrame": 3.04,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153004,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 410,
+       "fps": 272.9,
+       "cpu": {
+        "player": 0.206,
+        "crowd": 0.093,
+        "people": 0.295,
+        "boats": 0.096,
+        "shadow": 1.001,
+        "color": 1.646,
+        "post": 0.045,
+        "frame": 3.467,
+        "other": 0.178
+       },
+       "cpuP95": 4.4,
+       "cpuMax": 6.4,
+       "uploadKB": {
+        "mean": 183.1,
+        "max": 183
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.022,
+        "color": 1.179,
+        "shadow": 2.165,
+        "gap": 0.005,
+        "post": 0
+       },
+       "gpuFrame": 3.344,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153707.18,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 416,
+       "fps": 276.7,
+       "cpu": {
+        "player": 0.205,
+        "crowd": 0.089,
+        "people": 0.287,
+        "boats": 0.101,
+        "shadow": 1.004,
+        "color": 1.631,
+        "post": 0.034,
+        "frame": 3.422,
+        "other": 0.16
+       },
+       "cpuP95": 4.4,
+       "cpuMax": 5.8,
+       "uploadKB": {
+        "mean": 183.1,
+        "max": 183
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.021,
+        "color": 1.199,
+        "shadow": 2.088,
+        "gap": 0.004,
+        "post": 0
+       },
+       "gpuFrame": 3.287,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154788,
+        "post": 1
+       },
+       "people": 466
+      }
+     ],
+     "bases": [
+      {
+       "frames": 353,
+       "fps": 234.5,
+       "cpu": {
+        "player": 0.191,
+        "crowd": 0.09,
+        "people": 0.278,
+        "boats": 0.091,
+        "shadow": 0.925,
+        "color": 1.554,
+        "normal": 0.571,
+        "overlay": 0.246,
+        "post": 0.033,
+        "frame": 4.054,
+        "other": 0.165
+       },
+       "cpuP95": 5,
+       "cpuMax": 8,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 1.968,
+        "shadow": 1.936,
+        "gap": 0.014,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.904,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153004,
+        "normal": 273081,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 323,
+       "fps": 215.2,
+       "cpu": {
+        "player": 0.225,
+        "crowd": 0.086,
+        "people": 0.297,
+        "boats": 0.103,
+        "shadow": 1.024,
+        "color": 1.7,
+        "normal": 0.611,
+        "overlay": 0.275,
+        "post": 0.036,
+        "frame": 4.423,
+        "other": 0.152
+       },
+       "cpuP95": 5.7,
+       "cpuMax": 6.7,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.159,
+        "shadow": 2.057,
+        "gap": 0.017,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.216,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153004,
+        "normal": 273081,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 330,
+       "fps": 219,
+       "cpu": {
+        "player": 0.212,
+        "crowd": 0.094,
+        "people": 0.306,
+        "boats": 0.1,
+        "shadow": 1.006,
+        "color": 1.668,
+        "normal": 0.588,
+        "overlay": 0.273,
+        "post": 0.035,
+        "frame": 4.349,
+        "other": 0.161
+       },
+       "cpuP95": 5.5,
+       "cpuMax": 7.3,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.079,
+        "shadow": 2.079,
+        "gap": 0.014,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.158,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154728,
+        "normal": 274865,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 338,
+       "fps": 224.3,
+       "cpu": {
+        "player": 0.214,
+        "crowd": 0.092,
+        "people": 0.302,
+        "boats": 0.094,
+        "shadow": 0.967,
+        "color": 1.627,
+        "normal": 0.579,
+        "overlay": 0.264,
+        "post": 0.032,
+        "frame": 4.244,
+        "other": 0.165
+       },
+       "cpuP95": 5.2,
+       "cpuMax": 7.4,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.018,
+        "shadow": 2.019,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.037,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154788,
+        "normal": 274865,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      }
+     ]
+    },
+    "boats_plain": {
+     "fps": {
+      "base": 219.025,
+      "exp": 245.1,
+      "delta": 26.075,
+      "ratio": 1.119
+     },
+     "cpu": {
+      "base": 4.353,
+      "exp": 3.868,
+      "delta": -0.486,
+      "ratio": 0.888
+     },
+     "gpu": {
+      "base": 4.17,
+      "exp": 3.635,
+      "delta": -0.535,
+      "ratio": 0.872
+     },
+     "calls": {
+      "base": 495,
+      "exp": 522,
+      "delta": 27,
+      "ratio": 1.055
+     },
+     "color": {
+      "base": 1.68,
+      "exp": 1.494,
+      "delta": -0.186,
+      "ratio": 0.889
+     },
+     "shadow": {
+      "base": 0.998,
+      "exp": 0.847,
+      "delta": -0.152,
+      "ratio": 0.848
+     },
+     "normal": {
+      "base": 0.874,
+      "exp": 0.734,
+      "delta": -0.14,
+      "ratio": 0.84
+     },
+     "people": {
+      "base": 0.295,
+      "exp": 0.293,
+      "delta": -0.002,
+      "ratio": 0.994
+     },
+     "p95": {
+      "base": 5.475,
+      "exp": 4.633,
+      "delta": -0.842,
+      "ratio": 0.846
+     },
+     "info": {
+      "batches": 32
+     },
+     "runs": [
+      {
+       "frames": 374,
+       "fps": 248.8,
+       "cpu": {
+        "player": 0.203,
+        "crowd": 0.092,
+        "people": 0.288,
+        "boats": 0.099,
+        "shadow": 0.827,
+        "color": 1.486,
+        "normal": 0.475,
+        "overlay": 0.244,
+        "post": 0.031,
+        "frame": 3.811,
+        "other": 0.158
+       },
+       "cpuP95": 4.5,
+       "cpuMax": 5.3,
+       "uploadKB": {
+        "mean": 177.8,
+        "max": 178
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 1.723,
+        "shadow": 1.884,
+        "gap": 0.011,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.607,
+       "calls": {
+        "shadow": 204,
+        "color": 180,
+        "normal": 94,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1304146,
+        "color": 1208706,
+        "normal": 326811,
+        "overlay": 646996.936,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 361,
+       "fps": 239.4,
+       "cpu": {
+        "player": 0.216,
+        "crowd": 0.091,
+        "people": 0.301,
+        "boats": 0.107,
+        "shadow": 0.871,
+        "color": 1.515,
+        "normal": 0.489,
+        "overlay": 0.26,
+        "post": 0.033,
+        "frame": 3.959,
+        "other": 0.167
+       },
+       "cpuP95": 4.9,
+       "cpuMax": 7.3,
+       "uploadKB": {
+        "mean": 177.8,
+        "max": 178
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 1.751,
+        "shadow": 1.935,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.686,
+       "calls": {
+        "shadow": 204,
+        "color": 180,
+        "normal": 94,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1304146,
+        "color": 1208706,
+        "normal": 326811,
+        "overlay": 644631.13,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 371,
+       "fps": 247.1,
+       "cpu": {
+        "player": 0.202,
+        "crowd": 0.093,
+        "people": 0.291,
+        "boats": 0.098,
+        "shadow": 0.842,
+        "color": 1.481,
+        "normal": 0.48,
+        "overlay": 0.254,
+        "post": 0.031,
+        "frame": 3.833,
+        "other": 0.154
+       },
+       "cpuP95": 4.5,
+       "cpuMax": 6.6,
+       "uploadKB": {
+        "mean": 177.8,
+        "max": 178
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 1.688,
+        "shadow": 1.925,
+        "gap": 0.014,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.613,
+       "calls": {
+        "shadow": 204,
+        "color": 180,
+        "normal": 94,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1304146,
+        "color": 1208706,
+        "normal": 326811,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      }
+     ],
+     "bases": [
+      {
+       "frames": 317,
+       "fps": 210.2,
+       "cpu": {
+        "player": 0.224,
+        "crowd": 0.085,
+        "people": 0.3,
+        "boats": 0.101,
+        "shadow": 1.035,
+        "color": 1.763,
+        "normal": 0.639,
+        "overlay": 0.274,
+        "post": 0.034,
+        "frame": 4.536,
+        "other": 0.166
+       },
+       "cpuP95": 6,
+       "cpuMax": 7.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.192,
+        "shadow": 2.146,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.338,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154788,
+        "normal": 274865,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 344,
+       "fps": 229.1,
+       "cpu": {
+        "player": 0.201,
+        "crowd": 0.092,
+        "people": 0.285,
+        "boats": 0.092,
+        "shadow": 0.946,
+        "color": 1.594,
+        "normal": 0.582,
+        "overlay": 0.257,
+        "post": 0.032,
+        "frame": 4.151,
+        "other": 0.162
+       },
+       "cpuP95": 5,
+       "cpuMax": 6.9,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.011,
+        "shadow": 1.96,
+        "gap": 0.012,
+        "normal": 0.001,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.972,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154728,
+        "normal": 274865,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 332,
+       "fps": 221.3,
+       "cpu": {
+        "player": 0.212,
+        "crowd": 0.092,
+        "people": 0.298,
+        "boats": 0.102,
+        "shadow": 1.004,
+        "color": 1.65,
+        "normal": 0.585,
+        "overlay": 0.269,
+        "post": 0.037,
+        "frame": 4.3,
+        "other": 0.143
+       },
+       "cpuP95": 5.2,
+       "cpuMax": 6.3,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.078,
+        "shadow": 2.054,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.132,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154703.759,
+        "normal": 274780.759,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 324,
+       "fps": 215.5,
+       "cpu": {
+        "player": 0.216,
+        "crowd": 0.09,
+        "people": 0.297,
+        "boats": 0.105,
+        "shadow": 1.008,
+        "color": 1.714,
+        "normal": 0.614,
+        "overlay": 0.277,
+        "post": 0.036,
+        "frame": 4.427,
+        "other": 0.16
+       },
+       "cpuP95": 5.7,
+       "cpuMax": 9.2,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.204,
+        "shadow": 2.035,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.239,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153004,
+        "normal": 273081,
+        "overlay": 648562.741,
+        "post": 1
+       },
+       "people": 466
+      }
+     ]
+    },
+    "boats_nosort": {
+     "fps": {
+      "base": 222.225,
+      "exp": 221.933,
+      "delta": -0.292,
+      "ratio": 0.999
+     },
+     "cpu": {
+      "base": 4.288,
+      "exp": 4.299,
+      "delta": 0.011,
+      "ratio": 1.003
+     },
+     "gpu": {
+      "base": 4.104,
+      "exp": 4.13,
+      "delta": 0.027,
+      "ratio": 1.007
+     },
+     "calls": {
+      "base": 495,
+      "exp": 495,
+      "delta": 0,
+      "ratio": 1
+     },
+     "color": {
+      "base": 1.643,
+      "exp": 1.658,
+      "delta": 0.014,
+      "ratio": 1.009
+     },
+     "shadow": {
+      "base": 0.979,
+      "exp": 0.969,
+      "delta": -0.011,
+      "ratio": 0.989
+     },
+     "normal": {
+      "base": 0.864,
+      "exp": 0.867,
+      "delta": 0.003,
+      "ratio": 1.003
+     },
+     "people": {
+      "base": 0.291,
+      "exp": 0.294,
+      "delta": 0.002,
+      "ratio": 1.008
+     },
+     "p95": {
+      "base": 5.2,
+      "exp": 5.367,
+      "delta": 0.167,
+      "ratio": 1.032
+     },
+     "info": {
+      "batches": 32
+     },
+     "runs": [
+      {
+       "frames": 322,
+       "fps": 214.3,
+       "cpu": {
+        "player": 0.219,
+        "crowd": 0.091,
+        "people": 0.307,
+        "boats": 0.104,
+        "shadow": 1.005,
+        "color": 1.712,
+        "normal": 0.614,
+        "overlay": 0.284,
+        "post": 0.035,
+        "frame": 4.453,
+        "other": 0.173
+       },
+       "cpuP95": 5.7,
+       "cpuMax": 6.9,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.042,
+        "color": 2.124,
+        "shadow": 2.146,
+        "gap": 0.012,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.27,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1152952,
+        "normal": 273089,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 349,
+       "fps": 231.6,
+       "cpu": {
+        "player": 0.208,
+        "crowd": 0.08,
+        "people": 0.274,
+        "boats": 0.099,
+        "shadow": 0.928,
+        "color": 1.589,
+        "normal": 0.566,
+        "overlay": 0.263,
+        "post": 0.033,
+        "frame": 4.108,
+        "other": 0.148
+       },
+       "cpuP95": 4.9,
+       "cpuMax": 6.5,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 1.951,
+        "shadow": 2.013,
+        "gap": 0.019,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 3.964,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153012,
+        "normal": 273089,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 330,
+       "fps": 219.9,
+       "cpu": {
+        "player": 0.211,
+        "crowd": 0.093,
+        "people": 0.3,
+        "boats": 0.1,
+        "shadow": 0.973,
+        "color": 1.672,
+        "normal": 0.601,
+        "overlay": 0.272,
+        "post": 0.035,
+        "frame": 4.335,
+        "other": 0.171
+       },
+       "cpuP95": 5.5,
+       "cpuMax": 8.3,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.2
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.109,
+        "shadow": 2.048,
+        "gap": 0.017,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.157,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154564,
+        "normal": 274641,
+        "overlay": 645488.709,
+        "post": 1
+       },
+       "people": 466
+      }
+     ],
+     "bases": [
+      {
+       "frames": 339,
+       "fps": 225,
+       "cpu": {
+        "player": 0.201,
+        "crowd": 0.086,
+        "people": 0.287,
+        "boats": 0.1,
+        "shadow": 0.966,
+        "color": 1.618,
+        "normal": 0.597,
+        "overlay": 0.265,
+        "post": 0.028,
+        "frame": 4.236,
+        "other": 0.174
+       },
+       "cpuP95": 5,
+       "cpuMax": 10,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.017,
+        "shadow": 2.038,
+        "gap": 0.011,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.055,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1152990.195,
+        "normal": 273081,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 341,
+       "fps": 226.5,
+       "cpu": {
+        "player": 0.202,
+        "crowd": 0.091,
+        "people": 0.292,
+        "boats": 0.099,
+        "shadow": 0.964,
+        "color": 1.608,
+        "normal": 0.589,
+        "overlay": 0.267,
+        "post": 0.026,
+        "frame": 4.206,
+        "other": 0.159
+       },
+       "cpuP95": 5,
+       "cpuMax": 5.9,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.019,
+        "shadow": 1.991,
+        "gap": 0.013,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.01,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1152990.534,
+        "normal": 273089,
+        "overlay": 647945.37,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 328,
+       "fps": 217.8,
+       "cpu": {
+        "player": 0.205,
+        "crowd": 0.087,
+        "people": 0.295,
+        "boats": 0.109,
+        "shadow": 0.989,
+        "color": 1.668,
+        "normal": 0.609,
+        "overlay": 0.28,
+        "post": 0.033,
+        "frame": 4.366,
+        "other": 0.178
+       },
+       "cpuP95": 5.6,
+       "cpuMax": 7.6,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.041,
+        "color": 2.153,
+        "shadow": 2.052,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.205,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1153012,
+        "normal": 273089,
+        "overlay": 648770,
+        "post": 1
+       },
+       "people": 466
+      },
+      {
+       "frames": 331,
+       "fps": 219.6,
+       "cpu": {
+        "player": 0.22,
+        "crowd": 0.087,
+        "people": 0.291,
+        "boats": 0.103,
+        "shadow": 0.998,
+        "color": 1.679,
+        "normal": 0.583,
+        "overlay": 0.266,
+        "post": 0.031,
+        "frame": 4.343,
+        "other": 0.172
+       },
+       "cpuP95": 5.2,
+       "cpuMax": 8.1,
+       "uploadKB": {
+        "mean": 185.7,
+        "max": 186
+       },
+       "bakeMs": {
+        "mean": 0,
+        "max": 0.1
+       },
+       "gpu": {
+        "pre": 0.04,
+        "color": 2.124,
+        "shadow": 2.02,
+        "gap": 0.015,
+        "normal": 0,
+        "overlay": 0,
+        "post": 0
+       },
+       "gpuFrame": 4.144,
+       "calls": {
+        "shadow": 203,
+        "color": 166,
+        "normal": 82,
+        "overlay": 43,
+        "post": 1
+       },
+       "tris": {
+        "shadow": 1298528,
+        "color": 1154728,
+        "normal": 274865,
+        "overlay": 644573,
+        "post": 1
+       },
+       "people": 466
+      }
+     ]
+    }
+   },
+   "quietEnd": {
+    "quiet": false,
+    "waitedS": 1,
+    "others": 1,
+    "blender": 0,
+    "load": 0.64
+   }
+  }
+ },
+ "programs": {
+  "limits": {
+   "MAX_TEXTURE_SIZE": 16384,
+   "MAX_VERTEX_UNIFORM_VECTORS": 4095,
+   "MAX_FRAGMENT_UNIFORM_VECTORS": 1024,
+   "MAX_VARYING_VECTORS": 30,
+   "MAX_VERTEX_ATTRIBS": 16,
+   "MAX_TEXTURE_IMAGE_UNITS": 16,
+   "MAX_VERTEX_TEXTURE_IMAGE_UNITS": 16,
+   "MAX_COMBINED_TEXTURE_IMAGE_UNITS": 32,
+   "MAX_SAMPLES": 8,
+   "MAX_DRAW_BUFFERS": 8,
+   "MAX_COLOR_ATTACHMENTS": 8,
+   "MAX_RENDERBUFFER_SIZE": 16384
+  },
+  "extensions": [
+   "EXT_clip_control",
+   "EXT_color_buffer_float",
+   "EXT_color_buffer_half_float",
+   "EXT_conservative_depth",
+   "EXT_depth_clamp",
+   "EXT_disjoint_timer_query_webgl2",
+   "EXT_float_blend",
+   "EXT_polygon_offset_clamp",
+   "EXT_render_snorm",
+   "EXT_texture_compression_bptc",
+   "EXT_texture_compression_rgtc",
+   "EXT_texture_filter_anisotropic",
+   "EXT_texture_mirror_clamp_to_edge",
+   "EXT_texture_norm16",
+   "KHR_parallel_shader_compile",
+   "NV_shader_noperspective_interpolation",
+   "OES_draw_buffers_indexed",
+   "OES_sample_variables",
+   "OES_shader_multisample_interpolation",
+   "OES_texture_float_linear",
+   "OVR_multiview2",
+   "WEBGL_blend_func_extended",
+   "WEBGL_clip_cull_distance",
+   "WEBGL_compressed_texture_s3tc",
+   "WEBGL_compressed_texture_s3tc_srgb",
+   "WEBGL_debug_renderer_info",
+   "WEBGL_debug_shaders",
+   "WEBGL_lose_context",
+   "WEBGL_multi_draw",
+   "WEBGL_polygon_mode",
+   "WEBGL_provoking_vertex",
+   "WEBGL_stencil_texturing"
+  ],
+  "programs": [
+   {
+    "name": "",
+    "cacheKey": "2,3,MIST_BOXES,24,highp,srgb,false,,fals",
+    "uniformVectors": 61,
+    "samplers": 3,
+    "attributes": 2
+   },
+   {
+    "name": "Material_0",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 53,
+    "samplers": 3,
+    "attributes": 5
+   },
+   {
+    "name": "Material_0",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 47,
+    "samplers": 3,
+    "attributes": 7
+   },
+   {
+    "name": "reed",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 46,
+    "samplers": 4,
+    "attributes": 3
+   },
+   {
+    "name": "leafy_1",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 46,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "bamboo",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 46,
+    "samplers": 4,
+    "attributes": 3
+   },
+   {
+    "name": "bamboo",
+    "cacheKey": "lambert,highp,srgb,false,,uv,false,false",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "ground",
+    "cacheKey": "lambert,highp,srgb,false,,uv,false,false",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "plaster",
+    "cacheKey": "lambert,highp,srgb,false,,uv,false,false",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "rammed",
+    "cacheKey": "lambert,highp,srgb,false,,uv,false,false",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "redwood",
+    "cacheKey": "lambert,highp,srgb,false,,uv,false,false",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "bamboo",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "ground",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "plaster",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "redwood",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "water_ring",
+    "cacheKey": "lambert,highp,srgb-linear,false,,false,f",
+    "uniformVectors": 45,
+    "samplers": 4,
+    "attributes": 4
+   },
+   {
+    "name": "water_ring",
+    "cacheKey": "lambert,highp,srgb-linear,false,,false,f",
+    "uniformVectors": 45,
+    "samplers": 4,
+    "attributes": 4
+   },
+   {
+    "name": "brick",
+    "cacheKey": "lambert,highp,srgb,false,,uv,false,false",
+    "uniformVectors": 45,
+    "samplers": 2,
+    "attributes": 3
+   },
+   {
+    "name": "water",
+    "cacheKey": "lambert,highp,srgb,false,,false,false,fa",
+    "uniformVectors": 44,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "water_ring",
+    "cacheKey": "lambert,highp,srgb,false,,false,false,fa",
+    "uniformVectors": 44,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "water_ring",
+    "cacheKey": "lambert,highp,srgb,false,,false,false,fa",
+    "uniformVectors": 44,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "water",
+    "cacheKey": "lambert,highp,srgb-linear,false,,false,f",
+    "uniformVectors": 44,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "cloth_white",
+    "cacheKey": "lambert,highp,srgb-linear,false,,false,f",
+    "uniformVectors": 43,
+    "samplers": 3,
+    "attributes": 2
+   },
+   {
+    "name": "bark",
+    "cacheKey": "lambert,highp,srgb,false,,false,false,fa",
+    "uniformVectors": 42,
+    "samplers": 1,
+    "attributes": 2
+   },
+   {
+    "name": "bark",
+    "cacheKey": "lambert,highp,srgb-linear,false,,false,f",
+    "uniformVectors": 42,
+    "samplers": 1,
+    "attributes": 2
+   },
+   {
+    "name": "Material_0",
+    "cacheKey": "lambert,highp,srgb-linear,false,,uv,fals",
+    "uniformVectors": 35,
+    "samplers": 2,
+    "attributes": 5
+   },
+   {
+    "name": "",
+    "cacheKey": "basic,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 22,
+    "samplers": 1,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "basic,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 22,
+    "samplers": 1,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 20,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 20,
+    "samplers": 2,
+    "attributes": 4
+   },
+   {
+    "name": "",
+    "cacheKey": "normal,highp,srgb-linear,false,,false,fa",
+    "uniformVectors": 20,
+    "samplers": 1,
+    "attributes": 4
+   },
+   {
+    "name": "",
+    "cacheKey": "normal,highp,srgb-linear,false,,false,fa",
+    "uniformVectors": 20,
+    "samplers": 1,
+    "attributes": 4
+   },
+   {
+    "name": "",
+    "cacheKey": "basic,highp,srgb-linear,false,,false,fal",
+    "uniformVectors": 17,
+    "samplers": 0,
+    "attributes": 1
+   },
+   {
+    "name": "",
+    "cacheKey": "0,1,highp,srgb-linear,false,,false,false",
+    "uniformVectors": 15,
+    "samplers": 0,
+    "attributes": 1
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 14,
+    "samplers": 2,
+    "attributes": 6
+   },
+   {
+    "name": "",
+    "cacheKey": "normal,highp,srgb-linear,false,,false,fa",
+    "uniformVectors": 14,
+    "samplers": 1,
+    "attributes": 6
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 13,
+    "samplers": 3,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "normal,highp,srgb-linear,false,,false,fa",
+    "uniformVectors": 13,
+    "samplers": 2,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 13,
+    "samplers": 1,
+    "attributes": 3
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 12,
+    "samplers": 1,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "depth,highp,srgb-linear,false,,uv,false,",
+    "uniformVectors": 12,
+    "samplers": 1,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "normal,highp,srgb-linear,false,,false,fa",
+    "uniformVectors": 12,
+    "samplers": 0,
+    "attributes": 2
+   },
+   {
+    "name": "",
+    "cacheKey": "normal,highp,srgb-linear,false,,false,fa",
+    "uniformVectors": 12,
+    "samplers": 0,
+    "attributes": 2
+   }
+  ],
+  "maxUniformVectors": 61,
+  "maxSamplers": 4,
+  "maxAttributes": 7
+ },
+ "logs": []
+}

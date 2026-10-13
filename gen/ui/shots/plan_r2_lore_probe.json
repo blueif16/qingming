@@ -1,0 +1,22 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "shots": [
+    { "name": "d_day_toast_folded", "hour": 10, "at": "inner_city:spawn",
+      "js": "t.ui.help(false); t.ui.toast('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,1800)); return t.ui.state().places;", "wait": 200 },
+    { "name": "d_day_toast_open",
+      "js": "t.ui.unfold(true); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().places;", "wait": 200 },
+    { "name": "d_day_journal_city",
+      "js": "t.ui.discover(['r:shizijie','r:chengmen','S6.bld.sunyang_zhengdian','S6.fig.storyteller_3822','S6.str.square_well_2000','S5.bld.tax_office','S5.str.gate_tower','S5.str.moat_bridge','t:V5.1']); await t.ui.journal.open('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,3500)); return t.ui.journal.state();", "wait": 300 },
+    { "name": "d_day_journal_gate",
+      "js": "t.ui.journal.turn(1); await new Promise(r=>setTimeout(r,2500)); return t.ui.journal.state();", "wait": 300 },
+    { "name": "d_day_journal_col",
+      "js": "t.ui.journal.turn(-5); await new Promise(r=>setTimeout(r,1500)); return t.ui.journal.state();", "wait": 300 },
+    { "name": "d_day_hud_marks",
+      "js": "t.ui.journal.close(); await t.hud.show(); await new Promise(r=>setTimeout(r,3500)); return t.hud.stats();", "wait": 300 }
+   ]
+  }
+ ]
+}

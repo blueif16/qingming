@@ -1,0 +1,4 @@
+{"url": "http://127.0.0.1:5190/world.html", "pages": [
+ {"device": "desktop", "shots": [{"name": "desktop_set_display_quality", "hour": 10, "at": "inner_city:spawn", "js": "t.ui.settings.open('display'); await new Promise(r=>setTimeout(r,1200)); return t.ui.settings.state ? t.ui.settings.state() : null;", "wait": 300}]},
+ {"device": "phone", "shots": [{"name": "phone_set_display_quality", "hour": 10, "at": "inner_city:spawn", "js": "t.ui.settings.open('display'); await new Promise(r=>setTimeout(r,1200)); return null;", "wait": 300}]}
+]}

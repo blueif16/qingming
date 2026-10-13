@@ -1,0 +1,403 @@
+{
+  "_defaults": {
+    "fan_round": {
+      "bone": "RightHand",
+      "at": "hand_world",
+      "side": "right",
+      "offset": [
+        0,
+        -0.14,
+        0.02
+      ]
+    },
+    "cleaver": {
+      "bone": "RightHand",
+      "at": "hand",
+      "side": "right",
+      "grip": [
+        0,
+        0.08,
+        0.0
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ]
+    },
+    "bow": {
+      "bone": "LeftHand",
+      "at": "hand",
+      "side": "left",
+      "grip": [
+        0,
+        0.08,
+        0.0
+      ],
+      "rot": [
+        -90,
+        0,
+        0
+      ]
+    },
+    "pole_baskets": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.85,
+      "lift": 0.08
+    },
+    "pole_boxes": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.85,
+      "lift": 0.08
+    },
+    "pole_bundle": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.85,
+      "lift": 0.08
+    },
+    "pole_shallow_baskets": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.85,
+      "lift": 0.08
+    },
+    "pole_bundles": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.85,
+      "lift": 0.08
+    },
+    "back_frame": {
+      "bone": "Spine",
+      "at": "back",
+      "bone_ref": "Spine",
+      "follow": 0.15,
+      "offset": [
+        0,
+        -0.08,
+        -0.06
+      ]
+    },
+    "back_boxes": {
+      "bone": "Spine",
+      "at": "back",
+      "bone_ref": "Spine",
+      "follow": 0.5,
+      "offset": [
+        0,
+        -0.05,
+        -0.08
+      ]
+    },
+    "back_bundle": {
+      "bone": "Spine",
+      "at": "back",
+      "bone_ref": "Spine",
+      "follow": 0.5,
+      "offset": [
+        0,
+        -0.03,
+        -0.08
+      ]
+    },
+    "bucket": {
+      "bone": "RightHand",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.8,
+      "lift": 0.0
+    },
+    "goad": {
+      "bone": "RightHand",
+      "at": "hand",
+      "side": "right",
+      "grip": [
+        0,
+        0.08,
+        0
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ]
+    },
+    "whip": {
+      "bone": "RightHand",
+      "at": "hand",
+      "side": "right",
+      "grip": [
+        0,
+        0.08,
+        0
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ]
+    },
+    "stick": {
+      "bone": "RightHand",
+      "at": "hand",
+      "side": "right",
+      "grip": [
+        0,
+        0.08,
+        0
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ]
+    },
+    "staff": {
+      "bone": "RightHand",
+      "at": "hand_world",
+      "side": "right",
+      "grip_y": 0.08
+    },
+    "child_in_arms": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "left",
+      "along": 0.6,
+      "lift": 0.0
+    },
+    "child_on_shoulders": {
+      "bone": "Spine",
+      "at": "back",
+      "bone_ref": "neck",
+      "follow": 0.6
+    },
+    "child_on_back": {
+      "bone": "Spine",
+      "at": "back",
+      "bone_ref": "Spine",
+      "follow": 1.0
+    },
+    "tray": {
+      "bone": "RightHand",
+      "at": "hands",
+      "grip_y": 0.06,
+      "offset": [
+        0,
+        0.02,
+        0.02
+      ]
+    },
+    "tray_head": {
+      "bone": "Head",
+      "at": "head",
+      "lift": 0.19,
+      "follow": 0.6
+    },
+    "box_shoulder": {
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 1.1,
+      "lift": 0.07
+    },
+    "lead_rope": {
+      "bone": "RightHand",
+      "at": "hand_world",
+      "side": "right",
+      "grip_y": 0.08
+    }
+  },
+  "porter": {
+    "pole_baskets": {
+      "clip": "carry_pole",
+      "t": 1.5
+    },
+    "pole_boxes": {
+      "clip": "carry_pole",
+      "t": 1.5
+    },
+    "pole_bundle": {
+      "clip": "carry_pole",
+      "t": 1.5
+    },
+    "pole_shallow_baskets": {
+      "clip": "carry_pole",
+      "t": 1.5
+    },
+    "pole_bundles": {
+      "clip": "carry_pole",
+      "t": 1.5
+    },
+    "stick": {
+      "clip": "walk",
+      "t": 0.3
+    },
+    "staff": {
+      "clip": "stand_pole",
+      "t": 2.0
+    },
+    "tray": {
+      "clip": "hold_tray",
+      "t": 3.0
+    },
+    "tray_head": {
+      "clip": "walk",
+      "t": 0.3
+    },
+    "box_shoulder": {
+      "clip": "shoulder_box",
+      "t": 2.0
+    },
+    "stick_stride": {
+      "geom": "stick",
+      "clip": "stride_stick",
+      "t": 1.0
+    }
+  },
+  "monk": {
+    "back_frame": {
+      "clip": "back_load",
+      "t": 1.0
+    }
+  },
+  "child": {
+    "back_boxes": {
+      "clip": "back_load",
+      "t": 1.0,
+      "scale": 0.7
+    },
+    "back_bundle": {
+      "clip": "back_load",
+      "t": 1.0,
+      "scale": 0.8
+    }
+  },
+  "sightseer": {
+    "fan_round": {
+      "clip": "fan_walk",
+      "t": 1.0
+    }
+  },
+  "scholar": {
+    "fan_round": {
+      "clip": "fan",
+      "t": 1.0
+    },
+    "staff": {
+      "clip": "idle",
+      "t": 3.0,
+      "offset": [
+        0,
+        0.1,
+        0
+      ]
+    }
+  },
+  "elder": {
+    "fan_round": {
+      "clip": "fan",
+      "t": 1.0
+    }
+  },
+  "idler": {
+    "bucket": {
+      "clip": "bucket_shoulder",
+      "t": 5.6
+    },
+    "child_on_back": {
+      "clip": "carry_child",
+      "t": 2.0
+    }
+  },
+  "butcher": {
+    "cleaver": {
+      "clip": "chop",
+      "t": 1.0
+    }
+  },
+  "archer": {
+    "bow": {
+      "clip": "draw_bow",
+      "t": 1.5
+    }
+  },
+  "townsman": {
+    "back_boxes": {
+      "clip": "back_load",
+      "t": 1.0
+    },
+    "child_on_shoulders": {
+      "clip": "carry_child",
+      "t": 3.0
+    }
+  },
+  "carter": {
+    "goad": {
+      "clip": "drive_cart",
+      "t": 2.0
+    },
+    "whip": {
+      "clip": "drive_cart",
+      "t": 2.0
+    },
+    "whip_walk": {
+      "geom": "whip",
+      "clip": "walk_whip",
+      "t": 1.0
+    },
+    "whip_stand": {
+      "geom": "whip",
+      "clip": "stand_whip",
+      "t": 3.0
+    }
+  },
+  "inspector": {
+    "staff": {
+      "clip": "talk",
+      "t": 1.0,
+      "bone": "LeftHand",
+      "side": "left"
+    },
+    "whip": {
+      "clip": "walk_whip",
+      "t": 1.0
+    },
+    "whip_hold": {
+      "geom": "whip",
+      "clip": "hold_whip",
+      "t": 3.0
+    }
+  },
+  "woman": {
+    "child_in_arms": {
+      "clip": "hold_child",
+      "t": 0.0
+    }
+  },
+  "hat_traveller": {
+    "fan_round": {
+      "clip": "ride_fan",
+      "t": 2.0
+    }
+  },
+  "robed_man": {
+    "staff": {
+      "clip": "idle",
+      "t": 2.0,
+      "bone": "LeftHand",
+      "side": "left"
+    },
+    "lead_rope": {
+      "clip": "hold_rope",
+      "t": 2.0
+    }
+  }
+}

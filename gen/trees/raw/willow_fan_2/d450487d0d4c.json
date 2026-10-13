@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: an early-spring willow (柳) as the scroll paints it, before its leaves have opened. A sturdy, slightly leaning trunk with knots and rough grey-brown bark forks into a few thick limbs; each limb ends in a knobbly head from which a half-open fan of long, straight, stiff, slender shoots springs upward and outward like the ribs of a fan, only the outermost shoots bending over a little at their tips. The fans overlap into a broad, airy crown with plenty of sky between the shoots. This is NOT a weeping willow: no hanging curtains, no drooping strands, no full foliage. The shoots carry only tiny swelling buds and the first specks of pale green, so the crown reads as fine red-brown lines under a faint pale-green haze, the way the shoots rise from the clubbed head of an old pollard willow.\nColours: grey-brown bark with darker knots; shoots red-brown; the buds and first tiny leaves pale willow green (about #a3b56e), sparse.\n\nThis one: A tall upright willow: a straight trunk that forks at mid-height into three limbs rising steeply, each crowned by a tall fan of shoots; the crown taller than it is wide and a little lopsided to the right.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/willow_fan_1.jpg",
+  "gen/trees/refs/willow_fan_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "d450487d0d4c",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 49.7,
+ "attempts": 1,
+ "idempotency_key": "3706bdf7-1bf3-439b-a542-56a933d92369",
+ "request_id": "518b17a3-171a-4ee0-977c-05c5ae5176d6",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5124,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 535
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5124,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 535
+  },
+  "total_tokens": 6708
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/5cb26dd3-c311-439c-8f0f-31f95626daf6"
+ ],
+ "files": [
+  "gen/trees/raw/willow_fan_2/d450487d0d4c_0.png"
+ ]
+}

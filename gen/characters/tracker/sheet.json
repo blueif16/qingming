@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a Song boat tracker (纤夫) who hauls the grain boats upstream on a tow rope: a wiry, hard-working adult man, about 6.5 heads tall, a lean sunburnt face with dark dot eyes and short brows, clean shaven, black hair under a small round brown cloth cap that fits close over the crown. A short faded khaki-tan hemp jacket with a crossed collar to the hips, sleeves to the wrist, belted tight at the waist with a twisted rope; loose dark grey trousers rolled up to below the knee, bare shins and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/tracker/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 32.9,
+ "attempts": 1,
+ "idempotency_key": "b753b8d8-3c5f-4647-8fb0-aed7b0b43a2a",
+ "request_id": "f3f96846-4ddd-4c01-b09f-91d5d698b3aa",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3363,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 381
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3363,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 381
+  },
+  "total_tokens": 4947
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/dafd4c97-6e6e-45f2-938f-0950c8a35cea"
+ ],
+ "files": [
+  "gen/characters/tracker/sheet_0.png"
+ ]
+}

@@ -1,0 +1,594 @@
+{
+ "archer": {
+  "file": "assets/chars/archer.glb",
+  "height_m": 1.74,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "draw_bow",
+   "bind"
+  ],
+  "motion": [
+   "bind"
+  ],
+  "props": {
+   "bow": "draw_bow"
+  },
+  "title": "Archer of the wine depot (S5 archer_drawing_bow_5635; plays the three archers of the wine depot)"
+ },
+ "bearer": {
+  "file": "assets/chars/bearer.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sedan_carry",
+   "sedan_walk",
+   "lift_pole"
+  ],
+  "motion": [
+   "sedan_carry",
+   "sedan_walk",
+   "lift_pole"
+  ],
+  "props": {},
+  "title": "Sedan bearer (S6 sedan_bearer_far_4462; plays the seven bearers of the two sedans)"
+ },
+ "butcher": {
+  "file": "assets/chars/butcher.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "chop"
+  ],
+  "motion": [
+   "chop"
+  ],
+  "props": {
+   "cleaver": "chop"
+  },
+  "title": "Butcher of 孙羊店 (S6 butcher_3920, chopping at his block)"
+ },
+ "camel_driver": {
+  "file": "assets/chars/camel_driver.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "stroll",
+   "look",
+   "lead",
+   "ride",
+   "bow"
+  ],
+  "motion": [
+   "lead",
+   "ride",
+   "bow"
+  ],
+  "props": {},
+  "title": "Driver of the camel caravan, leading it out through the gate"
+ },
+ "carter": {
+  "file": "assets/chars/carter.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "gape",
+   "push",
+   "carry",
+   "hand_over",
+   "ride",
+   "arms_folded",
+   "crouch",
+   "sit",
+   "drive_cart",
+   "steer",
+   "drive_team",
+   "bridle",
+   "walk_whip",
+   "stand_whip",
+   "listen",
+   "look"
+  ],
+  "motion": [
+   "hand_over",
+   "ride",
+   "arms_folded",
+   "drive_cart",
+   "steer",
+   "drive_team",
+   "bridle",
+   "walk_whip",
+   "stand_whip",
+   "listen"
+  ],
+  "props": {
+   "goad": "drive_cart",
+   "whip": "drive_cart",
+   "whip_walk": "walk_whip",
+   "whip_stand": "stand_whip"
+  },
+  "title": "Carter at the tax office, handing over the manifest (one of four; the same type pulls the carts outside)"
+ },
+ "child": {
+  "file": "assets/chars/child.glb",
+  "height_m": 1.15,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "play",
+   "back_load",
+   "ride",
+   "reach",
+   "look",
+   "listen"
+  ],
+  "motion": [
+   "play",
+   "back_load",
+   "ride",
+   "reach",
+   "listen"
+  ],
+  "props": {
+   "back_boxes": "back_load",
+   "back_bundle": "back_load"
+  },
+  "title": "Child in a short jacket (S6 boy_5050, running with his arms out; plays the street children, scaled to each painted height)"
+ },
+ "child_robed": {
+  "file": "assets/chars/child_robed.glb",
+  "height_m": 1.2,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "chin",
+   "look"
+  ],
+  "motion": [
+   "chin"
+  ],
+  "props": {},
+  "title": "Boy in a dark robe and cap (S6 boy_dark_robe_2380, watching with a hand at his chin)"
+ },
+ "elder": {
+  "file": "assets/chars/elder.glb",
+  "height_m": 1.66,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "ride_side",
+   "fan",
+   "listen",
+   "sit",
+   "look",
+   "talk"
+  ],
+  "motion": [
+   "ride_side",
+   "fan",
+   "listen"
+  ],
+  "props": {
+   "fan_round": "fan"
+  },
+  "title": "Old man in a tall black hat (S6 old_man_tall_hat_4666; plays five men in tall black hats, and the old rider sitting sideways on his donkey in S5)"
+ },
+ "fortune_teller": {
+  "file": "assets/chars/fortune_teller.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "tell_fortune",
+   "sit"
+  ],
+  "motion": [
+   "tell_fortune"
+  ],
+  "props": {},
+  "title": "Fortune-teller (临街神算, S4 fortune_teller_12232, seated behind his table)"
+ },
+ "hat_traveller": {
+  "file": "assets/chars/hat_traveller.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "ride_fan",
+   "ride",
+   "talk",
+   "crane"
+  ],
+  "motion": [
+   "ride_fan",
+   "ride",
+   "crane"
+  ],
+  "props": {
+   "fan_round": "ride_fan"
+  },
+  "title": "Traveller in a wide conical straw hat (S4 rider_fan_10285, riding with a round fan before his face)"
+ },
+ "idler": {
+  "file": "assets/chars/idler.glb",
+  "height_m": 1.66,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "chat",
+   "sit_floor",
+   "quick",
+   "lean_wall",
+   "lean_chin",
+   "ride",
+   "crane",
+   "draw_water",
+   "bucket_shoulder",
+   "lead",
+   "point",
+   "crouch",
+   "push",
+   "bucket_lift",
+   "bridle",
+   "browse",
+   "hail",
+   "sit_one_knee",
+   "squat_sleeves",
+   "tie_kerchief",
+   "push_flank",
+   "sit",
+   "look",
+   "carry_child"
+  ],
+  "motion": [
+   "lean_wall",
+   "lean_chin",
+   "ride",
+   "crane",
+   "draw_water",
+   "bucket_shoulder",
+   "lead",
+   "point",
+   "bucket_lift",
+   "bridle",
+   "browse",
+   "hail",
+   "sit_one_knee",
+   "squat_sleeves",
+   "tie_kerchief",
+   "push_flank",
+   "carry_child"
+  ],
+  "props": {
+   "bucket": "bucket_shoulder",
+   "child_on_back": "carry_child"
+  },
+  "title": "Labourer idling at the foot of the wall outside the gate"
+ },
+ "inspector": {
+  "file": "assets/chars/inspector.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "talk",
+   "argue",
+   "point",
+   "ride",
+   "arms_folded",
+   "hand_over",
+   "chin",
+   "walk_whip",
+   "hold_whip",
+   "sit",
+   "look",
+   "bend_goods",
+   "lean_over"
+  ],
+  "motion": [
+   "point",
+   "ride",
+   "arms_folded",
+   "hand_over",
+   "chin",
+   "walk_whip",
+   "hold_whip",
+   "bend_goods",
+   "lean_over"
+  ],
+  "props": {
+   "staff": "talk",
+   "whip": "walk_whip",
+   "whip_hold": "hold_whip"
+  },
+  "title": "Inspector outside the tax office, naming a large figure for the carters bales (余辉)"
+ },
+ "monk": {
+  "file": "assets/chars/monk.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "back_load",
+   "talk"
+  ],
+  "motion": [
+   "back_load"
+  ],
+  "props": {
+   "back_frame": "back_load"
+  },
+  "title": "Itinerant monk (行脚僧, S6 itinerant_monk_2078; the back-frame is the prop prop_back_frame)"
+ },
+ "official": {
+  "file": "assets/chars/official.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "sit_talk",
+   "write",
+   "ride",
+   "read"
+  ],
+  "motion": [
+   "write",
+   "ride",
+   "read"
+  ],
+  "props": {},
+  "title": "Tax official (税官), seated at his desk in the tax office, about to write the declaration"
+ },
+ "porter": {
+  "file": "assets/chars/porter.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "carry",
+   "ride",
+   "carry_pole",
+   "stand_pole",
+   "sedan_carry",
+   "sedan_walk",
+   "lift_pole",
+   "stride_stick",
+   "talk",
+   "hold_tray",
+   "shoulder_box"
+  ],
+  "motion": [
+   "ride",
+   "carry_pole",
+   "stand_pole",
+   "sedan_carry",
+   "sedan_walk",
+   "lift_pole",
+   "stride_stick",
+   "hold_tray",
+   "shoulder_box"
+  ],
+  "props": {
+   "pole_baskets": "carry_pole",
+   "pole_boxes": "carry_pole",
+   "pole_bundle": "carry_pole",
+   "pole_shallow_baskets": "carry_pole",
+   "pole_bundles": "carry_pole",
+   "stick": "walk",
+   "staff": "stand_pole",
+   "tray": "hold_tray",
+   "tray_head": "walk",
+   "box_shoulder": "shoulder_box",
+   "stick_stride": "stride_stick"
+  },
+  "title": "Porter with a shoulder pole (B1 style test, 2026-10-09; views and mesh in gen/v1)"
+ },
+ "robed_man": {
+  "file": "assets/chars/robed_man.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "lead",
+   "talk",
+   "listen",
+   "tie_kerchief",
+   "sit",
+   "hold_rope",
+   "crane"
+  ],
+  "motion": [
+   "lead",
+   "listen",
+   "tie_kerchief",
+   "hold_rope",
+   "crane"
+  ],
+  "props": {
+   "staff": "idle",
+   "lead_rope": "hold_rope"
+  },
+  "title": "Man in a long loose white robe (S4 ox_leader_11017; plays the white-robed men of the outer road)"
+ },
+ "scholar": {
+  "file": "assets/chars/scholar.glb",
+  "height_m": 1.74,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "drink",
+   "talk",
+   "listen",
+   "fan",
+   "knees_up",
+   "bow",
+   "crane",
+   "look"
+  ],
+  "motion": [
+   "listen",
+   "fan",
+   "knees_up",
+   "bow",
+   "crane"
+  ],
+  "props": {
+   "fan_round": "fan",
+   "staff": "idle"
+  },
+  "title": "Scholar in a pale robe (赶考士人, S6 scholar_front_3240; plays 19 pale-robed men)"
+ },
+ "sightseer": {
+  "file": "assets/chars/sightseer.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "chat",
+   "stroll",
+   "lean_chin",
+   "ride",
+   "crane",
+   "bow",
+   "fan_walk",
+   "knees_up",
+   "point",
+   "fan"
+  ],
+  "motion": [
+   "lean_chin",
+   "ride",
+   "crane",
+   "bow",
+   "fan_walk",
+   "knees_up",
+   "point",
+   "fan"
+  ],
+  "props": {
+   "fan_round": "fan_walk"
+  },
+  "title": "Scholar sightseer leaning on the moat bridge railing, watching the fish"
+ },
+ "soldier": {
+  "file": "assets/chars/soldier.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sleep_side",
+   "doze_knees",
+   "sit_one_knee",
+   "squat_sleeves",
+   "kneel_sleep",
+   "sit"
+  ],
+  "motion": [
+   "sleep_side",
+   "doze_knees",
+   "sit_one_knee",
+   "squat_sleeves",
+   "kneel_sleep"
+  ],
+  "props": {},
+  "title": "Courier-post soldier (递铺, S4 soldier_knee_up_11792; plays the seven dozing soldiers)"
+ },
+ "storyteller": {
+  "file": "assets/chars/storyteller.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "tell"
+  ],
+  "motion": [
+   "tell"
+  ],
+  "props": {},
+  "title": "Storyteller (闹市说书, S6 storyteller_3822, the one figure facing out of the ring)"
+ },
+ "townsman": {
+  "file": "assets/chars/townsman.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "talk",
+   "look",
+   "ride",
+   "crane",
+   "bow",
+   "lead",
+   "hand_over",
+   "crouch",
+   "back_load",
+   "show_garment",
+   "browse",
+   "carry_child",
+   "squat_sleeves"
+  ],
+  "motion": [
+   "ride",
+   "crane",
+   "bow",
+   "lead",
+   "hand_over",
+   "back_load",
+   "show_garment",
+   "browse",
+   "carry_child",
+   "squat_sleeves"
+  ],
+  "props": {
+   "back_boxes": "back_load",
+   "child_on_shoulders": "carry_child"
+  },
+  "title": "Townsman and shop owner (B1 style test, 2026-10-09; views and mesh in gen/v1)"
+ },
+ "woman": {
+  "file": "assets/chars/woman.glb",
+  "height_m": 1.58,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "hold_child"
+  ],
+  "motion": [
+   "hold_child"
+  ],
+  "props": {
+   "child_in_arms": "hold_child"
+  },
+  "title": "Woman (the matchmaker in the sedan, S6 sedan_passenger_4362; her dress from a woman bringing a child to 赵太丞家, S7, scan u 1575-1655)"
+ }
+}

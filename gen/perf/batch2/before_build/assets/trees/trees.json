@@ -1,0 +1,991 @@
+{
+ "about": "Tree cards (tools/tree_cards.mjs; trees/notes.md). Each card: file; form; base_uv = the trunk foot in the image (u from the left, v from the bottom, 0-1); height_m x width_m = the card plane at scale 1, so that the tree on it, foot to crown top, is tree_m tall (its real height); px; kb; alpha (soft: anti-aliased; hard: cut at 0.5, for the 300 KB budget) and webp_q; mean = mean sRGB of the solid pixels. Painted in true colours: the page should not retint them.",
+ "bamboo_1": {
+  "file": "assets/trees/bamboo_1.webp",
+  "form": "bamboo",
+  "base_uv": [
+   0.4606,
+   0.0014
+  ],
+  "height_m": 6.033,
+  "width_m": 2.655,
+  "tree_m": 6,
+  "px": [
+   338,
+   768
+  ],
+  "kb": 153,
+  "alpha": "soft",
+  "webp_q": 84,
+  "mean": "#6c7a5b"
+ },
+ "bamboo_2": {
+  "file": "assets/trees/bamboo_2.webp",
+  "form": "bamboo",
+  "base_uv": [
+   0.4077,
+   0.002
+  ],
+  "height_m": 4.033,
+  "width_m": 3.55,
+  "tree_m": 4,
+  "px": [
+   676,
+   768
+  ],
+  "kb": 157,
+  "alpha": "hard",
+  "webp_q": 82,
+  "mean": "#6f7a5c"
+ },
+ "bamboo_3": {
+  "file": "assets/trees/bamboo_3.webp",
+  "form": "bamboo",
+  "base_uv": [
+   0.7204,
+   0.0014
+  ],
+  "height_m": 6.033,
+  "width_m": 2.608,
+  "tree_m": 6,
+  "px": [
+   332,
+   768
+  ],
+  "kb": 101,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#767d67"
+ },
+ "bamboo_4": {
+  "file": "assets/trees/bamboo_4.webp",
+  "form": "bamboo",
+  "base_uv": [
+   0.362,
+   0.0014
+  ],
+  "height_m": 6.033,
+  "width_m": 3.346,
+  "tree_m": 6,
+  "px": [
+   426,
+   768
+  ],
+  "kb": 95,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#727e60"
+ },
+ "bamboo_5": {
+  "file": "assets/trees/bamboo_5.webp",
+  "form": "bamboo",
+  "base_uv": [
+   0.5269,
+   0.0021
+  ],
+  "height_m": 2.521,
+  "width_m": 2.075,
+  "tree_m": 2.5,
+  "px": [
+   632,
+   768
+  ],
+  "kb": 152,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#737c5d"
+ },
+ "bamboo_6": {
+  "file": "assets/trees/bamboo_6.webp",
+  "form": "bamboo",
+  "base_uv": [
+   0.5289,
+   0.0013
+  ],
+  "height_m": 3.016,
+  "width_m": 0.923,
+  "tree_m": 3,
+  "px": [
+   235,
+   768
+  ],
+  "kb": 95,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#6c7658"
+ },
+ "elm_claw_1": {
+  "file": "assets/trees/elm_claw_1.webp",
+  "form": "elm_claw",
+  "base_uv": [
+   0.55,
+   0.0014
+  ],
+  "height_m": 11.06,
+  "width_m": 7.186,
+  "tree_m": 11,
+  "px": [
+   499,
+   768
+  ],
+  "kb": 101,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#625a52"
+ },
+ "elm_claw_2": {
+  "file": "assets/trees/elm_claw_2.webp",
+  "form": "elm_claw",
+  "base_uv": [
+   0.5112,
+   0.0014
+  ],
+  "height_m": 9.049,
+  "width_m": 5.632,
+  "tree_m": 9,
+  "px": [
+   478,
+   768
+  ],
+  "kb": 99,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#6e6153"
+ },
+ "elm_claw_3": {
+  "file": "assets/trees/elm_claw_3.webp",
+  "form": "elm_claw",
+  "base_uv": [
+   0.5353,
+   0.002
+  ],
+  "height_m": 9.074,
+  "width_m": 12.772,
+  "tree_m": 9,
+  "px": [
+   1081,
+   768
+  ],
+  "kb": 157,
+  "alpha": "hard",
+  "webp_q": 82,
+  "mean": "#695e50"
+ },
+ "elm_claw_4": {
+  "file": "assets/trees/elm_claw_4.webp",
+  "form": "elm_claw",
+  "base_uv": [
+   0.4889,
+   0.0021
+  ],
+  "height_m": 4.034,
+  "width_m": 5.274,
+  "tree_m": 4,
+  "px": [
+   1004,
+   768
+  ],
+  "kb": 145,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#63574d"
+ },
+ "elm_claw_5": {
+  "file": "assets/trees/elm_claw_5.webp",
+  "form": "elm_claw",
+  "base_uv": [
+   0.5476,
+   0.0014
+  ],
+  "height_m": 9.049,
+  "width_m": 5.514,
+  "tree_m": 9,
+  "px": [
+   468,
+   768
+  ],
+  "kb": 146,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#716659"
+ },
+ "elm_claw_6": {
+  "file": "assets/trees/elm_claw_6.webp",
+  "form": "elm_claw",
+  "base_uv": [
+   0.4439,
+   0.0013
+  ],
+  "height_m": 11.059,
+  "width_m": 4.91,
+  "tree_m": 11,
+  "px": [
+   341,
+   768
+  ],
+  "kb": 66,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#63594c"
+ },
+ "hedge_1": {
+  "file": "assets/trees/hedge_1.webp",
+  "form": "hedge",
+  "base_uv": [
+   0.5434,
+   0.0043
+  ],
+  "height_m": 0.814,
+  "width_m": 2.578,
+  "tree_m": 0.8,
+  "px": [
+   1476,
+   466
+  ],
+  "kb": 143,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#5e6346"
+ },
+ "leafy_1": {
+  "file": "assets/trees/leafy_1.webp",
+  "form": "leafy",
+  "base_uv": [
+   0.4858,
+   0.0021
+  ],
+  "height_m": 1.613,
+  "width_m": 1.997,
+  "tree_m": 1.6,
+  "px": [
+   951,
+   768
+  ],
+  "kb": 178,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#656850"
+ },
+ "pine_fan_1": {
+  "file": "assets/trees/pine_fan_1.webp",
+  "form": "pine_fan",
+  "base_uv": [
+   0.6159,
+   0.002
+  ],
+  "height_m": 8.066,
+  "width_m": 12.561,
+  "tree_m": 8,
+  "px": [
+   1196,
+   768
+  ],
+  "kb": 201,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#7d816e"
+ },
+ "pine_fan_2": {
+  "file": "assets/trees/pine_fan_2.webp",
+  "form": "pine_fan",
+  "base_uv": [
+   0.5404,
+   0.0013
+  ],
+  "height_m": 11.059,
+  "width_m": 7.445,
+  "tree_m": 11,
+  "px": [
+   517,
+   768
+  ],
+  "kb": 87,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#767569"
+ },
+ "pine_fan_3": {
+  "file": "assets/trees/pine_fan_3.webp",
+  "form": "pine_fan",
+  "base_uv": [
+   0.5223,
+   0.0021
+  ],
+  "height_m": 6.051,
+  "width_m": 9.494,
+  "tree_m": 6,
+  "px": [
+   1205,
+   768
+  ],
+  "kb": 217,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#787f70"
+ },
+ "pine_fan_4": {
+  "file": "assets/trees/pine_fan_4.webp",
+  "form": "pine_fan",
+  "base_uv": [
+   0.516,
+   0.0021
+  ],
+  "height_m": 7.058,
+  "width_m": 7.288,
+  "tree_m": 7,
+  "px": [
+   793,
+   768
+  ],
+  "kb": 152,
+  "alpha": "hard",
+  "webp_q": 78,
+  "mean": "#787c70"
+ },
+ "pine_fan_5": {
+  "file": "assets/trees/pine_fan_5.webp",
+  "form": "pine_fan",
+  "base_uv": [
+   0.6787,
+   0.0013
+  ],
+  "height_m": 7.038,
+  "width_m": 3.363,
+  "tree_m": 7,
+  "px": [
+   367,
+   768
+  ],
+  "kb": 102,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#828375"
+ },
+ "sapling_1": {
+  "file": "assets/trees/sapling_1.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.4645,
+   0.0014
+  ],
+  "height_m": 2.213,
+  "width_m": 0.882,
+  "tree_m": 2.2,
+  "px": [
+   204,
+   512
+  ],
+  "kb": 25,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#625a4d"
+ },
+ "sapling_2": {
+  "file": "assets/trees/sapling_2.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.5022,
+   0.002
+  ],
+  "height_m": 2.218,
+  "width_m": 1.477,
+  "tree_m": 2.2,
+  "px": [
+   341,
+   512
+  ],
+  "kb": 36,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#5d544b"
+ },
+ "sapling_3": {
+  "file": "assets/trees/sapling_3.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.6757,
+   0.0014
+  ],
+  "height_m": 2.212,
+  "width_m": 1.21,
+  "tree_m": 2.2,
+  "px": [
+   280,
+   512
+  ],
+  "kb": 32,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#675d51"
+ },
+ "sapling_4": {
+  "file": "assets/trees/sapling_4.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.4327,
+   0.0014
+  ],
+  "height_m": 2.614,
+  "width_m": 0.689,
+  "tree_m": 2.6,
+  "px": [
+   135,
+   512
+  ],
+  "kb": 14,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#5e5648"
+ },
+ "sapling_5": {
+  "file": "assets/trees/sapling_5.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.4712,
+   0.0014
+  ],
+  "height_m": 2.213,
+  "width_m": 1.193,
+  "tree_m": 2.2,
+  "px": [
+   276,
+   512
+  ],
+  "kb": 32,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#5a5449"
+ },
+ "sapling_6": {
+  "file": "assets/trees/sapling_6.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.4969,
+   0.0021
+  ],
+  "height_m": 1.815,
+  "width_m": 1.73,
+  "tree_m": 1.8,
+  "px": [
+   488,
+   512
+  ],
+  "kb": 49,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#5d554a"
+ },
+ "sapling_7": {
+  "file": "assets/trees/sapling_7.webp",
+  "form": "sapling",
+  "base_uv": [
+   0.4778,
+   0.0014
+  ],
+  "height_m": 2.413,
+  "width_m": 1.126,
+  "tree_m": 2.4,
+  "px": [
+   239,
+   512
+  ],
+  "kb": 25,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#665e53"
+ },
+ "shoot_tree_1": {
+  "file": "assets/trees/shoot_tree_1.webp",
+  "form": "shoot_tree",
+  "base_uv": [
+   0.4867,
+   0.0021
+  ],
+  "height_m": 4.538,
+  "width_m": 4.024,
+  "tree_m": 4.5,
+  "px": [
+   681,
+   768
+  ],
+  "kb": 141,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#776c59"
+ },
+ "shoot_tree_2": {
+  "file": "assets/trees/shoot_tree_2.webp",
+  "form": "shoot_tree",
+  "base_uv": [
+   0.4912,
+   0.0021
+  ],
+  "height_m": 4.034,
+  "width_m": 5.998,
+  "tree_m": 4,
+  "px": [
+   1142,
+   768
+  ],
+  "kb": 175,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#776958"
+ },
+ "shoot_tree_3": {
+  "file": "assets/trees/shoot_tree_3.webp",
+  "form": "shoot_tree",
+  "base_uv": [
+   0.5242,
+   0.0014
+  ],
+  "height_m": 5.53,
+  "width_m": 3.42,
+  "tree_m": 5.5,
+  "px": [
+   475,
+   768
+  ],
+  "kb": 138,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#7c705c"
+ },
+ "shoot_tree_4": {
+  "file": "assets/trees/shoot_tree_4.webp",
+  "form": "shoot_tree",
+  "base_uv": [
+   0.5042,
+   0.002
+  ],
+  "height_m": 3.529,
+  "width_m": 4.696,
+  "tree_m": 3.5,
+  "px": [
+   1022,
+   768
+  ],
+  "kb": 161,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#817259"
+ },
+ "slender_1": {
+  "file": "assets/trees/slender_1.webp",
+  "form": "slender",
+  "base_uv": [
+   0.5053,
+   0.0013
+  ],
+  "height_m": 9.048,
+  "width_m": 2.403,
+  "tree_m": 9,
+  "px": [
+   204,
+   768
+  ],
+  "kb": 31,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#605849"
+ },
+ "slender_2": {
+  "file": "assets/trees/slender_2.webp",
+  "form": "slender",
+  "base_uv": [
+   0.8122,
+   0.0013
+  ],
+  "height_m": 8.043,
+  "width_m": 3.383,
+  "tree_m": 8,
+  "px": [
+   323,
+   768
+  ],
+  "kb": 48,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#665f56"
+ },
+ "slender_3": {
+  "file": "assets/trees/slender_3.webp",
+  "form": "slender",
+  "base_uv": [
+   0.5293,
+   0.0014
+  ],
+  "height_m": 6.033,
+  "width_m": 1.901,
+  "tree_m": 6,
+  "px": [
+   242,
+   768
+  ],
+  "kb": 44,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#655e4b"
+ },
+ "slender_4": {
+  "file": "assets/trees/slender_4.webp",
+  "form": "slender",
+  "base_uv": [
+   0.8384,
+   0.0013
+  ],
+  "height_m": 8.043,
+  "width_m": 2.314,
+  "tree_m": 8,
+  "px": [
+   221,
+   768
+  ],
+  "kb": 23,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#5a554c"
+ },
+ "slender_5": {
+  "file": "assets/trees/slender_5.webp",
+  "form": "slender",
+  "base_uv": [
+   0.5032,
+   0.0014
+  ],
+  "height_m": 7.038,
+  "width_m": 2.493,
+  "tree_m": 7,
+  "px": [
+   272,
+   768
+  ],
+  "kb": 53,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#817769"
+ },
+ "slender_6": {
+  "file": "assets/trees/slender_6.webp",
+  "form": "slender",
+  "base_uv": [
+   0.4917,
+   0.0014
+  ],
+  "height_m": 7.039,
+  "width_m": 3.309,
+  "tree_m": 7,
+  "px": [
+   361,
+   768
+  ],
+  "kb": 65,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#716a5b"
+ },
+ "slender_7": {
+  "file": "assets/trees/slender_7.webp",
+  "form": "slender",
+  "base_uv": [
+   0.5035,
+   0.0013
+  ],
+  "height_m": 8.043,
+  "width_m": 3.603,
+  "tree_m": 8,
+  "px": [
+   344,
+   768
+  ],
+  "kb": 88,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#766f5c"
+ },
+ "slender_8": {
+  "file": "assets/trees/slender_8.webp",
+  "form": "slender",
+  "base_uv": [
+   0.2781,
+   0.0014
+  ],
+  "height_m": 7.038,
+  "width_m": 2.722,
+  "tree_m": 7,
+  "px": [
+   297,
+   768
+  ],
+  "kb": 54,
+  "alpha": "soft",
+  "webp_q": 88,
+  "mean": "#686051"
+ },
+ "whip_clump_1": {
+  "file": "assets/trees/whip_clump_1.webp",
+  "form": "whip_clump",
+  "base_uv": [
+   0.4877,
+   0.0022
+  ],
+  "height_m": 1.816,
+  "width_m": 2.875,
+  "tree_m": 1.8,
+  "px": [
+   1216,
+   768
+  ],
+  "kb": 172,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#958167"
+ },
+ "whip_clump_2": {
+  "file": "assets/trees/whip_clump_2.webp",
+  "form": "whip_clump",
+  "base_uv": [
+   0.6477,
+   0.0021
+  ],
+  "height_m": 2.218,
+  "width_m": 1.947,
+  "tree_m": 2.2,
+  "px": [
+   674,
+   768
+  ],
+  "kb": 102,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#917b61"
+ },
+ "willow_burl_1": {
+  "file": "assets/trees/willow_burl_1.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.6364,
+   0.0014
+  ],
+  "height_m": 10.055,
+  "width_m": 6.664,
+  "tree_m": 10,
+  "px": [
+   509,
+   768
+  ],
+  "kb": 119,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#807251"
+ },
+ "willow_burl_2": {
+  "file": "assets/trees/willow_burl_2.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.4994,
+   0.0013
+  ],
+  "height_m": 9.048,
+  "width_m": 6.044,
+  "tree_m": 9,
+  "px": [
+   513,
+   768
+  ],
+  "kb": 118,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#837455"
+ },
+ "willow_burl_3": {
+  "file": "assets/trees/willow_burl_3.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.5539,
+   0.002
+  ],
+  "height_m": 8.064,
+  "width_m": 7.886,
+  "tree_m": 8,
+  "px": [
+   751,
+   768
+  ],
+  "kb": 160,
+  "alpha": "hard",
+  "webp_q": 82,
+  "mean": "#827957"
+ },
+ "willow_burl_4": {
+  "file": "assets/trees/willow_burl_4.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.6429,
+   0.0013
+  ],
+  "height_m": 16.087,
+  "width_m": 10.871,
+  "tree_m": 16,
+  "px": [
+   519,
+   768
+  ],
+  "kb": 156,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#887d59"
+ },
+ "willow_burl_5": {
+  "file": "assets/trees/willow_burl_5.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.7227,
+   0.0021
+  ],
+  "height_m": 12.1,
+  "width_m": 15.283,
+  "tree_m": 12,
+  "px": [
+   970,
+   768
+  ],
+  "kb": 151,
+  "alpha": "hard",
+  "webp_q": 82,
+  "mean": "#7b6a49"
+ },
+ "willow_burl_6": {
+  "file": "assets/trees/willow_burl_6.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.5194,
+   0.002
+  ],
+  "height_m": 9.074,
+  "width_m": 12.979,
+  "tree_m": 9,
+  "px": [
+   1007,
+   704
+  ],
+  "kb": 157,
+  "alpha": "hard",
+  "webp_q": 78,
+  "mean": "#887e5c"
+ },
+ "willow_burl_7": {
+  "file": "assets/trees/willow_burl_7.webp",
+  "form": "willow_burl",
+  "base_uv": [
+   0.7212,
+   0.0021
+  ],
+  "height_m": 10.083,
+  "width_m": 14.766,
+  "tree_m": 10,
+  "px": [
+   1031,
+   704
+  ],
+  "kb": 157,
+  "alpha": "hard",
+  "webp_q": 78,
+  "mean": "#8b7d5a"
+ },
+ "willow_fan_1": {
+  "file": "assets/trees/willow_fan_1.webp",
+  "form": "willow_fan",
+  "base_uv": [
+   0.4976,
+   0.0021
+  ],
+  "height_m": 10.084,
+  "width_m": 10.439,
+  "tree_m": 10,
+  "px": [
+   795,
+   768
+  ],
+  "kb": 158,
+  "alpha": "hard",
+  "webp_q": 82,
+  "mean": "#8a7b62"
+ },
+ "willow_fan_2": {
+  "file": "assets/trees/willow_fan_2.webp",
+  "form": "willow_fan",
+  "base_uv": [
+   0.4865,
+   0.0014
+  ],
+  "height_m": 10.055,
+  "width_m": 6.088,
+  "tree_m": 10,
+  "px": [
+   465,
+   768
+  ],
+  "kb": 155,
+  "alpha": "soft",
+  "webp_q": 84,
+  "mean": "#7c6e5a"
+ },
+ "willow_fan_3": {
+  "file": "assets/trees/willow_fan_3.webp",
+  "form": "willow_fan",
+  "base_uv": [
+   0.5354,
+   0.0014
+  ],
+  "height_m": 9.049,
+  "width_m": 6.139,
+  "tree_m": 9,
+  "px": [
+   521,
+   768
+  ],
+  "kb": 111,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#947d62"
+ },
+ "willow_fan_4": {
+  "file": "assets/trees/willow_fan_4.webp",
+  "form": "willow_fan",
+  "base_uv": [
+   0.4962,
+   0.002
+  ],
+  "height_m": 8.066,
+  "width_m": 8.234,
+  "tree_m": 8,
+  "px": [
+   784,
+   768
+  ],
+  "kb": 149,
+  "alpha": "hard",
+  "webp_q": 74,
+  "mean": "#8e7d67"
+ },
+ "willow_weep_1": {
+  "file": "assets/trees/willow_weep_1.webp",
+  "form": "willow_weep",
+  "base_uv": [
+   0.2802,
+   0.0013
+  ],
+  "height_m": 11.562,
+  "width_m": 7.181,
+  "tree_m": 11.5,
+  "px": [
+   477,
+   768
+  ],
+  "kb": 132,
+  "alpha": "hard",
+  "webp_q": 86,
+  "mean": "#8f8463"
+ }
+}

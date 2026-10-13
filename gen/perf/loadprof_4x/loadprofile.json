@@ -1,0 +1,773 @@
+{
+ "mode": "loadprofile",
+ "url": "http://127.0.0.1:5190/world.html",
+ "date": "2026-10-13T04:47:46.467Z",
+ "viewport": [
+  390,
+  844,
+  3
+ ],
+ "src": {
+  "assets.js": "42bf7aec",
+  "backdrop.js": "942312f3",
+  "boatflow.js": "b17719b7",
+  "boats.js": "9ff950ed",
+  "chars.js": "0eddc955",
+  "creatures.js": "e73e42e4",
+  "crowd.js": "c3bcf3b8",
+  "daylight.js": "7b6783c4",
+  "followcam.js": "09f4a71e",
+  "gpumem.js": "398e2de5",
+  "main.js": "b2773a3c",
+  "palette.js": "49d5f7de",
+  "people.js": "1a870d7e",
+  "player.js": "0a0eaa87",
+  "post.js": "63cf1e94",
+  "scroll_hud.js": "89d2c495",
+  "scroll_projection.js": "c4748acd",
+  "settings.js": "07db6000",
+  "sound.js": "1c1d34f6",
+  "sundial.js": "e09e5f94",
+  "sundial_glyphs.js": "27881bda",
+  "surface.js": "40ec6cc5",
+  "water.js": "3d286cd7",
+  "world.js": "3a5784d2"
+ },
+ "loadMs": 5410,
+ "env": {
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4070 SUPER (0x00002783) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "gpuTimer": true,
+  "loaded": [
+   "inner_city",
+   "gate",
+   "city_end"
+  ],
+  "dpr": 1.5,
+  "requests": 250,
+  "totalKB": 43569,
+  "byType": {
+   "code.other": {
+    "n": 1,
+    "kb": 217
+   },
+   "data.css": {
+    "n": 1,
+    "kb": 5
+   },
+   "data.svg": {
+    "n": 1,
+    "kb": 5
+   },
+   "code.js": {
+    "n": 37,
+    "kb": 10374
+   },
+   "data.woff2": {
+    "n": 3,
+    "kb": 178
+   },
+   "code.mjs": {
+    "n": 1,
+    "kb": 3
+   },
+   "panels.js": {
+    "n": 1,
+    "kb": 103
+   },
+   "code.css": {
+    "n": 1,
+    "kb": 22
+   },
+   "trees.json": {
+    "n": 1,
+    "kb": 15
+   },
+   "data.json": {
+    "n": 29,
+    "kb": 1372
+   },
+   "cast.json": {
+    "n": 2,
+    "kb": 43
+   },
+   "data.webp": {
+    "n": 2,
+    "kb": 40
+   },
+   "sections.glb": {
+    "n": 3,
+    "kb": 4565
+   },
+   "panels.json": {
+    "n": 3,
+    "kb": 6
+   },
+   "cast.glb": {
+    "n": 32,
+    "kb": 14274
+   },
+   "data.ktx2": {
+    "n": 25,
+    "kb": 2059
+   },
+   "transcoder": {
+    "n": 2,
+    "kb": 571
+   },
+   "kit.ktx2": {
+    "n": 14,
+    "kb": 1718
+   },
+   "trees.ktx2": {
+    "n": 27,
+    "kb": 6571
+   },
+   "panels.ktx2": {
+    "n": 3,
+    "kb": 680
+   },
+   "data.webm": {
+    "n": 61,
+    "kb": 748
+   }
+  }
+ },
+ "ms": 15668,
+ "events": [
+  {
+   "kind": "load",
+   "name": "canal",
+   "ms": 1502,
+   "stallMs": 302,
+   "longestTaskMs": 302,
+   "steps": {
+    "fetch": 254,
+    "models": 151,
+    "compile": 105,
+    "boats": 30,
+    "collider": 1,
+    "trees": 570,
+    "people": 286,
+    "backdrop": 56
+   },
+   "newPrograms": 2,
+   "bakeMs": 371,
+   "maxBakeMs": 8,
+   "bvhMs": 17,
+   "colliderTris": 30795
+  },
+  {
+   "kind": "load",
+   "name": "outer_road_2",
+   "ms": 671,
+   "stallMs": 125,
+   "longestTaskMs": 124,
+   "steps": {
+    "fetch": 183,
+    "models": 188,
+    "compile": 1,
+    "boats": 8,
+    "collider": 0,
+    "trees": 132,
+    "people": 111,
+    "backdrop": 1
+   },
+   "newPrograms": 3,
+   "bakeMs": 332,
+   "maxBakeMs": 8,
+   "bvhMs": 26,
+   "colliderTris": 43838
+  },
+  {
+   "kind": "unload",
+   "name": "outer_road_2",
+   "ms": 421,
+   "stallMs": 165,
+   "longestTaskMs": 120,
+   "steps": {},
+   "newPrograms": 0,
+   "bakeMs": 23,
+   "maxBakeMs": 23
+  },
+  {
+   "kind": "load",
+   "name": "countryside",
+   "ms": 11052,
+   "stallMs": 1785,
+   "longestTaskMs": 1783,
+   "steps": {
+    "fetch": 1016,
+    "models": 999,
+    "compile": 7,
+    "boats": 17,
+    "collider": 5,
+    "trees": 6951,
+    "people": 1648,
+    "backdrop": 6
+   },
+   "newPrograms": 4,
+   "bakeMs": 145,
+   "maxBakeMs": 53,
+   "bvhMs": 154,
+   "colliderTris": 49658
+  }
+ ],
+ "profile": {
+  "totalMs": 17189,
+  "inclusive": [
+   [
+    "(root) :0",
+    17189,
+    100
+   ],
+   [
+    "(anon) :92",
+    12893,
+    75
+   ],
+   [
+    "tick world.js:922",
+    12866,
+    74.8
+   ],
+   [
+    "render post.js:147",
+    9389,
+    54.6
+   ],
+   [
+    "r.render :130",
+    9335,
+    54.3
+   ],
+   [
+    "WebGLRenderer.render three.module-Bj7iJlUn.js:51996",
+    9303,
+    54.1
+   ],
+   [
+    "passColor :123",
+    6950,
+    40.4
+   ],
+   [
+    "WebGLRenderer.renderBufferDirect three.module-Bj7iJlUn.js:51786",
+    6683,
+    38.9
+   ],
+   [
+    "renderScene three.module-Bj7iJlUn.js:52125",
+    5618,
+    32.7
+   ],
+   [
+    "renderObjects three.module-Bj7iJlUn.js:52200",
+    5584,
+    32.5
+   ],
+   [
+    "renderObject three.module-Bj7iJlUn.js:52210",
+    5405,
+    31.4
+   ],
+   [
+    "setProgram three.module-Bj7iJlUn.js:52328",
+    4663,
+    27.1
+   ],
+   [
+    "obj.<computed> :101",
+    3037,
+    17.7
+   ],
+   [
+    "o.update :107",
+    2589,
+    15.1
+   ],
+   [
+    "sm.render :151",
+    2467,
+    14.4
+   ],
+   [
+    "passShadow :156",
+    2448,
+    14.2
+   ],
+   [
+    "WebGLShadowMap.render three.module-Bj7iJlUn.js:47158",
+    2447,
+    14.2
+   ],
+   [
+    "renderObject three.module-Bj7iJlUn.js:47372",
+    2415,
+    14
+   ],
+   [
+    "update people.js:657",
+    2272,
+    13.2
+   ],
+   [
+    "(program) :0",
+    1864,
+    10.8
+   ],
+   [
+    "step world.js:789",
+    1659,
+    9.7
+   ],
+   [
+    "addSection world.js:811",
+    1651,
+    9.6
+   ],
+   [
+    "dropToSupport world.js:312",
+    1644,
+    9.6
+   ],
+   [
+    "populate world.js:441",
+    1619,
+    9.4
+   ],
+   [
+    "(anon) world.js:831",
+    1619,
+    9.4
+   ],
+   [
+    "passNormal :124",
+    1596,
+    9.3
+   ],
+   [
+    "addWalker people.js:362",
+    1582,
+    9.2
+   ],
+   [
+    "corridorFor people.js:390",
+    1566,
+    9.1
+   ],
+   [
+    "setValue three.module-Bj7iJlUn.js:45406",
+    1425,
+    8.3
+   ],
+   [
+    "a.update people.js:377",
+    1392,
+    8.1
+   ],
+   [
+    "setValueT1 three.module-Bj7iJlUn.js:45119",
+    1338,
+    7.8
+   ],
+   [
+    "walkStep people.js:433",
+    1326,
+    7.7
+   ],
+   [
+    "setTexture2D three.module-Bj7iJlUn.js:48387",
+    1295,
+    7.5
+   ],
+   [
+    "raycastFirst boats.js:94",
+    1290,
+    7.5
+   ],
+   [
+    "getProgram three.module-Bj7iJlUn.js:52227",
+    1121,
+    6.5
+   ],
+   [
+    "setup three.module-Bj7iJlUn.js:42887",
+    1027,
+    6
+   ],
+   [
+    "upload three.module-Bj7iJlUn.js:45414",
+    965,
+    5.6
+   ],
+   [
+    "raycastFirst three-mesh-bvh.js:3650",
+    943,
+    5.5
+   ],
+   [
+    "projectObject three.module-Bj7iJlUn.js:52080",
+    885,
+    5.1
+   ],
+   [
+    "uploadTexture three.module-Bj7iJlUn.js:48548",
+    872,
+    5.1
+   ],
+   [
+    "_raycastFirst$1 three-mesh-bvh.js:2701",
+    853,
+    5
+   ],
+   [
+    "addAnimal people.js:321",
+    769,
+    4.5
+   ],
+   [
+    "passCrowdNormals :125",
+    701,
+    4.1
+   ],
+   [
+    "raycastFirst player.js:27",
+    697,
+    4.1
+   ],
+   [
+    "blocked world.js:371",
+    679,
+    3.9
+   ],
+   [
+    "raycast three-mesh-bvh.js:3632",
+    664,
+    3.9
+   ],
+   [
+    "plan people.js:543",
+    602,
+    3.5
+   ],
+   [
+    "ground world.js:369",
+    599,
+    3.5
+   ],
+   [
+    "gl.<computed> :63",
+    552,
+    3.2
+   ],
+   [
+    "update crowd.js:365",
+    474,
+    2.8
+   ],
+   [
+    "update three.module-Bj7iJlUn.js:44598",
+    463,
+    2.7
+   ],
+   [
+    "getParameters three.module-Bj7iJlUn.js:46085",
+    458,
+    2.7
+   ],
+   [
+    "bindTexture three.module-Bj7iJlUn.js:47885",
+    445,
+    2.6
+   ],
+   [
+    "update player.js:153",
+    433,
+    2.5
+   ],
+   [
+    "bindVertexArrayObject three.module-Bj7iJlUn.js:42906",
+    417,
+    2.4
+   ],
+   [
+    "updateTexture three.module-Bj7iJlUn.js:48506",
+    405,
+    2.4
+   ],
+   [
+    "texSubImage2D three.module-Bj7iJlUn.js:47930",
+    403,
+    2.3
+   ],
+   [
+    "bindVertexArray :0",
+    396,
+    2.3
+   ],
+   [
+    "intersectsNodeBounds three-mesh-bvh.js:2596",
+    374,
+    2.2
+   ],
+   [
+    "texSubImage2D :0",
+    372,
+    2.2
+   ],
+   [
+    "work crowd.js:59",
+    346,
+    2
+   ],
+   [
+    "checkBufferGeometryIntersection three-mesh-bvh.js:2273",
+    336,
+    2
+   ],
+   [
+    "onBeforeRender three.module-Bj7iJlUn.js:19895",
+    325,
+    1.9
+   ],
+   [
+    "update three.module-Bj7iJlUn.js:42100",
+    311,
+    1.8
+   ],
+   [
+    "updateMatrixWorld three.module-Bj7iJlUn.js:10046",
+    301,
+    1.7
+   ],
+   [
+    "refreshMaterialUniforms three.module-Bj7iJlUn.js:50048",
+    278,
+    1.6
+   ],
+   [
+    "setValueM4 three.module-Bj7iJlUn.js:45003",
+    274,
+    1.6
+   ],
+   [
+    "bindTexture :0",
+    253,
+    1.5
+   ],
+   [
+    "fromBufferAttribute three.module-Bj7iJlUn.js:4916",
+    253,
+    1.5
+   ],
+   [
+    "update three.module-Bj7iJlUn.js:44378",
+    228,
+    1.3
+   ]
+  ],
+  "self": [
+   [
+    "(program) :0",
+    1864,
+    10.8
+   ],
+   [
+    "WebGLRenderer.renderBufferDirect three.module-Bj7iJlUn.js:51786",
+    553,
+    3.2
+   ],
+   [
+    "getProgram three.module-Bj7iJlUn.js:52227",
+    552,
+    3.2
+   ],
+   [
+    "setProgram three.module-Bj7iJlUn.js:52328",
+    511,
+    3
+   ],
+   [
+    "raycast three-mesh-bvh.js:3632",
+    491,
+    2.9
+   ],
+   [
+    "getParameters three.module-Bj7iJlUn.js:46085",
+    426,
+    2.5
+   ],
+   [
+    "renderObject three.module-Bj7iJlUn.js:47372",
+    409,
+    2.4
+   ],
+   [
+    "bindVertexArray :0",
+    396,
+    2.3
+   ],
+   [
+    "raycastFirst boats.js:94",
+    392,
+    2.3
+   ],
+   [
+    "projectObject three.module-Bj7iJlUn.js:52080",
+    385,
+    2.2
+   ],
+   [
+    "intersectsNodeBounds three-mesh-bvh.js:2596",
+    374,
+    2.2
+   ],
+   [
+    "texSubImage2D :0",
+    372,
+    2.2
+   ],
+   [
+    "_raycastFirst$1 three-mesh-bvh.js:2701",
+    321,
+    1.9
+   ],
+   [
+    "plan people.js:543",
+    311,
+    1.8
+   ],
+   [
+    "updateMatrixWorld three.module-Bj7iJlUn.js:10046",
+    253,
+    1.5
+   ],
+   [
+    "bindTexture :0",
+    253,
+    1.5
+   ],
+   [
+    "fromBufferAttribute three.module-Bj7iJlUn.js:4916",
+    253,
+    1.5
+   ],
+   [
+    "needsUpdate three.module-Bj7iJlUn.js:42958",
+    211,
+    1.2
+   ],
+   [
+    "refreshUniformsCommon three.module-Bj7iJlUn.js:50083",
+    202,
+    1.2
+   ],
+   [
+    "multiplyMatrices three.module-Bj7iJlUn.js:8252",
+    199,
+    1.2
+   ],
+   [
+    "uniformMatrix4fv :0",
+    192,
+    1.1
+   ],
+   [
+    "getBindingState three.module-Bj7iJlUn.js:42912",
+    186,
+    1.1
+   ],
+   [
+    "setup three.module-Bj7iJlUn.js:42887",
+    182,
+    1.1
+   ],
+   [
+    "update three.module-Bj7iJlUn.js:44598",
+    174,
+    1
+   ],
+   [
+    "renderObjects three.module-Bj7iJlUn.js:52200",
+    164,
+    1
+   ],
+   [
+    "body people.js:549",
+    160,
+    0.9
+   ],
+   [
+    "pushOut people.js:701",
+    159,
+    0.9
+   ],
+   [
+    "onBeforeRender three.module-Bj7iJlUn.js:19895",
+    155,
+    0.9
+   ],
+   [
+    "renderObject three.module-Bj7iJlUn.js:52210",
+    144,
+    0.8
+   ],
+   [
+    "invert three.module-Bj7iJlUn.js:8402",
+    143,
+    0.8
+   ],
+   [
+    "upload three.module-Bj7iJlUn.js:45414",
+    133,
+    0.8
+   ],
+   [
+    "getBoundingSphereAt three.module-Bj7iJlUn.js:19596",
+    116,
+    0.7
+   ],
+   [
+    "bufferSubData :0",
+    114,
+    0.7
+   ],
+   [
+    "flatten three.module-Bj7iJlUn.js:44882",
+    111,
+    0.6
+   ],
+   [
+    "update people.js:657",
+    109,
+    0.6
+   ],
+   [
+    "circlesOf people.js:744",
+    107,
+    0.6
+   ],
+   [
+    "update three.module-Bj7iJlUn.js:42100",
+    103,
+    0.6
+   ],
+   [
+    "applyMatrix4 three.module-Bj7iJlUn.js:4356",
+    100,
+    0.6
+   ],
+   [
+    "bindTexture three.module-Bj7iJlUn.js:47885",
+    100,
+    0.6
+   ],
+   [
+    "arraysEqual three.module-Bj7iJlUn.js:44900",
+    99,
+    0.6
+   ]
+  ]
+ },
+ "logs": []
+}

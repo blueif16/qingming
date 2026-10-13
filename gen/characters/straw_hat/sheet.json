@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a Song labourer and porter of the canal wharves: a lean, sinewy adult man, about 6.5 heads tall, a weathered tanned face with dark dot eyes, a short black moustache and a sparse chin beard, black hair in a topknot. A broad conical woven bamboo-and-straw hat (斗笠) in pale straw yellow, wider than his shoulders, with a low pointed crown, tied under the chin with a cord. A short grey-brown hemp jacket with a crossed collar reaching just below the hips, belted at the waist with a dark cloth sash, sleeves to the forearm; loose undyed off-white trousers ending at the knee, bare shins and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/straw_hat/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 51.2,
+ "attempts": 1,
+ "idempotency_key": "42a40256-d681-4487-8a85-fb7eab41f965",
+ "request_id": "1f77e8c9-c128-4855-b972-b3981f8cb04d",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3390,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 408
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3390,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 408
+  },
+  "total_tokens": 4974
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/c551d272-8566-4507-8c63-4ee34f92403b"
+ ],
+ "files": [
+  "gen/characters/straw_hat/sheet_0.png"
+ ]
+}

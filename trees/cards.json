@@ -1,0 +1,180 @@
+{
+  "about": "The tree cards (tools/tree_cards.mjs). One entry per form the scroll paints: its prompt (prompts/tree_<form>.txt: the form, then one [n] block per variant, inside prompts/tree_card.txt), its reference crops of the scan (u0, v0, u1, v1 in scan px, given as images 2, 3 after the style image), and per variant the image size and the real height of the tree (foot to crown top, metres) the card shows at scale 1. Optional per form or variant: key {conf, bg, gap, band, gamma} keyer settings (tools/tree_cards.mjs keyCard), retry (a number; bump it to draw that card again with the same prompt), ship_h (the shipped height in px, 768 by default; 512 for saplings and the hedge row). Optional per variant: refs, the indices of the form crops it is sent (default: all of them; old variants pin [0, 1] when a form gains crops, so their keys stay).",
+  "model": "gpt-image-2.5",
+  "style": "prompts/style_B1.png",
+  "forms": {
+    "willow_fan": {
+      "name": "early-spring willow with fans of shoots",
+      "refs": [
+        {"of":"S6.tree.willow_2330","scan":[1800,150,2800,960]},
+        {"of":"S5.tree.willow_7856, S5.tree.old_bole_8090","scan":[7500,100,8200,1150]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1024","height_m":10},
+        "2": {"size":"1024x1536","height_m":10},
+        "3": {"size":"1024x1536","height_m":9},
+        "4": {"size":"1024x1024","height_m":8}
+      }
+    },
+    "willow_burl": {
+      "name": "huge old pollard willow with a burled bole",
+      "refs": [
+        {"of":"S4.tree.gnarled_willow_12390","scan":[12050,0,12650,1010]},
+        {"of":"S4.tree.willow_11300, S4.tree.willow_leaning_11185","scan":[10850,0,11500,820]},
+        {"of":"S1.tree.willow_burl_great_32620","scan":[32210,270,32810,1608]},
+        {"of":"S1.tree.willow_great_burl_32065","scan":[31680,222,32210,1470]},
+        {"of":"S1.tree.willow_leaning_hut_31240","scan":[30270,540,31350,1512]},
+        {"of":"S2.tree.willow_split_22285","scan":[21850,0,22540,338]},
+        {"of":"S2.tree.willow_great_27068","scan":[26440,175,27260,925]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1536","height_m":10,"refs":[0,1]},
+        "2": {"size":"1024x1536","height_m":9,"refs":[0,1]},
+        "3": {"size":"1024x1024","height_m":8,"refs":[0,1]},
+        "4": {"size":"1024x1536","height_m":16,"refs":[2,3]},
+        "5": {"size":"1536x1024","height_m":12,"refs":[4]},
+        "6": {"size":"1536x1024","height_m":9,"refs":[5],"ship_h":704},
+        "7": {"size":"1536x1024","height_m":10,"refs":[6],"ship_h":704}
+      }
+    },
+    "pine_fan": {
+      "name": "pine-like tree with fans of needles",
+      "refs": [
+        {"of":"S4.tree.gnarled_9445","scan":[9250,60,9800,470]},
+        {"of":"S4.tree.pollard_9650, S4.tree.big_9840","scan":[9150,380,10300,1150]}
+      ],
+      "variants": {
+        "1": {"size":"1536x1024","height_m":8},
+        "2": {"size":"1024x1536","height_m":11},
+        "3": {"size":"1536x1024","height_m":6},
+        "4": {"size":"1024x1024","height_m":7},
+        "5": {"size":"1024x1536","height_m":7}
+      }
+    },
+    "elm_claw": {
+      "name": "bare elm with crab-claw twigs",
+      "refs": [
+        {"of":"S5.tree.elm_6935, S5.tree.elm_7118","scan":[6800,800,7250,1700]},
+        {"of":"S5.tree.elm_5748","scan":[5500,280,6100,950]},
+        {"of":"S1.tree.bare_elm_twin_34552","scan":[34300,252,34615,956]},
+        {"of":"S1.tree.bare_elm_twin_35920","scan":[35780,385,36160,1220]},
+        {"of":"S1.tree.bare_elm_tall_36070","scan":[35975,270,36276,1190]},
+        {"of":"S1.tree.elm_slender_33906","scan":[33860,195,34065,955]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1536","height_m":11,"refs":[0,1]},
+        "2": {"size":"1024x1536","height_m":9,"refs":[0,1]},
+        "3": {"size":"1536x1024","height_m":9,"refs":[0,1]},
+        "4": {"size":"1536x1024","height_m":4,"refs":[0,1]},
+        "5": {"size":"1024x1536","height_m":9,"refs":[2,3]},
+        "6": {"size":"1024x1536","height_m":11,"refs":[4,5]}
+      }
+    },
+    "shoot_tree": {
+      "name": "young bare tree of upright shoots",
+      "refs": [
+        {"of":"S5.tree.willow_7665, S5.tree.willow_7978","scan":[7300,1250,8300,1800]},
+        {"of":"S6.tree.bare_4665, S6.tree.bare_shoots_5012, S6.tree.bare_shoots_5105","scan":[4350,1300,5300,1800]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1024","height_m":4.5},
+        "2": {"size":"1536x1024","height_m":4},
+        "3": {"size":"1024x1536","height_m":5.5},
+        "4": {"size":"1536x1024","height_m":3.5}
+      }
+    },
+    "whip_clump": {
+      "name": "low clump of bare stems",
+      "refs": [
+        {"of":"S4.tree.bare_bush_11225, S4.tree.grass_clump_11640","scan":[11100,1450,11850,1800]},
+        {"of":"S5.tree.shrubs_8300","scan":[8100,1550,8500,1800]}
+      ],
+      "variants": {
+        "1": {"size":"1536x1024","height_m":1.8},
+        "2": {"size":"1024x1024","height_m":2.2}
+      }
+    },
+    "slender": {
+      "name": "slender bare trunk",
+      "refs": [
+        {"of":"S4.tree.straight_trunk_12192","scan":[12100,0,12320,640]},
+        {"of":"S5.tree.willow_6775","scan":[6650,1300,6900,1780]},
+        {"of":"S1.tree.grove_fan_35632","scan":[35580,173,35730,788]},
+        {"of":"S1 the pale grove, grove_fan_35485 .. 35823","scan":[35242,110,35985,795]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1536","height_m":9,"refs":[0,1]},
+        "2": {"size":"1024x1536","height_m":8,"refs":[0,1]},
+        "3": {"size":"1024x1536","height_m":6,"refs":[0,1]},
+        "4": {"size":"1024x1536","height_m":8,"refs":[0,1]},
+        "5": {"size":"1024x1536","height_m":7,"refs":[2,3]},
+        "6": {"size":"1024x1536","height_m":7,"refs":[2,3]},
+        "7": {"size":"1024x1536","height_m":8,"refs":[2,3]},
+        "8": {"size":"1024x1536","height_m":7,"refs":[2,3]}
+      }
+    },
+    "bamboo": {
+      "name": "bamboo clump",
+      "refs": [
+        {"of":"S6.tree.needle_tree_2025 .. 2245","scan":[1950,0,2320,300]},
+        {"of":"S4.tree.leafy_clump_11090","scan":[10950,1380,11320,1760]},
+        {"of":"S7.tree.needle_tree_1955, S7.tree.needle_tree_1910","scan":[1820,0,2070,300]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1536","height_m":6,"refs":[0,1]},
+        "2": {"size":"1024x1024","height_m":4,"refs":[0,1]},
+        "3": {"size":"1024x1536","height_m":6,"refs":[0,1]},
+        "4": {"size":"1024x1536","height_m":6,"refs":[0,1]},
+        "5": {"size":"1024x1024","height_m":2.5,"refs":[0,1]},
+        "6": {"size":"1024x1536","height_m":3,"refs":[2,0]}
+      }
+    },
+    "leafy": {
+      "name": "evergreen in leaf",
+      "refs": [
+        {"of":"S4.tree.shrub_bridge_11705","scan":[11640,700,11830,880]},
+        {"of":"S5.tree.leafy_far_7672 (kept as a ref of leafy_1; the tree itself is now read as a small elm)","scan":[7520,60,7780,400]}
+      ],
+      "variants": {
+        "1": {"size":"1536x1024","height_m":1.6}
+      }
+    },
+    "willow_weep": {
+      "name": "old willow with bare hanging whips (S7's one painted weeping willow)",
+      "refs": [
+        {"of":"S7.tree.willow_edge_855","scan":[795,0,1252,908]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1536","height_m":11.5}
+      }
+    },
+    "sapling": {
+      "name": "young bare sapling with a small crab-claw crown",
+      "ship_h": 512,
+      "refs": [
+        {"of":"S1.tree.young_bare_29558","scan":[29480,1056,29632,1242]},
+        {"of":"S1 the 菜地 grove, young_bare_29558 .. 29968","scan":[29520,1150,30010,1430]}
+      ],
+      "variants": {
+        "1": {"size":"1024x1536","height_m":2.2},
+        "2": {"size":"1024x1024","height_m":2.2},
+        "3": {"size":"1024x1536","height_m":2.2},
+        "4": {"size":"1024x1536","height_m":2.6},
+        "5": {"size":"1024x1536","height_m":2.2},
+        "6": {"size":"1024x1024","height_m":1.8},
+        "7": {"size":"1024x1536","height_m":2.4}
+      }
+    },
+    "hedge": {
+      "name": "knee-high row of small leafy shrubs",
+      "ship_h": 512,
+      "refs": [
+        {"of":"S2.tree.shrub_row_22805","scan":[22620,280,22960,440]},
+        {"of":"S4.tree.shrub_bridge_11705 (the dotted-leaf shrub)","scan":[11640,700,11830,880]}
+      ],
+      "variants": {
+        "1": {"size":"1536x1024","height_m":0.8}
+      }
+    }
+  }
+}

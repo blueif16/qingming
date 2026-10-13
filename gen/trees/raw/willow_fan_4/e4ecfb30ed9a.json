@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: an early-spring willow (柳) as the scroll paints it. A sturdy, slightly leaning trunk with knots and rough grey-brown bark forks into a few thick limbs; each limb ends in a knobbly head from which big open fans of long, straight, slender shoots spring upward and outward and arch over a little at their tips. The fans overlap into a broad, airy crown with sky showing between them. The shoots are long single whips, not a fine branching twig lattice, and they rise; they do not hang down in curtains. Fresh new leaves are just opening along every shoot as tiny slender leaves, so each fan reads as a light green feathery spray with the darker shoots showing through.\nColours: grey-brown bark with darker brown knots; shoots red-brown; new leaves fresh pale willow green (about #8fa35f), lighter at the tips.\n\nThis one: A medium willow with a short, stout, twisting trunk that divides low into four spreading limbs; a round crown of many overlapping fans, its left side lower than its right.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/willow_fan_1.jpg",
+  "gen/trees/refs/willow_fan_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "e4ecfb30ed9a",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 45.2,
+ "attempts": 1,
+ "idempotency_key": "c745cb17-ce75-4053-8186-a86f5bdd8cb7",
+ "request_id": "4c85a2a1-8e36-48d5-9b8e-cdcad6499f1a",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5080,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 491
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5080,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 491
+  },
+  "total_tokens": 6730
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/fd56e88a-fe14-488c-8526-24848dc611a9"
+ ],
+ "files": [
+  "gen/trees/raw/willow_fan_4/e4ecfb30ed9a_0.png"
+ ]
+}

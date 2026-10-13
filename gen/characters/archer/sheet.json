@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a young soldier-archer of the escort, stripped to the waist for drawing a bow: an athletic man, about 6.5 heads tall, a tanned muscular bare chest and bare arms, a young face with dark dot eyes, black hair tied in a top-knot with a dark band. A wide dark red-brown cloth waist guard wrapped round his middle and tied with a sash, loose knee-length dark grey trousers, white leg wraps and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/archer/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 46.2,
+ "attempts": 1,
+ "idempotency_key": "f4009a3a-3f51-4c7d-9f63-16f2bff7baa8",
+ "request_id": "bfe2d9ed-6625-447f-acd3-5eb38d5cce24",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3646,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3293,
+   "text_tokens": 353
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3646,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3293,
+   "text_tokens": 353
+  },
+  "total_tokens": 5230
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/8648931e-b46e-48ac-a7e9-e50a15ffeb2a"
+ ],
+ "files": [
+  "gen/characters/archer/sheet_0.png"
+ ]
+}

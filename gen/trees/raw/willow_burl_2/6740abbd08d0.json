@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a huge old pollarded willow as the scroll paints it. A massive, short, swollen bole, dark and mottled, lumpy with burls, knots and hollows, its foot flaring into a few exposed roots. The bole rises to a knobbly, clubbed pollard head (where the tree was cut back year after year), and from that head a dense fountain of long, straight, slender whips springs upward and outward, arching a little at the tips, the longest sweeping far out to one side. The whips grow straight from the head; they are long single shoots, not branches, and they do not hang in curtains. Tiny new leaves are just opening along them.\nColours: dark grey-brown bark mottled with paler grey patches and a few spots of moss green; whips red-brown; new leaves fresh pale willow green (about #8fa35f).\n\nThis one: An upright bole, very thick and lumpy, with a dark hollow in its side; the knobbly head splits into three short clubbed stubs, each with its own tall fan of whips.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/willow_burl_1.jpg",
+  "gen/trees/refs/willow_burl_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "6740abbd08d0",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 49.9,
+ "attempts": 1,
+ "idempotency_key": "c9dc89b9-e56d-49f7-8dd7-1821f10d5888",
+ "request_id": "3c482747-445b-4988-8b5c-89332a9a67d5",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4474,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3970,
+   "text_tokens": 504
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4474,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3970,
+   "text_tokens": 504
+  },
+  "total_tokens": 6058
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/4379caff-578f-459c-bf41-02fe93465e10"
+ ],
+ "files": [
+  "gen/trees/raw/willow_burl_2/6740abbd08d0_0.png"
+ ]
+}

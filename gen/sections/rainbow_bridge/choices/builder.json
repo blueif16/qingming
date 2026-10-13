@@ -1,0 +1,75 @@
+{
+ "agent": "S3_run2_lead (the area agent): blender/rainbow_bridge_scene.py",
+ "how": {
+  "S3.grd.south_bank_19300": {
+   "how": "ground",
+   "why": "the ground falls from the bank-top line (H 0) to the shore at the water's H"
+  },
+  "S3.grd.south_bank_20120": {
+   "how": "ground",
+   "why": "the ground falls from the bank-top line (H 0) to the shore at the water's H"
+  },
+  "S3.grd.far_bank_seam_15500": {
+   "how": "ground",
+   "why": "the far bank at the S4b seam, running off the silk's top edge: ground"
+  },
+  "S3.road.main": {
+   "how": "ground",
+   "why": "the route: worn ground along its land stretches (the south bank, the north bank); its stretch over the bridge is the bridge's deck"
+  },
+  "S3.road.tavern_front_16620": {
+   "how": "ground",
+   "why": "the forecourt in front of 十千脚店's gate: worn ground"
+  },
+  "S3.road.south_street_20250": {
+   "how": "ground",
+   "why": "the ground in front of the open shop: worn ground"
+  },
+  "S3.bld.tavern_20230": {
+   "how": "model",
+   "why": "narrowed (choice, map/BUILDING.md rule 5: narrowed, never shrunk): the bridge's built north ramp (kit_rainbow_bridge, extended 3.0 m past the mapped foot along its axis so the deck stays within the 34 deg walk limit) lands where the painting puts the tavern's west half (its west corner at the bridge's north-east end post), and the S2 seam (u 20500) bounds its east end 1.3 m past its painted east end. Built X 146.4-148.8 (its painted 143.7-147.9), at its painted front (the bank top, D 24.92) and painted depth (to D 26.6), real heights (eave 2.95), open on all four sides on slender posts so the route along the water runs through it, with its painted lattice band and the lattice-filled east gable; its furniture rearranged inside it by the props agent (choices/props.json)"
+  },
+  "S3.water.bian_west_15500": {
+   "how": "ground",
+   "why": "one flat strip (kb.water_strip, H -0.7, seams west and east) between the shore lines in gen/sections/rainbow_bridge/river_plan.json water, not the mapped ones: the near shore as mapped to the bridge's south-west foot, then 0.6 m off the south ramp's far skirt (the painted water meets the deck's west edge at u 18300-18480, river_e); the far shore = the far bank's mapped tops (the est shores lie 0.5-1.1 m north of them; the lead's call) moved 5.5 m north with the far bank, joined to S4b's moved far shore at the seam, and stepping back south along u 18300 to the hall on stilts' bank"
+  },
+  "S3.water.bian_river_18300": {
+   "how": "ground",
+   "why": "one flat strip between the shore lines in river_plan.json: under the bridge the south abutment's river face and the north abutment's river face with the arch's far edge as the shores (the mapped est shores crossed the abutments and left up to 5.4 m of north bank under the arch's far half: the bridge agent's proposal); east of it the mapped south shore and the north bank's tops 0.4 m out (the est north shore lies up to 0.86 m north of them), meeting S2's first points at u 20500"
+  },
+  "S3.grd.bank_n_16150": {
+   "how": "ground",
+   "why": "the far bank's slope and top from river_plan.json banks.north (its mapped tops moved 5.5 m north along the receding direction with the far bank, as the shore; its top 0.6 m further up): a move that keeps every point's scan u can't be one dX, dD, so the entity itself isn't moved in the layout. Not walkable (river_plan.json far_bank)."
+  },
+  "S3.grd.bank_s_15500": {
+   "how": "ground",
+   "why": "the near bank from river_plan.json banks.south: its mapped tops to (121.53, 11.71); its last three (the land at the bridge's south-west foot, X 121-122, D 13-18) are water now, the bank top running along the south ramp's far skirt to the abutment"
+  },
+  "S3.grd.north_bank_20250": {
+   "how": "ground",
+   "why": "the north bank east of the bridge from river_plan.json banks.north: the ground falls from its mapped top to a shore 0.4 m south of it (its est shore lies up to 0.86 m north of the top), ending on S2's first bank-top point (149.37, 24.68) at the seam"
+  },
+  "S3.grd.far_bank_18450": {
+   "how": "ground",
+   "why": "the far bank under the hall on stilts from river_plan.json: unmoved; its mapped shore where it lies south of the top, its first point (north of the top) dropped; the far bank's step along u 18300 rises north from its west end"
+  }
+ },
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): the S4b seam at u 15500 (west), the silk's bottom (south) and top (north) edges, the S2 seam at u 20500 (east)",
+   "why": "outside the painted area the scroll paints nothing (north, south) or the neighbours stand (west: S4b, built; east: S2, a painted panel until it's built)"
+  },
+  "seams_on_land": {
+   "what": "edge:west and edge:east run only along the seams' land parts, from the silk's edge to the shore (river_plan.json `edges`); across the river the shore walls (edge:shore) and the boats' rails close the walk",
+   "why": "S4b's sterns run 3-6 m past the west seam and S3's moored south-bank boat runs past the east seam at real size: a wall on the seam would stand across their decks"
+  },
+  "ground_at_seams": {
+   "what": "the ground stops 0.5 m past both seams and dips 0.12 m toward them; it runs 16 m past the silk's top and bottom edges under the mist",
+   "why": "build_rules.md, Build 2: S4b (west) is built; S2 (east) is built at the same time, and its ground or panel covers the seam; the water strips stop exactly on the seams (the lead's note: seams=(\"west\", \"east\"))"
+  },
+  "north_detour": {
+   "what": "edge:north follows the silk's top edge from the S4b seam to the far railing of the bridge's north ramp (138.48, 30.54), runs along the far railing's wall and round the north foot 1-3 m past the top edge ((140.03, 32.30), (141.28, 33.73)), and back to the top edge at (144.91, 30.54), then on to the S2 seam (gen/sections/rainbow_bridge/bridge_plan.json edge_north); the ground runs on there (it runs 16 m past the top edge everywhere)",
+   "why": "the bridge's built north ramp, extended 3.0 m along its axis to walk at 34 deg, lands 2-3 m past the silk's top edge: a wall on the edge would stop walkers on the deck's low end. The far bank west of the bridge stays closed (river_plan.json far_bank) by the water, the far railing and the ramp's skirt"
+  }
+ }
+}

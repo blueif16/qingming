@@ -1,0 +1,168 @@
+{
+ "projection": {
+  "about": "Local oblique ground mapping, scan px <- metres: u = origin_u + px_per_m_x*X + depth_px_per_m[0]*D, v = origin_v + depth_px_per_m[1]*D - px_per_m_height*H. X runs along the street (right = out of the city), D is depth (away from the viewer, i.e. north), H is height. Fitted on the moat bridge: near-left deck corner (8275,1565) is the origin; far-left corner at (8505,1135), assuming the deck is 8 m wide and the bridge 14 m long. Heights use the same scale as X, so painted figures (165-190 px) read about 1.3x life size, a painting convention; the build uses true-scale people.",
+  "origin_u": 8275,
+  "origin_v": 1565,
+  "px_per_m_x": 77,
+  "depth_px_per_m": [
+   28.75,
+   -53.75
+  ],
+  "px_per_m_height": 77
+ },
+ "figures": [
+  {
+   "id": "tax_inspector",
+   "X": -32.34,
+   "D": 10.1,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 340,
+   "support": "ground"
+  },
+  {
+   "id": "tax_official",
+   "X": -32.04,
+   "D": 12.65,
+   "H": 0,
+   "pose": "seated",
+   "facing_deg": 270,
+   "support": "office floor"
+  },
+  {
+   "id": "camel_driver",
+   "X": -28.65,
+   "D": 3,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 20,
+   "support": "ground"
+  },
+  {
+   "id": "tower_watchman",
+   "X": -20.14,
+   "D": 4.65,
+   "H": 10,
+   "pose": "standing",
+   "facing_deg": 200,
+   "support": "gate tower floor"
+  },
+  {
+   "id": "bridge_porter",
+   "X": 0.18,
+   "D": 2.14,
+   "H": 0,
+   "pose": "walking",
+   "facing_deg": 180,
+   "support": "bridge deck"
+  },
+  {
+   "id": "bridge_sightseer",
+   "X": 3.61,
+   "D": 0.24,
+   "H": 0,
+   "pose": "leaning",
+   "facing_deg": 270,
+   "support": "bridge deck"
+  },
+  {
+   "id": "tax_carter_manifest",
+   "X": -31.25,
+   "D": 9.92,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 170,
+   "support": "ground"
+  },
+  {
+   "id": "tax_declarer",
+   "X": -33.99,
+   "D": 13.3,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 10,
+   "support": "office floor"
+  },
+  {
+   "id": "wall_recliner",
+   "X": -10.26,
+   "D": 8.69,
+   "H": 0,
+   "pose": "leaning",
+   "facing_deg": 330,
+   "support": "ground"
+  },
+  {
+   "id": "wall_idler_white",
+   "X": -8.98,
+   "D": 5.77,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 250,
+   "support": "ground"
+  },
+  {
+   "id": "wall_idler_blue",
+   "X": -7.75,
+   "D": 5.06,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 330,
+   "support": "ground"
+  },
+  {
+   "id": "wall_idler_grey",
+   "X": -8.61,
+   "D": 6.08,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 230,
+   "support": "ground"
+  },
+  {
+   "id": "wall_idler_stick",
+   "X": -9.97,
+   "D": 5.69,
+   "H": 0,
+   "pose": "standing",
+   "facing_deg": 300,
+   "support": "ground"
+  },
+  {
+   "id": "wall_squatter",
+   "X": -7.05,
+   "D": 4.87,
+   "H": 0,
+   "pose": "squatting",
+   "facing_deg": 200,
+   "support": "ground"
+  },
+  {
+   "id": "rail_watcher_2",
+   "X": 6.27,
+   "D": 0.24,
+   "H": 0,
+   "pose": "leaning",
+   "facing_deg": 270,
+   "support": "bridge deck"
+  },
+  {
+   "id": "rail_watcher_3",
+   "X": 7.6,
+   "D": 0.24,
+   "H": 0,
+   "pose": "leaning",
+   "facing_deg": 270,
+   "support": "bridge deck"
+  },
+  {
+   "id": "rail_watcher_4",
+   "X": 8.49,
+   "D": 0.24,
+   "H": 0,
+   "pose": "leaning",
+   "facing_deg": 270,
+   "support": "bridge deck"
+  }
+ ]
+}

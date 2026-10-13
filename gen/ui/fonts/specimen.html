@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>字樣 · type specimen</title>
+<!-- Specimen of the ink-UI type candidates (gen/ui/fonts/CHOICE.md). Fonts: specimen_fonts/ (subsets of
+     specimen_text.txt made with tools/font_subset.py --config gen/ui/fonts/specimen_roles.json).
+     Screenshot: tools/chrome_slot.sh node gen/ui/fonts/specimen_shot.mjs -->
+<link rel="stylesheet" href="specimen_fonts/fonts.css">
+<style>
+:root { --paper: #efe4cc; --paper2: #f6efdf; --ink: #2b2622; --ink2: #5a4f45; --cinnabar: #b5321e; --mount: #4e4033; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 14px/1.5 sp_wenkai_med, serif; }
+header { padding: 28px 40px 12px; border-bottom: 1px solid #0002; display: flex; align-items: baseline; gap: 24px; }
+header h1 { font: 44px sp_bakudai_reg; margin: 0; letter-spacing: -0.06em; }
+header p { margin: 0; color: var(--ink2); font: 13px/1.5 system-ui, sans-serif; }
+section { padding: 18px 40px 26px; border-bottom: 1px solid #0002; }
+h2 { font: 600 13px system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ink2); margin: 0 0 12px; }
+.row { display: grid; grid-template-columns: 210px 1fr; gap: 18px; align-items: center; padding: 12px 0; border-top: 1px dashed #0001; }
+.lab { font: 12px/1.45 system-ui, sans-serif; color: var(--ink2); }
+.lab b { display: block; font-size: 14px; color: var(--ink); }
+.lab .pick { color: var(--cinnabar); font-weight: 700; }
+.demo { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; }
+.vban { writing-mode: vertical-rl; text-orientation: upright; font-size: 64px; line-height: 1; letter-spacing: calc(var(--ls, -0.04em) - 0.04em);
+  display: flex; align-items: center; gap: 10px; }
+.vban .ps { writing-mode: horizontal-tb; }
+.ps { display: inline-grid; place-items: center; width: 1.05em; height: 1.05em; background: var(--cinnabar); color: var(--paper2);
+  border-radius: 3px; font-size: 22px; line-height: 1; }
+.toast { background: var(--paper2); border: 1.5px solid var(--ink); padding: 6px 18px 8px; font-size: 34px; line-height: 1.1;
+  letter-spacing: var(--ls, -0.04em); box-shadow: 3px 3px 0 #0001; }
+.toast small { display: block; font: 15px sp_wenkai_med; color: var(--ink2); letter-spacing: 0; margin-top: 2px; }
+.region { font-size: 52px; line-height: 1; letter-spacing: var(--ls, -0.04em); }
+.region span { font-size: 24px; color: var(--ink2); margin-left: 10px; }
+.bubble { position: relative; background: var(--paper2); border: 1.5px solid var(--ink); border-radius: 14px 16px 15px 13px;
+  padding: 8px 14px; font-size: 16px; line-height: 1.5; max-width: 260px; }
+.bubble:after { content: ''; position: absolute; left: 26px; bottom: -9px; width: 14px; height: 14px; background: var(--paper2);
+  border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); transform: rotate(45deg) skew(8deg, 8deg); }
+.tag { display: inline-block; background: var(--paper2); border: 1px solid var(--ink); padding: 1px 7px; font-size: 13px; }
+.sizes p { margin: 2px 0; }
+.s13 { font-size: 13px; } .s15 { font-size: 15px; } .s16 { font-size: 16px; } .s20 { font-size: 20px; }
+.hud { background: var(--mount); color: var(--paper); padding: 6px 16px; font-size: 20px; letter-spacing: .02em; }
+.phone { width: 390px; border: 10px solid #222; border-radius: 28px; background: #6b8a7a; height: 420px; position: relative; overflow: hidden; }
+.phone .sky { position: absolute; inset: 0; background: linear-gradient(#cfd8d0, #9fb3a5 60%, #8a7d63); }
+.phone .bubble { position: absolute; left: 24px; top: 70px; font: 15px/1.5 sp_wenkai_med; max-width: 220px; }
+.phone .bubble.b2 { left: 150px; top: 190px; }
+.phone .tag { position: absolute; font-family: sp_wenkai_med; }
+.phone .toastp { position: absolute; left: 50%; top: 14px; transform: translateX(-50%); background: var(--paper2); border: 1.5px solid var(--ink);
+  padding: 4px 14px 6px; font: 26px/1.1 sp_bakudai_reg; letter-spacing: -0.12em; white-space: nowrap; }
+.phone .toastp small { font: 13px sp_wenkai_med; color: var(--ink2); letter-spacing: 0; margin-left: 6px; }
+.seals { display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap; }
+.seals figure { margin: 0; text-align: center; font: 11px system-ui, sans-serif; color: var(--ink2); }
+.logo { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
+.logo .h { width: 560px; } .logo .v { height: 420px; }
+.missing { font: 12px system-ui, sans-serif; color: var(--cinnabar); }
+</style>
+</head>
+<body>
+<header>
+  <h1>字樣</h1>
+  <p>Type specimen, ink UI round, 2026-10-12. Paper #efe4cc, ink #2b2622, cinnabar #b5321e. Picks in red.
+  Every face is a subset of <code>specimen_text.txt</code>; sizes are CSS px.</p>
+</header>
+
+<section id="display">
+  <h2>(a) Display: banners, place names, toasts, place seals</h2>
+  <div class="row" data-f="sp_bakudai_reg" data-ls="-0.12em"><div class="lab"><b>莫大毛筆 Bakudai Regular</b><span class="pick">PICK</span> · 青柳衡山's brush · OFL (base: free commercial) · 0.35 KB/char · size-adjust 118%, letter-spacing −0.12em</div>
+    <div class="demo f"></div></div>
+  <div class="row" data-f="sp_bakudai_med" data-ls="-0.12em"><div class="lab"><b>Bakudai Medium</b>auto-emboldened weight · 0.42 KB/char</div>
+    <div class="demo f"></div></div>
+  <div class="row" data-f="sp_wenkai_med"><div class="lab"><b>霞鶩文楷 TC Medium</b>alternate 1 · calm 楷 (江南百景圖's choice) · OFL · 0.28 KB/char</div>
+    <div class="demo f"></div></div>
+  <div class="row" data-f="sp_huiwen"><div class="lab"><b>匯文明朝體 Huiwen Mincho</b>alternate 2 · old letterpress · "Public Domain" · 0.54 KB/char</div>
+    <div class="demo f"></div></div>
+  <div class="row" data-f="sp_cactus"><div class="lab"><b>仙人掌明體 Cactus Classical Serif</b>print display · OFL · 0.17 KB/char</div>
+    <div class="demo f"></div></div>
+  <div class="row" data-f="sp_yuji_syuku"><div class="lab"><b>Yuji Syuku</b>rejected · lacks 汴 腳 說 稅 內 (see the box in 腳)</div>
+    <div class="demo f"></div></div>
+</section>
+
+<section id="text">
+  <h2>(b) Text: bubbles, name tags, help, scroll HUD (13–16 px)</h2>
+  <div class="row" data-t="sp_wenkai_med"><div class="lab"><b>霞鶩文楷 TC Medium</b><span class="pick">PICK</span> · OFL · 0.24 KB/char</div><div class="demo t"></div></div>
+  <div class="row" data-t="sp_wenkai_reg"><div class="lab"><b>霞鶩文楷 TC Regular</b>thinner at 13 px · OFL</div><div class="demo t"></div></div>
+  <div class="row" data-t="sp_cactus"><div class="lab"><b>仙人掌明體 Cactus Classical Serif</b>alternate 1 · 傳承字形 print · OFL · 0.15 KB/char</div><div class="demo t"></div></div>
+  <div class="row" data-t="sp_zhuque"><div class="lab"><b>朱雀仿宋 Zhuque Fangsong</b>alternate 2 · 宋刻本 lineage · OFL · 0.30 KB/char</div><div class="demo t"></div></div>
+  <div class="row" data-t="sp_iming"><div class="lab"><b>一點明體 I.Ming</b>checked · IPA licence</div><div class="demo t"></div></div>
+  <div class="row" data-t="sp_iansui"><div class="lab"><b>芫荽 Iansui</b>checked · OFL · softer</div><div class="demo t"></div></div>
+</section>
+
+<section id="phone">
+  <h2>Phone, real size (390 px wide): the picks together</h2>
+  <div style="display:flex; gap:40px; align-items:flex-start">
+    <div class="phone"><div class="sky"></div>
+      <div class="toastp">孫羊正店<small>正店 · 酒樓</small></div>
+      <div class="bubble">客官，修個面？</div>
+      <span class="tag" style="left:40px; top:130px">待詔</span>
+      <div class="bubble b2">抬頭，莫動，這刀快。</div>
+      <span class="tag" style="left:170px; top:250px">客人</span>
+      <span class="tag" style="left:280px; top:330px">稅吏</span>
+      <span class="tag" style="left:40px; top:330px">更夫</span>
+    </div>
+    <div class="lab" style="max-width:420px">Bubble 15 px, name tags 13 px (WenKai TC Medium), toast 26 px (Bakudai) over a stand-in sky.
+      This shot is taken at device pixel ratio 1, the worst case for legibility; phones are 2–3.</div>
+  </div>
+</section>
+
+<section id="seal">
+  <h2>(c) Seal: the brand seal 「上河」 (SVG) and seal-script / place seals</h2>
+  <div class="seals">
+    <figure><img src="../../../web/public/assets/ui/seal.svg" width="160" height="160" alt="seal"><figcaption>seal.svg 160 px</figcaption></figure>
+    <figure><img src="../../../web/public/assets/ui/seal.svg" width="64" height="64" alt="seal"><figcaption>64</figcaption></figure>
+    <figure><img src="../../../web/public/assets/ui/seal_small.svg" width="40" height="40" alt="seal"><figcaption>small 40</figcaption></figure>
+    <figure><img src="../../../web/public/assets/ui/seal_small.svg" width="24" height="24" alt="seal"><figcaption>24</figcaption></figure>
+    <figure><img src="../../../web/public/assets/ui/seal_small.svg" width="16" height="16" alt="seal"><figcaption>16</figcaption></figure>
+    <figure><img src="../../../web/public/assets/ui/seal_oval.svg" width="84" height="120" alt="oval seal"><figcaption>seal_oval.svg 閑章 「清朙」</figcaption></figure>
+    <figure><img src="seal/alt_qingming.svg" width="120" height="120" alt="alt seal"><figcaption>alternate square 「清朙」</figcaption></figure>
+    <figure><div style="font: 56px sp_lxgw_seal; letter-spacing: .1em">清明上宋東</div><figcaption>霞鶩篆書 LXGW Seal (清明上宋東)</figcaption></figure>
+    <figure><div style="display:flex; gap:8px"><span class="ps" style="font-family:sp_bakudai_reg; font-size:30px">門</span><span class="ps" style="font-family:sp_bakudai_reg; font-size:30px">稅</span><span class="ps" style="font-family:sp_bakudai_reg; font-size:30px">鋪</span><span class="ps" style="font-family:sp_bakudai_reg; font-size:30px">樓</span><span class="ps" style="font-family:sp_bakudai_reg; font-size:30px">橋</span></div><figcaption>place seals: display face, white on red</figcaption></figure>
+  </div>
+</section>
+
+<section id="logo">
+  <h2>Logo: 清明上河圖 in Huizong's own 瘦金 (楷書千字文卷, 1104), with the seal 「上河」</h2>
+  <div class="logo">
+    <figure style="margin:0"><img src="../../../web/public/assets/ui/logo_h.svg" style="width:560px" alt="logo_h"><figcaption class="lab">logo_h.svg (shipped; traced from the public-domain Commons scan)</figcaption></figure>
+    <figure style="margin:0"><img src="../../../web/public/assets/ui/logo_v.svg" style="height:300px" alt="logo_v"><figcaption class="lab">logo_v.svg</figcaption></figure>
+    <figure style="margin:0"><img src="../../../web/public/assets/ui/logo_col.svg" style="height:300px" alt="logo_col"><figcaption class="lab">logo_col.svg (title-slip column)</figcaption></figure>
+    <figure style="margin:0; background:var(--mount); padding:18px 24px"><img src="../../../web/public/assets/ui/logo_h_light.svg" style="width:300px" alt=""><figcaption class="lab" style="color:#efe4cc">logo_h_light.svg on the mount brown</figcaption></figure>
+  </div>
+  <div class="logo" style="margin-top:22px">
+    <figure style="margin:0"><img src="logo/logo_h_shmuseum.svg" style="width:560px" alt="logo_h_shmuseum"><figcaption class="lab">not shipped: the same five characters traced from the Shanghai Museum's sharper 2025 photo (licence question)</figcaption></figure>
+    <figure style="margin:0"><img src="logo/logo_v_shmuseum.svg" style="height:300px" alt="logo_v_shmuseum"><figcaption class="lab">logo_v, museum photo</figcaption></figure>
+    <figure style="margin:0"><img src="../../../web/public/assets/ui/logo_h.svg" style="width:180px" alt=""><figcaption class="lab">phone size: 180 px</figcaption></figure>
+  </div>
+</section>
+
+<script>
+for (const row of document.querySelectorAll('[data-f]')) {
+  const f = row.dataset.f, d = row.querySelector('.demo');
+  d.style.fontFamily = f + ', serif';
+  if (row.dataset.ls) d.style.setProperty('--ls', row.dataset.ls);
+  d.innerHTML = `<div class="vban">虹橋<span class="ps" style="font-family:${f}">橋</span></div>
+    <div class="toast">孫羊正店<small>正店 · 酒樓</small></div>
+    <div class="region">城門<span>東角子門</span></div>
+    <div class="toast" style="font-size:28px">十千腳店</div>
+    <div class="region" style="font-size:40px">趙太丞家 · 汴河</div>`;
+}
+for (const row of document.querySelectorAll('[data-t]')) {
+  const f = row.dataset.t, d = row.querySelector('.demo');
+  d.style.fontFamily = f + ', serif';
+  d.innerHTML = `<div class="bubble">客官，修個面？</div>
+    <span class="tag">待詔</span> <span class="tag">稅吏</span>
+    <div class="sizes"><p class="s13">13 px「匹帛稅重，照例該納這個數。」樓內架著一面大鼓。</p>
+      <p class="s15">15 px「引子拿來。沒有引子，照重稅算。」</p>
+      <p class="s16">16 px「看，那尾鯉魚又上來了。」本是防火的鋪屋。</p></div>
+    <div class="hud">清明上河圖 · 城門 · 午時三刻</div>`;
+}
+</script>
+</body>
+</html>

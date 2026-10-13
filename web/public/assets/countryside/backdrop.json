@@ -1,0 +1,39 @@
+{
+ "about": "The painted backdrop beyond the walkable area of S1 (countryside, scan u 29050-37610, the scroll's start) (map/BUILDING.md: painting, not models). tools/backdrop.mjs restyles each panel from the scroll strip that lies past that edge (scan rect u0,v0,u1,v1) with prompts/backdrop_panel.txt + the panel's content prompt (prompts/backdrop_countryside_<side>.txt): seen at eye level on plain white, which ship keys out with clean edges; it measures the painted horizon, and web/src/backdrop.js stands the panel on the ring (angles: 0 = east, 90 = north, 180 = west) at its true aspect with that horizon at eye level, its foot in ground mist. Everything outside the painted area is veiled in mist (the scroll's blank silk). West is S2 (the canal, u 20500-29050), being built at the same time: with streaming its panel stands in whenever S2 is not loaded, and drops when it is. East is the silk's own start (u 37610): nothing is painted beyond it (rule 4), mist only; the seals at u 37250-37560 are never painted. North: mist (the reason is in picked.north). South (below the silk's bottom edge): mist only. Ring radius 95, not the 70 of the earlier sections: S1's painted area is 135 m wide (X 267-402), so its corners lie 47-69.5 m from its centre and a 70 m circle passed 0.5 m from the south-west corner, standing the west panel on the edge wall; at 95 the ring keeps the 25 m margin the page keeps past the outer seams when joined (backdrop.js: max(R - halfOne, 25)), and the west panel stands 25-48 m past the seam, as the earlier sections' panels stand 26-49 m past theirs. The radius matters only alone (?sections=countryside) and when S1 is the westmost loaded section (the joined ring's north-south depth comes from the westmost loaded section's backdrop.json); the panel's measurements do not depend on it.",
+ "ring": {
+  "radius": 95,
+  "bottom": -3,
+  "top": 24
+ },
+ "mist": {
+  "start": 0.6,
+  "full": 9
+ },
+ "size": "3584x1280",
+ "panels": [
+  {
+   "side": "west",
+   "angle": 176,
+   "width": 37,
+   "scan": [
+    25300,
+    0,
+    29050,
+    1790
+   ],
+   "content": "backdrop_countryside_west",
+   "candidates": 2,
+   "pick": 0,
+   "picked": "2026-10-12, draw 1 (candidates 0-1, one gen of 2 images). Picked 0. It holds what the strip paints, in the viewer's frame: on the left the river running away to the horizon with no far bank (white mist beyond), the small plain boat nearest with its big rudder and a mooring line, the deep-laden grain boat with its mat hood, heaped coiled cargo and ladders, then boats under barrel-vaulted mat hoods along the bank; on the right the long open eating shed under a hipped thatched roof with a lower skirt roof, many diners at tables, the light-robed man on a stool at its near end holding the small dark donkey's lead; the brick fire-watch platform with its wooden stair and the open pavilion with a pyramidal tiled roof and round finial, nobody in it; three pollards with fans of stiff shoots behind the shed (none weeping); on the wharf two porters bent under grain sacks, the stout man seated on the heap of sacks, two men shaking hands; the two poles leaning into an A with the pennant cord, and the pole frame behind; the house with a balcony under its gable; the great pollard willow leaning over the bank with the railed walkway beside it, and behind it the big eating shed with its round parasol; the white-walled house and the long tiled halls at the far end; along the far right a horse with its head down by a round-topped cart under a shed. S1's own great willow is left out, as asked. Its departures: the fire-watch platform stands against the shed's near (east) end instead of behind the shed's west half; the boats run on as six or seven, two more than the strip's five, the extra ones small at the far left in the end fade; the far halls have no lattice doors or open windows to read, and the paper shop with its signboard is not clear (perhaps the shop with shelves at the far right); green grass tufts on the wharf. Measured: ground strip 0.1133 of the width (a street-like deep wedge, as every street panel: 0.055-0.106), horizon 0.602 and foot 0.918 of the raw height, near-white 0.7%; alone (ring 95, arc 61 m) the page lifts it about 2.7 m, its horizon about 1.6 deg over the eye from S1's centre and 3.9 deg from the seam's middle (shipped street panels stand 2.6-4.1 deg). Rejected: 1 (ground strip 0.0859, lift about 1.1 m, near-white 6.5%: its pollard crowns key pale and glow on the night row) puts the platform rightly behind the shed but makes the shed a square pavilion, adds a second pair shaking hands and drops the bent porters, and lines the river bank with five or six more pollards and a long street of houses running to the horizon (the strip has one great willow by the jetty and a long-roofed hall closing the view)",
+   "why": "S2 (the canal, u 20500-29050) lies past the west seam and is being built now; the panel stands in whenever it is not loaded. Its strip is S2's east wharves, u 25300-29050 (48.7 m of scroll, the stretch beyond the seam): nearest the thatched eating shed (望楼饭铺) with the donkey and its seated owner, the 望火楼 on its brick platform, the grain porters' wharf with the two grain boats (万石船) and the small boat at the bottom, the tiled shed, the lower eating shed with its pennant poles, the pole frame and 王家纸马铺 at the top, the great willow by the jetty and the big eating shed, then the white-walled house, the warehouse, 沿河雅座 and the open shop with the curtain, and the far street along the top; the two moored boats by the halls. Its west end, u 25300, is just past 逆水行舟's stern (u ~25290), so that boat and its trackers (u 21000-25290) are left out whole; the mat-canopy boat (25145-26090) loses only its bow tip. S2 is 8550 px long; one panel of the whole would crowd 111 m of the river into one 2.8:1 image. The strip's bottom-right corner holds most of S1's own great willow (S1.tree.willow_burl_29090: bole u 28960-29250 at the bottom edge, whips west to u ~28585, v 750-1790), built in 3D on this side of the seam: the content prompt tells the model to leave it out (the strip cannot: the tool joins whole-height rects only). Angle and width from S1's centre (334.50, 13.07): the seam runs from the nw corner (290.62, 30.54) at 158.3 deg to the sw corner (267.21, -4.39) at 194.5 deg, so the panel is centred on 176 and as wide (37); from the seam's middle it fills about 80 deg of the view, its left (south) end over the river, its right (north) end over the far street",
+   "horizon": 0.4794,
+   "foot": 0.9139,
+   "aspect": 3.8352
+  }
+ ],
+ "picked": {
+  "east": "mist, no panel: the silk's own start (u 37610) is past S1's east edge, and nothing is painted beyond it (map/BUILDING.md rule 4; build_rules.md, Panels). The seals at u 37250-37560 are never painted.",
+  "north": "mist, no panel (read on the scan, u 28700-37610, v 0-600, 2026-10-12): the silk's top band paints open ground that runs on to the top edge only at S1's west end, u ~29050-30100 (S1.grd.terraced_fields_29450: banked fields cut by the top edge, with the diagonal path, a few far figures and a dark animal). From u ~30200 to 31300 the top edge cuts the crowns of the far pollard willows over the tomb-sweeping party's path, and from u ~31300 to the silk's start the crowns of the great willows, the farmsteads' bare elms and the grove stand against blank silk with nothing painted above them (the scroll's opening mist; v 0-200 empty over u 33300-37610). The page stands a north panel over the section's whole top edge (its nw to ne corners plus 12% each side, 135 m here), so a panel of the fields would invent open fields over nine-tenths of an edge where the painter left blank silk. The gate's rule (a north panel only where the top band paints open ground that runs on) does not hold for the edge as a whole: mist, which is loyal.",
+  "south": "mist only, below the silk's bottom edge (as every section)."
+ }
+}

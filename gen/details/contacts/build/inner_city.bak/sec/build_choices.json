@@ -1,0 +1,94 @@
+{
+ "about": "Where the build of the inner city (S6) departs from the scroll map, and why (map/BUILDING.md). moves: positions (metres, X east, D north), applied by tools/map_layout.mjs on top of map/world/S6.json when it writes layout.json. how: an entity built differently from its kind's default (tools/loyalty_check.mjs). unbuilt: mapped entities not built yet, with the reason and who decided. edges: how the walkable area is closed and what is shown beyond it. Sizes chosen by the builder are marked 'choice:' in blender/inner_city_scene.py and listed in sections/inner_city/notes.md. Real size everywhere (the user, 2026-10-12): positions and footprints from the map, heights and the sizes of things real.",
+ "moves": {
+  "S6.veh.barrow_casks_3300": {
+   "dX": 1.25,
+   "dD": -1.25,
+   "why": "painted beside the lead mules of the big wagon's team; at real size the team (two ranks of two mules ahead of the wagon's shafts) reaches over its spot, so the barrow and the man pushing it (people.json nudge) stand 1.8 m south-east, at the mouth of the cross street"
+  },
+  "S6.prop.table_upper_5497": {
+   "dX": -0.9,
+   "dD": 0.0,
+   "why": "the 正店's upper storey ends at the wine depot's west wall (X -47.1; painted, its east room runs on over the depot, but the gate's builder makes the depot 4 m deep): the east room's table and what is on it shift 0.9 m west with its end wall"
+  },
+  "S6.prop.ewer_upper_5507": {
+   "dX": -0.9,
+   "dD": 0.0,
+   "why": "the 正店's upper storey ends at the wine depot's west wall (X -47.1; painted, its east room runs on over the depot, but the gate's builder makes the depot 4 m deep): the east room's table and what is on it shift 0.9 m west with its end wall"
+  },
+  "S6.prop.dishes_upper_5475": {
+   "dX": -0.9,
+   "dD": 0.0,
+   "why": "the 正店's upper storey ends at the wine depot's west wall (X -47.1; painted, its east room runs on over the depot, but the gate's builder makes the depot 4 m deep): the east room's table and what is on it shift 0.9 m west with its end wall"
+  },
+  "S6.tree.pine_4430": {
+   "dX": 1.1,
+   "dD": -1.6,
+   "why": "its estimated base (hidden behind the roofs) falls inside the corner shop at the crossroads; moved 1.9 m along its painted receding line (towards the viewer) so its trunk stands in the yard between the corner shop and the 正店's west end, behind the butcher's shop, rising behind the roofs as painted"
+  },
+  "S6.ani.mule_lower_3_3498": {
+   "dX": -2.16,
+   "dD": 0.75,
+   "why": "the wagon's team (four mules painted overlapping, ~1 m ahead of the wagon) set out at real size: the rear pair (shaft mule, mule 3) on the wagon's axis just ahead of its shafts, the lead pair 2.4 m further on turning 10 deg south as the team swings onto the main street (painted heading 195 would put their heads in the incense shop's scaffold)"
+  },
+  "S6.ani.mule_lower_shaft_3560": {
+   "dX": -3.21,
+   "dD": 1.11,
+   "why": "the wagon's team (four mules painted overlapping, ~1 m ahead of the wagon) set out at real size: the rear pair (shaft mule, mule 3) on the wagon's axis just ahead of its shafts, the lead pair 2.4 m further on turning 10 deg south as the team swings onto the main street (painted heading 195 would put their heads in the incense shop's scaffold)"
+  },
+  "S6.ani.mule_lower_1_3427": {
+   "dX": -2.94,
+   "dD": -0.84,
+   "why": "the wagon's team (four mules painted overlapping, ~1 m ahead of the wagon) set out at real size: the rear pair (shaft mule, mule 3) on the wagon's axis just ahead of its shafts, the lead pair 2.4 m further on turning 10 deg south as the team swings onto the main street (painted heading 195 would put their heads in the incense shop's scaffold)"
+  },
+  "S6.ani.mule_lower_2_3462": {
+   "dX": -3.86,
+   "dD": -0.44,
+   "why": "the wagon's team (four mules painted overlapping, ~1 m ahead of the wagon) set out at real size: the rear pair (shaft mule, mule 3) on the wagon's axis just ahead of its shafts, the lead pair 2.4 m further on turning 10 deg south as the team swings onto the main street (painted heading 195 would put their heads in the incense shop's scaffold)"
+  },
+  "S6.ani.mule_upper_1_3585": {
+   "dX": 0.37,
+   "dD": -0.24,
+   "why": "the upper team (four mules painted overlapping in one line ahead of the hidden wagon) set out at real size as two ranks of two on the wagon's axis, the rear pair just ahead of its shafts, the lead pair 2.4 m further on"
+  },
+  "S6.ani.mule_upper_2_3620": {
+   "dX": 0.01,
+   "dD": 0.41,
+   "why": "the upper team (four mules painted overlapping in one line ahead of the hidden wagon) set out at real size as two ranks of two on the wagon's axis, the rear pair just ahead of its shafts, the lead pair 2.4 m further on"
+  },
+  "S6.ani.mule_upper_3_3655": {
+   "dX": 1.96,
+   "dD": -0.51,
+   "why": "the upper team (four mules painted overlapping in one line ahead of the hidden wagon) set out at real size as two ranks of two on the wagon's axis, the rear pair just ahead of its shafts, the lead pair 2.4 m further on"
+  },
+  "S6.ani.mule_upper_lead_3690": {
+   "dX": 1.65,
+   "dD": 0.07,
+   "why": "the upper team (four mules painted overlapping in one line ahead of the hidden wagon) set out at real size as two ranks of two on the wagon's axis, the rear pair just ahead of its shafts, the lead pair 2.4 m further on"
+  },
+  "S6.ani.donkey_wine_cart_3191": {
+   "dX": 0.0,
+   "dD": -0.25,
+   "why": "painted two abreast but overlapping; set 0.5 m apart side by side (real bodies)"
+  },
+  "S6.ani.donkey_wine_cart_3105": {
+   "dX": 0.0,
+   "dD": 0.3,
+   "why": "painted two abreast but overlapping; set 0.5 m apart side by side (real bodies)"
+  },
+  "S6.ani.donkey_team_dark_5300": {
+   "dX": 0.0,
+   "dD": 0.12,
+   "why": "painted two abreast but overlapping; set 0.5 m apart side by side (real bodies)"
+  }
+ },
+ "how": {},
+ "unbuilt": {},
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): layout painted_area, i.e. the section's seams at u 2000 (S7) and u 5600 (the gate, S5) and the silk's top and bottom edges, on the ground",
+   "why": "outside the painted area the scroll paints nothing for this section; the far street at the top of the silk stays walkable (the lead, 2026-10-12: real size everywhere, no stage set)",
+   "beyond": "painting, not models: west, S7 (the 解 building, 赵太丞家, the official's gatehouse, the willows to the cut edge) as a painted panel until it is built; south, mist (below the silk's edge); north, mist (the silk's top edge cuts the far row: nothing is painted above it); east, the gate (S5), built"
+  }
+ }
+}

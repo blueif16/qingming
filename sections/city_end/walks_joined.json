@@ -1,0 +1,56 @@
+[
+ {
+  "label": "joined: the street west -> east across the S6 seam (X -86.0 at D 6.9) into the inner city",
+  "start": [-93.5, 6.9],
+  "legs": [[0, 5.5]],
+  "expect": {"X": [-82.2, -80.8], "D": [6.5, 7.4], "H": [-0.2, 0.3]},
+  "why": "on the joined page the seam walls are dropped; D 6.9 passes north of the retinue and south of S6's paper-stall crowd"
+ },
+ {
+  "label": "joined: the street east -> west from the inner city across the seam to 赵太丞家",
+  "start": [-80.5, 7.0],
+  "legs": [[180, 5.5]],
+  "expect": {"X": [-93.2, -92.0], "D": [6.6, 7.4], "H": [-0.2, 0.3]}
+ },
+ {
+  "label": "joined: square through the seam on the street toward S6's square well (the alone page stops at X -88.0)",
+  "start": [-90.0, 8.6],
+  "legs": [[33, 2.0]],
+  "expect": {"X": [-86.8, -85.9], "D": [10.6, 11.3]}
+ },
+ {
+  "label": "joined: from S6's well (north of its platform) round S7's box shed into the strip behind 赵太丞家",
+  "start": [-88.6, 14.15],
+  "legs": [[180, 1.0], [135, 1.5]],
+  "expect": {"X": [-93.1, -92.0], "D": [15.2, 16.6]},
+  "why": "the only way from the street to S7's back halls and courtyards: between S7.str.box_shed_1855's north-east corner (-91.17, 14.34) and S6.bld.house_well_2020's south-west corner (-90.65, 14.93), 0.79 m apart"
+ },
+ {
+  "label": "joined: from S6's top street west between its north range and far house into S7's courtyard at the top",
+  "start": [-84.5, 25.55],
+  "legs": [[180, 3.5], [225, 3.0]],
+  "expect": {"X": [-97.4, -96.4], "D": [20.4, 21.4]},
+  "why": "S6's top street runs on west between S6.bld.north_range_2283 (north wall D 24.96) and S6.bld.far_house_1859 (front D 26.11), then south-west across the seam (X -95.8 at D 22.4) into the courtyard east of S7's north-south hall"
+ },
+ {
+  "label": "joined: S7's courtyard at the top east across the seam to S6's north range",
+  "start": [-97.6, 23.0],
+  "legs": [[0, 3.0]],
+  "expect": {"X": [-92.6, -91.9], "D": [22.7, 23.3]},
+  "why": "the courtyard east of the north-south hall runs on into S6's west margin; S6.bld.north_range_2283's west wall is X -91.84"
+ },
+ {
+  "label": "joined: past the 解 building's north-east corner, east along D 2.6 into S6's street north of the 解 ring",
+  "start": [-84.0, 2.6],
+  "legs": [[0, 2.6]],
+  "expect": {"X": [-79.0, -77.6], "D": [2.2, 2.9]},
+  "why": "the 解 building's NE corner is (-81.08, -0.2); S6's mat awning (D 0..2.05) and its seated ring lie south of the line"
+ },
+ {
+  "label": "joined: from S6's 解 ring west under the 解 building's east eave (the seam dropped) to its east wall",
+  "start": [-78.0, -1.9],
+  "legs": [[180, 1.5]],
+  "expect": {"X": [-80.8, -80.2], "D": [-2.3, -1.5]},
+  "why": "between the post and stand (D -3.2..-3.4) and S6's bench and seated listeners (D -0.3..-0.9); the eave strip's east side is the seam"
+ }
+]

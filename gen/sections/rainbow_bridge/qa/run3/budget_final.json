@@ -1,0 +1,95 @@
+{
+ "budgets": {
+  "about": "The size budget per section that tools/budget_check.mjs checks (proposed by the engine round, 2026-10-12, from S6 inner_city, S5 gate and S4 outer_road part 1 as shipped with KTX2 textures, plus headroom). A new section must PASS before it joins the world. The page holds three sections at once (yours and each neighbour, web/src/world.js), so the window budget is what a phone holds: about 200 MB of sections, plus the fixed render targets (about 60 MB on a phone at the 1.5 pixel-ratio cap), plus 100-150 MB of JS, well under the 1-1.5 GB at which an iPhone Safari tab dies. Measured on the desktop GPU, where ETC1S copies become BC7 (8 bits a pixel; a phone gets ETC1, 4); the texture MB estimates use the phone's formats.",
+  "section": {
+   "download_mb": 9,
+   "download_mb_why": "the section's GLB, its layout/people/scene/backdrop JSON, its panels and the tree cards it plants (KTX2 where adopted): 4.8 / 7.7 / 7.5 MB now, the cards 2.5-5.4 of it",
+   "download_with_shared_mb": 20,
+   "download_with_shared_mb_why": "plus the kit swatches its GLB uses and every character and animal it casts (GLB + KTX2 copies): 15.3 / 16.0 / 16.4 MB now; the first visit's worst case, shared things come from cache after",
+   "triangles_k": 130,
+   "triangles_k_why": "drawn triangles: 119.5k / 107.2k / 109.6k now; the web-scene skill's budget (about 38 per m2 at full detail, 130k for a 74 x 46 m section)",
+   "collider_triangles_k": 5,
+   "collider_triangles_k_why": "collider-only (hidden__) meshes: 0.6-1.2k now; invisible walls, trunks and ramps are boxes, not meshes",
+   "texture_own_mb": 24,
+   "texture_own_mb_why": "its panels and tree cards on the GPU (KTX2): 7.8 / 18.3 / 15.0 MB now; 69 MB for the gate as webp, so a section that ships cards without running tools/ktx2.mjs fails here",
+   "people": null,
+   "people_why": "every painted figure and animal (map/BUILDING.md): the painting sets the number, reported only (197 / 93 / 81 now)",
+   "draw_calls": 330,
+   "draw_calls_why": "all passes (colour, ink normals, shadow) at its worst camera spot, alone: 278 / 224 / 215 now",
+   "gpu_mb": 75,
+   "gpu_mb_why": "measured alone in a headless load (web/src/gpumem.js) once the crowd's bakes are done, minus the fixed render targets: 59.7 / 46.7 / 49.4 MB now (122-131 MB as webp)"
+  },
+  "window": {
+   "gpu_mb": 200,
+   "gpu_mb_why": "the most three neighbouring sections take together (each measured alone, so characters and kit shared between them are counted twice: an upper bound): 156 MB now"
+  }
+ },
+ "rows": [
+  {
+   "name": "rainbow_bridge",
+   "people": 241,
+   "download": {
+    "own": 7.922280311584473,
+    "glb": 3.0171661376953125,
+    "json": 0.45093441009521484,
+    "panels": 0.44037437438964844,
+    "cards": 4.013805389404297,
+    "kit": 1.2226877212524414,
+    "cast": 16.951491355895996
+   },
+   "triangles": {
+    "drawn": 107390,
+    "collider": 2340
+   },
+   "textures": {
+    "own": 13.271484375,
+    "kit": 3.9999999999999996,
+    "cast": 12.264322916666666
+   },
+   "geometryMB": 3.6867332458496094,
+   "castN": 29,
+   "cast": [
+    "robed_man",
+    "boatman",
+    "camel_driver",
+    "porter",
+    "townsman",
+    "scholar",
+    "carter",
+    "sightseer",
+    "idler",
+    "straw_hat",
+    "dark_hat",
+    "storyteller",
+    "youth",
+    "fortune_teller",
+    "groom",
+    "inspector",
+    "woman",
+    "child",
+    "elder",
+    "bearer",
+    "child_red",
+    "grain_porter",
+    "child_robed",
+    "tracker",
+    "hat_traveller",
+    "butcher",
+    "horse",
+    "horse_dark",
+    "donkey_dark"
+   ]
+  }
+ ],
+ "measured": {
+  "rainbow_bridge": {
+   "calls": 316,
+   "callsAt": "east_seam",
+   "tris": 2850625,
+   "gpuMB": 80.16999999999999,
+   "fixedMB": 91.77000000000001,
+   "peopleLoaded": 241,
+   "errors": []
+  }
+ }
+}

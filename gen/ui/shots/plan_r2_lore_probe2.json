@@ -1,0 +1,16 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "shots": [
+    { "name": "d_day_toast_open", "hour": 10, "at": "inner_city:spawn",
+      "js": "t.ui.help(false); await new Promise(r=>setTimeout(r,4500)); t.ui.toast('S6.bld.sunyang_zhengdian', true); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().places;", "wait": 200 },
+    { "name": "d_day_journal_tabs",
+      "js": "t.ui.discover(['r:shizijie','r:chengmen','S6.bld.sunyang_zhengdian','S6.fig.storyteller_3822','S6.str.square_well_2000','S5.bld.tax_office','S5.str.gate_tower','S5.str.moat_bridge','t:V5.1']); await t.ui.journal.open('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,2500)); const tabs=[...document.querySelectorAll('.qm-jn-tab')].map(b=>{const s=b.querySelector('.qm-jn-tab-seal'); const r=s.getBoundingClientRect(); const cs=getComputedStyle(s); return [b.title, Math.round(r.width), Math.round(r.height), cs.display, cs.flexDirection, cs.writingMode, getComputedStyle(b).display, getComputedStyle(b).writingMode]}); return tabs;", "wait": 300 },
+    { "name": "d_day_hud_marks",
+      "js": "t.ui.journal.close(); await t.hud.show(); t.hud.zoomBy(1/1.6); await new Promise(r=>setTimeout(r,3500)); return t.hud.stats();", "wait": 300 }
+   ]
+  }
+ ]
+}

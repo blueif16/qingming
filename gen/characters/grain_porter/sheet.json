@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a Song wharf and cart porter who carries grain sacks: a sturdy adult man, about 6.5 heads tall, a square tanned face with dark dot eyes, a short black moustache and a short chin beard, black hair under a small pointed dark grey cloth cap (a kerchief knotted on top, its tip standing up). A short white hemp jacket with a crossed collar and short wide sleeves, hanging loose to the hips; over it a dark brown cloth wrapped round the hips and tied at the waist, hanging like an apron to the knees; loose white trousers rolled up to mid-calf, bare lower legs and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/grain_porter/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 37.6,
+ "attempts": 1,
+ "idempotency_key": "03991569-8969-4807-9edb-856379427baa",
+ "request_id": "3a283ab9-2031-48e0-abf0-ce3838910c16",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3371,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 389
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3371,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 389
+  },
+  "total_tokens": 4955
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/23b3af10-b343-4965-87e6-d3a8a3400b2c"
+ ],
+ "files": [
+  "gen/characters/grain_porter/sheet_0.png"
+ ]
+}

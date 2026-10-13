@@ -1,0 +1,76 @@
+{
+ "about": "Config for tools/font_subset.py (usage: gen/ui/fonts/README.md). Shared: the ui agent may add globs to 'sources' and characters to 'extra' or 'core'; the type agent owns the font choices. Fonts and licences: gen/ui/fonts/CHOICE.md. A role's 'lazy' groups (suffix -> sources) become <role>-<suffix>.woff2, fetched only when their text shows (tools/font_subset.py docstring); a source starting with '!' is excluded from the main sources.",
+ "out_dir": "web/public/assets/ui/fonts",
+ "always": "「」『』，。？！、…·：；（）《》〈〉——～",
+ "roles": {
+  "display": {
+   "family": "QM Display",
+   "font": "gen/ui/fonts/src/bakudai/Bakudai-Regular.ttf",
+   "licence": "SIL OFL 1.1 (莫大毛筆字體 Bakudai, from 青柳衡山 衡山毛筆フォント); see CHOICE.md",
+   "stack": "\"QM Display\", \"QM Text\", \"BiauKai\", \"DFKai-SB\", \"Kaiti TC\", \"STKaiti\", \"KaiTi\", serif",
+   "size_adjust": "118%",
+   "no_always": true,
+   "sources": [
+    "sections/*/places.json#name,sub,seal",
+    "sections/*/talk.json#title"
+   ],
+   "extra": "清明上河圖 汴京 東京 汴河 張擇端 宋 今靜緩常疾 歸 設定視角聲音介面畫面進階耗費 志",
+   "core": "",
+   "licence_file": [
+    "gen/ui/fonts/src/bakudai/COPYRIGHT.txt",
+    "gen/ui/fonts/src/bakudai/OFL.txt",
+    "gen/ui/fonts/src/bakudai/KOUZAN_BASE_TERMS.txt"
+   ],
+   "lazy": {
+    "lore": [
+     "web/src/ui/journal_words.js",
+     "gen/ui/lore/colophons.json#title,who"
+    ]
+   }
+  },
+  "text": {
+   "family": "QM Text",
+   "font": "gen/ui/fonts/src/lxgw_wenkai_tc/LXGWWenKaiTC-Medium.ttf",
+   "licence": "SIL OFL 1.1 (霞鶩文楷 TC / LXGW WenKai TC, Medium); see CHOICE.md",
+   "stack": "\"QM Text\", \"BiauKai\", \"DFKai-SB\", \"Kaiti TC\", \"STKaiti\", \"KaiTi\", \"Noto Serif TC\", serif",
+   "latin": true,
+   "sources": [
+    "sections/*/talk.json#name,say,think,title",
+    "sections/*/places.json#name,sub,line",
+    "web/src/ui/**/*.js",
+    "!web/src/ui/settings_words.js",
+    "!web/src/ui/journal_words.js",
+    "!web/src/ui/journal.js",
+    "web/src/ui/**/*.json",
+    "web/ui.html",
+    "web/world.html",
+    "web/src/scroll_hud.js",
+    "web/src/sound.js"
+   ],
+   "extra": "清明上河圖 汴京 東京 張擇端",
+   "core": "清明上河圖汴京展卷載入中請稍候輕觸開始入城行走",
+   "licence_file": "gen/ui/fonts/src/lxgw_wenkai_tc/OFL.txt",
+   "lazy": {
+    "settings": [
+     "web/src/ui/settings_words.js"
+    ],
+    "lore": [
+     "sections/*/places.json#long,quote,quoteSrc,cite",
+     "gen/ui/lore/colophons.json#title,lead,who,text,gloss",
+     "web/src/ui/journal_words.js",
+     "web/src/ui/journal.js"
+    ]
+   }
+  },
+  "seal": {
+   "family": "QM Seal",
+   "font": "gen/ui/fonts/src/lxgw_seal/LXGWSeal-Regular.ttf",
+   "licence": "SIL OFL 1.1 with the web-subset permission for the Reserved Font Names (霞鶩篆書 / LXGW Seal); see CHOICE.md",
+   "stack": "\"QM Seal\", \"QM Display\", serif",
+   "no_always": true,
+   "sources": [],
+   "extra": "清明上宋東",
+   "licence_file": "gen/ui/fonts/src/lxgw_seal/OFL.txt"
+  }
+ }
+}

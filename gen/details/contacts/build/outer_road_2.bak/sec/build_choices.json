@@ -1,0 +1,292 @@
+{
+ "about": "Where the build of S4b (outer road part 2, u 12600-15500) departs from the scroll map, and why (map/BUILDING.md). moves: positions (metres, X east, D north), applied by tools/map_layout.mjs on top of map/world/S4b.json when it writes layout.json. how: an entity built differently from its kind's default (tools/loyalty_check.mjs). unbuilt: mapped entities not built yet, with the reason. edges: the walkable area's walls. boats: the boat kit's options per boat (blender/build_boats.py), each with its reason. The moorings' plan (every hull's gunwale outline against its neighbours and the shores) is the area agent's scratch script boat_plan.py / solve.py (session scratchpad S4b_run2_lead/), summarised in sections/outer_road_2/notes.md.",
+ "moves": {
+  "S4b.veh.boat_arched_awning_14945": {
+   "dX": 1.6,
+   "dD": 0.15,
+   "why": "the moorings at real size (BUILDING.md 'Boats and water'): shortened to 0.6 of its type (12 m against its painted 6.1 m, west half hidden) its hull, centred on the painted midpoint, ran 0.9 m onto the bank at its bow and 0.3 m into the big cabin boat; moved outward (east, over open water) 1.6 m until its raked bow's top (1.5 m past the stem) no longer lies over the bank top (the shore walls stood across its foredeck: QA), and 0.15 m north to clear the big boat (0.36 m)"
+  },
+  "S4b.veh.boat_mat_cargo_14900": {
+   "dX": 3.75,
+   "dD": 2.1,
+   "why": "rafted between the arched-awning boat and the long boat, whose painted centre lines are 1.8 m from it, under any real beam: at 0.6 of its type (12 x 3.1 m) it moves 2.1 m north to clear the arched boat (0.24 m gap); outward (east) 1.35 m so its stem reaches the shore, and 2.4 m more so that its painted gangplank has a gap to span (the bow's raked top otherwise lies over the bank path and the plank could not run from the bank down to its deck, as painted)"
+  },
+  "S4b.veh.boat_long_cabin_14850": {
+   "dX": 5.6,
+   "dD": 4.35,
+   "why": "next north in the raft: at 0.6 of its type (11.4 x 3.0 m) it moves 4.35 m north to clear the mat-cargo boat (0.39 m gap) and 5.6 m east (outward), so its raked bow clears the cove's north-west bank and the top house's east wall (at 4.05 m its bow lay 1.3 m over the bank top and against the wall: QA); the room comes from the far bank moved north (how: S4b.water.bian_river)"
+  },
+  "S4b.veh.boat_round_mat_15025": {
+   "dX": 0.9,
+   "dD": 5.7,
+   "why": "the top of the raft, its stern painted over the long boat's middle (behind it, north): built as a small awning boat 5 m long (choice, boats) at its painted heading 148, moved north with the raft 5.7 m to clear the long boat (0.15 m) and 0.9 m east to keep its bow at the cove's (moved) north-west shore, the painted landing"
+  },
+  "S4b.veh.boat_small_cabin_15182": {
+   "dX": 4.5,
+   "dD": 4.45,
+   "why": "the small boat along the far bank: moved north with the far bank (how: S4b.water.bian_river) and 4.5 m east (downstream along the far bank, outward over open water) so it doesn't share its band of water with the round boat's diagonal hull (0.19 m apart)"
+  },
+  "S4b.fig.seated_boatman_stern_15372": {
+   "dX": 1.6,
+   "dD": 0.15,
+   "why": "crew: goes with his boat (S4b.veh.boat_arched_awning_14945)"
+  },
+  "S4b.fig.boatman_dark_cap_15046": {
+   "dX": 5.6,
+   "dD": 4.35,
+   "why": "crew: goes with his boat (S4b.veh.boat_long_cabin_14850)"
+  },
+  "S4b.fig.boatman_light_hat_15066": {
+   "dX": 6.05,
+   "dD": 4.35,
+   "why": "crew: goes with his boat (S4b.veh.boat_long_cabin_14850, dX 5.6) and 0.45 m further aft along its south deck: painted 0.22 m from the boatman in the dark cap, the two figures would stand inside each other at real size"
+  },
+  "S4b.bld.far_shed_15098": {
+   "dX": -2.26,
+   "dD": 5.5,
+   "why": "the far bank moved 5.5 m north along the frame's receding direction (how: S4b.water.bian_river): the shed on it goes with it"
+  },
+  "S4b.tree.far_bank_15308": {
+   "dX": -2.26,
+   "dD": 5.5,
+   "why": "on the far bank, moved with it (how: S4b.water.bian_river)"
+  },
+  "S4b.tree.far_bank_15230": {
+   "dX": -2.26,
+   "dD": 5.5,
+   "why": "on the far bank, moved with it (how: S4b.water.bian_river)"
+  },
+  "S4b.prop.table_14722": {
+   "dX": 0.9,
+   "why": "the customer in the dark cap is painted leaning on it, seated on his stool (stool_14840) 1.8 m east of its mapped centre: at real size (0.9 m long) its end stood 1.3 m short of his hands; moved east to his stool"
+  }
+ },
+ "how": {
+  "S4b.water.bian_river": {
+   "how": "ground",
+   "why": "one flat strip at the frame's water H -0.7 (kit_boats.water_strip) between the mapped near shore and the far shore MOVED 5.5 m north along the receding direction (dX -2.26, dD +5.5), the cove's north-west shore carried on along the same line to meet it, and both shores run on 16 m east past the S3 seam under the mist (S3 isn't built; the lead cuts the strip back to the seam when S3 joins, like the ground). Why the far bank moves: the six boats at real size (each at least 0.6 of its type) need about 20 m of water across, the painted cove holds 13-15 m (the far bank is painted at the silk's top edge at the painter's far-row scale, about 0.55-0.6); BUILDING.md and build_rules: where a far bank painted small leaves no room, make room with recorded moves, not by changing the frame. The far bank (S4b.grd.far_bank_15330) and everything on it move with the shore (moves)."
+  },
+  "S4b.grd.far_bank_15330": {
+   "how": "ground",
+   "why": "the far bank's slope and top, built from its mapped lines moved 5.5 m north with the far shore (how: S4b.water.bian_river); unreachable (across the water), beyond the painted area's top edge in light mist"
+  },
+  "S4b.grd.near_bank_14850": {
+   "how": "ground",
+   "why": "the ground falls from its mapped bank top (H 0) to its mapped shore at the water's H -0.7 (a sandy slope, steep where the two lines meet at the bank path), and on under the water"
+  },
+  "S4b.tree.stump_14805": {
+   "how": "model",
+   "why": "a solid gnarled stump with no crown (the needs list and the catalogue §5: built in the area's kit, kit_outer_road_2.stump, no card; the tree factory assigns it card 'kit'); until that assignment lands the page also plants its fallback card there"
+  }
+ },
+ "unbuilt": {},
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): the part 1 seam at u 12600 (west), the silk's bottom (south) and top (north) edges, the S3 seam at u 15500 (east)",
+   "why": "outside the painted area the scroll paints nothing (north, south) or the neighbours stand (west: part 1, built; east: S3, a painted panel until it's built)"
+  },
+  "east_on_land": {
+   "what": "edge:east runs only along the seam's land part, from the silk's bottom edge to the near shore at (88.39, 14.11); across the river the shore walls (edge:shore) and the boats' rails close the walk",
+   "why": "five of the six moored hulls run past the seam at real size (their sterns to X 88-94): a wall on the seam would stand across their decks"
+  },
+  "north_west_of_cove": {
+   "what": "edge:north runs along the silk's top edge from the part 1 seam to the cove's west shore (X 77.5); the cove and the far bank beyond it are closed by the water and its shore walls",
+   "why": "the cove reaches north past the silk's top edge (the far bank moved, how: S4b.water.bian_river): a wall on the edge would cross the round boat's and the small boat's decks"
+  }
+ },
+ "boats": {
+  "S4b.veh.boat_big_cabin_14928": {
+   "kit": {
+    "kind": "passenger",
+    "lw": 11.4,
+    "beam": 3.2,
+    "free": 0.9,
+    "cabin": {
+     "x0": 0.14,
+     "x1": 0.92,
+     "pattern": "boards",
+     "roof": "board",
+     "segs": 3
+    },
+    "bow_canopy": false,
+    "stern_house": false,
+    "sweep": "port",
+    "mast": "down",
+    "cargo": [
+     [
+      "basket",
+      0.52,
+      0.55,
+      "roof"
+     ],
+     [
+      "basket",
+      0.58,
+      -0.45,
+      "roof"
+     ],
+     [
+      "basket",
+      0.64,
+      0.4,
+      "roof"
+     ]
+    ],
+    "moor": [
+     "S4b.prop.mooring_post_14737",
+     [
+      76.63,
+      18.61,
+      -0.1
+     ]
+    ],
+    "sweep_pose": "rest",
+    "crutch": true
+   },
+   "why": "the biggest boat, a 客船 with board walls (types #5): at its type's 19 m it ran 7 m past its painted ends into the arched boat and the bank, so it is shortened to 0.6 (11.4 m; painted waterline 12.3 m) and narrowed to 3.2 m (Song inland proportion for a hull that length, the painted rafted spacing far smaller still); it keeps its painted place. free 0.9: its painted deck stands 0.73 m over the water (frame support), so its side meets the bank top level for boarding. The cabin runs from the stern quarter to the raked bow end, where the man sits on its roof (painted: a hip-roofed cabin at the bank end, a long planked cabin and a mat-roofed after cabin with railings, built as the cabin's three segments from 0.14 to 0.92 of the hull; the kit's raised stern house stood 4.5 m over the water, a box on posts nothing like the painted low after cabin); the sweep's blade trails on the south (port) side, at rest, as painted (u 15680-15855); the long spar along the cabin tops is the lowered mast; round woven covers on the roof amidships (u 15190-15360); two ropes from the bow bitts to the mooring post. Round-2 kit options (gen/boats/round2_options.json, merged by the join agent 2026-10-12): B5: the sweep at rest; B7: the lowered mast in its crutch (it lies over the cabin roof)."
+  },
+  "S4b.veh.boat_arched_awning_14945": {
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false,
+    "lw": 12.0,
+    "beam": 3.1,
+    "free": 1.1,
+    "cabin": false,
+    "anchor": [
+     [
+      96.5,
+      21.6,
+      -0.7
+     ]
+    ]
+   },
+   "why": "a cargo boat riding high under arched mat awnings (types #4, its south half): kind grain (its slug says awning, which the old kind_of read as small). Shortened to 0.6 (12 m) and narrowed to 3.1 m to lie rafted between the big boat and the mat-cargo boat (moves); free 1.1 (its painted stern deck 0.84 m over the water). No sweep: the painted pole slanting into the water at its stern is a punt pole (no blade), and its anchor line from the stern (to a splash past the seam) is a line the kit doesn't build yet (stern lines: waits on the boat factory). No crew house aft (cabin false): the painted boatman sits in the open at the stern under the awning's east end, and the kit's house would hide him (QA). Round-2 kit options (gen/boats/round2_options.json, merged by the join agent 2026-10-12): the stern anchor line to its splash past the seam (the point: the area's)."
+  },
+  "S4b.veh.boat_mat_cargo_14900": {
+   "kit": {
+    "kind": "grain",
+    "hold": "laden",
+    "laden": true,
+    "lw": 12.0,
+    "beam": 3.1,
+    "free": 0.55,
+    "gangplank": [
+     75.45,
+     24.45,
+     0.0
+    ],
+    "cargo": [
+     [
+      "coil",
+      0.86,
+      0.5,
+      "deck"
+     ],
+     [
+      "coil",
+      0.86,
+      -0.5,
+      "deck"
+     ],
+     [
+      "basket",
+      0.9,
+      0.0,
+      "deck"
+     ]
+    ],
+    "awnings": [
+     [
+      0.82,
+      1.06,
+      "hood",
+      {
+       "end": "fore",
+       "mat": "bark"
+      }
+     ]
+    ],
+    "sweep": "starboard",
+    "sweep_pose": "shipped",
+    "anchor": [
+     [
+      96.0,
+      26.0,
+      -0.7
+     ]
+    ]
+   },
+   "why": "a cargo boat with mats or matted bales laden along the middle (the laden mound under its rope net), coils and flat baskets on its foredeck, low in the water (free 0.55, the kit's deep-laden freeboard). Shortened to 0.6 (12 m), narrowed to 3.1 m, moved (moves). Its painted gangplank runs from the bank path (the porter with two baskets steps down it) to its bow: the foot at the bank's edge, (75.45, 24.45) at H 0, on the boat's north (starboard) side: on its south side the arched-awning boat lies 0.5 m off, too close for a plank (the porter is nudged to the plank's foot, people.json). Not built yet (kit): the dark barrel mat roof over its bow, the raised sweep or bow board along its deck, its looped anchor line from the stern (waits on the boat factory). Round-2 kit options (gen/boats/round2_options.json, merged by the join agent 2026-10-12): B1: the dark barrel mat roof over its bow; B5: the sweep shipped along its deck; its looped stern anchor line (the point: the area's); the gangplank lands square (the fix)."
+  },
+  "S4b.veh.boat_long_cabin_14850": {
+   "kit": {
+    "kind": "passenger",
+    "lw": 11.4,
+    "beam": 3.0,
+    "free": 0.8,
+    "cabin": {
+     "x0": 0.08,
+     "x1": 0.5,
+     "pattern": "passenger",
+     "roof": "board",
+     "segs": 2
+    },
+    "bow_canopy": false,
+    "awnings": [
+     [
+      0.86,
+      1.04,
+      "hood",
+      {
+       "end": "fore",
+       "mat": "bark"
+      }
+     ]
+    ]
+   },
+   "why": "a long boat with a lattice-windowed deckhouse at its east (stern) end and a planked cabin amidships (types #3, ends as the map reads them: bow at the bank). Shortened to 0.6 (11.4 m; painted 7.2 m), narrowed to 3.0 m, moved (moves); free 0.8 (its painted deck 0.58 m over the water). Its two boatmen stand on the open south deck forward of the house. Not built yet (kit): the big dark mat roof over its high bow end, the round emblem on its cabin. Round-2 kit options (gen/boats/round2_options.json, merged by the join agent 2026-10-12): B1: the big dark mat roof over its high bow end."
+  },
+  "S4b.veh.boat_round_mat_15025": {
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.3,
+    "free": 0.85
+   },
+   "why": "the round-sterned boat with a barrel mat roof, seen from its stern at the top of the raft. Kind small (an awning boat, 篷船), not grain: its painted extent is 235 x 170 px (u 15017-15252, v 160-330), which at its painted heading allows a hull of about 5-6 m at the painter's far-row scale, not a 12-20 m cargo boat; the forked post at its bow, the squared transom with the rudder stock and the arched mat roof over the hull are the small type's parts. lw 5.0 (over 0.6 of the type), the type's beam; free 0.85 (bulging high sides as painted), so its floor lies within 0.35 m of the long boat's deck and the boarding bridges between them run both ways (at 0.5 the long boat's bridge hung 0.8 m over its floor and you couldn't climb back: QA)."
+  },
+  "S4b.veh.boat_small_cabin_15182": {
+   "kit": {
+    "kind": "small",
+    "lw": 6.0,
+    "beam": 1.9,
+    "free": 0.6,
+    "bow": "pointed",
+    "stern_frame": true,
+    "awning": false,
+    "awnings": [
+     [
+      0.38,
+      0.68,
+      "canopy",
+      {
+       "h": 0.95
+      }
+     ],
+     [
+      0.08,
+      0.36,
+      "hood",
+      {
+       "end": "aft",
+       "rise": 1.3
+      }
+     ]
+    ]
+   },
+   "why": "the small boat along the far bank (types #1, ends as the map reads them: the up-swept west end is its bow): kind small (its slug says cabin, which the old kind_of read as passenger). lw 6.0 (0.75 of the type; painted 3.3 m at the silk's top edge), beam 1.9; free 0.6 (painted 0.7-0.86). No crew, no mast (the restyle's are the far bank's willows). Round-2 kit options (gen/boats/round2_options.json, merged by the join agent 2026-10-12): B2, B6 (a tiller), B1: the low canopy and the higher stern cabin."
+  }
+ }
+}

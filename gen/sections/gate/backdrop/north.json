@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 (Along the River During the Qingming Festival) and the only source for what this panel shows. Paint one very wide panel of a painted backdrop in exactly image 1's painting style (hand-inked dark-brown outlines, light hatching, flat muted painted colours, clean readable shapes), showing what image 2 paints, but as a view seen at eye level by a person standing on the ground at the edge of our scene and looking out: looking north from the top edge of the city-gate scene over the far ground beyond it: the land that image 2 paints along the very top of the scroll above the gate (image 2's left end is on our left, its right end on our right). Open, level, bare tan earth, with here and there a low rounded earth mound; standing apart on it, a loose, uneven row of small trees of only the two kinds image 2 paints there: leafless trees whose crowns are fans of fine radiating twig sprays, a few with a faint haze of new green shoots, and dark pines with flat clusters of needle tufts on crooked leaning trunks. The trees are small and far off, with plain white showing between them; they stand a little closer together on the right half. Nothing else: no buildings, people, animals, carts, roads, fences, fields, water, hills, mountains, towers or walls.\n\nRules for the panel:\n- Only what image 2 paints. Add nothing that image 2 does not show: no hills or mountains, no distant tree lines or forests, no lakes, rivers or islands, no towers, pagodas, city walls, flags, clouds, birds, sun or haze banks, unless the description above names them. Leave out image 2's red seals, inscriptions and silk damage.\n- Eye level. The viewer's eye is at the height of a standing person's eyes, so the horizon is one straight, level line across the whole image, a quarter of the way up from the bottom edge. The heads of all standing people are on that line, near or far; buildings, trees, carts and animals rise above it with their feet just under it. Below the horizon there is only a thin strip of level ground, a tenth of the image height at most. We never look down onto roofs, courtyards or the surface of a road: a road running away from us is a thin wedge of ground narrowing to the horizon.\n- Plain white everywhere else. The sky is flat pure white from the top edge down to the horizon, behind everything: no clouds, no blue, no gradient, no haze, no texture, no paper grain. Below the strip of ground the bottom of the image is the same pure white: the ground ends in soft white mist. The upper part of the image, above the tallest trees and roofs, is empty white.\n- Clear and crisp: every outline and colour as clear as in image 1, with no atmospheric haze and no fading toward the distance (the world adds its own mist). Trees keep clear branches and twigs with white showing between them.\n- The left and right eighths of the image hold only low ground and a few small things; they will fade into mist.\n- Colours of the real town in soft spring daylight, as in image 1: grey-blue clay tiles, white lime plaster, weathered brown timber, tan rammed earth and dusty roads, pale fresh-green willows, dark green pines, bare ink-brown branches. Not the yellow-brown of the aged silk in image 2; no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/gate/backdrop/north_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "3584x1280",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "north"
+ },
+ "format": "png",
+ "generation_s": 51.4,
+ "attempts": 1,
+ "idempotency_key": "3ef628e2-5ab5-4d16-8a47-1e2a1297eccc",
+ "request_id": "7ea31312-d9e4-48c6-9882-631cdb87b03c",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3268,
+  "completion_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3663,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2894,
+   "text_tokens": 769
+  },
+  "output_tokens": 3268,
+  "output_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3663,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2894,
+   "text_tokens": 769
+  },
+  "total_tokens": 6931
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/6837774d-b580-49d1-88ba-5d2d0e5bcd40",
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/9a88e45e-41eb-4fa0-85ea-98085e2c0daa"
+ ],
+ "files": [
+  "gen/sections/gate/backdrop/north_0.png",
+  "gen/sections/gate/backdrop/north_1.png"
+ ]
+}

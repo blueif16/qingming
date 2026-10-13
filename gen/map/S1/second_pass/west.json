@@ -1,0 +1,939 @@
+{
+ "section": "S1",
+ "pass": "second pass `west`: owns u 29050-31100 (t1, t2), looked at 28900-31320; read against map/strokes/S1.json as merged 2026-10-12 09:33 (237 entities)",
+ "how": "Overlays of the merged strokes at zoom 0.5 over u 28900-31250 and at zoom 1 in eight windows (grid 50), each beside a normalised scan window, then zoom 1.6-4 crops (colour, blurred colour, blurred grey, high-pass: the scan minus a 8-12 px blur, x3-4) and the restyle beside the scan (tools/scroll_inspect.mjs countryside/west) wherever the merge notes flagged a doubt or the two views differed. Positions of faint lines and stems from darkness profiles: row profiles (mean red of 30-40 px column bands), column profiles (20 px bands of v) and line profiles (mean red along a line against parallel lines 2-16 px off). Scripts (crop.mjs, hp.mjs, colprof.mjs, rowprof.mjs, lineprof.mjs, windows.mjs) and every crop are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/. Proposals only: nothing in the parts or the map was edited.",
+ "summary": "Every flag from the merge notes was read. Settled: the pale mass at the field's corner is a rock (the hooded figure is dropped); the shapes at the man at the post are his own sleeve and forearm (no second figure, nothing hung on the bar); the field holds 13 trunk feet, t1's trees, plus a faint fourteenth; far_tree_30985 is a far shrub, not the far willow's twig ends; the hut willow is one leaning tree (reading a), and the willows pass's base is right; the slats over the counter are the shed's lattice. Not settled (no change): the five far figures and the far ox, the blob at 29300, the stall man's third head. Four new entities, all low: a fourteenth young tree (29968), a small far tree at the top edge both tiles left to each other (30297), the banked far fields above the chase field with their diagonal edge (30400), and a far slope stroke under the far shrubs (30950). Thirteen changes: five far field lines added to S1.grd.terraced_fields_29450, two extended and two moved onto their strokes (8-17 px); young_bare_29655's foot moved 60 px down to the drawn foot; field_30430's ridge line lowered 8-14 px east of 30370; and notes settled on the field, the rock, the man at the post, the post, the hut willow, far_tree_30985, the twin willow, the far willow at 30500, young_bare_29948 and the stall shed. No figure, animal or bird lacks an entity in u 29050-31100.",
+ "entities": [
+  {
+   "id": "S1.tree.young_bare_29968",
+   "kind": "tree",
+   "name": "young bare tree at the grove's east end, beside the west traveller's head (low confidence)",
+   "what": "A fourteenth young bare tree at the east end of the grove by the vegetable field: a thin stem outlined on both sides rising from the bank just west of the west traveller's head, its small twiggy crown tangled with S1.tree.young_bare_29948's (crab-claw twigs; elm_claw young form, card _4, or shoot_tree). No leaves yet.",
+   "pts": {
+    "base": [
+     29968,
+     1345,
+     "est"
+    ],
+    "top": [
+     29966,
+     1200,
+     "est"
+    ],
+    "crown_w": [
+     29950,
+     1215,
+     "est"
+    ],
+    "crown_e": [
+     29998,
+     1205,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: crown tangled with S1.tree.young_bare_29948's; the stem's middle passes just west of S1.fig.traveller_standing_29996's head",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): t1 named this stem only in S1.tree.young_bare_29948's note ('a stem at u 29963-29973 (v 1290-1317) ... is not recorded'). Column darkness profiles (red channel, 20 px bands of v, each column against a running 70th-percentile background) find it as a PAIR of minima 8-9 px apart, the two outlines of one stem, like the grove's other trunks: u 29966/29975 at v 1260-1280 (depth 28/15), 29963/29972 at v 1280-1300 (15/10), 29965/29973 at v 1320-1340 (19/16), 29963/29972 at v 1340-1360 (13/8); nothing at v 1360-1380, so the foot is about v 1345 (est). Above v 1250 it is lost among the twigs of the crown at u 29950-30000, v 1185-1250, which could be its own or S1.tree.young_bare_29948's (that tree's crown_e is (29975, 1205)): top and crown are est. OTHER READINGS: a second stem of S1.tree.young_bare_29948 from one foot (then fold it into that tree as a two-stem tree); or an upright stick held behind the west traveller (he holds his stick and bundle on his east side, 30022-30067, so this is less likely). The restyle draws the grove's crowns on to u ~30010 with trunks down to v ~1300 at u 29950-29975. With it the grove counts 14 trunk feet (see the check on the field's plants).",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_field_e.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/hp_field_e.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z4_stem.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_stem.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.far_tree_top_30297",
+   "kind": "tree",
+   "name": "small far tree cut by the silk's top edge above the chase field (low confidence)",
+   "what": "A small far tree or bush on the far fields at the top of the silk: a dark stem slanting from its foot up to the north-west, with fans of fine twiggy branches spreading west and up to the silk's top edge, which cuts the crown. Bare, early spring; drawn small (far).",
+   "pts": {
+    "base": [
+     30297,
+     82,
+     "est"
+    ],
+    "top": [
+     30240,
+     24,
+     "est"
+    ],
+    "crown_w": [
+     30172,
+     40,
+     "est"
+    ],
+    "crown_e": [
+     30320,
+     48,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: crown cut by the silk's top edge (v ~22-25)",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): each tile left these strokes to the other and nobody recorded them: t1 ('Fans at the top right (u 30190-30400, v 20-270) may be this tree's top or the crown of a willow whose trunk stands east of 30300 (t2's): not used', on S1.tree.willow_twin_29970) and t2 ('the branches cut by the top edge at 30175-30300, v 25-108', left to t1). Strokes (zoom 1.8 colour, zoom 3 high-pass): a dark slanting stroke from about (30230, 42) to (30297, 80), with a branching stroke from (30263, 38) down to (30270, 58); a line darkness profile along (30230, 42)->(30297, 80) is darkest on the line itself (red 125 against 145-150 at 6-16 px either side). Fine shoots fan out from it to the west and up to the edge over u 30172-30305, v 22-80, with more faint shoots at u 30170-30260, v 85-145. It is not the top of S1.tree.willow_twin_29970: that tree's top is (30125, 150), and between them (u 30130-30170, v 80-150) the silk is nearly blank. The big fans further south-east (u 30280-30450, v 100-280) are S1.tree.willow_far_30500's west shoots (its crown_w is (30390, 179)), not this tree. Base est at the stroke's lower end, just below the far field line S1.grd.terraced_fields_29450 edge_v63e (proposed, v ~55 here). OTHER READING: twig ends of a willow standing above the top edge (nothing of it is on the silk). The restyle draws a small bare tree with its stem at about (30265, 60-95) here.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_fans.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/hp_fans.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_fans.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.banked_fields_30400",
+   "kind": "grd",
+   "name": "banked far fields behind the chase field, with a diagonal edge (low confidence)",
+   "what": "Far fields on the rising ground north of the raised plot S1.grd.field_30430 and its dotted ridge, behind the chase field: level field banks drawn as horizontal ink lines about 30 px of v apart, crossed by a long diagonal line running down to the south-east to the dotted ridge (a raised path or a field's edge), the same field pattern as S1.grd.terraced_fields_29450 west of the willows.",
+   "pts": {
+    "lines": {
+     "edge_v303": [
+      [
+       30300,
+       301
+      ],
+      [
+       30360,
+       302
+      ],
+      [
+       30420,
+       304
+      ]
+     ],
+     "edge_v334": [
+      [
+       30260,
+       334
+      ],
+      [
+       30340,
+       334
+      ],
+      [
+       30420,
+       334
+      ],
+      [
+       30460,
+       336
+      ]
+     ],
+     "edge_v364": [
+      [
+       30260,
+       364
+      ],
+      [
+       30340,
+       364
+      ],
+      [
+       30420,
+       364
+      ],
+      [
+       30500,
+       366
+      ]
+     ],
+     "diag": [
+      [
+       30290,
+       215,
+       "est"
+      ],
+      [
+       30370,
+       266
+      ],
+      [
+       30430,
+       304
+      ],
+      [
+       30470,
+       328
+      ],
+      [
+       30510,
+       357
+      ],
+      [
+       30550,
+       381
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: west end under S1.tree.willow_twin_29970's crown, east end under the shoots of S1.tree.willow_far_30500 and S1.tree.willow_fan_30632",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): not recorded; the diagonal was named only in notes: t2's on S1.tree.willow_far_30500 ('a slanting bank line ((30406, 256) -> (30583, 379))'; a line profile finds no stroke on its west half, which lies 30-36 px above the measured diag, and its east half within about 10 px of it) and structures_w's on S1.grd.field_30430 ('A long faint diagonal (30200,230)->(30550,390) above it may be another field edge or a willow branch (not recorded)'). Measured with row darkness profiles (red channel, mean of 30-40 px column bands) and line profiles (mean red along a line against parallel lines 2-16 px off): edge_v334 is the strongest (on the line 118-134 against 147-155 either side from u 30260 to 30420, fading by 30460); edge_v364 is clear from 30260 to 30500 (122-135 against 144-151); edge_v303 is weaker (133-140 against 148-155, u 30300-30420). The diagonal is clear from u 30410 to 30570 (offset 0 to +8 px: 133-141 against 143-156) and weaker from 30290 to 30410 (140-143 against 150-154; may be willow shoots there, so the first point is est); it ends on the dotted ridge at about (30550, 385). The straight long diagonal (30200,230)->(30550,390) that the note gives has no line under it (profile flat). Which side of each bank is higher is not drawn: north higher, as everywhere in S1 (a few px each, far). No receding edge for the frame: the field lines run along the scroll and the diagonal slopes +0.63 down to the right (north-west to south-east on the ground, as S1.road.path_29640 does at +0.9). The restyle draws terraced strips with a sloping path edge here (u 30290-30570, v 210-410). For the builder: one field system with S1.grd.terraced_fields_29450 (lines every 30-40 px there too), seen again east of the twin willow's crown.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_ridge.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_ridge.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_C_top.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.far_slope_30950",
+   "kind": "grd",
+   "name": "far slope's edge under the far shrubs at the top edge (low confidence)",
+   "what": "A short slanting ink stroke on the far ridge at the top of the silk, below the row of far shrub crowns (S1.tree.far_shrubs_30860, S1.tree.far_tree_30985): the edge of a far slope or bank falling to the south-east.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       30930,
+       45
+      ],
+      [
+       30950,
+       61
+      ],
+      [
+       30970,
+       78
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): named only in notes: S1.tree.far_tree_30985 ('A slanting dark stroke runs below and west of it from (30925, 40) to (30970, 75): a far slope's edge (ground, structures_w's) or this tree's leaning trunk') and t2's report (left to structures_w), which did not record it. A line profile along (30930, 47)->(30970, 80) is darkest 2 px above it (red 112 against 139-145 at 6-16 px either side): a real stroke from about (30930, 45) to (30970, 78). It does not read as far_tree_30985's trunk: its lower end (30970, 78) is under the east blotches, but it rises toward the WEST, away from them, and no twig leaves it. Higher side north (the ridge), a few px. OTHER READING: the leaning trunk of a far tree whose crown is the blotches at 30891-30920 (S1.tree.far_shrubs_30860's east clump); then retire this and give that crown a base at (30970, 78). The restyle draws a slope there with a small tree on it.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_topedge.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_topedge.jpg"
+   ]
+  }
+ ],
+ "changes": [
+  {
+   "id": "S1.grd.terraced_fields_29450",
+   "set": {
+    "pts.lines": {
+     "edge_v57": [
+      [
+       29050,
+       57
+      ],
+      [
+       29150,
+       58
+      ]
+     ],
+     "edge_v70w": [
+      [
+       29100,
+       70
+      ],
+      [
+       29200,
+       72
+      ],
+      [
+       29380,
+       71
+      ]
+     ],
+     "edge_v95w": [
+      [
+       29100,
+       92
+      ],
+      [
+       29215,
+       94
+      ],
+      [
+       29330,
+       97
+      ]
+     ],
+     "edge_v128w": [
+      [
+       29050,
+       110
+      ],
+      [
+       29105,
+       129
+      ],
+      [
+       29160,
+       130
+      ],
+      [
+       29215,
+       133,
+       "est"
+      ]
+     ],
+     "edge_v155": [
+      [
+       29050,
+       152
+      ],
+      [
+       29250,
+       156
+      ],
+      [
+       29350,
+       163
+      ],
+      [
+       29450,
+       168
+      ],
+      [
+       29500,
+       180
+      ],
+      [
+       29560,
+       190
+      ]
+     ],
+     "edge_v250w": [
+      [
+       29250,
+       250
+      ],
+      [
+       29400,
+       250
+      ],
+      [
+       29500,
+       248
+      ]
+     ],
+     "edge_v63e": [
+      [
+       29790,
+       67
+      ],
+      [
+       29900,
+       64
+      ],
+      [
+       29980,
+       63
+      ],
+      [
+       30060,
+       58
+      ],
+      [
+       30130,
+       55
+      ]
+     ],
+     "edge_v85": [
+      [
+       29600,
+       85
+      ],
+      [
+       29750,
+       84
+      ],
+      [
+       29850,
+       86
+      ],
+      [
+       29900,
+       94
+      ],
+      [
+       29980,
+       93
+      ],
+      [
+       30060,
+       88
+      ]
+     ],
+     "edge_v120": [
+      [
+       29600,
+       120
+      ],
+      [
+       29750,
+       120
+      ],
+      [
+       29810,
+       121
+      ],
+      [
+       29900,
+       117
+      ],
+      [
+       29980,
+       119
+      ],
+      [
+       30060,
+       112
+      ]
+     ],
+     "edge_v152": [
+      [
+       29560,
+       150
+      ],
+      [
+       29750,
+       152
+      ],
+      [
+       29900,
+       155
+      ]
+     ],
+     "edge_v177": [
+      [
+       29600,
+       176
+      ],
+      [
+       29750,
+       177
+      ],
+      [
+       29810,
+       177
+      ]
+     ],
+     "edge_v215": [
+      [
+       29600,
+       213
+      ],
+      [
+       29800,
+       215
+      ],
+      [
+       29900,
+       217
+      ]
+     ],
+     "edge_v250e": [
+      [
+       29650,
+       250
+      ],
+      [
+       29800,
+       250
+      ]
+     ],
+     "edge_v282": [
+      [
+       29560,
+       286
+      ],
+      [
+       29650,
+       285,
+       "est"
+      ],
+      [
+       29720,
+       281
+      ],
+      [
+       29830,
+       280
+      ]
+     ],
+     "edge_v300": [
+      [
+       29700,
+       298
+      ],
+      [
+       29850,
+       300
+      ],
+      [
+       29900,
+       302,
+       "est"
+      ]
+     ],
+     "edge_v362": [
+      [
+       29599,
+       361
+      ],
+      [
+       29650,
+       364
+      ],
+      [
+       29705,
+       367
+      ]
+     ],
+     "diag_ne": [
+      [
+       29740,
+       30
+      ],
+      [
+       29800,
+       85
+      ],
+      [
+       29850,
+       130
+      ]
+     ]
+    }
+   },
+   "was": {
+    "pts.lines": "edge_v57, edge_v155, edge_v250w, edge_v85 (to 29850), edge_v120 (to 29810), edge_v152, edge_v185 (v 184-186), edge_v215, edge_v250e, edge_v265 (v 263-266), edge_v300, edge_v362, diag_ne"
+   },
+   "add_note": "SECOND PASS (west): lines added and moved from row darkness profiles (red channel, 30-40 px column bands, local minima against a running background) and line profiles (mean red along a line against parallel lines 2-16 px off), checked on zoom 1.6-2.2 colour and blurred-grey crops. ADDED near the seam, where nothing was recorded between v 57 and v 152 east of 29050: edge_v70w (u 29100-29380, on the line 121-128 against 130-147), edge_v95w (29100-29330, 127-132 against 134-148) and edge_v128w (a band v 126-141, its top edge from (29050, 110) to (29215, 133); it continues the curved line S2's t12 noted at (28999, 83)->(29079, 126), which a line profile confirms west of the seam at (29000, 81)->(29050, 106): S2's side, not recorded by S2). ADDED east: edge_v63e (29790-30130, 135 against 147, sloping up to the east; it may run on to about (30230, 50) behind the new far tree S1.tree.far_tree_top_30297). EXTENDED east past the silk crease at u ~29845: edge_v85 to (30060, 88) (depth 13-21 at u 29860-30010) and edge_v120 to (30060, 112) (weaker, depth 8-11). MOVED: edge_v185 -> edge_v177 (no stroke on the old line, 147 against 142-150; the stroke is at v 176-177, 140 against 148) and edge_v265 -> edge_v282 (no stroke on the old line: 140 against 133-142; the stroke is at v 279-286 from u 29560 to 29830, depth 21-30, broken where S1.road.path_29640 crosses it at u 29620-29690). Both moved lines lie partly under willow shoots (S1.tree.willow_stall_c_29300, S1.tree.willow_east_29845); the profiles were read in bands on both sides of the shoots. Not changed: edge_v57 (its stroke is faint; the darkest rows at 29050-29150 are v 43-48 and 67-69, both weak), edge_v300 (no clear stroke on it or 18 px below; shoots), edge_v152 and edge_v215 (within 5 px). The far figures stand on these strips: the pair at v 118-122 on the strip between edge_v95w and edge_v128w; S1.fig.far_figure_29337 (v 141) and the group at v 143-145 on the strip between edge_v128w's line and edge_v155.",
+   "reason": "Far field banks the strokes show that no entity holds (the ground pilot records every bank and field edge), and two lines recorded 8-17 px off their strokes.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_seamtop2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_seamtop.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_farfields.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_terr.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_terr.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_farfields.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.young_bare_29655",
+   "set": {
+    "pts.base": [
+     29648,
+     1306
+    ]
+   },
+   "was": {
+    "pts.base": [
+     29655,
+     1245,
+     "est"
+    ]
+   },
+   "add_note": "SECOND PASS (west): the trunk is drawn below the great willow's whips down to about v 1300-1310: column profiles find it at u 29654-29661 from v 1180 to 1300 (depth 17-40) and at u 29646-29647 at v 1280-1320 (32-39), fading at v 1320-1340 (11). A second stem at u 29636-29639 (v 1220-1290, depth 20-39) joins it there: one tree forked from the foot (kept as one) or a fifteenth young tree (low; not proposed). The foot is measured, so `est` is dropped.",
+   "reason": "The foot was set 60 px high, where the whips cross the trunk; the trunk goes on below them.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_field_w.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_field_w.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_field.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.field_vegetable_29790",
+   "set": {},
+   "replace_in_note": {
+    "old": "Second pass: count trunk feet at zoom 2 (red channel); what is not a tree entity is this field's planting, built as part of it.",
+    "new": "SECOND PASS (west): trunk feet counted on column darkness profiles (red channel, 20 px bands of v from 1180 to 1380): 13 trunks, the same as t1's trees (u 29558, 29647-29661, 29733-29738, 29746-29756, 29780, 29794-29796, 29837, 29860-29862, 29879-29885, 29899-29905, 29915-29920, 29933, 29950), plus a faint fourteenth at 29966-29975 (proposed, S1.tree.young_bare_29968, low). Between them the profiles show no further stems with feet: the '25-35 small plants' are these trees' low crab-claw crowns and branches (the middle group's trees are only 90-170 px tall, so their crowns fill the band v 1250-1350). The planting to build is the 13 (or 14) trees; crop or grove of saplings stays the user's call."
+   },
+   "reason": "The merge asked the second pass to settle 13 trees against 25-35 plants by trunk feet.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_field.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_field.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_field_m.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_field_e.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/hp_field_e.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.young_bare_29948",
+   "set": {},
+   "replace_in_note": {
+    "old": "a stem at u 29963-29973 (v 1290-1317) just east of it touches the traveller at u ~29966-30060 (t2's) and is not recorded",
+    "new": "a stem at u 29963-29975 (v 1255-1345) just east of it, beside the west traveller's head, is S1.tree.young_bare_29968 (second pass, low)"
+   },
+   "reason": "Follows the new entity.",
+   "conf": "low"
+  },
+  {
+   "id": "S1.grd.field_30430",
+   "set": {
+    "pts.lines.ridge_n": [
+     [
+      30290,
+      372
+     ],
+     [
+      30370,
+      382
+     ],
+     [
+      30450,
+      392
+     ],
+     [
+      30550,
+      390
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.ridge_n": [
+     [
+      30290,
+      372
+     ],
+     [
+      30370,
+      378
+     ],
+     [
+      30450,
+      385
+     ],
+     [
+      30550,
+      380
+     ]
+    ]
+   },
+   "replace_in_note": {
+    "old": "A long faint diagonal (30200,230)->(30550,390) above it may be another field edge or a willow branch (not recorded).",
+    "new": "The banked fields above it, with a diagonal edge from about (30370, 266) down to the ridge at (30550, 381), are S1.grd.banked_fields_30400 (second pass)."
+   },
+   "add_note": "SECOND PASS (west): east of u 30370 the clumps' dark centres lie 8-14 px below the recorded ridge (line profiles: darkest at +8 to +14 px at 30370-30450 and +4 to +10 px at 30450-30550); the west end at the bump (30300-30330, 365-375) is unchanged.",
+   "reason": "The ridge line sits on the clumps' tops east of 30370; the clump row (the field's edge) is lower.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_ridge.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.willow_far_30500",
+   "set": {},
+   "replace_in_note": {
+    "old": "just above a slanting bank line ((30406, 256) -> (30583, 379))",
+    "new": "just above the far fields' diagonal edge (S1.grd.banked_fields_30400 `diag`, second pass: measured at (30370, 266) -> (30550, 381); the line given here before, (30406, 256) -> (30583, 379), has no stroke under its west half)"
+   },
+   "reason": "Follows the new banked-fields entity; the base est (30500, 268) is unchanged (it rests on the trunk's smudge, not on the line).",
+   "conf": "low"
+  },
+  {
+   "id": "S1.tree.willow_twin_29970",
+   "set": {},
+   "replace_in_note": {
+    "old": "Fans at the top right (u 30190-30400, v 20-270) may be this tree's top or the crown of a willow whose trunk stands east of 30300 (t2's): not used.",
+    "new": "The fans at the top right are not this tree's: the ones cut by the top edge (u 30172-30305, v 22-80) are S1.tree.far_tree_top_30297 (second pass), and the ones further south-east (u 30280-30450, v 100-280) are S1.tree.willow_far_30500's west shoots."
+   },
+   "reason": "Follows the new entity; the silk between this tree's top (30125, 150) and the top-edge fans is nearly blank.",
+   "conf": "low"
+  },
+  {
+   "id": "S1.tree.willow_leaning_hut_31240",
+   "set": {},
+   "add_note": "SECOND PASS (west), the flagged zoom-3 read of u 31000-31320, v 1100-1490: reading (a) holds. On zoom 1.6 and 2.5 crops the trunk is one band: from the bole's upper west side (31150, 1345) diagonal strokes run up-left to the fence's foot at (31046-31102, 1297-1335); a pale band with a dark west edge rises at u 31008-31046 from v 1310 to the hut's eave (v ~1122); above the eave a dark trunk section at u 30902-30940 (v 1054-1190) carries it on up-left to the pollard head in the roof's hatching at about (30860-30990, 990-1120). No foot is drawn under the trunk at the fence (reading (b)'s 'tree rooted at the fence's foot at about (31060, 1340)'): the fence's withies run on, unbroken, behind it. The restyle draws the same single leaning willow. The bole's lower edge: I read it at v 1482-1498 across u 31150-31290, as the willows pass does; I agree with its base (31215, 1492, est) and its note on S1.road.main's edge_n.",
+   "reason": "The merge asked the west pass to confirm reading (a) at zoom 3; the willows pass proposes the base and leaves the trunk to this pass.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_hutwillow.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_hut.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_bole.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_bole.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.far_tree_30985",
+   "set": {},
+   "replace_in_note": {
+    "old": "If the second pass reads the blotches as the whips' twig ends, retire this tree.",
+    "new": "SECOND PASS (west): not the willow's twig ends; keep. At zoom 3-3.5 these blotches are knotted dark dots (u 30963-30989, v 24-50, and 30991-31011, v 30-42), the same mark as S1.tree.far_shrubs_30860's clumps (30831-30857, 30866-30883, 30891-30920): one row of far shrubs or moss-dotted crowns along the far ridge. S1.tree.willow_far_31190's west shoots are fine straight lines that thin out at about u 31000-31020, v 40-60, with no dots on them. The slanting stroke below is S1.grd.far_slope_30950 (second pass)."
+   },
+   "reason": "The merge left this possible duplicate open for the second pass.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_topedge.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_topedge.jpg"
+   ]
+  },
+  {
+   "id": "S1.fig.man_at_post_29812",
+   "set": {},
+   "replace_in_note": {
+    "old": "MERGE: a small upright shape with a pointed top in front of him (u 29813-29840, v 1027-1100) and a dark rounded mass on the post's east side (29840-29880, v 1043-1067) are named only here and in the post's note: the second pass reads them at zoom 3 (a second, smaller figure held or standing at the bar, a bucket, or his own bundle and legs).",
+    "new": "SECOND PASS (west): read at zoom 3-4 (colour, grey, high-pass): no second figure. The small pointed shape (u 29815-29832, v 1027-1053) has no face, and no second head, arms or feet go with it: it is his left sleeve and hand (or a small gourd or bottle held at his chest, the restyle's hanging sleeve). The dark mass (u 29827-29857, v 1043-1060) lies on the bar's west side, between him and the post: his forearm laid on the bar as he leans. The strokes at v 1080-1117 (u 29800-29837) continue his robe down to his legs, matching his 146 px height."
+   },
+   "reason": "The merge asked the second pass to settle these shapes; a second figure would change the cast.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_post.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/hp_post.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z4_post.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_post.jpg"
+   ]
+  },
+  {
+   "id": "S1.prop.post_crossbar_29862",
+   "set": {},
+   "replace_in_note": {
+    "old": "a dark rounded mass on its east side (u 29840-29880, v 1043-1067) may be a bucket, a basket or the man's bundle",
+    "new": "the dark rounded mass by the bar (u 29827-29857, v 1043-1060) is the forearm of S1.fig.man_at_post_29812 laid on the bar (second pass); nothing hangs from the bar"
+   },
+   "reason": "Follows the man's note.",
+   "conf": "med"
+  },
+  {
+   "id": "S1.grd.rock_29745",
+   "set": {},
+   "replace_in_note": {
+    "old": "The hooded-figure reading (b) is kept open for the second pass (if it is a figure, retire this and add a figure; it would change the cast).",
+    "new": "SECOND PASS (west): a rock; reading (b) is dropped. At zoom 2-3 the west face is laid in with short parallel diagonal texture strokes (rock texture), the outline rises to a pointed, slightly west-leaning summit at (29757, 1043) and runs down into the field's ground with no hem, feet or hands, and no face or hood opening is drawn. As a figure it would stand 104 px from summit to foot (v 1043-1147) beside the 146 px man at the post at the same foot level: too short for a standing adult. The restyle's man in blue here is invented."
+   },
+   "reason": "The merge left the hooded-figure reading open for the second pass.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_rock.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_rock.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_B_bot.jpg"
+   ]
+  },
+  {
+   "id": "S1.bld.stall_shed_29600",
+   "set": {},
+   "add_note": "SECOND PASS (west): the slats over the counter (u 29437-29490, v 553-597) are this shed's lattice front running on west of the post at u 29486 (vertical slats from the eave to the counter's top, the same as the fascia lattice at 29486-29599, v 551-570); a few dark knots among them at v 565-590 (u 29445-29480) may be small goods on the counter. No entity (as the merge decided); build the lattice from 29437.",
+   "reason": "The merge listed the slats as 'goods or lattice, no entity'; this places them on the shed.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_counter.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_counter2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_counter.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_counter2.jpg"
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "flag": "the rock or a hooded figure (S1.grd.rock_29745)",
+   "ids": [
+    "S1.grd.rock_29745"
+   ],
+   "verdict": "rock; note settled (changes)",
+   "evidence": "See the change on S1.grd.rock_29745."
+  },
+  {
+   "flag": "the shape in front of the man at the post and the dark mass on the post (S1.fig.man_at_post_29812)",
+   "ids": [
+    "S1.fig.man_at_post_29812",
+    "S1.prop.post_crossbar_29862"
+   ],
+   "verdict": "his own sleeve and forearm; no second figure, no hung bucket (changes)",
+   "evidence": "See the changes on both entities."
+  },
+  {
+   "flag": "the field's plants, trunk by trunk (13 trees or 25-35 plants)",
+   "ids": [
+    "S1.grd.field_vegetable_29790",
+    "S1.tree.young_bare_29558",
+    "S1.tree.young_bare_29655",
+    "S1.tree.young_bare_29733",
+    "S1.tree.young_bare_29757",
+    "S1.tree.young_bare_29775",
+    "S1.tree.young_bare_29795",
+    "S1.tree.young_bare_29836",
+    "S1.tree.young_bare_29862",
+    "S1.tree.young_bare_29882",
+    "S1.tree.young_bare_29902",
+    "S1.tree.young_bare_29918",
+    "S1.tree.young_bare_29932",
+    "S1.tree.young_bare_29948"
+   ],
+   "verdict": "13 trunk feet confirmed, plus a faint 14th (new, low); 29655's foot moved down 60 px",
+   "evidence": "Column darkness profiles (red channel, 20 px bands of v, minima against a running background) at v 1280-1360 find exactly t1's stems; the 14th is a paired outline at u 29963-29975, v 1255-1345. 29558's trunk fades at v ~1220, matching its est foot. See the changes on the field, 29655 and 29948, and the new S1.tree.young_bare_29968."
+  },
+  {
+   "flag": "the 5 far figures and the far ox (all low) and the blob at (29300-29315, 117-127)",
+   "ids": [
+    "S1.fig.far_figure_29230",
+    "S1.fig.far_figure_29257",
+    "S1.fig.far_figure_29337",
+    "S1.fig.far_figure_29466",
+    "S1.fig.far_figure_29482",
+    "S1.ani.far_ox_29515",
+    "S1.grp.far_terrace_pair",
+    "S1.grp.far_terrace_ox"
+   ],
+   "verdict": "not settled; no change (all stay low)",
+   "evidence": "Read at zoom 2.2 (blur 1.2, grey normalise), 3.5 and 4 (blur 1.0, colour). The cluster at 29217-29262 (v 87-122) is three or four dark blobs with no legible head or limbs; the restyle draws a small frame with hanging cloths there. At 29457-29487 three or four upright strokes (v 100-145) stand under a short top stroke (v 110-115), and east of them a long low mass (29487-29565, v 127-145) lies under a horizontal stroke ending in a rounded east end (29530-29537, v 110-120); the restyle draws posts and a wood pile. One more reading fits these strokes as well as two standing figures and an ox: a ploughman at the handles with an ox ahead of him facing east (spring ploughing). The blob at (29300-29315, 117-127) sits against S1.tree.far_willow_top_29290's trunk and stays unread. The new far field lines (edge_v95w, edge_v128w, edge_v155) give the strips the figures stand on (see the change on S1.grd.terraced_fields_29450).",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_far_b.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_farox.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_farpair.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_far.jpg"
+   ]
+  },
+  {
+   "flag": "the stall man's possible third head",
+   "ids": [
+    "S1.fig.stall_man_29328",
+    "S1.fig.stall_customer_29280"
+   ],
+   "verdict": "not settled; no change",
+   "evidence": "At zoom 2.5-4 (colour, blurred colour, high-pass) the stall man's head (29318-29340, v 548-575) has a face; the rounded shape right of it (29337-29355, v 553-578) has no face or features and reads equally as a bundle on his back (the restyle) or a head behind him. The customer's oval just west of the post at u ~29292 (29269-29289, v 545-580) is an outline with an inner ring: a hooded head or a hat or sieve hung on the post, as t1 gave it. Nothing else at the stall reads as a head.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_stall.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/hp_stall.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_stall.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z4_stallmen.jpg"
+   ]
+  },
+  {
+   "flag": "the slats above the counter (29437-29490, v 553-597: goods or lattice, no entity)",
+   "ids": [
+    "S1.prop.stall_counter_29430",
+    "S1.bld.stall_shed_29600"
+   ],
+   "verdict": "the shed's lattice front; note on the shed (changes)",
+   "evidence": "See the change on S1.bld.stall_shed_29600."
+  },
+  {
+   "flag": "the stem at (29963-29973, 1290-1317)",
+   "ids": [
+    "S1.tree.young_bare_29948"
+   ],
+   "verdict": "a fourteenth young tree, low (new entity S1.tree.young_bare_29968)",
+   "evidence": "See the new entity."
+  },
+  {
+   "flag": "the fans at the top edge 30170-30320, v 20-70",
+   "ids": [
+    "S1.tree.willow_twin_29970",
+    "S1.tree.willow_far_30500"
+   ],
+   "verdict": "a far tree no one recorded (new entity S1.tree.far_tree_top_30297, low)",
+   "evidence": "See the new entity and the change on S1.tree.willow_twin_29970."
+  },
+  {
+   "flag": "the diagonal (30200, 230)->(30550, 390)",
+   "ids": [
+    "S1.grd.field_30430"
+   ],
+   "verdict": "part of unrecorded banked fields (new entity S1.grd.banked_fields_30400, low); the straight diagonal as given has no stroke under it",
+   "evidence": "See the new entity."
+  },
+  {
+   "flag": "far_tree_30985 against willow_far_31190",
+   "ids": [
+    "S1.tree.far_tree_30985",
+    "S1.tree.willow_far_31190",
+    "S1.tree.far_shrubs_30860"
+   ],
+   "verdict": "not a duplicate; keep both (change on far_tree_30985's note); the slanting stroke below is a new grd (S1.grd.far_slope_30950, low)",
+   "evidence": "See the change and the new entity."
+  },
+  {
+   "flag": "the hut willow at zoom 3 (u 31000-31320, v 1100-1490)",
+   "ids": [
+    "S1.tree.willow_leaning_hut_31240"
+   ],
+   "verdict": "reading (a), one leaning willow; agree with the willows pass's base (31215, 1492, est)",
+   "evidence": "See the change on S1.tree.willow_leaning_hut_31240."
+  },
+  {
+   "flag": "the hut's gateway: trestle or a seated figure (structures_w: 'the small seated figure in the hut's gateway')",
+   "ids": [
+    "S1.prop.trestle_hut_gate_30841",
+    "S1.str.wattle_fence_31100"
+   ],
+   "verdict": "agree with t2 and the merge: an A-frame of two crossed sticks and the gate post; no figure, no pig",
+   "evidence": "At zoom 3.5 the A-frame's legs cross cleanly at (30843, 1248) with straight sides and no head or body; the thin upright at 30889-30900 (v 1221-1279) is a plain post. The restyle's pig and man in blue are these two.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_gate.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_gate.jpg"
+   ]
+  },
+  {
+   "flag": "the west traveller (one figure or two)",
+   "ids": [
+    "S1.fig.traveller_standing_29996"
+   ],
+   "verdict": "agree: one figure",
+   "evidence": "At zoom 3 there are two feet only, (29973-29987, 1467-1477) and (30003-30017, 1467-1483); the object east of him is a stick from (30040, 1337) to (30067, 1353) with a bag hanging at 30040-30053, v 1340-1403, and the ground under it is blank. The restyle's second, bearded man is invented.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_trav.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/insp_trav.jpg"
+   ]
+  },
+  {
+   "flag": "head counts of the groups in the range",
+   "ids": [
+    "S1.grp.tomb_sweeping_party",
+    "S1.grp.donkey_travellers",
+    "S1.grp.runaway_horse",
+    "S1.grp.village_stall"
+   ],
+   "verdict": "agree",
+   "evidence": "Counted again at zoom 1-1.6: the party has 7 figures (2 bearers, the porter with the pole, the frontal walker, the porter with the staff, the porter with the boxes, the rider), 1 horse and the sedan; the travellers 5 figures and 2 donkeys; 3 chasers and the horse's surviving hind half (back 30085-30200, v 770-790; hind legs to (30240, 860)), with the man at the post and the child west of the farmhouse; at the stall 2 figures (1 low), the buffalo, the ox and the barrow. No figure, animal or bird was found without an entity in u 29050-31100.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_party.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_C_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/z_horse.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_B_top.jpg"
+   ]
+  },
+  {
+   "flag": "everything else in the range",
+   "ids": [],
+   "verdict": "no other change",
+   "evidence": "Overlays of map/strokes/S1.json at zoom 0.5 (28900-31250) and zoom 1 in eight windows (u 28900-31300 in four, v 0-900 and 850-1800, grid 50), each beside the same window of the scan (normalised colour, grid 50), then zoom 2-4 crops where anything differed. Every other marker sits on its stroke. The straight vertical lines at u ~29250 (v 950-1750) and ~29845 (v 40-130) are silk creases. The small pale board and the hung bundle between the stall willows (S1.prop.pale_board_29172, S1.prop.hanging_bundle_29198) are unreadable at zoom 3; their low readings stand.",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_all_z05.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/plain_all_z05.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_A_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_A_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_A_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_A_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_B_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_B_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_B_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_B_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_C_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_C_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_C_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_C_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_D_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_D_top.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/ov_D_bot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_west/pl_D_bot.jpg"
+   ]
+  }
+ ],
+ "left_to": [
+  {
+   "what": "S2's side of the seam: the curved line from (29000, 81) to (29050, 106), confirmed by a line profile and continued in S1 as edge_v128w; S2.grd.bank_lines_top_28900 does not hold it",
+   "to": "the lead (seam note for S2; S1 does not edit S2's files)"
+  },
+  {
+   "what": "S1.road.main's edge_n past the hut willow's bole (u 31150-31280), if the bole's base moves to (31215, 1492)",
+   "to": "the frame step / the lead (the willows pass gives the numbers)"
+  }
+ ],
+ "lessons": [
+  "**Check far field lines with line profiles, not only by eye.** On S1's far fields two recorded bank lines sat 8-17 px off their strokes and five lines were missing; under willow shoots the eye picks the wrong one. Average the darkness along the proposed line and along parallel lines 2-16 px either side (a 20-line script): a real stroke is darkest at offset 0, a misplaced line is darkest at an offset, and a line that is not there gives a flat profile. It also settles where a line ends (run it in 40 px segments).",
+  "**A trunk is a pair of minima.** In a column darkness profile across a grove, an outlined stem shows as two minima 8-10 px apart that stay together from band to band down the silk; single minima that drift are whips or twigs. Count trunk feet this way where crowns tangle (S1's 菜地: 13 trunks and one faint fourteenth, against '25-35 plants' by eye).",
+  "**When two tiles each name the same strokes in a note and leave them to the other, a second pass finds an unrecorded thing there.** On S1 both t1 and t2 named the fans at the top edge above the chase field and neither mapped them: they are a small far tree. Search every 'left to' and 'not used' note for strokes that both neighbours mention."
+ ]
+}

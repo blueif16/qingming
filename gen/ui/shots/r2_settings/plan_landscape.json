@@ -1,0 +1,6 @@
+{ "url": "http://127.0.0.1:5190/world.html",
+  "pages": [ { "device": "desktop", "width": 844, "height": 390, "shots": [
+    { "name": "landscape_844x390_hud", "hour": 10, "at": "inner_city:spawn", "js": "t.ui.help(false); await new Promise(r=>setTimeout(r,2000));", "wait": 300 },
+    { "name": "landscape_844x390_set_adv", "js": "await t.ui.settings.open('adv'); t.ui.settings.select('exposure'); await new Promise(r=>setTimeout(r,800)); return t.ui.settings.state().sel;", "wait": 300 },
+    { "name": "landscape_844x390_set_time", "js": "t.ui.settings.page('time'); await new Promise(r=>setTimeout(r,500));", "wait": 300 }
+  ] } ] }

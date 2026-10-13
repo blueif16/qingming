@@ -1,0 +1,1376 @@
+{
+ "about": "S3's props built by blender/kit_rainbow_bridge_props.place_props(table, ents, z_at, rng, skip): one entry per map ID, `part` a placer of that module (fn(c, **args)) or 'module.function' (called in the entity's local frame), `args` its sizes (metres, deg; 'deck' = the bridge deck's axis), `why` what is painted and the evidence for each size (painted px / (100 s), s the local figure scale; real size where that reading isn't real furniture: choice). `top_h` on every prop that carries another mapped prop: the height of its built top above its own base (the builder's z_at for 'table top: <id>'). Written by scratchpad S3_run2_props/make_props_table.py. Not here (built by others): S3.prop.lamp_box_jiaodian_17035 (the tavern kit agent's (十千脚店's lamp-box sign)); S3.prop.xinjiu_flagpole_17630 (the tavern kit agent's (the 新酒 pole, bar and banner)); S3.prop.bridge_end_post_19026 (the bridge kit's (表木), from the bridge-fit agent's params); S3.prop.bridge_end_post_20050 (the bridge kit's (表木), from the bridge-fit agent's params); S3.prop.bridge_end_post_far_19176 (the bridge kit's (表木), from the bridge-fit agent's params).",
+ "props": [
+  {
+   "id": "S3.prop.awning_rack_18797",
+   "part": "slat_rack",
+   "args": {
+    "l": 0.6,
+    "w": 0.35,
+    "h": 0.9,
+    "slats": "h",
+    "legs": 0.1,
+    "yaw": "deck+90"
+   },
+   "why": "Upright slatted wooden rack (shelves or a lattice stand) under the east mat awning, where the man in a dark cap works. 41 x 64 px at s 0.7 -> 0.6 x 0.9 m; set across the deck so it stands level on the ramp."
+  },
+  {
+   "id": "S3.prop.basin_16180",
+   "part": "basket",
+   "args": {
+    "r": 0.35,
+    "h": 0.44,
+    "mouth": 0.92,
+    "top_h": 0.44
+   },
+   "why": "Large round, bowl-shaped vessel with a hatched belly (woven), heaped with round things, on the balcony floor before the table's east end. About 55 px across (~0.7 m: the map's builder choice): r 0.35; its rim 0.44 m = the frame's 'table top: S3.prop.basin_16180' (34 px)."
+  },
+  {
+   "id": "S3.prop.basket_on_stand_18005",
+   "part": "tray_stand",
+   "args": {
+    "R": 0.36,
+    "h": 0.72,
+    "basket": true,
+    "legs": 4,
+    "splay": 0.12
+   },
+   "why": "Wide shallow round wicker basket with a woven rim on a stand (legs not clear). Rim 55 px at s 0.76 -> 0.72 m (R 0.36); its rim ~50-60 px over the est foot: 0.72 m."
+  },
+  {
+   "id": "S3.prop.bench_18630",
+   "part": "bench",
+   "args": {
+    "L": 1.0,
+    "yaw": "deck-90",
+    "h": 0.42,
+    "anchor": "center"
+   },
+   "why": "Low wooden bench at the west stall's north-east corner, a man seated on it. Seat 42 px at s 0.68 -> 0.62 m; built 1.0 m, 0.42 m (choice), across the deck (level). Never collides."
+  },
+  {
+   "id": "S3.prop.big_parasol_18160",
+   "part": "parasol",
+   "args": {
+    "R": 1.5,
+    "hub_h": 3.0,
+    "ribs": 20,
+    "rise": 0.35
+   },
+   "why": "Very large open parasol, about 30 ribs, seen from above, over the small-goods display and the table of bowls. SCALE CUE canopy 270 px at s ~0.98 -> 2.75 m; built 3.0 m (R 1.5), 20 ribs (choice: triangles), hub 3.0 m: its canopy is painted over the lattice awning's north-east corner (hub v 906 over the est foot v 1085: 2.3 m at 77 px/m)."
+  },
+  {
+   "id": "S3.prop.big_parasol_19565",
+   "part": "parasol",
+   "args": {
+    "R": 1.65,
+    "hub_h": 2.9,
+    "hub_off": [
+     -0.9,
+     0.6
+    ],
+    "tilt": [
+     0.0,
+     -0.3
+    ],
+    "ribs": 16
+   },
+   "why": "Very large parasol, many ribs, tilted back over the mat shed, its pole slanting down over the shed's roof. Canopy ~265 px (≈ 3.3 m at the figures' ~80 px/m beside it): R 1.65. Hub (19495,1085) up-left of the est foot (19565,1245): hub 0.9 m west and 0.6 m north of the foot, 2.9 m up (choice), canopy tilted back (north rim low)."
+  },
+  {
+   "id": "S3.prop.bottle_stand_17600",
+   "part": "bottle_stand",
+   "args": {
+    "w": 0.55,
+    "d": 0.4,
+    "h": 0.87,
+    "top_h": 0.87
+   },
+   "why": "Small box-shaped stall stand with a dark cloth-hung front, bottles on it. 38 x 65 px at s 0.63 -> 0.6 x 1.0 m; built 0.55 x 0.4 m, top 0.87 m = the frame's support (67 px)."
+  },
+  {
+   "id": "S3.prop.bottles_on_stand_17600",
+   "part": "bottles",
+   "args": {
+    "n": 5,
+    "h": 0.3,
+    "spread": 0.36
+   },
+   "why": "Four or five round-topped, narrow-necked bottles (the wine-bottle form) on the stand: tops 25 x 38 px; 0.3 m bottles, five (choice), on its built top."
+  },
+  {
+   "id": "S3.prop.bowl_on_table_19816",
+   "part": "small_thing",
+   "args": {
+    "kind": "bowl",
+    "r": 0.08
+   },
+   "why": "Small round bowl on the shop table (16 x 12 px): 0.16 m across, on the table's built top."
+  },
+  {
+   "id": "S3.prop.bundle_over_rail_19392",
+   "part": "rail_bundle",
+   "args": {
+    "rail_h": 1.05,
+    "out": "deck-90",
+    "h": 0.55,
+    "w": 0.38
+   },
+   "why": "Pale rounded bundle with vertical folds hanging over the outside of the near railing below the wide-hat man's hands. 28 x 49 px at s 0.65 -> 0.43 x 0.75 m; built 0.38 x 0.55 m on a rope over the rail's top (the bridge kit's railing: 1.05 m), hanging outward (right of the deck's axis)."
+  },
+  {
+   "id": "S3.prop.coiled_goods_18600",
+   "part": "coiled_heap",
+   "args": {
+    "n": 8,
+    "r": 0.17,
+    "spread": [
+     0.85,
+     0.6
+    ],
+    "tiers": 3,
+    "yaw": 0,
+    "on": "S3.prop.stall_table_18540"
+   },
+   "why": "Pile of round coiled goods (flat coils of twisted dough, or coiled baskets) heaped at the table's north-east end and beyond it. 94 x 81 px at s 0.74 -> 1.25 x 1.1 m; built eight 0.34 m coils in three tiers (~0.2 m a tier, choice); the coils over the table's built plan lie on its top, the rest on the deck beyond (as painted)."
+  },
+  {
+   "id": "S3.prop.dark_basket_18500",
+   "part": "basket",
+   "args": {
+    "r": 0.22,
+    "h": 0.32,
+    "mat": "bark"
+   },
+   "why": "Dark round basket or bucket under the front of the west stall's table: 34 x 29 px at s 0.73 -> 0.46 x 0.4 m."
+  },
+  {
+   "id": "S3.prop.dishes_16120",
+   "part": "dishes",
+   "args": {
+    "n": 3,
+    "spread": 0.35
+   },
+   "why": "A few small dark dishes on the table's west half (2-3: three built), on its built top."
+  },
+  {
+   "id": "S3.prop.far_bank_basin_17662",
+   "part": "tub",
+   "args": {
+    "r": 0.28,
+    "h": 0.16,
+    "mat": "interior"
+   },
+   "why": "Large dark shallow basin on the ground before the low table (35 x 13 px at s 0.24): 0.56 m across, 0.16 m deep; moved 0.75 m south with its table, to lie before it."
+  },
+  {
+   "id": "S3.prop.far_bank_bench_17278",
+   "part": "bench",
+   "args": {
+    "L": 1.0,
+    "h": 0.42,
+    "yaw": 90,
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Low bench on splayed legs the hunched man sits on, east of the small table he faces (38 px at s 0.3): 1.0 m, set along the table's east side (yaw 90, choice: then it clears the table and the counter at real size). Never collides."
+  },
+  {
+   "id": "S3.prop.far_bank_bench_17416",
+   "part": "bench",
+   "args": {
+    "L": 1.3,
+    "lod": 1
+   },
+   "why": "Long bench before the west square table (52 px): 1.3 m."
+  },
+  {
+   "id": "S3.prop.far_bank_bench_17470",
+   "part": "bench",
+   "args": {
+    "L": 1.1,
+    "yaw": 90,
+    "lod": 1
+   },
+   "why": "Bench (or a second small table) set end-on, running back north-east from the west table's east side: yaw 90, 1.1 m."
+  },
+  {
+   "id": "S3.prop.far_bank_bench_17515",
+   "part": "bench",
+   "args": {
+    "L": 1.3,
+    "lod": 1
+   },
+   "why": "Long bench before the east square table (48 px): 1.3 m."
+  },
+  {
+   "id": "S3.prop.far_bank_counter_table_17347",
+   "part": "table",
+   "args": {
+    "L": 1.6,
+    "W": 0.55,
+    "h": 0.85,
+    "apron": "board",
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Long counter table with a plain board apron, two men behind it facing the river. 90 px at s 0.29 -> 3.1 m; mapped corners 1.34 x 0.56 m; built 1.6 x 0.55 x 0.85 m (choice: the bench and the small table stand close west of it) on their centre, moved 0.55 m south so the two men painted behind it sit behind it (choices/props.json)."
+  },
+  {
+   "id": "S3.prop.far_bank_long_table_17945",
+   "part": "table",
+   "args": {
+    "L": 1.8,
+    "W": 0.55,
+    "h": 0.75,
+    "lod": 1,
+    "top_h": 0.75
+   },
+   "why": "Long plain table along a far-bank shop's front. SCALE CUE 130 px at s 0.24 -> 5.4 m: built 1.8 x 0.55 m; its top 0.75 m real, not the frame's painted 0.36 (the brief: painted too small to be real); the thing on it stands on the built top (top_h)."
+  },
+  {
+   "id": "S3.prop.far_bank_low_table_17652",
+   "part": "table",
+   "args": {
+    "L": 1.0,
+    "W": 0.45,
+    "h": 0.42,
+    "lod": 1,
+    "apron": null
+   },
+   "why": "Low table or bench before the tall jar (60 px at s 0.26): 1.0 x 0.45 m, 0.42 m high (choice)."
+  },
+  {
+   "id": "S3.prop.far_bank_slatted_stand_17080",
+   "part": "slat_rack",
+   "args": {
+    "l": 0.6,
+    "w": 0.45,
+    "h": 0.6,
+    "slats": "h",
+    "legs": 0.3
+   },
+   "why": "Small wooden stand with horizontally slatted sides on legs (a rack, a cupboard or a tiny booth): 28 x 48 px at s 0.29; built 0.6 x 0.45 m, its slatted body 0.6 m on 0.3 m legs (choice)."
+  },
+  {
+   "id": "S3.prop.far_bank_table_17105",
+   "part": "table",
+   "args": {
+    "L": 0.75,
+    "W": 0.6,
+    "h": 0.76,
+    "lod": 1
+   },
+   "why": "Small plain table east of the slatted stand, faded (34 px): 0.75 x 0.6 m."
+  },
+  {
+   "id": "S3.prop.far_bank_table_17245",
+   "part": "table",
+   "args": {
+    "L": 0.75,
+    "W": 0.75,
+    "h": 0.76,
+    "lod": 1
+   },
+   "why": "Small square table on four legs, the seated man faces it (43 px at s 0.3): 0.75 m."
+  },
+  {
+   "id": "S3.prop.far_bank_table_17435",
+   "part": "table",
+   "args": {
+    "L": 0.9,
+    "W": 0.9,
+    "h": 0.78,
+    "stretch": true,
+    "lod": 1
+   },
+   "why": "Empty square table with stretchers under the mat-roofed shed (64 px at s 0.29): 0.9 m square (choice)."
+  },
+  {
+   "id": "S3.prop.far_bank_table_17533",
+   "part": "table",
+   "args": {
+    "L": 0.9,
+    "W": 0.9,
+    "h": 0.78,
+    "stretch": true,
+    "lod": 1
+   },
+   "why": "Second empty square table with stretchers under the shed (65 px at s 0.28 -> 2.3 m: implausible): 0.9 m square."
+  },
+  {
+   "id": "S3.prop.far_bank_tables_19210",
+   "part": "table_row",
+   "args": {
+    "w_off": [
+     -2.73,
+     0.68
+    ],
+    "e_off": [
+     2.49,
+     -0.16
+    ],
+    "n": 7,
+    "size": [
+     0.72,
+     0.72,
+     0.76
+    ],
+    "bench": [
+     0.72,
+     0.42
+    ]
+   },
+   "why": "A row of about 7 small square tables with benches (no one seated) along the long open building's front on the far bank behind the crown, from w_end (19075, 55) to e_end (19395, 98): those stroke points through the frame give the row's ends as offsets from the base (5.3 m), so a move of the entity moves the row. Seven 0.72 m tables each with a 0.72 m bench before it (choice: seven real tables fit 5.3 m only this small; painted ~45 px each at s ~0.5)."
+  },
+  {
+   "id": "S3.prop.far_bank_thing_on_table_17968",
+   "part": "small_thing",
+   "args": {
+    "kind": "handled_basket",
+    "r": 0.08,
+    "h": 0.1
+   },
+   "why": "Small pot or basket with a handle on the long table (15 x 22 px): a 0.16 m basket with a bail handle (conf low)."
+  },
+  {
+   "id": "S3.prop.far_chair_18322",
+   "part": "chair",
+   "args": {
+    "facing": 180,
+    "kind": "slats",
+    "back_h": 0.95,
+    "lod": 1
+   },
+   "why": "Chair with four legs in the open shed, a man sits on it facing the table west of him. Real size (legs 43 px at s 0.22). Never collides."
+  },
+  {
+   "id": "S3.prop.far_counter_19555",
+   "part": "table",
+   "args": {
+    "L": 2.0,
+    "W": 0.4,
+    "h": 0.9,
+    "apron": "board",
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Long plain counter table on legs under a shed's eaves, a man leaning over it. Top 121 px at s 0.48 -> 2.5 m; mapped corners 1.74 x 0.28 m; built 2.0 x 0.4 x 0.9 m (choice: a narrow counter, the man leaning over it from behind and the dark vendor before it are mapped within 0.6 m of depth) on their centre."
+  },
+  {
+   "id": "S3.prop.far_hall_bench_18447",
+   "part": "bench",
+   "args": {
+    "L": 1.2,
+    "lod": 1
+   },
+   "why": "Bench between the hall's tables (40 px): 1.2 m (choice)."
+  },
+  {
+   "id": "S3.prop.far_hall_chairs_18393",
+   "part": "chair",
+   "args": {
+    "facing": -90,
+    "kind": "curved",
+    "back_h": 1.0,
+    "lod": 1
+   },
+   "why": "Chair with a curved back rail in the open hall on posts (perhaps two side by side: one built, conf low), facing the river (south, choice). On the hall's raised deck (0.39)."
+  },
+  {
+   "id": "S3.prop.far_hall_long_table_18410",
+   "part": "table",
+   "args": {
+    "L": 1.5,
+    "W": 0.6,
+    "h": 0.78,
+    "lod": 1
+   },
+   "why": "Long table in the far-bank hall (78 px at s ~0.6 -> 1.3 m): built 1.5 x 0.6 m (choice), on the raised deck."
+  },
+  {
+   "id": "S3.prop.far_hall_table_18478",
+   "part": "table",
+   "args": {
+    "L": 0.9,
+    "W": 0.7,
+    "h": 0.78,
+    "lod": 1
+   },
+   "why": "Table in the hall east of the long table (56 px): 0.9 x 0.7 m (choice), on the raised deck."
+  },
+  {
+   "id": "S3.prop.far_parasol_18400",
+   "part": "parasol",
+   "args": {
+    "R": 1.3,
+    "hub_h": 2.5,
+    "ribs": 10
+   },
+   "why": "Large round ribbed canopy over the hall's west end (110 px at s ~0.3 -> 3.7 m): built 2.6 m (R 1.3, choice), 10 ribs."
+  },
+  {
+   "id": "S3.prop.far_shed_bench_18288",
+   "part": "bench",
+   "args": {
+    "L": 1.0,
+    "lod": 1
+   },
+   "why": "Low bench before the shed's table (30 px at s 0.22): 1.0 m."
+  },
+  {
+   "id": "S3.prop.far_shed_table_18265",
+   "part": "table",
+   "args": {
+    "L": 1.0,
+    "W": 0.55,
+    "h": 0.78,
+    "lod": 1
+   },
+   "why": "Long table in the open shed (painted diagonal: the frame's receding edges draw so). 67 x 55 px at s 0.22; built 1.0 x 0.55 m (choice), moved 0.25 m west to clear the chair of the man seated east of it (choices/props.json)."
+  },
+  {
+   "id": "S3.prop.far_shop_bench_18060",
+   "part": "bench",
+   "args": {
+    "L": 1.2,
+    "lod": 1
+   },
+   "why": "Bench at the west end of the far shop's front (38 px): 1.2 m."
+  },
+  {
+   "id": "S3.prop.far_shop_long_table_18120",
+   "part": "table",
+   "args": {
+    "L": 1.3,
+    "W": 0.55,
+    "h": 0.78,
+    "lod": 1
+   },
+   "why": "Long table inside the tiled far-bank shop's open front, nobody at it (57 px at s 0.22): 1.3 x 0.55 m (choice)."
+  },
+  {
+   "id": "S3.prop.far_shop_table_18168",
+   "part": "table",
+   "args": {
+    "L": 0.75,
+    "W": 0.6,
+    "h": 0.78,
+    "lod": 1,
+    "goods": [
+     {
+      "kind": "pot",
+      "at": [
+       -0.9,
+       0.0
+      ],
+      "r": 0.07,
+      "h": 0.12
+     }
+    ]
+   },
+   "why": "Second table inside the far-bank shop, east of the long one (47 px at s 0.22): 0.75 x 0.6 m; its what's 'small dark thing on the long table's east end' is built with it (a dark pot, at the long table's east end)."
+  },
+  {
+   "id": "S3.prop.far_stall_table_19410",
+   "part": "table",
+   "args": {
+    "L": 1.8,
+    "W": 0.55,
+    "h": 0.7,
+    "anchor": "center",
+    "lod": 1,
+    "goods": [
+     {
+      "kind": "wares",
+      "n": 4,
+      "at": [
+       0,
+       0
+      ],
+      "step": 0.35
+     }
+    ]
+   },
+   "why": "Long low table under the far parasol set out with goods (unreadable small shapes). Top 93 px at s 0.49 -> 1.9 m; mapped corners 1.29 x 0.28 m; built 1.8 x 0.55 x 0.7 m, four small wares."
+  },
+  {
+   "id": "S3.prop.far_tray_stand_19563",
+   "part": "tray_stand",
+   "args": {
+    "R": 0.22,
+    "h": 0.85,
+    "legs": 3,
+    "splay": 0.1,
+    "basket": true
+   },
+   "why": "Flat round basket on a stand with long splayed legs (a pedlar's display, the stand reading). Basket 20 px at s 0.48 -> 0.42 m (R 0.22: 0.44 m); legs ~45 px -> 0.95 m: top 0.85 m; moved 0.2 m south to stand before the man behind it."
+  },
+  {
+   "id": "S3.prop.food_heap_16170",
+   "part": "fruit_heap",
+   "args": {
+    "R": 0.31,
+    "h": 0.3,
+    "n": 10
+   },
+   "why": "Big heap of lumpy round things touched with pink and red (fruit, buns or flowers) in the basin: 58 x 38 px -> a mound 0.6 m across, 0.3 m high, on the basin's built rim."
+  },
+  {
+   "id": "S3.prop.food_stand_17815",
+   "part": "table",
+   "args": {
+    "L": 0.6,
+    "W": 0.6,
+    "h": 1.01,
+    "legs": "splayed",
+    "splay": 0.06,
+    "stretch": true,
+    "top_h": 1.01
+   },
+   "why": "Tall wooden stand (a small high table) with a round tray on top, customers round it. Top 65 px at s 0.76 -> 0.85 m; built 0.6 m square (choice), top 1.01 m = the frame's 'table top: S3.prop.food_stand_17815' (78 px)."
+  },
+  {
+   "id": "S3.prop.frame_awning_19070",
+   "part": "frame_awning",
+   "args": {
+    "eave_h": 2.1,
+    "ridge_h": 0.5,
+    "size": [
+     2.2,
+     1.5
+    ],
+    "yaw": "deck"
+   },
+   "why": "Light gabled frame (posts, a ridge and slanting rafters, perhaps a cloth or mat awning) behind the south end, feet hidden (conf low). Built a 2.2 x 1.5 m frame on four posts along the deck, eaves 2.1 m, ridge 0.5 m higher, a mat over both slopes (choice)."
+  },
+  {
+   "id": "S3.prop.goods_pole_18785",
+   "part": "goods_pole",
+   "args": {
+    "h": 2.4,
+    "tiers": [
+     1.1,
+     1.5,
+     1.9
+    ],
+    "arm": 0.36
+   },
+   "why": "Upright pole in a dark box-like stand hung with clusters of curly twisted goods on both sides (dough twists): a pedlar's display pole. Goods 85 x 110 px, pole 128 px above the est foot; behind the hall (s ~0.75): goods 1.1 x 0.85 m (arm 0.36), pole 2.4 m, three tiers 1.1-1.9 m (choice: 'from about a man's height to above his head' against the 1.3 m the strokes give at s 0.75)."
+  },
+  {
+   "id": "S3.prop.goods_stand_18800",
+   "part": "slat_rack",
+   "args": {
+    "l": 0.6,
+    "w": 0.4,
+    "h": 0.75,
+    "slats": "v",
+    "light_box": [
+     0.28,
+     0.28,
+     0.4
+    ]
+   },
+   "why": "Slatted wooden frame of goods under the big parasol with a light box-like thing beside it to the west (faded). Frame 43 x 55 px at s 0.72 -> 0.6 x 0.76 m; light box 20 x 30 px -> 0.28 x 0.4 m."
+  },
+  {
+   "id": "S3.prop.goods_table_17708",
+   "part": "table",
+   "args": {
+    "L": 1.1,
+    "W": 0.55,
+    "h": 0.65,
+    "apron": "board",
+    "top_h": 0.65
+   },
+   "why": "Low stall table with jars, its front in shadow (a dark front band). SCALE CUE ~85 px at s 0.63-0.76 -> 1.1-1.35 m; built 1.1 x 0.55 m, top 0.65 m = the frame's support (50 px), a front board for the dark band."
+  },
+  {
+   "id": "S3.prop.goods_table_18232",
+   "part": "table",
+   "args": {
+    "L": 1.2,
+    "W": 0.6,
+    "h": 0.78,
+    "goods": [
+     {
+      "kind": "bowl_stacks",
+      "n": 3,
+      "high": 4,
+      "step": 0.3,
+      "at": [
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "why": "Table under the parasol's east rim with stacks of bowls (the pointing man points at it). 90 px at s 0.98 -> 0.92 m; built 1.2 x 0.6 x 0.78 m, three stacks of 3-5 bowls."
+  },
+  {
+   "id": "S3.prop.hall_bench_18550",
+   "part": "bench",
+   "args": {
+    "L": 1.1,
+    "lod": 1
+   },
+   "why": "Low bench beside the square table (seat 31 px at s 0.6 -> 0.52 m): 1.1 m (choice), 0.45 m high."
+  },
+  {
+   "id": "S3.prop.hall_table_18508",
+   "part": "table",
+   "args": {
+    "L": 0.85,
+    "W": 0.85,
+    "h": 0.78,
+    "lod": 1
+   },
+   "why": "Square wooden table on the hall's raised floor (top 57 px at s 0.66 -> 0.86 m): 0.85 m square."
+  },
+  {
+   "id": "S3.prop.hanging_signboard_18463",
+   "part": "hanging_sign",
+   "args": {
+    "parasol_id": "S3.prop.parasol_lower_18538",
+    "w": 0.24,
+    "h": 0.5,
+    "cells": 2
+   },
+   "why": "Small framed signboard hanging from the lower parasol's west rim, two or three illegible characters (□□; the scholars name the stalls here 饮子): faded broken strokes. Board 20 x 45 px at s 0.68 -> 0.3 x 0.66 m, built 0.24 x 0.5 m; hung on cords from the rib above it. Moves with the lower parasol (0.8 m south)."
+  },
+  {
+   "id": "S3.prop.hooked_stick_on_wall_18474",
+   "part": "hooked_post",
+   "args": {
+    "h": 0.3,
+    "curl": [
+     1,
+     0
+    ],
+    "on_h": 1.95
+   },
+   "why": "Small thin upright with a hooked top curling east (20 px at s 0.68 -> 0.3 m) standing on the tiled wall's coping at its north end: moved onto the wall's north end (choices/props.json) and stood on the coping, 1.95 m over the ground there (the builder's wall: 1.75 m with its tiled coping to ~1.98)."
+  },
+  {
+   "id": "S3.prop.jar_20109",
+   "part": "small_thing",
+   "args": {
+    "kind": "jar",
+    "r": 0.065,
+    "h": 0.25
+   },
+   "why": "Narrow round-topped jar beside the seated figure (12 x 23 px at s 0.92 -> 0.13 x 0.25 m), on the ground (conf low)."
+  },
+  {
+   "id": "S3.prop.jars_on_table_17700",
+   "part": "jars",
+   "args": {
+    "n": 6,
+    "h": 0.2,
+    "spread": 0.8
+   },
+   "why": "About six small round-topped jars in a row on the stall table (tops 50 px wide row): 0.2 m jars along 0.8 m."
+  },
+  {
+   "id": "S3.prop.lamp_box_18676",
+   "part": "post_box",
+   "args": {
+    "z_box": 1.3,
+    "w": 0.32,
+    "d": 0.26,
+    "hb": 0.3
+   },
+   "why": "Small upright lidded box (a lamp-box sign or a chest) under the lower parasol's east rim: box 33 x 24 px -> 0.32 x 0.3 m; its bottom (v 1500) 1.3 m above its est foot (v 1600) through the frame: on a post (choice: what carries it is not painted). Conf low."
+  },
+  {
+   "id": "S3.prop.lattice_mat_awning_17840",
+   "part": "mat_awning",
+   "args": {
+    "eave": "corners",
+    "heights": [
+     2.55,
+     2.2,
+     2.4,
+     2.75
+    ],
+    "lattice": 0.42,
+    "posts": [
+     1,
+     2
+    ]
+   },
+   "why": "Large woven-mat awning stiffened with a diagonal lattice of bamboo slats, sloping from the bank's edge down to the south; it overlaps the flat canopy's east end. Mapped corners (est) kept; eaves sw 2.55, se 2.2, ne 2.4, nw 2.75 m (under the big parasol's rim at its north-east corner) (choice: the mapped 1.36-2.34 are placeholders under hidden posts): its west edge rests on the flat canopy's mat (built above it), the east end on two poles."
+  },
+  {
+   "id": "S3.prop.leaning_pole_15912",
+   "part": "leaning_pole",
+   "args": {
+    "top": [
+     -0.6,
+     0.12,
+     2.4
+    ],
+    "r": 0.03
+   },
+   "why": "Straight pole leaning across the lattice window from the sill to the eave beam (a loose pole, or a window's stay). Foot (15930,1395) to top (15892,1292): it leans west; built 2.5 m long (choice), top 0.6 m west and 2.4 m up."
+  },
+  {
+   "id": "S3.prop.low_table_wares_20013",
+   "part": "table",
+   "args": {
+    "L": 1.0,
+    "W": 0.4,
+    "h": 0.55,
+    "yaw": -18.6,
+    "anchor": "center",
+    "lod": 1,
+    "goods": [
+     {
+      "kind": "wares",
+      "n": 4,
+      "at": [
+       0,
+       0
+      ],
+      "step": 0.22
+     }
+    ]
+   },
+   "why": "Long low table set obliquely at the bridge's north foot with small dark wares (bowls or jars). Top 89 px at s 0.44 -> 2.0 m; built 1.0 x 0.4 x 0.55 m (low; at the bridge-fit agent's spot in the tavern's west bay, between the stall-keeper behind it and the man in the black hat east of it); yaw from its front edge (19969,258)->(20058,281) through the frame. Four wares, alternately jar and bowl (dark)."
+  },
+  {
+   "id": "S3.prop.mat_awning_stall_18330",
+   "part": "mat_awning",
+   "args": {
+    "eave": "rect",
+    "size": [
+     2.5,
+     1.6
+    ],
+    "yaw": "deck-90",
+    "front_h": 1.95,
+    "back_h": 2.15,
+    "grid": [
+     5,
+     3
+    ],
+    "posts": "corners"
+   },
+   "why": "Stall under a sloping woven-mat awning on poles at the ramp's west side, high at its north edge, low at its south edge; the mat drawn in a grid of battens. Built deck-aligned, 1.6 m along x 2.5 m across the deck centred on its layout point (the bridge-fit agent's footprint_on_deck, deck_fit.json: its mapped corners, at their east-west orientation, would cross the deck's middle). Its low front edge runs across the deck at the downhill (south-west) end and it rises up the ramp to its high (north) edge: eaves 1.95 m and 2.15 m over the deck at each pole (z_at per corner), so with the ramp it stands ~0.9 m higher at the back."
+  },
+  {
+   "id": "S3.prop.mat_awning_stall_18783",
+   "part": "mat_awning",
+   "args": {
+    "eave": "rect",
+    "size": [
+     2.8,
+     1.9
+    ],
+    "yaw": "deck",
+    "front_h": 2.0,
+    "back_h": 2.25,
+    "lattice": 0.5,
+    "posts": "corners",
+    "rail_side": true
+   },
+   "why": "Stall under a flat woven-mat awning (a diagonal lattice of slats over it) at the foot of the near railing, its east side resting against the railing. The mapped corners are a 5.4 x 0.6 m sliver (three est, on the skewed deck); built a real 2.8 x 1.9 m awning centred on them along the deck's axis, its east (railing) side 2.0 m and the other 2.25 m over the deck at each pole, the east poles lashed at the railing's height (the bridge kit's 1.05 m)."
+  },
+  {
+   "id": "S3.prop.mat_canopy_17600",
+   "part": "mat_awning",
+   "args": {
+    "eave": "corners",
+    "front_h": 2.4,
+    "back_h": 2.55,
+    "grid": [
+     6,
+     0
+    ],
+    "posts": "corners"
+   },
+   "why": "Large flat canopy of dark woven matting on posts over the stalls between the 新酒 pole and the official. Mapped corners kept (3.75-4.24 x 3.0 m); front eave 2.4 m (structures_w: 192 px ≈ 2.5 m), back 2.55 m; battens across (grid); poles at its corners (posts glimpsed at u 17643, 17680, 17838-17910)."
+  },
+  {
+   "id": "S3.prop.mooring_post_17702",
+   "part": "lamp_post",
+   "args": {
+    "above": 2.4,
+    "below": 0.6
+   },
+   "why": "Tall thin post with a small box (a lamp or plaque) at the far bank's water edge, between two boats. ~97 px at s ~0.3; built 2.4 m above the water (1.7 m over the bank), 0.6 m below it, the box 0.26 m (choice). The shared kit_common.mooring_stake(lamp=True) replaces the stand-in when factory (c) lands."
+  },
+  {
+   "id": "S3.prop.parasol_17408",
+   "part": "parasol",
+   "args": {
+    "R": 1.15,
+    "hub_h": 2.35,
+    "tilt": [
+     0.0,
+     0.35
+    ],
+    "ribs": 14,
+    "mat": "oilpaper"
+   },
+   "why": "Big parasol on a pole, its dark canopy tilted toward the viewer, ribbed from a hub, a knob at its top. Canopy 170 px at s 0.84 -> 2.0 m; built 2.3 m (R 1.15), hub 2.35 m, tilted 0.35 (north rim up: the top faces the viewer)."
+  },
+  {
+   "id": "S3.prop.parasol_19150",
+   "part": "parasol",
+   "args": {
+    "R": 1.35,
+    "hub_h": 2.6,
+    "tilt": [
+     0.8,
+     0.0
+    ],
+    "ribs": 14
+   },
+   "why": "Big ribbed parasol tilted steeply behind the rider, its knobbed hub at the canopy's west end (one canopy, second pass). Canopy 195 px at s 0.72 -> 2.7 m (R 1.35); hub 2.6 m; tilt 0.8 (its east rim up: the hub shows at the west end)."
+  },
+  {
+   "id": "S3.prop.parasol_20288",
+   "part": "parasol",
+   "args": {
+    "R": 1.3,
+    "hub_h": 2.45,
+    "ribs": 14
+   },
+   "why": "Large round parasol over the stall table, radiating ribs. Canopy ~210 px at s ~0.92 -> 2.3 m; built 2.6 m across (R 1.3, the web-scene skill's 262 px -> 2.6 m), hub 2.45 m (choice: the seated seller and customer under it)."
+  },
+  {
+   "id": "S3.prop.parasol_big_18748",
+   "part": "parasol",
+   "args": {
+    "R": 1.6,
+    "hub_h": 2.6,
+    "ribs": 14,
+    "rise": 0.35
+   },
+   "why": "Big round parasol of ribbed oiled paper over the crowd at the ramp's foot, seen from above. Canopy 255 px at s 0.72 -> 3.5 m; built 3.2 m (R 1.6, choice), hub 2.6 m."
+  },
+  {
+   "id": "S3.prop.parasol_far_stall_19440",
+   "part": "parasol",
+   "args": {
+    "R": 1.2,
+    "hub_h": 2.4,
+    "ribs": 10
+   },
+   "why": "Large round ribbed parasol over a stall on the north bank behind the crown, top cut by the silk's edge. Canopy 72 px at s 0.49 -> 1.5 m; built 2.4 m (R 1.2, choice), 10 ribs (far)."
+  },
+  {
+   "id": "S3.prop.parasol_lower_18538",
+   "part": "parasol",
+   "args": {
+    "R": 1.5,
+    "hub_h": 2.35,
+    "ribs": 14,
+    "rise": 0.15,
+    "vase": true
+   },
+   "why": "Lower (south) twin parasol, its ribs gathered under the canopy into a turned, vase-shaped runner on the pole (vase_runner: runner 50 x 57 px -> 0.34 m mouth, 0.5 m long). Canopy 285 px -> 3.0 m (R 1.5), hub 2.35 m. Moved 0.8 m south (its painted hub at H 2.35 maps there; choices/props.json)."
+  },
+  {
+   "id": "S3.prop.parasol_stall_18585",
+   "part": "parasol",
+   "args": {
+    "R": 1.2,
+    "hub_h": 2.5,
+    "ribs": 14
+   },
+   "why": "Large parasol behind the west stall's mat awning, canopy an ellipse with its hub near the middle (stands level on a pole under the hub). Canopy 160 px at s 0.74 -> 2.2 m; built R 1.2, hub 2.5 m over the deck."
+  },
+  {
+   "id": "S3.prop.parasol_stall_table_20245",
+   "part": "table",
+   "args": {
+    "L": 1.5,
+    "W": 0.6,
+    "h": 0.76,
+    "stretch": true,
+    "goods": [
+     {
+      "kind": "jars",
+      "n": 1,
+      "h": 0.24,
+      "at": [
+       -0.42,
+       0.0
+      ]
+     },
+     {
+      "kind": "lidded_box",
+      "at": [
+       0.05,
+       0.05
+      ],
+      "s": [
+       0.26,
+       0.18,
+       0.16
+      ],
+      "mat": "interior"
+     }
+    ]
+   },
+   "why": "Rectangular table on four legs with a lower stretcher, a jar at its west end and a dark box-like ware near its middle. SCALE CUE ~150 px at s 0.92 -> 1.6 m; built 1.5 x 0.6 x 0.76 m."
+  },
+  {
+   "id": "S3.prop.parasol_upper_18606",
+   "part": "parasol",
+   "args": {
+    "R": 1.5,
+    "hub_h": 2.6,
+    "ribs": 14,
+    "rise": 0.15
+   },
+   "why": "Upper (north) of the twin big flat parasols. Canopy 300 px at s 0.68 (4.4 m) / px/100 (3.0 m): built 3.0 m (R 1.5), flat (rise 0.15), hub 2.6 m: a little above the lower one, as painted (hub v 1400 against 1460). Its pole rises between them (moved 0.5 m north: choices/props.json)."
+  },
+  {
+   "id": "S3.prop.pot_on_rack_16140",
+   "part": "pot_rack",
+   "args": {
+    "w": 0.7,
+    "h": 1.5,
+    "depth": 0.28,
+    "shelf": 0.6
+   },
+   "why": "Small dark pot on the lowest shelf of an open rack (horizontal bars between uprights, red touches) at the back wall of the middle bay. The rack (u 16122-16160) is what makes the pot stand, so it is built under the pot's ID (the tavern kit leaves it out): 0.7 m wide, 1.5 m tall, shelves 0.6 / 1.02 / 1.44 m (the map: the pot ~0.6 m up, a builder choice), the middle shelf's bars red."
+  },
+  {
+   "id": "S3.prop.round_basket_18865",
+   "part": "basket",
+   "args": {
+    "r": 0.17,
+    "h": 0.2,
+    "lid": true
+   },
+   "why": "Round object with a looped rim (a basket, a lid or a round hat) by the goods pole: 24 px; a lidded round basket 0.34 m across (choice, conf low)."
+  },
+  {
+   "id": "S3.prop.round_ribbed_object_19765",
+   "part": "rope_reel",
+   "args": {
+    "r": 0.24
+   },
+   "why": "Round object with radiating spokes and a spike on top at the moored boat's west end, on its mat roof: a rope reel or coil in a frame (t8, t9). ~40 px at s 0.88 -> 0.45 m: r 0.24. Static on the boat's roof (the boat rides 2 cm); the river agent may move it with the boat."
+  },
+  {
+   "id": "S3.prop.round_tray_17815",
+   "part": "round_tray",
+   "args": {
+    "R": 0.36,
+    "buns": 5
+   },
+   "why": "Round shallow tray on the stand, under the seated man's hands: dark mass 67 px at s 0.76 -> 0.88 m; built 0.72 m across, five buns on it (choice: what it holds is not readable)."
+  },
+  {
+   "id": "S3.prop.round_tray_stand_18403",
+   "part": "tray_stand",
+   "args": {
+    "R": 0.5,
+    "h": 0.72,
+    "legs": 4,
+    "splay": 0.2,
+    "goods": 6
+   },
+   "why": "Large round flat tray with round things (cakes) on a splayed-leg stand at the water's edge by the west stall; on the deck. SCALE CUE rim 90 px at s 0.74 -> 1.2 m; built 1.0 m across (R 0.5, choice), its top 0.72 m (legs ~60 px). Each leg on the deck under it (z_at per foot)."
+  },
+  {
+   "id": "S3.prop.shop_bench_19902",
+   "part": "bench",
+   "args": {
+    "L": 0.75,
+    "h": 0.45,
+    "anchor": "center",
+    "lattice_side": true
+   },
+   "why": "Wooden bench with a lattice side, east of the standing man. 35 px wide (19885-19920) -> 0.75 m at s 0.47; built 0.75 m, the lattice closing its east end; moved 0.15 m east (its sitter stays on it) to clear the standing man west of it."
+  },
+  {
+   "id": "S3.prop.shop_chair_19725",
+   "part": "chair",
+   "args": {
+    "facing": 0,
+    "back_h": 0.95,
+    "kind": "slats"
+   },
+   "why": "Chair with a slatted back the man at the table sits on; faces the table (east). Back and seat 48 x 50 px; seat 0.46, back 0.95 m (choice). Never collides (a seated figure)."
+  },
+  {
+   "id": "S3.prop.shop_long_board_19601",
+   "part": "bench",
+   "args": {
+    "L": 1.5,
+    "yaw": 94.6,
+    "w": 0.3,
+    "h": 0.42,
+    "anchor": "center"
+   },
+   "why": "Long narrow pale board with a framed edge and cross pieces running back into the shop: built as a long bench set end-on (the map's first reading; else a ladder). Mapped corners 1.57 m deep x 0.2 m; built 1.5 x 0.3 m, 0.42 m, along its mapped west edge (94.6 deg)."
+  },
+  {
+   "id": "S3.prop.shop_low_table_19797",
+   "part": "table",
+   "args": {
+    "L": 0.65,
+    "W": 0.55,
+    "h": 0.32,
+    "anchor": "center",
+    "apron": null
+   },
+   "why": "Low table or board on short legs at the shop's front sill, top a parallelogram receding north-east. Mapped corners 0.63 x 0.6 m; built so, its top 0.32 m (short legs to v ~1610: choice)."
+  },
+  {
+   "id": "S3.prop.shop_table_19776",
+   "part": "table",
+   "args": {
+    "L": 1.0,
+    "W": 0.6,
+    "h": 0.62,
+    "anchor": "center",
+    "top_h": 0.62
+   },
+   "why": "Square wooden table in the open shop, the seated man leans on its west end. Top 92 px; mapped corners 0.99 x 0.46 m (back est); built 1.0 x 0.6 m, top 0.62 m = the frame's support 'table top: S3.prop.shop_table_19776' (48 px)."
+  },
+  {
+   "id": "S3.prop.shop_table_tray_20140",
+   "part": "table",
+   "args": {
+    "L": 1.5,
+    "W": 0.5,
+    "h": 0.75,
+    "anchor": "center",
+    "goods": [
+     {
+      "kind": "oval_tray",
+      "L": 0.7,
+      "W": 0.42,
+      "at": [
+       -0.15,
+       0.0
+      ]
+     },
+     {
+      "kind": "pot",
+      "at": [
+       0.12,
+       0.3
+      ],
+      "r": 0.07,
+      "h": 0.12
+     }
+    ]
+   },
+   "why": "Long table or counter in the shop's east part with a large flat oval tray and a small round pot behind it (both part of this entity's what). Top from u ~20090 to ~20190 (100 px); built 1.5 x 0.5 x 0.75 m (choice); tray 36 x 10 px -> 0.7 x 0.42 m oval."
+  },
+  {
+   "id": "S3.prop.shop_wall_bench_19582",
+   "part": "bench",
+   "args": {
+    "L": 1.2,
+    "yaw": 2,
+    "w": 0.28,
+    "h": 0.4,
+    "anchor": "center"
+   },
+   "why": "Long low bench along the back of the shop's west part, in front of a lattice wall. Mapped corners 1.21 x 0.28 m (est): built so, 0.4 m high."
+  },
+  {
+   "id": "S3.prop.signboard_19982",
+   "part": "leaning_sign",
+   "args": {
+    "w": 0.32,
+    "L": 0.85,
+    "lean": [
+     0.12,
+     0.22
+    ],
+    "cells": 3
+   },
+   "why": "Upright signboard leaning back at the shop's front, three character cells, illegible (□□□): faded broken strokes, never guessed. 25 x 65 px; built 0.32 x 0.85 m (choice between px/100 and s 0.47), its top leaning north-east as painted (top (19997,1540) over foot (19978,1603))."
+  },
+  {
+   "id": "S3.prop.slanted_board_19912",
+   "part": "propped_board",
+   "args": {
+    "L": 1.3,
+    "D": 0.8,
+    "low": 0.12,
+    "high": 0.65
+   },
+   "why": "Large plain board at a slant across the shop's front, high side at the back: a shutter taken down and propped (one reading; a counter top or couch the others). 116 px wide, 65 px of slope; built 1.3 x 0.8 m, its low edge 0.12 and its high edge 0.65 m up on two props (choice). Collides."
+  },
+  {
+   "id": "S3.prop.slatted_panel_18615",
+   "part": "slat_panel",
+   "args": {
+    "w": 0.4,
+    "top_rise": 0.9,
+    "lean": 0.6,
+    "yaw": 90
+   },
+   "why": "Short panel of two rails with slanting slats between them (a rack, a ladder set down or a bench back) at the west stall's north-east corner, its long axis falling to the east. ~85 px at s 0.61 -> 1.1 m rails: built leaning from its foot 0.6 m west to its top 0.9 m up, 0.4 m wide, five slats."
+  },
+  {
+   "id": "S3.prop.small_box_20345",
+   "part": "crossed_box",
+   "args": {
+    "l": 0.34,
+    "w": 0.3,
+    "h": 0.33
+   },
+   "why": "Small box with a crossed pattern, a short stick rising north-east from it (30 x 33 px at s 0.92 -> 0.33 x 0.36 m)."
+  },
+  {
+   "id": "S3.prop.small_goods_display_18060",
+   "part": "display_board",
+   "args": {
+    "size": [
+     1.7,
+     0.9
+    ],
+    "yaw": 0,
+    "front_h": 0.22,
+    "back_h": 0.62
+   },
+   "why": "Hardware pedlar's sloping display board laid with rows of small dark goods (rods, rings, knife and scissor shapes, combs), a dark box at its north-east corner, the seller at its west end. Mapped corners (three est) span 1.5-2.3 x 2 m; built a real board 1.7 x 0.9 m centred on them, 0.22 m at its front edge and 0.62 m at the back (choice)."
+  },
+  {
+   "id": "S3.prop.small_table_20460",
+   "part": "table",
+   "args": {
+    "L": 0.6,
+    "W": 0.5,
+    "h": 0.78,
+    "top_mat": "interior",
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Small table with a dark top at the tavern's east end. Top 34 px (20443-20477) at s ~0.4 -> 0.85 m; built 0.6 x 0.5 m, 0.78 high (choice: a Song high table; it fits behind the route's lane by the S2 seam), dark top (interior)."
+  },
+  {
+   "id": "S3.prop.stall_table_17380",
+   "part": "table",
+   "args": {
+    "L": 1.1,
+    "W": 0.65,
+    "h": 0.75,
+    "legs": "splayed",
+    "splay": 0.06,
+    "top_mat": "interior",
+    "goods": [
+     {
+      "kind": "under",
+      "n": 2,
+      "step": 0.4,
+      "at": [
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "why": "Stall table with a dark top, splayed legs, dark things stowed under it. Top ~100 px at s 0.89 -> 1.1 m; built 1.1 x 0.65 x 0.75 m; base = the middle of its front legs (front-anchored); two dark bundles under it."
+  },
+  {
+   "id": "S3.prop.stall_table_18540",
+   "part": "table",
+   "args": {
+    "L": 1.6,
+    "W": 0.62,
+    "h": 0.78,
+    "yaw": "deck-90",
+    "anchor": "center",
+    "goods": [
+     {
+      "kind": "tray",
+      "r": 0.2,
+      "at": [
+       -0.3,
+       -0.1
+      ],
+      "buns": 4
+     },
+     {
+      "kind": "tray",
+      "r": 0.17,
+      "at": [
+       0.02,
+       -0.12
+      ]
+     },
+     {
+      "kind": "bowls",
+      "n": 3,
+      "step": 0.17,
+      "at": [
+       0.32,
+       0.05
+      ]
+     }
+    ]
+   },
+   "why": "Table under the west mat awning laden with shallow bowls, dishes and round trays along its front. Top 119 px at s 0.74 -> 1.6 m; built 1.6 x 0.62 x 0.78 m along the awning's front, across the deck (level across it); each leg on the deck (z_at per foot)."
+  },
+  {
+   "id": "S3.prop.stall_table_19228",
+   "part": "table",
+   "args": {
+    "L": 1.6,
+    "W": 0.6,
+    "h": 0.78,
+    "anchor": "center",
+    "goods": [
+     {
+      "kind": "dish",
+      "r": 0.17,
+      "at": [
+       -0.38,
+       0.0
+      ]
+     },
+     {
+      "kind": "bowls",
+      "n": 3,
+      "step": 0.18,
+      "at": [
+       0.12,
+       0.05
+      ]
+     },
+     {
+      "kind": "lidded_box",
+      "at": [
+       0.4,
+       0.12
+      ],
+      "s": [
+       0.22,
+       0.16,
+       0.14
+      ]
+     }
+    ]
+   },
+   "why": "Long table under the mat shed: a flat dish at its west end, bowls and a lidded box at its east end (part of it). Top 150 px (19153-19303): px/100 = 1.5 m (s ~1.25 here reads 1.2); built 1.6 x 0.6 x 0.78 m; base est under its middle (legs hidden by the roof)."
+  },
+  {
+   "id": "S3.prop.stick_on_ground_17615",
+   "part": "lying_pole",
+   "args": {
+    "L": 1.5,
+    "yaw": 8.1
+   },
+   "why": "Long thin stick or plank lying on the ground south of the bottle stand, thicker at its west end (a fallen carrying pole?). Line 55 px at s 0.63 -> 0.87 m; built 1.5 m (choice: a carrying pole), along its painted line."
+  },
+  {
+   "id": "S3.prop.stool_20126",
+   "part": "stool",
+   "args": {
+    "h": 0.42,
+    "s": 0.32
+   },
+   "why": "Small stool under the seated customer (legs 21 px wide): 0.32 m, 0.42 high. Never collides."
+  },
+  {
+   "id": "S3.prop.table_15745",
+   "part": "table",
+   "args": {
+    "L": 1.1,
+    "W": 0.5,
+    "h": 0.45,
+    "legs": "splayed",
+    "splay": 0.05
+   },
+   "why": "Unattended table (or a low couch) with a plain top and splayed legs in the west bay. Top 85 x 24 px at s 0.55 -> 1.5 m; built 1.1 x 0.5 m, 0.45 m (a low table, like the diners')."
+  },
+  {
+   "id": "S3.prop.table_16145",
+   "part": "table",
+   "args": {
+    "L": 1.3,
+    "W": 0.55,
+    "h": 0.45,
+    "anchor": "center",
+    "top_h": 0.45
+   },
+   "why": "Long low dining table across the balcony's middle bay, dishes on its west half. ~90 px at s 0.55 -> 1.6 m; built 1.3 x 0.55 m (room for the diners), its top 0.45 m = the frame's 'table top: S3.prop.table_16145' (35 px)."
+  },
+  {
+   "id": "S3.prop.tavern_bench_20124",
+   "part": "bench",
+   "args": {
+    "L": 0.6,
+    "yaw": 0,
+    "h": 0.45,
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Plain bench west of the first table, nobody on it. 28 px wide at s 0.34 -> 0.8 m; built 0.6 m, set along the square table's north side behind the narrowed tavern (choices/props.json)."
+  },
+  {
+   "id": "S3.prop.tavern_chair_20325",
+   "part": "chair",
+   "args": {
+    "facing": 0,
+    "back_h": 1.05,
+    "kind": "slats",
+    "lod": 1
+   },
+   "why": "High-backed chair at the west end of the second table, empty, facing it (east). Back posts from v 187, seat v ~240, legs to v ~270 (83 px at s ~0.4): back 1.05 m, seat 0.46."
+  },
+  {
+   "id": "S3.prop.tavern_chair_20390",
+   "part": "chair",
+   "args": {
+    "facing": 180,
+    "back_h": 1.05,
+    "kind": "slats",
+    "lod": 1
+   },
+   "why": "High-backed wooden chair east of the east table, empty, facing it (west). Back posts 66-76 px at s ~0.4 -> ~1.0 m: back 1.05 m, seat 0.46 (choice). The map reads one, possibly two overlapping: one is built (conf med)."
+  },
+  {
+   "id": "S3.prop.tavern_table_20168",
+   "part": "table",
+   "args": {
+    "L": 0.6,
+    "W": 0.6,
+    "h": 0.78,
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Square table with a plain top, empty. Top ~85 x 28 px parallelogram, 70 px wide at s 0.34 -> 2 m: implausible; built as a small real square table 0.6 m (choice: the narrowed tavern)."
+  },
+  {
+   "id": "S3.prop.tavern_table_20340",
+   "part": "table",
+   "args": {
+    "L": 0.7,
+    "W": 0.55,
+    "h": 0.78,
+    "anchor": "center",
+    "lod": 1
+   },
+   "why": "Table between two high-backed chairs, empty. Top 57 px at s ~0.4 -> 1.4 m; built 0.7 x 0.55 m (choice: it and its two chairs fit the narrowed tavern's 0.7 m strip behind the route's lane, between its posts)."
+  },
+  {
+   "id": "S3.prop.tilted_parasol_19790",
+   "part": "parasol",
+   "args": {
+    "R": 1.2,
+    "hub_h": 2.4,
+    "tilt": [
+     -0.8,
+     0.0
+    ],
+    "ribs": 12
+   },
+   "why": "Large ribbed parasol tilted steeply west, hub at the east, rim opening west over the man in the dark cap. Canopy 137 px at s 0.82 -> 1.7 m; built R 1.2 (choice), hub 2.4 m, tilt -0.8 (its west rim up, the opening facing west)."
+  }
+ ]
+}

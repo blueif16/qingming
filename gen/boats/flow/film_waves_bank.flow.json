@@ -1,0 +1,385 @@
+[
+ {
+  "section": "canal",
+  "zones": [
+   {
+    "lanes": [
+     "boat_sweep_22000",
+     "small1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_sweep_22000",
+     "small1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_sweep_22000",
+     "big1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_sweep_22000",
+     "small1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_sweep_22000",
+     "big1-loop"
+    ],
+    "side": "big1-loop",
+    "users": [
+     "S2.veh.boat_open_21968~flow1"
+    ]
+   },
+   {
+    "lanes": [
+     "boat_sweep_22000",
+     "big1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_towed_mast_23632",
+     "small1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_towed_mast_23632",
+     "small1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_towed_mast_23632",
+     "big1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_towed_mast_23632",
+     "big1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_towed_mast_23632",
+     "small1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "boat_towed_mast_23632",
+     "big1-loop"
+    ],
+    "side": "big1-loop",
+    "users": [
+     "S2.veh.boat_open_21968~flow1"
+    ]
+   },
+   {
+    "lanes": [
+     "small1-up",
+     "small1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "small1-up",
+     "big1-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "small1-down",
+     "big1-up"
+    ],
+    "side": "big1-up",
+    "users": [
+     "S2.veh.boat_bottom_28395~flow7",
+     "S2.veh.boat_skiff_21080~flow8"
+    ]
+   },
+   {
+    "lanes": [
+     "small1-down",
+     "small1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "small1-down",
+     "big1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "big1-up",
+     "big1-down"
+    ],
+    "side": "big1-up",
+    "users": [
+     "S2.veh.boat_bottom_28395~flow7",
+     "S2.veh.boat_skiff_21080~flow8"
+    ]
+   },
+   {
+    "lanes": [
+     "big1-down",
+     "small1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "big1-down",
+     "big1-loop"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "small1-loop",
+     "big1-loop"
+    ],
+    "side": null,
+    "users": []
+   }
+  ],
+  "waves": [
+   {
+    "lane": "big1-up",
+    "fits": 6,
+    "next": 2.4,
+    "burst": 2
+   },
+   {
+    "lane": "big1-down",
+    "fits": 12,
+    "next": 2.9,
+    "burst": 2
+   },
+   {
+    "lane": "big1-loop",
+    "fits": 6,
+    "next": 2.6,
+    "burst": 2
+   }
+  ],
+  "boats": [
+   {
+    "id": "S2.veh.boat_sweep_22000",
+    "lane": "boat_sweep_22000",
+    "st": "wait",
+    "s": 116.92,
+    "v": 0,
+    "end": 116.9,
+    "spot": 116.92,
+    "blocked": null,
+    "misted": false,
+    "mast": null
+   },
+   {
+    "id": "S2.veh.boat_towed_mast_23632",
+    "lane": "boat_towed_mast_23632",
+    "st": "wait",
+    "s": 84.12,
+    "v": 0,
+    "end": 84.1,
+    "spot": 84.12,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "tow": true
+   },
+   {
+    "id": "S2.veh.boat_open_21968~flow1",
+    "lane": "big1-loop",
+    "st": "run",
+    "s": 92.66,
+    "v": 0.71,
+    "end": 139.2,
+    "spot": null,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "crew": 3
+   },
+   {
+    "id": "S2.veh.boat_covered_21205~flow4",
+    "lane": "big1-up",
+    "st": "wait",
+    "s": 104.49,
+    "v": 0,
+    "end": 104.5,
+    "spot": null,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "crew": 3
+   },
+   {
+    "id": "S2.veh.boat_mat_cargo_21055~flow5",
+    "lane": "big1-down",
+    "st": "gone",
+    "s": 0,
+    "v": 0,
+    "end": 97.3,
+    "spot": null,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "crew": 5
+   },
+   {
+    "id": "S2.veh.boat_mat_shelter_20805~flow6",
+    "lane": "big1-loop",
+    "st": "run",
+    "s": 46.67,
+    "v": 0.68,
+    "end": 139.2,
+    "spot": null,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "crew": 1
+   },
+   {
+    "id": "S2.veh.boat_bottom_28395~flow7",
+    "lane": "big1-up",
+    "st": "run",
+    "s": 94.28,
+    "v": 0,
+    "end": 103.9,
+    "spot": null,
+    "blocked": "S2.veh.boat_covered_21205~flow4",
+    "misted": false,
+    "mast": null,
+    "crew": 1
+   },
+   {
+    "id": "S2.veh.boat_skiff_21080~flow8",
+    "lane": "big1-up",
+    "st": "run",
+    "s": 83.97,
+    "v": 0,
+    "end": 104.5,
+    "spot": null,
+    "blocked": "S2.veh.boat_bottom_28395~flow7",
+    "misted": false,
+    "mast": null,
+    "crew": 1
+   }
+  ]
+ },
+ {
+  "section": "rainbow_bridge",
+  "zones": [
+   {
+    "lanes": [
+     "boat_cabin_under_arch_19225",
+     "small2-down"
+    ],
+    "side": null,
+    "users": []
+   },
+   {
+    "lanes": [
+     "small2-up",
+     "small2-down"
+    ],
+    "side": null,
+    "users": []
+   }
+  ],
+  "waves": [
+   {
+    "lane": "small2-up",
+    "fits": 3,
+    "next": 3,
+    "burst": 2
+   },
+   {
+    "lane": "small2-down",
+    "fits": 3,
+    "next": 2.2,
+    "burst": 2
+   }
+  ],
+  "boats": [
+   {
+    "id": "S3.veh.boat_cabin_under_arch_19225",
+    "lane": "boat_cabin_under_arch_19225",
+    "st": "wait",
+    "s": 28.22,
+    "v": 0,
+    "end": 28.2,
+    "spot": 10.75,
+    "blocked": null,
+    "misted": false,
+    "mast": null
+   },
+   {
+    "id": "S3.veh.boat_awning_17442~flow2",
+    "lane": "small2-up",
+    "st": "gone",
+    "s": 0,
+    "v": 0,
+    "end": 31.2,
+    "spot": null,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "crew": 3
+   },
+   {
+    "id": "S3.veh.boat_mat_cabin_18005~flow3",
+    "lane": "small2-up",
+    "st": "gone",
+    "s": 0,
+    "v": 0,
+    "end": 31.2,
+    "spot": null,
+    "blocked": null,
+    "misted": false,
+    "mast": null,
+    "crew": 3
+   }
+  ]
+ }
+]

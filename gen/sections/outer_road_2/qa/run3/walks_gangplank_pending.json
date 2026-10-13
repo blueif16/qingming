@@ -1,0 +1,62 @@
+[
+ {
+  "label": "up the mat-cargo boat's gangplank from the bank onto its deck (the plank lands square since the round-2 kit options; joined run, 2026-10-12)",
+  "start": [
+   74.9,
+   24.8
+  ],
+  "legs": [
+   [
+    327,
+    1.6
+   ]
+  ],
+  "expect": {
+   "X": [
+    76.8,
+    79.5
+   ],
+   "D": [
+    22.4,
+    24.6
+   ],
+   "H": [
+    -0.75,
+    0.6
+   ]
+  },
+  "why": "the plank runs from its foot at the bank's edge (75.45, 24.45, H 0) down to the deck by the bow (about 77.4, 23.2); before the options it met the tapering bow rim at about 15 deg and its rail opening was a 0.22 m slot"
+ },
+ {
+  "label": "down the mat-cargo boat's gangplank back onto the bank",
+  "start": [
+   74.9,
+   24.8
+  ],
+  "legs": [
+   [
+    327,
+    1.6
+   ],
+   [
+    147,
+    2.2
+   ]
+  ],
+  "expect": {
+   "X": [
+    72.8,
+    75.6
+   ],
+   "D": [
+    24.2,
+    26.2
+   ],
+   "H": [
+    -0.1,
+    0.15
+   ]
+  },
+  "why": "the way back up the plank to the bank top"
+ }
+]

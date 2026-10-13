@@ -1,0 +1,3993 @@
+{
+ "about": "Who the Rainbow Bridge's (S3) people and animals are and what they do: every painted figure (232) and animal (9) of S3 (map/text/S3.md, u 15500-20500) at its mapped spot (layout.json, with its recorded moves), and nobody else (map/BUILDING.md). Written by gen/sections/rainbow_bridge/make_people.py from the cast gen/sections/rainbow_bridge/cast.json (the needs list's casting with the catalogue's new characters), at the kits' real sizes (the bridge as kit_rainbow_bridge fits it, the vehicles, the animals, the props); rerun it after a layout move, a build or a workshop delivery. figures: character (a character not made yet plays its stand_in; a figure painted seated, crouching or riding whose character lacks that posture is played by the nearest look that has it: cast_why), do = [clip, seconds] cycles with clips the playing character has (clips_why: what is still to make), nudge = [dX, dD] (nudge_why), facing_deg where the real-size scene needs another (facing_why), scale for children (scale_why), ride = the animal a rider sits on, props = carried prop_<name> parts (props_why). Crew on boats (layout support boat deck:/roof:/bow deck:) stand at their layout spots, placed by the page's boats (web/src/boats.js); boats: each boat's motion and crew work (the river agent's people_boats.json, merged). walkers: figures painted walking or carrying, along their painted direction and back (walkers_why). animals: each painted animal at its map position facing hind to fore, model, load and clips from web/public/assets/animals/animals.json (animals_why). Seats the map lacks: gen/sections/rainbow_bridge/seats.json, for the builder. No traffic.",
+ "figures": {
+  "parasol_stall_seller_20290": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit_talk",
+     16
+    ]
+   ],
+   "nudge": [
+    0.35,
+    -0.02
+   ]
+  },
+  "seated_customer_20140": {
+   "character": "robed_man",
+   "do": [
+    [
+     "drink",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.25,
+    -0.07
+   ]
+  },
+  "man_in_hatch_20172": {
+   "character": "boatman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.1,
+    0.0
+   ]
+  },
+  "shop_low_head_19940": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "sit_floor",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.18,
+    -0.25
+   ]
+  },
+  "shop_figure_hat_19972": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    0.03
+   ]
+  },
+  "man_in_hatch_20148": {
+   "character": "boatman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    0.0
+   ]
+  },
+  "shop_seated_on_bench_19905": {
+   "character": "townsman",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ]
+  },
+  "shop_standing_man_19872": {
+   "character": "scholar",
+   "do": [
+    [
+     "talk",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.04,
+    0.4
+   ]
+  },
+  "man_reclining_waving_20060": {
+   "character": "boatman",
+   "do": [
+    [
+     "lie_wave",
+     16
+    ]
+   ]
+  },
+  "shop_seated_man_19772": {
+   "character": "scholar",
+   "do": [
+    [
+     "drink",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.53,
+    -0.25
+   ]
+  },
+  "man_waving_on_boat_roof_19952": {
+   "character": "boatman",
+   "do": [
+    [
+     "wave_arms",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "boatman_stern_bending_20365": {
+   "character": "boatman",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ]
+  },
+  "boatman_cabin_door_pole_20300": {
+   "character": "boatman",
+   "do": [
+    [
+     "fend_pole",
+     10
+    ]
+   ],
+   "facing_deg": 14.0
+  },
+  "dark_hat_figure_20070": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.24,
+    0.0
+   ]
+  },
+  "boatman_stern_seated_20285": {
+   "character": "boatman",
+   "do": [
+    [
+     "sit_one_knee",
+     16
+    ]
+   ]
+  },
+  "stallkeeper_20030": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.28,
+    -0.03
+   ]
+  },
+  "cart_pusher_19922": {
+   "character": "carter",
+   "do": [
+    [
+     "push",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.21,
+    -0.77
+   ]
+  },
+  "boatman_hauling_rope_20205": {
+   "character": "boatman",
+   "do": [
+    [
+     "haul_line",
+     10
+    ]
+   ]
+  },
+  "parasol_capped_man_19652": {
+   "character": "sightseer",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.02,
+    -0.03
+   ]
+  },
+  "cart_puller_19870": {
+   "character": "idler",
+   "do": [
+    [
+     "steer",
+     10
+    ]
+   ],
+   "facing_deg": 172.8,
+   "nudge": [
+    -1.14,
+    0.11
+   ]
+  },
+  "bank_watcher_19672": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    0.16
+   ]
+  },
+  "figure_topedge_19925": {
+   "character": "carter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.16,
+    -0.18
+   ]
+  },
+  "boatman_crouching_20026": {
+   "character": "boatman",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.28,
+    0.91
+   ]
+  },
+  "bank_waver_19612": {
+   "character": "robed_man",
+   "do": [
+    [
+     "wave_arms",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "boatman_under_mat_roof_19970": {
+   "character": "boatman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.05,
+    0.73
+   ]
+  },
+  "boatman_under_mat_roof_19955": {
+   "character": "boatman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.37,
+    0.64
+   ]
+  },
+  "walker_topedge_19878": {
+   "character": "porter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "back_bundle"
+   ],
+   "nudge": [
+    -0.06,
+    -0.13
+   ]
+  },
+  "boatman_standing_pole_19892": {
+   "character": "boatman",
+   "do": [
+    [
+     "pole_boat",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.18,
+    0.6
+   ]
+  },
+  "rail_watcher_19923": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.05,
+    0.04
+   ]
+  },
+  "boatman_bent_pole_19830": {
+   "character": "boatman",
+   "do": [
+    [
+     "pole_boat",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.22,
+    0.73
+   ]
+  },
+  "boatman_hat_pole_19915": {
+   "character": "straw_hat",
+   "do": [
+    [
+     "pole_boat",
+     10
+    ]
+   ],
+   "nudge": [
+    0.05,
+    -0.17
+   ]
+  },
+  "head_by_shed_post_19334": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "rail_watcher_19892": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.04,
+    0.04
+   ]
+  },
+  "rail_watcher_19862": {
+   "character": "townsman",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.04,
+    0.04
+   ]
+  },
+  "under_parasol_bender_19385": {
+   "character": "robed_man",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "nudge": [
+    0.06,
+    0.0
+   ]
+  },
+  "boatman_both_arms_pole_19840": {
+   "character": "boatman",
+   "do": [
+    [
+     "fend_pole",
+     10
+    ]
+   ]
+  },
+  "boatman_bending_pole_19746": {
+   "character": "boatman",
+   "do": [
+    [
+     "pole_boat",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    0.26
+   ]
+  },
+  "boatman_capped_19800": {
+   "character": "boatman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    -0.01
+   ]
+  },
+  "stall_sitter_east_19297": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.08,
+    -0.35
+   ]
+  },
+  "boatman_pole_raised_19775": {
+   "character": "boatman",
+   "do": [
+    [
+     "fend_pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0.01,
+    -0.1
+   ]
+  },
+  "deck_stooping_hat_19765": {
+   "character": "dark_hat",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.05,
+    0.04
+   ]
+  },
+  "stall_bearded_man_19235": {
+   "character": "storyteller",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.37,
+    -0.03
+   ]
+  },
+  "deck_rail_leaner_19715": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.02,
+    0.06
+   ]
+  },
+  "deck_rail_watcher_19670": {
+   "character": "townsman",
+   "do": [
+    [
+     "hold_tray",
+     10
+    ]
+   ],
+   "props": [
+    "rope_coil"
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.04,
+    0.04
+   ]
+  },
+  "boatman_poling_bow_19632": {
+   "character": "boatman",
+   "do": [
+    [
+     "pole_boat",
+     10
+    ]
+   ]
+  },
+  "boatman_reaching_19681": {
+   "character": "boatman",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.17,
+    -0.37
+   ]
+  },
+  "stall_man_with_dish_19173": {
+   "character": "scholar",
+   "do": [
+    [
+     "drink",
+     16
+    ]
+   ],
+   "nudge": [
+    0.02,
+    0.33
+   ]
+  },
+  "gable_figure_18836": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "deck_rail_leaner_19578": {
+   "character": "idler",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.21,
+    -0.19
+   ]
+  },
+  "boatman_leaning_on_bundle_19650": {
+   "character": "boatman",
+   "do": [
+    [
+     "lean_over",
+     10
+    ]
+   ],
+   "nudge": [
+    0.02,
+    -0.26
+   ]
+  },
+  "deck_pole_holder_19625": {
+   "character": "porter",
+   "do": [
+    [
+     "fend_pole",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.09,
+    -0.02
+   ]
+  },
+  "bowman_arm_out_19583": {
+   "character": "boatman",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.1,
+    -0.13
+   ]
+  },
+  "bowman_arm_out_19565": {
+   "character": "boatman",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.13,
+    0.2
+   ]
+  },
+  "deck_rail_leaner_19538": {
+   "character": "scholar",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.05,
+    0.14
+   ]
+  },
+  "stall_sitter_west_19088": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.0,
+    -0.35
+   ]
+  },
+  "deck_capped_shouter_19492": {
+   "character": "townsman",
+   "do": [
+    [
+     "hail",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.25,
+    -0.36
+   ]
+  },
+  "deck_youth_rope_19445": {
+   "character": "youth",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "scale": 1.0,
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.07,
+    0.01
+   ]
+  },
+  "deck_wide_hat_19405": {
+   "character": "dark_hat",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7
+  },
+  "bank_watcher_at_end_post_18998": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.1,
+    -0.32
+   ]
+  },
+  "man_dark_cap_back_row_19325": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 318.7
+  },
+  "bank_watcher_crouching_18960": {
+   "character": "carter",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    0.44
+   ]
+  },
+  "bank_watcher_dark_robe_18968": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.13
+   ]
+  },
+  "deck_rail_face_19350": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.22,
+    -0.05
+   ]
+  },
+  "deck_hat_stick_19353": {
+   "character": "straw_hat",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "props": [
+    "stick_shoulder"
+   ],
+   "facing_deg": 318.7
+  },
+  "man_leaning_over_rail_19432": {
+   "character": "scholar",
+   "do": [
+    [
+     "reach_over_rail",
+     10
+    ]
+   ]
+  },
+  "man_leaning_on_railing_19225": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.07,
+    0.01
+   ]
+  },
+  "bank_watcher_dark_vest_18945": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.05,
+    0.0
+   ]
+  },
+  "man_lowering_rope_19295": {
+   "character": "idler",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.36,
+    -0.15
+   ]
+  },
+  "man_behind_rump_19165": {
+   "character": "groom",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.0,
+    0.03
+   ]
+  },
+  "man_at_railing_face_west_19318": {
+   "character": "inspector",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_bent_over_railing_19195": {
+   "character": "porter",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.06,
+    0.02
+   ]
+  },
+  "bank_watcher_dark_hair_18905": {
+   "character": "woman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    -0.19
+   ]
+  },
+  "man_behind_railing_19258": {
+   "character": "porter",
+   "do": [
+    [
+     "crane",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.03,
+    0.01
+   ]
+  },
+  "far_robed_figure_19768": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.16,
+    -0.13
+   ]
+  },
+  "rider_white_robe_19110": {
+   "character": "scholar",
+   "ride": "horse_19055",
+   "do": [
+    [
+     "ride",
+     16
+    ]
+   ]
+  },
+  "robe_man_east_18893": {
+   "character": "robed_man",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.16,
+    0.12
+   ]
+  },
+  "small_figure_pole_18840": {
+   "character": "child",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "scale": 1.03
+  },
+  "groom_holding_horse_19095": {
+   "character": "groom",
+   "do": [
+    [
+     "hold_horse_neck",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    -0.01
+   ]
+  },
+  "man_at_cabin_rail_19366": {
+   "character": "robed_man",
+   "do": [
+    [
+     "lean_chin",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "man_folded_arms_tall_cap_19270": {
+   "character": "elder",
+   "do": [
+    [
+     "arms_folded",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "man_white_headcloth_19050": {
+   "character": "porter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.0,
+    0.01
+   ]
+  },
+  "basket_carrier_19138": {
+   "character": "porter",
+   "do": [
+    [
+     "hold_tray",
+     10
+    ]
+   ],
+   "props": [
+    "flat_basket"
+   ],
+   "nudge": [
+    -0.01,
+    0.01
+   ]
+  },
+  "man_pointing_west_at_railing_19090": {
+   "character": "sightseer",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    0.17
+   ]
+  },
+  "man_bent_over_railing_19065": {
+   "character": "townsman",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.22,
+    0.27
+   ]
+  },
+  "far_water_carrier_19720": {
+   "character": "porter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.0,
+    -0.6
+   ]
+  },
+  "long_robe_pole_18852": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.02
+   ]
+  },
+  "tall_robed_man_18990": {
+   "character": "robed_man",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_wide_hat_18615": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.35,
+    0.09
+   ]
+  },
+  "dark_head_behind_horse_19018": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "sedan_bearer_front_18838": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry",
+     10
+    ]
+   ],
+   "facing_deg": 14.0
+  },
+  "man_arms_on_railing_18982": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.02,
+    -0.25
+   ]
+  },
+  "man_over_railing_19025": {
+   "character": "inspector",
+   "do": [
+    [
+     "reach_over_rail",
+     12
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    0.41,
+    -0.42
+   ]
+  },
+  "man_head_bowed_18962": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     12
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.17,
+    -0.11
+   ]
+  },
+  "man_arms_flung_wide_18990": {
+   "character": "inspector",
+   "do": [
+    [
+     "lunge_arms_wide",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    -0.01
+   ]
+  },
+  "man_light_robe_reaching_18958": {
+   "character": "robed_man",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.16,
+    0.0
+   ]
+  },
+  "sack_porter_18915": {
+   "character": "robed_man",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 228.7
+  },
+  "far_vendor_dark_19578": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.01,
+    0.02
+   ]
+  },
+  "long_robe_back_18806": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_reaching_with_stick_18930": {
+   "character": "inspector",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.11,
+    -0.13
+   ]
+  },
+  "man_dark_jacket_pointing_18915": {
+   "character": "inspector",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.11,
+    0.04
+   ]
+  },
+  "head_behind_porter_18893": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "wide_hat_pointer_18890": {
+   "character": "dark_hat",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "back_tall_bundle"
+   ]
+  },
+  "white_sack_porter_18882": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "back_bundle"
+   ],
+   "facing_deg": 228.7
+  },
+  "wide_hat_pointer_18855": {
+   "character": "dark_hat",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_dark_cap_18812": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "far_squatting_man_19618": {
+   "character": "porter",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ]
+  },
+  "man_dark_cap_south_end_18930": {
+   "character": "inspector",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 318.7
+  },
+  "far_shopkeeper_19620": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "man_behind_18822": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_behind_awning_18898": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 318.7
+  },
+  "light_jacket_man_18812": {
+   "character": "idler",
+   "do": [
+    [
+     "arms_folded",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.05,
+    0.22
+   ]
+  },
+  "pointer_east_18830": {
+   "character": "inspector",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "head_under_parasol_hub_18780": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "far_stall_vendor_19436": {
+   "character": "carter",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.11,
+    0.12
+   ]
+  },
+  "stout_man_18750": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "back_view_dark_hair_18340": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "donkey_man_east_18768": {
+   "character": "porter",
+   "do": [
+    [
+     "lean_over",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    0.08
+   ]
+  },
+  "leaning_man_arms_out_18703": {
+   "character": "idler",
+   "do": [
+    [
+     "push",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    0.18
+   ]
+  },
+  "sedan_bearer_rear_18688": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry",
+     10
+    ]
+   ],
+   "facing_deg": 14.0
+  },
+  "donkey_man_west_18728": {
+   "character": "idler",
+   "do": [
+    [
+     "bridle",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.05,
+    0.05
+   ]
+  },
+  "bowing_man_18688": {
+   "character": "sightseer",
+   "do": [
+    [
+     "bow",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    -0.13
+   ]
+  },
+  "heads_under_parasol_18755": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "hand_to_head_18752": {
+   "character": "carter",
+   "do": [
+    [
+     "tie_kerchief",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "awning_worker_18815": {
+   "character": "idler",
+   "do": [
+    [
+     "browse",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7
+  },
+  "calling_man_18690": {
+   "character": "townsman",
+   "do": [
+    [
+     "hail",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "youth_round_face_18643": {
+   "character": "youth",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "scale": 1.0
+  },
+  "man_light_jacket_18760": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 48.7
+  },
+  "stall_man_parasol_18612": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.21,
+    0.21
+   ]
+  },
+  "man_under_parasol_18710": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "groom_at_donkey_18682": {
+   "character": "idler",
+   "do": [
+    [
+     "bridle",
+     10
+    ]
+   ]
+  },
+  "man_under_awning_18775": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 318.7
+  },
+  "second_head_ramp_foot_18740": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "light_jacket_man_18670": {
+   "character": "porter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "dark_head_ramp_foot_18720": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.05,
+    -0.1
+   ]
+  },
+  "donkey_rider_18650": {
+   "character": "scholar",
+   "ride": "donkey_ridden_18690",
+   "do": [
+    [
+     "ride",
+     16
+    ]
+   ],
+   "props": [
+    "stick_ride"
+   ]
+  },
+  "child_red_18592": {
+   "character": "child_red",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "scale": 0.89
+  },
+  "donkey_walker_18481": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "dark_cap_man_18622": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "mat_stall_keeper_18435": {
+   "character": "inspector",
+   "do": [
+    [
+     "lean_over",
+     10
+    ]
+   ],
+   "nudge": [
+    0.05,
+    0.07
+   ]
+  },
+  "porter_jar_bundle_18483": {
+   "character": "porter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "facing_deg": 48.7
+  },
+  "mat_stall_leaner_18375": {
+   "character": "robed_man",
+   "do": [
+    [
+     "crane",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.09,
+    0.07
+   ]
+  },
+  "robe_apron_man_18582": {
+   "character": "robed_man",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "hip_bag"
+   ]
+  },
+  "seated_man_topknot_18352": {
+   "character": "robed_man",
+   "do": [
+    [
+     "drink",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.02,
+    0.26
+   ]
+  },
+  "bending_man_18305": {
+   "character": "idler",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "facing_deg": 138.7,
+   "nudge": [
+    -0.08,
+    0.08
+   ]
+  },
+  "tray_bender_18356": {
+   "character": "porter",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    0.17
+   ]
+  },
+  "barrow_pusher_18295": {
+   "character": "carter",
+   "do": [
+    [
+     "push",
+     10
+    ]
+   ]
+  },
+  "black_hat_man_18458": {
+   "character": "dark_hat",
+   "do": [
+    [
+     "hold_tray",
+     10
+    ]
+   ],
+   "props": [
+    "tray"
+   ]
+  },
+  "bending_dark_top_18345": {
+   "character": "idler",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.19,
+    0.05
+   ]
+  },
+  "seated_man_cap_18282": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.13,
+    -0.14
+   ]
+  },
+  "dark_robe_man_18400": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "talk",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "parasol_edge_crouching_18288": {
+   "character": "idler",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.05,
+    0.09
+   ]
+  },
+  "robed_back_view_18425": {
+   "character": "woman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "mat_leaner_white_18220": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_over",
+     10
+    ]
+   ],
+   "facing_deg": 138.7
+  },
+  "bearded_barrow_man_18098": {
+   "character": "grain_porter",
+   "do": [
+    [
+     "haul_line",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.16,
+    -0.43
+   ]
+  },
+  "pointing_man_18318": {
+   "character": "inspector",
+   "do": [
+    [
+     "point",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "reaching_man_18062": {
+   "character": "idler",
+   "do": [
+    [
+     "reach",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "porter_straw_hat_17762": {
+   "character": "straw_hat",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "man_dark_hat_18035": {
+   "character": "dark_hat",
+   "do": [
+    [
+     "talk",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "display_seller_18058": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.32,
+    0.01
+   ]
+  },
+  "man_behind_official_17982": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.31,
+    -0.18
+   ]
+  },
+  "robed_man_gesturing_17567": {
+   "character": "townsman",
+   "do": [
+    [
+     "hand_over",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "official_black_robe_17940": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    -0.19
+   ]
+  },
+  "child_holding_robe_17520": {
+   "character": "child_robed",
+   "do": [
+    [
+     "reach",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "scale": 0.85
+  },
+  "man_seen_from_behind_17865": {
+   "character": "idler",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.15,
+    -0.47
+   ]
+  },
+  "man_dark_cap_17888": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.01,
+    0.0
+   ]
+  },
+  "man_north_of_chuanche_17690": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "hooded_figure_17848": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.01,
+    -0.0
+   ]
+  },
+  "seated_man_at_stand_17795": {
+   "character": "inspector",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.32,
+    -0.03
+   ]
+  },
+  "cap_man_at_cart_17545": {
+   "character": "inspector",
+   "do": [
+    [
+     "lean_over",
+     10
+    ]
+   ]
+  },
+  "squatting_man_17768": {
+   "character": "idler",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ]
+  },
+  "figure_bent_at_table_17658": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.15,
+    0.04
+   ]
+  },
+  "walker_with_bundle_17396": {
+   "character": "bearer",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "figure_behind_pole_17650": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    0.08
+   ]
+  },
+  "gate_post_figure_17332": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.11,
+    0.24
+   ]
+  },
+  "topknot_man_at_cart_17458": {
+   "character": "grain_porter",
+   "do": [
+    [
+     "push_flank",
+     10
+    ]
+   ]
+  },
+  "passenger_seated_18147": {
+   "character": "scholar",
+   "do": [
+    [
+     "knees_up",
+     16
+    ]
+   ],
+   "facing_deg": 270
+  },
+  "parasol_stallkeeper_17445": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    0.05
+   ]
+  },
+  "behind_lampbox_17090": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "tracker_16423": {
+   "character": "tracker",
+   "do": [
+    [
+     "tow_walk",
+     10
+    ]
+   ],
+   "nudge": [
+    0.18,
+    -0.07
+   ]
+  },
+  "tracker_16405": {
+   "character": "tracker",
+   "do": [
+    [
+     "tow_walk",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.25,
+    0.06
+   ]
+  },
+  "tracker_16385": {
+   "character": "tracker",
+   "do": [
+    [
+     "tow_walk",
+     10
+    ]
+   ],
+   "nudge": [
+    0.25,
+    -0.13
+   ]
+  },
+  "tracker_16358": {
+   "character": "tracker",
+   "do": [
+    [
+     "tow_walk",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.15,
+    -0.0
+   ]
+  },
+  "passenger_seated_18112": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit_floor",
+     16
+    ]
+   ],
+   "facing_deg": 270
+  },
+  "tracker_16333": {
+   "character": "tracker",
+   "do": [
+    [
+     "tow_walk",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    -0.21
+   ]
+  },
+  "parasol_seated_17322": {
+   "character": "carter",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.06,
+    -0.17
+   ]
+  },
+  "far_bank_seated_18318": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.16,
+    -0.08
+   ]
+  },
+  "porter_carrying_17922": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "props": [
+    "back_bundle"
+   ],
+   "nudge": [
+    0.05,
+    -0.0
+   ]
+  },
+  "porter_standing_17886": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 180,
+   "nudge": [
+    0.08,
+    -0.04
+   ]
+  },
+  "porter_standing_17860": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.03,
+    0.06
+   ]
+  },
+  "porter_standing_17833": {
+   "character": "porter",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    -0.08
+   ]
+  },
+  "porter_hunched_17808": {
+   "character": "idler",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.0,
+    0.17
+   ]
+  },
+  "porter_bending_17790": {
+   "character": "porter",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    -0.11
+   ]
+  },
+  "far_bank_man_doorway_18008": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "passenger_seated_17632": {
+   "character": "townsman",
+   "do": [
+    [
+     "sit_floor",
+     16
+    ]
+   ],
+   "facing_deg": 270
+  },
+  "far_bank_seated_17922": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.01,
+    0.44
+   ]
+  },
+  "balcony_figure_16383": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.09,
+    0.0
+   ]
+  },
+  "balcony_drinker_16358": {
+   "character": "sightseer",
+   "do": [
+    [
+     "lean_chin",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    0.0
+   ]
+  },
+  "awning_boatman_17435": {
+   "character": "boatman",
+   "do": [
+    [
+     "sit_floor",
+     16
+    ]
+   ],
+   "nudge": [
+    0.85,
+    -0.09
+   ]
+  },
+  "far_bank_crouching_17696": {
+   "character": "idler",
+   "do": [
+    [
+     "squat_sleeves",
+     10
+    ]
+   ],
+   "nudge": [
+    0.13,
+    0.06
+   ]
+  },
+  "diner_east_16183": {
+   "character": "robed_man",
+   "do": [
+    [
+     "talk",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.05,
+    0.03
+   ]
+  },
+  "far_bank_figure_hat_17666": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.02,
+    0.01
+   ]
+  },
+  "boatman_poling_16198": {
+   "character": "boatman",
+   "do": [
+    [
+     "pole_boat",
+     10
+    ]
+   ]
+  },
+  "diner_cap_16077": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit_talk",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.28,
+    0.32
+   ]
+  },
+  "diner_hunched_16050": {
+   "character": "scholar",
+   "do": [
+    [
+     "listen",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.43,
+    0.02
+   ]
+  },
+  "sweep_man_15915": {
+   "character": "boatman",
+   "do": [
+    [
+     "work_sweep",
+     10
+    ]
+   ]
+  },
+  "boatman_on_cargo_16032": {
+   "character": "boatman",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "facing_deg": 355,
+   "nudge": [
+    0.12,
+    -0.38
+   ]
+  },
+  "boatman_on_cargo_15998": {
+   "character": "boatman",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "facing_deg": 355,
+   "nudge": [
+    -0.18,
+    -0.13
+   ]
+  },
+  "sweep_man_15888": {
+   "character": "boatman",
+   "do": [
+    [
+     "work_sweep",
+     10
+    ]
+   ]
+  },
+  "sweep_man_15862": {
+   "character": "boatman",
+   "do": [
+    [
+     "work_sweep",
+     10
+    ]
+   ]
+  },
+  "sweep_man_15855": {
+   "character": "boatman",
+   "do": [
+    [
+     "work_sweep",
+     10
+    ]
+   ]
+  },
+  "sweep_man_15838": {
+   "character": "boatman",
+   "do": [
+    [
+     "work_sweep",
+     10
+    ]
+   ]
+  },
+  "sweep_man_15810": {
+   "character": "boatman",
+   "do": [
+    [
+     "work_sweep",
+     10
+    ]
+   ]
+  },
+  "head_at_partition_15848": {
+   "character": "robed_man",
+   "do": [
+    [
+     "talk",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.1,
+    -0.01
+   ]
+  },
+  "doorway_figure_15818": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.04,
+    0.04
+   ]
+  },
+  "far_bank_seated_17366": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.02,
+    0.34
+   ]
+  },
+  "far_bank_seated_17333": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.14,
+    0.13
+   ]
+  },
+  "boatman_bow_15688": {
+   "character": "boatman",
+   "do": [
+    [
+     "sit_floor",
+     16
+    ]
+   ],
+   "nudge": [
+    0.27,
+    0.0
+   ]
+  },
+  "boatman_bow_15664": {
+   "character": "boatman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.02,
+    0.0
+   ]
+  },
+  "far_bank_seated_17277": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.17,
+    0.01
+   ]
+  },
+  "boatman_bow_15636": {
+   "character": "boatman",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.25,
+    0.0
+   ]
+  },
+  "far_bank_figure_17213": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.19,
+    -0.07
+   ]
+  },
+  "far_bank_standing_17174": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.06,
+    0.06
+   ]
+  },
+  "far_bank_standing_17132": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "passenger_door_16553": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "facing_deg": 180
+  },
+  "far_bank_figure_16823": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "idle",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "far_bank_figure_16722": {
+   "character": "carter",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ]
+  }
+ },
+ "nudge_why": {
+  "parasol_stall_seller_20290": "painted seated with his feet at the painted point; robed_man's sit_talk keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "seated_customer_20140": "seated on S3.prop.stool_20126 (a mapped seat), as painted: robed_man's drink keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat",
+  "man_in_hatch_20172": "painted closer to a crewmate than two bodies on boat_moored_south_bank_19745: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "shop_low_head_19940": "his painted spot lies inside or within 0.3 m of S3.prop.signboard_19982 (the prop at its built size): he steps straight out of it; then his painted spot lies inside or within 0.3 m of S3.prop.slanted_board_19912 (the prop at its built size): he steps straight out of it",
+  "shop_figure_hat_19972": "his painted spot lies inside or within 0.3 m of S3.prop.slanted_board_19912 (the prop at its built size): he steps straight out of it",
+  "man_in_hatch_20148": "painted closer to a crewmate than two bodies on boat_moored_south_bank_19745: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "shop_standing_man_19872": "his painted spot lies inside or within 0.3 m of S3.prop.shop_bench_19902 (the seat): he steps straight out of it; then his painted spot lies inside or within 0.3 m of S3.prop.shop_table_19776 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "shop_seated_man_19772": "seated on S3.prop.shop_chair_19725 (a mapped seat), as painted: scholar's drink keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat",
+  "dark_hat_figure_20070": "his painted spot lies inside or within 0.3 m of S3.prop.low_table_wares_20013 (the prop at its built size): he steps straight out of it",
+  "stallkeeper_20030": "his painted spot lies inside or within 0.3 m of S3.prop.tavern_table_20340 (the prop at its built size): he steps straight out of it; then his painted spot lies inside or within 0.2 m of S3.prop.tavern_chair_20325 (the seat): he steps straight out of it; then his painted spot lies inside or within 0.3 m of S3.prop.low_table_wares_20013 (the prop at its built size): he steps straight out of it",
+  "cart_pusher_19922": "his painted spot lies inside or within 0.3 m of S3.veh.handcart_19862 (the kit's real-size body): he steps straight out of it",
+  "parasol_capped_man_19652": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19530 (its mapped footprint): he steps straight out of it",
+  "cart_puller_19870": "painted between the handcart's shaft tips, leaning forward with his arms back on them: at real size the shafts end at (144.97, 29.60) (the props kit's handcart, 0.95 m past its 1.6 m body); he stands 0.3 m ahead of the tips, between them",
+  "bank_watcher_19672": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19530 (its mapped footprint): he steps straight out of it",
+  "figure_topedge_19925": "painted at the silk's edge (0.28 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.04 m in from it; then his painted spot lies inside or within 0.3 m of S3.veh.handcart_19862 load (the kit's real-size body): he steps straight out of it",
+  "boatman_crouching_20026": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.18 m along, +2.20 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "boatman_under_mat_roof_19970": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-0.48 m along, +1.97 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_under_mat_roof_19955": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-0.30 m along, +1.97 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "walker_topedge_19878": "painted at the silk's edge (0.21 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.11 m in from it; then painted against dog_or_donkey_19825 (donkey, 1.19 m long and 0.32 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
+  "boatman_standing_pole_19892": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+0.48 m along, +1.87 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "rail_watcher_19923": "leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.30 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m)",
+  "boatman_bent_pole_19830": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+1.21 m along, +2.01 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "boatman_hat_pole_19915": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+0.46 m along, -1.43 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "rail_watcher_19892": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it",
+  "rail_watcher_19862": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it",
+  "under_parasol_bender_19385": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it",
+  "boatman_bending_pole_19746": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+2.37 m along, +1.52 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "boatman_capped_19800": "painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "stall_sitter_east_19297": "painted seated with his feet at the painted point; robed_man's sit keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.stall_table_19228 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.08 m forward to clear it (people.js would stand him on the top)",
+  "boatman_pole_raised_19775": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+2.23 m along, -1.26 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "deck_stooping_hat_19765": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.30 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m)",
+  "stall_bearded_man_19235": "painted seated with his feet at the painted point; storyteller's sit keeps its root 0.37 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "deck_rail_leaner_19715": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "deck_rail_watcher_19670": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then on the deck within 0.3 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.3 m inside it",
+  "boatman_reaching_19681": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+3.49 m along, -1.65 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "stall_man_with_dish_19173": "painted seated with his feet at the painted point; scholar's drink keeps its root 0.33 m behind the feet and the hips 0.02 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "deck_rail_leaner_19578": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.64 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "boatman_leaning_on_bundle_19650": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+3.90 m along, -1.50 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "deck_pole_holder_19625": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "bowman_arm_out_19583": "painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "bowman_arm_out_19565": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+4.75 m along, -0.08 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "deck_rail_leaner_19538": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "stall_sitter_west_19088": "painted seated with his feet at the painted point; robed_man's sit keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "deck_capped_shouter_19492": "leans over the near railing (hail): at real size the railing's line (the built deck's near edge) is +0.79 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "deck_youth_rope_19445": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "bank_watcher_at_end_post_18998": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then his painted spot lies inside or within 0.2 m of S3.prop.bridge_end_post_19026 (the prop at its built size): he steps straight out of it",
+  "bank_watcher_crouching_18960": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "bank_watcher_dark_robe_18968": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "deck_rail_face_19350": "leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.56 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_leaning_on_railing_19225": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "bank_watcher_dark_vest_18945": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "man_lowering_rope_19295": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.73 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_behind_rump_19165": "painted against horse_19055 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
+  "man_bent_over_railing_19195": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "bank_watcher_dark_hair_18905": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "man_behind_railing_19258": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "far_robed_figure_19768": "painted at the silk's edge (0.19 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.13 m in from it; then his painted spot lies inside or within 0.3 m of S3.bld.north_bank_shed_19620 (its mapped footprint): he steps straight out of it",
+  "robe_man_east_18893": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "groom_holding_horse_19095": "painted against second_horse_19230 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its head, on the side he is painted",
+  "man_white_headcloth_19050": "painted against horse_19055 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
+  "basket_carrier_19138": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "man_pointing_west_at_railing_19090": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "man_bent_over_railing_19065": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "far_water_carrier_19720": "his painted spot lies inside or within 0.3 m of S3.bld.north_bank_shed_19620 (its mapped footprint): he steps straight out of it",
+  "long_robe_pole_18852": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "man_wide_hat_18615": "his painted spot lies inside or within 0.3 m of S3.bld.bridge_foot_hall_19000 (its mapped footprint): he steps straight out of it",
+  "man_arms_on_railing_18982": "leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.54 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_over_railing_19025": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.94 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_head_bowed_18962": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_arms_flung_wide_18990": "painted against horse_19055 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its head, on the side he is painted",
+  "man_light_robe_reaching_18958": "his painted spot lies inside or within 0.3 m of S3.veh.sedan_18842 (the kit's real-size body): he steps straight out of it",
+  "far_vendor_dark_19578": "his painted spot lies inside or within 0.2 m of S3.prop.far_tray_stand_19563 (the prop at its built size): he steps straight out of it",
+  "man_reaching_with_stick_18930": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then on the deck within 0.3 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.3 m inside it",
+  "man_dark_jacket_pointing_18915": "his painted spot lies inside or within 0.3 m of S3.veh.sedan_18842 (the kit's real-size body): he steps straight out of it",
+  "light_jacket_man_18812": "painted against donkey_dark_18745 (donkey, 1.49 m long and 0.80 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "far_stall_vendor_19436": "painted seated with his feet at the painted point; carter's sit keeps its root 0.18 m behind the feet and the hips 0.34 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.far_stall_table_19410, S3.prop.far_bank_tables_19210 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.08 m back and to one side to clear it (people.js would stand him on the top)",
+  "donkey_man_east_18768": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "leaning_man_arms_out_18703": "painted against donkey_dark_18745 (donkey, 1.49 m long and 0.80 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "donkey_man_west_18728": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "bowing_man_18688": "painted against donkey_dark_18745 (donkey, 1.49 m long and 0.80 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
+  "stall_man_parasol_18612": "seated on S3.prop.bench_18630 (a mapped seat), as painted: robed_man's sit keeps the hips 0.05 m from the root, so the root stands where the hips land on the seat",
+  "dark_head_ramp_foot_18720": "painted against donkey_ridden_18690 (donkey, 1.49 m long and 0.40 m wide at real size): his spot fell inside its body, so he steps straight out from its rump, on the side he is painted",
+  "mat_stall_keeper_18435": "his painted spot lies inside or within 0.3 m of S3.prop.stall_table_18540 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "mat_stall_leaner_18375": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "seated_man_topknot_18352": "painted seated with his feet at the painted point; robed_man's drink keeps its root 0.26 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "bending_man_18305": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "tray_bender_18356": "his painted spot lies inside or within 0.2 m of S3.prop.round_tray_stand_18403 (the prop at its built size): he steps straight out of it",
+  "bending_dark_top_18345": "his painted spot lies inside or within 0.2 m of S3.prop.round_tray_stand_18403 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "seated_man_cap_18282": "painted seated with his feet at the painted point; scholar's sit keeps its root 0.19 m behind the feet and the hips 0.27 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "parasol_edge_crouching_18288": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "bearded_barrow_man_18098": "his painted spot lies inside or within 0.3 m of S3.veh.barrow_hooped_load_18100 load (the kit's real-size body): he steps straight out of it",
+  "display_seller_18058": "painted seated with his feet at the painted point; fortune_teller's sit keeps its root 0.32 m behind the feet and the hips 0.04 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "man_behind_official_17982": "his painted spot lies inside or within 0.2 m of S3.prop.basket_on_stand_18005 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "official_black_robe_17940": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "man_seen_from_behind_17865": "painted seated with his feet at the painted point; idler's sit keeps its root 0.40 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.food_stand_17815 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.18 m back and to one side to clear it (people.js would stand him on the top)",
+  "man_dark_cap_17888": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "hooded_figure_17848": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "seated_man_at_stand_17795": "painted seated with his feet at the painted point; inspector's sit keeps its root 0.41 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.goods_table_17708 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.10 m forward to clear it (people.js would stand him on the top)",
+  "figure_bent_at_table_17658": "his painted spot lies inside or within 0.3 m of S3.prop.goods_table_17708 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "figure_behind_pole_17650": "his painted spot lies inside or within 0.3 m of S3.prop.bottle_stand_17600 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "gate_post_figure_17332": "his painted spot lies inside or within 0.3 m of S3.bld.tavern_gate_16870 (its mapped footprint): he steps straight out of it",
+  "parasol_stallkeeper_17445": "his painted spot lies inside or within 0.3 m of S3.prop.stall_table_17380 (the prop at its built size): he steps straight out of it",
+  "tracker_16423": "painted at the silk's edge (0.31 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.01 m in from it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "tracker_16405": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then painted at the silk's edge (0.19 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.13 m in from it",
+  "tracker_16385": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "tracker_16358": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "tracker_16333": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "parasol_seated_17322": "painted seated with his feet at the painted point; carter's sit keeps its root 0.18 m behind the feet and the hips 0.34 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "far_bank_seated_18318": "seated on S3.prop.far_chair_18322 (a mapped seat), as painted: robed_man's sit keeps the hips 0.05 m from the root, so the root stands where the hips land on the seat",
+  "porter_carrying_17922": "painted closer to a crewmate than two bodies on boat_unloading_17705: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "porter_standing_17886": "painted closer to a crewmate than two bodies on boat_unloading_17705: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "porter_standing_17860": "painted closer to a crewmate than two bodies on boat_unloading_17705: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "porter_standing_17833": "painted closer to a crewmate than two bodies on boat_unloading_17705: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "porter_hunched_17808": "painted closer to a crewmate than two bodies on boat_unloading_17705: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "porter_bending_17790": "painted closer to a crewmate than two bodies on boat_unloading_17705: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "far_bank_seated_17922": "painted seated with his feet at the painted point; camel_driver's sit keeps its root 0.44 m behind the feet and the hips 0.04 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "balcony_figure_16383": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "balcony_drinker_16358": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "awning_boatman_17435": "on boat_awning_17442, built at real size (small, 5.0 m long, 2.2 m in the beam, build_choices.json boats): his painted spot lay off its deck (+2.35 m along, -0.23 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "far_bank_crouching_17696": "his painted spot lies inside or within 0.3 m of S3.prop.far_bank_low_table_17652 (the prop at its built size): he steps straight out of it",
+  "diner_east_16183": "his painted spot lies inside or within 0.3 m of S3.prop.table_16145 (the prop at its built size): he steps straight out of it; then his painted spot lies inside or within 0.3 m of S3.prop.pot_on_rack_16140 (the prop at its built size): he steps straight out of it",
+  "far_bank_figure_hat_17666": "his painted spot lies inside or within 0.3 m of S3.prop.far_bank_low_table_17652 (the prop at its built size): he steps straight out of it",
+  "diner_cap_16077": "painted seated with his feet at the painted point; scholar's sit_talk keeps its root 0.42 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "diner_hunched_16050": "painted seated with his feet at the painted point; scholar's listen keeps its root 0.43 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "boatman_on_cargo_16032": "on boat_towed_mast_16228, built at real size (grain, 12.0 m long, 3.1 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.68 m along, +1.52 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_towed_mast_16228: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_on_cargo_15998": "on boat_towed_mast_16228, built at real size (grain, 12.0 m long, 3.1 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.86 m along, +1.30 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_towed_mast_16228: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "head_at_partition_15848": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "doorway_figure_15818": "his painted spot lies inside or within 0.3 m of S3.prop.table_15745 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "far_bank_seated_17366": "painted seated with his feet at the painted point; hat_traveller's sit keeps its root 0.34 m behind the feet and the hips 0.04 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "far_bank_seated_17333": "painted seated with his feet at the painted point; scholar's sit keeps its root 0.19 m behind the feet and the hips 0.27 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "boatman_bow_15688": "painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_bow_15664": "painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "far_bank_seated_17277": "seated on S3.prop.far_bank_bench_17278 (a mapped seat), as painted: robed_man's sit keeps the hips 0.05 m from the root, so the root stands where the hips land on the seat",
+  "boatman_bow_15636": "painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "far_bank_figure_17213": "his painted spot lies inside or within 0.3 m of S3.prop.far_bank_table_17245 (the prop at its built size): he steps straight out of it",
+  "far_bank_standing_17174": "his painted spot lies inside or within 0.3 m of S3.bld.far_shop_17170 (its mapped footprint): he steps straight out of it"
+ },
+ "walkers": [
+  {
+   "id": "porter_with_pole_20450",
+   "figure": "porter_with_pole_20450",
+   "character": "porter",
+   "props": [
+    "pole_bundle"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     160.15,
+     -3.51
+    ],
+    [
+     156.3,
+     -3.51
+    ]
+   ]
+  },
+  {
+   "id": "pole_carrier_robe_18345",
+   "figure": "pole_carrier_robe_18345",
+   "character": "robed_man",
+   "props": [
+    "pole_bundles"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     127.26,
+     -3.32
+    ],
+    [
+     134.21,
+     -3.32
+    ]
+   ]
+  },
+  {
+   "id": "porter_baskets_bottom_18175",
+   "figure": "porter_baskets_bottom_18175",
+   "character": "porter",
+   "props": [
+    "pole_baskets"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     127.17,
+     -4.04
+    ],
+    [
+     134.12,
+     -4.04
+    ]
+   ]
+  },
+  {
+   "id": "porter_two_baskets_18340",
+   "figure": "porter_two_baskets_18340",
+   "character": "porter",
+   "props": [
+    "pole_baskets"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     128.51,
+     5.05
+    ],
+    [
+     135.51,
+     5.05
+    ]
+   ]
+  },
+  {
+   "id": "walker_with_stick_17884",
+   "figure": "walker_with_stick_17884",
+   "character": "porter",
+   "props": [
+    "stick_stride"
+   ],
+   "clip": "stride_stick",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     126.37,
+     3.28
+    ],
+    [
+     120.72,
+     3.28
+    ]
+   ]
+  },
+  {
+   "id": "waiter_calling_17451",
+   "figure": "waiter_calling_17451",
+   "character": "butcher",
+   "clip": "walk",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     118.79,
+     -0.61
+    ],
+    [
+     122.26,
+     -4.08
+    ]
+   ]
+  }
+ ],
+ "walkers_why": {
+  "porter_with_pole_20450": "3.6 m along the painted direction (180 deg) to S3.bld.front_roof_19800, and 0.3 m back behind the painted spot to the painted area's edge",
+  "figure_topedge_19925": "painted walking, but he stands at his spot: only 0.9 m of room (0.0 m along the painted direction (0 deg) to S3.veh.handcart_19862 (front to rear + 0.6 m, +-1.0 m), and 0.9 m back behind the painted spot to animal dog_or_donkey_19825)",
+  "walker_topedge_19878": "painted walking, but he stands at his spot: only 0.5 m of room (0.5 m along the painted direction (0 deg) to S3.veh.handcart_19862 (front to rear + 0.6 m, +-1.0 m))",
+  "far_water_carrier_19720": "painted walking, but he stands at his spot: only 0.0 m of room (0.0 m along the painted direction (180 deg) to S3.bld.north_bank_shed_19620)",
+  "sack_porter_18915": "painted walking, but he stands at his spot: along the built deck (down toward the south foot, as painted), +1.47 m off its centre line: 1.0 m ahead to animal donkey_dark_18745, 6.0 m back; the deck rises from 5.27 to 2.07 m along it; but people.js starts a walker from its root at y 0 and grounds it by a ray from 1.5 m: on the deck at 5.12 m he would land under the bridge, so he stands at his spot until the page passes a start height (startAt [X, D, H])",
+  "white_sack_porter_18882": "painted walking, but he stands at his spot: along the built deck (down toward the south foot, as painted), +1.92 m off its centre line: 1.3 m ahead to animal donkey_dark_18745, 5.7 m back; the deck rises from 5.29 to 2.46 m along it; but people.js starts a walker from its root at y 0 and grounds it by a ray from 1.5 m: on the deck at 5.19 m he would land under the bridge, so he stands at his spot until the page passes a start height (startAt [X, D, H])",
+  "pole_carrier_robe_18345": "1.4 m along the painted direction (0 deg) to S3.bld.bridge_foot_hall_19000, and 5.6 m back behind the painted spot",
+  "man_light_jacket_18760": "painted walking, but he stands at his spot: only 0.0 m of room (along the built deck (up toward the north foot, as painted), -2.62 m off its centre line: 0.0 m ahead to S3.prop.awning_rack_18797; the deck rises from 2.16 to 2.16 m along it)",
+  "porter_baskets_bottom_18175": "3.1 m along the painted direction (0 deg) to S3.bld.bridge_foot_hall_19000, and 3.9 m back behind the painted spot",
+  "porter_jar_bundle_18483": "painted walking, but he stands at his spot: only 0.0 m of room (along the built deck (up toward the north foot, as painted), +0.28 m off its centre line: 0.0 m ahead to S3.prop.round_tray_stand_18403; the deck rises from 1.83 to 1.83 m along it)",
+  "porter_two_baskets_18340": "7.0 m along the painted direction (0 deg)",
+  "walker_with_stick_17884": "2.7 m along the painted direction (180 deg) to S3.prop.xinjiu_flagpole_17630, and 3.0 m back behind the painted spot to S3.veh.barrow_hooped_load_18100 (front to rear + 0.6 m, +-1.0 m)",
+  "waiter_calling_17451": "1.3 m along the painted direction (315 deg) to the painted area's edge, and 3.6 m back behind the painted spot to S3.veh.chuanche_17775 (front to rear + 0.6 m, +-1.0 m)",
+  "walker_with_bundle_17396": "painted walking, but he stands at his spot: only 1.2 m of room (1.2 m along the painted direction (225 deg) to S3.bld.tavern_gate_16870)",
+  "held": {
+   "groom_at_donkey_18682": "painted walking at the ridden donkey's head on its east side; the donkey is ridden and led, so it stands (map/BUILDING.md: an animal walks only with nobody riding or leading it away), and he stands at its head holding it (bridle) until a led animal can walk with its groom",
+   "donkey_walker_18481": "painted striding behind the pack donkey donkey_sack_18535, driving it; the donkey is painted standing (facing 120, into the crowd), so he stands behind its rump with it"
+  },
+  "trackers": "the five 纤夫 walk with their towed boat (boats.js hauler: people.json boats.<boat>.haul, from the river agent's people_boats.json): figures, not walkers",
+  "deck": "people.js starts every walker from its root at y 0 and grounds it by a ray from 1.5 m: a walker whose path starts on the deck above about 1.3 m would land under the bridge, so those stand until the page passes a start height (proposed: world.js populate passes startAt [f.X, f.D, f.H] and people.js addWalker sets p.root.position.y = startAt[2] before its first step); their paths are computed and kept in walkers_why",
+  "haul": {
+   "tracker_16333": "walks with boat_towed_mast_16228 (tracker tow_walk while it moves: the tow_walk take's stand-in, a forward-leaning walk; idle while it waits)",
+   "tracker_16358": "walks with boat_towed_mast_16228 (tracker tow_walk while it moves: the tow_walk take's stand-in, a forward-leaning walk; idle while it waits)",
+   "tracker_16385": "walks with boat_towed_mast_16228 (tracker tow_walk while it moves: the tow_walk take's stand-in, a forward-leaning walk; idle while it waits)",
+   "tracker_16405": "walks with boat_towed_mast_16228 (tracker tow_walk while it moves: the tow_walk take's stand-in, a forward-leaning walk; idle while it waits)",
+   "tracker_16423": "walks with boat_towed_mast_16228 (tracker tow_walk while it moves: the tow_walk take's stand-in, a forward-leaning walk; idle while it waits)"
+  }
+ },
+ "animals": {
+  "horse_17222": {
+   "model": "horse",
+   "load": "saddle_dark",
+   "do": [
+    [
+     "graze",
+     9
+    ],
+    [
+     "head_low",
+     5
+    ]
+   ]
+  },
+  "horse_19055": {
+   "model": "horse_dark",
+   "load": "saddle",
+   "do": [
+    [
+     "head_low",
+     12
+    ]
+   ]
+  },
+  "second_horse_19230": {
+   "model": "horse_dark",
+   "do": [
+    [
+     "head_low",
+     12
+    ]
+   ]
+  },
+  "donkey_18048": {
+   "model": "donkey_dark",
+   "load": "halter_breeching",
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ]
+  },
+  "donkey_sack_18535": {
+   "model": "donkey_dark",
+   "load": "pack_bale",
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ]
+  },
+  "donkey_sack_18690": {
+   "model": "donkey_dark",
+   "load": "pack_bale",
+   "do": [
+    [
+     "walk_low",
+     8
+    ]
+   ],
+   "path": [
+    [
+     130.56,
+     3.97
+    ],
+    [
+     133.59,
+     4.3
+    ]
+   ]
+  },
+  "donkey_ridden_18690": {
+   "model": "donkey_dark",
+   "load": "saddle_cloth",
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ]
+  },
+  "donkey_dark_18745": {
+   "model": "donkey_dark",
+   "load": "pack_saddle",
+   "do": [
+    [
+     "graze",
+     9
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "dog_or_donkey_19825": {
+   "model": "donkey_dark",
+   "do": [
+    [
+     "walk",
+     8
+    ]
+   ],
+   "scale": 0.8,
+   "nudge": [
+    -1.19,
+    -0.12
+   ],
+   "path": [
+    [
+     140.97,
+     29.57
+    ],
+    [
+     144.11,
+     29.88
+    ]
+   ]
+  }
+ },
+ "animals_why": {
+  "horse_17222": "a pale horse, saddled and bridled, no rider, at 十千脚店's gate, its head lowered to the ground at the west, rump to us, one hind hoof lifted (余辉's 欢楼美禄). as painted. Wanted: a dark-flap saddle with a tasselled crupper and the tail tied in a knot (a tack variant; the registry's saddle is a red cloth); nobody holds it",
+  "horse_19055": "the horseman's brown horse of 车轿相争 on the deck, coming down west from the crown, its head pulled low and west by the groom hugging its neck; the rider in white sits on it. as painted. Wanted: a brown coat (body_from horse + tone, free); the saddle is implied (tack not readable)",
+  "second_horse_19230": "only a head: a dark-maned horse (or donkey or mule) head with a forelock, lowered and facing west, just east of the first horse's tail; its body would be hidden by the railing crowd (other reading: a man in a dark head-cloth bent forward). as painted. Wanted: a dark coat (free tone); the lead's call whether it is built. The lead's call (needs list)",
+  "donkey_18048": "a black donkey balking at the barrow's front, rump to us, head away north-east, hind legs braced far back; a halter rope runs taut from its head to the bearded man hauling at the barrow's front. clip balk not made yet: idle plays. Wanted: a dark tone (free); a halter-and-breeching tack with a lead rope (new, small); a braced \"balk\" pose (optional)",
+  "donkey_sack_18535": "a dark donkey seen from behind heading north-west into the crowd at the bridge's foot, ears up, a huge pale sack (a bale) across its back hanging far out on both sides; its driver walks behind it. as painted. Wanted: pack_bale (one huge pale sack lashed across a pack saddle, new tack); a dark tone (free); the registry pack_saddle (two small white side bundles) stands in",
+  "donkey_sack_18690": "a dark donkey walking east under a huge pale sack that covers its back from rump to shoulders, head low at the east, one hind leg lifted; nobody leads or rides it. as painted. Wanted: pack_bale (new tack) and a dark tone, as donkey_sack_18535",
+  "donkey_ridden_18690": "a dark donkey walking east up the foot of the south ramp, long upright ears, head up, no load; a man in a light robe rides it and its groom walks at its head. as painted. Wanted: a dark tone (free). painted walking, but ridden and led: it stands under its rider with its groom at its head (map/BUILDING.md: an animal walks its short path only with nobody riding or leading it away)",
+  "donkey_dark_18745": "a small dark donkey on the ramp with its head lowered to the west, a light bundle on its back, two men bending over it (one at its neck, one over its load); other reading: a crouching man in dark clothes. as painted. Wanted: a dark tone (free)",
+  "dog_or_donkey_19825": "a small dark animal trotting east toward the handcart's puller on the north bank, no tack or load, about 1.1 m long and 0.8 m high: donkey-sized, but faint enough to be a big dog; the map leans to the donkey. as painted. Wanted: a dark tone (free); the lead's call: a small donkey (cast now, scale 0.8: 1.19 m long, 0.82 m at the withers, as painted) or the registry dog. The lead's call (needs list)",
+  "nudges": {
+   "dog_or_donkey_19825": "at real size (1.19 m long, 0.32 m wide with its load) its body ran into S3.veh.handcart_19862 load, figure cart_puller_19870 (at handcart_19862): it steps 1.20 m back along its own heading, keeping its painted place in its group"
+  },
+  "walks": {
+   "donkey_sack_18690": "painted walking with nobody riding or leading it: 0.5 m ahead along its heading (6 deg) to S3.prop.goods_pole_18785, 2.6 m back to S3.veh.barrow_hooped_load_18100 (front to rear + 0.6 m, +-1.0 m)",
+   "dog_or_donkey_19825": "painted walking with nobody riding or leading it: 0.6 m ahead along its heading (6 deg) to S3.veh.handcart_19862 (front to rear + 0.6 m, +-1.0 m), 2.6 m back to the bridge's ramp (its skirt walls)"
+  },
+  "riders": {
+   "rider_white_robe_19110": "horse_19055",
+   "donkey_rider_18650": "donkey_ridden_18690"
+  }
+ },
+ "boats": {
+  "boat_under_way_15595": {
+   "run_m": 1.0,
+   "speed_mps": 0.35,
+   "pause_s": [
+    8,
+    3
+   ],
+   "why": "rowed by its great sweep (摇橹向前), heading west-north-west toward S4b's raft: S4b's sterns lie 0.3 m off its bow at rest, so its run is cut from the default 8 m to 1 m (it sculls forward a metre and drifts back); the sweep sculls while it moves",
+   "crew": {
+    "sweep_man_15810": {
+     "work": "sweep"
+    },
+    "sweep_man_15838": {
+     "work": "sweep"
+    },
+    "sweep_man_15855": {
+     "work": "sweep"
+    },
+    "sweep_man_15862": {
+     "work": "sweep"
+    },
+    "sweep_man_15888": {
+     "work": "sweep"
+    },
+    "sweep_man_15915": {
+     "work": "sweep"
+    },
+    "boatman_bow_15636": {},
+    "boatman_bow_15664": {},
+    "boatman_bow_15688": {}
+   },
+   "crew_note": "the three bowmen's layout support is 'boat bow deck:', which the page's host doesn't parse (it reads 'boat deck:' and 'boat roof:'): listed here without work so the page hosts them on this boat's deck; their painted raised bow deck (H 1.12) waits on the kit factory's B9"
+  },
+  "boat_towed_mast_16228": {
+   "run_m": 4.0,
+   "speed_mps": 0.4,
+   "pause_s": [
+    8,
+    3
+   ],
+   "why": "towed east by the five trackers on the far bank, the tow line from its masthead made fast to the rear man (tracker_16333, the map): 4 m (default 8) so that its bow stays 0.3 m clear of the mat-cabin boat moored at the hall on stilts; the trackers walk the same 4 m with it",
+   "haul": {
+    "tracker_16333": {
+     "walk": "tow_walk",
+     "stand": "idle"
+    },
+    "tracker_16358": {
+     "walk": "tow_walk",
+     "stand": "idle"
+    },
+    "tracker_16385": {
+     "walk": "tow_walk",
+     "stand": "idle"
+    },
+    "tracker_16405": {
+     "walk": "tow_walk",
+     "stand": "idle"
+    },
+    "tracker_16423": {
+     "walk": "tow_walk",
+     "stand": "idle"
+    }
+   },
+   "tow": "tracker_16333"
+  },
+  "boat_cabin_under_arch_19225": {
+   "run_m": 3.0,
+   "speed_mps": 0.2,
+   "pause_s": [
+    10,
+    4
+   ],
+   "why": "painted drifting under the arch: 3 m west along its heading and back (default 4), its mat awning under the soffit all the way (crown 1.8 m above the water under a soffit of 2.4-3.6 m)"
+  },
+  "boat_mast_lowering_19518": {
+   "run_m": 0.2,
+   "mast_cycle_s": 24,
+   "why": "大船抢险: the mast going down and up again is its motion (24 s); its run is 0 (the area agent's call): its bow lies 0.4 m outside the arch's near face, and its curled stem post (3.1 m above the water) can't pass under the face anywhere (soffit less the facing timber, 3.23 m at the crown) | area agent: run_m 0.2, not 0: boats.js divides by the travel time, and 0 gives NaN matrices on the frame its state changes (QA, probe/nan3.js); 0.2 m keeps the bow 0.2 m off the arch's near face at the end of its run | run 3 finisher: pause_s [3600, 3]: it rests at its painted spot with its contacts open while its mast goes down and up (the painted motion, mast_cycle_s, runs on its own clock); with the default 8 s pauses its 0.2 m outings closed and reopened its bank bridge under the arch, and 2 of 14 walkers boarding there ended 0.4 m out in the water (qa/run3/wade.log)",
+   "pause_s": [
+    3600,
+    3
+   ]
+  }
+ },
+ "clips_why": {
+  "about": "Actions the painting needs that the character its dress calls for lacks today. \"to retarget (free)\": a local retarget (from:/t2m:, catalogue 2a) onto that character; \"NEW take\": a Text to Motion take (catalogue 1c); \"with the new character\": the catalogue's new character gets it (1b); \"being made\": already in characters/<name>.json. Rerun make_people.py when they land; until then each figure plays the nearest clip its playing character has.",
+  "bridle": "holding an animal at its head (free: from:idler/bridle) -- grain_porter [to retarget (free)]: bearded_barrow_man_18098 (plays haul_line now)",
+  "drive_donkeys": "NEW (catalogue 1c #13): walking a little behind a pack animal, the near hand on its load, a switch low behind -- idler [NEW take]: donkey_walker_18481 (plays look now)",
+  "fend_pole": "NEW (optional, rank 7): holding a long pole overhead or level and pushing it away against something -- boatman [being made]: boatman_cabin_door_pole_20300, boatman_both_arms_pole_19840, boatman_pole_raised_19775 (plays fend_pole now); porter [being made]: deck_pole_holder_19625 (plays fend_pole now)",
+  "haul_line": "NEW (rank 3): hauling a rope hand over hand, leaning back, one foot forward -- boatman [being made]: boatman_hauling_rope_20205 (plays haul_line now); grain_porter [being made]: bearded_barrow_man_18098 (plays haul_line now)",
+  "hold_horse_neck": "NEW (optional, rank 10): leaning into a horse's chest, both arms round its lowered neck -- groom [being made]: groom_holding_horse_19095 (plays hold_horse_neck now)",
+  "lie_wave": "NEW (optional, rank 9): half lying on the back on a roof, one arm raised high waving -- boatman [being made]: man_reclining_waving_20060 (plays lie_wave now)",
+  "look": "Long Breathe and Look Around (free: from:townsman/look) -- bearer [to retarget (free)]: walker_with_bundle_17396 (plays idle now)",
+  "lunge_arms_wide": "NEW (optional, rank 11): a crouched lunge with both arms flung wide, face up, shouting -- inspector [being made]: man_arms_flung_wide_18990 (plays lunge_arms_wide now)",
+  "pole_boat": "NEW (10 credits, rank 1): standing at a gunwale, both hands on a long pole planted at a slant into the water, a short shove, then the hands walk back up it -- boatman [being made]: boatman_standing_pole_19892, boatman_bent_pole_19830, boatman_bending_pole_19746, boatman_poling_bow_19632, boatman_poling_16198 (plays pole_boat now); straw_hat [being made]: boatman_hat_pole_19915 (plays pole_boat now)",
+  "reach_over_rail": "NEW (rank 4): bent far over a waist-high railing, head down, both arms hanging over it reaching down -- dark_hat [being made]: deck_stooping_hat_19765, deck_wide_hat_19405 (plays reach_over_rail now); idler [being made]: deck_rail_leaner_19578, man_lowering_rope_19295 (plays reach_over_rail now); inspector [being made]: man_over_railing_19025 (plays reach_over_rail now); porter [being made]: man_bent_over_railing_19195 (plays reach_over_rail now); scholar [being made]: man_leaning_over_rail_19432 (plays reach_over_rail now); townsman [being made]: rail_watcher_19862, man_bent_over_railing_19065 (plays reach_over_rail now); youth [being made]: deck_youth_rope_19445 (plays reach_over_rail now)",
+  "sit_floor": "sitting cross-legged on the ground (free: from:idler/sit_floor) -- scholar [to retarget (free)]: passenger_seated_18147 (plays knees_up now)",
+  "tow_walk": "NEW (rank 5): walking slowly bent far forward, leaning into a tow line over the shoulder, arms swinging low -- tracker [being made]: tracker_16423, tracker_16405, tracker_16385, tracker_16358, tracker_16333 (plays tow_walk now)",
+  "wave_arms": "NEW (rank 6): both arms raised high and waving, shouting -- boatman [being made]: man_waving_on_boat_roof_19952 (plays wave_arms now); robed_man [being made]: bank_waver_19612 (plays wave_arms now)",
+  "work_sweep": "NEW (rank 2): in a row at a long sweep's loom, both hands at chest height, pushing it across and pulling it back with the whole body -- boatman [being made]: sweep_man_15915, sweep_man_15888, sweep_man_15862, sweep_man_15855, sweep_man_15838, sweep_man_15810 (plays work_sweep now)"
+ },
+ "scale_why": {
+  "deck_youth_rope_19445": "painted about 0.85 of the adults beside him (his head lower than the men beside him at the railing): 0.85 x 1.70 m / the youth model's 1.45 m = 1.0 (1.45 m tall)",
+  "small_figure_pole_18840": "painted about 0.7 of the adults beside him (a small figure squatting at the goods pole's foot): 0.7 x 1.70 m / the child model's 1.15 m = 1.03 (1.18 m tall)",
+  "youth_round_face_18643": "painted about 0.85 of the adults beside him (between the bowing man and the west stall, smaller than both): 0.85 x 1.70 m / the youth model's 1.45 m = 1.0 (1.45 m tall)",
+  "child_red_18592": "painted about 0.6 of the adults beside him (beside the first loaded donkey's head, about 0.6 of the men round it): 0.6 x 1.70 m / the child_red model's 1.15 m = 0.89 (1.02 m tall)",
+  "child_holding_robe_17520": "painted about 0.6 of the adults beside him (holding the robe of the man beside it, about 0.6 of his height): 0.6 x 1.70 m / the child_robed model's 1.20 m = 0.85 (1.02 m tall)",
+  "about": "people.js scale multiplies the playing character's own height, so each child's painted ratio to the adults beside it becomes a scale of the model that plays it (recomputed when the youth replaces the child)"
+ },
+ "facing_why": {
+  "boatman_cabin_door_pole_20300": "painted holding his long pole straight out east past the stern toward the north-bank boat (S2.veh.boat_mat_cargo_21055); S2's boats agent moved that boat 8.9 m east and 6.0 m south (the lead, 2026-10-12), so he faces where it lies now, about (152.5, 16.5)",
+  "cart_puller_19870": "hauling the handcart: facing the way its shafts point",
+  "rail_watcher_19923": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "rail_watcher_19892": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "rail_watcher_19862": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_stooping_hat_19765": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_rail_leaner_19715": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_rail_watcher_19670": "at the near railing (0.30 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "deck_rail_leaner_19578": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_pole_holder_19625": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_rail_leaner_19538": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_capped_shouter_19492": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_youth_rope_19445": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_wide_hat_19405": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_dark_cap_back_row_19325": "at the near railing (1.02 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "deck_rail_face_19350": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_hat_stick_19353": "at the near railing (1.06 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "man_leaning_on_railing_19225": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_lowering_rope_19295": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_bent_over_railing_19195": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_behind_railing_19258": "at the near railing (0.81 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "man_bent_over_railing_19065": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "sedan_bearer_front_18838": "carrying the sedan up the ramp: facing its heading, rear to front",
+  "man_arms_on_railing_18982": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_over_railing_19025": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_head_bowed_18962": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "sack_porter_18915": "painted walking down the ramp (painted facing 180); the built deck runs at 48.7 deg, so he faces down it (228.7)",
+  "man_reaching_with_stick_18930": "at the near railing (0.30 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "white_sack_porter_18882": "painted walking down the ramp (painted facing 180); the built deck runs at 48.7 deg, so he faces down it (228.7)",
+  "man_dark_cap_south_end_18930": "at the near railing (1.15 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "man_behind_awning_18898": "at the near railing (1.11 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "sedan_bearer_rear_18688": "carrying the sedan up the ramp: facing its heading, rear to front",
+  "awning_worker_18815": "at the near railing (0.95 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "man_light_jacket_18760": "painted walking up the ramp (painted facing 90); the built deck runs at 48.7 deg, so he faces up it (48.7)",
+  "man_under_awning_18775": "at the near railing (1.10 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "porter_jar_bundle_18483": "painted walking up the ramp (painted facing 0); the built deck runs at 48.7 deg, so he faces up it (48.7)",
+  "bending_man_18305": "at the far railing (1.05 m from it), his painted facing 180 points into it (the painter turns the railing toward us): he faces square out over it (138.7)",
+  "mat_leaner_white_18220": "at the far railing (0.55 m from it), his painted facing 180 points into it (the painter turns the railing toward us): he faces square out over it (138.7)",
+  "passenger_seated_18147": "seated inside the mat cabin, seen through its open (south) side: facing us",
+  "passenger_seated_18112": "seated inside the mat cabin beside the other, seen through its open side: facing us",
+  "porter_standing_17886": "a face in profile between the others on the foredeck, who all look west over the bow: facing west with them",
+  "passenger_seated_17632": "seated in the awning boat's cabin, seen through a window on its south side: facing us",
+  "boatman_on_cargo_16032": "crouching on the cargo of the boat towed east (heading 355): facing its bow",
+  "boatman_on_cargo_15998": "crouching on the cargo of the boat towed east (heading 355): facing its bow",
+  "passenger_door_16553": "filling the long boat's west cabin door: facing out of it, west"
+ },
+ "cast_why": {
+  "bank_watcher_dark_hair_18905": "dark hair, smaller than the men beside it: the woman at her own 1.58 m (the needs list's other reading, a youth at about 0.85, is not taken)",
+  "child_red_18592": "a small figure in a red garment: the child recoloured red (catalogue 2e, child_red; the child's jacket is teal)",
+  "official_black_robe_17940": "catalogue 1b: a black 幞头 and a long black robe; recast free from the official (a warm-grey robe) to the fortune-teller (a dark ink-blue robe, a futou)",
+  "about": "by dress (needs list \"Casting\", catalogue 1b and 7): short jackets and trousers are the idler or the porter, long light robes with a dark cap the scholar, a light robe without a cap the robed man, dark long robes the townsman, the inspector or the fortune-teller, wide hats the hat traveller (dark broad hats dark_hat, straw hats straw_hat, when made), the crews the boatman (when made)"
+ },
+ "props_why": {
+  "porter_with_pole_20450": "pole_bundle: on as pole_bundle (porter, held in carry_pole)",
+  "boatman_cabin_door_pole_20300": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays fend_pole)",
+  "walker_topedge_19878": "back_bundle: on as back_bundle (porter, held in idle)",
+  "boatman_standing_pole_19892": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays pole_boat)",
+  "boatman_bent_pole_19830": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays pole_boat)",
+  "boatman_hat_pole_19915": "long_pole: off (straw_hat: long_pole held in stand_pole, staff missing; it plays pole_boat)",
+  "boatman_both_arms_pole_19840": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays fend_pole)",
+  "boatman_bending_pole_19746": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays pole_boat)",
+  "boatman_pole_raised_19775": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays fend_pole)",
+  "deck_rail_watcher_19670": "rope_coil: on as rope_coil (townsman, held in hold_tray)",
+  "boatman_poling_bow_19632": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays pole_boat)",
+  "deck_pole_holder_19625": "long_pole: off (porter: long_pole held in stand_pole, staff held in stand_pole; it plays fend_pole)",
+  "deck_hat_stick_19353": "stick: on as stick_shoulder (straw_hat, held in idle)",
+  "basket_carrier_19138": "flat_basket: on as flat_basket (porter, held in hold_tray)",
+  "far_water_carrier_19720": "pole_buckets: off (porter: pole_buckets held in carry_pole, pole_shallow_baskets held in carry_pole; it plays look/idle)",
+  "sack_porter_18915": "back_sack: off (robed_man: back_sack_dark held in back_load, back_sack missing, back_bundle missing, back_boxes missing; it plays look/idle)",
+  "man_reaching_with_stick_18930": "stick: off (inspector: stick_shoulder missing, stick_ride missing, stick missing, stick_drive missing, stick_stride missing; it plays point/idle)",
+  "wide_hat_pointer_18890": "back_tall_bundle: on as back_tall_bundle (dark_hat, held in idle)",
+  "white_sack_porter_18882": "back_sack: not on townsman yet; back_bundle stands in, held in idle (the painted silhouette kept)",
+  "pole_carrier_robe_18345": "pole_bundles: on as pole_bundles (robed_man, held in carry_pole)",
+  "porter_baskets_bottom_18175": "pole_baskets: on as pole_baskets (porter, held in carry_pole)",
+  "donkey_rider_18650": "stick: on as stick_ride (scholar, held in ride)",
+  "porter_jar_bundle_18483": "pole_jar_bundle: off (porter: pole_jar_bundle held in carry_pole, pole_bundles held in carry_pole; it plays look/idle)",
+  "robe_apron_man_18582": "hip_bag: on as hip_bag (robed_man, held in idle)",
+  "porter_two_baskets_18340": "pole_baskets: on as pole_baskets (porter, held in carry_pole)",
+  "black_hat_man_18458": "tray: on as tray (dark_hat, held in hold_tray)",
+  "porter_straw_hat_17762": "pole_fringe_frame: off (straw_hat: pole_fringe_frame missing, pole_bundle missing; it plays idle/look)",
+  "walker_with_stick_17884": "stick_stride: on as stick_stride (porter, held in stride_stick)",
+  "waiter_calling_17451": "hand_dish: off (butcher: hand_dish_buns held in hold_tray, hand_dish missing; it plays walk)",
+  "man_north_of_chuanche_17690": "stick: off (porter: stick_shoulder missing, stick_ride missing, stick held in walk, stick_drive missing, stick_stride held in stride_stick; it plays idle/look)",
+  "walker_with_bundle_17396": "bundle_small: off (bearer: bundle_small missing; it plays idle)",
+  "porter_carrying_17922": "back_sack: not on porter yet; back_bundle stands in, held in idle (the painted silhouette kept)",
+  "boatman_poling_16198": "long_pole: off (boatman: long_pole held in stand_pole, staff missing; it plays pole_boat)",
+  "about": "carried props as painted (needs list \"Props carried by figures\", catalogue 2d), switched on only when the playing character's GLB has prop_<name> bound to a clip the figure plays: never a carry clip without its load; a painted load no GLB has yet may be played by the nearest existing load (the pole and its two loads, a load on the back, a pole in the hands)"
+ },
+ "wanted": {
+  "about": "What S3 still waits for, by kind (the catalogue's items), with the figures each serves.",
+  "characters": {},
+  "takes": {
+   "pole_boat": [
+    "boatman_bending_pole_19746",
+    "boatman_bent_pole_19830",
+    "boatman_hat_pole_19915",
+    "boatman_poling_16198",
+    "boatman_poling_bow_19632",
+    "boatman_standing_pole_19892"
+   ],
+   "work_sweep": [
+    "sweep_man_15810",
+    "sweep_man_15838",
+    "sweep_man_15855",
+    "sweep_man_15862",
+    "sweep_man_15888",
+    "sweep_man_15915"
+   ],
+   "haul_line": [
+    "bearded_barrow_man_18098",
+    "boatman_hauling_rope_20205"
+   ],
+   "reach_over_rail": [
+    "deck_rail_leaner_19578",
+    "deck_stooping_hat_19765",
+    "deck_wide_hat_19405",
+    "deck_youth_rope_19445",
+    "man_bent_over_railing_19065",
+    "man_bent_over_railing_19195",
+    "man_leaning_over_rail_19432",
+    "man_lowering_rope_19295",
+    "man_over_railing_19025",
+    "rail_watcher_19862"
+   ],
+   "tow_walk": [
+    "tracker_16333",
+    "tracker_16358",
+    "tracker_16385",
+    "tracker_16405",
+    "tracker_16423"
+   ],
+   "wave_arms": [
+    "bank_waver_19612",
+    "man_waving_on_boat_roof_19952"
+   ],
+   "fend_pole": [
+    "boatman_both_arms_pole_19840",
+    "boatman_cabin_door_pole_20300",
+    "boatman_pole_raised_19775",
+    "deck_pole_holder_19625"
+   ],
+   "lie_wave": [
+    "man_reclining_waving_20060"
+   ],
+   "hold_horse_neck": [
+    "groom_holding_horse_19095"
+   ],
+   "lunge_arms_wide": [
+    "man_arms_flung_wide_18990"
+   ],
+   "drive_donkeys": [
+    "donkey_walker_18481"
+   ]
+  },
+  "props": {
+   "boatman_cabin_door_pole_20300": [
+    "long_pole"
+   ],
+   "boatman_hat_pole_19915": [
+    "long_pole"
+   ],
+   "boatman_standing_pole_19892": [
+    "long_pole"
+   ],
+   "boatman_both_arms_pole_19840": [
+    "long_pole"
+   ],
+   "boatman_bent_pole_19830": [
+    "long_pole"
+   ],
+   "boatman_pole_raised_19775": [
+    "long_pole"
+   ],
+   "boatman_bending_pole_19746": [
+    "long_pole"
+   ],
+   "far_water_carrier_19720": [
+    "pole_buckets"
+   ],
+   "boatman_poling_bow_19632": [
+    "long_pole"
+   ],
+   "deck_pole_holder_19625": [
+    "long_pole"
+   ],
+   "man_reaching_with_stick_18930": [
+    "stick"
+   ],
+   "sack_porter_18915": [
+    "back_sack"
+   ],
+   "white_sack_porter_18882": [
+    "back_sack"
+   ],
+   "porter_jar_bundle_18483": [
+    "pole_jar_bundle"
+   ],
+   "porter_carrying_17922": [
+    "back_sack"
+   ],
+   "porter_straw_hat_17762": [
+    "pole_fringe_frame"
+   ],
+   "man_north_of_chuanche_17690": [
+    "stick"
+   ],
+   "waiter_calling_17451": [
+    "hand_dish"
+   ],
+   "walker_with_bundle_17396": [
+    "bundle_small"
+   ],
+   "boatman_poling_16198": [
+    "long_pole"
+   ]
+  },
+  "animals": {
+   "horse_17222": {
+    "load_wanted": "saddle_dark"
+   },
+   "horse_19055": {
+    "model_wanted": "horse_dark"
+   },
+   "second_horse_19230": {
+    "model_wanted": "horse_dark"
+   },
+   "donkey_18048": {
+    "model_wanted": "donkey_dark",
+    "load_wanted": "halter_breeching",
+    "clip_wanted": {
+     "idle": "balk"
+    }
+   },
+   "donkey_sack_18535": {
+    "model_wanted": "donkey_dark",
+    "load_wanted": "pack_bale"
+   },
+   "donkey_sack_18690": {
+    "model_wanted": "donkey_dark",
+    "load_wanted": "pack_bale",
+    "clip_wanted": {
+     "walk": "walk_low"
+    }
+   },
+   "donkey_ridden_18690": {
+    "model_wanted": "donkey_dark"
+   },
+   "donkey_dark_18745": {
+    "model_wanted": "donkey_dark"
+   },
+   "dog_or_donkey_19825": {
+    "model_wanted": "donkey_dark"
+   }
+  }
+ },
+ "builder_notes": {
+  "boats": [],
+  "about": "What this casting assumes of the build, and what it found (rerun after each build).",
+  "bridge": "the deck as kit_rainbow_bridge.plan_only fits it with bridge_params.json: 25.52 m foot to foot, 8.25 m between the railings, crown 5.29 m; bridge_plan.json agrees (25.52 m); railing leaners 0.36 m inside the near railing, everyone else 0.3 m inside",
+  "seats_json": "seats.json X, D is the seat's centre under the hips; build each stool there (non-colliding)",
+  "table_tops": "roots over a table, counter or stand at its assumed size (people.js would stand the figure on it): none",
+  "vehicles": "the barrows as kit_vehicles._barrow (collider 0.3 m in from each end, +-0.53 m; the load over the wheel), the sedan as sedan_chair(carried) (cabin 0.92 x 0.78 at the poles' middle), the handcart a 1.2 m wide box rear to front (the area builder's)",
+  "props": "sizes from gen/sections/rainbow_bridge/props_table.json args",
+  "crew_close": [],
+  "walker_start_height": "people.js starts walkers at y 0 (ray from 1.5 m): deck walkers above 1.3 m stand; proposed fix in walkers_why.deck"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "about": "TEST FIXTURE: the boats' kit options for the boats test page (blender/build_boats.py reads `boats`).",
+ "boats": {
+  "SB.veh.boat_passenger_a": {
+   "kit": {
+    "kind": "passenger"
+   },
+   "why": "test: the big cabin boat at the stair"
+  },
+  "SB.veh.boat_grain_b": {
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false
+   },
+   "why": "test: rafted outside A"
+  },
+  "SB.veh.boat_sweep_r": {
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false,
+    "sweep": "port"
+   },
+   "why": "test: the sweep boat (S3 #6), rafted outside B at its rest spot; its crew work the sweep on the after deck, aft of the crew house"
+  },
+  "SB.veh.boat_towed_t": {
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false,
+    "mast": "up",
+    "tow_to": "tracker_1"
+   },
+   "why": "test: towed upstream by its trackers"
+  },
+  "SB.veh.boat_laden_g": {
+   "kit": {
+    "kind": "grain",
+    "hold": "laden",
+    "gangplank": [
+     33.0,
+     0.25,
+     0.02
+    ],
+    "moor": [
+     [
+      27.0,
+      0.2,
+      0.25
+     ]
+    ]
+   },
+   "why": "test: the deep-laden grain boat (S2 #28) off the bank, its gangplank to the bank, a mooring line"
+  },
+  "SB.veh.boat_small_s": {
+   "kit": {
+    "kind": "small",
+    "awning": false,
+    "oars": 1,
+    "cargo": []
+   },
+   "why": "test: a small open boat rowed (its oars and rowers show)"
+  },
+  "SB.veh.boat_lowering_l": {
+   "kit": {
+    "kind": "passenger",
+    "stern_house": true,
+    "bow_canopy": false,
+    "cabin": {
+     "x0": 0.24,
+     "x1": 0.74,
+     "segs": 2
+    }
+   },
+   "why": "test: the big boat lowering its mast (S3 #12)"
+  }
+ }
+}

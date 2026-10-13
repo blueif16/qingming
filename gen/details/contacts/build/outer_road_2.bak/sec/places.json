@@ -1,0 +1,77 @@
+{
+ "about": "Place names the player is told (ink UI round, gen/ui/STYLE.md 'Place notifications'). region: the large banner shown when you walk into this section's region (sections sharing a region id show it once). landmarks: a vertical name plaque stands over the map entity id as you approach (江南百景圖's plaques), and a toast with the line from the painting's reading when you come within r metres of its footprint (or its point); top: the plaque's height when the map has none. Every name and line in 繁體, from the painting and its readings; src says where. Lore (round 2, gen/ui/r2_lore.md): long is the longer description under the toast's fold and in the 圖志 journal; quote and quoteSrc an exact line from a period or scholarly source; cite the sources as the player reads them; longSrc one note per claim (never shown); crop the map IDs that frame the painting's crop (tools/place_crops.mjs). Bundled for the page by tools/ui_data.mjs into web/public/assets/ui/places.json (short) and lore.json (long, fetched when needed).",
+ "region": {
+  "id": "chengmenkouwai",
+  "name": "城門口外",
+  "sub": "進城大道",
+  "seal": "外",
+  "src": "S4 part 2: the same region as outer_road (one 余辉 segment), so crossing between them shows no banner"
+ },
+ "landmarks": [
+  {
+   "id": "S4b.veh.palm_cart_13070",
+   "name": "大棕蓋車",
+   "line": "富戶人家的車，棕葉蓋頂。",
+   "seal": "車",
+   "r": 6,
+   "src": "名画记 27 大棕盖车; 余辉 2014 豪车云集",
+   "long": "路口一停一走兩輛大車，車頂鋪著厚厚的棕毛，像一座蓬鬆的草屋。這是給家眷坐的車子，《東京夢華錄》叫它「宅眷坐車子」。故宮名畫記看見走著的那輛車後門裏，一位婦人低頭撩起簾子往外望；車前一牛駕轅、一牛拉套，後面跟著提食物的僕從，騎馬戴帽的大概就是男主人，一行人也許剛從郊外掃墓回來。",
+   "quote": "又有宅眷坐車子，與平頭車大抵相似，但棕作蓋。",
+   "quoteSrc": "《東京夢華錄》卷三〈般載雜賣〉",
+   "cite": "故宮名畫記・《東京夢華錄》・畫中所見",
+   "longSrc": [
+    "map S4b.veh.palm_cart_13070 (parked, unhitched), S4b.veh.palm_cart_13455 (shaft ox and lead ox)",
+    "MHJ 27: 一停一走两辆大棕盖车…专供家眷坐的车子…一个妇女低着头撩起门帘正往外看…一头牛驾辕，一头牛拉套…两个仆从携带着食品…应该是这家男主人…也许是从郊外扫墓回来的",
+    "quote: DJ 卷三 般载杂卖"
+   ],
+   "crop": [
+    "S4b.veh.palm_cart_13070",
+    "S4b.veh.palm_cart_13455"
+   ]
+  },
+  {
+   "id": "S4b.bld.wheelwright_shed_13840",
+   "name": "車鋪",
+   "line": "匠人在修大車的輪子。",
+   "seal": "輪",
+   "r": 6,
+   "src": "名画记 26 大车修理店; 余辉 2014 车铺劳作",
+   "long": "小飯鋪北邊是一家修大車的鋪子，棚下堆著方木、長桿，大概是做車轅、車軸的料。一個匠人彎著腰，伏在一隻平放在地上的大車輪上幹活；故宮名畫記說他雙手握著榔頭，正在修整車輪。城門口外，牛車、棕蓋車往來不絕。余輝為這一景取名「車鋪勞作」。",
+   "quote": "東京般載車，大者曰『太平』。",
+   "quoteSrc": "《東京夢華錄》卷三〈般載雜賣〉",
+   "cite": "故宮名畫記・余輝・畫中所見",
+   "longSrc": [
+    "MHJ 26: 一个小饭铺的北边，是一家大车修理店，门口堆积了许多木料，一个工人双手持着榔头，正在修整车轮",
+    "map S4b.fig.wheelwright_bending_13620, S4b.prop.loose_wheel_13665, S4b.prop.timber_pile_13745 (cart shafts, axles, felloe blanks?)",
+    "map S4/S4b carts (ox carts, the 串车 at the gate)",
+    "SEC §1.2: YH14 车铺劳作",
+    "quote: DJ 卷三 般载杂卖"
+   ],
+   "crop": [
+    "S4b.bld.wheelwright_shed_13840",
+    "S4b.prop.loose_wheel_13665"
+   ]
+  },
+  {
+   "id": "S4b.bld.tea_house_14531",
+   "name": "小鋪閒坐",
+   "line": "路邊小鋪，有人閒坐吃茶。",
+   "seal": "茶",
+   "r": 6,
+   "src": "余辉 2014 vignette 小铺闲坐 (the map's tea house; its identification marked uncertain)",
+   "long": "路北一座敞開的廳堂，前頭搭著蓆棚，棚下擺著長桌條凳。一位戴寬簷黑帽的客人探身向前，和對面一個翹著腿的白衣胖漢說話；另一位戴黑帽的，兩肘支在桌上歇著。屋上不見招牌，是不是茶鋪，還說不準；余輝為這一景取名「小鋪閒坐」。城門口外這一段，處處是這樣不慌不忙的人。",
+   "quote": "更有提茶瓶之人，每日鄰里互相支茶，相問動靜。",
+   "quoteSrc": "《東京夢華錄》卷五〈民俗〉",
+   "cite": "余輝・《東京夢華錄》・畫中所見",
+   "longSrc": [
+    "map S4b.bld.tea_house_14531 (mat canopy, long tables and benches, no signboard; identification uncertain)",
+    "map S4b.fig.customer_hat_14462, customer_white_14560 (knee drawn up), customer_cap_14785 (forearms on the table)",
+    "SEC §1.2: YH14 小铺闲坐; 余辉 (4) 城门口外真悠闲",
+    "quote: DJ 卷五 民俗"
+   ],
+   "crop": [
+    "S4b.bld.tea_house_14531"
+   ]
+  }
+ ]
+}

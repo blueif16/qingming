@@ -1,0 +1,11 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  { "device": "desktop", "shots": [
+    { "name": "desktop_si_1000", "at": "inner_city:spawn", "js": "t.ui.help(false); t.time.setHour(10); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 },
+    { "name": "desktop_xu_1930", "js": "t.time.setHour(19.5); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 } ] },
+  { "device": "phone", "shots": [
+    { "name": "phone_si_1000", "at": "inner_city:spawn", "js": "t.ui.help(false); t.time.setHour(10); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 },
+    { "name": "phone_xu_1930", "js": "t.time.setHour(19.5); await new Promise(r=>setTimeout(r,800)); return t.time.get().full;", "wait": 300 } ] }
+ ]
+}

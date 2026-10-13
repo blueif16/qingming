@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 (Along the River During the Qingming Festival) and the only source for what this panel shows. Paint one very wide panel of a painted backdrop in exactly image 1's painting style (hand-inked dark-brown outlines, light hatching, flat muted painted colours, clean readable shapes), showing what image 2 paints, but as a view seen at eye level by a person standing on the ground at the edge of our scene and looking out: looking east along the river from the moorings at the end of our scene: the next stretch of the scroll (image 2), seen from its west end at eye level. Image 2's left end is nearest to us and its right end farthest away; its top edge is on our left and its bottom edge on our right. All of it is far off across a stretch of white mist, so even its nearest hall, boats and people are small, the people's heads on the horizon. The river and the road lie flat at the horizon as thin slivers: the water is a narrow flat band of blue-green with fine ink ripple lines, no deeper than a standing man is tall, never a wide sheet of water reaching toward the bottom of the picture; below it there is only white mist. The river runs away from us on the left of the picture; on the right, along its near bank, a dusty road runs beside the water to the foot of the bridge. A little right of the middle of the picture, farthest away, the great arched bridge stands over the river: one single arch with no piers, built of many long straight timbers laid side by side and lashed in overlapping courses into a broad, plain brown band that curves from bank to bank, square beam ends standing out of its face; the humped wooden deck on top has a railing of X-braced panels and is crowded with tiny people, stalls, a sedan chair and a rider; at its ends tall plain poles, each with two bars crossed in an X at its top. Just beyond the arch, seen through it and above its deck, a big cargo boat lies across the river with its mast being lowered, many crewmen on its deck poling and hauling ropes; a cabin boat lies in the arch's shadow. They close the view: beyond the bridge only a few low tiled roofs and bare trees, no open water running on to the horizon. On the river, nearer to us: a boat with a big arched mat roof coming toward us, five men working one long sweep oar over its stern and three men at its high bow; a heavily laden boat with a tall mast, towed by a long line from its masthead to five trackers walking bent forward in single file on a bank path on the far (left) shore. Along the far (left) bank toward the bridge: a row of moored boats (a very long passenger boat with a continuous cabin of lattice windows, a boat with a mat awning over its bow, a long low boat with its mast lowered onto a crossed crutch, a boat with a dark arched mat cabin), and behind them small open-fronted shops with tables under mat canopies, a long open hall on short stilts with tables on its raised deck, and a few bare pollard willows. On the right, nearest: the long two-storey riverside hall of a tavern, a big grey tiled roof over an upper balcony with a railing where men sit eating at a table, bare trees in front of it; then the tavern's long tiled wing and, over its gate, a towering openwork scaffold of bare lashed poles with tiers of crossbars, three tapering spires of bound poles and fans of poles splaying out like a crown (no flowers, no streamers); from it a long bar runs to a tall pole, and a long pale banner with three dark vertical bands hangs from the bar; a flat dark mat canopy over stalls of jars and bottles; a cargo boat moored at the bank with men unloading jars and bundles; on the road before the bridge a single-wheeled barrow under a huge domed load bound with ropes, porters with shoulder poles, dark donkeys under huge pale sacks, big round parasols over stalls, and a crowd growing thicker toward the bridge's ramp; a big grey tiled gable roof at the bridge's foot. The willows are pollard willows before their leaves open: from each knobbly head a half-open fan of long, straight, stiff bare shoots springs upward and outward. They are NOT weeping willows: no hanging curtains, no drooping strands, no foliage. No stone bridge, no pavilion on the bridge, no lake, no island, no sails, no rainbow colours, no hills, no city wall, no second bridge.\n\nRules for the panel:\n- Only what image 2 paints. Add nothing that image 2 does not show: no hills or mountains, no distant tree lines or forests, no lakes, rivers or islands, no towers, pagodas, city walls, flags, clouds, birds, sun or haze banks, unless the description above names them. Leave out image 2's red seals, inscriptions and silk damage.\n- Eye level. The viewer's eye is at the height of a standing person's eyes, so the horizon is one straight, level line across the whole image, a quarter of the way up from the bottom edge. The heads of all standing people are on that line, near or far; buildings, trees, carts and animals rise above it with their feet just under it. Below the horizon there is only a thin strip of level ground, a tenth of the image height at most. We never look down onto roofs, courtyards or the surface of a road: a road running away from us is a thin wedge of ground narrowing to the horizon.\n- Plain white everywhere else. The sky is flat pure white from the top edge down to the horizon, behind everything: no clouds, no blue, no gradient, no haze, no texture, no paper grain. Below the strip of ground the bottom of the image is the same pure white: the ground ends in soft white mist. The upper part of the image, above the tallest trees and roofs, is empty white.\n- Clear and crisp: every outline and colour as clear as in image 1, with no atmospheric haze and no fading toward the distance (the world adds its own mist). Trees keep clear branches and twigs with white showing between them.\n- The left and right eighths of the image hold only low ground and a few small things; they will fade into mist.\n- Colours of the real town in soft spring daylight, as in image 1: grey-blue clay tiles, white lime plaster, weathered brown timber, tan rammed earth and dusty roads, pale fresh-green willows, dark green pines, bare ink-brown branches. Not the yellow-brown of the aged silk in image 2; no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/outer_road_2/backdrop/east_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "3584x1280",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "east"
+ },
+ "format": "png",
+ "generation_s": 46.3,
+ "attempts": 1,
+ "idempotency_key": "bb063245-c9ab-4010-ad3e-e952cb139502",
+ "request_id": "0730e2ec-aa0f-4c08-bc52-9bd7c7aef8d5",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3268,
+  "completion_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5958,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4485,
+   "text_tokens": 1473
+  },
+  "output_tokens": 3268,
+  "output_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5958,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4485,
+   "text_tokens": 1473
+  },
+  "total_tokens": 9226
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/9a685452-ff05-4d94-ba24-71c561933e27",
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/cedf3c76-ed37-4d5b-9f9c-8a71e47007ea"
+ ],
+ "files": [
+  "gen/sections/outer_road_2/backdrop/east_0.png",
+  "gen/sections/outer_road_2/backdrop/east_1.png"
+ ]
+}

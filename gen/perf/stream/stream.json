@@ -1,0 +1,601 @@
+{
+ "mode": "stream",
+ "url": "http://127.0.0.1:5190/world.html",
+ "date": "2026-10-13T03:15:01.006Z",
+ "viewport": [
+  1920,
+  1080,
+  1
+ ],
+ "loadMs": 3035,
+ "env": {
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4070 SUPER (0x00002783) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "gpuTimer": true,
+  "loaded": [
+   "inner_city",
+   "gate",
+   "city_end"
+  ],
+  "dpr": 1,
+  "requests": 190,
+  "totalKB": 43757,
+  "byType": {
+   "code.other": {
+    "n": 1,
+    "kb": 217
+   },
+   "code.js": {
+    "n": 29,
+    "kb": 9690
+   },
+   "code.mjs": {
+    "n": 1,
+    "kb": 3
+   },
+   "panels.js": {
+    "n": 1,
+    "kb": 103
+   },
+   "trees.json": {
+    "n": 1,
+    "kb": 15
+   },
+   "cast.json": {
+    "n": 2,
+    "kb": 43
+   },
+   "data.json": {
+    "n": 27,
+    "kb": 1359
+   },
+   "data.webp": {
+    "n": 2,
+    "kb": 40
+   },
+   "sections.glb": {
+    "n": 3,
+    "kb": 4565
+   },
+   "panels.json": {
+    "n": 3,
+    "kb": 6
+   },
+   "cast.glb": {
+    "n": 33,
+    "kb": 14570
+   },
+   "data.ktx2": {
+    "n": 32,
+    "kb": 2641
+   },
+   "kit.ktx2": {
+    "n": 14,
+    "kb": 1718
+   },
+   "transcoder": {
+    "n": 2,
+    "kb": 571
+   },
+   "trees.ktx2": {
+    "n": 31,
+    "kb": 7392
+   },
+   "panels.ktx2": {
+    "n": 3,
+    "kb": 680
+   },
+   "data.webm": {
+    "n": 5,
+    "kb": 144
+   }
+  }
+ },
+ "steps": [
+  {
+   "view": "storyteller",
+   "ms": 2545,
+   "loaded": [
+    "city_end",
+    "inner_city",
+    "gate"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "crossroads",
+   "ms": 2520,
+   "loaded": [
+    "city_end",
+    "inner_city",
+    "gate"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "from_gate",
+   "ms": 4103,
+   "loaded": [
+    "city_end",
+    "inner_city",
+    "gate"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "carts",
+   "ms": 4744,
+   "loaded": [
+    "gate",
+    "outer_road",
+    "outer_road_2"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "moorings_bank",
+   "ms": 3850,
+   "loaded": [
+    "outer_road",
+    "outer_road_2",
+    "rainbow_bridge"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "crown",
+   "ms": 4077,
+   "loaded": [
+    "outer_road_2",
+    "rainbow_bridge",
+    "canal"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "under_arch",
+   "ms": 2570,
+   "loaded": [
+    "outer_road_2",
+    "rainbow_bridge",
+    "canal"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "grain_wharf",
+   "ms": 6243,
+   "loaded": [
+    "rainbow_bridge",
+    "canal",
+    "countryside"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "towed_boat",
+   "ms": 2566,
+   "loaded": [
+    "rainbow_bridge",
+    "canal",
+    "countryside"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "farmsteads",
+   "ms": 2729,
+   "loaded": [
+    "canal",
+    "countryside"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "charcoal_train",
+   "ms": 2557,
+   "loaded": [
+    "canal",
+    "countryside"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "crown",
+   "ms": 7126,
+   "loaded": [
+    "outer_road_2",
+    "rainbow_bridge",
+    "canal"
+   ],
+   "traced": 0
+  },
+  {
+   "view": "storyteller",
+   "ms": 6728,
+   "loaded": [
+    "city_end",
+    "inner_city",
+    "gate"
+   ],
+   "traced": 0
+  }
+ ],
+ "events": [
+  {
+   "kind": "load",
+   "name": "gate",
+   "ms": 1411,
+   "stallMs": 157,
+   "longestTaskMs": 156,
+   "steps": {
+    "fetch": 279,
+    "models": 170,
+    "compile": 6,
+    "boats": 0,
+    "collider": 0,
+    "trees": 723,
+    "people": 59,
+    "backdrop": 115
+   },
+   "newPrograms": 19,
+   "bakeMs": 264,
+   "maxBakeMs": 6,
+   "bvhMs": 19,
+   "colliderTris": 47071
+  },
+  {
+   "kind": "load",
+   "name": "city_end",
+   "ms": 700,
+   "stallMs": 154,
+   "longestTaskMs": 151,
+   "steps": {
+    "fetch": 169,
+    "models": 245,
+    "compile": 0,
+    "boats": 0,
+    "collider": 0,
+    "trees": 216,
+    "people": 26,
+    "backdrop": 3
+   },
+   "newPrograms": 22,
+   "bakeMs": 51,
+   "maxBakeMs": 4,
+   "bvhMs": 9,
+   "colliderTris": 15028
+  },
+  {
+   "kind": "unload",
+   "name": "city_end",
+   "ms": 88,
+   "stallMs": 48,
+   "longestTaskMs": null,
+   "steps": {},
+   "newPrograms": 6,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "unload",
+   "name": "inner_city",
+   "ms": 84,
+   "stallMs": 47,
+   "longestTaskMs": null,
+   "steps": {},
+   "newPrograms": 9,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "load",
+   "name": "outer_road",
+   "ms": 998,
+   "stallMs": 99,
+   "longestTaskMs": 99,
+   "steps": {
+    "fetch": 111,
+    "models": 251,
+    "compile": 39,
+    "boats": 0,
+    "collider": 0,
+    "trees": 374,
+    "people": 70,
+    "backdrop": 85
+   },
+   "newPrograms": 20,
+   "bakeMs": 25,
+   "maxBakeMs": 6,
+   "bvhMs": 14,
+   "colliderTris": 35968
+  },
+  {
+   "kind": "load",
+   "name": "outer_road_2",
+   "ms": 1100,
+   "stallMs": 98,
+   "longestTaskMs": 97,
+   "steps": {
+    "fetch": 180,
+    "models": 361,
+    "compile": 11,
+    "boats": 9,
+    "collider": 0,
+    "trees": 295,
+    "people": 48,
+    "backdrop": 120
+   },
+   "newPrograms": 12,
+   "bakeMs": 133,
+   "maxBakeMs": 6,
+   "bvhMs": 13,
+   "colliderTris": 43838
+  },
+  {
+   "kind": "unload",
+   "name": "gate",
+   "ms": 5,
+   "stallMs": 81,
+   "longestTaskMs": null,
+   "steps": {},
+   "newPrograms": -2,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "load",
+   "name": "rainbow_bridge",
+   "ms": 1290,
+   "stallMs": 101,
+   "longestTaskMs": 100,
+   "steps": {
+    "fetch": 258,
+    "models": 401,
+    "compile": 0,
+    "boats": 11,
+    "collider": 0,
+    "trees": 328,
+    "people": 75,
+    "backdrop": 143
+   },
+   "newPrograms": 3,
+   "bakeMs": 151,
+   "maxBakeMs": 30,
+   "bvhMs": 11,
+   "colliderTris": 28676
+  },
+  {
+   "kind": "unload",
+   "name": "outer_road",
+   "ms": 3,
+   "stallMs": 70,
+   "longestTaskMs": 67,
+   "steps": {},
+   "newPrograms": 2,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "load",
+   "name": "canal",
+   "ms": 1638,
+   "stallMs": 258,
+   "longestTaskMs": 256,
+   "steps": {
+    "fetch": 260,
+    "models": 0,
+    "compile": 36,
+    "boats": 21,
+    "collider": 0,
+    "trees": 808,
+    "people": 205,
+    "backdrop": 172
+   },
+   "newPrograms": 5,
+   "bakeMs": 99,
+   "maxBakeMs": 8,
+   "bvhMs": 13,
+   "colliderTris": 30795
+  },
+  {
+   "kind": "unload",
+   "name": "outer_road_2",
+   "ms": 145,
+   "stallMs": 60,
+   "longestTaskMs": null,
+   "steps": {},
+   "newPrograms": 1,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "load",
+   "name": "countryside",
+   "ms": 3628,
+   "stallMs": 309,
+   "longestTaskMs": 308,
+   "steps": {
+    "fetch": 282,
+    "models": 338,
+    "compile": 1,
+    "boats": 3,
+    "collider": 1,
+    "trees": 2607,
+    "people": 245,
+    "backdrop": 2
+   },
+   "newPrograms": 3,
+   "bakeMs": 60,
+   "maxBakeMs": 7,
+   "bvhMs": 25,
+   "colliderTris": 49658
+  },
+  {
+   "kind": "unload",
+   "name": "rainbow_bridge",
+   "ms": 131,
+   "stallMs": 52,
+   "longestTaskMs": null,
+   "steps": {},
+   "newPrograms": 0,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "unload",
+   "name": "countryside",
+   "ms": 98,
+   "stallMs": 54,
+   "longestTaskMs": 57,
+   "steps": {},
+   "newPrograms": -2,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "load",
+   "name": "rainbow_bridge",
+   "ms": 1610,
+   "stallMs": 193,
+   "longestTaskMs": 191,
+   "steps": {
+    "fetch": 227,
+    "models": 305,
+    "compile": 21,
+    "boats": 11,
+    "collider": 0,
+    "trees": 625,
+    "people": 151,
+    "backdrop": 153
+   },
+   "newPrograms": 4,
+   "bakeMs": 21,
+   "maxBakeMs": 4,
+   "bvhMs": 13,
+   "colliderTris": 28676
+  },
+  {
+   "kind": "load",
+   "name": "outer_road_2",
+   "ms": 1264,
+   "stallMs": 142,
+   "longestTaskMs": 142,
+   "steps": {
+    "fetch": 328,
+    "models": 355,
+    "compile": 1,
+    "boats": 5,
+    "collider": 0,
+    "trees": 349,
+    "people": 96,
+    "backdrop": 2
+   },
+   "newPrograms": 3,
+   "bakeMs": 22,
+   "maxBakeMs": 4,
+   "bvhMs": 23,
+   "colliderTris": 43838
+  },
+  {
+   "kind": "unload",
+   "name": "outer_road_2",
+   "ms": 73,
+   "stallMs": 40,
+   "longestTaskMs": null,
+   "steps": {},
+   "newPrograms": -45,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "unload",
+   "name": "rainbow_bridge",
+   "ms": 87,
+   "stallMs": 38,
+   "longestTaskMs": 79,
+   "steps": {},
+   "newPrograms": -32,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "unload",
+   "name": "canal",
+   "ms": 21,
+   "stallMs": 80,
+   "longestTaskMs": 79,
+   "steps": {},
+   "newPrograms": -31,
+   "bakeMs": 0,
+   "maxBakeMs": 0
+  },
+  {
+   "kind": "load",
+   "name": "inner_city",
+   "ms": 1252,
+   "stallMs": 180,
+   "longestTaskMs": 179,
+   "steps": {
+    "fetch": 93,
+    "models": 458,
+    "compile": 16,
+    "boats": 0,
+    "collider": 0,
+    "trees": 410,
+    "people": 111,
+    "backdrop": 56
+   },
+   "newPrograms": 18,
+   "bakeMs": 22,
+   "maxBakeMs": 5,
+   "bvhMs": 17,
+   "colliderTris": 32498
+  },
+  {
+   "kind": "load",
+   "name": "city_end",
+   "ms": 1168,
+   "stallMs": 56,
+   "longestTaskMs": 50,
+   "steps": {
+    "fetch": 170,
+    "models": 365,
+    "compile": 1,
+    "boats": 0,
+    "collider": 0,
+    "trees": 546,
+    "people": 20,
+    "backdrop": 2
+   },
+   "newPrograms": 4,
+   "bakeMs": 245,
+   "maxBakeMs": 6,
+   "bvhMs": 7,
+   "colliderTris": 15028
+  },
+  {
+   "kind": "load",
+   "name": "gate",
+   "ms": 1697,
+   "stallMs": 141,
+   "longestTaskMs": 141,
+   "steps": {
+    "fetch": 189,
+    "models": 230,
+    "compile": 31,
+    "boats": 0,
+    "collider": 0,
+    "trees": 881,
+    "people": 113,
+    "backdrop": 169
+   },
+   "newPrograms": 6,
+   "bakeMs": 216,
+   "maxBakeMs": 14,
+   "bvhMs": 25,
+   "colliderTris": 47071
+  }
+ ],
+ "glTrace": [],
+ "logs": []
+}

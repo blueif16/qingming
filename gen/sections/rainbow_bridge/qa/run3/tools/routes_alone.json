@@ -1,0 +1,1095 @@
+[
+ {
+  "label": "across the bridge, south foot -> crown -> north foot, onto the north bank (through the painted deck crowd)",
+  "start": [
+   124.8,
+   8.0
+  ],
+  "via": [
+   [
+    132.5,
+    17.0
+   ],
+   [
+    133.4,
+    18.2
+   ],
+   [
+    134.6,
+    19.2
+   ],
+   [
+    136.5,
+    19.2
+   ],
+   [
+    138.2,
+    19.8
+   ],
+   [
+    145.5,
+    28.0
+   ]
+  ],
+  "push": [],
+  "expect": {
+   "X": [
+    144.6,
+    146.4
+   ],
+   "D": [
+    27.1,
+    28.9
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  },
+  "why": "the trace passes the crown at H ~5.3; waypoints threaded round the deck figures (bodies 0.26 m) and the sedan"
+ },
+ {
+  "label": "across the bridge, north bank -> north foot -> crown -> south foot",
+  "start": [
+   145.5,
+   28.0
+  ],
+  "via": [
+   [
+    137.9,
+    19.5
+   ],
+   [
+    133.6,
+    18.4
+   ],
+   [
+    132.0,
+    16.6
+   ],
+   [
+    131.9,
+    16.3
+   ],
+   [
+    124.8,
+    8.0
+   ]
+  ],
+  "push": [],
+  "expect": {
+   "X": [
+    123.9,
+    125.7
+   ],
+   "D": [
+    7.1,
+    8.9
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "up the south ramp onto the crown",
+  "start": [
+   124.8,
+   8.0
+  ],
+  "via": [
+   [
+    132.5,
+    17.0
+   ],
+   [
+    133.4,
+    18.2
+   ],
+   [
+    133.6,
+    18.4
+   ],
+   [
+    136.6,
+    19.2
+   ]
+  ],
+  "push": [],
+  "expect": {
+   "X": [
+    136.08,
+    137.08
+   ],
+   "D": [
+    18.68,
+    19.68
+   ],
+   "H": [
+    5.05,
+    5.45
+   ]
+  }
+ },
+ {
+  "label": "the near (east) railing stops you on the deck (station 18.25 m, deck H 3.09)",
+  "start": [
+   139.27,
+   23.68
+  ],
+  "via": [],
+  "push": [
+   [
+    318.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    140.63,
+    141.89
+   ],
+   "D": [
+    20.98,
+    22.33
+   ],
+   "H": [
+    2.6,
+    3.81
+   ]
+  },
+  "why": "the railing collider at the deck edge (bridge_plan.json walk.railing); the walker may slide a little down the slope along it; picked where the painted railing figures leave a gap"
+ },
+ {
+  "label": "the near (east) railing stops you on the deck (station 22.5 m, deck H 0.66)",
+  "start": [
+   142.07,
+   26.87
+  ],
+  "via": [],
+  "push": [
+   [
+    318.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    143.44,
+    144.7
+   ],
+   "D": [
+    24.17,
+    25.53
+   ],
+   "H": [
+    0.24,
+    1.28
+   ]
+  },
+  "why": "the railing collider at the deck edge (bridge_plan.json walk.railing); the walker may slide a little down the slope along it; picked where the painted railing figures leave a gap"
+ },
+ {
+  "label": "the far (west) railing stops you on the deck (station 17.0 m, deck H 3.83)",
+  "start": [
+   136.94,
+   24.06
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    134.05,
+    135.31
+   ],
+   "D": [
+    25.1,
+    26.45
+   ],
+   "H": [
+    3.36,
+    4.51
+   ]
+  },
+  "why": "the railing collider at the deck edge (bridge_plan.json walk.railing); the walker may slide a little down the slope along it; picked where the painted railing figures leave a gap"
+ },
+ {
+  "label": "the far (west) railing stops you on the deck (station 9.0 m, deck H 4.38)",
+  "start": [
+   131.66,
+   18.05
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    128.77,
+    130.03
+   ],
+   "D": [
+    19.09,
+    20.44
+   ],
+   "H": [
+    3.69,
+    4.82
+   ]
+  },
+  "why": "the railing collider at the deck edge (bridge_plan.json walk.railing); the walker may slide a little down the slope along it; picked where the painted railing figures leave a gap"
+ },
+ {
+  "label": "the far (west) railing stops you on the deck (station 3.5 m, deck H 0.98)",
+  "start": [
+   128.41,
+   13.59
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    125.14,
+    126.4
+   ],
+   "D": [
+    14.96,
+    16.31
+   ],
+   "H": [
+    0.34,
+    1.44
+   ]
+  },
+  "why": "the railing collider at the deck edge (bridge_plan.json walk.railing); the walker may slide a little down the slope along it; picked where the painted railing figures leave a gap"
+ },
+ {
+  "label": "the south ramp's near (east) side stops you on the ground (station 4.5 m, deck H 1.54)",
+  "start": [
+   134.0,
+   10.0
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    132.14,
+    133.95
+   ],
+   "D": [
+    10.27,
+    11.41
+   ],
+   "H": [
+    -0.7,
+    0.25
+   ]
+  },
+  "why": "nobody walks under a ramp or steps onto it over its railing (ends on the ground or the bank below it, outside the deck edge)"
+ },
+ {
+  "label": "the south ramp's near (east) side stops you on the ground (station 0.3 m, deck H 0.01)",
+  "start": [
+   130.6,
+   7.36
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    129.35,
+    131.16
+   ],
+   "D": [
+    7.09,
+    8.23
+   ],
+   "H": [
+    -0.7,
+    0.25
+   ]
+  },
+  "why": "nobody walks under a ramp or steps onto it over its railing (ends on the ground or the bank below it, outside the deck edge)"
+ },
+ {
+  "label": "the north ramp's near (east) side stops you on the north bank (station 23.5 m, deck H 0.31)",
+  "start": [
+   145.6,
+   25.08
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    144.67,
+    146.47
+   ],
+   "D": [
+    24.52,
+    25.66
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "the north ramp's near (east) side stops you on the north bank (station 24.0 m, deck H 0.17)",
+  "start": [
+   146.0,
+   25.48
+  ],
+  "via": [],
+  "push": [
+   [
+    138.7,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    145.04,
+    146.85
+   ],
+   "D": [
+    24.95,
+    26.09
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "the south bank road from the S4b seam east to the bridge's south foot",
+  "start": [
+   93.0,
+   6.0
+  ],
+  "via": [
+   [
+    119.6,
+    7.1
+   ],
+   [
+    120.4,
+    7.6
+   ],
+   [
+    120.5,
+    7.7
+   ],
+   [
+    121.3,
+    7.9
+   ],
+   [
+    124.8,
+    8.0
+   ]
+  ],
+  "push": [],
+  "expect": {
+   "X": [
+    124.2,
+    125.4
+   ],
+   "D": [
+    7.4,
+    8.6
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "the south bank road from the bridge's south foot west to the S4b seam (its wall stops you, alone)",
+  "start": [
+   124.8,
+   8.0
+  ],
+  "via": [
+   [
+    120.5,
+    7.9
+   ],
+   [
+    119.8,
+    7.2
+   ],
+   [
+    119.5,
+    7.1
+   ],
+   [
+    93.0,
+    6.0
+   ]
+  ],
+  "push": [
+   [
+    202.3,
+    2
+   ]
+  ],
+  "expect": {
+   "X": [
+    91.83,
+    92.53
+   ],
+   "D": [
+    5.31,
+    6.01
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "from the south foot east under the arch, past the open shop to the S2 seam (its wall stops you)",
+  "start": [
+   124.8,
+   8.0
+  ],
+  "via": [
+   [
+    128.1,
+    6.5
+   ],
+   [
+    130.5,
+    5.7
+   ],
+   [
+    130.9,
+    5.7
+   ],
+   [
+    133.3,
+    6.1
+   ],
+   [
+    134.2,
+    6.6
+   ],
+   [
+    134.4,
+    6.8
+   ],
+   [
+    134.5,
+    7.1
+   ],
+   [
+    134.5,
+    7.3
+   ],
+   [
+    134.0,
+    8.2
+   ],
+   [
+    140.0,
+    7.5
+   ],
+   [
+    145.8,
+    7.5
+   ],
+   [
+    146.9,
+    6.9
+   ],
+   [
+    152.0,
+    5.0
+   ]
+  ],
+  "push": [
+   [
+    21.5,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    155.6,
+    157.3
+   ],
+   "D": [
+    4.6,
+    7.0
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  },
+  "why": "the S2 seam runs at 111.5 deg: the stop lies 0.3 m inside it; kept north of the painted walk of the porters and the donkey (D 4.3, X 127-135.5)"
+ },
+ {
+  "label": "the north bank from the north foot east to the S2 seam (its wall stops you)",
+  "start": [
+   142.8,
+   28.8
+  ],
+  "via": [
+   [
+    145.0,
+    27.3
+   ],
+   [
+    146.2,
+    27.4
+   ]
+  ],
+  "push": [
+   [
+    21.5,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    147.2,
+    148.4
+   ],
+   "D": [
+    27.0,
+    29.0
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  },
+  "why": "the seam runs at 111.5 deg: the stop lies 0.3 m inside it"
+ },
+ {
+  "label": "the far bank is closed: west from the north foot you climb the north ramp and stop at its far railing",
+  "start": [
+   142.3,
+   30.6
+  ],
+  "via": [],
+  "push": [
+   [
+    180,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    137.4,
+    138.6
+   ],
+   "D": [
+    28.8,
+    30.0
+   ],
+   "H": [
+    0.7,
+    1.3
+   ]
+  },
+  "why": "the far railing runs to the foot; beyond it the far bank lies past the water (closed)"
+ },
+ {
+  "label": "the far bank is closed: north-west off the north foot's run-out",
+  "start": [
+   141.6,
+   30.8
+  ],
+  "via": [],
+  "push": [
+   [
+    150,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    138.9,
+    141.0
+   ],
+   "D": [
+    30.4,
+    32.6
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "west edge (alone): the S4b seam stops you on the south bank road",
+  "start": [
+   94.5,
+   3.0
+  ],
+  "via": [],
+  "push": [
+   [
+    202.3,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    93.1,
+    93.8
+   ],
+   "D": [
+    2.22,
+    2.92
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "west edge (alone): the S4b seam stops you near the shore",
+  "start": [
+   91.5,
+   10.5
+  ],
+  "via": [],
+  "push": [
+   [
+    202.3,
+    2
+   ]
+  ],
+  "expect": {
+   "X": [
+    90.03,
+    90.73
+   ],
+   "D": [
+    9.69,
+    10.39
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "east edge (alone): the S2 seam stops you on the south bank",
+  "start": [
+   154.5,
+   5.0
+  ],
+  "via": [],
+  "push": [
+   [
+    21.5,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    156.16,
+    156.86
+   ],
+   "D": [
+    5.44,
+    6.14
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "east edge (alone): the S2 seam stops you east of the open shop, by the street",
+  "start": [
+   158.0,
+   -2.5
+  ],
+  "via": [],
+  "push": [
+   [
+    21.5,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    159.19,
+    159.89
+   ],
+   "D": [
+    -2.24,
+    -1.54
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "east edge (alone): the S2 seam stops you on the north bank",
+  "start": [
+   146.0,
+   27.6
+  ],
+  "via": [],
+  "push": [
+   [
+    21.5,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    147.3,
+    148.0
+   ],
+   "D": [
+    27.9,
+    28.6
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "north edge: the silk's top edge stops you on the north bank, by the painted figures at the edge",
+  "start": [
+   145.5,
+   28.5
+  ],
+  "via": [],
+  "push": [
+   [
+    90,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    144.9,
+    145.9
+   ],
+   "D": [
+    29.5,
+    30.3
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  },
+  "why": "figure_topedge_19925 stands 0.15 m inside the top edge (145.29, 30.39): you stop at its body or the wall"
+ },
+ {
+  "label": "north edge: the wall round the north foot stops you north-east of the run-out",
+  "start": [
+   142.6,
+   31.0
+  ],
+  "via": [],
+  "push": [
+   [
+    45,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    142.6,
+    143.8
+   ],
+   "D": [
+    31.3,
+    32.5
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "north edge: the wall round the north foot's run-out stops you past the top edge",
+  "start": [
+   141.3,
+   31.0
+  ],
+  "via": [],
+  "push": [
+   [
+    90,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    140.9,
+    141.7
+   ],
+   "D": [
+    32.8,
+    33.6
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  },
+  "why": "build_choices edges.north_detour"
+ },
+ {
+  "label": "south edge: the silk's bottom edge stops you (X 113.0)",
+  "start": [
+   113.0,
+   -2.5
+  ],
+  "via": [],
+  "push": [
+   [
+    270,
+    2
+   ]
+  ],
+  "expect": {
+   "X": [
+    112.65,
+    113.35
+   ],
+   "D": [
+    -4.45,
+    -3.75
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "south edge: the silk's bottom edge stops you (X 124.0)",
+  "start": [
+   124.0,
+   -2.0
+  ],
+  "via": [],
+  "push": [
+   [
+    270,
+    2
+   ]
+  ],
+  "expect": {
+   "X": [
+    123.65,
+    124.35
+   ],
+   "D": [
+    -4.45,
+    -3.75
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "south edge: the silk's bottom edge stops you (X 144.0)",
+  "start": [
+   144.0,
+   -2.0
+  ],
+  "via": [],
+  "push": [
+   [
+    270,
+    2
+   ]
+  ],
+  "expect": {
+   "X": [
+    143.65,
+    144.35
+   ],
+   "D": [
+    -4.45,
+    -3.75
+   ],
+   "H": [
+    -0.12,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "shore: the water's edge stops you (the west reach near the S4b seam)",
+  "start": [
+   92.0,
+   10.0
+  ],
+  "via": [],
+  "push": [
+   [
+    90,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    91.7,
+    92.3
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  },
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json)"
+ },
+ {
+  "label": "shore: the water's edge stops you (the west reach by the riverside hall)",
+  "start": [
+   105.0,
+   8.0
+  ],
+  "via": [],
+  "push": [
+   [
+    90,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    104.7,
+    105.3
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  },
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json)"
+ },
+ {
+  "label": "shore: the water's edge stops you (the west reach by the unloading boat's bank)",
+  "start": [
+   116.0,
+   9.5
+  ],
+  "via": [],
+  "push": [
+   [
+    90,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    115.7,
+    116.3
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  },
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json)"
+ },
+ {
+  "label": "shore: the water's edge stops you (under the arch, south bank)",
+  "start": [
+   140.0,
+   7.5
+  ],
+  "via": [],
+  "push": [
+   [
+    90,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    139.7,
+    140.3
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  },
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json)"
+ },
+ {
+  "label": "shore: the water's edge stops you (the north bank east of the bridge)",
+  "start": [
+   147.5,
+   27.6
+  ],
+  "via": [],
+  "push": [
+   [
+    270,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    147.0,
+    148.4
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  },
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json)"
+ }
+]

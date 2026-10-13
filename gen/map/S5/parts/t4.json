@@ -1,0 +1,604 @@
+{
+ "section": "S5",
+ "entities": [
+  {
+   "id": "S5.fig.rider_8080",
+   "kind": "figure",
+   "name": "rider in a veiled broad-brimmed hat",
+   "what": "Rider in a broad-brimmed hat with a veil hanging from the brim to the shoulders (帷帽) and a long pale robe, sitting upright on a small dark donkey that walks east, out of the city. Hands rest in the lap and the face is turned toward the viewer.",
+   "pts": {
+    "foot": [
+     8080,
+     1246,
+     "est"
+    ],
+    "head": [
+     8067,
+     1035
+    ]
+   },
+   "support": "animal S5.ani.donkey_8121",
+   "pose": "riding",
+   "facing_deg": 0,
+   "group": "S5.grp.rider_party_8080",
+   "vis": "full",
+   "conf": "med",
+   "src": "sections.md §3: man in a broad-brimmed hat on a donkey or horse, with servants; Hansen: 'a woman in a veiled hat on a donkey'",
+   "note": "head = top of the hat (brim spans u 8033-8110). The strokes falling from the brim read as a veil, which fits Hansen's 'woman in a veiled hat'; the face is too small to settle man or woman. foot = ground under the seat, between the donkey's hoof lines."
+  },
+  {
+   "id": "S5.ani.donkey_8121",
+   "kind": "animal",
+   "name": "rider's donkey",
+   "what": "Small dark donkey carrying the veiled-hat rider, walking east with its head lowered. A dark saddle cloth hangs on its flank, and a groom on its east side holds it at the head.",
+   "pts": {
+    "fore": [
+     8121,
+     1245
+    ],
+    "hind": [
+     8040,
+     1240
+    ],
+    "head": [
+     8158,
+     1165
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S5.grp.rider_party_8080",
+   "vis": "full",
+   "conf": "med",
+   "src": "sections.md §3: rider on a donkey or horse",
+   "note": "Hooves: hind at about [8026,1244] and [8054,1234]; fore at [8114,1251] and [8128,1239]. It stands about half a man's height at the back, so it is read as a donkey, not a horse. A third leg-like stroke at u ~8000 is the luggage servant's leg behind its rump."
+  },
+  {
+   "id": "S5.fig.luggage_servant_8002",
+   "kind": "figure",
+   "name": "servant with the luggage pole",
+   "what": "Servant in a dark cap and a plain short robe, walking close behind the donkey's rump. Over his shoulder is a carrying pole, and a long dark bag and a cloth bundle hang from its rear (west) end at about u 7905-7965. His face is turned toward the viewer.",
+   "pts": {
+    "foot": [
+     8002,
+     1236,
+     "est"
+    ],
+    "head": [
+     8007,
+     1070
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 0,
+   "group": "S5.grp.rider_party_8080",
+   "vis": "part: legs behind the donkey's hindquarters",
+   "conf": "med",
+   "src": "sections.md §3: servants walk with him, one carrying luggage on a pole",
+   "note": "The pole runs from about [7920,1095] to [8035,1090]. One foot seems to show under the donkey's rump at about [8001,1233]."
+  },
+  {
+   "id": "S5.fig.groom_8167",
+   "kind": "figure",
+   "name": "groom at the donkey's head",
+   "what": "Groom in a dark cap, a short jacket and trousers, walking east at the donkey's head on its east side. He bends to hold the bridle, has a short stick or whip in his other hand, and looks back toward the viewer.",
+   "pts": {
+    "foot": [
+     8167,
+     1245
+    ],
+    "head": [
+     8172,
+     1106
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S5.grp.rider_party_8080",
+   "vis": "full",
+   "conf": "high",
+   "src": "sections.md §3: servants walk with him",
+   "note": "feet at about [8148,1244] and [8188,1244]"
+  },
+  {
+   "id": "S5.veh.cart_screen_8510",
+   "kind": "vehicle",
+   "name": "串车 under the cursive-script screen",
+   "what": "串车 (a barrow with one big spoked wheel under the middle) heading east, out of the city. Its load is hidden under a huge domed sheet covered in cursive-script calligraphy (the screen used as a tarp), edged by a dark band (load spans about u 8290-8500, top v 1075). One carter pushes at the rear handles and another hauls at the front shafts; a long draught pole and trace run on east to a donkey at about u 8700-8880.",
+   "pts": {
+    "front": [
+     8510,
+     1278,
+     "est"
+    ],
+    "rear": [
+     8202,
+     1266,
+     "est"
+    ],
+    "wheels": [
+     [
+      8400,
+      1276
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S5.grp.screen_cart_8510",
+   "vis": "full",
+   "conf": "high",
+   "src": "余辉: 书屏遭废 (cursive-script screen used as a tarp); wenxueart: 两人合作、一头驴牵引的串车",
+   "note": "front = ground under the front end of the barrow frame, where the front carter grips it. The draught pole and trace continue to the donkey's harness at about [8695,1220] (pole height, not ground). rear = ground under the rear handle tips (u ~8200, v 1187). The wheel is at the bridge deck's west edge, so the front half may already be on the deck."
+  },
+  {
+   "id": "S5.fig.cart_pusher_8254",
+   "kind": "figure",
+   "name": "carter pushing the screen cart",
+   "what": "Carter in a rolled headcloth and short jacket, bent far forward behind the 串车 in a wide stride. He grips its rear handles and pushes it east.",
+   "pts": {
+    "foot": [
+     8254,
+     1263
+    ],
+    "head": [
+     8270,
+     1113
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S5.grp.screen_cart_8510",
+   "vis": "full",
+   "conf": "high",
+   "src": "wenxueart: 两人合作、一头驴牵引的串车",
+   "note": "rear foot at about [8218,1268], front foot at about [8290,1258]"
+  },
+  {
+   "id": "S5.fig.cart_shaftman_8498",
+   "kind": "figure",
+   "name": "carter at the front shafts of the screen cart",
+   "what": "Second carter at the front of the 串车, in a cap and short jacket with trousers tied at the calf. He is bent forward over the front shafts with feet braced, gripping a shaft and the trace rope that runs east to the donkey.",
+   "pts": {
+    "foot": [
+     8498,
+     1277
+    ],
+    "head": [
+     8537,
+     1130
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S5.grp.screen_cart_8510",
+   "vis": "full",
+   "conf": "high",
+   "src": "wenxueart: 两人合作、一头驴牵引的串车",
+   "note": "feet at about [8492,1280] and [8508,1272]. He seems to face east, hauling; the restyle paints him facing west toward the cart, so facing is med confidence. He may already stand on the bridge deck's west end."
+  },
+  {
+   "id": "S5.prop.basket_8670",
+   "kind": "prop",
+   "name": "basket at the far railing",
+   "what": "Round woven basket set down at the foot of the far (north) railing of the moat bridge, beside the seated man; the cart's draught pole and trace pass in front of it.",
+   "pts": {
+    "base": [
+     8670,
+     1200
+    ]
+   },
+   "support": "bridge deck",
+   "vis": "part: draught pole and trace in front",
+   "conf": "med",
+   "src": "",
+   "note": "spans about u 8643-8700, v 1170-1200"
+  },
+  {
+   "id": "S5.fig.far_rail_back_8615",
+   "kind": "figure",
+   "name": "man at the far railing seen from behind",
+   "what": "Man in a dark knee-length robe and pale trousers, standing with his back to the viewer at the far (north) railing of the moat bridge. His hands are on the top rail and he looks out over the moat to the north, head turned slightly left.",
+   "pts": {
+    "foot": [
+     8615,
+     1184
+    ],
+    "head": [
+     8600,
+     1040
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 90,
+   "vis": "full",
+   "conf": "high",
+   "src": "邵琦: 有不少人在桥栏杆边观鱼 (setting)",
+   "note": "feet at about [8607,1184] and [8628,1178]. Willow twigs cross his head, so the head point is med confidence.",
+   "group": "S5.grp.far_rail_sightseers"
+  },
+  {
+   "id": "S5.fig.far_rail_white_8698",
+   "kind": "figure",
+   "name": "man in white at the far railing",
+   "what": "Man in a white jacket seen from behind at the far railing, leaning to the right with both forearms stretched along the top rail (hands at about u 8730-8750). His legs are hidden behind the seated man and the donkey.",
+   "pts": {
+    "foot": [
+     8698,
+     1190,
+     "est"
+    ],
+    "head": [
+     8697,
+     1040
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 90,
+   "vis": "part: legs hidden behind the seated man in front of him",
+   "conf": "high",
+   "src": "邵琦: 有不少人在桥栏杆边观鱼 (setting)",
+   "note": "foot estimated under the hips (u 8677-8715). He is on the t4/t5 boundary (u 8700), so t5 may record him too.",
+   "group": "S5.grp.far_rail_sightseers"
+  },
+  {
+   "id": "S5.fig.bridge_sightseer",
+   "kind": "figure",
+   "name": "bridge sightseer",
+   "what": "Sightseer in a dark (blue) robe, hunched over the near (south) railing with his arms folded on the top rail and his head resting on them, watching the water (邵琦: people at the railing watching fish). His hips are to the west and his head turned east. His legs are hidden behind the railing, so the foot point is estimated.",
+   "pts": {
+    "foot": [
+     8552,
+     1552,
+     "est"
+    ],
+    "head": [
+     8593,
+     1425
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 270,
+   "vis": "part: legs behind the railing lattice",
+   "conf": "high",
+   "src": "邵琦: 有不少人在桥栏杆边观鱼",
+   "note": "seed from sections/gate/figures.json (2026-10-10). Re-checked 2026-10-11: head moved from [8600,1422] to [8593,1425] (top of the cap). Foot moved from [8560,1552] to [8552,1552], under the hips at u 8530-8560 rather than under the head. v stays just north of the railing's base board (v ~1563).",
+   "group": "S5.grp.near_rail_watchers"
+  },
+  {
+   "id": "S5.fig.rail_leaner_8665",
+   "kind": "figure",
+   "name": "youth leaning on the near railing",
+   "what": "Slight figure, perhaps a youth, in a pale jacket leaning on the near (south) railing. His arms are folded on the top rail with his face buried in them, looking down at the water. His legs are hidden behind the railing lattice.",
+   "pts": {
+    "foot": [
+     8665,
+     1552,
+     "est"
+    ],
+    "head": [
+     8668,
+     1437
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 270,
+   "vis": "part: legs behind the railing lattice",
+   "conf": "high",
+   "src": "邵琦: 有不少人在桥栏杆边观鱼",
+   "note": "between S5.fig.bridge_sightseer and the seed S5.fig.rail_watcher_2 (u 8765, t5). Foot estimated the same way as bridge_sightseer's.",
+   "group": "S5.grp.near_rail_watchers"
+  },
+  {
+   "id": "S5.fig.bridge_porter",
+   "kind": "figure",
+   "name": "bridge porter",
+   "what": "Porter in a short jacket, rolled trousers and a dark cap, walking west off the moat bridge toward the gate (into the city), face in profile to the left. Two deep round baskets hang from a pole on his shoulder (west basket u 8240-8320, east basket u 8390-8467).",
+   "pts": {
+    "foot": [
+     8350,
+     1458
+    ],
+    "head": [
+     8327,
+     1288
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "carrying",
+   "facing_deg": 180,
+   "vis": "full",
+   "conf": "high",
+   "src": "sections.md §3: porters with shoulder-pole baskets",
+   "note": "seed from sections/gate/figures.json (2026-10-10). Re-checked 2026-10-11: foot moved from [8350,1450] to [8350,1458], midway between the planted front foot [8318,1460] and the ground under the lifted rear foot [8385,1455]. Head moved from [8320,1285] to [8327,1288]. He is at the deck's west end, above the near railing's first post (u ~8318), and is about to step onto the road. He walks away from the bridge, not toward it as sections.md has the porters."
+  },
+  {
+   "id": "S5.fig.porter_back_8050",
+   "kind": "figure",
+   "name": "porter seen from behind",
+   "what": "Porter seen from behind in a plain jacket, head bare with dark hair. A pole lies across his shoulders, with a tall sack hanging at the west end (u 7970-8010) and a round basket at the east end (u 8127-8183). He walks away from the viewer, head turned slightly east, and his legs are lost behind the bare tree in front.",
+   "pts": {
+    "foot": [
+     8050,
+     1465,
+     "est"
+    ],
+    "head": [
+     8038,
+     1295
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 60,
+   "vis": "part: legs hidden by the bare tree's crown in front of him",
+   "conf": "med",
+   "src": "sections.md §3: porters with shoulder-pole baskets",
+   "note": "foot estimated from body height (about 170 px, the same as the bridge porter's). Direction is uncertain: he is seen from behind with the pole across the picture, so north-east is a guess (the restyle turns him east)."
+  },
+  {
+   "id": "S5.fig.greeter_stick_8245",
+   "kind": "figure",
+   "name": "man with a walking stick, greeting",
+   "what": "Man in a peaked hat and long pale robe, set back north of the road under the willow, holding a walking stick that slants down to the west. He stands face to face with a bowing man, their heads close together.",
+   "pts": {
+    "foot": [
+     8245,
+     1074
+    ],
+    "head": [
+     8248,
+     990
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "group": "S5.grp.greeting_8265",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "small (about 85 px tall), so further north than the road traffic. The stick runs from about [8200,1070] to [8237,1050]."
+  },
+  {
+   "id": "S5.fig.greeter_bowing_8285",
+   "kind": "figure",
+   "name": "man bowing in greeting",
+   "what": "Man in a short brown jacket and trousers, bent forward from the waist toward the man with the stick, head lowered next to his. A bow of greeting, or the two are talking closely.",
+   "pts": {
+    "foot": [
+     8285,
+     1080
+    ],
+    "head": [
+     8262,
+     1003
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S5.grp.greeting_8265",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "faint strokes; the restyle also reads two men greeting"
+  },
+  {
+   "id": "S5.fig.small_figure_8310",
+   "kind": "figure",
+   "name": "small figure by the willow trunk",
+   "what": "A small dark upright shape just east of the bowing man, against the willow's trunk. It reads as a child or a short figure standing there; the strokes are very faint.",
+   "pts": {
+    "foot": [
+     8310,
+     1072,
+     "est"
+    ],
+    "head": [
+     8306,
+     1030
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "barely legible on the silk; the restyle paints a child here with a jar beside it. It may be part of the trunk or the bowing man's clothing."
+  },
+  {
+   "id": "S5.fig.far_figure_8205",
+   "kind": "figure",
+   "name": "faint distant figure behind the trees",
+   "what": "Tiny, faint figure far back beyond the trees, by a fence line north of the road. Only a dark round head and a dark body can be made out.",
+   "pts": {
+    "foot": [
+     8205,
+     928,
+     "est"
+    ],
+    "head": [
+     8206,
+     884
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "dark strokes at [8203-8210, 885-895] with smudges below. The restyle paints a man in white with a dark cap here, next to a gate post at u ~8228 and a fence (u 8155-8280, v 860-925), which the structures agent may record."
+  },
+  {
+   "id": "S5.tree.old_bole_8090",
+   "kind": "tree",
+   "name": "huge old tree north of the road",
+   "what": "Huge old tree just north of the road, behind the rider. A massive bole about 85 px wide (u 8045-8130), scarred with a hollow, forks at about v 900 into several limbs. Fine drooping willow-like twigs fill the crown, and dark knobbly bare tips (elm-like) top it at v 120-200. It has no leaves, and its root flare runs east to about u 8160.",
+   "pts": {
+    "base": [
+     8090,
+     1050,
+     "est"
+    ],
+    "top": [
+     8070,
+     120
+    ],
+    "crown_w": [
+     7870,
+     560
+    ],
+    "crown_e": [
+     8300,
+     540
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk foot hidden behind the rider's hat",
+   "conf": "med",
+   "src": "",
+   "note": "The knobbly tips at v 120-200 (u 7950-8250) are read as this tree's top (the restyle agrees), but they could belong to trees further back. The crown edges overlap the neighbouring crowns, so crown_w/crown_e are rough."
+  },
+  {
+   "id": "S5.tree.willow_8362",
+   "kind": "tree",
+   "name": "willow behind the screen cart",
+   "what": "Tall willow-like tree behind (north of) the screen cart. A straight trunk (u 8340-8380) carries a dense fan of long thin bare switches radiating from a knot at about v 965, then rises to a fork at about v 570 whose limbs spread to the crown top. It is not in leaf.",
+   "pts": {
+    "base": [
+     8362,
+     1082,
+     "est"
+    ],
+    "top": [
+     8380,
+     385
+    ],
+    "crown_w": [
+     8170,
+     760
+    ],
+    "crown_e": [
+     8520,
+     560
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk foot hidden behind the cart's load",
+   "conf": "med",
+   "src": "",
+   "note": "Crowns overlap here, so the top and the east edge may belong partly to S5.tree.knobbly_8525."
+  },
+  {
+   "id": "S5.tree.knobbly_8525",
+   "kind": "tree",
+   "name": "knobbly tree at the bridge's north-west corner",
+   "what": "Tree at the north-west corner of the moat bridge, its trunk (about u 8500-8540) rising behind the far railing's west end. Above v 830 it spreads into dark, knobbly, twisted bare branches with clumped twig tips (elm-like), which reach east over the railing to about u 8880, mixed with fine drooping willow-like switches. It is not in leaf.",
+   "pts": {
+    "base": [
+     8525,
+     1100,
+     "est"
+    ],
+    "top": [
+     8560,
+     385
+    ],
+    "crown_w": [
+     8420,
+     640
+    ],
+    "crown_e": [
+     8880,
+     770
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk foot hidden behind the railing end post and the cart's load",
+   "conf": "med",
+   "src": "",
+   "note": "Probably stands on the moat bank north of the bridge head. The tall twin pole at u 8520-8545, v 967-1140 in front of it is left to the structures agent."
+  },
+  {
+   "id": "S5.tree.shrubs_8300",
+   "kind": "tree",
+   "name": "bare shrubs below the bridge's west end",
+   "what": "Low clump of bare shrubs or saplings rising from the bottom edge of the silk, in front of the bridge's west abutment and piers. Thin straight stems, no leaves.",
+   "pts": {
+    "base": [
+     8300,
+     1765,
+     "est"
+    ],
+    "top": [
+     8250,
+     1680
+    ],
+    "crown_w": [
+     8195,
+     1700
+    ],
+    "crown_e": [
+     8420,
+     1730
+    ]
+   },
+   "support": "bank slope",
+   "vis": "part: cut by the silk's bottom edge",
+   "conf": "med",
+   "src": "",
+   "note": "the silk's bottom edge is at about v 1768 here"
+  },
+  {
+   "id": "S5.grp.rider_party_8080",
+   "kind": "group",
+   "name": "veiled-hat rider and servants",
+   "what": "A traveller in a veiled broad-brimmed hat rides a donkey east, out of the city. A groom leads the donkey at its head and a servant walks behind with the luggage on a carrying pole. They pass just east of the kneeling man by the road (recorded by t3).",
+   "members": [
+    "S5.fig.rider_8080",
+    "S5.ani.donkey_8121",
+    "S5.fig.luggage_servant_8002",
+    "S5.fig.groom_8167"
+   ],
+   "src": "sections.md §3: rider in a broad-brimmed hat with servants, heading out of the city",
+   "note": ""
+  },
+  {
+   "id": "S5.grp.screen_cart_8510",
+   "kind": "group",
+   "name": "screen cart crew",
+   "what": "The 串车 covered by the cursive-script screen is being taken out of the city. One carter pushes at the rear handles, one hauls at the front shafts, and a donkey pulls ahead on a long pole and trace. The heavy 串车 crossing onto the bridge: a man between its shafts (t4) and a collared donkey far ahead on long traces, ridden by one man while another stoops at its head.",
+   "members": [
+    "S5.veh.cart_screen_8510",
+    "S5.fig.cart_pusher_8254",
+    "S5.fig.cart_shaftman_8498",
+    "S5.ani.trace_donkey_8814",
+    "S5.fig.trace_donkey_rider_8740",
+    "S5.fig.bending_man_8905"
+   ],
+   "src": "余辉: 书屏遭废",
+   "note": "The draught donkey (hind about [8725,1268], fore about [8835,1270], head about [8880,1230]) is in t5's range and is not listed here. Add it when merging."
+  },
+  {
+   "id": "S5.grp.greeting_8265",
+   "kind": "group",
+   "name": "two men greeting under the willow",
+   "what": "Two men meet under the willow north of the road. One stands upright with a walking stick; the other bows toward him with their heads close together.",
+   "members": [
+    "S5.fig.greeter_stick_8245",
+    "S5.fig.greeter_bowing_8285"
+   ],
+   "src": "",
+   "note": ""
+  }
+ ]
+}

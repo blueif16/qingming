@@ -1,0 +1,197 @@
+{
+ "section": "S1",
+ "pass": "second pass `willows`: owns u 31100-33200 (t3, t4), looked at 30950-33350; read against map/strokes/S1.json as merged 2026-10-12 09:33 (237 entities)",
+ "how": "Overlays of the merged strokes at zoom 0.5 and 0.9 over the whole range (top and bottom halves), normalised scan windows at zoom 1 (grid 50), then zoom 1.5-8 crops (colour, greyscale, high-pass) and darkness profiles (rows: mean grey in 10 px bins; columns: a 14-60 px band against 15 px either side) wherever the merge notes flagged a doubt. Every crop and script is in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/. Proposals only: nothing in the parts or the map was edited.",
+ "summary": "No painted thing in u 31100-33200 lacks an entity, and no entity sits off its strokes by more than about 30 px. The feet of seven of the eight great willows (G1, G2, G3, the burled willow, A, B, C), the four far willows' feet, the far grove's foot line, the jar, the basin and the porter were all checked and agree. Four changes are proposed: the hut willow's base moved down to the bole's drawn lower edge; a third reading added to the far sapling; the party porter's tool settled as a plain staff (the group note says hoe or rake); and the measured knobbly lobe beside willow B kept as B's roots, read the same way as the burled willow's root lobes. No new entities.",
+ "entities": [],
+ "changes": [
+  {
+   "id": "S1.tree.willow_leaning_hut_31240",
+   "set": {
+    "pts.base": [
+     31215,
+     1492,
+     "est"
+    ]
+   },
+   "was": {
+    "pts.base": [
+     31240,
+     1465,
+     "est"
+    ]
+   },
+   "add_note": "SECOND PASS (willows): the bole's lower edge is drawn at v 1486-1498 across u 31140-31275. Crops: zoom 2.4 greyscale and zoom 3 colour. The bole is the textured mass with bark marks, a pale crack at u 31176-31201 running down to v 1486, and the round hollow at (31255-31284, 1357-1382). Below the edge is a strip of pale ground (v 1498-1510), then the next dark wash (v 1510-1527). Row profiles: at v 1500 the silk turns pale (123-140) from u 31240 east, and at v 1480-1490 from u 31280 east; u 31140-31230 stays dark (100-113) down to v 1500-1505. The base moves from (31240, 1465) est to the middle of that edge. The mass is a tree's bole, not a rock: it has bark texture and a hollow, and diagonal strokes leave its upper west side (31120-31160, 1300-1340) toward the trunk in front of the fence. That fits reading (a). The trunk, head and crown west of u 31100 are the west pass's to settle.",
+   "reason": "The base was set where the bole 'merges with the dark wash' (v 1465). Read on the scan, its own lower edge is about 27 px lower (about 0.5 m of depth at 51.25 px/m). Knock-on for the lead: S1.road.main's edge_n here, (31100, 1484) and (31300, 1470 est), would then run about 20 px inside the bole's foot. Its centre (31150, 1530 est) is unaffected. If the base moves, edge_n at u 31150-31280 should drop to about v 1500.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_bolefoot.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_bolebottom.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_hutbole.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_hutctx.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.sapling_far_31328",
+   "set": {},
+   "add_note": "SECOND PASS (willows): at zoom 1-5 the two strokes read as the two outlines of one short thick stem, with no fork or twig at either top. The west outline runs at u 31326-31334 from v 338 to 394, the east outline at u 31353-31360 from v 358 to 384, with pale silk between. A willow branch crosses at v 330-345 and hides the top. A third reading (c): a cut stump or a low pollard about 30 px wide and 55 px tall, base (31342, 395). The far bank line S1.grd.bank_31390 (v 400-413 here) runs along its foot, and structures_w also called it 'a stump or tree knee'. Conf stays low. If (c) is taken, base becomes (31342, 395), `top` is dropped and the form is a stump.",
+   "reason": "This decides whether the builder plants a sapling card or a stump. The current note offers 'post' as the other reading, not 'stump'.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_farpair.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_stump.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/scan_31050_top.jpg"
+   ]
+  },
+  {
+   "id": "S1.grp.tomb_sweeping_party",
+   "set": {},
+   "replace_in_note": {
+    "old": "the man with a long-handled tool (a hoe or a rake?) held upright over his shoulder",
+    "new": "the man with a long staff slanting over his shoulder (second pass: its top ends in a small knob, no blade or tines drawn)"
+   },
+   "also_add_note_to": {
+    "id": "S1.fig.party_porter_staff_31131",
+    "text": "SECOND PASS (willows): foot and head confirmed at zoom 3.2: feet (31108-31118, 452) and (31146-31155, 452), head (31124-31139, 352-368). The staff runs from his shoulder up-left to (31110, 312). At zoom 8 its top is a small dark knob about 5 x 9 px at (31108-31113, 312-321), with no blade, tines or crossbar. It is a plain staff, or at most a tool seen edge-on. Build a plain staff (carried prop)."
+   },
+   "reason": "The group note (from t2) and the figure (t3) disagree about the tool, and the needs list will cast the carried prop from one of them. The strokes show only a staff.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_porter.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_stafftop.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.willow_burl_great_32620",
+   "set": {},
+   "add_note": "SECOND PASS (willows), the flagged 'roots or a rock': the knobbly mass east of B's foot is a low lobe from u 32723 to 32860. Its base line runs along v 1585-1595, continuous with B's foot line, and it has two bumps, a peak at (32775, 1543) and a second at (32815-32827, 1545-1550). It has a pale lit face on its west part (32750-32773, 1553-1583) and dense dark knobs and dots on its east part. Between the trunk's own flare (it sweeps down into the ground at about 32705-32740, v 1582-1600) and the lobe there is only a narrow pale gap above v 1585. Kept as B's exposed roots. The burled willow S1.tree.willow_great_burl_32065 has its root lobes drawn in the same way (pale-topped lobes with dark knobbed edges at 32057-32128, v 1455-1500 and 32152-32286, v 1400-1500), and the map already reads those as roots. Read both alike. If the lead reads them as rocks, all three lobes become grd rocks together, with base corners from the extents given here.",
+   "reason": "This settles the merge's open flag ('B's roots or a rock'). It is consistent with how the map already reads the same painting idiom one tree west.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_Broots.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_Broots_z2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_Brock_c.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_burlroots.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_willows/z_AB_feet.jpg"
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "flag": "the great willows' feet (G3 at 31910, A and B at 32448/32620)",
+   "ids": [
+    "S1.tree.willow_great_31620",
+    "S1.tree.willow_great_31715",
+    "S1.tree.willow_great_31910",
+    "S1.tree.willow_great_burl_32065",
+    "S1.tree.willow_burl_forked_32448",
+    "S1.tree.willow_burl_great_32620",
+    "S1.tree.willow_burl_leaning_east_32805"
+   ],
+   "verdict": "agree, no change",
+   "evidence": "Column profiles, trunk against the silk 15 px either side: G1 (31600-31640) is dark to v 1340 and pale from 1345, matching base v 1338. G2 (31690-31740) is dark to v 1330 and pale from 1335-1345, matching 1335. G3: its west outline is a dip at u 31880 at v 1300-1390, and the ground in front is pale at 31890-31920 from v 1410. My foot is (31930 +/- 20, 1395), against the map's (31910, 1385), inside the spread t3 gave. Burled willow: its trunk band at 32020-32140 is dark at v 1390-1430, and the roots run to 32180-32290 at v 1430-1480. The trunk meets the ground at about v 1420-1435; the base at v 1450 sits inside the root flare, which is acceptable. A: the trunk's dark contours end at v 1425-1437 over u 32375-32483 (zoom 2.4 greyscale), matching (32448, 1432). B: the trunk meets the ground at v 1563-1590 over u 32567-32713, matching (32620, 1588). C: the foot spans u 32730-32880 at v 1390-1400, matching (32805, 1395). G1's pale west-foot lump (31541-31618, v 1261-1361) is bounded by G1's dark lower trunk and continues its pale bark. It is root flare, as the merge read it."
+  },
+  {
+   "flag": "B's roots or a rock (32700-32845, v 1540-1605)",
+   "ids": [
+    "S1.tree.willow_burl_great_32620"
+   ],
+   "verdict": "roots (see changes); no entity",
+   "evidence": "See the change on S1.tree.willow_burl_great_32620. A ready rock, if the lead wants one: S1.grd.rock_32790, base sw (32723, 1592), se (32860, 1590), ne (32850, 1565, est), nw (32740, 1570, est), summit (32775, 1543), conf low."
+  },
+  {
+   "flag": "the far grove's est feet (v 645-660)",
+   "ids": [
+    "S1.tree.far_bare_elm_32510",
+    "S1.tree.far_bare_leaning_32628",
+    "S1.tree.far_slender_faint_32717",
+    "S1.tree.far_slender_32753",
+    "S1.tree.far_slender_32786",
+    "S1.tree.far_twin_stem_32838",
+    "S1.tree.far_slender_32866",
+    "S1.tree.far_bare_elm_32932",
+    "S1.tree.far_bare_elm_33009",
+    "S1.tree.far_bare_elm_33061"
+   ],
+   "verdict": "agree, no change; count of 10 confirmed",
+   "evidence": "Column profiles down the three east trunks show where each stops reading darker than the silk beside it. 32924-32938 is darker to v 655-660. 33004-33018 is darker to v 630 and fades by 640-645. 33055-33069 is darker to about v 650-655, equal from 660. All three vanish where willow C's whip tips begin (v 640-670), so the foot line v 645-660 holds. Stems counted on greyscale zoom-1.8 crops: 32750-32761, 32767-32778 and 32783-32794 (the two stems of _32786), 32805-32822 and 32828-32844 (the twin), 32861-32878, 32884-32897 (_32932's north-west branch), 32911-32944, 33000-33022, 33050-33078, plus the faint 32712-32720. No eleventh trunk shows. Nothing can settle far_bare_elm_32510's true foot: B's fine whip fans cover 32450-32600 from v 330 down."
+  },
+  {
+   "flag": "S1.prop.reed_or_stake_32882",
+   "ids": [
+    "S1.prop.reed_or_stake_32882"
+   ],
+   "verdict": "agree (low), no change",
+   "evidence": "At zoom 5 it is a dotted ink line from (32867, 1484) to (32883, 1542). Its top end touches the lower edge of the dark wash of S1.grd.bank_32905 (v 1482-1486), where a small dark notch sits at (32884-32892, 1460-1468). It is dotted, not tapered, and nothing else (no tie, no head, no second blade) is drawn with it. Both readings stay open, conf low."
+  },
+  {
+   "flag": "the wash bands under the willows, water or ground, up to u 33000",
+   "ids": [
+    "S1.grd.bank_31660",
+    "S1.grd.bank_31680",
+    "S1.grd.bank_31700",
+    "S1.grd.bank_31825",
+    "S1.grd.bank_32445",
+    "S1.grd.bank_32700",
+    "S1.grd.bank_32705",
+    "S1.grd.bank_32900",
+    "S1.grd.bank_32905",
+    "S1.water.wash_band_34400"
+   ],
+   "verdict": "ground west of u 33000; no water entity proposed (the lead's and the user's call stands)",
+   "evidence": "1) Between u 31100 and 32850 every pale band carries something. The willows stand on them: G1 and G2 at v 1335-1340, G3 at 1385-1395, the burled willow at 1420-1450, A at 1432, B at 1588. The route runs on the band at v 1455-1500. 2) West of B, the pale band at the south edge of the candidate water is only a 35-50 px strip (v 1550-1600, between bank_31680 and bank_31700) back to u 31400. It would be a strange channel. 3) East of B, the pale band at v 1486-1580 (between bank_32905's foot and bank_32700's top) begins at B's trunk and root lobe (32700-32860) and widens east into structures_e's S1.water.wash_band_34400. It has no west mouth: if it is water, it is an inlet whose head is B's roots. 4) High-pass crops show no ripple lines in it, but the stream at the bridge (S1.water.stream_36500, u 36150-36550, v 1080-1280) has none either, so texture cannot decide. 5) The dark band v 1395-1486 at 32660-33000 is a bank (S1.grd.bank_32905), with C standing on its top, not water. If the wash band is taken as water, its west end in this range is shore_n (32860, 1486) -> (33000, 1490) along bank_32905's foot and shore_s (32860, 1592) -> (33000, 1580) along bank_32700's top. It closes against B's root lobe at u 32725-32860."
+  },
+  {
+   "flag": "the far willows and the sapling at the top",
+   "ids": [
+    "S1.tree.willow_far_31190",
+    "S1.tree.willow_far_31245",
+    "S1.tree.willow_far_31443",
+    "S1.tree.willow_far_31505",
+    "S1.tree.sapling_far_31328"
+   ],
+   "verdict": "agree; one note added (sapling, above)",
+   "evidence": "On the zoom-0.9 overlay and zoom-1.8/2.5 crops each base marker sits on its trunk's foot: 31190 at v 254 (the tick at 31197-31203), 31245 at v 291, 31443 at v 413, 31505 at v 474 (the dark foot lump 31506-31534, v 454-474). No fifth far trunk shows between 31280 and 31420 at v 0-300, or between 31550 and 31850 at v 150-500 (open silk with a faint ground band at v 433-450, 31540-31620). The whip fan at 31600-31840, v 50-350 converges on 31505's head, matching its crown_e (31820)."
+  },
+  {
+   "flag": "painted things that are not entities (checked so they are not proposed again)",
+   "ids": [],
+   "verdict": "no entity",
+   "evidence": "Two short dark crescents at (31406-31422, 559-590) and (31431-31450, 537-581) are drooping whip tips, not birds: they have no head and taper downward like the whips around them. The straight vertical line at u 31481-31487, v 410-760 is the silk crease t3 named. Faint parallel vertical lines at u 33139-33172, v 195-380 are a crease (no branches, no foot). Another vertical seam runs at u 33115-33123, v 1300-1800. The pale patch at 32950-33010, v 180-240 is silk damage. The specks at (32222, 136) and (32262, 145) are dust. Plain silk lies above the burled willow's crown (31650-32380, v 0-240) and above the grove (32380-33200, v 0-160): no far figures or trees."
+  },
+  {
+   "flag": "everything else in the range",
+   "ids": [
+    "S1.fig.party_porter_staff_31131",
+    "S1.prop.jar_tied_31298",
+    "S1.prop.basin_31373",
+    "S1.bld.shed_posts_31370",
+    "S1.str.wattle_fence_31100",
+    "S1.grd.bank_yard_31390",
+    "S1.grd.bank_31390",
+    "S1.tree.willow_burl_leaning_east_32805"
+   ],
+   "verdict": "agree",
+   "evidence": "The jar marker (31298, 1169) and the basin marker (31373, 1155) sit on their feet. The shed's east post meets its foot at v 1235. The fence's foot runs at v 1335-1340, and its spiky tops are the fence's own. bank_31390 lies on the drawn line at v 400-413. The bank lines under the willows lie on their wash bands (zoom-0.9 overlay). The porter is confirmed (see changes). Only one figure stands in the range, and no animals. The trees by base: 4 far willows, 1 far sapling or stump, 8 great willows (the hut willow, G1, G2, G3, the burled willow, A, B, C), and 10 far grove trees. No count changes."
+  }
+ ],
+ "left_to": [
+  {
+   "what": "the hut willow's trunk, head and crown west of u 31100 (readings a/b), at zoom 3",
+   "to": "second pass `west` (it holds the flag); only the base, in this range, is proposed here"
+  },
+  {
+   "what": "S1.tree.far_tree_30985 against S1.tree.willow_far_31190's west limb (30950-31015, v 23-48)",
+   "to": "second pass `west` (it holds the flag); 31190's own base and trunk are confirmed above"
+  },
+  {
+   "what": "the dark wash band east of u 33200 (33200-33500, v 1490-1550) and the pale band's course east of 33000",
+   "to": "second pass `farms`"
+  }
+ ],
+ "lessons": [
+  "Read the same painting idiom the same way across neighbouring entities. On S1's dyke the painter draws exposed willow roots as pale-topped lobes with dark knobbed edges, which look like small rocks. One tree's lobes were mapped as roots and the next tree's were left open as 'roots or a rock'. When a second pass meets such a flag, it compares the neighbouring case at the same zoom and proposes one reading for both. If the reading changes, all such lobes become rocks together.",
+  "A column darkness profile settles where a hidden trunk stops: take the mean grey of a 14-60 px band down the trunk against 15 px of silk either side, in 5 px bins of v. The trunk's end is where the band stops being darker than both sides. It confirmed S1's far-grove foot line to within 10 px, where the eye only saw whips.",
+  "A tree's base where its bole meets a dark bank wash is easy to set too high. Look for the lower edge of the bark texture (cracks, hollows, knots), not the top of the wash, and check it with row profiles: the silk turns pale just below the true foot. Then check the road edge or bank line that runs past the foot."
+ ]
+}

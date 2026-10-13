@@ -1,0 +1,663 @@
+{
+ "about": "S1's cast (written by make_people.py; rerun it after a workshop delivery or a build): for each painted figure what the needs list wants (character, clips, props) and what plays now; the seats the builder adds inside figure entities (map/BUILDING.md rule 3); the moves the train wants",
+ "figures": {
+  "man_with_stick_29205": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "point"
+    ],
+    "props": [
+     "hoe"
+    ]
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "idle",
+      10
+     ]
+    ],
+    "props": [
+     "hoe"
+    ]
+   }
+  },
+  "traveller_standing_29996": {
+   "wanted": {
+    "character": "scholar",
+    "do": [
+     "look"
+    ],
+    "props": [
+     "stick_bag"
+    ]
+   },
+   "now": {
+    "plays": "scholar",
+    "do": [
+     [
+      "idle",
+      10
+     ]
+    ],
+    "props": [
+     "stick_bag"
+    ]
+   }
+  },
+  "child_29674": {
+   "wanted": {
+    "character": "child_robed",
+    "do": [
+     "reach",
+     "look"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "child_robed",
+    "do": [
+     [
+      "reach",
+      8
+     ],
+     [
+      "look",
+      4
+     ]
+    ],
+    "props": []
+   }
+  },
+  "stall_customer_29280": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "drink"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "drink",
+      12
+     ]
+    ],
+    "props": []
+   }
+  },
+  "traveller_rider_30165": {
+   "wanted": {
+    "character": "townsman",
+    "do": [
+     "ride"
+    ],
+    "props": [
+     "wind_hood",
+     "wind_cape"
+    ]
+   },
+   "now": {
+    "plays": "townsman",
+    "do": [
+     [
+      "ride",
+      10
+     ]
+    ],
+    "props": [
+     "wind_hood",
+     "wind_cape"
+    ]
+   }
+  },
+  "stall_man_29328": {
+   "wanted": {
+    "character": "townsman",
+    "do": [
+     "talk"
+    ],
+    "props": [
+     "back_bundle"
+    ]
+   },
+   "now": {
+    "plays": "townsman",
+    "do": [
+     [
+      "talk",
+      10
+     ]
+    ],
+    "props": [
+     "back_bundle"
+    ]
+   }
+  },
+  "man_at_post_29812": {
+   "wanted": {
+    "character": "robed_man",
+    "do": [
+     "beckon_lean"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "robed_man",
+    "do": [
+     [
+      "beckon_lean",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "traveller_staff_30357": {
+   "wanted": {
+    "character": "porter",
+    "clip": "carry_pole",
+    "props": [
+     "staff_shoulder",
+     "back_bundle"
+    ]
+   },
+   "now": {
+    "plays": "porter",
+    "clip": "carry_pole",
+    "props": [
+     "staff_shoulder",
+     "back_bundle"
+    ]
+   },
+   "walks": 6.1
+  },
+  "traveller_rider_30495": {
+   "wanted": {
+    "character": "camel_driver",
+    "do": [
+     "ride"
+    ],
+    "props": [
+     "wind_hood",
+     "wind_cape"
+    ]
+   },
+   "now": {
+    "plays": "camel_driver",
+    "do": [
+     [
+      "ride",
+      10
+     ]
+    ],
+    "props": [
+     "wind_hood",
+     "wind_cape"
+    ]
+   }
+  },
+  "groom_leading_donkey_30648": {
+   "wanted": {
+    "character": "robed_man",
+    "clip": "lead",
+    "props": [
+     "lead_rope"
+    ]
+   },
+   "now": {
+    "plays": "robed_man",
+    "clip": "lead",
+    "props": []
+   },
+   "walks": 6.7
+  },
+  "far_figure_29230": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "crouch"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "crouch",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "far_figure_29257": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "crouch"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "crouch",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "far_figure_29337": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "idle"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "idle",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "far_figure_29466": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "idle"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "idle",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "far_figure_29482": {
+   "wanted": {
+    "character": "straw_hat",
+    "do": [
+     "idle"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "straw_hat",
+    "do": [
+     [
+      "idle",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "groom_chasing_30353": {
+   "wanted": {
+    "character": "groom",
+    "clip": "chase_run",
+    "props": [
+     "hat_on_back"
+    ]
+   },
+   "now": {
+    "plays": "groom",
+    "clip": "chase_run",
+    "props": [
+     "hat_on_back"
+    ]
+   },
+   "walks": 5.0
+  },
+  "groom_chasing_30518": {
+   "wanted": {
+    "character": "groom",
+    "clip": "chase_run",
+    "props": []
+   },
+   "now": {
+    "plays": "groom",
+    "clip": "chase_run",
+    "props": []
+   },
+   "walks": 5.0
+  },
+  "groom_chasing_30697": {
+   "wanted": {
+    "character": "groom",
+    "clip": "chase_run",
+    "props": []
+   },
+   "now": {
+    "plays": "groom",
+    "clip": "chase_run",
+    "props": []
+   },
+   "walks": 5.0
+  },
+  "sedan_bearer_front_30828": {
+   "wanted": {
+    "character": "bearer",
+    "do": [
+     "sedan_carry"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "bearer",
+    "do": [
+     [
+      "sedan_carry",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "sedan_bearer_rear_30990": {
+   "wanted": {
+    "character": "bearer",
+    "do": [
+     "sedan_carry"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "bearer",
+    "do": [
+     [
+      "sedan_carry",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "porter_pole_31083": {
+   "wanted": {
+    "character": "porter",
+    "do": [
+     "idle",
+     "look"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "porter",
+    "do": [
+     [
+      "idle",
+      8
+     ],
+     [
+      "look",
+      4
+     ]
+    ],
+    "props": []
+   }
+  },
+  "porter_boxes_30908": {
+   "wanted": {
+    "character": "porter",
+    "do": [
+     "idle",
+     "look"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "porter",
+    "do": [
+     [
+      "idle",
+      8
+     ],
+     [
+      "look",
+      4
+     ]
+    ],
+    "props": []
+   }
+  },
+  "rider_party_30988": {
+   "wanted": {
+    "character": "hat_traveller",
+    "do": [
+     "ride"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "hat_traveller",
+    "do": [
+     [
+      "ride",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "porter_walking_31070": {
+   "wanted": {
+    "character": "idler",
+    "do": [
+     "idle",
+     "look"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "idler",
+    "do": [
+     [
+      "idle",
+      8
+     ],
+     [
+      "look",
+      4
+     ]
+    ],
+    "props": []
+   }
+  },
+  "party_porter_staff_31131": {
+   "wanted": {
+    "character": "porter",
+    "do": [
+     "stand_pole"
+    ],
+    "props": [
+     "staff"
+    ]
+   },
+   "now": {
+    "plays": "porter",
+    "do": [
+     [
+      "stand_pole",
+      10
+     ]
+    ],
+    "props": [
+     "staff"
+    ]
+   }
+  },
+  "bending_farmer_34252": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "bend_goods"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "bend_goods",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "farmer_by_hedge_34472": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "stand_sleeves"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "stand_sleeves",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "figure_in_shed_35108": {
+   "wanted": {
+    "character": "farmer",
+    "do": [
+     "crouch"
+    ],
+    "props": []
+   },
+   "now": {
+    "plays": "farmer",
+    "do": [
+     [
+      "crouch",
+      10
+     ]
+    ],
+    "props": []
+   }
+  },
+  "charcoal_driver_36250": {
+   "wanted": {
+    "character": "straw_hat",
+    "clip": "drive_donkeys",
+    "props": [
+     "stick"
+    ]
+   },
+   "now": {
+    "plays": "straw_hat",
+    "clip": "drive_donkeys",
+    "props": [
+     "stick"
+    ]
+   },
+   "walks": 2.7
+  },
+  "charcoal_driver_36797": {
+   "wanted": {
+    "character": "straw_hat",
+    "clip": "drive_donkeys",
+    "props": [
+     "stick"
+    ]
+   },
+   "now": {
+    "plays": "straw_hat",
+    "clip": "drive_donkeys",
+    "props": [
+     "stick"
+    ]
+   },
+   "walks": 2.5
+  }
+ },
+ "seats": {
+  "S1.fig.stall_customer_29280": {
+   "at": [
+    285.41,
+    18.6
+   ],
+   "top": 0.48,
+   "facing_deg": 0,
+   "clip": "farmer drink",
+   "what": "a low stool (choice: about 0.35 m across) under his hips, hidden behind the small table as painted, built inside his figure entity S1.fig.stall_customer_29280 (map/BUILDING.md rule 3); its top at the clip's seat height, or he hovers or sinks"
+  }
+ },
+ "moves_wanted": {
+  "S1.ani.donkey_charcoal_36745": {
+   "dX": 1.99,
+   "dD": -0.45
+  },
+  "S1.ani.donkey_charcoal_36666": {
+   "dX": 1.35,
+   "dD": 0.07
+  },
+  "S1.ani.donkey_charcoal_36508": {
+   "dX": 0.91,
+   "dD": -0.66
+  },
+  "S1.ani.donkey_charcoal_36410": {
+   "dX": 0.32,
+   "dD": -0.04
+  },
+  "S1.ani.donkey_charcoal_36323": {
+   "dX": -0.56,
+   "dD": 0.27
+  },
+  "S1.fig.charcoal_driver_36797": {
+   "dX": 2.38,
+   "dD": -1.1
+  },
+  "S1.fig.charcoal_driver_36250": {
+   "dX": -1.45,
+   "dD": 0.02
+  }
+ },
+ "train": {
+  "shift": 0.75,
+  "rear": "north",
+  "spacing": 1.9,
+  "lanes": [
+   -0.41,
+   0.28
+  ],
+  "walk": [
+   2.5,
+   0.0
+  ],
+  "about": "the charcoal train's layout the moves come from (kept while it serves)"
+ },
+ "builder_assumptions": {
+  "sedan": "S1.veh.sedan_willow_30805 from kit_vehicles.sedan_chair(front, rear, carried=True) at its defaults (cabin 0.92 x 0.78 m at cabin_at 0.5, poles 0.465 m either side at 1.3 m): the bearers stand under the right-hand pole, 0.15 m inside its ends",
+  "lead rope": "the second travellers' donkey walks with the groom 1.6 m ahead at its head: a rope from his hands to its halter can't be a static builder line while they walk (needs list: \"a builder's line\"); the robed man's lead_rope prop comes on when his lead clip is back",
+  "stall stool": "cast.json seats: the stall customer's hidden stool",
+  "solids": "the script tests against gen/sections/countryside/solids.json when the builder writes one (S7's format: collider cells per owner at body height, seats, walk); until then the layout's footprints, lines and props at the choice radii in PROP_R"
+ }
+}

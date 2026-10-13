@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is a screenshot of our 3D walkable world: the countryside outside Northern Song Kaifeng in early spring at mid-morning: great gnarled old willows on a dyke with their first thin green shoots, a thatched shed on the left, a walker in a long robe seen from behind, a dirt road. Image 2 is a style reference.\nKeep exactly the composition, camera angle, perspective, buildings, objects, people, their poses and positions from image 1; change only how it is rendered. Render it as a Chinese ink-and-colour painting on paper in the painting language of image 2 (study its line, washes and colour handling, not its content): fine ink outlines of varying weight that break into dry-brush strokes on timber, tiles and bark; flat mineral-pigment washes that bleed slightly past the lines, with soft gradients inside each wash; roof tiles drawn row by row in grey-blue ink wash; white lime walls with faint ink edges; flat soft cast shadows as grey washes; distance fading into pale mist. Colours are the true daylight colours of a real Northern Song town, NOT aged yellow paper and NOT sepia: neutral grey brick and tiles, white plaster, weathered brown timber, red-ochre paint, dusty grey-brown ground, muted malachite greens, azurite and indigo blues for water, small cinnabar accents. The sky is a clear blue day sky painted as a few flat horizontal wash bands with a few soft white cloud blocks edged by thin broken ink lines, with plenty of empty space. No text, no calligraphy, no seals, no UI, no border.\nVariant: lighter and more poetic: thinner colour washes, more visible ink line and brush texture, more empty misty space in the distance and the sky (liu bai), the colours still true daylight colours, never yellowed.",
+ "refs": [
+  "gen/ui/look/concepts/src/country_willows.jpg",
+  "gen/ui/look/ref_small/jn1_keyart_pink_sky_1600.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x864",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "country_willows_B"
+ },
+ "format": "png",
+ "generation_s": 37.0,
+ "attempts": 1,
+ "idempotency_key": "e462a818-9fb2-4ff6-b742-0556427828ce",
+ "request_id": "431a034f-e7a9-486f-87ab-2272300a3809",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1640,
+  "completion_tokens_details": {
+   "image_tokens": 1640,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5083,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4698,
+   "text_tokens": 385
+  },
+  "output_tokens": 1640,
+  "output_tokens_details": {
+   "image_tokens": 1640,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5083,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4698,
+   "text_tokens": 385
+  },
+  "total_tokens": 6723
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/d7b769b0-f536-4762-8831-49253fea6d13"
+ ],
+ "files": [
+  "gen/ui/look/concepts/country_willows_B_0.png"
+ ]
+}

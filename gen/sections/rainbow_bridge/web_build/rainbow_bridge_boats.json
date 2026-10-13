@@ -1,0 +1,449 @@
+{
+ "about": "Written by blender/build_boats.py: the section's boats as built for the page (both detail levels in the GLB). tris: visible triangles per detail level, collider triangles, triangles per node.",
+ "section": "S3",
+ "boats": {
+  "S3.veh.boat_moored_south_bank_19745": {
+   "kind": "small",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 12.0,
+   "loa": 13.3,
+   "beam": 3.0,
+   "deck_z": 0.76,
+   "roof_z": 2.3,
+   "heading_deg": -179.7,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 2560,
+    "lod1": 1168,
+    "colliders": 84,
+    "nodes": {
+     "body": 2504,
+     "deck__col": 12,
+     "rim__col": 24,
+     "board__edge": 56,
+     "roof__col": 48,
+     "wet__ring": 56
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 12.0,
+    "beam": 3.0
+   },
+   "note": null
+  },
+  "S3.veh.boat_mast_lowering_19518": {
+   "kind": "passenger",
+   "pose": "lowering mast",
+   "motion": "under_way",
+   "lw": 11.4,
+   "loa": 17.0,
+   "beam": 3.3,
+   "deck_z": 0.66,
+   "roof_z": 3.349,
+   "heading_deg": -162.9,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 4716,
+    "lod1": 1834,
+    "colliders": 176,
+    "nodes": {
+     "body": 4470,
+     "deck__col": 72,
+     "rim__col": 32,
+     "board__edge": 64,
+     "roof__col": 72,
+     "mast": 152,
+     "wet__ring": 64,
+     "bow_wave": 30
+    }
+   },
+   "kit": {
+    "kind": "passenger",
+    "lw": 11.4,
+    "beam": 3.3,
+    "mast": "lowering",
+    "mast_at": 0.5,
+    "cabin": {
+     "x0": 0.03,
+     "x1": 0.55,
+     "pattern": "boards",
+     "roof": "board",
+     "segs": 3,
+     "wall_h": 1.4
+    },
+    "stern_house": false,
+    "bow_canopy": false,
+    "cargo": [
+     [
+      "coil",
+      0.9,
+      0.0,
+      "deck"
+     ],
+     [
+      "roll",
+      0.8,
+      0.75,
+      "deck"
+     ]
+    ]
+   },
+   "note": null
+  },
+  "S3.veh.boat_skiff_19255": {
+   "kind": "small",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 4.8,
+   "loa": 6.1,
+   "beam": 1.6,
+   "deck_z": -0.03,
+   "roof_z": null,
+   "heading_deg": -0.7,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 1246,
+    "lod1": 484,
+    "colliders": 24,
+    "nodes": {
+     "body": 1202,
+     "deck__col": 12,
+     "rim__col": 12,
+     "board__edge": 28,
+     "wet__ring": 44
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 4.8,
+    "beam": 1.6,
+    "awning": false,
+    "cargo": []
+   },
+   "note": null
+  },
+  "S3.veh.boat_cabin_under_arch_19225": {
+   "kind": "small",
+   "pose": "drifting",
+   "motion": "under_way",
+   "lw": 10.0,
+   "loa": 11.3,
+   "beam": 2.6,
+   "deck_z": 0.35,
+   "roof_z": 1.89,
+   "heading_deg": 179.7,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 2458,
+    "lod1": 1098,
+    "colliders": 80,
+    "nodes": {
+     "body": 2372,
+     "deck__col": 12,
+     "rim__col": 20,
+     "board__edge": 48,
+     "roof__col": 48,
+     "wet__ring": 56,
+     "bow_wave": 30
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 10.0,
+    "beam": 2.6,
+    "cargo": []
+   },
+   "note": null
+  },
+  "S3.veh.boat_mat_cabin_18005": {
+   "kind": "small",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 5.0,
+   "loa": 6.3,
+   "beam": 2.2,
+   "deck_z": 0.12,
+   "roof_z": 1.66,
+   "heading_deg": 180.0,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 1918,
+    "lod1": 1048,
+    "colliders": 72,
+    "nodes": {
+     "body": 1870,
+     "deck__col": 12,
+     "rim__col": 12,
+     "board__edge": 28,
+     "roof__col": 48,
+     "wet__ring": 48
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.2
+   },
+   "note": null
+  },
+  "S3.veh.boat_lowered_mast_17708": {
+   "kind": "small",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 5.0,
+   "loa": 6.3,
+   "beam": 2.2,
+   "deck_z": 0.12,
+   "roof_z": 1.66,
+   "heading_deg": 178.2,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 2166,
+    "lod1": 1204,
+    "colliders": 72,
+    "nodes": {
+     "body": 1966,
+     "deck__col": 12,
+     "rim__col": 12,
+     "board__edge": 28,
+     "roof__col": 48,
+     "mast": 152,
+     "wet__ring": 48
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.2,
+    "mast": "down",
+    "mast_h": 6.0
+   },
+   "note": null
+  },
+  "S3.veh.boat_unloading_17705": {
+   "kind": "grain",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 12.0,
+   "loa": 16.5,
+   "beam": 3.0,
+   "deck_z": 0.9,
+   "roof_z": 3.366,
+   "heading_deg": 167.7,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 4744,
+    "lod1": 2156,
+    "colliders": 152,
+    "nodes": {
+     "body": 4684,
+     "deck__col": 72,
+     "rim__col": 32,
+     "board__edge": 64,
+     "roof__col": 48,
+     "wet__ring": 60
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "lw": 12.0,
+    "beam": 3.0,
+    "free": 1.2,
+    "hold": "hatch",
+    "laden": false,
+    "cabin": {
+     "x0": 0.03,
+     "x1": 0.42,
+     "pattern": "house",
+     "roof": "mat",
+     "segs": 2,
+     "wall_h": 1.3
+    },
+    "cargo": [
+     [
+      "jar",
+      0.9,
+      0.45,
+      "deck"
+     ],
+     [
+      "jar",
+      0.9,
+      -0.35,
+      "deck"
+     ],
+     [
+      "sack",
+      0.47,
+      0.6,
+      "deck"
+     ],
+     [
+      "sack",
+      0.47,
+      -0.6,
+      "deck"
+     ],
+     [
+      "basket",
+      0.5,
+      0.0,
+      "deck"
+     ]
+    ]
+   },
+   "note": "mapped waterline 8.2 m, built 12.0 m (real size, BUILDING.md rule 5)"
+  },
+  "S3.veh.boat_awning_17442": {
+   "kind": "small",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 5.0,
+   "loa": 6.3,
+   "beam": 2.2,
+   "deck_z": 0.23,
+   "roof_z": 1.77,
+   "heading_deg": 173.9,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 1918,
+    "lod1": 1098,
+    "colliders": 72,
+    "nodes": {
+     "body": 1870,
+     "deck__col": 12,
+     "rim__col": 12,
+     "board__edge": 28,
+     "roof__col": 48,
+     "wet__ring": 48
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.2,
+    "moor": [
+     "S3.prop.mooring_post_17702"
+    ]
+   },
+   "note": null
+  },
+  "S3.veh.boat_passenger_long_16398": {
+   "kind": "passenger",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 11.4,
+   "loa": 17.0,
+   "beam": 2.9,
+   "deck_z": 0.32,
+   "roof_z": 3.396,
+   "heading_deg": 175.5,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 4658,
+    "lod1": 1612,
+    "colliders": 176,
+    "nodes": {
+     "body": 4598,
+     "deck__col": 72,
+     "rim__col": 32,
+     "board__edge": 64,
+     "roof__col": 72,
+     "wet__ring": 60
+    }
+   },
+   "kit": {
+    "kind": "passenger",
+    "lw": 11.4,
+    "beam": 2.9,
+    "cabin": {
+     "x0": 0.08,
+     "x1": 0.92,
+     "pattern": "passenger",
+     "roof": "board",
+     "segs": 3
+    },
+    "bow_canopy": false,
+    "stern_house": false,
+    "cargo": []
+   },
+   "note": null
+  },
+  "S3.veh.boat_towed_mast_16228": {
+   "kind": "grain",
+   "pose": "towed",
+   "motion": "under_way",
+   "lw": 12.0,
+   "loa": 16.5,
+   "beam": 3.1,
+   "deck_z": 0.35,
+   "roof_z": 3.099,
+   "heading_deg": -7.6,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 5220,
+    "lod1": 1800,
+    "colliders": 152,
+    "nodes": {
+     "body": 4978,
+     "deck__col": 96,
+     "rim__col": 32,
+     "board__edge": 64,
+     "roof__col": 24,
+     "mast": 152,
+     "wet__ring": 60,
+     "bow_wave": 30
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "lw": 12.0,
+    "beam": 3.1,
+    "hold": "laden",
+    "mast": "up",
+    "tow_to": "tracker_16333"
+   },
+   "note": "mapped waterline 2.5 m, built 12.0 m (real size, BUILDING.md rule 5)"
+  },
+  "S3.veh.boat_under_way_15595": {
+   "kind": "grain",
+   "pose": "rowed",
+   "motion": "under_way",
+   "lw": 12.0,
+   "loa": 16.5,
+   "beam": 2.8,
+   "deck_z": 0.3,
+   "roof_z": 1.988,
+   "heading_deg": 159.0,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 4138,
+    "lod1": 1728,
+    "colliders": 176,
+    "nodes": {
+     "body": 3956,
+     "deck__col": 72,
+     "rim__col": 32,
+     "board__edge": 64,
+     "roof__col": 72,
+     "sweep": 92,
+     "wet__ring": 60,
+     "bow_wave": 30
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "lw": 12.0,
+    "beam": 2.8,
+    "free": 0.6,
+    "hold": "awning",
+    "laden": false,
+    "cabin": false,
+    "sweep": "port"
+   },
+   "note": "mapped waterline 4.5 m, built 12.0 m (real size, BUILDING.md rule 5)"
+  }
+ }
+}

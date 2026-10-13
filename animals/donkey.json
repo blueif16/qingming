@@ -1,0 +1,109 @@
+{
+  "title": "Donkey: the grey-dun donkey of the gate (S5: 8 of its 12 animals: ridden, packed, in a trace collar, head down)",
+  "plan": "equid",
+  "figure": {
+    "section": "gate",
+    "id": "trace_donkey_8814",
+    "map_id": "S5.ani.trace_donkey_8814",
+    "src": "mosaic",
+    "crop": [
+      8660,
+      1170,
+      8900,
+      1300
+    ]
+  },
+  "prompt": "animal_donkey",
+  "mesh": {
+    "from": "side",
+    "test": [
+      "side",
+      "threequarter"
+    ],
+    "polys": 3500
+  },
+  "clips": [
+    "idle",
+    "walk",
+    "graze",
+    "lie",
+    "walk_low"
+  ],
+  "back_m": 1.0,
+  "tack": {
+    "saddle_cloth": [
+      {
+        "kind": "cloth",
+        "mat": "cloth_dark",
+        "hem": "cloth_red",
+        "span": [
+          -0.2,
+          0.2
+        ],
+        "down": 78
+      },
+      {
+        "kind": "girth",
+        "at": -0.1
+      }
+    ],
+    "collar": [
+      {
+        "kind": "collar",
+        "mat": "felt",
+        "at": 0.45
+      }
+    ],
+    "pack_saddle": [
+      {
+        "kind": "cloth",
+        "mat": "felt",
+        "span": [
+          -0.22,
+          0.22
+        ],
+        "down": 60
+      },
+      {
+        "kind": "girth",
+        "at": -0.12
+      },
+      {
+        "kind": "pack_frame",
+        "length": 0.34
+      },
+      {
+        "kind": "side_bundles",
+        "mat": "cloth_white",
+        "length": 0.36,
+        "drop": 0.34
+      }
+    ],
+    "pannier_charcoal": [
+      {
+        "kind": "cloth",
+        "mat": "felt",
+        "span": [
+          -0.22,
+          0.22
+        ],
+        "down": 60
+      },
+      {
+        "kind": "girth",
+        "at": -0.12
+      },
+      {
+        "kind": "pack_frame",
+        "length": 0.34
+      },
+      {
+        "kind": "panniers",
+        "length": 0.34,
+        "rise": 0.24
+      }
+    ]
+  },
+  "seat_back": 0.1,
+  "head_low_z": 0.3
+}

@@ -1,0 +1,113 @@
+{
+ "section": "S2",
+ "pass": "second pass, east_middle: u 25300-27600 (looked at 25150-27750, v 0-1790)",
+ "how_to_read": "entities: new entities in the strokes format, ready to copy into a part (as S4's merge_fixes accept()). retire: entities to drop in merge_fixes.mjs, with the reason. changes: edits to existing entities; 'set' keys are fields or 'pts.<name>' points, 'add_note' is text to append to the note. checked: the merge notes' list for this range (and the other low entities), read again, with the verdict and the reading. Crops (contrast-stretched scan, some with the east restyle beside it on the same grid) are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S2_second_east_middle/; crop.mjs and ecrop.mjs there make them.",
+ "summary": "No painted thing in u 25150-27750 was found without an entity, and none of the merged entities is proposed for retirement. The range was walked at zoom 1 (land v 0-1000 and the water v 900-1790), then at zoom 2-2.4 window by window (the far street, the halls and the bank strip, the warehouse, both moored boats' decks, the great willow's crown, the paper shop, the yard, the eating shed and the jetty), and every item on the merge's list at zoom 3.5-6, scan beside restyle. The water holds only current lines and eddies (no boat, float or swimmer); the willow crowns hold no bird; the warehouse doors, the white-walled house, the paper shop's open front, the yard and the eating shed hold nobody beyond the mapped figures. Three notes are proposed (the capped head at 25810, the barrow, the round-topped cart, one optional point move); everything else stays as merged, with the reading in 'checked'.",
+ "entities": [],
+ "retire": [],
+ "changes": [
+  {
+   "id": "S2.fig.crewman_head_cabin_east_25810",
+   "add_note": "Second pass: compared on one crop with the boat's domed basket at (25890-25920, 625-650). That basket is one ribbed half-dome sitting on a flat line at v ~645. This object is two parts: a small, pale, smooth round top (25802-25816, 623-640, no ribs) over a wider body with vertical and slanting ribs (25798-25830, 640-670) that goes down behind the curved mat cabin roof. That reads better as a man seen from behind, bare-headed or in a pale cap, in a ribbed straw cape (蓑衣), than as a second domed basket (the restyle draws exactly that man). Still conf low: a lidded jar standing in a ribbed basket is the other reading.",
+   "conf": "low",
+   "crops": "scratchpad S2_second_east_middle/baskets_boat.jpg (zoom 4, scan over restyle), head25810_g.jpg (zoom 5, grey), bank1.jpg"
+  },
+  {
+   "id": "S2.veh.barrow_crates_25598",
+   "add_note": "Second pass, which reading: the barrow (kept). The two lattice crates are not hung level: the west crate (25530-25568, 75-98) stands lower and nearer, the east crate (25570-25600, 33-75) higher and further, one behind the other along a line that runs up to the east as a barrow's bed recedes here. A load on a shoulder pole would hang at one height on either side of its carrier, and the hooded man (25512-25555, v 28-75) is at the west end behind both crates, not between them. No wheel shows: it would be under the crates.",
+   "conf": "low",
+   "crops": "scratchpad S2_second_east_middle/barrow.jpg (zoom 5, scan over restyle), barrow_g.jpg (zoom 4, grey), barrow_z6.jpg"
+  },
+  {
+   "id": "S2.veh.cart_round_top_26035",
+   "set": {
+    "pts.front": [
+     25998,
+     136,
+     "est"
+    ]
+   },
+   "add_note": "Second pass: the bed's two long horizontal members (v 100-113) run from u ~25912 to ~25998 and end there on legs at about u 25919 and 25987-25992 (feet v ~136-138). Between the bed's east end and the dark horse (body from u ~26030), close vertical posts stand at u 26000-26030 (v 65-134), and no shaft runs on to the horse. So front moved from (26035, 130 est) to (25998, 136 est), where the bed ends (the old front sat under the horse's hind feet at 26037). This does not settle cart or stall; it does weaken the horse's place in the cart's group: as drawn it is not in shafts. Either keep S2.grp.round_cart_26035 with a note, or leave the horse ungrouped.",
+   "conf": "low",
+   "crops": "scratchpad S2_second_east_middle/cart_g.jpg (zoom 4.4, grey), roundcart.jpg (zoom 4, scan over restyle), fs2.jpg, fs3.jpg"
+  }
+ ],
+ "checked": [
+  {
+   "what": "the far street's crate barrow (S2.veh.barrow_crates_25598, S2.fig.barrow_pusher_25532, S2.fig.barrow_puller_25607)",
+   "verdict": "no change beyond the note above",
+   "reading": "Barrow reading kept (see changes). The puller at 25600-25613 (v 20-78) is a standing shape with a head at the silk's top edge, crossed by the awning's poles; it cannot be told from the poles at zoom 5-6, so it stays low. The pusher's visible legs end at about v 75-78, behind the west crate; his est foot (25532, 100) is plausible (the crate hides v 75-98).",
+   "crops": "scratchpad S2_second_east_middle/barrow.jpg, barrow_g.jpg, barrow_z6.jpg, fs1.jpg"
+  },
+  {
+   "what": "the far street's other low figures: S2.fig.far_street_child_25728, S2.fig.stall_second_26194, S2.fig.walker_26697",
+   "verdict": "no change",
+   "reading": "All three are at the scan's limit (1-2 px strokes, 45-75 px figures). 25728: a dark spot at (25727, 105-113) next to the shed post at 25730; child or post knot cannot be told at zoom 3-6. 26194: dark mass against the shed's east post; same. 26697: an A-shaped robe outline with a dark top at (26680-26710, 70-150), lighter silk inside, as t8 describes; a robed figure reads slightly better than a willow stem (the top willow's legs end at 26588 and 26624). The restyle's other far-street people (the man at 25850, a horse at 25840-25900, an ox head at 25770) are table legs and trestles on the scan (zoom 4).",
+   "crops": "scratchpad S2_second_east_middle/fs_shed.jpg (zoom 3, scan over restyle), fs_shed_z6.jpg, shed25850.jpg, walker.jpg"
+  },
+  {
+   "what": "the round-topped cart and the two animals (S2.veh.cart_round_top_26035, S2.ani.horse_feeding_26072, S2.ani.donkey_26098)",
+   "verdict": "no change beyond the cart note above",
+   "reading": "The round top (25940-26005, v 30-90) sits on a flat bed on legs; no wheel, as t7 found. The dark horse (26030-26087) stands with its head lowered at (26070-26085, 110-130), facing east. The donkey: a head with ears at about (26085-26100, 86-100) facing west, body behind the shed post at u 26100, legs to v ~140; plausible, kept low. A pole at u 26023-26029 (v 38-132) is the west post of the lean-to roof over the cart and the stall (t7's reading) or a post of the cart's setting (structures_e's); it is not in any entity's points, but it belongs to S2.bld.far_long_shed_26260's west end under t7's reading, so no new entity.",
+   "crops": "scratchpad S2_second_east_middle/roundcart.jpg, cart_g.jpg, fs3.jpg, shedwest.jpg"
+  },
+  {
+   "what": "the hall window's small figure and the shopkeeper (S2.fig.hall_small_figure_25628, S2.fig.shopkeeper_25360)",
+   "verdict": "no change",
+   "reading": "Window: one dark seated mass with its head at (25582-25597, 412-428) and a lower bump at (25620-25635, 430-443) that runs on to u 25640 at v 437-460: a second, smaller seated person or the man's sleeve and a bundle; can't be told at zoom 4. Shop: a face with a cap and eyes at (25350-25375, 340-375), shoulders below to v 395, facing the viewer: it reads as a person more than a picture, but the restyle frames it, so low stays right.",
+   "crops": "scratchpad S2_second_east_middle/window.jpg, shopkeeper.jpg (zoom 4, scan beside restyle)"
+  },
+  {
+   "what": "the warehouse's capped posts (retired S2.prop.mooring_post_26018; posts at u ~25895, 26010, 26120 in S2.bld.warehouse_26070)",
+   "verdict": "no change (the merge's reading holds)",
+   "reading": "All three stand on the plinth's plank face exactly below the bay posts: (25896-25908, 550-578) under 25905-25915, (26008-26025, 566-632) under 26020-26025, (26115-26130, 560-620) under 26125-26135. No rope reaches any of them; both moored boats' ropes go elsewhere (river_m's to t6's post at 25207). They are the posts carried down through the platform.",
+   "crops": "scratchpad S2_second_east_middle/bank1.jpg, bank2.jpg, warehouse.jpg (zoom 2.2-2.4)"
+  },
+  {
+   "what": "the moored boat's crew (S2.fig.figure_under_canopy_25518, S2.fig.crewman_head_cabin_east_25810, S2.fig.man_leaning_casks_25650) and the 'tall figure' at its stern (u ~26000-26020)",
+   "verdict": "no change; a note for 25810 above",
+   "reading": "Under the canopy: a round head-like shape at (25503-25520, 620-640) with leafy, sprig-like strokes east of it to (25550, 690), beside the lidded jar (25430-25480) and the dark dish (25473-25510, 687-700); a seated man or a potted plant both fit, so low stays. The man leaning on the casks (head (25655, 528)) is clear. The stern shape at (26005-26030, 720-745) has horizontal ribs and a hole: the rudder stock's drum head, as the merge read it. The mat-cabin boat (river_e) has nobody else on deck, at its fore cabin door or on its roof besides its two men (zoom 2 and 3.5).",
+   "crops": "scratchpad S2_second_east_middle/canopy.jpg, canopy_fig.jpg, boatA.jpg, boatB.jpg, forecabin.jpg"
+  },
+  {
+   "what": "t8's hooded rider and donkey (S2.fig.rider_26832, S2.ani.donkey_26872) and the baskets (S2.prop.baskets_26778)",
+   "verdict": "no change",
+   "reading": "At zoom 3 the hooded figure (26817-26847, 63-110) runs straight down into the animal's back with no legs of its own below it, and the animal's neck and raised head are at (26853-26873, 88-130), facing east: one rider on one animal, as t8 read it. The baskets: two rounded outlines at (26750-26805, 140-170); at (26786, 125), where the restyle puts its porter's head, the scan has only the open shed's horizontal rail. So they were set down, and no porter is painted.",
+   "crops": "scratchpad S2_second_east_middle/fs5.jpg (zoom 3), walker.jpg (zoom 4, scan beside restyle)"
+  },
+  {
+   "what": "the rounded shape at the paper shop's west end (26905-26990, v 20-110)",
+   "verdict": "no change: part of S2.bld.wang_paper_horse_shop_27100 (its roof_end_w), no tree",
+   "reading": "A light rounded panel (26895-26945, 40-85) bounded on the east by a curved dark outline, with dark Y-shaped strokes over it at (26925-26955, 20-55) where two edges meet: the gable end with its barge boards meeting at the apex (a 悬鱼-like ornament), as structures_e read it. No trunk comes down below the roof line, and the strokes don't spread out past u 26960 the way twigs would. The restyle's bare tree there has nothing on the scan to support it.",
+   "crops": "scratchpad S2_second_east_middle/top26930.jpg (zoom 4, scan beside restyle), top26930_e.jpg (zoom 3.5, grey)"
+  },
+  {
+   "what": "the great willow: one tree or two, and the wattle fence (S2.tree.willow_great_27068, S2.str.wattle_fence_26890)",
+   "verdict": "no change; tree count here stays 1",
+   "reading": "The knobbed head is one unbroken dark mass from the leaning trunk's top at (27000-27050, 600-650) west to about 26800 (v 515-660). Under its west half, the finely hatched block (26820-26925, 620-676) has a lower edge that bows downward. That fits a round wattle enclosure seen from the front, or the bark of the head where it rests on the ground. The small two-post, two-rail frame at (26935-26975, 620-662) stands just where the head overhangs, as a wooden prop under an old tree's head would (the restyle draws it that way). Nothing here needs a second trunk: no outline of its own runs from the hatched block up into the head, unlike the leaning trunk's two parallel outlines. The fence entity already carries the frame (frame_w, frame_e, frame_top).",
+   "crops": "scratchpad S2_second_east_middle/willow.jpg (zoom 2.2), fence.jpg (zoom 4, scan over restyle), knob_side.jpg (zoom 2.5, scan beside restyle)"
+  },
+  {
+   "what": "t9's man behind the tub and the tall paper item (S2.fig.man_behind_tub_27538, S2.prop.tall_paper_item_27112)",
+   "verdict": "no change",
+   "reading": "Tub: a rounded outline at (27530-27550, 695-715) over the staved tub; at zoom 2.2 a narrow upright figure-like shape shows at (27527-27555, 676-722), but zoom 4 resolves only weave. Person or the tub's load stays open, so conf low stays. Paper item: a tall narrow outlined upright with a rounded top at (27104-27125, 113-218), on the line of the shop's front post at u ~27120. A paper effigy or a door leaf or post can't be told apart, so conf low stays.",
+   "crops": "scratchpad S2_second_east_middle/tub.jpg, shedB.jpg, paperitem.jpg, shop.jpg"
+  },
+  {
+   "what": "the paddle on the tall rear hall's east hip (pts.paddle of S2.bld.tall_rear_hall_25330)",
+   "verdict": "no change (stays in the building)",
+   "reading": "A blade-shaped object (25440-25475, 85-115) with a ring-like knob at (25465-25485, 100-115) and a thin line on to (25490, 120), on the hip just east of the finial. An oar left on the roof and a ridge ornament both fit. A separate prop would need a roof support key the frame does not have. If the lead reads it as a loose oar, it becomes a prop on `roof: S2.bld.tall_rear_hall_25330`.",
+   "crops": "scratchpad S2_second_east_middle/paddle.jpg (zoom 3.5, scan beside restyle), topw.jpg"
+  },
+  {
+   "what": "the rest of the range, walked for things without an entity",
+   "verdict": "nothing to add",
+   "reading": "The water (25150-27750, v 900-1790) holds only current lines and eddies. There is a pale silk-damage patch at (25700-25740, ~1080), and river_e already noted the ink accent at (27140, 1375). The willow crowns (26440-27260, v 180-560) hold whips and shoots and no bird. The open shop and the bank (25150-25520, v 380-720) hold the two men, t6's post with its rope and bank wash. The bank strip in front of the warehouse and the white-walled house (25700-26520, v 470-700) holds wash and the plinth posts only. The paper shop's front holds counters and goods and no shopkeeper. The yard and the pole frame (27240-27640, v 90-330) hold the frame, the trestle with its board, the low stand and the railing, and no people. The eating shed and the jetty (27020-27640, v 540-960) hold empty tables, the parasol, the tub and the uncertain figure. The roofs at the top edge (27280-27760, v 0-200) are roofs only.",
+   "crops": "scratchpad S2_second_east_middle/e_25150_0.jpg, e_26000_0.jpg, e_26880_0.jpg (zoom 1), water_w.jpg, water_e.jpg, crownA.jpg, crownB.jpg, shopbank.jpg, bank1.jpg, bank2.jpg, shop.jpg, frame.jpg, shedA.jpg, shedB.jpg, topE.jpg, topw.jpg"
+  }
+ ],
+ "lessons": [
+  "A second pass on faint silk gains most by comparing an uncertain shape with a known thing of the same kind on the same crop (S2: the 'head' at 25810 against the boat's own domed basket 90 px east: one is a single ribbed dome, the other a smooth round top over a ribbed body), not by zooming further: above zoom 5 the commons scan shows only weave.",
+  "Before writing that an animal stands in a cart's shafts, follow the bed's lines to their end. On S2's far street the round-topped cart's bed stops 30 px short of the horse, with posts between, and its 'front' had been put under the horse's hind feet."
+ ]
+}

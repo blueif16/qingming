@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>清明上河圖</title>
+  <link rel="icon" href="data:," />
+  <!-- the UI's subset web fonts (gen/ui/fonts/CHOICE.md; tools/font_subset.py): QM Display, QM Text, QM Seal -->
+  <link rel="stylesheet" href="/assets/ui/fonts/fonts.css" />
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #e9dcc0; font-family: system-ui, sans-serif; }
+    canvas { display: block; touch-action: none; }
+    #help { position: fixed; left: 12px; bottom: 12px; padding: 8px 10px; background: rgba(40, 28, 18, 0.55);
+            color: #f4ead6; font-size: 12px; line-height: 1.5; border-radius: 6px; pointer-events: none; max-width: 70vw; }
+    #stats { position: fixed; left: 12px; top: 12px; padding: 4px 8px; background: rgba(40, 28, 18, 0.55);
+             color: #f4ead6; font: 11px ui-monospace, monospace; border-radius: 4px; pointer-events: none; white-space: pre; }
+    #ref { position: fixed; top: 0; left: 50%; height: 100vh; transform: translateX(-50%); pointer-events: none; display: none; }
+    /* the loading/title screen (ink UI, gen/ui/STYLE.md): paper, mist, the title and seal, progress as one ink stroke;
+       web/src/ui/loading.js drives --ld and the wipe-out; inline so it paints before any script. The rules are keyed on
+       the class .ld, never the id: done() takes the id away at once (for the tools), and rules on #loading then let the
+       logo paint at its own huge size until the paper went (the round-2 "stuck at huge text", gen/ui/r2_time.md). The
+       wipe is two opposite transforms (the box slides left, its content right), which the compositor runs smoothly
+       while the main thread is busy streaming in the neighbouring sections. */
+    .ld { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; overflow: hidden;
+          color: #2a2420; font: 16px/1.4 "QM Text", "BiauKai", "DFKai-SB", "Kaiti TC", "STKaiti", "KaiTi", serif;
+          background: #efe4cc; --ld: 0; }
+    .ld-in { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4vh; }
+    .ld .ld-paper { position: absolute; inset: 0; z-index: -2; background: radial-gradient(120% 90% at 50% 45%, #f5ecd8 0%, #efe4cc 55%, #e0d0ad 100%); }
+    .ld .ld-mist { position: absolute; inset: 0; z-index: -1; background: radial-gradient(38% 26% at 26% 30%, rgba(255, 252, 244, 0.75), transparent 70%),
+               radial-gradient(34% 24% at 76% 68%, rgba(255, 252, 244, 0.6), transparent 70%), radial-gradient(22% 14% at 70% 22%, rgba(255, 252, 244, 0.5), transparent 70%); }
+    .ld .ld-mark { display: flex; flex-direction: row-reverse; align-items: flex-end; gap: 12px; }
+    .ld .ld-logo { display: block; height: clamp(220px, 46vh, 430px); width: auto; } /* Huizong's 瘦金 清明上河圖 with its seal (assets/ui/logo_v.svg, gen/ui/fonts/CHOICE.md) */
+    .ld .ld-stroke { position: relative; width: min(440px, 70vw); aspect-ratio: 600 / 36; }
+    .ld .ld-stroke svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .ld .ld-ghost { opacity: 0.1; }
+    .ld .ld-ink { clip-path: inset(0 calc(100% - var(--ld) * 100%) 0 0); transition: clip-path 0.6s ease; }
+    .ld:not(.ld-js) .ld-ink { animation: ld-pre 9s cubic-bezier(0.2, 0.6, 0.3, 1) forwards; }
+    .ld .ld-hint { margin: 0; font-size: 15px; letter-spacing: 0.6em; text-indent: 0.6em; opacity: 0.55; }
+    .ld.ld-out { pointer-events: none; animation: ld-wipe 1.1s cubic-bezier(0.6, 0, 0.3, 1) forwards; }
+    .ld.ld-out > .ld-in { animation: ld-wipe-in 1.1s cubic-bezier(0.6, 0, 0.3, 1) forwards; }
+    @keyframes ld-pre { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 72% 0 0); } }
+    @keyframes ld-wipe { to { transform: translateX(-100%); } }
+    @keyframes ld-wipe-in { to { transform: translateX(100%); } }
+    @keyframes ld-fade { to { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ld.ld-out { animation: ld-fade 0.3s forwards; } .ld.ld-out > .ld-in { animation: none; } .ld .ld-ink { transition: none; } }
+    /* the time instrument in #dial: src/ui/time.js + time.css (round 2; the round-1 sundial's rules are gone) */
+    #crosshair { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 2px;
+                 background: rgba(58, 38, 23, 0.6); pointer-events: none; display: none; }
+  </style>
+</head>
+<body data-sections="city_end,inner_city,gate,outer_road,outer_road_2,rainbow_bridge,canal,countryside" data-spawn="inner_city:spawn">
+  <div id="loading" class="ld" role="img" aria-label="清明上河圖 · 載入中"><div class="ld-in">
+    <div class="ld-paper"></div><div class="ld-mist"></div>
+    <div class="ld-mark"><img class="ld-logo" src="/assets/ui/logo_v.svg" alt="清明上河圖" /></div>
+    <div class="ld-stroke"><svg class="ld-ghost" viewBox="0 0 600 36" preserveAspectRatio="none" aria-hidden="true"><path id="ld-path" d="M15.4 6.5L590 13.1L583.5 12.7L577.1 12.6L570.6 12.1L564.2 12.2L557.7 12.2L551.3 11.7L544.8 11.6L538.4 11.6L531.9 11.4L525.5 11.4L519 11.2L512.5 10.8L506.1 10.7L499.6 10.7L493.2 10.6L486.7 10.7L480.3 10.5L473.8 10L467.4 10L460.9 10.3L454.5 10.3L448.1 10.7L441.6 10.6L435.2 10.7L428.7 10.8L422.3 11.2L415.8 11.3L409.4 11.2L403 11.6L396.5 11.5L390.1 11.9L383.6 11.7L377.2 12.2L370.8 12.1L364.3 12.4L357.9 12.5L351.4 12.7L345 12.9L338.6 12.7L332.1 13.1L325.7 13.2L319.2 13.1L312.8 13.1L306.4 13.4L299.9 13.2L293.5 13.2L287 13.3L280.6 13.5L274.2 13.1L267.7 13.2L261.3 13.4L254.8 13L248.4 12.9L242 13.2L235.5 13L229.1 13.1L222.6 12.8L216.2 12.9L209.8 13L203.3 13L196.9 12.7L190.5 12.8L184 12.6L177.6 12.5L171.1 12.5L164.7 12.4L158.3 12.5L151.8 12.2L145.4 12.1L138.9 12.1L132.5 11.9L126.1 12L119.6 11.8L113.2 11.9L106.8 11.7L100.3 11.6L93.9 11L87.4 11.1L81 10.9L74.6 10.9L68.1 10.6L61.7 10.4L55.2 9.9L48.8 10L42.4 9.6L35.9 9.5L29.5 9.6L23 10.7L16.6 11.9L10 13.1L590 13.9L583.6 14.6L577.1 15.3L570.7 15.6L564.3 16.3L557.8 16.9L551.4 17L545 17.5L538.5 18.1L532.1 18.5L525.7 19L519.2 19.4L512.8 19.7L506.3 20.2L499.9 20.8L493.5 21.4L487 22.1L480.6 22.6L474.2 22.8L467.7 22.9L461.3 23.3L454.8 23.4L448.4 24L441.9 23.9L435.5 24.1L429 24.3L422.6 24.7L416.2 24.8L409.7 24.7L403.3 25.2L396.8 25L390.4 25.4L383.9 25.1L377.5 25.6L371 25.3L364.6 25.6L358.1 25.6L351.7 25.8L345.2 25.9L338.8 25.7L332.3 26.1L325.9 26.2L319.4 26.1L313 26.2L306.5 26.5L300.1 26.4L293.6 26.6L287.2 26.8L280.7 27.1L274.3 26.9L267.8 27.2L261.4 27.6L254.9 27.4L248.5 27.5L242 28L235.6 27.9L229.1 28.2L222.7 28L216.2 28.2L209.8 28.3L203.3 28.5L196.9 28.2L190.4 28.4L184 28.3L177.5 28.2L171.1 28.3L164.6 28.2L158.2 28.4L151.7 28.1L145.3 28.2L138.8 28.3L132.4 28.2L125.9 28.4L119.5 28.3L113 28.6L106.6 28.6L100.1 28.7L93.7 28.3L87.2 28.7L80.8 28.6L74.3 28.8L67.9 28.8L61.4 28.7L55 28.4L48.5 28.7L42.1 28.4L35.6 28.4L29.2 28.3L22.8 27L16.3 25.6L10 24.2L5.7 18.7ZM389.3 19.6L400.9 19.5L412.5 19.2L424 18.9L435.6 18.7L447.2 18.4L458.8 18.1L470.3 17.7L481.9 17.4L493.5 17.1L505 16.7L516.6 16.4L528.2 16.1L539.8 15.7L551.3 15.4L562.9 15.1L574.5 14.7L574.5 14.4L562.9 14.7L551.3 14.9L539.8 15.2L528.2 15.5L516.6 15.7L505 16L493.5 16.3L481.9 16.6L470.3 16.9L458.7 17.2L447.2 17.4L435.6 17.7L424 17.9L412.4 18.2L400.9 18.4L389.3 18.7ZM370.7 22.9L378.3 22.8L385.9 22.7L393.5 22.5L401.1 22.2L408.7 22.1L416.3 21.9L423.9 21.7L431.5 21.5L439.1 21.2L446.7 21L454.3 20.8L461.9 20.6L469.5 20.4L477 20.1L484.6 19.8L492.2 19.6L492.2 19.4L484.6 19.5L477 19.7L469.4 19.9L461.8 20L454.2 20.2L446.7 20.4L439.1 20.5L431.5 20.8L423.9 20.9L416.3 21.1L408.7 21.3L401.1 21.4L393.5 21.6L385.9 21.8L378.3 21.9L370.7 22.1ZM367.2 19.8L378.5 19.6L389.9 19.3L401.2 19.1L412.6 18.8L423.9 18.5L435.2 18.3L446.6 18L457.9 17.7L469.3 17.4L480.6 17.1L492 16.8L503.3 16.5L514.7 16.2L526 15.9L537.4 15.5L548.7 15.2L548.7 15.1L537.4 15.3L526 15.6L514.7 15.8L503.3 16.2L492 16.4L480.6 16.7L469.3 17L457.9 17.3L446.6 17.6L435.2 17.8L423.9 18.1L412.5 18.3L401.2 18.6L389.8 18.8L378.5 19L367.2 19.3ZM440.6 16.3L445.9 16.3L451.1 16.1L456.4 16L461.6 15.9L466.9 15.7L472.1 15.6L477.4 15.4L482.6 15.2L487.9 15.1L493.2 14.9L498.4 14.8L503.7 14.7L508.9 14.5L514.2 14.4L519.4 14.1L524.7 13.9L524.7 13.7L519.4 13.8L514.2 13.9L508.9 14L503.6 14.1L498.4 14.3L493.1 14.3L487.9 14.4L482.6 14.5L477.4 14.7L472.1 14.8L466.9 14.9L461.6 15L456.4 15.1L451.1 15.2L445.9 15.4L440.6 15.6ZM332.2 19.2L337.6 19.1L343 19L348.5 18.9L353.9 18.8L359.3 18.7L364.7 18.6L370.2 18.5L375.6 18.3L381 18.2L386.4 18.1L391.8 18L397.3 17.8L402.7 17.7L408.1 17.6L413.5 17.4L418.9 17.2L418.9 17.1L413.5 17.1L408.1 17.3L402.7 17.3L397.2 17.4L391.8 17.6L386.4 17.6L381 17.7L375.6 17.8L370.1 17.9L364.7 18L359.3 18.1L353.9 18.1L348.5 18.2L343 18.3L337.6 18.4L332.2 18.6Z" fill="#2a2420" fill-rule="evenodd"/></svg><svg class="ld-ink" viewBox="0 0 600 36" preserveAspectRatio="none" aria-hidden="true"><use href="#ld-path"/></svg></div>
+    <p class="ld-hint">展卷</p>
+  </div></div>
+  <div id="crosshair"></div>
+  <div id="stats"></div>
+  <div id="dial"></div>
+  <div id="help"></div>
+  <script type="module" src="/src/world.js"></script>
+</body>
+</html>

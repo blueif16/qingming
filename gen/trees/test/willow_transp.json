@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is a detail of the Qingming scroll showing the kind of tree to paint (ignore everything in it except the big tree).\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown linework, light hatching, flat muted painted colour fills, like image 1's willow.\nThe tree is the big early-spring willow of image 2: a thick, slightly leaning, knotty trunk that forks about two-thirds of the way up into a long limb to the left and several limbs to the right; every limb ends in big open fans of long, straight, fine shoots that rise and arch outwards (they do not hang down in curtains).\nTrue natural daylight colours, not the yellowed silk of image 2: grey-brown bark with darker knots; the shoots dark brown-grey with tiny pale fresh yellow-green buds just opening, so the crown reads as a light green haze over fine twigs.\nThe whole tree from the trunk foot to the crown top, centred, front view, filling the picture height, nothing cut off.\nIsolated on a fully transparent background: no ground, no grass, no shadow, no roots spreading on a floor, no other objects, no text, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/test_willow_2330.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "willow_transp",
+  "background": "transparent"
+ },
+ "format": "png",
+ "generation_s": 41.8,
+ "attempts": 1,
+ "idempotency_key": "e3f45d73-f3c0-4fbb-a4d9-f4bd14d33f54",
+ "request_id": "b07c1caa-9159-40f2-88e4-fd41e025724b",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3501,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3238,
+   "text_tokens": 263
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3501,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3238,
+   "text_tokens": 263
+  },
+  "total_tokens": 5085
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/7eeb1854-8296-4ace-9971-72d5ebc168cc"
+ ],
+ "files": [
+  "gen/trees/test/willow_transp_0.png"
+ ]
+}

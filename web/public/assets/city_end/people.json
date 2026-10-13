@@ -1,0 +1,370 @@
+{
+ "about": "Who the scroll's end's people and animals are and what they do: every painted figure and animal of S7 (map/text/S7.md, u 815-2000) at its mapped spot (layout.json), and nobody else (map/BUILDING.md). Written by gen/sections/city_end/make_people.py (the casting of gen/expand/city_end_needs.md with the lead's calls of 2026-10-12: everyone from the 22 existing characters, the new official_rider playing his stand_in); rerun it when the workshop delivers characters, clips and props, or when the builder rewrites gen/sections/city_end/solids.json. figures: character (a new one plays its stand_in until it exists), do = [clip, seconds] cycles with clips the playing character has (clips_why: what is still to make), nudge = [dX, dD] (nudge_why), scale for children (scale_why), ride = the animal a rider sits on, carried_by = the figure whose prop draws a carried child, props = carried prop_<name> parts (props_why). walkers: figures painted mid-stride or carrying, walking along their painted direction from their spot and back (walkers_why). animals: each painted animal at its map position facing hind to fore, model and load from web/public/assets/animals/animals.json. No traffic.",
+ "figures": {
+  "gatekeeper_seated_1082": {
+   "character": "robed_man",
+   "do": [
+    [
+     "sit_talk",
+     12
+    ]
+   ],
+   "nudge": [
+    0.01,
+    0.1
+   ]
+  },
+  "face_at_gate_door_1251": {
+   "character": "child",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     6
+    ]
+   ],
+   "scale": 0.8,
+   "nudge": [
+    1.45,
+    0.0
+   ]
+  },
+  "man_at_post_1118": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_post_talk",
+     12
+    ]
+   ]
+  },
+  "visitor_food_box_1308": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "props": [
+    "food_box"
+   ]
+  },
+  "pointing_man_1370": {
+   "character": "scholar",
+   "do": [
+    [
+     "point_way",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.42
+   ]
+  },
+  "seated_woman_child_1535": {
+   "character": "woman_pale",
+   "do": [
+    [
+     "sit_hold_child",
+     12
+    ]
+   ],
+   "props": [
+    "child_on_lap"
+   ],
+   "nudge": [
+    0.08,
+    0.0
+   ]
+  },
+  "child_on_lap_1546": {
+   "character": "child",
+   "carried_by": "seated_woman_child_1535",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "standing_woman_1567": {
+   "character": "woman_pale",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.44
+   ]
+  },
+  "doctor_dark_robe_1615": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "examine_child",
+     12
+    ]
+   ]
+  },
+  "folded_object_bearer_1490": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.15,
+    0.0
+   ]
+  },
+  "official_rider_1610": {
+   "character": "official_rider",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "props": [
+    "stick"
+   ],
+   "ride": "horse_official_1625"
+  },
+  "bucket_man_1872": {
+   "character": "idler",
+   "do": [
+    [
+     "bucket_lift",
+     12
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    -0.08
+   ]
+  },
+  "groom_1698": {
+   "character": "groom",
+   "do": [
+    [
+     "bridle",
+     9
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "attendant_pale_1750": {
+   "character": "groom",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "props": [
+    "staff"
+   ]
+  }
+ },
+ "nudge_why": {
+  "gatekeeper_seated_1082": "painted seated on his low box seat S7.prop.seat_box_gatekeeper_1070: robed_man's sit_talk puts the hips 0.27 m behind the feet and 0.14 m to the right (measured on the GLB), so at the mapped foot they sat -0.04 m from the edge of S7.prop.seat_box_gatekeeper_1070; he moves 0.10 m so the hips sit on it, 0.12 m in from its edge",
+  "face_at_gate_door_1251": "only its head is painted, at the edge of the open door leaf; its estimated foot (on the hall's floor line where the leaf ends, X -102.53) lands 0.99 m inside the gate hall's west pier (the frame's weak west knot). It stands in the passage (X -101.54 to -99.59, solids.json) against the east face of the leaf, which stands open 82 deg against the passage's west side from its hinge at (-101.46, 14.45) to about (-101.34, 15.34): 0.2 m clear of it, at its mapped depth",
+  "pointing_man_1370": "painted standing just behind (north of) the tied sack set down at the gate, his legs hidden by it (the map: foot est behind the sack's foot). As built, his spot was inside S7.prop.tied_sack_1365: he steps 0.42 m to stand 0.20 m clear of it",
+  "seated_woman_child_1535": "painted seated on the bench S7.prop.bench_shop_west_1507 holding the child: woman_pale's sit_hold_child puts the hips 0.33 m behind the feet and 0.17 m to the left (measured on the GLB), so at the mapped foot they sat -0.06 m from the edge of S7.prop.bench_shop_west_1507; he moves 0.08 m so the hips sit on it, 0.12 m in from its edge",
+  "child_on_lap_1546": "held upright on the seated woman's lap, as painted: drawn by her child_in_arms prop while she sits (people.json carried_by), so it has no body of its own",
+  "standing_woman_1567": "painted standing just behind the seated woman, looking at the doctor; her feet are estimated (hidden behind the seated woman and the child) at the seated woman's depth, which at real size puts her 0.06 m from the line between the doctor and the child on the seated woman's lap that he reaches for; she stands 0.44 m further back (north), behind the seated woman as painted, 0.35 m clear of it",
+  "folded_object_bearer_1490": "painted walking just behind the official's horse with the folded parasol (the map: rump behind him): at real size (horse_white, 2.05 m long, 0.65 m wide, centred on its painted spot) his spot was inside its body; he steps 0.15 m to stand 0.30 m behind its rump, as painted",
+  "bucket_man_1872": "painted bent over the bucket at his feet, a hand on its handle; his bucket_lift (measured on the GLB) bends his head over a point about 0.3 m ahead of his spot, with his feet astride it, so he steps straight back along his facing and the bucket (0.2 m round, 0.68 m tall) stands before his feet, under his reach. As built, his spot was 0.09 m from S7.prop.bucket_at_carrier_1890 (built, not a collider): he steps 0.12 m to stand 0.20 m clear of it"
+ },
+ "walkers": [
+  {
+   "id": "porter_baskets_1255",
+   "figure": "porter_baskets_1255",
+   "character": "dark_hat",
+   "props": [
+    "pole_baskets"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -95.52,
+     7.67
+    ],
+    [
+     -96.73,
+     0.78
+    ]
+   ]
+  },
+  {
+   "id": "walker_bag_1885",
+   "figure": "walker_bag_1885",
+   "character": "townsman",
+   "clip": "walk",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -87.96,
+     5.76
+    ],
+    [
+     -85.31,
+     5.76
+    ]
+   ]
+  },
+  {
+   "id": "bundle_man_1976",
+   "figure": "bundle_man_1976",
+   "character": "dark_hat",
+   "props": [
+    "bundle_small"
+   ],
+   "clip": "walk_hold_chest",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -85.4,
+     5.99
+    ],
+    [
+     -87.33,
+     2.66
+    ]
+   ]
+  }
+ ],
+ "walkers_why": {
+  "porter_baskets_1255": "5.7 m along its painted facing (260 deg) to the painted area's edge, and 1.4 m back behind its spot",
+  "walker_bag_1885": "1.2 m along its painted facing (0 deg) to the painted area's edge, and 1.5 m back behind its spot to figure attendant_pale_1750",
+  "bundle_man_1976": "3.9 m along its painted facing (240 deg) to S7.bld.hip_gable_1360",
+  "held": {
+   "retinue": "official_rider_1610 rides the official's horse, which stands (idle) as in S4 and S6; groom_1698, attendant_pale_1750 and folded_object_bearer_1490 are painted walking with it and stay with it, playing their walk in place as the stand clip that reads best (idle, look): nobody walks away from the ridden horse. The group walk waits for a procession routine on the page (clips_why procession)",
+   "bucket_man_1872": "painted bent over the bucket at his feet (S7.prop.bucket_at_carrier_1890), not walking: he stays and lifts (bucket_lift)"
+  }
+ },
+ "animals": {
+  "horse_official_1625": {
+   "model": "horse_white",
+   "load": "saddle",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "bird_roof_1735": {
+   "model": "bird",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  }
+ },
+ "animals_why": {
+  "models": "species as painted (map/text/S7.md, needs list \"Animals\"): the official's horse, painted pale and uncoloured (horse_white), and the black bird on the roof slope (bird, the kit-built crow)",
+  "horse_official_1625": "faces east as mapped (hind to fore), standing under its rider (idle) with the groom at its head; its load is the existing saddle (tack_saddle, which the rider sits on). Wanted (workshop, kit tack, 0 credits): saddle_fringe, the saddle plus a crupper strap over the rump to the tail, a long fringed saddle-cloth hanging almost to the hooves, and a bridle with reins to the rider's hands; when it lands, set load to saddle_fringe",
+  "bird_roof_1735": "perched on the east slope of S7.bld.hall_ns_1620 at its mapped H 3.2 (layout support roof; animals.json perch: the page sits a perched animal at its H, and the area builder makes the roof meet it: the roof's top under it is at 3.223 m, solids.json), facing 150 deg (hind to fore), head up to the north-west",
+  "pale_shape_1905": "not cast: conf low, an animal or a mat; the area agent lists it under unbuilt in build_choices.json until the lead decides (switch PALE_SHAPE in the script)"
+ },
+ "clips_why": {
+  "about": "Actions the painting needs that the wanted character lacks. \"to make, free\": a local retarget (from:) or a trimmed clip back from gen/; \"NEW take\": a Text to Motion take (10 credits once); \"being made\": in the character's characters/<name>.json. Rerun make_people.py when they land; until then each figure plays the nearest clip its character (or stand-in, or pose fallback) has.",
+  "notes": {
+   "examine_child": "when it lands, the doctor must stand within reach of the child: at real size the woman's sit sets her lap about 0.5 m behind her feet, so the child (her prop) is about 1.8 m from the doctor's spot; nudge him west then (the standing woman, who stands between them on the map's line, stays clear of him behind the seated one)",
+   "seats": "seated figures are grounded at their feet (people.js: a ray from H + 1.2 m, and seats don't collide); each sit clip puts the hips behind the feet (HIPS, measured on the GLBs), so each seated figure is nudged until its hips sit on its built seat (solids.json seats), and the seat's top should be at the clip's seat height (SEAT_H) or the figure hovers or sinks (checks)"
+  },
+  "procession": {
+   "about": "the retinue painted walking east with the official's horse: they stand with it now (no figure walks away from a ridden horse; their walk played in place reads as idle/look). Wanted on the page: a procession routine that walks the horse (horse walk) a short way east and back with its rider and the three walking beside it at their painted offsets, playing:",
+   "official_rider_1610": "ride: rides the horse as it walks (horse walk)",
+   "groom_1698": "bridle: walks at the horse's head with the lead (a bridle walk; inspector bridle is free from:carter/bridle)",
+   "attendant_pale_1750": "carry_pole + staff: walks ahead with the staff on his right shoulder (idler carry_pole is free from:porter/carry_pole)",
+   "folded_object_bearer_1490": "carry_pole + folded_parasol: walks behind the horse with the folded parasol on his shoulder (townsman carry_pole is free from:porter/carry_pole)"
+  }
+ },
+ "scale_why": {
+  "face_at_gate_door_1251": "only the head is painted (12 x 17 px), about half the size of the gate's adults' heads: a small child peeking round the open leaf, 0.8 of the child model (the brief; by its estimated foot, 122 px against the gate's adults' 165, it would be about 1.1): 0.8 x the child model's 1.15 m = 0.92 m tall",
+  "about": "people.js scale multiplies the playing character's own height (the child model is 1.15 m)"
+ },
+ "facing_why": {},
+ "cast_why": {
+  "stand_in dark_hat": "catalogue item 14 (model S7.fig.porter_baskets_1255: a wide dark hat with an upturned brim, a dark short belted jacket, light trousers): the porter plays the porter with his baskets (carry_pole, pole_baskets), the inspector the man with the small bundle, until it lands",
+  "stand_in groom": "catalogue item 17 (model S7.fig.groom_1698: a dark short jacket, pale trousers, a dark round cap): the inspector plays the groom and the idler the attendant in pale, until it lands",
+  "stand_in woman_pale": "catalogue item 45 or the free recolour woman_pale (2e; model S7.fig.standing_woman_1567: a high dark bun, a pale long robe under a short over-jacket): the woman plays both women, until it lands",
+  "stand_in official_rider": "hat_traveller: the bearded official in the very broad flat-brimmed black hat and pale round-collared robe (needs list, \"The one character worth making\", model official_rider_1610, crop [1550, 975, 1680, 1215]); the hat traveller already rides (ride) and has the broadest hat of the cast (a woven straw cone, a buff cross-collared robe)",
+  "man_at_post_1118": "idler (light clothes, small top-knot; a servant or second doorman), not the gatekeeper's character: the two look alike on the scroll and are painted side by side (needs list)",
+  "face_at_gate_door_1251": "child (conf low: the map's other reading is a small lamp hung in the gate); the area agent builds it as this figure, once (the lead, 2026-10-12)",
+  "doctor_dark_robe_1615": "fortune_teller (long dark robe over pale trousers, dark cap; the townsman's slate robe is the fallback): examine_child is new, hand_over (free: from:carter/hand_over) stands in when it lands; until then idle",
+  "child_on_lap_1546": "child, carried_by the seated woman: the page doesn't draw it, the carrier's prop does (people.json carried_by; S4's child_in_arms_10430)",
+  "about": "cast by dress from the 22 existing characters (needs list, \"Casting\"); a figure whose wanted character lacks the clip its pose needs (a seat) plays the nearest character that has it, until it lands; gestures a character lacks play the nearest clip it has (clips_why)"
+ },
+ "props_why": {
+  "visitor_food_box_1308": "back_bundle: off (camel_driver has no prop_back_bundle yet); food_box: on (camel_driver, held in idle)",
+  "seated_woman_child_1535": "child_on_lap: on (woman_pale, held in sit_hold_child)",
+  "porter_baskets_1255": "pole_baskets: on (dark_hat, held in carry_pole)",
+  "folded_object_bearer_1490": "folded_parasol: off (townsman holds it in carry_pole, which this figure does not play)",
+  "official_rider_1610": "stick: on (official_rider, held in ride)",
+  "bucket_man_1872": "pole_hooks: off (idler holds it in carry_pole, which this figure does not play)",
+  "attendant_pale_1750": "staff: on (groom, held in idle)",
+  "walker_bag_1885": "hip_bag: off (townsman holds it in idle, which this figure does not play)",
+  "bundle_man_1976": "bundle_small: on (dark_hat, held in walk_hold_chest)",
+  "wanted": {
+   "visitor_food_box_1308": "back_bundle (big: the existing back_bundle at about 1.6x, hanging down his back and left side, on the camel driver's look/idle) and food_box (new: the 食盒, a small lidded box with a tall bail handle hanging from the right hand, clip-independent)",
+   "folded_object_bearer_1490": "folded_parasol (new: the long folded parasol or 掌扇, about 2.2 m, on the right shoulder in carry_pole, which the townsman gets free from:porter/carry_pole); shown when the retinue walks (procession, clips_why)",
+   "official_rider_1610": "stick (optional riding_stick: the existing stick held upright behind his west shoulder in ride), on the official_rider when he is made (the hat traveller's GLB has no prop_stick)",
+   "seated_woman_child_1535": "child_on_lap (new placement of the existing child_in_arms child: upright on her thighs, facing forward, her hands at its waist, on sit_hold_child); meanwhile her child_in_arms is on in her sit (props_why, the decision)",
+   "bucket_man_1872": "pole_hooks (new: the bare bamboo shoulder pole, about 1.7 m, a rope and hook at each end, slanting from his right shoulder down to the buckets at his feet, in bucket_lift; the buckets are map props on the ground)",
+   "walker_bag_1885": "hip_bag (new: a dark cloth bag on a cord at the west hip, about 0.2 x 0.45 m; S6 wants the same for five figures)"
+  },
+  "child_on_lap decision": "the seated woman (seated_woman_child_1535) keeps her child_in_arms prop on in her sit (Meshy 32) until sit_hold_child and child_on_lap land: rendered on the GLB (char_props.py review, 2026-10-12), the child sits upright on her lap at her left knee in the sit's calm opening (t 0-4.3 s), as painted, while from 4.4 to 10 s she leans forward chin in hand and presses it into her chest. So her cycle is [sit, 1]: people.js restarts the clip at a random point of its first 3 s at each step, which holds her in that opening (switch SIT_CHILD_CALM in the script); the plain sit without the prop would leave the child invisible",
+  "about": "carried props as painted (needs list \"Props carried by figures\"), switched on only when the playing character's GLB has prop_<name> and the figure plays the clip that holds it (characters/props.json); wanted: what the workshop is asked for"
+ }
+}

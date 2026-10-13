@@ -1,0 +1,61 @@
+[
+ {
+  "label": "down the first grain boat's gangplank from the bank onto its deck (u 27285; the long plank)",
+  "start": [
+   263.4,
+   12.0
+  ],
+  "legs": [
+   [
+    238.6,
+    4.8
+   ]
+  ],
+  "expect": {
+   "X": [
+    257.0,
+    259.6
+   ],
+   "D": [
+    2.4,
+    5.0
+   ],
+   "H": [
+    0.2,
+    0.9
+   ]
+  },
+  "why": "PENDING (page queue, S2 finisher): boats.js contacts() adds the plank's contact only when its nearest rim piece has none; that piece (17) touches the second grain boat, so the shore walls along the plank never open and you stop at the water's edge (261.7, 9.3)"
+ },
+ {
+  "label": "up the gangplank from the first grain boat's deck back onto the bank",
+  "start": [
+   263.4,
+   12.0
+  ],
+  "legs": [
+   [
+    238.6,
+    4.8
+   ],
+   [
+    58.6,
+    4.8
+   ]
+  ],
+  "expect": {
+   "X": [
+    261.8,
+    264.2
+   ],
+   "D": [
+    10.6,
+    12.8
+   ],
+   "H": [
+    -0.15,
+    0.2
+   ]
+  }
+ }
+]

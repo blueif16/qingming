@@ -1,0 +1,44 @@
+{
+ "owner": "build",
+ "moves": {
+  "S2.prop.shop_bench_23955": {
+   "dX": -0.45,
+   "dD": 0.18,
+   "why": "the black-capped man (S2.fig.shop_man_dark_cap_23963) sits facing east across the small table S2.prop.shop_small_table_23983, painted 0.3 m east of his bench: at their real sizes (a 0.9 m bench, a 0.6 m table) they stood inside each other; the bench turned north-south (a builder choice) and set 0.75 m west of the table's centre, its south end clear of the shop's corner post, so his feet go under the top (the casting agent's request)"
+  }
+ },
+ "how": {
+  "S2.grd.bank_lines_top_28900": {
+   "how": "ground",
+   "why": "the two long lines at the top east of the 望火楼 built as a low raised bank (0.28 m) between them in the ground's heightfield (blender/canal_scene.py ground()), the reading of a raised bank or field edge; a path's two edges (the other reading) would be the same worn strip. S1 maps the same two lines (S1.grd.terraced_fields_29450): the lead settles which reading stays at the seam"
+  }
+ },
+ "unbuilt": {},
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): the S3 seam at u 20500 (west), the silk's top edge (north), the S1 seam at u 29050 (east), the silk's bottom edge (south)",
+   "why": "outside the painted area the scroll paints nothing (north, south) or the neighbours stand (west: S3, east: S1, painted panels until they are built)"
+  },
+  "west_on_land": {
+   "what": "edge:west runs only along the S3 seam's land parts: the north strip from the built north bank top's seam point (149.37, 24.68) to the silk's top (147.06, 30.54), and the south bank from the silk's bottom (160.85, -4.39) to its shore's seam point (156.16, 7.49); across the river the shore walls and the boats' rails close the walk",
+   "why": "S3's moored boats and S2's north-bank cargo boat run across the seam's water: a wall there would stand across their decks"
+  },
+  "east_all_land": {
+   "what": "edge:east runs the whole S1 seam (267.21, -4.39) to (290.62, 30.54): the east reach's water ends at the silk's bottom just west of it (266.98, -3.14), under the massive willow",
+   "why": "no water is painted on the S1 seam (map: S2.water.bian_river_e's east end)"
+  },
+  "south_on_land": {
+   "what": "edge:south runs along the silk's bottom edge only where it is land: the south bank from the S3 seam to the spit's end (160.85 to 189.97, D -4.39), and the sliver of bank between the east reach's end (266.98, -3.14) and the S1 seam's foot (267.21, -4.39); between them the river runs off the silk into the mist (the middle and east reaches run on 16 m south under it)",
+   "why": "the silk's bottom edge cuts the water from u 22680 to 28970: a wall across the water would stand across the boats' decks at the bottom edge (the second grain boat, the bottom boat, the mat-roofed boat)"
+  },
+  "north_whole": {
+   "what": "edge:north runs the whole silk's top edge (D 30.54); the north-bank buildings' backs run past it (choice depths) and close themselves",
+   "why": "nothing past the silk's top is painted; the far street and the top buildings end there"
+  },
+  "shore": {
+   "what": "edge:shore: invisible walls along every real shore as built (the river plan's north shore, the mapped south shores of the west and second reaches), 0.5 m pieces from 0.6 m below the water to 1.3 m above the bank (kit_boats.water_strip's), only inside the painted area; none along the middle and east reaches' run-on lines south of the silk or across the reaches' joins (water on both sides)",
+   "why": "nobody walks into the river; boats are boarded where their rails touch a bank (the page drops those pieces)"
+  }
+ },
+ "boats": {}
+}

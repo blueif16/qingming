@@ -1,0 +1,99 @@
+{
+ "name": "mule",
+ "title": "Mule: the dark mule of the four-mule wagons (S6: the two 太平车 at the crossroads)",
+ "plan": "equid",
+ "figure": {
+  "section": "inner_city",
+  "id": "wagon_mules_3550",
+  "src": "scan",
+  "crop": [
+   3380,
+   500,
+   3720,
+   700
+  ]
+ },
+ "prompt": "animal_mule",
+ "back_m": 1.3,
+ "mesh": {
+  "from": "side",
+  "test": [
+   "side"
+  ],
+  "polys": 3500
+ },
+ "clips": [
+  "idle",
+  "walk",
+  "graze",
+  "lie"
+ ],
+ "tack": {
+  "collar": [
+   {
+    "kind": "collar",
+    "mat": "felt",
+    "at": 0.45
+   }
+  ],
+  "pack_saddle": [
+   {
+    "kind": "cloth",
+    "mat": "felt",
+    "span": [
+     -0.22,
+     0.22
+    ],
+    "down": 60
+   },
+   {
+    "kind": "girth",
+    "at": -0.12
+   },
+   {
+    "kind": "pack_frame",
+    "length": 0.34
+   },
+   {
+    "kind": "side_bundles",
+    "mat": "cloth_white",
+    "length": 0.36,
+    "drop": 0.3
+   }
+  ],
+  "pack_heap_dark": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_dark",
+    "span": [
+     -0.22,
+     0.22
+    ],
+    "down": 60
+   },
+   {
+    "kind": "girth",
+    "at": -0.12
+   },
+   {
+    "kind": "pack_frame",
+    "length": 0.34
+   },
+   {
+    "kind": "side_bundles",
+    "mat": "cloth_dark",
+    "length": 0.4,
+    "drop": 0.34
+   },
+   {
+    "kind": "bale",
+    "mat": "charcoal",
+    "ry": 0.24,
+    "rr": 0.13,
+    "droop": 70
+   }
+  ]
+ },
+ "graze_z": 0.12,
+ "seat_back": 0.05
+}

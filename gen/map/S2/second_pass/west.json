@@ -1,0 +1,215 @@
+{
+ "section": "S2",
+ "pass": "second pass, west: u 20500-22900 (looked at 20350-23100), 2026-10-12. Read against map/strokes/S2.json (403 entities, the merge of 2026-10-12): zoom-1 overlays with grid 50 over the whole range in three bands (v 0-620, 560-1200, 1150-1800) beside contrast-stretched scan crops of the same windows, then zoom 2-5 crops (colour, contrast-stretched and greyscale) with the restyle beside the scan (scroll_inspect canal/west) over the dense and faint parts and over every item the merge notes list for `west`.",
+ "how_to_read": "entities: new entities in the strokes format, ready to copy into a part (as S4's merge_fixes accept()). retire: entities to drop in merge_fixes.mjs, with the reason. changes: edits to existing entities; 'set' keys are fields or 'pts.<name>' points, 'members_remove' edits a group, 'add_note' is text to append to the note. checked: the merge notes' list for this range (and the other low entities), read again, with the verdict and the reading. seam: notes on S3's entities for the lead. Crops are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S2_second_west/ (ov_<u>_<v>.jpg: zoom-1 overlays; sc_<u>_<v>.jpg: contrast-stretched zoom-1 windows; z_*.jpg: contrast-stretched zooms; g_*.jpg: greyscale zooms; c_*.jpg: plain colour zooms; i_*.jpg: scan beside the restyle).",
+ "summary": "84 entities with main point in 20500-22900 read against the scan. No marker found off its stroke; the tow rope's points lie on the painted rope; crews counted again (sweep 6, trackers 5, cargo boat 6). 1 new entity: the tiled roof west of the long house (u 22320-22650) had no footprint, named only in S2.bld.long_house_22780's note (low). 1 retirement: the possible figure under the big cabin boat's awning (a white silk fleck at the awning's tip; its own note's keep condition fails). 9 changes: the boat and group text that follow the retirement; evidence added to the merge's two additions from S3's reading (the second bare tree: its stems run down to the hall roof's hip on their own, so keep it; the figure under the eave: a 45-50 px face is the size of the big-hat man's 40 px face at v 1712, so t1's size objection does not hold, keep it); the big-hat man faces north-west (seen from behind); the slat screen and the long house's notes point to the new hall; two small objects on the mat-roofed boat's deck go into its `what`. 14 items checked with no change. 2 seam notes for the lead: the small frame at u 20440-20530 is not S2's fence; S3's south-bank boat runs on to about u 20745.",
+ "entities": [
+  {
+   "id": "S2.bld.hall_behind_gate_22480",
+   "kind": "building",
+   "name": "tiled hall behind the white compound wall and the gateway, west of the long house (roof only)",
+   "what": "A tiled hall on the north bank behind (north of) the white compound wall and the roofed gateway, west of the long house, seen only as its roof and its slatted west bay: a broad roof of tiles from a west eave corner over the slatted screen (S2.str.slat_screen_22375) running east, where its tile rows run on unbroken into the long house's roof, cut off by the silk's top edge; under the roof's west end the slatted front with its capping rail stands about 115 px of v behind the white wall's foot. The rest of its front is hidden behind the white wall and the gateway; nothing hangs on it and no writing shows.",
+   "pts": {
+    "base": {
+     "sw": [
+      22320,
+      185
+     ],
+     "se": [
+      22640,
+      199,
+      "est"
+     ],
+     "ne": [
+      22776,
+      49,
+      "est"
+     ],
+     "nw": [
+      22456,
+      35,
+      "est"
+     ]
+    },
+    "roof_w_corner": [
+     22326,
+     104
+    ],
+    "roof_verge_w": [
+     22405,
+     50
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: only the roof and the slatted west bay show; the front east of u 22437 is behind the white wall and the gateway, the west bay's foot behind the split willow's east leg; the roof's back is cut by the silk's top edge",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): a painted roof with no footprint (map/README.md rule 6). S2.bld.long_house_22780's note says 'whether the roof over u 22320-22650 (v 20-200, behind the screen and the white wall) is this house's west part or a second building is not settled', and S2.str.slat_screen_22375's reading (b) names 'the big tiled roof spanning u ~22320-22810 at v 20-200 (recorded with the long house)'; but the long house's footprint starts at u 22650 (sw (22650, 406), nw est (22786, 256)), so nothing would be built under the roof's west 330 px. Strokes (crops z_bigroof.jpg, z_roofw.jpg, z_screen.jpg): the roof's west eave corner at (22326, 104) with its west verge rising to (22405, 50) and on to the silk's top edge (v ~18); tile rows fill u 22320-22650, v 20-200 and run on east without a ridge end, gable or break into the long house's roof (one chimney, at u 22697, on the long house's part); the slatted front (slats u 22320-22437, top rail v 122, a mid rail v ~150, foot (22320, 185)-(22435, 190)) stands right under the roof's west eave. The white wall's foot (22437-22532, v 302-312) and the gateway's sill (v 306-322) are 110-125 px of v further south, and the white wall's coping (v 173-197) reaches only to the slatted front's foot level: so the wall and the gate stand in front of this hall with a narrow yard (about 2 m at the depth rate) between them, and the gateway's own small roof sits under this roof's eave. FOOTPRINT: sw is the slatted front's west foot (measured); the front is carried east along the slats' foot line (slope +0.04) to se (22640, 199, est) at the long house's west corner post (u ~22650); back corners est 150 px of v behind along slope -1.1 (structures_w's placeholder rule for this stretch), at the silk's top edge. The footprint touches neither the gateway's (back corners v 297-300) nor the long house's (its west side runs (22650, 406)->(22786, 256)). READINGS: (a, taken) a separate hall behind a compound wall and a gateway, whose west bay front is the slatted screen (S2.str.slat_screen_22375, reading (b) of that entity); (b) the west part of the long house under one continuous roof, set back behind the wall and gate (the long house is then L-shaped: fold this footprint into S2.bld.long_house_22780 and drop this entity). The restyle also draws one continuous roof over a lattice front behind the white wall. Main point u 22320: S2's (west range)."
+  }
+ ],
+ "retire": [
+  {
+   "id": "S2.fig.figure_under_awning_21245",
+   "conf": "med",
+   "reason": "Its own note says 'keep only if the second pass reads a face', and there is none. On a plain colour zoom-3 crop (c_awning.jpg), the restyle comparison (i_awning.jpg) and a contrast-stretched zoom-2.3 crop (z_cabin.jpg), the 'pale head-sized patch' at (21238-21252, 158-185) is a white fleck of silk damage at the flat mat awning's west tip: the awning's two edge lines run straight through it, and there is no outline of a head, face, shoulders or body between it and the row of coiled ropes below (v 192-222). The same white flecks show elsewhere on this silk (e.g. u 21550-21600, v 790-830). The restyle invents a man leaning on a railing here, as river_w noted. The big cabin boat's crew becomes three (window man, far-deck man, steersman).",
+   "crops": "c_awning.jpg, i_awning.jpg, z_cabin.jpg, ov_cabin.jpg"
+  }
+ ],
+ "changes": [
+  {
+   "id": "S2.grp.boat_big_cabin_21120",
+   "members_remove": [
+    "S2.fig.figure_under_awning_21245"
+   ],
+   "set": {
+    "what": "The big cabin boat moored along the north bank with its crew at rest: a man looks out of the low cabin's window, a boatman stands on the far-side deck between the cabins, and the steersman stands on the high stern."
+   },
+   "note": "Follows the retirement of S2.fig.figure_under_awning_21245."
+  },
+  {
+   "id": "S2.veh.boat_big_cabin_21120",
+   "set": {
+    "what": "A big river boat moored along the north bank in front of the shops, bow to the west-north-west: a curved stem head with a round windlass hub at the bow (u 21110-21190, v 155-210) and a long oar or pole slanting down from the bow into the water (to about (21265, 318)); a flat mat awning on posts (u 21220-21350, v 160-200) over a row of six coiled ropes hanging along the far gunwale (u 21225-21350, v 195-225); a short upright post on deck (u ~21362, v 150-200); a low cabin with a window (u 21290-21400, v 240-300) where a man sits; a big round-arched cabin frame (u 21400-21500, v 200-300) and a deckhouse with a sloping mat roof (u 21430-21660, v 160-280); a high stern with a gabled rudder house (u 21650-21800, v 170-260) and a big rudder hung over the stern, its blade in the water (u 21650-21780, v 345-420). The hull is planked with rows of nails and bellies down to v ~388 under the deckhouse. No mast or sail. Three crew are painted."
+   },
+   "add_note": "Second pass: the possible figure under the awning's west end (S2.fig.figure_under_awning_21245) is a white silk fleck at the awning's tip, retired; three crew.",
+   "note": "Follows the retirement."
+  },
+  {
+   "id": "S2.fig.figure_under_eave_20625",
+   "add_note": "Second pass (west): keep, conf low. t1's size objection does not hold near the silk's bottom edge: the pale patch's face-like part (brow line v ~1653 to chin v ~1700, u 20600-20632) is 45-50 px tall, and the nearest sure face at a similar v, the big-hat man's profile (S2.fig.big_hat_man_south_bank_22045, v 1613-1653 at foot v 1712), is 40 px; a figure standing at the silk's edge is painted larger still. Below the face only the eave's straight hatching (v 1677-1757) and a curved stroke like a hand or sleeve at (20630-20650, 1710-1745) show, so the body would be hidden behind the lower roof band. Which way it looks is not settled: the bumpy west contour (u 20600-20610, bumps at v ~1663-1690) reads as brow, nose and chin looking west (toward the trunk, facing 180), while the dark angled stroke at its east edge (20630-20647, 1657-1677) reads as a profile looking east (facing 0, as recorded). The other reading stays the eave's bracket set: a lobed bracket arm (栱) seen from the side under the hall's west eave (structures_w's brackets at 20580-20647, v 1603-1703) gives the same bumpy edge under a beam (the 'brow line'). Crops: z_eave_fig.jpg, z_face_color.jpg, g_eave.jpg, i_eave_fig.jpg.",
+   "conf": "low",
+   "crops": "z_eave_fig.jpg, z_face_color.jpg, g_eave.jpg, i_eave_fig.jpg"
+  },
+  {
+   "id": "S2.tree.dark_trunk_willow_20530",
+   "add_note": "Second pass (west): the pale patch under the hall's west eave is kept as S2.fig.figure_under_eave_20625 (low): at 45-50 px it matches the big-hat man's 40 px face at v 1712, so it is not too big for a face this near the bottom edge. The long straight shoot at u ~20645 (v ~900-1340) springs from this tree's knobbed head (it bends into the head's east edge at v ~1340-1370); the stems at u 20700-20720 do not (S2.tree.bare_south_bank_20705).",
+   "conf": "med",
+   "crops": "g_fan.jpg, g_tree20705.jpg"
+  },
+  {
+   "id": "S2.tree.bare_south_bank_20705",
+   "add_note": "Second pass (west): keep as its own tree (conf low). On a greyscale contrast-stretched crop (g_fan.jpg, zoom 1.35, u 20430-20960, v 880-1500) and at zoom 2.2-3 (g_tree20705.jpg, z_frame20720.jpg), the stems split into two sets: (1) the long straight shoot at u ~20645 (v ~900-1340) and its neighbours bend west into the dark tree's knobbed head at v ~1340-1370 (its east edge u ~20615): they are S2.tree.dark_trunk_willow_20530's; (2) two or three stems at u 20700-20720 run down past the head's level, about 90 px east of its edge, converging to the hall roof's west hip line at about (20710, 1455-1480), where they stop as if behind the roof, and fan up and east toward u 20850-20950, v 950-1100. A drooping willow whip would spread downward, not converge, so set (2) reads as a separate stem whose foot is hidden behind the roof, as S3's t9 saw. Between the two sets, at (20720-20760, 1330-1400), a pale shape with folds that the restyle paints as a wooden frame with a wheel and a hanging cloth reads on the scan as a gap between the stems and the hip (no frame strokes). Points kept; its crown_w (20640, 940) may lie on the dark tree's shoot: the lead may move it to about (20690, 1000).",
+   "conf": "low",
+   "crops": "g_fan.jpg, g_tree20705.jpg, z_frame20720.jpg, i_tree20705.jpg, z_sbank_w.jpg"
+  },
+  {
+   "id": "S2.fig.big_hat_man_south_bank_22045",
+   "set": {
+    "facing_deg": 135
+   },
+   "add_note": "Second pass (west): he is seen from behind: the hat's tie hangs down the middle of his back (22053-22060, 1627-1667), the back of his light jacket faces the viewer, and only a sliver of his profile shows at the hat's west edge (21990-22007, 1613-1653); his arms reach down in front of him to the west (21973-22023, 1673-1687). So he faces north-west, away from the viewer (135), not straight west (180). On the bank, as t2 read him: the small boat's near gunwale curves up from (22020, 1790) to its bow post (22127-22157, 1705-1780) south of his seat line (21890, 1673)-(22127, 1733), so he sits on the bank's edge above the boat, not inside it. Crops: z_bighat.jpg, i_bighat.jpg.",
+   "conf": "med",
+   "crops": "z_bighat.jpg, i_bighat.jpg"
+  },
+  {
+   "id": "S2.str.slat_screen_22375",
+   "add_note": "Second pass (west): reading (b) is proposed as S2.bld.hall_behind_gate_22480 (low): the slatted front stands right under the west eave corner (22326, 104) of a tiled roof whose tile rows run on into the long house's roof, about 115 px of v behind the white wall's foot. If the lead accepts the hall, this screen is its west bay front; if not, it stays a free-standing screen. Crops: z_screen.jpg, z_roofw.jpg.",
+   "conf": "low",
+   "crops": "z_screen.jpg, z_roofw.jpg, z_bigroof.jpg"
+  },
+  {
+   "id": "S2.bld.long_house_22780",
+   "add_note": "Second pass (west): the roof over u 22320-22650 is proposed as S2.bld.hall_behind_gate_22480 (low), a hall behind the white wall and the gateway; its other reading is this house's west part under one continuous roof (then fold that footprint into this one and drop the hall).",
+   "conf": "low",
+   "crops": "z_bigroof.jpg, z_roofw.jpg"
+  },
+  {
+   "id": "S2.veh.boat_mat_roof_22290",
+   "set": {
+    "what": "A long boat moored along the low south spit, bow west: a long arched mat roof on posts over its west two thirds (u 22290-22780), with cloths or curtains hanging under its west end; a raked pole (a lowered mast or a stowed quant) leans west from the roof's west post with a cloth (a furled sail?) hanging from it; an open after deck and, at the east end, an overhanging stern frame of lashed beams with a rudder whose stock stands at u ~22885 and whose blade lies along the waterline to u ~23050. A rope runs from its side down to the spit. On the deck under the roof's middle lie a flat woven object (a straw sandal, a folded mat or a basket lid; u 22440-22495, v 1592-1615) and a small staved tub (u 22505-22535, v 1580-1615). A man bends over the near gunwale pouring a bucket into the river."
+   },
+   "add_note": "Second pass (west): the two small things on the deck under the roof (crop c_deckobj.jpg, i_matboat.jpg; the restyle paints a straw sandal and a wooden tub) were in no entity; as the boat's gear they go in its `what` (the river rule: cargo in `what`).",
+   "conf": "low",
+   "crops": "c_deckobj.jpg, z_matboat.jpg, i_matboat.jpg"
+  }
+ ],
+ "checked": [
+  {
+   "what": "S2.tree.bare_south_bank_20705 (own tree or the dark tree's shoots)",
+   "verdict": "keep (low); note added (changes)",
+   "reading": "Two sets of stems: the straight shoot at u ~20645 joins the dark tree's head; two or three stems at u 20700-20720 converge downward to the hall roof's hip at (20710, 1455-1480), 90 px east of the head, and stop there as if behind the roof. A separate stem is the better reading. The tree count matters to the user, so it stays, low."
+  },
+  {
+   "what": "S2.fig.figure_under_eave_20625",
+   "verdict": "keep (low); note added (changes)",
+   "reading": "A face-like patch 45-50 px tall, the size of the big-hat man's 40 px face at v 1712, so not too big; its direction is not settled (west by the bumpy contour, east by the angled stroke). The bracket-arm reading remains."
+  },
+  {
+   "what": "the dark mass at u 21273-21303, v 1268-1300 (merge_darkmass_21290.jpg)",
+   "verdict": "no change (not a figure)",
+   "reading": "On z_group.jpg (zoom 2.2) it is the great willow trunk's west edge: the same knotted hatching as the trunk, no face, no outline apart from the trunk's. The head beside it, (21245-21276, 1268-1300), is S2.fig.bank_small_figure_21255's, correctly marked."
+  },
+  {
+   "what": "t1's low figures: S2.fig.bank_figure_raised_hands_21085, S2.fig.bank_crouching_21155, S2.fig.figure_by_top_willow_20590",
+   "verdict": "no change (all three stay low)",
+   "reading": "Raised hands: directly over the seated man's dark head (21057-21083, 1262-1285) is a rounded head-sized outline (21073-21090, 1236-1258) with a small loop east of it (21090-21102, 1237-1250) and a straight stroke from the loop down to v ~1283 (c_loop.jpg, g_loop.jpg): either a second person's head with a raised hand, or a ring or cup on a stick he holds up; no face is drawn in it, so it cannot be settled. Crouching: a dark cap over a pale back cut by the roof ridge (21126-21182, 1375-1444) reads at zoom 2.2 as a person seen from behind, crouching; the basket-on-a-sack reading stays possible. By the top willow: at zoom 2.1 (z_topwillow.jpg) a pale head (20581-20595, 150-169) and a robe down to v ~233 stand against the trunk's east side, about 75 px tall, the size of the robed man on the strip (73 px at foot v 146); at zoom 3 it breaks into bark texture (the restyle paints a hollow)."
+  },
+  {
+   "what": "river_w's S2.fig.child_or_vase_21076",
+   "verdict": "no change (stays low)",
+   "reading": "At zoom 2 and 4 (z_covered.jpg, c_vase.jpg): a flat brimmed top (21065-21088, 1139-1145), a narrow neck, a swelling body (v 1152-1182) and a narrower foot on a stand (v 1182-1197), the profile of a lidded vase; but a small dark dot at (21078, 1148) could be an eye under a flat hat. 57 px tall beside the seated man's 73 px. Not settled."
+  },
+  {
+   "what": "S2.fig.man_in_river_20970: what he stands on",
+   "verdict": "no change (support water, low)",
+   "reading": "Nothing is painted below his waist (v ~690-700) and no hull, gunwale or deck shows anywhere around him (z_river_man.jpg, z_riverman4.jpg). The long straight line below him, (20650, 820)-(20990, 760), carries small bud ticks like the willow whips around it: a straight whip, not a pole. The dark round thing at his hand is two small blobs (21005-21030, 645-665)."
+  },
+  {
+   "what": "the two birds, S2.ani.bird_in_willow_21135 and S2.ani.bird_in_willow_21730",
+   "verdict": "no change (both low)",
+   "reading": "Plain colour zoom 3 (c_bird1.jpg, c_bird2.jpg): both are the same small solid shape, a head dot over a body 14-16 px long, darker than the whips' line work; the eastern one is the clearer. Birds is the better reading for both."
+  },
+  {
+   "what": "the reddish mark in the water at (20683, 645-675)",
+   "verdict": "nothing to add",
+   "reading": "A thin reddish-brown vertical stroke (20682-20686, 643-675), a colour unlike every ink line here, over a ripple line that forms its 'crossbar' (i_redmark.jpg, z_redmark_color.jpg): a stain or a later touch, not a painted thing; the restyle ignores it."
+  },
+  {
+   "what": "the north-bank cargo boat's bow (S2.veh.boat_mat_cargo_21055)",
+   "verdict": "no change (bow east, med)",
+   "reading": "East end (z_cargo_e.jpg): the hull tapers to a point at the waterline (21000-21070, 470-500) with the water jar on the foredeck and nothing hanging below or beyond it; the west end (z_cargo_w.jpg) is hidden behind S3's big boat's rudder frame (20380-20470, v 390-520). Either way the boat stays S2's (the lead's note)."
+  },
+  {
+   "what": "t2's S2.fig.crouching_man_by_timber_21880",
+   "verdict": "no change (low)",
+   "reading": "A dark round head (21865-21888, 1591-1615) seen from behind, with body lines under the timber's west end (z_bighat.jpg): a person is the better reading; the dark-tuft reading stays possible."
+  },
+  {
+   "what": "the big-hat man: on the bank or in the small boat's bow",
+   "verdict": "on the bank (t2's reading); facing changed to 135 (changes)",
+   "reading": "The boat's near gunwale curve runs south of his seat line, so he sits on the bank's edge above the boat's bow."
+  },
+  {
+   "what": "the crews and the rope",
+   "verdict": "no change",
+   "reading": "Counted head by head again: the sweep 6 (heads at u ~22078, 22108, 22148, 22180, 22214, 22254; z_sweep.jpg), the trackers 5 (the broad-hat man is one man with one pair of legs and a bundle or arm on his back; z_tracker4.jpg), the cargo boat 6, the open boat 2, the mat-roofed boat 1 (the hatched mass east of the bucket man's head is his hunched back or a basket; no second head, z_bucket.jpg), 豪华客船 west of 22900 only the reclining passenger (the bow canopy, coiled ropes and drums carry nobody; z_ship_w.jpg). The mat-shelter boat's deck holds boxes and jars and no crew (z_shelter.jpg). The tow rope's points from 21832 to 23100 lie on the painted rope (rope.jpg)."
+  },
+  {
+   "what": "the land strips: north bank 20500-22900 and south bank 20500-22700",
+   "verdict": "no change",
+   "reading": "North: the robed man and the smaller figure, the open shop's two faint figures (the upright at 21565-21580 is the shop's west post, not a third), the table, basket and wheel, the fences and walls; the bank strip 22200-22900 is empty, as t3 found. South: the 5 people of the group, the timber and its crouching man, the big-hat man; the small upright at (21417-21455, 1696-1752) under the gable is the gable house's framing (post and tenons; z_gable.jpg), not a figure or a prop. The 20 x 10 px blot at (21222-21244, 1442-1452) under the tall man's hem (z_tallfeet.jpg) is a shoe of the pair or a stone, too small for its own thing. No tree missed: the great willow's eastern whips (21700-22100) are its own crown, with no second trunk."
+  },
+  {
+   "what": "the road S2.road.main in 20500-22900",
+   "verdict": "no change",
+   "reading": "Its edges sit on open ground: edge_n on the fence, shop, wall, white wall, gate and long-house feet; at 22285 edge_n (330 est) passes south of both split-willow feet; the rear tracker's foot (22172, 386) is inside the edges."
+  }
+ ],
+ "seam": [
+  {
+   "with": "S3, u 20500: the small frame at u 20440-20530 (the merge notes' 'hut')",
+   "note": "It is not the west end of S2's slat fence: the fence east of the top willow (S2.str.slat_fence_20740, 20593-20657) has close slats 3-4 px apart (g_slats_e.jpg), while west of the trunk there are only 3-4 uprights 10-20 px apart (u ~20462, 20480, 20500, 20515; v ~155-250) with a slanting rail at (20500-20530, 205-215) (g_slats_w.jpg, g_hut.jpg). No roof is drawn over them (willow whips fill v 60-150), and S3's small table (S3.prop.small_table_20460, two tiers, top v 219-227) stands in front. Readings: the tavern's east posts or a light frame or rack beside it (S3's by its middle, ~20485), or the west bay of a building behind the willow (S3's structures_e). Nothing for S2 to record; for the lead with S3."
+  },
+  {
+   "with": "S3, u 20500: S3.veh.boat_moored_south_bank_19745's east end",
+   "note": "S3 records its rear at (20640, 1185, est) and its roof to 20620. On the scan (g_fan.jpg, z_sbank_w.jpg) its long low roof ends in a rounded hump at about u 20650-20741 (v 1065-1102) and its hull planking (v 1160-1228) runs east to about u 20745, as t1 said ('roof and planking show to u ~20745'): the boat reaches about 100 px further into S2's range than recorded. S3's entity; S2 records nothing. Its stern stands just north of where the stems of S2.tree.bare_south_bank_20705 meet the hall roof, which the builder should know."
+  }
+ ],
+ "lessons": [
+  "**Size-check a doubtful face against a sure face at a similar v, not against heads higher up the silk.** Figures near the silk's bottom edge are painted largest. S2's t1 judged a 45-50 px profile at v ~1650-1700 'twice a head's size' by a head at v 1270; the big-hat man's sure profile at v 1613-1653 is 40 px, so the patch is a face's size there.",
+  "**Before extending a structure behind an occluder, compare the stroke rhythm on both sides.** S2's slat fence has slats 3-4 px apart east of the top willow; the uprights west of the trunk are 10-20 px apart with a slanting rail, so they are a different thing, not the fence's west end.",
+  "**A roof named only in a building's note is a painted thing without a footprint.** S2's long house said 'whether the roof over u 22320-22650 is this house's west part or a second building is not settled', and its footprint started at u 22650, so nothing would have been built under 330 px of painted roof. The second pass gives such a roof an entity of its own (or the building's footprint is moved), with both readings.",
+  "**A white fleck of silk damage at the tip of a light structure reads as a pale head at zoom 1-2.** S2's 'figure under the awning' was a fleck at the awning's west tip, with the awning's edge lines running through it. Check every pale head on a plain colour crop at zoom 3 for an outline before keeping it."
+ ]
+}

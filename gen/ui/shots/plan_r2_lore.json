@@ -1,0 +1,121 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "shots": [
+    {
+     "name": "desktop_day_toast_folded",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.help(false); await new Promise(r=>setTimeout(r,4800)); t.ui.toast('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,1800)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_toast_open",
+     "js": "t.ui.unfold(true); await new Promise(r=>setTimeout(r,2600)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_journal_city",
+     "js": "t.ui.discover(['r:shizijie','r:chengmen','r:hongqiao','r:juanwei','S6.bld.sunyang_zhengdian','S6.fig.storyteller_3822','S6.str.square_well_2000','S6.bld.incense_shop_liu','S5.bld.tax_office','S5.str.gate_tower','S5.str.moat_bridge','S3.str.rainbow_bridge','S3.bld.tavern_gate_16870','S7.bld.zhao_taicheng','t:V5.1','t:V6.5']); await t.ui.journal.open('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,3500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_journal_gate",
+     "js": "t.ui.journal.turn(1); await new Promise(r=>setTimeout(r,2500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_journal_bridge",
+     "js": "await t.ui.journal.open('S3.str.rainbow_bridge'); await new Promise(r=>setTimeout(r,2500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_journal_col",
+     "js": "await t.ui.journal.open('col'); await new Promise(r=>setTimeout(r,1500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_journal_talk",
+     "js": "await t.ui.journal.open('talk'); await new Promise(r=>setTimeout(r,1200)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_hud_marks",
+     "js": "t.ui.journal.close(); await t.hud.show(); t.hud.zoomBy(1/1.6); await new Promise(r=>setTimeout(r,3500)); return t.hud.stats();",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_toast_open",
+     "hour": 21.5,
+     "js": "t.hud.hide(); await t.view('inner_city:spawn'); t.ui.night(true); await new Promise(r=>setTimeout(r,800)); t.ui.toast('S5.str.gate_tower', true); await new Promise(r=>setTimeout(r,2600)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_night_journal",
+     "js": "await t.ui.journal.open('S5.str.moat_bridge'); await new Promise(r=>setTimeout(r,3000)); return t.ui.journal.state();",
+     "wait": 300
+    }
+   ]
+  },
+  {
+   "device": "phone",
+   "shots": [
+    {
+     "name": "phone_day_toast_folded",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.help(false); await new Promise(r=>setTimeout(r,4800)); t.ui.toast('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,1800)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_toast_open",
+     "js": "t.ui.unfold(true); await new Promise(r=>setTimeout(r,2600)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_journal_city",
+     "js": "t.ui.discover(['r:shizijie','r:chengmen','r:hongqiao','r:juanwei','S6.bld.sunyang_zhengdian','S6.fig.storyteller_3822','S6.str.square_well_2000','S6.bld.incense_shop_liu','S5.bld.tax_office','S5.str.gate_tower','S5.str.moat_bridge','S3.str.rainbow_bridge','S3.bld.tavern_gate_16870','S7.bld.zhao_taicheng','t:V5.1','t:V6.5']); await t.ui.journal.open('S6.bld.sunyang_zhengdian'); await new Promise(r=>setTimeout(r,3500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_journal_gate",
+     "js": "t.ui.journal.turn(1); await new Promise(r=>setTimeout(r,2500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_journal_bridge",
+     "js": "await t.ui.journal.open('S3.str.rainbow_bridge'); await new Promise(r=>setTimeout(r,2500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_journal_col",
+     "js": "await t.ui.journal.open('col'); await new Promise(r=>setTimeout(r,1500)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_journal_talk",
+     "js": "await t.ui.journal.open('talk'); await new Promise(r=>setTimeout(r,1200)); return t.ui.journal.state();",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_hud_marks",
+     "js": "t.ui.journal.close(); await t.hud.show(); t.hud.zoomBy(1/1.6); await new Promise(r=>setTimeout(r,3500)); return t.hud.stats();",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_toast_open",
+     "hour": 21.5,
+     "js": "t.hud.hide(); await t.view('inner_city:spawn'); t.ui.night(true); await new Promise(r=>setTimeout(r,800)); t.ui.toast('S5.str.gate_tower', true); await new Promise(r=>setTimeout(r,2600)); return t.ui.state().places;",
+     "wait": 200
+    },
+    {
+     "name": "phone_night_journal",
+     "js": "await t.ui.journal.open('S5.str.moat_bridge'); await new Promise(r=>setTimeout(r,3000)); return t.ui.journal.state();",
+     "wait": 300
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is an old gentleman: about 6.5 heads tall, slightly stooped, a long white beard and white moustache, a lined kind face with dark dot eyes, a tall square black gauze hat (a scholar's tall cap). A long light grey-white robe with wide sleeves reaching to the feet, a dark sash, white socks and black cloth shoes.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/elder/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 35.1,
+ "attempts": 1,
+ "idempotency_key": "ac1c8823-2ad4-43ba-9872-0014f667b989",
+ "request_id": "41c709b1-83d8-4f7b-a9fc-42615cf83ad8",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3675,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3345,
+   "text_tokens": 330
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3675,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3345,
+   "text_tokens": 330
+  },
+  "total_tokens": 5259
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/14ac10d1-d120-487a-bb79-e462782624dc"
+ ],
+ "files": [
+  "gen/characters/elder/sheet_0.png"
+ ]
+}

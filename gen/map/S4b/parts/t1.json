@@ -1,0 +1,834 @@
+{
+ "section": "S4b",
+ "entities": [
+  {
+   "id": "S4b.veh.palm_cart_13070",
+   "kind": "vehicle",
+   "name": "first palm-covered family cart (parked, no team)",
+   "what": "Big palm-covered family cart (大棕盖车) parked on the north side of the road in front of the official hall: a huge shaggy roof of palm fibre over a tall box body, a black cord along the roof's ridge that loops down near each end, a lattice-railed under-frame and one big spoked wheel (the near, south one) showing above the south roof. At its east end a short frame juts out and ends in a carved beam end (the roots of the shafts, read as its front); no shafts, yoke or animals are drawn, so it stands unhitched. A small figure stands at its west end and a person sits under the thatch at its front.",
+   "pts": {
+    "front": [
+     13070,
+     1225,
+     "est"
+    ],
+    "rear": [
+     12700,
+     1225,
+     "est"
+    ],
+    "wheels": [
+     [
+      12831,
+      1276,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "pose": "parked",
+   "facing_deg": 0,
+   "group": "S4b.grp.palm_cart_13070",
+   "vis": "part: the wheel's lower half, the ground line and both ends' undersides hidden by the south roof; the north side hidden",
+   "conf": "med",
+   "src": "余辉: 豪车云集 (the first of the two palm-covered carts)",
+   "note": "Roof (thatch skirt) u 12672-13068, from the ridge cord at v 959-967 down to its fringe at v ~1100-1110. Ridge cord from (12729, 965) to (12998, 960); it drops at the west end along u 12729-12740 (v 965-1015) and curls west round a pale rounded shape (see S4b.prop.big_jar_12707), and drops again at u 12940-12958 (v 959-1025); the roof part east of that drop (u 12958-13064) is like the front hood of the second cart (S4b's t2 cart at 13120), which faces east. Under-frame/bed v ~1105-1195 from u 12715 to the east frame's end (13023-13073, v 1150-1185). FACING (conf low-med): front = east, from (1) the hood-like roof part east of the second cord drop, as on the second cart's front, and (2) the jutting frame with a carved end at the east, read as the shafts' roots; the west end, where a front would show shafts, is hidden by the south roof below v ~1150, so a front to the west (shafts hidden under that roof) can't be excluded. No team anywhere near (bare road at u 13080-13260, v 1140-1260). The thatch-covered shade on a post at u 12969-13109, v 1197-1280 (S4b.prop.thatch_shade_13049) stands just south-east of its front. SCALE CUE: near wheel's outer rim u 12755-12907 (152 px across), top of the rim v 1128, sides at v ~1185-1195; hub hidden (est (12831, 1200)); bottom hidden behind the south roof (est v 1276, so the contact is est); body ~400 px long (u 12672-13073) and ~290 px from the ridge to the ground. Ground: near wheel contact est v 1276; the cart's centre line est v 1225 (half a ~2 m track, ~50 px, north of the near wheel), used for front and rear. DEPTH DIRECTION: none usable (drawn side-on; the east frame's end beam (13023, 1153) -> (13073, 1180), slope +0.54, is a side profile, not a receding edge). Part 1's 'not yet mapped' list names 'the palm-covered cart's roof at 12690-12920': this is it."
+  },
+  {
+   "id": "S4b.fig.small_figure_cart_rear_12706",
+   "kind": "figure",
+   "name": "small figure at the first cart's west end (child?)",
+   "what": "A small figure in light clothes standing at the west end of the first palm-covered cart, just under the fringe of its thatch, head turned south; only the head and shoulders show between the thatch and the south roof. Probably a child (a servant boy of the family?).",
+   "pts": {
+    "foot": [
+     12706,
+     1195,
+     "est"
+    ],
+    "head": [
+     12705,
+     1112
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S4b.grp.palm_cart_13070",
+   "vis": "part: below the shoulders hidden by the south roof (its ridge at v ~1147 here)",
+   "conf": "low",
+   "note": "Head u 12698-12714, v 1108-1127; shoulders to v ~1147, where the south roof (S4.bld.south_hall_12350's neighbour roof, structures_w) cuts it. The head is ~13 px wide against ~20 px for adults nearby, so it reads as a child about 75-80 px tall standing on the cart's far (north) side, foot est v ~1195 (the far wheel line, ~1175-1200). Other reading: an adult standing at the cart's near side with feet at v ~1270 behind the roof; then the head would be small for its depth. Candidate for part 1's 'a small boy' (map/index.md, S4 inner seam). The restyle paints a small light figure here too."
+  },
+  {
+   "id": "S4b.fig.seated_in_cart_front_12995",
+   "kind": "figure",
+   "name": "person seated in the front of the first cart",
+   "what": "A person in light clothes sits under the front of the palm-covered cart's thatch, inside the frame at its east end, as if resting (the carter or a servant waiting with the unhitched cart).",
+   "pts": {
+    "foot": [
+     13000,
+     1170,
+     "est"
+    ],
+    "head": [
+     12995,
+     1113
+    ]
+   },
+   "support": "cart bed: S4b.veh.palm_cart_13070",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S4b.grp.palm_cart_13070",
+   "vis": "part: in the shadow under the thatch, behind the frame's posts",
+   "conf": "low",
+   "note": "A pale shape u 12983-13023, v 1110-1160 with a darker rounded top at (12990-13005, 1110-1120) between the under-frame's posts; the restyle paints a person seated there (orange-brown jacket, hair bun). Could also be a light-coloured bundle or a blind hung in the frame. Feet est on the cart bed (v ~1170 at the front frame). Painted height to the seat ~55 px."
+  },
+  {
+   "id": "S4b.prop.thatch_shade_13049",
+   "kind": "prop",
+   "name": "thatch-covered shade on a post south-east of the first cart",
+   "what": "A long fan-shaped shade of palm thatch or ribbed matting, its ribs radiating from a narrow west end and widening to a rounded east end, set on a single post with a bracket, standing just south-east of the first cart's front, above the second cart's roof.",
+   "pts": {
+    "base": [
+     13049,
+     1300,
+     "est"
+    ],
+    "canopy_w": [
+     12969,
+     1230
+    ],
+    "canopy_e": [
+     13109,
+     1220
+    ],
+    "top": [
+     13040,
+     1197
+    ]
+   },
+   "support": "ground",
+   "vis": "part: the post's foot hidden behind the second cart's roof below v ~1283",
+   "conf": "low",
+   "note": "Canopy u 12969-13109, v 1197-1249 (west tip ~(12969, 1230), rounded east end ~(13109, 1220)); post u 13042-13057 from v 1249 to 1283 where the second cart's roof hides it; foot est at the road's level v ~1300. Readings: a stall's or a carter's thatched shade on its own post (recorded as a prop, per the brief's 'if unsure, record it'), or the thatched end of the open shop roof below it (structures_w's) whose top-right corner is at about (13050, 1260-1280). The restyle paints a thatched canopy on a bracketed post. Main point u 13049 is on the t1/t2 boundary: t2 may record it too (drop one). MERGE: t2 recorded the same canopy as S4b.prop.thatched_canopy_13052 (retired as a duplicate; its base (13052, 1278) was 22 px from this one). t2 read it as a large round canopy of palm thatch like a big umbrella, u 12900-13109 (v 1203-1250, centre ~(13005, 1225)), on a short boxy post with lattice sides under its east part (u 13043-13060, v 1247-1278); its other reading, a pole hidden under the centre at u ~13005, also makes it this unit's."
+  },
+  {
+   "id": "S4b.veh.sedan_chair_13140",
+   "kind": "vehicle",
+   "name": "dark-roofed sedan chair set down beside the first cart",
+   "what": "Tall sedan chair (轿) set down on its short corner legs on the road just east of the first palm-covered cart: a panelled box with a lattice window high in its south side and a narrow door strip at its west end, under a dark domed roof with up-turned eaves; its carrying poles run east at about mid-height toward a man standing by it (t2's figure, likely its bearer).",
+   "pts": {
+    "front": [
+     13140,
+     1140,
+     "est"
+    ],
+    "rear": [
+     13060,
+     1140,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "set down",
+   "facing_deg": 0,
+   "vis": "part: west poles (if any) hidden by the cart's east end",
+   "conf": "med",
+   "src": "余辉: 豪车云集 (the sedan beside the palm-covered carts)",
+   "note": "Roof u 13046-13144, v 954-978 (eave tip curls up at the west end ~(13050, 970)); body u 13060-13140, v 978-1138; lattice window u 13100-13140, v 986-1042; narrow west end strip u 13060-13080; corner legs at (13080, 1138) and (13138, 1138), standing on the ground (no one lifts it), so front and rear are the body's ends at the legs' foot line, not the poles' ends (their east ends are unclear: horizontal lines run east from the box at v ~1023-1050 to about u 13200-13260, mixed with the shop tables there). FACING (conf low): east, toward the poles and the standing man (t2's, foot ~(13163, 1122), head ~(13172, 963)). SCALE CUE: box 80 px long, 184 px from roof top to feet. DEPTH DIRECTION: none (the west end strip's bottom runs level). Owned by t1 by the brief, though its main point is past 13050.",
+   "group": "S4b.grp.sedan_chair_13140"
+  },
+  {
+   "id": "S4b.fig.official_seated_12728",
+   "kind": "figure",
+   "name": "official seated in the hall",
+   "what": "An official in a full light robe sits on the raised floor inside the official hall, his rounded back to the west, leaning forward toward the east as if reading or writing at a low desk; willow or pine sprays hang over the hall's roof above him.",
+   "pts": {
+    "foot": [
+     12728,
+     912,
+     "est"
+    ],
+    "head": [
+     12720,
+     852
+    ]
+   },
+   "support": "official hall floor",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S4b.grp.hall_people_12800",
+   "vis": "part: lower body behind the hall's front railing",
+   "conf": "med",
+   "src": "sections.md S4: the official compound beside the fortune-teller",
+   "note": "Body u 12700-12760, v 852-912, a big rounded robe with its west contour at u 12700-12708; head at its top (12712-12730, 852-867); faint lines of an arm resting forward at (12735-12755, 880-895). Seat est at the robe's foot (v ~912), behind the railing (v 916-935) and the floor's front edge (v 953-970, S4.bld.official_hall_12530). Painted 60 px head to seat (part 1: 63 px). The restyle seats him facing east at a desk with a brush. Part 1's 'not yet mapped' list: 'a seated official at 12700-12755'."
+  },
+  {
+   "id": "S4b.fig.man_dark_cap_by_stair_12700",
+   "kind": "figure",
+   "name": "man in a dark cap by the foot of the hall's stair",
+   "what": "A man in a dark cap and light clothes sits (or stands) just east of the foot of the official hall's stair, at the west end of the first palm-covered cart, facing west toward the stair; below his chest a pale rounded shape (a big jar in front of him, or his own lap) is wrapped by the cart's black roof cord.",
+   "pts": {
+    "foot": [
+     12702,
+     1030,
+     "est"
+    ],
+    "head": [
+     12700,
+     922
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 180,
+   "group": "S4b.grp.hall_people_12800",
+   "vis": "part: below the chest hidden by the cart's roof and the pale shape",
+   "conf": "low",
+   "note": "Dark cap u 12695-12707, v 922-935; torso lines u 12700-12720, v 936-975; then the pale rounded shape u 12680-12735, v 977-1022 (S4b.prop.big_jar_12707). Two readings: (1) a man seated facing west, the pale shape his light lap and knees (the restyle paints a man in a dark cap seated here); (2) a man standing behind a big jar, his body hidden by it and the cart (foot then est ~(12705, 1050)). Part 1's 'not yet mapped' list names both 'a figure by the stair' and 'a big jar' here, so both are recorded. The stair (S4.bld.official_hall_12530) comes down eastward to about (12650-12677, 940-957), just west of him. MERGE: S4b.prop.big_jar_12707 is kept as a jar in front of him (straight rim, closed bottom outline), so he is likelier standing or seated behind it than holding it on his lap."
+  },
+  {
+   "id": "S4b.prop.big_jar_12707",
+   "kind": "prop",
+   "name": "big jar (?) at the west end of the first cart",
+   "what": "A pale, round-bellied shape with a straight rim line on top and a dark outline round its bottom, standing between the foot of the hall's stair and the west end of the first palm-covered cart: read as a big earthenware jar (缸).",
+   "pts": {
+    "base": [
+     12707,
+     1022
+    ]
+   },
+   "support": "ground",
+   "vis": "part: its east side and bottom crossed by the cart's black roof cord",
+   "conf": "low",
+   "note": "Shape u 12680-12735, v 977-1022; rim line (12685, 985) -> (12727, 983); a dark shadow on its west flank (12683-12698, 990-1015); the cart's ridge cord runs down its east side and curls under it (v ~1020). Readings: a big jar (part 1's 'not yet mapped' list names 'a big jar' near here); the light lap of S4b.fig.man_dark_cap_by_stair_12700 (the restyle's reading); or the rolled west end of the cart's thatch (the cart's east end has a similar pale shape at (13002-13047, 977-1007), which I read as S4b.fig.customer_dark_hat_13027's body). SCALE CUE: 55 px wide, ~40 px tall. MERGE: kept with the man (S4b.fig.man_dark_cap_by_stair_12700). On the merge agent's crop (scratchpad S4b_merge/c_jar.jpg, zoom 3) the pale shape has a straight rim line on top and a closed, rounded dark outline round its bottom, like a vessel, with the man's torso showing above it (v 936-975): a jar is the likelier reading than his lap. Both stay low until the second pass."
+  },
+  {
+   "id": "S4b.fig.man_seated_front_of_hall_12866",
+   "kind": "figure",
+   "name": "man in a light robe seated in front of the hall's east bays",
+   "what": "A man in a long light robe sits in front of the hall's railing, his body turned east, head with dark hair; he looks toward the standing man to the east.",
+   "pts": {
+    "foot": [
+     12866,
+     990,
+     "est"
+    ],
+    "head": [
+     12853,
+     883
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S4b.grp.hall_people_12800",
+   "vis": "part: lower body hidden by the first cart's roof (top v ~965)",
+   "conf": "med",
+   "note": "Head u 12847-12862, v 883-900; body widening down to u 12845-12880 at v ~963, where the cart's roof hides it. His body crosses the railing's line (v ~920-927), so he is read as seated in front of (south of) the railing on a bench on the ground, feet est v ~990; other reading: seated on the hall's floor at its front edge (support 'official hall floor', foot ~(12866, 950)). The restyle paints a man in white seated on a stool facing east. SECOND PASS: his right arm reaches toward S4b.prop.funnel_vessel_12884 (low), the deep vessel at the railing just east of him."
+  },
+  {
+   "id": "S4b.fig.dark_figure_or_garment_12825",
+   "kind": "figure",
+   "name": "dark-robed figure (or a hanging garment) at the hall's front",
+   "what": "A narrow dark vertical shape between the hall's posts west of the seated man: a person in a dark robe standing with the head bowed, or a dark garment hung on a post.",
+   "pts": {
+    "foot": [
+     12825,
+     985,
+     "est"
+    ],
+    "head": [
+     12823,
+     857
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S4b.grp.hall_people_12800",
+   "vis": "part: below v ~960 hidden by the cart's roof",
+   "conf": "low",
+   "note": "Shape u 12813-12837, v 857-960, dark with a lighter middle; a rounded top at (12818-12828, 857-867) may be a head. The restyle paints a blue robe hanging on a hook here. A robe or a hanging cloth changes the cast: both readings kept; if it is a garment it is part of the hall (structures_w)."
+  },
+  {
+   "id": "S4b.fig.man_standing_by_hall_12942",
+   "kind": "figure",
+   "name": "man in a cap standing at the hall's east end",
+   "what": "A man in a cap and a long robe stands at the east end of the hall's front, behind the first cart, his arms lowered in front of him toward the table or the seated man to his west.",
+   "pts": {
+    "foot": [
+     12942,
+     1000,
+     "est"
+    ],
+    "head": [
+     12940,
+     867
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S4b.grp.hall_people_12800",
+   "vis": "part: below v ~965 hidden by the first cart's roof",
+   "conf": "med",
+   "note": "Head u 12930-12950, v 867-887; body u 12923-12957 down to v ~963, where the cart's roof hides it. Standing height ~130 px at this depth puts his feet at v ~1000, south of the hall's floor edge (v 953-970), so he stands on the ground in front of the hall (not on its floor). The restyle paints him in blue. SECOND PASS: \"the table\" in his what is the deep funnel-shaped vessel S4b.prop.funnel_vessel_12884 (low)."
+  },
+  {
+   "id": "S4b.prop.table_13010",
+   "kind": "prop",
+   "name": "table in the open shop east of the hall",
+   "what": "A long table with a slanted-looking top in the open shop under the long roof just east of the hall, behind the first cart's front; customers sit at it.",
+   "pts": {
+    "base": [
+     13010,
+     960,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.shop_table_13010",
+   "vis": "part: legs hidden by the cart's roof below v ~965",
+   "conf": "med",
+   "note": "Top u 12947-13075, v ~880-940: its east edge runs (13022, 882) -> (13075, 935), slope +1.0, down to the right (a side edge, not the ground's receding direction). Legs show at u ~13017 and ~13053 down to v ~960. The signboard just above its east end (u 13042-13082, v 848-892) hangs between the long roof's posts (structures_w; its main point is past 13050)."
+  },
+  {
+   "id": "S4b.fig.customer_light_12990",
+   "kind": "figure",
+   "name": "customer in light clothes at the shop table",
+   "what": "A man in light clothes sits at the west end of the shop table behind the first cart's front, his face turned toward the viewer; only his head and shoulders show above the cart's thatch.",
+   "pts": {
+    "foot": [
+     12992,
+     1025,
+     "est"
+    ],
+    "head": [
+     12990,
+     935
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 270,
+   "group": "S4b.grp.shop_table_13010",
+   "vis": "part: below the shoulders hidden by the cart's roof",
+   "conf": "low",
+   "note": "Head u 12980-13000, v 935-953. The restyle paints a man in white seated at the table. Feet est from a seated height of ~90 px at this depth."
+  },
+  {
+   "id": "S4b.fig.customer_dark_hat_13027",
+   "kind": "figure",
+   "name": "customer in a dark hat at the shop table",
+   "what": "A man in a dark round hat and light clothes sits at the south side of the shop table with his back to the viewer, just above the first cart's front; only the hat and his shoulders show.",
+   "pts": {
+    "foot": [
+     13027,
+     1030,
+     "est"
+    ],
+    "head": [
+     13027,
+     947
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 90,
+   "group": "S4b.grp.shop_table_13010",
+   "vis": "part: below the shoulders hidden by the cart's roof",
+   "conf": "low",
+   "note": "Dark hat u 13007-13047, v 947-970; a pale shape below it (13002-13047, 977-1007) read as his light back and shoulders (the restyle paints a man in white with a dark hat here). Feet est. If the pale shape is instead the rolled east end of the cart's thatch, he is still a figure (the hat is clear)."
+  },
+  {
+   "id": "S4b.ani.horse_12862",
+   "kind": "animal",
+   "name": "small horse at the second cart's rear",
+   "what": "A small light-coloured horse with a long dark tail stands at the rear of the second palm-covered cart, facing east with its head (dark forelock and mane) held low toward the cart's underside; a dark band across its middle may be a girth or saddle cloth. A man in a big black hat stands behind it.",
+   "pts": {
+    "fore": [
+     12928,
+     1762,
+     "est"
+    ],
+    "hind": [
+     12862,
+     1765,
+     "est"
+    ],
+    "head": [
+     12990,
+     1620
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S4b.grp.horse_12900",
+   "vis": "part: hooves at the silk's bottom edge, faint",
+   "conf": "med",
+   "note": "Back line from the rump (12808, 1652) to the withers (12935, 1650); belly v ~1710-1730; the long dark tail hangs from the rump to near the ground (u 12810-12847, v 1673-1770) at the WEST end, so the west end is not the head (the restyle puts a man in blue bending there: that is the tail). Hind legs u ~12850-12880, front legs u ~12910-12940 (hooves est v 1760-1770, faint). HEAD (conf low): the dark mass u 12950-13013, v 1603-1660, rising from the chest, is read as its lowered head and dark mane, the muzzle pale at ~(13000-13020, 1636-1660); the restyle paints a man in blue bending over there instead, and a leg-like line (12960, 1677) -> (13000, 1770) with a shoe-like end at ~(12963, 1755) could be his. If that is a man, the horse's head is hidden behind him. Dark band (12913-12960, 1697-1717): girth, saddle cloth or a rider's boot. SCALE CUE: back 110 px above the hooves, body ~130 px long (rump to chest), small against the 170 px man at u 12775 (a pony, or the painter's small horse). It is not harnessed to the cart."
+  },
+  {
+   "id": "S4b.fig.man_big_hat_12895",
+   "kind": "figure",
+   "name": "man in a big black hat behind the horse",
+   "what": "A man in a big round black hat and a light robe stands on the far side of the small horse at the second cart's rear, reaching forward toward the horse's head as if holding its bridle.",
+   "pts": {
+    "foot": [
+     12895,
+     1690,
+     "est"
+    ],
+    "head": [
+     12892,
+     1518
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "group": "S4b.grp.horse_12900",
+   "vis": "part: below the hips hidden by the horse",
+   "conf": "low",
+   "note": "Hat u 12864-12920, v 1518-1568; robe u 12860-12928 down to the horse's back (v ~1648); arm toward (12950-12970, 1590-1610). Two readings: (1) standing behind the horse (chosen: a 172 px standing figure, like the man at u 12775 at 170 px, puts his feet at v ~1690, hidden by the horse's body); (2) riding (the restyle's reading: support 'animal S4b.ani.horse_12862', pose riding, foot est under the seat ~(12890, 1757)), but then hat-top to seat is ~128 px, about 1.4x a seated man's height here. The legs that show under the horse's belly (u 12900-12940, shoes at ~(12913, 1765) and (12933, 1752)) reach v ~1765, too low for this man standing; they are read as the horse's forelegs."
+  },
+  {
+   "id": "S4b.fig.man_white_jacket_12773",
+   "kind": "figure",
+   "name": "man in a light jacket in front of the bottom shop",
+   "what": "A man in a light short jacket and trousers stands in front of the open shop at the bottom of the silk, beside the tall barrel, facing east toward the horse; a cloth or bag hangs at his west side from his hand or waist.",
+   "pts": {
+    "foot": [
+     12773,
+     1768
+    ],
+    "head": [
+     12765,
+     1600
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "full",
+   "conf": "high",
+   "note": "Head u 12753-12780, v 1600-1623 (dark hair, face to the east); feet at (12757-12770, 1763-1773) and (12777-12790, 1760-1770). Hanging cloth or bag u 12720-12757, v 1670-1730 (carried: part of him). Painted 168 px tall (the reference adult here). The restyle paints a blue cloth tied at his waist."
+  },
+  {
+   "id": "S4b.prop.table_12645",
+   "kind": "prop",
+   "name": "table in the bottom shop (the child's table)",
+   "what": "A plain table inside the open front of the bottom shop, its top just east of the seam; the small child of part 1 reaches onto its west end.",
+   "pts": {
+    "base": [
+     12645,
+     1703
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: west legs hidden by the child",
+   "conf": "high",
+   "note": "Top u 12599-12687, v 1638-1650 (front edge level: no receding edge shows); legs at u ~12636 and ~12660 down to v ~1700-1705. Part 1's 'not yet mapped' list ('the table ... at 12600-12700'); S4.fig.child_at_table_12597 reaches to it. SCALE CUE: top ~60 px above the legs' feet. The restyle puts a round basket on it; the scan shows nothing clear on the top."
+  },
+  {
+   "id": "S4b.prop.barrel_12677",
+   "kind": "prop",
+   "name": "tall barrel (or stack of baskets) at the bottom shop",
+   "what": "A tall cylindrical container with hooped or woven lattice sides stands on the ground at the front of the bottom shop, just east of the child's table: a barrel, a tall basket or a drum.",
+   "pts": {
+    "base": [
+     12677,
+     1768
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "full",
+   "conf": "med",
+   "note": "Cylinder u 12657-12697, v 1670-1770; top rim v ~1670-1680, bottom v 1763-1770. Part 1 called it 'a barrel or drum at 12650-12700 (v 1680-1790)'. The restyle paints a tall woven basket with a child's head peeping over it; the scan shows only the rim there. SCALE CUE: 100 px tall, 40 px wide (about 0.6 of the man beside it)."
+  },
+  {
+   "id": "S4b.prop.counter_frame_12655",
+   "kind": "prop",
+   "name": "frame or counter at the back of the bottom shop",
+   "what": "A rectangular wooden frame or counter at the back of the bottom shop, behind the child's table, with a small cup- or lamp-like thing hanging under its top bar.",
+   "pts": {
+    "base": [
+     12655,
+     1605,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: its foot behind the child's table",
+   "conf": "low",
+   "note": "Frame u 12613-12693, v 1540-1600: top bar v 1550-1557, lower bar v 1587-1597; the hanging thing at (12647-12663, 1567-1580) (if it hangs from the building it is structures_w's). May be part of the shop's fittings (a shelf or the open front's rail) rather than standing furniture."
+  },
+  {
+   "id": "S4b.prop.slatted_rack_12732",
+   "kind": "prop",
+   "name": "slatted rack or bench in the bottom shop",
+   "what": "A low slatted rack or bench seen at a slant between two of the bottom shop's posts, behind the man in the light jacket.",
+   "pts": {
+    "base": [
+     12732,
+     1612,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: lower end behind the man's head",
+   "conf": "low",
+   "note": "Boards u 12700-12765: an upper rail (12700, 1540) -> (12760, 1567) and slatted boards (12700, 1573) -> (12760, 1600), sloping down to the right (+0.45: a side view, not a receding edge); between the posts at u 12690-12700 and 12760-12770. Could be a stair or a shelf of the building (structures_w)."
+  },
+  {
+   "id": "S4b.fig.seated_in_bottom_shop_12792",
+   "kind": "figure",
+   "name": "person seated at the shop table (faint)",
+   "what": "A faint pale figure sits at the west end of the table with the tray in the bottom shop, hunched and facing east.",
+   "pts": {
+    "foot": [
+     12792,
+     1555,
+     "est"
+    ],
+    "head": [
+     12787,
+     1460
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "faded",
+   "conf": "low",
+   "note": "A pale area with a curved top contour at u 12777-12800, v 1460-1550, right of the shop's post at u 12768-12780. The restyle paints a person in white seated there. Could be a hanging cloth or the post's light side; kept with conf low."
+  },
+  {
+   "id": "S4b.prop.table_tray_12845",
+   "kind": "prop",
+   "name": "table with a tray in the bottom shop",
+   "what": "A table in the open bottom shop (under the long lattice eave) with a shallow boat-shaped tray or basket on its west end.",
+   "pts": {
+    "base": [
+     12845,
+     1520,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: legs crossed by the bench and the jug",
+   "conf": "med",
+   "note": "Top u 12800-12890, v ~1440-1477; a leg at u 12840-12847 down to v ~1520. The tray is S4b.prop.tray_12823."
+  },
+  {
+   "id": "S4b.prop.tray_12823",
+   "kind": "prop",
+   "name": "boat-shaped tray on the shop table",
+   "what": "A shallow oblong tray or basket with raised ends standing on the west end of the table in the bottom shop.",
+   "pts": {
+    "base": [
+     12823,
+     1474
+    ]
+   },
+   "support": "table top: S4b.prop.table_tray_12845",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "full",
+   "conf": "med",
+   "note": "u 12800-12847, v 1460-1477."
+  },
+  {
+   "id": "S4b.prop.jug_12833",
+   "kind": "prop",
+   "name": "dark jug in the bottom shop",
+   "what": "A dark jug or bottle under the table with the tray, on or by the bench.",
+   "pts": {
+    "base": [
+     12833,
+     1532
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "full",
+   "conf": "med",
+   "note": "u 12827-12840, v 1503-1532. May stand on the bench (S4b.prop.bench_12835) or hang under the table."
+  },
+  {
+   "id": "S4b.prop.table_12900",
+   "kind": "prop",
+   "name": "second table in the bottom shop",
+   "what": "A second table east of the tray table in the bottom shop, its top sloping up to the east, just west of the second cart's rear.",
+   "pts": {
+    "base": [
+     12900,
+     1530,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: legs behind the man in the big hat",
+   "conf": "med",
+   "note": "Top u 12860-12940, v ~1473-1503."
+  },
+  {
+   "id": "S4b.prop.bench_12835",
+   "kind": "prop",
+   "name": "long bench in the bottom shop",
+   "what": "A long bench running at a slant in front of the two tables in the bottom shop.",
+   "pts": {
+    "base": [
+     12835,
+     1550,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: east end behind the man in the big hat",
+   "conf": "med",
+   "note": "Front edge (12780, 1557) -> (12890, 1510), slope -0.43 (shallower than the ground's receding direction; it may run partly along the shop's front)."
+  },
+  {
+   "id": "S4b.tree.elm_twin_12921",
+   "kind": "tree",
+   "name": "tall bare tree at the top of the silk (west of a pair)",
+   "what": "Tall straight bare tree, elm-like, rising behind the big sloping roof to the top of the silk, its thin branches ending in clusters of dark dotted buds or leaves; one of a pair of straight trunks standing close together.",
+   "pts": {
+    "base": [
+     12921,
+     400,
+     "est"
+    ],
+    "top": [
+     12920,
+     8
+    ],
+    "crown_w": [
+     12850,
+     110
+    ],
+    "crown_e": [
+     12960,
+     80
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden behind the willow sprays and the big sloping roof; crown cut by the silk's top edge",
+   "conf": "med",
+   "note": "Trunk u 12913-12930 from v ~147 down to ~320, where the sprays of S4.tree.willow_12588's crown hide it; it crosses in front of a far diamond-tiled roof (u 12846-12997, v 147-294, structures_w). Foot est at v ~400 (between the sprays and the big sloping roof's top at v ~450). Crown extents rough: the dotted clusters of the two trees mix at u 12850-13140, v 20-130. The restyle draws bare budding branches; species from the scan: straight trunk, dark dotted clusters (elm-like)."
+  },
+  {
+   "id": "S4b.tree.elm_twin_12976",
+   "kind": "tree",
+   "name": "tall bare tree at the top of the silk (east of a pair)",
+   "what": "Tall straight bare tree, elm-like, the eastern of the pair, its trunk rising straight to the top of the silk with clusters of dark dotted buds or leaves on its upper branches.",
+   "pts": {
+    "base": [
+     12976,
+     400,
+     "est"
+    ],
+    "top": [
+     12976,
+     5
+    ],
+    "crown_w": [
+     12930,
+     60
+    ],
+    "crown_e": [
+     13060,
+     100
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden behind the willow sprays and the big sloping roof; crown cut by the silk's top edge",
+   "conf": "med",
+   "note": "Trunk u 12964-12989 from the top edge down to v ~336. Separate trunk from S4b.tree.elm_twin_12921 (about 50 px apart all the way down), so two trees. Foot est as for its neighbour. East of it the gnarled, dark, hole-pocked trunk at u 13020-13110 (v 100-470) is a third tree whose foot is hidden behind the big sloping roof at about u 13090-13110: t2's."
+  },
+  {
+   "id": "S4b.ani.bird_12827",
+   "kind": "animal",
+   "name": "small dark bird among the sprays above the hall",
+   "what": "A small solid black blot among the willow (or pine) sprays above the hall's roof, rounded at its east end and tapering west: a bird, perched or in flight.",
+   "pts": {
+    "fore": [
+     12829,
+     363,
+     "est"
+    ],
+    "hind": [
+     12822,
+     363,
+     "est"
+    ],
+    "head": [
+     12832,
+     357
+    ]
+   },
+   "support": "perched: S4.tree.willow_12588",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "note": "Blot u 12821-12833, v 355-363 (12 x 8 px), solid ink, unlike the line work of the sprays, like part 1's S4.ani.bird_12433. The restyle paints a flying bird here. fore/hind = the blot's underside. A second, fainter dark dash at (12637-12650, 420-427) is read as crossing twigs (the restyle paints a second bird there): not recorded."
+  },
+  {
+   "id": "S4b.grp.palm_cart_13070",
+   "kind": "group",
+   "name": "the first palm-covered cart, waiting",
+   "what": "The first palm-covered family cart stands unhitched on the north side of the road: a small figure waits at its west end and a person sits under the thatch at its front.",
+   "members": [
+    "S4b.veh.palm_cart_13070",
+    "S4b.fig.small_figure_cart_rear_12706",
+    "S4b.fig.seated_in_cart_front_12995"
+   ],
+   "conf": "med",
+   "src": "余辉: 豪车云集",
+   "note": "The sedan chair S4b.veh.sedan_chair_13140 stands just east of it (its bearer is t2's figure at ~(13163, 1122)); the second palm-covered cart (t2) is drawn by oxen east on the south side."
+  },
+  {
+   "id": "S4b.grp.horse_12900",
+   "kind": "group",
+   "name": "the horse and the man in the big hat",
+   "what": "At the rear of the second palm-covered cart a man in a big black hat stands on the far side of a small horse and holds it by its head, which it lowers toward the cart.",
+   "members": [
+    "S4b.ani.horse_12862",
+    "S4b.fig.man_big_hat_12895"
+   ],
+   "conf": "low",
+   "note": "May belong with the second cart's people (t2: the man walking under its rear at ~(13090, 1725) with his arms up to the cargo slung under it). MERGE: kept apart from S4b.grp.palm_cart_13455 (not harnessed; nobody in it works at the cart)."
+  },
+  {
+   "id": "S4b.grp.hall_people_12800",
+   "kind": "group",
+   "name": "people at the official hall's east bays",
+   "what": "In and in front of the official hall: the official sits at work on the raised floor, a man in a light robe sits in front of the railing beside a deep funnel-shaped vessel, a man in a cap stands at the east end, a dark-robed figure (or a hung robe) stands between the posts, and a man in a dark cap sits by the stair's foot behind a big jar.",
+   "members": [
+    "S4b.fig.official_seated_12728",
+    "S4b.fig.man_dark_cap_by_stair_12700",
+    "S4b.fig.man_seated_front_of_hall_12866",
+    "S4b.fig.dark_figure_or_garment_12825",
+    "S4b.fig.man_standing_by_hall_12942",
+    "S4b.prop.funnel_vessel_12884"
+   ],
+   "conf": "low",
+   "src": "sections.md S4: the official compound beside the fortune-teller",
+   "note": "The hall is S4.bld.official_hall_12530 (part 1's). SECOND PASS: the two dim heads deep in the hall (S4b.fig.head_deep_in_hall_12871 and _12908) are retired: both sit on the hall's lintel with no body below; they are things hung from S4.bld.official_hall_12530 (a lamp, a bag or a pot: seam notes for the lead). The other reading, two people seated deep inside, is in merge_notes.md."
+  },
+  {
+   "id": "S4b.grp.shop_table_13010",
+   "kind": "group",
+   "name": "customers at the shop table east of the hall",
+   "what": "Two customers sit at a long table in the open shop under the long roof, just behind the first cart's front.",
+   "members": [
+    "S4b.prop.table_13010",
+    "S4b.fig.customer_light_12990",
+    "S4b.fig.customer_dark_hat_13027"
+   ],
+   "conf": "low"
+  },
+  {
+   "id": "S4b.grp.bottom_shop_12750",
+   "kind": "group",
+   "name": "the open shop at the bottom of the silk",
+   "what": "An open-fronted shop at the bottom edge, under a long lattice eave: tables (one with a tray), a long bench, a dark jug, a slatted rack and a frame at the back, a tall barrel at the front; a faint figure sits at the tray table and a man in a light jacket stands at the front by the barrel.",
+   "members": [
+    "S4b.prop.table_12645",
+    "S4b.prop.barrel_12677",
+    "S4b.prop.counter_frame_12655",
+    "S4b.prop.slatted_rack_12732",
+    "S4b.fig.seated_in_bottom_shop_12792",
+    "S4b.prop.table_tray_12845",
+    "S4b.prop.tray_12823",
+    "S4b.prop.jug_12833",
+    "S4b.prop.table_12900",
+    "S4b.prop.bench_12835",
+    "S4b.fig.man_white_jacket_12773",
+    "S4b.prop.slatted_crate_12819"
+   ],
+   "conf": "med",
+   "note": "S4.fig.child_at_table_12597 (part 1's) reaches onto S4b.prop.table_12645. The shop front west of u 12700 is S4.bld.south_hall_12350's open front (part 1); east of 12700 is structures_w's next roof."
+  },
+  {
+   "id": "S4b.grp.sedan_chair_13140",
+   "kind": "group",
+   "name": "the sedan chair set down, with its attendant",
+   "what": "A dark-roofed sedan chair stands set down on the road just east of the first palm-covered cart, its poles running east; a young man in a long light robe stands between the poles at its east side, its bearer or attendant waiting. No passenger shows.",
+   "members": [
+    "S4b.veh.sedan_chair_13140",
+    "S4b.fig.sedan_attendant_13160"
+   ],
+   "conf": "med",
+   "src": "余辉: 豪车云集 (the sedan beside the palm-covered carts)",
+   "note": "Made in the merge: t1 recorded the sedan (the brief gave it to t1), t2 the man between its poles (foot (13160, 1120)), and both asked for one group. It stands beside S4b.grp.palm_cart_13070 (the first cart) but is not part of it."
+  },
+  {
+   "id": "S4b.prop.slatted_crate_12819",
+   "kind": "prop",
+   "name": "slatted crate at the bottom shop's front, behind the small horse",
+   "what": "A box of horizontal slats (a crate or cage) standing at the open front of the bottom shop just east of its post, behind the head of the man in the light jacket and above the small horse's rump; its lower part is hidden by the horse.",
+   "pts": {
+    "base": [
+     12819,
+     1690,
+     "est"
+    ],
+    "top_w": [
+     12800,
+     1597
+    ],
+    "top_e": [
+     12838,
+     1600
+    ]
+   },
+   "support": "ground",
+   "group": "S4b.grp.bottom_shop_12750",
+   "vis": "part: below v ~1645 hidden behind S4b.ani.horse_12862's back",
+   "conf": "med",
+   "src": "",
+   "note": "SECOND PASS (west): no entity covers it, and no note names it. Strokes: slatted box u 12800-12838, v 1597-1645: two side posts, a darker top rail and about four horizontal slats; its lower edge meets the horse's back line (v ~1645-1652). It is not S4b.prop.slatted_rack_12732 (boards u 12700-12765, v 1540-1600, west of the shop's post at u 12768-12780; the man's head lies between the two). The restyle paints a slatted crate of round loaves here. Base est on the shop's open front line (its columns' feet est ~1700, S4b.road.main edge_s), about 45 px below the last visible slat. OTHER READING: a crate packed on the horse's rump (its bottom sits on the back line): support 'animal S4b.ani.horse_12862', base at the horse's hind (12862, 1765). The horse shows no pack frame or girth at that end (its dark band is at u 12913-12960), so the shop reading is chosen. The lead adds it to S4b.grp.bottom_shop_12750's members. SCALE CUE: 38 px wide, 48 px visible. Crops: S4b_second_west/z2_crate.jpg (zoom 4, scan | restyle), z2_bshop.jpg (zoom 2.2, scan | overlay), z2_cartrear_r.jpg."
+  },
+  {
+   "id": "S4b.prop.funnel_vessel_12884",
+   "kind": "prop",
+   "name": "funnel-shaped vessel at the official hall's front railing",
+   "what": "A deep vessel, wide at its rim and narrowing to a small bottom (a wash basin on a stand, a hopper, or a deep sieve), at the front of the official hall's east bays between the man seated in the light robe and the man in the cap standing to the east; the seated man's right arm reaches toward it.",
+   "pts": {
+    "base": [
+     12884,
+     940,
+     "est"
+    ],
+    "rim_w": [
+     12865,
+     881
+    ],
+    "rim_e": [
+     12897,
+     881
+    ],
+    "bottom": [
+     12884,
+     917
+    ]
+   },
+   "support": "official hall floor",
+   "group": "S4b.grp.hall_people_12800",
+   "vis": "part: below its narrow bottom hidden behind the hall's front railing (v 916-935) or the first cart's roof",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (west): no entity covers it. It is named only as 'the table' in S4b.fig.man_standing_by_hall_12942's what ('his arms lowered in front of him toward the table or the seated man'), so README rule 6 applies. Strokes: a straight rim (12865, 881) -> (12897, 881) with dark inner shading; its sides converge to a narrow bottom at about (12880-12888, 915-920). A frame of thin posts and two rails stands just east of it at u 12895-12932, v 907-952, either the railing's east bay where the raised floor ends (u ~12930) or the vessel's stand. The seated man's arm runs from his shoulder (12855, 920) toward the vessel's foot. The restyle paints a funnel-shaped tray with a dark lining on a stand, with the seated man's hand in it. SUPPORT: READING 1 (chosen): the vessel stands on the raised floor (H 0.45) just behind the front railing, whose top rail (v 916) meets its narrow bottom. Its foot is hidden, so the base is est at the floor's front. READING 2: it stands on a tall stand of its own on the ground beside the seated man (S4b.fig.man_seated_front_of_hall_12866, foot est v ~990): base est (12884, 990), support 'ground', a stand about as tall as the seated man. If accepted, the lead may add to S4b.fig.man_seated_front_of_hall_12866's what that his right arm reaches toward it. Crops: S4b_second_west/z2_trough.jpg (zoom 4, scan | restyle), z2_trough_p.jpg (zoom 4, no grid), z2_lintel.jpg (zoom 3.5, no grid | restyle)."
+  }
+ ]
+}

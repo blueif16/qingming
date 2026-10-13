@@ -1,0 +1,3001 @@
+{
+ "section": "S1",
+ "entities": [
+  {
+   "id": "S1.bld.stall_shed_29600",
+   "kind": "building",
+   "name": "village stall shed (thatched hip roof, open front)",
+   "what": "The long shed of the village tea-and-food stall where the canal market begins: a big thatched hip roof (hatched straw strokes; the front eave a dashed row of thatch ends) on posts, the front open. At its west end customers sit at a table under the eave (the lower roof S1.bld.stall_annex_29350); between the posts at u 29486-29599 a board or lattice fascia hangs under the eave; east of it the front under the eave is blank silk (no wall drawn: open, or a pale plastered wall). A second, smaller thatched roof stands behind its east end (S1.bld.stall_back_shed_29860).",
+   "pts": {
+    "base": {
+     "sw": [
+      29375,
+      665,
+      "est"
+     ],
+     "se": [
+      29825,
+      662,
+      "est"
+     ],
+     "ne": [
+      29825,
+      600,
+      "est"
+     ],
+     "nw": [
+      29375,
+      600,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     29375,
+     543
+    ],
+    "se_eave": [
+     29825,
+     548
+    ],
+    "ridge_mid": [
+     29600,
+     420
+    ],
+    "ridge_e": [
+     29675,
+     420
+    ],
+    "bays": [
+     [
+      29380,
+      665,
+      "est"
+     ],
+     [
+      29486,
+      664
+     ],
+     [
+      29599,
+      665,
+      "est"
+     ],
+     [
+      29815,
+      662,
+      "est"
+     ]
+    ]
+   },
+   "facing_deg": 270,
+   "vis": "part: west half behind the willow trunks over the stall, roof under willow branches; back hidden",
+   "conf": "med",
+   "src": "sections.md S1: the village tea and food stalls at the edge of the market",
+   "note": "THATCH, not tile: the roof is filled with hatched straw strokes and its eave is a row of short hanging thatch ends at v 539-550 from u 29374 to 29825 (the restyle draws blue tile: wrong). ROOF (zoom 2, raised contrast): the ridge is a line at v 420 running west from 29675 (its west end lost in the willow branches); the east end is a HIP: a line from the ridge end (29675,420) down to the front eave's east corner (29825,548) (slope +0.85, a hip line, not a receding edge). FRONT: one post read clearly at u 29486 (v 551-664); the fascia board 29486-29599 at v 551-570; the east end edge drops from (29805,550) to (29820,620). Ground line: the post foot (29486,664) and t1's counter S1.prop.stall_counter_29430 (feet v 664-666); the other bays and the sw/se corners are est on that line. DEPTH: not painted; the back corners are placeholders 62 px of v behind the front (about 1.2 m at 51.25 px/m: the builder settles the depth as choice:). The long horizontal line at v 361-367 (u 29599-29705) above the roof is a far field bank (S1.grd.terraced_fields_29450 edge_v362), not the ridge. SCALE CUES: front eave about 120 px over the ground (eave v 545, ground v 665); fascia 113 px long; eave run 451 px (29374-29825); ridge 128 px above the eave. SECOND PASS (west): the slats over the counter (u 29437-29490, v 553-597) are this shed's lattice front running on west of the post at u 29486 (vertical slats from the eave to the counter's top, the same as the fascia lattice at 29486-29599, v 551-570); a few dark knots among them at v 565-590 (u 29445-29480) may be small goods on the counter. No entity (as the merge decided); build the lattice from 29437.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.bld.stall_back_shed_29860",
+   "kind": "building",
+   "name": "small thatched shed behind the stall's east end",
+   "what": "A second, smaller thatched roof behind (north of) the east end of the stall shed, its eave a row of hanging thatch ends; a big willow trunk leans across its front, and under its eave the silk is blank (no wall drawn).",
+   "pts": {
+    "base": {
+     "sw": [
+      29795,
+      642,
+      "est"
+     ],
+     "se": [
+      29905,
+      640,
+      "est"
+     ],
+     "ne": [
+      29925,
+      600,
+      "est"
+     ],
+     "nw": [
+      29815,
+      602,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     29795,
+     528
+    ],
+    "se_eave": [
+     29900,
+     522
+    ],
+    "ridge_w": [
+     29795,
+     488
+    ],
+    "ridge_e": [
+     29910,
+     486
+    ]
+   },
+   "facing_deg": 270,
+   "vis": "part: behind the willow trunk leaning from (29910,500) to (29840,640); walls and base hidden",
+   "conf": "med",
+   "src": "sections.md S1: the village tea and food stalls",
+   "note": "Read at zoom 2-2.8 with raised contrast: thatch ends at v 505-530 from u 29795 to 29900 under a top line at v 485-490 (29790-29910); its eave sits 20-25 px higher on the silk than the main shed's (v 548), so it stands a little further back. THATCH. The restyle makes it a white-walled house with a blue tile roof (29764-29960): the roof is painted, the walls and the tiles are not. Base corners are placeholders: the front foot taken about 115 px below the eave, by the main shed's eave height (the willow's roots at v 630-650 are there).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.bld.stall_annex_29350",
+   "kind": "building",
+   "name": "stall shed, lower west roof (customers' end)",
+   "what": "A lower roof at the west end of the stall shed, over the seated customers: its top at about v 460 and its eave at v 535-540, in line with the main shed's eave; the west end is behind the two willow trunks over the stall. Open front, customers seated at a table under it.",
+   "pts": {
+    "base": {
+     "sw": [
+      29262,
+      662,
+      "est"
+     ],
+     "se": [
+      29375,
+      665,
+      "est"
+     ],
+     "ne": [
+      29445,
+      600,
+      "est"
+     ],
+     "nw": [
+      29330,
+      598,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     29262,
+     535
+    ],
+    "se_eave": [
+     29367,
+     540
+    ],
+    "ridge_w": [
+     29268,
+     462,
+     "est"
+    ]
+   },
+   "facing_deg": 270,
+   "vis": "part: west end behind the willow trunks (u 29200-29260 and 29358-29392), seated figures in front",
+   "conf": "med",
+   "src": "sections.md S1: the village tea and food stalls",
+   "note": "Read at zoom 2.4: a roof slope with hatching from about (29250,463) down to (29367,534) and an eave line at v 535-540 from 29262 to 29367, lower than the main shed's roof (ridge at v 420). It may be a lean-to or the main roof's lower west wing; recorded as its own roof so the builder can make the step. A small triangle at (29300-29325, 409-437) above it may be a gable end or a willow branch. Ground corners est on the main shed's front line (v 662-665); back corners placeholders, 62-67 px of v behind as for the main shed. SCALE CUE: eave about 125 px over the ground line.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.bld.farmhouse_hall_30200",
+   "kind": "building",
+   "name": "tiled farmhouse hall with a veranda",
+   "what": "The back hall of a small tiled farmstead: a long tiled roof with ridge tiles, its west end a hip-gable running down to the eave corner at u 29976; under the west eave an open veranda with posts and a railing of balusters (floor at v about 1100). East of u 30120 its front is hidden by the front wing's roof (S1.bld.farmhouse_wing_30190; the two belong together), and its east end by the willow crown at about 30330.",
+   "pts": {
+    "base": {
+     "sw": [
+      29998,
+      1100
+     ],
+     "se": [
+      30330,
+      1100,
+      "est"
+     ],
+     "ne": [
+      30400,
+      1035,
+      "est"
+     ],
+     "nw": [
+      30068,
+      1035,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     29976,
+     1050
+    ],
+    "ridge_w": [
+     30080,
+     925
+    ],
+    "ridge_e": [
+     30325,
+     958
+    ],
+    "bays": [
+     [
+      30003,
+      1100
+     ],
+     [
+      30050,
+      1100
+     ],
+     [
+      30088,
+      1100
+     ]
+    ]
+   },
+   "facing_deg": 270,
+   "vis": "part: front east of 30120 behind the front wing; east end under a willow crown",
+   "conf": "high",
+   "src": "brief: the tiled farmhouse with a veranda (u 29980-30400)",
+   "note": "TILE (rows of tile strokes; the restyle's tile is right here). West roof edge (29976,1050)->(30080,925); ridge from (30080,925) east, ridge tiles drawn at 30250-30320 (v 940-960). Veranda (zoom 3.5): eave v 1052, posts at 30003 (the corner), 30050 and 30088 (v 1054-1100), a railing of balusters between 30010 and 30045, a curved bracket between the posts at 30050-30088; the floor line v 1098-1104. The back (north) corners and the east end are placeholders (the hall's depth is not painted; its east end assumed at 30330-30400 where the ridge marks stop under the willow). SCALE CUES: veranda posts about 50 px from eave to floor (v 1050-1100) and spaced about 12-25 px (balusters) - small against the travellers below (about 180 px tall at v 1550-1630) and the walker at 29200 (about 105 px at v 1060): the painter shrinks the house.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.bld.farmhouse_wing_30190",
+   "kind": "building",
+   "name": "tiled farmhouse front wing (board walls)",
+   "what": "The front wing of the same farmstead, in front of and south of the hall: a big tiled roof coming down low over a wall of vertical boards; it is painted turned about 45 degrees to the scroll, with its nearest corner pointing at the viewer (u 30124, v 1196) and a gable-like apex where its roof meets the hall's at about (30195, 975).",
+   "pts": {
+    "base": {
+     "sw": [
+      30124,
+      1196
+     ],
+     "se": [
+      30300,
+      1165,
+      "est"
+     ],
+     "ne": [
+      30232,
+      1135,
+      "est"
+     ],
+     "nw": [
+      30056,
+      1166
+     ]
+    },
+    "sw_eave": [
+     30124,
+     1160
+    ],
+    "nw_eave": [
+     30024,
+     1126
+    ],
+    "top": [
+     30195,
+     975,
+     "est"
+    ]
+   },
+   "vis": "part: east end under willow branches; north corner hidden by its own roof",
+   "conf": "med",
+   "src": "brief: the tiled farmhouse with a veranda (u 29980-30400)",
+   "note": "Corners are named for the footprint's order, not by compass (the wing is rotated): sw = the nearest corner (30124,1196); nw = the west end of the visible board wall (30056,1166); se = the east end of the south-east face, est under the willow branches (its foot is seen at (30152-30200, 1168-1174); the eave runs on to about (30320,1150)); ne = nw plus the sw-to-se offset (placeholder). Wall feet: west face (30056,1166)->(30124,1196), slope +0.44; south-east face from (30124,1196) up to the right (about -0.23). The two faces do not fit one rectangle under any dx near 30-60 px/m, so this is the painter's shape; the builder settles it as choice:. Board wall 30058-30128, v 1146-1190 (about 45 px tall); eave over the near corner at about v 1160. No door is drawn on the visible faces.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.bld.hut_thatched_31000",
+   "kind": "building",
+   "name": "thatched hut behind the wattle fences",
+   "what": "A small farmhouse or hut with a thatched hip roof (hatched straw strokes), seen behind its tall wattle fences and the leaning trunk of a big willow; its walls are hidden. There is an opening in the fence at about u 30812-30917 in front of it, where a small figure sits.",
+   "pts": {
+    "base": {
+     "sw": [
+      30760,
+      1270,
+      "est"
+     ],
+     "se": [
+      31175,
+      1270,
+      "est"
+     ],
+     "ne": [
+      31240,
+      1200,
+      "est"
+     ],
+     "nw": [
+      30825,
+      1200,
+      "est"
+     ]
+    },
+    "se_eave": [
+     31170,
+     1115
+    ],
+    "sw_eave": [
+     30760,
+     1118,
+     "est"
+    ],
+    "ridge_w": [
+     30852,
+     950
+    ],
+    "ridge_e": [
+     31002,
+     955
+    ]
+   },
+   "facing_deg": 270,
+   "vis": "part: walls behind the wattle fences and a willow trunk; roof under willow branches",
+   "conf": "med",
+   "src": "brief: a thatched hut with a wattle fence (u 30720-31300)",
+   "note": "THATCH (the restyle draws blue tile and white walls: wrong). Ridge v 948-955 from about 30852 to 31006; east hip from about (31010,965) down to the east eave corner (31170-31206, 1112-1115); the front eave at v about 1115-1120; west end lost in the willow branches (sw_eave est). Footprint is a placeholder: the front wall must stand north of the fences' foot (v 1330-1338), so the front is taken at v 1270; depth placeholder by the slope -1.0. SCALE CUE: roof from ridge to eave about 165 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.bld.shed_posts_31370",
+   "kind": "building",
+   "name": "open shed on posts east of the hut",
+   "what": "An open shed: a low roof of brush or thatch carried on bare posts, no walls; under it a big lidded jar or vat and a round tray or table on a stand (props, t3's). It stands on a small raised yard east of the hut's fence.",
+   "pts": {
+    "base": {
+     "sw": [
+      31245,
+      1235,
+      "est"
+     ],
+     "se": [
+      31445,
+      1235
+     ],
+     "ne": [
+      31500,
+      1180,
+      "est"
+     ],
+     "nw": [
+      31300,
+      1180,
+      "est"
+     ]
+    },
+    "se_eave": [
+     31445,
+     1060
+    ],
+    "sw_eave": [
+     31250,
+     1060,
+     "est"
+    ],
+    "top": [
+     31350,
+     985,
+     "est"
+    ],
+    "bays": [
+     [
+      31357,
+      1235,
+      "est"
+     ],
+     [
+      31445,
+      1235
+     ]
+    ]
+   },
+   "facing_deg": 270,
+   "vis": "part: west end behind the tall wattle fence; roof under willow branches",
+   "conf": "med",
+   "src": "brief: a shed on posts east of the hut (u 31230-31430)",
+   "note": "Posts read at zoom 2: one at u 31353-31360 from the eave (v 1055) down to v 1190, one at 31435-31445 from v 1055 to v 1235. The west post ending at v 1190 is either a back post (the shed recedes up-right) or stands behind the tray; the front line is taken at the east post's foot, v 1235, on the yard's edge (S1.grd.bank_yard_31390). Roof: a hatched band v 965-1065 over 31250-31450, eave v 1055-1065, flat or a lean-to (thatch/brush; the restyle's tiles are wrong). No walls; the white-walled house the restyle draws behind it (31130-31470) is not painted. SCALE CUES: east post 180 px tall (v 1055-1235); post spacing about 85 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.str.wattle_fence_30760",
+   "kind": "structure",
+   "name": "wattle fence west of the hut's gateway",
+   "what": "A woven wattle fence panel (upright stakes with horizontal weaving) in front of the hut, west of the opening where a small figure sits.",
+   "pts": {
+    "line": [
+     [
+      30712,
+      1330
+     ],
+     [
+      30760,
+      1332
+     ],
+     [
+      30812,
+      1330
+     ]
+    ]
+   },
+   "vis": "part: top under willow branches",
+   "conf": "high",
+   "src": "brief: the hut's wattle fences",
+   "note": "Foot read at zoom 1.9: v 1324-1333. Top at about v 1185: about 145 px tall. Gateway gap 30812-30917.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.str.wattle_fence_31100",
+   "kind": "structure",
+   "name": "tall wattle fence east of the hut's gateway",
+   "what": "A tall woven brushwood-and-stake fence running east from the hut's gateway behind the leaning willow trunk to the shed on posts: stakes with spiky tops, bound by two horizontal withies.",
+   "pts": {
+    "line": [
+     [
+      30917,
+      1336
+     ],
+     [
+      30985,
+      1338
+     ],
+     [
+      31050,
+      1340,
+      "est"
+     ],
+     [
+      31100,
+      1338
+     ],
+     [
+      31200,
+      1338
+     ],
+     [
+      31287,
+      1340
+     ]
+    ],
+    "gate_post_foot": [
+     30895,
+     1277
+    ],
+    "gate_post_top": [
+     30895,
+     1227
+    ]
+   },
+   "vis": "part: 31017-31087 behind the willow trunk",
+   "conf": "high",
+   "src": "brief: the hut's wattle fences",
+   "note": "Foot v 1335-1340 (zoom 2). Top: v about 1175 at the west, rising to v 1111-1150 at 31100-31285: about 160-225 px tall, the tallest part at the east end beside the shed. Two bindings at about v 1230 and 1320 (east part). Taken as one fence continuing behind the trunk. MERGE (from t2): a thin post stands in the gateway (30887-30903, v 1227-1277; points gate_post_foot and gate_post_top), about 60 px of v behind the fence's foot line, with a few loose fence strokes lying on the ground beside it (30880-30920, v 1283-1297): part of this fence (a gate post and a loose hurdle). The A-frame trestle in the gap is t2's S1.prop.trestle_hut_gate_30841.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.road.main",
+   "kind": "road",
+   "route": true,
+   "name": "the country road from the market through the village, under the great willows and past the farmsteads to the charcoal train's path",
+   "what": "The walk through S1's west half, read from the open, trodden ground (no road is drawn in the countryside): from the market seam it runs east across the village ground in front of the stall shed (where the buffalo, the ox and the barrow are), over the open field where the runaway horse and its chasers run, then turns south between the farmhouse and the hut under a willow's hanging branches, down to the travellers' band of ground, runs east along the willow dyke (隋堤) among the great pollarded willows, and climbs north-east behind the massive willows toward the farmhouses' road. East of u 33000 (structures_e's join piece, spliced in the merge): The country road along the front of the farmsteads: a level strip of bare earth between the farmhouses' fences and the bank in front of them, past the open barn and along the south of the threshing floor, then north of the big bare trees and down the charcoal donkey train's path, which runs diagonally from the train's head (north-west) to its driver (south-east) on a low bank above the stream, and on east along the north bank until the seal and the mist take it. No road edge is drawn anywhere: the edges are where the trodden ground meets fence, bank or open ground.",
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       29050,
+       730
+      ],
+      [
+       29300,
+       790,
+       "est"
+      ],
+      [
+       29600,
+       830,
+       "est"
+      ],
+      [
+       29900,
+       850,
+       "est"
+      ],
+      [
+       30150,
+       845,
+       "est"
+      ],
+      [
+       30400,
+       830,
+       "est"
+      ],
+      [
+       30500,
+       900,
+       "est"
+      ],
+      [
+       30560,
+       1050,
+       "est"
+      ],
+      [
+       30620,
+       1250,
+       "est"
+      ],
+      [
+       30680,
+       1400,
+       "est"
+      ],
+      [
+       30720,
+       1470,
+       "est"
+      ],
+      [
+       30850,
+       1505,
+       "est"
+      ],
+      [
+       31000,
+       1525,
+       "est"
+      ],
+      [
+       31150,
+       1530,
+       "est"
+      ],
+      [
+       31300,
+       1505,
+       "est"
+      ],
+      [
+       31400,
+       1478,
+       "est"
+      ],
+      [
+       31650,
+       1475,
+       "est"
+      ],
+      [
+       31900,
+       1475,
+       "est"
+      ],
+      [
+       32100,
+       1450,
+       "est"
+      ],
+      [
+       32300,
+       1430,
+       "est"
+      ],
+      [
+       32500,
+       1330,
+       "est"
+      ],
+      [
+       32700,
+       1150,
+       "est"
+      ],
+      [
+       32850,
+       1000,
+       "est"
+      ],
+      [
+       33000,
+       985,
+       "est"
+      ],
+      [
+       33150,
+       965,
+       "est"
+      ],
+      [
+       33300,
+       945,
+       "est"
+      ],
+      [
+       33450,
+       922
+      ],
+      [
+       33650,
+       922
+      ],
+      [
+       33850,
+       925
+      ],
+      [
+       34050,
+       928
+      ],
+      [
+       34200,
+       940
+      ],
+      [
+       34400,
+       940
+      ],
+      [
+       34600,
+       937
+      ],
+      [
+       34800,
+       935
+      ],
+      [
+       34950,
+       920
+      ],
+      [
+       35100,
+       905
+      ],
+      [
+       35250,
+       895
+      ],
+      [
+       35400,
+       885,
+       "est"
+      ],
+      [
+       35600,
+       860,
+       "est"
+      ],
+      [
+       35800,
+       835,
+       "est"
+      ],
+      [
+       36000,
+       805,
+       "est"
+      ],
+      [
+       36150,
+       780,
+       "est"
+      ],
+      [
+       36245,
+       766
+      ],
+      [
+       36310,
+       798
+      ],
+      [
+       36390,
+       836
+      ],
+      [
+       36480,
+       882
+      ],
+      [
+       36580,
+       900
+      ],
+      [
+       36680,
+       915
+      ],
+      [
+       36780,
+       928
+      ],
+      [
+       36900,
+       942
+      ],
+      [
+       37000,
+       958,
+       "est"
+      ],
+      [
+       37120,
+       972,
+       "est"
+      ],
+      [
+       37240,
+       975,
+       "est"
+      ],
+      [
+       37390,
+       1005,
+       "est"
+      ]
+     ],
+     "edge_n": [
+      [
+       29050,
+       695,
+       "est"
+      ],
+      [
+       29262,
+       662,
+       "est"
+      ],
+      [
+       29486,
+       664
+      ],
+      [
+       29825,
+       662,
+       "est"
+      ],
+      [
+       29900,
+       645,
+       "est"
+      ],
+      [
+       30000,
+       590
+      ],
+      [
+       30150,
+       578
+      ],
+      [
+       30300,
+       565
+      ],
+      [
+       30450,
+       558
+      ],
+      [
+       30600,
+       610,
+       "est"
+      ],
+      [
+       30680,
+       760,
+       "est"
+      ],
+      [
+       30700,
+       1000,
+       "est"
+      ],
+      [
+       30712,
+       1330
+      ],
+      [
+       30820,
+       1430
+      ],
+      [
+       31000,
+       1460
+      ],
+      [
+       31100,
+       1484
+      ],
+      [
+       31150,
+       1500,
+       "est"
+      ],
+      [
+       31250,
+       1500,
+       "est"
+      ],
+      [
+       31300,
+       1470,
+       "est"
+      ],
+      [
+       31400,
+       1450
+      ],
+      [
+       31600,
+       1452
+      ],
+      [
+       31800,
+       1455
+      ],
+      [
+       31920,
+       1460
+      ],
+      [
+       32100,
+       1400,
+       "est"
+      ],
+      [
+       32300,
+       1325
+      ],
+      [
+       32500,
+       1200,
+       "est"
+      ],
+      [
+       32700,
+       1060,
+       "est"
+      ],
+      [
+       32850,
+       960,
+       "est"
+      ],
+      [
+       33000,
+       945,
+       "est"
+      ],
+      [
+       33150,
+       925,
+       "est"
+      ],
+      [
+       33300,
+       905,
+       "est"
+      ],
+      [
+       33450,
+       892
+      ],
+      [
+       33650,
+       895
+      ],
+      [
+       33850,
+       902
+      ],
+      [
+       34050,
+       903
+      ],
+      [
+       34200,
+       916
+      ],
+      [
+       34400,
+       914
+      ],
+      [
+       34600,
+       916
+      ],
+      [
+       34800,
+       918
+      ],
+      [
+       34950,
+       878
+      ],
+      [
+       35100,
+       860,
+       "est"
+      ],
+      [
+       35250,
+       845,
+       "est"
+      ],
+      [
+       35400,
+       840,
+       "est"
+      ],
+      [
+       35600,
+       815,
+       "est"
+      ],
+      [
+       35800,
+       790,
+       "est"
+      ],
+      [
+       36000,
+       760,
+       "est"
+      ],
+      [
+       36150,
+       735,
+       "est"
+      ],
+      [
+       36300,
+       755,
+       "est"
+      ],
+      [
+       36400,
+       790,
+       "est"
+      ],
+      [
+       36500,
+       835,
+       "est"
+      ],
+      [
+       36600,
+       860,
+       "est"
+      ],
+      [
+       36700,
+       875,
+       "est"
+      ],
+      [
+       36850,
+       900,
+       "est"
+      ],
+      [
+       37000,
+       925,
+       "est"
+      ],
+      [
+       37120,
+       958,
+       "est"
+      ],
+      [
+       37240,
+       955,
+       "est"
+      ],
+      [
+       37390,
+       980,
+       "est"
+      ]
+     ],
+     "edge_s": [
+      [
+       29050,
+       1000,
+       "est"
+      ],
+      [
+       29300,
+       1060,
+       "est"
+      ],
+      [
+       29600,
+       1110,
+       "est"
+      ],
+      [
+       29800,
+       1120
+      ],
+      [
+       29990,
+       1100
+      ],
+      [
+       30100,
+       1035,
+       "est"
+      ],
+      [
+       30400,
+       1035,
+       "est"
+      ],
+      [
+       30410,
+       1200,
+       "est"
+      ],
+      [
+       30450,
+       1325
+      ],
+      [
+       30550,
+       1600,
+       "est"
+      ],
+      [
+       30720,
+       1600,
+       "est"
+      ],
+      [
+       30860,
+       1550
+      ],
+      [
+       31020,
+       1590
+      ],
+      [
+       31100,
+       1600
+      ],
+      [
+       31300,
+       1600,
+       "est"
+      ],
+      [
+       31400,
+       1500
+      ],
+      [
+       31650,
+       1498
+      ],
+      [
+       31950,
+       1505
+      ],
+      [
+       32100,
+       1560,
+       "est"
+      ],
+      [
+       32250,
+       1505
+      ],
+      [
+       32460,
+       1515
+      ],
+      [
+       32600,
+       1400,
+       "est"
+      ],
+      [
+       32750,
+       1200,
+       "est"
+      ],
+      [
+       32850,
+       1040,
+       "est"
+      ],
+      [
+       33000,
+       1025,
+       "est"
+      ],
+      [
+       33150,
+       1005,
+       "est"
+      ],
+      [
+       33300,
+       985,
+       "est"
+      ],
+      [
+       33500,
+       948
+      ],
+      [
+       33700,
+       950
+      ],
+      [
+       33900,
+       953
+      ],
+      [
+       34100,
+       960
+      ],
+      [
+       34300,
+       966
+      ],
+      [
+       34500,
+       960
+      ],
+      [
+       34700,
+       960
+      ],
+      [
+       34900,
+       962
+      ],
+      [
+       35100,
+       935
+      ],
+      [
+       35300,
+       930
+      ],
+      [
+       35450,
+       925,
+       "est"
+      ],
+      [
+       35600,
+       905,
+       "est"
+      ],
+      [
+       35800,
+       880,
+       "est"
+      ],
+      [
+       36000,
+       860,
+       "est"
+      ],
+      [
+       36190,
+       845
+      ],
+      [
+       36300,
+       862
+      ],
+      [
+       36400,
+       890
+      ],
+      [
+       36500,
+       916
+      ],
+      [
+       36580,
+       935
+      ],
+      [
+       36700,
+       960,
+       "est"
+      ],
+      [
+       36850,
+       965,
+       "est"
+      ],
+      [
+       37000,
+       990,
+       "est"
+      ],
+      [
+       37120,
+       1000,
+       "est"
+      ],
+      [
+       37240,
+       1005,
+       "est"
+      ],
+      [
+       37390,
+       1040,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "part: the ground is ink wash and no edge is drawn anywhere; under the big willows' crowns at u 32300-33300; behind the big bare trees at u 35800-36150; under a seal from u ~37250",
+   "conf": "low",
+   "src": "余辉: 隋堤烟柳 (setting); 惊马闯市 (setting)",
+   "note": "POINT 0 = the datum, copied from S2.road.main's last centre point in gen/map/S2/parts/structures_w.json: (29050,730) est, with S2's edges there (edge_n 695, edge_s 1000) - the open ground in front of the 望楼饭铺 shed's east end and S1's stall. The EAST END (32850, 33000, 33150) copies structures_e's join piece S1.road.main_east point for point (centre 1000/985/965, edge_n 960/945/925, edge_s 1040/1025/1005), so the splice at 33000 is clean. EDGES, how read: west stretch (29050-30450) edge_n = the stall's front line (post foot v 664; t1's counter S1.prop.stall_counter_29430 at v 664-666) and the foot of the chase field's north bank (S1.grd.bank_30300); edge_s = under the bottom-left willow's crown (the walker at 29200 has his feet at about v 1060), the 菜地's north edge (S1.grd.field_vegetable_29790) and the farmhouse hall's back (placeholder). The turn south (30400-30720) is NOT painted as a path: it is the 300 px gap of open ground under hanging willow branches between the farmhouse (east end about 30400) and the hut's fence (west end 30712); all its points est. Lower stretch (30720-32300): edge_n = the hut fence's foot, the foot of S1.grd.bank_30750 and the willow dyke's front bank (S1.grd.bank_31660); edge_s = the tops of the next banks down (S1.grd.bank_30900, S1.grd.bank_31680). It passes south of the willows at 31548-31939 and north of the massive willow's trunk foot at about 32080 (hidden behind it). The CLIMB (32300-32850) to structures_e's road in front of the farmhouses (v about 920 at 33450) is not painted: it runs behind (north of) the massive trunk at 32470-32780, crossing S1.grd.bank_32445 and S1.grd.bank_32900; all est. OTHER READINGS of the route: (a) an upper way behind the hut and the great willows at v about 850-1000 (the willows' crowns hide that ground; it would skip the willows' feet, 隋堤烟柳's view); (b) the travellers' path (S1.road.path_30300) reached from the village ground through the 54 px gap between the 菜地's east end and the farmhouse wing (u 30002-30056, v 1130-1300): too narrow for a road; (c) under the bottom-left willow past the walker at 29200: nothing drawn. The sedan party's track (S1.road.path_30950) leaves the silk at its top and cannot carry the route east. MERGE: spliced at u 33000 with structures_e's join piece S1.road.main_east (dropped): points up to and including u 33000 are structures_w's, points east of it the piece's (identical at 32850/33000/33150, so the splice is clean). The east piece's own reading follows. HOW READ. u 33400-35250 (conf med): edge_n = the feet of the brushwood fences and hedges (v 882-918) and the barn's posts (v 867-880); edge_s = the top of the yard bank S1.grd.yard_bank_34400 (v 945-966; 925-935 at the threshing floor). u 36190-36900 (conf med): the centre is the line of the donkey train's hooves and drivers' feet (t8: head driver ~(36245, 766), donkeys at v 798, 830-841, 880-885, 903-917, 936-946, rear driver (36795, 925)); edge_s = the top of the dyke bank S1.grd.dyke_36380 under them; edge_n is est, ~50 px north of the centre. u 35250-36190: not painted as a path; est, joining the threshing floor to the train's head behind (north of) the big bare trees whose bases are at v ~1100-1230. u 32850-33300: under the willow crown, est; structures_w's reading of S1.road.main at u 33000-33150 decides, and the merge reconciles the overlap. East of the rear driver nothing marks it: it is est, bent to pass south of the roots of the bare tree with the leaning pole (t8, roots u 37030-37180, v 880-955) and north of the north bank's top. East end (37240, 975) est: from u 37250 a seal covers the strip (v 800-980) and beyond it is plain silk (mist), so nothing past it is recorded. WHY THIS IS THE MAIN ROAD: the charcoal donkey train, the painting's travellers here, walks it toward the city, and it is the only continuous level strip through the farmsteads; the bridge path S1.road.path_36380 has no readable continuation off the bridge. Width 40-80 px of v (about 1-1.5 m at 51.25 px/m). MERGE (for the frame and the builder): between u 35030 and 35420 the route's centre (v 905-895) and edge_n (v 860-845) run inside the south part of S1.grd.threshing_floor_35225 (v 800-930): the road skirts the floor along its south edge, and the two share that strip of open ground; nothing is painted to separate them. The two unpainted bends (30400-30720 south, 32300-32850 north) and the est stretch 35250-36190 are recorded choices of reading, not strokes. SECOND PASS (start): the note says 'from u 37250 a seal covers the strip (v 800-980)'. Measured, the seal at that height spans u 37396-37538, v 805-1007. The seal starting at 37248 is the top one (v 51-319). Between 37250 and 37396 the strip is painted open ground: the bank's foot (S1.grd.bank_37050, v 962-978) above it and the north bank's top (S1.grd.bank_36900, v ~1045-1060) below it. The est route can run on to the seal's edge, ending at 37390. That is OPTIONAL: it is still a reading through unpainted ground, and it adds about 2 m to the walkable east end. FRAME: point 0 of each line is S2.road.main's last point at u 29050, copied from map/strokes/S2.json on every run of merge_fixes.mjs (centre (29050, 730) measured by S2, edges (29050, 695) and (29050, 1000) est): the datum of map/frames/S1.json, station +314.87. FRAME: edge_n gets two points at the hut willow's bole, (31150, 1500, est) and (31250, 1500, est), between (31100, 1484) and (31300, 1470, est): with the bole's base moved to its drawn lower edge (31215, 1492, est; second pass willows) the old line ran about 20 px inside the bole. The centre (31150, 1530, est) is unchanged. FRAME (from the second pass farms, for the lead): from u 33400 to 34750 nine tree bases stand between edge_n and edge_s, five on or south of the centre (S1.tree.elm_forked_33433, elm_forked_33785, elm_tall_33865, elm_slender_33906, elm_twin_33936, elm_spreading_34030, bare_elm_twin_34552, bare_elm_twin_34640, bare_elm_tall_34703): the light strip between the fences' feet (v ~895-918) and the yard bank's top (v ~943-950) is the only level ground there, and the trees stand on it. The lines are kept as read (the strokes don't settle it): the walkable line weaves between the trunks (a build choice), or the lead moves the centre onto the bank top just south of the feet (v ~945-950).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.road.path_30950",
+   "kind": "road",
+   "name": "the tomb-sweeping party's track",
+   "what": "The broad track the tomb-sweeping party comes down: from the top of the silk between the far willows (u about 30900-31070) down through the open ground where the riders, the sedan and the porters walk, to the chase field, where it meets S1.road.main at about (30650, 700).",
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       30650,
+       700,
+       "est"
+      ],
+      [
+       30760,
+       630,
+       "est"
+      ],
+      [
+       30880,
+       560,
+       "est"
+      ],
+      [
+       30990,
+       470,
+       "est"
+      ],
+      [
+       31050,
+       380,
+       "est"
+      ],
+      [
+       31030,
+       290,
+       "est"
+      ],
+      [
+       31000,
+       160,
+       "est"
+      ],
+      [
+       30985,
+       40,
+       "est"
+      ]
+     ],
+     "edge_w": [
+      [
+       30600,
+       640,
+       "est"
+      ],
+      [
+       30700,
+       545,
+       "est"
+      ],
+      [
+       30810,
+       500
+      ],
+      [
+       30860,
+       400,
+       "est"
+      ],
+      [
+       30880,
+       250,
+       "est"
+      ],
+      [
+       30900,
+       40,
+       "est"
+      ]
+     ],
+     "edge_e": [
+      [
+       30720,
+       770,
+       "est"
+      ],
+      [
+       30960,
+       640,
+       "est"
+      ],
+      [
+       31150,
+       520,
+       "est"
+      ],
+      [
+       31232,
+       420
+      ],
+      [
+       31110,
+       270,
+       "est"
+      ],
+      [
+       31060,
+       150,
+       "est"
+      ],
+      [
+       31040,
+       40,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "part: open faded ground; the upper end fades out at the silk's top",
+   "conf": "low",
+   "src": "名画记: 杨柳杂花装簇轿顶 (pin 6) (setting)",
+   "note": "No edges are drawn: edge_w follows the bank under the willows west of the party (S1.grd.bank_30300's east end, v 495-547) and the left willows' trunks (30683-30772); edge_e the bank under the willows east of it (S1.grd.bank_31390, v 400-420) and the far willows at the top (31074-31284). The party's figures stand from v about 330 (riders) to 580 (the sedan) on it. Above v 250 the track is inferred (the restyle draws it running off the top at about 30900-31000). Recorded by structures_w (all of it is in 30600-31232).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.road.path_30300",
+   "kind": "road",
+   "name": "the travellers' path (迎寒策蹇)",
+   "what": "The band of trodden ground along which the travellers on donkeys and their walkers go, from the figure at the gap south of the farmhouse (u about 30000) down east to where it meets S1.road.main below the hut's fence (u about 30780).",
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       29960,
+       1485,
+       "est"
+      ],
+      [
+       30150,
+       1500
+      ],
+      [
+       30350,
+       1548
+      ],
+      [
+       30500,
+       1610
+      ],
+      [
+       30650,
+       1625
+      ],
+      [
+       30780,
+       1540,
+       "est"
+      ]
+     ],
+     "edge_n": [
+      [
+       29960,
+       1450,
+       "est"
+      ],
+      [
+       30150,
+       1460,
+       "est"
+      ],
+      [
+       30300,
+       1360,
+       "est"
+      ],
+      [
+       30500,
+       1365,
+       "est"
+      ],
+      [
+       30700,
+       1400
+      ],
+      [
+       30780,
+       1440,
+       "est"
+      ]
+     ],
+     "edge_s": [
+      [
+       29960,
+       1525,
+       "est"
+      ],
+      [
+       30050,
+       1575
+      ],
+      [
+       30250,
+       1555
+      ],
+      [
+       30400,
+       1575
+      ],
+      [
+       30480,
+       1640,
+       "est"
+      ],
+      [
+       30700,
+       1645,
+       "est"
+      ],
+      [
+       30780,
+       1600,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "part: ink-wash ground; no edge drawn",
+   "conf": "med",
+   "src": "名画记: 骑驴客商 (pin 4); 余辉: 迎寒策蹇 (setting)",
+   "note": "Centre points at the travellers' feet and hooves: the first donkey 30100-30240 at v 1490-1510, the walker with a stick at 30337-30381 (v 1549), the second rider's donkey 30440-30570 (v 1596-1625), the man leading it 30625-30675 (v 1625-1630). edge_s = the top of the curved bank under them (S1.grd.bank_29950); edge_n = the foot of the bank below the farmhouse and the hut (S1.grd.bank_30750). West of about 29960 no path is drawn: the ground bands run on under the bottom-left willow's crown.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.road.path_29640",
+   "kind": "road",
+   "name": "raised field path across the far fields",
+   "what": "A straight raised path (or a bank between fields) running diagonally down across the far banked fields at the top of the silk, from about (29515,148) to (29720,330), drawn as two or three parallel lines.",
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       29515,
+       148
+      ],
+      [
+       29620,
+       240
+      ],
+      [
+       29720,
+       328
+      ]
+     ],
+     "edge_w": [
+      [
+       29490,
+       160
+      ],
+      [
+       29590,
+       250
+      ],
+      [
+       29690,
+       335
+      ]
+     ],
+     "edge_e": [
+      [
+       29540,
+       135
+      ],
+      [
+       29650,
+       228
+      ],
+      [
+       29750,
+       320
+      ]
+     ]
+    }
+   },
+   "vis": "part: lower end under willow branches",
+   "conf": "med",
+   "note": "Slope about +0.9 (down to the right): it runs north-west to south-east on the ground, not straight back, so it gives no dx knot. Its top end meets the field bank S1.grd.terraced_fields_29450 edge_v155 where the far figures and the dark animal stand (t1's); its lower end fades behind the stall shed's willows at about v 330. The restyle reads a raised path across terraced fields (right on the form).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.terraced_fields_29450",
+   "kind": "grd",
+   "name": "banked fields at the top of the silk",
+   "what": "Far fields at the top of the silk behind the village: long level strips divided by low banks or ridges (horizontal ink lines every 30-40 px of v), crossed by the diagonal raised path S1.road.path_29640; trees and small far figures with a dark animal stand on the strip at v 120-150.",
+   "pts": {
+    "lines": {
+     "edge_v57": [
+      [
+       29050,
+       57
+      ],
+      [
+       29150,
+       58
+      ]
+     ],
+     "edge_v70w": [
+      [
+       29100,
+       70
+      ],
+      [
+       29200,
+       72
+      ],
+      [
+       29380,
+       71
+      ]
+     ],
+     "edge_v95w": [
+      [
+       29100,
+       92
+      ],
+      [
+       29215,
+       94
+      ],
+      [
+       29330,
+       97
+      ]
+     ],
+     "edge_v128w": [
+      [
+       29050,
+       110
+      ],
+      [
+       29105,
+       129
+      ],
+      [
+       29160,
+       130
+      ],
+      [
+       29215,
+       133,
+       "est"
+      ]
+     ],
+     "edge_v155": [
+      [
+       29050,
+       150
+      ],
+      [
+       29250,
+       156
+      ],
+      [
+       29350,
+       163
+      ],
+      [
+       29450,
+       168
+      ],
+      [
+       29500,
+       180
+      ],
+      [
+       29560,
+       190
+      ]
+     ],
+     "edge_v250w": [
+      [
+       29250,
+       250
+      ],
+      [
+       29400,
+       250
+      ],
+      [
+       29500,
+       248
+      ]
+     ],
+     "edge_v63e": [
+      [
+       29790,
+       67
+      ],
+      [
+       29900,
+       64
+      ],
+      [
+       29980,
+       63
+      ],
+      [
+       30060,
+       58
+      ],
+      [
+       30130,
+       55
+      ]
+     ],
+     "edge_v85": [
+      [
+       29600,
+       85
+      ],
+      [
+       29750,
+       84
+      ],
+      [
+       29850,
+       86
+      ],
+      [
+       29900,
+       94
+      ],
+      [
+       29980,
+       93
+      ],
+      [
+       30060,
+       88
+      ]
+     ],
+     "edge_v120": [
+      [
+       29600,
+       120
+      ],
+      [
+       29750,
+       120
+      ],
+      [
+       29810,
+       121
+      ],
+      [
+       29900,
+       117
+      ],
+      [
+       29980,
+       119
+      ],
+      [
+       30060,
+       112
+      ]
+     ],
+     "edge_v152": [
+      [
+       29560,
+       150
+      ],
+      [
+       29750,
+       152
+      ],
+      [
+       29900,
+       155
+      ]
+     ],
+     "edge_v177": [
+      [
+       29600,
+       176
+      ],
+      [
+       29750,
+       177
+      ],
+      [
+       29810,
+       177
+      ]
+     ],
+     "edge_v215": [
+      [
+       29600,
+       213
+      ],
+      [
+       29800,
+       215
+      ],
+      [
+       29900,
+       217
+      ]
+     ],
+     "edge_v250e": [
+      [
+       29650,
+       250
+      ],
+      [
+       29800,
+       250
+      ]
+     ],
+     "edge_v282": [
+      [
+       29560,
+       286
+      ],
+      [
+       29650,
+       285,
+       "est"
+      ],
+      [
+       29720,
+       281
+      ],
+      [
+       29830,
+       280
+      ]
+     ],
+     "edge_v300": [
+      [
+       29700,
+       298
+      ],
+      [
+       29850,
+       300
+      ],
+      [
+       29900,
+       302,
+       "est"
+      ]
+     ],
+     "edge_v362": [
+      [
+       29599,
+       361
+      ],
+      [
+       29650,
+       364
+      ],
+      [
+       29705,
+       367
+      ]
+     ],
+     "diag_ne": [
+      [
+       29740,
+       30
+      ],
+      [
+       29800,
+       85
+      ],
+      [
+       29850,
+       130
+      ]
+     ]
+    }
+   },
+   "vis": "part: east of 29870 under the willow crowns; v 300-360 behind the stall's willows",
+   "conf": "med",
+   "note": "Read at zoom 1-2 with raised contrast. Each edge_* line is one field bank or ridge, named by its v. Which side is higher is not drawn; read as fields stepping up to the north (up the silk), each step a few px (far: the figures standing on edge_v155's strip are 32-47 px tall, so a low bank there is about 5-10 px). BOTH READINGS: terraced fields (the restyle draws stone-faced terraces) or flat fields with raised ridges between them; the strokes give only the lines. The lines continue west of the seam to about 28950 (edge_v57 at (28960,58), edge_v155 at (28950,148)): S2's ground. diag_ne (29740,30)->(29850,130) is a second diagonal line parallel to the path, perhaps the fields' east boundary. No receding (up-right) field edge is drawn. MERGE (cross-key seam check against map/strokes/S2.json, u 28750-29350): edge_v155 starts at (29050, 152), 2 px from S2.grd.bank_lines_top_28900's edge_n end (29050, 150): the same stroke, already trimmed at the seam on both sides. S2's lower line (edge_s, ending (29050, 192) est; its note says it runs to (29073, 192)) has no S1 line east of the seam. edge_v57 runs on west of the seam to about (28960, 58), where S2 has no line: a seam note for S2. SECOND PASS (west): lines added and moved from row darkness profiles (red channel, 30-40 px column bands, local minima against a running background) and line profiles (mean red along a line against parallel lines 2-16 px off), checked on zoom 1.6-2.2 colour and blurred-grey crops. ADDED near the seam, where nothing was recorded between v 57 and v 152 east of 29050: edge_v70w (u 29100-29380, on the line 121-128 against 130-147), edge_v95w (29100-29330, 127-132 against 134-148) and edge_v128w (a band v 126-141, its top edge from (29050, 110) to (29215, 133); it continues the curved line S2's t12 noted at (28999, 83)->(29079, 126), which a line profile confirms west of the seam at (29000, 81)->(29050, 106): S2's side, not recorded by S2). ADDED east: edge_v63e (29790-30130, 135 against 147, sloping up to the east; it may run on to about (30230, 50) behind the new far tree S1.tree.far_tree_top_30297). EXTENDED east past the silk crease at u ~29845: edge_v85 to (30060, 88) (depth 13-21 at u 29860-30010) and edge_v120 to (30060, 112) (weaker, depth 8-11). MOVED: edge_v185 -> edge_v177 (no stroke on the old line, 147 against 142-150; the stroke is at v 176-177, 140 against 148) and edge_v265 -> edge_v282 (no stroke on the old line: 140 against 133-142; the stroke is at v 279-286 from u 29560 to 29830, depth 21-30, broken where S1.road.path_29640 crosses it at u 29620-29690). Both moved lines lie partly under willow shoots (S1.tree.willow_stall_c_29300, S1.tree.willow_east_29845); the profiles were read in bands on both sides of the shoots. Not changed: edge_v57 (its stroke is faint; the darkest rows at 29050-29150 are v 43-48 and 67-69, both weak), edge_v300 (no clear stroke on it or 18 px below; shoots), edge_v152 and edge_v215 (within 5 px). The far figures stand on these strips: the pair at v 118-122 on the strip between edge_v95w and edge_v128w; S1.fig.far_figure_29337 (v 141) and the group at v 143-145 on the strip between edge_v128w's line and edge_v155. FRAME (cross-key seam check): edge_v155's first point takes S2.grd.bank_lines_top_28900 edge_n's last point exactly, (29050, 150) (was (29050, 152)), so the line joins across the seam; copied from map/strokes/S2.json on every run.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_29590",
+   "kind": "grd",
+   "name": "low bank in front of the stall's yard",
+   "what": "A soft ink-wash step along the front of the stall's yard, just south of where the buffalo lies and the ox stands: the yard is a little higher than the open ground south of it.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29280,
+       770
+      ],
+      [
+       29500,
+       775
+      ],
+      [
+       29700,
+       772
+      ],
+      [
+       29900,
+       775
+      ]
+     ],
+     "bank_foot": [
+      [
+       29280,
+       795
+      ],
+      [
+       29500,
+       800
+      ],
+      [
+       29700,
+       795
+      ],
+      [
+       29900,
+       800
+      ]
+     ]
+    }
+   },
+   "vis": "part: west end behind the lying buffalo",
+   "conf": "low",
+   "note": "A darker wash band v 760-800 with a line at v 775-785, u 29280-29900 (zoom 1, raised contrast). Higher side north. Height est 10-20 px (no post or figure stands on the step). Could be only shading of the ground: conf low.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_30300",
+   "kind": "grd",
+   "name": "bank on the north side of the chase field",
+   "what": "A long bank rising gently to the east along the north side of the open field where the runaway horse and its chasers run; willows stand along its top at both ends and a raised field (S1.grd.field_30430) lies behind it.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29960,
+       557
+      ],
+      [
+       30150,
+       540
+      ],
+      [
+       30300,
+       508
+      ],
+      [
+       30400,
+       498
+      ],
+      [
+       30550,
+       488
+      ],
+      [
+       30650,
+       472
+      ],
+      [
+       30810,
+       495,
+       "est"
+      ]
+     ],
+     "bank_foot": [
+      [
+       29960,
+       592
+      ],
+      [
+       30050,
+       582
+      ],
+      [
+       30250,
+       562
+      ],
+      [
+       30450,
+       558
+      ],
+      [
+       30600,
+       600
+      ],
+      [
+       30700,
+       560,
+       "est"
+      ],
+      [
+       30810,
+       547
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "med",
+   "note": "Read at zoom 1 (labels legible): the upper dark stroke (29980,560)->(30650,470) and the lower dark band (30050,580)->(30600,600). Higher side north. Height about 35-60 px of v between top and foot; the willow at (30650,520) stands on its top. East of 30650 it is the bank under the willows west of the party's track (v 495-547). MERGE: the small marks below its foot at (30090-30113, v 590-627) that t1 left as \"small rocks or a stump\" and t2 as \"stones or moss dots\" are a few faint dots on a zoom-3 crop: moss dots, no entity.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.field_30430",
+   "kind": "grd",
+   "name": "raised field behind the chase field",
+   "what": "A slightly raised plot of ground behind the chase field's north bank, its north edge a ridge drawn as a dotted line of small clumps (plants or clods), its west end a short slope.",
+   "pts": {
+    "lines": {
+     "ridge_n": [
+      [
+       30290,
+       372
+      ],
+      [
+       30370,
+       382
+      ],
+      [
+       30450,
+       392
+      ],
+      [
+       30550,
+       390
+      ]
+     ],
+     "edge_w": [
+      [
+       30290,
+       372
+      ],
+      [
+       30300,
+       420,
+       "est"
+      ],
+      [
+       30310,
+       500,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "part: under willow branches",
+   "conf": "low",
+   "note": "The dotted ridge v 372-385 (u 30290-30550) and the bank S1.grd.bank_30300 (top v 498-508 there) bound a light plot about 120 px deep. A field (the clumps a crop row) or a raised strip of ground: both readings. The banked fields above it, with a diagonal edge from about (30370, 266) down to the ridge at (30550, 381), are S1.grd.banked_fields_30400 (second pass). SECOND PASS (west): east of u 30370 the clumps' dark centres lie 8-14 px below the recorded ridge (line profiles: darkest at +8 to +14 px at 30370-30450 and +4 to +10 px at 30450-30550); the west end at the bump (30300-30330, 365-375) is unchanged.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.field_vegetable_29790",
+   "kind": "grd",
+   "name": "the vegetable field (菜地)",
+   "what": "A slightly raised plot south of the village ground, west of the farmhouse, planted with young bare trees: 13 trunk feet and a faint fourteenth, each its own tree entity (S1.tree.young_bare_29558 to S1.tree.young_bare_29968), whose low crab-claw crowns fill the plot (the second pass counted the feet; \"25-35 small plants\" was a reading of these crowns); a pale pointed rock (S1.grd.rock_29745) stands at its north-west corner.",
+   "pts": {
+    "base": {
+     "sw": [
+      29560,
+      1340
+     ],
+     "se": [
+      29995,
+      1350,
+      "est"
+     ],
+     "ne": [
+      30000,
+      1128
+     ],
+     "nw": [
+      29590,
+      1130,
+      "est"
+     ]
+    }
+   },
+   "vis": "part: plants overlap the edges; west end under the bottom-left willow's branches",
+   "conf": "med",
+   "src": "名画记: 菜地 (pin 5)",
+   "note": "North edge v 1116-1130 from the rock (29790) to 30000 (zoom 1.6); south edge = the top of the bank S1.grd.bank_29750 (v 1330-1350); west end at about 29550-29600 where the plants start; east end at the farmhouse wing (30000-30056). ROWS: the plants stand in loose bands at about v 1140-1200, 1200-1280 and 1280-1350, running roughly along the scroll (dv/du about 0); no furrow or row line is drawn, so the field gives NO receding edge for the frame. The plants are painted as tiny bare shrubs (the restyle too): vegetables (pin 5 名画记: 菜地) or a nursery of saplings. t1 records the taller ones as 13 young bare trees (S1.tree.young_bare_29558 ... S1.tree.young_bare_29948, bases v 1222-1400): this entity is the plot's ground only, never a second record of its plants; whether they are a crop or a grove is the merge's and the user's call (BOTH READINGS). t1's post S1.prop.post_crossbar_29862 stands at its north edge. MERGE: the plants are counted two ways: t1 records 13 young bare trees with trunks 90-180 px tall (S1.tree.young_bare_29558 ... _29948, count good to about +-2); this entity's what describes 25-35 small twiggy plants 30-70 px tall in 3-4 loose bands. On the merge's zoom-1.6 crop the plot is a dense mass of small bare crab-claw crowns over thin trunks (v 1150-1350), the trunks clearer in its east half. SECOND PASS (west): trunk feet counted on column darkness profiles (red channel, 20 px bands of v from 1180 to 1380): 13 trunks, the same as t1's trees (u 29558, 29647-29661, 29733-29738, 29746-29756, 29780, 29794-29796, 29837, 29860-29862, 29879-29885, 29899-29905, 29915-29920, 29933, 29950), plus a faint fourteenth at 29966-29975 (proposed, S1.tree.young_bare_29968, low). Between them the profiles show no further stems with feet: the '25-35 small plants' are these trees' low crab-claw crowns and branches (the middle group's trees are only 90-170 px tall, so their crowns fill the band v 1250-1350). The planting to build is the 13 (or 14) trees; crop or grove of saplings stays the user's call.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.rock_29745",
+   "kind": "grd",
+   "name": "pale pointed rock at the field's north-west corner",
+   "what": "A pale, rounded upright mass about 90 px wide and 160-180 px tall at the north-west corner of the vegetable field, outlined with short dark hatched strokes on its west side.",
+   "pts": {
+    "base": {
+     "sw": [
+      29704,
+      1147
+     ],
+     "se": [
+      29788,
+      1145
+     ],
+     "ne": [
+      29798,
+      1105,
+      "est"
+     ],
+     "nw": [
+      29714,
+      1107,
+      "est"
+     ]
+    },
+    "sw_top": [
+     29707,
+     1095
+    ],
+    "se_top": [
+     29785,
+     1090
+    ],
+    "summit": [
+     29757,
+     1043
+    ]
+   },
+   "vis": "part: foot hidden by the field's plants",
+   "conf": "low",
+   "note": "BOTH READINGS (zoom 3): (a) a rock or earth mound with textured strokes; (b) more likely a figure in a hooded cloak seen from behind (a dome-shaped hood 35 px wide at v 1043-1060, shoulders widening to 75 px by v 1100, a cross line like a belt at v 1100, the lower body hidden by the plants), in scale with the man at the post beside it (t1's S1.fig.man_at_post_29812, head v 968); the restyle draws a man in a blue robe there. t1 recorded the same mass as the prop S1.prop.rock_or_heap_29745 (rock, earth mound or straw heap; outline u 29704-29788, v 1039-1147): the merge keeps ONE of the two (this grd if a rock or mound, t1's prop if a heap, a figure of t1's if a hooded man). Front foot taken at v 1145-1147 as t1 reads it (the field's plants start there); back corners placeholders. MERGE: t1 recorded the same mass as the prop S1.prop.rock_or_heap_29745 (rock, earth mound or straw heap; its west face's hatching \"like rock texture more than straw\"); that prop is retired and this entity kept. On the merge's zoom 2.5-4 crops it reads as an upright pointed rock: the shaded west face is laid in with diagonal texture strokes, and no head, face, hands or feet are drawn. SECOND PASS (west): a rock; reading (b) is dropped. At zoom 2-3 the west face is laid in with short parallel diagonal texture strokes (rock texture), the outline rises to a pointed, slightly west-leaning summit at (29757, 1043) and runs down into the field's ground with no hem, feet or hands, and no face or hood opening is drawn. As a figure it would stand 104 px from summit to foot (v 1043-1147) beside the 146 px man at the post at the same foot level: too short for a standing adult. The restyle's man in blue here is invented.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_29750",
+   "kind": "grd",
+   "name": "bank along the south side of the vegetable field",
+   "what": "The vegetable field's south edge: a raised edge with a dark wash slope below it, down to the next band of ground.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29560,
+       1335
+      ],
+      [
+       29650,
+       1332
+      ],
+      [
+       29750,
+       1330
+      ],
+      [
+       29850,
+       1345
+      ],
+      [
+       29960,
+       1352,
+       "est"
+      ]
+     ],
+     "bank_foot": [
+      [
+       29550,
+       1440
+      ],
+      [
+       29650,
+       1420
+      ],
+      [
+       29750,
+       1430
+      ],
+      [
+       29850,
+       1455
+      ],
+      [
+       29960,
+       1470
+      ]
+     ]
+    }
+   },
+   "vis": "part: west end under willow branches",
+   "conf": "med",
+   "note": "Zoom 1.05, raised contrast: a light raised strip v 1330-1413 with dark wash v 1413-1470 at its foot. Higher side north. Height about 80-110 px of v from top to foot (a slope rather than a step).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_29780",
+   "kind": "grd",
+   "name": "bank below the vegetable field (second step)",
+   "what": "A dark ink-wash band: the next step down south of the vegetable field.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29560,
+       1480
+      ],
+      [
+       29700,
+       1478
+      ],
+      [
+       29850,
+       1488
+      ],
+      [
+       29950,
+       1495
+      ]
+     ],
+     "bank_foot": [
+      [
+       29560,
+       1505
+      ],
+      [
+       29700,
+       1500
+      ],
+      [
+       29850,
+       1512
+      ],
+      [
+       29950,
+       1520
+      ]
+     ]
+    }
+   },
+   "vis": "part: west end under willow branches",
+   "conf": "low",
+   "note": "Wash band v 1470-1520, u 29550-29960; higher side north; about 25 px. Fades east into the travellers' path.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_29950",
+   "kind": "grd",
+   "name": "curved bank under the travellers",
+   "what": "A dark bank curving under the travellers' path: low in the west, rising under the first rider and walker, and turning down at its east end below the second rider.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29560,
+       1550
+      ],
+      [
+       29700,
+       1560
+      ],
+      [
+       29850,
+       1565
+      ],
+      [
+       30050,
+       1575
+      ],
+      [
+       30250,
+       1555
+      ],
+      [
+       30400,
+       1575
+      ],
+      [
+       30440,
+       1610,
+       "est"
+      ]
+     ],
+     "bank_foot": [
+      [
+       29560,
+       1585
+      ],
+      [
+       29700,
+       1590
+      ],
+      [
+       29850,
+       1592
+      ],
+      [
+       30050,
+       1610
+      ],
+      [
+       30250,
+       1595
+      ],
+      [
+       30400,
+       1610
+      ],
+      [
+       30440,
+       1640,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "med",
+   "note": "West half (29560-29950) a wash band v 1547-1594 with darker strokes at 29700-29912; east half the curved stroke (30050,1580)->(30250,1560)->(30400,1580) under the travellers' feet. Higher side north. About 35 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_30250",
+   "kind": "grd",
+   "name": "low bank near the silk's bottom (west and middle)",
+   "what": "A long low ink-wash bank near the bottom of the silk, below the travellers and the hut.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29720,
+       1625
+      ],
+      [
+       29900,
+       1628
+      ],
+      [
+       30100,
+       1640
+      ],
+      [
+       30300,
+       1640
+      ],
+      [
+       30550,
+       1638
+      ],
+      [
+       30800,
+       1630
+      ],
+      [
+       31100,
+       1625
+      ],
+      [
+       31450,
+       1622
+      ]
+     ],
+     "bank_foot": [
+      [
+       29720,
+       1655
+      ],
+      [
+       29900,
+       1660
+      ],
+      [
+       30100,
+       1668
+      ],
+      [
+       30300,
+       1668
+      ],
+      [
+       30550,
+       1668
+      ],
+      [
+       30800,
+       1665
+      ],
+      [
+       31100,
+       1670
+      ],
+      [
+       31450,
+       1672
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "low",
+   "note": "Wash bands v 1623-1672 read in three crops (29720-30100, 30300-30780, 30817-31450) and joined; the join at 30100-30300 is est. Higher side north, about 30-45 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_29830",
+   "kind": "grd",
+   "name": "lowest bank at the bottom left",
+   "what": "The lowest curved bank line above the silk's bottom edge, west half.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       29600,
+       1690
+      ],
+      [
+       29750,
+       1683
+      ],
+      [
+       29900,
+       1690
+      ],
+      [
+       30050,
+       1700
+      ]
+     ],
+     "bank_foot": [
+      [
+       29600,
+       1715
+      ],
+      [
+       29750,
+       1712
+      ],
+      [
+       29900,
+       1718
+      ],
+      [
+       30050,
+       1725
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "low",
+   "note": "Wash line v 1680-1725, u 29598-30055. The silk's bottom edge is at about v 1775-1780 here.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_30750",
+   "kind": "grd",
+   "name": "bank below the farmhouse and the hut's fences",
+   "what": "The bank under the hut's wattle fences and the farmhouse's east end: the hut and fences stand on its top, and it slopes down to the travellers' path.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       30400,
+       1322
+      ],
+      [
+       30540,
+       1316
+      ],
+      [
+       30700,
+       1332
+      ],
+      [
+       30820,
+       1348
+      ],
+      [
+       31020,
+       1380
+      ],
+      [
+       31100,
+       1395
+      ]
+     ],
+     "bank_foot": [
+      [
+       30400,
+       1360,
+       "est"
+      ],
+      [
+       30540,
+       1370
+      ],
+      [
+       30700,
+       1400
+      ],
+      [
+       30820,
+       1430
+      ],
+      [
+       31000,
+       1460
+      ],
+      [
+       31100,
+       1484
+      ]
+     ]
+    }
+   },
+   "vis": "part: middle behind the leaning willow's trunk",
+   "conf": "med",
+   "note": "Zoom 1.25 and 1.4: the dark line (30404,1324)->(30540,1316)->(30700,1332)->(30820,1348)->(31020,1380) and the dark wash below it to v 1430-1484. Higher side north. About 40-90 px; the fences' feet (v 1330-1340) sit on its top.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_30900",
+   "kind": "grd",
+   "name": "dark bank east of the travellers",
+   "what": "A dark ink-wash bank south of the road below the hut, east of the travellers.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       30680,
+       1530
+      ],
+      [
+       30860,
+       1550
+      ],
+      [
+       31020,
+       1590
+      ],
+      [
+       31100,
+       1600
+      ]
+     ],
+     "bank_foot": [
+      [
+       30680,
+       1575,
+       "est"
+      ],
+      [
+       30860,
+       1600
+      ],
+      [
+       31020,
+       1630
+      ],
+      [
+       31100,
+       1645
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "low",
+   "note": "Zoom 1.25: dark band (30684,1540)->(30860,1556)->(31020,1596). Higher side north, about 40-50 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_yard_31390",
+   "kind": "grd",
+   "name": "front edge of the shed's yard",
+   "what": "The small raised yard where the shed on posts stands: its front edge and the dark wash below it.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       31285,
+       1245
+      ],
+      [
+       31400,
+       1242
+      ],
+      [
+       31500,
+       1250
+      ]
+     ],
+     "bank_foot": [
+      [
+       31285,
+       1290
+      ],
+      [
+       31400,
+       1300
+      ],
+      [
+       31500,
+       1300,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "part: east end under the willow trunks",
+   "conf": "med",
+   "note": "Zoom 2: a line v 1240-1250 (31285-31500) with dark wash v 1260-1300 below it. Higher side north, about 50 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_31390",
+   "kind": "grd",
+   "name": "bank under the willows east of the party's track",
+   "what": "A low bank line under the willows on the east side of the tomb-sweeping party's track, with stumps on it.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       31232,
+       400
+      ],
+      [
+       31400,
+       405
+      ],
+      [
+       31547,
+       418
+      ]
+     ],
+     "bank_foot": [
+      [
+       31232,
+       420,
+       "est"
+      ],
+      [
+       31400,
+       428,
+       "est"
+      ],
+      [
+       31547,
+       440,
+       "est"
+      ]
+     ]
+    }
+   },
+   "vis": "part: under willow branches",
+   "conf": "low",
+   "note": "Zoom 0.95: a ground line v 400-420 from 31232 to 31547 with stumps or tree knees at about 31326 and 31474-31526 (t3's). Higher side north (the willows). Small (about 20 px). MERGE: its \"stumps or tree knees\" are t3's S1.tree.sapling_far_31328 (31326) and the foot of S1.tree.willow_far_31505 (31474-31526).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_31660",
+   "kind": "grd",
+   "name": "the willow dyke's front bank (隋堤)",
+   "what": "The raised bank on which the great pollarded willows stand (the Sui dyke): a light raised top round the trunks and a dark wash slope along its front, down to the road.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       31400,
+       1405
+      ],
+      [
+       31600,
+       1402
+      ],
+      [
+       31800,
+       1410
+      ],
+      [
+       31920,
+       1420
+      ]
+     ],
+     "bank_foot": [
+      [
+       31400,
+       1450
+      ],
+      [
+       31600,
+       1452
+      ],
+      [
+       31800,
+       1455
+      ],
+      [
+       31920,
+       1460
+      ]
+     ]
+    }
+   },
+   "vis": "part: east end runs into the massive willow's roots",
+   "conf": "med",
+   "src": "余辉: 隋堤烟柳 (setting)",
+   "note": "Zoom 1.15: the light raised ground round the willow bases (v 1341-1437; trunks at 31548-31765 based at v 1324-1359, 31835-31939 at v 1359) and the dark wash v 1402-1454 along its front. Higher side north, about 45 px. East of 31920 the roots of the massive willow (31878-32250) cover it.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_31680",
+   "kind": "grd",
+   "name": "bank south of the road under the willows",
+   "what": "A dark wash bank south of the road along the willows: the next step down.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       31400,
+       1500
+      ],
+      [
+       31650,
+       1498
+      ],
+      [
+       31950,
+       1505
+      ],
+      [
+       32250,
+       1505,
+       "est"
+      ],
+      [
+       32460,
+       1515
+      ]
+     ],
+     "bank_foot": [
+      [
+       31400,
+       1545
+      ],
+      [
+       31650,
+       1550
+      ],
+      [
+       31950,
+       1548
+      ],
+      [
+       32250,
+       1535,
+       "est"
+      ],
+      [
+       32460,
+       1540
+      ]
+     ]
+    }
+   },
+   "vis": "part: 31950-32250 under the massive willow's roots",
+   "conf": "med",
+   "note": "Zoom 1.15 and 1.1: dark band v 1498-1550 (31400-31957) and its continuation v 1495-1532 (32250-32477). Higher side north, about 45 px.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_31700",
+   "kind": "grd",
+   "name": "low bank under the willows (third step)",
+   "what": "The next dark wash bank down, near the silk's bottom, under the great willows.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       31400,
+       1605
+      ],
+      [
+       31700,
+       1602
+      ],
+      [
+       32000,
+       1610
+      ]
+     ],
+     "bank_foot": [
+      [
+       31400,
+       1650
+      ],
+      [
+       31700,
+       1654
+      ],
+      [
+       32000,
+       1650
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "low",
+   "note": "Zoom 1.15: dark band v 1602-1654, u 31400-32009. Higher side north.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_31825",
+   "kind": "grd",
+   "name": "bottom bank line under the willows",
+   "what": "A faint bank line just above the silk's bottom edge under the great willows.",
+   "pts": {
+    "line": [
+     [
+      31400,
+      1712
+     ],
+     [
+      31800,
+      1715
+     ],
+     [
+      32250,
+      1712
+     ]
+    ]
+   },
+   "vis": "faded",
+   "conf": "low",
+   "note": "Zoom 1.15: a wash line v 1707-1724. The silk's bottom edge is at about v 1778 here.",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_32445",
+   "kind": "grd",
+   "name": "bank behind the massive willows",
+   "what": "A dark wash bank behind (north of) the trunks of the massive willows, seen between them.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       32170,
+       1280
+      ],
+      [
+       32450,
+       1285
+      ],
+      [
+       32720,
+       1290
+      ],
+      [
+       33000,
+       1295
+      ]
+     ],
+     "bank_foot": [
+      [
+       32170,
+       1320
+      ],
+      [
+       32450,
+       1325
+      ],
+      [
+       32720,
+       1322
+      ],
+      [
+       33000,
+       1338
+      ]
+     ]
+    }
+   },
+   "vis": "part: behind the trunks at 32255-32490, 32455-32780 and 32730-33000",
+   "conf": "low",
+   "note": "Zoom 0.9, 1.0 and 1.1: dark band v 1277-1340, u 32167-33200. Ends at 33000 (my range): east of it, and from 32850, structures_e records the same line as S1.grd.bank_33650 bank_top ((32850,1300) est, (33000,1295)). Higher side north, about 40 px. MERGE: continues east of u 33000 as structures_e's S1.grd.bank_33300 (at u 33000: top 1295/1298, foot 1338/1330).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_32900",
+   "kind": "grd",
+   "name": "bank behind the east willow",
+   "what": "A faint ink-wash bank far behind the east pollarded willows, rising a little to the east.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       32640,
+       1135
+      ],
+      [
+       32860,
+       1130
+      ],
+      [
+       33000,
+       1090
+      ]
+     ],
+     "bank_foot": [
+      [
+       32640,
+       1180
+      ],
+      [
+       32860,
+       1175
+      ],
+      [
+       33000,
+       1130
+      ]
+     ]
+    }
+   },
+   "vis": "part: seen between the willow trunks and under their branches",
+   "conf": "low",
+   "note": "Zoom 1.0, raised contrast: wash bands v 1130-1180 (32640-32860) and v 1080-1130 (33000-33200). Higher side north. It continues east of 33000 as structures_e's S1.grd.terrace_lines_33800 (bank_top_c from (33100,1120)). MERGE: continues east of u 33000 as structures_e's S1.grd.terrace_lines_33800 (at u 33000: top 1090 at 33000 against bank_top_c 1120 at 33100 (a 30 px step: both low)).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_32905",
+   "kind": "grd",
+   "name": "bank at the foot of the east willow",
+   "what": "The bank whose top edge carries the east pollarded willow (base about u 32760, v 1395): an upper level north of it and a dark wash slope south of it down to the lower band.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       32660,
+       1398
+      ],
+      [
+       32900,
+       1395
+      ],
+      [
+       33000,
+       1394
+      ]
+     ],
+     "bank_foot": [
+      [
+       32660,
+       1440,
+       "est"
+      ],
+      [
+       32800,
+       1482
+      ],
+      [
+       33000,
+       1486
+      ]
+     ]
+    }
+   },
+   "vis": "part: west end behind the massive willow's trunk",
+   "conf": "med",
+   "note": "Zoom 1.1: a dark line v 1395-1423 (32660-33150) and dark wash v 1441-1486 (32795-33150), taken as one bank (two strokes). Higher side north, about 60-90 px. Ends at 33000: structures_e's S1.grd.bank_33650 (foot (32850,1490)-(33250,1520)) carries it on east; below it lies structures_e's S1.water.wash_band_34400 (v 1490-1605 from 32850: water or a hollow). MERGE: continues east of u 33000 as structures_e's S1.grd.bank_33650 (at u 33000: top 1394/1395, foot 1486/1490).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_32700",
+   "kind": "grd",
+   "name": "bank in front of the massive willow's roots",
+   "what": "A dark wash bank near the bottom of the silk on which the roots of the massive willow at 32470-32780 spread.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       32250,
+       1580
+      ],
+      [
+       32700,
+       1585
+      ],
+      [
+       33000,
+       1580
+      ]
+     ],
+     "bank_foot": [
+      [
+       32250,
+       1612
+      ],
+      [
+       32700,
+       1614
+      ],
+      [
+       33000,
+       1612
+      ]
+     ]
+    }
+   },
+   "vis": "part: 32523-32841 under the willow's roots",
+   "conf": "low",
+   "note": "Zoom 1.1: dark band v 1577-1614 across 32250-33150. Ends at 33000: from 32850 structures_e records the line at v 1605-1645 as S1.grd.bank_south_34400 (the same stroke, or the next one down: settle at merge). Higher side north. MERGE: continues east of u 33000 as structures_e's S1.grd.bank_south_34400 (at u 33000: top 1580/1610, foot 1612/1640: structures_e reads the band about 30 px lower, so its top meets this bank's foot (both low)).",
+   "support": "ground"
+  },
+  {
+   "id": "S1.grd.bank_32705",
+   "kind": "grd",
+   "name": "lowest bank at the east of the range",
+   "what": "The lowest wash band above the silk's bottom edge, east of the massive willows.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       32250,
+       1662
+      ],
+      [
+       32700,
+       1665
+      ],
+      [
+       33000,
+       1662
+      ]
+     ],
+     "bank_foot": [
+      [
+       32250,
+       1710
+      ],
+      [
+       32700,
+       1714
+      ],
+      [
+       33000,
+       1710
+      ]
+     ]
+    }
+   },
+   "vis": "full",
+   "conf": "low",
+   "note": "Zoom 1.1: dark band v 1659-1714. The silk's bottom edge at about v 1775. MERGE: continues east of u 33000 as structures_e's S1.grd.bank_south_34400 (at u 33000: top 1662 = the latter's lower_band_top 1662).",
+   "support": "ground"
+  }
+ ]
+}

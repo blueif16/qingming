@@ -1,0 +1,206 @@
+{
+ "entities": {
+  "S4b.veh.boat_cabin_15200": {
+   "kind": "vehicle",
+   "pos": [
+    79.1,
+    17.77
+   ],
+   "H": -1.5,
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": -11.2,
+   "pts": {
+    "front": [
+     87.01,
+     16.2,
+     -1.5
+    ],
+    "rear": [
+     79.1,
+     17.77,
+     -1.5
+    ]
+   },
+   "length_m": 8.06
+  },
+  "S3.veh.boat_cargo_sweep_15750": {
+   "kind": "vehicle",
+   "pos": [
+    90.63,
+    22.25
+   ],
+   "H": -1.5,
+   "support": "water",
+   "pose": "rowed",
+   "facing_deg": 146.4,
+   "pts": {
+    "front": [
+     84.47,
+     26.35,
+     -1.5
+    ],
+    "rear": [
+     90.63,
+     22.25,
+     -1.5
+    ]
+   },
+   "length_m": 7.4
+  },
+  "S2.veh.boat_passenger_23070": {
+   "kind": "vehicle",
+   "pos": [
+    194.35,
+    15.42
+   ],
+   "H": -1.5,
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 171.8,
+   "pts": {
+    "front": [
+     176.81,
+     17.96,
+     -1.5
+    ],
+    "rear": [
+     194.35,
+     15.42,
+     -1.5
+    ]
+   },
+   "length_m": 17.72
+  },
+  "S2.veh.boat_grain_27600": {
+   "kind": "vehicle",
+   "pos": [
+    254.42,
+    1.96
+   ],
+   "H": -1.5,
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 143.0,
+   "pts": {
+    "front": [
+     244.07,
+     9.77,
+     -1.5
+    ],
+    "rear": [
+     254.42,
+     1.96,
+     -1.5
+    ]
+   },
+   "length_m": 12.97
+  },
+  "S2.veh.boat_small_22500": {
+   "kind": "vehicle",
+   "pos": [
+    182.33,
+    0.4
+   ],
+   "H": -1.5,
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 2.2,
+   "pts": {
+    "front": [
+     187.44,
+     0.6,
+     -1.5
+    ],
+    "rear": [
+     182.33,
+     0.4,
+     -1.5
+    ]
+   },
+   "length_m": 5.11
+  }
+ },
+ "results": {
+  "S4b.veh.boat_cabin_15200": {
+   "kind": "passenger",
+   "motion": "moored",
+   "facing_deg": -11.2,
+   "built_heading": -11.2,
+   "mapped_length_m": 8.06,
+   "built_lw": 19.0,
+   "centre_vs_painted_midpoint_m": 0.0,
+   "deck_z_world": -0.6,
+   "static_tris": 6234,
+   "static_owners": {
+    "S4b.veh.boat_cabin_15200": 6234
+   },
+   "static_deck_z": -0.6,
+   "note": "mapped waterline 8.1 m, built 19.0 m (real size, BUILDING.md rule 5)"
+  },
+  "S3.veh.boat_cargo_sweep_15750": {
+   "kind": "grain",
+   "motion": "under_way",
+   "facing_deg": 146.4,
+   "built_heading": 146.4,
+   "mapped_length_m": 7.4,
+   "built_lw": 20.0,
+   "centre_vs_painted_midpoint_m": 0.0,
+   "deck_z_world": -0.55,
+   "static_tris": 6860,
+   "static_owners": {
+    "S3.veh.boat_cargo_sweep_15750": 6860
+   },
+   "static_deck_z": -0.55,
+   "note": "mapped waterline 7.4 m, built 20.0 m (real size, BUILDING.md rule 5)"
+  },
+  "S2.veh.boat_passenger_23070": {
+   "kind": "passenger",
+   "motion": "moored",
+   "facing_deg": 171.8,
+   "built_heading": 171.8,
+   "mapped_length_m": 17.72,
+   "built_lw": 19.0,
+   "centre_vs_painted_midpoint_m": 0.0,
+   "deck_z_world": -0.6,
+   "static_tris": 6606,
+   "static_owners": {
+    "S2.veh.boat_passenger_23070": 6606
+   },
+   "static_deck_z": -0.6,
+   "note": null
+  },
+  "S2.veh.boat_grain_27600": {
+   "kind": "grain",
+   "motion": "moored",
+   "facing_deg": 143.0,
+   "built_heading": 143.0,
+   "mapped_length_m": 12.97,
+   "built_lw": 20.0,
+   "centre_vs_painted_midpoint_m": 0.0,
+   "deck_z_world": -1.25,
+   "static_tris": 5886,
+   "static_owners": {
+    "S2.veh.boat_grain_27600": 5886
+   },
+   "static_deck_z": -1.25,
+   "note": "mapped waterline 13.0 m, built 20.0 m (real size, BUILDING.md rule 5)"
+  },
+  "S2.veh.boat_small_22500": {
+   "kind": "small",
+   "motion": "moored",
+   "facing_deg": 2.2,
+   "built_heading": 2.2,
+   "mapped_length_m": 5.11,
+   "built_lw": 8.0,
+   "centre_vs_painted_midpoint_m": 0.0,
+   "deck_z_world": -1.38,
+   "static_tris": 2198,
+   "static_owners": {
+    "S2.veh.boat_small_22500": 2198
+   },
+   "static_deck_z": -1.38,
+   "note": "mapped waterline 5.1 m, built 8.0 m (real size, BUILDING.md rule 5)"
+  }
+ }
+}

@@ -1,0 +1,1410 @@
+{
+ "section": "S1",
+ "pass": "second pass `start`: owns u 35400-37610 (t7, t8, structures_e's east end), looked at 35250-37610; read against map/strokes/S1.json as merged 2026-10-12 (237 entities)",
+ "how": "Overlays of the merged strokes at zoom 1 (grid 50) over 35250-36450 and 36400-37610, then overlay windows at zoom 1.3-2.4 (grid 25) over the grove's ground, the bridge and boat, the spits, the east banks and the east trees' feet. Normalised scan crops at zoom 2-6, and blurred greyscale crops (t7's recipe) for pale trunks. Darkness profiles: columns (mean grey of 20-32 px wide columns in 5-10 px bins of v, blurred 1.5 px) for every bank edge proposed below, and rows (1-px columns in 10 px bands) for the line at the boat's end and the slender tree's foot. The seals were measured as pixels with R-G > 45. Every crop and script is in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/. Proposals only: nothing in the parts or the map was edited.",
+ "summary": "The cast is right. The strokes show 5 donkeys and 2 drivers. Every donkey whose head can be read faces east-south-east, and the west driver holds a stick out over the last donkey, driving from behind. So the train walks east, down toward the bridge's east end, as t8 recorded (D1 is a side view like D2, not end-on). The tree count of 19 in the range agrees trunk by trunk, and t7's crossing reading of the three bare elms holds. The pale patch at 35907-35980 is ground strokes, not a man. The boat lies afloat on the pale water, between the spit, the bank's foot and the bridge. Its bow can't be read: no rudder or sweep. Proposed: one new entity, a vertical pole at the boat's east end. It is about 60 px long and stops 40-60 px short of the nearest bridge post, so it reads as a mooring pole, not the rope the notes describe. Also proposed: 15 changes. Three only correct notes (the train's direction, the boat, the bridge). Eight are the extents the merge asked about. The near bank, and with it the stream's south shore, runs on east to about 37250, not 36850. spit_36225 reaches a tip at (36815, 1433), 165 px past its mapped tip. The shoal starts at about 35790. The pale band's north shore at 35500-35780 is at v about 1390, not 1330. In 34850-35850 neither the pale band nor the near bank has any edge on the silk. The seals start further east than the notes say: 37396 for the strip at v 805-1007, 37362 for v 1138-1351. So the north bank's foot line runs visibly between them to the silk's end at about 37560. The east spit runs to the seal at 37362 and reappears past it at 37568-37610. The bank at the east trees' feet has its foot at the lowest stroke of its layered wash, v 918-978, about where the road's edge_n is. The mapped 868-870 is an upper layer. Smaller items: D1's head measured, the west driver's confidence raised, and the slender tree's foot moved 18 px west to its trunk's centre.",
+ "entities": [
+  {
+   "id": "S1.prop.mooring_pole_36444",
+   "kind": "prop",
+   "name": "upright pole at the small boat's east end (mooring pole?)",
+   "what": "A thin, straight, upright pole standing in the stream at the pointed east end of the small empty boat (S1.veh.boat_sampan_36440), rising about 60 px above the boat's end: the boat is tied to it, a pole planted in the stream bed (the notes' 'mooring rope to the bridge post' is the other reading).",
+   "pts": {
+    "base": [
+     36443,
+     1186,
+     "est"
+    ],
+    "top": [
+     36442,
+     1125
+    ]
+   },
+   "support": "stream",
+   "vis": "faded",
+   "conf": "low",
+   "note": "SECOND PASS (start): t8 named this line in the boat's `what` and note as 'its mooring rope (or a pole stuck in the stream bed)' running 'up to the foot of a bridge post at about (36445, 1100)', and the merge wrote that into S1.str.small_bridge_36365's note. On the strokes it does not reach a post. Row profiles (1-px columns, 10 px bands, blur 1.2) find a dark line at u 36442-36446 from v 1130 to 1180 (9-15 levels below the band's median), possibly from about 1115 (a broad weak minimum at 36437). There is nothing at v 1070-1110 (depth 3-11 at the band's edge only). The nearest post feet are S1.str.small_bridge_36365's bays (36455, 1063), (36480, 1067), (36491, 1065): 40-60 px of plain silk lie between the line's top and them. It is vertical (no slant toward any post) and straight, and it stops at the boat's end below and at nothing above, so it is not a silk crease. A rope tied to a post would reach the post and slant, so the reading taken is a pole planted in the stream bed beside the boat's east end, like the mooring posts S2 and S3 record standing in the water (S2.prop.mooring_post_23126, S3.prop.mooring_post_17702: support water; here the stream). Base est at the waterline at the boat's end; its foot is under water. If the lead keeps the rope reading, decline this and correct the boat's and the bridge's notes instead (the 'post foot at (36445, 1100)' has no post: see the changes). Crops: boat_z3.jpg, rope_z5g.jpg, ov_bridge.jpg, bridge_z16.jpg."
+  }
+ ],
+ "changes": [
+  {
+   "id": "S1.ani.donkey_charcoal_36323",
+   "set": {
+    "pts.head": [
+     36340,
+     792
+    ],
+    "facing_deg": 330
+   },
+   "was": {
+    "pts.head": [
+     36340,
+     772,
+     "est"
+    ],
+    "facing_deg": 315
+   },
+   "add_note": "SECOND PASS (start): D1 is a side view like D2, not end-on. Its three legs end 37 px apart along u ((36294, 796), (36315, 802), (36331, 806)), as D2's do (36351-36417), and its load is two bundles along its back, as D2's 'two baskets' are. Its head is the dark lowered shape at its east end, u 36332-36350, v 765-802, between its forelegs and D2's rump (greyscale zoom 6, d1_z6g.jpg; zoom 4, d12_z4.jpg): head and neck hang low, muzzle near v 800, as D2's and D3's do. The pale rounded mass with 'eyes' on its west bundle (36285-36312, 752-785) is the pannier's weave pattern. The restyle reads the two bundles as two men. Facing 330 as D2 and D3, the file's direction. Conf on the facing low -> med.",
+   "reason": "The flag asked whether D1 is end-on. It is drawn in profile, head down at the east end, so the train's last donkey faces the same way as the others. The head point moves 20 px onto the drawn head.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d1_z6g.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d12_z4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d1d2_grid.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/train_norm.jpg"
+   ]
+  },
+  {
+   "id": "S1.fig.charcoal_driver_36250",
+   "set": {
+    "conf": "med"
+   },
+   "was": {
+    "conf": "low"
+   },
+   "add_note": "SECOND PASS (start): at zoom 4 (colour and blurred greyscale, wdriver_z4.jpg, wdriver_z4g.jpg) he reads as a figure. Both outlines of a short jacket run at u 36235-36257, v 702-737, with a belt line at v ~737. Two legs stand apart, ending at (36238, 760) and (36258, 765). A roundish head shows at u 36240-36262, v 680-702, crossed by twigs, so the head point stays est. His right arm goes east to (36277, 715). From the hand a thin straight stick runs on east, over D1's west pannier, to about (36320, 705). That is a driving stick held out over the last donkey from behind: a carried prop for the needs list. Facing 0 is right. He drives the train east from its rear.",
+   "reason": "The flag asked about the faint west driver. Body, belt and two legs are drawn. Only the head is lost in the twigs, so 'crossing twig strokes only' no longer fits. His stick is evidence for the train's direction.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/wdriver_z4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/wdriver_z4g.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d12_z4.jpg"
+   ]
+  },
+  {
+   "id": "S1.grp.charcoal_train",
+   "set": {},
+   "add_note": "SECOND PASS (start), on the direction (the lead's decision): every head that can be read is at the east end. D4: ears and muzzle, high. D3: rump west, head lowered at 36505-36540. D2: lowered head at 36407-36435. D1: lowered head at 36332-36350, a side view (see its note). D5 comes toward the viewer: between its panniers a broad dark shape, 17 px wide (36733-36750), tapers to a rounded end at v ~932, too broad for a tail, so it is a lowered head seen from the front (290 stands). The west man holds a stick out east over D1's load: he drives from behind. The east man stands at the front and holds D5's load while it comes down to him. So as painted the train walks east-south-east, down toward the bridge's east end (the leader is already 140-190 px east of it, at 36745-36797). Nothing on the strokes turns it west. 赶驴入城 is the scholarship's title, not a stroke reading. The routine in people.json should walk it east along S1.road.main as mapped.",
+   "reason": "Settles the merge's first question with stroke evidence from both ends of the file: the rear driver's stick and D1's head.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/train_norm.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d12_z4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d34_z4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d5man_z4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/d5_z6g.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/wdriver_z4.jpg"
+   ]
+  },
+  {
+   "id": "S1.veh.boat_sampan_36440",
+   "set": {},
+   "add_note": "SECOND PASS (start): AFLOAT, confirmed. The hull lies wholly on pale silk. Its near gunwale (36193, 1160) -> (36327, 1190) runs 20-35 px north of S1.grd.spit_under_boat_36140's north edge (36250, 1210) -> (36335, 1228). The dark stroke under its west half, (36207, 1180) -> (36327, 1223), is that spit's edge, not ground under the boat. The west transom (36173-36187, 1127-1160) is about 70 px east of the west bank's foot (S1.grd.bank_36060: (36105, 1110), (36075, 1180)). Support stream stands. BOW: still unreadable. No rudder, sweep or side sweep is drawn; the west end is a raised square transom and the east end lower and pointed. front = east stays, conf low. THE LINE at its east end is vertical at u 36442-36446, v about 1125-1180. It stops 40-60 px below the nearest bridge post foot (36455, 1063), and no post stands at (36445, 1100). It is proposed as its own prop, S1.prop.mooring_pole_36444 (a pole in the stream bed the boat is tied to). If accepted, read 'the line' in this note and in `what` as that pole.",
+   "reason": "Answers the flag ('the boat's bow and whether it floats'). The note's post at (36445, 1100) does not exist in the bridge's bays.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/boat_z3.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/bridge_z16.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_bridge.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/rope_z5g.jpg"
+   ]
+  },
+  {
+   "id": "S1.str.small_bridge_36365",
+   "set": {},
+   "replace_in_note": {
+    "old": "MERGE: t8's boat S1.veh.boat_sampan_36440 is moored by a rope from its east end to the foot of the post at about (36445, 1100).",
+    "new": "MERGE: t8's boat S1.veh.boat_sampan_36440 lies under the bridge's west half. The line at its east end (u 36442-36446, v ~1125-1180) stops 40-60 px below this bridge's nearest post foot (36455, 1063); second pass: a mooring pole in the stream bed (S1.prop.mooring_pole_36444, low), not a rope to a post."
+   },
+   "reason": "The merged note names a post foot at (36445, 1100) that none of this entity's ten bays has.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/rope_z5g.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_bridge.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.bank_south_34400",
+   "set": {
+    "pts.lines.bank_top": [
+     [
+      33000,
+      1610
+     ],
+     [
+      33200,
+      1622
+     ],
+     [
+      33300,
+      1625
+     ],
+     [
+      33400,
+      1605
+     ],
+     [
+      33450,
+      1590
+     ],
+     [
+      33600,
+      1600
+     ],
+     [
+      33800,
+      1605
+     ],
+     [
+      34000,
+      1600
+     ],
+     [
+      34100,
+      1590
+     ],
+     [
+      34150,
+      1520,
+      "est"
+     ],
+     [
+      34300,
+      1505
+     ],
+     [
+      34500,
+      1505
+     ],
+     [
+      34700,
+      1510
+     ],
+     [
+      34850,
+      1530,
+      "est"
+     ],
+     [
+      35000,
+      1590,
+      "est"
+     ],
+     [
+      35300,
+      1595,
+      "est"
+     ],
+     [
+      35600,
+      1595,
+      "est"
+     ],
+     [
+      35900,
+      1590
+     ],
+     [
+      36050,
+      1580
+     ],
+     [
+      36200,
+      1588
+     ],
+     [
+      36350,
+      1605
+     ],
+     [
+      36500,
+      1605
+     ],
+     [
+      36600,
+      1612
+     ],
+     [
+      36700,
+      1618
+     ],
+     [
+      36850,
+      1637
+     ],
+     [
+      36950,
+      1632
+     ],
+     [
+      37050,
+      1640
+     ],
+     [
+      37150,
+      1635,
+      "est"
+     ],
+     [
+      37250,
+      1630,
+      "est"
+     ]
+    ],
+    "pts.lines.bank_foot": [
+     [
+      33000,
+      1640
+     ],
+     [
+      33200,
+      1645
+     ],
+     [
+      33400,
+      1630
+     ],
+     [
+      33800,
+      1625
+     ],
+     [
+      34100,
+      1620
+     ],
+     [
+      34150,
+      1580,
+      "est"
+     ],
+     [
+      34370,
+      1578
+     ],
+     [
+      34520,
+      1585
+     ],
+     [
+      34700,
+      1605
+     ],
+     [
+      34850,
+      1612,
+      "est"
+     ],
+     [
+      35000,
+      1630,
+      "est"
+     ],
+     [
+      35600,
+      1630,
+      "est"
+     ],
+     [
+      36100,
+      1650,
+      "est"
+     ],
+     [
+      36500,
+      1660,
+      "est"
+     ],
+     [
+      36850,
+      1680,
+      "est"
+     ],
+     [
+      36950,
+      1668
+     ],
+     [
+      37100,
+      1695,
+      "est"
+     ],
+     [
+      37250,
+      1700,
+      "est"
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.bank_top (from 35900)": [
+     [
+      35900,
+      1592,
+      "est"
+     ],
+     [
+      36100,
+      1592
+     ],
+     [
+      36300,
+      1597
+     ],
+     [
+      36500,
+      1605
+     ],
+     [
+      36700,
+      1618
+     ],
+     [
+      36850,
+      1640,
+      "est"
+     ]
+    ],
+    "pts.lines.bank_foot (end)": [
+     [
+      36850,
+      1680,
+      "est"
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): the dark face runs on east of u 36850 with a clear top edge. The light-to-dark step was read on column profiles (32 px columns, 5 px bins, blur 1.5): 36600 at 1605/1620, 36700 at 1605/1630, 36850 at 1637 (weak), 36950 at 1632 (sharp, 123 -> 104), 37050 at 1640 (126 -> 111), 37150 at 1635 (weak), 37250 at 1630 (134 -> 126, fading). By 37300-37350 only a trace remains, so it ends at about 37250, under plain silk (mist). Its lower edge is clear only at 36950 (1665-1670). West of the bridge the top edge measures 1588 at 35900, 1578 at 36050, 1585 at 36200, 1605 at 36350 and 36500, and 1612 at 36600 (points replaced, within about 10 px of the old ones). West of about 35850 nothing is drawn. At 35450-35750 the whole lower half (v 1340-1770) is one even mid-tone with no step, and a vertical silk crease runs at u 35500-35520. So the est stretch 34850-35850 is a join across bare silk, not a reading of strokes. Below this face, at 36000-36950, a second dark band lies at v ~1700-1765, just above the silk's lower edge (v 1770): the east continuation of `lower_band_top` (not proposed as a line; it runs off the silk).",
+   "reason": "The merge asked for the stream's and the pale band's extents. The near bank, which is the stream's south shore, is drawn 400 px further east than mapped.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/bottom.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/bottom_ov.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_e.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_w.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/paleband.jpg"
+   ]
+  },
+  {
+   "id": "S1.water.stream_36500",
+   "set": {
+    "pts.lines.shore_s": [
+     [
+      36000,
+      1582
+     ],
+     [
+      36050,
+      1580
+     ],
+     [
+      36200,
+      1588
+     ],
+     [
+      36350,
+      1605
+     ],
+     [
+      36500,
+      1605
+     ],
+     [
+      36600,
+      1612
+     ],
+     [
+      36700,
+      1618
+     ],
+     [
+      36850,
+      1637
+     ],
+     [
+      36950,
+      1632
+     ],
+     [
+      37050,
+      1640
+     ],
+     [
+      37150,
+      1635,
+      "est"
+     ],
+     [
+      37250,
+      1630,
+      "est"
+     ]
+    ],
+    "pts.lines.shore_n": [
+     [
+      36030,
+      1255,
+      "est"
+     ],
+     [
+      36075,
+      1180
+     ],
+     [
+      36105,
+      1110
+     ],
+     [
+      36125,
+      1058,
+      "est"
+     ],
+     [
+      36160,
+      990,
+      "est"
+     ],
+     [
+      36300,
+      982,
+      "est"
+     ],
+     [
+      36450,
+      980,
+      "est"
+     ],
+     [
+      36540,
+      990,
+      "est"
+     ],
+     [
+      36590,
+      1015,
+      "est"
+     ],
+     [
+      36615,
+      1060
+     ],
+     [
+      36680,
+      1080
+     ],
+     [
+      36780,
+      1098
+     ],
+     [
+      36870,
+      1112
+     ],
+     [
+      36950,
+      1090,
+      "est"
+     ],
+     [
+      37050,
+      1085
+     ],
+     [
+      37150,
+      1080
+     ],
+     [
+      37250,
+      1085
+     ],
+     [
+      37350,
+      1077
+     ],
+     [
+      37450,
+      1076
+     ],
+     [
+      37560,
+      1066,
+      "est"
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.shore_s": [
+     [
+      36000,
+      1592,
+      "est"
+     ],
+     [
+      36100,
+      1592
+     ],
+     [
+      36200,
+      1595
+     ],
+     [
+      36300,
+      1597
+     ],
+     [
+      36400,
+      1600
+     ],
+     [
+      36500,
+      1605
+     ],
+     [
+      36600,
+      1610
+     ],
+     [
+      36700,
+      1618
+     ],
+     [
+      36800,
+      1625
+     ],
+     [
+      36850,
+      1640,
+      "est"
+     ]
+    ],
+    "pts.lines.shore_n (end)": [
+     [
+      37150,
+      1085,
+      "est"
+     ],
+     [
+      37250,
+      1080,
+      "est"
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): EXTENTS. shore_s is the near bank's top edge (S1.grd.bank_south_34400, same points). It runs on east to about 37250 and fades there; it is not lost at 36850. Its west end stays at u 36000, where it meets S1.water.wash_band_34400; the near bank's dark band itself begins at about 35900. shore_n follows the north bank's lowest stroke, which runs on east between the seals to the silk's end (S1.grd.bank_36900, below). The seals are measured by red pixels (R-G > 45): u 37248-37503 at v 51-319, u 37396-37538 at v 805-1007, u 37362-37567 at v 1138-1351, u 37424-37584 at v 1597-1756. The strip v 1007-1138 is covered by none of them. East of about 37250 the water between the east spit (S1.grd.spit_east_37060) and the near bank's end is plain silk (mist): close the polygon there, at the builder's choice.",
+   "reason": "The flag asked for the stream's extents. Both shores are drawn further east than mapped. The 'seal from u 37250' in the notes is the top seal (v 51-319), not the ones at the water's level.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_e.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_eastbank.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/eastend_z2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/bottom.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.spit_36225",
+   "set": {
+    "pts.lines.edge_n": [
+     [
+      35800,
+      1350,
+      "est"
+     ],
+     [
+      36000,
+      1352
+     ],
+     [
+      36200,
+      1362
+     ],
+     [
+      36400,
+      1385
+     ],
+     [
+      36550,
+      1388
+     ],
+     [
+      36617,
+      1377
+     ],
+     [
+      36650,
+      1397
+     ],
+     [
+      36737,
+      1405
+     ],
+     [
+      36815,
+      1433
+     ]
+    ],
+    "pts.lines.edge_s": [
+     [
+      35800,
+      1415,
+      "est"
+     ],
+     [
+      36000,
+      1420
+     ],
+     [
+      36200,
+      1420
+     ],
+     [
+      36450,
+      1420
+     ],
+     [
+      36550,
+      1443
+     ],
+     [
+      36700,
+      1443
+     ],
+     [
+      36815,
+      1433
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.edge_n (end)": [
+     [
+      36550,
+      1388
+     ],
+     [
+      36650,
+      1405
+     ]
+    ],
+    "pts.lines.edge_s (end)": [
+     [
+      36450,
+      1420
+     ],
+     [
+      36650,
+      1405
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): the tongue does not end at (36650, 1405). Its dark wash runs on east to a sharp tip at (36815, 1433), read at zoom 3 on spittip_z3.jpg. The top edge goes up to a small hump at (36617, 1377), down to v ~1397-1410 along 36650-36720, over a second hump at (36737, 1405), then down to the tip. The bottom edge stays flat at v ~1443 from 36550 to 36720, then rises to the tip. The humps are what the merge note calls 'a few small dark marks (36600-36750, 1395-1440)', and t8's moss dot at (36645, 1410) sits on the tongue's top. No entity for them.",
+   "reason": "The spit is drawn 165 px longer than mapped. For the ground pilot it is a land tongue, and its tip sets how far land reaches into the stream.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/spittip_z3.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_spits.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_e.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.shoal_36380",
+   "set": {
+    "pts.lines.edge_n": [
+     [
+      35790,
+      1497
+     ],
+     [
+      35800,
+      1487
+     ],
+     [
+      35850,
+      1468
+     ],
+     [
+      35950,
+      1468
+     ],
+     [
+      36050,
+      1450
+     ],
+     [
+      36400,
+      1460
+     ],
+     [
+      36700,
+      1470
+     ]
+    ],
+    "pts.lines.edge_s": [
+     [
+      35790,
+      1497
+     ],
+     [
+      35800,
+      1508
+     ],
+     [
+      35850,
+      1518
+     ],
+     [
+      35950,
+      1518
+     ],
+     [
+      36050,
+      1500
+     ],
+     [
+      36400,
+      1500
+     ],
+     [
+      36650,
+      1490
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.edge_n (start)": [
+     [
+      36050,
+      1450
+     ]
+    ],
+    "pts.lines.edge_s (start)": [
+     [
+      36050,
+      1500
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): the streak starts at about u 35790, not 36050. Column profiles (32 px, 5 px bins) show its dark band at 35800 (v 1487-1508, min 100), 35850 (1468-1518, min 94), 35950 (1468-1518) and 36050 (1473-1508). At 35700 only a trace remains (117-119). Measured at 36050, the band sits about 20 px lower than the mapped edge_n (1450), which was kept.",
+   "reason": "Part of the flag's extents: the streak runs 260 px further west, to where the pale band meets the stream.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/paleband.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/paleband_ov.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_w.jpg"
+   ]
+  },
+  {
+   "id": "S1.water.wash_band_34400",
+   "set": {
+    "pts.lines.shore_n": [
+     [
+      33000,
+      1490
+     ],
+     [
+      33200,
+      1485
+     ],
+     [
+      33250,
+      1520
+     ],
+     [
+      33300,
+      1552
+     ],
+     [
+      33400,
+      1578
+     ],
+     [
+      33550,
+      1590
+     ],
+     [
+      33700,
+      1585
+     ],
+     [
+      33850,
+      1556
+     ],
+     [
+      34000,
+      1535
+     ],
+     [
+      34150,
+      1515
+     ],
+     [
+      34300,
+      1500
+     ],
+     [
+      34450,
+      1490,
+      "est"
+     ],
+     [
+      34550,
+      1460,
+      "est"
+     ],
+     [
+      34650,
+      1310,
+      "est"
+     ],
+     [
+      34800,
+      1302
+     ],
+     [
+      35100,
+      1305
+     ],
+     [
+      35420,
+      1342
+     ],
+     [
+      35500,
+      1392
+     ],
+     [
+      35650,
+      1388
+     ],
+     [
+      35780,
+      1393
+     ],
+     [
+      35900,
+      1418
+     ],
+     [
+      36000,
+      1420
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.shore_n (35400-35800)": [
+     [
+      35400,
+      1318
+     ],
+     [
+      35700,
+      1330
+     ],
+     [
+      35800,
+      1415,
+      "est"
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start), u 35400-36000 only: the lowest dark wash stroke above the band, which is the west end of S1.grd.spit_36225's layer, ends at v ~1385-1395 from 35500 to 35850. The step to the paler silk below measures 1392 at 35500 (weak, 96 -> 113), 1385-1390 at 35560-35700 (101 -> 120-125) and 1393 at 35780. So the shore is about 60 px lower there than the 1330 mapped from S1.grd.bank_35200's foot. At 35420 the dark ends at 1342. EXTENT: the band is pale only east of about 35650. At 35450-35600 the silk below v 1340 is one even mid-tone (104-115) down to the silk's edge, with no pale band and no near bank (see S1.grd.bank_south_34400). In this range the band's south shore (35000-35900) is drawn on no stroke. That is more evidence for the water-or-ground question: the pale band does not visibly join the stream's water west of about 35650.",
+   "reason": "The flag asked for the pale band's extents. Its north shore in this range is on the wrong stroke, and its west continuation toward the farms is not drawn in 35400-35650.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/paleband.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/paleband_ov.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_w.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.bank_36900",
+   "set": {
+    "pts.lines.bank_top": [
+     [
+      36610,
+      1025
+     ],
+     [
+      36700,
+      1015
+     ],
+     [
+      36800,
+      1010
+     ],
+     [
+      36880,
+      1000
+     ],
+     [
+      36980,
+      1010
+     ],
+     [
+      37100,
+      1040,
+      "est"
+     ],
+     [
+      37250,
+      1045,
+      "est"
+     ],
+     [
+      37350,
+      1060,
+      "est"
+     ],
+     [
+      37450,
+      1058,
+      "est"
+     ],
+     [
+      37560,
+      1052,
+      "est"
+     ]
+    ],
+    "pts.lines.bank_foot": [
+     [
+      36615,
+      1060
+     ],
+     [
+      36680,
+      1080
+     ],
+     [
+      36780,
+      1098
+     ],
+     [
+      36870,
+      1112
+     ],
+     [
+      36950,
+      1090,
+      "est"
+     ],
+     [
+      37050,
+      1085
+     ],
+     [
+      37150,
+      1080
+     ],
+     [
+      37250,
+      1085
+     ],
+     [
+      37350,
+      1077
+     ],
+     [
+      37450,
+      1076
+     ],
+     [
+      37560,
+      1066,
+      "est"
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.bank_top (end)": [
+     [
+      37250,
+      1045,
+      "est"
+     ]
+    ],
+    "pts.lines.bank_foot (end)": [
+     [
+      37150,
+      1085,
+      "est"
+     ],
+     [
+      37250,
+      1080,
+      "est"
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): the bank's lowest stroke runs on east past 37250, as one dark line at v ~1060-1085 (eastend_z2.jpg), to about 37570, 40 px short of the silk's end. No seal covers it: the seals are at v 805-1007 (u 37396-37538) and v 1138-1351 (u 37362-37567). Measured foot (dark to light, 24 px columns, 10 px bins): 37150 at 1080, 37250 at 1085, 37350 at 1077, 37400 at 1077, 37450 at 1076, 37500 at 1066, 37580 at ~1066 (weak). East of ~37150 the face above it is only this one stroke, so bank_top there is est, about 20 px above the foot.",
+   "reason": "Part of the flag's extents. The line was stopped at 37250 for a seal, but the seals leave this strip open.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/eastend_z2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_eastbank.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/lower_e.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.spit_east_37060",
+   "set": {
+    "pts.lines.edge_n": [
+     [
+      36880,
+      1152
+     ],
+     [
+      37000,
+      1150
+     ],
+     [
+      37150,
+      1155
+     ],
+     [
+      37280,
+      1135
+     ],
+     [
+      37355,
+      1148
+     ]
+    ],
+    "pts.lines.edge_s": [
+     [
+      36900,
+      1215
+     ],
+     [
+      37050,
+      1220
+     ],
+     [
+      37100,
+      1242
+     ],
+     [
+      37200,
+      1238
+     ],
+     [
+      37280,
+      1245
+     ],
+     [
+      37355,
+      1240
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.edge_n (end)": [
+     [
+      37250,
+      1160,
+      "est"
+     ]
+    ],
+    "pts.lines.edge_s (end)": [
+     [
+      37200,
+      1222
+     ],
+     [
+      37250,
+      1225,
+      "est"
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): measured to the lower-middle seal's west edge (u 37362, v 1138-1351). Profiles: the upper stroke at v 1130-1145 and the main band at v 1180-1235 at 37100-37280, light from 1240-1250; at 37340 dark from 1150 to 1235. Past the seal, at u 37568-37610 (the silk's end), the band shows again: dark at v 1180-1220, and a lower dark band at v 1240-1300 (profiles at 37575 and 37595). So it runs under the seal to the silk's end. That stretch is not drawn as a line (nothing under a seal is guessed), but the builder can carry it to the end of the silk.",
+   "reason": "Part of the flag's extents. The tongue runs on 105 px to the seal, and its lower edge reads about 15-20 px lower at 37100-37280.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/eastend_z2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_eastbank.jpg"
+   ]
+  },
+  {
+   "id": "S1.grd.bank_37050",
+   "set": {
+    "pts.lines.bank_top": [
+     [
+      36830,
+      835
+     ],
+     [
+      36990,
+      838
+     ],
+     [
+      37150,
+      830,
+      "est"
+     ],
+     [
+      37250,
+      843
+     ],
+     [
+      37300,
+      843
+     ],
+     [
+      37390,
+      840,
+      "est"
+     ]
+    ],
+    "pts.lines.bank_foot": [
+     [
+      36830,
+      905,
+      "est"
+     ],
+     [
+      36900,
+      918
+     ],
+     [
+      36950,
+      925
+     ],
+     [
+      37000,
+      920
+     ],
+     [
+      37050,
+      932
+     ],
+     [
+      37125,
+      952
+     ],
+     [
+      37200,
+      958
+     ],
+     [
+      37250,
+      962
+     ],
+     [
+      37300,
+      968
+     ],
+     [
+      37350,
+      976
+     ],
+     [
+      37390,
+      978
+     ]
+    ]
+   },
+   "was": {
+    "pts.lines.bank_top": [
+     [
+      36830,
+      835
+     ],
+     [
+      36990,
+      838
+     ],
+     [
+      37150,
+      830,
+      "est"
+     ],
+     [
+      37240,
+      832,
+      "est"
+     ]
+    ],
+    "pts.lines.bank_foot": [
+     [
+      36830,
+      868
+     ],
+     [
+      36990,
+      870
+     ],
+     [
+      37150,
+      868,
+      "est"
+     ],
+     [
+      37240,
+      870,
+      "est"
+     ]
+    ]
+   },
+   "add_note": "SECOND PASS (start): this is one layered ink-wash bank face. The strokes lie in three layers, v ~840-860, 880-916 and 932-968 at 37160-37400 (rootband_z25.jpg), with the trees' roots in them. The mapped bank_foot (868-870) is the lower edge of the top layer only. The face's sharp lower edge is the lowest layer's, from column profiles (20 px, 5 px bins): 36900 at 918 (110 -> 131), 36950 at 925, 37000 at 920, 37050 at 932, 37125 at 952, 37200 at 958, 37250 at 962, 37300 at 968, 37350 at 976, 37390 at 978. It runs to the upper-middle seal's west edge (u 37396, v 805-1007), not to 37240. So the bank is about 80-140 px of face, and both east trees stand on it: S1.tree.slender_bare_37018 (foot v ~852) high on the face, S1.tree.elm_bare_37140 (950) near its foot. Their support could be 'bank slope' if the frame gives one. S1.road.main's edge_n est (36850-37240: 900-958) already runs along this foot within about 10 px. The open strip below it (v ~975-1050) runs on to the seal at 37396, which bears on the road's east end (next change).",
+   "reason": "The bank's foot was on an inner stroke ('on the wrong stroke'), 50-110 px above the drawn foot, and the line stopped 150 px short of the seal it was stopped for.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/rootband_z25.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_roots.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/eastend_z2.jpg"
+   ]
+  },
+  {
+   "id": "S1.road.main",
+   "set": {
+    "pts.lines.centre (append)": [
+     [
+      37390,
+      1005,
+      "est"
+     ]
+    ],
+    "pts.lines.edge_n (append)": [
+     [
+      37390,
+      980,
+      "est"
+     ]
+    ],
+    "pts.lines.edge_s (append)": [
+     [
+      37390,
+      1040,
+      "est"
+     ]
+    ]
+   },
+   "was": {
+    "last points": "centre (37240, 975, est), edge_n (37240, 955, est), edge_s (37240, 1005, est)"
+   },
+   "add_note": "SECOND PASS (start): the note says 'from u 37250 a seal covers the strip (v 800-980)'. Measured, the seal at that height spans u 37396-37538, v 805-1007. The seal starting at 37248 is the top one (v 51-319). Between 37250 and 37396 the strip is painted open ground: the bank's foot (S1.grd.bank_37050, v 962-978) above it and the north bank's top (S1.grd.bank_36900, v ~1045-1060) below it. The est route can run on to the seal's edge, ending at 37390. That is OPTIONAL: it is still a reading through unpainted ground, and it adds about 2 m to the walkable east end.",
+   "reason": "The road's east end was set by a seal edge 150 px west of the real one.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/eastend_z2.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/ov_roots.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.slender_bare_37018",
+   "set": {
+    "pts.base": [
+     37000,
+     852
+    ]
+   },
+   "was": {
+    "pts.base": [
+     37018,
+     850
+    ]
+   },
+   "add_note": "SECOND PASS (start): the base is at the trunk's centre, not on its east outline. Row profiles (1-px columns, 10 px bands) find the trunk's outlines at u 36995-37000 and 37020-37025 for v 800-830. Below that the west outline flares out to a root spread at 36965-36985 (v 840-860), and the east outline stays at 37015-37020. Foot centre about (37000, 852); the mapped 37018 is the east outline. Small (18 px), for consistency with how the other feet were taken.",
+   "reason": "A foot point on an outline, not on the trunk's centre.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/slender_z2g.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_second_start/slfoot_z4g.jpg"
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "flag": "each donkey's facing (D1 and D5 end-on)",
+   "ids": [
+    "S1.ani.donkey_charcoal_36323",
+    "S1.ani.donkey_charcoal_36410",
+    "S1.ani.donkey_charcoal_36508",
+    "S1.ani.donkey_charcoal_36666",
+    "S1.ani.donkey_charcoal_36745"
+   ],
+   "verdict": "D2, D3 and D4 agree as mapped. D1 is a side view facing east (change proposed). D5 is end-on toward the viewer (290 kept).",
+   "evidence": "train_norm.jpg (zoom 2, gridless, whole file) then zoom 4 and zoom 6 greyscale per donkey. D4: two pricked ears and the muzzle at its east end (36677-36700, 830-872). D3: a rounded rump at 36435-36447, head lowered at 36520-36537 by the trunk. D2: a lowered wedge at 36412-36435, v 802-815. D1: legs spread 37 px along u and its head lowered at 36332-36350. D5: the central shape is 17 px wide and tapers to a rounded muzzle at v 932, too broad for a tail, between two symmetric panniers, with its legs splayed to both sides."
+  },
+  {
+   "flag": "the faint west driver",
+   "ids": [
+    "S1.fig.charcoal_driver_36250"
+   ],
+   "verdict": "A figure, conf low -> med (change proposed). He holds a driving stick out east over D1.",
+   "evidence": "wdriver_z4.jpg / wdriver_z4g.jpg: jacket outlines, belt, two legs apart. Head at 36240-36262, v 680-702, crossed by twigs. Stick to (36320, 705)."
+  },
+  {
+   "flag": "the boat's bow and whether it floats",
+   "ids": [
+    "S1.veh.boat_sampan_36440"
+   ],
+   "verdict": "Afloat: the whole hull is on pale silk 20-35 px north of the spit's edge. The bow can't be read; front = east stays, conf low. The line at the east end is a vertical pole, not a rope to the bridge (new prop proposed).",
+   "evidence": "boat_z3.jpg, bridge_z16.jpg, ov_bridge.jpg, rope_z5g.jpg, row profiles in rowprof.mjs (v 1050-1200, u 36432-36462)."
+  },
+  {
+   "flag": "the stream's and the pale band's extents",
+   "ids": [
+    "S1.water.stream_36500",
+    "S1.water.wash_band_34400",
+    "S1.grd.bank_south_34400",
+    "S1.grd.spit_36225",
+    "S1.grd.shoal_36380",
+    "S1.grd.bank_36900",
+    "S1.grd.spit_east_37060"
+   ],
+   "verdict": "Water reaches further east than mapped. Its south shore (the near bank) runs to about 37250, its north shore (the north bank's foot) to about 37560 between the seals, and the east spit to the seal at 37362 and on past it. To the west, the pale band is pale and edged only east of about 35650. At 35400-35650 nothing marks it, nor the near bank (to about 35850). Changes proposed for each line.",
+   "evidence": "Column darkness profiles (prof.mjs) at every u named in the changes. lower_w.jpg, lower_e.jpg, paleband.jpg, bottom.jpg, eastend_z2.jpg, ov_spits.jpg, ov_eastbank.jpg. Seal boxes from seal.mjs."
+  },
+  {
+   "flag": "the pale patch with contour strokes at 35907-35980, v 840-900 (ground mark?)",
+   "ids": [],
+   "verdict": "Ground strokes, no entity (t7 confirmed).",
+   "evidence": "patch_z25n.jpg, patch_z35g.jpg (greyscale, blurred). A pale area at 35924-35984, v 820-934 with a dark wedge at 35941-35964, v 866-880, smaller marks below it, and horizontal bank strokes at v 923-951. No head, robe outline, sleeves or feet; trunk outlines cross it. It lies on the est road's south edge (edge_s ~860 at 36000). The restyle's man is invented."
+  },
+  {
+   "flag": "the crossing trunks of the three bare elms",
+   "ids": [
+    "S1.tree.bare_elm_35840",
+    "S1.tree.bare_elm_twin_35920",
+    "S1.tree.bare_elm_tall_36070"
+   ],
+   "verdict": "t7's reading 1 holds, no change.",
+   "evidence": "elms_z1n.jpg (zoom 1, whole height) and cross_z3n.jpg. The tall trunk's outlines run on straight from its fork (36113, 380) to its foot (36060-36095, v 910-1160). The twin's east stem crosses it at v ~860-910. Beside the tall trunk at v 450-740 a second, thinner stem stands (36097-36113), as reading 1 says. Three feet, where recorded."
+  },
+  {
+   "flag": "far_fan_tree_36300's base",
+   "ids": [
+    "S1.tree.far_fan_tree_36300"
+   ],
+   "verdict": "Not readable, est kept.",
+   "evidence": "farfan_z15g.jpg (blurred greyscale, zoom 1.5). Its pale stems converge at 36283-36303, v 303-350 and show down to v ~430. From v 430 to 700 S1.tree.elm_bare_36660's crab-claw limbs cover it, and at v 700-766 no pale trunk shows at u 36280-36320 (only the west driver at 36235-36265). Base anywhere on the far ground at v <= 766; (36300, 700) est is as good as any."
+  },
+  {
+   "flag": "the leaning pole",
+   "ids": [
+    "S1.prop.leaning_pole_37075"
+   ],
+   "verdict": "A cut pole, as mapped, no change.",
+   "evidence": "pole_z35.jpg, slender_z2g.jpg. Parallel straight edges about 10-12 px apart with a pale interior (lighter than any trunk), and a squarely cut top end at (36986-36997, 694-702). It crosses in front of the slender trunk and rests at (37080-37095, 805-820) against the forked tree's trunk, whose root mass hides its foot (base est (37075, 830) stands). A broken limb would taper and carry twigs, and this does neither."
+  },
+  {
+   "flag": "tree count and other misses in 35400-37610 (no flag; full read)",
+   "ids": [],
+   "verdict": "19 trees with bases in the range, all present. No figure, animal, bird, nest or prop missing.",
+   "evidence": "top_w_grey.jpg and top_e_grey.jpg (blurred greyscale over the top half): 7 grove trunks counted again at 35445-35850, the far fans at 35965-36130 and 36243-36700, the three east trees. The low twigs at 37240-37330, v 740-820 are elm_bare_37140's low east limb, as its note says. The stub at (37235, 590-600) is part of it. Silk damage at 36036-36100, v 260-394 and 36880-36900, v 650-685; silk creases at u 35500-35520 and 37192/37244. Moss dot at (36645, 1410) on spit_36225's top (no entity, per the merge's rule)."
+  }
+ ],
+ "left_to": [
+  {
+   "what": "The near bank (S1.grd.bank_south_34400) and the pale band's south shore are drawn on no stroke from about 34850 to 35850. At 35450-35750 the whole lower half is one even tone. The farms pass may see the same west of 35400.",
+   "to": "the second pass `farms` (33200-35400) and the lead (the water-or-ground question)"
+  },
+  {
+   "what": "The train's direction as painted (east-south-east, down toward the bridge's east end): the evidence is in the group's change. It decides the routine in sections/countryside/people.json.",
+   "to": "the lead"
+  },
+  {
+   "what": "A driving stick in the west driver's hand (to about (36320, 705)) and the east driver's switch: carried props for the needs list.",
+   "to": "the needs agent"
+  },
+  {
+   "what": "If S1.prop.mooring_pole_36444 is accepted, the boat kit (or a stake prop) needs a thin upright pole about 1 m above the water at the boat's east end.",
+   "to": "the needs agent"
+  }
+ ],
+ "lessons": [
+  "**Measure a seal before you stop a line at it.** S1's east end stopped the road and three bank lines at u 37250 'under a seal'. The seals there sit at u 37396-37538 (v 805-1007) and 37362-37567 (v 1138-1351); the one at 37248 is at the top of the silk (v 51-319). So 150 px of painted bank and the strip between the seals were left out. Find each seal's box from its red pixels (R-G > 45 on the scan), run every line to the box it really meets, and say in the note where the strokes show again past the seal.",
+  "**A layered wash bank has its foot at its lowest stroke.** Countryside banks are painted as two or three stacked wash strokes with paler gaps between them. The lower edge of the first stroke is a layer, not the bank's foot (S1.grd.bank_37050: mapped 868-870, drawn foot 918-978). Take the foot from a column darkness profile through the whole band, and check it against the figures and the road beside it: the drivers stand and the road runs along the true foot.",
+  "**A line at a boat's end: follow it to both ends before naming it.** A rope runs to what it is tied to and slants toward it. A vertical line that rises from the boat and stops short of everything is a pole planted in the bed (S1: 60 px long, ending 40-60 px under the nearest bridge post). Check the post the note names against the structure's own `bays`.",
+  "**Read a pack animal's view from its legs, not from its load.** Two bundles side by side can be a front-and-back load seen in profile. Legs spread along u mean a side view (S1's D1: three legs 37 px apart, head lowered at the east end). An end-on animal shows its panniers left and right of a central head or rump, and its legs splay to both sides (D5)."
+ ]
+}

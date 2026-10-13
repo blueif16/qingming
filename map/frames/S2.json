@@ -1,0 +1,509 @@
+{
+ "section": "S2",
+ "status": "frame step 2026-10-12 (round 2). Continues S3 east of u 20500 with S5's origin and scales, S3's seam knot [20500, 30.4] and S3's route station at the seam (+179.21). Four measured knots: west 43.1 (u 22185), middle 48.3 (23989), middle-east 46.6 (25924) and east -51.6 (28121): THE RECEDING DIRECTION TURNS OVER between u ~26000 and ~28100 (the east wharf's furniture recedes up-left), which stretches the rows north of the river over that stretch; the lead decides (questions, first item). Water copied from S4b (-0.7).",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    20350,
+    29200
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    30.4,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     20500,
+     30.4
+    ],
+    [
+     22185,
+     43.1
+    ],
+    [
+     23989,
+     48.3
+    ],
+    [
+     25924,
+     46.6
+    ],
+    [
+     28121,
+     -51.6
+    ]
+   ],
+   "derivation": [
+    "Seed (mapping_rules.md, frame, \"S3, S2, S1\"): S5's origin (S5.str.moat_bridge:base.sw, scan 8248, 1565), 77 px per metre across the street and in height, 51.25 px of v per metre of depth (map/README.md, Frames, One world across sections), from map/frames/S3.json. Covers u 20350-29200, the area's look range.",
+    "Seam knot [20500, 30.4]: S3's dx at u 20500 (its last knot [19830, 30.4], constant to the seam; map/frames/S3.json). A point on the seam maps to the same metres in both sections: S2's painted area's west corners are S3's east corners (map_layout: sw (160.85, -4.39), nw (147.06, 30.54)).",
+    "MEASURED KNOTS (ground-level receding edges; each group's knot is dx = 51.25 / |mean slope|, at the mean u of its edges; stroke points from gen/map/S2/reports/structures_w.md section 4 and structures_e.md section 5, with t4, t5, t10 and t11's reads of the same furniture; the frame agent re-read the shop row's side, the shop-front tables and the tiled shed's tables on zoom-2.5 to zoom-4 crops, scratchpad S2_frame/k_*.jpg):",
+    "  WEST, [22185, 43.1]: the shop row's east side wall, post foot to post foot (21425, 135) -> (21457, 99) -1.13 (45; ground, med); the gateway's low roof, west side (22499, 193) -> (22521, 167) -1.18 (43) and east side (22593, 210) -> (22616, 181) -1.26 (41) (a roof about 2.5-3 m up, med). Mean slope -1.19 (n = 3, weak; structures_w). Not used: the south-bank hall's NW hip (-0.71, a hip runs diagonal to the plan), the slat fence's foot (-0.32, set at a slant), the shop row's roof verge (-1.27, short). S3's north-bank tavern tables at u ~20160 read 39-43 too (S3's frame, not used there).",
+    "  MIDDLE, [23989, 48.3]: nine furniture edges at the eatery and the shop fronts (all short, +-0.3): the eatery table's east end (23902, 349) -> (23922, 328) -1.05, its bench (23860, 365) -> (23875, 352) -0.87, the shop-front tables (24010, 220) -> (24020, 205) -1.5, (24060, 225) -> (24074, 204) -1.5, (24137, 230) -> (24151, 212) -1.29 (structures_w); t4's eatery table (23714, 368) -> (23722, 357) -1.38; t5's three reads of the shop tables -0.72, -0.8, -0.53. Mean slope -1.07 (structures_w: -1.06, dx ~48, scatter +-0.35). The frame agent's re-read of the shop table at 24060-24160 (k_shoptables.jpg): its west end -1.2 to -1.5 (34-44).",
+    "  MIDDLE-EAST, [25924, 46.6]: 沿河雅座's long interior table, west end (25690, 412) -> (25702, 400) -1.0 (51, low, seen through a window on a raised floor), and the far-street table under the long shed, west end (26145, 118) -> (26160, 100) -1.2 (43, low). Mean slope -1.10. Direction only, agreeing: the white-wall house's short ridge sits right of its wall's middle, and the warehouse's east gable end is visible (structures_e).",
+    "  EAST, [28121, -51.6]: ten furniture edges that recede UP-LEFT (slope positive): the lower shed's tables (27705, 752) -> (27735, 778) +0.87 and (27855, 758) -> (27880, 782) +0.96; the tiled shed's tables (28030, 455) -> (28050, 475) +1.0, (28090, 455) -> (28110, 475) +1.0, (28150, 455) -> (28170, 478) +1.15; 望楼饭铺's table (28620, 565) -> (28640, 590) +1.25 (structures_e); t11's table_28205 (28152, 454) -> (28182, 476) +0.73, its bench (28160, 470) -> (28196, 496) +0.72, table_28598 (28615, 574) -> (28632, 592) +1.06; t10's table_27672 (27710, 752) -> (27732, 778) +1.2. Mean slope +0.99 (scatter dx -41 to -71). The frame agent's crop of the tiled shed's tables (k_tiledshed_tables.jpg) shows every short side running down to the right. Agreeing: the 望火楼 pavilion's back posts stand 45 px LEFT of its front posts (28387 -> 28343, 28540 -> 28495) and its platform's back corners likewise (structures_e); between the groups 王家纸马铺 (26915-27290) is drawn frontal, its floor line level (v 200-203) and no side shown, where the line between the middle-east and east knots crosses 0 (u ~26960).",
+    "RAMP RATES (a constant dx gives 1.30 m of X per 100 px of u on every row; a drifting dx scales that by 1 - dx' * D, D up to 30.2 m at the silk's top; scratchpad S2_frame/knot_options.mjs): 20500-22185 +0.75 px/m per 100 px (the silk's top rows at 0.77); 22185-23989 +0.29; 23989-25924 -0.09; 25924-28121 -4.47 (the turn): the rows north of the river STRETCH, x1.45 at mid-water (v 1000), x1.75 on the east wharf and the route (v 700), x2.1 on the north-bank strip (v 300) and x2.35 at the silk's top. Nothing folds. East of 28121 dx is constant again.",
+    "WALL AND EDGE CHECKS (world direction of the measured edges, expected 90 deg for a short side receding straight back; knot_options.mjs): west, the shop row's east side 91.2; middle, the eatery table 92.0; middle-east, 沿河雅座's table 85.9; east of the last knot, 望楼饭铺's table 82.2 and the 望火楼 pavilion's post line 99.5 (est). Inside the turn the strong drift skews short edges: the tiled shed's table 124.3, the lower shed's 130.9 (with dx held at +46.6 they would be 139-145 deg everywhere east of 26000). Fronts run along the bank: 王家纸马铺's floor line -0.3 deg, the tiled shed's foot line -10.6, 望楼饭铺's post feet -30.3 (the sheds follow the bank, which turns south-east toward the S1 seam)."
+   ],
+   "assumptions": [
+    "East-west and height 77 px per metre, depth 51.25 px of v per metre, as every section (S5). Things up the silk are painted smaller (questions: the diminution); positions only come from the map (BUILDING.md rule 5).",
+    "dx drifts along S2 by the knots above: from S3's 30.4 at the seam to 43.1 by the trackers, 48.3 at the eatery, 46.6 at 沿河雅座, then turns through 0 near 王家纸马铺 (u ~26960) to -51.6 on the east wharf, linear between and constant beyond. The drift and the turn are the painter's (the lead's note for S3/S2: keep the seam knot and add the measured knots). S1 starts from -51.6 at u 29050.",
+    "Painted figure size is not a scale (wharf figures 133-148 px at v 700-900, 1.7-1.9 m at 77 px/m; the north-bank strip's 54-95 px). Place by foot point.",
+    "The bank tops on both sides of the river are at street level (ground, H 0); the banks' shore lines stand on the water (support_by). Things painted on the wash slope between them (`bank slope`) are taken half way down, H -0.35 (assumed).",
+    "Boat decks and roofs are the water plus the painted rise from the waterline to the deck straight above it (two stroke points each, the river agents' readings unless said); the high-sided boats are drawn with 150-210 px of side, so their decks come out 2-2.7 m above the water (questions)."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "street level. 'ground: on <prop>' (the grain owner on his sacks) marks a figure whose foot point is the ground under the thing he sits on"
+  },
+  "water": {
+   "H": -0.7,
+   "how": "COPIED FROM map/frames/S4b.json (one H for the whole 汴河, Phase 0), as S3's frame copied it. S4b's derivation: MEASURED AS A BOUND (conf low), the river agent's reading (gen/map/S4b/reports/river.md, Water level): H = -(v_waterline - v_ground) / 77 at the same u, the ground at street level (H 0), at the three places where flat ground meets the first water on S4b's moorings: M1 the bank path at the gangplank, ground (14778, 401) under the porter's feet and the plank's foot, over the first ripple swirl (14778, 456): 55 px, -0.71; M2a the top-left building's front wall foot (14920, 166) over the landing's lower wash edge (14920, 224): 58 px, -0.75; M2b the same wall foot (14990, 151) over the landing's edge (14990, 203): 52 px, -0.68. Spread 0.07 m; M2a and M2b (a wall foot, the narrowest bank) are the surest. The bank is a wash-drawn slope with no vertical face, stair, revetment or jetty, so each reading is an upper bound on the depth: a landing s m deep puts the water 0.67 s m higher (plausible range -0.3 to -0.75). S3's river agents found no vertical face either; river_e's bounds at the far-bank hall on posts (18446-18542: -0.86 to -1.0) fit. 1 m of H moves every boat and shore point 1.5 m north or south (77 / 51.25). One H for the whole 汴河: S3, S2 and S1 copy it; a revetment, stair or abutment foot read later replaces it only with the lead's agreement. Replaces the seed's -1.5 (S5's moat, assumed). S2'S OWN CHECKS (not used; no S2 unit could measure a level: no vertical face, quay or stair meets the water in 20500-29050 except the rough landing steps): river_w2, the landing steps at the terrace's west end S2.str.landing_steps_22950, top tread (22932, 410) at ground level over the lowest step at the water (22952, 486, est), 76 px: H >= -0.99 (a bound: the stair runs south as it descends, so the true surface is higher; a 0.5 m run gives -0.65); river_m, the bank west of the moored boat's post, (25250, 560) over the hidden shore (25250, 638, est), 78 px: >= -1.0 (weak); river_e, the bank top (28330, 975) over the bank porter's edge line (28330, ~1220): |H| <= 3.2 (a slope). All consistent with -0.7; none tighter."
+  },
+  "bank slope": {
+   "H": -0.35,
+   "how": "assumed: half way between the bank top (ground, 0) and the water (-0.7). Used by the things painted on the wash slope between them: the bank porter climbing from grain boat 2, the two men at the bank's edge behind the cargo boat's deckhouse, t6's mooring post, the mooring post with its coiled rope, the ladder, the ribbed object and the jetty's post feet. A thing at the slope's foot is then about 0.5 m too far north, one at its top about 0.5 m too far south (1 m of H moves a point 1.5 m in depth)"
+  },
+  "terrace floor: S2.bld.river_terrace_23250": {
+   "H": 0,
+   "how": "derived: the terrace's floor is level with the bank top: its carved front sill runs v 438 (u 23050) to 456 (23320) (structures_w, floor_sw (23040, 438), floor_mid (23250, 452)), and the bank top under it is (23300, 452, est) (the merge's seam point); its back meets the long house's wall foot (22902, 414) on the same ground. Its front stands on stilts to the shore (v 485-495), about 0.55 m above the water. The five diners, their tables, the chair and the bundle stand on it, and the route's stretch 22920-23500 (support_ranges)"
+  },
+  "upper floor: S2.bld.yanhe_yazuo_hall_25690": {
+   "H": 1.3,
+   "how": "derived: 沿河雅座's raised room floor, its sill line v ~462-468 (sill_w (25480, 465), sill_e (25895, 457)), over the posts' feet on the bank straight below, bays (25768, 566) and (25868, 565): 100 px (structures_e: \"floor ~100 above the bank\"). The two window figures, the tables and chairs and the ladder inside stand on it"
+  },
+  "fire tower platform": {
+   "H": 1.13,
+   "how": "derived (a lower bound): the 望火楼 platform's brick face, its top edge sw_top (28393, 203) over its foot sw (28393, 290, est), 87 px; the foot is hidden behind the rear shed's roof at v >= 283, so the platform may be higher. Only the pavilion stands on it: nobody is painted on the platform (余辉: a tower with no watchman)"
+  },
+  "table top: S2.prop.table_shop_21160": {
+   "H": 0.4,
+   "how": "derived: the top board v 105-110 over its front legs' feet (21135, 138) and (21190, 137), 31 px (t1; painted small at the top of the silk). The basket stands on it"
+  },
+  "table top: S2.prop.stall_table_24708": {
+   "H": 0.42,
+   "how": "derived: the top's front edge v ~458 (top v 440-460) over its legs' feet v 488-492 (t6), 32 px. The stall's goods lie on it"
+  },
+  "cart bed: S2.veh.mule_cart_24305": {
+   "H": 0.91,
+   "how": "derived: the bed's top at the loader's feet (24345, ~195) over the ground line under it, the near wheel's ground contact (24390, 267): 70 px (t5). The loader stands on it"
+  },
+  "perched: S2.tree.willow_great_21345": {
+   "H": 10.47,
+   "how": "derived like S4's and S4b's perched birds: a bird in the great willow's crown taken at the depth of the tree's trunk foot, base (21345, 1450, est); the two birds' undersides at v 636 (S2.ani.bird_in_willow_21730) and 651 (S2.ani.bird_in_willow_21135), mean 643.5: (1450 - 643.5) / 77 = 10.47 m (10.57 and 10.38 each)"
+  },
+  "animal S2.ani.donkey_26872": {
+   "H": 0,
+   "how": "the hooded rider on the donkey on the far street: his foot point (26835, 152, est) is the ground under his seat, and the donkey stands on the ground (hooves (26872, 151), (26822, 152)), so H 0; named so the rider's support is explicit (S3's lesson: riders need their animal's height)"
+  },
+  "boat deck: S2.veh.boat_mat_cargo_21055": {
+   "H": -0.02,
+   "how": "water -0.7 + 0.68 m: the near gunwale over the waterline straight below it, v ~412-427 over v ~462-486 (river_w); at beam_s (20760, 482) the gunwale is at v ~430: 52 px. The four deck crew (the pole man west of the seam among them) stand on it"
+  },
+  "boat roof: S2.veh.boat_mat_cargo_21055": {
+   "H": 1.05,
+   "how": "water -0.7 + 1.75 m: the mat cover over the cargo, under the roof man's feet (20683, 338) over the near waterline (20683, ~473) (river_w: 85 px above the near gunwale, 135 above the waterline)"
+  },
+  "boat deck: S2.veh.boat_big_cabin_21120": {
+   "H": -0.12,
+   "how": "water -0.7 + 0.58 m: the cabin floor at the near gunwale, v ~300 over the waterline v ~345 at u ~21335 (river_w). The window man and the far-deck boatman stand on it"
+  },
+  "boat stern deck: S2.veh.boat_big_cabin_21120": {
+   "H": 1.01,
+   "how": "water -0.7 + 1.71 m: the high stern: stern_top (21662, 255) over rear (21665, 387, est), river_w. The steersman stands on it"
+  },
+  "boat deck: S2.veh.boat_covered_21205": {
+   "H": -0.14,
+   "how": "water -0.7 + 0.56 m: the gunwale amidships v ~1195 over the waterline v ~1238, est (river_w). The seated man and the child or vase are on it"
+  },
+  "boat deck: S2.veh.boat_open_21968": {
+   "H": -0.43,
+   "how": "water -0.7 + 0.27 m: the gunwale (22100, 1536) over beam_s (22100, 1557) (river_w2). The two men are on it"
+  },
+  "boat deck: S2.veh.boat_sweep_22000": {
+   "H": 0.73,
+   "how": "water -0.7 + 1.43 m: the raised after deck where the six sweep men stand, v ~975-995 at u 22100-22200, over the est waterline v ~1080-1112 (river_w2, est)"
+  },
+  "boat deck: S2.veh.boat_mat_roof_22290": {
+   "H": 0.53,
+   "how": "water -0.7 + 1.23 m: the near gunwale at the bucket man (22665, 1595) over the waterline straight below (22665, 1690) (river_w2; the stern rises: amidships about 70 px)"
+  },
+  "boat deck: S2.veh.boat_passenger_22545": {
+   "H": 0.21,
+   "how": "water -0.7 + 0.91 m: 豪华客船's side walkway (23200, 840) over beam_s (23200, 910) (river_w2). The boatman on the walkway and the two in the open bay stand on it"
+  },
+  "boat roof: S2.veh.boat_passenger_22545": {
+   "H": 2.03,
+   "how": "the walkway (0.21) + the cabin roof's eave, about 140 px over the walkway (river_w2: \"the frame should take roof eave ~140 px over the walkway\"): 1.82 m. The man reclining on the roof cargo is on it"
+  },
+  "boat after roof: S2.veh.boat_passenger_22545": {
+   "H": 3.39,
+   "how": "water -0.7 + 4.09 m: the tall after cabin's roof deck under the windlass man, v ~590 at u 23468, over the waterline ~905 (river_w2; conf low: about the walkway + 3.2 m)"
+  },
+  "boat ladder: S2.veh.boat_passenger_22545": {
+   "H": 1.77,
+   "how": "the walkway (0.21) + the rung under the climbing man's feet, about 120 px above the ladder's foot on the walkway (23243, 835) (river_w2; ladder top (23305, 690)): 1.56 m"
+  },
+  "boat deck: S2.veh.boat_towed_mast_23632": {
+   "H": 0.21,
+   "how": "water -0.7 + 0.91 m: 逆水行舟's wale amidships (24400, 1145) over beam_s (24400, 1215) (river_m). The foredeck men, the passengers at the window and the man at the stern cabin's door stand on it"
+  },
+  "boat bow deck: S2.veh.boat_towed_mast_23632": {
+   "H": -0.28,
+   "how": "water -0.7 + 0.42 m: the low bow deck under the hood: bow_top (23625, 1068) over front (23632, 1100, est) (river_m). The bowman stands on it"
+  },
+  "boat roof: S2.veh.boat_towed_mast_23632": {
+   "H": 1.7,
+   "how": "the deck (0.21) + the cabin's height: the roof's front edge (24400, ~1030) over the wale (24400, 1145), 115 px (river_m: cabin walls about 110 px, v 1030-1140): 1.49 m. The roof crew (the hauler at the mast, the seated and leaning men, the coil figures) are on it"
+  },
+  "boat deck: S2.veh.boat_cargo_hooded_bow_23715": {
+   "H": 1.77,
+   "how": "water -0.7 + 2.47 m: the cargo boat's south gunwale (24400, 695) over beam_s (24400, 885, est), the waterline hidden behind 逆水行舟 (river_m). Its deck crew stand at v 578-682 on the deck plane behind the gunwale; an unladen, high-sided hull"
+  },
+  "boat deck: S2.veh.boat_moored_mat_canopy_25145": {
+   "H": 2,
+   "how": "water -0.7 + 2.7 m: the gunwale amidships (25600, 800) over beam_s (25600, 1008) (river_m). The three crew are on it"
+  },
+  "boat deck: S2.veh.boat_mat_cabin_25980": {
+   "H": 1.31,
+   "how": "water -0.7 + 2.01 m: the deck edge under the cabin walls (26300, 835) over beam_s (26300, 990) (river_e). Nobody stands on it now (the hood man is on the stern deck); kept for the builder's deck"
+  },
+  "boat stern deck: S2.veh.boat_mat_cabin_25980": {
+   "H": 3.17,
+   "how": "water -0.7 + 3.87 m: the high after deck under the stern hood (26750, ~702) over the waterline ~1000, est (river_e: the stern overhangs). The hood man sits on it"
+  },
+  "boat roof: S2.veh.boat_mat_cabin_25980": {
+   "H": 2.83,
+   "how": "water -0.7 + 3.53 m: the cabin roof's edge v 716-720 at u 26295 over beam_s (26300, 990) (river_e: the deck 2.0 m + the roof 1.5 m). The roof man crouches on it"
+  },
+  "boat deck: S2.veh.boat_grain_27285": {
+   "H": -0.01,
+   "how": "water -0.7 + 0.69 m: grain boat 1's south gunwale amidships, v ~1440 at u 27570, over beam_s (27570, 1493) (river_e): deep-laden. Nobody stands on it; kept for the builder's deck"
+  },
+  "boat stern deck: S2.veh.boat_grain_27285": {
+   "H": 1.96,
+   "how": "water -0.7 + 2.66 m: the stern deck by the tiller, v ~1300 est (the tiller bar at v 1265-1280), over rear (27882, 1505) (river_e, est). The steersman reading stands on it"
+  },
+  "boat deck: S2.veh.boat_grain_28095": {
+   "H": 0.01,
+   "how": "water -0.7 + 0.71 m: grain boat 2's after deck under the coils, v ~1405-1420 at u 28550, over the waterline ~1470, est (river_e). The coil figure (a man or a bitt) is on it"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S2.road.main:lines.centre.0"
+  ],
+  "station": 179.21,
+  "about": "where the route crosses the seam with S3 (u 20500): S2.road.main's centre-line point 0, exactly S3.road.main's last centre point (20500, 258, est; read from map/strokes/S3.json by merge_fixes.mjs on every run). Station +179.21 there, S3's route station at that point (sections/rainbow_bridge/layout.json), so stations run on."
+ },
+ "checks": [
+  {
+   "what": "shop row on the north-bank strip: front eave above its south-west corner (sw -> sw_eave), m",
+   "a": "S2.bld.shop_row_21200:base.sw",
+   "b": "S2.bld.shop_row_21200:sw_eave",
+   "measure": "height",
+   "expect": "a shop's front eave, roughly 2.8-3.5 m; at v 141, where figures are painted at about 0.5-0.6 of life"
+  },
+  {
+   "what": "the long house: front eave (sw -> sw_eave), m",
+   "a": "S2.bld.long_house_22780:base.sw",
+   "b": "S2.bld.long_house_22780:sw_eave",
+   "measure": "height",
+   "expect": "a house's pent eave, roughly 2.5-3.2 m; at v 406 (figures about 0.75 of life)"
+  },
+  {
+   "what": "the eatery shelter: eave (sw -> sw_eave), m",
+   "a": "S2.bld.eatery_shelter_23750:base.sw",
+   "b": "S2.bld.eatery_shelter_23750:sw_eave",
+   "measure": "height",
+   "expect": "a mat shelter's eave, roughly 2.2-2.8 m; at v 389 (figures about 0.75 of life)"
+  },
+  {
+   "what": "the dining terrace: front eave (sw -> sw_eave; base est at the stilts' feet), m",
+   "a": "S2.bld.river_terrace_23250:base.sw",
+   "b": "S2.bld.river_terrace_23250:sw_eave",
+   "measure": "height",
+   "expect": "a terrace roof's eave over a floor near ground level, roughly 2.8-3.5 m above the stilts' feet"
+  },
+  {
+   "what": "the scaffold house: front eave (sw -> sw_eave), m",
+   "a": "S2.bld.scaffold_house_24975:base.sw",
+   "b": "S2.bld.scaffold_house_24975:sw_eave",
+   "measure": "height",
+   "expect": "a single-storey house's eave, roughly 2.8-3.2 m; at v 500 (figures about 0.8 of life)"
+  },
+  {
+   "what": "the open shop by the halls: front eave (sw -> sw_eave), m",
+   "a": "S2.bld.open_shop_25340:base.sw",
+   "b": "S2.bld.open_shop_25340:sw_eave",
+   "measure": "height",
+   "expect": "a shop's eave, roughly 3-3.5 m"
+  },
+  {
+   "what": "the warehouse: eave above its plinth's foot (sw -> sw_eave), m",
+   "a": "S2.bld.warehouse_26070:base.sw",
+   "b": "S2.bld.warehouse_26070:sw_eave",
+   "measure": "height",
+   "expect": "a warehouse eave on a plinth about 0.9 m high (70 px), roughly 3.5-4.5 m"
+  },
+  {
+   "what": "王家纸马铺: front eave (sw -> sw_eave), m",
+   "a": "S2.bld.wang_paper_horse_shop_27100:base.sw",
+   "b": "S2.bld.wang_paper_horse_shop_27100:sw_eave",
+   "measure": "height",
+   "expect": "a shop's eave, roughly 3 m; at v 200 (figures about 0.55 of life)"
+  },
+  {
+   "what": "the tiled shed: front eave at its east post (se -> se_eave), m",
+   "a": "S2.bld.tiled_shed_27985:base.se",
+   "b": "S2.bld.tiled_shed_27985:se_eave",
+   "measure": "height",
+   "expect": "a shed's eave, roughly 2.5-3 m"
+  },
+  {
+   "what": "the jetty: deck railing above its post feet (sw -> sw_top), m",
+   "a": "S2.str.jetty_27260:base.sw",
+   "b": "S2.str.jetty_27260:sw_top",
+   "measure": "height",
+   "expect": "a raised walkway on the bank slope, deck about 0.3-0.6 m up plus a railing about 0.9 m"
+  },
+  {
+   "what": "the 望火楼 platform: brick face (sw -> sw_top; foot hidden, est), m",
+   "a": "S2.str.fire_tower_platform_28450:base.sw",
+   "b": "S2.str.fire_tower_platform_28450:sw_top",
+   "measure": "height",
+   "expect": "a fire tower's brick platform, several metres; painted small at v 200-290 and its foot hidden, so a lower bound"
+  },
+  {
+   "what": "逆水行舟's mast: foot -> top, m",
+   "a": "S2.veh.boat_towed_mast_23632:mast",
+   "b": "S2.veh.boat_towed_mast_23632:mast_top",
+   "measure": "height",
+   "expect": "a Song grain boat's mast, roughly 10-15 m"
+  },
+  {
+   "what": "王家纸马铺: front length (sw -> se), m",
+   "a": "S2.bld.wang_paper_horse_shop_27100:base.sw",
+   "b": "S2.bld.wang_paper_horse_shop_27100:base.se",
+   "measure": "distance",
+   "expect": "a shop front of 3-4 bays, roughly 9-13 m; 375 px at v 200, inside the receding direction's turn"
+  },
+  {
+   "what": "望楼饭铺: front length (sw -> se), m",
+   "a": "S2.bld.wanglou_shed_28660:base.sw",
+   "b": "S2.bld.wanglou_shed_28660:base.se",
+   "measure": "distance",
+   "expect": "a long barracks-type shed, roughly 15-25 m (751 px, past the last knot)"
+  },
+  {
+   "what": "the jetty: length along the bank (sw -> se), m",
+   "a": "S2.str.jetty_27260:base.sw",
+   "b": "S2.str.jetty_27260:base.se",
+   "measure": "distance",
+   "expect": "a plank walkway with six posts, roughly 6-12 m"
+  },
+  {
+   "what": "grain boat 1: waterline length (front -> rear), m",
+   "a": "S2.veh.boat_grain_27285:front",
+   "b": "S2.veh.boat_grain_27285:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "Hb": -0.7,
+   "expect": "a 万石船 grain boat, roughly 20-30 m (river_e: 600 px front-rear)"
+  },
+  {
+   "what": "豪华客船: waterline length (front -> rear), m",
+   "a": "S2.veh.boat_passenger_22545:front",
+   "b": "S2.veh.boat_passenger_22545:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "Hb": -0.7,
+   "expect": "a large passenger boat, roughly 20-30 m (1180 px)"
+  },
+  {
+   "what": "逆水行舟: waterline length (front -> rear), m",
+   "a": "S2.veh.boat_towed_mast_23632:front",
+   "b": "S2.veh.boat_towed_mast_23632:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "Hb": -0.7,
+   "expect": "a big grain boat, roughly 25-35 m (1420 px)"
+  },
+  {
+   "what": "the river's width at u 21000: north shore -> south shore, m",
+   "a": "S2.water.bian_river_w:lines.shore_n.5",
+   "b": "S2.water.bian_river_w:lines.shore_s.4",
+   "measure": "distance",
+   "Ha": -0.7,
+   "Hb": -0.7,
+   "expect": "the 汴河 here, tens of metres (S3: 8.2 m at u 18300, 16.5 m at 15500)"
+  },
+  {
+   "what": "the north-bank strip in front of the shop row at u 21300: the road's edge_n -> edge_s, m",
+   "a": "S2.road.main:lines.edge_n.5",
+   "b": "S2.road.main:lines.edge_s.5",
+   "measure": "distance",
+   "expect": "a walkable bank, a few metres; painted 29 px deep at v 137-166 (questions: strip depths)"
+  },
+  {
+   "what": "the gateway: post to post (sw -> se), m",
+   "a": "S2.str.gateway_22573:base.sw",
+   "b": "S2.str.gateway_22573:base.se",
+   "measure": "distance",
+   "expect": "a gateway's opening, roughly 2-3 m; painted 75 px at v 315 (figures about 0.7 of life)"
+  },
+  {
+   "what": "王家纸马铺: front direction (sw -> se), deg",
+   "a": "S2.bld.wang_paper_horse_shop_27100:base.sw",
+   "b": "S2.bld.wang_paper_horse_shop_27100:base.se",
+   "measure": "direction",
+   "expect": "0 (drawn frontal)"
+  },
+  {
+   "what": "the tiled shed: front direction along its posts' feet (sw -> se), deg",
+   "a": "S2.bld.tiled_shed_27985:base.sw",
+   "b": "S2.bld.tiled_shed_27985:base.se",
+   "measure": "direction",
+   "expect": "along the bank, which runs east-south-east here (the sheds follow it)"
+  }
+ ],
+ "questions": [
+  "FOR THE LEAD FIRST, THE RECEDING DIRECTION TURNS OVER IN S2's EAST HALF. West of u ~26200 every ground-level edge recedes up-right (west 43.1, middle 48.3, middle-east 46.6 px/m, continuing S3's 30.4 at the seam); from u 27700 to 28650 all ten furniture edges read by three agents recede UP-LEFT (slopes +0.72 to +1.25, mean +0.99, dx -51.6), the 望火楼 pavilion's back posts stand 45 px left of its front posts, and 王家纸马铺 between the groups (26915-27290) is drawn frontal. The frame uses the measured knots (option A): dx falls from +46.6 at u 25924 to -51.6 at 28121 (-4.47 px/m per 100 px, three times S4b's suggested limit of 1.5) and stays -51.6 to the S1 seam. NOTHING FOLDS, but over u 25924-28121 the rows north of the river STRETCH east-west: x1.45 at mid-water (v 1000), x1.75 on the route and the east wharf (v 700), x2.1 on the north-bank strip (v 300), x2.35 at the silk's top; the route from u 25900 to 28250 is 53.9 m long. East of 28121 the furniture maps square (望楼饭铺's table 82 deg, the pavilion's post line 99 deg); inside the turn it maps 124-131 deg (the drift itself skews short edges). The stretch falls where the painter shrinks the far rows to about 0.5 of life, so real-size buildings there fit their painted places better (王家纸马铺's front comes out 10.7 m, a 3-4 bay shop; held at +46.6 it is 4.9 m). OPTION B, hold +46.6 east of 25924 (one edit: drop the last knot): no stretch (route 34.4 m), but the whole east wharf's furniture, sheds and the 望火楼 map skewed 49-55 deg (139-145 deg instead of 90), and S1 starts from +46.6. OPTION C, a ramp held to 1.5 px/m per 100 px (to +13.7 at 28121): x1.25 at the route and x1.45 at the silk's top, route 40.7 m, but the east edges still map 125-140 deg. Computed in scratchpad S2_frame/knot_options.mjs. S1's structures_w found no ground-level receding edge in 29050-33000 and suggests holding S2's seam knot; its farmhouse hip reads +43 (a hip, low) and its east +24 (low), so a ramp back toward + inside S1 should stay slow (from -51.6 to +24 over 7000 px is +1.1 per 100 px: no fold). Changing the knots is one edit of dx_knots in map/frames/S2.json (scratchpad S2_frame/mkframe.mjs), then `node tools/scroll_map.mjs S2 all` and `node tools/map_layout.mjs S2`; the seam knot S1 seeds from changes with it.",
+  "THE STRIPS AND THE DIMINUTION (the lead's note: report each strip's depth; the one-scale frame is kept). The route's strip depth (edge_n to edge_s, m, at the frame's one depth rate; worldcheck.mjs): the north-bank strip in front of the shops and fences, u 20500-21800: 0.56-1.56 m; the trackers' towpath 21950-22600: 2.2-3.1; in front of the long house 22780-22900: 1.1-1.2; through the terrace 23050-23450: 1.0-1.3; the eatery 23560-23950: 1.2-2.3; the unloading yard 24150-24550: 4.2-5.9; IN FRONT OF THE SCAFFOLD HOUSE 24700-25100: 0.20-0.29 m (the level strip is 10-20 px of v); the open shop and 沿河雅座 25230-25900: 0.7-1.6; the warehouse, the white-wall house and the great willow 26100-27000: 0.5-0.8; the jetty and the lower shed 27135-27850: 0.9-2.5; the porters' wharf and 望楼饭铺 28050-29050: 6.0-8.2. THE DIMINUTION (structures_w's table, about 30 standing adults from the parts): against life at the frame's 77 px/m (127 px for 1.65 m) the painted scale is about 0.5 at foot v 116-150 (the far street and the top strip), 0.68 at v 170-260, 0.74 at v 280-400 (trackers, eatery, yard), 0.86 at v 440-600 (the narrow bank), 1.05 at v 620-800 (the porters' wharf), 1.12 at v ~905, and 1.14-1.54 on the south bank near the silk's bottom edge; S2 is painted 1.5-3 times larger than S4 at the same v. Buildings on the north-bank strip built at real size are 1.2-2 times their painted frontage (rule 5); room to walk on the strips under 1 m is a build-time choice (build_choices.json).",
+  "THE BANKS AGAINST THE WATER LEVEL (S3's and S4b's lesson: a north bank's waterline must be painted at least 0.7 x 77 = 54 px below its top, or its shore maps north of the bank top). Where the shore is an estimate hidden behind moored boats it is 10-50 px below the top, so with H -0.7 the shore lands NORTH of its own bank top: S2.grd.north_bank_20500 at u 20500-21720 by 0.24-0.86 m (behind the north-bank cargo boat and the big cabin boat), S2.grd.bank_n_23300 at u 23300-26000 by 0.07-0.46 m (behind the cargo boat and the moored boat), S2.grd.north_bank_26000 at u 26000-26650 by 0.41-0.76 m (behind the moored boat and the mat-cabin boat), S2.grd.north_bank_22550 at u 23300 by 0.19 m. Every one of these shore points is est; the south banks are fine. The builder should put the bank's face at the bank top there and the water under the moored hulls (the hulls hide the shore as painted). At the S3 seam the route ends 0.86 m from the water's edge as S3 found; edge_s (v 280) is 0.5 m from the shore.",
+  "THE ROUTE (structures_w's S2.road.main, 50 centre points, 20500-29050; it takes the narrow bank in front of the halls, not the far street, structures_w and structures_e agree). Still open: (1) u 22600-23300, in front of the long house, river_w2's bank top (v 407-432) runs north of the route's centre (v 410-448): the level strip there is 5-15 px of v (0.1-0.3 m), and the centre runs on the wash slope; (2) u 25905-26240, the warehouse's plank-faced plinth meets the bank top at its foot (v 625-632) and the centre's est v 615 lies on the plinth's front: either the route runs along the plinth's top in front of the doors (v ~555-565, about 0.9 m up) or the strip is nil; (3) u 25450-26600 the route is hidden behind the moored boats' mat roofs (est). The frame step set edge_n where structures_w had an estimate and structures_e or the wharf yard read the front (u 25350, 26300, 27650, 27850, 28050, 28250, and a turn at the lower shed's east end, 28000); the rest stand as structures_w drew them. The route through the dining terrace (22920-23500, reading (a)) is on the terrace floor, H 0 (support_ranges).",
+  "BOAT DECKS AND THE CREWS. Each deck's H is the water plus the painted rise from the waterline to the deck straight above (the river agents' two stroke points). The high-sided boats seen from above come out high: the cargo boat 1.77 m (190 px of side), the moored boat 2.0 m (208 px), the mat-cabin boat's main deck 1.31 m and its stern deck 3.17 m, grain boat 1's stern deck 1.96 m, 豪华客船's after roof 3.39 m (conf low). The crews then fall on their hulls in world D (worldcheck.mjs: every crewman lies between 0.3 m south of his boat's near waterline and 2.5 m north of its northmost recorded waterline point). Two roof crews were taken on the roof's level, not on the cargo they lie on: 豪华客船's reclining man (H 2.03; on the cargo's top he would be 3.74 and 2.6 m further south). The boats' painted lengths are short against their crews (grain boat 1 8.6 m, 豪华客船 16.2 m, 逆水行舟 19.8 m; 逆水行舟's mast 8.6 m), so the boat kit's real sizes are a recorded choice.",
+  "THE WATER LEVEL: copied from S4b (-0.7, a bound, conf low). S2's own checks agree and are no tighter: the landing steps at the terrace's west end give H >= -0.99 (river_w2), the bank at u 25250 >= -1.0 (river_m, weak), the east bank |H| <= 3.2 (river_e). No vertical face, quay or stair meets the water anywhere in S2; the warehouse's plank-faced plinth (u 25905-26240) is the nearest thing to a face, but its foot is hidden behind the moored boats.",
+  "SEAM NOTES FOR THE LEAD. S3 (u 20500): the cross-key check (20200-20800) finds no same-kind pair under 30 px, and the road, the water and both banks share their seam points exactly (0 px). The second pass (west) reads the small frame at u 20440-20530 (the merge notes' 'hut': uprights 10-20 px apart with a slanting rail, unlike S2's slat fence) as S3's by its middle (~20485), still recorded by nobody; and S3.veh.boat_moored_south_bank_19745's roof and planking run on to about u 20745 (S3 records its rear at 20640). S1 (u 29050): no same-kind pair under 30 px; the road shares its seam point (29050, 730) with S1.road.main (S1 marks it est); S2.grd.bank_lines_top_28900's edge_n and S1.grd.terraced_fields_29450 are the same lines read twice (2 px apart at the seam): one reading should go. S1 seeds from dx -51.6 at u 29050 and station +314.87 at (29050, 730).",
+  "TOOL QUIRK: plan.jpg labels the datum 'station 0' even when datum.station is set (S2: +179.21), as S4b's and S3's frames noted."
+ ],
+ "checks_result": [
+  {
+   "what": "shop row on the north-bank strip: front eave above its south-west corner (sw -> sw_eave), m",
+   "expect": "a shop's front eave, roughly 2.8-3.5 m; at v 141, where figures are painted at about 0.5-0.6 of life",
+   "got": 0.92
+  },
+  {
+   "what": "the long house: front eave (sw -> sw_eave), m",
+   "expect": "a house's pent eave, roughly 2.5-3.2 m; at v 406 (figures about 0.75 of life)",
+   "got": 1.65
+  },
+  {
+   "what": "the eatery shelter: eave (sw -> sw_eave), m",
+   "expect": "a mat shelter's eave, roughly 2.2-2.8 m; at v 389 (figures about 0.75 of life)",
+   "got": 1.66
+  },
+  {
+   "what": "the dining terrace: front eave (sw -> sw_eave; base est at the stilts' feet), m",
+   "expect": "a terrace roof's eave over a floor near ground level, roughly 2.8-3.5 m above the stilts' feet",
+   "got": 2.39
+  },
+  {
+   "what": "the scaffold house: front eave (sw -> sw_eave), m",
+   "expect": "a single-storey house's eave, roughly 2.8-3.2 m; at v 500 (figures about 0.8 of life)",
+   "got": 1.58
+  },
+  {
+   "what": "the open shop by the halls: front eave (sw -> sw_eave), m",
+   "expect": "a shop's eave, roughly 3-3.5 m",
+   "got": 2.48
+  },
+  {
+   "what": "the warehouse: eave above its plinth's foot (sw -> sw_eave), m",
+   "expect": "a warehouse eave on a plinth about 0.9 m high (70 px), roughly 3.5-4.5 m",
+   "got": 3.29
+  },
+  {
+   "what": "王家纸马铺: front eave (sw -> sw_eave), m",
+   "expect": "a shop's eave, roughly 3 m; at v 200 (figures about 0.55 of life)",
+   "got": 1.32
+  },
+  {
+   "what": "the tiled shed: front eave at its east post (se -> se_eave), m",
+   "expect": "a shed's eave, roughly 2.5-3 m",
+   "got": 2.12
+  },
+  {
+   "what": "the jetty: deck railing above its post feet (sw -> sw_top), m",
+   "expect": "a raised walkway on the bank slope, deck about 0.3-0.6 m up plus a railing about 0.9 m",
+   "got": 1
+  },
+  {
+   "what": "the 望火楼 platform: brick face (sw -> sw_top; foot hidden, est), m",
+   "expect": "a fire tower's brick platform, several metres; painted small at v 200-290 and its foot hidden, so a lower bound",
+   "got": 1.13
+  },
+  {
+   "what": "逆水行舟's mast: foot -> top, m",
+   "expect": "a Song grain boat's mast, roughly 10-15 m",
+   "got": 8.61
+  },
+  {
+   "what": "王家纸马铺: front length (sw -> se), m",
+   "expect": "a shop front of 3-4 bays, roughly 9-13 m; 375 px at v 200, inside the receding direction's turn",
+   "got": 10.66
+  },
+  {
+   "what": "望楼饭铺: front length (sw -> se), m",
+   "expect": "a long barracks-type shed, roughly 15-25 m (751 px, past the last knot)",
+   "got": 9.1
+  },
+  {
+   "what": "the jetty: length along the bank (sw -> se), m",
+   "expect": "a plank walkway with six posts, roughly 6-12 m",
+   "got": 5.22
+  },
+  {
+   "what": "grain boat 1: waterline length (front -> rear), m",
+   "expect": "a 万石船 grain boat, roughly 20-30 m (river_e: 600 px front-rear)",
+   "got": 8.6
+  },
+  {
+   "what": "豪华客船: waterline length (front -> rear), m",
+   "expect": "a large passenger boat, roughly 20-30 m (1180 px)",
+   "got": 16.21
+  },
+  {
+   "what": "逆水行舟: waterline length (front -> rear), m",
+   "expect": "a big grain boat, roughly 25-35 m (1420 px)",
+   "got": 19.77
+  },
+  {
+   "what": "the river's width at u 21000: north shore -> south shore, m",
+   "expect": "the 汴河 here, tens of metres (S3: 8.2 m at u 18300, 16.5 m at 15500)",
+   "got": 23.16
+  },
+  {
+   "what": "the north-bank strip in front of the shop row at u 21300: the road's edge_n -> edge_s, m",
+   "expect": "a walkable bank, a few metres; painted 29 px deep at v 137-166 (questions: strip depths)",
+   "got": 0.63
+  },
+  {
+   "what": "the gateway: post to post (sw -> se), m",
+   "expect": "a gateway's opening, roughly 2-3 m; painted 75 px at v 315 (figures about 0.7 of life)",
+   "got": 0.94
+  },
+  {
+   "what": "王家纸马铺: front direction (sw -> se), deg",
+   "expect": "0 (drawn frontal)",
+   "got": -0.31
+  },
+  {
+   "what": "the tiled shed: front direction along its posts' feet (sw -> se), deg",
+   "expect": "along the bank, which runs east-south-east here (the sheds follow it)",
+   "got": -10.58
+  }
+ ]
+}

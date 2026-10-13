@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a scholar on his way to the examinations: adult man, slim and upright, about 7 heads tall, a calm face with dark dot eyes and a neat thin black beard and moustache, a soft black cap (futou) with two soft ribbon ends hanging behind. A long pale white robe with wide sleeves and a round collar reaching to the feet, tied with a thin dark sash; black cloth shoes. Hands relaxed at his sides.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/scholar/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 48.8,
+ "attempts": 1,
+ "idempotency_key": "b971e32c-6eae-4980-a947-d739efea3732",
+ "request_id": "9f2b7915-430b-41d2-9230-e422915971ff",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3795,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3448,
+   "text_tokens": 347
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3795,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3448,
+   "text_tokens": 347
+  },
+  "total_tokens": 5379
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/3399b041-738c-4b3a-bdf4-619f607f54fb"
+ ],
+ "files": [
+  "gen/characters/scholar/sheet_0.png"
+ ]
+}

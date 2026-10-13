@@ -1,0 +1,55 @@
+{
+  "title": "Ox: the yellow draught ox of the covered carts (S4: the two three-ox covered carts; S5: the team of the covered ox cart)",
+  "plan": "bovid",
+  "figure": {
+    "section": "outer_road",
+    "id": "lead_ox_10800",
+    "src": "scan",
+    "crop": [
+      10680,
+      900,
+      10980,
+      1100
+    ]
+  },
+  "prompt": "animal_ox",
+  "back_m": 1.2,
+  "mesh": {
+    "from": "side",
+    "test": [
+      "side"
+    ],
+    "polys": 3500
+  },
+  "clips": [
+    "idle",
+    "walk",
+    "graze",
+    "lie"
+  ],
+  "tone": {
+    "hue": 5,
+    "saturation": 0.8,
+    "value": 0.98
+  },
+  "tack": {
+    "draught": [
+      {
+        "kind": "girth",
+        "at": -0.18,
+        "traces": true,
+        "trace_z": 0.62
+      },
+      {
+        "kind": "breast_strap",
+        "z": 0.6,
+        "tassels": 5
+      },
+      {
+        "kind": "nose_rope",
+        "end_z": 0.62,
+        "sag": 0.12
+      }
+    ]
+  }
+}

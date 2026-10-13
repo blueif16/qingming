@@ -1,0 +1,466 @@
+[
+ {
+  "label": "alone: from the spawn (scene.json spawn, X -87.6 D 8.4) west into the street",
+  "start": [
+   -87.6,
+   8.4
+  ],
+  "legs": [
+   [
+    185,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -94.6,
+    -93.1
+   ],
+   "D": [
+    7.6,
+    8.4
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "the spawn must stand inside the walkable area alone (?sections=city_end): the S6 seam at D 8.6 is X -86.77, so a spawn east of it is behind the east edge wall (QA found the first spawn, X -86.5, 0.27 m past it; moved to X -87.6)"
+ },
+ {
+  "label": "main street end to end, east -> west: from the S6 seam past the retinue and 赵太丞家 to the gate hall",
+  "start": [
+   -87.3,
+   8.3
+  ],
+  "legs": [
+   [
+    180,
+    6.4
+   ]
+  ],
+  "expect": {
+   "X": [
+    -102.0,
+    -100.8
+   ],
+   "D": [
+    7.9,
+    8.7
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "the street's middle (D 8.3) is open ground between the retinue (D 5.6-5.9) and the shop's boards (D 10.8+); 14 m"
+ },
+ {
+  "label": "main street end to end, west -> east: from the gate hall back toward the S6 seam",
+  "start": [
+   -101.0,
+   8.4
+  ],
+  "legs": [
+   [
+    0,
+    6.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -88.6,
+    -87.2
+   ],
+   "D": [
+    8.0,
+    8.8
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "13 m east along the street's middle, stopping just short of the seam (X -86.6 at D 8.4)"
+ },
+ {
+  "label": "edge west: the scroll's cut end stops you (square to the edge, facing 218)",
+  "start": [
+   -99.5,
+   8.0
+  ],
+  "legs": [
+   [
+    218,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -101.6,
+    -100.9
+   ],
+   "D": [
+    6.3,
+    7.0
+   ]
+  },
+  "why": "the west edge runs from (-93.12, -4.39) to (-120.29, 30.54); 2.57 m square to it from the start, the walker stops 0.35 m short (radius + half the wall)"
+ },
+ {
+  "label": "edge east (alone): the S6 seam stops you on the street (square to it, facing 33)",
+  "start": [
+   -90.0,
+   8.6
+  ],
+  "legs": [
+   [
+    33,
+    2.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -88.4,
+    -87.7
+   ],
+   "D": [
+    9.6,
+    10.2
+   ]
+  },
+  "why": "the seam is 2.70 m square from the start; alone, its wall stands"
+ },
+ {
+  "label": "edge north: the silk's top stops you, from the courtyard behind the main hall",
+  "start": [
+   -104.0,
+   28.0
+  ],
+  "legs": [
+   [
+    90,
+    1.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -104.3,
+    -103.7
+   ],
+   "D": [
+    29.9,
+    30.4
+   ]
+  },
+  "why": "the north edge is D 30.54"
+ },
+ {
+  "label": "edge south: the silk's bottom stops you, south of the hip-gable building among the bottom trees",
+  "start": [
+   -92.2,
+   -1.3
+  ],
+  "legs": [
+   [
+    270,
+    1.8
+   ]
+  ],
+  "expect": {
+   "X": [
+    -92.5,
+    -91.9
+   ],
+   "D": [
+    -4.3,
+    -3.8
+   ]
+  },
+  "why": "the south edge is D -4.39"
+ },
+ {
+  "label": "across the street from 赵太丞家 and down to the silk's bottom (nothing unpainted in the way)",
+  "start": [
+   -94.0,
+   12.0
+  ],
+  "legs": [
+   [
+    270,
+    8.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -93.5,
+    -92.5
+   ],
+   "D": [
+    -4.2,
+    -3.8
+   ]
+  },
+  "why": "X -94.0 passes between the hip-gable building (west wall X -93.0) and the gnarled tree's trunk (X -95.04) to the silk's bottom; the painted area narrows there (its SW corner is (-93.12, -4.39)), so the last metre slides along the west edge into the corner"
+ },
+ {
+  "label": "into 赵太丞家's open front (east of the doctor) to the counter",
+  "start": [
+   -94.6,
+   10.5
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -94.9,
+    -94.3
+   ],
+   "D": [
+    14.4,
+    15.3
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  },
+  "why": "the counter's front is D 14.99 (X -97.17..-94.37), the back wall D 15.55: the walker stops at the counter (or the wall behind it)"
+ },
+ {
+  "label": "into the gate passage (east half, clear of the child at the leaf) to the partition",
+  "start": [
+   -100.3,
+   11.0
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -100.6,
+    -100.0
+   ],
+   "D": [
+    14.85,
+    15.3
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  },
+  "why": "the passage runs between its jambs (X -101.6..-99.5) to the low railed partition at D 15.55; the door frame at D 14.45 is open"
+ },
+ {
+  "label": "alone: the strip between the box shed and the S6 seam is closed by the seam wall (joined: walks_joined goes round it)",
+  "start": [
+   -90.75,
+   12.6
+  ],
+  "legs": [
+   [
+    90,
+    1.4
+   ]
+  ],
+  "expect": {
+   "X": [
+    -91.1,
+    -90.6
+   ],
+   "D": [
+    13.9,
+    14.4
+   ]
+  },
+  "why": "between the shed's east side (X -91.17) and the seam (X -90.02 at D 13.56, -90.53 at D 14.34) only 0.64 m is left at the shed's north-east corner: alone the seam wall stops the walker there; joined the wall is dropped and the way runs on through S6 (walks_joined.json)"
+ },
+ {
+  "label": "the box shed's slatted front stops you (north from the street, west of the leaning panel)",
+  "start": [
+   -92.6,
+   12.4
+  ],
+  "legs": [
+   [
+    90,
+    1.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -92.8,
+    -92.4
+   ],
+   "D": [
+    12.9,
+    13.35
+   ]
+  },
+  "why": "S7.str.box_shed_1855's front is D 13.56 (X -93.17..-91.25): a booth, not a room to walk into (its interior is not painted)"
+ },
+ {
+  "label": "along the 解 building's east eave (the pocket between its east wall and the seam) to the stand",
+  "start": [
+   -80.3,
+   -2.2
+  ],
+  "legs": [
+   [
+    270,
+    1.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -80.6,
+    -79.9
+   ],
+   "D": [
+    -3.0,
+    -2.5
+   ]
+  },
+  "why": "the braced stand (S7.prop.bench_jie_eave_1885, D -3.36, 0.34 deep) stands across the strip under the eave, with the post and the tub east of it"
+ },
+ {
+  "label": "the hooped buckets at the well's west end stop you (east along D 12.5 into the bail bucket)",
+  "start": [
+   -91.2,
+   12.5
+  ],
+  "legs": [
+   [
+    0,
+    1.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -90.5,
+    -89.5
+   ],
+   "D": [
+    11.4,
+    13.2
+   ]
+  },
+  "why": "S7.prop.bucket_bail_1950 (r 0.2) stands at (-90.03, 12.43) and collides: the walker aimed at it is turned round its south side (alone S6's platform is absent; the seam is X -89.33 here) Since the join (2026-10-12) the buckets' bodies collide (they were walked through: no collider) and the bail bucket stands on S6's planks run west under it: the walker is stopped at the bail bucket and turned round either side of it."
+ },
+ {
+  "label": "the bench by the east board (end-on inside 赵太丞家's east column) stops you",
+  "start": [
+   -94.6,
+   13.4
+  ],
+  "legs": [
+   [
+    0,
+    1.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -94.3,
+    -93.95
+   ],
+   "D": [
+    13.2,
+    13.6
+   ]
+  },
+  "why": "S7.prop.bench_shop_east_1752 stands end-on at X -93.66 (D 12.95..13.85), 0.3 wide: a painted bench is solid (only seats under seated figures stay non-colliding)"
+ },
+ {
+  "label": "the strip along the seam north of the shop up to the courtyard at the top (east of the north-south hall)",
+  "start": [
+   -92.3,
+   15.0
+  ],
+  "legs": [
+   [
+    121.5,
+    4.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -98.2,
+    -96.8
+   ],
+   "D": [
+    22.8,
+    24.2
+   ]
+  },
+  "why": "past 赵太丞家's back hall (east end X -94.66) and the middle hall (east end X -97.61) to the courtyard east of the north-south hall (east wall X -100)"
+ },
+ {
+  "label": "the north courtyard west past the far gable, down the west strip to the main hall's patterned front",
+  "start": [
+   -104.0,
+   30.0
+  ],
+  "legs": [
+   [
+    180,
+    4.0
+   ],
+   [
+    270,
+    3.9
+   ],
+   [
+    0,
+    1.4
+   ]
+  ],
+  "expect": {
+   "X": [
+    -110.2,
+    -109.2
+   ],
+   "D": [
+    21.0,
+    21.9
+   ]
+  },
+  "why": "north of the far gable (D 29.43..30.54), west of the main hall (X -110.94), into the yard between the middle hall's back (D 20.4) and the main hall's platform (D 22.28)"
+ },
+ {
+  "label": "from the main hall's front yard round the middle hall's west end into the yard behind the gate hall",
+  "start": [
+   -108.5,
+   21.4
+  ],
+  "legs": [
+   [
+    270,
+    2.2
+   ],
+   [
+    0,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -103.6,
+    -102.4
+   ],
+   "D": [
+    16.1,
+    16.9
+   ]
+  },
+  "why": "west of the middle hall (X -106.07) the compound's yards connect; behind the gate hall (back D 15.71) and in front of the middle hall (D 18.0)"
+ }
+]

@@ -1,0 +1,1740 @@
+{
+ "section": "S6",
+ "entities": [
+  {
+   "id": "S6.veh.barrow_top_3340",
+   "kind": "vehicle",
+   "name": "wheelbarrow at the top of the silk",
+   "what": "Small wheelbarrow (串车 type) with one spoked wheel under its front half and a slatted bed; its pointed front end faces west (u 3271) and two handles with a pair of rear legs stand at the east end, where a man leans over it. No load is visible on the bed.",
+   "pts": {
+    "front": [
+     3275,
+     128,
+     "est"
+    ],
+    "rear": [
+     3410,
+     122,
+     "est"
+    ],
+    "wheels": [
+     [
+      3338,
+      132
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "SCALE CUES: wheel rim u 3318-3360, v 80-132, hub about (3340, 104): diameter about 52 px. Bed from the front tip (3271, 63) to the handle ends (≈3411, 72); rear legs at (3385-3400, 94-120). front/rear = ground under the bed's ends, on the wheel's ground line (est).",
+   "group": "S6.grp.barrow_top_3340"
+  },
+  {
+   "id": "S6.fig.barrow_pusher_3390",
+   "kind": "figure",
+   "name": "man leaning over the wheelbarrow",
+   "what": "Man in a light short jacket at the east (handle) end of the wheelbarrow, leaning forward over its bed with his face toward the viewer; his lower body is hidden by the barrow.",
+   "pts": {
+    "foot": [
+     3390,
+     120,
+     "est"
+    ],
+    "head": [
+     3375,
+     4
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 180,
+   "vis": "part: lower body hidden by the barrow; head touches the silk's top edge",
+   "conf": "med",
+   "src": "",
+   "note": "foot from his height, between the barrow's handles.",
+   "group": "S6.grp.barrow_top_3340"
+  },
+  {
+   "id": "S6.fig.top_edge_figure_3332",
+   "kind": "figure",
+   "name": "figure cut by the silk's top edge behind the barrow",
+   "what": "A figure in a long dark-edged robe standing just north of the wheelbarrow, cut off by the top edge of the silk at about the waist; only the robe's lower part (u 3323-3360, v 0-37) shows above the barrow's bed.",
+   "pts": {
+    "foot": [
+     3332,
+     85,
+     "est"
+    ],
+    "head": [
+     3335,
+     0,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: head and chest beyond the silk's top edge; feet hidden by the barrow",
+   "conf": "low",
+   "src": "",
+   "note": "the restyle paints a standing man in a red robe here. Could also be a tall load standing on the barrow; strokes faint.",
+   "group": "S6.grp.barrow_top_3340"
+  },
+  {
+   "id": "S6.grp.barrow_top_3340",
+   "kind": "group",
+   "name": "the wheelbarrow at the top of the street",
+   "what": "A man leans over a parked wheelbarrow at the top of the silk, with a second figure standing behind it, cut off by the silk's edge.",
+   "members": [
+    "S6.veh.barrow_top_3340",
+    "S6.fig.barrow_pusher_3390",
+    "S6.fig.top_edge_figure_3332"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.box_carrier_3272",
+   "kind": "figure",
+   "name": "man carrying a stack of boxes on his back",
+   "what": "Man in a long light robe walking at the top of the silk with a tall banded box (a stack of lidded food boxes, or a tall basket) slung on his back by a strap; his right hand is held out forward (east), toward the wheelbarrow.",
+   "pts": {
+    "foot": [
+     3272,
+     109
+    ],
+    "head": [
+     3258,
+     2
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 0,
+   "vis": "part: head touches the silk's top edge",
+   "conf": "med",
+   "src": "",
+   "note": "feet: (3253, 105) and (3290, 110). Box stack u 3218-3256, v 22-67."
+  },
+  {
+   "id": "S6.prop.sign_cloth_shop_3450",
+   "kind": "prop",
+   "name": "standing signboard of the cloth shop",
+   "what": "Tall vertical signboard on its own wooden frame (a post on each side and a box-like foot) standing at the west end of the cloth shop's front. Characters, top to bottom: □ □ 疋 帛 鋪 — the first is cut by the silk's top edge, the second is unclear (錦 or 明?), the last three read 疋帛鋪 (匹帛鋪, silk-and-cloth shop). Scholars read the shop as 王家羅明匹帛鋪.",
+   "pts": {
+    "base": [
+     3450,
+     152
+    ]
+   },
+   "support": "ground",
+   "vis": "full",
+   "conf": "high",
+   "src": "sections.md: 王家罗明匹帛铺 (≈ 3400–3950, top)",
+   "note": "board u 3420-3465, v 0-118; frame foot u 3423-3470, v 115-155; feet at (3427, 152) and (3475, 155). SCALE: board 45 px wide; sign about 155 px tall above its foot (its top is beyond the silk). Free-standing (not hung on the building).",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.prop.cloth_counter_3595",
+   "kind": "prop",
+   "name": "counter table in the cloth shop",
+   "what": "Long plain counter table under the cloth shop's eave, running east-west behind a low bench; its top is bare.",
+   "pts": {
+    "base": [
+     3595,
+     152
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "med",
+   "src": "",
+   "note": "top u 3546-3660, v 101-112; legs at (3546, 151), (3615, 151), (3644, 166). SCALE: table about 114 px long, top about 45 px above its feet.",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.prop.cloth_bench_3598",
+   "kind": "prop",
+   "name": "low bench before the cloth shop's counter",
+   "what": "Low long bench standing in front of (south of) the counter table, where a customer sits.",
+   "pts": {
+    "base": [
+     3598,
+     162
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "med",
+   "src": "",
+   "note": "seat v 133-141 from u 3530 to 3650; legs at (3546, 157), (3646, 166).",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.prop.cloth_counter_3720",
+   "kind": "prop",
+   "name": "second counter table in the cloth shop",
+   "what": "Second long table (or bench) under the eave east of the first, a figure seated at it.",
+   "pts": {
+    "base": [
+     3720,
+     168
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "top u 3660-3781, v 109-123; legs at about (3746, 172) and (3770, 162). Faint.",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.fig.cloth_shop_seated_3640",
+   "kind": "figure",
+   "name": "customer seated in the cloth shop",
+   "what": "Figure in a light robe seated on the low bench in front of the counter, back hunched forward over the counter; faint.",
+   "pts": {
+    "foot": [
+     3642,
+     162,
+     "est"
+    ],
+    "head": [
+     3632,
+     97
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 90,
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "seated on S6.prop.cloth_bench_3598. Pale rounded shape u 3620-3660, v 97-142; the restyle paints a white bundle here, so it may be a bale of cloth on the bench instead.",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.fig.cloth_shop_standing_3686",
+   "kind": "figure",
+   "name": "slim figure standing at the cloth shop's counter",
+   "what": "Slim figure in a long light robe standing at the east end of the first counter under the shop's eave, facing the counter; faint.",
+   "pts": {
+    "foot": [
+     3686,
+     186
+    ],
+    "head": [
+     3684,
+     92
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "vis": "faded",
+   "conf": "med",
+   "src": "",
+   "note": "feet at (3680, 187) and (3696, 176).",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.fig.cloth_shop_seated_3752",
+   "kind": "figure",
+   "name": "figure seated at the second counter",
+   "what": "Figure seated on the bench at the second counter, knees forward and feet on the shop floor; faint.",
+   "pts": {
+    "foot": [
+     3755,
+     174,
+     "est"
+    ],
+    "head": [
+     3748,
+     72
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 270,
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "seated on S6.prop.cloth_counter_3720 (or a bench at it); head under the eave at v 70-80, partly lost in the dark eave.",
+   "group": "S6.grp.cloth_shop_3600"
+  },
+  {
+   "id": "S6.grp.cloth_shop_3600",
+   "kind": "group",
+   "name": "the cloth shop's front",
+   "what": "The cloth shop (王家羅明匹帛鋪) at the top of the cross street: its signboard stands on the street, and under the eave two counter tables with a bench, where customers sit and stand.",
+   "members": [
+    "S6.prop.sign_cloth_shop_3450",
+    "S6.prop.cloth_counter_3595",
+    "S6.prop.cloth_bench_3598",
+    "S6.prop.cloth_counter_3720",
+    "S6.fig.cloth_shop_seated_3640",
+    "S6.fig.cloth_shop_standing_3686",
+    "S6.fig.cloth_shop_seated_3752"
+   ],
+   "src": "sections.md: 王家罗明匹帛铺",
+   "note": ""
+  },
+  {
+   "id": "S6.prop.shed_table_3242",
+   "kind": "prop",
+   "name": "long table at the corner shed (west)",
+   "what": "Long plain table standing end-on to the street under the corner shed's mat roof, its length receding north-east; nothing on it.",
+   "pts": {
+    "base": {
+     "sw": [
+      3216,
+      467
+     ],
+     "se": [
+      3268,
+      470
+     ],
+     "ne": [
+      3352,
+      372,
+      "est"
+     ],
+     "nw": [
+      3300,
+      369,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "front edge of the top (3212, 421)-(3268, 422); front legs at (3216, 467) and (3268, 470). RECEDING: the top's west long edge (3213, 420)->(3290, 337), slope -1.08. Back legs hidden (est along that slope). SCALE: top 56 px wide, about 48 px above its feet."
+  },
+  {
+   "id": "S6.prop.shed_table_3296",
+   "kind": "prop",
+   "name": "long table at the corner shed (east)",
+   "what": "Second long table beside the first, also end-on to the street and receding north-east under the shed.",
+   "pts": {
+    "base": {
+     "sw": [
+      3284,
+      472
+     ],
+     "se": [
+      3308,
+      471
+     ],
+     "ne": [
+      3392,
+      372
+     ],
+     "nw": [
+      3368,
+      370,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "front edge of the top (3277, 435)-(3315, 433); front legs at (3284, 472) and (3308, 471); a back leg at (3392, 372) (u 3390, v 340-372). RECEDING: the top's west edge (3280, 435)->(3367, 347), slope -1.01."
+  },
+  {
+   "id": "S6.prop.table_3218",
+   "kind": "prop",
+   "name": "small table at the incense shop's corner",
+   "what": "Small square table standing under the eave at the corner of the incense shop, west of the two long tables.",
+   "pts": {
+    "base": [
+     3218,
+     502
+    ]
+   },
+   "support": "ground",
+   "vis": "part: west half behind the incense shop's corner post",
+   "conf": "med",
+   "src": "",
+   "note": "top v 449-455 from u 3200 to 3243; legs at (3202, 511) and (3229, 492). Close to the u 3200 seam (t2)."
+  },
+  {
+   "id": "S6.prop.shed_back_rack_3330",
+   "kind": "prop",
+   "name": "rack with goods at the back of the corner shed",
+   "what": "Low rack (or bench) at the back of the corner shed with rounded goods on it (jars, baskets or bundles); strokes too faint to name the goods.",
+   "pts": {
+    "base": [
+     3330,
+     365,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "goods u 3255-3380, v 318-360; the restyle paints chairs and shelves here. Could be part of the shed's furniture."
+  },
+  {
+   "id": "S6.veh.taiping_wagon_3600",
+   "kind": "vehicle",
+   "name": "big four-mule wagon (太平车) turning out of the cross street",
+   "what": "Large box-bodied wagon (太平车) with high plank sides and a big spoked wheel, swinging out of the cross street to the south-west: its front end is at the lower left, where the shafts run down to the team of four mules, its rear (with a rack of rails and a hanging rope) at the upper right. A man sits on the front of the bed, a burly carter walks between the shafts, and another walks beside it past the wheel.",
+   "pts": {
+    "front": [
+     3600,
+     555,
+     "est"
+    ],
+    "rear": [
+     3855,
+     470,
+     "est"
+    ],
+    "wheels": [
+     [
+      3783,
+      506
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 215,
+   "vis": "part: bottom of the wheel and the east side behind the corner roof",
+   "conf": "high",
+   "src": "sections.md: two four-mule wagons swinging round the corner (≈ 3200–3850)",
+   "note": "SCALE CUES: the near wheel is a tall ellipse u 3750-3800, v 333-507 (about 48 px wide, 170 px tall; the vertical extent is about its diameter, the narrow width means its plane recedes steeply); hub about (3776, 423). Body: front side panel u 3583-3700, v 315-460; rear panel over the wheel u 3717-3813, v 310-463; body about 270 px long in u. RECEDING: front panel's top edge (3583, 380)->(3693, 320), slope -0.55; rear panel's top edge (3717, 390)->(3813, 310), slope -0.83; shafts and traces (3720, 477)->(3540, 547), slope -0.39 (the wagon's axis, turning, not the frame's depth direction). A long whip line runs from the carter's hand (3603, 464) to (3405, 522). front/rear: ground under the body's ends (est); the far wheel is hidden.",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.ani.mule_lower_1_3427",
+   "kind": "animal",
+   "name": "lead mule of the big wagon's team (front left)",
+   "what": "Grey-brown mule at the head of the big wagon's four-mule team, walking west-south-west with its head up, ears pricked and mouth open (braying); collar and traces.",
+   "pts": {
+    "fore": [
+     3427,
+     682
+    ],
+    "hind": [
+     3505,
+     672,
+     "est"
+    ],
+    "head": [
+     3408,
+     575
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 195,
+   "vis": "part: hind legs among the other mules' legs",
+   "conf": "high",
+   "src": "",
+   "note": "front hoof (3426, 680); ears top (3415, 555); muzzle (3388, 578). Team order read from the heads: this lead pair = mules 1 and 2.",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.ani.mule_lower_2_3462",
+   "kind": "animal",
+   "name": "second mule of the big wagon's team (front right)",
+   "what": "Mule beside the lead mule, head lowered toward the ground, walking west in the front pair of the big wagon's team; collar and traces.",
+   "pts": {
+    "fore": [
+     3462,
+     682
+    ],
+    "hind": [
+     3540,
+     670,
+     "est"
+    ],
+    "head": [
+     3448,
+     612
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 195,
+   "vis": "part: body behind the lead mule",
+   "conf": "med",
+   "src": "",
+   "note": "hoof (3462, 680); lifted hoof (3475, 660).",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.ani.mule_lower_3_3498",
+   "kind": "animal",
+   "name": "third mule of the big wagon's team",
+   "what": "Mule in the rear pair of the big wagon's team, head low and mostly hidden among the others, walking west.",
+   "pts": {
+    "fore": [
+     3498,
+     682
+    ],
+    "hind": [
+     3585,
+     664,
+     "est"
+    ],
+    "head": [
+     3503,
+     612
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 195,
+   "vis": "part: head and legs among the other mules",
+   "conf": "med",
+   "src": "",
+   "note": "eye at (3501, 614); hoof (3497, 680); lifted hooves (3517, 657).",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.ani.mule_lower_shaft_3560",
+   "kind": "animal",
+   "name": "shaft mule of the big wagon",
+   "what": "Big mule standing between the shafts at the rear of the team, nearest the wagon, head lowered and turned west; breeching strap round its hindquarters, tail hanging.",
+   "pts": {
+    "fore": [
+     3560,
+     686
+    ],
+    "hind": [
+     3640,
+     645
+    ],
+    "head": [
+     3538,
+     590
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 195,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "front hooves (3557, 687) and (3583, 652, lifted); hind hooves (3610, 640) and (3655, 645). SCALE: back at v 543, hooves at 645-687; about 125-140 px tall at the withers in this team.",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.fig.wagon_shaft_carter_3642",
+   "kind": "figure",
+   "name": "burly carter between the wagon's shafts",
+   "what": "Burly carter in a light short jacket and dark cap at the front of the big wagon between the shafts, gripping a shaft in each hand and shouting (mouth open) as he steers the turn; a long whip runs from his hand forward over the team.",
+   "pts": {
+    "foot": [
+     3642,
+     556,
+     "est"
+    ],
+    "head": [
+     3640,
+     414
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 240,
+   "vis": "part: legs hidden by the shaft mule's back",
+   "conf": "high",
+   "src": "",
+   "note": "hands at (3603, 464) and (3674, 456). Foot from his height; he stands just in front of the wagon body.",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.fig.wagon_top_rider_3740",
+   "kind": "figure",
+   "name": "young man seated on the front of the wagon",
+   "what": "Young man with a round face and a dark cap seated on the front of the big wagon's bed behind its front board, looking west.",
+   "pts": {
+    "foot": [
+     3742,
+     395,
+     "est"
+    ],
+    "head": [
+     3740,
+     317
+    ]
+   },
+   "support": "cart bed: S6.veh.taiping_wagon_3600",
+   "pose": "seated",
+   "facing_deg": 215,
+   "vis": "part: below the chest hidden by the front board",
+   "conf": "med",
+   "src": "",
+   "note": "the bed's floor is hidden; foot = est on the bed behind the front board.",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.fig.wagon_side_man_3796",
+   "kind": "figure",
+   "name": "man walking beside the wagon past the wheel",
+   "what": "Man in a light jacket walking on the east side of the big wagon just past its wheel; only his head and shoulders show above the corner roof.",
+   "pts": {
+    "foot": [
+     3796,
+     560,
+     "est"
+    ],
+    "head": [
+     3798,
+     428
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 215,
+   "vis": "part: below the chest hidden by the corner building's roof",
+   "conf": "med",
+   "src": "",
+   "note": "close to the u 3800 seam (t4). Foot from his height.",
+   "group": "S6.grp.taiping_wagon_3600"
+  },
+  {
+   "id": "S6.grp.taiping_wagon_3600",
+   "kind": "group",
+   "name": "the big wagon turning the corner",
+   "what": "A big 太平車 wagon drawn by four mules swings out of the cross street onto the main street, heading west: a burly carter steers at the shafts with a long whip, a young man rides on the front of the bed and another man walks beside the wheel.",
+   "members": [
+    "S6.veh.taiping_wagon_3600",
+    "S6.ani.mule_lower_1_3427",
+    "S6.ani.mule_lower_2_3462",
+    "S6.ani.mule_lower_3_3498",
+    "S6.ani.mule_lower_shaft_3560",
+    "S6.fig.wagon_shaft_carter_3642",
+    "S6.fig.wagon_top_rider_3740",
+    "S6.fig.wagon_side_man_3796"
+   ],
+   "src": "sections.md: two four-mule wagons swinging round the corner",
+   "note": "Four mules painted in this team."
+  },
+  {
+   "id": "S6.veh.hidden_wagon_3400",
+   "kind": "vehicle",
+   "name": "second wagon, hidden behind the corner shed",
+   "what": "A second wagon whose body is entirely hidden behind the corner shed's dark mat roof; only its four-mule team, its driver and the traces running back west under the roof's tip are painted. It heads east, toward the crossroads.",
+   "pts": {
+    "front": [
+     3400,
+     345,
+     "est"
+    ],
+    "rear": [
+     3220,
+     335,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: body entirely hidden behind the corner shed's roof",
+   "conf": "low",
+   "src": "sections.md: two four-mule wagons swinging round the corner",
+   "note": "Position inferred only from the traces, which vanish behind the roof's tip at about (3350-3420, 285-305). Rear end and size are guesses (a wagon as long as the big one); it may stand further north behind the shed. A builder may leave the body out or hide it behind the shed.",
+   "group": "S6.grp.wagon2_team_3400"
+  },
+  {
+   "id": "S6.ani.mule_upper_1_3585",
+   "kind": "animal",
+   "name": "rear mule of the upper team",
+   "what": "Brown mule at the rear of the upper four-mule team (nearest the driver), walking east with its head down; traces from its harness run back west to the hidden wagon.",
+   "pts": {
+    "fore": [
+     3585,
+     360
+    ],
+    "hind": [
+     3505,
+     360
+    ],
+    "head": [
+     3585,
+     302
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "hind hooves (3500, 362) and (3525, 348, lifted); front hooves (3578, 362) and (3600, 352).",
+   "group": "S6.grp.wagon2_team_3400"
+  },
+  {
+   "id": "S6.ani.mule_upper_2_3620",
+   "kind": "animal",
+   "name": "second mule of the upper team",
+   "what": "Mule walking east in the upper team, head lowered; only its back and head show above the big wagon's front board.",
+   "pts": {
+    "fore": [
+     3620,
+     360,
+     "est"
+    ],
+    "hind": [
+     3540,
+     360,
+     "est"
+    ],
+    "head": [
+     3612,
+     306
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: legs hidden by the big wagon's front",
+   "conf": "med",
+   "src": "",
+   "note": "",
+   "group": "S6.grp.wagon2_team_3400"
+  },
+  {
+   "id": "S6.ani.mule_upper_3_3655",
+   "kind": "animal",
+   "name": "third mule of the upper team",
+   "what": "Mule walking east in the upper team, head down; legs hidden behind the big wagon's front board.",
+   "pts": {
+    "fore": [
+     3655,
+     356,
+     "est"
+    ],
+    "hind": [
+     3575,
+     358,
+     "est"
+    ],
+    "head": [
+     3640,
+     305
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: legs hidden by the big wagon's front",
+   "conf": "low",
+   "src": "",
+   "note": "the upper team's heads at u 3562-3670 are hard to separate: four backs are painted, and four or five head shapes; recorded as four mules.",
+   "group": "S6.grp.wagon2_team_3400"
+  },
+  {
+   "id": "S6.ani.mule_upper_lead_3690",
+   "kind": "animal",
+   "name": "lead mule of the upper team, head raised",
+   "what": "Lead mule of the upper team, a darker animal with its head raised high and ears pricked, walking east just north of the big wagon's front; collar and harness.",
+   "pts": {
+    "fore": [
+     3690,
+     352,
+     "est"
+    ],
+    "hind": [
+     3610,
+     355,
+     "est"
+    ],
+    "head": [
+     3712,
+     283
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: legs hidden by the big wagon's front",
+   "conf": "high",
+   "src": "",
+   "note": "ears (3700-3725, 262-268); muzzle (3723, 303); back line v 260-277.",
+   "group": "S6.grp.wagon2_team_3400"
+  },
+  {
+   "id": "S6.fig.upper_team_driver_3450",
+   "kind": "figure",
+   "name": "bearded carter driving the upper team",
+   "what": "Bearded carter in a light short jacket and trousers walking east behind the upper four-mule team, leaning back with the reins in both hands; the traces to the hidden wagon pass beside him.",
+   "pts": {
+    "foot": [
+     3450,
+     341
+    ],
+    "head": [
+     3448,
+     221
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "feet at (3427, 345) (back foot) and (3473, 337); hands at (3470-3483, 257-263).",
+   "group": "S6.grp.wagon2_team_3400"
+  },
+  {
+   "id": "S6.grp.wagon2_team_3400",
+   "kind": "group",
+   "name": "the second wagon's team",
+   "what": "A carter walks behind a team of four mules heading east at the corner; their traces run back under the corner shed's roof to a wagon hidden behind it.",
+   "members": [
+    "S6.veh.hidden_wagon_3400",
+    "S6.ani.mule_upper_1_3585",
+    "S6.ani.mule_upper_2_3620",
+    "S6.ani.mule_upper_3_3655",
+    "S6.ani.mule_upper_lead_3690",
+    "S6.fig.upper_team_driver_3450"
+   ],
+   "src": "sections.md: two four-mule wagons swinging round the corner",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.basket_porter_3370",
+   "kind": "figure",
+   "name": "porter with two baskets on a shoulder pole",
+   "what": "Young porter in a short light jacket walking east past the corner shed with a shoulder pole on his right shoulder: a deep round basket hangs at each end, the east one heaped with a pale load; his face is turned east.",
+   "pts": {
+    "foot": [
+     3370,
+     525
+    ],
+    "head": [
+     3375,
+     385
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 0,
+   "vis": "part: one foot behind the west basket",
+   "conf": "high",
+   "src": "",
+   "note": "planted foot (3378, 522); west basket u 3321-3374, v 497-535; east basket u 3390-3446, v 454-500; pole (3331, 444)->(3424, 419)."
+  },
+  {
+   "id": "S6.veh.barrow_casks_3300",
+   "kind": "vehicle",
+   "name": "loaded 串车 barrow at the incense shop's corner",
+   "what": "串车-type barrow with one big spoked wheel, loaded with large round dark bundles (or casks: round ends show) lashed with ropes; a raised front rack with hooks at its east end. Its pusher, standing between the handles at its west end, is west of u 3200.",
+   "pts": {
+    "front": [
+     3300,
+     685,
+     "est"
+    ],
+    "rear": [
+     3150,
+     695,
+     "est"
+    ],
+    "wheels": [
+     [
+      3214,
+      683
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Wheel nearly round (its plane faces the viewer, so the barrow runs east-west): rim u 3177-3253, v 608-684, diameter about 76 px, hub (3215, 645). Load u 3140-3300, v 535-640; handles at (3150-3165, 630-645). front = ground under the raised east rack, on the wheel's ground line (est). SEAM: its pusher (foot ≈ (3128, 716)) belongs to t2; this barrow is mine by its front (east) end, which is an inference from the pusher at the west end. t2 may record it too. MERGE: t2 recorded the same cart as S6.veh.handcart_3100 (front at the west shaft tips (3100,712), body with lattice sides heaped with dark sacks and bundles, a hook hanging at its north-east end, wheel 80 x 87 px, hub (3215,645)); retired as a duplicate. Whether it has one wheel (串车) or two (only the near one shows) is open.",
+   "group": "S6.grp.barrow_3300"
+  },
+  {
+   "id": "S6.fig.fan_man_3225",
+   "kind": "figure",
+   "name": "man hiding his face behind a round fan (便面)",
+   "what": "Man in a long dark robe over wide trousers walking west, holding a round dark fan up against the east side of his face so it screens his face from the street (便面); his face, in profile, looks west.",
+   "pts": {
+    "foot": [
+     3225,
+     899
+    ],
+    "head": [
+     3212,
+     713
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 180,
+   "vis": "full",
+   "conf": "high",
+   "src": "名画记: 便面 (pin 43, ≈3250)",
+   "note": "feet (3207, 896) and (3240, 903); fan u 3210-3246, v 712-753. Painted height 186 px.",
+   "group": "S6.grp.fan_traveller_3225"
+  },
+  {
+   "id": "S6.fig.servant_boy_bundle_3270",
+   "kind": "figure",
+   "name": "servant boy (child) with a bundle on his back",
+   "what": "Boy servant (child) in a short jacket and trousers walking beside the fan man on his east side, a bundle or bag tied on his back, face toward the viewer.",
+   "pts": {
+    "foot": [
+     3270,
+     866
+    ],
+    "head": [
+     3268,
+     740
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 225,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "child: painted height 126 px against the fan man's 186 (0.68). Bundle u 3290-3314, v 760-805.",
+   "group": "S6.grp.fan_traveller_3225"
+  },
+  {
+   "id": "S6.grp.fan_traveller_3225",
+   "kind": "group",
+   "name": "the man with the fan and his servant boy",
+   "what": "A man shields his face with a round fan (便面) as he walks west, his servant boy beside him carrying a bundle.",
+   "members": [
+    "S6.fig.fan_man_3225",
+    "S6.fig.servant_boy_bundle_3270"
+   ],
+   "src": "名画记: 便面 (pin 43)",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.rider_3375",
+   "kind": "figure",
+   "name": "rider on a dark horse, seen from behind",
+   "what": "Rider in a long light robe with a dark cap and a long dark band (sash ends) hanging down his back, seen from behind on a dark horse heading north-east up the street; his dark boots show in the stirrups on both sides.",
+   "pts": {
+    "foot": [
+     3378,
+     1016,
+     "est"
+    ],
+    "head": [
+     3357,
+     757
+    ]
+   },
+   "support": "animal S6.ani.horse_3445",
+   "pose": "riding",
+   "facing_deg": 60,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "boots at (3295, 920) and (3405, 948). Foot = ground under the saddle (est).",
+   "group": "S6.grp.rider_3375"
+  },
+  {
+   "id": "S6.ani.horse_3445",
+   "kind": "animal",
+   "name": "rider's dark horse, seen from behind",
+   "what": "Dark horse seen from behind with its rump toward the viewer, walking away north-east with the rider; tail hanging, saddle with crupper strap; its raised head shows just east of the rider's shoulder.",
+   "pts": {
+    "fore": [
+     3445,
+     1003
+    ],
+    "hind": [
+     3362,
+     1027
+    ],
+    "head": [
+     3393,
+     802
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 60,
+   "vis": "part: forehand and one front leg hidden by the rider and rump",
+   "conf": "med",
+   "src": "",
+   "note": "hind hooves (3330, 1028) and (3395, 1025); one front hoof (3457, 1002). The round dark shape by the rider's east shoulder (u 3377-3409, v 785-822) is read as the horse's head from behind; the restyle paints it as a red saddle bag instead. SCALE: rump u 3300-3413, v 870-1007.",
+   "group": "S6.grp.rider_3375"
+  },
+  {
+   "id": "S6.fig.groom_whip_3452",
+   "kind": "figure",
+   "name": "groom with a long whip walking by the horse",
+   "what": "Groom in a dark short jacket, light trousers and puttees walking just east of the rider's horse, a long curved whip held up in his right hand; head turned west toward the rider.",
+   "pts": {
+    "foot": [
+     3452,
+     910
+    ],
+    "head": [
+     3452,
+     778
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 60,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "feet (3447, 912) and (3462, 897, lifted); whip from (3505, 810) curving down to (3500, 910).",
+   "group": "S6.grp.rider_3375"
+  },
+  {
+   "id": "S6.grp.rider_3375",
+   "kind": "group",
+   "name": "the rider and his groom",
+   "what": "A rider on a dark horse heads up the street away from the viewer, his groom walking at the horse's side with a whip.",
+   "members": [
+    "S6.fig.rider_3375",
+    "S6.ani.horse_3445",
+    "S6.fig.groom_whip_3452"
+   ],
+   "src": "brief: a rider in the middle of the street (≈ 3300–3450)",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.child_ring_edge_3577",
+   "kind": "figure",
+   "name": "child standing at the edge of the crowd",
+   "what": "Child in a short jacket and trousers standing alone at the west edge of the crowd round the storyteller, facing the viewer, hands together at his belly.",
+   "pts": {
+    "foot": [
+     3577,
+     965
+    ],
+    "head": [
+     3565,
+     832
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "child: painted height 133 px against 186-243 for the adults nearby. feet (3567, 965) and (3587, 963)."
+  },
+  {
+   "id": "S6.fig.ring_bearded_robe_3630",
+   "kind": "figure",
+   "name": "tall bearded man in a brown robe (ring, west end)",
+   "what": "Tall bearded man in a long brown robe with a dark sash and a dark cap, standing at the west end of the storyteller's ring, facing east to listen.",
+   "pts": {
+    "foot": [
+     3630,
+     985
+    ],
+    "head": [
+     3625,
+     742
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "high",
+   "src": "名画记: 闹市说书 (pin 39, ≈3840)",
+   "note": "painted height 243 px, the tallest here. Robe hem v 978-987.",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_fan_cap_3688",
+   "kind": "figure",
+   "name": "listener with a knotted cap and a dark fan",
+   "what": "Man in a light robe and knotted cap at the back of the ring, holding a dark folding fan (or a board) up beside his face, looking east at the storyteller.",
+   "pts": {
+    "foot": [
+     3690,
+     955,
+     "est"
+    ],
+    "head": [
+     3680,
+     732
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: below the chest hidden by the listeners in front",
+   "conf": "med",
+   "src": "",
+   "note": "fan u 3700-3718, v 747-790, with a light striped sleeve (or robe) hanging below it to v 830: read as his raised arm; it could instead be a second listener whose face is hidden by the fan. Foot from his height, behind the bending men.",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_bending_3668",
+   "kind": "figure",
+   "name": "listener bending forward in a light robe",
+   "what": "Man in a light robe bending forward with his back to the viewer, craning east toward the storyteller.",
+   "pts": {
+    "foot": [
+     3670,
+     1019
+    ],
+    "head": [
+     3652,
+     836
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "feet (3659-3682, 1010-1025).",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_dark_robe_3692",
+   "kind": "figure",
+   "name": "listener in a long dark robe",
+   "what": "Man in a long dark robe standing among the listeners, facing east.",
+   "pts": {
+    "foot": [
+     3692,
+     993
+    ],
+    "head": [
+     3685,
+     803
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: upper body behind the fan-holder",
+   "conf": "med",
+   "src": "",
+   "note": "feet (3680-3700, 987-996).",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_bun_3712",
+   "kind": "figure",
+   "name": "listener with a dark hair bun",
+   "what": "Listener with a dark hair bun (or soft cap) between the two bending men; only the head and dark shoulders show.",
+   "pts": {
+    "foot": [
+     3715,
+     975,
+     "est"
+    ],
+    "head": [
+     3703,
+     825
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: only head and shoulders",
+   "conf": "low",
+   "src": "",
+   "note": "the dark robe at u 3700-3738, v 858-963 may be his.",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_standing_post_3745",
+   "kind": "figure",
+   "name": "man standing behind the crowd by the corner building",
+   "what": "Man in a cap and light robe standing behind (north of) the crowd at a post of the corner building's front, facing the viewer.",
+   "pts": {
+    "foot": [
+     3745,
+     895,
+     "est"
+    ],
+    "head": [
+     3740,
+     706
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: below the chest hidden by the listeners",
+   "conf": "med",
+   "src": "",
+   "note": "foot from his height, behind the listeners.",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_bending_hat_3748",
+   "kind": "figure",
+   "name": "big listener bending forward in a light robe and dark hat",
+   "what": "Big man in a long light robe and dark hat bending forward with his back to the viewer, his arm stretched east along the next listener's back.",
+   "pts": {
+    "foot": [
+     3748,
+     1022
+    ],
+    "head": [
+     3748,
+     836
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "feet (3732-3765, 1016-1028).",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.ring_listener_3788",
+   "kind": "figure",
+   "name": "listener at the ring's east side (head only)",
+   "what": "Listener of whom only the dark-haired head shows between the bending man and the storyteller's table.",
+   "pts": {
+    "foot": [
+     3790,
+     965,
+     "est"
+    ],
+    "head": [
+     3786,
+     818
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: only the head",
+   "conf": "low",
+   "src": "",
+   "note": "close to the u 3800 seam; t4 may record it.",
+   "group": "S6.grp.storyteller_ring"
+  },
+  {
+   "id": "S6.fig.scholar_back_3203",
+   "kind": "figure",
+   "name": "scholar in a white robe seen from behind",
+   "what": "Scholar in a long white robe with wide hanging sleeves and a dark cap, seen from behind, facing north-east toward the scholar in front of him as they talk.",
+   "pts": {
+    "foot": [
+     3203,
+     1158
+    ],
+    "head": [
+     3196,
+     963
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 45,
+   "vis": "full",
+   "conf": "high",
+   "src": "名画记: 赶考士人 (pin 44, ≈3240)",
+   "note": "hem v 1146-1162. Close to the u 3200 seam (t2).",
+   "group": "S6.grp.exam_scholars_3240"
+  },
+  {
+   "id": "S6.fig.scholar_front_3240",
+   "kind": "figure",
+   "name": "bearded scholar in a white robe facing the viewer",
+   "what": "Bearded scholar in a long white robe and a black cap with ribbon ends, facing the viewer and the other scholar, hands in his sleeves.",
+   "pts": {
+    "foot": [
+     3240,
+     1160
+    ],
+    "head": [
+     3226,
+     938
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 225,
+   "vis": "full",
+   "conf": "high",
+   "src": "名画记: 赶考士人 (pin 44, ≈3240)",
+   "note": "hem v 1154-1162; a sleeve hangs to (3298, 1128).",
+   "group": "S6.grp.exam_scholars_3240"
+  },
+  {
+   "id": "S6.fig.young_man_case_3340",
+   "kind": "figure",
+   "name": "young man reaching toward the scholars",
+   "what": "Young man (servant) in a dark short jacket and light trousers, reaching his right hand out toward the two scholars and holding a long dark case upright in his left hand.",
+   "pts": {
+    "foot": [
+     3340,
+     1292
+    ],
+    "head": [
+     3333,
+     1098
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 225,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "feet (3324, 1295) and (3360, 1288); case u 3350-3374, v 1206-1270.",
+   "group": "S6.grp.exam_scholars_3240"
+  },
+  {
+   "id": "S6.fig.box_shoulder_porter_3405",
+   "kind": "figure",
+   "name": "man carrying a long flat box on his shoulder",
+   "what": "Man in a light jacket and trousers carrying a long flat box (a book box or board) on his shoulder, tilted over his head, beside the young man; face toward the viewer.",
+   "pts": {
+    "foot": [
+     3405,
+     1246
+    ],
+    "head": [
+     3375,
+     1060
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 270,
+   "vis": "part: legs behind the young man's case",
+   "conf": "med",
+   "src": "",
+   "note": "box u 3319-3428, v 1050-1075. His tie to the scholars is a reading, not painted.",
+   "group": "S6.grp.exam_scholars_3240"
+  },
+  {
+   "id": "S6.grp.exam_scholars_3240",
+   "kind": "group",
+   "name": "the scholars and their servants",
+   "what": "Two scholars in white robes stand talking; a young servant holding a long case reaches out toward them, and another man carries a long box on his shoulder (read as scholars on their way to the exams with their luggage).",
+   "members": [
+    "S6.fig.scholar_back_3203",
+    "S6.fig.scholar_front_3240",
+    "S6.fig.young_man_case_3340",
+    "S6.fig.box_shoulder_porter_3405"
+   ],
+   "src": "名画记: 赶考士人 (pin 44)",
+   "note": "Which servant goes with which scholar is not painted."
+  },
+  {
+   "id": "S6.fig.bowing_dark_robe_3470",
+   "kind": "figure",
+   "name": "man in a dark robe bowing with joined hands",
+   "what": "Man in a long dark robe belted at the waist, his head under a dark soft cap tied in a knot (or a hair bun), raising his joined hands in a bow toward the bearded man.",
+   "pts": {
+    "foot": [
+     3470,
+     1270
+    ],
+    "head": [
+     3452,
+     1058
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "feet (3448-3502, 1268-1272). Could be a woman (the knot is a bun); dress reads male.",
+   "group": "S6.grp.greeting_3490"
+  },
+  {
+   "id": "S6.fig.bearded_light_robe_3508",
+   "kind": "figure",
+   "name": "bearded man in a light robe returning the greeting",
+   "what": "Bearded man in a light robe and black cap facing the viewer, hands at his chest returning the greeting.",
+   "pts": {
+    "foot": [
+     3508,
+     1235,
+     "est"
+    ],
+    "head": [
+     3505,
+     1031
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 225,
+   "vis": "part: below the waist hidden by the man in the dark robe and the sunshade",
+   "conf": "high",
+   "src": "",
+   "note": "foot from his height.",
+   "group": "S6.grp.greeting_3490"
+  },
+  {
+   "id": "S6.grp.greeting_3490",
+   "kind": "group",
+   "name": "two men greeting",
+   "what": "Two men meet in the street: one in a dark robe bows with joined hands to a bearded man, who returns the greeting.",
+   "members": [
+    "S6.fig.bowing_dark_robe_3470",
+    "S6.fig.bearded_light_robe_3508"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.dark_robe_reaching_3570",
+   "kind": "figure",
+   "name": "man in a dark robe reaching toward the porter's box",
+   "what": "Man in a long dark robe and broad black hat with his back to the viewer, reaching both hands forward (east) toward the box hanging from the passing porter's pole.",
+   "pts": {
+    "foot": [
+     3570,
+     1290
+    ],
+    "head": [
+     3550,
+     1080
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "feet (3540-3604, 1280-1296); hands (3595-3612, 1135-1145).",
+   "group": "S6.grp.box_porter_3745"
+  },
+  {
+   "id": "S6.fig.box_pole_porter_3745",
+   "kind": "figure",
+   "name": "porter with two boxes on a shoulder pole",
+   "what": "Porter in a light short jacket and trousers walking east with a shoulder pole on his right shoulder: a tall square box (or cage) hangs at each end.",
+   "pts": {
+    "foot": [
+     3745,
+     1290
+    ],
+    "head": [
+     3745,
+     1104
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "feet (3712, 1290) and (3776, 1280); pole (3634, 1128)->(3848, 1141); west box u 3626-3691, v 1131-1214; east box u 3794-3844, v 1145-1229.",
+   "group": "S6.grp.box_porter_3745"
+  },
+  {
+   "id": "S6.grp.box_porter_3745",
+   "kind": "group",
+   "name": "the box porter and a customer",
+   "what": "A porter carries two boxes on a shoulder pole eastward; a man in a dark robe reaches toward the west box as it passes.",
+   "members": [
+    "S6.fig.dark_robe_reaching_3570",
+    "S6.fig.box_pole_porter_3745"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.prop.sign_street_3641",
+   "kind": "prop",
+   "name": "tall signboard on the street before the inn",
+   "what": "Tall vertical signboard on two posts standing on the street's south side, in front of the inn's roofs, under the big flat sunshade. Characters, top to bottom: □ □ □ 香 □ □ (only 香, the fourth, is fairly clear; the first may be 居, the last two look like 飯/鋪 but are illegible).",
+   "pts": {
+    "base": [
+     3641,
+     1440,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden behind the inn's roof ridge",
+   "conf": "high",
+   "src": "",
+   "note": "board u 3620-3659, v 1215-1420 (≈205 px tall); posts at u 3623 and 3657. Free-standing as painted; it may be a shop's sign set at the inn's front."
+  },
+  {
+   "id": "S6.prop.sunshade_3590",
+   "kind": "prop",
+   "name": "big flat mat sunshade over the signboard",
+   "what": "Large flat round sunshade of woven straw/mat, seen almost edge-on, spread over the top of the street signboard and the people beside it; thick at its west rim, tapering east.",
+   "pts": {
+    "base": [
+     3600,
+     1440,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: its pole or support is not painted apart from the signboard's posts",
+   "conf": "low",
+   "src": "",
+   "note": "canopy u 3485-3694, v 1174-1227. It seems to rest on the signboard's posts; the restyle reads it the same way. SCALE: about 210 px across."
+  },
+  {
+   "id": "S6.prop.curved_pole_3580",
+   "kind": "prop",
+   "name": "long curved pole or rope sagging across the street",
+   "what": "A long curved line, like a bent bamboo pole or a sagging rope, running from about (3497, 1250) down to (3580, 1297) and up to (3730, 1250) in front of the people at the signboard; its ends are not tied to anything visible.",
+   "pts": {
+    "base": [
+     3580,
+     1420,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: ends free",
+   "conf": "low",
+   "src": "",
+   "note": "identity unclear (the restyle paints a bent pole). It ends at the shoulder of S6.fig.ridge_dark_robe_3575."
+  },
+  {
+   "id": "S6.fig.pointing_man_3405",
+   "kind": "figure",
+   "name": "young man pointing west above the inn's roof",
+   "what": "Young man in a light jacket with a topknot standing on the street just north of the inn's west roof, pointing west with his right hand (toward the inn's signboard); only his upper body shows above the roof.",
+   "pts": {
+    "foot": [
+     3405,
+     1470,
+     "est"
+    ],
+    "head": [
+     3400,
+     1292
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "vis": "part: below the waist hidden by the inn's roof",
+   "conf": "high",
+   "src": "",
+   "note": "arm (3328-3368, 1338-1350). Foot from his height; the roof hides everything below v ≈ 1395."
+  },
+  {
+   "id": "S6.fig.ridge_reclining_3530",
+   "kind": "figure",
+   "name": "man reclining beside a dark heap north of the inn's roof",
+   "what": "Man in a dark cap apparently reclining (or crouching) facing west just north of the inn's roof ridge, a dark mass stretching west from his head (his body under a dark wrap, or a heap he leans on); only the upper part shows above the roof.",
+   "pts": {
+    "foot": [
+     3505,
+     1410,
+     "est"
+    ],
+    "head": [
+     3543,
+     1323
+    ]
+   },
+   "support": "ground",
+   "pose": "lying",
+   "facing_deg": 180,
+   "vis": "part: below the shoulders hidden by the inn's roof",
+   "conf": "low",
+   "src": "",
+   "note": "dark mass u 3470-3560, v 1320-1400 with a pale face (3530-3553, 1343-1367). It could instead be an animal's head (a donkey lying) or a bundle; the restyle paints a crouching man with a bundle."
+  },
+  {
+   "id": "S6.fig.ridge_dark_robe_3575",
+   "kind": "figure",
+   "name": "figure in a dark robe north of the inn's roof",
+   "what": "Figure in a dark robe seen from behind, standing or seated beside the reclining man; the curved pole ends at his shoulder.",
+   "pts": {
+    "foot": [
+     3575,
+     1415,
+     "est"
+    ],
+    "head": [
+     3573,
+     1310
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "vis": "part: below the waist hidden by the inn's roof",
+   "conf": "low",
+   "src": "",
+   "note": "u 3557-3587, v 1310-1413; the restyle paints a woman in red here. Strokes faint."
+  },
+  {
+   "id": "S6.prop.ridge_round_basket_3695",
+   "kind": "prop",
+   "name": "big round woven object north of the inn's roof",
+   "what": "Large round woven object (a big basket, or a heap under a mat) just north of the inn's roof ridge, east of the signboard.",
+   "pts": {
+    "base": [
+     3695,
+     1410,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: lower part hidden by the inn's roof",
+   "conf": "low",
+   "src": "",
+   "note": "u 3660-3730, v 1307-1395, curved woven strokes."
+  },
+  {
+   "id": "S6.prop.sign_inn_wang_3272",
+   "kind": "prop",
+   "name": "standing signboard of the inn 久住王員外家",
+   "what": "Tall vertical signboard standing at the west end of the inn's roofs. Characters as painted: 久住 (two small characters side by side in a box at the top), then 王 員 外 家 top to bottom.",
+   "pts": {
+    "base": [
+     3270,
+     1580,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden by the tree crowns",
+   "conf": "high",
+   "src": "名画记: 久住王员外家 (pin 42, ≈3310)",
+   "note": "board u 3245-3295, v 1298-1507 (≈210 px tall, 50 wide); below v 1507 its posts go down into the tree crowns, so the foot is est. Free-standing as painted (not hung on the inn's roof)."
+  },
+  {
+   "id": "S6.tree.bare_lower_3228",
+   "kind": "tree",
+   "name": "bare tree at the lower edge (west)",
+   "what": "Crown of a leafless tree with many fine upcurving twigs (elm-like, or a willow before leafing) rising from below the silk's lower edge in front of the inn's west end.",
+   "pts": {
+    "base": [
+     3228,
+     1770,
+     "est"
+    ],
+    "top": [
+     3205,
+     1515
+    ],
+    "crown_w": [
+     3060,
+     1640
+    ],
+    "crown_e": [
+     3320,
+     1600
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk below the silk's lower edge",
+   "conf": "med",
+   "src": "",
+   "note": "twigs converge near (3213-3240, 1673-1693); base est at the silk's edge (v ≈ 1768). The crowns of the three lower-edge trees overlap; the count is read from where the twigs converge."
+  },
+  {
+   "id": "S6.tree.bare_lower_3400",
+   "kind": "tree",
+   "name": "bare tree at the lower edge (middle)",
+   "what": "Crown of a second leafless tree with fine upcurving twigs, rising from below the silk's edge in front of the inn's roofs.",
+   "pts": {
+    "base": [
+     3400,
+     1770,
+     "est"
+    ],
+    "top": [
+     3385,
+     1550
+    ],
+    "crown_w": [
+     3293,
+     1620
+    ],
+    "crown_e": [
+     3480,
+     1600
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk below the silk's lower edge",
+   "conf": "med",
+   "src": "",
+   "note": "twigs converge near (3387-3413, 1713-1740)."
+  },
+  {
+   "id": "S6.tree.bare_lower_3527",
+   "kind": "tree",
+   "name": "bare tree at the lower edge (east)",
+   "what": "Crown of a third leafless tree with fine upcurving twigs at the lower edge, in front of the inn's middle roofs.",
+   "pts": {
+    "base": [
+     3527,
+     1770,
+     "est"
+    ],
+    "top": [
+     3540,
+     1575
+    ],
+    "crown_w": [
+     3453,
+     1640
+    ],
+    "crown_e": [
+     3707,
+     1660
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk below the silk's lower edge",
+   "conf": "med",
+   "src": "",
+   "note": "twigs converge near (3507-3547, 1713-1740)."
+  },
+  {
+   "id": "S6.grp.barrow_3300",
+   "kind": "group",
+   "name": "barrow pushed past the incense shop",
+   "what": "A man in a broad hat stands between the handles of a barrow heaped with roped dark bundles at the incense shop's corner and pushes it east toward the crossroads.",
+   "members": [
+    "S6.veh.barrow_casks_3300",
+    "S6.fig.handcart_man_3130"
+   ]
+  },
+  {
+   "id": "S6.fig.ring_face_3735",
+   "kind": "figure",
+   "name": "half-hidden listener in the ring (face only)",
+   "what": "A small face with dark hair shows between the man holding the dark fan and the tall man standing at the back of the ring; the rest of the body is hidden by the listeners in front. A youth or a short man.",
+   "pts": {
+    "foot": [
+     3735,
+     960,
+     "est"
+    ],
+    "head": [
+     3732,
+     778
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: face only, between the listeners",
+   "conf": "low",
+   "src": "余辉: 街头说书",
+   "note": "Face at about (3722-3745, 775-800) on the scroll (lead's second pass; t4 noted \"a face (3725,789)\"). Foot est under the face at the ring's depth (v ~960, like the neighbours'); painted height unknown."
+  }
+ ]
+}

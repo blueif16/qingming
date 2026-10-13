@@ -1,0 +1,302 @@
+{
+ "section": "S3",
+ "pass": "second pass, middle: owns u 17800-19100, looked at 17650-19250 (merge notes, 'For the second pass')",
+ "how_to_read": "entities = new entities in full map form, each to be copied into a part by merge_fixes.mjs if accepted (S4's form). edits = changes to merged entities (retire, move a point, change a support, rewrite a what), each with its evidence. reviewed = the merge's listed items settled with no change to points or supports (an optional note_add for the entity). seen_not_proposed = painted marks looked at and left out, with why. Crops are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S3_second_middle/ (scratchpad/S3_second_middle/ below). Read at zoom 1.6 per 350 x 450 px window over the whole range (ents and plain), then zoom 2-4 on contrast-stretched crops (normalise 1-99 %) and raw crops, plus the registered overview restyle beside the scan where the merge names it.",
+ "entities": [
+  {
+   "id": "S3.veh.boat_skiff_19255",
+   "kind": "vehicle",
+   "name": "narrow empty skiff under the arch's south foot",
+   "what": "A long, narrow, empty skiff lying in the water under the south half of the arch, parallel to the south bank: a slim hull seen side-on, about 340 px long, its sharp west end running in behind the arch's south leg and its east end rising to an upturned stem with a small knob on its tip; four short uprights (frames or thwarts) stand between gunwale and bottom over its east half. No crew, oar, pole or mooring line is painted.",
+   "pts": {
+    "front": [
+     19255,
+     966
+    ],
+    "rear": [
+     18915,
+     963,
+     "est"
+    ],
+    "beam_s": [
+     19110,
+     1000
+    ],
+    "bow_top": [
+     19253,
+     944
+    ]
+   },
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 0,
+   "vis": "part: its west end runs in behind the arch's south leg (u ~18915-18935); the south-east end post crosses it at u ~19015",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (middle): replaces S3.prop.floating_timber_19090 (edit below: retire it). Strokes on contrast crops at zoom 3-4: gunwale (top line) (18933, 947) -> (19014, 964) -> (19100, 975) -> (19160, 975) -> (19252, 945); bottom (18933, 961) -> (19014, 983) -> (19100, 1000) -> (19160, 997) -> (19255, 967). The depth grows from ~14 px in the west to ~25 px at u 19100-19160, then both lines rise together into a stem whose tip carries a small knob at (19250-19260, 943-952), with a short post down to (19258, 965). Uprights between the lines at u 19108-19113, 19160-19170, 19185-19192 and 19210-19215 (v ~970-1000). This is a hull's profile: a log or spar keeps one depth along its length and has no rising stem. BOW: the upturned stem is east, so front = the waterline under it; the west end is sharp and hidden, rear est where the two lines meet behind the arch's leg. pose 'moored' is a reading: nothing ties it and nobody is in it; it lies ~40-60 px north of the south bank's est shore (v ~1040), under the ridge of S3.bld.mat_shed_19160. OTHER READINGS, kept: a long timber or spar afloat (river_e's first reading), or a footing timber of the bridge's south abutment (river_e); neither explains the stem with its knob. t7 and the bridge agent also read a skiff. OWNER: its main point (front, u 19255) falls in the east range; the merge listed it for the middle pass. SCALE CUE: hull ~340 px long (4.4 m at 77 px/m), ~20-25 px deep. Crops: scratchpad/S3_second_middle/i_timber.jpg, i_timber_e.jpg, i_timber_w.jpg, i_timber_m.jpg."
+  },
+  {
+   "id": "S3.fig.head_under_parasol_hub_18780",
+   "kind": "figure",
+   "name": "dark-haired head under the big parasol's hub",
+   "what": "A round dark-haired head (bare, or in a small dark cap) under the middle of the big parasol at the bridge's south foot, between the stout man in dark clothes and the man in the long robe seen from behind; only the head and a little dark clothing show above the crowd (a customer, or the keeper of the goods stand under the parasol).",
+   "pts": {
+    "foot": [
+     18782,
+     1185,
+     "est"
+    ],
+    "head": [
+     18780,
+     1046
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "vis": "part: only the head shows; the body is hidden by S3.fig.stout_man_18750 and S3.fig.long_robe_back_18806 in front",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (middle): the merge's item '1-2 more heads under the big parasol', first blob (t6 left it: '(18767-18784, 1050-1073) could be heads or hands'). Strokes: a round dark mass u 18769-18790, v 1046-1066, about 20 px across like the heads beside it (S3.fig.stout_man_18750's at (18738, 1083), S3.fig.heads_under_parasol_18755's at (18754, 1024)), with dark clothing below it at u 18770-18800, v 1080-1110. It lies straight under the parasol's true hub (18781, 908; edit on S3.prop.parasol_big_18748). OTHER READING: the hair of S3.fig.long_robe_back_18806 (whose head is recorded 45 px lower, at (18793, 1103)) or of S3.fig.man_dark_cap_18812 (head (18810, 1078)), or a hand; then decline. Facing is not legible (90 = toward the bridge, as the crowd around it). Foot est ~140 px below the head, like the stout man's. Crops: scratchpad/S3_second_middle/e_heads_z.jpg, e_heads_ze.jpg, e_foot_crowd.jpg, e_parasol_wide.jpg."
+  },
+  {
+   "id": "S3.fig.second_head_ramp_foot_18740",
+   "kind": "figure",
+   "name": "second dark head at the foot of the ramp",
+   "what": "A second round dark head (hair or a dark cap, seen from behind) just south-east of the head in the crowd at the foot of the south ramp, above the big parasol's canopy; the body is lost in the crowd.",
+   "pts": {
+    "foot": [
+     18742,
+     950,
+     "est"
+    ],
+    "head": [
+     18740,
+     848
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "standing",
+   "facing_deg": 90,
+   "vis": "part: only the head shows, between S3.fig.dark_head_ramp_foot_18720 and S3.fig.man_light_jacket_18760",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (middle): the merge's item '1-2 more heads under the big parasol', second blob, named only in S3.fig.dark_head_ramp_foot_18720's note ('a second dark blob at (18727-18747, 847-867) may be a hand or another head'; map/README.md rule 6). Strokes: a dark angular blob u 18730-18750, v 846-870, the size, shape and tone of its neighbour's head (u 18707-18727, v 820-840); the overview restyle paints two dark-haired heads side by side here (scratchpad/S3_second_middle/o_parasol.jpg). OTHER READING: the dark shoulder or raised hand of S3.fig.dark_head_ramp_foot_18720 (25 px below and east of that head); then decline. Support follows its neighbour's (on the deck by the bridge agent's foot line v ~1090; offset 135 px west of deck_e at the same v). Foot est ~100 px below the head, as its neighbour's. Crops: scratchpad/S3_second_middle/e_blob2.jpg, e_blob2e.jpg."
+  },
+  {
+   "id": "S3.prop.slatted_panel_18615",
+   "kind": "prop",
+   "name": "slatted panel at the west stall's north-east corner",
+   "what": "A short panel of two rails with slanting slats between them, about 85 px long, standing at the north-east corner of the west mat-awning stall between the man seated on the bench (west of it) and the round-faced youth (east of it): a rack, a ladder set down, or a bench's slatted back.",
+   "pts": {
+    "base": [
+     18620,
+     462,
+     "est"
+    ],
+    "top_w": [
+     18593,
+     390
+    ],
+    "foot_e": [
+     18640,
+     457
+    ]
+   },
+   "support": "bridge deck",
+   "vis": "part: its foot is behind the seated man's knees",
+   "conf": "low",
+   "src": "",
+   "note": "SECOND PASS (middle): the merge's item 'the west railing piece'. Accept only together with the edit on S3.str.rainbow_bridge that removes its custom points rail_w_piece_s/rail_w_piece_n (the same strokes); if the lead keeps the bridge's reading, decline this. Strokes (raw and stretched crops at zoom 3-4): two rails from (18593, 390) down to (18640, 457), long axis slope +1.4 (falling to the east), 4-5 slats between them at (18605-18632, 395-465). Why not the deck's west railing: (1) it stands 590-670 px west of deck_e at the same v, but the water's edge runs 700-775 px west of deck_e all along the ramp (reviewed item 'deck entities'), and the man seated on S3.prop.bench_18630 sits between it and the water, so it is inside the deck, not on its edge; (2) a stretch of the west railing would run parallel to the near railing, rising to the east (slope -1.4 to -2.0 on the south flank), while this panel falls to the east; (3) it is 85 px long against the near railing's ~50 px height at the crown. So it is no evidence for deck_w. Group: the lead adds it to S3.grp.west_stall_18330. Crops: scratchpad/S3_second_middle/d_frame_raw.jpg, d_west_rail.jpg, d_west_rail_z4.jpg."
+  }
+ ],
+ "edits": [
+  {
+   "id": "S3.prop.floating_timber_19090",
+   "action": "retire",
+   "reason": "It is a narrow skiff, not a timber: the hull deepens from ~14 px in the west to ~25 px at u 19100-19160 and rises to an upturned stem with a knob at (19253, 944); four frames or thwarts stand between gunwale and bottom. Replaced by S3.veh.boat_skiff_19255 (entities). The skiff is S3's own boat with no crew, so no group.",
+   "conf": "med"
+  },
+  {
+   "id": "S3.ani.dark_donkey_18625",
+   "action": "retire",
+   "also": "remove it from S3.grp.sack_donkeys_18600's members (and the group's what: 'two dark donkeys under huge pale sacks', already two); add to S3.fig.calling_man_18690's note: 'Second pass: the dark curved mass at u 18607-18686, v 1073-1153 west of him is his two wide dark sleeves stretched west, cuffs hanging at (18617-18632, 1118-1145), not a third donkey (S3.ani.dark_donkey_18625 retired).'",
+   "reason": "The shape (u 18607-18686, v 1073-1153) has no head, ears, legs or tail of its own: its curved top runs straight on into the calling man's right shoulder at (18665, 1105), it is painted in the same grey-black tone as his robe (raw crop), and its narrow west end, which t5 and t6 read as a lowered head, hangs like two sleeve cuffs at (18617-18632, 1118-1145). Under and behind the calling man only human legs and his robe's skirt are painted (18677-18714, 1150-1245); a donkey's body would have to stand there. The 'leg-like stroke' (18640-18657, 1123-1180) is light, not dark like a donkey's leg, and belongs to the people behind. The overview restyle paints only his outstretched arms. t6 recorded it conf low and asked for this retirement if it is his sleeves. Crops: scratchpad/S3_second_middle/f_dark_raw.jpg, f_dark_z3.jpg, f_donkeys.jpg, o_donkeys.jpg.",
+   "conf": "med"
+  },
+  {
+   "id": "S3.fig.figure_under_awning_18015",
+   "action": "retire",
+   "also": "remove it from S3.grp.boat_unloading_17705's members; the boat's crew is then 6 (its what already says 'perhaps one more under the mat awning': drop that clause).",
+   "reason": "On raw and stretched crops at zoom 3-4 (u 17960-18080, v 770-920) the strokes are two straight parallel lines ~6 px apart slanting from (18017, 812) to (18032, 860), crossed by a second straight strut, below the flat lattice awning: the awning's west pole (river_w's pole at ~18010) and its brace. No head, shoulder, sleeve or hem curve is painted; the pale shape between the lines is bare silk, and the small pale patch at (18018-18032, 875-895) has no outline of a body. river_w recorded it conf low as 'the awning's pole' or a man. If the lead keeps it, keep conf low. Crops: scratchpad/S3_second_middle/c_fig18015_raw.jpg, c_fig18015_z3.jpg, c_stern2.jpg, o_stern.jpg.",
+   "conf": "med"
+  },
+  {
+   "id": "S3.prop.parasol_stall_18585",
+   "action": "edit",
+   "set": {
+    "pts.hub": [
+     18492,
+     480
+    ],
+    "pts.base": [
+     18492,
+     640,
+     "est"
+    ]
+   },
+   "what": "Large parasol of ribbed oiled paper or cloth standing behind the west stall's mat awning, its canopy seen from above as an ellipse with the hub near its middle; the man seated on the bench at the stall's north-east corner reaches up to its east rim.",
+   "note_add": "Second pass: the ribs meet at (18492, 480) (zoom 3.4, scratchpad/S3_second_middle/h_hub_z3.jpg): t5's reading (18495, 482) is right, t6's (18578, 455) is the canopy's east rim, where the seated man's hands are. The canopy is an ellipse u 18420-18580, v 455-515, its hub near the middle, so it stands about level on a pole straight under the hub, hidden behind the mat roof: base moved from (18585, 600, est) to (18492, 640, est), at the stall's back edge (nw (18420, 615), ne (18600, 640)), ~160 px below the hub (a pole of ~1.4 figure heights at this depth, where figures are 110-130 px). ID unchanged.",
+   "also": "S3.fig.stall_man_parasol_18612: in its what, 'both hands at the hub of the stall's parasol, which he holds tilted over the stall's mat roof' becomes 'both hands up at the east rim of the stall's parasol (S3.prop.parasol_stall_18585), tilting or steadying it over the stall's mat roof'.",
+   "reason": "The hub was recorded at the canopy's east end and the base est under it, 93 px east of where the ribs meet.",
+   "conf": "med"
+  },
+  {
+   "id": "S3.prop.parasol_big_18748",
+   "action": "edit",
+   "set": {
+    "pts.hub": [
+     18781,
+     908
+    ],
+    "pts.base": [
+     18781,
+     1150,
+     "est"
+    ]
+   },
+   "note_add": "Second pass: the ribs meet at (18781, 908) (zoom 3.4, scratchpad/S3_second_middle/e_bighub.jpg), not (18745, 900); base est moved under the hub, from (18748, 1150) to (18781, 1150). The round head S3.fig.head_under_parasol_hub_18780 (if accepted) stands straight under it. ID unchanged.",
+   "reason": "Hub 36 px west of the ribs' meeting point; the base est followed it.",
+   "conf": "med"
+  },
+  {
+   "id": "S3.veh.boat_unloading_17705",
+   "action": "edit",
+   "set": {
+    "pts.rear": [
+     18210,
+     958,
+     "est"
+    ]
+   },
+   "what_replace": {
+    "from": "an arched mat hood (18040-18130, v 735-800) and flat lattice mat awnings on poles (17960-18250, v 740-880; poles at ~18010 and ~18170)",
+    "to": "an arched mat hood (18095-18200, v 735-800) and flat lattice mat awnings on poles (17960-18330, v 740-880; poles at ~18010 and ~18170)"
+   },
+   "note_add": "Second pass: the arched stern hood spans u 18095-18200 (its arch from (18093, 760) over (18150, 737) to (18202, 792); scratchpad/S3_second_middle/c_stern2.jpg, c_stern_plain.jpg), so the stern is under its east end: rear moved from (18120, 950, est), which lay under the hood's middle, to (18210, 958, est) on the hull line (17780, 850) -> (18050, 940) carried east under the big parasol. The flat lattice panel reaches (18327, 812-825). East of ~18190 that panel lies over the south ramp's west edge (the deck's far edge is ~720 px west of deck_e: 18190 at v 840), so its east part may be an awning of the stall at the ramp's edge (the tray stall) rather than the boat's; the boat ends at the deck's edge either way. Waterline length now ~505 px.",
+   "reason": "The recorded rear lay under the middle of the boat's own stern hood.",
+   "conf": "med"
+  },
+  {
+   "id": "S3.prop.bridge_end_post_far_19176",
+   "action": "edit",
+   "set": {
+    "pts.base": [
+     19176,
+     240,
+     "est"
+    ]
+   },
+   "note_add": "Second pass: the foot is still hidden; its v is now estimated from the post's own size instead of the deck crowd's feet. Its X is ~30 px across (u 19160-19192) against ~45 px for the north-east post S3.prop.bridge_end_post_20050 (foot est v 395, ~355 px foot to cross) and ~90 px for the south-east post S3.prop.bridge_end_post_19026 (~513 px foot to cross). Scaled by those two ratios (7.9 and 5.7 px of height per px of bar), its foot is ~171-237 px below its cross (v 35): v ~205-270; base est (19176, 240). The smaller X says it stands further back than the north-east post, so it is not the twin of either near post across the deck (whose width lies east-west, level in the picture: a twin would be painted the same size at the same v). Reading (b), a pole standing behind the deck's far edge or on the far bank, is now the likelier; reading (a) stays in the note. Crops: scratchpad/S3_second_middle/j_farpost.jpg, j_farposte.jpg.",
+   "reason": "Placeholder at the deck crowd's foot level (v 300) assumed reading (a).",
+   "conf": "low"
+  },
+  {
+   "id": "S3.str.rainbow_bridge",
+   "action": "edit",
+   "set": {
+    "pts.rail_w_piece_s": null,
+    "pts.rail_w_piece_n": null
+   },
+   "note_add": "Second pass: the 'west railing piece' (18593-18640, 384-462) is not the deck's west railing (see S3.prop.slatted_panel_18615): it stands 590-670 px west of deck_e, 50-130 px inside the water's edge, with a seated man between it and the water, and it falls to the east while the railings rise to the east. It is no evidence for deck_w. The water's edge on the upstream side of the south ramp is: 696-776 px west of deck_e at every v from 400 to 965 (mean ~725), which supports deck_w = deck_e - 750 to within ~25-50 px.",
+   "reason": "The merge added these custom points from t5's and t6's left-to lists; read at zoom 3-4 they are a slatted panel inside the deck. Remove only if S3.prop.slatted_panel_18615 is accepted.",
+   "conf": "low"
+  }
+ ],
+ "reviewed": [
+  {
+   "item": "the 35 `bridge deck` entities west of u 18810: ramp or bank",
+   "ids": [
+    "S3.fig.mat_leaner_white_18220",
+    "S3.fig.seated_man_cap_18282",
+    "S3.fig.parasol_edge_crouching_18288",
+    "S3.fig.bending_man_18305",
+    "S3.prop.mat_awning_stall_18330",
+    "S3.fig.bending_dark_top_18345",
+    "S3.fig.seated_man_topknot_18352",
+    "S3.fig.tray_bender_18356",
+    "S3.fig.mat_stall_leaner_18375",
+    "S3.prop.round_tray_stand_18403",
+    "S3.fig.robed_back_view_18425",
+    "S3.fig.mat_stall_keeper_18435",
+    "S3.fig.porter_jar_bundle_18483",
+    "S3.prop.dark_basket_18500",
+    "S3.prop.stall_table_18540",
+    "S3.fig.robe_apron_man_18582",
+    "S3.prop.parasol_stall_18585",
+    "S3.prop.coiled_goods_18600",
+    "S3.fig.stall_man_parasol_18612",
+    "S3.prop.bench_18630",
+    "S3.fig.youth_round_face_18643",
+    "S3.fig.groom_at_donkey_18682",
+    "S3.fig.bowing_man_18688",
+    "S3.fig.sedan_bearer_rear_18688",
+    "S3.ani.donkey_ridden_18690",
+    "S3.fig.leaning_man_arms_out_18703",
+    "S3.fig.dark_head_ramp_foot_18720",
+    "S3.fig.donkey_man_west_18728",
+    "S3.ani.donkey_dark_18745",
+    "S3.fig.hand_to_head_18752",
+    "S3.fig.man_light_jacket_18760",
+    "S3.fig.donkey_man_east_18768",
+    "S3.fig.man_under_awning_18775",
+    "S3.prop.mat_awning_stall_18783",
+    "S3.prop.awning_rack_18797"
+   ],
+   "decision": "keep all 35 on `bridge deck` (the ramp). No support change.",
+   "evidence": "No west edge is inked, but the line where the south ramp's crowd meets the water is the deck's far edge, not a bank: measured at the same v, it runs 696-776 px west of the painted deck_e from v 400 to v 965 (the crowd's edge west of the seated man (18560, 400): 725; the bridge agent's (18300, 700): 696; river_w's bank points (18300, 640): 737, (18230, 775): 718, (18180, 890): 709, (18080, 965): 776), following the arch's convex flank (deck_e's slope changes from -2.0 to -1.4 over that range). A natural bank would not keep a constant offset from the bridge's near face along a curve. All 35 lie inside that edge (their offsets from deck_e at their own v are 98-676 px) and above the bridge agent's foot line (v ~1090). The boat moored at the edge fits: its stern hood ends at (18200, 770), 750 px west of deck_e, i.e. on the edge line, so the boat lies alongside the ramp's west foot. The westernmost cluster (the white-jacket man, the seated man in a cap, the bending man, the crouching figure, offsets 582-676) stands on the ramp's edge over the boat; the tray stall they gather round is one scene with them and stays on the deck too. Their H then comes from the v rule (u* = max(u, u_s(v)), or the lead's H_profile_X), 1.6-2.9 m by the bridge agent's primary foot; if the deck lands higher on its near face (the bridge agent's third column, foot at (18905, 862)), the same entities get 0-1 m. That choice is the bridge's foot, not these entities' support. The 'west railing piece' is no evidence either way (edit on S3.str.rainbow_bridge)."
+  },
+  {
+   "item": "t5's S3.fig.mat_leaner_white_18220: the unloading boat's crew, the ramp or the bank",
+   "decision": "keep `bridge deck`, conf low; second reading the boat's stern deck (boat deck: S3.veh.boat_unloading_17705); not the bank.",
+   "evidence": "His foot est (18220, 875) is 676 px west of deck_e, inside the deck's far edge (~720 px; reviewed item above), and the boat's stern hood he bends over ends on that edge at (18200, 770): he stands at the ramp's west edge, leaning down over the hood's east end with both arms forward. Under the deck reading there is no bank at that spot. The boat reading would put him on the stern deck; the stern ends under the hood's east end (~18210, edit on the boat), right under his head, while his body (u 18208-18245) is east of it, over the ramp's edge.",
+   "note_add": "Second pass: kept on the deck (the ramp's west edge runs ~720 px west of deck_e, and he is 676 px west of it); the boat's stern hood ends on that edge at (18200, 770), so he bends over it from the ramp. Second reading: on the boat's stern deck. Not the bank."
+  },
+  {
+   "item": "the second sack donkey's facing (S3.ani.donkey_sack_18690; t5 and t6 disagree)",
+   "decision": "keep t6's reading: facing east (0); no change to its points.",
+   "evidence": "At zoom 3.2 (scratchpad/S3_second_middle/f_d2_z3.jpg): the leg at (18602-18614, 1305-1333) bends with its joint pointing west, a hock, so the tail is west; the leg at the east end (18690-18708, 1299-1320) bends forward to the east, a knee; the thin stem at (18568-18578, 1305-1342) hangs from the sack's west corner with a tuft and no hoof or joint: the tail (t5 read it as a foreleg). The body visible under the sack (u 18600-18700) is a rump-to-shoulder view walking east; the head is lowered and hidden under the calling man at the east end. The overview restyle (scratchpad/S3_second_middle/o_donkeys.jpg) also paints it head down, facing east.",
+   "note_add": "Second pass: facing east confirmed (hock at (18602-18614, 1305-1333) points west; knee at the east end points east; the tufted tail hangs at (18568-18578, 1305-1342))."
+  },
+  {
+   "item": "the sheaf of reeds above S3.fig.wide_hat_pointer_18890 (carried or standing)",
+   "decision": "carried on his back, as recorded; no prop.",
+   "evidence": "The sheaf (u 18872-18905, v 365-478, a pointed bundle of crosshatched reeds) ends exactly at the top of his wide hat (18872-18913, 478-494) and is centred on him; nothing of it shows on either side of his body below the hat, and no foot or base of its own is painted. A sheaf standing behind him would show its lower part beside him. scratchpad/S3_second_middle/g_sheaf.jpg.",
+   "note_add": "Second pass: carried (its foot is behind his hat and shoulders; no part of it shows beside his body)."
+  },
+  {
+   "item": "the second blob under the big parasol (18727-18747, 847-867)",
+   "decision": "proposed as S3.fig.second_head_ramp_foot_18740 (entities), conf low; the lead may decline it as the neighbour's shoulder.",
+   "note_add": "for S3.fig.dark_head_ramp_foot_18720 if accepted: 'The second dark blob at (18727-18747, 847-867) is S3.fig.second_head_ramp_foot_18740 (second pass).'"
+  },
+  {
+   "item": "the west stall's parasol hub; the floating timber; the far-side end post's foot; the west railing piece; river_w's figure under the awning; t6's dark donkey",
+   "decision": "see edits (each with its evidence)."
+  }
+ ],
+ "seen_not_proposed": [
+  "Short vertical strokes at the silk's top edge above the far-bank hall's roof: a row of 4-5 posts at u 18452-18485, v 15-35, and posts with a small A-shaped trestle at u 18530-18600, v 15-42 (scratchpad/S3_second_middle/k_fartop_z3.jpg). Too faint to name (fence or railing posts beyond the roof's ridge, ridge ornaments, or twigs); structures_e's lesson says buildings cut by the top edge count, so the lead may want structures_e to look. No entity proposed.",
+  "Faint uprights just east of the mat-cabin boat's hood, (18320-18335, 305-345): its stern post or rudder (part of S3.veh.boat_mat_cabin_18005), not a figure.",
+  "A dark wash blob at the far-bank hall's south-west corner (17865-17900, 175-235): ink wash under the corner post (S3.bld.far_hall_17875), not a figure.",
+  "A pale dotted vertical streak at (17960-17975, 1375-1480) between the walker with the stick and the black donkey: silk damage or a repair, not a thing.",
+  "The diamond ornament on the arch's face at (18887-18912, 906-944) above the south-bank watchers: part of S3.str.rainbow_bridge (like beam_end_19115), no entity needed; the lead may add it as a custom point.",
+  "Every head in the crowds at the ramp's top (u 18700-19050, v 180-480), at the ramp's foot (18580-18900, 740-1000), under the big parasol, under the mat canopy at 17780-18110 and under the mat shed at 19050-19260 was checked against the map at zoom 2-4: no other unrecorded head. One near pair: S3.fig.man_white_headcloth_19050 and S3.fig.dark_head_behind_horse_19018 (heads 25 px apart) are two heads."
+ ],
+ "lessons": [
+  "**Test a hidden deck edge by its offset from the painted edge at the same v.** On S3 the line where the south ramp's crowd meets the water stays 696-776 px west of the near railing's edge from v 400 to v 965 while that edge curves (slope -2.0 to -1.4): a natural bank would not follow the arch, so it is the deck's far edge, and a slatted panel 590-670 px out is inside the deck, not its railing.",
+  "**Read a parasol's hub where its ribs meet, at zoom 3 on a stretched crop.** Two S3 parasols had the hub at a canopy end (where a man's hands are, or a guess), 36 and 86 px from the ribs' meeting point, and their est bases followed it.",
+  "**Profile a long thin floating shape before naming it.** A timber keeps one depth along its length; a hull deepens toward its middle, rises to a stem and shows frames (S3's 'floating timber' under the arch is a skiff).",
+  "**A dark mass joined to a figure in the same tone, with no head, ears or legs of its own, is that figure's clothing.** S3's third 'donkey' at the bridge's foot was the calling man's two wide sleeves; look for the animal's legs and body where they would have to be.",
+  "**A boat's fittings bound its ends.** A recorded stern that falls under the boat's own stern hood is too short: put the rear under the hood's far end."
+ ]
+}

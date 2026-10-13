@@ -1,0 +1,497 @@
+{
+ "units": {
+  "bed_river_flow": {
+   "kind": "sfx",
+   "hash": "ce27ddd2b7cc",
+   "takes": 1,
+   "req": {
+    "text": "A broad, slow river flowing past an earthen bank and moored wooden boats: a steady soft current, small gurgles and swirls along the hulls, water moving against the bank, open air with a light breeze. No music, no speech, no engines.",
+    "duration_seconds": 15,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bed_wharf_day": {
+   "kind": "sfx",
+   "hash": "283cfcf01f29",
+   "takes": 1,
+   "req": {
+    "text": "A busy riverside wharf by day, heard from the bank: footsteps on wooden planks, heavy sacks thudding down, hemp ropes creaking, wooden hulls knocking softly, water lapping, a low indistinct murmur of workers far off. No music, no speech, no engines.",
+    "duration_seconds": 15,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bed_bridge_crowd": {
+   "kind": "sfx",
+   "hash": "e2d9547eb29c",
+   "takes": 2,
+   "req": {
+    "text": "Many people crossing a large arched timber bridge by day: hollow footsteps on thick wooden planks, shuffling cloth shoes, creaking boards, an occasional hoof knock, a river rushing far below, a distant wordless hum of a crowd with no words. No music, no speech, no voices, no engines.",
+    "duration_seconds": 15,
+    "prompt_influence": 0.6,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bed_country_day": {
+   "kind": "sfx",
+   "hash": "b5b627782a19",
+   "takes": 1,
+   "req": {
+    "text": "Open farmland in early spring by day: a light breeze over bare fields and leafless trees, swallows twittering, tree sparrows by a farmhouse, a magpie chattering far off, wide quiet open air. No music, no speech, no engines.",
+    "duration_seconds": 15,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "hull_creak": {
+   "kind": "sfx",
+   "hash": "34fd9089852c",
+   "takes": 1,
+   "req": {
+    "text": "A large old wooden boat hull creaking slowly as it shifts against its mooring, one long deep groan of timber, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "hull_water_slap": {
+   "kind": "sfx",
+   "hash": "cae2dcb7912e",
+   "takes": 1,
+   "req": {
+    "text": "Four separate small river waves slapping against the side of a moored wooden boat hull, hollow wet knocks with short gaps, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "mooring_rope_creak": {
+   "kind": "sfx",
+   "hash": "271aa7f0b2cd",
+   "takes": 1,
+   "req": {
+    "text": "A thick hemp mooring rope tightening twice around a wooden post under load, creaking and squeaking stretch, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "sweep_scull": {
+   "kind": "sfx",
+   "hash": "61515576608e",
+   "takes": 1,
+   "req": {
+    "text": "One stroke of a long wooden stern sweep oar sculling a heavy river boat: the wooden pivot creaking, the blade swishing through the water, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "mast_lower": {
+   "kind": "sfx",
+   "hash": "51ca507c1e27",
+   "takes": 1,
+   "req": {
+    "text": "A tall wooden boat mast being lowered: heavy timber creaking and groaning as it tilts, ropes straining, then a dull heavy wooden thud on the deck, close, dry.",
+    "duration_seconds": 4,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "rope_haul": {
+   "kind": "sfx",
+   "hash": "9b42262c1efd",
+   "takes": 1,
+   "req": {
+    "text": "Two strong hand-over-hand pulls on a thick hemp rope, the rope rasping and squeaking under tension, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "horse_gallop_earth": {
+   "kind": "sfx",
+   "hash": "e517c03fd31a",
+   "takes": 1,
+   "req": {
+    "text": "A loose horse galloping fast on packed earth, heavy drumming hooves, a snort, outdoors, close, dry.",
+    "duration_seconds": 4,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "wheelwright_mallet": {
+   "kind": "sfx",
+   "hash": "3e4390f40f67",
+   "takes": 1,
+   "req": {
+    "text": "Three separate strikes of a wooden mallet on the hub of a wooden cart wheel, solid resonant knocks on hard timber, outdoors, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bed_open_night": {
+   "kind": "sfx",
+   "hash": "fc0518364f0f",
+   "takes": 1,
+   "req": {
+    "text": "Open land by water on a cool early-spring night: still air, a faint breeze, a few frogs croaking far off, very sparse insects, wide and quiet, no summer cricket chorus. No music, no speech, no engines.",
+    "duration_seconds": 15,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bed_bare_trees_wind": {
+   "kind": "sfx",
+   "hash": "69cbf0b8dc9d",
+   "takes": 1,
+   "req": {
+    "text": "Wind through tall leafless trees in early spring: dry twigs ticking and clattering softly, branches creaking, an airy whoosh rising and falling, no leaves, outdoors. No music, no speech, no engines.",
+    "duration_seconds": 12,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "stream_trickle": {
+   "kind": "sfx",
+   "hash": "9f226d0c39c9",
+   "takes": 1,
+   "req": {
+    "text": "A small shallow stream trickling over pebbles and around wooden bridge posts in open country: gentle bubbling and babbling, soft and close, calm air. No music, no speech, no engines.",
+    "duration_seconds": 12,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "river_swift": {
+   "kind": "sfx",
+   "hash": "1581689560fd",
+   "takes": 1,
+   "req": {
+    "text": "A strong river current rushing past timber bridge abutments and wooden piles: fast swirling water, eddies gurgling and sucking, a deep steady rush, outdoors, mid distance. No music, no speech, no engines.",
+    "duration_seconds": 12,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "hull_bump": {
+   "kind": "sfx",
+   "hash": "04803eeffa65",
+   "takes": 1,
+   "req": {
+    "text": "Two moored wooden boat hulls bumping together twice, heavy dull wooden knocks with a short grinding rub, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "pole_push": {
+   "kind": "sfx",
+   "hash": "fce26cc1dbc0",
+   "takes": 1,
+   "req": {
+    "text": "A long bamboo punting pole plunged into a river and pushed hard against the bottom from a wooden boat: a splash, bamboo creaking under strain, water dripping, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "rope_throw": {
+   "kind": "sfx",
+   "hash": "c58f0b426f96",
+   "takes": 1,
+   "req": {
+    "text": "A coiled hemp rope thrown through the air with a soft whoosh, then slapping down onto a wooden boat deck, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "tow_rope_strain": {
+   "kind": "sfx",
+   "hash": "3e09cf8521d8",
+   "takes": 1,
+   "req": {
+    "text": "A very long taut hemp tow rope under heavy strain outdoors, slow creaking and stretching groans, a light twang as it tightens, close, dry.",
+    "duration_seconds": 4,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "tracker_strain": {
+   "kind": "sfx",
+   "hash": "d851a991ad15",
+   "takes": 1,
+   "req": {
+    "text": "Several men leaning into a heavy tow rope together: deep rhythmic effort breaths and low wordless grunts, feet scraping on earth, outdoors, close, dry.",
+    "duration_seconds": 4,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "step_boat_deck": {
+   "kind": "sfx",
+   "hash": "d7282b87eb1e",
+   "takes": 1,
+   "req": {
+    "text": "Four footsteps in cloth shoes on the plank deck of a floating wooden boat, hollow boomy knocks with a slight creak and faint water slosh under the hull, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "gangplank_flex": {
+   "kind": "sfx",
+   "hash": "800bea7fabb2",
+   "takes": 1,
+   "req": {
+    "text": "Two footsteps on a long wooden gangplank between a boat and a bank, the board bending with a springy creak and a hollow knock, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "step_mud": {
+   "kind": "sfx",
+   "hash": "57fabd81c1af",
+   "takes": 1,
+   "req": {
+    "text": "Four footsteps in cloth shoes on wet, sticky river-bank mud, a soft squelch and suck as each foot pulls free, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bridge_arch_creak": {
+   "kind": "sfx",
+   "hash": "c93321bddf17",
+   "takes": 1,
+   "req": {
+    "text": "A huge timber arch bridge under the weight of a crowd: massive wooden beams creaking and groaning deeply, low knocks in the joints, outdoors, close, dry.",
+    "duration_seconds": 4,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "hooves_timber": {
+   "kind": "sfx",
+   "hash": "b072d804a22c",
+   "takes": 1,
+   "req": {
+    "text": "A horse stamping and shifting on a thick timber bridge deck, four hollow hoof knocks on wooden planks, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "crowd_alarm": {
+   "kind": "sfx",
+   "hash": "88aaeaae9054",
+   "takes": 1,
+   "req": {
+    "text": "A crowd on a bridge crying out in alarm together, a sudden rising wordless clamour of many voices, outdoors, close, dry, no intelligible words.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "cart_two_wheel_earth": {
+   "kind": "sfx",
+   "hash": "57ce7e158d09",
+   "takes": 1,
+   "req": {
+    "text": "A large two-wheeled wooden cart rolling slowly on a dirt road: big wooden wheels crunching grit, the wooden axle creaking and knocking with each turn, no bell, close, dry.",
+    "duration_seconds": 5,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "pannier_creak": {
+   "kind": "sfx",
+   "hash": "98a8ea0a3124",
+   "takes": 1,
+   "req": {
+    "text": "A donkey walking with two heavy wicker panniers of charcoal on a wooden pack saddle: wicker and wood creaking with each step, lumps of charcoal shifting, close, dry.",
+    "duration_seconds": 5,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "mule_call": {
+   "kind": "sfx",
+   "hash": "085a925a0d3d",
+   "takes": 1,
+   "req": {
+    "text": "A mule calling once, a whinny that breaks into a hoarse bray, outdoors, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bucket_slosh": {
+   "kind": "sfx",
+   "hash": "e1d40a330fee",
+   "takes": 1,
+   "req": {
+    "text": "A full wooden water bucket lifted and set down, water sloshing and the bail handle creaking, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "bed_mist_edge": {
+   "kind": "sfx",
+   "hash": "892ef84f8b65",
+   "takes": 1,
+   "req": {
+    "text": "Open air at the misty edge of a wide plain: a soft steady breeze, a gentle airy hush, very faint distant birds now and then, calm and empty. No music, no speech, no engines.",
+    "duration_seconds": 12,
+    "prompt_influence": 0.4,
+    "loop": true,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "sack_shoulder": {
+   "kind": "sfx",
+   "hash": "777c111e1d91",
+   "takes": 1,
+   "req": {
+    "text": "A porter heaving a heavy grain sack onto his shoulder: coarse hemp cloth rubbing, grain shifting and settling inside, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "railing_creak": {
+   "kind": "sfx",
+   "hash": "dc9c42304f32",
+   "takes": 1,
+   "req": {
+    "text": "Someone leaning on an old wooden bridge railing: the rail creaks and its post knocks softly, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "scaffold_creak": {
+   "kind": "sfx",
+   "hash": "86ef87793543",
+   "takes": 1,
+   "req": {
+    "text": "Tall wooden poles lashed together with rope, creaking and knocking softly as a gust pushes them, outdoors, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "wind_vane_turn": {
+   "kind": "sfx",
+   "hash": "54290c3cbf6c",
+   "takes": 1,
+   "req": {
+    "text": "A small wooden wind vane swinging on a squeaky wooden pivot atop a tall pole in a gust, outdoors, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "twig_brush": {
+   "kind": "sfx",
+   "hash": "60ea8c1a19bc",
+   "takes": 1,
+   "req": {
+    "text": "Clothes brushing through dry leafless twigs and bare shoots: light scratching and small snapping ticks, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "straw_reed_brush": {
+   "kind": "sfx",
+   "hash": "67b785c6c0fc",
+   "takes": 1,
+   "req": {
+    "text": "A sleeve brushing along dry straw thatch, a reed mat screen and a woven wattle fence: dry rustle, rattle and scrape, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "wood_bump": {
+   "kind": "sfx",
+   "hash": "4b033533d800",
+   "takes": 1,
+   "req": {
+    "text": "Two separate bumps against a free-standing wooden signboard and a stack of leaning poles: hollow wooden knocks and a short rattle, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "jar_knock": {
+   "kind": "sfx",
+   "hash": "b318be5d88d2",
+   "takes": 1,
+   "req": {
+    "text": "A shoulder bumping a big glazed earthenware storage jar, three separate hollow ceramic thunks, close, dry.",
+    "duration_seconds": 2,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  },
+  "step_splash": {
+   "kind": "sfx",
+   "hash": "95a4677aee2e",
+   "takes": 1,
+   "req": {
+    "text": "Three footsteps splashing through ankle-deep water at a muddy stream edge, close, dry.",
+    "duration_seconds": 3,
+    "prompt_influence": 0.3,
+    "loop": false,
+    "model_id": "eleven_text_to_sound_v2"
+   }
+  }
+ },
+ "voices": {}
+}

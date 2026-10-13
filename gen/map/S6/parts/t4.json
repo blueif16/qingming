@@ -1,0 +1,1516 @@
+{
+ "section": "S6",
+ "entities": [
+  {
+   "id": "S6.fig.robed_man_3808",
+   "kind": "figure",
+   "name": "man in a long dark robe and black hat (top street)",
+   "what": "Man in a long dark robe to the ankles and a black hat, standing on the street at the top of the silk behind the butcher shop's roof; he faces east toward the man in light clothes with his hands joined before his chest, as if greeting or talking. A townsman or minor official.",
+   "pts": {
+    "foot": [
+     3808,
+     260
+    ],
+    "head": [
+     3798,
+     135
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "group": "S6.grp.top_street_talk",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Painted height 125 px (far figure on the top street). Feet at u 3795-3825, v 259-262."
+  },
+  {
+   "id": "S6.fig.light_jacket_man_3845",
+   "kind": "figure",
+   "name": "man in a light short jacket (top street)",
+   "what": "Man in a pale short jacket and trousers with a dark cap, standing facing west toward the robed man and holding something small at his chest. A townsman or shop hand.",
+   "pts": {
+    "foot": [
+     3845,
+     258
+    ],
+    "head": [
+     3838,
+     132
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S6.grp.top_street_talk",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Painted height 126 px. What he holds is not legible. Feet at u 3835-3855, v 255-259."
+  },
+  {
+   "id": "S6.grp.top_street_talk",
+   "kind": "group",
+   "name": "two men talking on the top street",
+   "what": "On the street at the top of the silk, behind the butcher shop's roof, a man in a long dark robe and black hat faces a man in a pale short jacket; they stand close together as if greeting or talking.",
+   "members": [
+    "S6.fig.robed_man_3808",
+    "S6.fig.light_jacket_man_3845"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.child_3885",
+   "kind": "figure",
+   "name": "child beside the red board (top street)",
+   "what": "Child (a boy with tufted hair) in a short pale jacket and trousers, standing against the west edge of the tall red board on the top street, facing the viewer.",
+   "pts": {
+    "foot": [
+     3885,
+     313
+    ],
+    "head": [
+     3885,
+     209
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "child: painted height 104 px, against 125 px for the two men about 50 px further up the silk (an adult this low on the silk would be taller than them)."
+  },
+  {
+   "id": "S6.fig.doorway_man_4026",
+   "kind": "figure",
+   "name": "man at a shop door (top street)",
+   "what": "Man in a short jacket, trousers and a cap standing in the doorway of the shop at the top of the silk, facing the viewer; a dark bundle or bag hangs at his left side.",
+   "pts": {
+    "foot": [
+     4026,
+     182
+    ],
+    "head": [
+     4027,
+     80
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Painted height 102 px (far). Feet at u 4015-4038, v 175-189. Bag at u 4035-4049, v 106-139."
+  },
+  {
+   "id": "S6.fig.shop_person_3991",
+   "kind": "figure",
+   "name": "person behind the top-street counter table",
+   "what": "Small figure seen from the waist up behind the long table in front of the top-street shop, west of the doorway; dress not legible.",
+   "pts": {
+    "foot": [
+     3991,
+     150,
+     "est"
+    ],
+    "head": [
+     3991,
+     98
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: lower body behind the table; strokes faint",
+   "conf": "low",
+   "src": "",
+   "note": "A head and arms at u 3982-4002, v 97-140; the restyle also paints a small figure here. Could instead be an object standing on the table."
+  },
+  {
+   "id": "S6.prop.counter_table_3940",
+   "kind": "prop",
+   "name": "long table in front of the top-street shop",
+   "what": "Long table in front of the shop on the top street, west of the doorway with the man; its top at v 110-120 from u 3900 to 3990, a leg at u 3975-3980 down to v ~148. The tall red board stands in front of its west half.",
+   "pts": {
+    "base": {
+     "sw": [
+      3902,
+      155,
+      "est"
+     ],
+     "se": [
+      3980,
+      150
+     ],
+     "ne": [
+      3980,
+      126,
+      "est"
+     ],
+     "nw": [
+      3902,
+      130,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: west half behind the red board",
+   "conf": "med",
+   "src": "",
+   "note": "Table ~35 px high from top to leg foot. Back corners est."
+  },
+  {
+   "id": "S6.prop.bench_3880",
+   "kind": "prop",
+   "name": "small table or bench (top street)",
+   "what": "Small table or bench between the talking men and the red board on the top street: top at v 155-169 from u 3860 to 3905, legs at u ~3865 and ~3895 down to v ~190-195.",
+   "pts": {
+    "base": [
+     3880,
+     194
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.prop.red_board_3936",
+   "kind": "prop",
+   "name": "tall red-lacquered board (top street)",
+   "what": "Tall upright board painted red inside a dark frame, with rounded upper corners, standing free on the top street between the long table and the butcher shop's roof; about 65 px wide and over 230 px tall. No characters are legible on it.",
+   "pts": {
+    "base": [
+     3936,
+     365,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden by the butcher shop's roof (visible v 129-360)",
+   "conf": "med",
+   "src": "",
+   "note": "Edges u 3902-3969, top v 129. The child stands against its west edge with feet at v 313, so the board stands at least that far forward; its foot is est just below where the roof cuts it. May be a standing signboard whose characters have faded, or a screen. Possibly a building part (reported). MERGE: the structures pass recorded the same board as S6.str.red_panel_3898 (retired as a duplicate): panel u 3895-3978, v 130-365, red-lacquered with a dark border and a rounded top, its lower part hidden behind the corner shop's west eave; foot est at v ~400 (a ~3.5 m board), in the cross street about 3.5 m west of the corner shop's west wall; no characters visible."
+  },
+  {
+   "id": "S6.fig.butcher_3920",
+   "kind": "figure",
+   "name": "butcher at the chopping block (孫羊店)",
+   "what": "Butcher in the open front of the 孫羊店 meat shop under the eave, seen from the shoulders up behind his chopping block, bent forward over the meat with his pale bare head toward the viewer; his hands are at the block (a cleaver is not legible).",
+   "pts": {
+    "foot": [
+     3925,
+     790,
+     "est"
+    ],
+    "head": [
+     3918,
+     655
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S6.grp.butcher_shop",
+   "vis": "part: only head and shoulders behind the block and the meat; faded",
+   "conf": "low",
+   "src": "brief: the 孙羊店 butcher",
+   "note": "The pale rounded form at u 3907-3954, v 652-708 reads as a man leaning over the block (the restyle paints a butcher with a cleaver here); it could also be a big piece of meat. Foot est behind the counter: the counter's front edge is at v ~744, the shop floor ~v 790-800."
+  },
+  {
+   "id": "S6.prop.meat_counter_3856",
+   "kind": "prop",
+   "name": "long meat counter (孫羊店)",
+   "what": "Long low table (the meat counter) along the open front of the meat shop under the eave, from u 3786 to 3925; its top at v ~717-720, its front edge at v ~738-744. A dark pot stands on its west half and a side of pork hangs above its middle.",
+   "pts": {
+    "base": {
+     "sw": [
+      3788,
+      800,
+      "est"
+     ],
+     "se": [
+      3922,
+      800,
+      "est"
+     ],
+     "ne": [
+      3922,
+      778,
+      "est"
+     ],
+     "nw": [
+      3788,
+      778,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "group": "S6.grp.butcher_shop",
+   "vis": "part: legs hidden behind the storyteller's crowd",
+   "conf": "med",
+   "src": "",
+   "note": "Footprint est: front legs ~55 px below the front edge of the top; depth ~22 px of v assumed. SCALE: counter 137 px long."
+  },
+  {
+   "id": "S6.prop.chopping_block_3963",
+   "kind": "prop",
+   "name": "thick chopping block (孫羊店)",
+   "what": "Thick oval chopping block (or deep table top) at the east end of the meat counter, its dark rim at v 700-726 from u 3913 to 4013; the butcher leans over it and big pieces of pork lie on it.",
+   "pts": {
+    "base": [
+     3963,
+     792,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.butcher_shop",
+   "vis": "part: lower part hidden by the crowd",
+   "conf": "low",
+   "src": "",
+   "note": "Base est under its middle at the shop floor (~v 790)."
+  },
+  {
+   "id": "S6.prop.meat_pieces_3978",
+   "kind": "prop",
+   "name": "pieces of pork on the chopping block",
+   "what": "Big pale lumps of pork with dark spots piled on the chopping block, at u 3948-4007, v 652-700.",
+   "pts": {
+    "base": [
+     3978,
+     790,
+     "est"
+    ]
+   },
+   "support": "ground: on S6.prop.chopping_block_3963",
+   "group": "S6.grp.butcher_shop",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "Could be part of a carcass or a second hanging piece."
+  },
+  {
+   "id": "S6.prop.hanging_meat_3857",
+   "kind": "prop",
+   "name": "side of pork hanging in the shop front",
+   "what": "A long pale piece of meat (a half carcass), narrowing to a point at the bottom, hung from the eave beam inside the meat shop's front above the middle of the counter; strings or hooks hang beside it to the west.",
+   "pts": {
+    "base": [
+     3857,
+     798,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.butcher_shop",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Hangs from v ~650 to 752 at u 3848-3866; base = floor under it, est. The strings at u 3807-3848, v 650-680 may carry smaller pieces (faded)."
+  },
+  {
+   "id": "S6.prop.pot_on_counter_3832",
+   "kind": "prop",
+   "name": "dark pot on the meat counter",
+   "what": "Small dark vessel with a lid or knob on top, standing on the west half of the meat counter.",
+   "pts": {
+    "base": [
+     3832,
+     790,
+     "est"
+    ]
+   },
+   "support": "ground: on S6.prop.meat_counter_3856",
+   "group": "S6.grp.butcher_shop",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "u 3819-3845, v 699-726. Could be a weight or a steelyard's pan."
+  },
+  {
+   "id": "S6.prop.banner_sunyangdian_4152",
+   "kind": "prop",
+   "name": "banner 孫羊店",
+   "what": "Long vertical cloth banner with a dark border reading 孫羊店 top to bottom, hanging from the slanting eave beam on the east side of the 孫羊店 building, between a pale cloth panel to its west and another to its east; characters clear.",
+   "pts": {
+    "base": [
+     4152,
+     905,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.butcher_shop",
+   "vis": "full",
+   "conf": "med",
+   "src": "sections.md / brief: the 孙羊店 butcher's flag",
+   "note": "Banner u 4135-4170, top at the eave (v ~585), bottom v ~740, characters at v 610-690. It hangs from the building's eave, not from a pole of its own: if the structures agent lists it in that building's what, drop this entity. Base = ground below it, est at the building's front line (its post at u 4202-4236 reaches v ~925). MERGE: the structures pass reads the flag as hung from a pole of its own, running straight from (4085,545) at the butcher's roof's west end down to (4445,835) at the 正店's west column, where its foot probably stands; the pole is part of this entity. MERGE: the structures pass reads the flag as hung from a pole of its own, running straight from (4085,545) at the butcher's roof's west end down to (4445,835) at the 正店's west column, where its foot probably stands; the pole is part of this entity. MERGE: the structures pass reads the flag as hung from a pole of its own, running straight from (4085,545) at the butcher's roof's west end down to (4445,835) at the 正店's west column, where its foot probably stands; the pole is part of this entity."
+  },
+  {
+   "id": "S6.grp.butcher_shop",
+   "kind": "group",
+   "name": "the 孫羊店 meat shop",
+   "what": "Under the eave of the 孫羊店 building, the open shop front sells pork: a long counter with a dark pot on it, a side of pork hanging above, and at the east end a thick chopping block with big pieces of pork where the butcher leans over his work; the shop's banner 孫羊店 hangs from the eave east of it. The storyteller's crowd stands in front of the counter.",
+   "members": [
+    "S6.fig.butcher_3920",
+    "S6.prop.meat_counter_3856",
+    "S6.prop.chopping_block_3963",
+    "S6.prop.meat_pieces_3978",
+    "S6.prop.hanging_meat_3857",
+    "S6.prop.pot_on_counter_3832",
+    "S6.prop.banner_sunyangdian_4152"
+   ],
+   "src": "sections.md: the 孙羊店 butcher's flag",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.storyteller_3822",
+   "kind": "figure",
+   "name": "storyteller (闹市说书)",
+   "what": "Bearded man with a dark beard and dark headwear at the north side of the ring, in front of the meat counter, facing out toward the viewer and the crowd while the listeners face him. What he holds and his gesture are not legible at this scan's resolution; light lines east of his head may be a raised arm.",
+   "pts": {
+    "foot": [
+     3822,
+     948,
+     "est"
+    ],
+    "head": [
+     3820,
+     757
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: from the chest down hidden by the listeners in front",
+   "conf": "med",
+   "src": "名画记: 闹市说书 (pin 39, 3840); sections.md: the storyteller with 17-18 listeners",
+   "note": "Taken as the storyteller because he is the only figure facing out of the ring at its focus, with the listeners' backs turned toward him. Face u 3809-3834, v 757-799 (beard v 775-805). Foot est ~190 px below the head (the listeners' painted heights are 194-203 px). He may be seated: his head is 12-15 px lower than the two standing men just east of him."
+  },
+  {
+   "id": "S6.fig.listener_3905",
+   "kind": "figure",
+   "name": "listener standing beside the storyteller",
+   "what": "Young man in a dark robe standing at the ring's north-east side next to the storyteller, his face toward the viewer and the ring; only head and shoulders show above the crowd.",
+   "pts": {
+    "foot": [
+     3905,
+     935,
+     "est"
+    ],
+    "head": [
+     3905,
+     742
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 240,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: below the shoulders hidden by the listeners in front",
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.listener_hat_3932",
+   "kind": "figure",
+   "name": "listener in a dark hat beside the storyteller",
+   "what": "Man in a dark hat and dark robe standing east of the young man at the ring's north-east side, facing south-west into the ring; head and shoulders above the crowd.",
+   "pts": {
+    "foot": [
+     3932,
+     937,
+     "est"
+    ],
+    "head": [
+     3931,
+     745
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 240,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: below the shoulders hidden by the listeners in front",
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.listener_3845",
+   "kind": "figure",
+   "name": "listener in a pale jacket (front row)",
+   "what": "Listener seen from behind with dark hair, pale jacket and trousers, standing in the ring's front row west of its middle, facing north toward the storyteller.",
+   "pts": {
+    "foot": [
+     3845,
+     1022
+    ],
+    "head": [
+     3830,
+     822
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: middle hidden by his neighbours",
+   "conf": "med",
+   "src": "",
+   "note": "Feet at u 3837-3853, v 1015-1026. The restyle shows him in profile facing west."
+  },
+  {
+   "id": "S6.fig.listener_3878",
+   "kind": "figure",
+   "name": "listener in the second row",
+   "what": "Listener with dark hair seen from behind in the ring's second row, facing north toward the storyteller.",
+   "pts": {
+    "foot": [
+     3878,
+     1000,
+     "est"
+    ],
+    "head": [
+     3875,
+     810
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: only the head; body hidden behind the man with the bag",
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.listener_dark_robe_3926",
+   "kind": "figure",
+   "name": "listener in a long dark robe",
+   "what": "Listener in a long dark robe seen from behind, dark hair, standing in the ring facing north toward the storyteller.",
+   "pts": {
+    "foot": [
+     3926,
+     1018
+    ],
+    "head": [
+     3909,
+     818
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "part: upper body partly behind the man with the bag",
+   "conf": "med",
+   "src": "",
+   "note": "Foot at u 3917-3937, v 1015-1020."
+  },
+  {
+   "id": "S6.fig.listener_purple_robe_3958",
+   "kind": "figure",
+   "name": "listener in a dark purple robe (east edge)",
+   "what": "Listener at the ring's east edge in a dark purple robe over pale trousers, his head turned west toward the storyteller.",
+   "pts": {
+    "foot": [
+     3958,
+     988
+    ],
+    "head": [
+     3950,
+     785
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Feet at u 3939-3953 (v 982-993) and 3965-3976 (v 979-987)."
+  },
+  {
+   "id": "S6.fig.listener_bag_3893",
+   "kind": "figure",
+   "name": "listener in a pale jacket with a bag at his hip",
+   "what": "Listener at the front of the ring in a pale short jacket and trousers with a dark bag or folded cloth at his hip, dark hair, seen from behind, facing north toward the storyteller.",
+   "pts": {
+    "foot": [
+     3893,
+     1056
+    ],
+    "head": [
+     3874,
+     861
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Feet at u 3873-3884 (v 1048-1059) and 3900-3914 (v 1051-1062). Bag at u 3848-3915, v 943-976."
+  },
+  {
+   "id": "S6.fig.child_listener_3812",
+   "kind": "figure",
+   "name": "child listener",
+   "what": "Child in a dark short coat with tufted hair, seen from behind at the ring's south-west edge, facing north toward the storyteller.",
+   "pts": {
+    "foot": [
+     3812,
+     1027
+    ],
+    "head": [
+     3809,
+     918
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "group": "S6.grp.storyteller_ring",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "child: painted height 109 px, against 194-203 px for the adult listeners at the same depth. Feet at u 3806-3820, v 1020-1030."
+  },
+  {
+   "id": "S6.grp.storyteller_ring",
+   "kind": "group",
+   "name": "the storyteller and his listeners (闹市说书)",
+   "what": "A crowd stands in a ring on the street in front of the 孫羊店 meat counter listening to a bearded storyteller who faces out of the ring toward the viewer: most listeners turn their backs to us, two men stand beside him facing into the ring, a child stands at its front edge. Nine members are east of u 3800 (listed here); about ten more stand west of u 3800 (tile t3), about 19 people in all.",
+   "members": [
+    "S6.fig.storyteller_3822",
+    "S6.fig.listener_3905",
+    "S6.fig.listener_hat_3932",
+    "S6.fig.listener_3845",
+    "S6.fig.listener_3878",
+    "S6.fig.listener_dark_robe_3926",
+    "S6.fig.listener_purple_robe_3958",
+    "S6.fig.listener_bag_3893",
+    "S6.fig.child_listener_3812",
+    "S6.fig.ring_bearded_robe_3630",
+    "S6.fig.ring_fan_cap_3688",
+    "S6.fig.ring_bending_3668",
+    "S6.fig.ring_dark_robe_3692",
+    "S6.fig.ring_bun_3712",
+    "S6.fig.ring_standing_post_3745",
+    "S6.fig.ring_bending_hat_3748",
+    "S6.fig.ring_listener_3788",
+    "S6.fig.ring_face_3735"
+   ],
+   "src": "名画记: 闹市说书 (pin 39, 3840); sections.md: the storyteller with 17-18 listeners (≈ 3600-4200)",
+   "note": "Members west of u 3800 (t3's), read from the strokes: man in a dark robe and hat (head 3625,740; feet ~3638,982); man holding a dark fan (head 3675,730); man by the shop post (head 3742,704); a face between them (3725,789); dark heads at (3679,802), (3705,832), (3787,822); a pale-jacketed man with a belt seen from behind (head ~3745,842; feet ~3770,1029); dark-robed and pale-robed backs at u ~3690 and ~3655 (feet ~v 1015-1022)."
+  },
+  {
+   "id": "S6.fig.seated_man_highseat_4070",
+   "kind": "figure",
+   "name": "man on a high seat behind the tray stall",
+   "what": "Man in a broad-brimmed dark hat and dark jacket sitting high on a tall chair behind the oval tray of goods, facing the viewer; probably the stall keeper.",
+   "pts": {
+    "foot": [
+     4072,
+     885,
+     "est"
+    ],
+    "head": [
+     4068,
+     706
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 270,
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "part: legs among the chair's legs, feet not clearly drawn",
+   "conf": "med",
+   "src": "",
+   "note": "Seated on S6.prop.high_seat_4060. Hat top v 706, face v 720-737. Foot est where the chair's legs end (v ~877-885)."
+  },
+  {
+   "id": "S6.prop.high_seat_4060",
+   "kind": "prop",
+   "name": "tall chair of the stall keeper",
+   "what": "Tall chair or high stool under the seated man: straight legs at u 4037-4043 and 4073-4080 reaching down to v ~877, and a long curved bar (an arm or rail) sweeping from (4040, 800) to (4110, 860).",
+   "pts": {
+    "base": [
+     4060,
+     880,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "part: behind the seated man and the man with the jar",
+   "conf": "low",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.young_man_4108",
+   "kind": "figure",
+   "name": "young man beside the high seat",
+   "what": "Young man in a long dark robe standing just east of the man on the high seat, under the hanging bamboo blind, facing the viewer.",
+   "pts": {
+    "foot": [
+     4108,
+     905,
+     "est"
+    ],
+    "head": [
+     4108,
+     767
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "part: lower body behind the oval tray",
+   "conf": "med",
+   "src": "",
+   "note": "Face at u 4100-4117, v 770-790."
+  },
+  {
+   "id": "S6.prop.slanted_rack_4008",
+   "kind": "prop",
+   "name": "slanted dotted board on a frame",
+   "what": "Rectangular board set at a slant (high at its east end) on a light wooden frame with a box-like lower part, with a row of dark dots along it, west of the man on the high seat; perhaps a display rack or a signboard.",
+   "pts": {
+    "base": [
+     4008,
+     838,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "part: lower frame hidden behind the man with the jar",
+   "conf": "low",
+   "src": "",
+   "note": "Board from (4039, 719) down to (3979, 752); frame lines down to v ~795-830; a box-like part at u 3967-3993, v 817-850. The restyle paints it as a cart-like frame."
+  },
+  {
+   "id": "S6.prop.tray_stand_4110",
+   "kind": "prop",
+   "name": "oval tray of goods on a crossed-leg stand",
+   "what": "Large oval tray, dark with light round goods heaped on it, on a folding stand with crossed legs and a lattice frame; a round basket stands under its west end.",
+   "pts": {
+    "base": {
+     "sw": [
+      4079,
+      1010
+     ],
+     "se": [
+      4138,
+      1012
+     ],
+     "ne": [
+      4166,
+      993
+     ],
+     "nw": [
+      4052,
+      993,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Tray rim u 4039-4176, v 909-944. Leg feet at (4081,1010), (4138,1012), (4166,993). SCALE: tray 137 px long, rim ~65 px above the leg feet."
+  },
+  {
+   "id": "S6.prop.goods_tray_4108",
+   "kind": "prop",
+   "name": "goods on the oval tray",
+   "what": "Light round goods (buns, cakes or fruit) heaped on the oval tray.",
+   "pts": {
+    "base": [
+     4108,
+     1000,
+     "est"
+    ]
+   },
+   "support": "ground: on S6.prop.tray_stand_4110",
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.prop.basket_4060",
+   "kind": "prop",
+   "name": "round basket under the tray",
+   "what": "Round pale basket standing under the west end of the oval tray, between its legs.",
+   "pts": {
+    "base": [
+     4060,
+     998
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "part: behind the stand's legs",
+   "conf": "low",
+   "src": "",
+   "note": "u 4046-4072, v 954-996."
+  },
+  {
+   "id": "S6.fig.man_bending_tray_4190",
+   "kind": "figure",
+   "name": "man bending over the tray",
+   "what": "Man in a pale short jacket and trousers (perhaps with an apron) bending over the east end of the oval tray and reaching into the goods with both hands, facing west.",
+   "pts": {
+    "foot": [
+     4190,
+     1006
+    ],
+    "head": [
+     4158,
+     845
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Bent forward: head at u 4147-4173, v 845-867. Feet at u 4169-4186 (v 994-1006) and 4196-4211 (v 996-1011)."
+  },
+  {
+   "id": "S6.fig.man_red_jar_4005",
+   "kind": "figure",
+   "name": "man holding a small red jar",
+   "what": "Man in a pale jacket and trousers with a dark cap, standing at the west end of the oval tray facing the viewer and holding a small red-rimmed jar or pot at his hip; a customer, or a listener at the ring's east edge.",
+   "pts": {
+    "foot": [
+     4005,
+     997
+    ],
+    "head": [
+     4007,
+     833
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S6.grp.tray_stall_4110",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Feet at u 3999-4027, v 990-1003. Jar at u 4016-4027, v 947-959."
+  },
+  {
+   "id": "S6.grp.tray_stall_4110",
+   "kind": "group",
+   "name": "the tray stall with the high seat",
+   "what": "A street stall in front of the 孫羊店 building, east of the storyteller's ring: an oval tray of goods on a crossed-leg stand with a basket under it; a man on a high chair sits behind it with a young man beside him, a man bends over the tray from its east end, and a man holding a small jar stands at its west end; a slanted dotted board on a frame stands behind its west end.",
+   "members": [
+    "S6.fig.seated_man_highseat_4070",
+    "S6.prop.high_seat_4060",
+    "S6.fig.young_man_4108",
+    "S6.prop.slanted_rack_4008",
+    "S6.prop.tray_stand_4110",
+    "S6.prop.goods_tray_4108",
+    "S6.prop.basket_4060",
+    "S6.fig.man_bending_tray_4190",
+    "S6.fig.man_red_jar_4005"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.prop.parasol_4312",
+   "kind": "prop",
+   "name": "big parasol over the stall",
+   "what": "Big oiled-paper parasol tilted toward the viewer over the stall at the west end of 孫羊正店's front, its ribs radiating from a hub at (4269, 762); its pole seems to come down into the tub with the sticks.",
+   "pts": {
+    "base": [
+     4312,
+     1038,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Canopy u 4162-4399, v 725-845. SCALE: canopy 237 px across. The pole is not clearly drawn between the hub and the net bag; the straight line at u 4299-4305, v 845-980 and the restyle suggest it stands in the tub."
+  },
+  {
+   "id": "S6.prop.net_bag_4286",
+   "kind": "prop",
+   "name": "net bag hanging under the parasol",
+   "what": "Netted bag (or a gourd in a net) hanging under the parasol's canopy, above the tub.",
+   "pts": {
+    "base": [
+     4286,
+     1036,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Bag u 4272-4299, v 845-885; base = ground under it, est."
+  },
+  {
+   "id": "S6.prop.tray_stand_4258",
+   "kind": "prop",
+   "name": "oval tray on a folding stand (west of the tub)",
+   "what": "Oval dark tray on a folding stand with splayed legs, west of the tub, with dark goods and a couple of dark boxes on it.",
+   "pts": {
+    "base": {
+     "sw": [
+      4228,
+      1030
+     ],
+     "se": [
+      4290,
+      1036
+     ],
+     "ne": [
+      4280,
+      1010,
+      "est"
+     ],
+     "nw": [
+      4245,
+      1008,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Tray rim u 4215-4300, v 945-976. SCALE: tray 85 px long, rim ~60 px above the leg feet."
+  },
+  {
+   "id": "S6.prop.goods_tray_4258",
+   "kind": "prop",
+   "name": "goods on the west tray",
+   "what": "Dark goods with light spots heaped on the west tray, with a couple of dark boxes at its back rim.",
+   "pts": {
+    "base": [
+     4258,
+     1020,
+     "est"
+    ]
+   },
+   "support": "ground: on S6.prop.tray_stand_4258",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Boxes u 4257-4295, v 916-939."
+  },
+  {
+   "id": "S6.prop.tub_4320",
+   "kind": "prop",
+   "name": "wooden tub between the trays",
+   "what": "Hooped wooden tub standing on the ground between the two trays under the parasol; a bundle of tall upright sticks stands in it.",
+   "pts": {
+    "base": [
+     4320,
+     1039
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Tub u 4292-4346, v 982-1039 (SCALE: 54 px wide, 57 px tall)."
+  },
+  {
+   "id": "S6.prop.sticks_in_tub_4325",
+   "kind": "prop",
+   "name": "bundle of upright sticks in the tub",
+   "what": "Bundle of tall upright sticks or stalks with pointed or tufted tops standing in the wooden tub, rising to v ~875.",
+   "pts": {
+    "base": [
+     4325,
+     1035,
+     "est"
+    ]
+   },
+   "support": "ground: on S6.prop.tub_4320",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Sticks u 4305-4355, v 875-982."
+  },
+  {
+   "id": "S6.prop.tray_stand_4385",
+   "kind": "prop",
+   "name": "oval tray on a folding stand (east of the tub)",
+   "what": "Oval dark tray on a folding stand with splayed legs, east of the tub, heaped with pale lumpy goods piled high at its back.",
+   "pts": {
+    "base": {
+     "sw": [
+      4356,
+      1034
+     ],
+     "se": [
+      4405,
+      1047
+     ],
+     "ne": [
+      4415,
+      1015
+     ],
+     "nw": [
+      4365,
+      1012,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Tray rim u 4343-4409, v 947-976. Leg feet at (4356,1034), (4405,1047), (4415,1015)."
+  },
+  {
+   "id": "S6.prop.goods_tray_4385",
+   "kind": "prop",
+   "name": "goods on the east tray",
+   "what": "Pale lumpy goods (triangular cakes or dumplings) piled high on the east tray.",
+   "pts": {
+    "base": [
+     4385,
+     1025,
+     "est"
+    ]
+   },
+   "support": "ground: on S6.prop.tray_stand_4385",
+   "group": "S6.grp.parasol_stall_4300",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Pile u 4343-4409, v 925-947."
+  },
+  {
+   "id": "S6.grp.parasol_stall_4300",
+   "kind": "group",
+   "name": "the parasol stall",
+   "what": "A stall under a big tilted parasol at the west end of 孫羊正店's street front: two oval trays of goods on folding stands with a tub of upright sticks between them and a net bag hanging under the parasol. No seller is drawn at it; the seated man at the 正店's door (east of u 4400, tile t5) may keep it.",
+   "members": [
+    "S6.prop.parasol_4312",
+    "S6.prop.net_bag_4286",
+    "S6.prop.tray_stand_4258",
+    "S6.prop.goods_tray_4258",
+    "S6.prop.tub_4320",
+    "S6.prop.sticks_in_tub_4325",
+    "S6.prop.tray_stand_4385",
+    "S6.prop.goods_tray_4385"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.fan_man_3972",
+   "kind": "figure",
+   "name": "man hiding his face behind a fan",
+   "what": "Tall man in a long pale robe and a tall dark hat, holding a dark round fan up beside his face with his left hand, head turned east; a gentleman or scholar on the south side of the street.",
+   "pts": {
+    "foot": [
+     3972,
+     1245,
+     "est"
+    ],
+    "head": [
+     3962,
+     1025
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: feet hidden behind the inn's roof ridge",
+   "conf": "high",
+   "src": "",
+   "note": "Fan at u 3982-4025, v 1079-1115, held before the east side of his face. Hat tip v 1025; foot est ~220 px lower (he is nearer the viewer than the ring). The 名画记 pin 43 便面 (3250) marks a different fan-screened figure at the crossroads."
+  },
+  {
+   "id": "S6.fig.seated_cap_man_3905",
+   "kind": "figure",
+   "name": "man in a square black cap, seated",
+   "what": "Man in a square black cap and dark robe sitting (on a seat hidden behind others) on the south side of the street, facing the viewer, his hands busy in front of him; a man crouches in front of him.",
+   "pts": {
+    "foot": [
+     3905,
+     1250,
+     "est"
+    ],
+    "head": [
+     3900,
+     1095
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 270,
+   "group": "S6.grp.seated_pair_3900",
+   "vis": "part: below the chest hidden by the crouching man and the inn's roof",
+   "conf": "med",
+   "src": "",
+   "note": "Cap u 3890-3910, v 1095-1109; face v 1110-1130; robe u 3860-3950, v 1117-1195."
+  },
+  {
+   "id": "S6.fig.crouching_man_3890",
+   "kind": "figure",
+   "name": "man crouching in front of the seated man",
+   "what": "Man in a pale jacket crouching or kneeling in front of the seated man, bent forward with his dark-haired head lowered; the restyle reads a small jar in his hands.",
+   "pts": {
+    "foot": [
+     3890,
+     1278,
+     "est"
+    ],
+    "head": [
+     3888,
+     1176
+    ]
+   },
+   "support": "ground",
+   "pose": "crouching",
+   "facing_deg": 180,
+   "group": "S6.grp.seated_pair_3900",
+   "vis": "part: legs cut by the inn's roof ridge",
+   "conf": "low",
+   "src": "",
+   "note": "Head u 3877-3900, v 1176-1195; body u 3850-3930 down to v ~1267."
+  },
+  {
+   "id": "S6.grp.seated_pair_3900",
+   "kind": "group",
+   "name": "a seated man and a crouching man",
+   "what": "On the south side of the street west of the fan man, a man in a square black cap sits facing the viewer while a man in a pale jacket crouches in front of him, bent over something in his hands.",
+   "members": [
+    "S6.fig.seated_cap_man_3905",
+    "S6.fig.crouching_man_3890"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.youth_umbrella_4028",
+   "kind": "figure",
+   "name": "youth under a dark umbrella",
+   "what": "Youth in a pale jacket with a sash under a wide dark open umbrella, walking east with an arm stretched toward the man east of him; a pole runs at shoulder height from him to that man.",
+   "pts": {
+    "foot": [
+     4030,
+     1350,
+     "est"
+    ],
+    "head": [
+     4026,
+     1162
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S6.grp.umbrella_pair_4060",
+   "vis": "part: legs hidden behind the inn's roof",
+   "conf": "med",
+   "src": "",
+   "note": "Umbrella canopy u 3990-4097, v 1133-1173, with a knob at its top (4047, 1133); it could also be a very broad hat. Face u 4016-4036, v 1167-1187."
+  },
+  {
+   "id": "S6.fig.round_face_man_4092",
+   "kind": "figure",
+   "name": "round-faced man under the umbrella's east edge",
+   "what": "Man with a round face in profile facing west, under the east edge of the same dark umbrella, at the other end of the shoulder-height pole from the youth.",
+   "pts": {
+    "foot": [
+     4092,
+     1370,
+     "est"
+    ],
+    "head": [
+     4092,
+     1190
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S6.grp.umbrella_pair_4060",
+   "vis": "part: face only; body not legible",
+   "conf": "low",
+   "src": "",
+   "note": "Face at u 4083-4100, v 1192-1212."
+  },
+  {
+   "id": "S6.prop.box_stack_4082",
+   "kind": "prop",
+   "name": "stack of flat boxes",
+   "what": "Stack of flat boxes or steamer trays on a long dark plank (a low bench, or the pole of a load), below the pole between the youth and the round-faced man.",
+   "pts": {
+    "base": [
+     4082,
+     1300,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S6.grp.umbrella_pair_4060",
+   "vis": "part: foot hidden by the inn's roof",
+   "conf": "low",
+   "src": "",
+   "note": "Stack u 4065-4100, v 1230-1259; plank u 4053-4150, v 1259-1273. It may be a load hanging from the pole (carried by the two men) rather than set down."
+  },
+  {
+   "id": "S6.fig.man_by_boxes_4115",
+   "kind": "figure",
+   "name": "man looking up beside the box stack",
+   "what": "Man with dark hair, his face turned up, seen just above the inn's roof ridge east of the box stack; only his head and shoulders show.",
+   "pts": {
+    "foot": [
+     4115,
+     1360,
+     "est"
+    ],
+    "head": [
+     4113,
+     1243
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S6.grp.umbrella_pair_4060",
+   "vis": "part: below the shoulders hidden by the inn's roof",
+   "conf": "low",
+   "src": "",
+   "note": "Head u 4100-4140, v 1243-1273."
+  },
+  {
+   "id": "S6.grp.umbrella_pair_4060",
+   "kind": "group",
+   "name": "two men under a dark umbrella with a stack of boxes",
+   "what": "On the south side of the street, a youth and a round-faced man stand under one wide dark umbrella with a pole between them at shoulder height and a stack of flat boxes below it; a man looks up beside the boxes. They may be carrying the boxes on the pole.",
+   "members": [
+    "S6.fig.youth_umbrella_4028",
+    "S6.fig.round_face_man_4092",
+    "S6.prop.box_stack_4082",
+    "S6.fig.man_by_boxes_4115"
+   ],
+   "src": "",
+   "note": "Reading uncertain (faded, partly hidden by the inn's roof)."
+  },
+  {
+   "id": "S6.fig.sedan_rear_bearer_4195",
+   "kind": "figure",
+   "name": "rear bearer of the first sedan",
+   "what": "Rear bearer of the first matchmaker's sedan: man in a short jacket and a dark cap carrying the sedan's poles on his shoulder and gripping them with both hands, walking east behind the sedan.",
+   "pts": {
+    "foot": [
+     4195,
+     1355,
+     "est"
+    ],
+    "head": [
+     4202,
+     1160
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 0,
+   "vis": "part: legs hidden behind the south-side parasol's canopy and the inn's roof",
+   "conf": "high",
+   "src": "sections.md: two matchmakers' sedans at 孙羊正店's door (≈ 4300-4850)",
+   "note": "Belongs with the first matchmaker's sedan, which tile t5 records (its pole ends and front bearers are at u ~4440-4560). The poles reach west to u ~4152, past his shoulder. Head u 4187-4220, v 1160-1197.",
+   "group": "S6.grp.sedan_4575"
+  },
+  {
+   "id": "S6.fig.sedan_attendant_4255",
+   "kind": "figure",
+   "name": "attendant walking beside the sedan",
+   "what": "Man (possibly a youth) in a pale jacket and a head-wrap walking east beside the sedan's rear, just south of its poles.",
+   "pts": {
+    "foot": [
+     4255,
+     1390,
+     "est"
+    ],
+    "head": [
+     4250,
+     1232
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "vis": "part: below the chest hidden by the south-side parasol's canopy",
+   "conf": "low",
+   "src": "",
+   "note": "Belongs with the first matchmaker's sedan, which tile t5 records (its pole ends and front bearers are at u ~4440-4560). His head is smaller than the rear bearer's (about 17 vs 25 px); foot est with a 160 px height.",
+   "group": "S6.grp.sedan_4575"
+  },
+  {
+   "id": "S6.fig.man_below_sedan_4343",
+   "kind": "figure",
+   "name": "man just south of the sedan box",
+   "what": "Man with a dark topknot, head turned west and down, just south of the sedan box; only his head shows above the south-side parasol's canopy.",
+   "pts": {
+    "foot": [
+     4343,
+     1430,
+     "est"
+    ],
+    "head": [
+     4343,
+     1257
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "vis": "part: head only; body hidden by the parasol's canopy and the inn's roof",
+   "conf": "low",
+   "src": "",
+   "note": "Perhaps another sedan attendant. Head u 4327-4360, v 1257-1290. Foot est ~175 px below the head, near the street's south edge.",
+   "group": "S6.grp.sedan_4575"
+  },
+  {
+   "id": "S6.fig.sedan_passenger_4362",
+   "kind": "figure",
+   "name": "woman seated in the first sedan",
+   "what": "Woman (the matchmaker) seated inside the first sedan, her pale face seen through the latticed window on its south side.",
+   "pts": {
+    "foot": [
+     4362,
+     1345,
+     "est"
+    ],
+    "head": [
+     4357,
+     1164
+    ]
+   },
+   "support": "sedan: S6.veh.sedan_4575",
+   "pose": "seated",
+   "facing_deg": 0,
+   "vis": "part: face only, through the window",
+   "conf": "med",
+   "src": "sections.md: two matchmakers' sedans at 孙羊正店's door",
+   "note": "Face u 4343-4365, v 1169-1197. Foot = ground under her seat, est (the box's bottom is at v ~1307-1333). If t5 records her with the sedan, keep one.",
+   "group": "S6.grp.sedan_4575"
+  },
+  {
+   "id": "S6.ani.dog_4335",
+   "kind": "animal",
+   "name": "small dark animal under the south-side parasol",
+   "what": "Small dark animal, probably a dog, walking west under the south-side parasol: a horizontal dark body with the head at its west end and thin legs.",
+   "pts": {
+    "fore": [
+     4315,
+     1395,
+     "est"
+    ],
+    "hind": [
+     4362,
+     1393,
+     "est"
+    ],
+    "head": [
+     4306,
+     1350
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "vis": "part: feet at the inn's roof ridge",
+   "conf": "low",
+   "src": "",
+   "note": "Body u 4302-4367, v 1345-1375. Lines above it (u 4305-4375, v 1327-1345) may instead be a person bending; the restyle paints a man here."
+  },
+  {
+   "id": "S6.prop.parasol_south_4265",
+   "kind": "prop",
+   "name": "big parasol on the street's south edge",
+   "what": "Big parasol on the south edge of the street seen almost edge-on: a flat dark canopy with its ribs gathered into a bell under the centre and a pole straight down; its foot is hidden behind the inn's roof ridge, and whatever it shades is hidden too.",
+   "pts": {
+    "base": [
+     4265,
+     1425,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: pole foot hidden by the inn's roof ridge",
+   "conf": "med",
+   "src": "",
+   "note": "Canopy u 4098-4420, v 1286-1325; pole u 4262-4268 visible down to v ~1395. SCALE: canopy 322 px across."
+  },
+  {
+   "id": "S6.fig.scholar_upstairs_3912",
+   "kind": "figure",
+   "name": "scholar studying upstairs (士子苦读)",
+   "what": "Young man in a dark cap and dark robe sitting at a window of the inn's upper storey with his hand to his chin, looking east toward the lamp and things on the table beside him; the scholar studying for the exams.",
+   "pts": {
+    "foot": [
+     3915,
+     1705,
+     "est"
+    ],
+    "head": [
+     3910,
+     1624
+    ]
+   },
+   "support": "inn upper floor",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S6.grp.scholar_studying",
+   "vis": "part: below the chest behind the window sill",
+   "conf": "high",
+   "src": "名画记: 久住王员外家 (pin 42); sections.md: the scholar studying upstairs (士子苦读)",
+   "note": "UPPER FLOOR: window sill at v 1676-1684, floor line est ~v 1700 under him (the lower rail at v ~1698). Face u 3904-3924, v 1629-1656."
+  },
+  {
+   "id": "S6.prop.desk_things_4013",
+   "kind": "prop",
+   "name": "lamp and things on the scholar's table",
+   "what": "Things on the table at the scholar's window, east of him: a thin upright rod (a lamp or candle stand), a dark round vessel at its foot and a slanted frame (a book rest or a chair back).",
+   "pts": {
+    "base": [
+     4013,
+     1700,
+     "est"
+    ]
+   },
+   "support": "inn upper floor",
+   "group": "S6.grp.scholar_studying",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "Vessel u 3991-4011, v 1656-1679; rod u 4011-4016, v 1639-1679; slanted frame u 4016-4051, v 1636-1679. A hook hangs from the ceiling above them at (4036, 1615) (building)."
+  },
+  {
+   "id": "S6.grp.scholar_studying",
+   "kind": "group",
+   "name": "the scholar studying upstairs",
+   "what": "In the upper storey of the inn 久住王員外家, a young scholar sits at the window with his hand to his chin beside a table with a lamp and books (士子苦读).",
+   "members": [
+    "S6.fig.scholar_upstairs_3912",
+    "S6.prop.desk_things_4013"
+   ],
+   "src": "名画记: 久住王员外家 (pin 42); sections.md: 士子苦读",
+   "note": ""
+  },
+  {
+   "id": "S6.fig.window_face_4155",
+   "kind": "figure",
+   "name": "person at the inn's east upper window",
+   "what": "Person peering out of the east window of the inn's upper storey; only the face and dark hair show beside a curtain.",
+   "pts": {
+    "foot": [
+     4155,
+     1725,
+     "est"
+    ],
+    "head": [
+     4152,
+     1630
+    ]
+   },
+   "support": "inn upper floor",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: face only",
+   "conf": "med",
+   "src": "",
+   "note": "Face u 4142-4166, v 1630-1666. UPPER FLOOR: floor line est ~v 1720 (rail at v 1722-1746)."
+  },
+  {
+   "id": "S6.prop.domed_basket_4080",
+   "kind": "prop",
+   "name": "domed basket on a low stand in the top-street shop",
+   "what": "Domed round basket or lidded tub on a low stand inside the top-street shop, east of the man in the doorway.",
+   "pts": {
+    "base": [
+     4080,
+     150,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: inside the shop front; faded",
+   "conf": "low",
+   "src": "",
+   "note": "Dome u 4062-4098, v 100-125; stand lines to v ~140. The restyle paints a striped table here."
+  },
+  {
+   "id": "S6.tree.willow_crown_4230",
+   "kind": "tree",
+   "name": "tree crown at the top edge behind the roofs",
+   "what": "Crown of long sweeping willow-like strands at the very top of the silk, above the roof ridges east of the 楊家應症 signboard; its trunk is hidden behind the roofs.",
+   "pts": {
+    "base": [
+     4230,
+     150,
+     "est"
+    ],
+    "top": [
+     4230,
+     0
+    ],
+    "crown_w": [
+     4140,
+     40
+    ],
+    "crown_e": [
+     4320,
+     30
+    ]
+   },
+   "support": "ground",
+   "vis": "part: only the crown's lower edge between the silk's top edge and the roof ridges",
+   "conf": "low",
+   "src": "",
+   "note": "Strands at u 4140-4320, v 0-60, cut by the silk's top edge. It may be the upper west part of the big willow whose trunk shows at u ~4420-4445, v 20-370 (base east of u 4400: tile t5); if t5 records that crown reaching here, drop this. Base est behind the roofs at about the top street's depth."
+  }
+ ]
+}

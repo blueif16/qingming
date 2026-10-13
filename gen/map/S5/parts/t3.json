@@ -1,0 +1,649 @@
+{
+ "section": "S5",
+ "entities": [
+  {
+   "id": "S5.ani.camel_lead_7492",
+   "kind": "animal",
+   "name": "lead camel half out of the gate passage",
+   "what": "Bactrian camel, the caravan's lead, heading east out of the city: head, raised neck with a shaggy dark throat beard, front hump and forelegs show at the passage's east mouth; its rear half is still inside the passage behind the north jamb. No load is legible on the visible part.",
+   "pts": {
+    "fore": [
+     7492,
+     1303
+    ],
+    "hind": [
+     7370,
+     1298,
+     "est"
+    ],
+    "head": [
+     7532,
+     1143
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S5.grp.camel_caravan",
+   "vis": "part: rear half hidden inside the gate passage",
+   "conf": "high",
+   "src": "museum: 第一只骆驼已经探出了多半个身子快要出城",
+   "note": "fore = ground under the forelegs just east of the passage floor's edge (about v 1285); hind estimated about 1.2 m (120 px) behind the fore hooves, inside the passage."
+  },
+  {
+   "id": "S5.fig.caravan_leader_7388",
+   "kind": "figure",
+   "name": "foreign-looking camel driver at the passage mouth",
+   "what": "A driver half-seen in the passage mouth beside the lead camel's shoulder, only his hat (a broad, dark brim) and upper body showing above the camel's back; walks east with the camel.",
+   "pts": {
+    "foot": [
+     7388,
+     1280,
+     "est"
+    ],
+    "head": [
+     7380,
+     1086
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S5.grp.camel_caravan",
+   "vis": "part: lower body hidden behind the camel; strokes faint",
+   "conf": "med",
+   "src": "余辉: 门洞口露出一个胡人模样的驭手 (荣新江: a foreign caravan leader)",
+   "note": "The scroll shows only a hat-brim curve and a narrow upright body at u 7362-7402, v 1085-1170; the restyle reads the same strokes as a man in a hat. Foot estimated 1.7 m below the head, slightly up the silk from the camel's fore hooves (he walks on its far side)."
+  },
+  {
+   "id": "S5.fig.wall_recliner",
+   "kind": "figure",
+   "name": "man half-reclining at the wall foot (probably the barber's customer)",
+   "what": "Man in a white 交领 robe half-reclining against the foot of the gate block's east face, head tipped far back and face turned up and away, eyes apparently closed; a second man bends over him from the east with his hands at his chin and chest.",
+   "pts": {
+    "foot": [
+     7725,
+     1092,
+     "est"
+    ],
+    "head": [
+     7662,
+     1012
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 330,
+   "group": "S5.grp.barber_7700",
+   "vis": "part: legs hidden behind the idlers' heads",
+   "conf": "med",
+   "src": "开封清明上河图研究会 事物考: 城下修面 (customer, eyes half shut); 邵琦: 城墙下有人靠着城墙休息",
+   "note": "Seed corrected: head was [7690,1030] (his chin); now the crown of the tipped-back head. Foot moved from [7735,1098] to where his feet must be, east of his hips; hidden behind the heads of S5.fig.wall_idler_white and wall_idler_grey, so est. The tipped-back head matches the 'customer leaning away from the razor' reading, so he is probably the barber's customer rather than a dozer."
+  },
+  {
+   "id": "S5.fig.barber_7805",
+   "kind": "figure",
+   "name": "man bending over the recliner (probably the barber)",
+   "what": "Man in a short jacket and dark cap crouching east of the recliner and leaning far over him to the west, face toward the viewer, both arms reaching down to the recliner's chin and chest; his folded legs and feet are to the east. No razor is legible.",
+   "pts": {
+    "foot": [
+     7805,
+     1066,
+     "est"
+    ],
+    "head": [
+     7720,
+     975
+    ]
+   },
+   "support": "ground",
+   "pose": "crouching",
+   "facing_deg": 200,
+   "group": "S5.grp.barber_7700",
+   "vis": "part: feet faint, overlapped by the idlers' heads",
+   "conf": "low",
+   "src": "开封清明上河图研究会 事物考: 城下修面 (old barber with razor, holding the chin)",
+   "note": "Identification as the barber rests on the place (u 7650-7810, as 事物考 says) and the pose; the goatee, razor and raised little finger cannot be read on this silk. Foot = the shapes at u 7790-7830, v 1046-1074 that read as his feet (the restyle paints a bag there)."
+  },
+  {
+   "id": "S5.fig.wall_idler_stick",
+   "kind": "figure",
+   "name": "idler in white with a stick, at the gate-block end of the group",
+   "what": "Man in a white robe and dark cap at the west end of the knot of idlers, close under the gate block's east face, facing the viewer; something stick-like runs down in front of him.",
+   "pts": {
+    "foot": [
+     7678,
+     1297,
+     "est"
+    ],
+    "head": [
+     7667,
+     1128
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S5.grp.wall_idlers",
+   "vis": "part: legs hidden behind the two men in front of him",
+   "conf": "med",
+   "note": "Seed corrected: head [7660,1128] -> [7667,1128]; foot [7671,1259] gave a figure 130 px tall, much shorter than his neighbours (175-185 px); his feet are hidden, so the foot is now estimated 170 px below the head."
+  },
+  {
+   "id": "S5.fig.wall_idler_white",
+   "kind": "figure",
+   "name": "idler in white jacket and trousers",
+   "what": "Man in a white jacket, white trousers and dark cap standing in the middle of the group, hands in his sleeves, face turned toward the viewer and slightly west.",
+   "pts": {
+    "foot": [
+     7760,
+     1258
+    ],
+    "head": [
+     7750,
+     1083
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 260,
+   "group": "S5.grp.wall_idlers",
+   "vis": "full",
+   "conf": "high",
+   "note": "Seed corrected slightly: foot [7749,1255] -> [7760,1258] (midway between the two shoes at u 7748 and 7772), head [7745,1088] -> [7750,1083] (cap top)."
+  },
+  {
+   "id": "S5.fig.wall_idler_grey",
+   "kind": "figure",
+   "name": "idler in grey behind the group",
+   "what": "Man in a grey robe and dark cap standing just behind the man in white, head bent, turned west toward the others.",
+   "pts": {
+    "foot": [
+     7792,
+     1236,
+     "est"
+    ],
+    "head": [
+     7785,
+     1066
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 230,
+   "group": "S5.grp.wall_idlers",
+   "vis": "part: lower body hidden behind wall_idler_white and wall_idler_blue",
+   "conf": "high",
+   "note": "Seed corrected slightly: head [7775,1072] -> [7785,1066]; foot [7787,1238] was not on visible strokes, now marked est."
+  },
+  {
+   "id": "S5.fig.wall_idler_blue",
+   "kind": "figure",
+   "name": "idler in the dark blue robe at the east of the group",
+   "what": "Man in a knee-length dark (blue) robe over white trousers and a dark cap, at the front east side of the group, hands together at the waist, looking out east toward the road and the rider.",
+   "pts": {
+    "foot": [
+     7826,
+     1295
+    ],
+    "head": [
+     7826,
+     1110
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 330,
+   "group": "S5.grp.wall_idlers",
+   "vis": "full",
+   "conf": "high",
+   "note": "Seed corrected: head [7812,1115] -> [7826,1110] (cap top); foot [7824,1293] -> [7826,1295]."
+  },
+  {
+   "id": "S5.fig.idler_front_7650",
+   "kind": "figure",
+   "name": "capped idler in front of the stick man",
+   "what": "Man in a light robe and dark cap standing in front of (south of) the stick man, arms together at his chest holding something short, face toward the viewer.",
+   "pts": {
+    "foot": [
+     7650,
+     1358,
+     "est"
+    ],
+    "head": [
+     7643,
+     1188
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 250,
+   "group": "S5.grp.wall_idlers",
+   "vis": "part: legs hidden behind the pale rounded mass and the foreground crown",
+   "conf": "med",
+   "note": "New. Foot estimated 170 px below the head."
+  },
+  {
+   "id": "S5.fig.idler_grey_front_7702",
+   "kind": "figure",
+   "name": "idler in grey at the front of the group",
+   "what": "Man in a grey jacket and dark cap at the front (south) of the group, head and shoulders above the pale rounded mass, turned slightly east.",
+   "pts": {
+    "foot": [
+     7702,
+     1424,
+     "est"
+    ],
+    "head": [
+     7697,
+     1255
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 290,
+   "group": "S5.grp.wall_idlers",
+   "vis": "part: only head and shoulders show above the pale mass and the foreground crown",
+   "conf": "med",
+   "note": "New. Foot estimated 170 px below the head, behind the foreground tree crown."
+  },
+  {
+   "id": "S5.fig.camel_watcher_7600",
+   "kind": "figure",
+   "name": "man in a long robe watching the camel",
+   "what": "Man in a long greyish robe and dark cap at the west end of the crowd, just outside the passage mouth, head turned west to look at the camel coming out.",
+   "pts": {
+    "foot": [
+     7600,
+     1390,
+     "est"
+    ],
+    "head": [
+     7593,
+     1223
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S5.grp.wall_idlers",
+   "vis": "part: below the hips hidden behind the foreground tree crown",
+   "conf": "med",
+   "note": "New. His robe ends at about v 1350 between the black animal and the pale mass; standing or seated cannot be told. Foot estimated as for a standing man."
+  },
+  {
+   "id": "S5.fig.tree_leaner_7952",
+   "kind": "figure",
+   "name": "man leaning back against the big tree",
+   "what": "Man in a black hat and dark robe leaning back against the east side of the big willow's trunk north of the road, body slanting, legs braced forward to the east, resting (邵琦's man resting by the wall may be this one or the recliner).",
+   "pts": {
+    "foot": [
+     7952,
+     1048
+    ],
+    "head": [
+     7903,
+     905
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 300,
+   "vis": "full",
+   "conf": "med",
+   "src": "邵琦: 城墙下有人靠着城墙休息 (possibly)",
+   "note": "New. At a glance the strokes read as a gnarled second trunk; the zoom shows a hatted head (u 7895-7912, v 905-930) and two dark legs ending at v 1048, and the restyle paints a man here. Up the silk from the crowd, so painted smaller (145 px)."
+  },
+  {
+   "id": "S5.fig.porter_7786",
+   "kind": "figure",
+   "name": "porter with a basket on a shoulder pole",
+   "what": "Man in a short white jacket walking east with a pole over his shoulder, a small basket hanging from its raised front (east) end; below the waist he is hidden by the foreground willow crowns.",
+   "pts": {
+    "foot": [
+     7786,
+     1484,
+     "est"
+    ],
+    "head": [
+     7782,
+     1316
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 0,
+   "vis": "part: legs hidden by the foreground tree crowns",
+   "conf": "high",
+   "note": "New. Pole from about [7735,1368] to [7855,1320], basket at u 7835-7865. Foot estimated 170 px below the head."
+  },
+  {
+   "id": "S5.ani.black_animal_7495",
+   "kind": "animal",
+   "name": "black animal at the passage mouth",
+   "what": "A dark-coated quadruped about 1 m long (flat back, rounded rump) standing in front of the passage mouth with its head down to the west; legs hidden by the foreground crown. Dog, pig or small donkey cannot be told.",
+   "pts": {
+    "fore": [
+     7495,
+     1390,
+     "est"
+    ],
+    "hind": [
+     7558,
+     1392,
+     "est"
+    ],
+    "head": [
+     7465,
+     1345
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "vis": "part: legs and head hidden by the foreground tree crown",
+   "conf": "low",
+   "note": "New. Body measured at u 7480-7570, v 1320-1350; ground points estimated 70 px below the back. The restyle paints a dark animal grazing."
+  },
+  {
+   "id": "S5.prop.pale_mass_7670",
+   "kind": "prop",
+   "name": "pale rounded mass in front of the idlers",
+   "what": "A pale, rounded hump about 1 m across with darker shading on its east side, in front of the idlers; its lower part is hidden by the foreground crown. It may be the back of a pale animal seen from behind, or a large bale.",
+   "pts": {
+    "base": [
+     7670,
+     1405,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: lower part hidden by the foreground tree crown",
+   "conf": "low",
+   "note": "New. Top outline from [7617,1333] over [7665,1328] to [7720,1345]; identity unclear in both the scroll and the restyle."
+  },
+  {
+   "id": "S5.fig.wall_squatter",
+   "kind": "figure",
+   "name": "kneeling man by the thing on the ground",
+   "what": "Man in a dark robe and cap kneeling on the road east of the idlers, hunched forward with face in profile to the east, both arms reaching down to something lying on the ground in front of him; the rider party passes just beyond.",
+   "pts": {
+    "foot": [
+     7872,
+     1302
+    ],
+    "head": [
+     7888,
+     1198
+    ]
+   },
+   "support": "ground",
+   "pose": "kneeling",
+   "facing_deg": 350,
+   "group": "S5.grp.roadside_rite_7900",
+   "vis": "full",
+   "conf": "high",
+   "src": "余辉 2014: 杀羊祭道 / 余辉 2021: 祭拜路神; encyclopedic text: 跪地行乞的老人",
+   "note": "Seed re-read: not squatting at the right of the idlers but kneeling, turned east toward the object on the ground. Foot = the knees ([7872,1303] seed -> [7872,1302]); head [7880,1195] -> [7888,1198]."
+  },
+  {
+   "id": "S5.prop.ground_object_7952",
+   "kind": "prop",
+   "name": "thing lying on the ground before the kneeling man",
+   "what": "An elongated shape about 1 m long lying east-west on the road in front of the kneeling man, pointed at its east end, with fold or leg lines; 余辉 reads a sheep killed as an offering to the road, the restyle paints a person lying down. The strokes are too faint to decide.",
+   "pts": {
+    "base": [
+     7952,
+     1300
+    ]
+   },
+   "support": "ground",
+   "group": "S5.grp.roadside_rite_7900",
+   "vis": "faded",
+   "conf": "low",
+   "src": "余辉 2014: 杀羊祭道",
+   "note": "New. Spans about u 7905-8000, v 1272-1305; its west end may continue under the kneeling man's arms."
+  },
+  {
+   "id": "S5.tree.willow_7856",
+   "kind": "tree",
+   "name": "big willow north of the road outside the gate",
+   "what": "Large old willow-like tree: a thick, slightly leaning trunk splitting at about 2 m into several limbs that end in fans of long thin unleafed shoots; its crown spreads over the barber and the idlers. The man S5.fig.tree_leaner_7952 leans on its east side.",
+   "pts": {
+    "base": [
+     7856,
+     1118,
+     "est"
+    ],
+    "top": [
+     7830,
+     450,
+     "est"
+    ],
+    "crown_w": [
+     7535,
+     770
+    ],
+    "crown_e": [
+     7965,
+     690
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk foot hidden behind the idlers' heads",
+   "conf": "high",
+   "note": "New. Trunk measured at u 7838-7876 from v 900 to 1110; base below the blue idler's cap, so est (the restyle puts the roots at v 1110-1122). Above v 700 its crown merges with the crowns behind it and with S5.tree.old_bole_8090's, so top and crown_e are uncertain."
+  },
+  {
+   "id": "S5.tree.leafy_far_7672",
+   "kind": "tree",
+   "name": "far leafy tree behind the tower's east eave",
+   "what": "Distant tree with dense dotted dark leaf clusters (the only leafed crown here), seen beyond the wall behind the east end of the gate-tower roof; trunk hidden.",
+   "pts": {
+    "base": [
+     7672,
+     360,
+     "est"
+    ],
+    "top": [
+     7640,
+     95
+    ],
+    "crown_w": [
+     7540,
+     230
+    ],
+    "crown_e": [
+     7732,
+     260
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk and foot hidden behind the nearer bare crowns",
+   "conf": "low",
+   "note": "New. base = the lowest visible part of the trunk, not the ground contact (hidden, lower); its depth is unknown."
+  },
+  {
+   "id": "S5.tree.far_willow_7897",
+   "kind": "tree",
+   "name": "far willow at the top of the silk",
+   "what": "Small distant willow-like crown of fine radiating shoots near the top edge of the silk, beyond the wall.",
+   "pts": {
+    "base": [
+     7897,
+     170,
+     "est"
+    ],
+    "top": [
+     7890,
+     62
+    ],
+    "crown_w": [
+     7812,
+     140
+    ],
+    "crown_e": [
+     7982,
+     120
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk and foot hidden behind nearer crowns",
+   "conf": "low",
+   "note": "New. base = where its shoots converge, the lowest visible point; true ground contact hidden."
+  },
+  {
+   "id": "S5.tree.pollard_far_7960",
+   "kind": "tree",
+   "name": "far pollard tree with knobbly dark head",
+   "what": "Bare tree in the far canopy with a dark knobbly forked head (like a pollarded willow) from which fans of thin shoots rise; trunk hidden.",
+   "pts": {
+    "base": [
+     7960,
+     370,
+     "est"
+    ],
+    "top": [
+     7965,
+     200
+    ],
+    "crown_w": [
+     7880,
+     260
+    ],
+    "crown_e": [
+     8050,
+     250
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk and foot hidden behind the big willow's crown",
+   "conf": "low",
+   "note": "New. base = bottom of the dark head (u 7941-7980, v 289-367); ground contact hidden."
+  },
+  {
+   "id": "S5.tree.multi_trunk_7298",
+   "kind": "tree",
+   "name": "old multi-trunk tree below the passage mouth",
+   "what": "Old tree at the foot of the gate block below the passage mouth: a pale, pitted, gnarled trunk with a darker twisted second trunk beside it, rising to a fan-shaped willow-like crown of long thin unleafed shoots.",
+   "pts": {
+    "base": [
+     7298,
+     1632
+    ],
+    "top": [
+     7300,
+     1255
+    ],
+    "crown_w": [
+     7205,
+     1380
+    ],
+    "crown_e": [
+     7440,
+     1430
+    ]
+   },
+   "support": "ground",
+   "vis": "full",
+   "conf": "high",
+   "note": "New. Trunk feet at [7276,1628] (pale) and [7320,1636] (dark); base is their midpoint."
+  },
+  {
+   "id": "S5.tree.willow_7665",
+   "kind": "tree",
+   "name": "foreground willow south of the road (west)",
+   "what": "Foreground willow-like tree whose wide crown of long thin unleafed shoots fills the bottom of the silk in front of the idlers and hides their legs; the shoots radiate from limbs meeting near [7600,1540].",
+   "pts": {
+    "base": [
+     7665,
+     1785,
+     "est"
+    ],
+    "top": [
+     7590,
+     1355
+    ],
+    "crown_w": [
+     7370,
+     1560
+    ],
+    "crown_e": [
+     7770,
+     1480
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk below the crown hidden, foot at or below the silk's bottom edge",
+   "conf": "med",
+   "note": "New. The trunk seems to run down-east from the limb junction to the bottom edge (the restyle draws it so); base est at the silk's bottom edge."
+  },
+  {
+   "id": "S5.tree.willow_7978",
+   "kind": "tree",
+   "name": "foreground willow south of the road (east)",
+   "what": "Foreground willow-like tree, crown of long thin unleafed shoots spreading from limbs that meet near [7985,1600]; it hides the porters' legs.",
+   "pts": {
+    "base": [
+     7978,
+     1782,
+     "est"
+    ],
+    "top": [
+     7960,
+     1385
+    ],
+    "crown_w": [
+     7770,
+     1520
+    ],
+    "crown_e": [
+     8210,
+     1450
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk below the crown hidden, foot at the silk's bottom edge",
+   "conf": "med",
+   "note": "New. A dark trunk line runs from [7992,1598] down to about [7978,1762]."
+  },
+  {
+   "id": "S5.grp.barber_7700",
+   "kind": "group",
+   "name": "barber at the wall foot (城下修面), probable",
+   "what": "A man bending over another who half-reclines with head tipped back at the foot of the gate block's east face: probably the barber shaving his customer. The awning on a pole lashed to a stool and the hanging hair-knot sign that 事物考 describes are not visible: the silk above them (u 7680-7840, v 880-980, between the gate block and the big willow's trunk) is blank and faded.",
+   "members": [
+    "S5.fig.wall_recliner",
+    "S5.fig.barber_7805"
+   ],
+   "conf": "low",
+   "src": "开封清明上河图研究会 事物考: 城下修面"
+  },
+  {
+   "id": "S5.grp.wall_idlers",
+   "kind": "group",
+   "name": "idlers at the gate block's foot",
+   "what": "A loose knot of seven men in caps standing at the foot of the gate block just outside the passage, chatting and watching the road: the camel coming out on their west, the rider party and the kneeling man on their east.",
+   "members": [
+    "S5.fig.wall_idler_stick",
+    "S5.fig.wall_idler_white",
+    "S5.fig.wall_idler_grey",
+    "S5.fig.wall_idler_blue",
+    "S5.fig.idler_front_7650",
+    "S5.fig.idler_grey_front_7702",
+    "S5.fig.camel_watcher_7600"
+   ],
+   "src": "sections.md: idlers by the wall, ≈ 7630–7870"
+  },
+  {
+   "id": "S5.grp.roadside_rite_7900",
+   "kind": "group",
+   "name": "kneeling man and the thing on the ground",
+   "what": "A man kneels on the road over something lying in front of him, either killing a sheep as an offering to the road (余辉) or a kneeling beggar (encyclopedic reading); the rider party passes right by.",
+   "members": [
+    "S5.fig.wall_squatter",
+    "S5.prop.ground_object_7952"
+   ],
+   "conf": "med",
+   "src": "余辉: 杀羊祭道; 跪地行乞"
+  }
+ ]
+}

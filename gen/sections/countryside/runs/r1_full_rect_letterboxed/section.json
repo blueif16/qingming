@@ -1,0 +1,22 @@
+{
+  "title": "The countryside (郊野 · 古柳), whole area in one section: the first run, 2026-10-12. Do not run: the image model letterboxes an overview this wide (asked 4096x848, got 4096x1695 with white bands), so every tile's colour crop was the wrong area. Superseded by sections/countryside/west and east.",
+  "scan": "reference/scroll/qingming_commons_38414x1800.jpg",
+  "rect": [
+    28896,
+    0,
+    8720,
+    1792
+  ],
+  "style_image": "prompts/style_B1.png",
+  "model": "gpt-image-2.5",
+  "overview": {
+    "prompt": "scroll_restyle",
+    "size": "4096x848"
+  },
+  "tiles": {
+    "prompt": "scroll_restyle_tile",
+    "src": 1024,
+    "overlap": 128,
+    "size": "2048x2048"
+  }
+}

@@ -1,0 +1,103 @@
+{
+ "about": "Place names the player is told (ink UI round, gen/ui/STYLE.md 'Place notifications'). region: the large banner shown when you walk into this section's region (sections sharing a region id show it once). landmarks: a vertical name plaque stands over the map entity id as you approach (江南百景圖's plaques), and a toast with the line from the painting's reading when you come within r metres of its footprint (or its point); top: the plaque's height when the map has none. Every name and line in 繁體, from the painting and its readings; src says where. Lore (round 2, gen/ui/r2_lore.md): long is the longer description under the toast's fold and in the 圖志 journal; quote and quoteSrc an exact line from a period or scholarly source; cite the sources as the player reads them; longSrc one note per claim (never shown); crop the map IDs that frame the painting's crop (tools/place_crops.mjs). Bundled for the page by tools/ui_data.mjs into web/public/assets/ui/places.json (short) and lore.json (long, fetched when needed).",
+ "region": {
+  "id": "jiaoye",
+  "name": "郊野",
+  "sub": "古柳前後",
+  "seal": "野",
+  "src": "map/sections.json S1 '郊野 · 古柳'; 余辉《深度游》第一段 古柳前后见清明; 《导览》 村柳前后",
+  "long": "畫卷由右向左展開，開卷是汴京東南的遠郊：河渠縱橫，老樹還沒抽芽，薄霧輕籠，正是早春。兩個腳夫趕著馱炭的驢隊走向小橋，農家的穀場靜悄悄的；隋堤上一排老柳，掃墓的人家抬著插滿楊柳的轎子回城。畫的是不是清明，學者有過爭論：孔憲易據炭驢、扇子和「新酒」旗，以為是秋景；金人張著的跋文落款「清明後一日」，余輝以為這已婉轉點明了時節。這裏從清明之說。",
+  "quote": "凡新墳皆用此日拜掃。都城人出郊。",
+  "quoteSrc": "《東京夢華錄》卷七〈清明節〉",
+  "cite": "故宮名畫記・孔憲易・余輝〈跋文考釋〉",
+  "longSrc": [
+   "MHJ 1: 汴京城外东南远郊, 河渠纵横, 老树新芽未吐, 薄雾轻笼, 早春; 两个脚夫赶着几匹毛驴，驮着木炭向小桥走来",
+   "map S1.grp.charcoal_train: two drivers, five donkeys",
+   "MHJ 2 寂静的谷场; MHJ 3 隋堤; MHJ 6 杨柳杂花装簇轿顶 (扫墓回城)",
+   "SEC §1.3: 孔宪易 autumn, not Qingming (charcoal donkeys, fans, straw hats, 新酒 flags, watermelons)",
+   "COL p.60 (余辉): 张著跋文年款为\"清明后一日\"，婉转地确定此图所绘的时节是清明节",
+   "quote: DJ 卷七 清明节"
+  ]
+ },
+ "landmarks": [
+  {
+   "id": "S1.str.small_bridge_36365",
+   "name": "草橋",
+   "line": "馱炭的驢隊，正要過橋進城。",
+   "seal": "橋",
+   "r": 7,
+   "src": "名画记 1 赶驴入城; 余辉 2014 送炭驴队; map: small plank bridge (草桥)",
+   "top": 3.5,
+   "long": "開卷第一景：一座低矮的木板橋，細木柱撐著，橋面鋪著草土，沒有護欄，橋下泊著一隻空船。兩個腳夫趕著馱炭的驢子走向小橋，前頭的腳夫一手扶著領頭驢背上的炭筐。故宮名畫記說，這些炭要運進城裏，供酒店灶下燒火；孔憲易卻拿這隊炭驢作證，說畫的是秋冬而不是清明。",
+   "cite": "故宮名畫記・孔憲易・畫中所見",
+   "longSrc": [
+    "map S1.str.small_bridge_36365: long low plank bridge on thin posts, deck covered with brushwood or turf, no railing; a small empty boat under it",
+    "MHJ 1: 两个脚夫赶着几匹毛驴，驮着木炭向小桥走来",
+    "map S1.fig.charcoal_driver_36797: right arm to the top of the leading donkey's load",
+    "MHJ 21: 驴队往城里运送的木炭，正是满足这些酒店所需",
+    "SEC §1.3: 孔宪易 autumn argument rests on the charcoal donkeys (among others)"
+   ],
+   "crop": [
+    "S1.str.small_bridge_36365",
+    "S1.grp.charcoal_train"
+   ]
+  },
+  {
+   "id": "S1.grd.threshing_floor_35225",
+   "name": "穀場",
+   "line": "農家的穀場，此時正靜。",
+   "seal": "穀",
+   "r": 7,
+   "src": "名画记 2 寂静的谷场",
+   "long": "過了小橋，路邊幾間農舍，門前搭著涼棚、擺著椅凳，像是供行人歇腳的小店；時候尚早，還沒有客人。屋旁一片平整的空地便是穀場，早春時節空空蕩蕩，只立著一副木架和一根叉竿；一株截了頂的老柳，新枝像扇子般張開。故宮名畫記稱這一景為「寂靜的穀場」，余輝的小題作「曬場農舍」。",
+   "cite": "故宮名畫記・余輝・畫中所見",
+   "longSrc": [
+    "MHJ 2: 路边歇脚店，门前搭着凉棚，摆放着椅凳。时候尚早，还没有客人到来",
+    "map S1.grd.threshing_floor_35225: empty in early spring, a bench or roller frame and a forked pole",
+    "map S1.tree.willow_pollard_35128: pollarded willow, fan of long shoots",
+    "SEC §1.2: 余辉 2014 vignette 晒场农舍"
+   ],
+   "crop": [
+    "S1.grd.threshing_floor_35225",
+    "S1.tree.willow_pollard_35128"
+   ]
+  },
+  {
+   "id": "S1.grd.bank_31660",
+   "name": "隋堤煙柳",
+   "line": "堤上老柳，人稱隋堤。",
+   "seal": "柳",
+   "r": 8,
+   "src": "名画记 3 隋堤烟柳; map: the willow dyke's front bank (隋堤)",
+   "long": "汴河開鑿於隋煬帝時，沿河的堤岸便叫隋堤，堤上遍植楊柳，「隋堤煙柳」後來列為「汴京八景」之一。畫中的柳樹樹幹蒼老扭曲，枝頭卻是新抽的嫩條。故宮名畫記解釋：堤柳長到一定粗細，就砍去樹梢，砍下的枝條紮成捆，釘在兩岸防洪護堤，年年如此，才長成這副頭大身粗的模樣。",
+   "cite": "故宮名畫記・畫中所見",
+   "longSrc": [
+    "MHJ 3: 人工河开通于隋炀帝时期…隋堤…盛植杨柳…\"汴京八景\"之一; 树干古老苍劲，枝头新发; 砍去树梢，扎成捆，钉在汴河两岸，用来防洪抗险",
+    "map S1.grd.bank_31660: raised bank of the great pollarded willows"
+   ],
+   "crop": [
+    "S1.grd.bank_31660"
+   ]
+  },
+  {
+   "id": "S1.veh.sedan_willow_30805",
+   "name": "踏青歸來",
+   "line": "轎頂插著楊柳雜花，掃墓回城。",
+   "seal": "轎",
+   "r": 7,
+   "src": "《东京梦华录》卷七 清明节 '轿子即以杨柳杂花装簇顶上'; 名画记 6; 余辉 2014 踏青回归",
+   "long": "一隊人馬從郊外掃墓回城：轎頂插滿楊柳，柳條一直垂到轎身，轎夫一前一後抬著；挑夫擔著箱籠，騎馬的男主人隨在隊後。轎子關著，看不見裏面的人，故宮名畫記說坐的是女主人。這正是《東京夢華錄》寫的清明風俗：城裏人出郊拜掃，回城時把楊柳雜花裝簇在轎頂上。畫面從這裏由靜轉動，人馬漸漸多了起來。",
+   "quote": "轎子即以楊柳雜花裝簇頂上，四垂遮映。",
+   "quoteSrc": "《東京夢華錄》卷七〈清明節〉",
+   "cite": "故宮名畫記・《東京夢華錄》・畫中所見",
+   "longSrc": [
+    "MHJ 6: 扫墓回城…女主人的轿子以杨柳杂花装饰轿顶…男主人骑马走在队伍的后面…画面也由静到动",
+    "map S1.veh.sedan_willow_30805 (closed box, willow sprays, two bearers), S1.fig.porter_boxes_30908, S1.fig.porter_pole_31083",
+    "DJ 卷七 清明节 (wikisource reads 装族; 装簇 per MHJ 6 title and the usual text)"
+   ],
+   "crop": [
+    "S1.grp.tomb_sweeping_party"
+   ]
+  }
+ ]
+}

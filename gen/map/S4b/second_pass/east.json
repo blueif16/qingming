@@ -1,0 +1,250 @@
+{
+ "section": "S4b",
+ "pass": "second pass, east: u 14000-15500 (looked at 13850-15900)",
+ "how_to_read": "entities: new entities in the strokes format, ready to copy into a part (as S4's merge_fixes accept()). retire: entities to drop in merge_fixes.mjs, with the reason. changes: edits to existing entities; 'set' keys are fields or 'pts.<name>' points, 'remove_pts' drops points, 'add_note' is text to append to the note. checked: the merge's list for this half, read again, with no change proposed. Crops are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S4b_second_east/.",
+ "entities": [
+  {
+   "id": "S4b.prop.small_box_or_stool_14384",
+   "kind": "prop",
+   "name": "small box or low stool behind the long hall's ridge (faint)",
+   "what": "A small object showing just above the ridge of the long south hall (S4b.bld.south_hall_long_14680), about 40 px east of where the north barge of S4b.bld.south_hall_13920 meets that ridge: a rounded top outline over a dark body, like a low stool, a box or a basket standing on the road's south edge with its foot hidden behind the ridge.",
+   "pts": {
+    "base": [
+     14384,
+     1250,
+     "est"
+    ],
+    "top": [
+     14385,
+     1231
+    ]
+   },
+   "support": "ground",
+   "vis": "part: its foot hidden behind the long hall's ridge (v ~1243)",
+   "conf": "low",
+   "note": "SECOND PASS (east): t4 saw it and left it to structures_e as a 'ridge finial at (14375-14390, 1225-1240)' (reports/t4.md, 'Left to another agent'); structures_e's notes name only the ridge's end curls (u 14100 and 15205-15223), so no entity records it (map/README.md rule 6). Strokes: top outline (14373, 1232) -> (14386, 1230) -> (14395, 1238), a dark fill below it down to the ridge's upper line at v ~1243; 22 x 12 px, about 0.3 m wide at the road's 77 px/m. Readings: (a) a low stool, a box or a basket on the road behind the ridge, as S4b.prop.bundle_heap_14680 lies 170 px east of it (taken; the restyle paints a small stool here); (b) a small animal lying on the road (too small and too plain to tell); (c) a ridge ornament, a beast at the foot of south_hall_13920's north barge, which reaches the long hall's ridge at about (14336, 1241): then it is part of that building and this prop is dropped. Base est at the ridge + 7 px, as for the bundle heaps. Crops: scratchpad S4b_second_east/z_ridgeobj.jpg (zoom 7, scan over restyle), z_ridgeobj_enh.jpg, z_roadw.jpg (zoom 2.5)."
+  },
+  {
+   "id": "S4b.prop.stool_14595",
+   "kind": "prop",
+   "name": "stool under the stout man in white",
+   "what": "Low wooden stool at the east end of the tea table on which the stout man in white (S4b.fig.customer_white_14560) sits with one knee drawn up on the seat; his robe falls over it.",
+   "pts": {
+    "base": [
+     14594,
+     1182
+    ]
+   },
+   "support": "tea house floor",
+   "group": "S4b.grp.tea_house_customers",
+   "vis": "part: the seat under the sitter's knee and robe",
+   "conf": "med",
+   "note": "SECOND PASS (east): replaces S4b.prop.round_stand_14600 and S4b.prop.chair_14556 (see 'retire'). Strokes (zoom 4.5, enhanced): legs at u 14579 and 14609 running down to v 1180-1183, a stretcher at v ~1145, the seat at v ~1141 directly under the man's hips; the oval read as a tray-stand's top (u 14575-14620, v 1115-1137) is his right knee drawn up on the seat with the robe over it (it joins his body at u 14590-14600, v 1085-1115). SCALE CUE: about 40 px from the seat to the feet, 30 px between the legs (like S4b.prop.stool_14840). The restyle keeps a tray-stand here and sits him on a seat west of it; the scan has no seat there. Crops: scratchpad S4b_second_east/z_white.jpg, z_white_enh.jpg (zoom 4.5), z_tea_mid.jpg (zoom 3, scan over restyle)."
+  },
+  {
+   "id": "S4b.prop.round_basket_or_drum_14795",
+   "kind": "prop",
+   "name": "round hatched object in front of the crouching figure at the front rail (faint)",
+   "what": "A small rounded object with vertical hatching inside its outline, on the road just in front of the tea house's front rail, east of the crouching figure (S4b.fig.figure_at_front_rail_14752), who reaches toward it: a basket, a bucket or a small drum.",
+   "pts": {
+    "base": [
+     14795,
+     1228,
+     "est"
+    ],
+    "top": [
+     14795,
+     1201
+    ]
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "note": "SECOND PASS (east): t4 and t5 read 'only a few strokes' here and recorded nothing; on the enhanced zoom-5 crop the strokes close into a rounded outline u 14781-14810, v 1201-1228 with vertical strokes inside (x 14785-14800), below the rail (v 1192-1198) and in front of the figure's arms. Recorded because it changes the build (rule: faint things that change the cast or the build are recorded low with both readings). Readings: (a) a basket, a bucket or a small drum on the road (taken; the restyle paints a drum with a painted face at u 14770-14830, v 1185-1240); (b) the crouching figure's own knees and trouser folds, then drop this. SCALE CUE: about 30 px across, 27 px high (0.35 m at 77 px/m). If accepted, a group with the figure (S4b.grp.figure_at_front_rail_14760, members the figure and this) would say what he does. Crops: scratchpad S4b_second_east/z_drum_enh.jpg (zoom 5, enhanced), z_frontrail.jpg, z_frontrail_enh3.jpg, z_rail.jpg (scan over restyle)."
+  }
+ ],
+ "retire": [
+  {
+   "id": "S4b.prop.chair_14556",
+   "reason": "Misread: its 'legs at u 14550-14562, v 1130-1180' are the east leg of S4b.prop.table_14518 (legs at 14485, 14517, 14550) and the hanging shin of the man in white, whose foot shows at (14553-14567, 1171-1176). No seat is drawn there; he sits on the stool at u 14579-14609 (new S4b.prop.stool_14595).",
+   "conf": "med",
+   "crops": "scratchpad S4b_second_east/z_white_enh.jpg"
+  },
+  {
+   "id": "S4b.prop.round_stand_14600",
+   "reason": "Misread (map/README.md rule 7, retired and replaced by S4b.prop.stool_14595): the oval 'top' (u 14575-14620, v 1115-1137) is the man in white's drawn-up knee and robe over the seat of the stool he sits on, and its 'legs at u 14580 and 14605' are that stool's legs. t4's own note gave both readings ('read as the round stand, not his knee (both possible)').",
+   "conf": "med",
+   "crops": "scratchpad S4b_second_east/z_white.jpg, z_white_enh.jpg"
+  }
+ ],
+ "changes": [
+  {
+   "id": "S4b.fig.customer_white_14560",
+   "set": {
+    "what": "Stout man in a light (white) robe with dark hair, seated on a low stool at the east end of the tea table with his right knee drawn up on the seat, facing the man in the dark hat across the table and half turned toward the viewer. A customer, or the tea-house keeper sitting with a guest.",
+    "pts.foot": [
+     14561,
+     1177
+    ]
+   },
+   "add_note": "Second pass: he sits on S4b.prop.stool_14595 (legs u 14579 and 14609); the oval at u 14575-14620, v 1115-1137 is his drawn-up knee, and his left foot shows at (14553-14567, 1171-1176), so foot (14561, 1177) is measured (was (14560, 1175) est). The round tray-stand and the chair at 14556 are retired.",
+   "conf": "med"
+  },
+  {
+   "id": "S4b.grp.tea_house_customers",
+   "members_remove": [
+    "S4b.prop.round_stand_14600",
+    "S4b.prop.chair_14556"
+   ],
+   "members_add": [
+    "S4b.prop.stool_14595"
+   ],
+   "set": {
+    "what": "In the open hall of the tea house beside the road, customers sit at tables on chairs, stools and benches: a man in a dark hat and a stout man in white on a low stool face each other across a table, a man in a dark robe bends forward over a table end at the hall's west post, and a man in a dark cap leans on a table in the east bay; several benches and tables stand empty."
+   },
+   "note": "Follows the retirements above."
+  },
+  {
+   "id": "S4b.fig.porter_baskets_14778",
+   "set": {
+    "facing_deg": 330,
+    "what": "Porter in a short jacket and a dark cap, bent forward under a carrying pole across his shoulders with a round basket hung on cords at each end, one hand raised to steady the pole in front of his face, stepping east down the gangplank from the bank toward the mat-cargo boat."
+   },
+   "add_note": "Second pass: facing changed from 180 to 330 (conf med). On an unsharpened zoom-6 crop his face is a dark profile under the cap on its EAST side (14783-14790, 355-363), his raised hand holds the pole in front of it at (14790-14798, 357-367), his head is east of his hips, and his east leg steps down-right to (14788, 405) along the gangplank, whose line runs under his feet from (14745, 388) to the boat end (14895, 463). The river agent read him facing east; t4 read west from the stride and wrote that the head may be turned east. 330 is the gangplank's direction with the seed frame (dx +31.6: about 2.2 m east for 1.2 m south); recompute from the frame's knot here if needed. He is loading or boarding the mat-cargo boat (余辉's 客家登船?), not coming off it.",
+   "conf": "med",
+   "crops": "scratchpad S4b_second_east/z_porter_soft.jpg (zoom 6, unsharpened), z_porter.jpg, z_porter_enh.jpg (zoom 7), z_stump_both.jpg (zoom 4, scan over restyle)"
+  },
+  {
+   "id": "S4b.fig.figure_at_front_rail_14752",
+   "set": {
+    "pose": "crouching",
+    "pts.foot": [
+     14775,
+     1232,
+     "est"
+    ],
+    "name": "figure crouching in front of the tea house's front rail (faint)",
+    "what": "Faint figure crouching on the road just in front of the tea house's low front rail, head at the rail's west part and body and arms reaching east under the rail toward a small round object (S4b.prop.round_basket_or_drum_14795, low); perhaps a boy or a servant."
+   },
+   "add_note": "Second pass: the strokes below the head run east, not down: back and arms from (14745, 1191) to about (14785, 1225), under the rail (v 1192-1198) and 20-35 px below the platform's front edge (v ~1200-1207), so the figure crouches on the road in front of the rail (structures_e's reading: 'the figure crouching at the platform's front'); pose standing -> crouching, foot est moved under the hips (14775, 1232). Support ground stays (the reading 'squatting on the floor behind the rail' is dropped: his lower body is below the floor's edge).",
+   "conf": "low",
+   "crops": "scratchpad S4b_second_east/z_drum_enh.jpg, z_frontrail_enh3.jpg, z_eastbay.jpg"
+  },
+  {
+   "id": "S4b.prop.bank_timber_15162",
+   "set": {
+    "pts.base": [
+     15205,
+     912
+    ],
+    "pts.end_w": [
+     15157,
+     906
+    ],
+    "pts.end_e": [
+     15265,
+     928
+    ]
+   },
+   "remove_pts": [
+    "top_w"
+   ],
+   "add_note": "Second pass: the 'west end turning down like a short post' (u 15158-15166, v 902-930) is the top of S4b.bld.mat_shed_15038's east verge ((15147, 897) -> (15197, 1000) passes u 15157-15163 at v 905-930; overlay scratchpad S4b_second_east/ow_timber.jpg), so reading (c), a low rail on a post, has no post and is dropped. The band itself (double line about 10 px thick, (15157, 906) -> (15200, 911) -> (15240, 918), fading into the willow's whips at about (15265, 928)) starts at the shed roof's top east corner and runs on near the line of the shed's ridge. Remaining readings, all low: (a) the bank's lip behind the shed (the river agent's est bank_top passes (15150, 895)-(15300, 905), 5-15 px north of it); (b) a log or timber on the bank; (d) a branch of S4b.tree.willow_15468 from its fan of whips. Base moved to the band's middle (was the verge's foot (15162, 930)).",
+   "conf": "low",
+   "crops": "scratchpad S4b_second_east/z_timber.jpg (zoom 3.5, scan over restyle), ow_timber.jpg"
+  },
+  {
+   "id": "S4b.bld.south_hall_edge_14945",
+   "set": {
+    "pts.eave_w": [
+     14692,
+     1765
+    ],
+    "pts.eave_e": [
+     14900,
+     1764
+    ]
+   },
+   "add_note": "Second pass: its south eave is drawn just above the silk's bottom edge: a row of curled tile-end (drip-tile) marks along v 1752-1768 from the west hip's foot (14692, 1765) east to about u 14900, where the diagonal hall's roof covers it (the restyle paints an eave board with roundels there). The south slope therefore runs from the ridge (v 1519-1535) down to an eave at v ~1760; the south wall's foot is below the silk (the base corners stay placeholders).",
+   "conf": "med",
+   "crops": "scratchpad S4b_second_east/z_eave.jpg (zoom 3, scan over restyle), z_bottommarks.jpg, ow_eave.jpg"
+  }
+ ],
+ "checked": [
+  {
+   "what": "the three willow heads (S4b.tree.willow_head_14090, _14300, _14470)",
+   "verdict": "no change",
+   "reading": "Three fan centres read the same as t4 and the merge: (14090-14117, 390), (14290-14317, 275-285) and (14450-14470, 367). No trunk stroke shows below any of them (v 400-600 is the forked elm's dark twig mass and the tea house's roofs). The west fan's whips spread west and up, the middle fan's straight up, the east fan's east and up, all away from the region behind the elm's gnarled crown (u 14200-14330, v 230-400), so ONE willow with a head hidden behind that crown and three knobs is also possible; the strokes can't settle two or three trunks against one. Crop: z_willows_scan.jpg (zoom 1.2)."
+  },
+  {
+   "what": "S4b.tree.stump_14805 and the small light shape at (14832-14846, 331-347)",
+   "verdict": "no change",
+   "reading": "The stippled band from (14800, 345) to the knob (14825-14840, 220-235) reads as the merge has it. The light shape is the long boat's bank-end outline and the wash beside it; no head (zoom 6, z_lightshape.jpg)."
+  },
+  {
+   "what": "the two bundle heaps (S4b.prop.bundle_heap_14680, _14970)",
+   "verdict": "no change",
+   "reading": "Two hatched lens shapes above the long hall's ridge, u 14555-14800 and about 14795-15060 (on z_heaps.jpg the east one's thin west tail seems to start at ~14795 rather than its end_w 14880, its thick part being 14890-15030; optional: end_w (14795, 1262)). Heap or ridge capping stays open. Crop: z_heaps.jpg."
+  },
+  {
+   "what": "S4b.prop.round_canopy_14905",
+   "verdict": "no change",
+   "reading": "A 250 px dome with radial ribs whose rim runs along the mat roof's back edge; no pole shows. Parasol behind the roof or a round roof of the tea house stays open. Crop: z_canopy.jpg."
+  },
+  {
+   "what": "the tea house's front rail against a bench",
+   "verdict": "no change (rail, part of S4b.bld.tea_house_14531)",
+   "reading": "The east end post at (14852-14862, 1190-1225) carries a knob cap that rises ABOVE the top bar (v 1192-1197), as a railing's post does and a bench's leg does not; a second bar runs at v ~1205-1210. Crops: z_rail.jpg, z_rail_enh.jpg (zoom 4)."
+  },
+  {
+   "what": "S4b.fig.man_east_bay_14958 (seated or standing)",
+   "verdict": "no change",
+   "reading": "The face (14954-14969, 1022-1040) and the reddish oval (14935-14975, 1068-1090) are there; the crossing braces below hide the legs. The three readings stay. Crop: z_eastbayman.jpg."
+  },
+  {
+   "what": "the restyle's 'reclining man' on the arched-awning boat (u 15075-15120, v 523-547)",
+   "verdict": "no figure",
+   "reading": "A dark wedge between crossing strokes at (15080-15105, 528-545) under the awning's hoops, and a fan of poles converging at about (15125, 545) from (15110, 505) and (15150, 500) (a crutch or the lowered gear of the boat); no head or body outline. Crops: z_recl.jpg, z_recl_enh.jpg (zoom 5)."
+  },
+  {
+   "what": "the faint crew",
+   "verdict": "no change",
+   "reading": "S4b.fig.boatman_dark_cap_15046: a dark cap (15037-15050, 367-376) with robe strokes below, as recorded; boatman_light_hat_15066 is not legible either way (zoom 5, z_boatmen.jpg). S4b.fig.head_in_cabin_door_15097 is a clear round dark blob (15090-15102, 697-710) framed by the doorway's posts (z_cabindoor.jpg): the lead may raise it to med."
+  },
+  {
+   "what": "S4b.str.reed_fence_15320",
+   "verdict": "no change (a screen)",
+   "reading": "The strokes are straight, close and regular, hang from a straight top under the low house's eave (v 1340-1350) and stop at v ~1460; the willow's whips are curved and cross the roofs. A reed or bamboo screen (or a blind) fits, whips do not. Crop: z_fence.jpg."
+  },
+  {
+   "what": "S4b.tree.young_tree_15275",
+   "verdict": "no change",
+   "reading": "One continuous stem rises from the gap between the roofs at (15270-15290, 1300-1330) and arches to the willow's knot (15350, 1070); its twigs point up with buds, so it grows from below. Crop: z_youngtree.jpg."
+  },
+  {
+   "what": "the strip at u 15030-15180, v 85-150",
+   "verdict": "no change",
+   "reading": "On the enhanced crop a few faint curls at (15070-15150, 100-130) and a faint line at v ~150 (15000-15100); they are too faint to tell water ticks from ground wash, so the river agent's land reading stands. Crops: z_strip.jpg, z_strip_enh.jpg, z_stripripple.jpg."
+  },
+  {
+   "what": "the big boat's after end past the seam (u 15580-15870)",
+   "verdict": "no crew",
+   "reading": "The forking short strokes at u 15620-15800, v 690-800 have buds and Y forks (bare twigs over the boat), no heads; the after cabin, spar and sweep read as the merge has them. Crops: z_bigaft_w.jpg, z_bigaft_e.jpg, z_stern_rail.jpg."
+  },
+  {
+   "what": "the small cabin boat's west end mark (15205-15220, 75-85)",
+   "verdict": "no change",
+   "reading": "A small dark shape with a short cross bar above the up-swept end: the recorded post or flag. The restyle makes it a boatman's head; the scan shows no body below it (the hull's lines run through v 95-130). Crop: z_smallbow.jpg."
+  },
+  {
+   "what": "the far bank's trees (S4b.tree.far_bank_15230, _15308)",
+   "verdict": "no change",
+   "reading": "Trunks at 15218-15240 and 15300-15320 as recorded; the K-shaped strokes at (15354-15386, 37-71) are a forked trunk or the east branches of the 15308 tree (t5's reading), not a third tree that can be told apart. A long faint line at v 43-48 over u 15250-15460 lies behind the trunks (a far-bank field edge or path). Crops: z_farbank.jpg, z_farbank_enh.jpg."
+  },
+  {
+   "what": "counts held against the scan",
+   "verdict": "no change",
+   "reading": "Tea house: three customers in the west and middle bays (bent man, man in the dark hat, man in white), the man in the dark cap in the east bay, and the man in the east bay, as mapped; the west platform's long bench, table and bench are empty. Top shops: the far top shop's furniture (chair_14028, table_14067, stool_14088) and the top house's (chair_14788, bench_14795, table_14830, bench_14861) match the strokes. Bank: the pair, the porter, the man at the gate post, the figure behind the roof, the man pointing at the boats; no other figure on the bank or the landing. Water east of the boats: only the two lines; no birds in the willows or over the water."
+  }
+ ]
+}

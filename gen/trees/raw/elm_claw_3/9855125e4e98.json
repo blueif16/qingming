@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a bare elm (榆) in early spring as the scroll paints it, before any leaves. A gnarled, knotted trunk with pale bark patches and dark hollows twists up and splits into crooked limbs. The crown is a ragged mass of dark, angular \"crab-claw\" twigs: short, bent, knobbly twigs that hook and turn like claws, ending in small dark clumps of tight buds. No leaves at all.\nColours: grey-brown bark with pale grey patches and dark knots; twigs dark brown-grey; buds dark red-brown with only a hint of green.\n\nThis one: A large elm whose thick dark trunk forks at about two-thirds of its height, the left limbs spreading wide and nearly level, the right limb reaching up and over; the crown wider than it is tall.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/elm_claw_1.jpg",
+  "gen/trees/refs/elm_claw_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "9855125e4e98",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 39.6,
+ "attempts": 1,
+ "idempotency_key": "ec820f92-a997-4889-8ef4-0968cdd8ee93",
+ "request_id": "94f5ea56-1074-40a0-ada3-df0a8bb9560f",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3897,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3452,
+   "text_tokens": 445
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3897,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3452,
+   "text_tokens": 445
+  },
+  "total_tokens": 5481
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/ccc5df38-28d9-4c4e-9052-1287429adc9a"
+ ],
+ "files": [
+  "gen/trees/raw/elm_claw_3/9855125e4e98_0.png"
+ ]
+}

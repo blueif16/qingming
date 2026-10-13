@@ -1,0 +1,177 @@
+{
+ "section": "S4",
+ "status": "part 1 (u 9400-12600) mapped 2026-10-11. The frame continues S5's (map/README.md, Frames): S5's origin, 77 px per metre across the street and in height, 51.25 px of v per metre of depth; only the receding direction drifts (dx_knots, measured here). The seed's origin, scales and seam knot are kept.",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    9250,
+    15700
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    32.125,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     9400,
+     32.125
+    ],
+    [
+     10270,
+     36
+    ],
+    [
+     11420,
+     31.6
+    ]
+   ],
+   "derivation": [
+    "Continues S5's frame (map/frames/S5.json F1), so the whole joined world is one coordinate system: the same origin (S5.str.moat_bridge:base.sw, scan 8248, 1565), the same 77 px per metre across the street and in height, and the same 51.25 px of v per metre of depth.",
+    "Seam with S5 at u 9400: S5's receding direction there is dx = 32.125 px per metre north (constant east of its bridge knot at u 8250), so this frame's first knot is [9400, 32.125]. A point on the seam then maps to the same metres in both sections.",
+    "Knot [10270, 36]: the big hall south of the road, S4.bld.south_hall_10330, whose roof ridge runs straight away from the viewer from its south gable: ridge (10340, 1545) -> (10597, 1210), slope -1.28 (dx 40); the roof's west eave, parallel to it, (9957, 1667) -> (10160, 1340), slope -1.61 (dx 32); the structures agent measured -1.37 and -1.45 on the same lines. Mean slope about -1.42, dx = 51.25 / 1.42 = 36. Both are high lines (eave and ridge, about 4-6 m up), med confidence; nothing at ground level recedes in u 9400-10600 (the houses at the top are frontal, the S5 cart's shaft lies almost level).",
+    "Knot [11420, 31.6]: the side edges of the tea-house tables and benches under the eave of S4.bld.south_hall_11450 (props at about 0.6 m): (11330, 1600) -> (11358, 1545), slope -1.96; (11405, 1600) -> (11430, 1560), -1.6; (11493, 1598) -> (11512, 1567), -1.6 (the structures agent: -1.4); mean about -1.65, dx 31.1; and the rounded east end of the courier post's ditch (S4.grd.ditch_11570) (11460, 805) -> (11510, 725), -1.6, dx 32. Short edges, low-med confidence each, but they agree with each other and with S5's bridge (-1.60).",
+    "East of u 11420 the knot list stays at 31.6 (constant beyond). Only high or ambiguous edges recede there, and they are shallow: the courier post's west wing eave (11607, 200) -> (11807, 78), -0.61; the open gate leaf's foot (11653, 583) -> (11713, 547), -0.60, which depends on how far the leaf swings; S4.bld.south_hall_12350's ridge (12090, 1395) -> (12600, 1110), -0.56, and its east eave, -0.26; S4.bld.south_pavilion_11760's east hip runs down to the LEFT. Ground-level edges there are steep but humped or curved (the small bridge's west side (11712, 845) -> (11762, 728), -2.34). As in S5 (the tower hall -0.54 over ground -0.88), high lines flatten, so they are not used; this is an open question (questions)."
+   ],
+   "assumptions": [
+    "East-west and height share S5's scale, 77 px per metre; depth is 51.25 px of v per metre everywhere on the ground (S5's bridge deck). This part's real-size checks say the painter draws far things smaller (questions: the diminution up the silk); the scale is kept unchanged until the lead decides.",
+    "Painted figure size is not a scale (S5: street figures about 1.3x life; here 150-195 px on the road, 1.9-2.5 m at 77 px/m). Place by foot point.",
+    "Supports other than the ground: the seat on the front of S5's covered ox cart and the temple gate hall's plinth (supports)."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "street level; small undulations ignored (the courier post's forecourt is a bank perhaps 0.5-1 m above the road behind its planked ditch, not modelled: taken as ground)"
+  },
+  "vehicle S5.veh.covered_ox_cart_9800": {
+   "H": 0.9,
+   "how": "derived: the seated driver's seat on the front of S5's covered ox cart at v ~1300, against the ground under the cart's front est at v ~1368 (68 px / 77)"
+  },
+  "gate hall floor": {
+   "H": 0.5,
+   "how": "measured roughly: the temple gate hall's plinth, about 20 px from its foot (v 185-188) to its top (v 163-168), the side bays' floor about 40 px above the ground at the hall's foot (t1); 0.3-0.5 m at 77 px/m"
+  },
+  "carried in arms": {
+   "H": 0,
+   "how": "a child held at a carrier's shoulder: its foot point is the carrier's foot point on the ground (as S6's 'shoulders'); the hold height is the people page's choice"
+  },
+  "perched": {
+   "H": 9.5,
+   "how": "derived: a bird in a tree's crown, taken at the depth of the tree's trunk (S4.tree.gnarled_willow_12390, base v 998: D 11.1 m); its v 267 is then (1565 - 51.25 x 11.1 - 267) / 77 = 9.5 m up, inside the 11 m crown"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S4.road.main:lines.centre.0"
+  ],
+  "station": 26.05,
+  "about": "where the main road crosses the seam with S5 (u 9400): its centre-line point 0, at S5's road end (scan 9400, 1370). Station +26.05 there, the station of S5.road.main's east end, so stations run on from the gate."
+ },
+ "checks": [
+  {
+   "what": "courier post gate: eave height above the threshold (west column foot -> eave), m",
+   "a": "S4.bld.post_gatehouse_11730:base.sw",
+   "b": "S4.bld.post_gatehouse_11730:sw_eave",
+   "measure": "height",
+   "expect": "a single-storey gateway's eave, roughly 3-4 m (doorway 177 x 165 px: 2.3 x 2.1 m at 77 px/m); near the road (v 600)"
+  },
+  {
+   "what": "small bridge in front of the courier post, length east-west (sw -> se), m",
+   "a": "S4.str.small_bridge_11800:base.sw",
+   "b": "S4.str.small_bridge_11800:base.se",
+   "measure": "distance",
+   "expect": "a small plank crossing over a roadside ditch, roughly 2-4 m"
+  },
+  {
+   "what": "small bridge, depth across the ditch (sw -> nw), m",
+   "a": "S4.str.small_bridge_11800:base.sw",
+   "b": "S4.str.small_bridge_11800:base.nw",
+   "measure": "distance",
+   "expect": "the ditch's width plus its banks, roughly 2-3 m"
+  },
+  {
+   "what": "courier post ditch width (far bank foot -> near bank, west stretch), m",
+   "a": "S4.grd.ditch_11570:lines.bank_n.2",
+   "b": "S4.grd.ditch_11570:lines.bank_s_w.3",
+   "measure": "distance",
+   "expect": "a roadside drainage ditch, roughly 1-2 m"
+  },
+  {
+   "what": "shop house east of the temple: eave height (sw -> sw_eave), m",
+   "a": "S4.bld.shop_house_10400:base.sw",
+   "b": "S4.bld.shop_house_10400:sw_eave",
+   "measure": "height",
+   "expect": "a shop's front eave, roughly 3 m; far up the silk (v 313)"
+  },
+  {
+   "what": "temple gate hall: eave height (se -> se_eave), m",
+   "a": "S4.bld.temple_gate_hall_9960:base.se",
+   "b": "S4.bld.temple_gate_hall_9960:se_eave",
+   "measure": "height",
+   "expect": "a temple gate hall's eave, roughly 3-4 m (its shut door 70 x 55 px: 0.9 x 0.7 m at 77 px/m); at the top of the silk (v 188)"
+  },
+  {
+   "what": "house west of the temple: eave height (sw -> sw_eave), m",
+   "a": "S4.bld.house_9590:base.sw",
+   "b": "S4.bld.house_9590:sw_eave",
+   "measure": "height",
+   "expect": "a house's eave, roughly 2.5-3 m; at the top of the silk (v 152)"
+  }
+ ],
+ "questions": [
+  "Mapped so far: u 9400-12600 (part 1). The rest of S4 (12600-15500) is a later area.",
+  "THE DIMINUTION UP THE SILK (reported to the lead before any change): the painter draws far things smaller, so one 77 px/m scale squeezes the top of the silk. Standing adults' painted heights against their foot v: 160-195 px on the road (v 1050-1770), about 150-175 at the courier post and the sedan chairs (v 800-900), 144 (the porter, v 632), 129 (v 474), 94 (the shopkeeper, v 318), 55 (the monk at the temple's side door, v 220): about 0.9 of the road's size at v 850, 0.8 at v 630, 0.5 at v 320 and 0.3 at v 220. Buildings agree: the courier gate's doorway (v 600) is 2.3 x 2.1 m and its eave 2.5 m, the shop house's eave (v 313) 1.4 m, the temple's eave (v 188) 1.5 m and its shut door 0.9 x 0.7 m, the house west of the temple's eave (v 152) 0.7 m. A scale that falls with height on the silk (or a depth rate that grows) would put the top-of-silk buildings further north and make them wider; S5 met the same thing (house_9300's eave 0.7 m, the tower at 0.6 of the street's scale). Until the lead decides, sizes up there are builder choices (map/BUILDING.md rule 5).",
+  "THE RECEDING DIRECTION EAST OF u 11420: only high lines recede there and they are shallow (-0.56 to -0.61, dx 84-91); ground evidence west of it is steep (-1.4 to -2.0). The frame keeps 31.6. If the ground really recedes at about -0.6 at the east end, things up the silk there (the courier post's north hall, the fortune-teller's back row) would move about 10 m east.",
+  "S4.bld.south_hall_12350's ridge (-0.56) and lower-right eave (-0.26) are not parallel, and its open-front columns stand about 200 px east of its est footprint: a veranda, or a separate hall continuing into part 2. Its footprint is a placeholder.",
+  "The courier post's ditch and the small bridge: the planked bank and humped crossing are read as a ditch and a bridge (sections.md: a small bridge in front of the gate); the restyle reads a rail fence and a heap of brushwood. No water is drawn.",
+  "The road's south edge between u 9640 and 10160 runs off the silk's bottom edge: the open ground with standing figures continues south beyond the painting there."
+ ],
+ "checks_result": [
+  {
+   "what": "courier post gate: eave height above the threshold (west column foot -> eave), m",
+   "expect": "a single-storey gateway's eave, roughly 3-4 m (doorway 177 x 165 px: 2.3 x 2.1 m at 77 px/m); near the road (v 600)",
+   "got": 2.49
+  },
+  {
+   "what": "small bridge in front of the courier post, length east-west (sw -> se), m",
+   "expect": "a small plank crossing over a roadside ditch, roughly 2-4 m",
+   "got": 2.28
+  },
+  {
+   "what": "small bridge, depth across the ditch (sw -> nw), m",
+   "expect": "the ditch's width plus its banks, roughly 2-3 m",
+   "got": 2.3
+  },
+  {
+   "what": "courier post ditch width (far bank foot -> near bank, west stretch), m",
+   "expect": "a roadside drainage ditch, roughly 1-2 m",
+   "got": 2.08
+  },
+  {
+   "what": "shop house east of the temple: eave height (sw -> sw_eave), m",
+   "expect": "a shop's front eave, roughly 3 m; far up the silk (v 313)",
+   "got": 1.4
+  },
+  {
+   "what": "temple gate hall: eave height (se -> se_eave), m",
+   "expect": "a temple gate hall's eave, roughly 3-4 m (its shut door 70 x 55 px: 0.9 x 0.7 m at 77 px/m); at the top of the silk (v 188)",
+   "got": 1.53
+  },
+  {
+   "what": "house west of the temple: eave height (sw -> sw_eave), m",
+   "expect": "a house's eave, roughly 2.5-3 m; at the top of the silk (v 152)",
+   "got": 0.68
+  }
+ ]
+}

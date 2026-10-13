@@ -1,0 +1,830 @@
+{
+ "section": "S3",
+ "entities": [
+  {
+   "id": "S3.veh.handcart_19862",
+   "kind": "vehicle",
+   "name": "two-wheeled handcart pulled up the north bank",
+   "what": "Two-wheeled handcart on the north bank just north of the bridge's north ramp: a slatted box body with two long top rails that run on as shafts at its west end, one big spoked wheel showing on the near side under the body's east half. One man pulls it west by the shafts, a second leans on it at the wheel; no animal is harnessed. No load is drawn above the rails (the box may hold goods).",
+   "pts": {
+    "front": [
+     19862,
+     208,
+     "est"
+    ],
+    "rear": [
+     19978,
+     218,
+     "est"
+    ],
+    "wheels": [
+     [
+      19957,
+      220
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "group": "S3.grp.handcart_19862",
+   "vis": "part: the far wheel and the shaft tips hidden by the puller",
+   "conf": "med",
+   "src": "",
+   "note": "Front = ground under the shaft tips at the west end, where the puller S3.fig.cart_puller_19870 holds them; rear = ground under the box's east end (about 19975). Which end is the front is read from the puller leaning west with his feet east of his head; if the cart is being backed east, front and rear swap (both ends are in t9's range either way). SCALE CUE: wheel about 78 px tall (v 142-220), so about 1 m; box about 95 px long (19880-19975), side about 40 px high (v 158-198). The top rails run (19862,140) -> (19975,123), slope dv/du -0.15 (raised rails, not a ground edge). A thin pole runs on north-east from the rails' east end to about (20021, 115): a third shaft or a prop stick. East of the wheel is a dark lumpy mass (S3.tree.shrub_or_heap_20025), which the overview restyle paints as foliage; if it is the cart's covered load instead, the cart's rear moves to about 20055. A pale crouching shape at 19790-19845, v 160-215 just west of the puller (a dog, or a figure crouching) is t8's by its u and may belong to this group."
+  },
+  {
+   "id": "S3.fig.cart_puller_19870",
+   "kind": "figure",
+   "name": "man pulling the handcart by its shafts",
+   "what": "Man in a dark cap and a short jacket with trousers, at the west end of the handcart between its shaft tips, leaning forward to the west with his arms back on the shafts, hauling the cart.",
+   "pts": {
+    "foot": [
+     19870,
+     207
+    ],
+    "head": [
+     19848,
+     121
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 180,
+   "group": "S3.grp.handcart_19862",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Feet at about (19858, 195) and (19882, 219), a long stride; foot = midway. Painted height about 86 px with the lean."
+  },
+  {
+   "id": "S3.fig.cart_pusher_19922",
+   "kind": "figure",
+   "name": "man leaning on the handcart at its wheel",
+   "what": "Man in a dark cap standing in the middle of the handcart's near side, just west of its wheel, bent forward over the top rail: pushing or steadying the cart as it is hauled west.",
+   "pts": {
+    "foot": [
+     19922,
+     224
+    ],
+    "head": [
+     19930,
+     119
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 180,
+   "group": "S3.grp.handcart_19862",
+   "vis": "part: body behind the cart's rails and box; legs show below the box",
+   "conf": "med",
+   "src": "",
+   "note": "Legs at 19917-19929, v 202-227 below the box. Head 105 px above the foot (he stands upright behind the rail)."
+  },
+  {
+   "id": "S3.grp.handcart_19862",
+   "kind": "group",
+   "name": "handcart and its two men",
+   "what": "A two-wheeled handcart on the north bank north of the bridge's ramp, hauled west by one man at the shafts while a second leans on it at the wheel.",
+   "members": [
+    "S3.veh.handcart_19862",
+    "S3.fig.cart_puller_19870",
+    "S3.fig.cart_pusher_19922",
+    "S3.ani.dog_or_donkey_19825"
+   ],
+   "vis": "full",
+   "conf": "med",
+   "note": "A pale crouching shape at 19790-19845, v 160-215 (t8's range: a dog or a crouching figure) may belong to this group; the merge joins it if t8 records it."
+  },
+  {
+   "id": "S3.fig.walker_topedge_19878",
+   "kind": "figure",
+   "name": "walker cut by the silk's top edge",
+   "what": "Man in a dark short jacket walking along the north bank's back road at the very top of the silk; only his body from the shoulders down and his legs are painted, his head is cut off by the silk's top edge. A dark mass at his back (19870-19897, v 25-45) is a bundle he carries or a second person's torso.",
+   "pts": {
+    "foot": [
+     19878,
+     79
+    ],
+    "head": [
+     19850,
+     0,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "vis": "part: cut by the silk's top edge at v 22",
+   "conf": "med",
+   "src": "",
+   "note": "Torso 19840-19865, v 25-55; feet at about (19866, 78) and (19890, 80). Head est above the silk's edge (off the painting). Faint. Facing east is read from the forward lean; low confidence on direction."
+  },
+  {
+   "id": "S3.fig.figure_topedge_19925",
+   "kind": "figure",
+   "name": "second figure (or animal) cut by the silk's top edge",
+   "what": "Thin bent strokes at the very top edge just east of the walker: the legs or arms of a second figure (or the legs of a small animal), cut off by the silk's top edge; nothing else of it is painted.",
+   "pts": {
+    "foot": [
+     19925,
+     50,
+     "est"
+    ],
+    "head": [
+     19915,
+     0,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "vis": "part: only a few strokes below the silk's top edge",
+   "conf": "low",
+   "src": "",
+   "note": "Strokes at 19900-19963, v 22-50: one line (19905,25)->(19925,45), another (19935,30)->(19945,45), a line on to (19963, 39). Two readings: a person walking with a pole (the overview restyle paints a figure in white with a stick here) or a small animal's legs. Foot est where the strokes end."
+  },
+  {
+   "id": "S3.tree.shrub_or_heap_20025",
+   "kind": "tree",
+   "name": "dark low mass east of the handcart (shrub or covered heap)",
+   "what": "A dark, mottled, lumpy mass about 65 px across on the north bank between the handcart's wheel and the bridge's north end post, with an irregular top: a low shrub, or a heap of goods under a cover.",
+   "pts": {
+    "base": [
+     20025,
+     207,
+     "est"
+    ],
+    "top": [
+     20035,
+     150
+    ],
+    "crown_w": [
+     19993,
+     175
+    ],
+    "crown_e": [
+     20060,
+     172
+    ]
+   },
+   "support": "ground",
+   "vis": "part: west edge behind the cart's wheel",
+   "conf": "low",
+   "src": "",
+   "note": "Mass 19993-20060, v 150-207. Two readings: a shrub (the overview restyle paints green foliage here) or a heap of goods (or the cart's covered load, which would lengthen S3.veh.handcart_19862 to about 20055). No trunk shows. If a heap, it should be retired and recorded as a prop. SECOND PASS (east): not the handcart's load. On a colour crop at zoom 2.5 the mass (19988-20052, v 148-200) is stippled like massed leaves, and it lies east of and lower than the box's east end (the top rails end at about (19975-20000, 124-132)). So the cart keeps its rear at ~19978, and the shrub reading is preferred over a covered heap (conf stays low). Crop: p2e_c_northfoot_col.jpg."
+  },
+  {
+   "id": "S3.prop.low_table_wares_20013",
+   "kind": "prop",
+   "name": "long low table with wares at the bridge's north foot",
+   "what": "A long, low table on the north bank at the foot of the bridge's north end post, set obliquely, with small dark wares on it (bowls or jars): an outdoor stall or the little tavern's serving table.",
+   "pts": {
+    "base": [
+     20013,
+     282
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_foot_stall_20013",
+   "vis": "part: east end behind the end post",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)?",
+   "note": "Top 19969-20058, v 240-270; legs at about (19979, 277), (20033, 296), (20052, 281). Front edge (19969,258) -> (20058,281), slope 0.26. Pin 21 (19990) may name this stall or the tavern east of it."
+  },
+  {
+   "id": "S3.fig.stallkeeper_20030",
+   "kind": "figure",
+   "name": "stall-keeper behind the low table (faint)",
+   "what": "A faint head and shoulders behind the long low table's east half, as of a stall-keeper standing behind his wares.",
+   "pts": {
+    "foot": [
+     20030,
+     262,
+     "est"
+    ],
+    "head": [
+     20030,
+     220
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S3.grp.north_foot_stall_20013",
+   "vis": "part: below the shoulders hidden by the table",
+   "conf": "low",
+   "src": "",
+   "note": "Rounded shape at 20020-20045, v 216-247 behind the table. Two readings: a stall-keeper's head, or a ware (a jar) standing on the table. Foot est behind the table."
+  },
+  {
+   "id": "S3.fig.dark_hat_figure_20070",
+   "kind": "figure",
+   "name": "figure in a black hat at the tavern's west end (faint)",
+   "what": "A black hat (a brimmed cap with a knob) over a dark upright shape, standing at the west end of the north-bank tavern's front, just east of the low table: a man in a dark robe.",
+   "pts": {
+    "foot": [
+     20078,
+     265,
+     "est"
+    ],
+    "head": [
+     20070,
+     194
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: faint; body merges with the dark doorway behind",
+   "conf": "low",
+   "src": "",
+   "note": "Hat 20060-20081, v 191-204; dark area 20060-20100, v 210-265 below it. Two readings: a man in a dark robe and black hat, or a dark doorway or cabinet with a lamp hung above it. Foot est at the bottom of the dark area."
+  },
+  {
+   "id": "S3.grp.north_foot_stall_20013",
+   "kind": "group",
+   "name": "stall at the bridge's north foot",
+   "what": "A long low table with wares on the north bank at the bridge's north end post, with a faint stall-keeper behind it.",
+   "members": [
+    "S3.prop.low_table_wares_20013",
+    "S3.fig.stallkeeper_20030"
+   ],
+   "vis": "part",
+   "conf": "low",
+   "note": ""
+  },
+  {
+   "id": "S3.prop.tavern_bench_20124",
+   "kind": "prop",
+   "name": "bench at the north-bank tavern",
+   "what": "A plain wooden bench in front of the north-bank tavern, west of its first table; nobody sits on it.",
+   "pts": {
+    "base": [
+     20124,
+     270
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_tavern_furniture_20250",
+   "vis": "part: crossed by the big boat's ropes",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)?",
+   "note": "Bench 20110-20138, v 240-270 (legs to about 270). The big boat's mast ropes and rope ladder cross it."
+  },
+  {
+   "id": "S3.prop.tavern_table_20168",
+   "kind": "prop",
+   "name": "square table at the north-bank tavern",
+   "what": "A square wooden table with a plain top in front of the north-bank tavern's open front; empty, no customers painted at it.",
+   "pts": {
+    "base": [
+     20168,
+     270
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_tavern_furniture_20250",
+   "vis": "part: crossed by the big boat's ropes",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)?",
+   "note": "Top a parallelogram about 20125-20210, v 218-246; legs to about v 270-277. SCALE CUE: top about 70 px wide. Receding edge of its top (20140,220) -> (20125,240), slope dv/du -1.3 (a table top, not ground)."
+  },
+  {
+   "id": "S3.prop.tavern_chair_20325",
+   "kind": "prop",
+   "name": "high-backed chair at the north-bank tavern",
+   "what": "A high-backed wooden chair at the west end of the tavern's second table; empty.",
+   "pts": {
+    "base": [
+     20325,
+     270
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_tavern_furniture_20250",
+   "vis": "full",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)?",
+   "note": "Back posts 20313-20337 from v 187; seat at about v 240; legs to about v 270."
+  },
+  {
+   "id": "S3.prop.tavern_table_20340",
+   "kind": "prop",
+   "name": "table at the north-bank tavern, east",
+   "what": "A wooden table between two high-backed chairs at the east part of the north-bank tavern's front; empty.",
+   "pts": {
+    "base": [
+     20340,
+     270
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_tavern_furniture_20250",
+   "vis": "part: lower legs behind the boats' roofs",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)?",
+   "note": "Top 20310-20367, v 227-247; legs to about v 270."
+  },
+  {
+   "id": "S3.prop.tavern_chair_20390",
+   "kind": "prop",
+   "name": "high-backed chair at the north-bank tavern, east",
+   "what": "A high-backed wooden chair (possibly two side by side) east of the tavern's east table; empty.",
+   "pts": {
+    "base": [
+     20390,
+     262
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_tavern_furniture_20250",
+   "vis": "full",
+   "conf": "med",
+   "src": "名画记: 虹桥边的小酒馆 (pin 21)?",
+   "note": "Back posts at 20367-20390 and 20383-20410, v 197-263: one chair seen with both back posts, or two chairs overlapping. Count: 1, possibly 2."
+  },
+  {
+   "id": "S3.prop.small_table_20460",
+   "kind": "prop",
+   "name": "small table under the willow at the tavern's east end",
+   "what": "A small table with a dark top standing at the north-bank tavern's east end, below the big willow's crown.",
+   "pts": {
+    "base": [
+     20460,
+     262
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.north_tavern_furniture_20250",
+   "vis": "part: willow whips hang over it",
+   "conf": "med",
+   "src": "",
+   "note": "Top 20443-20477, v 220-247; legs to about v 262. A post rises from behind it to the roof (the tavern's, structures_e). The willow (S2's) stands just east."
+  },
+  {
+   "id": "S3.grp.north_tavern_furniture_20250",
+   "kind": "group",
+   "name": "the north-bank tavern's tables and chairs",
+   "what": "The furniture set out in front of the open north-bank tavern east of the bridge's north foot: a bench, two tables, high-backed chairs and a small table, all empty (no customers are painted at them).",
+   "members": [
+    "S3.prop.tavern_bench_20124",
+    "S3.prop.tavern_table_20168",
+    "S3.prop.tavern_chair_20325",
+    "S3.prop.tavern_table_20340",
+    "S3.prop.tavern_chair_20390",
+    "S3.prop.small_table_20460"
+   ],
+   "vis": "part",
+   "conf": "med",
+   "note": "The building is structures_e's. 名画记 pin 21 (虹桥边的小酒馆, 19990) is near its west end."
+  },
+  {
+   "id": "S3.fig.rail_watcher_19862",
+   "kind": "figure",
+   "name": "man leaning over the north ramp's railing",
+   "what": "Man in a dark cap on the bridge's north ramp, leaning far over the near railing, looking down at the big boat below; westmost of three at the railing in t9's range.",
+   "pts": {
+    "foot": [
+     19866,
+     306,
+     "est"
+    ],
+    "head": [
+     19860,
+     243
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 270,
+   "group": "S3.grp.shouting_down_to_boat",
+   "vis": "part: below the chest hidden by the railing",
+   "conf": "high",
+   "src": "余辉: 上下呼救 (setting)",
+   "note": "On the deck at the railing. Feet est just behind the railing's foot (deck edge about v 310 here). Bent over the rail, so only about 63 px from head to the est foot. Another face at 19830-19853, v 240-263 just west of him is t8's."
+  },
+  {
+   "id": "S3.fig.rail_watcher_19892",
+   "kind": "figure",
+   "name": "man leaning over the north ramp's railing, middle",
+   "what": "Man in a dark cap on the bridge's north ramp, leaning on the near railing with his face turned down toward the big boat; between two others doing the same.",
+   "pts": {
+    "foot": [
+     19897,
+     318,
+     "est"
+    ],
+    "head": [
+     19892,
+     253
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 270,
+   "group": "S3.grp.shouting_down_to_boat",
+   "vis": "part: below the chest hidden by the railing",
+   "conf": "high",
+   "src": "余辉: 上下呼救 (setting)",
+   "note": "On the deck at the railing. Feet est behind the railing's foot."
+  },
+  {
+   "id": "S3.fig.rail_watcher_19923",
+   "kind": "figure",
+   "name": "man leaning over the north ramp's railing, east",
+   "what": "Man in a dark cap on the bridge's north ramp, leaning on the near railing, his face showing, looking down at the big boat; the eastmost of the three, near where the ramp comes down to the north bank.",
+   "pts": {
+    "foot": [
+     19928,
+     331,
+     "est"
+    ],
+    "head": [
+     19923,
+     273
+    ]
+   },
+   "support": "bridge deck",
+   "pose": "leaning",
+   "facing_deg": 270,
+   "group": "S3.grp.shouting_down_to_boat",
+   "vis": "part: below the waist hidden by the railing",
+   "conf": "high",
+   "src": "余辉: 上下呼救 (setting)",
+   "note": "On the deck at the railing. Body 19905-19940, v 273-327. Feet est behind the railing's foot. No figures on the ramp east of him (19940-20030)."
+  },
+  {
+   "id": "S3.fig.shop_standing_man_19872",
+   "kind": "figure",
+   "name": "man standing in the south-bank shop",
+   "what": "Slim man in a pale long robe and a soft cap standing inside the open-fronted shop on the south bank, at the east end of its long table, turned toward the table (west).",
+   "pts": {
+    "foot": [
+     19872,
+     1550
+    ],
+    "head": [
+     19869,
+     1472
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S3.grp.south_shop_19920",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Body 19858-19885, v 1468-1553; feet at 19865-19880, v 1541-1553. Painted height about 78 px. The shop's floor is at v 1540-1560 here (table legs end at 1557-1561). The long table west of him (19762-19854, base about 19808) and a seated figure at its west end (about 19723-19777, v 1457-1545) are t8's by u."
+  },
+  {
+   "id": "S3.prop.shop_bench_19902",
+   "kind": "prop",
+   "name": "bench in the south-bank shop",
+   "what": "A wooden bench with a lattice side inside the south-bank shop, east of the standing man.",
+   "pts": {
+    "base": [
+     19902,
+     1550
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.south_shop_19920",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "19885-19920, v 1515-1553; legs at about (19888, 1553) and (19917, 1548)."
+  },
+  {
+   "id": "S3.fig.shop_seated_on_bench_19905",
+   "kind": "figure",
+   "name": "figure seated on the shop's bench (faint)",
+   "what": "Faint outline of a person seated on the bench, turned north-east, one arm reaching east toward a table or the counter.",
+   "pts": {
+    "foot": [
+     19905,
+     1550,
+     "est"
+    ],
+    "head": [
+     19892,
+     1468
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 45,
+   "group": "S3.grp.south_shop_19920",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Seated on S3.prop.shop_bench_19902. Outline at 19880-19945, v 1460-1510, a hand-like shape at (19935, 1495). Two readings: a seated figure (its torso above the bench where a sitter's would be), or a second table with a cloth behind the bench (the overview restyle draws tables and stools, no figure, here). Foot est under the bench."
+  },
+  {
+   "id": "S3.fig.shop_figure_hat_19972",
+   "kind": "figure",
+   "name": "figure at the east end of the shop's slanted board (faint)",
+   "what": "Faint figure at the east end of the large slanted board in the south-bank shop, just west of the shop's door posts: a pale oval with a dark rim at chest height, read as a wide hat or a bowl held in the hands, over an upright outline.",
+   "pts": {
+    "foot": [
+     19972,
+     1550,
+     "est"
+    ],
+    "head": [
+     19975,
+     1474,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S3.grp.south_shop_19920",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Pale oval at 19955-19975, v 1495-1510; upright outline at 19970-19995, v 1460-1530. Two readings: a server holding a bowl (or a man in a wide hat) leaning on the board, or a basket and the door post. The overview restyle paints a figure leaning on the board here (shifted east). Head and foot est."
+  },
+  {
+   "id": "S3.fig.shop_low_head_19940",
+   "kind": "figure",
+   "name": "head showing above the shop's front board (faint)",
+   "what": "A dark-haired head (with a pale face part) just above the front edge of the shop's slanted board, below the faint figure at the board's east end: a person seated or lying low at the shop front, looking east.",
+   "pts": {
+    "foot": [
+     19945,
+     1608,
+     "est"
+    ],
+    "head": [
+     19940,
+     1577
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S3.grp.south_shop_19920",
+   "vis": "part: only the head shows above the board",
+   "conf": "low",
+   "src": "",
+   "note": "Dark rounded shape 19927-19954, v 1576-1600. Two readings: a head (the overview restyle paints a reclining figure in blue here, which may be this person and the one above as one), or a dark pot on the board. The shop front's edge and the foreground roof are at v 1605-1615, so the foot est sits on it."
+  },
+  {
+   "id": "S3.prop.slanted_board_19912",
+   "kind": "prop",
+   "name": "large slanted board at the shop front",
+   "what": "A large plain board lying at a slant across the south-bank shop's front, its high side at the back (north) and its low side at the front edge: a counter top or a reclining couch, or a shutter taken down and propped.",
+   "pts": {
+    "base": [
+     19912,
+     1605
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.south_shop_19920",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "Board about 19854-19970, from v 1545 (back) to 1610 (front edge). A smaller slanted board west of it (19792-19858, v 1572-1610, base about 19825) is t8's by u, or part of the shop (structures_e). If both are the shop's own fittings, structures_e records them and these props are dropped."
+  },
+  {
+   "id": "S3.prop.signboard_19982",
+   "kind": "prop",
+   "name": "signboard leaning at the shop front",
+   "what": "An upright signboard with writing, leaning back at the south-bank shop's front by its door posts; characters painted but illegible: □□□.",
+   "pts": {
+    "base": [
+     19978,
+     1603
+    ],
+    "top": [
+     19997,
+     1540
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.south_shop_19920",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Board 19962-20007, v 1538-1603, leaning back (top north-east of the foot). At least three character cells are drawn; none can be read at the scan's resolution (zoom 6 tried). SCALE CUE: about 25 px wide, 65 px long."
+  },
+  {
+   "id": "S3.grp.south_shop_19920",
+   "kind": "group",
+   "name": "the south-bank shop east of the arch",
+   "what": "The open-fronted shop under the big tiled roof on the south bank east of the bridge: a long table with a seated figure (t8's), a standing man, a bench with a faint seated figure, a large slanted board at the front with a faint figure at its east end and a head below, and a leaning signboard by the door posts.",
+   "members": [
+    "S3.fig.shop_standing_man_19872",
+    "S3.prop.shop_bench_19902",
+    "S3.fig.shop_seated_on_bench_19905",
+    "S3.fig.shop_figure_hat_19972",
+    "S3.fig.shop_low_head_19940",
+    "S3.prop.slanted_board_19912",
+    "S3.prop.signboard_19982",
+    "S3.fig.shop_seated_man_19772",
+    "S3.prop.shop_chair_19725",
+    "S3.prop.shop_table_19776",
+    "S3.prop.bowl_on_table_19816",
+    "S3.prop.shop_low_table_19797",
+    "S3.prop.shop_long_board_19601",
+    "S3.prop.shop_wall_bench_19582",
+    "S3.bld.open_shop_20000",
+    "S3.prop.shop_table_tray_20140"
+   ],
+   "vis": "part",
+   "conf": "med",
+   "note": "t8's side (by u, < 19850): the long table (19762-19854, bowl on it at 19815, 1484), the seated figure at about 19723-19777, the small slanted board (19792-19858). The merge joins them. Merge: joined with t8's S3.grp.shop_table_19776 (the seated man, his chair, the table and the bowl; retired) and t8's loose shop props (the low table, the long board, the wall bench); the building is structures_e's S3.bld.open_shop_20000."
+  },
+  {
+   "id": "S3.fig.seated_customer_20140",
+   "kind": "figure",
+   "name": "seated figure at the parasol stall",
+   "what": "Figure with the hair tied up in a topknot (no hat) and a long robe, seated on a stool at the west end of the table under the big parasol, facing east across the table toward the seller; a jar or bottle stands at each side of it.",
+   "pts": {
+    "foot": [
+     20145,
+     1672,
+     "est"
+    ],
+    "head": [
+     20132,
+     1543
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Seated on S3.prop.stool_20126. Body 20110-20177, v 1540-1673; hair knot at 20125-20145, v 1540-1553. Sex not certain (a woman's bun or a man's bare topknot). Feet est at the robe's hem. Seated height about 130 px, the largest figure in t9 (nearest the viewer)."
+  },
+  {
+   "id": "S3.prop.stool_20126",
+   "kind": "prop",
+   "name": "stool under the seated figure at the parasol stall",
+   "what": "A small stool under the seated figure at the parasol stall's west end.",
+   "pts": {
+    "base": [
+     20126,
+     1675
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "part: mostly hidden by the sitter's robe",
+   "conf": "low",
+   "src": "",
+   "note": "Legs at about 20115-20136, v 1607-1675. If no stool is painted, the figure sits on a bench hidden under the robe."
+  },
+  {
+   "id": "S3.prop.jar_20109",
+   "kind": "prop",
+   "name": "jar beside the seated figure",
+   "what": "A narrow jar or bottle with a rounded top standing just west of the seated figure at the parasol stall.",
+   "pts": {
+    "base": [
+     20109,
+     1578,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "part: lower part merges with the figure's robe",
+   "conf": "low",
+   "src": "",
+   "note": "Shape 20103-20115, v 1555-1578. Two readings: a jar standing on something hidden (a counter or a shelf), or the seated figure's raised hand. A matching jar stands on the stall table's west end at about (20172, 1578) (in the table's what)."
+  },
+  {
+   "id": "S3.prop.parasol_stall_table_20245",
+   "kind": "prop",
+   "name": "table of the parasol stall",
+   "what": "A rectangular wooden table on four legs with a lower stretcher, under the big parasol in front of the south-bank shops; a jar stands at its west end and a dark box-like ware near its middle; the seller sits behind it, a customer on a stool at its west end.",
+   "pts": {
+    "base": [
+     20245,
+     1692
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Top about 20170-20320, v 1600-1630; stretcher at v 1650-1667; legs at about (20213, 1676), (20273, 1713), (20313, 1695). SCALE CUE: about 150 px long. Front edge (20174,1625) -> (20273,1640), slope 0.15."
+  },
+  {
+   "id": "S3.prop.parasol_20288",
+   "kind": "prop",
+   "name": "big parasol over the stall table",
+   "what": "A large round parasol of oiled paper or mat with radiating ribs, set up over the stall table in front of the south-bank shops; its pole stands behind the seller (hidden), probably fixed at the table.",
+   "pts": {
+    "base": [
+     20288,
+     1692,
+     "est"
+    ],
+    "top": [
+     20287,
+     1452
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "part: pole hidden behind the seller and the table",
+   "conf": "high",
+   "src": "",
+   "note": "Canopy 20165-20374 (about 210 px across), rim at v 1508-1545, ribs meeting at about (20287, 1452). Base est straight below the apex at the table's back legs' v."
+  },
+  {
+   "id": "S3.fig.parasol_stall_seller_20290",
+   "kind": "figure",
+   "name": "seller seated behind the parasol stall's table",
+   "what": "Bareheaded man with a round head (hair tied up) seated behind the table under the big parasol, both arms stretched out on the table toward the customer at its west end: the stall-keeper.",
+   "pts": {
+    "foot": [
+     20290,
+     1650,
+     "est"
+    ],
+    "head": [
+     20291,
+     1553
+    ]
+   },
+   "support": "ground",
+   "pose": "seated",
+   "facing_deg": 180,
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "part: below the chest hidden by the table",
+   "conf": "med",
+   "src": "",
+   "note": "Head 20283-20300, v 1548-1572; body 20260-20310, v 1567-1622; pale sleeves on the table at 20228-20278, v 1572-1590 (the run-1 tile restyle paints a second bent person there; the scan shows sleeves). Foot est behind the table."
+  },
+  {
+   "id": "S3.prop.small_box_20345",
+   "kind": "prop",
+   "name": "small cross-patterned box east of the parasol stall",
+   "what": "A small box with a crossed pattern (or a little stool) on the ground just east of the parasol stall's table, at the shop's corner post; a short stick rises from it toward the north-east.",
+   "pts": {
+    "base": [
+     20345,
+     1630
+    ]
+   },
+   "support": "ground",
+   "group": "S3.grp.parasol_stall_20245",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "Box 20330-20360, v 1597-1630."
+  },
+  {
+   "id": "S3.grp.parasol_stall_20245",
+   "kind": "group",
+   "name": "the parasol stall in front of the south-bank shops",
+   "what": "A table under a big parasol in front of the south-bank shops east of the bridge, a seller seated behind it with his arms on the table and a customer seated on a stool at its west end, jars and a small box about it.",
+   "members": [
+    "S3.prop.parasol_stall_table_20245",
+    "S3.prop.parasol_20288",
+    "S3.fig.parasol_stall_seller_20290",
+    "S3.fig.seated_customer_20140",
+    "S3.prop.stool_20126",
+    "S3.prop.jar_20109",
+    "S3.prop.small_box_20345"
+   ],
+   "vis": "full",
+   "conf": "med",
+   "note": ""
+  },
+  {
+   "id": "S3.fig.porter_with_pole_20450",
+   "kind": "figure",
+   "name": "man with a pole and a hanging sack by the dark trunk",
+   "what": "Man drawn in outline only (pale clothes, trousers) at the west side of the big dark trunk, near the silk's bottom edge: a long pole runs west from his shoulder with a long pale sack and a straight staff hanging from it, as if he carries his goods on a shoulder pole.",
+   "pts": {
+    "foot": [
+     20450,
+     1745
+    ],
+    "head": [
+     20452,
+     1593
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 180,
+   "vis": "part: outline only, faint; legs cross the trunk's shadow",
+   "conf": "med",
+   "src": "",
+   "note": "Body 20437-20475, v 1590-1700; legs to a foot at about (20450, 1745) (20443-20457, 1727-1747), in a walking stride. Painted height about 150 px (near the viewer). The pole runs (20460,1592) -> (20367,1615); the sack hangs at 20387-20430, v 1600-1680, the staff at 20418-20429, v 1580-1700. SECOND PASS (east): carried. The pole's east end rests on his shoulder at his head, and he strides. Its west end stops just short of the shop's corner post (20375-20383) without a joint or tie, so it is not a bar fixed between the post and the trunk. hanging_sack_and_staff_20412 (retired at the second pass) retire proposed; the sack and the staff (with a small crosspiece at its top) are his load. Crop: p2e_c_shop2_col.jpg."
+  }
+ ]
+}

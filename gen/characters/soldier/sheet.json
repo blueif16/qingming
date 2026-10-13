@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a Song courier-post soldier off duty: a stocky adult man, about 6.5 heads tall, a broad weathered face with dark dot eyes and a short black moustache, a dark cloth cap tied round his head. A belted knee-length dark grey-brown jacket with a crossed collar over loose trousers, white leg wraps from the knee to the ankle and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/soldier/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 47.8,
+ "attempts": 1,
+ "idempotency_key": "3ae4b50f-f43f-4ee2-ba65-d255698fc756",
+ "request_id": "2a511ac2-9365-4e0c-9191-656e5bd0be5e",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3577,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3241,
+   "text_tokens": 336
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3577,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3241,
+   "text_tokens": 336
+  },
+  "total_tokens": 5161
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/5d152787-811b-4482-aacc-9949372ec894"
+ ],
+ "files": [
+  "gen/characters/soldier/sheet_0.png"
+ ]
+}

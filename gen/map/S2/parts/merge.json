@@ -1,0 +1,111 @@
+{
+ "section": "S2",
+ "entities": [
+  {
+   "id": "S2.grp.open_air_eatery_23760",
+   "kind": "group",
+   "name": "the open-air eatery under its shelter (west of the shop fronts)",
+   "what": "The open-air eatery on the north bank between the terrace's pavilion and the shop fronts: tables and benches under and in front of a mat shelter on posts, nearly all empty; one man sits at its west end and one stands at the shelter's east post.",
+   "members": [
+    "S2.fig.eatery_man_23642",
+    "S2.prop.eatery_bench_23612",
+    "S2.prop.eatery_table_23683",
+    "S2.prop.eatery_back_table_23670",
+    "S2.prop.eatery_rack_23688",
+    "S2.prop.eatery_dark_object_23574",
+    "S2.fig.eatery_man_standing_23918",
+    "S2.prop.eatery_bench_23727",
+    "S2.prop.eatery_table_23755",
+    "S2.prop.eatery_bench_23818",
+    "S2.prop.eatery_table_23730",
+    "S2.prop.eatery_table_23788",
+    "S2.prop.eatery_bench_23848",
+    "S2.prop.eatery_table_23880",
+    "S2.prop.eatery_bench_23922",
+    "S2.prop.eatery_table_23852",
+    "S2.prop.eatery_bench_23893",
+    "S2.prop.eatery_table_23818",
+    "S2.bld.eatery_shelter_23750"
+   ],
+   "note": "Merge: t4's S2.grp.eatery_west_23650 (west of u 23700) and t5's S2.grp.eatery_east_23820 (east of it) were folded into this group, as both asked; the shelter S2.bld.eatery_shelter_23750 (structures_w) joins it. t4's list of t5's furniture matches t5's props (t5's seam notes); t4's \"stake on the tow rope\" at (23940, 455) is the rope's toggle (river_m: rope_toggle), not an entity."
+  },
+  {
+   "id": "S2.ani.bird_in_willow_21135",
+   "kind": "animal",
+   "name": "small dark bird (?) on a willow twig over the water",
+   "what": "A small solid dark blot on a hanging willow twig high over the water west of the great willow's trunk, like a small bird perched on the twig (the twin of t2's S2.ani.bird_in_willow_21730 further east in the same crown).",
+   "pts": {
+    "fore": [
+     21137,
+     651,
+     "est"
+    ],
+    "hind": [
+     21130,
+     651,
+     "est"
+    ],
+    "head": [
+     21135,
+     642
+    ]
+   },
+   "support": "perched: S2.tree.willow_great_21345",
+   "vis": "full",
+   "conf": "low",
+   "note": "Added at the merge: named only in river_w's report and in S2.fig.man_in_river_20970's note (\"a dark blob on a willow twig at about (21125, 640), probably a perched bird\", left to t1, which did not record it). Merge crop gen/map/S2/look/merge_bird_21135.jpg (zoom 6): a blot about 14 x 11 px at u 21128-21142, v 641-652, darker and more solid than the whips' line work. READINGS: a perched bird (taken), or a knot where whips cross. Whose twig: the great willow's crown reaches west to u ~20980 here (t2), so S2.tree.willow_great_21345. Facing unknown."
+  },
+  {
+   "id": "S2.tree.bare_south_bank_20705",
+   "kind": "tree",
+   "name": "second bare tree on the south bank, behind the hall's west roof (uncertain)",
+   "what": "A bare tree (a small pollard, or a bare deciduous tree) on the south bank east of the great dark-trunked tree: a fan of long, thin, straight bare stems rising from a point just above the south-bank hall's west hip and spreading up and east over the water among the dark tree's shoots.",
+   "pts": {
+    "base": [
+     20705,
+     1458,
+     "est"
+    ],
+    "top": [
+     20665,
+     900
+    ],
+    "crown_w": [
+     20690,
+     1000
+    ],
+    "crown_e": [
+     20950,
+     1100
+    ]
+   },
+   "support": "ground",
+   "vis": "part: its foot hidden behind S2.bld.south_bank_hall_21050's roof; its twigs mix with S2.tree.dark_trunk_willow_20530's shoots",
+   "conf": "low",
+   "note": "Added at the merge: S3's t9 saw \"a second bare tree whose twigs fan over 20650-20950, v 930-1390, its trunk hidden behind that roof (~20680, 1330 est)\" (seen east of the seam, for S2) and its twigs mixing with the dark tree's east of 20650; river_w read \"uprights at u 20610-20690\" as forked branches of the dark tree; t1 recorded one tree, whose shoots it gives out to crown_e (20830, 800). Merge crops gen/map/S2/look/merge_tree_20705.jpg (zoom 1.4) and merge_tree_20705_foot.jpg (zoom 3): a separate set of stems converges downward at u ~20650-20715, v 1300-1455, 60-100 px east of the dark tree's knobbed head (u 20515-20610, v 1230-1380), to a narrow foot just above the hall roof's hip line (v ~1470 here); base est there (the true foot is behind the roof, on the bank between the water, bank top v ~1265, and the hall). READINGS: its own tree (taken, conf low), or the east shoots of S2.tree.dark_trunk_willow_20530 (t1, river_w); then retire this one. For the second pass: the tree count matters to the user. Second pass (west): keep as its own tree (conf low). On a greyscale contrast-stretched crop (g_fan.jpg, zoom 1.35, u 20430-20960, v 880-1500) and at zoom 2.2-3 (g_tree20705.jpg, z_frame20720.jpg), the stems split into two sets: (1) the long straight shoot at u ~20645 (v ~900-1340) and its neighbours bend west into the dark tree's knobbed head at v ~1340-1370 (its east edge u ~20615): they are S2.tree.dark_trunk_willow_20530's; (2) two or three stems at u 20700-20720 run down past the head's level, about 90 px east of its edge, converging to the hall roof's west hip line at about (20710, 1455-1480), where they stop as if behind the roof, and fan up and east toward u 20850-20950, v 950-1100. A drooping willow whip would spread downward, not converge, so set (2) reads as a separate stem whose foot is hidden behind the roof, as S3's t9 saw. Between the two sets, at (20720-20760, 1330-1400), a pale shape with folds that the restyle paints as a wooden frame with a wheel and a hanging cloth reads on the scan as a gap between the stems and the hip (no frame strokes). Points kept; its crown_w (20640, 940) may lie on the dark tree's shoot: the lead may move it to about (20690, 1000). FRAME AGENT (second pass accepted): crown_w moved from (20640, 940) to (20690, 1000), as the second pass offered: the long shoot at u ~20645 is S2.tree.dark_trunk_willow_20530's, so this tree's crown starts at its own stems' west edge."
+  },
+  {
+   "id": "S2.fig.figure_under_eave_20625",
+   "kind": "figure",
+   "name": "figure between the dark tree and the south-bank hall's west eave (uncertain)",
+   "what": "A pale head in profile facing east, and perhaps a body below it, in the gap between the great dark-trunked tree's east side and the south-bank hall's west eave, at the silk's bottom edge.",
+   "pts": {
+    "foot": [
+     20630,
+     1785,
+     "est"
+    ],
+    "head": [
+     20625,
+     1632
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: below the head crossed by the eave's brackets and the roof's hatching; foot at or below the silk's bottom edge",
+   "conf": "low",
+   "note": "Added at the merge: S3's t9 (head ~(20625, 1645), body to v ~1720) and S3's structures_e (\"a figure stands at (20599-20656, 1628-1690)\") read a figure here; S2's t1 named the same pale patch (u 20600-20645, v 1630-1700) and did not record it, because at 45 x 60 px it is twice a figure's head at this v (\"the gap between trunk and eave brackets\"). Merge crop gen/map/S2/look/merge_figure_20625.jpg (zoom 3): a light patch with a profile-like contour (brow, nose, chin facing east) at u 20600-20650, v 1630-1700 and diagonal strokes below it to v ~1760. READINGS: a person standing under the eave (taken, conf low; foot est at the silk's edge, painted ~155 px, as the south-bank figures, 145-196 px), or the pale gap between the trunk and the eave brackets (t1); then retire it. For the second pass. Second pass (west): keep, conf low. t1's size objection does not hold near the silk's bottom edge: the pale patch's face-like part (brow line v ~1653 to chin v ~1700, u 20600-20632) is 45-50 px tall, and the nearest sure face at a similar v, the big-hat man's profile (S2.fig.big_hat_man_south_bank_22045, v 1613-1653 at foot v 1712), is 40 px; a figure standing at the silk's edge is painted larger still. Below the face only the eave's straight hatching (v 1677-1757) and a curved stroke like a hand or sleeve at (20630-20650, 1710-1745) show, so the body would be hidden behind the lower roof band. Which way it looks is not settled: the bumpy west contour (u 20600-20610, bumps at v ~1663-1690) reads as brow, nose and chin looking west (toward the trunk, facing 180), while the dark angled stroke at its east edge (20630-20647, 1657-1677) reads as a profile looking east (facing 0, as recorded). The other reading stays the eave's bracket set: a lobed bracket arm (栱) seen from the side under the hall's west eave (structures_w's brackets at 20580-20647, v 1603-1703) gives the same bumpy edge under a beam (the 'brow line'). Crops: z_eave_fig.jpg, z_face_color.jpg, g_eave.jpg, i_eave_fig.jpg."
+  }
+ ]
+}

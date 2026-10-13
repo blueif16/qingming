@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a pine-like tree as the scroll paints it, its needles drawn as fan-shaped clusters. A twisting, knotty trunk with pale grey bark scarred by dark knots leans and bends into a few heavy, crooked limbs. Along the limbs and at their ends sit dense, rounded fans of fine, short, straight needles radiating from one point like half-open fans, layered in flat tiers with sky between them.\nColours: pale grey-brown bark with dark knots; needles deep blue-green (about #4f6a58), a lighter fresh green on the upper fans; no yellow.\n\nThis one: A medium old tree with a short, thick, twisting trunk on spreading roots, its knotty limbs bending out to both sides, carrying the needle fans in two or three broad tiers; the crown about as wide as it is tall.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/pine_fan_1.jpg",
+  "gen/trees/refs/pine_fan_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "27793e1c2f4c",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 32.9,
+ "attempts": 1,
+ "idempotency_key": "2e33e9f7-880d-4f56-84f4-092ea7d6aab2",
+ "request_id": "d3c1fd75-3d18-431a-aa5c-e0c91a79642e",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4171,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3728,
+   "text_tokens": 443
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4171,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3728,
+   "text_tokens": 443
+  },
+  "total_tokens": 5821
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/e2898e85-6d2b-4e92-9392-573d2b6460ad"
+ ],
+ "files": [
+  "gen/trees/raw/pine_fan_4/27793e1c2f4c_0.png"
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene in a hand-inked, softly painted game style. Image 2 is a detail cut from an old Chinese handscroll: a cart's load covered by a large sheet of paper or silk written all over in cursive-script calligraphy (草书), a calligraphy screen used as a tarpaulin.\nPaint one flat, square texture swatch of that sheet seen straight on, filling the whole image edge to edge: pale cream paper, written all over in flowing Chinese cursive-script calligraphy in dark brown-black ink, vertical columns of linked characters running top to bottom, columns read right to left, varied stroke weight, a few dry-brush strokes, even spacing between the columns. Rendered in exactly image 1's style: hand-inked dark-brown linework, muted painted colours, soft and clean, true colours (cream paper, not aged yellow). Flat even lighting, no folds, no shadows, no border, no frame, no seals, no other objects, no background.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/vehicles/textures/screen_scan_ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "script_sheet"
+ },
+ "format": "png",
+ "generation_s": 42.4,
+ "attempts": 1,
+ "idempotency_key": "474f2285-fa8d-4168-9ae9-63143a82507e",
+ "request_id": "4a4c24e6-fea1-4a82-9489-6c062ca657b0",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3300,
+  "completion_tokens_details": {
+   "image_tokens": 3300,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3495,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3275,
+   "text_tokens": 220
+  },
+  "output_tokens": 3300,
+  "output_tokens_details": {
+   "image_tokens": 3300,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3495,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3275,
+   "text_tokens": 220
+  },
+  "total_tokens": 6795
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/084d13a3-7227-4a3b-87ed-c31b90db38b5",
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/1e5acc7f-4fe4-48dd-bd60-a8b4480f5a53"
+ ],
+ "files": [
+  "gen/vehicles/textures/script_sheet_0.png",
+  "gen/vehicles/textures/script_sheet_1.png"
+ ]
+}

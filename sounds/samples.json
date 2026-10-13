@@ -1,0 +1,219 @@
+{
+ "about": "First ElevenLabs test (2026-10-12): do its sound effects and Chinese voices fit the world? Sources: gen/life/design.md, gen/life/vignettes_S4_S6.md (lines, marked as our proposals), gen/life/sound_research.md (prompt rules: beds end 'no music, no speech'; one-shots dry). Run: node tools/eleven.mjs sounds/samples.json all Free key (2026-10-12): library voices and voice design are paid-only over the API, so the lines are read by premade voices (English-native) on eleven_v3 and eleven_v4; the designed voices wait for a paid plan.",
+ "voices": {
+  "laborer": {
+   "description": "A rough, loud middle-aged Chinese labourer from northern China, a carter who has worked outdoors all his life. Hoarse, earthy, blunt voice, speaking Mandarin with a slight Henan accent, natural and unpolished, not a narrator.",
+   "text": "啊——？这么多！去年哪有这个数！官人，你看这货单，一包一包都写得明明白白。慢些，慢些，门洞窄，莫碰着驼子。再推一把，正店就在前头了。这趟货送到，晚上去脚店吃两碗酒，歇歇这把老骨头。哎，让一让，让一让，车来了！"
+  },
+  "official": {
+   "description": "A stern middle-aged Chinese tax official, educated and self-important, speaking Mandarin slowly and formally with a slightly nasal tone, impatient with merchants. Natural, not a narrator.",
+   "text": "匹帛税重，照例该纳这个数。引子拿来。没有引子，照重税算。你们这些车户，每回都说货少，一包一包都要过秤，少一文也不行。你的货也在这里？排在后头，等着。下一个，报上名来，什么货？"
+  },
+  "old_man": {
+   "description": "An old Chinese man in his seventies, a street barber and storyteller. Warm, slightly raspy, thin voice, unhurried and humorous, speaking Mandarin with an old-fashioned northern flavour. Natural, not a narrator.",
+   "text": "抬头，莫动，这刀快。舒坦罢？老汉剃了四十年头，没伤过一个客官。话说那曹操引兵八十三万，下江南来，旌旗蔽日，好不威风！列位看官，且听下回分解。客官慢走，明日再来。"
+  },
+  "beggar_boy": {
+   "description": "A thin, pleading voice of a young teenage Chinese street boy, about thirteen, a beggar on a bridge, speaking Mandarin quickly and cheekily, a little hoarse from shouting. Natural, not a narrator.",
+   "text": "官人，赏一文罢！官人行行好，赏一文！这位客官，您老福大命大，赏一文罢！哎，那位官人不理咱们，走，去那边问问。谢官人！谢官人！官人，就一文，一文就好！"
+  },
+  "hawker": {
+   "description": "A loud Chinese street hawker in an old market town, a strong melodic sing-song voice calling out his wares in long drawn-out tones across the street, outdoors, energetic.",
+   "text": "炊饼——热炊饼嘞——！香糖果子——又香又甜嘞——！刚出锅的炊饼——一文钱两个——！过路的客官，尝一个罢——！炊饼——热炊饼嘞——！热的炊饼——两文三个嘞——！"
+  }
+ },
+ "units": {
+  "bed_inner_street": {
+   "kind": "sfx",
+   "seconds": 15,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Ambience of a busy open-air street market in an ancient town, daytime: indistinct murmur of many people talking at a distance, footsteps on packed earth, a wooden cart creaking slowly past, a donkey's hooves, occasional distant calls of street vendors. No music, no modern vehicles, no engines, no intelligible words."
+  },
+  "bed_gate_passage": {
+   "kind": "sfx",
+   "seconds": 12,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Inside a long brick-vaulted city gate tunnel: echoing footsteps and slow hooves on packed earth, the soft padding of a camel, muffled street noise from both open ends, strong reverberation. No music, no speech, no engines."
+  },
+  "bed_moat_bridge": {
+   "kind": "sfx",
+   "seconds": 12,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "On an old wooden plank bridge over a calm moat: gentle water lapping against wooden trestles below, hollow footsteps on timber planks passing by, a light breeze, distant murmur of a small town. No music, no speech, no engines."
+  },
+  "bed_outer_road": {
+   "kind": "sfx",
+   "seconds": 15,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Countryside dirt road lined with old willow trees on a spring morning: wind rustling through willow leaves, songbirds chirping, a distant rooster, a faint cart creaking far away. No music, no speech, no engines, no traffic."
+  },
+  "bed_night": {
+   "kind": "sfx",
+   "seconds": 15,
+   "loop": true,
+   "influence": 0.4,
+   "prompt": "Night in an ancient town in late summer: crickets and frogs chirping, a dog barking far away, a light wind, very quiet empty streets. No music, no speech, no engines."
+  },
+  "drum_dusk": {
+   "kind": "sfx",
+   "seconds": 10,
+   "prompt": "A large Chinese barrel drum on a city gate tower struck slowly with heavy wooden beaters at dusk: deep booming hits with a long decay, heard from the street below at a distance, outdoors. No music, no other instruments."
+  },
+  "ox_cart_bell": {
+   "kind": "sfx",
+   "seconds": 10,
+   "prompt": "A heavy wooden ox cart rolling slowly on a dirt road: the wooden axle creaking rhythmically, wheels crunching on gravel, a small iron bell hanging from the cart clinking with each jolt, slow ox hoof steps. No music, no speech."
+  },
+  "donkey_bray": {
+   "kind": "sfx",
+   "seconds": 4,
+   "prompt": "A single donkey braying loudly, outdoors, close, dry recording."
+  },
+  "camel_grumble": {
+   "kind": "sfx",
+   "seconds": 5,
+   "prompt": "A Bactrian camel grumbling and groaning low, close, outdoors, dry recording."
+  },
+  "razor_shave": {
+   "kind": "sfx",
+   "seconds": 5,
+   "prompt": "Close-up foley of a straight razor shaving stubble on a man's chin: slow scraping strokes, then the blade wiped on a cloth. Quiet, dry, no music."
+  },
+  "cleaver_chop": {
+   "kind": "sfx",
+   "seconds": 5,
+   "prompt": "A butcher chopping meat on a thick wooden block with a heavy cleaver: several solid thuds, outdoors, dry foley. No music."
+  },
+  "pole_creak": {
+   "kind": "sfx",
+   "seconds": 6,
+   "prompt": "A porter walking with a bamboo shoulder pole carrying two heavy baskets: the bamboo pole creaking rhythmically with each step, baskets swaying, footsteps on dirt. Close, dry, no music, no speech."
+  },
+  "bowstring": {
+   "kind": "sfx",
+   "seconds": 4,
+   "prompt": "A traditional wooden bow slowly drawn, the string creaking under tension, then released with a twang, no arrow impact. Close, dry."
+  },
+  "monk_clappers": {
+   "kind": "sfx",
+   "seconds": 5,
+   "prompt": "A wandering monk walking down a street clapping two wooden boards together in a slow steady rhythm, outdoors, mid distance. No music, no speech."
+  },
+  "tts_carter_gape_v3": {
+   "kind": "tts",
+   "voice": "SOYHLrjzK2X1ezoPC6cr",
+   "voice_name": "laborer",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "[shocked] 啊——？这么多！[frustrated] 去年哪有这个数！"
+  },
+  "tts_carter_gape_v4": {
+   "kind": "tts",
+   "voice": "SOYHLrjzK2X1ezoPC6cr",
+   "voice_name": "laborer",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "[shocked] 啊——？这么多！[frustrated] 去年哪有这个数！"
+  },
+  "tts_inspector_v3": {
+   "kind": "tts",
+   "voice": "onwK4e9ZLuTAKqWW03F9",
+   "voice_name": "official",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "匹帛税重，照例该纳这个数。引子拿来，没有引子，照重税算。"
+  },
+  "tts_inspector_v4": {
+   "kind": "tts",
+   "voice": "onwK4e9ZLuTAKqWW03F9",
+   "voice_name": "official",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "匹帛税重，照例该纳这个数。引子拿来，没有引子，照重税算。"
+  },
+  "tts_barber_v3": {
+   "kind": "tts",
+   "voice": "pqHfZKP75CvOlQylNhV4",
+   "voice_name": "old",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "抬头，莫动，这刀快。[chuckles] 老汉剃了四十年头，没伤过一个客官。"
+  },
+  "tts_barber_v4": {
+   "kind": "tts",
+   "voice": "pqHfZKP75CvOlQylNhV4",
+   "voice_name": "old",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "抬头，莫动，这刀快。[chuckles] 老汉剃了四十年头，没伤过一个客官。"
+  },
+  "tts_storyteller_v3": {
+   "kind": "tts",
+   "voice": "pqHfZKP75CvOlQylNhV4",
+   "voice_name": "old",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "[dramatic] 话说那曹操引兵八十三万，下江南来，旌旗蔽日，好不威风！"
+  },
+  "tts_storyteller_v4": {
+   "kind": "tts",
+   "voice": "pqHfZKP75CvOlQylNhV4",
+   "voice_name": "old",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "[dramatic] 话说那曹操引兵八十三万，下江南来，旌旗蔽日，好不威风！"
+  },
+  "tts_beggar_boy_v3": {
+   "kind": "tts",
+   "voice": "TX3LPaxmHKxFdv7VOQHJ",
+   "voice_name": "boy",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "[pleading] 官人，赏一文罢！官人行行好，赏一文！"
+  },
+  "tts_beggar_boy_v4": {
+   "kind": "tts",
+   "voice": "TX3LPaxmHKxFdv7VOQHJ",
+   "voice_name": "boy",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "[pleading] 官人，赏一文罢！官人行行好，赏一文！"
+  },
+  "tts_hawker_cry_v3": {
+   "kind": "tts",
+   "voice": "N2lVS1w4EtoT3dr4eOWO",
+   "voice_name": "hawker",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "[shouting] 炊饼——热炊饼嘞——！香糖果子——又香又甜嘞——！"
+  },
+  "tts_hawker_cry_v4": {
+   "kind": "tts",
+   "voice": "N2lVS1w4EtoT3dr4eOWO",
+   "voice_name": "hawker",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "[shouting] 炊饼——热炊饼嘞——！香糖果子——又香又甜嘞——！"
+  },
+  "tts_soldier_wait_v3": {
+   "kind": "tts",
+   "voice": "SOYHLrjzK2X1ezoPC6cr",
+   "voice_name": "laborer",
+   "model": "eleven_v3",
+   "stability": 0.5,
+   "text": "[sighs] 差官还不出来，日头都快晌午了。"
+  },
+  "tts_soldier_wait_v4": {
+   "kind": "tts",
+   "voice": "SOYHLrjzK2X1ezoPC6cr",
+   "voice_name": "laborer",
+   "model": "eleven_v4",
+   "stability": 0.5,
+   "text": "[sighs] 差官还不出来，日头都快晌午了。"
+  }
+ }
+}

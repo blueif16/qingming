@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 (Along the River During the Qingming Festival) and the only source for what this panel shows. Paint one very wide panel of a painted backdrop in exactly image 1's painting style (hand-inked dark-brown outlines, light hatching, flat muted painted colours, clean readable shapes), showing what image 2 paints, but as a view seen at eye level by a person standing on the ground at the edge of our scene and looking out: looking east down the river from the north foot of the great bridge at the east end of our scene: the next stretch of the scroll (image 2), seen from its west end at eye level. Image 2's left end is nearest to us and its right end farthest away; its top edge is on our left and its bottom edge on our right. Everything in this picture is far away across a stretch of white mist: its nearest things stand some seventy paces from us, so even the nearest people are small, about a twentieth of the image height, with their heads on the horizon and their feet just under it. The painted ground under the horizon is no deeper than those people are tall. The river runs away from us down the middle of the picture as a flat sliver of blue-green water with fine ink current lines and small eddy swirls, already narrow at its near end, no deeper than a standing man is tall, never a wide sheet of water reaching toward the bottom of the image; below it there is only white mist. On the left, along the river's near (north) bank, nearest: two old pollard willows with dark knobbed heads beside a tall fence of close slats; a long single-storey tiled shop row with open bays, a plain wall with a tiled coping, an open shop with a counter and a few people; moored along the bank in front of them, their bows toward us: a long low cargo boat under dark arched mat roofs with its crew, one man fending off with a pole; a low boat with a woven mat roof and a big coil of rope; a big cabin boat with a high stern, its steersman standing on it. Farther along the left bank: exactly five trackers bent forward in single file on the bank path, hauling on one long tow line that runs from them along the river to the masthead of the big boat at the far end; a huge old pollard willow at the top of the bank whose gnarled trunk is split into two legs like an inverted V; a white plastered wall with a dark tiled coping and a small roofed gateway with a closed double door; a long house with a plain plastered front, a band of lattice windows under a plank pent roof and a big grey tiled hip roof; rough stone steps down to the water; then a single-storey riverside dining terrace, an open-sided hall carried on posts over the bank with a balustrade, diners at its tables and a small gabled pavilion at its far end. Moored along the bank below the terrace and as long as it: a very long passenger boat whose cabin of lattice windows runs its whole length under a low curved roof, a curved post at its bow, a few people on its roof and its side walkway. Farthest on the left, small: an open-air eatery under a broad mat shelter on posts with empty tables and benches, porters bent under big sacks, a two-wheeled cart with a mat-covered load and a team of two dark mules. In the middle of the river, coming toward us: a boat driven by six men heaving together on one great stern sweep, its long blade trailing behind. The far end of the river is closed by two big boats lying side by side and filling it from bank to bank: in the middle, a big boat being towed upstream toward us, one tall mast stepped in a braced frame on its cabin roof with ropes fanning down from the masthead, crewmen on its deck; on its left, a very long, high-sided cargo boat moored along the left bank, a dark mat hood over its bow, windlasses and crewmen on its deck. Behind those two boats only the roofs of the two banks close in: no water shows beyond them, and no rows of houses run on toward the horizon. On the right, along the river's far (south) bank, nearest: a massive old pollard willow with a very dark, gnarled, knotted trunk and a fan of long thin bare shoots rising over the water; the big grey tiled hip roof of a hall on the bank, roof only; a second, huge old pollard willow with a massive knobbed trunk that forks into an upright stem and a heavy limb, its long bare shoots reaching far out over the water; under them a small open skiff, and a small boat with a mat canopy on four thin posts where a man sits, people on the bank holding something up to him; a long low building with a thatched roof and a tiled house with an open gable truss; a low earthen mound with a small open boat tied to it, a man sitting in it; farther, a long boat with an arched mat roof moored along a low spit of bank, a man pouring a bucket over its side. Beyond that spit the far bank ends: on the right of the two big boats only flat water fading into white mist. The willows are pollard willows before their leaves open: from each knobbly head a half-open fan of long, straight, stiff bare shoots springs upward and outward. They are NOT weeping willows: no hanging curtains, no drooping strands, no foliage. No bridge, no stone quay, no stone embankment, no straight canal running to the horizon, no lake, no island, no sails, no rainbow colours, no hills, no city wall, no tower, no pagoda, no green trees.\n\nRules for the panel:\n- Only what image 2 paints. Add nothing that image 2 does not show: no hills or mountains, no distant tree lines or forests, no lakes, rivers or islands, no towers, pagodas, city walls, flags, clouds, birds, sun or haze banks, unless the description above names them. Leave out image 2's red seals, inscriptions and silk damage.\n- Eye level. The viewer's eye is at the height of a standing person's eyes, so the horizon is one straight, level line across the whole image, a quarter of the way up from the bottom edge. The heads of all standing people are on that line, near or far; buildings, trees, carts and animals rise above it with their feet just under it. Below the horizon there is only a thin strip of level ground, a tenth of the image height at most. We never look down onto roofs, courtyards or the surface of a road: a road running away from us is a thin wedge of ground narrowing to the horizon.\n- Plain white everywhere else. The sky is flat pure white from the top edge down to the horizon, behind everything: no clouds, no blue, no gradient, no haze, no texture, no paper grain. Below the strip of ground the bottom of the image is the same pure white: the ground ends in soft white mist. The upper part of the image, above the tallest trees and roofs, is empty white.\n- Clear and crisp: every outline and colour as clear as in image 1, with no atmospheric haze and no fading toward the distance (the world adds its own mist). Trees keep clear branches and twigs with white showing between them.\n- The left and right eighths of the image hold only low ground and a few small things; they will fade into mist.\n- Colours of the real town in soft spring daylight, as in image 1: grey-blue clay tiles, white lime plaster, weathered brown timber, tan rammed earth and dusty roads, pale fresh-green willows, dark green pines, bare ink-brown branches. Not the yellow-brown of the aged silk in image 2; no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/rainbow_bridge/backdrop/east_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "3584x1280",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "east"
+ },
+ "format": "png",
+ "generation_s": 52.6,
+ "attempts": 1,
+ "idempotency_key": "e8464fd4-56e9-4182-b178-7ed9c70fc49b",
+ "request_id": "f6c94131-2c54-4cae-a27a-013bd289cd13",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3268,
+  "completion_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 6168,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4459,
+   "text_tokens": 1709
+  },
+  "output_tokens": 3268,
+  "output_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 6168,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4459,
+   "text_tokens": 1709
+  },
+  "total_tokens": 9436
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/2bac05df-1741-492a-8368-9a5cbae84c5a",
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/3fdc5125-c282-499b-ba4f-defb13c6c471"
+ ],
+ "files": [
+  "gen/sections/rainbow_bridge/backdrop/east_0.png",
+  "gen/sections/rainbow_bridge/backdrop/east_1.png"
+ ]
+}

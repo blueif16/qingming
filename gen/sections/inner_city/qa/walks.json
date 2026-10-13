@@ -1,0 +1,430 @@
+[
+ {
+  "label": "main street end to end, east -> west: from the S5 seam past 孙羊正店, the storyteller and the crossroads to the well's end",
+  "start": [
+   -40.2,
+   7.0
+  ],
+  "legs": [
+   [
+    180,
+    14.2
+   ],
+   [
+    90,
+    0.7
+   ],
+   [
+    180,
+    4.1
+   ]
+  ],
+  "expect": {
+   "X": [
+    -81.0,
+    -79.6
+   ],
+   "D": [
+    8.0,
+    9.0
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "along the street (D 7.0, then D 8.5 past the painted monk and scholars standing on the centre line at X -70..-72.5), 40 m; the last 4 m to the well are the paper stall's painted crowd. Nothing unpainted may block it"
+ },
+ {
+  "label": "main street end to end, west -> east: from the well back to the S5 seam",
+  "start": [
+   -80.4,
+   8.5
+  ],
+  "legs": [
+   [
+    0,
+    4.1
+   ],
+   [
+    270,
+    0.7
+   ],
+   [
+    0,
+    13.8
+   ]
+  ],
+  "expect": {
+   "X": [
+    -41.8,
+    -40.2
+   ],
+   "D": [
+    6.6,
+    7.4
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  }
+ },
+ {
+  "label": "up the cross street (east side, past the 太平车) to the top street, then west along it",
+  "start": [
+   -69.8,
+   12.4
+  ],
+  "legs": [
+   [
+    90,
+    6.3
+   ],
+   [
+    180,
+    7.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -87.0,
+    -85.5
+   ],
+   "D": [
+    25.8,
+    26.7
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "the 太平车 and its team fill the cross street's middle (painted), so the walk keeps to the clear lane by the corner shop's west wall (X -69.8), then the top street's clear lane (D 26.2)"
+ },
+ {
+  "label": "into 孙羊正店's open front (between the doorman and the 香 lamp-box) to the back of the front room",
+  "start": [
+   -50.35,
+   10.4
+  ],
+  "legs": [
+   [
+    90,
+    4.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    15.4,
+    16.5
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  },
+  "why": "the front room is 3.6 m deep (builder: deck to y0+3.6, its dark back at y0+3.6); you must stop there, not walk on into the hollow building"
+ },
+ {
+  "label": "into the 孫羊店 butcher's open front (between its middle posts) to its back wall",
+  "start": [
+   -61.78,
+   12.0
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    15.4,
+    16.2
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  }
+ },
+ {
+  "label": "into the cloth shop's open front (top street, east of its counters) to its back",
+  "start": [
+   -76.3,
+   25.2
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    28.8,
+    29.8
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  }
+ },
+ {
+  "label": "into the incense shop's open front from the cross street (between its scaffold poles)",
+  "start": [
+   -75.6,
+   16.3
+  ],
+  "legs": [
+   [
+    180,
+    4.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -81.9,
+    -79.6
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  },
+  "why": "the open front is about 2.4 m deep (builder: its dark back at xe0 - 2.4); you must stop there, not walk on into the hall"
+ },
+ {
+  "label": "round the well: along its south side to the west edge",
+  "start": [
+   -84.0,
+   9.8
+  ],
+  "legs": [
+   [
+    180,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -88.4,
+    -86.0
+   ],
+   "D": [
+    9.4,
+    11.3
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "heading west into the slanted west edge, the walker stops and slides north-west along it (the edge runs NW), so the end is a range along the edge"
+ },
+ {
+  "label": "round the well: up its east side (between the platform and the willow) and west behind it to the edge",
+  "start": [
+   -85.7,
+   10.2
+  ],
+  "legs": [
+   [
+    90,
+    2.2
+   ],
+   [
+    180,
+    2.6
+   ]
+  ],
+  "expect": {
+   "X": [
+    -91.0,
+    -89.6
+   ],
+   "D": [
+    14.0,
+    15.0
+   ],
+   "H": [
+    -0.2,
+    0.45
+   ]
+  }
+ },
+ {
+  "label": "west edge stops you (main street, square into the edge)",
+  "start": [
+   -84.5,
+   7.0
+  ],
+  "legs": [
+   [
+    213,
+    2.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -85.6,
+    -84.7
+   ],
+   "D": [
+    6.2,
+    7.0
+   ]
+  }
+ },
+ {
+  "label": "west edge stops you (by the 解 ring, square into the edge)",
+  "start": [
+   -78.6,
+   -1.8
+  ],
+  "legs": [
+   [
+    213,
+    2.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -79.8,
+    -78.9
+   ],
+   "D": [
+    -2.7,
+    -1.9
+   ]
+  }
+ },
+ {
+  "label": "south edge stops you (the open square west of the inn)",
+  "start": [
+   -72.4,
+   2.4
+  ],
+  "legs": [
+   [
+    270,
+    4.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    -4.4,
+    -3.8
+   ],
+   "X": [
+    -72.9,
+    -71.9
+   ]
+  }
+ },
+ {
+  "label": "south edge stops you (east of the south houses, by the rider)",
+  "start": [
+   -38.3,
+   -0.5
+  ],
+  "legs": [
+   [
+    270,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    -4.4,
+    -3.8
+   ]
+  }
+ },
+ {
+  "label": "north edge stops you (behind the corner shop, top street east end)",
+  "start": [
+   -66.0,
+   25.6
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    29.9,
+    30.5
+   ]
+  }
+ },
+ {
+  "label": "north edge stops you (top street west part, by the lattice frame)",
+  "start": [
+   -87.0,
+   25.6
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    29.9,
+    30.5
+   ]
+  }
+ },
+ {
+  "label": "east edge stops you on the inner city alone (main street, square into the S5 seam)",
+  "start": [
+   -41.0,
+   4.5
+  ],
+  "legs": [
+   [
+    37,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -39.7,
+    -38.7
+   ],
+   "D": [
+    5.3,
+    6.4
+   ]
+  }
+ },
+ {
+  "label": "east edge stops you on the inner city alone (north yard behind the 正店)",
+  "start": [
+   -56.0,
+   26.0
+  ],
+  "legs": [
+   [
+    37,
+    2.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    -55.5,
+    -54.5
+   ],
+   "D": [
+    26.3,
+    27.2
+   ]
+  }
+ }
+]

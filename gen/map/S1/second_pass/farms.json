@@ -1,0 +1,435 @@
+{
+ "section": "S1",
+ "pass": "second pass `farms`: owns u 33200-35400 (t5, t6), looked at 33050-35550; read against map/strokes/S1.json as merged 2026-10-12 (237 entities)",
+ "how": "Overlays of the merged strokes at zoom 0.45 over the whole range, then normalised scan windows: crowns at zoom 1.25-1.8, the houses, yard, barn and shed at zoom 2-2.6, the lower half at zoom 0.8-1.5. Zoom 3-5 crops in natural colour, normalised, greyscale, red channel and high-pass, with the restyle (countryside/east mosaic) beside them, wherever the merge notes flagged a doubt. Every crop and script is in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/ (crop.mjs draws the scan, the restyle or the strokes with a grid; build.py writes this file). Proposals only: nothing in the parts or the map was edited.",
+ "summary": "Two new entities are proposed, both conf low. A pale far willow (S1.tree.far_willow_34995): t6 folded its fan into the near willow's note, but the fan converges on its own point. The open floor behind the yard where the roller stands (S1.grd.floor_behind_yard_34285): t5 left it to structures_e, who did not record it. One duplicate in disguise: S1.str.posts_35075's east post and S1.fig.figure_in_shed_35108 are the same indigo-tinted inverted-V strokes; the figure reading is the stronger one. A painted post named only in a group note becomes the SE corner post of S1.bld.farmhouse_thatched_33955. The 'small shed' at the yard's west side is that house's east hip end, not a separate building. One point on the wrong stroke: S1.bld.farmhouse_thatched_34600's ridge_w sat on an elm stem, 45 px west of the roof. Two notes were mangled by the merge's renameRefs. The flagged doubts answered: the hump is not a stack; the yard's hedge is bushes; the dome has no post (a stack); the roller and the crossing stems agree. The bending farmer, the yard objects, the pale bird, the lean-to and the long roof's material stay open, with evidence added. For the lead: S1.road.main runs through nine trunk feet in front of the farmsteads.",
+ "entities": [
+  {
+   "id": "S1.tree.far_willow_34995",
+   "kind": "tree",
+   "name": "pale far willow crown behind the long farmhouse",
+   "what": "A small fan of long thin shoots drawn in pale grey ink, rising up and out to the north-west from a point just above the long farmhouse's ridge and the far roof's east slope: a far pollarded willow (willow_fan form, drawn small and pale for distance) standing behind the farmstead, its head and trunk hidden by the roofs. Early spring, bare or a faint haze.",
+   "pts": {
+    "base": [
+     34995,
+     640,
+     "est"
+    ],
+    "top": [
+     34960,
+     482
+    ],
+    "crown_w": [
+     34900,
+     520
+    ],
+    "crown_e": [
+     35025,
+     565,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk and foot hidden behind S1.bld.far_roof_34840 and S1.bld.farmhouse_long_34950; crown faint",
+   "conf": "low",
+   "src": "余辉: 寂静的谷场",
+   "note": "SECOND PASS (farms): no entity of its own. S1.tree.willow_pollard_35128's note folds these strokes into that willow ('Fainter shoots continue west over the back roof to about (34920, 500)'). Read on a greyscale crop at zoom 3 (wfan_g.jpg) and in colour at zoom 1.8 (wil_n.jpg): the pale shoots at u 34900-35025, v 480-600 converge on their own point at about (34990-35000, 597-600), just above the long farmhouse's ridge (v ~603) where the far roof's east slope runs down to it. That point is 130-160 px west of the near willow's west knob (35127-35160, 600-660), and the near willow's dark shoots reach west only to about u 35015-35020. The fan is drawn in the same pale grey wash as the far roof, so it stands far back. Base: a placeholder straight below the convergence point, at the long farmhouse's placeholder back (v 640); the true foot is north of the roofs (t5's rule for trees behind houses). Painted height, convergence to top, about 118 px. BOTH READINGS: a separate far willow (this entity), or the near willow's west shoots drawn pale (then decline this, and the near willow's note stands). The restyle also paints a separate pale tree here (u 34900-35020, v 490-600); that is a hint, not evidence."
+  },
+  {
+   "id": "S1.grd.floor_behind_yard_34285",
+   "kind": "grd",
+   "name": "open floor behind the yard, where the roller stands",
+   "what": "A stretch of plain, smooth bare ground behind (north of) the small yard's rail, between the big farmhouse's east end and the pale trunks by the standing farmer. Nothing stands on it but the idle stone roller in its frame, with the domed stack at its west edge. It is either a second threshing floor (the 谷场 of 寂静的谷场, swept and idle) or plain open ground behind the yard.",
+   "pts": {
+    "base": {
+     "sw": [
+      34130,
+      817
+     ],
+     "se": [
+      34440,
+      812,
+      "est"
+     ],
+     "ne": [
+      34440,
+      690,
+      "est"
+     ],
+     "nw": [
+      34150,
+      690,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "full",
+   "conf": "low",
+   "src": "名画记: 寂静的谷场 (pin 2)",
+   "note": "SECOND PASS (farms): a thing each side left to the other. t5 left it to structures_e: '(7) the plain floor north of the fence (34100-34350, v 680-815) where the roller stands: a candidate for the threshing floor of 寂静的谷场 (pin 2 at 34100)'. structures_e recorded only the yard south of the rail (S1.grd.yard_34205), so no entity holds the roller's ground. Read at zoom 1.8 and 2.5 (floor_ov.jpg, yard_n25.jpg). The surface is plain light silk with no strokes. South edge: the rail S1.str.rail_34170 (v 811-818; sw is the rail's west end) and, east of 34284, the back of the hedge clump of S1.str.hedge_yard_34265 (top v ~790-822). West edge: the big farmhouse's east hip and the elm trunk at u 34100-34120; S1.prop.haystack_34080 stands at it. East edge: the pale trunks and the farmer at u ~34410-34475. The north edge is not drawn (plain silk runs up into the elms' low twig sprays at v ~690-770), so ne and nw are est at v 690. Pin 2 (u 34100) falls here, and S1.prop.roller_frame_34158 (base (34158, 758)) stands on it. BOTH READINGS: a second threshing floor (a swept, level surface like S1.grd.threshing_floor_35225, which is drawn as plain silk too), or plain ground behind the yard. If the second, decline this: the builder's ground covers it at H 0. SCALE: about 310 x 125 px."
+  }
+ ],
+ "changes": [
+  {
+   "id": "S1.str.posts_35075",
+   "set": {
+    "pts.line": [
+     [
+      35057,
+      830,
+      "est"
+     ],
+     [
+      35155,
+      868
+     ]
+    ],
+    "pts.post_e_top": null
+   },
+   "was": {
+    "pts.line": [
+     [
+      35055,
+      830,
+      "est"
+     ],
+     [
+      35075,
+      830,
+      "est"
+     ],
+     [
+      35097,
+      830,
+      "est"
+     ]
+    ],
+    "pts.post_e_top": [
+     35095,
+     760
+    ]
+   },
+   "add_note": "SECOND PASS (farms): a duplicate in disguise with S1.fig.figure_in_shed_35108. This structure's east post ('strokes at u 35090-35107, v 750-830', post_e_top (35095, 760)) and t6's figure ('a curved stroke from (35097, 790) up to (35105, 768) and over to (35120, 773), with a dark blob at (35107-35117, 787-797)') are the same strokes. Read in colour at zoom 3-4 and high-pass at zoom 2.6 (insp_35090_790.jpg, shed_nat4.jpg, lean_hp.jpg, fork_n5.jpg), they are an inverted V: a west stroke from (35104, 760) down to (35093, 795) and an east stroke from (35108, 765) down to (35118, 800), with a dark mass in its east half (35110-35118, 780-800). (1) The strokes are tinted indigo, the garment colour; the west post at 35057 and the forked pole at 35150 are plain grey-black ink. (2) No shaft runs on below v ~800 to the ground at u 35092: the plank line at v 801-805 crosses plain silk there. A second dark mass under it at (35095-35115, 815-831) is where a crouching body would rest. So it is a figure, not a post. The frame then stands on the west post (35050-35065, v 750-830) and the forked pole (35155, 868); the line runs from one foot to the other. If the lead reads it as a post, keep this entity as it was and retire S1.fig.figure_in_shed_35108 instead: one of the two must go.",
+   "reason": "One painted thing recorded twice, as a person and as a post. The builder would place both.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/insp_35090_790.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/shed_nat4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/lean_hp.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/tf_n.jpg"
+   ]
+  },
+  {
+   "id": "S1.fig.figure_in_shed_35108",
+   "set": {},
+   "add_note": "SECOND PASS (farms): the same strokes were also S1.str.posts_35075's east post (see that entity). The figure reading is the stronger one: an inverted V of indigo-tinted strokes, apex (35105, 760), feet of the V at (35093, 795) and (35118, 800), with a dark mass in its east half. The garment colour and the lack of any shaft below v 800 rule out a post. It reads as a person in a dark cloak or hood, crouching or bending behind the plank, seen from behind. The dark mass at (35095-35115, 815-831) is his lower body or a jar beside the jar S1.prop.jar_shed_35058. conf stays low (a hung straw cape is still possible).",
+   "reason": "Settles the duplicate with the post in favour of the figure; the figure's points are unchanged.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/insp_35090_790.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/shed_nat4.jpg"
+   ]
+  },
+  {
+   "id": "S1.bld.farmhouse_thatched_33955",
+   "set": {
+    "pts.base.se": [
+     34142,
+     887
+    ],
+    "pts.bays": [
+     [
+      34142,
+      887
+     ]
+    ],
+    "pts.hip_foot_e": [
+     34150,
+     845
+    ],
+    "pts.post_se_top": [
+     34142,
+     848
+    ]
+   },
+   "was": {
+    "pts.base.se": [
+     34130,
+     892,
+     "est"
+    ],
+    "pts.hip_foot_e": [
+     34149,
+     822
+    ]
+   },
+   "add_note": "SECOND PASS (farms): the east hip comes down to a corner post. The thatched east slope's edge runs unbroken from about (34000, 700) through (34117, 793) to its lower corner at (34150, 843-848) (post_n.jpg zoom 3, bighouse_hp.jpg zoom 1.7). Under that corner a thin post stands from v 848 to its foot at (34142, 887) (t5 saw it too: 'a post at 34140-34148 down to v 885'). Recorded as this house's SE corner post (a bay), and the se base corner moves onto its foot (was est (34130, 892)). The hatched triangle t5 called 'the small thatched shed at the yard's west side (hatched gable 34117-34155, v 805-852)' is this house's east hip end, or a lean-to under it: no separate building. The hatched band of S1.str.fence_brush_33760 runs on under the corner to v ~890 west of the post, so here the band stands in front of the wall line.",
+   "reason": "A painted post was named only in a group note (S1.grp.farmyard_34200), and the 'small shed' in t5's left-to list was never recorded. Both are this building.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/post_n.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/post_nat4.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/bhe_z.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/bighouse_hp.jpg"
+   ]
+  },
+  {
+   "id": "S1.grp.farmyard_34200",
+   "set": {},
+   "replace_in_note": {
+    "old": "The small shed (hatched gable 34117-34155, v 805-852, a post at 34140-34148 down to v 885) and the fence rail (34122, 811)->(34235, 818) are structures_e's.",
+    "new": "The 'small shed' at the yard's west side (hatched gable 34117-34155, v 805-852, a post at 34140-34148 down to v 885) is the east hip end of S1.bld.farmhouse_thatched_33955 and its corner post (second pass); the fence rail (34122, 811)->(34235, 818) is S1.str.rail_34170. Behind the rail, the roller stands on the open floor S1.grd.floor_behind_yard_34285 (if accepted)."
+   },
+   "reason": "The note names a building that does not exist as an entity.",
+   "conf": "med"
+  },
+  {
+   "id": "S1.bld.farmhouse_thatched_34600",
+   "set": {
+    "pts.ridge_w": [
+     34605,
+     667
+    ]
+   },
+   "was": {
+    "pts.ridge_w": [
+     34557,
+     667
+    ]
+   },
+   "add_note": "SECOND PASS (farms): ridge_w moved from (34557, 667) to (34605, 667). On the scan at zoom 2-2.6 (h34600_n.jpg, m_34350_n.jpg) the rounded top runs over u 34603-34670 (v 655-668), its highest point at about (34635, 655). From its west shoulder (34605, 668) the roof drops through (34585, 678) and (34562, 693) to the lower west wing (34493-34551, v 705-750). The old point lay on the west stem of S1.tree.bare_elm_twin_34552 (u 34535-34568), 45 px west of the roof's outline, where the roof's edge is at v ~693.",
+   "reason": "A roof point on the wrong stroke (a tree stem): the builder shapes the roof from the ridge points.",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/h34600_n.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/h34600_ov.jpg"
+   ]
+  },
+  {
+   "id": "S1.str.hedge_yard_34265",
+   "set": {},
+   "replace_in_note": {
+    "old": "t6 recorded the east part of this belt as hedge shrubs, S1.str.hedge_yard_34265 (",
+    "new": "t6 recorded the east part of this belt as hedge shrubs, S1.tree.shrubs_34385 (retired; "
+   },
+   "add_note": "SECOND PASS (farms), bushes or brushwood: at zoom 2.6 (hedge_n.jpg) the east clump (34284-34430, v 788-918) is drawn as small rounded leaf-dab clusters with rounded tops, and no uprights, stakes or rails. That is bushes, t6's reading. The low south band (34122-34302, v 873-916) is too faint to tell.",
+   "reason": "The note says the entity was retired and names itself. merge_fixes.mjs runs renameRefs('S1.tree.shrubs_34385', 'S1.str.hedge_yard_34265') after noteOnce, so the rename rewrote the retired ID in the MERGE note too. Fix the order in merge_fixes.mjs, or apply this replacement after the rename.",
+   "conf": "high"
+  },
+  {
+   "id": "S1.str.fence_brush_34660",
+   "set": {},
+   "replace_in_note": {
+    "old": "t6 recorded the same belt as hedge shrubs, S1.str.fence_brush_34660 (",
+    "new": "t6 recorded the same belt as hedge shrubs, S1.tree.shrubs_34735 (retired; "
+   },
+   "add_note": "SECOND PASS (farms), bushes or brushwood: the west part (34495-34700) is the same leaf-dab clusters as the yard's east clump (bushes). In front of the barn's west bay (34715-34800, v 836-875) a few horizontal and slanting strokes may be rails or a low frame (rail_hp.jpg, rail_g.jpg; the restyle draws a rail fence there). Unreadable at zoom 3-4, so no entity is proposed; both readings stay.",
+   "reason": "Same renameRefs effect as on S1.str.hedge_yard_34265: the note names itself as retired.",
+   "conf": "high"
+  },
+  {
+   "id": "S1.str.fence_brush_33760",
+   "set": {},
+   "add_note": "SECOND PASS (farms), the hump: it is not a free-standing stack. At zoom 1.7-2.6 (hump_hp.jpg, hump_z.jpg, h1_norm.jpg) its outline is one crisp, smooth line from (33430, 845) up through (33500, 800) to (33560, 778), where it meets S1.bld.farmhouse_gable_33670's west eave corner (33575, 772). The surface inside is the same short slanted dashes as the rest of the band and as the thatch on the gable house's east slope (33680-33760, v 780-850), with no boundary between them. The band's lower edge is a straight dark line at v 867-881 (33430-33780), with a paler strip below it (v 881-899) and then the ground line. Nothing separates the hump from the band, so no prop is proposed. The evidence leans two ways. In the WEST (33400-33780) it favours reading (b): the smooth outline and the thatch dashes make the hump the west hip of a low thatched roof, with its eave at v ~875 (the front slope of the gable house's roof, or a low thatched wing in front of S1.bld.farmhouse_back_33450). In the EAST (33780-34150) it favours reading (a): S1.bld.farmhouse_thatched_33955's east hip ends at a corner post at (34142, 848-887) (see that entity), while the band runs on below the corner to v ~890, so there it stands in front of the wall line. The builder must not settle this silently. If the lead takes (b) for the west part, this line would start at u ~33780, and the west part becomes roof (a building entity, or eaves of S1.bld.farmhouse_gable_33670 lowered to v ~875).",
+   "reason": "Answers the merge's flag 'settle hump against thatch at zoom 2' with the measured outline; the fence-or-roof question stays open for the lead.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/hump_hp.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/hump_z.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/hump_rest.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/h1_norm.jpg"
+   ]
+  },
+  {
+   "id": "S1.prop.haystack_34080",
+   "set": {},
+   "add_note": "SECOND PASS (farms): no post or eave found (dome_n.jpg zoom 3, dome_hp.jpg zoom 4, roller_z4.jpg). The dome's top arc runs from (34063, 715) over (34085, 700) to (34100, 698). Its west side comes down to (34063, 745), where it meets the east hip slope of S1.bld.farmhouse_thatched_33955 (34060, 743) -> (34107, 790). Below the arc there is no open space and no shaft: the 'vertical stroke at ~34066 down to v ~745' is the dome's own west side ending on the slope. Its foot is hidden behind the big house's roof. It stays a stack (or the top of a roof behind the house), conf low.",
+   "reason": "Answers the merge's flag (stack or a small shelter on a post).",
+   "conf": "med",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/dome_n.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/dome_hp.jpg"
+   ]
+  },
+  {
+   "id": "S1.tree.willow_pollard_35128",
+   "set": {},
+   "replace_in_note": {
+    "old": "Fainter shoots continue west over the back roof to about (34920, 500).",
+    "new": "Fainter, pale shoots west of u 35020 over the back roof (to about (34900, 520)) converge on their own point at about (34995, 598): the second pass maps them as a separate far willow, S1.tree.far_willow_34995 (low)."
+   },
+   "reason": "Only if S1.tree.far_willow_34995 is accepted. The sheaf at 35171-35244 was checked too: it tapers to a point at v ~790 (east_n.jpg, tf_z3.jpg), so it is drooping shoots, as t6 read it, not a second trunk.",
+   "conf": "low"
+  },
+  {
+   "id": "S1.bld.farmhouse_long_34950",
+   "set": {},
+   "add_note": "SECOND PASS (farms), roof material: the eave is a crisp, straight double line at v 690-700 from u 34800 to 35100, with no ragged fringe like the barn's thatch (v 796-809). The slope is laid in rows of small scalloped marks, not the barn's slanted dashes (roofs_n.jpg, roofs_hp.jpg zoom 2.6). Those two signs lean to tile or a neatly trimmed roof, against the thatch the note calls probable. Both readings stay; a question for the lead, since it changes the kit part.",
+   "reason": "Answers the merge's flag on the long farmhouse's roof material with the evidence; no point changes.",
+   "conf": "low",
+   "crops": [
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/roofs_n.jpg",
+    "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S1_farms/roofs_hp.jpg"
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "flag": "the hump at 33400-33540 (stack, fence or thatch)",
+   "ids": [
+    "S1.str.fence_brush_33760",
+    "S1.bld.farmhouse_gable_33670",
+    "S1.bld.farmhouse_back_33450"
+   ],
+   "verdict": "not a stack: no new prop. Roof or fence stays open, now with measured points (change on S1.str.fence_brush_33760)",
+   "evidence": "The outline (33430, 845) -> (33500, 800) -> (33560, 778) is one smooth line joining the gable house's west eave corner. The dashes are continuous with the band and with the gable house's thatch. The lower edge is at v 867-881. The restyle's golden haystack is that hatched slope."
+  },
+  {
+   "flag": "the hedges (bushes or brushwood)",
+   "ids": [
+    "S1.str.hedge_yard_34265",
+    "S1.str.fence_brush_34660",
+    "S1.str.fence_brush_33760"
+   ],
+   "verdict": "yard's east clump and the east belt's west part: bushes (t6). West farmstead band: thatch-like dashes (see the hump). In front of the barn's west bay: possible rails, unreadable",
+   "evidence": "hedge_n.jpg and fence_n.jpg at zoom 2.6: rounded leaf-dab clusters, no uprights. bhe_z.jpg, hump_z.jpg: short slanted dashes. rail_hp.jpg: horizontal strokes at 34715-34800, v 836-875."
+  },
+  {
+   "flag": "S1.prop.haystack_34080 (stack or a small shelter on a post)",
+   "ids": [
+    "S1.prop.haystack_34080"
+   ],
+   "verdict": "stack (or a roof behind); no post, no eave",
+   "evidence": "Its west side ends on the big house's east hip slope at (34063, 745), so its foot is hidden behind the roof (dome_n.jpg, dome_hp.jpg)."
+  },
+  {
+   "flag": "the roller or a man with a wheel (S1.prop.roller_frame_34158)",
+   "ids": [
+    "S1.prop.roller_frame_34158"
+   ],
+   "verdict": "agree: roller in its frame, conf low",
+   "evidence": "At zoom 2.5-4 (yard_n25.jpg, roller_z4.jpg): a dark round mass (34150-34182, v 710-748), a short peg on top (34155-34160, v 697-712), a pale frame curving round its west side (34128-34150, v 705-752) and a pale bar at its east foot (34175-34200, v 735-755). The peg is about 5 px wide; the farmer's head 110 px east is about 20 px. No limbs and no feet are drawn. The restyle's man with a wheel stays a hint. It stands on the open floor proposed as S1.grd.floor_behind_yard_34285."
+  },
+  {
+   "flag": "the bending farmer and the yard objects (hens?)",
+   "ids": [
+    "S1.fig.bending_farmer_34252",
+    "S1.prop.yard_object_34170",
+    "S1.prop.yard_object_34208"
+   ],
+   "verdict": "agree, both readings stay",
+   "evidence": "The arch (34237-34268, v 811-853) has a straight west side and a shaded east side. Nothing at zoom 2.5-4 settles a bending person against a bell-shaped coop. yard_object_34170 (34150-34187, v 853-877) has a rounded body with a raised, bluish west end. yard_object_34208 (34190-34227, v 845-860) is long, pointed at its east end, with two short uprights above. Both fit hens as well as baskets or a trough (post_n.jpg, post_nat4.jpg, yard_n25.jpg). No change; the hen reading would add two animals, and the strokes cannot carry it."
+  },
+  {
+   "flag": "the pale bird (S1.ani.pale_bird_34250)",
+   "ids": [
+    "S1.ani.pale_bird_34250"
+   ],
+   "verdict": "agree, conf low",
+   "evidence": "At zoom 4 (bird_n.jpg): a pale bluish-white patch (34245-34258, v 308-345) among the twigs, with a small dark dot at its top (34242-34250, 302-308). That fits a perched bird with a dark head, or an abrasion. The restyle draws only twigs."
+  },
+  {
+   "flag": "S1.str.posts_35075 (frame or lean-to) and the figure under it",
+   "ids": [
+    "S1.str.posts_35075",
+    "S1.fig.figure_in_shed_35108",
+    "S1.prop.long_plank_shed_35060",
+    "S1.prop.jar_shed_35058",
+    "S1.prop.bench_35133",
+    "S1.prop.straw_strip_35206"
+   ],
+   "verdict": "duplicate found (the east post is the figure: see changes); frame or lean-to stays open",
+   "evidence": "Between the long farmhouse's eave (v 690-694) and the posts' tops (v 750-760), the diagonal strokes at u 34970-35030 are the barn's east hip, running from (34976, 751) to (35021, 796). The strokes at 35030-35100 are too faint to call a thatched lean-to roof (lean_hp.jpg). The forked pole (35150-35153, v 753-862, two prongs at its top), the bench (35103-35166, v 840-865) and the straw strip (35166-35244, v 858-867) sit on their strokes (tf_n.jpg, tf_ov.jpg)."
+  },
+  {
+   "flag": "the far roof and the long farmhouse's roof material",
+   "ids": [
+    "S1.bld.far_roof_34840",
+    "S1.bld.farmhouse_long_34950"
+   ],
+   "verdict": "far roof: agree (apex (34808, 506), grey wash; its east slope runs down under the pale fan of the proposed S1.tree.far_willow_34995). Long farmhouse: evidence added (crisp double eave, scalloped rows: tile or trimmed thatch)",
+   "evidence": "c_34600_n.jpg, wil_n.jpg, roofs_n.jpg, roofs_hp.jpg."
+  },
+  {
+   "flag": "the trees' crossing stems",
+   "ids": [
+    "S1.tree.elm_twin_33936",
+    "S1.tree.elm_spreading_34030",
+    "S1.tree.elm_slender_33906",
+    "S1.tree.elm_forked_33785",
+    "S1.tree.elm_tall_33865"
+   ],
+   "verdict": "agree with t5: separate trees, no change",
+   "evidence": "Red-channel crop at zoom 1.6 (grove_r.jpg, grove_ov.jpg): the leaning stem of elm_twin_33936 crosses in front of elm_spreading_34030. The latter's pale band runs on behind it at u 34021-34040 down to v ~907. The feet of elm_forked_33785, elm_tall_33865, elm_slender_33906 and elm_twin_33936 are four separate feet at v 925-947, so four trees by the brief's rule. elm_forked_33785's east stem leaves the same fork."
+  },
+  {
+   "flag": "the dark wash band 33200-33500, v 1490-1550, and the pale band's course east of 33000 (left by the willows pass)",
+   "ids": [
+    "S1.grd.bank_33650",
+    "S1.water.wash_band_34400",
+    "S1.grd.bank_south_34400"
+   ],
+   "verdict": "recorded; agree within 10-25 px, water or ground stays the user's question",
+   "evidence": "band_n.jpg and band_ov.jpg (zoom 1.5): the dark band is the lowest layer of bank_33650, a tongue with its tip at (33190-33200, 1483-1500). Its lower edge runs at about (33217, 1513), (33300, 1545) and (33400, 1573), against bank_foot/shore_n (33200, 1485), (33300, 1552), (33400, 1578). The pale wedge below it narrows east and is pinched at 33450-33650. Its south edge is the sharp dark line (33303, 1630) -> (33403, 1600) -> (33457, 1583) -> (33750, 1597), which matches bank_south_34400's bank_top / shore_s within ~10 px."
+  },
+  {
+   "flag": "everything else in u 33200-35400",
+   "ids": [
+    "S1.fig.farmer_by_hedge_34472",
+    "S1.tree.pale_trunk_34474",
+    "S1.tree.pale_trunk_34412",
+    "S1.tree.bare_elm_twin_34552",
+    "S1.tree.bare_elm_twin_34640",
+    "S1.tree.bare_elm_tall_34703",
+    "S1.prop.nest_33900",
+    "S1.prop.nest_34445",
+    "S1.prop.nest_34680",
+    "S1.prop.nest_34757",
+    "S1.bld.barn_open_34860",
+    "S1.prop.stack_34858",
+    "S1.prop.slatted_box_34960",
+    "S1.prop.crossed_poles_34925",
+    "S1.bld.farmhouse_gable_33670",
+    "S1.bld.farmhouse_back_33450",
+    "S1.tree.elm_forked_33433",
+    "S1.tree.elm_tall_33552",
+    "S1.tree.elm_33592",
+    "S1.grd.threshing_floor_35225",
+    "S1.grd.rocks_34620",
+    "S1.grd.rocks_34360"
+   ],
+   "verdict": "agree",
+   "evidence": "Overlays at zoom 0.45, 1.25-1.4 (crowns), 2-2.6 (houses, yard, barn, shed) and 0.8-1 (lower half). The farmer's head sits on his hat (34472, 762). The 'second figure' beside him (34495-34515, v 776-815) is the elm's stem (agree with t6). The four nests sit on their dark clumps. The barn's gable apex (34862, 680) and its three bays sit on their posts. The barn's props sit on the crate, the slatted box and the sloping trestle. The west houses' ridge and gable points sit on their outlines. The blob on the terrace (33439-33472, v 1034-1062) is a soft wash dot, not an animal (blob_n.jpg). The specks at (33967, 188) are 6 px stains. No figure, animal, boat or prop stands on the terrace or the lower bands (lo_*.jpg). The top strip v 0-250 is plain silk (top_w.jpg, top_e.jpg). By base, the range holds 18 trees (t5 11, t6 7), 19 with the proposed far willow."
+  }
+ ],
+ "for_lead": [
+  {
+   "what": "S1.road.main runs through the grove's trunk feet",
+   "detail": "Nine tree bases in front of the farmsteads lie between S1.road.main's edge_n and edge_s, five of them on or south of its centre line: elm_forked_33433 (905; n 893 / c 925 / s 960), elm_forked_33785 (935; 900/924/951), elm_tall_33865 (940; 902/925/952), elm_slender_33906 (935; 902/926/953), elm_twin_33936 (925; 902/926/954), elm_spreading_34030 (912 est; 903/928/958), bare_elm_twin_34552 (936; 916/938/960), bare_elm_twin_34640 (936; 916/937/960), bare_elm_tall_34703 (925 est; 917/936/960). On the scan (gl_ov.jpg, gl2_ov.jpg, zoom 2.6) the trunks stand on the light strip between the fences' feet (v ~895-918) and the top of the yard bank's dark face (v ~943-950). That strip is the only level ground there, and it is the trees' ground. The route as recorded walks through about nine trunks. Either the route's walkable line weaves between them (a build choice), or its centre moves to the bank's top just south of the trunk feet (v ~945-950) with edge_n on the trunk feet. The strokes don't settle which. (The bench, the straw strip and the crossed poles at 34925-35206 also lie inside the road strip, where the merge already noted the route runs through the threshing floor.)",
+   "conf": "high"
+  },
+  {
+   "what": "merge_fixes.mjs: renameRefs rewrites the MERGE notes",
+   "detail": "renameRefs('S1.tree.shrubs_34385', ...) and renameRefs('S1.tree.shrubs_34735', ...) run after the noteOnce calls that name those retired IDs. So S1.str.hedge_yard_34265's and S1.str.fence_brush_34660's notes now say they were retired, and name themselves (fixes in changes). No other note in S1 names its own ID.",
+   "conf": "high"
+  }
+ ],
+ "left_to": [
+  {
+   "what": "the frame or trestle-like strokes in front of the barn's west bay (34715-34800, v 836-875; possible rails, the restyle's rail fence)",
+   "to": "the lead: unreadable at zoom 2.4-4, no entity proposed; if anyone reads it, it is part of S1.str.fence_brush_34660 or a prop"
+  },
+  {
+   "what": "the possible second figure at the west post of the shed (indigo-tinged V at 35050-35075, v 755-790)",
+   "to": "the lead: too faint at zoom 4 to call a figure; kept as S1.str.posts_35075's west post"
+  }
+ ],
+ "lessons": [
+  "Compare low-confidence figures against posts and poles, not only against things of their own kind. On S1's threshing floor a figure (t6) and a structure's post (structures_e) were the same inverted-V strokes. The tool's near-duplicate check compares one kind, and the merge's cross-kind search paired rock/prop, roof/stack and hedge/tree, but not person/post. For every figure with conf low, list the posts, poles and frame points of structures within 20 px of its head-foot span.",
+  "On worn silk, colour separates a garment from a post. In S1 the painter tints clothing with indigo, while posts, poles and twigs are plain grey-black ink. Read a doubtful upright in natural colour at zoom 3-4 (scroll_inspect at half 45-60) before calling it a post or a figure. Also check whether a shaft continues to the ground: a post's does.",
+  "A pale crown with its own convergence point is its own tree. Far willows are drawn in pale grey wash beside a near willow's dark fan, and a tile agent may fold them into the near tree's note as 'fainter shoots'. Trace each fan to where its shoots converge, on a greyscale crop at zoom 3. Two convergence points 100+ px apart are two trees.",
+  "After the merge, test the route against the ground points. List every tree base and prop base that lies between the route's edge_n and edge_s. In S1 nine trunk feet stand in the road strip in front of the farmsteads, because the only level ground there is the trees' strip. The route's walkable line is then a choice for the lead, not a stroke reading.",
+  "In merge_fixes.mjs, rename references before writing MERGE notes that name the retired IDs (or skip notes in the rename). S1's renameRefs rewrote two retirement notes so that they named their own entity as retired."
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Paint a material sheet in exactly image 1's style (hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette). Flat, front-on, no perspective, no lighting gradient, no shadows, no text. A 2x3 grid of six square, seamlessly tileable swatches with thin gaps between them:\n1. grey-blue fired brick wall facing, small bricks in running bond with thin pale mortar lines\n2. rammed earth city wall, warm ochre earth with faint horizontal layer lines every hand-span and small cracks\n3. light grey dressed stone blocks (wall plinth and steps), large rectangular blocks with chisel marks\n4. red-brown painted timber (columns and beams), faint vertical grain, slightly worn paint\n5. weathered pale timber deck planks, long boards running left to right with gaps and nail heads\n6. packed earth ground with sparse dry grass tufts and small pebbles",
+ "refs": [
+  "qingming/gen/v1/target_street_B1.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "material_sheet"
+ },
+ "format": "png",
+ "generation_s": 40.3,
+ "attempts": 1,
+ "idempotency_key": "c634167f-00dc-4026-8df9-6de122bda02e",
+ "request_id": "aaa21b65-e6d8-4db2-991b-adeb0828333c",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 2307,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 207
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 2307,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 207
+  },
+  "total_tokens": 3891
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/5a3a9b15-657d-4e60-ba7e-a1fbd2581474"
+ ],
+ "files": [
+  "qingming/gen/sections/gate/textures/material_sheet_0.png"
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a boy of about seven from a better-off family: a child's proportions, about 4.8 heads tall, a round calm face with dark dot eyes, black hair under a soft dark cap. A dark brown-black robe to the knee with a crossed collar and long sleeves, tied with a narrow sash; pale trousers, white socks and black cloth shoes.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/child_robed/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 40.3,
+ "attempts": 1,
+ "idempotency_key": "6c6dc3f0-85cc-4199-b81f-81cd55d6728d",
+ "request_id": "678ffe44-b907-4a7b-8bf6-6faad466904e",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3777,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3448,
+   "text_tokens": 329
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3777,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3448,
+   "text_tokens": 329
+  },
+  "total_tokens": 5361
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/e800a36f-fe7d-445b-b305-8e2b9cfe4b6c"
+ ],
+ "files": [
+  "gen/characters/child_robed/sheet_0.png"
+ ]
+}

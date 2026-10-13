@@ -1,0 +1,116 @@
+/* The time instrument (time.js; gen/ui/r2_time.md): 晝夜卷 and its 時牌, top left in #dial. A paper slip holds an ivory
+   hour tablet and a small mounted handscroll of painted sky with a cinnabar "now" thread; under it the 初/正 and 刻
+   (the watch at night), the pace word and the 歸今 seal. Its footprint is published as --qm-dial-w / --qm-dial-h so
+   the HUD (hud.css) and the region banner (ui.css) sit round it without fixed numbers. Only transforms change while it
+   runs (the strip, the sun or moon); the words change when the reading does. */
+:root {
+  --qm-dial-w: 236px;
+  --qm-dial-h: 100px;
+}
+@media (max-width: 640px) {
+  :root { --qm-dial-w: 180px; --qm-dial-h: 82px; }
+}
+
+.qm-time {
+  --tm-tablet: 36px; --tm-sky: 36px; --tm-band: 16px; --tm-gap: 6px; --tm-frame: 9px;
+  position: fixed; top: var(--qm-top); left: var(--qm-left); z-index: 805; width: var(--qm-dial-w); height: var(--qm-dial-h);
+  box-sizing: border-box; color: var(--qm-ink); font-family: var(--qm-font-text);
+  user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; touch-action: none;
+}
+@media (max-width: 640px) {
+  .qm-time { --tm-tablet: 30px; --tm-sky: 28px; --tm-band: 14px; --tm-gap: 5px; --tm-frame: 7px; }
+}
+
+/* the paper slip (STYLE.md §4: the brush-edged 9-slice) */
+.tm-slip {
+  box-sizing: border-box; width: 100%; height: 100%;
+  border: var(--tm-frame) solid transparent; border-image: var(--qm-frame-slip) 24 / var(--tm-frame) / 0 stretch; border-image-slice: 24 fill;
+  filter: var(--qm-lift);
+  display: grid; grid-template-columns: var(--tm-tablet) 1fr; grid-template-rows: calc(var(--tm-sky) + var(--tm-band) + 4px) 1fr; /* + the mount's two silk edges */
+  column-gap: var(--tm-gap); row-gap: 2px; align-items: stretch;
+}
+
+/* the ivory hour tablet (時牌): the 時辰 large, written down. In the 楷 face (QM Text, 霞鶩文楷), not the display brush:
+   Bakudai's 巳 leaves its top open and reads as 已 (and its 戌 as 戍) at tablet size; the Song tablets were carved in
+   standard script anyway (gen/ui/r2_time.md, "The tablet's face") */
+.tm-tablet {
+  grid-row: 1 / 3; display: grid; place-items: center; box-sizing: border-box;
+  border: 6px solid transparent; border-image: var(--qm-frame-plaque) 24 / 6px / 0 stretch; border-image-slice: 24 fill;
+}
+.tm-name {
+  writing-mode: vertical-rl; text-orientation: upright; font: 400 24px/1.02 var(--qm-font-text); letter-spacing: 0.02em;
+  color: #1d1916; white-space: nowrap;
+}
+@media (max-width: 640px) { .tm-name { font-size: 19px; } .tm-tablet { border-width: 5px; } }
+
+/* the handscroll: a window on the painted day, mounted in silk, with its rollers at the ends; drag it */
+.tm-scroll {
+  position: relative; overflow: hidden; cursor: grab; touch-action: none; outline: none;
+  border-top: 2px solid var(--qm-mount); border-bottom: 2px solid var(--qm-mount);
+  background: var(--qm-paper-hi); /* the ruler's paper under the sky */
+}
+.qm-time.is-drag .tm-scroll { cursor: grabbing; }
+.tm-strip { position: absolute; left: 0; top: 0; height: 100%; will-change: transform; }
+.tm-sky { display: block; }
+/* the paper rolls away at both ends */
+.tm-scroll::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(42, 36, 32, 0.32), rgba(42, 36, 32, 0) 9%, rgba(42, 36, 32, 0) 91%, rgba(42, 36, 32, 0.32)); }
+.tm-roller { position: absolute; top: -2px; bottom: -2px; width: 4px; background: linear-gradient(90deg, #3a2f25, #6b5a48 45%, #3a2f25);
+  border-radius: 2px; z-index: 2; pointer-events: none; }
+.tm-l { left: 0; } .tm-r { right: 0; }
+
+/* the twelve 時辰 along the ruler; the current one in cinnabar */
+.tm-marks { position: absolute; left: 0; top: var(--tm-sky); height: var(--tm-band); width: 100%; }
+.tm-mark { position: absolute; top: 0; transform: translateX(-50%); font: 400 calc(var(--tm-band) - 1px)/var(--tm-band) var(--qm-font-text);
+  color: var(--qm-ink-soft); }
+.tm-mark.on { color: var(--qm-cinnabar); }
+
+/* now: a cinnabar thread with a bead, as the plaques hang */
+.tm-now { position: absolute; left: 50%; top: 0; bottom: 0; width: 0; border-left: 1.5px solid var(--qm-cinnabar); z-index: 1; pointer-events: none;
+  transform: translateX(-0.75px); }
+.tm-now::before { content: ''; position: absolute; left: -3.75px; top: -1px; width: 6px; height: 6px; border-radius: 50%; background: var(--qm-cinnabar); }
+
+/* the sun or the moon on the thread (clipped at the horizon line, so it sets behind the far bank) */
+.tm-orbs { position: absolute; left: 0; right: 0; top: 0; height: calc(var(--tm-sky) * 0.78); overflow: hidden; pointer-events: none; z-index: 1; }
+.tm-orb { position: absolute; left: 50%; top: 0; width: 16px; height: 16px; overflow: visible; }
+@media (max-width: 640px) { .tm-orb { width: 13px; height: 13px; } }
+.tm-glow { fill: rgba(255, 246, 225, 0.38); }
+.tm-disc { fill: #fff4e2; }
+.tm-rim { fill: none; stroke: rgba(60, 40, 30, 0.35); stroke-width: 0.8; }
+.tm-lit { display: none; fill: #ecebe2; }
+.tm-orb.is-moon .tm-glow { fill: rgba(220, 228, 255, 0.22); }
+.tm-orb.is-moon .tm-disc { fill: #3c4560 !important; }
+.tm-orb.is-moon .tm-lit { display: block; }
+.tm-orb.is-moon .tm-rim { stroke: rgba(230, 232, 240, 0.55); }
+
+/* the row under the scroll: 初/正 and 刻 (the watch at night), the pace, 歸今 */
+.tm-row { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.tm-sub { flex: 1; font: 400 14px/1 var(--qm-font-text); letter-spacing: 0.08em; color: var(--qm-ink); white-space: nowrap; }
+.tm-pace, .tm-back { position: relative; border: 0; padding: 0; margin: 0; background: none; cursor: pointer; color: inherit; font: inherit; }
+/* touch targets reach past the small marks */
+.tm-pace::before, .tm-back::before { content: ''; position: absolute; inset: -6px -5px; }
+.tm-pace { display: grid; place-items: center; min-width: 22px; height: 20px; font: 400 17px/1 var(--qm-font-title); color: var(--qm-ink);
+  background: linear-gradient(var(--qm-ink-faint), var(--qm-ink-faint)) center bottom / 80% 1.5px no-repeat; }
+.qm-time.is-local .tm-pace { color: var(--qm-cinnabar); }
+.tm-back { display: none; }
+.qm-time:not(.is-local) .tm-back { display: block; }
+.tm-back-seal { display: block; width: 23px; height: 27px; box-sizing: border-box; padding: 2px 0 0; text-align: center; white-space: nowrap;
+  writing-mode: vertical-rl; text-orientation: upright; font: 400 10px/23px var(--qm-font-title); letter-spacing: -0.08em;
+  background: var(--qm-seal); color: var(--qm-paper-hi); transform: rotate(-4deg);
+  -webkit-mask: var(--qm-seal-mask) center / 100% 100% no-repeat; mask: var(--qm-seal-mask) center / 100% 100% no-repeat;
+  animation: qm-stamp 240ms var(--qm-ease) both; }
+@media (max-width: 640px) {
+  .tm-sub { font-size: 12.5px; letter-spacing: 0.04em; }
+  .tm-pace { font-size: 15px; min-width: 20px; height: 18px; }
+  .tm-back-seal { width: 20px; height: 23px; font-size: 8.5px; line-height: 20px; }
+}
+
+/* T: the instrument has the keys */
+.qm-time.is-focus .tm-slip { filter: var(--qm-lift) drop-shadow(0 0 0.5px var(--qm-cinnabar)) drop-shadow(0 0 2px rgba(181, 50, 30, 0.6)); }
+.tm-hint { display: none; position: absolute; left: calc(100% + 6px); top: 4px; padding: 4px 8px; white-space: nowrap; font-size: 12.5px; color: var(--qm-ink);
+  background: rgba(var(--qm-mist), 0.9); border-radius: 2px; }
+.tm-hint .qm-gloss { display: block; }
+.qm-time.is-focus .tm-hint { display: block; }
+html.qm-touch .tm-hint { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) { .tm-back-seal { animation: qm-fade-in 150ms both; } }

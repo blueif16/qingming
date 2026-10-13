@@ -1,0 +1,11 @@
+{
+ "about": "Machine-readable section list for tools/scroll_map.mjs. Scan x ranges follow reference/scroll/sections.md section 2 (余辉's seven segments). Keys are S<n> plus an optional letter (S4b = the second part of S4, built after part 1 under its own key). folder = the sections/<folder>/ that builds the section, if any. area = the part of x that is mapped and built so far, when it is less than the whole section (tools use area || x).",
+ "S1": {"name": "郊野 · 古柳: the countryside", "x": [29050, 37610], "folder": "countryside", "x_note": "starts at u 29050, not 28700 (round 2 Phase 0): the 望楼饭铺 shed and its customers (u 28250-29000) stay whole in S2; sections.md puts the boundary in a zone, 28700-29000"},
+ "S2": {"name": "汴河 · 运河两岸: the canal wharves", "x": [20500, 29050], "folder": "canal"},
+ "S3": {"name": "虹桥: the Rainbow Bridge", "x": [15500, 20500], "folder": "rainbow_bridge"},
+ "S4": {"name": "城门口外: the outer road", "x": [9400, 15500], "area": [9400, 12600], "folder": "outer_road", "area_note": "part 1 (2026-10-11): the ox carts, the temple, the courier post and the fortune-teller; u 12600-15500 (the palm-covered family carts, the wheelwright, the moorings) is S4b (outer_road_2)"},
+ "S4b": {"name": "城门口外 (part 2): the outer road east, to the moorings", "x": [12600, 15500], "folder": "outer_road_2", "note": "S4 part 2 under its own key (round 2 Phase 0), so part 1's map files never change; IDs S4b.<kind>.<slug>"},
+ "S5": {"name": "城门: the city gate", "x": [5600, 9400], "folder": "gate"},
+ "S6": {"name": "城内十字街 · 闹市: the inner city", "x": [2000, 5600], "folder": "inner_city"},
+ "S7": {"name": "卷尾 · 赵太丞家: the end", "x": [815, 2000], "folder": "city_end"}
+}

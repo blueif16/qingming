@@ -1,0 +1,203 @@
+{
+ "url": "http://127.0.0.1:5190/world.html",
+ "pages": [
+  {
+   "device": "desktop",
+   "shots": [
+    {
+     "name": "desktop_day_hud",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.settings.close(); t.ui.help(false); t.ui.night(false); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().settings;",
+     "wait": 400
+    },
+    {
+     "name": "desktop_day_help",
+     "js": "t.ui.help(true); await new Promise(r=>setTimeout(r,600)); return t.ui.state().help;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_day_set_time",
+     "js": "t.ui.help(false); await t.ui.settings.open('time');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_view",
+     "js": "t.ui.settings.page('view'); t.ui.settings.select('camDistance'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_sound",
+     "js": "t.ui.settings.page('sound');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_ui",
+     "js": "t.ui.settings.page('ui');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_display",
+     "js": "t.ui.settings.page('display'); t.ui.settings.select('pixelRatioCap'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_set_adv",
+     "js": "t.ui.settings.page('adv'); t.ui.settings.select('tune'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_day_closed",
+     "js": "t.ui.settings.close(); await new Promise(r=>setTimeout(r,400)); return t.ui.state().settings;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_night_hud",
+     "hour": 21.5,
+     "at": "inner_city:spawn",
+     "js": "t.ui.settings.close(); t.ui.help(false); t.ui.night(true); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().settings;",
+     "wait": 400
+    },
+    {
+     "name": "desktop_night_help",
+     "js": "t.ui.help(true); await new Promise(r=>setTimeout(r,600)); return t.ui.state().help;",
+     "wait": 200
+    },
+    {
+     "name": "desktop_night_set_time",
+     "js": "t.ui.help(false); await t.ui.settings.open('time');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_set_view",
+     "js": "t.ui.settings.page('view'); t.ui.settings.select('camDistance'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_set_sound",
+     "js": "t.ui.settings.page('sound');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_set_ui",
+     "js": "t.ui.settings.page('ui');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_set_display",
+     "js": "t.ui.settings.page('display'); t.ui.settings.select('pixelRatioCap'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_set_adv",
+     "js": "t.ui.settings.page('adv'); t.ui.settings.select('tune'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "desktop_night_closed",
+     "js": "t.ui.settings.close(); await new Promise(r=>setTimeout(r,400)); return t.ui.state().settings;",
+     "wait": 200
+    }
+   ]
+  },
+  {
+   "device": "phone",
+   "shots": [
+    {
+     "name": "phone_day_hud",
+     "hour": 10,
+     "at": "inner_city:spawn",
+     "js": "t.ui.settings.close(); t.ui.help(false); t.ui.night(false); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().settings;",
+     "wait": 400
+    },
+    {
+     "name": "phone_day_help",
+     "js": "t.ui.help(true); await new Promise(r=>setTimeout(r,600)); return t.ui.state().help;",
+     "wait": 200
+    },
+    {
+     "name": "phone_day_set_time",
+     "js": "t.ui.help(false); await t.ui.settings.open('time');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_view",
+     "js": "t.ui.settings.page('view'); t.ui.settings.select('camDistance'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_sound",
+     "js": "t.ui.settings.page('sound');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_ui",
+     "js": "t.ui.settings.page('ui');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_display",
+     "js": "t.ui.settings.page('display'); t.ui.settings.select('pixelRatioCap'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_set_adv",
+     "js": "t.ui.settings.page('adv'); t.ui.settings.select('tune'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_day_closed",
+     "js": "t.ui.settings.close(); await new Promise(r=>setTimeout(r,400)); return t.ui.state().settings;",
+     "wait": 200
+    },
+    {
+     "name": "phone_night_hud",
+     "hour": 21.5,
+     "at": "inner_city:spawn",
+     "js": "t.ui.settings.close(); t.ui.help(false); t.ui.night(true); await new Promise(r=>setTimeout(r,2500)); return t.ui.state().settings;",
+     "wait": 400
+    },
+    {
+     "name": "phone_night_help",
+     "js": "t.ui.help(true); await new Promise(r=>setTimeout(r,600)); return t.ui.state().help;",
+     "wait": 200
+    },
+    {
+     "name": "phone_night_set_time",
+     "js": "t.ui.help(false); await t.ui.settings.open('time');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_set_view",
+     "js": "t.ui.settings.page('view'); t.ui.settings.select('camDistance'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_set_sound",
+     "js": "t.ui.settings.page('sound');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_set_ui",
+     "js": "t.ui.settings.page('ui');  await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_set_display",
+     "js": "t.ui.settings.page('display'); t.ui.settings.select('pixelRatioCap'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_set_adv",
+     "js": "t.ui.settings.page('adv'); t.ui.settings.select('tune'); await new Promise(r=>setTimeout(r,700)); return t.ui.settings.state().sel;",
+     "wait": 300
+    },
+    {
+     "name": "phone_night_closed",
+     "js": "t.ui.settings.close(); await new Promise(r=>setTimeout(r,400)); return t.ui.state().settings;",
+     "wait": 200
+    }
+   ]
+  }
+ ]
+}

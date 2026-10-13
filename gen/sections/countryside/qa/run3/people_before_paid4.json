@@ -1,0 +1,1006 @@
+{
+ "about": "Who the countryside's people and animals are and what they do: every painted figure and animal of S1 (map/text/S1.md, u 29050-37610) at its mapped spot (layout.json), and nobody else (map/BUILDING.md). Written by gen/sections/countryside/make_people.py (the casting of gen/expand/countryside_needs.md and the lead's calls of 2026-10-12: everyone from the 22 existing characters); rerun it when the workshop delivers characters, clips and props, or when the builder rebuilds (its raw GLB's colliders, ground_at.json, placed.json). figures: character (the catalogue's target; a pose fallback where neither the target nor the interim can hold the pose yet: cast_why), stand_in (the interim cast until the target is built), do = [clip, seconds] cycles with clips the playing character has (clips_why: what is still to make), nudge = [dX, dD] (nudge_why), scale for children (scale_why), ride = the animal a rider sits on, props = carried prop_<name> parts (props_why). walkers: the charcoal train's drivers, the travellers on foot and the runaway horse's grooms, walking along their painted direction and back (walkers_why). animals: each painted animal at its map position facing hind to fore, model and load from web/public/assets/animals/animals.json; path = it walks (the charcoal train, the travellers' donkeys, the runaway horse). No traffic.",
+ "figures": {
+  "man_with_stick_29205": {
+   "character": "farmer",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "props": [
+    "hoe"
+   ]
+  },
+  "traveller_standing_29996": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "props": [
+    "stick_bag"
+   ]
+  },
+  "child_29674": {
+   "character": "child_robed",
+   "do": [
+    [
+     "reach",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "scale": 0.62
+  },
+  "stall_customer_29280": {
+   "character": "farmer",
+   "do": [
+    [
+     "sit",
+     12
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.32
+   ]
+  },
+  "traveller_rider_30165": {
+   "character": "townsman",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "props": [
+    "wind_hood",
+    "wind_cape"
+   ],
+   "ride": "donkey_traveller_30216"
+  },
+  "stall_man_29328": {
+   "character": "townsman",
+   "do": [
+    [
+     "talk",
+     10
+    ]
+   ],
+   "props": [
+    "back_bundle"
+   ],
+   "nudge": [
+    0.0,
+    -0.16
+   ]
+  },
+  "man_at_post_29812": {
+   "character": "robed_man",
+   "do": [
+    [
+     "beckon_lean",
+     10
+    ]
+   ]
+  },
+  "traveller_rider_30495": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "props": [
+    "wind_hood",
+    "wind_cape"
+   ],
+   "ride": "donkey_traveller_30546"
+  },
+  "far_figure_29230": {
+   "character": "farmer",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.12,
+    0.03
+   ]
+  },
+  "far_figure_29257": {
+   "character": "farmer",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    0.12,
+    -0.03
+   ]
+  },
+  "far_figure_29337": {
+   "character": "farmer",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "far_figure_29466": {
+   "character": "farmer",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.06,
+    -0.57
+   ]
+  },
+  "far_figure_29482": {
+   "character": "straw_hat",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "nudge": [
+    0.07,
+    0.67
+   ]
+  },
+  "sedan_bearer_front_30828": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.26,
+    0.32
+   ]
+  },
+  "sedan_bearer_rear_30990": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry",
+     10
+    ]
+   ],
+   "nudge": [
+    0.02,
+    0.22
+   ]
+  },
+  "porter_pole_31083": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "porter_boxes_30908": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.35,
+    0.15
+   ]
+  },
+  "rider_party_30988": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "ride": "horse_party_31023"
+  },
+  "porter_walking_31070": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "party_porter_staff_31131": {
+   "character": "porter",
+   "do": [
+    [
+     "stand_pole",
+     10
+    ]
+   ],
+   "props": [
+    "staff"
+   ]
+  },
+  "bending_farmer_34252": {
+   "character": "farmer",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ]
+   ],
+   "nudge": [
+    0.06,
+    0.0
+   ]
+  },
+  "farmer_by_hedge_34472": {
+   "character": "farmer",
+   "do": [
+    [
+     "stand_sleeves",
+     10
+    ]
+   ],
+   "nudge": [
+    0.79,
+    0.79
+   ]
+  },
+  "figure_in_shed_35108": {
+   "character": "farmer",
+   "do": [
+    [
+     "crouch",
+     10
+    ]
+   ],
+   "nudge": [
+    0.18,
+    0.0
+   ]
+  }
+ },
+ "nudge_why": {
+  "stall_customer_29280": "painted seated at the small table (S1.prop.stall_table_small_29285, choice radius 0.3 m) just south of his feet, facing east to the standing man; at real size his legs (farmer sit: hips +0.02 m, toes 0.38 m ahead of his spot) ran into it: he sits 0.32 m off, the least move that clears it, the table beside his knees",
+  "stall_man_29328": "as built, his spot was 0.09 m from S1.bld.stall_annex_29350: he steps 0.16 m to stand 0.25 m clear of it",
+  "far_figure_29230": "the two small shapes crouching together in the far field: painted 0.35 m from far_figure_29257, closer than two bodies (0.52 m): each steps 0.13 m back from the other",
+  "far_figure_29257": "the two small shapes crouching together in the far field: painted 0.35 m from far_figure_29230, closer than two bodies (0.52 m): each steps 0.13 m back from the other",
+  "far_figure_29466": "one of the two small figures painted beside the far ox on the field bank: at real size (ox, 2.06 m long, 0.71 m wide, at its painted place) his spot fell inside its body; he steps 0.58 m to stand 0.30 m clear of its right flank",
+  "far_figure_29482": "one of the two small figures painted beside the far ox on the field bank: at real size (ox, 2.06 m long, 0.71 m wide, at its painted place) his spot fell inside its body; he steps 0.68 m to stand 0.30 m clear of its left flank",
+  "sedan_bearer_front_30828": "painted under the front end of the willow sedan's poles, carrying them (the sedan is built carried and stands, S4's precedent): the kit's poles run 0.465 m either side of its axis, so he stands with his right shoulder under the right-hand pole (sedan_carry holds it 0.18 m right of his centre line), 0.15 m inside its end",
+  "sedan_bearer_rear_30990": "painted under the rear end of the willow sedan's poles, carrying them (the sedan is built carried and stands, S4's precedent): the kit's poles run 0.465 m either side of its axis, so he stands with his right shoulder under the right-hand pole (sedan_carry holds it 0.18 m right of his centre line), 0.15 m inside its end",
+  "porter_boxes_30908": "painted walking east beside the party's rider, at his horse's rump: at real size (horse, 2.05 m long, 0.70 m wide, at its painted place) his spot fell inside its body; he steps 0.38 m to stand 0.30 m clear of its rump",
+  "bending_farmer_34252": "as built, his spot was 0.20 m from S1.prop.yard_object_34208: he steps 0.06 m to stand 0.25 m clear of it",
+  "farmer_by_hedge_34472": "as built, his spot was inside S1.tree.pale_trunk_34474: he steps 1.12 m to stand 0.25 m clear of it",
+  "figure_in_shed_35108": "as built, his spot was 0.08 m from S1.prop.jar_shed_35058: he steps 0.18 m to stand 0.25 m clear of it"
+ },
+ "walkers": [
+  {
+   "id": "traveller_staff_30357",
+   "figure": "traveller_staff_30357",
+   "character": "porter",
+   "clip": "carry_pole",
+   "speed": 0.863,
+   "pause": [
+    "idle",
+    4
+   ],
+   "path": [
+    [
+     286.9,
+     1.28
+    ],
+    [
+     287.39,
+     1.04
+    ],
+    [
+     287.88,
+     0.69
+    ],
+    [
+     288.26,
+     0.29
+    ],
+    [
+     288.58,
+     -0.05
+    ],
+    [
+     288.75,
+     -0.26
+    ],
+    [
+     289.02,
+     -0.27
+    ],
+    [
+     289.5,
+     -0.35
+    ],
+    [
+     289.88,
+     -0.42
+    ],
+    [
+     290.09,
+     -0.41
+    ],
+    [
+     290.38,
+     -0.22
+    ],
+    [
+     290.8,
+     0.03
+    ],
+    [
+     291.22,
+     0.28
+    ],
+    [
+     291.63,
+     0.52
+    ],
+    [
+     292.05,
+     0.77
+    ]
+   ],
+   "props": [
+    "staff_shoulder",
+    "back_bundle"
+   ]
+  },
+  {
+   "id": "groom_leading_donkey_30648",
+   "figure": "groom_leading_donkey_30648",
+   "character": "robed_man",
+   "clip": "lead",
+   "speed": 0.863,
+   "pause": [
+    "idle",
+    4
+   ],
+   "path": [
+    [
+     289.32,
+     -1.03
+    ],
+    [
+     289.8,
+     -1.11
+    ],
+    [
+     290.26,
+     -1.1
+    ],
+    [
+     290.68,
+     -0.86
+    ],
+    [
+     291.1,
+     -0.61
+    ],
+    [
+     291.51,
+     -0.36
+    ],
+    [
+     291.93,
+     -0.11
+    ],
+    [
+     292.35,
+     0.13
+    ],
+    [
+     292.77,
+     0.38
+    ],
+    [
+     293.2,
+     0.61
+    ],
+    [
+     293.63,
+     0.83
+    ],
+    [
+     294.07,
+     1.04
+    ],
+    [
+     294.52,
+     1.12
+    ],
+    [
+     294.99,
+     1.01
+    ],
+    [
+     295.46,
+     0.9
+    ]
+   ]
+  },
+  {
+   "id": "groom_chasing_30353",
+   "figure": "groom_chasing_30353",
+   "character": "groom",
+   "clip": "run",
+   "speed": 3.5,
+   "pause": [
+    "idle",
+    2
+   ],
+   "path": [
+    [
+     300.32,
+     15.28
+    ],
+    [
+     295.32,
+     15.28
+    ]
+   ]
+  },
+  {
+   "id": "groom_chasing_30518",
+   "figure": "groom_chasing_30518",
+   "character": "groom",
+   "clip": "run",
+   "speed": 3.5,
+   "pause": [
+    "idle",
+    2
+   ],
+   "path": [
+    [
+     302.22,
+     14.93
+    ],
+    [
+     297.22,
+     14.93
+    ]
+   ]
+  },
+  {
+   "id": "groom_chasing_30697",
+   "figure": "groom_chasing_30697",
+   "character": "groom",
+   "clip": "run",
+   "speed": 3.5,
+   "pause": [
+    "idle",
+    2
+   ],
+   "path": [
+    [
+     304.08,
+     17.21
+    ],
+    [
+     299.08,
+     17.21
+    ]
+   ]
+  },
+  {
+   "id": "charcoal_driver_36250",
+   "figure": "charcoal_driver_36250",
+   "character": "straw_hat",
+   "clip": "drive_donkeys",
+   "speed": 0.863,
+   "pause": [
+    "idle",
+    4
+   ],
+   "path": [
+    [
+     372.66,
+     15.61
+    ],
+    [
+     373.15,
+     15.71
+    ],
+    [
+     373.68,
+     15.8
+    ],
+    [
+     374.28,
+     15.7
+    ],
+    [
+     374.64,
+     15.22
+    ],
+    [
+     374.93,
+     14.81
+    ]
+   ],
+   "props": [
+    "stick"
+   ]
+  },
+  {
+   "id": "charcoal_driver_36797",
+   "figure": "charcoal_driver_36797",
+   "character": "straw_hat",
+   "clip": "drive_donkeys",
+   "speed": 0.863,
+   "pause": [
+    "idle",
+    4
+   ],
+   "path": [
+    [
+     381.51,
+     11.39
+    ],
+    [
+     382.0,
+     11.29
+    ],
+    [
+     382.52,
+     11.19
+    ],
+    [
+     383.05,
+     11.15
+    ],
+    [
+     383.56,
+     11.13
+    ],
+    [
+     384.01,
+     11.11
+    ]
+   ],
+   "props": [
+    "stick"
+   ]
+  }
+ ],
+ "walkers_why": {
+  "traveller_staff_30357": "the travellers ride east as painted (both donkeys and the walker face east, away from the city) along S1.road.path_30300 and on along the road it joins: 6.0 m from each one's spot and 0.8 m back (then donkey_traveller_30216 at -0.9 m: its body 0.01 m from figure traveller_standing_29996 (+0.17 m)), together at the donkey's pace 0.863 m/s; the standing traveller at the path's west end (traveller_standing_29996) stays, looking after them; he walks 0.7 m north of the path's centre line, beside the donkeys, not 1.15 m behind the second one's rump (carry_pole played at 0.63 of its natural 1.37 m/s)",
+  "groom_leading_donkey_30648": "the travellers ride east as painted (both donkeys and the walker face east, away from the city) along S1.road.path_30300 and on along the road it joins: 6.0 m from each one's spot and 0.8 m back (then donkey_traveller_30216 at -0.9 m: its body 0.01 m from figure traveller_standing_29996 (+0.17 m)), together at the donkey's pace 0.863 m/s; the standing traveller at the path's west end (traveller_standing_29996) stays, looking after them (lead played at 0.57 of its natural 1.51 m/s)",
+  "groom_chasing_30353": "runs west after the runaway horse, as painted: 2.0 m west of his spot (to the line X 295.29 (the horse's rump at its spot + 0.51 m: no groom reaches it)), and 3.0 m back east behind it, at 3.5 m/s; the horse walks west from its spot and never comes back east of it, so no groom ever reaches it",
+  "groom_chasing_30518": "runs west after the runaway horse, as painted: 2.0 m west of his spot (to X 297.19, where groom_chasing_30353, painted 1.9 m ahead of him in his lane, turns, plus that spacing), and 3.0 m back east behind it, at 3.5 m/s; the horse walks west from its spot and never comes back east of it, so no groom ever reaches it",
+  "groom_chasing_30697": "runs west after the runaway horse, as painted: 4.0 m west of his spot, and 1.0 m back east behind it, at 3.5 m/s; the horse walks west from its spot and never comes back east of it, so no groom ever reaches it",
+  "charcoal_driver_36250": "the charcoal train walks east-south-east as painted (the lead, build_rules.md: every readable head is at the east end, against the title 赶驴入城) along S1.road.main past the small bridge's landing: 2.5 m from each one's spot (then donkey_charcoal_36323 at +2.6 m: its body 0.07 m from edge:shore) and 0.0 m back behind it (then donkey_charcoal_36508 at -0.1 m: its body 0.06 m from edge:shore), in its painted order (D5 leading east, a driver at each end), all at the donkey's walking pace 0.863 m/s",
+  "charcoal_driver_36797": "the charcoal train walks east-south-east as painted (the lead, build_rules.md: every readable head is at the east end, against the title 赶驴入城) along S1.road.main past the small bridge's landing: 2.5 m from each one's spot (then donkey_charcoal_36323 at +2.6 m: its body 0.07 m from edge:shore) and 0.0 m back behind it (then donkey_charcoal_36508 at -0.1 m: its body 0.06 m from edge:shore), in its painted order (D5 leading east, a driver at each end), all at the donkey's walking pace 0.863 m/s",
+  "held": {
+   "the tomb-sweeping party": "the willow sedan is built carried and does not move (S4's precedent, the lead 2026-10-12): its bearers play sedan_carry in place under its poles, and the porters painted walking with it (porter_pole_31083, porter_walking_31070, party_porter_staff_31131) hold with it; the rider (on the standing horse) and the porter with the boxes face east as painted. Their walk waits for a procession routine on the page (clips_why procession)",
+   "the riders": "traveller_rider_30165 and traveller_rider_30495 ride their walking donkeys (people.js seats a rider on its animal every frame), rider_party_30988 his standing horse"
+  }
+ },
+ "animals": {
+  "water_buffalo_lying_29462": {
+   "model": "buffalo",
+   "do": [
+    [
+     "lie",
+     10
+    ]
+   ]
+  },
+  "ox_standing_29540": {
+   "model": "ox",
+   "do": [
+    [
+     "graze",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "far_ox_29515": {
+   "model": "ox",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "runaway_horse_30075": {
+   "model": "horse",
+   "path": [
+    [
+     293.75,
+     13.8
+    ],
+    [
+     286.75,
+     13.8
+    ]
+   ]
+  },
+  "horse_party_31023": {
+   "model": "horse",
+   "load": "saddle",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "donkey_traveller_30216": {
+   "model": "donkey",
+   "load": "saddle_cloth",
+   "path": [
+    [
+     284.81,
+     1.33
+    ],
+    [
+     285.29,
+     1.27
+    ],
+    [
+     285.73,
+     1.06
+    ],
+    [
+     286.17,
+     0.85
+    ],
+    [
+     286.61,
+     0.64
+    ],
+    [
+     287.05,
+     0.43
+    ],
+    [
+     287.43,
+     0.15
+    ],
+    [
+     287.76,
+     -0.2
+    ],
+    [
+     288.1,
+     -0.56
+    ],
+    [
+     288.44,
+     -0.89
+    ],
+    [
+     288.92,
+     -0.97
+    ],
+    [
+     289.4,
+     -1.05
+    ],
+    [
+     289.88,
+     -1.13
+    ],
+    [
+     290.33,
+     -1.06
+    ],
+    [
+     290.75,
+     -0.81
+    ]
+   ]
+  },
+  "donkey_traveller_30546": {
+   "model": "donkey",
+   "load": "saddle_cloth",
+   "path": [
+    [
+     287.94,
+     -0.4
+    ],
+    [
+     288.28,
+     -0.75
+    ],
+    [
+     288.7,
+     -0.93
+    ],
+    [
+     289.18,
+     -1.01
+    ],
+    [
+     289.66,
+     -1.09
+    ],
+    [
+     290.14,
+     -1.17
+    ],
+    [
+     290.56,
+     -0.93
+    ],
+    [
+     290.98,
+     -0.68
+    ],
+    [
+     291.39,
+     -0.43
+    ],
+    [
+     291.81,
+     -0.18
+    ],
+    [
+     292.23,
+     0.06
+    ],
+    [
+     292.65,
+     0.31
+    ],
+    [
+     293.07,
+     0.55
+    ],
+    [
+     293.51,
+     0.77
+    ],
+    [
+     293.94,
+     0.98
+    ]
+   ]
+  },
+  "donkey_charcoal_36323": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "path": [
+    [
+     373.86,
+     15.19
+    ],
+    [
+     373.97,
+     14.97
+    ],
+    [
+     374.25,
+     14.57
+    ],
+    [
+     374.54,
+     14.17
+    ],
+    [
+     374.81,
+     13.77
+    ],
+    [
+     375.12,
+     13.3
+    ]
+   ]
+  },
+  "donkey_charcoal_36410": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "path": [
+    [
+     375.34,
+     14.23
+    ],
+    [
+     375.6,
+     13.82
+    ],
+    [
+     375.84,
+     13.53
+    ],
+    [
+     376.25,
+     13.4
+    ],
+    [
+     376.72,
+     13.25
+    ],
+    [
+     377.19,
+     13.12
+    ]
+   ]
+  },
+  "donkey_charcoal_36508": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "path": [
+    [
+     376.42,
+     12.62
+    ],
+    [
+     376.91,
+     12.48
+    ],
+    [
+     377.4,
+     12.35
+    ],
+    [
+     377.9,
+     12.23
+    ],
+    [
+     378.39,
+     12.12
+    ],
+    [
+     378.89,
+     12.01
+    ]
+   ]
+  },
+  "donkey_charcoal_36666": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "path": [
+    [
+     378.44,
+     12.81
+    ],
+    [
+     378.93,
+     12.7
+    ],
+    [
+     379.41,
+     12.61
+    ],
+    [
+     379.91,
+     12.51
+    ],
+    [
+     380.41,
+     12.4
+    ],
+    [
+     380.9,
+     12.26
+    ]
+   ]
+  },
+  "donkey_charcoal_36745": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "path": [
+    [
+     380.15,
+     11.76
+    ],
+    [
+     380.61,
+     11.63
+    ],
+    [
+     381.1,
+     11.48
+    ],
+    [
+     381.61,
+     11.37
+    ],
+    [
+     382.1,
+     11.27
+    ],
+    [
+     382.62,
+     11.17
+    ]
+   ]
+  }
+ },
+ "animals_why": {
+  "models": "species, tack and load as painted (map/text/S1.md, needs list \"Animals\"), all at real size: the registry donkey with its pannier_charcoal (the charcoal train) and saddle_cloth (the travellers), the horse with its saddle (the party's rider) and bare (the runaway horse), the ox (yellow-dun) for the ox at the stall and the far ox",
+  "water_buffalo_lying_29462": "the buffalo variant (ox body, slate tone, horns_swept)",
+  "ox_standing_29540": "the pale brown ox standing before the stall's east end, facing us and a little west, its head lowered between its forelegs: graze, with an idle",
+  "far_ox_29515": "low confidence (an ox at the plough, or a cart or brushwood pile): built as its recorded reading, the registry ox standing (idle), with its two small figures beside its flanks",
+  "runaway_horse_30075": "built whole (the S1 area agent; the user's question stays open): the registry horse at real size, no tack, its lost front half supplied; it goes west as painted, 7.0 m from its spot along its painted heading and back, on walk (people.js plays `walk` on every animal path, at the horse's 1.104 m/s; the registry horse has walk, walk_low, head_low, graze, lie and idle, no gallop): wanted, a procedural gallop on our rig (free) and a clip option on people.js animal paths",
+  "horse_party_31023": "the party's horse, painted walking east under its rider against the sedan's westward walk: held with the party, standing (idle) with its saddle (tack_saddle, which the rider sits on)",
+  "charcoal train": "the charcoal train walks east-south-east as painted (the lead, build_rules.md: every readable head is at the east end, against the title 赶驴入城) along S1.road.main past the small bridge's landing: 2.5 m from each one's spot (then donkey_charcoal_36323 at +2.6 m: its body 0.07 m from edge:shore) and 0.0 m back behind it (then donkey_charcoal_36508 at -0.1 m: its body 0.06 m from edge:shore), in its painted order (D5 leading east, a driver at each end), all at the donkey's walking pace 0.863 m/s. the charcoal train set out at real size (5 donkeys 1.49 m long, 0.8 m across the panniers, painted overlapping in a 4.7 m file): in its painted order along S1.road.main, D5 leading east, 1.9 m apart, the file +0.75 m along the road from the painted donkeys' mean, in alternate lanes (-0.41 and +0.28 m off the road's centre line, D5 south); the east driver 1.4 m ahead of D5 in its lane, the west driver in the other lane (north of D1's), 1.3 m behind D1 (D2, in his lane, is 3.1-3.2 m on) (the longest walk clear of the trunks, the stream and the edges, then the least move; gen/sections/countryside/make_people.py)",
+  "travellers": "the travellers ride east as painted (both donkeys and the walker face east, away from the city) along S1.road.path_30300 and on along the road it joins: 6.0 m from each one's spot and 0.8 m back (then donkey_traveller_30216 at -0.9 m: its body 0.01 m from figure traveller_standing_29996 (+0.17 m)), together at the donkey's pace 0.863 m/s; the standing traveller at the path's west end (traveller_standing_29996) stays, looking after them",
+  "walk clips": "people.js plays `walk` on every animal path (at the registry's speed, pausing [idle, 4] at each end); wanted: the donkey's walk_low (the head and neck hanging low, as the horse's, procedural and free) for the four charcoal donkeys painted with their heads hanging (D5, D3, D2, D1) and the first traveller's donkey, the horse's gallop for the runaway horse, and a clip option on animal paths",
+  "pale_bird_34250": "not built: waits on a pale bird variant and the lead's reading (a crow would be wrong) (build_choices.json unbuilt)"
+ },
+ "clips_why": {
+  "about": "Actions the painting asks for that the wanted character lacks. \"to make, free\": a local retarget (from:) or a trimmed clip back from gen/; \"NEW take\": a Text to Motion take (10 credits once). Rerun make_people.py when they land; meanwhile each figure plays the nearest plan its character (or pose fallback) can.",
+  "drink": "seated, drinking (free: from:scholar/drink, Meshy 343) -- farmer [to make]: stall_customer_29280 (farmer plays sit)",
+  "procession": {
+   "about": "the tomb-sweeping party painted walking (the sedan west-south-west, its porters with it, the rider and the porter with the boxes east): they hold now (no figure walks away from the carried sedan). Wanted on the page: a group routine that walks the carried sedan a short way and back with its bearers at its poles and the porters at their painted offsets, playing:",
+   "sedan_bearer_front_30828": "sedan_walk (bearer: trimmed, back free from gen/)",
+   "sedan_bearer_rear_30990": "sedan_walk (bearer: trimmed, back free from gen/)",
+   "porter_pole_31083": "carry_pole + pole_basket_branches (stand-in pole_baskets), west",
+   "porter_walking_31070": "walk, west",
+   "party_porter_staff_31131": "carry_pole + staff on the shoulder (a new binding), west",
+   "porter_boxes_30908": "carry_pole + pole_hampers (stand-in pole_boxes), east",
+   "rider_party_30988": "ride, on the horse walking east"
+  }
+ },
+ "scale_why": {
+  "child_29674": "painted 64 px against the man at the post's 146 px (needs list): 0.44 of a 1.70 m man, on the child_robed model (1.20 m) 0.62 = 0.74 m tall"
+ },
+ "cast_why": {
+  "soldier": "farmer_by_hedge_34472 (interim): the soldier (a belted knee-length jacket and a cap) plays the farmer by the hedge until the farmer lands (needs list: a new pairing)",
+  "camel_driver": "traveller_rider_30495 and figure_in_shed_35108: the camel driver's indigo mantle is the hooded rider's cloak and the indigo-tinted cloak under the shed (needs list: a new pairing)",
+  "about": "character = the catalogue's cast (gen/expand/round2/catalogue.md §7: farmer 9, straw_hat 3, groom 3, the rest from the 22); stand_in = the needs list's cast by dress from the 22, which world.js plays until the target is built. A figure in a pose (seated, riding, crouching) whose target and interim both lack its clips plays the nearest character that has one, written as its character (POSE in the script), until one of them can"
+ },
+ "props_why": {
+  "man_with_stick_29205": "the hoe on his shoulder (bound to idle on the scholar); his painted pointing arm waits for point to hold it",
+  "traveller_standing_29996": "the stick and bag held before his chest (bound to idle on the scholar); his look waits for look to hold it",
+  "party_porter_staff_31131": "held with the sedan: he stands holding his knobbed staff upright (the porter's staff is bound to stand_pole); painted walking with it on his shoulder",
+  "wanted": {
+   "hat_on_back": "NEW (optional): a broad straw hat hanging at the back of the shoulders on its strings, flying a little, on run (or chase_run). No stand-in (the idler's GLB has no back_bundle) -- groom_chasing_30353 (idler: new prop)",
+   "hoe": "NEW 锄: a 1.6 m long-handled hoe with a small hooked or forked head over the right shoulder, on point. Stand-in: the scholar's staff, upright in idle -- man_with_stick_29205 (farmer: new prop); man_with_stick_29205 (scholar: new prop)",
+   "lead_rope": "existing (robed_man, hold_rope): a binding on lead when the robed man's lead is back -- groom_leading_donkey_30648 (robed_man: robed_man has prop_lead_rope held in hold_rope)",
+   "stick_bag": "NEW: a short stick (0.6 m) upright before the chest in both hands, a long dark bag hanging from its top. No stand-in (the staff is 1.98 m) -- traveller_standing_29996 (scholar: new prop)"
+  },
+  "about": "carried props as painted (needs list \"Props carried by figures\"), on only when the playing character's GLB has prop_<name> and the figure plays only the clip that holds it (characters/props.json); a stand-in prop is named in the figure's note"
+ }
+}

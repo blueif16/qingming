@@ -1,0 +1,27 @@
+[
+ {
+  "label": "S2: board the hooded-bow cargo boat from the north bank, up its west bridge (X 200, 28 deg) onto its high deck (H 1.0)",
+  "start": [
+   200.05,
+   19.0
+  ],
+  "legs": [
+   [
+    270,
+    2.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    15.6,
+    16.4
+   ],
+   "H": [
+    0.9,
+    1.15
+   ]
+  },
+  "why": "its bank bridges at X 202 and 204 rise 40 and 37 deg, over the walker's 34 deg limit; the west one (rim piece 12) rises 28 deg. Its crew stand on the deck behind the rim (the seated man at 199.86, 15.76)",
+  "from": "sections/canal/walks.json"
+ }
+]

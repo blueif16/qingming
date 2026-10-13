@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one animal cut from the painting this game is based on; people, harness and other things may overlap it. Redraw the animal from image 2 as a game creature that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows of the animal: its species and breed, build, proportions, coat colours and markings, mane, ears, horns and tail. Ignore image 2's pose, its harness, saddle, cloth, load and rider, the people and the background.\nThe animal is a black Chinese domestic pig of the Northern Song, the kind that roamed open ground at the edge of town: about 0.6 m at the back, a long low body with a slightly sagging back and a round belly, short sturdy legs with small cloven hooves, a long straight snout with a flat round nose, small eyes, medium ears flopping forward over the eyes, a thin tail with a tuft. Coarse black coat with a ridge of longer bristles along the spine, a dark grey snout and belly. Simple clean shapes, no fine hair detail.\nTurnaround sheet for 3D modelling on a 2 by 2 grid: the same animal four times, each one whole with empty margin around it, all four at the same scale. Top left: side view, facing left, in true profile. Top right: three-quarter view from the front left. Bottom left: front view, facing the viewer. Bottom right: back view. It stands square and calm on all four legs, the legs straight and a little apart so that every leg is separately visible, head and neck in a natural relaxed carriage, tail hanging, mouth closed. Bare: no saddle, no cloth, no collar, no harness, no load, no rider. Plain flat mid-grey background, no ground, no shadows, no scenery, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/animals/pig/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "2048x2048",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 38.4,
+ "attempts": 1,
+ "idempotency_key": "c8093c46-b29a-4e61-abb9-8d46ea5ec732",
+ "request_id": "2c6f0f27-144c-4fc1-b9f3-2216109fc041",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3317,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2878,
+   "text_tokens": 439
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3317,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2878,
+   "text_tokens": 439
+  },
+  "total_tokens": 4967
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/2db8708f-d33d-4b5b-b5a3-7a8777947c61"
+ ],
+ "files": [
+  "gen/animals/pig/sheet_0.png"
+ ]
+}

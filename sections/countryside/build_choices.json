@@ -1,0 +1,392 @@
+{
+ "about": "Where the build of S1 (the countryside, the scroll's start) departs from the scroll map, each with its reason (map/BUILDING.md rule 7). moves: shift an entity (tools/map_layout.mjs applies them to layout.json); how: an entity built other than as its kind's default, or a ground entity given a rise (the countryside-ground pilot); unbuilt: mapped entities not built yet, with the reason and who decided; edges: the walkable area's sides; boats: the boat kit's options per boat. Sizes the strokes can't give are marked choice: in blender/countryside_scene.py and blender/kit_countryside.py and listed in sections/countryside/notes.md. Edited by the S1 Run 2 workers (ground/builder, kit, casting), each only for its own entities.",
+ "moves": {
+  "S1.prop.mooring_pole_36444": {
+   "dX": 1.67,
+   "dD": -0.52,
+   "why": "the S1 ground agent (Run 2): the sampan it is painted tied to (at the boat's pointed east end) is built at real size and moved 0.6 m east, so its bow reaches 1.4 m past the painted pole; the pole moved along the boat's heading to stand 0.3 m beyond the bow, tied to it as painted (in the open water, 1 m clear of the elm's bank)"
+  },
+  "S1.veh.boat_sampan_36440": {
+   "dX": 0.58,
+   "dD": -0.15,
+   "why": "the S1 ground agent (Run 2): built at real size (4.8 m, 0.6 of the small type, the floor) on its painted midpoint, its stern's north corner ran 0.3 m into the stream's west bank under the bridge's west landing; moved 0.6 m east along its painted heading over open water (map/BUILDING.md, Boats and water)"
+  },
+  "S1.prop.bench_35133": {
+   "dD": -0.25,
+   "why": "the S1 kit agent (Run 2): the forked pole of S1.str.posts_35075, painted just behind the bench's east leg, is mapped at the bench's own depth (both feet at v 868); at real width (0.3 m) the bench stands 0.25 m in front of it."
+  },
+  "S1.prop.jar_shed_35058": {
+   "dX": 0.25,
+   "why": "the S1 kit agent (Run 2): mapped 4 cm from the foot of S1.str.posts_35075's west post (both at u 35050-35067, v 830); a jar 0.3 m across can't share the post's spot, so it stands 0.25 m east, under the long plank's middle (its note: 'a dark round object stands under its middle')."
+  },
+  "S1.prop.slatted_box_34960": {
+   "dX": -0.38,
+   "why": "the S1 kit agent (Run 2): the open barn's east wall stands on its painted east post (X 356.37); the crate painted under its east eave, mapped 0.05 m from that wall, would run through it at real size (0.6 m): it stands 0.38 m west, inside under the eave."
+  },
+  "S1.prop.crossed_poles_34925": {
+   "dD": -0.35,
+   "why": "the S1 kit agent (Run 2): mapped on the barn's open front line, 0.08 m from its painted front post at u 34918 (which the painting draws through it); the low frame of crossed poles stands just in front of the post line ('on the ground in front of the farmhouse')."
+  },
+  "S1.tree.far_pale_33455": {
+   "dD": 2.23,
+   "why": "the S1 kit agent (Run 2; confirmed by the S1 area agent): its base is estimated ('behind the westernmost house'), at the back house's placeholder front, 0.44 m inside the house built at a real depth (3.2 m); moved north to stand 0.6 m behind the house's back wall (conf low; 'could be silk wear'). North only, not along its painted receding line (dX +1.49): that spot lies 0.11 m from elm_33592's trunk (which keeps its own north-only move)."
+  },
+  "S1.tree.elm_tall_33552": {
+   "dD": 2.73,
+   "why": "the S1 kit agent (Run 2; confirmed by the S1 area agent): its base is estimated at the back house's placeholder front line ('the true foot is north of the house', its note); it fell inside the gable house (S1.bld.farmhouse_gable_33670) built 3.2 m deep. Moved north to stand 0.6 m behind that house's back wall, its trunk rising behind the roofs as painted. North only: along its painted receding line (dX +1.83) its trunk would stand 0.03 m from the big thatched house's west wall (S1.bld.farmhouse_thatched_33955)."
+  },
+  "S1.tree.elm_33592": {
+   "dD": 2.73,
+   "why": "the S1 kit agent (Run 2; confirmed by the S1 area agent): as elm_tall_33552 (its base est 'behind the house like S1.tree.elm_tall_33552'): 0.9 m inside the gable house built 3.2 m deep; moved north to 0.6 m behind its back wall. North only: along its painted receding line (dX +1.83) it would stand inside the big thatched house (S1.bld.farmhouse_thatched_33955)."
+  },
+  "S1.tree.far_pale_33720": {
+   "dX": 2.33,
+   "dD": 3.48,
+   "why": "the S1 kit agent (Run 2; confirmed by the S1 area agent): a faint far trunk 'standing behind the long thatched farmhouse' with an estimated base on the roof line, 0.5 m inside S1.bld.farmhouse_thatched_33955 built at a real depth for a house seen gable-on (4.8 m); moved along its painted receding line (dX = 0.670 dD, so it keeps its painted u) to 0.6 m behind that house's back wall (conf low). Its nearest trunk is then 4.3 m away."
+  },
+  "S1.ani.donkey_charcoal_36745": {
+   "dX": 1.99,
+   "dD": -0.45,
+   "why": "casting (make_people.py; cast.json train): the charcoal train set out at real size along S1.road.main, its path. Five donkeys 1.49 m long and 0.8 m across the panniers, painted overlapping in a 4.7 m file, stand 1.9 m apart in their painted order, D5 leading east, in alternate lanes 0.69 m apart (-0.41 / +0.28 m off the centre line), so people.js never has a donkey steer round the one ahead. The file runs back west from D5: of the layouts searched, it leaves the train the longest walk east (2.5 m since the 16:48 ground build) clear of the elm on the road (elm_bare_37140), the stream's shore and the trunks at its rear, then moves least. D5, the leader, keeps its painted place in the south lane, as painted Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -0.45 dD 0.09, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX 1.56 dD -0.36, which people.json had corrected by a nudge); the S1 finisher."
+  },
+  "S1.ani.donkey_charcoal_36666": {
+   "dX": 1.35,
+   "dD": 0.07,
+   "why": "casting: the charcoal train set out at real size (the reason under S1.ani.donkey_charcoal_36745). D4: 1.9 m behind D5, in the north lane Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -1.0 dD 0.75, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX 1.01 dD 0.15, which people.json had corrected by a nudge); the S1 finisher."
+  },
+  "S1.ani.donkey_charcoal_36508": {
+   "dX": 0.91,
+   "dD": -0.66,
+   "why": "casting: the charcoal train set out at real size (the reason under S1.ani.donkey_charcoal_36745). D3: 3.8 m behind D5, in the south lane Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -1.06 dD 1.07, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX 0.67 dD -0.58, which people.json had corrected by a nudge); the S1 finisher."
+  },
+  "S1.ani.donkey_charcoal_36410": {
+   "dX": 0.32,
+   "dD": -0.04,
+   "why": "casting: the charcoal train set out at real size (the reason under S1.ani.donkey_charcoal_36745). D2: 5.7 m behind D5, in the north lane Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -1.68 dD 1.5, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX 0.23 dD 0.09, which people.json had corrected by a nudge); the S1 finisher."
+  },
+  "S1.ani.donkey_charcoal_36323": {
+   "dX": -0.56,
+   "dD": 0.27,
+   "why": "casting: the charcoal train set out at real size (the reason under S1.ani.donkey_charcoal_36745). D1, the last: 7.6 m behind D5, in the south lane Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -2.8 dD -0.21, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX -0.58 dD 0.25, which people.json had corrected by a nudge); the S1 finisher."
+  },
+  "S1.fig.charcoal_driver_36797": {
+   "dX": 2.38,
+   "dD": -1.1,
+   "why": "casting: the charcoal train set out at real size (the reason under S1.ani.donkey_charcoal_36745). the east driver: 1.4 m ahead of D5 in its lane, at the train's east end as painted (people.js lets D5 follow a walker ahead at full pace from 1.35 m) Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -0.04 dD -0.49, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX 1.92 dD -0.99, which people.json had corrected by a nudge); the S1 finisher."
+  },
+  "S1.fig.charcoal_driver_36250": {
+   "dX": -1.45,
+   "dD": 0.02,
+   "why": "casting: the charcoal train set out at real size (the reason under S1.ani.donkey_charcoal_36745). the west driver: 1.0 m behind D1 and 0.7 m south of its lane, driving it from behind (north of D1 the trunks of far_crown_35990 and far_crown_36070 stand at the road's edge); a walker starts at his layout spot, so his place is a move, not a nudge Re-searched 2026-10-12 ~14:00 by gen/sections/countryside/make_people.py after the builder's shore walls and set pieces landed (the earlier set-out, dX -3.33 dD -1.77, no longer walked clear of them); recorded by the S1 area agent. Re-searched again 2026-10-12 evening by make_people.py on the ground agent's 16:48 build (its stream shore moved): the train's layout is kept (shift +0.75 m along the road, rear driver north, 1.9 m apart, lanes -0.41/+0.28 m), the move it gives is recorded here (was dX -1.5 dD 0.01, which people.json had corrected by a nudge); the S1 finisher."
+  }
+ },
+ "how": {
+  "S1.water.wash_band_34400": {
+   "how": "ground",
+   "why": "the lead's call (build_rules.md, 2026-10-12): the pale band stays water, a flat water strip at the stream's H (-0.7) between its mapped shores (conf low; water or a low flat is in the user's final list). Built (the ground agent, Run 2): its west end rounded to a point (its two shores meet at (320.9, 1.25)) instead of a straight chord; its shores smooth curves through the mapped points; the land 2.5 m in from its shores held 0.4 m over the water (a low flat), its narrow middle (0.2-1 m between the mapped shores at X 327-336) kept open water by a bed that drops off the shore at once."
+  },
+  "S1.bld.farmhouse_long_34950": {
+   "how": "model",
+   "roof": "tile",
+   "why": "the map leaves its roof open (thatch or tile); the second pass read it closest (zoom 2-3: a crisp double eave and rows of small scalloped marks, no ragged fringe), so it is built tiled; the scholars' 'thatched farmhouses' is the other reading (the S1 area agent, Run 2; in the user's list)."
+  },
+  "S1.grd.bank_29590": {
+   "how": "ground",
+   "rise_m": 0.15,
+   "why": "the stall yard's soft step (10-20 px of face). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_29750": {
+   "how": "ground",
+   "rise_m": 0.45,
+   "why": "the 菜地's south edge, a slope (80-110 px of face). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_29780": {
+   "how": "ground",
+   "rise_m": 0.2,
+   "why": "the next step down south of the 菜地 (25 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_29950": {
+   "how": "ground",
+   "rise_m": 0.25,
+   "why": "curving under the travellers' feet (35 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_29830": {
+   "how": "ground",
+   "rise_m": 0.15,
+   "why": "the lowest line at the bottom left. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_30250": {
+   "how": "ground",
+   "rise_m": 0.25,
+   "why": "the long low bank near the silk's bottom (30-45 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_30900": {
+   "how": "ground",
+   "rise_m": 0.25,
+   "why": "east of the travellers (40-50 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_30750": {
+   "how": "ground",
+   "rise_m": 0.6,
+   "why": "the hut's bank (40-90 px): the hut, its fences and the farmhouse's east end on its top; the route goes down it at the turn south. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_30300": {
+   "how": "ground",
+   "rise_m": 0.35,
+   "why": "the chase field's north bank (35-60 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_31390": {
+   "how": "ground",
+   "rise_m": 0.15,
+   "why": "far, by the party's track (20 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_31660": {
+   "how": "ground",
+   "rise_m": 0.8,
+   "why": "the willow dyke (隋堤, about 45 px over the road): the great willows on its top; its face widened to 1.85 m (0.55 of the widening north) so it stays at 26.6 deg. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_31680": {
+   "how": "ground",
+   "rise_m": 0.3,
+   "why": "south of the willow road (45 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_31700": {
+   "how": "ground",
+   "rise_m": 0.25,
+   "why": "the third step down under the willows. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_31825": {
+   "how": "ground",
+   "rise_m": 0.12,
+   "why": "one wash line above the silk's edge (its foot made 0.6 m south of the stroke). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_yard_31390": {
+   "how": "ground",
+   "rise_m": 0.3,
+   "why": "the shed on posts' raised yard (50 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_32445": {
+   "how": "ground",
+   "rise_m": 0.35,
+   "why": "behind the massive willows; the route climbs it. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_32900": {
+   "how": "ground",
+   "rise_m": 0.3,
+   "why": "behind the east willow; the route climbs it. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_32905": {
+   "how": "ground",
+   "rise_m": 0.4,
+   "why": "at the east willow's foot (60-90 px), the west end of the pale band's north bank. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_32700": {
+   "how": "ground",
+   "rise_m": 0.2,
+   "why": "the massive willow's roots. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_32705": {
+   "how": "ground",
+   "rise_m": 0.15,
+   "why": "the lowest band east of the willows. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.yard_bank_34400": {
+   "how": "ground",
+   "rise_m": 0.35,
+   "why": "the yard bank before the farmsteads (35-50 px, half a man): widened toward its foot only (0.9 of the widening) so the nine trees on its top stay on the level strip and the face is 24 deg. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_33300": {
+   "how": "ground",
+   "rise_m": 0.1,
+   "why": "the thin band at the terrace's foot (30-40 px). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_35530": {
+   "how": "ground",
+   "rise_m": 0.3,
+   "why": "the slope the pale grove stands on. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_37050": {
+   "how": "ground",
+   "rise_m": 0.3,
+   "why": "the layered bank north of the road at the east end. choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.terrace_lines_33800": {
+   "how": "ground",
+   "rise_m": [
+    0.07,
+    0.04,
+    0.05,
+    0.04
+   ],
+   "why": "four faint single strokes (bank_top_a..d), each a low step with a made foot 0.4-0.5 m south of the stroke (the strokes may be only the painter's texture: kept low). choice (ground pilot): a soft face lofted from the foot stroke up to the top stroke (a smooth curve through the mapped points, wobbling up to 0.1 m), its own surface ('earth') so the ink falls on the top stroke; the ground north of it raised by the rise, the step varying by up to 18% along the stroke, fading over 3 m beyond its ends, eased off away from the stroke by the level solve; faces widened where needed to stay under 27.5 deg (the walk limit is 34)"
+  },
+  "S1.grd.bank_south_34400": {
+   "how": "ground",
+   "rise_m": 0.12,
+   "why": "the near shore of the pale band and the stream: its top stroke is the shore line mapped at H 0 (the same stroke maps 1.05 m north at the water's H), so its face is built from the water's shore up to its foot stroke, the near ground's level (a shore bank, as the other banks whose feet stand on the water); its lower_band_top a low step of 0.12 m with a made foot 0.6 m south"
+  },
+  "S1.grd.bank_33650": {
+   "how": "ground",
+   "rise_m": "to the water",
+   "why": "a shore bank: its foot is the water's shore (support stream, H -0.7); its face falls from its top stroke to the shore, its own surface ('earth'), widened inland where needed so it stays under 26.6 deg; the land 2.5 m in from the stream's shores held 0.7 m over the water (measured at the bridge), the pale band's 0.4 m"
+  },
+  "S1.grd.bank_35200": {
+   "how": "ground",
+   "rise_m": "to the water",
+   "why": "a shore bank: its foot is the water's shore (support stream, H -0.7); its face falls from its top stroke to the shore, its own surface ('earth'), widened inland where needed so it stays under 26.6 deg; the land 2.5 m in from the stream's shores held 0.7 m over the water (measured at the bridge), the pale band's 0.4 m"
+  },
+  "S1.grd.bank_36060": {
+   "how": "ground",
+   "rise_m": "to the water",
+   "why": "a shore bank: its foot is the water's shore (support stream, H -0.7); its face falls from its top stroke to the shore, its own surface ('earth'), widened inland where needed so it stays under 26.6 deg; the land 2.5 m in from the stream's shores held 0.7 m over the water (measured at the bridge), the pale band's 0.4 m"
+  },
+  "S1.grd.bank_36900": {
+   "how": "ground",
+   "rise_m": "to the water",
+   "why": "a shore bank: its foot is the water's shore (support stream, H -0.7); its face falls from its top stroke to the shore, its own surface ('earth'), widened inland where needed so it stays under 26.6 deg; the land 2.5 m in from the stream's shores held 0.7 m over the water (measured at the bridge), the pale band's 0.4 m"
+  },
+  "S1.grd.dyke_36380": {
+   "how": "ground",
+   "rise_m": "to the water",
+   "why": "a shore bank: its foot is the water's shore (support stream, H -0.7); its face falls from its top stroke to the shore, its own surface ('earth'), widened inland where needed so it stays under 26.6 deg; the land 2.5 m in from the stream's shores held 0.7 m over the water (measured at the bridge), the pale band's 0.4 m"
+  },
+  "S1.grd.terraced_fields_29450": {
+   "how": "ground",
+   "rise_m": 0.05,
+   "why": "choice: the far banked fields as low terraces, each field line a 0.05 m step (foot made 0.35 m south) with an earth ridge 0.05 m high along it, irregular; the diagonal line a ridge 0.07 m; bare (early spring). Kept low so the far figures and the far ox stay within 0.3 m of their map H"
+  },
+  "S1.grd.banked_fields_30400": {
+   "how": "ground",
+   "rise_m": 0.05,
+   "why": "as S1.grd.terraced_fields_29450: three field lines as 0.05 m steps with earth ridges, the diagonal edge a ridge 0.07 m"
+  },
+  "S1.grd.field_30430": {
+   "how": "ground",
+   "rise_m": 0.1,
+   "why": "choice: the raised plot behind the chase field 0.1 m above its surroundings with a soft irregular rim, between the chase field bank's top, its dotted ridge and its west slope; its north edge a ridge 0.08 m with a row of clods as geometry (small faceted lumps, each its own size)"
+  },
+  "S1.grd.field_vegetable_29790": {
+   "how": "ground",
+   "rise_m": 0.2,
+   "why": "choice: the 菜地 a raised bed 0.2 m over the village ground, its rim soft and irregular (0.8 m), its soil bare; three soil ridges 0.06-0.08 m along the plant bands (v 1140-1200, 1200-1280, 1280-1350), wobbling, their heights varying; its 14 young trees stand on it as cards"
+  },
+  "S1.grd.threshing_floor_35225": {
+   "how": "ground",
+   "rise_m": 0.06,
+   "why": "choice: real size: 8.8 x 3.0 m (painted 5.0 x 2.5): east-west from the open barn's front to the pale grove's bank, north-south from the yard bank's top to the long farmhouse's front (no more room in depth); smooth (the ground's undulation damped), pale (bare, the ground's road half), a soft irregular rim; the route skirts its south part as painted"
+  },
+  "S1.grd.floor_behind_yard_34285": {
+   "how": "ground",
+   "rise_m": 0.05,
+   "why": "a smooth pale floor 0.05 m high with a soft irregular rim over its mapped footprint"
+  },
+  "S1.grd.yard_34205": {
+   "how": "ground",
+   "rise_m": 0.04,
+   "why": "a smooth pale yard 0.04 m high with a soft irregular rim over its mapped footprint"
+  },
+  "S1.grd.rocks_34620": {
+   "how": "model",
+   "why": "a solid thing (map/BUILDING.md): the pale outcrop built as soft boulders (song_kit.boulder via kit_countryside.outcrop): a dome 3.2 x 2.6 m, 1.5 m high (choice; painted 240 px across), with four smaller ones pressed against it, their joints the crack strokes"
+  },
+  "S1.grd.rocks_34360": {
+   "how": "model",
+   "why": "a solid thing: the lower broken stony ground as ten low flat stones 0.25-0.65 m (choice), each its own size and set, inside its soft footprint (kit_countryside.stony_ground)"
+  },
+  "S1.grd.rock_29745": {
+   "how": "model",
+   "why": "a solid thing: the pale pointed upright rock as a weathered standing rock 1.2 x 1.0 m, 1.9 m high (choice; painted 90 x 160-180 px): a lumpy main mass, a split slab against it and a low stone at its foot (kit_countryside.standing_stone). The map's other reading, a hooded figure, is not built"
+  },
+  "S1.grd.spit_east_37060": {
+   "how": "ground",
+   "back_m": 0.14,
+   "why": "choice: a land tongue at the water's level (both edges waterlines), its outline a soft closed curve through the mapped edges, a low rounded back up to the given height over the water, lumpy along its length; its own surface ('earth', the painter's dark tongue). Inside the shore walls: seen, not walked"
+  },
+  "S1.grd.spit_under_boat_36140": {
+   "how": "ground",
+   "back_m": 0.06,
+   "why": "choice: a land tongue at the water's level (both edges waterlines), its outline a soft closed curve through the mapped edges, a low rounded back up to the given height over the water, lumpy along its length; its own surface ('earth', the painter's dark tongue). Inside the shore walls: seen, not walked"
+  },
+  "S1.grd.spit_36150": {
+   "how": "ground",
+   "back_m": 0.13,
+   "why": "choice: a land tongue at the water's level (both edges waterlines), its outline a soft closed curve through the mapped edges, a low rounded back up to the given height over the water, lumpy along its length; its own surface ('earth', the painter's dark tongue). Inside the shore walls: seen, not walked"
+  },
+  "S1.grd.spit_36225": {
+   "how": "ground",
+   "back_m": 0.13,
+   "why": "choice: a land tongue at the water's level (both edges waterlines), its outline a soft closed curve through the mapped edges, a low rounded back up to the given height over the water, lumpy along its length; its own surface ('earth', the painter's dark tongue). Inside the shore walls: seen, not walked"
+  },
+  "S1.grd.shoal_36380": {
+   "how": "ground",
+   "back_m": 0.05,
+   "why": "choice: the faint streaks in the open water (shoals, reeds or ripple wash: the map's readings) as a shoal that breaks the water only in short streaks up to 0.05 m, lying under it between them"
+  },
+  "S1.grd.far_slope_30950": {
+   "how": "ground",
+   "rise_m": 0.08,
+   "why": "choice: the short slanting stroke on the far ridge as a low earth ridge 0.08 m along it"
+  },
+  "S1.road.main": {
+   "how": "ground",
+   "why": "choice: the trodden way as a worn band in the ground's own texture (its Blend UV: the road half), its strip paler (0.66) and its centre line the most worn, the edges noisy, never a ruled strip; 0.035 m lower where worn. Its levels: held at H 0 in the village (the S2 seam), -0.55 on the willow road (the travellers' band), +0.1 on the farmsteads' terrace and 0 on the train's path (the stream's banks), free where it crosses the hut's bank, climbs behind the massive willows and leaves the farmsteads"
+  },
+  "S1.road.path_30300": {
+   "how": "ground",
+   "why": "choice: a worn path in the ground's texture between its mapped edges (paler, 0.75 of the road half, its centre the most worn), noisy edges, 0.035 m lower"
+  },
+  "S1.road.path_36380": {
+   "how": "ground",
+   "why": "choice: a worn path in the ground's texture between its mapped edges (paler, 0.75 of the road half, its centre the most worn), noisy edges, 0.035 m lower"
+  },
+  "S1.road.path_30950": {
+   "how": "ground",
+   "why": "choice: a worn path in the ground's texture between its mapped edges (paler, 0.75 of the road half, its centre the most worn), noisy edges, 0.035 m lower"
+  },
+  "S1.road.path_29640": {
+   "how": "ground",
+   "rise_m": 0.1,
+   "why": "choice: the diagonal raised path across the far fields 0.1 m above them with a soft rim, worn pale"
+  },
+  "S1.water.stream_36500": {
+   "how": "ground",
+   "why": "one water strip at the stream's H (-0.7, map/frames/S1.json supports.stream) from kit_boats.water_strip; its shores as built (blender/countryside_scene.water_entities, choices): the north shore starts at the pale band's east end (363.02, 3.88), so the two strips meet on one chord and the open side between the band's end and the stream's west bank is walled (the land tongues are seen, not walked); at the bridge's east end the north shore gives way round the roots of S1.tree.elm_bare_36660, mapped 1 m into the water where the painting roots it on the bank (its bank top carried out round it, the bridge's east end landing on it); both shores carried on east past the silk's end under the mist along their mapped trend, so the run-on water meets the run-on ground along a shore with its bank, never a ruled edge; every shore a smooth curve through the mapped points, wobbling up to 0.1 m. The shore walls (edge:shore) leave a gap of 1.1 m either side of each bridge landing; the bridge's own rails close it"
+  }
+ },
+ "unbuilt": {
+  "S1.ani.pale_bird_34250": {
+   "why": "waits on a pale bird variant and the lead's reading (a bird, or a pale abrasion of the silk; conf low): the registry's kit bird is the black crow, which would be wrong (the S1 casting agent, Run 2; catalogue 2c: bird_pale is optional, the lead's call)"
+  }
+ },
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): layout painted_area, i.e. the seam with S2 at u 29050 (west), the silk's end at u 37610 (east) and the silk's top and bottom edges, on the ground",
+   "why": "outside the painted area the scroll paints nothing for this section; inside it the whole countryside stays walkable (fields, banks, yards, the far fields up the silk)",
+   "beyond": "painting, not models: west, S2 (built; its painted panel stands in until it loads: sections/countryside/backdrop.json); east, mist past the silk's start (rule 4); north and south, mist. The ground stops 0.5 m past the S2 seam and dips 0.12 m there (S2's runs level 1 m past it on top); on the other sides it runs 16 m out under the mist"
+  },
+  "shore": {
+   "what": "edge:shore: invisible walls along both shores of the stream and the pale band (0.5 m pieces from 0.6 m under the water to 1.6 m over H 0), within the painted area",
+   "why": "nobody walks into the water; a gap of 1.1 m either side of each landing of the small bridge (S1.str.small_bridge_36365), whose own invisible side rails run its length and past its ends; the open side between the pale band's east end and the stream's west bank is walled, so the land tongues are seen, not walked"
+  }
+ },
+ "boats": {
+  "S1.veh.boat_sampan_36440": {
+   "kit": {
+    "kind": "small",
+    "lw": 4.8,
+    "awning": false,
+    "cargo": [],
+    "moor": [
+     "S1.prop.mooring_pole_36444"
+    ]
+   },
+   "why": "the empty open sampan (types #17, small_open): kind set by hand (kind_of reads 'sampan' as small through its name list, set anyway); painted 2.97 m, built at 0.6 of the small type (4.8 m: the lead's floor) on its painted heading, open (no awning, no cabin), no cargo, moored to its pole at its pointed east end. The kit's small hull has a transom at both ends: the pointed-bow option (bow='pointed', catalogue B2) is not in blender/kit_boats.py yet, so it is not set; set it when the boat factory lands it. Moved (moves) 0.6 m east along its heading so its stern clears the west bank and the bridge's west landing; clears the bridge's posts by about 0.7 m"
+  }
+ },
+ "calls": {
+  "trees_in_road_strip": "the lead (build_rules.md): the nine trees whose feet stand in the road strip before the farmsteads (u 33400-34750: elm_forked_33433, elm_forked_33785, elm_tall_33865, elm_slender_33906, elm_twin_33936, elm_spreading_34030, bare_elm_twin_34552, bare_elm_twin_34640, bare_elm_tall_34703) stay at their painted feet; the walkable line weaves between them. No move.",
+  "charcoal_train_direction": "the lead: the charcoal donkey train walks east, as painted (every readable head at the east end), against the title 赶驴入城 (people.json).",
+  "bank_rises": "the lead: the bank rises (the willow dyke bank_31660, the hut's bank bank_30750, the yard bank yard_bank_34400 and the rest) are the builder's choices, recorded under how per bank with the rise in metres.",
+  "runaway_horse": "the S1 area agent, Run 2: built whole (the registry horse at real size, no tack), its lost front half supplied, galloping west as painted on the nearest clip the registry has until a gallop clip exists; whether to build it whole stays the user's question (the user's final list)."
+ }
+}

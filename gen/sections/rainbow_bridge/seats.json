@@ -1,0 +1,354 @@
+{
+ "about": "Seats the map lacks, for the area builder (map/BUILDING.md rule 3: the seat of a figure painted seated is part of it), written by gen/sections/rainbow_bridge/make_people.py from the layout, the bridge as built and the playing clip (rerun after a layout move). Keys are figure map IDs. X, D: the seat's centre, under the hips; H: the height it stands on (the ground 0, the built deck under it, the riverside hall's upper floor 3.83, a boat's deck or roof); seat_h: its top above H (0: the figure sits on the support itself); what: stool (build a small non-colliding stool inside the figure's entity), ground (a floor sit on the ground, a floor or the deck: nothing to build), boat (on a boat: the boat kit's deck grounds him, nothing to build); facing_deg, root [X, D, H] (where people.js stands the figure), clip; why. Figures on mapped benches, stools and chairs are not listed: their nudges put their hips on those props.",
+ "S3.fig.parasol_stall_seller_20290": {
+  "X": 157.34,
+  "D": -1.69,
+  "H": 0,
+  "seat_h": 0.57,
+  "what": "stool",
+  "facing_deg": 180,
+  "root": [
+   157.39,
+   -1.68,
+   0
+  ],
+  "clip": "robed_man sit_talk",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.57 m (robed_man's sit_talk puts the hip joint 0.63 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.boatman_stern_seated_20285": {
+  "X": 147.28,
+  "D": 16,
+  "H": 2.29,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "boatman sit_one_knee",
+  "why": "seated on boat roof: S3.veh.boat_mast_lowering_19518 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ },
+ "S3.fig.man_reclining_waving_20060": {
+  "X": 150.76,
+  "D": 9.7,
+  "H": 0.48,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "boatman lie_wave",
+  "why": "seated on boat roof: S3.veh.boat_moored_south_bank_19745 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ },
+ "S3.fig.shop_low_head_19940": {
+  "X": 152.06,
+  "D": -1.09,
+  "H": 0,
+  "seat_h": 0.0,
+  "what": "ground",
+  "facing_deg": 0,
+  "root": [
+   152.06,
+   -1.09,
+   0
+  ],
+  "clip": "camel_driver sit_floor",
+  "support": "ground",
+  "why": "a floor sit (camel_driver sit_floor) on ground itself: nothing to build"
+ },
+ "S3.fig.far_stall_vendor_19436": {
+  "X": 133.26,
+  "D": 28.95,
+  "H": 0,
+  "seat_h": 0.43,
+  "what": "stool",
+  "facing_deg": 270,
+  "root": [
+   133.09,
+   28.65,
+   0
+  ],
+  "clip": "carter sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (carter's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.stall_sitter_east_19297": {
+  "X": 141.28,
+  "D": 4.97,
+  "H": 0,
+  "seat_h": 0.43,
+  "what": "stool",
+  "facing_deg": 90,
+  "root": [
+   141.29,
+   4.92,
+   0
+  ],
+  "clip": "robed_man sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (robed_man's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.stall_bearded_man_19235": {
+  "X": 140.76,
+  "D": 5.31,
+  "H": 0,
+  "seat_h": 0.4,
+  "what": "stool",
+  "facing_deg": 180,
+  "root": [
+   140.79,
+   5.3,
+   0
+  ],
+  "clip": "storyteller sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (storyteller's sit puts the hip joint 0.41 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.stall_man_with_dish_19173": {
+  "X": 139.55,
+  "D": 5.68,
+  "H": 0,
+  "seat_h": 0.4,
+  "what": "stool",
+  "facing_deg": 270,
+  "root": [
+   139.55,
+   5.7,
+   0
+  ],
+  "clip": "scholar drink",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (scholar's drink puts the hip joint 0.45 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.stall_sitter_west_19088": {
+  "X": 138.36,
+  "D": 5.07,
+  "H": 0,
+  "seat_h": 0.43,
+  "what": "stool",
+  "facing_deg": 90,
+  "root": [
+   138.37,
+   5.02,
+   0
+  ],
+  "clip": "robed_man sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (robed_man's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.seated_man_topknot_18352": {
+  "X": 129.09,
+  "D": 17.6,
+  "H": 3.16,
+  "seat_h": 0.4,
+  "what": "stool",
+  "facing_deg": 270,
+  "root": [
+   129.08,
+   17.63,
+   3.16
+  ],
+  "clip": "robed_man drink",
+  "support": "bridge deck: 600 px west of the near edge",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (robed_man's drink puts the hip joint 0.44 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.seated_man_cap_18282": {
+  "X": 128.02,
+  "D": 17.39,
+  "H": 2.58,
+  "seat_h": 0.46,
+  "what": "stool",
+  "facing_deg": 0,
+  "root": [
+   128.25,
+   17.24,
+   2.58
+  ],
+  "clip": "scholar sit",
+  "support": "bridge deck: 650 px west of the near edge",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's sit puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.passenger_seated_18147": {
+  "X": 117.07,
+  "D": 23.78,
+  "H": -0.23,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "scholar knees_up",
+  "why": "seated on boat deck: S3.veh.boat_mat_cabin_18005 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ },
+ "S3.fig.passenger_seated_18112": {
+  "X": 116.55,
+  "D": 23.78,
+  "H": -0.23,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "robed_man sit_floor",
+  "why": "seated on boat deck: S3.veh.boat_mat_cabin_18005 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ },
+ "S3.fig.display_seller_18058": {
+  "X": 123.31,
+  "D": 7.22,
+  "H": 0,
+  "seat_h": 0.43,
+  "what": "stool",
+  "facing_deg": 0,
+  "root": [
+   123.27,
+   7.23,
+   0
+  ],
+  "clip": "fortune_teller sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (fortune_teller's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.far_bank_seated_17922": {
+  "X": 107.91,
+  "D": 33.31,
+  "H": 0,
+  "seat_h": 0.43,
+  "what": "stool",
+  "facing_deg": 270,
+  "root": [
+   107.92,
+   33.35,
+   0
+  ],
+  "clip": "camel_driver sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (camel_driver's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.man_seen_from_behind_17865": {
+  "X": 121.61,
+  "D": 5.9,
+  "H": 0,
+  "seat_h": 0.42,
+  "what": "stool",
+  "facing_deg": 90,
+  "root": [
+   121.6,
+   5.87,
+   0
+  ],
+  "clip": "idler sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.42 m (idler's sit puts the hip joint 0.48 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.seated_man_at_stand_17795": {
+  "X": 120.34,
+  "D": 6.06,
+  "H": 0,
+  "seat_h": 0.42,
+  "what": "stool",
+  "facing_deg": 0,
+  "root": [
+   120.32,
+   6.08,
+   0
+  ],
+  "clip": "inspector sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.42 m (inspector's sit puts the hip joint 0.48 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.passenger_seated_17632": {
+  "X": 108.49,
+  "D": 30.57,
+  "H": -0.44,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "townsman sit_floor",
+  "why": "seated on boat deck: S3.veh.boat_awning_17442 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ },
+ "S3.fig.awning_boatman_17435": {
+  "X": 105.37,
+  "D": 30.92,
+  "H": -0.44,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "boatman sit_floor",
+  "why": "seated on boat deck: S3.veh.boat_awning_17442 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ },
+ "S3.fig.far_bank_seated_17366": {
+  "X": 99.09,
+  "D": 33.53,
+  "H": 0,
+  "seat_h": 0.44,
+  "what": "stool",
+  "facing_deg": 270,
+  "root": [
+   99.1,
+   33.49,
+   0
+  ],
+  "clip": "hat_traveller sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.44 m (hat_traveller's sit puts the hip joint 0.5 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.far_bank_seated_17333": {
+  "X": 98.6,
+  "D": 33.47,
+  "H": 0,
+  "seat_h": 0.46,
+  "what": "stool",
+  "facing_deg": 270,
+  "root": [
+   98.45,
+   33.24,
+   0
+  ],
+  "clip": "scholar sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's sit puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.parasol_seated_17322": {
+  "X": 115.09,
+  "D": 4.16,
+  "H": 0,
+  "seat_h": 0.43,
+  "what": "stool",
+  "facing_deg": 0,
+  "root": [
+   115.39,
+   3.99,
+   0
+  ],
+  "clip": "carter sit",
+  "support": "ground",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (carter's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.diner_cap_16077": {
+  "X": 102.69,
+  "D": -2.29,
+  "H": 3.83,
+  "seat_h": 0.58,
+  "what": "stool",
+  "facing_deg": 315,
+  "root": [
+   102.65,
+   -2.25,
+   3.83
+  ],
+  "clip": "scholar sit_talk",
+  "support": "upper floor: S3.bld.tavern_river_hall_15540",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.58 m (scholar's sit_talk puts the hip joint 0.65 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.diner_hunched_16050": {
+  "X": 102.49,
+  "D": -3.13,
+  "H": 3.83,
+  "seat_h": 0.46,
+  "what": "stool",
+  "facing_deg": 0,
+  "root": [
+   102.46,
+   -3.14,
+   3.83
+  ],
+  "clip": "scholar listen",
+  "support": "upper floor: S3.bld.tavern_river_hall_15540",
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's listen puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips"
+ },
+ "S3.fig.boatman_bow_15688": {
+  "X": 98.11,
+  "D": 20.07,
+  "H": 1.12,
+  "seat_h": 0.0,
+  "what": "boat",
+  "clip": "boatman sit_floor",
+  "why": "seated on boat bow deck: S3.veh.boat_under_way_15595 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
+ }
+}

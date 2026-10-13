@@ -1,0 +1,1508 @@
+{
+ "section": "S5",
+ "entities": [
+  {
+   "id": "S5.str.gate_block",
+   "kind": "structure",
+   "name": "gate block (城台)",
+   "what": "Massive brick-faced, battered gate platform carrying the tower; the road passes through it east-west. Two faces are painted: the south face, frontal, with dense horizontal brick courses, and the east (outer) face, receding up-right, its courses drawn as '///' hatching, with the passage's outer mouth in it. Its top is a terrace with a low balustrade on the south, west and east edges. Unguarded, no crenellations.",
+   "pts": {
+    "base": {
+     "sw": [
+      6374,
+      1591,
+      "est"
+     ],
+     "se": [
+      7242,
+      1591,
+      "est"
+     ],
+     "ne": [
+      7768,
+      1128,
+      "est"
+     ],
+     "nw": [
+      6900,
+      1128,
+      "est"
+     ]
+    },
+    "sw_top": [
+     6478,
+     821
+    ],
+    "se_top": [
+     7068,
+     821
+    ],
+    "ne_top": [
+     7505,
+     400
+    ],
+    "arris_sw": [
+     [
+      6478,
+      821
+     ],
+     [
+      6430,
+      1160
+     ]
+    ],
+    "arris_se": [
+     [
+      7068,
+      821
+     ],
+     [
+      7089,
+      897
+     ]
+    ],
+    "arris_ne": [
+     [
+      7510,
+      397
+     ],
+     [
+      7600,
+      650
+     ],
+     [
+      7700,
+      935
+     ]
+    ],
+    "strip_line_a": [
+     [
+      7440,
+      473
+     ],
+     [
+      7570,
+      880
+     ]
+    ],
+    "terrace_edge_s": [
+     [
+      6485,
+      820
+     ],
+     [
+      7068,
+      821
+     ]
+    ],
+    "terrace_edge_e": [
+     [
+      7068,
+      821
+     ],
+     [
+      7505,
+      400
+     ]
+    ],
+    "terrace_edge_w": [
+     [
+      6485,
+      820
+     ],
+     [
+      6587,
+      717
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: lower half hidden by trees (south face), the camel and the wall-foot crowd (east face)",
+   "conf": "med",
+   "src": "余辉: 撤防的城门; sections.md §3 gate passage",
+   "note": "READING. Faces: S face from the SW arris (top 6478,821; visible down to 6430,1160, leans right going up: batter -0.13 px u per px v going down) to the SE arris (top 7068,821, runs down-right at +0.22 px u per px v, measured 7072,820 -> 7089,897). Terrace S edge = balustrade base v 820 (top rail v 763). E face: top edge = E balustrade base from the SE terrace corner (7068,821) to the NE terrace corner (7505,400), vector (437,-421). NE arris (line B) from (7510,397) down-right through (7700,935), slope +0.35 px u/px v. Two narrow vertical strips flank the passage on the E face: a dark strip 30-40 px wide from the balustrade (7152-7185, 690) to about (7290-7330, 1300) near the SE corner, and a lighter strip (band H) between line A (7440,473 -> 7570,880, slope +0.30) and line B near the NE corner; read as corner pilasters/piers (symmetric about the passage), not separate walls. No W or N face is visible (oblique shows S + E + top). HOW THE HIDDEN FOOT WAS ESTIMATED. The only drawn ground level on the block is the passage floor at the outer mouth (see S5.str.gate_passage: N jamb foot 7584,1290, S jamb foot 7442,1415). The E-face foot line was taken through those two points, parallel to the lintel (slope -0.88); se = its intersection with the SE arris, ne = with line B. sw = SW arris extended to the same v as se (S-face foot horizontal); nw = sw + (ne - se). So the footprint is est, conf low; the S and N piers come out symmetric (200 and 184 px of u from the passage), which supports the reading. Caveat at the NE corner: the recliner (seed S5.fig.wall_recliner, foot 7735,1098) and the man standing behind him sit 50-70 px west of this est foot line, so either the N pier is shallower / its foot steeper (a slope near the bridge's -1.6 would fit them), or they sit on a bank at the wall foot; ne is uncertain by about +-70 px. Heights (v px, base to top, include the batter set-back): se 770, ne 728. Batter on the E face: top set back about 170 px of u from the foot at the SE arris. SCALE CUES (px): S-face brick courses ~4.5 px apart; E-face courses ~9 px apart; terrace balustrade 57 px tall (763->820), posts ~65-70 px apart. DEPTH DIRECTION: E face lintel (136,-120), passage floor (142,-125), terrace E edge (437,-421), terrace W edge (6490,820)->(6587,717) = (97,-103); brick courses on the E face ~45 deg. So the gate block's oblique is about (1,-0.9..-1.0) per px u. Higher up the N-S lines flatten: podium E bracket band ~-0.7, hall E railing base -0.54, hall E eave -0.46 (checked by overlaying the three lines: the terrace line follows the E balustrade's base from the SE corner post to the NE corner). CONFLICTS: with this footprint the block's west foot is ~680 px of u east of the tax office's east end at the office's depth, although the painting puts the office right against the block's SW arris; and the hall above uses a much flatter oblique (see S5.str.gate_tower). The S5 frame (d = 28.75,-53.75) is steeper still."
+  },
+  {
+   "id": "S5.str.gate_passage",
+   "kind": "structure",
+   "name": "gate passage (门洞)",
+   "what": "Straight-lintel passage through the gate block, east-west. Only the outer (east) mouth is painted, as a tall opening in the battered east face; inside it the passage's north wall shows horizontal brick courses, a timber strip lines the south jamb, and a framed board with slats (the gate plaque, read by 余辉 as only '门') sits over the mouth. A Bactrian camel is walking out of the mouth, half outside.",
+   "pts": {
+    "base": {
+     "sw": [
+      6574,
+      1415,
+      "est"
+     ],
+     "se": [
+      7442,
+      1415,
+      "est"
+     ],
+     "ne": [
+      7584,
+      1290,
+      "est"
+     ],
+     "nw": [
+      6716,
+      1290,
+      "est"
+     ]
+    },
+    "se_top": [
+     7282,
+     773
+    ],
+    "ne_top": [
+     7418,
+     653
+    ],
+    "jamb_s": [
+     [
+      7282,
+      773
+     ],
+     [
+      7297,
+      840
+     ],
+     [
+      7353,
+      1093
+     ],
+     [
+      7430,
+      1363
+     ]
+    ],
+    "jamb_n": [
+     [
+      7418,
+      653
+     ],
+     [
+      7467,
+      840
+     ],
+     [
+      7533,
+      1093
+     ]
+    ],
+    "lintel": [
+     [
+      7282,
+      773
+     ],
+     [
+      7418,
+      653
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: outer mouth foot hidden by the camel and a seated man; inner (west) mouth not painted (hidden behind the block)",
+   "conf": "med",
+   "src": "sections.md §3: gate passage x ~7280-7450; camel caravan leaving",
+   "note": "se/ne = outer (east) mouth, S and N jamb feet; sw/nw = inner (west) mouth, est = outer mouth minus the block's foot width (868 px of u). Jamb lines: S jamb from the lintel (7282,773) through (7297,840), (7353,1093), (7430,1363): slope +0.22..0.235 px u/px v. N jamb from the lintel (7418,653) through (7467,840), (7533,1093): +0.26. Lintel/top from (7282,773) to (7418,653). Passage floor: the north wall's horizontal courses end at v ~1290 just inside the mouth (7450-7590), taken as the N jamb foot; S jamb foot = S jamb line meeting a foot line parallel to the lintel. The camel's hooves (~7450-7500, 1365-1385) stand between them. Timber strip (door lining or opened leaf) between the S jamb and a line ~35-50 px inside it (7332,840 -> 7370,1073; 7383-7393 at 840-1093). Plaque frame: slanted board with slats from (7270,700-790) to (7400-7410,590-640), in the plane of the E face, just above the lintel. SCALE CUES (px): mouth width along the face (142,-125) at the floor, (136,-120) at the lintel; opening height 642 (S jamb) and 637 (N jamb) px of v; camel in the mouth ~230 px from hooves to hump. The opening is a parallelogram, not a trapezoid (jambs ~parallel)."
+  },
+  {
+   "id": "S5.str.tower_podium",
+   "kind": "structure",
+   "name": "tower podium and balcony (平座)",
+   "what": "Bracketed platform standing on the terrace and carrying the hall: a base course, a deep band of bracket sets (平座斗栱), and on top a balcony floor with a low railing running round the south and east sides; the upper stair rises to it from the terrace.",
+   "pts": {
+    "base": {
+     "sw": [
+      6583,
+      719
+     ],
+     "se": [
+      7152,
+      720
+     ],
+     "ne": [
+      7470,
+      415,
+      "est"
+     ],
+     "nw": [
+      6901,
+      414,
+      "est"
+     ]
+    },
+    "sw_top": [
+     6583,
+     560
+    ],
+    "se_top": [
+     7152,
+     560
+    ]
+   },
+   "support": "gate terrace",
+   "facing_deg": 270,
+   "vis": "part: east side and north corners hidden behind the terrace balustrade and hall",
+   "conf": "med",
+   "note": "Front (S) foot on the terrace at v 717-720 from the SW corner (6583,719; it sits where the terrace W balustrade ends) to the SE corner (7152,720). Front: base course v 675-720, bracket band v 590-670, floor fascia v 560-590, balcony railing top v 532 / base v 557. E side: its foot is hidden behind the terrace's E balustrade. It must recede along the terrace edge (slope -0.96): a flatter line from the SE corner (7152,720) would pass outside the balustrade within ~50 px. ne/nw est = front corners + (318,-305), i.e. stopping ~35 px short of the terrace's NE corner (7505,400). The podium's E bracket band, drawn above the balustrade with figured panels, rises at ~-0.7 (7175,690)->(7320,605), (7300,580)->(7440,482). Support 'gate terrace' = top of S5.str.gate_block (not yet in the frame's supports). SCALE CUES (px): podium height from terrace to balcony floor ~159 px (719->560); balcony railing ~25-28 px. DEPTH DIRECTION: E bracket band ~-0.7, between the terrace edge (-0.96) below and the hall's E railing (-0.54) above: the drawn N-S lines get flatter with height."
+  },
+  {
+   "id": "S5.str.gate_tower",
+   "kind": "structure",
+   "name": "gate tower hall (城楼)",
+   "what": "The largest building in the scroll: a timber hall on the podium, 3 bays across its south end and 5 bays along its east side, with heavy bracket sets (intermediate sets between columns) and a hipped (庑殿) roof whose main ridge runs north-south, ending in 鸱吻 at both ends; the south end is a triangular hip. Lattice windows in the outer bays, a door in the middle bay of the south end where a lone figure stands at the head of the stair.",
+   "pts": {
+    "base": {
+     "sw": [
+      6620,
+      540,
+      "est"
+     ],
+     "se": [
+      7125,
+      540,
+      "est"
+     ],
+     "ne": [
+      7412,
+      385,
+      "est"
+     ],
+     "nw": [
+      6907,
+      385,
+      "est"
+     ]
+    },
+    "bays": [
+     [
+      6620,
+      540,
+      "est"
+     ],
+     [
+      6777,
+      540,
+      "est"
+     ],
+     [
+      6940,
+      540,
+      "est"
+     ],
+     [
+      7122,
+      540,
+      "est"
+     ]
+    ],
+    "sw_top": [
+     6620,
+     387
+    ],
+    "se_top": [
+     7125,
+     388
+    ],
+    "sw_eave": [
+     6620,
+     278
+    ],
+    "se_eave": [
+     7125,
+     280
+    ],
+    "ne_eave": [
+     7412,
+     203
+    ],
+    "ridge_s_end": [
+     6868,
+     65
+    ],
+    "ridge_n_end": [
+     7121,
+     25
+    ],
+    "eave_corner_sw": [
+     6503,
+     276
+    ],
+    "eave_corner_se": [
+     7245,
+     280
+    ],
+    "eave_corner_ne": [
+     7574,
+     129
+    ]
+   },
+   "support": "tower floor",
+   "facing_deg": 270,
+   "vis": "part: column feet hidden by the balcony railing; north and west sides hidden",
+   "conf": "high",
+   "src": "sections.md §3: 城上暮鼓; 名画记 five bays by three, hipped roof",
+   "note": "Columns: S end at u 6620, 6777, 6940, 7122 (bays 157/163/182 px); E side at ~7125, 7180, 7250, 7315, 7365, 7410 (5 bays, 47-70 px each) along the base line (7125,533)->(7412,378). Column feet hidden by the balcony railing, est at v 540 (S; the doorway floor, a little above the railing base v 557) and on the E base line (7125,540)->(7412,385). sw_top/se_top = column tops under the bracket band (v ~387); *_eave = the tile-end line at the same u (front eave v 276-280); ne_eave on the E eave line. Custom points (not straight above a base corner): ridge_s_end = S 鸱吻 base (ornament 24-88), straight above the middle of the S side (6872); ridge_n_end = N 鸱吻 (ornament 6-29), roughly above the middle of the N side (~7160); eave_corner_* = upturned eave corners (SE corner ornament hangs at 7260-7290, 307-333). Hips: SW (6868,65)->(6503,276), SE (6868,65)->(7245,280), NE (7121,25)->(7574,129). The main ridge (N-S) runs (6868,65)->(7121,25) = (253,-40), slope -0.16, far flatter than the E base (-0.54): the painter flattened the depth with height. So the 5-by-3 hall's long axis is N-S, along the wall, as a gate tower's should be; the '3 bays' face south toward the viewer. Drum: not identifiable; the doorway shows the standing figure (seed S5.fig.tower_watchman) and dark diagonal shapes behind him at 6855-6890, v 440-500 that might be the drum frame (very low conf). SCALE CUES (px): column height ~153 (387->540 est); door in the middle bay: frame 6790-6900, opening 6805-6890 (85 wide), top v 443, ~97 tall to the floor; doorway figure ~93 tall; balcony railing ~25-28; S-end bay widths 157-182. DEPTH DIRECTION: E side base / balcony railing (287,-155) = slope -0.54; E eave (329,-151) = -0.46; ridge (253,-40). Flatter than the gate block (-0.9..-1.0) and the bridge (-1.6)."
+  },
+  {
+   "id": "S5.str.tower_stair",
+   "kind": "structure",
+   "name": "stair from terrace to tower balcony",
+   "what": "Straight stair with a plank railing on each side, rising north from the terrace floor to the balcony at the middle of the hall's south end; dark capped newel posts at both feet.",
+   "pts": {
+    "base": {
+     "sw": [
+      6738,
+      772
+     ],
+     "se": [
+      6857,
+      772
+     ],
+     "ne": [
+      6905,
+      719,
+      "est"
+     ],
+     "nw": [
+      6820,
+      719,
+      "est"
+     ]
+    },
+    "nw_top": [
+     6820,
+     560
+    ],
+    "ne_top": [
+     6905,
+     560
+    ]
+   },
+   "support": "gate terrace",
+   "facing_deg": 270,
+   "vis": "full",
+   "conf": "high",
+   "note": "Bottom step on the terrace at v 760-773 between u ~6735 and 6860. Rails: W from (6750,763) to (6817,520); E from (6843,767) to (6907,527). Top tread at v ~563 (balcony floor). nw/ne est = straight below the top end at the podium's front foot (v 719). SCALE CUES (px): ~19 treads over 210 px of v (~11 px per step); width ~105-120 px; rail slope (67,-243) incl. rise. Its axis (~6800) is close to the hall door bay (6777-6940) and continues the lower flight (S5.str.inner_ramp)."
+  },
+  {
+   "id": "S5.str.inner_ramp",
+   "kind": "structure",
+   "name": "lower flight up the gate block (马道)",
+   "what": "Long straight flight with a plank railing on each side, laid against the gate block's south face and rising north from the street to a gap in the terrace balustrade (u ~6710-6855); its treads are drawn as evenly spaced horizontal lines, lighter than the brick face on either side. Empty of people.",
+   "pts": {
+    "base": {
+     "sw": [
+      6317,
+      1790,
+      "est"
+     ],
+     "se": [
+      6459,
+      1790,
+      "est"
+     ],
+     "ne": [
+      6852,
+      1591,
+      "est"
+     ],
+     "nw": [
+      6712,
+      1591,
+      "est"
+     ]
+    },
+    "nw_top": [
+     6712,
+     822
+    ],
+    "ne_top": [
+     6852,
+     822
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: everything below v ~1180 hidden by trees; foot not painted",
+   "conf": "med",
+   "src": "sections.md §3: inner ramp (马道), two flights (this is the lower; the upper is S5.str.tower_stair)",
+   "note": "Top end at the terrace edge between the rail-top posts (6710,755) and (6855,760); top tread at v ~822. W rail visible from (6710,755) to (6555,1180); E rail from (6855,760) through (6807,880) to ~(6690,1130): both slope -0.38 px u per px v going down. nw/ne = straight below the top end on the block's S-face foot line (v 1591, est). sw/se = where the rail lines reach the silk's bottom edge (v 1790): with the block's oblique the flight's foot would lie beyond the silk, so the true foot is NOT painted (trees and house S5.bld.house_6390 cover the lower part). Reading: a flight perpendicular to the S face (treads seen from above, rails = depth + rise), not a ramp along the face (a profile ramp would show a 30 deg sawtooth). Running N-S, it climbs to the terrace west of the earth-and-rock mound (S5.grd.rock_mound_7200), which is where a 马道 belongs; rail slope -0.38 with the block's oblique implies a steep (~50 deg) flight. SCALE CUES (px): tread lines ~10 px apart; width ~145 px at the top."
+  },
+  {
+   "id": "S5.str.moat_bridge",
+   "kind": "structure",
+   "name": "moat bridge (平桥)",
+   "what": "Flat timber bridge carrying the main road east over the moat, as wide as the road. Each side has a plank railing: a handrail on capped posts with diagonal braces and five or six horizontal boards below; sightseers lean on the near (south) railing to watch the water and on the far (north) railing with their backs to us. The deck's south edge shows a plain fascia beam; timber trestle frames stand in the water under both ends.",
+   "pts": {
+    "base": {
+     "sw": [
+      8248,
+      1565
+     ],
+     "se": [
+      9200,
+      1572,
+      "est"
+     ],
+     "ne": [
+      9455,
+      1168,
+      "est"
+     ],
+     "nw": [
+      8505,
+      1155
+     ]
+    },
+    "lines": {
+     "rail_near": [
+      [
+       8250,
+       1565
+      ],
+      [
+       8700,
+       1567
+      ],
+      [
+       9132,
+       1570
+      ]
+     ],
+     "rail_far": [
+      [
+       8505,
+       1155
+      ],
+      [
+       8800,
+       1160
+      ],
+      [
+       9100,
+       1163
+      ],
+      [
+       9340,
+       1167
+      ]
+     ]
+    },
+    "bays": [
+     [
+      8318,
+      1565
+     ],
+     [
+      8455,
+      1566
+     ],
+     [
+      8588,
+      1566
+     ],
+     [
+      8712,
+      1567
+     ],
+     [
+      8842,
+      1568
+     ],
+     [
+      8975,
+      1569
+     ],
+     [
+      9105,
+      1570
+     ],
+     [
+      8505,
+      1155
+     ],
+     [
+      8650,
+      1157
+     ],
+     [
+      8787,
+      1159
+     ],
+     [
+      9085,
+      1163
+     ],
+     [
+      9295,
+      1166
+     ]
+    ],
+    "sw_top": [
+     8250,
+     1470
+    ],
+    "nw_top": [
+     8505,
+     1078
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: east end behind willow branches and the covered cart; far railing behind the leaning crowd",
+   "conf": "high",
+   "src": "sections.md §3: 平桥; 桥头观水",
+   "note": "Deck level = road level at both ends (no rise drawn). Lines = railing feet on the deck edges. rail_near: boards start at 8236-8250, handrail 8277->9130 at v 1468-1477, deck-edge line v 1563-1572; fascia below to v 1590 (W) / 1600 (E). Near rail ends at the end post 9100-9110; the fascia continues to ~9190 under willow branches, so se is est. rail_far: tall W end post at 8500-8510 (capital v 1037-1047) beside a rack-like frame of tall posts and boards (8520-8590, up to v ~1000); handrail v 1072-1090 from 8587 to ~9340, where the big covered cart (9330-9750, S4 seam) hides it; lowest board v 1147-1166. ne est = se + the W end's depth offset (hidden by the covered cart). WHERE THE DECK MEETS THE ROAD: no abutment, ramp or step is drawn at either end; the deck is level with the road. W end = the line sw->nw (near rail's first board at 8236-8250 by the bush bank; far end post at 8505); E end = se->ne (near rail's end post 9105, fascia to ~9190 under the willow). The only supports drawn are the two timber trestle frames in the water (S5.str.bridge_trestle_w / _e); masonry abutments, if any, are hidden by the banks' bushes. bays: first 7 = near-rail post feet (8318...9105, ~132 px apart), last 5 = visible far-rail posts (end post 8505, then 8650, 8787, 9085, 9295; others hidden by people). sw_top = near handrail above sw (railing 95 px tall); nw_top = far handrail at the W end (~77-85 px tall; end-post cap at 1037). SCALE CUES (px): near railing 95 tall; far railing ~80-85 tall; post spacing ~132 (near) / ~140 (far); fascia 25-30 thick; rail watchers ~147 tall (seeds); the screen cart's wheel just NW of the W end ~82 px across (8302-8385, v 1200-1281); the big covered cart's wheel past the E end ~170 px (9464-9629, v 1221-1400). DEPTH DIRECTION: sw->nw (257,-410), slope -1.60; the far railing's E end runs ~300 px further east than the near one's, consistent with the same offset. Steeper than the gate block (-0.9..-1.0) and much steeper than the hall (-0.54)."
+  },
+  {
+   "id": "S5.str.bridge_trestle_w",
+   "kind": "structure",
+   "name": "west trestle frame of the moat bridge",
+   "what": "Timber framework under the bridge's west end: piles with rectangular caps, two long horizontal beams and diagonal struts, standing in the water.",
+   "pts": {
+    "line": [
+     [
+      8260,
+      1693
+     ],
+     [
+      8340,
+      1680
+     ],
+     [
+      8455,
+      1710
+     ]
+    ],
+    "bays": [
+     [
+      8260,
+      1693
+     ],
+     [
+      8455,
+      1710
+     ],
+     [
+      8482,
+      1673
+     ],
+     [
+      8505,
+      1643
+     ]
+    ]
+   },
+   "role": "pile_feet",
+   "support": "water",
+   "facing_deg": 0,
+   "vis": "full",
+   "conf": "med",
+   "note": "Line/bays = lowest visible ends of the piles (where they meet the water/bank): 8253-8267 to v 1693; 8433-8467 to v 1710; 8473-8490 to v 1673; 8503-8507 to v 1643. Beams at v 1607-1613 (8250-8433) and v 1670-1680 (8200-8440; it runs west past the bridge end into the bank, maybe a revetment sill). Pile caps at (8253,1637-1660), (8433-8448,1633-1660), (8459-8468,1668-1683), (8320-8340,1627-1640). Seen frontally: it is drawn as an east-west frame along the deck's south edge, not as a receding bent. Clear water span between this frame and the east one: u ~8510-8975."
+  },
+  {
+   "id": "S5.str.bridge_trestle_e",
+   "kind": "structure",
+   "name": "east trestle frame of the moat bridge",
+   "what": "Timber framework under the bridge's east end, like the west one: piles with caps, horizontal beams and struts, standing in the water; willow branches hang over it.",
+   "pts": {
+    "line": [
+     [
+      8985,
+      1670
+     ],
+     [
+      9010,
+      1700
+     ],
+     [
+      9180,
+      1688
+     ],
+     [
+      9225,
+      1690
+     ]
+    ],
+    "bays": [
+     [
+      8985,
+      1670
+     ],
+     [
+      9010,
+      1700
+     ],
+     [
+      9045,
+      1662
+     ],
+     [
+      9065,
+      1660
+     ],
+     [
+      9187,
+      1677
+     ],
+     [
+      9215,
+      1690
+     ]
+    ]
+   },
+   "role": "pile_feet",
+   "support": "water",
+   "facing_deg": 0,
+   "vis": "part: willow branches across",
+   "conf": "med",
+   "note": "Piles at 8980-8990 (cap 1647-1670), 9010 (to v 1700), 9037-9047 and 9060-9067 (to ~1660), 9180-9193 (cap 1657-1677), 9200-9227 (to ~1690). Beams at v 1600-1620 (8960-9260), v 1627-1630 (9083-9260), v 1685-1690 (9010-9177)."
+  },
+  {
+   "id": "S5.bld.tax_office",
+   "kind": "building",
+   "name": "tax office (税务所 / 场务)",
+   "what": "Three-bay open hall on the north side of the street, its east end against the gate block's south-west corner; a tiled roof whose front eave runs level across the whole front, round columns on small base plates, a narrower west bay with a lattice side panel and a large frame scale hanging inside, a wide middle bay where the official sits at a long desk, and an east bay with a back wall panel and a seated clerk. Open front, no plinth edge drawn.",
+   "pts": {
+    "base": {
+     "sw": [
+      5845,
+      920,
+      "est"
+     ],
+     "se": [
+      6390,
+      935,
+      "est"
+     ],
+     "ne": [
+      6557,
+      835,
+      "est"
+     ],
+     "nw": [
+      6012,
+      820,
+      "est"
+     ]
+    },
+    "bays": [
+     [
+      5845,
+      920,
+      "est"
+     ],
+     [
+      5968,
+      920
+     ],
+     [
+      6250,
+      932
+     ],
+     [
+      6385,
+      935,
+      "est"
+     ]
+    ],
+    "sw_eave": [
+     5845,
+     674
+    ],
+    "se_eave": [
+     6390,
+     681
+    ]
+   },
+   "support": "office floor",
+   "facing_deg": 270,
+   "vis": "part: roof top behind trees; feet of the east columns behind bales and people",
+   "conf": "high",
+   "src": "sections.md §3: 货到税讫; 余辉 撤防 reading",
+   "note": "Eave (tile ends) from (5845,674) to ~(6409,681); roof tiles up to v ~420 (ridge not visible, trees). Front beam v 699-706 (5944-6244). Columns: 5958-5980 with base plate (5953-5990, 918-922); 6244-6255 to ~v 932; east post 6368-6392 seen to v ~960 behind the bales (foot est 935); west end post est at 5845 (west bay 5800-5944 with a lattice panel 5800-5837 and a diagonal brace (5807,807)->(5837,787)). A thinner post at ~6137 (v 707-850) stands behind the desk (inner post, not on the front line). Desk front v 797-800 (6080-6230); back wall of the east bay ~v 740-830. Back corners est: depth ~100 px of v (front v ~925 to back wall ~825) with an assumed slope -0.6 -> (+167,-100); they fall behind the gate block in the picture. 'Against the wall': the office's east end (6390-6440) touches the gate block's SW arris in the picture. SCALE CUES (px): column 214 tall (920->706), ~25 px diameter; bays 123 (west, est) / 282 (middle; maybe two bays with a hidden column) / 140 (east); inspector seed 177 px tall. DEPTH DIRECTION: only the west-bay brace (30,-20) = slope -0.67 (low conf)."
+  },
+  {
+   "id": "S5.bld.wine_depot",
+   "kind": "building",
+   "name": "military wine depot / fire-post room (军巡铺屋)",
+   "what": "Open street-front room under a tiled eave, holding a row of large hooped casks (梢桶) on its floor with buckets on top; three archers get ready inside (one draws a bow). Lattice back wall and a corner post; a big tree stands at its east end. It continues west out of S5.",
+   "pts": {
+    "base": {
+     "sw": [
+      5400,
+      885,
+      "est"
+     ],
+     "se": [
+      5718,
+      885,
+      "est"
+     ],
+     "ne": [
+      5885,
+      785,
+      "est"
+     ],
+     "nw": [
+      5567,
+      785,
+      "est"
+     ]
+    },
+    "bays": [
+     [
+      5595,
+      885,
+      "est"
+     ],
+     [
+      5718,
+      885,
+      "est"
+     ]
+    ],
+    "sw_eave": [
+     5400,
+     655
+    ],
+    "se_eave": [
+     5718,
+     655
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: floor edge hidden by donkeys and people; east end behind a tree trunk (5717-5800)",
+   "conf": "high",
+   "src": "sections.md §3: 军巡铺屋, 禁军运酒 (余辉)",
+   "note": "Part inside S5: u 5600-5718. Eave (tile-end discs) at v 650-657 from <5400 to 5720, lintel v 660-665. Post at 5590-5600 (v 663-797+). Casks: v 803-863, ~55-60 px wide; floor front edge est v ~885 (behind the animals). sw est at u 5400 per sections.md (5400-5800) - the S6 mapper should use this ID for the rest. Back corners est with an assumed depth of 100 px of v at slope -0.6. DEPTH DIRECTION: no receding edge drawn. Behind it (north) stands S5.bld.back_hall_5790. SCALE CUES (px): eave 655 to floor ~885 = 230; casks ~60 tall; archers ~150-170 tall. West end (S6 seam notes): corner post at u ~5395-5423, lattice 5410-5450, eave discs from ~5415 east, floor front ~v 885; a round object on a thin pole at (5540-5570, 683-717) and a small box on the roof verge at (5455, 570) belong to the depot. The third archer is S6.fig.archer_waistguard_5465; the west casks are S5.prop.casks_west_5525."
+  },
+  {
+   "id": "S5.bld.back_hall_5790",
+   "kind": "building",
+   "name": "back hall behind the wine depot",
+   "what": "Tiled roof seen from above behind the depot and the upper floor of 孙羊正店, with a ridge ornament at its east end; behind it, in the yard, big rounded jars or bales are stacked in three tiers; a slanting railed stair or ladder rises at its west end.",
+   "pts": {
+    "base": {
+     "sw": [
+      5711,
+      470,
+      "est"
+     ],
+     "se": [
+      5880,
+      470,
+      "est"
+     ],
+     "ne": [
+      5940,
+      300,
+      "est"
+     ],
+     "nw": [
+      5771,
+      300,
+      "est"
+     ]
+    },
+    "se_ridge": [
+     5880,
+     250
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: front wall and feet hidden by the depot roof and trees",
+   "conf": "low",
+   "note": "Roof tiles from the ridge (v ~250, ornament at 5880,245) down to v ~455, u 5711-5867; its west end meets the 正店's upper storey (5400-5640, eave v 275). Railed stair from (5639,453) to (5733,325). Stacked jars/bales 5770-5890, v 130-280 (props, for the tile agents). Base entirely est (front assumed at the roof's lower edge + a wall). May belong to the 孙羊正店 complex (S6). S6 seam notes: its west end (u ~5700-5710) abuts the east post of 孙羊正店's upper storey (S6); probably part of that complex, not proven."
+  },
+  {
+   "id": "S5.bld.house_5800",
+   "kind": "building",
+   "name": "house south of the street (hip-gable roof)",
+   "what": "Large tiled roof seen from above at the bottom-left, its ridge running east-west along v ~1385-1430, with a 歇山 gable and curved bargeboards at its east end and a small open porch on posts below the east eave; the building's walls and street front (north side) are hidden.",
+   "pts": {
+    "base": {
+     "sw": [
+      5140,
+      1700,
+      "est"
+     ],
+     "se": [
+      5930,
+      1700,
+      "est"
+     ],
+     "ne": [
+      5930,
+      1440,
+      "est"
+     ],
+     "nw": [
+      5140,
+      1440,
+      "est"
+     ]
+    },
+    "se_eave": [
+     5885,
+     1565
+    ],
+    "ne_ridge": [
+     5880,
+     1430
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 90,
+   "vis": "part: only the roof and east-end posts are painted; walls hidden; continues west into S6",
+   "conf": "low",
+   "note": "East gable apex (5754,1434); bargeboards down to (5705,1600) and (5885,1565). Ridge/top edge from (5600,1385) to (5880-5930,1423-1430), sloping down to the right (+0.15), as the other bottom-left roofs do. Posts under the east end: 5834-5850 (v 1577-1758) and 5917-5930 (v 1429-1694). Faces the street (north), so facing 90; we see its back roof slope. Base est: north (street) wall at the ridge line, south wall at the posts' feet (v ~1700). Continues west of 5600 (S6). SCALE CUES (px): roof tile rows ~20 px apart; porch posts ~180-260 px. Depth: the east gable's eave line (5705,1600)->(5885,1565) = (180,-35) if read as receding (low conf). West end (S6 seam notes): a hip-gable end at u ~5135-5165, its west verge (5136,1465)->(5180,1640), top line at v 1445-1455; the point read at (5600,1385) is the top of a dark band above that line. Built by the gate builder, west into S6's range."
+  },
+  {
+   "id": "S5.bld.house_5720",
+   "kind": "building",
+   "name": "low house in front (south) of house_5800",
+   "what": "A second, lower tiled roof in the bottom-left corner, in front of house_5800; its top edge runs from upper left down to the right and ends at a dark ridge ornament; walls hidden, roof cut by the silk's bottom edge.",
+   "pts": {
+    "base": {
+     "sw": [
+      5216,
+      1790,
+      "est"
+     ],
+     "se": [
+      5880,
+      1790,
+      "est"
+     ],
+     "ne": [
+      5880,
+      1640,
+      "est"
+     ],
+     "nw": [
+      5216,
+      1600,
+      "est"
+     ]
+    },
+    "ne_ridge": [
+     5833,
+     1640
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 90,
+   "vis": "part: roof only, cut by the silk edge; continues west into S6",
+   "conf": "low",
+   "note": "Top edge (ridge or hip) from (5480,1490) via (5600,1555) to the ornament at (5833,1640); eave/tiles down to the silk edge. It slopes down to the right (+0.36), which no east-west or north-south ridge in the section's up-right oblique would do: read as a hip ridge, or the painter's freer oblique for the bottom-left houses. Base est only (the silk edge bounds it). West part (S6 seam notes): apex at (5476,1496), west verge down to about (5216,1620), tiles to u ~5200-5230 at the silk's edge. Built by the gate builder, west into S6's range."
+  },
+  {
+   "id": "S5.bld.house_6390",
+   "kind": "building",
+   "name": "bracketed house with studded door",
+   "what": "Tiled hip-gable roof with bracket sets under its eave and a studded double door in its painted (south) wall; a stall canopy on poles leans against its west end. Its east part disappears behind the trees at the foot of the gate block.",
+   "pts": {
+    "base": {
+     "sw": [
+      6300,
+      1735
+     ],
+     "se": [
+      6490,
+      1735,
+      "est"
+     ],
+     "ne": [
+      6490,
+      1600,
+      "est"
+     ],
+     "nw": [
+      6300,
+      1600,
+      "est"
+     ]
+    },
+    "bays": [
+     [
+      6345,
+      1730
+     ]
+    ],
+    "sw_eave": [
+     6300,
+     1548
+    ],
+    "nw_ridge": [
+     6330,
+     1392
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: east end hidden by trees, lower wall partly by people",
+   "conf": "med",
+   "note": "West verge from the ridge-end ornament (6330,1392) to the eave (6300,1545); eave v ~1550 (6300-6490); bracket sets v 1555-1585; beam v 1585-1590; studded door panel 6345-6450 x 1585-1695 (stud rows at v ~1610, 1650, 1690); post 6330-6345 down to v ~1730; a dark plinth/step block at v 1695-1760 (6300-6360). The door faces the viewer, so the building faces south (its back is to the street). North corners est at v 1600, just south of the gate block's (est) S-face foot (v 1591), since the house stands in front of the block; its true depth is not drawn. SCALE CUES (px): door panel ~105 wide x 110 tall; eave to post foot ~180. DEPTH DIRECTION: no receding edge drawn (only the gable verge, which mixes depth and height). Canopy (prop, tile agents): plank/mat roof from (6145,1460)-(6300,1420) down to (6080,1590)-(6290,1550) on poles at 6100-6110 and 6240-6255 (feet v ~1770)."
+  },
+  {
+   "id": "S5.bld.house_9300",
+   "kind": "building",
+   "name": "background house (top right)",
+   "what": "Hipped tiled house far up the silk behind the pines, front open on posts toward the viewer; it continues east out of S5.",
+   "pts": {
+    "base": {
+     "sw": [
+      9200,
+      153
+     ],
+     "se": [
+      9458,
+      152,
+      "est"
+     ],
+     "ne": [
+      9458,
+      60,
+      "est"
+     ],
+     "nw": [
+      9200,
+      60,
+      "est"
+     ]
+    },
+    "bays": [
+     [
+      9207,
+      153
+     ],
+     [
+      9264,
+      153
+     ],
+     [
+      9286,
+      153
+     ],
+     [
+      9364,
+      155
+     ]
+    ],
+    "sw_eave": [
+     9200,
+     100
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: east end beyond the section; partly behind pine branches",
+   "conf": "med",
+   "note": "Roof v ~15-100 from 9193 eastward; posts at 9207, 9264, 9286, 9364 down to v ~150-155. Back corners est (depth unknown, ~95 px of v assumed). The background path S5.road.far_path_8950 leads toward it. DEPTH DIRECTION: no receding edge drawn. S4 seam notes: its roof ends at about u 9462 and its last post is at 9455 (feet est v 152), perhaps shared with S4.bld.house_9590."
+  },
+  {
+   "id": "S5.bld.hut_9055",
+   "kind": "building",
+   "name": "small background building (top right)",
+   "what": "Small building half hidden by trees on the far ground at the top of the silk, a wall with vertical lines (door or window).",
+   "pts": {
+    "base": {
+     "sw": [
+      9030,
+      85,
+      "est"
+     ],
+     "se": [
+      9090,
+      85,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: mostly behind trees",
+   "conf": "low",
+   "note": "Wall with vertical strokes at 9057-9086, v 43-79; the riders on the background path pass below it."
+  },
+  {
+   "id": "S5.bld.shed_far_8195",
+   "kind": "building",
+   "name": "small distant structure behind the plaza trees",
+   "what": "Tiny low structure (row of short posts under a cover) with a small signboard or flag on a pole beside it, far behind the trees north of the plaza.",
+   "pts": {
+    "base": {
+     "sw": [
+      8160,
+      922,
+      "est"
+     ],
+     "se": [
+      8230,
+      922,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: between tree trunks; tiny",
+   "conf": "low",
+   "note": "Posts/cover at 8160-8230, v 875-922; sign/flag at ~8240-8290, v 860-880. Could also be a fence or a distant stall."
+  },
+  {
+   "id": "S5.road.main",
+   "kind": "road",
+   "name": "main road (through the gate and over the moat bridge)",
+   "what": "The town's main east-west road: the wide street inside the wall between the tax office and the houses on the south side, narrowing into the gate passage, out through the passage onto the open ground outside the gate (barber, idlers, carts), and straight onto the moat bridge, whose deck is as wide as the road.",
+   "route": true,
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       5600,
+       1250
+      ],
+      [
+       6300,
+       1300
+      ],
+      [
+       6645,
+       1352,
+       "est"
+      ],
+      [
+       7513,
+       1352,
+       "est"
+      ],
+      [
+       8000,
+       1358
+      ],
+      [
+       8376,
+       1360
+      ],
+      [
+       8850,
+       1366
+      ],
+      [
+       9328,
+       1370,
+       "est"
+      ],
+      [
+       9400,
+       1370,
+       "est"
+      ]
+     ],
+     "edge_n": [
+      [
+       5600,
+       888,
+       "est"
+      ],
+      [
+       5718,
+       888,
+       "est"
+      ],
+      [
+       5845,
+       920,
+       "est"
+      ],
+      [
+       5968,
+       921
+      ],
+      [
+       6250,
+       932
+      ],
+      [
+       6390,
+       940,
+       "est"
+      ],
+      [
+       6716,
+       1290,
+       "est"
+      ],
+      [
+       7584,
+       1290,
+       "est"
+      ],
+      [
+       7768,
+       1128,
+       "est"
+      ],
+      [
+       7900,
+       1045
+      ],
+      [
+       8100,
+       1040
+      ],
+      [
+       8330,
+       1060
+      ],
+      [
+       8505,
+       1155
+      ],
+      [
+       9100,
+       1163
+      ],
+      [
+       9340,
+       1167
+      ],
+      [
+       9420,
+       1168,
+       "est"
+      ]
+     ],
+     "edge_s": [
+      [
+       5600,
+       1440,
+       "est"
+      ],
+      [
+       6300,
+       1440,
+       "est"
+      ],
+      [
+       6574,
+       1415,
+       "est"
+      ],
+      [
+       7442,
+       1415,
+       "est"
+      ],
+      [
+       7600,
+       1450
+      ],
+      [
+       7900,
+       1475
+      ],
+      [
+       8100,
+       1500
+      ],
+      [
+       8248,
+       1565
+      ],
+      [
+       9132,
+       1570
+      ],
+      [
+       9400,
+       1575,
+       "est"
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: inside the passage and behind the gate block",
+   "conf": "med",
+   "note": "No road edge is drawn as a line anywhere; edges are where the open ground stops. Inside: edge_n = building fronts (depot floor ~885, tax-office column feet 920-935); edge_s = behind the roofs of the south-side houses (est, v ~1440); the street is ~500 px of v deep and the caravan walks in its southern half (v 1250-1400). Through the gate: the passage floor (S5.str.gate_passage, inner mouth est). Outside: edge_n = the wall foot and the line of tree bases (7880,1000; 8050-8120,1030; ~8330,1060) to the bridge's NW corner; edge_s = top of the bush/tree bank (7380,1440 -> 8240,1560). The open ground outside the gate is about as deep (v ~1050-1470) as the bridge deck (1155-1570). On the bridge: edges = the railing feet. Centre: inside drawn through the caravan's line, then the passage-mouth centres (outer mouth centre 7513,1352 = S5 datum), the bridge's end centres (8376,1360) and (9328,1370 est). The road continues east into S4."
+  },
+  {
+   "id": "S5.road.far_path_8950",
+   "kind": "road",
+   "name": "background path (top right)",
+   "what": "Path on the far ground at the top of the silk, behind the pines: a porter with a shoulder pole, a rider on a donkey and a walker go along it.",
+   "pts": {
+    "line": [
+     [
+      8850,
+      100,
+      "est"
+     ],
+     [
+      8910,
+      107
+     ],
+     [
+      8958,
+      121
+     ],
+     [
+      9000,
+      136
+     ],
+     [
+      9190,
+      155,
+      "est"
+     ]
+    ]
+   },
+   "role": "centre",
+   "support": "ground",
+   "vis": "part: inferred from the figures' feet; no edges drawn",
+   "conf": "med",
+   "note": "Feet: porter ~(8910,107), donkey hooves (8936-8979,121), walker (8993-9007,136). Seems to lead east toward S5.bld.house_9300."
+  },
+  {
+   "id": "S5.water.moat_south_8700",
+   "kind": "water",
+   "name": "moat water south of the bridge",
+   "what": "Open water under and in front of the moat bridge, left as plain silk without wave lines, between reed and bush banks; the trestle piles stand in it.",
+   "pts": {
+    "lines": {
+     "shore_w": [
+      [
+       8250,
+       1695,
+       "est"
+      ],
+      [
+       8400,
+       1720
+      ],
+      [
+       8440,
+       1790
+      ]
+     ],
+     "shore_e": [
+      [
+       9260,
+       1695,
+       "est"
+      ],
+      [
+       9050,
+       1745
+      ],
+      [
+       8930,
+       1790
+      ]
+     ],
+     "bridge_edge": [
+      [
+       8250,
+       1595
+      ],
+      [
+       8700,
+       1600
+      ],
+      [
+       9200,
+       1602,
+       "est"
+      ]
+     ]
+    }
+   },
+   "support": "water",
+   "vis": "part: cut by the silk edge at v 1790",
+   "conf": "med",
+   "src": "sections.md §3: 桥头观水",
+   "note": "Water = blank silk u ~8250-9260 below the deck fascia (v ~1590-1600) down to the silk edge, clear between the trestle frames at 8510-8975. shore_w = east limit of the reeds/bushes at the bottom-left (grass blades 8195-8400, v 1688-1770); shore_e = west limit of the grass tufts (8930-9050, v 1745-1790) and the willows of the east bank. Both shores are est: no shoreline is inked. South of the bridge a moat parallel to the wall would run down-left toward u ~7500-8200 at the silk edge; there the painting shows the bush bank (S5.grd.bush_bank_7800) and pines, so the water is only this patch under the bridge. bridge_edge = the deck's underside along the near side (where the water passes under the bridge)."
+  },
+  {
+   "id": "S5.water.moat_north_8950",
+   "kind": "water",
+   "name": "moat water north of the bridge",
+   "what": "Blank silk beyond the bridge's far railing, between the big tree at the bridge's north-west end and the willows and cart canopy at its north-east end; people lean on the far railing looking out over it, so it is read as the moat continuing north. No shore, ripples or boats are drawn.",
+   "pts": {
+    "lines": {
+     "bridge_edge": [
+      [
+       8505,
+       1155
+      ],
+      [
+       8800,
+       1160
+      ],
+      [
+       9100,
+       1163
+      ],
+      [
+       9340,
+       1167
+      ]
+     ]
+    }
+   },
+   "support": "water",
+   "vis": "part: only the bridge edge bounds it; tree crowns above",
+   "conf": "low",
+   "note": "Blank from the far railing (handrail v ~1075, foot ~1160) up to the tree crowns at v ~800 (u 8650-9200). MOAT COURSE: water shows only under/next to the bridge. A moat parallel to the wall (N-S) would run up-right from here (and down-left off the silk south of the bridge); up-right of this patch the painting shows big pines and willows (u 9100-9450, v 300-900) and, at the top, ground with a path, riders and a house (v 30-160) - no water. Between the gate and the bridge (u 7500-8240) the painting shows dry ground with people, trees and bushes, no moat."
+  },
+  {
+   "id": "S5.grd.bush_bank_7800",
+   "kind": "grd",
+   "name": "bush bank south of the road outside the gate",
+   "what": "Low bank thick with pines and bare bushes along the south side of the open ground outside the gate, running from the gate's south pier to the bridge's south-west corner, dropping toward the moat at its east end.",
+   "pts": {
+    "line": [
+     [
+      7380,
+      1440
+     ],
+     [
+      7600,
+      1450
+     ],
+     [
+      7900,
+      1475
+     ],
+     [
+      8100,
+      1500
+     ],
+     [
+      8248,
+      1565
+     ]
+    ]
+   },
+   "role": "bank_top",
+   "support": "ground",
+   "vis": "full",
+   "conf": "med",
+   "note": "Line = where the vegetation starts below the open road surface (no inked edge). Ground below it is foliage down to the silk edge; at 8150-8250 it becomes the moat's west bank."
+  },
+  {
+   "id": "S5.grd.moat_bank_e_9250",
+   "kind": "grd",
+   "name": "east bank of the moat",
+   "what": "Bank with a big willow and bushes at the bridge's south-east end, grass tufts at its foot by the water.",
+   "pts": {
+    "line": [
+     [
+      9200,
+      1600,
+      "est"
+     ],
+     [
+      9100,
+      1700,
+      "est"
+     ],
+     [
+      8960,
+      1790,
+      "est"
+     ]
+    ]
+   },
+   "role": "bank_top",
+   "support": "ground",
+   "vis": "part: mostly hidden by willow branches",
+   "conf": "low",
+   "note": "Inferred from the willow's position and the grass tufts at 8930-9050, v 1745-1790; no edge inked."
+  },
+  {
+   "id": "S5.grd.far_bank_6250",
+   "kind": "grd",
+   "name": "background ground with mounds (top left)",
+   "what": "Open far ground above the tax office roof: low earth mounds and ink-wash ground strokes with a few small animals and trees.",
+   "pts": {
+    "line": [
+     [
+      6150,
+      210
+     ],
+     [
+      6250,
+      197
+     ],
+     [
+      6350,
+      215
+     ],
+     [
+      6450,
+      210
+     ]
+    ]
+   },
+   "role": "bank_top",
+   "support": "ground",
+   "vis": "part: trees in front",
+   "conf": "low",
+   "note": "Wash strokes 6150-6350, v 175-230; a mound with a tree at (6220-6260, 140-180). Animals there (6280-6400, v 150-190) are for the tile agents."
+  },
+  {
+   "id": "S5.grd.rock_mound_7200",
+   "kind": "grd",
+   "name": "earth-and-rock mound at the gate block's south-east foot",
+   "what": "A mottled mound of earth and rock against the gate block's south face at its east end, running south past the silk's bottom edge: moss-dot texture, pale streaks and lumpy contours, with no brick courses, no crest line and no crenellations. Trees grow on it and round it: the knotted elm on its slope, the old multi-trunk tree at its east edge, the big bare elm at its west foot.",
+   "pts": {
+    "base": {
+     "sw": [
+      7010,
+      1790,
+      "est"
+     ],
+     "se": [
+      7400,
+      1790,
+      "est"
+     ],
+     "ne": [
+      7355,
+      1591,
+      "est"
+     ],
+     "nw": [
+      7050,
+      1591,
+      "est"
+     ]
+    },
+    "nw_top": [
+     7110,
+     1300
+    ],
+    "ne_top": [
+     7260,
+     1300
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunks and pine foliage cross it; its south end is beyond the silk",
+   "conf": "med",
+   "src": "余辉: 土墙杂树",
+   "note": "Re-read in the loyalty pass from gridded crops (gen/map/S5/loyalty/mound_grid.jpg, z2_b.jpg); replaces S5.str.wing_south. Scholars read this mass as the slumped earthen city wall with trees (余辉 土墙杂树; Hansen: an \"unguarded earthen wall... trees and brush growing at its base\"); in either reading the painted form is a low mound about 4-5 m across that ends at the silk's edge, not a coursed wall running north-south. Painted edges: W (7030,1700), (7010,1790); E (7380,1700), (7400,1790). Upward the mottling narrows to u 7110-7260 at v ~1300, where it meets the block's face: read as the mound's crest against the face (nw_top/ne_top, about 3.8 m), low confidence. Its foot along the block is hidden (est on the block's S-face foot, v 1591); sw/se are where the edges reach the silk's bottom edge, so its true south end is not painted. North of the block (u 7500-8300, v 150-1200, gen/map/S5/loyalty/north_of_block.jpg) the strokes show only the big willow and the old bole, bare ground and the far shed: no wall."
+  }
+ ]
+}

@@ -1,0 +1,577 @@
+{
+ "section": "S2",
+ "entities": [
+  {
+   "id": "S2.fig.bank_man_light_robe_25338",
+   "kind": "figure",
+   "name": "man in a light robe talking on the bank",
+   "what": "Man in a long light-coloured robe, open at the chest, with a small cap; stands on the bank in front of the open shop west of the 沿河雅座 halls, facing the viewer and his companion to the east, one arm bent toward him as he talks. A merchant or the shop's keeper by his dress.",
+   "pts": {
+    "foot": [
+     25338,
+     568
+    ],
+    "head": [
+     25337,
+     460
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 330,
+   "group": "S2.grp.bank_talkers_25350",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Painted height 108 px at foot v 568. The brief placed 'the two standing on the bank' at u 25500-25550; the strokes put them at u 25325-25385. The restyle paves the ground under them with flagstones; the scan has bare bank."
+  },
+  {
+   "id": "S2.fig.bank_man_with_stick_25370",
+   "kind": "figure",
+   "name": "man with a stick, back to the viewer, on the bank",
+   "what": "Man in a belted knee-length robe over trousers, hair in a knot, seen from behind and turned north-west toward the man in the light robe; a stick or short pole shows under his right arm, pointing east. A boatman or porter from the moored boats by his dress.",
+   "pts": {
+    "foot": [
+     25370,
+     590
+    ],
+    "head": [
+     25366,
+     467
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 135,
+   "group": "S2.grp.bank_talkers_25350",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Painted height 123 px at foot v 590 (the nearest land figures in t7). The stick is faint: a line at v ≈ 500 from u 25385 to 25410; the restyle draws a long stick over his shoulder and a second one under his arm."
+  },
+  {
+   "id": "S2.grp.bank_talkers_25350",
+   "kind": "group",
+   "name": "two men talking on the bank",
+   "what": "Two men stand face to face on the bare bank between the open shop and the moored boat's stern, talking: one in a light open robe facing out, one with a stick seen from behind.",
+   "members": [
+    "S2.fig.bank_man_light_robe_25338",
+    "S2.fig.bank_man_with_stick_25370"
+   ],
+   "src": "",
+   "note": "The boat moored just south-east of them (stern at u ≈ 25400-25450, v 540-700) is river_m's."
+  },
+  {
+   "id": "S2.fig.shopkeeper_25360",
+   "kind": "figure",
+   "name": "man inside the open shop behind the goods",
+   "what": "A man's head and shoulders (face toward the viewer, small cap, perhaps a beard) inside the open shop front west of the halls, standing behind the stepped rack of goods: the shopkeeper.",
+   "pts": {
+    "foot": [
+     25360,
+     445,
+     "est"
+    ],
+    "head": [
+     25356,
+     343
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: body below v 395 hidden by the goods rack",
+   "conf": "low",
+   "src": "",
+   "note": "Two readings: a man standing in the shop (the face reads at zoom 5, u 25350-25372, v 343-368), or a figure painted on a hanging picture or board (the restyle draws a framed image with a figure there). Foot est from a painted height of about 100 px (the bank men are 108-123 px at v 568-590, a little nearer); the shop floor is at about the bank's level."
+  },
+  {
+   "id": "S2.fig.hall_seated_man_25600",
+   "kind": "figure",
+   "name": "man seated in the hall's open window",
+   "what": "Man in a dark robe seated inside the 沿河雅座 hall's open window, hunched, turned east toward a smaller figure beside him; a low table or bench at his west side. A guest of the riverside rooms.",
+   "pts": {
+    "foot": [
+     25600,
+     462,
+     "est"
+    ],
+    "head": [
+     25593,
+     414
+    ]
+   },
+   "support": "upper floor: S2.bld.yanhe_yazuo_hall_25690",
+   "pose": "seated",
+   "facing_deg": 0,
+   "group": "S2.grp.hall_window_25600",
+   "vis": "part: below the hips hidden by the window sill",
+   "conf": "med",
+   "src": "名画记: 沿河雅座 (pin 14)",
+   "note": "Support placeholder: the merge writes structures_e's ID for the long hall (u ≈ 25450-25900). Its window room reads as a raised floor: window sill / floor line at v ≈ 462-468 under the figure; below it a lattice skirt (v 470-530) and posts whose feet stand at v ≈ 555 (the ground straight below). If structures_e reads the floor at ground level, the support is ground. Visible 48 px (v 414-462) seated."
+  },
+  {
+   "id": "S2.fig.hall_small_figure_25628",
+   "kind": "figure",
+   "name": "smaller figure beside the seated man (child or servant?)",
+   "what": "A smaller seated figure beside the man in the hall's window, its outline merged with his dark robe: a child or a servant attending him.",
+   "pts": {
+    "foot": [
+     25630,
+     462,
+     "est"
+    ],
+    "head": [
+     25626,
+     436
+    ]
+   },
+   "support": "upper floor: S2.bld.yanhe_yazuo_hall_25690",
+   "pose": "seated",
+   "facing_deg": 180,
+   "group": "S2.grp.hall_window_25600",
+   "vis": "part: below the shoulders hidden by the sill and the man",
+   "conf": "low",
+   "src": "名画记: 沿河雅座 (pin 14)",
+   "note": "The scan shows one dark mass u 25580-25643, v 413-462 with a second bump at (25626, 436); two readings: a second, smaller person, or the man's robe and sleeve. The restyle draws a man in red with a small person in blue. If a child: about 26 px visible against the man's 48 px. Floor as for S2.fig.hall_seated_man_25600."
+  },
+  {
+   "id": "S2.prop.hall_table_25565",
+   "kind": "prop",
+   "name": "low table or bench by the seated man",
+   "what": "A low table or bench inside the hall's window just west of the seated man: a plain board at u 25550-25580, v 425-442.",
+   "pts": {
+    "base": [
+     25565,
+     458,
+     "est"
+    ]
+   },
+   "support": "upper floor: S2.bld.yanhe_yazuo_hall_25690",
+   "group": "S2.grp.hall_window_25600",
+   "vis": "part: legs hidden by the sill",
+   "conf": "low",
+   "src": "名画记: 沿河雅座 (pin 14)",
+   "note": "Faint; the restyle draws a white table there."
+  },
+  {
+   "id": "S2.prop.hall_ladder_25535",
+   "kind": "prop",
+   "name": "ladder or steep stair inside the hall",
+   "what": "A ladder or steep stair inside the hall's west window, two parallel rails with rungs slanting from the floor at the west (u ≈ 25515, v 458) up toward the north-east (u ≈ 25560, v 405).",
+   "pts": {
+    "base": [
+     25520,
+     458,
+     "est"
+    ],
+    "top": [
+     25560,
+     405
+    ]
+   },
+   "support": "upper floor: S2.bld.yanhe_yazuo_hall_25690",
+   "vis": "part: seen through the window",
+   "conf": "low",
+   "src": "名画记: 沿河雅座 (pin 14)",
+   "note": "If it is a fixed stair it is part of the hall (structures_e) and this entity is dropped. The restyle draws a slanted ladder-like plank."
+  },
+  {
+   "id": "S2.grp.hall_window_25600",
+   "kind": "group",
+   "name": "guests in the hall's west window",
+   "what": "In the west window of the long riverside hall (沿河雅座) a man in a dark robe sits by a low table with a smaller figure beside him.",
+   "members": [
+    "S2.fig.hall_seated_man_25600",
+    "S2.fig.hall_small_figure_25628",
+    "S2.prop.hall_table_25565"
+   ],
+   "src": "名画记: 沿河雅座 (pin 14)",
+   "note": ""
+  },
+  {
+   "id": "S2.prop.hall_tables_chairs_25775",
+   "kind": "prop",
+   "name": "long table and folding seats inside the hall",
+   "what": "Inside the hall's east windows: a long table or counter (top v ≈ 405-415, u 25700-25850) with three seats with crossed legs (folding chairs or stools) below it, at u ≈ 25715-25742, 25750-25790 and 25820-25855; nobody sits at them.",
+   "pts": {
+    "base": {
+     "sw": [
+      25700,
+      460,
+      "est"
+     ],
+     "se": [
+      25855,
+      460,
+      "est"
+     ],
+     "ne": [
+      25850,
+      415,
+      "est"
+     ],
+     "nw": [
+      25700,
+      418,
+      "est"
+     ]
+    }
+   },
+   "support": "upper floor: S2.bld.yanhe_yazuo_hall_25690",
+   "vis": "part: seen through the window, below the sill hidden",
+   "conf": "med",
+   "src": "名画记: 沿河雅座 (pin 14)",
+   "note": "Exact count: 1 long table, 3 crossed-leg seats. The restyle draws a man in blue lying on the table, a small dark figure at u ≈ 25755 and a man in white at u ≈ 25845: none is on the scan (checked at zoom 4). Corners are the visible furniture's extents at the sill line (sw/se) and the table top's back (ne/nw)."
+  },
+  {
+   "id": "S2.fig.barrow_pusher_25532",
+   "kind": "figure",
+   "name": "man pushing the crate barrow on the far street",
+   "what": "Man under a broad round hat or hood, seen from behind and bent forward over the west end of a small barrow loaded with lattice crates, pushing it east along the far street at the top of the silk.",
+   "pts": {
+    "foot": [
+     25532,
+     100,
+     "est"
+    ],
+    "head": [
+     25530,
+     28
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 30,
+   "group": "S2.grp.barrow_25598",
+   "vis": "part: legs hidden by the lower crate",
+   "conf": "low",
+   "src": "",
+   "note": "Faint far-street strokes (u 25510-25555, v 28-90). Two readings: a man pushing a barrow (the restyle's reading), or a porter carrying two lattice baskets on a shoulder pole (then the vehicle S2.veh.barrow_crates_25598 is dropped and the crates are his load). Painted height about 72 px."
+  },
+  {
+   "id": "S2.veh.barrow_crates_25598",
+   "kind": "vehicle",
+   "name": "barrow or handcart with two lattice crates",
+   "what": "Small barrow or handcart on the far street carrying two lattice crates, one low at its west end (u 25528-25565, v 76-100) and one higher at its east end (u 25568-25598, v 36-73), the shafts running up to the man at its east end; no wheel is visible.",
+   "pts": {
+    "front": [
+     25598,
+     76,
+     "est"
+    ],
+    "rear": [
+     25535,
+     100,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 30,
+   "group": "S2.grp.barrow_25598",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Other reading: no vehicle, a porter with two baskets on a shoulder pole (see S2.fig.barrow_pusher_25532). SCALE CUE: crates about 37 × 25 px (west) and 30 × 37 px (east). DEPTH DIRECTION: the bed's lower edge (25535, 100) -> (25598, 72), slope dv/du -0.44 (it runs mostly east with a little depth; not a good receding edge). front/rear = ground under the crates' outer ends (est). Second pass, which reading: the barrow (kept). The two lattice crates are not hung level: the west crate (25530-25568, 75-98) stands lower and nearer, the east crate (25570-25600, 33-75) higher and further, one behind the other along a line that runs up to the east as a barrow's bed recedes here. A load on a shoulder pole would hang at one height on either side of its carrier, and the hooded man (25512-25555, v 28-75) is at the west end behind both crates, not between them. No wheel shows: it would be under the crates."
+  },
+  {
+   "id": "S2.fig.barrow_puller_25607",
+   "kind": "figure",
+   "name": "man at the barrow's east end",
+   "what": "Faint standing man at the east end of the crate barrow, between its shafts, pulling it east; his outline overlaps the stall awning's crossed poles.",
+   "pts": {
+    "foot": [
+     25607,
+     78
+    ],
+    "head": [
+     25605,
+     22
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S2.grp.barrow_25598",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Vertical strokes u 25600-25613, v 20-78 with a head shape at the top and feet at the bottom; they cross the awning's poles, so they could be poles only. The restyle draws a man in blue here holding the cart's shafts. Painted height 56 px, at the silk's top edge (v ≈ 16)."
+  },
+  {
+   "id": "S2.grp.barrow_25598",
+   "kind": "group",
+   "name": "the crate barrow on the far street",
+   "what": "Two men move a small barrow loaded with two lattice crates east along the far street above the halls: one bent over its west end pushing, one at the shafts' east end pulling.",
+   "members": [
+    "S2.fig.barrow_pusher_25532",
+    "S2.veh.barrow_crates_25598",
+    "S2.fig.barrow_puller_25607"
+   ],
+   "src": "",
+   "note": "conf low as a whole: see the pusher's note for the shoulder-pole reading."
+  },
+  {
+   "id": "S2.prop.stall_awning_25660",
+   "kind": "prop",
+   "name": "cloth awning over a stall on the far street",
+   "what": "A cloth or mat awning stretched from the tiled shed's west end over a small stall table, held up at its west end by crossed poles (u ≈ 25610-25630, v 40-70) and by a long pole slanting from its west edge (25615, 35) down to the ground at about (25677, 125).",
+   "pts": {
+    "base": [
+     25655,
+     118,
+     "est"
+    ],
+    "pole_foot": [
+     25677,
+     125,
+     "est"
+    ],
+    "eave_w": [
+     25615,
+     32
+    ],
+    "eave_e": [
+     25700,
+     25
+    ]
+   },
+   "support": "ground",
+   "group": "S2.grp.awning_stall_25660",
+   "vis": "part: its east end joins the tiled shed's roof",
+   "conf": "med",
+   "src": "",
+   "note": "Awning u 25615-25700, v 20-55. base = the middle of the ground under it (est). The tiled shed east of it (u ≈ 25700-25800, posts at u ≈ 25713-25720 and 25740) is structures_e's."
+  },
+  {
+   "id": "S2.prop.stall_table_25650",
+   "kind": "prop",
+   "name": "stall table under the awning",
+   "what": "Small stall table with splayed legs under the cloth awning (top at v ≈ 98-102, u 25635-25663); nothing on it is readable.",
+   "pts": {
+    "base": [
+     25650,
+     116
+    ]
+   },
+   "support": "ground",
+   "group": "S2.grp.awning_stall_25660",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "SCALE CUE: table about 28 px long, top about 15 px above its feet at v 116."
+  },
+  {
+   "id": "S2.fig.far_street_man_25688",
+   "kind": "figure",
+   "name": "man standing at the awning stall",
+   "what": "Man in a long robe and a cap standing by the stall table under the cloth awning, facing west toward it: the stall keeper or a customer.",
+   "pts": {
+    "foot": [
+     25688,
+     146,
+     "est"
+    ],
+    "head": [
+     25686,
+     73
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S2.grp.awning_stall_25660",
+   "vis": "part: legs hidden behind the hall's roof ridge (v ≈ 145)",
+   "conf": "med",
+   "src": "",
+   "note": "Painted height about 73 px with the foot est at the far street's ground just above the near hall's ridge."
+  },
+  {
+   "id": "S2.grp.awning_stall_25660",
+   "kind": "group",
+   "name": "the awning stall on the far street",
+   "what": "A small stall under a propped cloth awning on the far street above the halls: a table, with a man standing at it.",
+   "members": [
+    "S2.prop.stall_awning_25660",
+    "S2.prop.stall_table_25650",
+    "S2.fig.far_street_man_25688"
+   ],
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S2.fig.far_street_figure_25750",
+   "kind": "figure",
+   "name": "figure in a dark robe by the tiled shed",
+   "what": "Figure in a dark robe on the far street in front of the tiled shed's posts, with something (a basket?) held out at its east side; only the upper body shows above the hall's roof ridge.",
+   "pts": {
+    "foot": [
+     25750,
+     147,
+     "est"
+    ],
+    "head": [
+     25749,
+     99
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: below v ≈ 145 hidden by the hall's roof ridge",
+   "conf": "med",
+   "src": "",
+   "note": "Painted height only 48 px against 73 px for S2.fig.far_street_man_25688 at the same foot v: stooping, seated or a youth. The restyle draws a taller man in red (head v ≈ 78) carrying a basket."
+  },
+  {
+   "id": "S2.fig.far_street_child_25728",
+   "kind": "figure",
+   "name": "small head by the tiled shed (child?)",
+   "what": "A small dark head just west of the dark-robed figure on the far street: a child or a woman beside him.",
+   "pts": {
+    "foot": [
+     25728,
+     147,
+     "est"
+    ],
+    "head": [
+     25727,
+     105
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Two readings: a dark spot at (25727, 105-113) that may be a child's head, or a knot of the shed's furniture or posts. The restyle draws a small person with a hair knot behind the man in red. If a child: visible height about 42 px against the man's 48."
+  },
+  {
+   "id": "S2.prop.shed_tables_25845",
+   "kind": "prop",
+   "name": "tables and benches under the tiled shed on the far street",
+   "what": "Under the tiled shed on the far street: three tables or benches (tops at v ≈ 87-107, legs to v ≈ 130, at u ≈ 25777-25817, 25827-25847 and 25877-25900) and an A-frame trestle between them (u ≈ 25855-25877, v 75-107); nobody sits at them on the scan.",
+   "pts": {
+    "base": {
+     "sw": [
+      25777,
+      132,
+      "est"
+     ],
+     "se": [
+      25900,
+      132,
+      "est"
+     ],
+     "ne": [
+      25900,
+      100,
+      "est"
+     ],
+     "nw": [
+      25777,
+      95,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Count: 3 tables or benches and 1 trestle, faint. The restyle draws a big brown horse at u ≈ 25840-25900 (v 40-130), an ox head at u ≈ 25770 and a standing man at u ≈ 25850 (v 110-150); none of them is on the scan (checked at zoom 4): the horse is made from the trestle and the table legs."
+  },
+  {
+   "id": "S2.veh.cart_round_top_26035",
+   "kind": "vehicle",
+   "name": "round-topped cart (or stall under a round canopy) on the far street",
+   "what": "A large round-topped thing on a low frame on the far street: read as a parked cart under a round arched cover or carrying a huge round load, its bed (v 90-102) on props at u ≈ 25930 and 25990, its east end at the feeding horse. Faint.",
+   "pts": {
+    "front": [
+     25998,
+     136,
+     "est"
+    ],
+    "rear": [
+     25925,
+     132,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S2.grp.round_cart_26035",
+   "vis": "faded",
+   "conf": "low",
+   "src": "",
+   "note": "Other reading: a stall table under a big round parasol (then a prop, not a vehicle). SCALE CUE: the round top u 25940-26005, v 30-92 (65 px wide, 62 tall); the bed u 25920-26037; props to v ≈ 132. No wheel is readable on the scan (the restyle paints a spoked wheel at u ≈ 26000-26020, v 85-112, and the load as a giant bale). front/rear = ground under the bed's ends (est). Second pass: the bed's two long horizontal members (v 100-113) run from u ~25912 to ~25998 and end there on legs at about u 25919 and 25987-25992 (feet v ~136-138). Between the bed's east end and the dark horse (body from u ~26030), close vertical posts stand at u 26000-26030 (v 65-134), and no shaft runs on to the horse. So front moved from (26035, 130 est) to (25998, 136 est), where the bed ends (the old front sat under the horse's hind feet at 26037). This does not settle cart or stall; it does weaken the horse's place in the cart's group: as drawn it is not in shafts. Either keep S2.grp.round_cart_26035 with a note, or leave the horse ungrouped."
+  },
+  {
+   "id": "S2.ani.horse_feeding_26072",
+   "kind": "animal",
+   "name": "dark horse or mule with its head down",
+   "what": "A dark horse or mule standing at the east end of the round-topped cart, facing east with its head lowered to the ground or a trough (feeding); no tack readable. Perhaps the cart's draught animal, unhitched or between hidden shafts.",
+   "pts": {
+    "fore": [
+     26072,
+     134
+    ],
+    "hind": [
+     26037,
+     134
+    ],
+    "head": [
+     26082,
+     128
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S2.grp.round_cart_26035",
+   "vis": "faded",
+   "conf": "med",
+   "src": "",
+   "note": "Body u 26032-26070, v 94-112; legs to v ≈ 134. Species low: horse or mule (no long ears read). The restyle paints it reddish-brown, harnessed between the cart's shafts."
+  },
+  {
+   "id": "S2.grp.round_cart_26035",
+   "kind": "group",
+   "name": "the round-topped cart and its horse",
+   "what": "A round-topped cart stands parked on the far street with a dark horse or mule feeding, head down, at its east end.",
+   "members": [
+    "S2.veh.cart_round_top_26035",
+    "S2.ani.horse_feeding_26072"
+   ],
+   "src": "",
+   "note": "The donkey facing them from the east (S2.ani.donkey_26098) may belong too. FRAME AGENT (second pass accepted): the cart's front moved to where its bed ends (25998, 136, est); close posts stand between the bed and the horse and no shaft reaches it, so the horse stands at the cart's east end, not in its shafts. Kept in this group as one parked scene."
+  },
+  {
+   "id": "S2.ani.donkey_26098",
+   "kind": "animal",
+   "name": "donkey facing west under the stall shed",
+   "what": "A donkey (long ears) standing under the stall shed east of the round-topped cart, facing west toward the feeding horse, partly behind the shed's post; no load or tack readable.",
+   "pts": {
+    "fore": [
+     26098,
+     130
+    ],
+    "hind": [
+     26112,
+     130,
+     "est"
+    ],
+    "head": [
+     26089,
+     90
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "vis": "part: body behind the shed's post at u ≈ 26103",
+   "conf": "low",
+   "src": "",
+   "note": "Head with ears u 26084-26100, v 82-100; body to u ≈ 26124; legs to v ≈ 130. Its fore reads at u 26098, 2 px west of the t7|t8 boundary: t8 may record it too (keep one). The restyle turns its head into the hat of a standing man in blue (u ≈ 26090-26110, v 70-135) and draws a dark horse behind the post; the scan shows only this animal. Merge: t8 recorded the same animal under this ID (fore (26098, 136), hind (26119, 138), head (26088, 91); back line v 87-92 from u 26092 to 26122, legs at about u 26100, 26110, 26120 down to v 132-140; about 45 px to the back) and read it as a donkey or a horse facing the round-topped cart's horse head to head; t8's copy was dropped. Not joined to S2.grp.round_cart_26035: an animal facing the cart's horse head to head is not in its team."
+  }
+ ]
+}

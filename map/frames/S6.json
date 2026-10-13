@@ -1,0 +1,237 @@
+{
+ "section": "S6",
+ "status": "Mapped 2026-10-11 (the S6 area agent, Run 1). The frame continues S5's (map/README.md, Frames): same origin, scales and seam knot; the receding direction's knots inside S6 are measured from the structures' receding edges below.",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    1850,
+    5750
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    58.24,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     1250,
+     59.9
+    ],
+    [
+     2000,
+     50.4
+    ],
+    [
+     2950,
+     50.4
+    ],
+    [
+     4170,
+     54.4
+    ],
+    [
+     5600,
+     58.24
+    ]
+   ],
+   "derivation": [
+    "Continues S5's frame (map/frames/S5.json F1), so the joined world is one coordinate system: the same origin (S5.str.moat_bridge:base.sw, scan 8248, 1565), the same 77 px per metre across the street and in height, and the same 51.25 px of v per metre of depth. dx = 51.25 / |slope| for a receding (north-running) edge of slope dv/du.",
+    "Seam with S5 at u 5600: S5's receding direction there is 58.24 px per metre north (its gate value, kept constant west of u 7800 because S5 shows no reliable receding edge west of the gate), so the last knot is [5600, 58.24].",
+    "Seam with S7 at u 2000 (joined 2026-10-12, the round-2 join agent; map/README.md, One world across sections): S7's knots [1250, 59.9] and [2000, 50.4] (map/frames/S7.json F1) are copied here, because S6's entities that reach west of the seam (frame covers from u 1850) are placed with S7's drift. East of u 2000 nothing changes: dx was already a constant 50.4 there (west of the u 2950 knot). West of the seam dx now rises toward 59.9.",
+    "Knot [2950, 50.4], the west group (five edges, u 2190-3370): the incense compound's west range ridge (2190,310)->(2462,55), slope -0.94, dx 54.7; the incense shop's ridge (2660,335)->(2940,48), -1.025, dx 50.0; its east eave (2870,590)->(3245,200), -1.04, dx 49.3; the two long tables under its lean-to, west edges of their tops (3213,420)->(3290,337), -1.08, dx 47.5, and (3280,435)->(3367,347), -1.01, dx 50.7. Mean 50.4 at their mean u (~2950).",
+    "Knot [4170, 54.4], the middle group (three edges, u 3990-4346): the corner shop's ridge (3990,445)->(4235,165), -1.14, dx 44.8; its west eave, upper part (4060,240)->(4280,40), -0.91, dx 56.4; the west eave of the south-side house east of the inn (4134,1784)->(4346,1609), -0.83, dx 62.1. Mean 54.4.",
+    "East group (two edges, u 5272-5455), used as a check, not a knot: the parallel bars on the east side of the 正店 / 彩楼欢门 (5272,488)->(5432,340), -0.93, dx 55.4, and (5300,690)->(5455,520), -1.10, dx 46.7; mean 51.1 where the frame gives about 57.6 (see questions).",
+    "Not used: the square well's curb and platform sides (slopes -2.5 to -3.3: drawn almost from above), gable verges (they mix depth and height), the corner shop's lower west eave (it bends with the hip), the wagon's panels and shafts and the wine cart's casks (the vehicles are turning), and the 解 board's foot line (2050,1768)->(2120,1708), -0.86, dx 59.6 (only if the board stands square to the street).",
+    "The ten edges scatter by about +-5 px/m round 52 with no clear drift along the section; between the knots dx is linear, beyond them constant (S5's rule)."
+   ],
+   "assumptions": [
+    "East-west and height share S5's scale, 77 px per metre; depth is 51.25 px of v per metre everywhere on the ground. With them the street figures are about 1.3x life, as at the gate (adults 175-243 px, children 104-134 px, sedan bearers 156-182 px).",
+    "Things far up the silk are painted smaller than the frame's one scale allows (see questions): positions along the street still come from foot points and base corners, but sizes read at the back of the silk are about 0.55-0.6 of what they would be at the street.",
+    "Painted figure size is not a scale. Place by foot point."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "street level; small undulations ignored. 'ground: on <prop>' marks goods whose base point is the ground under the stand, tub, block or counter they sit on"
+  },
+  "zhengdian upper floor": {
+   "H": 4.5,
+   "how": "assumed: 孙羊正店's upper floor line (balustrade foot) is at v ~442 over u 4440-5650 and the street front (column feet, est) at v ~905; the ground under the balustrade is hidden, so floor height and set-back trade off: 6.0 m with no set-back, 4.5 m with 2.2 m (the upper storey's west end lines up with the ground floor's west column, and the ground-floor roof shows only ~110 px before the 彩楼's V-band), 3.4 m with 4 m. The middle reading is taken; the ground-floor eave is 2.6 m up (197 px), leaving a 1.9 m pent roof below the floor"
+  },
+  "zhengdian table top": {
+   "H": 5.25,
+   "how": "derived: the upper floor (4.5 m) plus the table in its east room, whose dishes sit ~57 px (0.75 m) above the floor line"
+  },
+  "inn upper floor": {
+   "H": 3.4,
+   "how": "assumed: the window sill of 久住王员外家's upper storey is at v ~1705 on its south face, and the ground below it is beyond the silk's edge; 3.4 m is the low reading of the 正店's floor. With it the inn's south wall foot falls at v ~1965 and its west gable apex (3810,1288) stands over the middle of its west wall, as a gable should"
+  },
+  "well cover": {
+   "H": 0.25,
+   "how": "assumed: the square well's curb stands 10-15 px proud of its platform boards, which show 6-8 px of thickness: about 0.25 m; two water-drawers stand on the cover's back beam"
+  },
+  "table top": {
+   "H": 1.1,
+   "how": "derived: the paper stall's table top stands 84 px above its leg feet (S6.prop.paper_stall_table_2395); painted furniture is drawn at the figures' 1.3x like them"
+  },
+  "cart bed: S6.veh.wine_cart_3090": {
+   "H": 0.75,
+   "how": "derived: the driver's est foot on the front board (v 1500) against the cart's ground line under him (v ~1556, between its front (3090,1482) and its rear (2700,1682))"
+  },
+  "cart bed: S6.veh.taiping_wagon_3600": {
+   "H": 1.45,
+   "how": "derived: the young man's est foot on the bed behind the front board (v 395) against the wheel's ground contact (3783,506)"
+  },
+  "sedan": {
+   "H": 0,
+   "how": "the passenger's foot point is the ground under her seat (est); the sedan's floor height is the vehicle kit's choice"
+  },
+  "shoulders": {
+   "H": 0,
+   "how": "a child carried on a man's shoulders: its foot point is the carrier's foot point; the ride height is the people page's choice"
+  },
+  "carried on back": {
+   "H": 1.25,
+   "how": "derived: the child's est feet at the carrier's waist (v 1145), 97 px above the carrier's feet (v 1242)"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S6.road.main:lines.centre.6"
+  ],
+  "station": -26.51,
+  "about": "where the main street crosses the seam with S5 (u 5600): its last centre-line point, exactly S5's road end (scan 5600, 1250). Station -26.51 there, the station of S5.road.main's west end, so stations run on from the gate (more negative going west, into the city)."
+ },
+ "checks": [
+  {
+   "what": "正店 ground-floor eave above its west column foot (painted eave height), m",
+   "a": "S6.bld.sunyang_zhengdian:base.sw",
+   "b": "S6.bld.sunyang_zhengdian:sw_eave",
+   "measure": "height",
+   "expect": "a Song shop-front eave, roughly 3-3.5 m (buildings are painted smaller than the 1.3x figures)"
+  },
+  {
+   "what": "corner shop front eave above its south-west foot, m",
+   "a": "S6.bld.corner_shop_3725:base.sw",
+   "b": "S6.bld.corner_shop_3725:sw_eave",
+   "measure": "height",
+   "expect": "a Song shop-front eave, roughly 3-3.5 m"
+  },
+  {
+   "what": "彩楼欢门 height at its west pole, m",
+   "a": "S6.str.cailou_huanmen_4430:base.sw",
+   "b": "S6.str.cailou_huanmen_4430:sw_top",
+   "measure": "height",
+   "expect": "reaching the upper storey's eave"
+  },
+  {
+   "what": "square well curb, width east-west (sw -> se), m",
+   "a": "S6.str.square_well_2000:base.sw",
+   "b": "S6.str.square_well_2000:base.se",
+   "measure": "distance",
+   "expect": "a square well curb, roughly 1-1.5 m (x1.3 as painted)"
+  },
+  {
+   "what": "square well curb, depth north-south (se -> ne), m",
+   "a": "S6.str.square_well_2000:base.se",
+   "b": "S6.str.square_well_2000:base.ne",
+   "measure": "distance",
+   "expect": "the same as the width if the curb is square (a test of the depth rate; the well is drawn almost from above)"
+  },
+  {
+   "what": "incense shop east wall direction (se -> ne), deg",
+   "a": "S6.bld.incense_shop_liu:base.se",
+   "b": "S6.bld.incense_shop_liu:base.ne",
+   "measure": "direction",
+   "expect": 90
+  },
+  {
+   "what": "corner shop west wall direction (sw -> nw), deg",
+   "a": "S6.bld.corner_shop_3725:base.sw",
+   "b": "S6.bld.corner_shop_3725:base.nw",
+   "measure": "direction",
+   "expect": 90
+  },
+  {
+   "what": "cross street width at its mouth (west wall foot -> east wall foot), m",
+   "a": "S6.road.cross_2970:lines.edge_w.0",
+   "b": "S6.road.cross_2970:lines.edge_e.0",
+   "measure": "distance",
+   "expect": "a Song city street, roughly 8-15 m"
+  },
+  {
+   "what": "west sedan, pole length (front -> rear), m",
+   "a": "S6.veh.sedan_4575:front",
+   "b": "S6.veh.sedan_4575:rear",
+   "measure": "distance",
+   "expect": "Song sedan poles, roughly 4-5 m (x1.3 as painted)"
+  }
+ ],
+ "questions": [
+  "Things far up the silk are painted smaller: the top street's adults are 100-125 px tall against 175-243 px on the main street, the cloth shop's posts 88 px against ~210 px for the corner shop's, and the wheelbarrow at the top has a 52 px wheel against 76-85 px for the barrows in the street (about 0.55-0.6 at D ~25-30 m). The frame keeps one across-street scale (77 px/m), so buildings, bays and gaps at the back of the silk come out about 0.6 of their painted proportion. A depth-dependent scale would change S5's frame too: the lead's call.",
+  "Roof rises are painted shorter than the frame allows (a 2 m rise is 154 px of v; the compound's north range shows 143 px for its whole south slope, the 正店's upper roof 205 px): heights read from roofs are unreliable.",
+  "The street's south edge is taken at v 1440 (the narrowest reading; S5's value). Figures seen over the south-side ridge east of u 5000 (the rider, his groom, the pole man) imply ground at v ~1480-1575, and S5's house_5800 has porch posts with feet at v 1694-1758: the houses' street fronts may lie up to ~150 px lower.",
+  "The 正店's upper floor height (3.4-6.0 m, 4.5 assumed) and the inn's (3.4 assumed) are not measurable: the ground under the 正店's balustrade is hidden and the inn's is beyond the silk.",
+  "The receding edges at the east end (u 5272-5455) read dx ~51 where the frame, blending to S5's 58.24 at the seam, gives ~57.6. S5's 58.24 west of the gate was carried from the gate, not measured; if the lead lowers S5's west value toward ~52, this section's last knot follows it.",
+  "The cross street runs due north (both its sides recede at the section's direction); no continuation south of the main street is painted: south of it lies an open square between the 解 building (S7) and the inn's west wing.",
+  "S6.veh.hidden_wagon_3400: only the second wagon's four-mule team, driver and traces are painted; its body is hidden behind the incense shop's lean-to mat roof. Its position is inferred."
+ ],
+ "checks_result": [
+  {
+   "what": "正店 ground-floor eave above its west column foot (painted eave height), m",
+   "expect": "a Song shop-front eave, roughly 3-3.5 m (buildings are painted smaller than the 1.3x figures)",
+   "got": 2.56
+  },
+  {
+   "what": "corner shop front eave above its south-west foot, m",
+   "expect": "a Song shop-front eave, roughly 3-3.5 m",
+   "got": 4.09
+  },
+  {
+   "what": "彩楼欢门 height at its west pole, m",
+   "expect": "reaching the upper storey's eave",
+   "got": 9.42
+  },
+  {
+   "what": "square well curb, width east-west (sw -> se), m",
+   "expect": "a square well curb, roughly 1-1.5 m (x1.3 as painted)",
+   "got": 2.27
+  },
+  {
+   "what": "square well curb, depth north-south (se -> ne), m",
+   "expect": "the same as the width if the curb is square (a test of the depth rate; the well is drawn almost from above)",
+   "got": 1.57
+  },
+  {
+   "what": "incense shop east wall direction (se -> ne), deg",
+   "expect": 90,
+   "got": 93.09
+  },
+  {
+   "what": "corner shop west wall direction (sw -> nw), deg",
+   "expect": 90,
+   "got": 94.53
+  },
+  {
+   "what": "cross street width at its mouth (west wall foot -> east wall foot), m",
+   "expect": "a Song city street, roughly 8-15 m",
+   "got": 11.21
+  },
+  {
+   "what": "west sedan, pole length (front -> rear), m",
+   "expect": "Song sedan poles, roughly 4-5 m (x1.3 as painted)",
+   "got": 5.55
+  }
+ ]
+}

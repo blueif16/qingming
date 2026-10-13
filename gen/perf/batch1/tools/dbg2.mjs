@@ -1,0 +1,20 @@
+import { chromium } from 'playwright-core';
+const url = process.argv[2] || 'http://127.0.0.1:5190/world.html?tier=low&adapt=0&sound=0';
+const browser = await chromium.connectOverCDP('http://127.0.0.1:' + process.env.CDP_PORT);
+const page = await (browser.contexts()[0]).newPage();
+const logs = [];
+page.on('console', (m) => { if (['error', 'warning'].includes(m.type())) logs.push(m.type() + ' ' + m.text()); });
+page.on('pageerror', (e) => logs.push('[pageerror] ' + e.message + ' ' + String(e.stack || '').split('\n').slice(0, 5).join(' | ')));
+await page.goto(url);
+await page.waitForFunction(() => window.__test, null, { timeout: 180000 });
+await page.waitForTimeout(3000);
+const r = await page.evaluate(async () => {
+  const T = window.__test;
+  const idx = T.stream.internals.index.map((e) => [e.name, e.state]);
+  const f0 = T.shadows().frames;
+  await new Promise((r) => setTimeout(r, 1000));
+  return { idx, framesPerSec: T.shadows().frames - f0, stats: T.stream.stats().events.map((e) => [e.kind, e.name, e.ms, e.stallMs]), tier: T.tiers.stats().log };
+});
+console.log(JSON.stringify(r));
+console.log(logs.slice(0, 20).join('\n'));
+await page.close(); await browser.close();

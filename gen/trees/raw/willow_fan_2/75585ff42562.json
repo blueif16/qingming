@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: an early-spring willow (柳) as the scroll paints it. A sturdy, slightly leaning trunk with knots and rough grey-brown bark forks into a few thick limbs; each limb ends in a knobbly head from which big open fans of long, straight, slender shoots spring upward and outward and arch over a little at their tips. The fans overlap into a broad, airy crown with sky showing between them. The shoots are long single whips, not a fine branching twig lattice, and they rise; they do not hang down in curtains. Fresh new leaves are just opening along every shoot as tiny slender leaves, so each fan reads as a light green feathery spray with the darker shoots showing through.\nColours: grey-brown bark with darker brown knots; shoots red-brown; new leaves fresh pale willow green (about #8fa35f), lighter at the tips.\n\nThis one: A tall upright willow: a straight trunk that forks at mid-height into three limbs rising steeply, each crowned by tall fans of shoots; the crown taller than it is wide and a little lopsided to the right.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/willow_fan_1.jpg",
+  "gen/trees/refs/willow_fan_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "75585ff42562",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 61.7,
+ "attempts": 1,
+ "idempotency_key": "54e30946-7ca0-4b77-8b9d-624b8ae37d79",
+ "request_id": "c8d8fdce-4815-4531-9c1e-a314f18ed261",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5090,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 501
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5090,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 501
+  },
+  "total_tokens": 6674
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/d185bf98-8452-43b8-b26d-29dd71c5a678"
+ ],
+ "files": [
+  "gen/trees/raw/willow_fan_2/75585ff42562_0.png"
+ ]
+}

@@ -1,0 +1,252 @@
+[
+ {
+  "label": "street -> passage -> through the painted crowd at its mouth -> over the bridge",
+  "start": [
+   -36,
+   3.95
+  ],
+  "legs": [
+   [
+    0,
+    10.4
+   ],
+   [
+    25,
+    0.6
+   ],
+   [
+    0,
+    10
+   ]
+  ],
+  "expect": {
+   "X": [
+    9,
+    13.6
+   ],
+   "H": [
+    -0.2,
+    0.3
+   ]
+  },
+  "why": "legs are [heading, seconds]; the idlers stand at the mouth as painted, so the walk threads the gap between the stick man and the man in front of him; since 2026-10-12 the lead camel stands half out of the passage on its north side, as painted: the walk holds D 3.95 through the passage, then turns 25 degrees past the camel's head to thread the idlers' gap at D ~4.6"
+ },
+ {
+  "label": "up the lower flight (马道) to the terrace edge",
+  "start": [
+   -19.15,
+   -16.3
+  ],
+  "legs": [
+   [
+    90,
+    14
+   ]
+  ],
+  "expect": {
+   "D": [
+    -2.0,
+    2.5
+   ],
+   "H": [
+    9.5,
+    12.2
+   ]
+  }
+ },
+ {
+  "label": "lower flight top -> onto the terrace",
+  "start": [
+   -19.15,
+   -1.6
+  ],
+  "legs": [
+   [
+    90,
+    1.8
+   ],
+   [
+    0,
+    2.5
+   ]
+  ],
+  "expect": {
+   "X": [
+    -18.3,
+    -15.0
+   ],
+   "H": [
+    9.9,
+    10.3
+   ]
+  }
+ },
+ {
+  "label": "upper stair -> balcony -> into the hall",
+  "start": [
+   -18.9,
+   -1.2
+  ],
+  "legs": [
+   [
+    90,
+    7
+   ]
+  ],
+  "expect": {
+   "D": [
+    2.1,
+    6.8
+   ],
+   "H": [
+    11.9,
+    12.3
+   ]
+  }
+ },
+ {
+  "label": "tax office steps -> onto the floor, east of the official's desk",
+  "start": [
+   -35.65,
+   9.4
+  ],
+  "legs": [
+   [
+    90,
+    2.5
+   ]
+  ],
+  "expect": {
+   "D": [
+    11.4,
+    16.5
+   ],
+   "H": [
+    0.3,
+    0.4
+   ]
+  }
+ },
+ {
+  "label": "onto a house plinth (house_5800, its steps at its front centre: street wall at D -0.3, 2026-10-12)",
+  "start": [
+   -36.0,
+   2.2
+  ],
+  "legs": [
+   [
+    270,
+    2.6
+   ]
+  ],
+  "expect": {
+   "H": [
+    0.4,
+    0.6
+   ]
+  }
+ },
+ {
+  "label": "kept out of the moat",
+  "start": [
+   -3,
+   12
+  ],
+  "legs": [
+   [
+    0,
+    6
+   ]
+  ],
+  "expect": {
+   "X": [
+    -1,
+    0
+   ],
+   "H": [
+    -0.3,
+    0.3
+   ]
+  }
+ },
+ {
+  "label": "round the gate's open north end (no wall is painted there) to the moat's bank",
+  "start": [
+   -28,
+   10.5
+  ],
+  "legs": [
+   [
+    0,
+    22
+   ]
+  ],
+  "expect": {
+   "X": [
+    -1,
+    0
+   ],
+   "H": [
+    -0.3,
+    0.3
+   ]
+  }
+ },
+ {
+  "label": "east edge: the S4 seam (slanted, u 9400) stops you past the bridge's east end",
+  "start": [
+   8,
+   4
+  ],
+  "legs": [
+   [
+    0,
+    12
+   ]
+  ],
+  "expect": {
+   "X": [
+    12.0,
+    16.5
+   ]
+  }
+ },
+ {
+  "label": "south edge: into the mist, stopped past the flight's foot",
+  "start": [
+   -10,
+   0
+  ],
+  "legs": [
+   [
+    270,
+    25
+   ]
+  ],
+  "expect": {
+   "D": [
+    -17.2,
+    -15.5
+   ]
+  }
+ },
+ {
+  "label": "north edge: stopped at the silk's top edge",
+  "start": [
+   -30,
+   20
+  ],
+  "legs": [
+   [
+    90,
+    16
+   ]
+  ],
+  "expect": {
+   "D": [
+    29,
+    30.6
+   ]
+  }
+ }
+]

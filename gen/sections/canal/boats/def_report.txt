@@ -1,0 +1,32 @@
+boat_mat_cargo_21055           grain     lw  20.0 beam 4.90 hd   -4 move (+0.00,+0.00)  on land 1.82 (wl 1.55)  to a shore  0.01
+boat_mat_shelter_20805         small     lw   8.0 beam 2.30 hd  178 move (+0.00,+0.00)  on land 3.58 (wl 3.47)  to a shore  0.59
+boat_skiff_21080               small     lw   8.0 beam 2.30 hd  151 move (+0.00,+0.00)  on land 0.00 (wl 0.00)  to a shore  4.28
+boat_big_cabin_21120           passenger lw  19.0 beam 4.50 hd  166 move (+0.00,+0.00)  on land 4.81 (wl 4.61)  to a shore  0.08
+boat_covered_21205             small     lw   8.0 beam 2.30 hd    2 move (+0.00,+0.00)  on land 0.71 (wl 0.60)  to a shore  0.06
+boat_open_21968                small     lw   8.0 beam 2.30 hd  162 move (+0.00,+0.00)  on land 0.98 (wl 0.88)  to a shore  0.05
+boat_sweep_22000               grain     lw  20.0 beam 4.90 hd  166 move (+0.00,+0.00)  on land 0.00 (wl 0.00)  to a shore  3.56
+boat_small_bow_22158           small     lw   8.0 beam 2.30 hd    5 move (+0.00,+0.00)  on land 3.79 (wl 3.43)  to a shore  0.05
+boat_mat_roof_22290            small     lw   8.0 beam 2.30 hd  169 move (+0.00,+0.00)  on land 0.10 (wl 0.00)  to a shore  0.00
+boat_passenger_22545           passenger lw  19.0 beam 4.50 hd  172 move (+0.00,+0.00)  on land 0.00 (wl 0.00)  to a shore  0.20
+boat_towed_mast_23632          grain     lw  20.0 beam 4.90 hd  174 move (+0.00,+0.00)  on land 0.00 (wl 0.00)  to a shore  4.79
+boat_cargo_hooded_bow_23715    grain     lw  20.0 beam 4.90 hd  180 move (+0.00,+0.00)  on land 1.05 (wl 0.62)  to a shore  0.14
+boat_moored_mat_canopy_25145   grain     lw  20.0 beam 4.90 hd  175 move (+0.00,+0.00)  on land 1.07 (wl 0.78)  to a shore  0.03
+boat_mat_cabin_25980           passenger lw  19.0 beam 4.50 hd  177 move (+0.00,+0.00)  on land 1.01 (wl 0.32)  to a shore  0.01
+boat_grain_27285               grain     lw  20.0 beam 4.90 hd  157 move (+0.00,+0.00)  on land 0.00 (wl 0.00)  to a shore  1.20
+boat_grain_28095               grain     lw  20.0 beam 4.90 hd  180 move (+0.00,+0.00)  on land 6.74 (wl 3.91)  to a shore  0.23
+boat_bottom_28395              small     lw   8.0 beam 2.30 hd  171 move (+0.00,+0.00)  on land 0.58 (wl 0.00)  to a shore  0.07
+pairs (gap m; negative = overlap):
+  boat_mat_cargo_21055           boat_mat_shelter_20805         -0.21  rest
+  boat_mat_cargo_21055           boat_big_cabin_21120           -1.55  rest
+  boat_mat_shelter_20805         boat_big_cabin_21120           -2.26  rest
+  boat_skiff_21080               boat_sweep_22000               -1.55  rest
+  boat_open_21968                boat_mat_roof_22290            -0.75  rest
+  boat_passenger_22545           boat_towed_mast_23632          +0.07  rest
+  boat_passenger_22545           boat_cargo_hooded_bow_23715    -2.02  rest
+  boat_towed_mast_23632          boat_cargo_hooded_bow_23715    +0.17  rest
+  boat_cargo_hooded_bow_23715    boat_moored_mat_canopy_25145   -2.20  rest
+  boat_moored_mat_canopy_25145   boat_mat_cabin_25980           -2.39  rest
+  boat_mat_cabin_25980           boat_grain_27285               +0.42  rest
+  boat_grain_27285               boat_grain_28095               -2.22  rest
+  boat_grain_27285               boat_bottom_28395              -1.66  rest
+  boat_cabin_under_arch_19225    boat_mat_cargo_21055           -0.17  S3@S3

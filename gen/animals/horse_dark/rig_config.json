@@ -1,0 +1,125 @@
+{
+ "name": "horse_dark",
+ "title": "Dark horse: the horse's body toned dark bay, mane, tail and points near-black (S4b horse_saddled_13378 with saddle_dark; S3 the horseman's brown horse horse_19055 with saddle; S2 horse_feeding_26072; S4 horse_dark_10372 if the lead recasts it)",
+ "plan": "equid",
+ "body_from": "horse",
+ "back_m": 1.28,
+ "clips": [
+  "idle",
+  "walk",
+  "graze",
+  "lie",
+  "head_low",
+  "walk_low"
+ ],
+ "tone": {
+  "ramp": [
+   [
+    0,
+    "#0d0a09"
+   ],
+   [
+    0.3,
+    "#181210"
+   ],
+   [
+    0.45,
+    "#2a1d17"
+   ],
+   [
+    0.58,
+    "#4a2f21"
+   ],
+   [
+    0.7,
+    "#61402b"
+   ],
+   [
+    0.8,
+    "#714b32"
+   ],
+   [
+    1,
+    "#8a5c3e"
+   ]
+  ]
+ },
+ "tack": {
+  "saddle": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_red",
+    "hem": "cloth_dark",
+    "span": [
+     -0.2,
+     0.2
+    ],
+    "down": 72
+   },
+   {
+    "kind": "girth",
+    "at": -0.08
+   },
+   {
+    "kind": "saddle",
+    "length": 0.32
+   }
+  ],
+  "saddle_dark": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_indigo",
+    "hem": "cloth_dark",
+    "span": [
+     -0.2,
+     0.2
+    ],
+    "down": 72
+   },
+   {
+    "kind": "skirt",
+    "mat": "cloth_indigo",
+    "hem": "cloth_dark",
+    "span": [
+     -0.17,
+     0.17
+    ],
+    "z_bot": 0.42,
+    "fringe": 0
+   },
+   {
+    "kind": "girth",
+    "at": -0.08
+   },
+   {
+    "kind": "saddle",
+    "length": 0.32
+   },
+   {
+    "kind": "crupper",
+    "tassels": 1
+   },
+   {
+    "kind": "bridle"
+   }
+  ],
+  "girth_cloth": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_dark",
+    "span": [
+     -0.13,
+     0.11
+    ],
+    "down": 62
+   },
+   {
+    "kind": "girth",
+    "at": -0.08
+   }
+  ]
+ },
+ "graze_z": 0.3,
+ "seat_back": 0.02,
+ "head_low_z": 0.32
+}

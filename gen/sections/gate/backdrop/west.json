@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 showing what lies beyond the edge of our walkable scene. Paint one wide panel of a painted backdrop, in exactly image 1's painting style (hand-inked dark-brown linework, light hatching, muted painted colours), showing the content of image 2 as a distant view seen from eye level, as if standing at the edge of our scene and looking out: the inner city street continuing west from the gate: the street running away between shops and houses, the big two-storey wine house with its tall decorated gateway (彩楼欢门) and hanging signs, tiled roofs one behind another, a few tiny figures on the street.\n\nRules for the panel:\n- Everything is far away (50 to 300 metres): small, soft, low in contrast, with gentle atmospheric haze; nothing large in the foreground and no people closer than the middle distance.\n- The horizon sits about one third up from the bottom. The bottom fifth is pale, even mist over the ground, so the panel can meet a misty floor; the top is open pale sky, fading to near white at the top edge.\n- The left and right ends dissolve into the same pale mist, so the panel can stand in a ring of mist.\n- Colours are the real town's in soft spring daylight, muted and natural: grey-blue tiles, white plaster, weathered timber, tan earth, pale grey-green willows and bare ink-brown branches, a blue-grey distance. Not the yellow of aged silk, no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/gate/backdrop/west_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "3584x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "west"
+ },
+ "format": "png",
+ "generation_s": 39.0,
+ "attempts": 1,
+ "idempotency_key": "504dec47-14cf-458f-92d0-15fbdbbf7f06",
+ "request_id": "3ebc8d3b-d4ab-4863-bdd6-6f14eaf5d52e",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1634,
+  "completion_tokens_details": {
+   "image_tokens": 1634,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4876,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4530,
+   "text_tokens": 346
+  },
+  "output_tokens": 1634,
+  "output_tokens_details": {
+   "image_tokens": 1634,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4876,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4530,
+   "text_tokens": 346
+  },
+  "total_tokens": 6510
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/3beba81f-6aa9-4b6f-8811-2fcda6ebe7bd"
+ ],
+ "files": [
+  "gen/sections/gate/backdrop/west_0.png"
+ ]
+}

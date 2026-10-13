@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a traveller on the road: adult man, about 6.5 heads tall, a round, friendly weathered face with small dark dot eyes, a short black moustache and a small chin beard, a wide flat conical woven straw hat tied under the chin, much wider than his shoulders. A light buff-white travelling robe with a crossed collar reaching to the shins, belted with a dark sash; pale trousers, white leg wraps and black cloth shoes.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/hat_traveller/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 81.9,
+ "attempts": 1,
+ "idempotency_key": "00543041-25dd-4835-b277-bf8fde1ea6af",
+ "request_id": "a0ee0902-569f-4b08-9cd8-95ce4ad26663",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3955,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3604,
+   "text_tokens": 351
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3955,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3604,
+   "text_tokens": 351
+  },
+  "total_tokens": 5539
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/e2687d5e-dbf1-4551-ba92-0237027d22de"
+ ],
+ "files": [
+  "gen/characters/hat_traveller/sheet_0.png"
+ ]
+}

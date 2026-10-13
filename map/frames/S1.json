@@ -1,0 +1,430 @@
+{
+ "section": "S1",
+ "status": "frame step 2026-10-12 (round 2). Continues S2 east of u 29050 with S5's origin and scales, S2's dx at the seam [29050, -51.6] and S2's route station at the seam (+314.87). NO GROUND-LEVEL RECEDING EDGE IS PAINTED IN S1 (structures_w, structures_e, t1 and the frame agent: the countryside is drawn square on), so the seam knot is held to the silk's end: dx is -51.6 everywhere, nothing stretches or folds. If the lead takes S2's option B (hold +46.6), S1's one knot becomes +46.6 (questions, first item). Water copied from S4b (-0.7, the 汴河 does not reach S1); the stream under the small bridge has its own support, H -0.7, measured at the bridge.",
+ "frames": [
+  {
+   "id": "F1",
+   "covers": [
+    28900,
+    37610
+   ],
+   "origin": [
+    8248,
+    1565
+   ],
+   "x": [
+    77,
+    0
+   ],
+   "d": [
+    -51.6,
+    -51.25
+   ],
+   "h": 77,
+   "dx_knots": [
+    [
+     29050,
+     -51.6
+    ]
+   ],
+   "derivation": [
+    "Seed (mapping_rules.md, frame, \"S3, S2, S1\"; brief_countryside.md, The frame): S5's origin (S5.str.moat_bridge:base.sw, scan 8248, 1565), 77 px per metre across and in height, 51.25 px of v per metre of depth (map/README.md, Frames, One world across sections), as map/frames/S2.json. Covers u 28900-37610: the area from 150 px west of the seam to the silk's end.",
+    "Seam knot [29050, -51.6]: S2's dx at u 29050 (S2's last knot [28121, -51.6], constant to the seam; map/frames/S2.json, option A, the measured knots). A point on the seam maps to the same metres in both sections: S1's painted area's west corners are S2's east corners (map_layout: se (267.21, -4.39), ne (290.62, 30.54)).",
+    "NO MEASURED KNOT. Every unit searched its range for a ground-level edge running straight back (furniture, a wall's foot, a fence, a ditch, a deck, a field's rows) and found none (gen/map/S1/reports/structures_w.md \"The receding-edge table\", structures_e.md \"Receding-edge table\", t1.md \"Receding edges\"): the stall counter and the small table are drawn frontal; every fence, hedge, bank, field line and the 菜地's rows run along the scroll (slopes 0 to +0.03); no farmhouse shows a side wall (fences and hedges hide the walls, the roofs are long side on or gable-on); the threshing floor has no drawn edge; eaves and ridges run level. Candidates, all REJECTED: the farmhouse hall's west hip (29976, 1050) -> (30080, 925), slope -1.20 (dx +43; a hip runs at 45 deg in plan, and eave-to-ridge level); the stall shed's east hip (+0.85, a hip); the farmhouse wing's two wall feet, +0.44 and -0.34 (the wing is drawn turned, the two faces give no single dx: solved as a turned box they give dx +126 or -92); the shed on posts' east and west post feet (31445, 1235) -> (31357, 1190), +0.51 (dx -100, up-left, if the west post is a back post; more likely it stands behind the tray); the small bridge's posts paired south to north, (36352, 1090) -> (36315, 1062) +0.76 (dx -67) or (36236, 1094) -> (36315, 1062) -0.41 (dx +126): the pairing is unreadable; the stream's west-bank waterline (36125, 1058) -> (36030, 1255), slope -2.1 (dx +24; a bank line curves); the barrow lying tipped (+0.39, a thing lying at an angle); the far raised path and diag_ne (+0.88, +0.91: they run north-west to south-east on the ground, not straight back); the sedan's poles (-0.29: the sedan heads west-south-west). The two post pairings that can be read at all lean up-left, the sign of S2's east knot; nothing at ground level contradicts it.",
+    "HELD: dx = -51.6 from the seam to the silk's end (a constant drift needs no ramp: every row keeps 1.30 m of X per 100 px of u). Against a frontal reading (dx 0), a point's X moves -dx·D/77: 20.47 m east at the silk's top (D 30.5 m), 2.94 m west at its bottom edge (D -4.4 m), 7.3-10.92 m east on the route (D 10.9-16.3 m). The countryside is drawn square on, so the receding direction cannot be checked against any wall here (questions: what the alternatives would change)."
+   ],
+   "assumptions": [
+    "East-west and height 77 px per metre, depth 51.25 px of v per metre, as every section (S5). Things up the silk are painted smaller (questions: the diminution); positions come only from the map (BUILDING.md rule 5).",
+    "dx is S2's seam value, -51.6, held constant over the whole of S1 because no ground-level edge recedes anywhere in it (derivation). It is the painter's drift at S2's east wharf carried on, not a reading of S1.",
+    "Painted figure size is not a scale: S1's foreground travellers are 171-189 px tall (2.2-2.5 m at 77 px/m), 1.8 times S4's road figures, and the party's porters high up 80-115 px. Place by foot point.",
+    "The ground is one level (ground, H 0) everywhere it is not water: every bank, terrace edge and field line is a ground line at H 0. Each painted band is a bank one step higher to the north (35-90 px of face in the foreground, 5-20 px far up), and its rise is a build-time choice of the ground pilot (questions), not a frame height: the frame maps each stroke at H 0, so a bank top is placed as if it were level with its foot.",
+    "Water: the stream and the pale band (if it is water) are the support `stream`, H -0.7, measured at the bridge. A ground line drawn on the water's edge (a bank's foot that is the shore, the land tongues' edges) stands on `stream` (support_by, support), so the same stroke maps to one place; the near bank's top (the shores' shore_s) stays on the ground: the water at -0.7 lies 1.05 m north of it, the bank's slope between.",
+    "Riders: a rider's foot point is the ground under his seat (the units' convention), so his animal's support is H 0 and the builder seats him on the animal."
+   ]
+  }
+ ],
+ "supports": {
+  "ground": {
+   "H": 0,
+   "how": "the countryside ground: the road, the farmyards, the fields and banks (one level, see assumptions). 216 entities"
+  },
+  "water": {
+   "H": -0.7,
+   "how": "COPIED FROM map/frames/S4b.json (one H for the whole 汴河, Phase 0), as S3's and S2's frames copied it. The 汴河 does not reach S1 (S2.water.bian_river_e's north shore turns south under the massive willow and meets the silk's bottom edge at (28968, 1780, est); no S1 entity stands on it): the key is kept so the joined world has one water level. S4b's derivation: MEASURED AS A BOUND (conf low), the river agent's reading (gen/map/S4b/reports/river.md, Water level): H = -(v_waterline - v_ground) / 77 at the same u, the ground at street level (H 0), at the three places where flat ground meets the first water on S4b's moorings: M1 the bank path at the gangplank, ground (14778, 401) under the porter's feet and the plank's foot, over the first ripple swirl (14778, 456): 55 px, -0.71; M2a the top-left building's front wall foot (14920, 166) over the landing's lower wash edge (14920, 224): 58 px, -0.75; M2b the same wall foot (14990, 151) over the landing's edge (14990, 203): 52 px, -0.68. Spread 0.07 m; M2a and M2b (a wall foot, the narrowest bank) are the surest. The bank is a wash-drawn slope with no vertical face, stair, revetment or jetty, so each reading is an upper bound on the depth: a landing s m deep puts the water 0.67 s m higher (plausible range -0.3 to -0.75). S3's river agents found no vertical face either; river_e's bounds at the far-bank hall on posts (18446-18542: -0.86 to -1.0) fit. 1 m of H moves every boat and shore point 1.5 m north or south (77 / 51.25). One H for the whole 汴河: S3, S2 and S1 copy it; a revetment, stair or abutment foot read later replaces it only with the lead's agreement. Replaces the seed's -1.5 (S5's moat, assumed)."
+  },
+  "stream": {
+   "H": -0.7,
+   "how": "MEASURED (two stroke points each, structures_e; gen/map/S1/reports/structures_e.md, \"The stream's water level\"): the stream under the small bridge is not the 汴河 and has its own level. The bridge's deck meets both bank tops level ((36125, 1052) at the west bank, (36608, 1032) at the east), so the deck is at ground level (H 0), and its posts stand in the water: the deck's south edge over the post foot straight below, (36540, 1036) -> (36540, 1090), 54 px, -0.70 m; (36352, 1038) -> (36352, 1090), 52 px, -0.68 m; and the west bank's top (36125, 1052) over its waterline (36110, 1110), 58 px, -0.75 m. Mean -0.71, spread 0.07; the shorter posts (feet v 1062-1075) would give -0.3 to -0.5 if their feet were at the waterline, but they read as a north row (their feet further back, not higher). That it equals the 汴河's -0.7 is a coincidence of two separate readings. Used by S1.water.stream_36500, S1.water.wash_band_34400 (the pale band, if it is water: conf low), the bridge's post feet (support_by bays), the sampan and its mooring pole, the land tongues and the shoal, and the bank feet that are the water's shore lines (support_by bank_foot: S1.grd.bank_36900, bank_36060, dyke_36380, and, with the pale band's water reading, bank_33650 and bank_35200). 1 m of H moves a point 1.5 m in depth"
+  },
+  "bank slope": {
+   "H": -0.38,
+   "H_profile": [
+    [
+     35920,
+     -0.38
+    ],
+    [
+     36070,
+     -0.59
+    ]
+   ],
+   "how": "DERIVED from where each foot stands on the stream's west bank face (S1.grd.bank_36060: bank_top on the ground, its foot the waterline at the stream's -0.7): a straight face, so H = -0.7 x f with f = (v_foot - v_top) / (v_waterline - v_top) at the foot's u. S1.tree.bare_elm_twin_35920: foot v 1200, the face's top v 1140 and waterline v 1250 at u 35920, f 0.55, H -0.38; S1.tree.bare_elm_tall_36070: foot v 1170, top 1067, waterline 1188 at u 36070, f 0.85, H -0.59 (its foot is drawn 10 px above the waterline: at the water's edge). An H_profile in u because only these two trees use it (read at each foot's own u; flat beyond). Without it the tall elm's foot maps inside the stream"
+  },
+  "perched: S1.tree.elm_slender_33906": {
+   "H": 8.96,
+   "how": "derived like S2's and S4b's perched birds: the thing at its tree's depth, H = (v_base - v_thing) / 77: the nest S1.prop.nest_33900 (v 245) over the tree's foot (33906, 935)"
+  },
+  "perched: S1.tree.bare_elm_twin_34552": {
+   "H": 6.9,
+   "how": "derived: the nest S1.prop.nest_34445 (v 405) over the tree's foot (34552, 936)"
+  },
+  "perched: S1.tree.bare_elm_tall_34703": {
+   "H": 7.73,
+   "how": "derived: the mean of its two nests, S1.prop.nest_34680 (v 300) and S1.prop.nest_34757 (v 360), over the tree's foot (34703, 925, est): 8.12 and 7.34 m each, so each nest maps about 0.6 m north or south of the trunk (on its branch)"
+  },
+  "perched: S1.tree.elm_34110": {
+   "H": 7.25,
+   "how": "derived: the pale bird S1.ani.pale_bird_34250 (conf low; its feet est at v 345) over the tree's foot (34110, 903, est)"
+  },
+  "animal S1.ani.horse_party_31023": {
+   "H": 0,
+   "how": "the party's rider S1.fig.rider_party_30988: his foot point (30988, 355, est) is the ground under his seat between the horse's hooves, so H 0; named so the rider's support is explicit (S3's lesson: riders need their animal's height)"
+  },
+  "animal S1.ani.donkey_traveller_30216": {
+   "H": 0,
+   "how": "the first hooded traveller S1.fig.traveller_rider_30165: foot point (30165, 1500, est) on the line between the donkey's hooves, H 0"
+  },
+  "animal S1.ani.donkey_traveller_30546": {
+   "H": 0,
+   "how": "the second hooded traveller S1.fig.traveller_rider_30495: foot point (30495, 1612, est) on the donkey's hoof line, H 0"
+  }
+ },
+ "datum": {
+  "pts": [
+   "S1.road.main:lines.centre.0"
+  ],
+  "station": 314.87,
+  "about": "where the route crosses the seam with S2 (u 29050): S1.road.main's centre-line point 0, exactly S2.road.main's last centre point (281.07, 16.29 m; scan (29050, 730), measured by S2; copied from map/strokes/S2.json by merge_fixes.mjs on every run). Station +314.87 there, S2's route station at that point (sections/canal/layout.json), so stations run on."
+ },
+ "checks": [
+  {
+   "what": "the stall shed: front eave above its south-west corner (sw -> sw_eave), m",
+   "a": "S1.bld.stall_shed_29600:base.sw",
+   "b": "S1.bld.stall_shed_29600:sw_eave",
+   "measure": "height",
+   "expect": "a village stall shed's eave, roughly 2.2-2.8 m; painted where the stall man is 103 px (1.34 m at 77 px/m), about 0.8 of life"
+  },
+  {
+   "what": "the stall shed: front length (sw -> se), m",
+   "a": "S1.bld.stall_shed_29600:base.sw",
+   "b": "S1.bld.stall_shed_29600:base.se",
+   "measure": "distance",
+   "expect": "a stall shed of three or four bays, roughly 8-12 m (450 px)"
+  },
+  {
+   "what": "the stall counter: front length (sw -> se), m",
+   "a": "S1.prop.stall_counter_29430:base.sw",
+   "b": "S1.prop.stall_counter_29430:base.se",
+   "measure": "distance",
+   "expect": "a long counter on legs, roughly 1.5-2.5 m (115 px; its top 63 px over its feet, 0.82 m)"
+  },
+  {
+   "what": "the tiled farmhouse hall: west eave over its veranda floor (sw -> sw_eave), m",
+   "a": "S1.bld.farmhouse_hall_30200:base.sw",
+   "b": "S1.bld.farmhouse_hall_30200:sw_eave",
+   "measure": "height",
+   "expect": "a hall's eave, roughly 2.5-3 m; structures_w: drawn small for its v (eave-to-floor 50 px beside men 140-146 px tall)"
+  },
+  {
+   "what": "the thatched hut: front eave (se -> se_eave; base est), m",
+   "a": "S1.bld.hut_thatched_31000:base.se",
+   "b": "S1.bld.hut_thatched_31000:se_eave",
+   "measure": "height",
+   "expect": "a thatched hut's eave, roughly 1.8-2.4 m"
+  },
+  {
+   "what": "the shed on posts: front eave at its east post (se -> se_eave), m",
+   "a": "S1.bld.shed_posts_31370:base.se",
+   "b": "S1.bld.shed_posts_31370:se_eave",
+   "measure": "height",
+   "expect": "an open shed's eave on posts, roughly 2-2.5 m"
+  },
+  {
+   "what": "the big thatched farmhouse: west eave (sw -> sw_eave; base est at the fence's foot), m",
+   "a": "S1.bld.farmhouse_thatched_33955:base.sw",
+   "b": "S1.bld.farmhouse_thatched_33955:sw_eave",
+   "measure": "height",
+   "expect": "a thatched farmhouse's eave, roughly 1.8-2.4 m; at v ~790-890, where the farmer by the hedge is 123 px (1.6 m)"
+  },
+  {
+   "what": "the big thatched farmhouse: its SE corner post, foot -> top (second pass farms), m",
+   "a": "S1.bld.farmhouse_thatched_33955:base.se",
+   "b": "S1.bld.farmhouse_thatched_33955:post_se_top",
+   "measure": "height",
+   "expect": "the post under the east hip's lower corner: a low eave or a lean-to's, roughly 1.5-2 m"
+  },
+  {
+   "what": "the open barn: front eave (sw -> sw_eave; base est), m",
+   "a": "S1.bld.barn_open_34860:base.sw",
+   "b": "S1.bld.barn_open_34860:sw_eave",
+   "measure": "height",
+   "expect": "an open barn's eave, roughly 2-2.5 m"
+  },
+  {
+   "what": "the open barn: front length (sw -> se), m",
+   "a": "S1.bld.barn_open_34860:base.sw",
+   "b": "S1.bld.barn_open_34860:base.se",
+   "measure": "distance",
+   "expect": "a barn of three bays, roughly 8-12 m (320 px)"
+  },
+  {
+   "what": "the small bridge: span along its south deck edge (deck_s first -> last point), m",
+   "a": "S1.str.small_bridge_36365:lines.deck_s.0",
+   "b": "S1.str.small_bridge_36365:lines.deck_s.5",
+   "measure": "distance",
+   "expect": "a 草桥 (plank bridge on posts) over a stream, roughly 5-10 m (483 px)"
+  },
+  {
+   "what": "the small bridge: direction of its south deck edge, deg",
+   "a": "S1.str.small_bridge_36365:lines.deck_s.0",
+   "b": "S1.str.small_bridge_36365:lines.deck_s.5",
+   "measure": "direction",
+   "expect": "about 0 (it runs east-west across the stream's north end)"
+  },
+  {
+   "what": "the stream at the bridge: north shore (36450, under the deck, est) -> south shore (36500), m",
+   "a": "S1.water.stream_36500:lines.shore_n.6",
+   "b": "S1.water.stream_36500:lines.shore_s.4",
+   "measure": "distance",
+   "Ha": -0.7,
+   "Hb": -0.7,
+   "expect": "a stream or pond under a plank bridge, roughly 8-15 m"
+  },
+  {
+   "what": "the sampan: waterline length (front -> rear), m",
+   "a": "S1.veh.boat_sampan_36440:front",
+   "b": "S1.veh.boat_sampan_36440:rear",
+   "measure": "distance",
+   "Ha": -0.7,
+   "Hb": -0.7,
+   "expect": "a small open boat, roughly 4-6 m (262 px)"
+  },
+  {
+   "what": "the mooring pole: base -> top above the water, m",
+   "a": "S1.prop.mooring_pole_36444:base",
+   "b": "S1.prop.mooring_pole_36444:top",
+   "measure": "height",
+   "expect": "a mooring pole about 1 m above the water"
+  },
+  {
+   "what": "charcoal donkey D4 (high conf): fore -> hind hooves, m",
+   "a": "S1.ani.donkey_charcoal_36666:fore",
+   "b": "S1.ani.donkey_charcoal_36666:hind",
+   "measure": "distance",
+   "expect": "a donkey's fore-to-hind hoof span, roughly 0.8-1.1 m"
+  },
+  {
+   "what": "the first traveller's donkey: fore -> hind hooves, m",
+   "a": "S1.ani.donkey_traveller_30216:fore",
+   "b": "S1.ani.donkey_traveller_30216:hind",
+   "measure": "distance",
+   "expect": "a donkey's hoof span, roughly 0.8-1.1 m; painted near the bottom edge, where figures are 1.8x S4's"
+  },
+  {
+   "what": "the standing ox at the stall: fore -> hind hooves, m",
+   "a": "S1.ani.ox_standing_29540:fore",
+   "b": "S1.ani.ox_standing_29540:hind",
+   "measure": "distance",
+   "expect": "an ox's hoof span, roughly 1.2-1.6 m"
+  },
+  {
+   "what": "the willow-decked sedan: front -> rear (est), m",
+   "a": "S1.veh.sedan_willow_30805:front",
+   "b": "S1.veh.sedan_willow_30805:rear",
+   "measure": "distance",
+   "expect": "a sedan chair with its poles and two bearers, roughly 3-4.5 m"
+  },
+  {
+   "what": "the threshing floor: front width (sw -> se; est), m",
+   "a": "S1.grd.threshing_floor_35225:base.sw",
+   "b": "S1.grd.threshing_floor_35225:base.se",
+   "measure": "distance",
+   "expect": "a village threshing floor, roughly 10-20 m across (390 px)"
+  },
+  {
+   "what": "the threshing floor: depth (sw -> nw), m",
+   "a": "S1.grd.threshing_floor_35225:base.sw",
+   "b": "S1.grd.threshing_floor_35225:base.nw",
+   "measure": "distance",
+   "expect": "roughly as deep as wide; painted 125 px of v (questions: strips)"
+  },
+  {
+   "what": "the hut fence's gate post: foot -> top, m",
+   "a": "S1.str.wattle_fence_31100:gate_post_foot",
+   "b": "S1.str.wattle_fence_31100:gate_post_top",
+   "measure": "height",
+   "expect": "a gate post, roughly 1.2-1.8 m"
+  },
+  {
+   "what": "the hut's wattle fence: direction (first -> last foot point), deg",
+   "a": "S1.str.wattle_fence_31100:line.0",
+   "b": "S1.str.wattle_fence_31100:line.5",
+   "measure": "direction",
+   "expect": "about 0: it runs along the scroll"
+  },
+  {
+   "what": "the great willow G1: foot -> crown top (est), m",
+   "a": "S1.tree.willow_great_31620:base",
+   "b": "S1.tree.willow_great_31620:top",
+   "measure": "height",
+   "expect": "an old pollarded willow, roughly 8-14 m"
+  },
+  {
+   "what": "the route at the S2 seam: edge_n -> edge_s (u 29050), m",
+   "a": "S1.road.main:lines.edge_n.0",
+   "b": "S1.road.main:lines.edge_s.0",
+   "measure": "distance",
+   "expect": "the same three points as S2's route end: S2's layout gives 7.17 m between them (5.95 m of depth, skewed by dx -51.6); the open ground of the village at the market's edge"
+  }
+ ],
+ "questions": [
+  "FOR THE LEAD FIRST, THE RECEDING DIRECTION: NO GROUND-LEVEL RECEDING EDGE IS PAINTED IN S1 (structures_w, structures_e, t1 and the frame agent; the rejected candidates are in the derivation). The frame holds S2's seam value to the silk's end: one knot [29050, -51.6], so nothing stretches or folds. It rests on S2's option A (S2's first question: the receding direction turns over in S2's east half). IF THE LEAD TAKES S2's OPTION B (hold +46.6 east of u 25924), S1's knot becomes [29050, 46.6]: mkframe.mjs (scratchpad S1_frame) reads the seam value from map/frames/S2.json, so rerun it, then `scroll_map S1 all` and `map_layout S1`; every far thing in S1 then moves west against the near ones, by 38.9 m at the silk's top (D 30.5 m) and 13.9-20.8 m on the route (D 10.9-16.3 m). Other readings, not used: dx about 0 (the countryside is drawn square on: no farmhouse shows a side wall, the counter and the table are frontal, as 王家纸马铺 is drawn where S2's dx crosses 0), which would move the far things 20.4 m west at the silk's top and 7.3-10.9 m on the route; the stream bank's weak +24 (a curving bank). Any held value keeps everything unfolded; a ramp inside S1 would stretch or squeeze the rows north of the route (from -51.6 at S4b's suggested limit of 1.5 px/m per 100 px it reaches 0 at u ~32490). The strokes can't settle it: the lead decides with S2's turn.",
+  "THE STRIPS AND THE DIMINUTION (the one-scale frame is kept; scratchpad S1_frame/strips.py). The route's strip (edge_n to edge_s at the same u, m at 51.25 px of v per metre): the village and the market's edge, u 29050-30350: 6.0-9.5 m; the unpainted bend south, 30400-30720: the route turns across the depth there (not a strip); in front of the hut and the hut willow, 30750-31350: 1.8-4.4 (1.95 at the willow's bole, edge_n moved to the bole's foot); UNDER THE GREAT WILLOWS, 31450-31950: 0.88-1.07 m (the route runs on the 35-50 px strip between the willow dyke's foot and the next bank); the unpainted bend north, 32000-32800: 1.6-5.5; IN FRONT OF THE FARMSTEADS, 33450-34850: 0.84-1.1 m, with nine tree feet in it (next question); the threshing floor and the pale grove, 34900-35900: 1.5-1.9; the charcoal train's path, 35900-36800: 1.5-2.2; the east end, 36850-37390: 0.86-1.27. THE DIMINUTION (standing, walking, running or carrying adults on the ground; painted height over 127 px, 1.65 m at 77 px/m): 0.29-0.35 at foot v 141-145 (the far figures on the field banks); 0.63-0.76 at v 329-448 (the party's porters); 0.81-0.91 at v 541-683 (porters, bearers, the stall man, a groom); 0.65-0.97 at v 766-925 (the charcoal drivers 0.65 and 0.74, the grooms 0.77-0.83, the farmer by the hedge 0.97); 1.10-1.15 at v 1095-1114 (the man with the stick, the man at the post); 1.35-1.49 at v 1476-1627 (the travellers). S1's foreground is painted 1.35-1.5 times life and its far banks a third of life, and the charcoal drivers at the east end are painted smaller than the party's porters 400-500 px higher up: not one curve. The buildings come out under life (checks: the stall shed's eave 1.58 m and front 5.9 m, the hall's eave over its veranda 0.65 m, the barn's eave 0.91 m and front 4.1 m, the threshing floor 5.0 x 2.9 m, the sampan 3.0 m): built at real size in their painted places (BUILDING.md rule 5), as recorded choices; room to walk on the 1 m strips is a build-time choice (build_choices.json).",
+  "THE ROUTE THROUGH THE TREES IN FRONT OF THE FARMSTEADS (second pass farms): from u 33400 to 34750 nine tree bases stand inside the route's strip (edge_n on the fences' feet, edge_s on the yard bank's top), five of them on or south of its centre: S1.tree.elm_forked_33433, elm_forked_33785, elm_tall_33865, elm_slender_33906, elm_twin_33936, elm_spreading_34030, bare_elm_twin_34552, bare_elm_twin_34640, bare_elm_tall_34703. The light strip between the fences' feet (v ~895-918) and the yard bank's dark face (v ~943-950) is the only level ground there, and the trees stand on it. The lines are kept as read. The lead's call: the walkable line weaves between the trunks (a recorded build choice), or the centre moves onto the bank top just south of the feet (v ~945-950) with edge_n on the trunk feet. The bench, the straw strip and the crossed poles at 34925-35206 also lie in the strip, where the route already runs through the threshing floor's south part (the merge's note on S1.road.main).",
+  "WATER OR GROUND, THE PALE BAND (the ground pilot's question for the user, still open): S1.water.wash_band_34400 is recorded as water (support `stream`, conf low), so the bank feet on its north shore (S1.grd.bank_33650, S1.grd.bank_35200) stand on the stream's level too (support_by, merge_fixes.mjs section 9 (d)). The second pass added evidence: willows, west of u 33000 every pale band carries willows or the route, and the band has no west mouth (if water, it is an inlet whose head is willow B's roots; shore points given in willows.json); start, the band is pale only east of about 35650, and from 34850 to 35850 neither it nor the near bank has an edge on the silk (one even tone at 35450-35750), so it does not visibly join the stream west of ~35650; farms, its edges agree with the bands within 10-25 px. If the user takes it as ground: retire the water entity in merge_fixes.mjs (or give it `ground`), and drop the support_by on bank_33650 and bank_35200 there.",
+  "THE CHARCOAL TRAIN'S DIRECTION (second pass start, accepted): as painted, the train walks east-south-east, down toward the bridge's east end. Every readable donkey head is at the east end (D1-D4; D1 is a side view with its head lowered, not end-on), D5 comes toward the viewer (facing 290), and the rear driver holds a stick out east over the last donkey, driving from behind. 赶驴入城 ('driving donkeys into the city', west) is the scholars' title, not a stroke reading. The map records the train as painted; its routine in sections/countryside/people.json is the lead's call.",
+  "THE GROUND'S STEPS (the ground pilot): every painted band is a bank one step higher to the north, 35-90 px of face in the foreground and 5-20 px far up. The frame maps every bank line at H 0 (one level), because a band's face mixes depth and height and nothing beside a bank gives its rise, except the stream's banks (0.7 m at the bridge). The steps that matter for the walk are the willow dyke under G1-G3 (S1.grd.bank_31660, about 45 px over the route), the hut's bank (S1.grd.bank_30750) and the yard bank in front of the farmsteads (S1.grd.yard_bank_34400). If the pilot raises bank tops above their feet, each bank's rise is a build choice (or the lead adds a `bank top` support with an H measured on a face), and what stands on a top (the great willows, the hut and its fences, the shed on posts) goes up with it, together.",
+  "THE STREAM (support `stream`, H -0.7 below the bank tops, measured at the bridge): the bridge's deck lies on the ground (H 0) and its posts stand in the water (support_by bays); the sampan and the new mooring pole stand on the water; the land tongues and the shoal are at the water's level (both edges waterlines: the builder raises their backs a little as a choice); the feet of the north, west and dyke banks are the shore (support_by bank_foot). The near bank's top (the shores' shore_s) stays on the ground, so the water's south edge maps 1.05 m north of it, the bank's slope between. The two big elms on the west bank's face stand on `bank slope`, H -0.38 and -0.59 from where their feet sit on the face (the tall elm's foot is drawn 10 px above the waterline). East of about u 37250 the water between the east spit and the near bank's end is plain silk (mist): the builder closes the polygon there (start pass). The boat's bow still can't be read (no rudder or sweep): front = the pointed east end, conf low.",
+  "THE EAST END: the route's est east end now runs to (37390, 1005), the west edge of the seal at the road's height. The second pass measured the seals as red pixels: u 37248-37503 at v 51-319, 37396-37538 at v 805-1007, 37362-37567 at v 1138-1351, 37424-37584 at v 1597-1756; nothing under a seal is recorded, and the north bank's foot and the east spit show again between and past them to the silk's end (u ~37570-37610). The painted area runs to u 37610; per the brief the ground runs 16 m out under the mist at the east, north and south edges.",
+  "OPEN READINGS THAT CHANGE THE BUILD (both readings in each entity's note; the strokes don't settle them): S1.str.fence_brush_33760 (a brushwood fence, or, west of u ~33780, the west hip of a low thatched roof: the hump); S1.bld.farmhouse_long_34950's roof (thatch, or tile: a crisp double eave and scalloped rows); S1.str.posts_35075 (a frame, or an open lean-to; its east post is now the figure S1.fig.figure_in_shed_35108); S1.grd.floor_behind_yard_34285 (a second threshing floor, or plain ground); the far figures and the far ox on the terraces (two standing figures and an ox, or a ploughman at his plough behind an ox); S1.prop.yard_object_34170 and _34208 (baskets or a trough, or hens); S1.ani.pale_bird_34250 (a bird, or an abrasion); the 菜地's planting (13 young trees and a faint 14th: a grove of saplings or a crop, the user's call); S1.tree.sapling_far_31328 (a sapling, a post or a stump); S1.tree.far_willow_34995 (its own far willow, or the near willow's pale west shoots).",
+  "SEAM NOTES FOR S2 (S1 does not edit S2's files; the cross-key check within u 28750-29350, scratchpad S1_frame/seamcheck.mjs, found no same-kind pair under 30 px and no line overlapping in u): (1) S2.grd.bank_lines_top_28900's edge_n ends at (29050, 150), and S1.grd.terraced_fields_29450's edge_v155 now starts there exactly (it was 2 px off; merge_fixes copies the point from S2's strokes): one stroke split at the seam, not a duplicate; (2) the curved far field line west of the seam, (29000, 81) -> (29050, 106), confirmed by the second pass (west) on a line profile, is not recorded by S2; S1's new edge_v128w continues it east from (29050, 110); (3) S2's edge_s ends at (29050, 192, est) with no S1 line east of the seam (its note says the stroke runs to 29073), and S1's edge_v57 runs west of the seam to about (28960, 58), where S2 has no line; (4) the route's three points at u 29050 are the same in both maps (S1 copies S2's on every run), and the painted areas meet at (267.21, -4.39) and (290.62, 30.54).",
+  "POSE WORDS (the merge's question, still open): `running` (three grooms) and `galloping` (the runaway horse) are not in map/README.md's list; kept as painted."
+ ],
+ "checks_result": [
+  {
+   "what": "the stall shed: front eave above its south-west corner (sw -> sw_eave), m",
+   "expect": "a village stall shed's eave, roughly 2.2-2.8 m; painted where the stall man is 103 px (1.34 m at 77 px/m), about 0.8 of life",
+   "got": 1.58
+  },
+  {
+   "what": "the stall shed: front length (sw -> se), m",
+   "expect": "a stall shed of three or four bays, roughly 8-12 m (450 px)",
+   "got": 5.88
+  },
+  {
+   "what": "the stall counter: front length (sw -> se), m",
+   "expect": "a long counter on legs, roughly 1.5-2.5 m (115 px; its top 63 px over its feet, 0.82 m)",
+   "got": 1.47
+  },
+  {
+   "what": "the tiled farmhouse hall: west eave over its veranda floor (sw -> sw_eave), m",
+   "expect": "a hall's eave, roughly 2.5-3 m; structures_w: drawn small for its v (eave-to-floor 50 px beside men 140-146 px tall)",
+   "got": 0.65
+  },
+  {
+   "what": "the thatched hut: front eave (se -> se_eave; base est), m",
+   "expect": "a thatched hut's eave, roughly 1.8-2.4 m",
+   "got": 2.01
+  },
+  {
+   "what": "the shed on posts: front eave at its east post (se -> se_eave), m",
+   "expect": "an open shed's eave on posts, roughly 2-2.5 m",
+   "got": 2.27
+  },
+  {
+   "what": "the big thatched farmhouse: west eave (sw -> sw_eave; base est at the fence's foot), m",
+   "expect": "a thatched farmhouse's eave, roughly 1.8-2.4 m; at v ~790-890, where the farmer by the hedge is 123 px (1.6 m)",
+   "got": 1.34
+  },
+  {
+   "what": "the big thatched farmhouse: its SE corner post, foot -> top (second pass farms), m",
+   "expect": "the post under the east hip's lower corner: a low eave or a lean-to's, roughly 1.5-2 m",
+   "got": 0.51
+  },
+  {
+   "what": "the open barn: front eave (sw -> sw_eave; base est), m",
+   "expect": "an open barn's eave, roughly 2-2.5 m",
+   "got": 0.91
+  },
+  {
+   "what": "the open barn: front length (sw -> se), m",
+   "expect": "a barn of three bays, roughly 8-12 m (320 px)",
+   "got": 4.07
+  },
+  {
+   "what": "the small bridge: span along its south deck edge (deck_s first -> last point), m",
+   "expect": "a 草桥 (plank bridge on posts) over a stream, roughly 5-10 m (483 px)",
+   "got": 6.55
+  },
+  {
+   "what": "the small bridge: direction of its south deck edge, deg",
+   "expect": "about 0 (it runs east-west across the stream's north end)",
+   "got": 3.42
+  },
+  {
+   "what": "the stream at the bridge: north shore (36450, under the deck, est) -> south shore (36500), m",
+   "expect": "a stream or pond under a plank bridge, roughly 8-15 m",
+   "got": 14.33
+  },
+  {
+   "what": "the sampan: waterline length (front -> rear), m",
+   "expect": "a small open boat, roughly 4-6 m (262 px)",
+   "got": 2.97
+  },
+  {
+   "what": "the mooring pole: base -> top above the water, m",
+   "expect": "a mooring pole about 1 m above the water",
+   "got": 0.79
+  },
+  {
+   "what": "charcoal donkey D4 (high conf): fore -> hind hooves, m",
+   "expect": "a donkey's fore-to-hind hoof span, roughly 0.8-1.1 m",
+   "got": 0.95
+  },
+  {
+   "what": "the first traveller's donkey: fore -> hind hooves, m",
+   "expect": "a donkey's hoof span, roughly 0.8-1.1 m; painted near the bottom edge, where figures are 1.8x S4's",
+   "got": 0.87
+  },
+  {
+   "what": "the standing ox at the stall: fore -> hind hooves, m",
+   "expect": "an ox's hoof span, roughly 1.2-1.6 m",
+   "got": 1
+  },
+  {
+   "what": "the willow-decked sedan: front -> rear (est), m",
+   "expect": "a sedan chair with its poles and two bearers, roughly 3-4.5 m",
+   "got": 3.77
+  },
+  {
+   "what": "the threshing floor: front width (sw -> se; est), m",
+   "expect": "a village threshing floor, roughly 10-20 m across (390 px)",
+   "got": 5
+  },
+  {
+   "what": "the threshing floor: depth (sw -> nw), m",
+   "expect": "roughly as deep as wide; painted 125 px of v (questions: strips)",
+   "got": 2.94
+  },
+  {
+   "what": "the hut fence's gate post: foot -> top, m",
+   "expect": "a gate post, roughly 1.2-1.8 m",
+   "got": 0.65
+  },
+  {
+   "what": "the hut's wattle fence: direction (first -> last foot point), deg",
+   "expect": "about 0: it runs along the scroll",
+   "got": -0.94
+  },
+  {
+   "what": "the great willow G1: foot -> crown top (est), m",
+   "expect": "an old pollarded willow, roughly 8-14 m",
+   "got": 12.18
+  },
+  {
+   "what": "the route at the S2 seam: edge_n -> edge_s (u 29050), m",
+   "expect": "the same three points as S2's route end: S2's layout gives 7.17 m between them (5.95 m of depth, skewed by dx -51.6); the open ground of the village at the market's edge",
+   "got": 7.16
+  }
+ ]
+}

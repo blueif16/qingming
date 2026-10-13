@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one animal cut from the painting this game is based on; people, harness and other things may overlap it. Redraw the animal from image 2 as a game creature that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows of the animal: its species and breed, build, proportions, coat colours and markings, mane, ears, horns and tail. Ignore image 2's pose, its harness, saddle, cloth, load and rider, the people and the background.\nThe animal is a small Chinese donkey of the Northern Song: about 1.05 m at the withers, compact and sturdy, a fairly big head with long upright ears, a short upright dark mane, a thin tail ending in a dark tuft. Soft grey-dun coat, a pale, almost white muzzle, belly and inner legs, a dark stripe along the spine, dark rings round the eyes, small dark hooves. A simple rope halter on the head. Simple clean shapes, no fine fur detail.\nTurnaround sheet for 3D modelling on a 2 by 2 grid: the same animal four times, each one whole with empty margin around it, all four at the same scale. Top left: side view, facing left, in true profile. Top right: three-quarter view from the front left. Bottom left: front view, facing the viewer. Bottom right: back view. It stands square and calm on all four legs, the legs straight and a little apart so that every leg is separately visible, head and neck in a natural relaxed carriage, tail hanging, mouth closed. Bare: no saddle, no cloth, no collar, no harness, no load, no rider. Plain flat mid-grey background, no ground, no shadows, no scenery, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/animals/donkey/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "2048x2048",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 29.0,
+ "attempts": 1,
+ "idempotency_key": "e47fbbca-6024-42f8-9f63-c8c592a707cd",
+ "request_id": "9e9f90af-e376-4176-9ffa-aba7aa1c81a6",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3455,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3034,
+   "text_tokens": 421
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3455,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3034,
+   "text_tokens": 421
+  },
+  "total_tokens": 5105
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/4792d8de-a488-48d7-9ba1-8de4a37516c2"
+ ],
+ "files": [
+  "gen/animals/donkey/sheet_0.png"
+ ]
+}

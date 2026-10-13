@@ -1,0 +1,250 @@
+{
+ "about": "Written by blender/build_boats.py: the section's boats as built for the page (both detail levels in the GLB). tris: visible triangles per detail level, collider triangles, triangles per node.",
+ "section": "SB",
+ "boats": {
+  "SB.veh.boat_passenger_a": {
+   "kind": "passenger",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 19,
+   "loa": 24.6,
+   "beam": 4.5,
+   "deck_z": 0.9,
+   "roof_z": 3.736,
+   "heading_deg": 0,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 6618,
+    "lod1": 2138,
+    "colliders": 216,
+    "nodes": {
+     "body": 6546,
+     "deck__col": 96,
+     "rim__col": 48,
+     "board__edge": 92,
+     "roof__col": 72,
+     "wet__ring": 72
+    }
+   },
+   "kit": {
+    "kind": "passenger"
+   },
+   "note": null
+  },
+  "SB.veh.boat_grain_b": {
+   "kind": "grain",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 20,
+   "loa": 24.5,
+   "beam": 4.9,
+   "deck_z": 0.95,
+   "roof_z": 3.823,
+   "heading_deg": 0,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 6502,
+    "lod1": 2216,
+    "colliders": 248,
+    "nodes": {
+     "body": 6434,
+     "deck__col": 104,
+     "rim__col": 48,
+     "board__edge": 96,
+     "roof__col": 96,
+     "wet__ring": 68
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false
+   },
+   "note": null
+  },
+  "SB.veh.boat_sweep_r": {
+   "kind": "grain",
+   "pose": "rowed",
+   "motion": "under_way",
+   "lw": 20,
+   "loa": 24.5,
+   "beam": 4.9,
+   "deck_z": 0.95,
+   "roof_z": 3.823,
+   "heading_deg": 0,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 6612,
+    "lod1": 2306,
+    "colliders": 248,
+    "nodes": {
+     "body": 6418,
+     "deck__col": 104,
+     "rim__col": 48,
+     "board__edge": 96,
+     "roof__col": 96,
+     "sweep": 92,
+     "wet__ring": 68,
+     "bow_wave": 34
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false,
+    "sweep": "port"
+   },
+   "note": null
+  },
+  "SB.veh.boat_towed_t": {
+   "kind": "grain",
+   "pose": "towed",
+   "motion": "under_way",
+   "lw": 20,
+   "loa": 24.5,
+   "beam": 4.9,
+   "deck_z": 0.95,
+   "roof_z": 3.823,
+   "heading_deg": 180,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 6760,
+    "lod1": 2362,
+    "colliders": 248,
+    "nodes": {
+     "body": 6506,
+     "deck__col": 104,
+     "rim__col": 48,
+     "board__edge": 96,
+     "roof__col": 96,
+     "mast": 152,
+     "wet__ring": 68,
+     "bow_wave": 34
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "hold": "awning",
+    "laden": false,
+    "mast": "up",
+    "tow_to": "tracker_1"
+   },
+   "note": null
+  },
+  "SB.veh.boat_lowering_l": {
+   "kind": "passenger",
+   "pose": "lowering mast",
+   "motion": "under_way",
+   "lw": 19,
+   "loa": 24.6,
+   "beam": 4.5,
+   "deck_z": 0.9,
+   "roof_z": 3.637,
+   "heading_deg": 180,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 6448,
+    "lod1": 2160,
+    "colliders": 216,
+    "nodes": {
+     "body": 6190,
+     "deck__col": 96,
+     "rim__col": 48,
+     "board__edge": 92,
+     "roof__col": 72,
+     "mast": 152,
+     "wet__ring": 72,
+     "bow_wave": 34
+    }
+   },
+   "kit": {
+    "kind": "passenger",
+    "stern_house": true,
+    "bow_canopy": false,
+    "cabin": {
+     "x0": 0.24,
+     "x1": 0.74,
+     "segs": 2
+    }
+   },
+   "note": null
+  },
+  "SB.veh.boat_small_s": {
+   "kind": "small",
+   "pose": "rowed",
+   "motion": "under_way",
+   "lw": 8,
+   "loa": 9.3,
+   "beam": 2.3,
+   "deck_z": 0.12,
+   "roof_z": null,
+   "heading_deg": 180,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 1344,
+    "lod1": 666,
+    "colliders": 28,
+    "nodes": {
+     "body": 1214,
+     "deck__col": 12,
+     "rim__col": 16,
+     "board__edge": 40,
+     "oar_p0": 28,
+     "oar_s0": 28,
+     "wet__ring": 48,
+     "bow_wave": 26
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "awning": false,
+    "oars": 1,
+    "cargo": []
+   },
+   "note": null
+  },
+  "SB.veh.boat_laden_g": {
+   "kind": "grain",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 20,
+   "loa": 24.5,
+   "beam": 4.9,
+   "deck_z": 0.25,
+   "roof_z": 3.016,
+   "heading_deg": 0,
+   "water_H": -1.5,
+   "tris": {
+    "lod0": 5686,
+    "lod1": 1712,
+    "colliders": 200,
+    "nodes": {
+     "body": 5618,
+     "deck__col": 128,
+     "rim__col": 48,
+     "board__edge": 96,
+     "roof__col": 24,
+     "wet__ring": 68
+    }
+   },
+   "kit": {
+    "kind": "grain",
+    "hold": "laden",
+    "gangplank": [
+     33,
+     0.25,
+     0.02
+    ],
+    "moor": [
+     [
+      27,
+      0.2,
+      0.25
+     ]
+    ]
+   },
+   "note": null
+  }
+ },
+ "glb": "boats_test_boats.glb"
+}

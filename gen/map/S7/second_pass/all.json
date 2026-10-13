@@ -1,0 +1,122 @@
+{
+  "section": "S7",
+  "range": "all: owns u 815-2000, looked to 2150 (second pass, fresh eyes, 2026-10-12)",
+  "how_read": "map/strokes/S7.json (72 entities) drawn over the scan in 18 windows of 450 x 300 px at zoom 2 with grid 50 (u 800-2150, v 0-1800), each read beside the same window without markers; zoom-3 scan/restyle pairs (tools/scroll_inspect.mjs city_end) over the gate scene, the shop, the shed and the well's west end, the retinue, the 解 eave, the needle trees, the main hall's panel, the west edge and the bottom strip; zoom 5-14 crops (normalised, greyscale or red channel) on every item the merge left open; pixel traces of two short edges; and a scan of all pairs of entities of DIFFERENT kinds whose points lie under 30 px apart (33 pairs; all are neighbours as painted except the two below). Crops and scripts: /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S7_second_pass/ (pair.mjs, raw.mjs, edge_bottom.mjs, edge_top.mjs, edge_trace.mjs).",
+  "summary": "Nothing painted is missing: every figure, animal, tree, prop and building on the silk has an entity, and nothing is named only in another entity's note. Two entities are proposed for retirement: S7.prop.peaked_box_1346 is the same strokes as S7.str.gate_block_east_1345 (one unit read a box, the other a block; the merge's duplicate check compares only the same kind), and S7.fig.child_at_knee_1547 is robe folds with no head. Three changes add measured points or readings: the east gate block's measured corner and higher conf; the slats above the 解 tub, with two readings; the 解 eave bench, conf med. The west block's foot line is measured from the pixels for the frame's west knot. If both retirements are accepted: 70 entities (17 figures, 3 animals, 9 trees, 20 props, 9 buildings, 5 structures, 1 road, 6 groups).",
+  "entities": [],
+  "retire": [
+    {
+      "id": "S7.prop.peaked_box_1346",
+      "into": "S7.str.gate_block_east_1345",
+      "conf": "med",
+      "reason": "Duplicate in disguise. The structures pass and t1 recorded the same strokes under different kinds. The block's evidence (a vertical edge at u ~1333, v 850-880, and a top line near v 848) and the box's outline (u 1332-1360, v 845-900) are one shape. At zoom 8 that shape is the front-west corner of a squared block, not a box with a gabled lid. (1) Its front's west edge is vertical at u 1333-1334 from v 858 down to the foot, which is measured at v 901-904 over u 1335-1345. (2) Its front top edge is level at v 859 from u 1334 to ~1358, where the tied sack hides it. (3) What t1 read as the lid's peak is the top's west edge receding up-right, (1334, 857) -> (1351, 843), slope about -0.82. No falling second slope follows east of 1352: only the pointing man's sleeve at v ~836 and the sack's tied neck at (1355-1362, 868-875) are there. The front face is 43 px tall (v 859-902); the west block's is 47 (v 852-899), and the west block's top edge recedes at -0.80. The corner stands straight below the passage's east jamb, whose strokes run at u 1333-1349 from the lintel down to v ~760 (z_passage.jpg). Likewise the west block's passage end lies below the west jamb (u 1199-1209). Both front corners sit 14-16 px outside their jambs' line, so the gate is symmetrical. Its fill is a mottled darker wash, not the west block's diagonal hatching; that face is a side face, and this is a front. Keep the block, with the box as its other reading (below). Remove the box from S7.grp.gatehouse_1240 and reword the texts that name 'a dark box'.",
+      "crops": ["scratchpad/S7_second_pass/z_box8.jpg (zoom 8)", "z_box_peak.jpg and z_box_peak_g.jpg (zoom 6, normalised and grey)", "i_gate_e.jpg (zoom 3, scan beside the restyle)", "z_passage.jpg (zoom 5, the passage and its east jamb)"]
+    },
+    {
+      "id": "S7.fig.child_at_knee_1547",
+      "into": null,
+      "conf": "med",
+      "reason": "Reading (b) of its own note: robe folds. At zoom 6 in greyscale (z_childknee.jpg), u 1530-1570 holds only long, gently curving parallel strokes. They run unbroken from v ~790 down to the hem at v ~880, and below them is a shoe-like outline at (1530-1563, 880-892), the women's feet. No closed head outline, no hair wash and no face shows at the recorded head (1547, 812) or anywhere else in v 790-860. The only heads in the group are the two women's (744, 720), the doctor's (741) and the held child's (u 1540-1552, v 752-770). The restyle's mosaic paints one child too (i_women.jpg): the held child, its legs hanging to v ~865. sections.md's 'two women bring children' is a summary, and the strokes show one child. Drop it from S7.grp.zhao_taicheng_patients and change the texts that say 'children' (below).",
+      "crops": ["scratchpad/S7_second_pass/z_childknee.jpg (zoom 6, grey)", "i_women.jpg (zoom 3, scan beside the restyle)"]
+    }
+  ],
+  "changes": [
+    {
+      "id": "S7.str.gate_block_east_1345",
+      "why": "Takes over the strokes of the retired S7.prop.peaked_box_1346. Its front-west corner and front top are now measured.",
+      "set": {
+        "name": "block at the gate passage's east side",
+        "pts": { "base": { "sw": [1334, 902], "se": [1394, 902, "est"], "ne": [1424, 878, "est"], "nw": [1364, 878, "est"] }, "sw_top": [1334, 859], "nw_top": [1364, 835, "est"] },
+        "vis": "part: only its front-west corner and the west end of its top show, between the visitor's food-box hand and the tied sack; the rest is behind the tied sack, the man pointing the way and the free-standing board S7.prop.board_zhao_west_a_1392",
+        "conf": "med",
+        "what": "Squared knee-high block at the east side of the gate passage, the mirror of the west block S7.str.gate_block_1160: its front's west edge, the west end of its level top edge and the top's west edge receding north-east show between the visitor and the tied sack; the rest of its front runs on east behind the sack, the man pointing the way and the free-standing board. The passage's east jamb rises over its west end."
+      },
+      "add_note": "SECOND PASS: the same strokes were t1's S7.prop.peaked_box_1346 ('a dark box with a peaked lid'), retired into this entity. At zoom 8 the front's west edge is at u 1333-1334, v 858-902 (foot measured v 901-904 at u 1335-1345); the front top edge is level at v 859, u 1334 to ~1358 (then hidden by the sack); the 'peak' is the top's west edge receding (1334,857) -> (1351,843), slope ~-0.82, with no falling second slope. Front face 43 px tall against the west block's 47; the corner stands straight below the passage's east jamb (strokes u 1333-1349 from the lintel to v ~760), as the west block's passage end lies below the west jamb. se, ne, nw and nw_top are est from the west block's size (60 px wide, 30 px of u deep). OTHER READING: a dark box set down on the ground behind the sack (t1), base (1342, 902); its fill is a mottled wash, not hatching. If the lead keeps the block, the gate hall's east post (S7.bld.gatehouse_1240 bays.1, (1360,899) est) stands at or just east of this block's west end. Crops: scratchpad/S7_second_pass/z_box8.jpg, z_box_peak.jpg, z_passage.jpg."
+    },
+    {
+      "id": "S7.grp.gatehouse_1240",
+      "why": "Its member S7.prop.peaked_box_1346 is retired.",
+      "remove_members": ["S7.prop.peaked_box_1346"],
+      "replace": [
+        { "field": "what", "from": "A tied sack and a dark box stand between them,", "to": "A tied sack stands between them, against the gate's east block," }
+      ]
+    },
+    {
+      "id": "S7.fig.pointing_man_1370",
+      "why": "Its `what` names the retired box.",
+      "replace": [
+        { "field": "what", "from": "A tied sack and a dark box stand in front of him.", "to": "A tied sack stands in front of him, against the gate's east block S7.str.gate_block_east_1345." }
+      ]
+    },
+    {
+      "id": "S7.grp.zhao_taicheng_patients",
+      "why": "Its member S7.fig.child_at_knee_1547 is retired.",
+      "remove_members": ["S7.fig.child_at_knee_1547"],
+      "replace": [
+        { "field": "name", "from": "bringing the children to the doctor (问病)", "to": "bringing a child to the doctor (问病)" },
+        { "field": "what", "from": "two women have brought children to the doctor", "to": "two women have brought a child to the doctor" },
+        { "field": "what", "from": " (a second, smaller child at the seated woman's knee is faint)", "to": "" },
+        { "field": "note", "from": "Heads counted at zoom 3-4: two women, the doctor, one child sure, a second child faint (conf low).", "to": "Heads counted at zoom 3-6: two women, the doctor and one child. Second pass: the faint 'second child' at the seated woman's knee (S7.fig.child_at_knee_1547) is the women's robe folds and was retired." }
+      ]
+    },
+    {
+      "id": "S7.fig.standing_woman_1567",
+      "why": "Its `what` says 'children'.",
+      "replace": [
+        { "field": "what", "from": "the second woman who has brought the children.", "to": "the second woman who has come with the child." }
+      ]
+    },
+    {
+      "id": "S7.prop.tub_slatted_1973",
+      "why": "Slats above the recorded lid that no entity covers; they decide the tub's built height.",
+      "add_note": "SECOND PASS: the slats go on above the lattice band. Between the 解 building's east post (u ~1940) and the leaning 解 board's west edge (u ~1955 at v 1500, ~1985 at v 1590), fine vertical slats fill the space from the bar (v ~1522) down to the band at v 1590-1616 (zoom 6: scratchpad/S7_second_pass/z_tubtop.jpg; z_tub.jpg). Two readings. (a) The tub is that tall: its top is under the bar (about 210 px, 2.7 m at 77 px/m), the lattice band is a band rather than its lid, and it narrows upward only because the board's slanted edge hides more of its east side. The restyle paints it so, as one tall slatted vessel up to the bar. (b) The tub ends at a lattice-topped lid at v ~1595 (135 px, as recorded), and the slats above it are a slatted screen or blind hung from the bar between the post and the board, part of S7.bld.jie_building_1800. The strokes don't settle it: the builder records the height as a choice."
+    },
+    {
+      "id": "S7.bld.jie_building_1800",
+      "why": "The other side of the tub's reading (b): a painted thing that would be part of this building.",
+      "add_note": "SECOND PASS: between its east post (u ~1922-1941) and the leaning board S6.prop.jie_signboard_2085, fine vertical slats show from the bar (v ~1522) down to the slatted tub's lattice band (v ~1590): either the upper part of S7.prop.tub_slatted_1973, or a slatted screen hung from the bar, which would be part of this building. See the tub's note. Also seen: the east eave's double band runs on down-left past pole A's top (1815,1598), through about (1765,1700), toward the silk's bottom edge near u ~1730; both leaning poles cross it, and their tips show above it on the tiles."
+    },
+    {
+      "id": "S7.prop.bench_jie_eave_1885",
+      "why": "Read again at zoom 3: a free-standing stand, so conf goes from low to med.",
+      "set": { "conf": "med" },
+      "add_note": "SECOND PASS: on the zoom-3 crop (scratchpad/S7_second_pass/i_jie_eave.jpg) it stands on its own legs. Its top is at v ~1665-1677 (u 1850-1917), its legs and diagonal braces run down to v ~1730-1743, and it is clear of the rail above (v 1604-1630, the building's) and of the east post (u 1922-1941): a stand or low table, not part of the building."
+    }
+  ],
+  "measurements": [
+    {
+      "what": "Receding edge for the frame's west knot: the foot of S7.str.gate_block_1160's hatched east face. The merge asked for it to be read once more at zoom 4.",
+      "how": "The lower boundary of the foot stroke per column (greyscale, 3x3 mean below 95, 105 or 115; edge_bottom.mjs), with a zoom-8 crop to check (z_blockface.jpg, z_blockface_g.jpg).",
+      "pts": [[1192, 899], [1197, 895], [1202, 888], [1207, 883], [1212, 879], [1217, 875], [1223, 874]],
+      "result": "Least squares over the whole foot (u 1192-1223): slope -0.870, dx 58.9. The straight front part (u 1193-1211) alone gives -1.10 (dx 46.5); the last ~10 px flatten to about -0.4, where the passage's west jamb foot meets the line. The face's top edge gives -1.23 over its front 14 px. The two eye readings in the merge notes (-0.80 and -1.08) are this line's two parts. Use -0.87 (dx 59) for the whole edge, with a scatter of about ±12 px/m on this one edge."
+    },
+    {
+      "what": "A short high line, for a check only: the top's west edge of S7.str.gate_block_east_1345 (0.56 m up).",
+      "pts": [[1334, 857], [1351, 843]],
+      "result": "Slope -0.82, dx 62. It is 17 px long, so give it low weight."
+    }
+  ],
+  "kept": [
+    { "id": "S7.fig.face_at_gate_door_1251", "verdict": "Keep both readings, as merged. At zoom 14 (z_lampw.jpg) a dark top (u 1244-1255, v 675-682) sits over a paler rounded part with an outline down to v ~692 and a pale centre at (1247, 684): dark hair over a small face, or a lamp's dark cap over its body. The east object in the passage (gate hall point lamp_e) hangs at the same height (v 673-690), but it is a different shape, a dark blob with a pale curl (z_lampe.jpg), so the pair doesn't settle it." },
+    { "id": "S7.ani.pale_shape_1905", "verdict": "Keep, low. At zoom 5 grey (z_pale2.jpg) its rounded west end bends down at (1883-1903, 805-830), just behind the carrier's head, which fits an animal with its head down. Its top line then runs straight east at v 787-792 into S6's 'wall foot', which fits a wall foot or a mat. Nothing more is legible." },
+    { "id": "S7.tree.gnarled_low_edge_875", "verdict": "Keep, low. The blotches (840-930, 1470-1610) are scattered dark wash spots with no continuous trunk outline (i_west_bot.jpg); the restyle's gnarled trunk is not in the strokes, but a rock reading isn't proved either." },
+    { "id": "S7.tree.willow_edge_855", "verdict": "Confirmed one tree. In the red channel (z_willow_mid_r.jpg, z_willow_top_r.jpg), the stems along the cut edge rise from the same knotted trunk mass at (840-930, 560-700) as the upper stem at u 920-945, and the trunk runs down under the seal at u 840-870 to the ground. One stem arcs from (829, 217) to the silk's top at u ~954. No second trunk shows." },
+    { "id": "S7.prop.leaning_panel_1812", "verdict": "Keep, as merged. Its hatched band runs (1845,800) -> (1805,900) to its own foot block at (1800-1822, 922-945), in front of the shed's slats (v 807-825); it is not the shed's wall (z_shedfoot.jpg)." },
+    { "id": "S7.str.box_shed_1855", "verdict": "Keep, low. At zoom 4 (z_shed2.jpg) its top's front edge (1821,748)-(1903,748) is level, its back edge (1812,726)-(1893,729) nearly so, and both side edges fall down-right. Its sides then splay outward downward to (1795,770) and (1918,790). The strokes don't separate a small flat-topped roof from a set-down chest or sedan." },
+    { "id": "S7.bld.far_gable_1345", "verdict": "Keep, low: the gable's bargeboards and king post show at (1290-1400, 0-35); building or cross-gable is not settled." },
+    { "id": "S7.tree.shoots_bottom_west_960", "verdict": "Keep as one mass: no trunk is drawn, and the bases of the shoots aren't separable at zoom 3." },
+    { "id": "S7.prop.stones_fence_foot_945", "verdict": "Not read beyond the merge's zoom-4 crop; keep, low." },
+    { "id": "S7.tree.needle_tree_1910, S7.tree.needle_tree_1955", "verdict": "Confirmed two trees (i_needle.jpg). The 1955 tree's own straight stem shows at u ~1957 (v 50-200), and the 1910 crown is a separate mass at (1840-1940, 77-190). S6's 2025 tree has its own faint stem at u ~2017-2023." },
+    { "id": "S7.grp.official_retinue", "verdict": "Confirmed: four men and the horse, every marker on its strokes (i_ret_w.jpg, i_ret_e.jpg)." },
+    { "id": "S7.bld.zhao_taicheng (interior), S7.bld.main_hall_1300 (panel)", "verdict": "Confirmed. No man stands at the shop door (i_shop_e.jpg), and the main hall's panel shows rows of motifs and the dark rectangle in a curved outline but no faces (i_panel.jpg). The brief's 'faces at the windows' are not painted." },
+    { "id": "S7.str.gate_roof_1475", "verdict": "No change. A pale strip that tapers downward at u ~1555-1575 (v 1310-1380), under the roof's east end, with a dark wedge west of it, has no foot. With the corner ornament at (1585-1610, 1315-1350), it reads as the 解 roof's north-west eave corner and verge, not as a post of the gate roof (z_gatepost.jpg, i_undergate.jpg)." },
+    { "id": "writing", "verdict": "Not re-read: 趙 · 太 · 丞 · 家, 五勞七傷□□□ and the free-standing boards' □ stand." }
+  ],
+  "seam": "Nothing new at the S6 seam beyond the merge notes. Every S7 entity within u 1850-2000 was seen on its strokes. S6's figures at the seam (crouching_dark_2028, well_bucket_lifter_2032, itinerant_monk_2078) all have their feet east of u 2000.",
+  "lessons": [
+    "**Check for duplicates across kinds, not only within one kind.** The merge flags things of the same kind under 30 px apart. On S7, one unit read 20 px of strokes as a structure (a second gate block) and the other as a prop (a box with a peaked lid). Both survived the merge. List every pair of entities of different kinds whose points lie under 30 px apart, and look at each pair that isn't an obvious neighbour on one zoom-6 crop.",
+    "**A small box's 'peak' or 'lid' may be its top's receding edge.** In this oblique view a box's top shows as a parallelogram whose side edge rises up-right at about the receding slope (-0.8 on S7). Before you record a gabled lid, look for the second, falling slope.",
+    "**To settle a faint extra figure, look for a closed head** (hair wash, face, chin line) at zoom 6 in greyscale. Long parallel strokes running unbroken from waist to hem are robe folds: S7's 'second child' at the doctor's was folds.",
+    "**Measure short receding edges from the pixels.** Trace the lower boundary of the stroke per column (3x3 mean below a threshold) and fit a line. On S7's gate block, two eye readings of one 30-px edge gave -0.80 and -1.08; the trace gave -0.87 over the whole foot and -1.10 over its straight front part, where the line bends at the jamb."
+  ]
+}

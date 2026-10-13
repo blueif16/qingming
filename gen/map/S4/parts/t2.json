@@ -1,0 +1,1272 @@
+{
+ "section": "S4",
+ "entities": [
+  {
+   "id": "S4.fig.monk_side_door_10208",
+   "kind": "figure",
+   "name": "monk at the temple side door",
+   "what": "Small figure in a long plain robe standing at the east end of the temple hall, just east of the open side doorway between the hall and its east wing, seen from the side and turned west toward the door: the monk going in by the side door while the main gate stays shut.",
+   "pts": {
+    "foot": [
+     10208,
+     220
+    ],
+    "head": [
+     10205,
+     165
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 180,
+   "vis": "full",
+   "conf": "med",
+   "src": "名画记: 清净的寺庙 (pin 30)",
+   "note": "Painted only 55 px tall (head 165, feet 210-222), much smaller than the shopkeeper 200 px east (94 px); whether the head is shaven is not legible. The doorway is the gap at u ~10155-10195, v 150-200 (structures agent)."
+  },
+  {
+   "id": "S4.fig.shopkeeper_10425",
+   "kind": "figure",
+   "name": "shopkeeper in the open shop front",
+   "what": "Man in a cap and a light jacket standing upright in the open front of the shop east of the temple, behind a stand with stacked round trays; one hand is raised toward his face. His goods (a heap of bundles and a big pale roll) fill the bay to his west.",
+   "pts": {
+    "foot": [
+     10425,
+     318,
+     "est"
+    ],
+    "head": [
+     10420,
+     224
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S4.grp.shop_front_10425",
+   "vis": "part: legs behind the tray stand",
+   "conf": "med",
+   "src": "",
+   "note": "Feet at the shop floor line (v ~315-320), behind the stand. The restyle adds two reclining men among the goods; the strokes show rounded bundles, not people."
+  },
+  {
+   "id": "S4.prop.goods_heap_10345",
+   "kind": "prop",
+   "name": "heap of goods in the shop bay",
+   "what": "Heap of rounded bundles or sacks piled on the floor of the open shop bay, with a large pale cylindrical roll (a bolt or a vat lying on its side) behind them.",
+   "pts": {
+    "base": [
+     10345,
+     312
+    ]
+   },
+   "support": "ground",
+   "group": "S4.grp.shop_front_10425",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "Heap spans u 10305-10390, v 266-315; the pale roll u 10344-10394, v 246-271. What the goods are is not legible; the restyle reads two reclining men (rejected)."
+  },
+  {
+   "id": "S4.prop.basket_10379",
+   "kind": "prop",
+   "name": "big round basket before the shop",
+   "what": "Large round woven basket set on the ground at the front edge of the shop bay.",
+   "pts": {
+    "base": [
+     10379,
+     330
+    ]
+   },
+   "support": "ground",
+   "group": "S4.grp.shop_front_10425",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Rim u 10362-10396 at v ~312; bottom v ~330."
+  },
+  {
+   "id": "S4.prop.tray_stand_10408",
+   "kind": "prop",
+   "name": "stand with stacked trays",
+   "what": "Small stand or stool in front of the shopkeeper carrying a stack of round trays (or a lidded basket).",
+   "pts": {
+    "base": [
+     10408,
+     313
+    ]
+   },
+   "support": "ground",
+   "group": "S4.grp.shop_front_10425",
+   "vis": "full",
+   "conf": "low",
+   "src": "",
+   "note": "Spans u 10395-10422, v 280-312."
+  },
+  {
+   "id": "S4.grp.shop_front_10425",
+   "kind": "group",
+   "name": "the shop east of the temple",
+   "what": "An open-fronted shop at the top of the side road: the shopkeeper stands behind a stand of trays with his goods heaped in the bay and a big basket set out in front.",
+   "members": [
+    "S4.fig.shopkeeper_10425",
+    "S4.prop.goods_heap_10345",
+    "S4.prop.basket_10379",
+    "S4.prop.tray_stand_10408"
+   ],
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S4.ani.pig_10262",
+   "kind": "animal",
+   "name": "pig at the back of the herd (top)",
+   "what": "Black bristly pig, the northernmost of the herd, walking east with its snout forward; only its back and head show above the others.",
+   "pts": {
+    "fore": [
+     10262,
+     395,
+     "est"
+    ],
+    "hind": [
+     10215,
+     390,
+     "est"
+    ],
+    "head": [
+     10275,
+     359
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 345,
+   "group": "S4.grp.pig_herd_10236",
+   "vis": "part: legs hidden behind the pigs in front",
+   "conf": "med",
+   "src": "",
+   "note": "Back u 10205-10272, v 332-347, flank down to v ~390 behind the dark pig. Four pigs (three here, one in t1) walk together as a herd half hidden behind the hanging branches of the pine-like trees west of the side road; no herder is drawn (the restyle adds one)."
+  },
+  {
+   "id": "S4.ani.pig_dark_10282",
+   "kind": "animal",
+   "name": "dark pig at the front of the herd",
+   "what": "Dark, round-bodied bristly pig at the east (front) of the herd, walking east with its snout raised.",
+   "pts": {
+    "fore": [
+     10282,
+     437
+    ],
+    "hind": [
+     10255,
+     427
+    ],
+    "head": [
+     10290,
+     398
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 345,
+   "group": "S4.grp.pig_herd_10236",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Body u 10235-10282, v 370-430; head u 10270-10295, v 375-400; hooves at u 10252-10258 (v 427) and 10268-10287 (v 433-440)."
+  },
+  {
+   "id": "S4.ani.pig_10236",
+   "kind": "animal",
+   "name": "pig in the middle of the herd",
+   "what": "Grey-brown pig walking east in the middle of the herd, behind the dark pig, under the low branches.",
+   "pts": {
+    "fore": [
+     10236,
+     442
+    ],
+    "hind": [
+     10200,
+     436,
+     "est"
+    ],
+    "head": [
+     10244,
+     434,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 345,
+   "group": "S4.grp.pig_herd_10236",
+   "vis": "part: crossed by branches; head behind the dark pig",
+   "conf": "med",
+   "src": "",
+   "note": "Body u 10175-10230, v 395-437; hooves at (10218, 438) and (10235, 443)."
+  },
+  {
+   "id": "S4.grp.pig_herd_10236",
+   "kind": "group",
+   "name": "pig herd on the side road",
+   "what": "A herd of four pigs walking east together across the open ground of the side road, below the shops, half hidden by hanging branches.",
+   "members": [
+    "S4.ani.pig_10262",
+    "S4.ani.pig_dark_10282",
+    "S4.ani.pig_10236",
+    "S4.ani.pig_10185"
+   ],
+   "conf": "med",
+   "src": "",
+   "note": "The fourth (westernmost) pig is t1's S4.ani.pig_10185 (fore est 10185, 452; head 10205, 448): join it to this group when merging."
+  },
+  {
+   "id": "S4.fig.porter_baskets_10347",
+   "kind": "figure",
+   "name": "porter with two shallow baskets",
+   "what": "Man seen from behind walking up the side road (north) with a carrying pole on his right shoulder; two large shallow round baskets hang from it on cords, one at each end. Bare head with a topknot, short jacket, trousers.",
+   "pts": {
+    "foot": [
+     10347,
+     632
+    ],
+    "head": [
+     10320,
+     488
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 95,
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Feet at (10325, 635) and (10370, 625). West basket u 10260-10340, v 563-610; east basket u 10357-10433, v 547-587; pole (10280, 535) -> (10385, 498)."
+  },
+  {
+   "id": "S4.fig.person_with_child_10430",
+   "kind": "figure",
+   "name": "person in a long robe holding a child",
+   "what": "Person (probably a woman) in a long robe reaching to the feet, standing at the west end of the roadside stall and facing west toward the porter; a small child is held up at the left shoulder (its head shows beside hers).",
+   "pts": {
+    "foot": [
+     10430,
+     474
+    ],
+    "head": [
+     10425,
+     345
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 200,
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Child's head u 10435-10447, v 350-366. Height 129 px.",
+   "group": "S4.grp.person_with_child_10430"
+  },
+  {
+   "id": "S4.prop.stall_shed_10470",
+   "kind": "prop",
+   "name": "thatched roadside stall on posts",
+   "what": "Open stall: a thatch or mat roof on four slender posts, open on all sides, with a long table under it; the three pack donkeys stand in front of it.",
+   "pts": {
+    "base": {
+     "sw": [
+      10470,
+      438,
+      "est"
+     ],
+     "se": [
+      10598,
+      432,
+      "est"
+     ],
+     "ne": [
+      10640,
+      392,
+      "est"
+     ],
+     "nw": [
+      10505,
+      398,
+      "est"
+     ]
+    }
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "vis": "part: post feet hidden by the donkeys and their loads",
+   "conf": "med",
+   "src": "",
+   "note": "Roof u 10453-10600, v 257-333 (front eave v 327-333); front-west post u 10468-10473 visible to v 417; a middle post at u 10530-10535. Recorded as a prop (stall on its own posts); the structures agent may also list it as a shed.",
+   "group": "S4.grp.pack_donkeys_10487"
+  },
+  {
+   "id": "S4.prop.long_table_10525",
+   "kind": "prop",
+   "name": "long table under the stall",
+   "what": "Long plank table on legs standing under the stall roof, its top at about knee-to-waist height of the donkeys.",
+   "pts": {
+    "base": [
+     10525,
+     425,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: legs hidden behind the donkeys",
+   "conf": "med",
+   "src": "",
+   "note": "Top u 10480-10597, v 387-397.",
+   "group": "S4.grp.pack_donkeys_10487"
+  },
+  {
+   "id": "S4.ani.pack_donkey_10487",
+   "kind": "animal",
+   "name": "west pack donkey",
+   "what": "Dark donkey carrying a wicker pannier frame heaped with dark lumpy load (charcoal or similar), walking away north-west past the stall with its head raised.",
+   "pts": {
+    "fore": [
+     10487,
+     507
+    ],
+    "hind": [
+     10533,
+     542
+    ],
+    "head": [
+     10462,
+     447
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 150,
+   "group": "S4.grp.pack_donkeys_10487",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Fore hooves (10477, 512) and (10496, 502); hind (10521, 540) and (10545, 544). The three donkeys overlap; legs assigned by position."
+  },
+  {
+   "id": "S4.ani.pack_donkey_10571",
+   "kind": "animal",
+   "name": "middle pack donkey",
+   "what": "Pack donkey seen from behind under a tall wicker frame of dark load, between the other two, walking north; its head is hidden by the load.",
+   "pts": {
+    "fore": [
+     10571,
+     514
+    ],
+    "hind": [
+     10567,
+     540
+    ],
+    "head": [
+     10575,
+     470,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 90,
+   "group": "S4.grp.pack_donkeys_10487",
+   "vis": "part: head and forequarters hidden by its load",
+   "conf": "low",
+   "src": "",
+   "note": "Hooves at (10552, 534), (10557, 517), (10582, 542), (10585, 512)."
+  },
+  {
+   "id": "S4.ani.pack_donkey_10632",
+   "kind": "animal",
+   "name": "east pack donkey",
+   "what": "Pack donkey at the east end of the line, facing east with its head lowered, a load frame on its back.",
+   "pts": {
+    "fore": [
+     10632,
+     523
+    ],
+    "hind": [
+     10604,
+     518
+    ],
+    "head": [
+     10647,
+     505
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S4.grp.pack_donkeys_10487",
+   "vis": "part: crossed by willow whips",
+   "conf": "low",
+   "src": "",
+   "note": "Hooves at (10604, 517), (10625, 522), (10637, 522); head u 10640-10652, v 485-512."
+  },
+  {
+   "id": "S4.fig.drover_10578",
+   "kind": "figure",
+   "name": "possible drover among the pack donkeys",
+   "what": "A rounded head-like shape with a dark top between the loads of the middle and east donkeys: probably the drover walking (or riding) among his donkeys; the body is hidden by the loads.",
+   "pts": {
+    "foot": [
+     10578,
+     525,
+     "est"
+    ],
+    "head": [
+     10577,
+     428
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 90,
+   "group": "S4.grp.pack_donkeys_10487",
+   "vis": "part: only the head shows between the loads",
+   "conf": "low",
+   "src": "",
+   "note": "Ambiguous: could be part of the load. The restyle paints a man in blue here."
+  },
+  {
+   "id": "S4.grp.pack_donkeys_10487",
+   "kind": "group",
+   "name": "pack donkeys at the stall",
+   "what": "Three donkeys laden with wicker frames of dark lumpy goods (charcoal?) stand and walk at the front of the roadside stall on the side road, probably with their drover among them.",
+   "members": [
+    "S4.ani.pack_donkey_10487",
+    "S4.ani.pack_donkey_10571",
+    "S4.ani.pack_donkey_10632",
+    "S4.fig.drover_10578",
+    "S4.prop.stall_shed_10470",
+    "S4.prop.long_table_10525"
+   ],
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S4.ani.horse_dark_10372",
+   "kind": "animal",
+   "name": "dark-maned horse with its head down",
+   "what": "Horse (or mule) standing on the far side of the road with its head hanging low to the west-south-west; dark mane and forequarters, a long dark tail at the east end. The groom stands in front of its middle.",
+   "pts": {
+    "fore": [
+     10372,
+     851
+    ],
+    "hind": [
+     10450,
+     828
+    ],
+    "head": [
+     10372,
+     790
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 200,
+   "group": "S4.grp.horse_and_groom_10372",
+   "vis": "part: barrel hidden behind the groom",
+   "conf": "med",
+   "src": "",
+   "note": "Fore hooves (10357, 852), (10388, 850); one hind leg to (10452, 828); tail u 10452-10488, v 742-818. Ears/mane at u 10333-10390, v 682-752. Horse vs mule not decidable; no saddle visible."
+  },
+  {
+   "id": "S4.fig.groom_10420",
+   "kind": "figure",
+   "name": "groom in front of the dark horse",
+   "what": "Young man in a cap, short jacket and trousers standing facing the viewer in front of the dark horse, hands together at his waist (holding the reins), head bowed slightly west.",
+   "pts": {
+    "foot": [
+     10420,
+     853
+    ],
+    "head": [
+     10405,
+     680
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S4.grp.horse_and_groom_10372",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Feet (10407, 852) and (10433, 850). Height 173 px."
+  },
+  {
+   "id": "S4.grp.horse_and_groom_10372",
+   "kind": "group",
+   "name": "horse and groom",
+   "what": "A groom stands holding a dark horse whose head hangs low, on the far side of the road west of the sedan chairs.",
+   "members": [
+    "S4.ani.horse_dark_10372",
+    "S4.fig.groom_10420"
+   ],
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S4.prop.mat_canopy_10555",
+   "kind": "prop",
+   "name": "arched mat canopy",
+   "what": "A low arched canopy of woven mat (dark mottled binding) behind the sedan poles, with planks or shelves under it: the shelter of a small stall, or the barrel cover of a parked cart seen end-on.",
+   "pts": {
+    "base": [
+     10555,
+     712,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "vis": "part: lower part hidden by the men and the sedan poles",
+   "conf": "low",
+   "src": "",
+   "note": "Arch u 10480-10632, v 575-700 (crown v ~580 at u 10540); inner shelf lines at v 632 and 657; two posts at u 10520 and 10535 down to v ~690. No wheel is visible. The restyle paints a loaded cart. Footprint not measurable."
+  },
+  {
+   "id": "S4.fig.young_man_canopy_10558",
+   "kind": "figure",
+   "name": "young man under the canopy",
+   "what": "Beardless young man in a cap and short jacket standing under the arched canopy just behind the west sedan pole, facing the viewer.",
+   "pts": {
+    "foot": [
+     10558,
+     800
+    ],
+    "head": [
+     10553,
+     680
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 270,
+   "vis": "part: body crossed by the sedan pole",
+   "conf": "med",
+   "src": "",
+   "note": "Smaller than the men around him (120 px): perhaps a youth."
+  },
+  {
+   "id": "S4.prop.stand_10497",
+   "kind": "prop",
+   "name": "small four-legged stand",
+   "what": "Small square stand (or low table) on four legs under the west end of the west sedan chair's poles.",
+   "pts": {
+    "base": [
+     10497,
+     785
+    ]
+   },
+   "support": "ground",
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "full",
+   "conf": "med",
+   "src": "",
+   "note": "Top u 10468-10525 at v ~720; legs to v 785. Whether the poles rest on it or it belongs to the canopy stall is not clear."
+  },
+  {
+   "id": "S4.fig.bearer_bending_10440",
+   "kind": "figure",
+   "name": "bearer bending to the pole ends",
+   "what": "Man in a dark cap bending forward to the east with both hands at the west ends of the west sedan chair's poles, as if about to lift them: the front bearer.",
+   "pts": {
+    "foot": [
+     10440,
+     800,
+     "est"
+    ],
+    "head": [
+     10438,
+     628
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 0,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "part: legs hidden by the groom and the horse",
+   "conf": "med",
+   "src": "",
+   "note": "Hands at about (10462, 708) on the pole; feet estimated from his size behind (north of) the horse."
+  },
+  {
+   "id": "S4.fig.man_long_robe_10605",
+   "kind": "figure",
+   "name": "man in a long robe at the west sedan",
+   "what": "Tall man in a long robe and dark cap seen from behind-left, standing at the west end of the west sedan chair with his hand on its pole or frame, facing east toward it.",
+   "pts": {
+    "foot": [
+     10605,
+     830
+    ],
+    "head": [
+     10588,
+     669
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 30,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Feet u 10590-10626, v 820-833. Height 161 px. Dress of a gentleman or steward rather than a bearer."
+  },
+  {
+   "id": "S4.veh.sedan_chair_10623",
+   "kind": "vehicle",
+   "name": "west sedan chair",
+   "what": "Tall sedan chair (轿): dark panelled box with a lattice window in its side and a curtained end, under a domed roof with upturned eaves; long poles run east and west along its sides at shoulder height. It hangs a little above the ground, lifted by its bearers.",
+   "pts": {
+    "front": [
+     10623,
+     830,
+     "est"
+    ],
+    "rear": [
+     10705,
+     832,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "full",
+   "conf": "high",
+   "src": "sections.md: two tall dark boxes on the far side (the lead's first look)",
+   "note": "Body u 10613-10700 (west end strip u 10613-10633), dome top v 617, bottom v 803-810, i.e. ~25 px above the bearers' foot line (v ~830): carried, not set down. SCALE CUE: body 87 px long, 190 px tall. Poles at v 700-710 (near) running from u ~10460 to ~10715. DEPTH DIRECTION: no reliable receding edge (the end strip's bottom (10613, 797) -> (10633, 805), slope +0.4, runs against the frame's receding direction; read it as a door jamb on the side). front = west end, since the bearers face west."
+  },
+  {
+   "id": "S4.fig.bearer_straining_10728",
+   "kind": "figure",
+   "name": "bearer straining under the pole between the chairs",
+   "what": "Bearer in a short jacket bent forward under the poles between the two chairs, the pole across his shoulder and neck, legs braced wide, mouth open with the effort; his head is at the west end of his body.",
+   "pts": {
+    "foot": [
+     10728,
+     836
+    ],
+    "head": [
+     10705,
+     705
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 180,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Feet (10707, 833) and (10753, 836)."
+  },
+  {
+   "id": "S4.fig.man_behind_bearer_10755",
+   "kind": "figure",
+   "name": "man behind the straining bearer",
+   "what": "Man in a cap and jacket standing just north of the straining bearer between the two chairs, looking down west at him; perhaps the second bearer of that pole.",
+   "pts": {
+    "foot": [
+     10755,
+     815,
+     "est"
+    ],
+    "head": [
+     10750,
+     645
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 200,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "part: legs hidden by the bearer",
+   "conf": "med",
+   "src": "",
+   "note": ""
+  },
+  {
+   "id": "S4.veh.sedan_chair_10810",
+   "kind": "vehicle",
+   "name": "east sedan chair",
+   "what": "Second tall sedan chair like the first: dark panelled box with vertical slats at its west end, a domed roof with an upturned eave curling out at the east; its poles run on east to the bearer at u ~10980. It hangs above the ground on its poles.",
+   "pts": {
+    "front": [
+     10810,
+     830,
+     "est"
+    ],
+    "rear": [
+     10892,
+     830,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 180,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "full",
+   "conf": "high",
+   "src": "sections.md: two tall dark boxes on the far side (the lead's first look)",
+   "note": "Body u 10801-10885, dome top v 621, bottom v ~806 (corner legs at (10805, 806) and (10883, 806)); feet of a person show below it at v 828-835, so it is lifted. SCALE CUE: 84 px long, 185 px tall. Poles: near pole v 719-723, far pole v ~687-690, from the chair east to about u 11005-11010, just past the rear bearer; the pole further east (v 700-705, u 11030-11230) is t3's porter's shoulder pole."
+  },
+  {
+   "id": "S4.fig.walker_behind_sedan_10822",
+   "kind": "figure",
+   "name": "person walking behind the east sedan",
+   "what": "Person on the far side of the east sedan chair: only the lower legs and shoes show beneath the lifted chair.",
+   "pts": {
+    "foot": [
+     10822,
+     832
+    ],
+    "head": [
+     10822,
+     660,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 180,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "part: all but the lower legs hidden by the chair",
+   "conf": "med",
+   "src": "",
+   "note": "Shoes at (10805, 828) and (10835, 835)."
+  },
+  {
+   "id": "S4.prop.small_stand_10900",
+   "kind": "prop",
+   "name": "small frame behind the east sedan",
+   "what": "Small upright frame or stand on thin legs just east of the east sedan chair, behind its far pole. A hatched bundle lies on top of it (u 10880-10914, v 660-700). A hatched bundle lies on top of it (u 10880-10914, v 660-700).",
+   "pts": {
+    "base": [
+     10900,
+     748
+    ]
+   },
+   "support": "ground",
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "part: behind the poles",
+   "conf": "low",
+   "src": "",
+   "note": "Spans u 10880-10915, v 657-750; could be a small person (a head-like top at v ~660) or a basket on a stand; the restyle paints a netted bundle and a basket."
+  },
+  {
+   "id": "S4.fig.bearer_east_10982",
+   "kind": "figure",
+   "name": "rear bearer of the east sedan",
+   "what": "Bearer in a cap and short jacket at the east ends of the east sedan chair's poles, the pole on his right shoulder, walking west with legs apart and looking west.",
+   "pts": {
+    "foot": [
+     10982,
+     833
+    ],
+    "head": [
+     10965,
+     700
+    ]
+   },
+   "support": "ground",
+   "pose": "carrying",
+   "facing_deg": 180,
+   "group": "S4.grp.sedan_chairs_10623",
+   "vis": "full",
+   "conf": "high",
+   "src": "",
+   "note": "Feet (10960, 828) and (11005, 835)."
+  },
+  {
+   "id": "S4.grp.sedan_chairs_10623",
+   "kind": "group",
+   "name": "two sedan chairs carried west",
+   "what": "Two tall sedan chairs travel west (toward the city) one behind the other along the far side of the road: bearers lift and shoulder the long poles, one strains under the poles between the chairs, a man in a long robe walks at the west chair and the front bearer bends to the pole ends.",
+   "members": [
+    "S4.veh.sedan_chair_10623",
+    "S4.veh.sedan_chair_10810",
+    "S4.fig.bearer_bending_10440",
+    "S4.fig.man_long_robe_10605",
+    "S4.fig.bearer_straining_10728",
+    "S4.fig.man_behind_bearer_10755",
+    "S4.fig.walker_behind_sedan_10822",
+    "S4.fig.bearer_east_10982",
+    "S4.prop.stand_10497",
+    "S4.prop.small_stand_10900"
+   ],
+   "conf": "med",
+   "src": "",
+   "note": "East of the poles' ends t3 records a knot of porters (S4.grp.porters_11100, u 11050-11210) who may be the chairs' luggage carriers; nothing in the strokes ties them for certain."
+  },
+  {
+   "id": "S4.ani.horse_rider_10205",
+   "kind": "animal",
+   "name": "fan rider's horse",
+   "what": "Horse with a dark shaggy mane coming west along the road, its head hanging low on the west; the rider with the fan sits above it, its body hidden behind the groom and the rear corner of the covered cart.",
+   "pts": {
+    "fore": [
+     10205,
+     1160,
+     "est"
+    ],
+    "hind": [
+     10330,
+     1150,
+     "est"
+    ],
+    "head": [
+     10198,
+     1085
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 190,
+   "group": "S4.grp.rider_party_10205",
+   "vis": "part: body and hind legs hidden by the groom and the cart",
+   "conf": "med",
+   "src": "sections.md: a rider coming the other way",
+   "note": "One foreleg visible, hoof at (10195, 1165); the other is hidden, so fore is estimated a little east of it. Mane u 10160-10240, v 1008-1065; head u 10185-10230, v 1065-1100. Edge case: fore at u ~10200, t1 may also record it."
+  },
+  {
+   "id": "S4.fig.rider_fan_10285",
+   "kind": "figure",
+   "name": "rider with a round fan",
+   "what": "Rider in a wide conical straw hat holding a dark round fan up before his chest and face, riding west against the traffic; light robe.",
+   "pts": {
+    "foot": [
+     10285,
+     1155,
+     "est"
+    ],
+    "head": [
+     10262,
+     885
+    ]
+   },
+   "support": "animal S4.ani.horse_rider_10205",
+   "pose": "riding",
+   "facing_deg": 190,
+   "group": "S4.grp.rider_party_10205",
+   "vis": "part: below the waist hidden by the cart roof corner",
+   "conf": "med",
+   "src": "sections.md: a rider coming the other way",
+   "note": "Hat u 10212-10312, v 885-932; fan u 10248-10305, v 948-992. That he rides (not stands behind the cart) is read from the horse below him; his seat is hidden."
+  },
+  {
+   "id": "S4.fig.groom_rider_10255",
+   "kind": "figure",
+   "name": "young groom at the rider's horse",
+   "what": "Young man in a cap and light jacket walking at the horse's head on its south side, between the horse and the covered cart, his face turned east.",
+   "pts": {
+    "foot": [
+     10255,
+     1172
+    ],
+    "head": [
+     10250,
+     1012
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 190,
+   "group": "S4.grp.rider_party_10205",
+   "vis": "part: body crossed by the horse's neck",
+   "conf": "med",
+   "src": "",
+   "note": "One shoe at (10255, 1170)."
+  },
+  {
+   "id": "S4.grp.rider_party_10205",
+   "kind": "group",
+   "name": "rider with a fan and his groom",
+   "what": "A rider in a wide straw hat, shading his face with a round fan, comes west on a horse with its head down, a young groom walking at its head, squeezing past the rear of the covered ox cart.",
+   "members": [
+    "S4.ani.horse_rider_10205",
+    "S4.fig.rider_fan_10285",
+    "S4.fig.groom_rider_10255"
+   ],
+   "conf": "med",
+   "src": "sections.md: a rider coming the other way",
+   "note": ""
+  },
+  {
+   "id": "S4.veh.covered_ox_cart_10550",
+   "kind": "vehicle",
+   "name": "second covered ox cart",
+   "what": "Big two-wheeled covered cart seen from behind: a barrel-vaulted roof of woven mat over a body closed at the rear by a lattice door with a carved rail; it heads north-east up the road with its team (a shaft ox and a lead ox) ahead to the east.",
+   "pts": {
+    "front": [
+     10550,
+     1185,
+     "est"
+    ],
+    "rear": [
+     10372,
+     1300,
+     "est"
+    ],
+    "wheels": [
+     [
+      10505,
+      1290,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 20,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "part: wheels and underside hidden by the roof of the building south of the road",
+   "conf": "high",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Roof from the rear arch (u 10240-10470, v 1035-1150) to the front end (u 10534-10565, v 990-1048); roof top v ~950-985; rear door u 10297-10447, v 1103-1243. Shafts are hidden behind the shaft ox. SCALE CUE: south wheel rim u 10475-10534, top v 1103, bottom hidden below v ~1285 (vertical extent >= 182 px), hub est (10505, 1195). A second rim arc at u 10293-10338, v 1203-1294 may be the north wheel (not recorded as a contact). DEPTH DIRECTION: the roof's south eave (10429, 1130) -> (10561, 1030), slope dv/du -0.76; the shaft ox's hoof line (10578, 1203) -> (10712, 1135), slope -0.51."
+  },
+  {
+   "id": "S4.ani.ox_shaft_10712",
+   "kind": "animal",
+   "name": "shaft ox of the second cart",
+   "what": "Light-coloured ox in the shafts of the second covered cart, seen from the rear-left as it pulls north-east, head up and to the right, a collar or yoke at its withers; the driver bends against its flank.",
+   "pts": {
+    "fore": [
+     10712,
+     1135
+    ],
+    "hind": [
+     10578,
+     1203
+    ],
+    "head": [
+     10695,
+     1012
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 25,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "part: belly and legs crossed by the driver",
+   "conf": "med",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Rump u 10560-10600, v 1100-1200; back line v ~1005-1010 from u 10600 to 10710; head with horns u 10667-10723, v 998-1032. A trace runs east from its chest at v ~1070 to the lead ox. Curled strokes at u 10562-10630, v 985-1020 (yoke saddle or the head of a third ox on the far side) are unresolved; only two oxen are legible for this cart, not three."
+  },
+  {
+   "id": "S4.ani.ox_lead_10872",
+   "kind": "animal",
+   "name": "lead ox of the second cart",
+   "what": "Big ox walking east ahead of the shaft ox on traces, one hind leg lifted in mid-stride; a girth band and breast strap hold the traces that run back to the shaft ox. A bare-headed man in a long robe (t3) leads it by the nose rope.",
+   "pts": {
+    "fore": [
+     10872,
+     1072
+    ],
+    "hind": [
+     10771,
+     1063
+    ],
+    "head": [
+     10930,
+     960
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "full",
+   "conf": "high",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Fore hooves (10835, 1064) and (10910, 1079); hind (10745, 1050) and (10797, 1077, lifted). Back top v 907; head u 10893-10957, v 930-997. Body 245 px long rump to muzzle (u 10700-10955)."
+  },
+  {
+   "id": "S4.fig.ox_driver_10635",
+   "kind": "figure",
+   "name": "driver bending at the shaft ox",
+   "what": "Driver in a white jacket, dark belt and dark cap bending forward against the right flank of the shaft ox with his back to us, both arms along its body (pushing it on or setting the harness).",
+   "pts": {
+    "foot": [
+     10635,
+     1215
+    ],
+    "head": [
+     10625,
+     1064
+    ]
+   },
+   "support": "ground",
+   "pose": "leaning",
+   "facing_deg": 30,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "full",
+   "conf": "med",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Feet (10605, 1200) and (10662, 1225)."
+  },
+  {
+   "id": "S4.fig.carter_whip_10380",
+   "kind": "figure",
+   "name": "carter with a whip beyond the cart",
+   "what": "Man in a cap on the far (north) side of the covered cart, only his head, shoulders and raised arm showing above its roof; he holds a long whip whose tasselled tip sticks up at the east, mouth open as if shouting at the oxen.",
+   "pts": {
+    "foot": [
+     10380,
+     1090,
+     "est"
+    ],
+    "head": [
+     10375,
+     911
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 10,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "part: below the shoulders hidden by the cart",
+   "conf": "med",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Whip from his hand (10395, 930) to (10476, 922), tassel u 10449-10468, v 911-949. Could instead be sitting on the roof; foot estimated from a 180 px height."
+  },
+  {
+   "id": "S4.fig.carter_front_10525",
+   "kind": "figure",
+   "name": "man at the front of the cart",
+   "what": "Head in a dark cap showing over the front end of the cart roof, facing east toward the oxen: a second carter walking beyond the front of the cart, or sitting at its front.",
+   "pts": {
+    "foot": [
+     10525,
+     1115,
+     "est"
+    ],
+    "head": [
+     10522,
+     945
+    ]
+   },
+   "support": "ground",
+   "pose": "walking",
+   "facing_deg": 0,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "part: only the head shows",
+   "conf": "low",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Head u 10507-10547, v 945-976."
+  },
+  {
+   "id": "S4.fig.man_cart_tail_10405",
+   "kind": "figure",
+   "name": "man crouched at the cart's tail",
+   "what": "Man in white bent double at the tail of the covered cart, under its rear door, back to us: pushing the cart or climbing in.",
+   "pts": {
+    "foot": [
+     10405,
+     1300,
+     "est"
+    ],
+    "head": [
+     10383,
+     1222
+    ]
+   },
+   "support": "ground",
+   "pose": "crouching",
+   "facing_deg": 60,
+   "group": "S4.grp.covered_ox_cart_10550",
+   "vis": "part: feet hidden by the roof of the building south of the road",
+   "conf": "low",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "Pale back u 10373-10433, v 1213-1287. Could be a bundle tied at the tail; the restyle reads a seated man."
+  },
+  {
+   "id": "S4.grp.covered_ox_cart_10550",
+   "kind": "group",
+   "name": "second covered ox cart and its team",
+   "what": "The second big covered ox cart heads east-north-east up the road: a light ox in the shafts and a big lead ox on traces pull it, a driver bends at the shaft ox, a carter with a whip walks beyond the cart, another man shows at its front and one crouches at its tail.",
+   "members": [
+    "S4.veh.covered_ox_cart_10550",
+    "S4.ani.ox_shaft_10712",
+    "S4.ani.ox_lead_10872",
+    "S4.fig.ox_driver_10635",
+    "S4.fig.carter_whip_10380",
+    "S4.fig.carter_front_10525",
+    "S4.fig.man_cart_tail_10405",
+    "S4.fig.ox_leader_11017"
+   ],
+   "conf": "high",
+   "src": "名画记: 牛拉大盖车 (pin 31) / sections.md: two three-ox covered carts with a rider coming the other way",
+   "note": "The bare-headed man in a long robe leading the lead ox by its nose rope (feet ~(10992, 1058) and (11048, 1045), foot mid ~(11020, 1051), head 11007, 860) is t3's by the main-point rule; add him to this group when merging."
+  },
+  {
+   "id": "S4.tree.willow_twin_10745",
+   "kind": "tree",
+   "name": "tall twin-trunked willow behind the sedans",
+   "what": "Tall tree with two (or three) slender trunks rising together from one foot behind the west sedan chair and the canopy, branching high into gnarled dark limbs; its long hanging whips fill the top of the silk over the side road.",
+   "pts": {
+    "base": [
+     10745,
+     605,
+     "est"
+    ],
+    "top": [
+     10780,
+     2
+    ],
+    "crown_w": [
+     10470,
+     380
+    ],
+    "crown_e": [
+     10980,
+     250
+    ]
+   },
+   "support": "ground",
+   "vis": "part: crown cut off by the silk's top edge; foot hidden behind the sedan chair and canopy",
+   "conf": "med",
+   "src": "",
+   "note": "Trunks at u 10700-10732, 10732-10764 and 10768-10792 between v 330 and ~615, converging toward one foot; dark limbs at u 10700-10860, v 0-175 continue it to the top edge. Crown extents are rough: its whips merge with those of the gnarled tree at u 10955 and the tree at u ~11100 (t3)."
+  },
+  {
+   "id": "S4.tree.behind_roof_10405",
+   "kind": "tree",
+   "name": "tree behind the roof east of the temple",
+   "what": "Crown of thin bare-looking branches radiating from a point just above the ridge of the building east of the temple: a tree standing behind (north of) that building, its trunk hidden by the roof.",
+   "pts": {
+    "base": [
+     10405,
+     120,
+     "est"
+    ],
+    "top": [
+     10400,
+     2
+    ],
+    "crown_w": [
+     10305,
+     40
+    ],
+    "crown_e": [
+     10500,
+     45
+    ]
+   },
+   "support": "ground",
+   "vis": "part: trunk hidden behind the roof; crown cut off by the silk's top edge",
+   "conf": "low",
+   "src": "",
+   "note": "Branches converge at about (10400, 85) above the ridge (v ~95-100). The base is a guess: somewhere behind the building, hidden. The restyle draws a trunk down to the ridge."
+  },
+  {
+   "id": "S4.tree.gnarled_10950",
+   "kind": "tree",
+   "name": "big gnarled old tree behind the east sedan",
+   "what": "Massive old tree with a dark, knotted and hollowed trunk standing behind the east sedan chair and its rear bearer, leaning up to the north-west; its crown merges with the willow whips above.",
+   "pts": {
+    "base": [
+     10990,
+     690,
+     "est"
+    ],
+    "top": [
+     10920,
+     100,
+     "est"
+    ],
+    "crown_w": [
+     10800,
+     300
+    ],
+    "crown_e": [
+     11000,
+     420
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden behind the sedan poles",
+   "conf": "med",
+   "src": "",
+   "note": "West stem: trunk u 10895-11002 between v 420 and ~680; a pale gap at u ~10995-11013 (v 540-600) separates it from a second mottled mass at u 11013-11080, which t3 records as S4.tree.willow_stem_11020. If the two are one split trunk from one foot (centre ~(10970, 690)), merge them into this entity. Top and crown are estimates. Merge (lead): one tree with twin stems from one foot, u 10895-11080; the east stem (t3's S4.tree.willow_stem_11020, dropped) is part of it. Base moved from the west stem's foot (10950, 685, est) to the shared foot (10990, 690, est) between the stems; the restyle paints the east stem as a man in a red robe, which the strokes do not show (bark texture, closed trunk outline at u ~11075)."
+  },
+  {
+   "id": "S4.tree.willow_south_10725",
+   "kind": "tree",
+   "name": "willow in front of the south building",
+   "what": "Willow-like tree rising from the bottom edge of the silk in front of the low building south of the road; many long thin branches and whips spread over the big tiled roof to the west and the thatched roof to the north.",
+   "pts": {
+    "base": [
+     10725,
+     1768,
+     "est"
+    ],
+    "top": [
+     10760,
+     1200
+    ],
+    "crown_w": [
+     10450,
+     1450
+    ],
+    "crown_e": [
+     10960,
+     1350
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot at the silk's bottom edge",
+   "conf": "med",
+   "src": "",
+   "note": "Stems converge at u 10700-10750 at the bottom edge (v ~1740-1768). Crown extents rough; its whips mix with those of the bare tree at u ~11040 (t3)."
+  },
+  {
+   "id": "S4.tree.leafy_shrub_10865",
+   "kind": "tree",
+   "name": "leafy shrub behind the small gable",
+   "what": "Dense leafy shrub or small tree (small leaf clusters, unlike the willows) behind the gable of the small building south of the road.",
+   "pts": {
+    "base": [
+     10865,
+     1590,
+     "est"
+    ],
+    "top": [
+     10850,
+     1415
+    ],
+    "crown_w": [
+     10800,
+     1480
+    ],
+    "crown_e": [
+     10925,
+     1460
+    ]
+   },
+   "support": "ground",
+   "vis": "part: foot hidden behind the small building's roof",
+   "conf": "low",
+   "src": "",
+   "note": "Leaf mass u 10800-10925, v 1415-1580. More leafy clumps continue east of the gable (u 10970-11060, v 1450-1700, t3)."
+  },
+  {
+   "id": "S4.prop.bench_10945",
+   "kind": "prop",
+   "name": "low bench by the small building",
+   "what": "Low bench or table of planks on short legs in front of the gable end of the small building south of the road.",
+   "pts": {
+    "base": [
+     10945,
+     1712
+    ]
+   },
+   "support": "ground",
+   "vis": "part: among willow whips",
+   "conf": "low",
+   "src": "",
+   "note": "Spans u 10920-10980, v 1680-1720; may be part of the building (a step or window ledge)."
+  }
+ ]
+}

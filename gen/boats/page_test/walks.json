@@ -1,0 +1,314 @@
+[
+ {
+  "label": "board from the bank: down the landing stair onto A's foredeck",
+  "start": [
+   2.5,
+   -5
+  ],
+  "legs": [
+   [
+    90,
+    3.2
+   ]
+  ],
+  "expect": {
+   "X": [
+    1.5,
+    3.5
+   ],
+   "D": [
+    1.0,
+    4.6
+   ],
+   "H": [
+    -0.5,
+    0.25
+   ]
+  }
+ },
+ {
+  "label": "cross from the rafted boat A to B (bank -> stair -> A -> B)",
+  "start": [
+   1.6,
+   -5
+  ],
+  "legs": [
+   [
+    90,
+    5.6
+   ]
+  ],
+  "expect": {
+   "D": [
+    5.9,
+    10.3
+   ],
+   "H": [
+    -0.6,
+    0.35
+   ]
+  }
+ },
+ {
+  "label": "A's bow rail and the end wall of its boarding bridges stop you (on A's foredeck, walk east)",
+  "start": [
+   2.5,
+   -5
+  ],
+  "legs": [
+   [
+    90,
+    3.2
+   ],
+   [
+    0,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    3.4,
+    5.1
+   ],
+   "D": [
+    0.3,
+    4.6
+   ],
+   "H": [
+    -0.4,
+    0.45
+   ]
+  }
+ },
+ {
+  "label": "B's bow rail stops you (on B's foredeck, walk east)",
+  "start": [
+   1.6,
+   -5
+  ],
+  "legs": [
+   [
+    90,
+    5.6
+   ],
+   [
+    0,
+    3.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    3.6,
+    6.1
+   ],
+   "D": [
+    5.9,
+    10.3
+   ],
+   "H": [
+    -0.5,
+    0.45
+   ]
+  }
+ },
+ {
+  "label": "step back ashore: A's foredeck -> stair -> bank",
+  "start": [
+   2.5,
+   -5
+  ],
+  "legs": [
+   [
+    90,
+    3.2
+   ],
+   [
+    270,
+    4.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    -8.0,
+    -2.6
+   ],
+   "H": [
+    -0.05,
+    0.1
+   ]
+  }
+ },
+ {
+  "label": "the shore wall stops you on the bank where no boat touches (X 20)",
+  "start": [
+   20,
+   -4
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    -0.3,
+    0.3
+   ],
+   "H": [
+    -0.05,
+    0.05
+   ]
+  }
+ },
+ {
+  "label": "the north bank's shore wall (trackers' bank, X -20)",
+  "start": [
+   -20,
+   38
+  ],
+  "legs": [
+   [
+    270,
+    3.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    33.7,
+    34.4
+   ],
+   "H": [
+    -0.05,
+    0.05
+   ]
+  }
+ },
+ {
+  "label": "boarding A from the bank along its side (contacts all along): onto its side walkway",
+  "start": [
+   -12,
+   -3
+  ],
+  "legs": [
+   [
+    90,
+    2.5
+   ]
+  ],
+  "expect": {
+   "D": [
+    0.3,
+    2.2
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  }
+ },
+ {
+  "label": "up the gangplank onto the laden boat G (bank -> plank -> deck)",
+  "start": [
+   33,
+   -4
+  ],
+  "legs": [
+   [
+    90,
+    4.5
+   ]
+  ],
+  "expect": {
+   "D": [
+    2.4,
+    6.6
+   ],
+   "H": [
+    -1.45,
+    -0.3
+   ]
+  }
+ },
+ {
+  "label": "the gangplank's rails stop you (on the plank, walk east)",
+  "start": [
+   33,
+   -4
+  ],
+  "legs": [
+   [
+    90,
+    2.3
+   ],
+   [
+    0,
+    2.0
+   ]
+  ],
+  "expect": {
+   "X": [
+    32.5,
+    33.6
+   ],
+   "D": [
+    0.3,
+    2.2
+   ],
+   "H": [
+    -1.0,
+    0.1
+   ]
+  }
+ },
+ {
+  "label": "G's far rail stops you (across its deck, north)",
+  "start": [
+   33,
+   -4
+  ],
+  "legs": [
+   [
+    90,
+    6.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    4.5,
+    7.0
+   ],
+   "H": [
+    -1.45,
+    -0.7
+   ]
+  }
+ },
+ {
+  "label": "back down the gangplank to the bank",
+  "start": [
+   33,
+   -4
+  ],
+  "legs": [
+   [
+    90,
+    3.0
+   ],
+   [
+    270,
+    4.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    -8.0,
+    -1.0
+   ],
+   "H": [
+    -0.05,
+    0.05
+   ]
+  }
+ }
+]

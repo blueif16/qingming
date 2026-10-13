@@ -1,0 +1,12 @@
+{
+  "title": "Pig: the black pig of the open ground (S5: the lying animal and the small animal at the top of the silk, the dark animal rooting at the gate passage's mouth; scale a piglet down)",
+  "plan": "bovid",
+  "joints": { "head_len": 0.62, "ear_len": 0.14, "ear_motion": 0.5, "fetlock": 0.1, "hfetlock": 0.1, "knee": 0.3, "hock": 0.36, "neck_base_u": 0.0, "neck_root_z": 0.72,
+              "walk": { "cycle": 0.8, "stride": 0.95, "duty": 0.62, "offsets": [0.0, 0.25, 0.5, 0.75], "lift_f": 0.09, "lift_h": 0.08, "fold_f": 55, "flip_f": 45, "fold_h": 22, "flip_h": 32 } },
+  "figure": { "section": "gate", "id": "small_animal_6390", "map_id": "S5.ani.small_animal_6390", "src": "scan", "crop": [6240, 120, 6440, 210] },
+  "prompt": "animal_pig",
+  "back_m": 0.6,
+  "graze_z": 0.04,
+  "mesh": { "from": "side", "test": ["side"], "polys": 3000 },
+  "clips": ["idle", "walk", "graze", "lie"]
+}

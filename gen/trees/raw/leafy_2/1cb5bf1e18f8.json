@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe plant: an evergreen in leaf among the bare trees of early spring, as the scroll paints it: dense rounded clusters of small dark leaves drawn as ink dots and short strokes on twiggy branches.\nColours: dark green leaves (about #4d6446) with lighter fresh green at the cluster tips; dark brown bark and twigs.\n\nThis one: A small evergreen tree drawn in the scroll's dotted-leaf manner (点叶): a short dark crooked trunk forking into twisted, angular branches that stay visible through the crown; the leaves are separate clusters of dark green ink dots and short strokes at the ends of the twigs, with sky between the clusters; a compact, rather flat-topped crown about as wide as it is tall. Not a lush round summer tree.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/leafy_1.jpg",
+  "gen/trees/refs/leafy_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "1cb5bf1e18f8",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 40.8,
+ "attempts": 1,
+ "idempotency_key": "1d804f53-5ec4-491d-b393-e2f9784b2d72",
+ "request_id": "211c3d0f-b6e0-44d6-8d99-e271c5643a93",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3664,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3235,
+   "text_tokens": 429
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3664,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3235,
+   "text_tokens": 429
+  },
+  "total_tokens": 5314
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/06f410cb-adfa-4eca-9604-525ac01f5c13"
+ ],
+ "files": [
+  "gen/trees/raw/leafy_2/1cb5bf1e18f8_0.png"
+ ]
+}

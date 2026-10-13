@@ -1,0 +1,970 @@
+{
+ "section": "S7",
+ "entities": [
+  {
+   "id": "S7.road.main",
+   "kind": "road",
+   "name": "main street at the scroll's end (S6's main street, continuing west)",
+   "what": "The town's main street running on west from the square well to the silk's cut edge: on its north side the doctor's shop 赵太丞家, the gate hall of the official's compound 官宦人家 and a low railing; on its south side the small gate roof, the hip-gable building and the 解 building, then the willows and bare trees along the bottom of the silk. In it the broad-hatted official rides out with his retinue, a porter carries shoulder-pole baskets and men walk at the well's west end. Nothing opens off it except the gate hall's passage.",
+   "pts": {
+    "lines": {
+     "centre": [
+      [
+       815,
+       1100,
+       "est"
+      ],
+      [
+       1300,
+       1110,
+       "est"
+      ],
+      [
+       1700,
+       1150,
+       "est"
+      ],
+      [
+       2000,
+       1180
+      ]
+     ],
+     "edge_n": [
+      [
+       815,
+       883,
+       "est"
+      ],
+      [
+       906,
+       883
+      ],
+      [
+       1060,
+       883,
+       "est"
+      ],
+      [
+       1060,
+       897,
+       "est"
+      ],
+      [
+       1420,
+       897,
+       "est"
+      ],
+      [
+       1488,
+       897
+      ],
+      [
+       1760,
+       897,
+       "est"
+      ],
+      [
+       1793,
+       870,
+       "est"
+      ],
+      [
+       1919,
+       870,
+       "est"
+      ],
+      [
+       1958,
+       830,
+       "est"
+      ],
+      [
+       2000,
+       800,
+       "est"
+      ]
+     ],
+     "edge_s": [
+      [
+       815,
+       1300,
+       "est"
+      ],
+      [
+       1043,
+       1287
+      ],
+      [
+       1095,
+       1287
+      ],
+      [
+       1340,
+       1300,
+       "est"
+      ],
+      [
+       2000,
+       1300,
+       "est"
+      ]
+     ]
+    }
+   },
+   "route": true,
+   "support": "ground",
+   "vis": "part: north margin behind the gate scene and the shop's boards; south margin behind the south-side roofs and the bottom trees",
+   "conf": "med",
+   "src": "余辉: 结尾三问 (问病 at 赵太丞家, 问道 at the gatehouse)",
+   "note": "Datum: the centre line's last point (index 3) is exactly (2000,1180), S6.road.main's first point (station -73.63). No edge is drawn as a line; the edges are where the open ground stops. edge_n: under the collectors' seal (est) to the railing's west post foot (906,883), along the railing's foot to its east end behind the seated gatekeeper (est 1060), the gate hall's front (the west block's foot v 899; est v 897 across the passage and behind the free-standing boards), 赵太丞家's front column feet (west 1488,897 measured; east est 1760), then north round the box-like structure east of the shop (its front hidden behind the bucket man, est v ~860) to the wall foot of S6's house behind the well (v 800 at the seam, S6's reading; the line at v 787-793 from u 1904 is the top of the pale mass in front of it). The well platform's west end (front edge v ~998 from u ~1903) and the free-standing boards (feet v 985-1000) stand on the street's north margin. edge_s: S6's convention (S6.road.main, edge_s at v 1300 and its open question about the south houses' hidden walls): v ~1300, where the street's painted figures stop (the retinue's feet v ~1270-1290, the porter ~1240, the bundle man 1257). The real street-side feet of the south buildings are hidden behind their own roofs and the bottom trees and lie lower: the gate roof's north posts est v ~1350, the hip-gable building's north wall est v ~1440, the 解 building's north wall est v ~1575 (its north-east eave corner (2000,1360) plus its east post's 211-px eave height). So the ground hidden behind the south roofs may add up to ~5 m to the street's depth at u 1640-2000: a question for the lead, as on S6. West of u ~1300 the open ground runs on under the bottom trees to the silk's bottom edge (v ~1770). Centre: through the traffic, about midway between the edges, easing to S6's (2000,1180). MERGE (from t1): a short ledge is drawn at the street's south edge, a double line at v ~1285-1290 from u 1043 to ~1095 (a kerb, or the lip where the ground drops to the bottom trees); edge_s takes its ends as measured points. The dashes running on east to u ~1204 are twig tips of S7.tree.bare_bottom_1117, not the ledge. MERGE: edge_n east of the shop now runs along the est front and east side of S7.str.box_shed_1855 ((1793,870), (1919,870), (1958,830)) to (2000,800), instead of (1800,860)->(1930,800), which cut through the shed's footprint."
+  },
+  {
+   "id": "S7.str.fence_960",
+   "kind": "structure",
+   "name": "low railing west of the gate hall",
+   "what": "Low wooden railing along the street's north edge, west of the gate hall: square posts with flat caps (at u ~909 and ~992, a third about 1060 behind the seated gatekeeper) carrying a top rail, a middle rail and a bottom rail. Probably the official compound's front railing.",
+   "pts": {
+    "line": [
+     [
+      906,
+      883
+     ],
+     [
+      1060,
+      883,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: east end behind the seated gatekeeper and the man standing behind him; west end at the collectors' seal",
+   "conf": "high",
+   "src": "名画记: 官宦人家 (pin 49) (setting)",
+   "note": "Rails at v ~813 (top), ~842 (middle, seen 911-994) and ~876-883 (bottom); post at 983-1001 with its cap at v 794; west post 906-913 (v 811-883). It runs east-west (no receding side). Under the seal (u 815-906) no rail can be read: it is est to end at the post at 908. SCALE CUES (px): 89 tall (cap 794 to foot 883), posts ~83 apart. A dark low shape at its foot (u 918-969, v 883-897: grass, a stone or a small animal) is t1's. MERGE: the dark low shape at its foot is S7.prop.stones_fence_foot_945 (low)."
+  },
+  {
+   "id": "S7.bld.gatehouse_1240",
+   "kind": "building",
+   "name": "gate hall (门屋) of the official's compound 官宦人家",
+   "what": "The street gate hall of the official's compound: single storey, open to the street under a tiled roof with bracket sets (斗拱) under the eave and a lintel beam over a wide open passage between the west column, which stands on a stone block, and an east post hidden behind the man pointing the way. Inside, a lamp or hook hangs from the lintel in the east part of the passage (u ~1337), and a small dark-topped shape shows at the edge of the open door leaf (u ~1248: S7.fig.face_at_gate_door_1251, a peeking head or a small lamp, one thing); the west half of the passage holds a light door leaf standing open against the west jamb, with a ring-knocker dot, and at the back of the passage a low railed partition (the lower half of a back door, or a screen) stands under a post. West of the passage is a plain-walled west bay, where the gatekeeper sits, with a slatted panel high under its eave (a rolled bamboo blind or a lattice); a low dark-hatched panel (a door leaf folded back?) stands on the block against the west pier. No board or writing is painted on it.",
+   "pts": {
+    "base": {
+     "sw": [
+      1050,
+      897,
+      "est"
+     ],
+     "se": [
+      1385,
+      897,
+      "est"
+     ],
+     "ne": [
+      1520,
+      760,
+      "est"
+     ],
+     "nw": [
+      1185,
+      760,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     1067,
+     587
+    ],
+    "se_eave": [
+     1417,
+     592,
+     "est"
+    ],
+    "ridge_w": [
+     1160,
+     466,
+     "est"
+    ],
+    "ridge_e": [
+     1450,
+     466,
+     "est"
+    ],
+    "lintel_w": [
+     1150,
+     650
+    ],
+    "lintel_e": [
+     1386,
+     650
+    ],
+    "lamp_e": [
+     1337,
+     680
+    ],
+    "partition_foot": [
+     1294,
+     759
+    ],
+    "blind": [
+     1110,
+     642
+    ],
+    "bays": [
+     [
+      1135,
+      899
+     ],
+     [
+      1360,
+      899,
+      "est"
+     ]
+    ],
+    "head_or_lamp_w": [
+     1248,
+     682
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: west end behind the willow, east end behind 赵太丞家's free-standing tall boards, east post behind the man pointing the way",
+   "conf": "med",
+   "src": "名画记: 官宦人家 (pin 49); 余辉: 门房指路",
+   "note": "Eave v 587 at the flared west corner (u 1067) and ~597 along the front to ~1417; ridge v 460-472 from ~1160 (west, behind the willow) to ~1450; bracket sets at u ~1105-1167, ~1224-1274 and ~1330-1380 (v 600-637); lintel v 647-653 from 1150 to 1386; west column u 1128-1141 from the lintel down to the block's top (v 852); passage jambs u 1199-1209 (west) and ~1350 (east); inside, the lamp hangs at (1245-1255, 676-688), the second object at (1330-1345, 670-700); the back partition u 1262-1326, v 707-759 (rails at 708, 718, 727, 754) with a post above it at u 1294-1298 (v 653-707); the slatted panel u 1088-1134, v 629-656 under a beam at v 659. BASE (placeholder where hidden): front v 897 (the west block's foot 899; no step or threshold is drawn, so the passage floor is at street level); west end est u 1050 (the roof's corner 1067), east end est 1385 (the roof reaches ~1417; the free-standing boards hide it); back est v 760 at the partition's foot (about 2.7 m deep), the back corners shifted by the frame's receding direction (dx 50.4). The partition seen through the passage is barely shifted (its west post at 1258 against the west jamb at 1204): it may stand ~1 m inside the back, or the receding is steeper here (passage west wall (1204,899)->(1258,800), slope -1.83, low weight). SCALE CUES (px): passage 145 wide; lintel 249 above the floor; eave ~300 above the front; ridge ~130 above the eave; west column 13 wide. The blocks are their own entities (S7.str.gate_block_1160, S7.str.gate_block_east_1345). Its compound: S7.grp.guanhuan_compound. MERGE: t1 recorded the back partition as a prop (S7.prop.bench_in_gate_hall_1293: outline u 1260-1327, v 705-757, top v 705, rails v 712 and 727, foot line v 755-757, its post u 1293-1298 up to the lintel); retired as a duplicate, since the post running from the lintel into its top rail makes it fixed (a low screen or the lower half of a back door), part of this building. Its foot line v ~757 is the passage floor's back, at street level. MERGE (from t1): the open door leaf spans u ~1207-1260 (v ~655-797), light, with its knocker dot at (1228,727): part of this building. The shape at (1245-1257, 673-692) that this pass read as a lamp is the same thing as t1's S7.fig.face_at_gate_door_1251 (pts head_or_lamp_w); no cord from the lintel is drawn."
+  },
+  {
+   "id": "S7.str.gate_block_1160",
+   "kind": "structure",
+   "name": "stone block at the gate's west column",
+   "what": "Squared knee-high block, stone or timber, at the foot of the gate hall's west column: the column stands on its top; its front face is plain, its east side face hatched dark. Perhaps a mounting block (上马石) or the plinth of the west pier.",
+   "pts": {
+    "base": {
+     "sw": [
+      1130,
+      899
+     ],
+     "se": [
+      1191,
+      899
+     ],
+     "ne": [
+      1221,
+      875
+     ],
+     "nw": [
+      1160,
+      875,
+      "est"
+     ]
+    },
+    "sw_top": [
+     1130,
+     852
+    ],
+    "se_top": [
+     1191,
+     852
+    ],
+    "ne_top": [
+     1221,
+     828,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: west end behind the man standing at the post",
+   "conf": "med",
+   "src": "名画记: 官宦人家 (pin 49); 余辉: 门房指路",
+   "note": "Front face u 1130-1190, top v 852, foot v 899; east face hatched, its back vertical edge at u ~1221 (v 825-875). RECEDING EDGE (ground level): east face foot (1191,899)->(1221,875), slope -0.80; its top (1191,852)->(1221,828) runs parallel. SCALE CUES (px): 60 wide, 47 tall (0.78 x 0.61 m at 77 px/m), 30 px deep in u. The column above it (u 1128-1141) stands at its west end; the hatched low panel at u 1167-1186 (v 785-852) on its top is part of the gate hall."
+  },
+  {
+   "id": "S7.str.gate_block_east_1345",
+   "kind": "structure",
+   "name": "block at the gate passage's east side",
+   "what": "Squared knee-high block at the east side of the gate passage, the mirror of the west block S7.str.gate_block_1160: its front's west edge, the west end of its level top edge and the top's west edge receding north-east show between the visitor and the tied sack; the rest of its front runs on east behind the sack, the man pointing the way and the free-standing board. The passage's east jamb rises over its west end.",
+   "pts": {
+    "base": {
+     "sw": [
+      1334,
+      902
+     ],
+     "se": [
+      1394,
+      902,
+      "est"
+     ],
+     "ne": [
+      1424,
+      878,
+      "est"
+     ],
+     "nw": [
+      1364,
+      878,
+      "est"
+     ]
+    },
+    "sw_top": [
+     1334,
+     859
+    ],
+    "nw_top": [
+     1364,
+     835,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: only its front-west corner and the west end of its top show, between the visitor's food-box hand and the tied sack; the rest is behind the tied sack, the man pointing the way and the free-standing board S7.prop.board_zhao_west_a_1392",
+   "conf": "med",
+   "src": "名画记: 官宦人家 (pin 49); 余辉: 门房指路",
+   "note": "Strokes: a vertical edge at u ~1333 (v 850-880) and a short top line near v ~848, behind the pointing man's robe; the restyle paints a grey stone block here (u ~1330-1370, v ~825-890). Two readings: a block at the east post like the west one (then the gate is symmetrical), or the edge is the pointing man's robe and the east jamb, and no block stands here. Corners est from the west block's size. SECOND PASS: the same strokes were t1's S7.prop.peaked_box_1346 ('a dark box with a peaked lid'), retired into this entity. At zoom 8 the front's west edge is at u 1333-1334, v 858-902 (foot measured v 901-904 at u 1335-1345); the front top edge is level at v 859, u 1334 to ~1358 (then hidden by the sack); the 'peak' is the top's west edge receding (1334,857) -> (1351,843), slope ~-0.82, with no falling second slope. Front face 43 px tall against the west block's 47; the corner stands straight below the passage's east jamb (strokes u 1333-1349 from the lintel to v ~760), as the west block's passage end lies below the west jamb. se, ne, nw and nw_top are est from the west block's size (60 px wide, 30 px of u deep). OTHER READING: a dark box set down on the ground behind the sack (t1), base (1342, 902); its fill is a mottled wash, not hatching. If the lead keeps the block, the gate hall's east post (S7.bld.gatehouse_1240 bays.1, (1360,899) est) stands at or just east of this block's west end. Crops: scratchpad/S7_second_pass/z_box8.jpg, z_box_peak.jpg, z_passage.jpg."
+  },
+  {
+   "id": "S7.bld.compound_hall_1420",
+   "kind": "building",
+   "name": "middle hall of the official's compound (behind the gate hall)",
+   "what": "A long tiled hall behind the gate hall and 赵太丞家's back hall: only the south slope of its roof shows, between their ridges and its own ridge, which carries a ridge-end ornament at its east end; its west end is hidden by the willow. Walls not seen.",
+   "pts": {
+    "base": {
+     "sw": [
+      1150,
+      650,
+      "est"
+     ],
+     "se": [
+      1700,
+      650,
+      "est"
+     ],
+     "ne": [
+      1828,
+      520,
+      "est"
+     ],
+     "nw": [
+      1278,
+      520,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     1150,
+     340,
+     "est"
+    ],
+    "ridge_e": [
+     1700,
+     322
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: roof only; west end behind the willow",
+   "conf": "med",
+   "src": "名画记: 官宦人家 (pin 49)",
+   "note": "Ridge (double line) v ~335-345 at u 1200-1480 and v ~320-330 at 1430-1700, ridge-end ornament at (1690-1705, 300-355); vertical tile rows below it down to the gate hall's ridge (v ~466) and the back hall's ridge (v ~375). Above its ridge the main hall's patterned front shows (u 1130-1315). PLACEHOLDER footprint: frontage = the ridge's visible ends (1150-1700); front est v 650 (about 2 m behind the gate hall's back), 2.5 m deep (v 650-520), back corners shifted by the receding direction; the builder settles them (choice:)."
+  },
+  {
+   "id": "S7.bld.main_hall_1300",
+   "kind": "building",
+   "name": "main hall of the official's compound (top of the silk)",
+   "what": "The compound's main hall at the top of the silk: a long hip-gable (歇山) tiled roof with tile-ends along its eave and its east gable (山花, bargeboards and an ornament) showing; its west end is behind the willows. Under the eave its front is a panel between posts, covered with rows of small dark motifs, with a dark upright rectangle in its lower middle from which a thin curved outline runs out to both sides: either a patterned curtain or screen hung across the open front, gathered by a dark tie or showing a dark doorway behind it, or a patterned wall or lattice window. It is not a board of characters: the motifs are too uniform and evenly spaced. A further post stands east of the panel. No faces are painted at it.",
+   "pts": {
+    "base": {
+     "sw": [
+      1090,
+      400,
+      "est"
+     ],
+     "se": [
+      1500,
+      400,
+      "est"
+     ],
+     "ne": [
+      1677,
+      220,
+      "est"
+     ],
+     "nw": [
+      1267,
+      220,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     1098,
+     36
+    ],
+    "ridge_e": [
+     1548,
+     36
+    ],
+    "eave_w": [
+     1098,
+     228
+    ],
+    "eave_e": [
+     1473,
+     228
+    ],
+    "gable_e": [
+     1568,
+     90
+    ],
+    "panel_w": [
+     1130,
+     332
+    ],
+    "panel_e": [
+     1315,
+     332
+    ],
+    "panel_mark": [
+     1248,
+     316
+    ],
+    "post_e": [
+     1374,
+     285
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: roof and the front panel only; west end behind the willows; east part of its eave behind the north-south hall's west slope",
+   "conf": "med",
+   "src": "名画记: 官宦人家 (pin 49)",
+   "note": "Ridge v ~30-42 from u 1098 to 1548; eave tile-ends v ~225-235 from 1098 to ~1473; east gable (歇山) u ~1535-1600, v 12-165, with an ornament at ~(1590, 80-100). Panel: posts at u ~1120-1130 and a frame at ~1310-1330; motifs in about 6 rows x 14 columns (spacing ~14 px), u 1130-1315, v 258-332; the dark rectangle u 1240-1257, v 300-332; the curved outline u 1215-1290, v 298-325 (the restyle draws it as a small pot or bundle). Further post u ~1370-1377, v 240-285. PLACEHOLDER footprint: frontage 1090-1500 (its east end meets the north-south hall's west side); front est v 400, back v 220 (3.5 m deep), shifted by the receding direction; things this high up the silk are painted at about 0.55 of the street's scale (S6), so its real height and depth are the builder's choice."
+  },
+  {
+   "id": "S7.bld.far_gable_1345",
+   "kind": "building",
+   "name": "gable end at the silk's top edge (behind the main hall)",
+   "what": "A small gable (山花) with a king post, its apex cut by the silk's top edge, rising above the main hall's ridge: the end of a building behind the main hall (or a cross-gable on the main hall's roof).",
+   "pts": {
+    "base": {
+     "sw": [
+      1300,
+      200,
+      "est"
+     ],
+     "se": [
+      1390,
+      200,
+      "est"
+     ],
+     "ne": [
+      1439,
+      150,
+      "est"
+     ],
+     "nw": [
+      1349,
+      150,
+      "est"
+     ]
+    },
+    "apex": [
+     1345,
+     0
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.guanhuan_compound",
+   "vis": "part: only the gable's top, cut by the silk's top edge",
+   "conf": "low",
+   "src": "名画记: 官宦人家 (pin 49)",
+   "note": "Bargeboards from the apex (1345, 0) down to the main hall's ridge line at ~(1300, 35) and ~(1390, 35); king post at u ~1345. PLACEHOLDER footprint behind the main hall (v 200-150), size the builder's choice; if the lead reads it as part of the main hall's roof, retire this and add it to S7.bld.main_hall_1300."
+  },
+  {
+   "id": "S7.bld.hall_ns_1620",
+   "kind": "building",
+   "name": "long north-south hall behind 赵太丞家",
+   "what": "A long hall running back (north) behind the middle hall: a big tiled roof whose ridge runs up the silk in the receding direction from behind the middle hall's ridge to a ridge-end ornament near the silk's top; its narrow west slope and broad east slope show, the east slope's eave disappearing behind the willow and the needle trees. A tall narrow pale box (a chimney or vent) stands on the east slope. Whether it belongs to the official's compound or to 赵太丞家 is not painted.",
+   "pts": {
+    "base": {
+     "sw": [
+      1352,
+      520,
+      "est"
+     ],
+     "se": [
+      1767,
+      520,
+      "est"
+     ],
+     "ne": [
+      1960,
+      280,
+      "est"
+     ],
+     "nw": [
+      1602,
+      280,
+      "est"
+     ]
+    },
+    "ridge_s": [
+     1506,
+     320,
+     "est"
+    ],
+    "ridge_n": [
+     1748,
+     18
+    ],
+    "eave_w_s": [
+     1380,
+     323
+    ],
+    "eave_w_n": [
+     1615,
+     97
+    ],
+    "eave_e_s": [
+     1771,
+     345
+    ],
+    "eave_e_n": [
+     1857,
+     241
+    ],
+    "chimney": [
+     1775,
+     268
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 0,
+   "vis": "part: roof only; south end behind the middle hall's ridge; north-east part behind the trees",
+   "conf": "med",
+   "note": "Ridge (double line) (1506,320)->(1748,18), slope -1.25, ornament at (1740-1750, 5-30); from it a verge runs down-right toward the north-east eave corner (est ~(1940,140), behind the needle trees). West eave (1380,323)->(1615,97), slope -0.96; east eave (1771,345)->(1857,241), slope -1.21 (high lines). The east slope's tiles form a diamond lattice (the slope seen obliquely). Chimney or vent: u 1760-1791, v 186-268. A black bird sits on the east slope at ~(1700-1765, 125-160): t2's animal (support roof: S7.bld.hall_ns_1620). S6's far house's west gable (king post u ~1822-1828) stands just east of its ridge end. PLACEHOLDER footprint: its long sides under the two eave lines lowered by an assumed eave height (~4 m at 0.55 scale, ~170 px), its south end just behind the middle hall (v 520), its north end est v 280; facing assumed east (its broad slope). Builder's choice."
+  },
+  {
+   "id": "S7.bld.zhao_taicheng",
+   "kind": "building",
+   "name": "赵太丞家, the doctor's shop (front hall)",
+   "what": "The doctor's shop 赵太丞家: a single-storey open-fronted shop hall facing the street under a tiled roof, with bracket sets under the eave. Between the brackets hang four lozenge-shaped tablets reading, east to west, 趙 · 太 · 丞 · 家 (趙太丞家). Below them a front beam spans from the west column to the east column, and a tall narrow board fixed to the front of the west column reads, top to bottom, 五勞七傷□□□ (the first character probably 五; the last three unclear: one with the 言 radical, perhaps 諸, one with 氵, perhaps 湯, and one with 言 or 氵). The floor is at street level. At the back stand a counter or low platform and a rack of boxes or drawers above it (t2's furniture). Its free-standing tall boards and tilted stand are t2's props.",
+   "pts": {
+    "base": {
+     "sw": [
+      1488,
+      897
+     ],
+     "se": [
+      1760,
+      897,
+      "est"
+     ],
+     "ne": [
+      1858,
+      797,
+      "est"
+     ],
+     "nw": [
+      1586,
+      797,
+      "est"
+     ]
+    },
+    "sw_eave": [
+     1488,
+     597
+    ],
+    "se_eave": [
+     1760,
+     597
+    ],
+    "ridge_w": [
+     1455,
+     508
+    ],
+    "ridge_e": [
+     1800,
+     508,
+     "est"
+    ],
+    "beam_w": [
+     1456,
+     665
+    ],
+    "beam_e": [
+     1751,
+     665
+    ],
+    "tablet_zhao": [
+     1720,
+     630
+    ],
+    "tablet_tai": [
+     1646,
+     632
+    ],
+    "tablet_cheng": [
+     1565,
+     633
+    ],
+    "tablet_jia": [
+     1478,
+     635
+    ],
+    "board_front_top": [
+     1472,
+     675
+    ],
+    "board_front_foot": [
+     1472,
+     820
+    ],
+    "bays": [
+     [
+      1488,
+      897
+     ],
+     [
+      1760,
+      897,
+      "est"
+     ]
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.zhao_taicheng_house",
+   "vis": "part: east column behind the bench and the east free-standing board; back corners hidden",
+   "conf": "high",
+   "src": "名画记: 国医赵太丞家 (pin 48); 余辉: 太丞医铺",
+   "note": "Eave v ~597 from u 1446 to 1798; ridge v ~505-512 from 1455 to ~1800 (east end into the willow); tablets at u 1700-1740 (趙), 1625-1668 (太), 1545-1585 (丞), 1458-1498 (家), v 612-650, each ~40 x 30 px and set slanting, with ornamented bracket clusters between them; front beam v 647-665 (u 1456-1751); west column u 1480-1493 down to v 897 on a dark base (v 876-902); east column u 1751-1767; the front board u 1458-1486, v 675-820, fixed to the west column (its foot is off the ground: the column runs on below it). Back: the counter's top line v 733 and its foot v 793-797 (u 1505-1747; the box at 1634-1747 with its east end post at 1742-1747), the rack u 1597-1735, v 693-723. BASE: front at the column feet (v 897; no step is drawn: the women's bench and the standing figures inside have feet at v 885-895, the street's level); back est v 797 at the counter's foot (~2 m deep), back corners shifted by the receding direction (dx 50.4); the visible back wall ends at u 1747, so the east side may recede more steeply than the frame. RECEDING EDGE: the bench by the east board (t2's), seat edge (1734,831)->(1767,802), slope -0.88. SCALE CUES (px): columns 272 apart (3.5 m); beam underside 232 above the floor; eave ~300 above the front; tablets ~40 x 30; front board 28 x 145. The scholars' sign 治酒所伤真方集香丸 is not on the building's tablets or its fixed board; it should be on one of the free-standing boards (t2's to read). Its back hall: S7.bld.zhao_back_hall_1630 (S7.grp.zhao_taicheng_house). MERGE: t2 counted about 6-7 character marks across the name board at zoom 2; this pass's zoom 5-8 reading (four tablets 趙 · 太 · 丞 · 家, bracket clusters between them) stands. The free-standing boards are S7.prop.board_zhao_west_a_1392, S7.prop.board_zhao_west_b_1433 and S7.prop.board_zhao_east_1775 (characters below the scan's resolution, copied as □); the back counter and rack are S7.prop.counter_back_1675."
+  },
+  {
+   "id": "S7.bld.zhao_back_hall_1630",
+   "kind": "building",
+   "name": "back hall of 赵太丞家",
+   "what": "A tiled hall behind the doctor's shop: only the south slope of its roof shows, between the shop's ridge and its own ridge, which has a ridge-end ornament and a verge running down at its west end. Walls not seen.",
+   "pts": {
+    "base": {
+     "sw": [
+      1490,
+      780,
+      "est"
+     ],
+     "se": [
+      1775,
+      780,
+      "est"
+     ],
+     "ne": [
+      1893,
+      660,
+      "est"
+     ],
+     "nw": [
+      1608,
+      660,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     1490,
+     375
+    ],
+    "ridge_e": [
+     1775,
+     375,
+     "est"
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 270,
+   "group": "S7.grp.zhao_taicheng_house",
+   "vis": "part: roof only",
+   "conf": "med",
+   "src": "名画记: 国医赵太丞家 (pin 48)",
+   "note": "Ridge (double line) v ~365-385 from u ~1490 (ornament at 1475-1490, v 355-375) to ~1775; from the west end a verge runs down-left toward (1440, 530). It could also be a hall of the official's compound; it is set behind the shop's front hall and in front of the middle hall, so it is read as the shop's back hall. PLACEHOLDER footprint: frontage = the ridge's ends, front est v 780 (just behind the front hall's back, v 797), 2.3 m deep, shifted by the receding direction; builder's choice."
+  },
+  {
+   "id": "S7.str.box_shed_1855",
+   "kind": "structure",
+   "name": "box-like shed east of 赵太丞家 (faint)",
+   "what": "A box-like structure east of the doctor's shop, behind the man bending under his pole: a slanted four-sided top over a side that runs down at its west end and a front with horizontal slats near its foot; its lower part is hidden behind the bucket man, the hooped buckets and the pale rounded mass. Either a small shed or booth with a low flat or lean-to roof, or a large chest, tank or covered sedan set down (then a prop).",
+   "pts": {
+    "base": {
+     "sw": [
+      1793,
+      870,
+      "est"
+     ],
+     "se": [
+      1919,
+      870,
+      "est"
+     ],
+     "ne": [
+      1958,
+      830,
+      "est"
+     ],
+     "nw": [
+      1832,
+      830,
+      "est"
+     ]
+    },
+    "top_nw": [
+     1813,
+     726
+    ],
+    "top_ne": [
+     1893,
+     729
+    ],
+    "top_se": [
+     1904,
+     749
+    ],
+    "top_sw": [
+     1821,
+     748
+    ]
+   },
+   "support": "ground",
+   "vis": "part: lower part behind the bucket man, the buckets and the pale mass; willow strands over its top",
+   "conf": "low",
+   "note": "Top: (1813,726), (1893,729), (1904,749), (1821,748); west side down from (1813,726) to (1793,766); east side (1904,749)->(1919,786); slats v 808-823 at u 1823-1900. Its top's side edges run up-LEFT, against every other receding line here, as a roof seen from its east end would: not used for the knots. The restyle paints a tiled lean-to on two posts over a pale wall. This is the small dark roof S6's note on S6.bld.house_well_2020 puts at u 1880-1960, v 735-805. Base est (front hidden at about v 870). If the lead reads it as a set-down chest or sedan, retire it for a t2 prop. MERGE: t2's S7.prop.leaning_panel_1812 (hatched panel from (1838,797) to a foot block at v 922-945) leans in front of its west end, and t2's S7.ani.pale_shape_1905 lies east of it in front of the house behind the well."
+  },
+  {
+   "id": "S7.str.gate_roof_1475",
+   "kind": "structure",
+   "name": "small gate roof on posts (south side of the street)",
+   "what": "A small tiled roof on posts on the street's south side, in front of the hip-gable building: probably its street gate (门罩 or roofed gateway). Its ridge has upturned ornaments at both ends, its ends are hipped, and its south eave is hung with a row of tile-ends. Its posts are hidden behind the hip-gable building's roof and gable, and the official's horse, walking north of it, is hidden behind it.",
+   "pts": {
+    "base": {
+     "sw": [
+      1345,
+      1430,
+      "est"
+     ],
+     "se": [
+      1610,
+      1430,
+      "est"
+     ],
+     "ne": [
+      1689,
+      1350,
+      "est"
+     ],
+     "nw": [
+      1424,
+      1350,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     1365,
+     1178
+    ],
+    "ridge_e": [
+     1585,
+     1176
+    ],
+    "hip_w": [
+     1335,
+     1270
+    ],
+    "hip_e": [
+     1625,
+     1262
+    ],
+    "eave_w": [
+     1340,
+     1290
+    ],
+    "eave_e": [
+     1610,
+     1290
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 90,
+   "vis": "part: posts and bases hidden behind the hip-gable building's roof and gable",
+   "conf": "med",
+   "note": "Ridge v ~1175-1180 from u ~1365 to ~1585 with upturned ornaments; hips down to (1335,1270) and (1625,1262); south eave v ~1285-1297 (u 1340-1610) with hanging tile-ends at v 1290-1300; vertical tile rows. The restyle stands it on four posts (u ~1430-1580) with brackets. PLACEHOLDER footprint: its south posts just north of the hip-gable building's north wall (est v 1430), its north posts est v 1350 (an eave ~2.2 m at the local scale), u from the roof's ends; builder's choice. SCALE CUES (px): ridge ~220 long, ridge 112 above the south eave."
+  },
+  {
+   "id": "S7.bld.hip_gable_1360",
+   "kind": "building",
+   "name": "hip-gable building south of the street",
+   "what": "A building south of the street under a hip-gable (歇山) tiled roof whose ridge runs east-west: its south slope (vertical tile rows) runs down into the bottom trees, a raised verge runs down from the ridge's east end, and its east gable triangle (山花) shows curved bargeboards, a tie beam and a small ornament on the bargeboard. Walls and doors are hidden by the gate roof in front of it, the 解 building beside it and the trees.",
+   "pts": {
+    "base": {
+     "sw": [
+      1122,
+      1700,
+      "est"
+     ],
+     "se": [
+      1352,
+      1700,
+      "est"
+     ],
+     "ne": [
+      1608,
+      1440,
+      "est"
+     ],
+     "nw": [
+      1378,
+      1440,
+      "est"
+     ]
+    },
+    "ridge_w": [
+     1295,
+     1293,
+     "est"
+    ],
+    "ridge_e": [
+     1430,
+     1290
+    ],
+    "gable_apex": [
+     1432,
+     1290
+    ],
+    "gable_tie_w": [
+     1440,
+     1425
+    ],
+    "gable_tie_e": [
+     1530,
+     1425
+    ],
+    "verge_foot": [
+     1355,
+     1565
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 90,
+   "vis": "part: roof only; west part behind the bottom trees, gable's foot behind the 解 roof",
+   "conf": "med",
+   "note": "Ridge v ~1290-1296 from ~1295 (west, into the trees) to the east gable at ~1430; gable's curved bargeboards u 1425-1530, v 1290-1425, tie beam v ~1425, ornament at ~(1500-1510, 1365-1380); verge (double line) (1420,1290)->(1355,1565). PLACEHOLDER footprint: ridge est ~4.5 m up at about 0.8 of the street's scale (~275 px), so its ground line at v ~1570; 5 m deep (north wall est v 1440, south v 1700), east end under the gable's centre (~1480 at mid-depth), west end est ~1250 at mid-depth (hidden), corners shifted by the receding direction; facing assumed north (the street). Builder's choice."
+  },
+  {
+   "id": "S7.bld.jie_building_1800",
+   "kind": "building",
+   "name": "the 解 building (south of the street)",
+   "what": "A large single-storey building south of the street with its gable end toward the street: a long tiled roof whose ridge runs back south (toward the viewer) from a ridge-end ornament, its narrow west slope hidden by the hip-gable building's gable and its broad east slope (tiles in diagonal rows) running down to the bottom of the silk. At its north-east eave corner, marked by a corner ornament, the flat mat awning S6.prop.mat_awning_2000 ties in, and just south of the corner the tall signboard S6.prop.jie_signboard_2085 leans its top edge on the east eave. A post stands under the east eave, and from it a horizontal bar runs east across the leaning board, carrying the 解 plaque (S6's). Under the east eave stand a table or stand and a rail, and two poles lean from the eave to the ground (t2's props). The 'corner building' S6 names is this building's north-east end, not a separate building.",
+   "pts": {
+    "base": {
+     "sw": [
+      1386,
+      1785,
+      "est"
+     ],
+     "se": [
+      1789,
+      1785,
+      "est"
+     ],
+     "ne": [
+      1995,
+      1575,
+      "est"
+     ],
+     "nw": [
+      1592,
+      1575,
+      "est"
+     ]
+    },
+    "ne_eave": [
+     2000,
+     1360
+    ],
+    "ridge_n": [
+     1796,
+     1264
+    ],
+    "ridge_ornament_top": [
+     1790,
+     1225
+    ],
+    "ridge_s": [
+     1454,
+     1652
+    ],
+    "eave_e_mid": [
+     1941,
+     1517
+    ],
+    "eave_e_s": [
+     1815,
+     1598
+    ],
+    "verge_nw": [
+     1640,
+     1333
+    ],
+    "east_post_top": [
+     1932,
+     1517
+    ],
+    "east_post_foot": [
+     1928,
+     1728,
+     "est"
+    ],
+    "bar_w": [
+     1942,
+     1522
+    ]
+   },
+   "support": "ground",
+   "facing_deg": 90,
+   "vis": "part: roof, east eave and one post; north wall hidden behind its own roof, south end cut by the silk's bottom edge",
+   "conf": "med",
+   "src": "名画记: \"解\"字招牌 (pin 45, ≈2070) (setting); 余辉: 考前求解 (setting)",
+   "note": "Ridge (double line) from its north end (1796,1264) under the ornament (1781-1801, 1225-1262) down-left to (1590,1520) and (1454,1652), slope -1.13. North verges: west (1796,1264)->(1640,1333)->(~1570,1364), east (1796,1270)->(1879,1307)->(1997,1355), slope ~0.4 each way, meeting the north-east corner ornament at (1993-2007, 1330-1357). East eave: (1996,1400)->(1941,1517) (the corner's upturn) then straight to (1815,1598), slope -0.64 (a high line). East post: u ~1922-1941 from the eave (v ~1517) to its foot behind the tub (est v ~1728): 211 px, so the eave is ~2.7 m up. Bar at v ~1520-1525 from the post (u ~1942) east past both edges of the leaning board (u ~1964 and ~2046 at that height) to ~2062. Under the eave: a rail or counter top at v 1604-1630 (u 1855-1923) and a stand with legs (u 1863-1923, v 1661-1743), t2's; leaning poles (1815,1598)->(1888,1771) and (1745,1669)->(1784,1747), t2's (props that lean on the building). The tiled south part ends near v ~1700-1720; below it grass and the bottom trees' twigs, then the silk's edge (v ~1770). PLACEHOLDER footprint: the north wall's foot est v 1575 (the north-east eave corner (2000,1360) plus the post's 211-px eave height), from u ~1592 to ~1995 (the ridge's north end at 1796 is midway), its long sides along the receding direction down to the silk's bottom edge (the building runs on beyond it); builder's choice. Facing: its gable end toward the street (north). The mat awning's west end is seen at u ~1858 (v 1252-1290), above this roof's north verge. MERGE: the rail under the east eave at v 1604-1630 (u 1855-1923) is part of this building (a sill, a shelf or the top of a low wall under the eave; t2 read it as the bench's back or the building's). The things under the eave are, by ID: the stand with legs S7.prop.bench_jie_eave_1885, the two leaning poles S7.prop.leaning_poles_1888 (added in the merge) and the tub S7.prop.tub_slatted_1973. SECOND PASS: between its east post (u ~1922-1941) and the leaning board S6.prop.jie_signboard_2085, fine vertical slats show from the bar (v ~1522) down to the slatted tub's lattice band (v ~1590): either the upper part of S7.prop.tub_slatted_1973, or a slatted screen hung from the bar, which would be part of this building. See the tub's note. Also seen: the east eave's double band runs on down-left past pole A's top (1815,1598), through about (1765,1700), toward the silk's bottom edge near u ~1730; both leaning poles cross it, and their tips show above it on the tiles."
+  },
+  {
+   "id": "S7.grp.guanhuan_compound",
+   "kind": "group",
+   "name": "官宦人家, the official's compound (buildings)",
+   "what": "The official's compound at the scroll's end: its street gate hall with the two blocks at the gate, the railing west of it, and the halls behind it rising up the silk (the middle hall, the main hall with its patterned front, a gable behind it).",
+   "members": [
+    "S7.bld.gatehouse_1240",
+    "S7.str.gate_block_1160",
+    "S7.str.gate_block_east_1345",
+    "S7.str.fence_960",
+    "S7.bld.compound_hall_1420",
+    "S7.bld.main_hall_1300",
+    "S7.bld.far_gable_1345"
+   ],
+   "src": "名画记: 官宦人家 (pin 49); 余辉: 门房指路",
+   "note": "The long north-south hall S7.bld.hall_ns_1620 may belong to it or to 赵太丞家; it is in neither group. The gate scene's figures (the gatekeeper, the visitor with the food box, the man pointing the way) are t1's."
+  },
+  {
+   "id": "S7.grp.zhao_taicheng_house",
+   "kind": "group",
+   "name": "赵太丞家, the doctor's house (buildings)",
+   "what": "The doctor's shop hall with its four-tablet name board and fixed front board, and the hall behind it.",
+   "members": [
+    "S7.bld.zhao_taicheng",
+    "S7.bld.zhao_back_hall_1630"
+   ],
+   "src": "名画记: 国医赵太丞家 (pin 48); 余辉: 太丞医铺",
+   "note": "The shop's free-standing tall boards (u ~1385-1445 and ~1755-1793), its tilted lattice stand, its furniture and the people inside are t2's."
+  }
+ ]
+}

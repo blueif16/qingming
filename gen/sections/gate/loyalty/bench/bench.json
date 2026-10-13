@@ -1,0 +1,276 @@
+{
+ "url": "http://127.0.0.1:5180/gate.html",
+ "date": "2026-10-12T04:40:08.219Z",
+ "viewport": [
+  1920,
+  1080
+ ],
+ "secs": 2,
+ "loadMs": 886,
+ "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4070 SUPER (0x00002783) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "gpuTimer": true,
+ "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+ "assetBytes": 5080714,
+ "assets": [
+  [
+   "gate.glb",
+   2019412
+  ],
+  [
+   "chars/characters.json",
+   2305
+  ],
+  [
+   "gate/layout.json",
+   65527
+  ],
+  [
+   "gate/scene.json",
+   1064
+  ],
+  [
+   "ui/sundial_face.webp",
+   19220
+  ],
+  [
+   "willow_card.webp",
+   309534
+  ],
+  [
+   "gate/people.json",
+   17816
+  ],
+  [
+   "chars/camel_driver.glb",
+   280024
+  ],
+  [
+   "chars/carter.glb",
+   327616
+  ],
+  [
+   "chars/idler.glb",
+   317708
+  ],
+  [
+   "chars/inspector.glb",
+   282768
+  ],
+  [
+   "chars/official.glb",
+   283244
+  ],
+  [
+   "chars/porter.glb",
+   214064
+  ],
+  [
+   "chars/sightseer.glb",
+   318908
+  ],
+  [
+   "chars/townsman.glb",
+   250392
+  ],
+  [
+   "gate/backdrop.json",
+   1340
+  ],
+  [
+   "gate/backdrop_east.webp",
+   117618
+  ],
+  [
+   "gate/backdrop_north.webp",
+   130764
+  ],
+  [
+   "gate/backdrop_west.webp",
+   121390
+  ]
+ ],
+ "views": [
+  "bridge",
+  "street",
+  "tower"
+ ],
+ "rows": [
+  {
+   "label": "gate with its 77 painted people",
+   "crowd": null,
+   "view": "bridge",
+   "fps": 303.48482575871196,
+   "cpuMs": 3.130477759256787,
+   "animMs": 0.7200988479069077,
+   "gpuMs": 2.5187852125205903,
+   "calls": 383,
+   "tris": 1224644,
+   "people": 77,
+   "dpr": 1,
+   "heapMB": 52.7462158203125,
+   "geometries": 46,
+   "textures": 106
+  },
+  {
+   "label": "gate with its 77 painted people",
+   "crowd": null,
+   "view": "street",
+   "fps": 214.63512029549779,
+   "cpuMs": 4.449069767913153,
+   "animMs": 1.0969767447127852,
+   "gpuMs": 3.276308986046512,
+   "calls": 377,
+   "tris": 1223132,
+   "people": 77,
+   "dpr": 1,
+   "heapMB": 59.83213424682617,
+   "geometries": 46,
+   "textures": 106
+  },
+  {
+   "label": "gate with its 77 painted people",
+   "crowd": null,
+   "view": "tower",
+   "fps": 206.93791862441267,
+   "cpuMs": 4.6007246373644195,
+   "animMs": 1.256521738813695,
+   "gpuMs": 3.456351227053143,
+   "calls": 296,
+   "tris": 931692,
+   "people": 77,
+   "dpr": 1,
+   "heapMB": 74.91632461547852,
+   "geometries": 46,
+   "textures": 106
+  },
+  {
+   "label": "1 gate + 40 load-test walkers (117 people)",
+   "crowd": null,
+   "view": "bridge",
+   "fps": 144.49277536123196,
+   "cpuMs": 6.701038063809946,
+   "animMs": 1.8782006922890158,
+   "gpuMs": 5.032753494809691,
+   "calls": 501,
+   "tris": 1729215,
+   "people": 117,
+   "dpr": 1,
+   "heapMB": 102.27643966674805,
+   "geometries": 46,
+   "textures": 146
+  },
+  {
+   "label": "1 gate + 40 load-test walkers (117 people)",
+   "crowd": null,
+   "view": "street",
+   "fps": 141.73778509756963,
+   "cpuMs": 6.808098591969046,
+   "animMs": 1.9147887339054699,
+   "gpuMs": 5.018472563380279,
+   "calls": 495,
+   "tris": 1727807,
+   "people": 117,
+   "dpr": 1,
+   "heapMB": 92.86483764648438,
+   "geometries": 46,
+   "textures": 146
+  },
+  {
+   "label": "1 gate + 40 load-test walkers (117 people)",
+   "crowd": null,
+   "view": "tower",
+   "fps": 157.7161110002,
+   "cpuMs": 6.112658226603194,
+   "animMs": 1.881645571581925,
+   "gpuMs": 4.554758481012656,
+   "calls": 364,
+   "tris": 1222189,
+   "people": 117,
+   "dpr": 1,
+   "heapMB": 94.91984558105469,
+   "geometries": 46,
+   "textures": 146
+  },
+  {
+   "label": "4 gates, 308 people (each with its own routines)",
+   "crowd": null,
+   "view": "bridge",
+   "fps": 65.95586412100177,
+   "cpuMs": 14.844360904137892,
+   "animMs": 4.944360901538591,
+   "gpuMs": 8.692281744360903,
+   "calls": 475,
+   "tris": 1495155,
+   "people": 308,
+   "dpr": 1,
+   "heapMB": 125.02212810516357,
+   "geometries": 49,
+   "textures": 417
+  },
+  {
+   "label": "4 gates, 308 people (each with its own routines)",
+   "crowd": null,
+   "view": "street",
+   "fps": 34.294234592445335,
+   "cpuMs": 29.020289850407753,
+   "animMs": 6.642028989999191,
+   "gpuMs": 17.520076057971018,
+   "calls": 1224,
+   "tris": 4039273,
+   "people": 308,
+   "dpr": 1,
+   "heapMB": 134.73373317718506,
+   "geometries": 49,
+   "textures": 417
+  },
+  {
+   "label": "4 gates, 308 people (each with its own routines)",
+   "crowd": null,
+   "view": "tower",
+   "fps": 47.38390942191634,
+   "cpuMs": 20.826315784454344,
+   "animMs": 5.394736834576255,
+   "gpuMs": 13.98544707368421,
+   "calls": 1144,
+   "tris": 3752062,
+   "people": 308,
+   "dpr": 1,
+   "heapMB": 146.14360332489014,
+   "geometries": 49,
+   "textures": 417
+  },
+  {
+   "label": "4 gates 308 people, CPU 4x slower",
+   "crowd": null,
+   "view": "tower",
+   "fps": 11.243095273011658,
+   "cpuMs": 95.77826086334561,
+   "animMs": 23.252173910970274,
+   "gpuMs": 50.06585321739131,
+   "calls": 1144,
+   "tris": 3752062,
+   "people": 308,
+   "dpr": 1,
+   "heapMB": 155.35551738739014,
+   "geometries": 49,
+   "textures": 417
+  },
+  {
+   "label": "1 gate 77 people, CPU 4x slower",
+   "crowd": null,
+   "view": "tower",
+   "fps": 37.26893261776981,
+   "cpuMs": 25.714666669368743,
+   "animMs": 6.318666666348776,
+   "gpuMs": 17.90235989333334,
+   "calls": 296,
+   "tris": 931692,
+   "people": 77,
+   "dpr": 1,
+   "heapMB": 140.45308208465576,
+   "geometries": 49,
+   "textures": 417
+  }
+ ],
+ "logs": []
+}

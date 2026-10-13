@@ -1,0 +1,16 @@
+{ "url": "http://127.0.0.1:5190/world.html",
+  "pages": [
+    { "device": "desktop", "loading": "desktop_loading",
+      "shots": [
+        { "name": "desktop_day_spawn", "hour": 10, "at": "inner_city:spawn", "wait": 2500 },
+        { "name": "desktop_night_spawn", "hour": 21.5, "wait": 1500 },
+        { "name": "desktop_hud", "hour": 10, "js": "await t.hud.show(); await new Promise(r => setTimeout(r, 2500));", "wait": 800 },
+        { "name": "desktop_gate_day", "js": "t.hud.hide(); await t.view('inner_city:spawn'); await t.goto(-28, 4); t.player.yaw = 0 * Math.PI/180 - Math.PI/2; t.set('hour', 10);", "wait": 2000 }
+      ] },
+    { "device": "phone", "loading": "phone_loading",
+      "shots": [
+        { "name": "phone_day_spawn", "hour": 10, "at": "inner_city:spawn", "wait": 2500 },
+        { "name": "phone_night_spawn", "hour": 21.5, "wait": 1500 },
+        { "name": "phone_hud", "hour": 10, "js": "await t.hud.show(); await new Promise(r => setTimeout(r, 2500));", "wait": 800 }
+      ] }
+  ] }

@@ -1,0 +1,52 @@
+{
+  "section": "S4",
+  "entities": [
+    {
+      "id": "S4.fig.child_in_arms_10430",
+      "kind": "figure",
+      "name": "small child held at the shoulder",
+      "what": "Small child held up at the left shoulder of the person in the long robe at the west end of the roadside stall (S4.fig.person_with_child_10430); its round dark-haired head shows just east of the carrier's head and its small body is pressed against the carrier's chest and shoulder. Painted about 50 px of child against the carrier's 129 px.",
+      "pts": { "foot": [10430, 474, "est"], "head": [10441, 349] },
+      "support": "carried in arms: S4.fig.person_with_child_10430",
+      "pose": "seated",
+      "facing_deg": 200,
+      "group": "S4.grp.person_with_child_10430",
+      "vis": "part: only the head and a little of the body show against the carrier",
+      "conf": "med",
+      "src": "",
+      "note": "SECOND PASS (west): missed as its own entity; t2 named the child only inside the carrier's `what` and `note` (map/README.md rule 6: a painted thing named in a note gets an entry; precedent S6.fig.child_on_back_2795, S6.fig.child_on_shoulders_4977). Strokes: child's head u 10433-10450, v 348-368 (top ~349), body u 10433-10455, v 368-397, against the carrier's left shoulder (carrier's head u 10415-10433, v 343-363). Foot = the carrier's foot point (the ground under the child), est, as for a rider. Which way the child faces is not legible; facing set to the carrier's. CHILD: build at child scale (about 0.4 of the carrier's height). Crops: gen/map/S4/look/p2w_e_z_child10440.jpg, p2w_inspect_10435_410.jpg (the restyle also paints a child at the shoulder)."
+    },
+    {
+      "id": "S4.grp.person_with_child_10430",
+      "kind": "group",
+      "name": "person carrying a small child",
+      "what": "A person in a long robe stands at the west end of the roadside stall at the top of the side road, facing west toward the porter with the baskets, holding a small child up at the shoulder.",
+      "members": ["S4.fig.person_with_child_10430", "S4.fig.child_in_arms_10430"],
+      "note": "SECOND PASS (west): the lead sets `group` on the existing S4.fig.person_with_child_10430 (it is in no group now)."
+    },
+    {
+      "id": "S4.tree.behind_house_9640",
+      "kind": "tree",
+      "name": "pine-like crown above the house at the top of the silk",
+      "what": "Fans of pine-like needle clusters showing above and over the tiled roof of the house at the top of the silk (S4.bld.house_9590): one fan at the roof's west part, a broad fan rising from the roof's east eave corner with a few sprays drooping east of it over the railing, and a branch running up from that fan to the silk's top edge; the trunk is not shown (behind the house or above the top edge).",
+      "pts": { "base": [9640, 42, "est"], "top": [9680, 2], "crown_w": [9497, 30], "crown_e": [9775, 95] },
+      "support": "ground",
+      "vis": "part: trunk hidden behind the house; crown cut off by the silk's top edge",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): no entity covers these sprays. S4.tree.gnarled_9445 stops at top (9440, 105) and S4.tree.leaning_9776's crown is at v 240-335; S4.tree.behind_roof_10405 is the same kind of case further east. Strokes: west fan u 9500-9580, v 7-57; middle sprays u 9593-9677, v 0-40; east fan u 9677-9777, v 0-87, radiating from about (9712, 75) at the roof's east eave corner (9720, 77), sprays drooping to (9755, 102); a branch (9680, 5) -> (9715, 70). Between the sprays and the house front (v 80-140) the roof and the front are clear of needles, so I read the crown as a tree behind (north of) the house, not as the top of a grove tree in front of it. OTHER READING: the fans are the tops of S4.tree.gnarled_9445 (west fan) and S4.tree.leaning_9776 (east fan), whose crowns would then reach the top edge; then drop this entity and raise those trees' `top` to (9545, 7) and (9712, 2). It may also be two trees (west fan, east fan). Base est just behind the house's back line (back corners est at v 50-52), under the crown's middle; a pure guess. The restyle draws bare branches above the roof. Crops: gen/map/S4/look/p2w_e_z_crown_behind_house.jpg, p2w_e_z_fan9710.jpg, p2w_e_house_crowns.jpg, p2w_inspect_9640_100.jpg."
+    },
+    {
+      "id": "S4.tree.small_bush_10296",
+      "kind": "tree",
+      "name": "small round bush at the bottom edge east of the big hall",
+      "what": "A small, dark, rounded leafy clump on a short thin stem at the bottom edge of the silk just east of the big tiled hall's south-east column, with low grass-like tufts at its foot; a thin horizontal line runs to it from the column.",
+      "pts": { "base": [10296, 1760], "top": [10297, 1714], "crown_w": [10284, 1726], "crown_e": [10311, 1724] },
+      "support": "ground",
+      "vis": "full",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): not recorded by any agent; S4.bld.south_hall_10330 ends its railing at u 10190. Strokes: clump u 10285-10310, v 1715-1736 (about 25 px wide, 21 tall); stem u 10292-10300, v 1736-1758; dark ragged tufts u 10233-10293, v 1755-1767 along the ground at the silk's edge (v ~1770). A thin line runs from the column at u ~10212 east at v 1717-1721 to the clump; east of it sweeping dark strokes (v 1725-1765) are the whips of S4.tree.willow_south_10725. OTHER READING: the end post of a low fence or balustrade with a round knob on top, the line being its rail from the hall's corner (the restyle paints a capped post with a curved rail); then it belongs to the structures (or extends the hall's railing) and this entity should be dropped. Size: ~46 px tall stem to top, small. Crops: gen/map/S4/look/p2w_e_z_post10297.jpg, p2w_e_z_bush10297.jpg, p2w_e_z_hall_under.jpg, p2w_inspect_10300_1680.jpg."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Two reference images. Image 1 is the target art style: a street scene. Image 2 is one figure cut from the painting this game is based on. Redraw the figure from image 2 as a game character that belongs in image 1's street, rendered in exactly image 1's art style: hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette, soft painted shading.\nKeep what image 2 shows: the clothing and how it is worn, its colours, the headwear, the hair, the build and the age. Ignore image 2's pose, the other people, the objects and the background.\nThe character is a Song farmer of the villages outside the city: a weathered middle-aged man, about 6.5 heads tall, a long brown face with dark dot eyes, a short grey-black beard and moustache, black hair under a small soft brown cloth cap. A plain undyed oatmeal-white hemp long jacket with a crossed collar reaching to the knees, long sleeves to the wrist, belted at the waist with a dark brown cloth cord; loose pale trousers tucked into white leg wraps, and woven straw sandals.\nCharacter turnaround sheet for 3D modelling: the same character three times side by side, evenly spaced, at the same size, feet on the same baseline, each one whole from head to feet with empty margin around it. Left: front view. Middle: side view, facing left. Right: back view. Neutral A-pose, arms straight and held slightly away from the body, legs straight and slightly apart, empty hands, nothing held or carried. Plain flat mid-grey background, no ground, no shadows, no scenery, no props, no text or labels.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/characters/farmer/ref.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 49.6,
+ "attempts": 1,
+ "idempotency_key": "4aa1c769-dbcb-4670-90ab-de0cd7837f06",
+ "request_id": "76f6db44-f56d-4824-bdfe-6338c640f3d3",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3342,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 360
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3342,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2982,
+   "text_tokens": 360
+  },
+  "total_tokens": 4926
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/ca002d9d-c9b9-4530-aeee-7c4242472def"
+ ],
+ "files": [
+  "gen/characters/farmer/sheet_0.png"
+ ]
+}

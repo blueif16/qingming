@@ -1,0 +1,76 @@
+{
+ "name": "camel",
+ "title": "Camel: the laden Bactrian camel of the caravan (S5: the lead camel in the gate passage and the two behind it)",
+ "plan": "camelid",
+ "figure": {
+  "section": "gate",
+  "id": "camel_6060",
+  "map_id": "S5.ani.camel_6060",
+  "src": "mosaic",
+  "crop": [
+   5900,
+   1030,
+   6150,
+   1280
+  ]
+ },
+ "prompt": "animal_camel",
+ "back_m": 1.85,
+ "mesh": {
+  "from": "side",
+  "test": [
+   "side"
+  ],
+  "polys": 3800
+ },
+ "clips": [
+  "idle",
+  "walk",
+  "graze",
+  "lie"
+ ],
+ "tack": {
+  "pack": [
+   {
+    "kind": "cloth",
+    "mat": "felt",
+    "span": [
+     -0.14,
+     0.14
+    ],
+    "down": 55
+   },
+   {
+    "kind": "camel_pack",
+    "half": 0.15,
+    "mats": [
+     "box",
+     "bundle_blue",
+     "pink"
+    ]
+   }
+  ],
+  "pack_sheaf": [
+   {
+    "kind": "cloth",
+    "mat": "felt",
+    "span": [
+     -0.14,
+     0.14
+    ],
+    "down": 55
+   },
+   {
+    "kind": "camel_pack",
+    "half": 0.15,
+    "mats": [
+     "box",
+     "cloth_dark",
+     "cloth_red"
+    ],
+    "sheaf": true
+   }
+  ]
+ },
+ "seat_back": 0
+}

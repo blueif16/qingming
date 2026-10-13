@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe plant: a low clump of long, thin, bare stems as the scroll paints it at the bottom edge of the silk: dozens of slender straight stems spring from one small foot and radiate upward and outward in a fan, like a tuft of tall reeds or a coppiced bush, a few stems curving over at their tips. No trunk.\nColours: stems grey-brown and red-brown, a few pale straw-coloured; tiny pale green buds (about #93a866) at some tips.\n\nThis one: A wide fan of stems spreading evenly to both sides, wider than it is tall.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/whip_clump_1.jpg",
+  "gen/trees/refs/whip_clump_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "ff9d9aa47359",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 30.6,
+ "attempts": 1,
+ "idempotency_key": "2044dea4-59db-48db-9670-f291be9f3b52",
+ "request_id": "46e3dd9c-edf8-4f54-83d1-42cd4b1e8a36",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3346,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2950,
+   "text_tokens": 396
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3346,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2950,
+   "text_tokens": 396
+  },
+  "total_tokens": 4930
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/50bc13b8-6755-4d75-9312-8bae54057b73"
+ ],
+ "files": [
+  "gen/trees/raw/whip_clump_1/ff9d9aa47359_0.png"
+ ]
+}

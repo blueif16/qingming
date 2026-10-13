@@ -1,0 +1,29 @@
+{
+ "_about": "The carried children (tools/carry_pose.mjs bakes them, tools/carry_check.mjs checks them). Per prop: carrier, child (the rigged character worn), height_m (the child's standing height), tris (decimation budget), recipe and its numbers p, sites (carrier surface sites: the point nearest to joint + off, off in the carrier's body frame x left / y up / z forward, or in the axes of joint `axes`; snapped onto the triangles of `bones`), contacts (site = a carrier site, child = the child's bones whose surface must touch it; tol_bind / tol_cycle the gap limits, m). The clip and bind time are the carrier's characters/props.json entry.",
+ "child_on_back": {
+  "carrier": "idler",
+  "child": "child",
+  "height_m": 0.85,
+  "tris": 2000,
+  "recipe": "back",
+  "p": { "lean": 0.0, "hip_at": 0.35, "out": 0.09, "side": 0.0, "hunch": 0.15, "head_yaw": 0.4, "head_pitch": 0.2, "hand_r": 0.012, "knee_r": 0.04, "shin_drop": 0.8 },
+  "sites": {
+   "Left shoulder": { "joint": "LeftArm", "axes": "Spine", "off": [-0.04, 0.08, 0.02], "bones": ["LeftShoulder", "LeftArm", "Spine", "neck"] },
+   "Right shoulder": { "joint": "RightArm", "axes": "Spine", "off": [0.04, 0.08, 0.02], "bones": ["RightShoulder", "RightArm", "Spine", "neck"] },
+   "Left flank": { "joint": "Spine01", "axes": "Spine", "off": [0.25, 0.0, 0.0], "bones": ["Hips", "Spine02", "Spine01", "LeftUpLeg"] },
+   "Right flank": { "joint": "Spine01", "axes": "Spine", "off": [-0.25, 0.0, 0.0], "bones": ["Hips", "Spine02", "Spine01", "RightUpLeg"] },
+   "Left palm": { "joint": "LeftHand", "off": [0.0, 0.03, -0.03], "bones": ["LeftHand"] },
+   "Right palm": { "joint": "RightHand", "off": [0.0, 0.03, -0.03], "bones": ["RightHand"] },
+   "upper back": { "joint": "Spine", "axes": "Spine", "off": [0.0, -0.05, -0.3], "bones": ["Spine", "Spine01", "Spine02"] }
+  },
+  "contacts": [
+   { "name": "child L hand on his L shoulder", "site": "Left shoulder", "child": ["LeftHand"] },
+   { "name": "child R hand on his R shoulder", "site": "Right shoulder", "child": ["RightHand"] },
+   { "name": "child L thigh at his L flank", "site": "Left flank", "child": ["LeftUpLeg", "LeftLeg"] },
+   { "name": "child R thigh at his R flank", "site": "Right flank", "child": ["RightUpLeg", "RightLeg"] },
+   { "name": "his L palm under the child", "site": "Left palm", "child": ["LeftUpLeg", "Hips"] },
+   { "name": "his R palm under the child", "site": "Right palm", "child": ["RightUpLeg", "Hips"] },
+   { "name": "child chest on his upper back", "site": "upper back", "child": ["Spine", "Spine01", "Spine02"] }
+  ]
+ }
+}

@@ -1,0 +1,226 @@
+{
+ "section": "S2",
+ "pass": "second pass, middle: u 22900-25300 (looked at 22750-25450)",
+ "how_to_read": "entities: new entities in the strokes format, ready to copy into a part (as S4's merge_fixes accept()). retire: entities to drop in merge_fixes.mjs, with the reason. changes: edits to existing entities; 'set' keys are fields or 'pts.<name>' points, 'members_remove'/'members_add' edit a group, 'add_note' is text to append to the note. checked: the merge notes' list for this range (and other low entities), read again, with the verdict and the reading. Crops are in /tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S2_second_middle/ (c_* colour, n_* colour normalised, g_* greyscale contrast-stretched, i_* scan beside the canal/west restyle, ov* overlays of map/strokes/S2.json); crop.mjs there makes them (node crop.mjs u0 u1 v0 v1 zoom out [c|n|g] [tick]).",
+ "summary": "112 entities with main point in 22900-25300 read against the scan at zoom 1-2 (overlays) and 3-7 (crops). 1 new entity (a possible second, smaller passenger at 逆水行舟's cabin window, low). 4 retirements: the merge-added crewman beside the poler (a rope-wrapped fender hung from the cargo boat, or a bitt post), the two bow-windlass men (the windlass's end disc, crank, posts and spoke ends), and the man under 逆水行舟's stern awning (a second light board). 9 changes: the eatery's west man is seated, not standing; the two boats' and their groups' text and members follow the retirements (fender and second board into the boats' what); a leftover 'ox' on S2.bld.open_shop_24300; hanging things named into S2.bld.open_shop_25340's and the eatery shelter's notes. In checked: the west 'head' over the scaffold roof reads as the ridge-end ornament (retire it if the lead agrees), the second head among 逆水行舟's roof coils may go to med, and the rest of the merge's list stays as mapped. Nothing else painted in the range lacks an entity.",
+ "entities": [
+  {
+   "id": "S2.fig.second_passenger_window_24050",
+   "kind": "figure",
+   "name": "second, smaller figure at 逆水行舟's cabin window (faint)",
+   "what": "A second, smaller person seen to the shoulders at the large lattice-framed window in 逆水行舟's cabin, just east of the dark-haired passenger who leans on the sill: a light round head with no dark hair (a light head-cloth, or a child), turned toward the viewer, a shoulder line running down to the sill.",
+   "pts": {
+    "foot": [
+     24050,
+     1135,
+     "est"
+    ],
+    "head": [
+     24049,
+     1082
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_towed_mast_23632",
+   "pose": "seated",
+   "facing_deg": 270,
+   "group": "S2.grp.boat_towed_mast_23632",
+   "vis": "part: seen to the shoulders through the window; faint",
+   "conf": "low",
+   "note": "SECOND PASS (middle): no entity covers it; river_m's note on S2.fig.passenger_window_24025 reads it as 'his shoulder and arm beside it'. Strokes: a closed light oval at u 24043-24058, v 1082-1095 (about 15 x 13 px, no dark hair or cap), 25-30 px east of the passenger's face (24011-24035, v 1075-1103) and level with it, with a shoulder line from it down-west to the sill (24035-24060, v 1095-1117). A man leaning both forearms on the sill does not hold a hand at head height 25 px east of his face, so a second person beside him is the better reading; others: his raised hand, or a light object on a shelf behind the sill. The restyle paints two people at this window. Foot est on the cabin floor as the passenger's (deck about v 1135, waterline about v 1210). Smaller than the passenger's head (20 px): a child, or set back in the cabin. Crops: scratchpad S2_second_middle/n_window.jpg (zoom 5), g_window.jpg (zoom 7, greyscale), i_window.jpg (restyle), c_cabinW.jpg (zoom 1.9)."
+  }
+ ],
+ "retire": [
+  {
+   "id": "S2.fig.crewman_beside_poler_23748",
+   "conf": "med",
+   "reason": "Not a figure. On zoom-4/5 crops the 'head' is 35 px wide (u 23731-23766, v 777-797), nearly twice the poler's head beside it (u 23672-23692, 20 px), and is two scroll-like curls joined by a bar, hung from a thin line that comes straight down from a small bar at (23742-23752, 744-749) on the cargo boat's planking; the 'body' (u 23735-23762, v 797-872) is a column of close HORIZONTAL wrappings, with no vertical robe folds, arms or hands, that tapers to about 10 px at its foot (23744, 870). It reads as a rope-wrapped fender (or a bundle) hung on a line over the cargo boat's south side at the bow, exactly where 逆水行舟's foredeck passes close alongside while the poler fends off; second reading: a bitt post with scroll ends on 逆水行舟's foredeck (the moored boat at 25165-25255 has scroll-ended bitts drawn the same way). The restyle paints a post with two round knobs here and the poler as the only man. The merge added this figure (merge_fixes.mjs, parts/merge.json) from river_w2's left-to note: decline that addition, take it out of S2.grp.boat_towed_mast_23632, and record the fender in the cargo boat's what (changes).",
+   "crops": "scratchpad S2_second_middle/n_second.jpg (zoom 5), g_post2.jpg (zoom 4, greyscale, with its foot), c_poler.jpg and g_poler.jpg (zoom 3), i_poler.jpg (restyle)"
+  },
+  {
+   "id": "S2.fig.windlass_man_w_23888",
+   "conf": "med",
+   "reason": "No head at the bow windlass. On zoom-4 colour and greyscale crops u 23870-23995, v 500-590 is the spoked windlass alone: a D-shaped end disc (23876-23895, v 538-575) with a crank bar over it (23877-23900, v 527-540), the spoked drum (23905-23975, v 530-570), post tops (23901-23906, v 505-530) and a row of spoke ends (23920-23970, v 505-525), all thin strokes 3-8 px wide. The certain man on the same bow 90 px west (S2.fig.man_bow_arm_out_23795) has a 25 px round head drawn with a double outline and a hand with fingers; nothing like it is drawn at the windlass. The 'bent shape' is the end disc and its crank. The restyle's knot of 4-5 men here is its usual invention (river_m). Take it out of S2.grp.boat_cargo_hooded_bow_23715.",
+   "crops": "scratchpad S2_second_middle/c_bowwind.jpg, g_bowwind.jpg (zoom 4), i_bowwind.jpg (restyle)"
+  },
+  {
+   "id": "S2.fig.windlass_man_e_23952",
+   "conf": "med",
+   "reason": "The 'round top' at (23948-23958, v 505-518) is a pointed spoke end, a 4 px stroke rising to a tip, one of a row of three or four along v 505-525 at u 23920-23970; no face, hair or shoulders below it (river_m's own other reading: 'one of its post tops'). Same crops and the same group edit as S2.fig.windlass_man_w_23888.",
+   "crops": "scratchpad S2_second_middle/c_bowwind.jpg, g_bowwind.jpg"
+  },
+  {
+   "id": "S2.fig.man_stern_awning_24870",
+   "conf": "med",
+   "reason": "A second light board, not a man. On zoom-3 and 4.5 crops the light shape at u 24866-24902, v 920-975 is a flat rectangle with an arched top and close vertical grain, drawn exactly like the tall board leaning 120 px west of it (u 24732-24789, v 869-979), only shorter; the strokes over it (24855-24900, v 889-920) are rigging lines crossing in a V, not a head. No face, hair or cap shows (river_m: 'no head or face can be made out at zoom 3'). The restyle's white-robed man is its invention on a light board. Take it out of S2.grp.boat_towed_mast_23632; the board goes into the boat's what (changes).",
+   "crops": "scratchpad S2_second_middle/c_sternawn.jpg (zoom 3, both boards), n_awning.jpg (zoom 4.5), cI.jpg (zoom 1.5)"
+  }
+ ],
+ "changes": [
+  {
+   "id": "S2.fig.eatery_man_23642",
+   "set": {
+    "pose": "seated",
+    "name": "stout man seated among the open-air eatery's tables",
+    "what": "Stout man in a light long robe with a dark topknot or cap, seated on the east end of the bench S2.prop.eatery_bench_23612 beside the table S2.prop.eatery_table_23683 under the eatery's shelter, body toward the viewer, arms held in front of him (perhaps holding a bowl): a customer, or the eatery's keeper resting."
+   },
+   "add_note": "Second pass: pose standing -> seated (conf med). He is 72 px from head top (v 326) to feet (v 398), with the torso about 45 px down to the bench top (v ~368-376) and only about 23 px of lower leg below it, the proportions of a seated man. Standing men nearby are far taller at similar or higher foot v: S2.fig.hat_walker_24004 109 px at v 373, S2.fig.eatery_man_standing_23918 92 px at v 301; a standing man at v 398 would be about 100-110 px, and 72 px is about 0.7 of that, as for the seated shop men (59-65 px at v 180-192). Foot unchanged (his feet at u 23634-23648, v 395-399). Support stays ground (the bench is a prop, named here). S2.fig.terrace_diner_w_23083's note uses him as a standing 72 px reference for the diners' seated height (57 px); seated, he suggests the diners' feet may sit 10-15 px lower than their est, within the est.",
+   "conf": "high",
+   "crops": "scratchpad S2_second_middle/c_eaterym.jpg (zoom 4), cB.jpg (zoom 2), i_wide2.jpg"
+  },
+  {
+   "id": "S2.grp.open_air_eatery_23760",
+   "set": {
+    "what": "The open-air eatery on the north bank between the terrace's pavilion and the shop fronts: tables and benches under and in front of a mat shelter on posts, nearly all empty; one man sits at its west end and one stands at the shelter's east post."
+   },
+   "note": "Follows the seated eatery man."
+  },
+  {
+   "id": "S2.veh.boat_cargo_hooded_bow_23715",
+   "set": {
+    "what": "A very long, high-sided boat lying along the north bank, bow west, close beside 逆水行舟 to its south and end to end with 豪华客船 to its west: at the bow (u 23700-23900) a curved arched beam over a dark mat hood, a deck post and a spoked windlass; on deck a flat board platform on legs and big round coils of rope or baskets (23940-24090, v 635-725) and a short ladder leaning from the deck up to the bank (top at (24045, 505)); amidships a flat mat-roofed deckhouse open at the sides (roof u 24275-24583, v 496-530) with a second arched beam and a dark mat hood at its east end (24425-24600, v 586-730); east of it a spoked wheel or windlass on a post (24640-24740, v 523-590); aft a huge rounded mat cover over the cargo, topped with a woven round basket (24775-25137, v 542-667); a high curved stern with a carved post and the rudder stock at u ~25100-25130. A coil or round fender hangs on its south side at (24380, 840), and at the bow a long rope-wrapped fender (or bundle) hangs on a line over its south side, between it and 逆水行舟's foredeck (u 23735-23768, v 745-872). No mast. Its many strakes with rivet rows show it riding high (unladen). Crew: a man at the bow (the spoked windlass beside him is unmanned), one or two men at the aft windlass, two crouching on deck, two in the deckhouse and a man poling at the gunwale.",
+    "pts.fender_bow_top": [
+     23747,
+     745
+    ],
+    "pts.fender_bow": [
+     23744,
+     872,
+     "est"
+    ]
+   },
+   "add_note": "Second pass: (1) the 'second figure beside the poler' (retired S2.fig.crewman_beside_poler_23748) is a long rope-wrapped fender or bundle hung on a line over this boat's south side at the bow: line from a small bar on the planking at (23742-23752, 744-749) down to a scroll-tied top (23731-23766, v 777-797), wrapped body to its tapered foot (23744, 872, est, behind 逆水行舟's bow hood); other reading: a bitt post with scroll ends on 逆水行舟's foredeck. (2) The bow windlass is unmanned on the scan (S2.fig.windlass_man_w_23888 and S2.fig.windlass_man_e_23952 retired as its disc, crank and spoke ends): the crew is 9, not 11. (3) A thin upright stick stands at the deckhouse roof's east end at (24537, 482-500) (t6 left it to river_m): a pole stood upright on the deck, or a stake on the bank behind the roof.",
+   "conf": "med",
+   "crops": "scratchpad S2_second_middle/g_post2.jpg, n_second.jpg, c_bowwind.jpg, c_bankedge.jpg"
+  },
+  {
+   "id": "S2.grp.boat_cargo_hooded_bow_23715",
+   "members_remove": [
+    "S2.fig.windlass_man_w_23888",
+    "S2.fig.windlass_man_e_23952"
+   ],
+   "set": {
+    "what": "The high-sided cargo boat moored along the bank: a man at the bow calls or points beside the unmanned bow windlass, one or two men work the aft windlass, two crouch on deck, two men rest and talk in the deckhouse and one bends at the gunwale with a pole as 逆水行舟 is towed past close alongside."
+   },
+   "note": "Follows the retirements."
+  },
+  {
+   "id": "S2.veh.boat_towed_mast_23632",
+   "set": {
+    "what": "A long, deep river boat lying in mid-river south of the cargo boat, bow west, being towed upstream: a single mast stepped amidships in a braced tabernacle on the cabin roof at u ~24190, its top at (24183, 302), with a fan of about fifteen stays and lines to both ends of the deck; the tow rope is made fast to the mast at (24188, 375) and runs about 2350 px west over the cargo boat's bow, the bank and the water to the five trackers (t2: S2.grp.boat_towed_mast_23632; the rope's far end is in the lead tracker S2.fig.tracker_lead_21867's hands at (21832, 197)); a short bar is lashed across the rope at (23945, 435-472). A long plank-walled cabin with lattice windows and a door runs the whole length under a low mat roof (cabin walls v ~1030-1140); the bow at the west end has a dark arched mat hood over a low foredeck, a carved stem post and two boat-hooks lying crossed over the stem; the stern at the east end rises over a big rudder whose blade trails at the waterline (24965-25185, v 1160-1220), under a mat awning with a big coil of bamboo rope (24900-25000, v 840-930) and two light boards standing under it, a tall one at u 24732-24789 (v 869-979) and a shorter one just west of the coil at u 24866-24902 (v 920-975); a long dark mat-hatched blade projects east from the stern at deck level to (25285, 1010) (a sweep 橹 shipped aft, or the stern awning's eave). Coiled ropes and bundles on the roof. Crew: a bowman under the hood, a man fending off 豪华客船's stern with a pole, a robed man on the foredeck, three or four men on the roof (one kneeling and hauling a line at the mast), a passenger at a window (perhaps two) and a man at the stern cabin's door. Not moored: it passes the moored cargo boat on its south side, close alongside."
+   },
+   "add_note": "Second pass: the light shape under the stern awning at u 24866-24902, v 920-975 is a second, shorter board (retired S2.fig.man_stern_awning_24870), drawn like the tall one at 24732-24789; a possible second, smaller passenger at the cabin window (S2.fig.second_passenger_window_24050, low); the 'second figure beside the poler' (retired S2.fig.crewman_beside_poler_23748) is a fender hung from the cargo boat or a bitt post on this foredeck (both readings in the cargo boat's note). Crew 11 -> 10 or 11 with the new low passenger.",
+   "conf": "high",
+   "crops": "scratchpad S2_second_middle/c_sternawn.jpg, n_window.jpg"
+  },
+  {
+   "id": "S2.grp.boat_towed_mast_23632",
+   "members_remove": [
+    "S2.fig.crewman_beside_poler_23748",
+    "S2.fig.man_stern_awning_24870"
+   ],
+   "members_add": [
+    "S2.fig.second_passenger_window_24050"
+   ],
+   "note": "Follows the retirements and the new passenger (accept or decline it with them)."
+  },
+  {
+   "id": "S2.bld.open_shop_24300",
+   "set": {
+    "name": "open-fronted shop at the top of the bank (east), behind the mule cart",
+    "vis": "part: front behind the cart's two mules, the cart and the men at it"
+   },
+   "note": "Text only: the merge turned t6's and structures_w's 'ox' into the two mules but missed this name and vis (structures_e's words)."
+  },
+  {
+   "id": "S2.bld.open_shop_25340",
+   "add_note": "Second pass: two small objects hang from a beam inside the shop's west bay, behind the goods racks (S2.prop.goods_racks_25290): one at u 25277-25286 and one hook-shaped at u 25293-25303, both v 356-379 (wares, meat or lanterns hung up; t6 left them to structures_e, which did not name them). Part of this building (what hangs from a building is the structures agent's).",
+   "conf": "med",
+   "crops": "scratchpad S2_second_middle/n_hall.jpg (zoom 3.5), cE.jpg"
+  },
+  {
+   "id": "S2.bld.eatery_shelter_23750",
+   "add_note": "Second pass: under the shelter's back eave, between the back posts at u ~23830-23845, a light rectangle with vertical folds and a V at its top hangs at u 23848-23875, v 230-262: a cloth hung there (no head; the restyle paints a man leaning on a table at about (23844-23880, 237-265)). Part of this building; no figure.",
+   "conf": "low",
+   "crops": "scratchpad S2_second_middle/n_shelterfig.jpg (zoom 6), g_shelterback.jpg, i_shelterback.jpg"
+  }
+ ],
+ "checked": [
+  {
+   "what": "S2.fig.head_over_roof_w_24840 and S2.fig.head_over_roof_e_24867 (the two heads over the scaffold house's roof)",
+   "verdict": "no change proposed; the lead may retire the west one",
+   "reading": "The west shape (u 24829-24849, v 247-269) stands exactly on the main ridge's west end (structures_e's ridge_end_w (24840, 255)): two lobes on top joined by a narrow neck that runs straight into the ridge line, the form of a ridge-end ornament (鸱尾), which structures_e also reads; a small lighter spot with a dark dot under the lobes is the only face-like trace. The east shape (u 24859-24877, v 238-263), 27 px further along the ridge, has a spiky cap over a lighter round face: a head or a ridge beast, undecided. If the west one is retired, name the ornament in S2.bld.scaffold_house_24975's what. No worker is painted on the scaffold itself (zoom 2.2, all poles).",
+   "crops": "scratchpad S2_second_middle/n_ridge.jpg, g_ridge.jpg (zoom 6), c_scaffold.jpg"
+  },
+  {
+   "what": "S2.fig.figure_roof_coils_24508 (second head among the coils on 逆水行舟's roof)",
+   "verdict": "no change; the lead may raise it to med",
+   "reading": "Two dark-haired heads sit side by side among the coils: the recorded seated boatman's (24469-24485, v 922-940) and this one (24491-24511, v 916-934), which has a dark top and a lighter face below it (v 932-944) like the first; a rolled bundle would not show the face.",
+   "crops": "scratchpad S2_second_middle/n_coils.jpg (zoom 5), cH.jpg"
+  },
+  {
+   "what": "S2.fig.figure_stern_roof_24622",
+   "verdict": "no change (low)",
+   "reading": "A dark rounded top 16 px wide at (24615-24631, v 901-919) beside the lidded box (24651-24679, v 903-929); a head or the awning's post top, undecidable at zoom 5.",
+   "crops": "scratchpad S2_second_middle/n_sternroof.jpg"
+  },
+  {
+   "what": "the cargo boat's other low crew: S2.fig.crewman_crouching_24125, S2.fig.figure_deckhouse_east_24590, S2.fig.windlass_man_aft_24660, S2.fig.figure_in_windlass_24713",
+   "verdict": "no change (low)",
+   "reading": "24125: a light rounded back with a darker head-like curve at (24125-24142, v 582-595), turned toward the white crewman, crossed by stays; a man more likely than a bundle. 24590: a hatched, hooded shape at (24573-24616, v 551-591) with no dark hair: a hanging basket or a hooded man. Aft windlass: a tangle of spokes and curved bars; a dark stippled mass at (24692-24717, v 537-567) is either the hub or a man's hair, and a profile-like curve at (24636-24666, v 547-574) either a head or a spoke's end. The poler (24730) is certain.",
+   "crops": "scratchpad S2_second_middle/c_aftwind.jpg, g_aftwind.jpg (zoom 4), c_cargofore.jpg, c_bankedge.jpg"
+  },
+  {
+   "what": "the deckhouse: a separate small boat?",
+   "verdict": "no change (deckhouse of the cargo boat)",
+   "reading": "The two men sit at the cargo boat's deck level (v ~590-600) under a flat mat roof (v 496-530) whose east end carries the arched beam and dark hood; between the deckhouse and the bank there is no stem, gunwale or waterline of another hull, only the bank-edge men's heads behind the roof (river_m's reading).",
+   "crops": "scratchpad S2_second_middle/c_bankedge.jpg (zoom 3.5)"
+  },
+  {
+   "what": "S2.fig.man_with_sticks_bank_24390 and S2.fig.sack_porter_bank_edge_24467",
+   "verdict": "no change (support at the frame: bank slope, as the merge suggests)",
+   "reading": "Both are clearly drawn behind the deckhouse roof: a capped head with a face looking down into the deckhouse, a fan of three thin sticks rising from beside his shoulder (24405-24422, v 456-493, held, so part of his figure); and a bent porter under a big sack, his face down at (24443-24456, v 470-490). If the sticks are incense, the man is a candidate for 余辉's 船侧祭神 (an offering at a boat's side), as is river_w2's bucket man at 22665; the strokes don't settle it.",
+   "crops": "scratchpad S2_second_middle/c_bankedge.jpg"
+  },
+  {
+   "what": "t4's unclear terrace figure (S2.fig.terrace_figure_unclear_23148) and the leaning diner (S2.fig.terrace_diner_leaning_23216)",
+   "verdict": "no change",
+   "reading": "23148: a fan of folds radiating from a point near (23150, 368) to an arc at v ~344 (u 23148-23164), with no head: a round fan, a draped cloth or a hunched back, undecidable; keep low. 23216: one figure: one dark head (23206-23224, v 338-349), and the long light body and sleeve run east from it to (23256, 374) without a break; the restyle's second person is that sleeve.",
+   "crops": "scratchpad S2_second_middle/cA_diners.jpg, gA_diners.jpg (zoom 4)"
+  },
+  {
+   "what": "t5's doorway jar (S2.prop.doorway_jar_23885), the carter's pose (S2.fig.carter_24218), the man in the shop door (S2.fig.man_in_shop_door_24415)",
+   "verdict": "no change",
+   "reading": "Jar: a light area in the lit doorway with a dark horizontal bar across it at v 125-145 and no head at zoom 7: undecidable. Carter: capped head (24207-24230, v 140-157), torso leaning over the mule's back (v ~197), arms reaching down to its neck; on foot (112 px if standing beyond the mule) or riding, no leg shows on the flank. Shop door: a light figure-like form at u 24400-24430, v 57-107 behind the loader's head; keep low.",
+   "crops": "scratchpad S2_second_middle/n_jar.jpg, c_carter.jpg, n_shoptop.jpg, c_cartE.jpg"
+  },
+  {
+   "what": "t6's man at the horse's head (one or two) and S2.ani.horse_24565",
+   "verdict": "no change (one man)",
+   "reading": "Top to bottom on one axis: a dark cap (24495-24526, v 72-84), a lighter face (v 84-96), the light round shape at his chest (24489-24517, v 96-121) where the horse's long lowered neck ends (band from (24589, 73) to (24511, 119)), and one robe below (24477-24527, v 116-172). One man holding the horse's head at his chest, as t6 has it; the horse in side view facing west with a dark saddle-cloth (24563-24594, v 70-113).",
+   "crops": "scratchpad S2_second_middle/n_horse.jpg (zoom 3.5), g_horsehead.jpg, i_horsehead.jpg"
+  },
+  {
+   "what": "t6's stall (S2.fig.stall_keeper_24650, S2.fig.stall_figure_behind_table_24705, S2.prop.stall_goods_24672)",
+   "verdict": "no change (low)",
+   "reading": "A light figure-like form leans over the table's west end (24655-24690, v 380-440) with a face-like oval at (24657-24675, v 387-402): the restyle's 'light-robed figure leaning over the table' fits it as well as goods with sprigs. The dark mass at the west end (24635-24665, v 435-475) stands on short, evenly spaced uprights (v 468-487): bench legs or a seated dark-clad person. The dark head behind the table (24690-24717, v 398-416) has no face. Not settled at zoom 4.5.",
+   "crops": "scratchpad S2_second_middle/c_stall.jpg, g_stall.jpg, i_stall.jpg"
+  },
+  {
+   "what": "S2.fig.robed_man_foredeck_23930's round object",
+   "verdict": "no change",
+   "reading": "The dark round object (23844-23859, v 839-854) sits right under a stay line running down-west; between it and his hands (23889-23901, v 859-866) no stick is clear. It may be a block on the stay rather than a thing he holds; his patterned bundle in the hands is clear.",
+   "crops": "scratchpad S2_second_middle/n_robed.jpg"
+  },
+  {
+   "what": "the rest of the range",
+   "verdict": "no new entity",
+   "reading": "Read at zoom 1-2 with the overlays and at zoom 3-5 where dense: the top roofs 22750-23500 (v 0-300) carry no figures or trees; the bank in front of the eatery and the shops (v 400-490) is empty apart from the rope's toggle; 豪华客船's after half has the five recorded people (side walkway, ladder, two in the bay, windlass); 逆水行舟's cabin side 24200-24760 shows only plank walls, a propped shutter and the man in the door; the cargo boat's stern top object at (25080-25105, v 620-640) is the rudder stock's domed head; the bank strip before the scaffold house (24745-25200, v 500-600) has only the mooring post; the water south of v ~1250 from 23070 to 25450 is empty ripples to the silk's edge. Every marker in the range sits on its thing.",
+   "crops": "scratchpad S2_second_middle/ov_w.jpg, ov_e.jpg, ovA-ovI.jpg, plain_all.jpg"
+  }
+ ],
+ "lessons": [
+  "A hung fender or a scroll-ended bitt looks like a standing crewman at the scan's resolution: a head-sized top over a body-sized column. Before keeping a faint crewman, compare its head's width with a certain figure's head on the same deck (S2: 35 px against the poler's 20), and look at the column's lines: a robe has vertical folds and arms, a rope-wrapped fender has close horizontal wrappings and tapers to its foot.",
+  "Settle seated or standing by painted height against standing neighbours at a similar foot v, not by the furniture beside the figure: S2's eatery man is 72 px at v 398 where standing men are 92-109 px at v 301-373, so he sits on the bench, though a 40 px table stands next to him.",
+  "Windlasses, cranks and spoked wheels are the commonest false crew on S2's boats: their end discs read as bent backs and their spoke ends as heads. A head on this scan is a 15-25 px dark mass (hair or cap) or a closed double outline; a 3-8 px stroke rising to a point is a spoke or post top."
+ ]
+}

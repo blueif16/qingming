@@ -1,0 +1,127 @@
+{
+ "name": "donkey_dark",
+ "title": "Dark donkey: the donkey's body toned near-black, its pale muzzle and belly kept a little lighter (S4b donkey_13474; S3 donkey_18048 with halter and breeching, the sack donkeys donkey_sack_18535 and _18690 with pack_bale, donkey_ridden_18690 with saddle_cloth, donkey_dark_18745; S2 donkey_dark_28921 with halter)",
+ "plan": "equid",
+ "body_from": "donkey",
+ "back_m": 1,
+ "clips": [
+  "idle",
+  "walk",
+  "graze",
+  "lie",
+  "walk_low"
+ ],
+ "tone": {
+  "ramp": [
+   [
+    0,
+    "#0b0a0a"
+   ],
+   [
+    0.3,
+    "#171514"
+   ],
+   [
+    0.5,
+    "#24201e"
+   ],
+   [
+    0.7,
+    "#332e2b"
+   ],
+   [
+    0.82,
+    "#4a433e"
+   ],
+   [
+    0.92,
+    "#7a7068"
+   ],
+   [
+    1,
+    "#968b81"
+   ]
+  ]
+ },
+ "tack": {
+  "saddle_cloth": [
+   {
+    "kind": "cloth",
+    "mat": "cloth_dark",
+    "hem": "cloth_red",
+    "span": [
+     -0.2,
+     0.2
+    ],
+    "down": 78
+   },
+   {
+    "kind": "girth",
+    "at": -0.1
+   }
+  ],
+  "pack_saddle": [
+   {
+    "kind": "cloth",
+    "mat": "felt",
+    "span": [
+     -0.22,
+     0.22
+    ],
+    "down": 60
+   },
+   {
+    "kind": "girth",
+    "at": -0.12
+   },
+   {
+    "kind": "pack_frame",
+    "length": 0.34
+   },
+   {
+    "kind": "side_bundles",
+    "mat": "cloth_white",
+    "length": 0.36,
+    "drop": 0.34
+   }
+  ],
+  "pack_bale": [
+   {
+    "kind": "cloth",
+    "mat": "felt",
+    "span": [
+     -0.22,
+     0.22
+    ],
+    "down": 60
+   },
+   {
+    "kind": "girth",
+    "at": -0.12
+   },
+   {
+    "kind": "pack_frame",
+    "length": 0.34
+   },
+   {
+    "kind": "bale",
+    "mat": "cloth_white"
+   }
+  ],
+  "halter": [
+   {
+    "kind": "halter"
+   }
+  ],
+  "halter_breeching": [
+   {
+    "kind": "halter"
+   },
+   {
+    "kind": "breeching"
+   }
+  ]
+ },
+ "seat_back": 0.1,
+ "head_low_z": 0.3
+}

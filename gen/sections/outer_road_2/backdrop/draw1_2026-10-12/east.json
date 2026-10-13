@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 (Along the River During the Qingming Festival) and the only source for what this panel shows. Paint one very wide panel of a painted backdrop in exactly image 1's painting style (hand-inked dark-brown outlines, light hatching, flat muted painted colours, clean readable shapes), showing what image 2 paints, but as a view seen at eye level by a person standing on the ground at the edge of our scene and looking out: looking east along the river from the moorings at the end of our scene: the next stretch of the scroll (image 2), seen from its west end at eye level. Image 2's left end is nearest to us and its right end farthest away; its top edge is on our left and its bottom edge on our right. On the left of the picture the river runs away from us, a band of blue-green water drawn with fine ink ripple lines, narrowing toward the bridge; on the right, along its near bank, a dusty road runs away beside the water to the foot of the bridge. Far off, a little right of the middle of the picture, where river and road meet the horizon: the great arched bridge, one single arch of plain weathered brown timber with no piers, its arch a broad band of many parallel curved beams springing from both banks, the humped deck on top with a railing of X-braced panels, crowded with tiny people, stalls, a sedan chair and a rider; a tall plain pole with two bars crossed at its top stands at each end. Beside the arch a big cargo boat lies across the river lowering its mast, many crewmen poling and hauling on it, and a cabin boat lies under the arch. Beyond the bridge the view ends: a few low tiled roofs and bare trees on both banks, nothing farther. On the river, nearer: a boat with a big arched mat roof coming toward us, five men working a long sweep oar at its stern and three men at its high bow; a heavily laden boat with a tall mast, towed by a line from its masthead to five trackers walking bent forward in single file up a bank path on the far shore. Along the far (left) bank toward the bridge: a row of moored boats (a very long passenger boat with a continuous cabin of lattice windows, a boat with a mat awning over its bow, a long low boat with its mast lowered onto a crossed crutch, a boat with a dark arched mat cabin), and behind them small open-fronted shops with tables under mat canopies, a long open hall on short stilts with tables on its raised deck, and a few bare pollard willows. On the right, nearest: the long two-storey riverside hall of a tavern, a big grey tiled roof over an upper balcony with a railing where men sit eating at a table, with bare trees in front of it; then the tavern's long tiled wing and, over its gate, a towering openwork scaffold of bare lashed poles with tiers of crossbars, three tapering spires of bound poles and fans of poles splaying out like a crown (no flowers, no streamers); from it a long bar runs to a tall pole, and a long pale banner with three dark vertical bands hangs from the bar; a flat dark mat canopy over stalls of jars and bottles; a cargo boat moored at the bank with men unloading jars and bundles; on the open ground before the bridge a single-wheeled barrow under a huge domed load bound with ropes, porters with shoulder poles, dark donkeys under huge pale sacks, big round parasols over stalls, and a crowd growing thicker toward the bridge's ramp; a big grey tiled gable roof at the bridge's foot. The willows are pollard willows before their leaves open: from each knobbly head a half-open fan of long, straight, stiff shoots springs upward and outward. They are NOT weeping willows: no hanging curtains, no drooping strands, no foliage. The river does not widen into a lake and does not run on to the horizon past the bridge; no sails, no rainbow colours, no hills, no city wall, no second bridge.\n\nRules for the panel:\n- Only what image 2 paints. Add nothing that image 2 does not show: no hills or mountains, no distant tree lines or forests, no lakes, rivers or islands, no towers, pagodas, city walls, flags, clouds, birds, sun or haze banks, unless the description above names them. Leave out image 2's red seals, inscriptions and silk damage.\n- Eye level. The viewer's eye is at the height of a standing person's eyes, so the horizon is one straight, level line across the whole image, a quarter of the way up from the bottom edge. The heads of all standing people are on that line, near or far; buildings, trees, carts and animals rise above it with their feet just under it. Below the horizon there is only a thin strip of level ground, a tenth of the image height at most. We never look down onto roofs, courtyards or the surface of a road: a road running away from us is a thin wedge of ground narrowing to the horizon.\n- Plain white everywhere else. The sky is flat pure white from the top edge down to the horizon, behind everything: no clouds, no blue, no gradient, no haze, no texture, no paper grain. Below the strip of ground the bottom of the image is the same pure white: the ground ends in soft white mist. The upper part of the image, above the tallest trees and roofs, is empty white.\n- Clear and crisp: every outline and colour as clear as in image 1, with no atmospheric haze and no fading toward the distance (the world adds its own mist). Trees keep clear branches and twigs with white showing between them.\n- The left and right eighths of the image hold only low ground and a few small things; they will fade into mist.\n- Colours of the real town in soft spring daylight, as in image 1: grey-blue clay tiles, white lime plaster, weathered brown timber, tan rammed earth and dusty roads, pale fresh-green willows, dark green pines, bare ink-brown branches. Not the yellow-brown of the aged silk in image 2; no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/outer_road_2/backdrop/east_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 2,
+  "size": "3584x1280",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "east"
+ },
+ "format": "png",
+ "generation_s": 56.5,
+ "attempts": 1,
+ "idempotency_key": "21b726e7-6a52-48ac-b1ab-7575d23b14d3",
+ "request_id": "2ba2ca55-109a-46a4-bc54-da30ae13bf9b",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 3268,
+  "completion_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5843,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4485,
+   "text_tokens": 1358
+  },
+  "output_tokens": 3268,
+  "output_tokens_details": {
+   "image_tokens": 3268,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5843,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4485,
+   "text_tokens": 1358
+  },
+  "total_tokens": 9111
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/b3b80776-f94a-45e9-ad0e-3b1ad7eeef57",
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/36981f50-8893-4a54-973e-c0419cadf742"
+ ],
+ "files": [
+  "gen/sections/outer_road_2/backdrop/east_0.png",
+  "gen/sections/outer_road_2/backdrop/east_1.png"
+ ]
+}

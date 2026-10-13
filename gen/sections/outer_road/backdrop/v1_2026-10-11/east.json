@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Image 2 is a strip of the scroll 清明上河图 showing what lies beyond the edge of our walkable scene. Paint one wide panel of a painted backdrop, in exactly image 1's painting style (hand-inked dark-brown linework, light hatching, muted painted colours), showing the content of image 2 as a distant view seen from eye level, as if standing at the edge of our scene and looking out: the outer road running on east past the official hall, seen along it, every part of it small and far off: on the road two big family carts with high domed hoods of shaggy brown palm fibre on two tall spoked wheels, the far one drawn by two oxen, with drivers, a rider and a few walkers; on the left of the road a long hall on a raised floor with a dark blue cloth hanging along its eave, a crowd of men standing round a seated man, a wheelwright bent over a big cart wheel, three pack donkeys going up a lane, then a huge gnarled old tree, almost bare, over low mat-awning sheds and an open-fronted tea house full of tables and benches; at the far end of the road, on the left, a bank path with a few tiny porters and four or five big cargo boats with arched mat roofs moored side by side against the bank, only a short reach of the river showing round them, its water a deep blue-green much darker than the sky and drawn with fine ink ripple lines, the rest of it hidden behind low houses and bare trees on the bank; on the right the long tiled roofs of big halls one behind another, with a few bare trees; above and beyond all of it only the plain pale sky: no far trees, islands, hills, clouds or haze banks, no city wall, no pagoda.\n\nRules for the panel:\n- Everything is far away (50 to 300 metres): small, soft, low in contrast, with gentle atmospheric haze; nothing large in the foreground and no people closer than the middle distance.\n- The horizon sits about one third up from the bottom. The bottom fifth is pale, even mist over the ground, so the panel can meet a misty floor; the top is open pale sky, fading to near white at the top edge.\n- The left and right ends dissolve into the same pale mist, so the panel can stand in a ring of mist.\n- Colours are the real town's in soft spring daylight, muted and natural: grey-blue tiles, white plaster, weathered timber, tan earth, pale grey-green willows and bare ink-brown branches, a blue-grey distance. Not the yellow of aged silk, no paper texture, no border, no frame, no seal, no text, no signature.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/sections/outer_road/backdrop/east_scroll.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "3584x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "east"
+ },
+ "format": "png",
+ "generation_s": 33.5,
+ "attempts": 1,
+ "idempotency_key": "0c875004-1df5-467d-aaf8-4be50c8d7d85",
+ "request_id": "4365f0f0-41a2-4d97-9b36-83dbd8ede0ae",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1634,
+  "completion_tokens_details": {
+   "image_tokens": 1634,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5066,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4482,
+   "text_tokens": 584
+  },
+  "output_tokens": 1634,
+  "output_tokens_details": {
+   "image_tokens": 1634,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5066,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4482,
+   "text_tokens": 584
+  },
+  "total_tokens": 6700
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/af2f9ad3-ec61-40a5-9e11-c45fea535065"
+ ],
+ "files": [
+  "gen/sections/outer_road/backdrop/east_0.png"
+ ]
+}

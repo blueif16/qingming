@@ -1,0 +1,107 @@
+{
+ "about": "Place names the player is told (ink UI round, gen/ui/STYLE.md 'Place notifications'). region: the large banner shown when you walk into this section's region (sections sharing a region id show it once). landmarks: a vertical name plaque stands over the map entity id as you approach (江南百景圖's plaques), and a toast with the line from the painting's reading when you come within r metres of its footprint (or its point); top: the plaque's height when the map has none. Every name and line in 繁體, from the painting and its readings; src says where. Lore (round 2, gen/ui/r2_lore.md): long is the longer description under the toast's fold and in the 圖志 journal; quote and quoteSrc an exact line from a period or scholarly source; cite the sources as the player reads them; longSrc one note per claim (never shown); crop the map IDs that frame the painting's crop (tools/place_crops.mjs). Bundled for the page by tools/ui_data.mjs into web/public/assets/ui/places.json (short) and lore.json (long, fetched when needed).",
+ "region": {
+  "id": "chengmen",
+  "name": "城門",
+  "sub": "東角子門",
+  "seal": "門",
+  "src": "map/sections.json S5 '城门'; 故宫 catalogue text (杨新): the gate tower is 东角子门, '位于汴京内城东南' (identification disputed)",
+  "long": "過了護城河上的平橋，便是全卷最高大的建築：城樓。這是哪一座城門，說法不一：故宮從東角子門之說；徐邦達、張安治據金人張公藥的跋詩「水門東去接隋渠」讀作東水門；余輝則說門額上只寫一個「門」字，畫的是「實情而非實景」。這裏用故宮之說。余輝又指出，這座城門沒有甕城，也不見垛口；一隊駱駝正從門洞走出城去，牽頭的像是胡人，進門頭一家便是稅務。",
+  "quote": "城門前後、城樓上下竟然沒有一兵一卒把守。",
+  "quoteSrc": "余輝〈清明上河圖十大看點〉",
+  "cite": "故宮・徐邦達・張安治・余輝〈十大看點〉〈最後三問〉",
+  "longSrc": [
+   "MHJ 33: 整幅画卷中，城门楼是一座最大的建筑物",
+   "SEC §3 Which gate: 东角子门 (the museum); 东水门 (徐邦达, 张安治, after the Jin colophon 水门东去接隋渠); composite (余辉)",
+   "COL: 张公药跋 水门东去接隋渠",
+   "YH21: 牌匾…就写了一个\"门\"字; YH15 看点十 (end) and 实情而非实景 (YH15 text)",
+   "YH15 看点七: 城门不是瓮城…连射箭的城垛也没有; 胡人模样的驭手; YH15 看点八: 城门内头一家是税务所",
+   "quote: YH15 看点七"
+  ]
+ },
+ "landmarks": [
+  {
+   "id": "S5.bld.tax_office",
+   "name": "稅務",
+   "line": "貨到稅訖，車夫在此納稅。",
+   "seal": "稅",
+   "r": 5,
+   "src": "名画记 35 税务所; 余辉 2014 vignette 货到税讫; map: tax office (税务所 / 场务)",
+   "long": "進了城門，街北緊貼城牆的頭一家，是一座敞開的廳屋，西間掛著一桿大秤，中間官員坐在長案後正要落筆。故宮名畫記說「有的研究者認為這是稅務所」：案上的紙卷或是「引子」，即商貨的通行憑證，沒有引子，稅就收得格外重。門外貨包堆著，貨主指著貨物和稅吏爭論，連城樓上的人也探頭張望。余輝更讀出一層意思：城門內頭一家本該是城防機關，如今卻改成了收稅的地方。",
+   "cite": "故宮名畫記・余輝〈十大看點〉〈最後三問〉・畫中所見",
+   "longSrc": [
+    "map S5.bld.tax_office: open hall, frame scale in the west bay, official at a long desk",
+    "MHJ 35: 在街北紧贴城墙的第一家…有的研究者认为这是税务所…\"引子\"…若没有这个\"引子\"，交税时税率就特别重…货主…手指货物与他说话…连城楼上值班的人也探出头来张望",
+    "YH21: 按理说城门内的第一个建筑应该是城防机关…进城的第一家却是场务，也就是税务所"
+   ],
+   "crop": [
+    "S5.bld.tax_office"
+   ]
+  },
+  {
+   "id": "S5.bld.wine_depot",
+   "name": "軍巡鋪屋",
+   "line": "本是防火的鋪屋，如今堆滿酒桶。",
+   "seal": "鋪",
+   "r": 5,
+   "src": "余辉 2023: the fire post now holds the troops' wine casks; 《东京梦华录》卷三 防火 '每坊巷三百步许，有军巡铺屋一所'",
+   "long": "孫羊正店東邊一間臨街的屋子，地上排著打了鐵箍的大木桶，正是《東京夢華錄》說的「梢桶」，正店用它裝酒。桶上擱著水桶，一根滅火的麻搭橫在上面。余輝認出這本是防火的軍巡鋪屋，該存水的地方卻放滿了酒桶；屋裏的弓手有的拉弓試弦，有的綁護腕、繫護腰，準備押運禁軍的酒。故宮只說屋裏的人像在準備出發，韓森則以為這是賣弓箭的鋪子。這裏從余輝之說。",
+   "quote": "每坊巷三百步許，有軍巡鋪屋一所。",
+   "quoteSrc": "《東京夢華錄》卷三〈防火〉",
+   "cite": "余輝〈十大看點〉〈最後三問〉・《東京夢華錄》・故宮名畫記・韓森",
+   "longSrc": [
+    "map S5.bld.wine_depot, S5.prop.casks_5665, casks_west_5525 (hooped casks, buckets on top, the 麻搭 across)",
+    "DJ 卷三 般载杂卖: 酒正店多以此载酒梢桶矣。梢桶如长水桶",
+    "YH21: 军巡铺…这些桶本来储存的是消防用水…变成了军酒转运站…麻搭",
+    "YH15 看点九: 拉满弓试弦…系护腰…缠护腕; 奉命前来\"正店\"武力押送军酒",
+    "MHJ 37: 仿佛是在进行出发前的准备工作",
+    "SEC §3: Hansen/Columbia: a bow-and-barrel or archery shop",
+    "quote: DJ 卷三 防火"
+   ],
+   "crop": [
+    "S5.bld.wine_depot",
+    "S5.prop.casks_5665"
+   ]
+  },
+  {
+   "id": "S5.str.gate_tower",
+   "name": "城樓",
+   "line": "樓內架著一面大鼓，暮時擊鼓。",
+   "seal": "樓",
+   "r": 7,
+   "src": "名画记 33 雄伟的城楼 '楼内明显可见一个鼓架，上面装置了一个大鼓'; 余辉 2014 城上暮鼓",
+   "long": "這是全卷最大的建築：廡殿頂，重重斗拱把屋簷挑得老遠，故宮說它有「大鵬展翅」的氣勢。樓內看得見一副鼓架，架著一面大鼓，余輝為這一景取名「城上暮鼓」。門額上只寫一個「門」字，城名用幾點帶過，余輝以為畫家有意不點明。樓門口獨立一人，余輝說是更夫，正低頭看稅務所前的爭吵；韓森卻說他是遊人，因為他望著城裏，不像守衛那樣望著城外。",
+   "cite": "故宮名畫記・余輝・韓森",
+   "longSrc": [
+    "MHJ 33: 最大的建筑物…庑殿顶，多重硕大的斗拱将屋檐外挑，使整个屋顶有大鹏展翅的动感…楼内明显可见一个鼓架，上面装置了一个大鼓",
+    "SEC §1.2: YH14 城上暮鼓",
+    "YH21: 牌匾上面就写了一个\"门\"字，\"门\"的前面就点了几点，这说明画家有意要回避画具体的城门",
+    "YH15 看点八: 惊动了城楼上的更夫向下张望",
+    "SEC §3: Hansen: \"a tourist, he gazes at the people inside the wall, not outside, where a guard would look\""
+   ],
+   "crop": [
+    "S5.str.gate_tower"
+   ]
+  },
+  {
+   "id": "S5.str.moat_bridge",
+   "name": "平橋",
+   "line": "橋欄邊，人看春水游魚。",
+   "seal": "橋",
+   "r": 6,
+   "src": "余辉《深度游》第五段 平桥城门; 邵琦: watchers at the railings; 余辉 2015 桥头观水",
+   "top": 4,
+   "long": "護城河上一座平平的木橋，兩側有木欄，欄邊擠滿了看水的人，有的倚欄看春水游魚，有的背過身來閒談。兩個小乞兒伸著手向遊人討錢，故宮名畫記寫得仔細：有人裝作沒聽見，有人怕掃了雅興，給一文錢打發他們走。戴頭巾的讀書人和穿短衣的苦力在同一道橋欄邊並肩，韓森說這座橋是各色人等的一幅群像。",
+   "cite": "故宮名畫記・邵琦・韓森・畫中所見",
+   "longSrc": [
+    "map S5.str.moat_bridge: flat timber bridge, plank railings, sightseers lean on both railings",
+    "SEC §3: 邵琦 有不少人在桥栏杆边观鱼; YH15 看点三: 清明节人们喜欢到河上观赏春水和游鱼",
+    "MHJ 32: 两个乞儿…其中两个人任凭…只装作没听见。另外两个也许怕乞儿破坏他们看风景的雅兴，伸出手给了他一文钱",
+    "SEC §3: Literati in kerchiefs and labourers…; Hansen \"a tableau of different social groups\""
+   ],
+   "crop": [
+    "S5.str.moat_bridge"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "length_m": 2.054,
+ "height_m": 1.438,
+ "back_m": 1.28,
+ "top_m": 1.836,
+ "width_m": 0.654,
+ "hoof_span_m": 0.982,
+ "walk": {
+  "clip": "walk",
+  "cycle_s": 1.067,
+  "stride_m": 1.178,
+  "speed_mps": 1.104,
+  "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+  "slip_mm": 0.8
+ },
+ "saddle": {
+  "bone": "spine2",
+  "offset": [
+   0.0,
+   0.2412,
+   0.181
+  ],
+  "rest": [
+   0.0,
+   1.2818,
+   0.1694
+  ]
+ },
+ "harness": {
+  "collar": [
+   0.0,
+   1.0496,
+   0.6428
+  ],
+  "trace_l": [
+   0.1857,
+   0.9856,
+   0.6172
+  ],
+  "trace_r": [
+   -0.1857,
+   0.9856,
+   0.6172
+  ],
+  "bone": "chest",
+  "yoke": [
+   0.0,
+   1.6833,
+   0.7196
+  ]
+ },
+ "head_bone": "head",
+ "hoof_bones": [
+  "hoof_f.L",
+  "hoof_f.R",
+  "hoof_h.L",
+  "hoof_h.R"
+ ],
+ "clips": {
+  "idle": 8.0,
+  "walk": 1.067,
+  "graze": 6.0,
+  "lie": 8.0,
+  "head_low": 8.0,
+  "walk_low": 1.067
+ },
+ "triangles": 3794,
+ "bones": 32,
+ "tack": {
+  "saddle": {
+   "node": "tack_saddle",
+   "triangles": 836,
+   "seat_m": 1.355,
+   "saddle_rest": [
+    0.0,
+    1.355,
+    0.1694
+   ]
+  },
+  "saddle_fringe": {
+   "node": "tack_saddle_fringe",
+   "triangles": 1964,
+   "seat_m": 1.355,
+   "saddle_rest": [
+    0.0,
+    1.355,
+    0.1694
+   ]
+  }
+ }
+}

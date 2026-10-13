@@ -1,0 +1,60 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Images 2 and 3 are details of the Qingming scroll (清明上河图) showing the kind of tree to paint: take from them only the tree's form, its branching and how its shoots or needles are drawn, and ignore everything else in them (people, roofs, umbrellas, the silk's yellow colour).\n\nPaint ONE single tree in exactly image 1's style: hand-inked dark-brown outlines and linework, light hatching on the trunk, flat muted painted colour fills, crisp clean edges, every shoot drawn as a clear confident stroke.\n\nThe tree: a young bare tree (a sapling) in early spring as the scroll paints it in the vegetable plot by the farm: a thin, dark, straight or slightly crooked trunk, bare for its lower half, carrying a small, open, angular crown of short, bent, knobbly \"crab-claw\" twigs that hook and turn like claws, drawn in dark ink; a few tiny dark buds, no leaves. It is a young tree a little taller than a man, not a miniature of an old tree: the trunk is thin and smooth, with no burls, knots or hollows, and the crown is sparse, with sky between the twigs.\nColours: dark grey-brown trunk; twigs dark brown-grey, darkest at their tips; buds dark brown, a few with a speck of fresh pale green (about #93a866), never pink or red.\n\nThis one: A thin stem leaning to the left in a gentle curve, its small crown lopsided to the left.\n\nThe whole tree from the foot of the trunk to the top of the crown, seen from the front at eye level, centred, filling the height of the picture with a small even margin, nothing cut off by the picture's edge. The trunk ends cleanly at its foot with a slight root flare, standing on nothing.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed, darkened silk of the scroll.\n\nIsolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no soil patch, no shadow, no mist or glow, no other trees, no other objects, no text, no seal, no border, no frame.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/refs/sapling_1.jpg",
+  "gen/trees/refs/sapling_2.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "dd3f2f572c5e",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 33.8,
+ "attempts": 1,
+ "idempotency_key": "7e5caab9-0f41-4229-95b0-24ee49610228",
+ "request_id": "368e2da6-b1b2-49ce-8ca8-e59e05634d12",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 3521,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3040,
+   "text_tokens": 481
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 3521,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3040,
+   "text_tokens": 481
+  },
+  "total_tokens": 5105
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/3e92d9a9-00bd-49ff-9f8b-e6a001ee8d01"
+ ],
+ "files": [
+  "gen/trees/raw/sapling_3/dd3f2f572c5e_0.png"
+ ]
+}

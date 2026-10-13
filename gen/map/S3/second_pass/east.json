@@ -1,0 +1,310 @@
+{
+ "section": "S3",
+ "agent": "second pass east",
+ "range": [
+  19100,
+  20500
+ ],
+ "looked_at": [
+  18950,
+  20650
+ ],
+ "form": "entities = new entities in the strokes format (accept by copying, as gen/map/S4/second_pass/); edits = changes to existing entities (set: fields to replace; add_note: text to append to note; remove_members: for groups); retire = entities to drop with the reason (README rule 7); settled = merge questions answered with no change",
+ "entities": [
+  {
+   "id": "S3.fig.head_by_shed_post_19334",
+   "kind": "figure",
+   "name": "dark head at the mat shed's south-east corner post (or a lidded jar)",
+   "what": "A dark rounded head, seen from behind with no face showing, at the foot of the south-east corner post of the mat-roofed stall under the arch's south side: a person standing or squatting on the bank just east of the eating stall, everything below the head hidden behind the big hall's north gable roof. It could instead be a dark-lidded jar standing at the post's foot.",
+   "pts": {
+    "foot": [
+     19334,
+     1390,
+     "est"
+    ],
+    "head": [
+     19334,
+     1259
+    ]
+   },
+   "support": "ground",
+   "pose": "standing",
+   "facing_deg": 90,
+   "vis": "part: only the head shows; below v ~1285 hidden behind the north gable roof of S3.bld.bridge_foot_hall_19000",
+   "conf": "low",
+   "note": "SECOND PASS (east): t8 saw it and left it to t7 ('a dark shape by its post at (19318-19351, 1259-1288) (a seated figure's head, or a jar)'). t7 did not record it, so no entity covers it. Strokes: a dark dome 19318-19350, v 1259-1283, about 32 x 24 px, lighter below it to v ~1300. It sits right under the shed's east post (S3.bld.mat_shed_19160: post at u 19330-19340, v 1140-1300), and the hall's bargeboard passes below it at v ~1320. Its size fits the heads of the bank watchers nearby (25-30 px). It lies 100 px below the seated diners' heads (v 1138-1177), so it is not one of them: it stands in front of (south of) the stall. Foot est from a ~130 px figure height (S3.fig.under_parasol_bender_19385 ~123 px, S3.fig.bank_waver_19612 ~135 px). It lies inside the hall's roof area on the scan, as for the other hidden-foot figures here. facing_deg 90 because no face shows (back of the head). If the lead reads a jar, record a prop `S3.prop.jar_by_shed_post_19334` at base (19334, 1290, est) instead. Crops: p2e_c_shedpost_col.jpg, p2e_c_shedpost.jpg, p2e_c_stall_col.jpg."
+  },
+  {
+   "id": "S3.prop.shop_table_tray_20140",
+   "kind": "prop",
+   "name": "table with a large oval tray inside the open shop, behind the parasol stall",
+   "what": "A long table or counter inside the east part of the south-bank open shop, just behind the seated customer at the parasol stall: its top lies between two near-level edges, from u ~20090 to ~20190. A large flat oval tray or dish lies on it, with a small round pot or bowl behind the tray. Nobody stands at it.",
+   "pts": {
+    "base": [
+     20140,
+     1560,
+     "est"
+    ],
+    "top_w": [
+     20090,
+     1513
+    ],
+    "top_e": [
+     20190,
+     1513
+    ]
+   },
+   "support": "ground",
+   "vis": "part: front edge and legs hidden by the seated customer (S3.fig.seated_customer_20140) and the parasol stall's table",
+   "conf": "low",
+   "note": "SECOND PASS (east): no entity covers it. S3.bld.open_shop_20000 lists its interior furniture only at u 19762-19920, and t9's report does not name it. Strokes: the top's back edge is a near-level line at v 1494-1497 (u 20090-20165), and its front edge at v 1530-1533 (u 20090-20215). The oval tray is at 20107-20143, v 1508-1518, and a small round pot or bowl at 20133-20153, v 1480-1497. The door posts at 20057-20067 and 20083-20090 stand just west of it, and the parasol's canopy starts at u ~20168. Base est: the legs are hidden. The shop's other table (S3.prop.shop_table_19776, top v 1488-1513) has legs to v 1557-1565, so v ~1560 is used here. It belongs with S3.grp.south_shop_19920 (the lead sets the group). Other reading: a shelf or the shop's raised floor seen with a tray on it; either way a tray is painted here. Crops: p2e_c_shopint_col.jpg, p2e_c_shopint_plain.jpg, p2e_c_shop2_col.jpg."
+  }
+ ],
+ "edits": [
+  {
+   "id": "S3.prop.parasol_19150",
+   "set": {
+    "pts": {
+     "base": [
+      19105,
+      262,
+      "est"
+     ],
+     "top": [
+      19150,
+      70
+     ],
+     "hub": [
+      19112,
+      97
+     ]
+    },
+    "what": "A big ribbed parasol tilted steeply behind the rider, its canopy spread from u ~19050 to ~19245 (v 70-150) around a knobbed hub at (19112, 97) near its west end: the ribs fan up and west from the hub to the rim at (19050, 75), and down and east to the rim at (19245, 150). Its pole drops from the hub at u ~19101-19106 and is hidden behind the rider's head below v ~150. The far-side end post (S3.prop.bridge_end_post_far_19176) crosses the canopy."
+   },
+   "add_note": "SECOND PASS (east): one canopy, not two. On the colour and plain zoom-3 crops, the 'upper' fan (19050-19167, v 73-107) and the 'lower' ellipse (19113-19247, v 103-150) both converge on one hub: a small dark knob at 19107-19117, v 95-102. A pole runs straight down from that knob as a double line at u 19101-19106, visible from v 98 to ~137 (zoom 6, p2e_c_parapole_plain.jpg). So this is one tilted parasol whose hub sits off-centre, as on S3.prop.tilted_parasol_19790, and the base moves from u 19160 (under the canopy's middle, est) to under the pole, u 19105 (est, v unchanged). t7's frame awning (S3.prop.frame_awning_19070, the middle agent's) gives an east post at u ~19103, v 100-140, which is this same stroke. Its long diagonal from (19010, 60) toward (19110, 98) ends at this hub. The lead decides whether that frame is a separate thing. Support (deck or far bank) is unchanged. Crops: p2e_c_parasols_col.jpg, p2e_c_parasols_plain.jpg, p2e_c_parasols.jpg.",
+   "conf": "low"
+  },
+  {
+   "id": "S3.prop.far_bank_tables_19210",
+   "set": {
+    "pts": {
+     "base": [
+      19235,
+      90
+     ],
+     "w_end": [
+      19075,
+      55
+     ],
+     "e_end": [
+      19395,
+      98
+     ]
+    },
+    "what": "A row of about 7 small square tables with benches (legs drawn as short strokes, no one seated) along the front of the long open building on the far bank behind the crown, at u 19075-19395, v 25-100: about 2 west of the tall end post (19075-19130, 19132-19165) and about 5 east of it (19187-19236, 19253-19307, 19296-19345, 19353-19396 and the bench at 19285-19300). The row ends at the parasol stall (S3.prop.far_stall_table_19410)."
+   },
+   "add_note": "SECOND PASS (east): the row's east end was left between two units. t7 stopped at 19345 ('continues east past 19350 (t8's)'), and t8 left 'the long open shed's tables and benches (≈ 19187-19391, v 55-100)' to t7. At zoom 3.5 a table with a bench stands at 19353-19396, v 49-98 (legs at u ~19370 and ~19387 down to v 95-98), just west of the parasol stall's table (19410). e_end moves to (19395, 98), the count to about 7, and base to the row's middle. Crops: p2e_c_fartables_col.jpg, p2e_c_fartables.jpg, p2e_c_north1_col.jpg.",
+   "conf": "low"
+  },
+  {
+   "id": "S3.bld.open_shop_20000",
+   "add_note": "SECOND PASS (east): t8's unassigned 'plank or ladder lines at 19615-19685, v 1275-1441' belong to a planked sloping plane between the mat shed S3.bld.mat_shed_19530 and this building's west hip. The plane runs 19550-19775, v 1244-1375: boards run up to the east, parallel to the hip line (19650,1395)->(19790,1200), with a double-line edge on their west side. An upright post stands at u ~19560-19570 (v 1240-1330). The plane is bounded by the shed's front (west), the big hall's north bargeboard (south), the hip line (east), and the feet of S3.fig.parasol_capped_man_19652 under the tilted parasol (north). TWO READINGS, conf low: (a) this building's west hip face, drawn in boards rather than tiles (the hip face lies exactly here); (b) the board roof of a small lean-to between the shed and this building, which would need its own entity. Under either reading it is no ladder or loose plank, so no prop. Crops: p2e_c_shedeast_col.jpg, p2e_c_underarch_col.jpg, p2e_c_ladder_w.jpg, p2e_c_ladder_plain.jpg."
+  },
+  {
+   "id": "S3.bld.front_roof_19800",
+   "add_note": "SECOND PASS (east): this closes t8's left-to item 'a building front with posts and a stair or ladder at 19330-19580, v 1660-1772', which was never assigned. The diagonal double band from (19506, 1774) to (19577, 1671) (slope about -1.45, the receding direction of the hall's eaves, -1.30) is this roof's west verge, seen running back. It is not a stair: no treads are drawn, only a few short marks. More upright posts with panels between them stand west of the posts named above: at u 19460-19470 and 19483-19493 (v ~1640-1770) and at 19507-19513. They are this building's west front, under the big hall's east eave, so its west end reaches u ~19460 rather than 19500 (placeholder footprint). Crops: p2e_c_bottomw_col.jpg, p2e_c_stair_col.jpg, p2e_c_stair_plain.jpg."
+  },
+  {
+   "id": "S3.veh.boat_mast_lowering_19518",
+   "add_note": "SECOND PASS (east): a third hook or rope loop hangs under the arch's rib at (19973-20000, v 397-417), in line with the two U-shaped loops at (19772, 392) and (19855, 390) in this boat's what. It is the C-shaped stroke river_e recorded as S3.fig.head_in_rigging_19990 (retire proposed). Crew count after the proposed retirements: 19 (was 21): S3.fig.head_in_rigging_19990 and S3.fig.boatman_stern_rail_20400 drop. Crops: p2e_c_loops_col.jpg, p2e_c_loops.jpg, p2e_c_nfoot_col.jpg, p2e_c_poop_plain.jpg."
+  },
+  {
+   "id": "S3.veh.boat_cabin_under_arch_19225",
+   "set": {
+    "conf": "high"
+   },
+   "add_note": "SECOND PASS (east): the merge asked whether this is a boat or the bridge's underside framework, and it is a boat. On a colour crop at zoom 1.8 the hull band (19283-19650+, v 524-580) carries the same 工-shaped iron cramps as the other hulls. Ripples are drawn right under its lower edge, and two passengers lean on a railing of posts and rails (v 480-524). Above them a planked roof with rafters slopes up under the arch's rib (v 347-447). The hull's west end is a square vertical edge at u ~19283 just inside the rib. Two passengers only: the cabin east of 19470 is empty. Crops: p2e_c_cabinboat_col.jpg, p2e_c_cabinpax_col.jpg."
+  },
+  {
+   "id": "S3.fig.porter_with_pole_20450",
+   "set": {
+    "note": "Body 20437-20475, v 1590-1700; legs to a foot at about (20450, 1745) (20443-20457, 1727-1747), in a walking stride. Painted height about 150 px (near the viewer). The pole runs (20460,1592) -> (20367,1615); the sack hangs at 20387-20430, v 1600-1680, the staff at 20418-20429, v 1580-1700. SECOND PASS (east): carried. The pole's east end rests on his shoulder at his head, and he strides. Its west end stops just short of the shop's corner post (20375-20383) without a joint or tie, so it is not a bar fixed between the post and the trunk. S3.prop.hanging_sack_and_staff_20412 retire proposed; the sack and the staff (with a small crosspiece at its top) are his load. Crop: p2e_c_shop2_col.jpg."
+   }
+  },
+  {
+   "id": "S3.tree.shrub_or_heap_20025",
+   "add_note": "SECOND PASS (east): not the handcart's load. On a colour crop at zoom 2.5 the mass (19988-20052, v 148-200) is stippled like massed leaves, and it lies east of and lower than the box's east end (the top rails end at about (19975-20000, 124-132)). So the cart keeps its rear at ~19978, and the shrub reading is preferred over a covered heap (conf stays low). Crop: p2e_c_northfoot_col.jpg."
+  },
+  {
+   "id": "S3.fig.deck_hat_stick_19353",
+   "add_note": "SECOND PASS (east): one man or two with t7's back-row man? Two. On zoom-2, zoom-6 and saturated colour crops, t7's man (19313-19337) has his own face under a low dark cap (v 193-217). This man's tall peaked hat with its slanting stick (19336-19362, v 185-211) is a separate shape east of it. The hat sits straight above the round face of S3.fig.deck_rail_face_19350 (19337-19356, v 223-243), with a dark band (hair) between (v 211-223). As that man's own hat it would make one head about 58 px tall, against about 20 px for the faces round it, so a separate man in the second row is the better reading, his face hidden behind the front man's head. Keep both (no change). Crops: p2e_c_backrow.jpg, p2e_c_backrow_z2.jpg, p2e_c_backrow_z6.jpg, p2e_c_backrow_col.jpg."
+  },
+  {
+   "id": "S3.fig.man_dark_cap_back_row_19325",
+   "add_note": "SECOND PASS (east): his own face shows under the low cap (19316-19336, v 193-217), separate from t8's tall hat at 19336-19362: keep both (see S3.fig.deck_hat_stick_19353)."
+  },
+  {
+   "id": "S3.grp.bank_watchers_under_arch_19600",
+   "remove_members": [
+    "S3.fig.light_robed_at_bow_19745"
+   ],
+   "add_note": "SECOND PASS (east): S3.fig.light_robed_at_bow_19745 retire proposed (the tilted parasol's far rim)."
+  },
+  {
+   "id": "S3.grp.boat_mast_lowering_crew",
+   "remove_members": [
+    "S3.fig.head_in_rigging_19990",
+    "S3.fig.boatman_stern_rail_20400"
+   ],
+   "add_note": "SECOND PASS (east): two members retire proposed (a rope hook under the rib; the arms of S3.fig.boatman_stern_bending_20365)."
+  }
+ ],
+ "retire": [
+  {
+   "id": "S3.fig.light_robed_at_bow_19745",
+   "reason": "Reading (c): no figure. Its 'body' strokes (19697-19763, v 1143-1177) are the far rim of S3.prop.tilted_parasol_19790. That canopy is drawn as an ellipse with its near rim at v ~1250, its far rim along v 1143-1180, and its hub at (19803, 1187). The far rim runs continuously into these strokes, against the dark mat end of the moored boat. Where the 'head' was put (19753-19767, v 1137-1153) only the cross-hatching of the boat's mat roof shows, with no face and no hair mass, on zoom-2.5, zoom-4 and colour crops. t9's 'head at the boat's west end at about (19690, 1125)' is S3.fig.bank_watcher_19672's head (19657-19687, v 1104-1127), 18 px away. river_e records no bow crew there, so the moored boat keeps its 4 crew.",
+   "groups": [
+    "S3.grp.bank_watchers_under_arch_19600"
+   ],
+   "conf": "med",
+   "crops": [
+    "gen/map/S3/look/p2e_c_boatwest.jpg",
+    "gen/map/S3/look/p2e_c_bowfig_z4.jpg",
+    "gen/map/S3/look/p2e_c_bowfig_col.jpg",
+    "gen/map/S3/look/p2e_c_tiltpar.jpg",
+    "gen/map/S3/look/p2e_c_underarch_col.jpg"
+   ]
+  },
+  {
+   "id": "S3.fig.head_in_rigging_19990",
+   "reason": "Not a head: a hook or rope loop hanging under the arch's rib. The stroke at 19973-20000, v 397-417 is a C-shaped dark arc open to the west, with no face, cap or shoulders; below it are only crossing ropes. It hangs under the rib in line with the two U-shaped loops river_e put in the big boat's what, at (19772, 392) and (19855, 390), about 85-130 px apart. As a man standing on the far deck (est foot v ~490-590) it would be about 185 px tall against 83-118 px for the crew. The proposed edit adds it to the boat's what as a third loop.",
+   "groups": [
+    "S3.grp.boat_mast_lowering_crew"
+   ],
+   "conf": "med",
+   "crops": [
+    "gen/map/S3/look/p2e_c_loops_col.jpg",
+    "gen/map/S3/look/p2e_c_loops.jpg",
+    "gen/map/S3/look/p2e_c_nfoot_col.jpg",
+    "gen/map/S3/look/p2e_c_midrig_col2.jpg"
+   ]
+  },
+  {
+   "id": "S3.fig.boatman_stern_rail_20400",
+   "reason": "The arms of S3.fig.boatman_stern_bending_20365 (river_e's second reading). On a plain zoom-3.5 crop and a colour crop at zoom 2.5, the bending man's cap is at v 273-281 (u 20345-20365). His torso bends east, and his arms reach down to the box at the stern rail (20389-20411, v 313-344). At the recorded head (20394, 312) only his shoulder and sleeve show: there is no face, cap or separate hair mass. The poop holds three men: hauling (20205), seated (20285) and bending (20365).",
+   "groups": [
+    "S3.grp.boat_mast_lowering_crew"
+   ],
+   "conf": "med",
+   "crops": [
+    "gen/map/S3/look/p2e_c_poop_plain.jpg",
+    "gen/map/S3/look/p2e_c_stern_col2.jpg",
+    "gen/map/S3/look/p2e_c_boataft_col.jpg"
+   ]
+  },
+  {
+   "id": "S3.prop.hanging_sack_and_staff_20412",
+   "reason": "Carried, not hung (t9's 'more likely reading'). The pole's east end rests on the shoulder of S3.fig.porter_with_pole_20450, at his head, and he is drawn in a walking stride. Its west end stops just short of the shop's corner post (20375-20383) with no joint, tie or bracket. The sack and the staff are his load, already in his what (note edit proposed).",
+   "groups": [],
+   "conf": "med",
+   "crops": [
+    "gen/map/S3/look/p2e_c_shop2_col.jpg",
+    "gen/map/S3/look/p2e_c_shop2_m.jpg"
+   ]
+  }
+ ],
+ "settled": [
+  {
+   "item": "t7's second horse S3.ani.second_horse_19230 and S3.fig.man_folded_arms_tall_cap_19270 (its rider?)",
+   "finding": "Not settled at the scan's resolution (zoom 5 is grain). It is consistent either way. If the head (19204-19255, v 194-232) is a horse's, the folded-arms man is its rider: his head at v 155 sits ~85 px above where the horse's back would be (v ~240), the same as the first rider's 84 px (head 166, back ~250), and his robe is hidden from v 227 down by the railing crowd. If it is a bent man in a dark head-cloth, he stands: 137 px against 137-146 px for the standing men nearby. No change proposed; both stay low.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_horse2.jpg",
+    "gen/map/S3/look/p2e_c_horse2_col.jpg",
+    "gen/map/S3/look/p2e_c_horse2_z5.jpg",
+    "gen/map/S3/look/p2e_c_horse_ctx.jpg"
+   ]
+  },
+  {
+   "item": "t9's 'face at 19830-19853, v 240-263' west of S3.fig.rail_watcher_19862",
+   "finding": "No extra figure. On a colour crop at zoom 4 it is the rounded back and shoulder of S3.fig.rail_watcher_19862 bent over the railing, with his dark cap at 19852-19870, v 240-248. The north ramp has three men at the railing, as mapped.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_nramp_col.jpg",
+    "gen/map/S3/look/p2e_c_deck2_col.jpg"
+   ]
+  },
+  {
+   "item": "t8's wide hat or basket at 19378-19430 and S3.prop.bundle_over_rail_19392",
+   "finding": "No change. On a colour crop the round shape (19376-19422, v 204-258) has a dark crown at its top and a light interior: a wide hat seen from above fits. The pale bundle with folds hangs below it over the rail (19381-19408, v 254-290). Both readings stay low.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_deck1_col.jpg"
+   ]
+  },
+  {
+   "item": "t9's faint shop figures (19905, 19940, 19972)",
+   "finding": "No change. At 19972 a standing figure with a dark topknot (head ~19972-19990, v 1470-1488) leans on the signboard's top, the better of t9's readings. At 19905 a light shape lies along the bench with an arm out east, and at 19940 a dark rounded shape with a pale part sits on the board's front edge. Both stay low with their readings. The signboard's writing is two columns of about four marks each, illegible at zoom 7.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_shop1_col.jpg",
+    "gen/map/S3/look/p2e_c_signboard.jpg"
+   ]
+  },
+  {
+   "item": "S3.fig.figure_topedge_19925 (figure or animal) and S3.ani.dog_or_donkey_19825",
+   "finding": "Not settled. At zoom 5 the top-edge strokes (19902-19964, v 22-48) read as legs in a stride, either a quadruped running or a person with a pole. t8 called it a running dog or donkey. Its back is cut by the silk's edge. The north-bank animal stays donkey-or-dog, and which end is its head is also unclear. No change.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_topanimal_col.jpg",
+    "gen/map/S3/look/p2e_c_northdog_col.jpg",
+    "gen/map/S3/look/p2e_c_northfoot_col.jpg"
+   ]
+  },
+  {
+   "item": "S3.fig.far_robed_figure_19768: 'vertical strokes just east at 19787-19797, v 17-47' (left for the second pass)",
+   "finding": "Not settled at zoom 4-5. Dark strokes at 19782-19798, v 25-55 with a short horizontal at v 50-55 could be the robed figure's sleeve, a second figure's back or a post (two uprights with crossbars on the colour crop). No proposal.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_robed_col.jpg",
+    "gen/map/S3/look/p2e_c_robedpost_plain.jpg"
+   ]
+  },
+  {
+   "item": "S3.prop.far_tray_stand_19563 (stand or striding man)",
+   "finding": "Stand reading kept. At zoom 4 the flat woven basket (19552-19575, v 50-65) sits on three or four splayed legs reaching v 125-130, separate from the dark-clad man behind (19570-19590).",
+   "crops": [
+    "gen/map/S3/look/p2e_c_traystand_col.jpg"
+   ]
+  },
+  {
+   "item": "S3.fig.dark_hat_figure_20070",
+   "finding": "No change. At zoom 4 the 'body' (20062-20105, v 220-262) is a dark block in a light frame with hatching, and the black 'hat' (20062-20080, v 192-202) sits on it. A dark-robed seated man and a dark cabinet or stove with a lid or lamp both remain possible. Stays low.",
+   "crops": [
+    "gen/map/S3/look/p2e_c_darkhat_col.jpg",
+    "gen/map/S3/look/p2e_c_tavern_col.jpg"
+   ]
+  },
+  {
+   "item": "Crew counts re-walked on colour crops at zoom 2",
+   "finding": "Every other figure in the big boat's crew, the cabin boat's two passengers, the moored boat's four crew (the two hatch heads read as two), the deck crowd 19100-19950, the stall under the arch, the north strip and the shops matches a mapped entity. The tables at the north-bank tavern are empty, as t9 says. No figure was found in the rigging tangle at 20040-20240, v 370-540 (ropes only at zoom 3).",
+   "crops": [
+    "gen/map/S3/look/p2e_c_boatfwd_col.jpg",
+    "gen/map/S3/look/p2e_c_boataft_col.jpg",
+    "gen/map/S3/look/p2e_c_midrig_plain.jpg",
+    "gen/map/S3/look/p2e_c_mboat1_col.jpg",
+    "gen/map/S3/look/p2e_c_mboat2_col.jpg",
+    "gen/map/S3/look/p2e_c_deck1_col.jpg",
+    "gen/map/S3/look/p2e_c_deck2_col.jpg",
+    "gen/map/S3/look/p2e_c_north2_col.jpg",
+    "gen/map/S3/look/p2e_c_tavern_col.jpg",
+    "gen/map/S3/look/p2e_c_stall_col.jpg"
+   ]
+  },
+  {
+   "item": "Left to the middle agent",
+   "finding": "S3.prop.floating_timber_19090 (main point 19090) and the foot of S3.prop.bridge_end_post_far_19176 are on the merge's list for 'middle' and were not re-read here. The edit to S3.prop.parasol_19150 above names a stroke that t7's S3.prop.frame_awning_19070 also uses."
+  }
+ ],
+ "lessons": [
+  "Read faint things on a saturated colour crop at zoom 2-2.5 (sharp `modulate({saturation: 1.8})` plus `linear(1.25, -35)`, cubic upscale), not only on contrast-stretched greyscale. On S3's second pass the colour crop told planks from mat, a hull's iron cramps from the bridge's beams, and a parasol's far rim from a figure, where greyscale at zoom 3 and above showed only grain.",
+  "Before keeping a 'head' among ropes or under a bridge, look along the same structure for repeats. S3's 'head among the rigging' was the third of three hooks hanging under the arch's rib at regular spacing.",
+  "Check a doubtful figure's strokes against the ellipse of any parasol or canopy beside it. A canopy's far rim drawn against a dark mass reads as a light-robed body (S3's 'figure at the moored boat's bow').",
+  "Compare the units' left-to lists by u range, not only by name. S3's far-bank tables at 19353-19396 were left by t7 to t8 and by t8 to t7, so nobody recorded them.",
+  "Before merging a hat and a face into one man, or splitting them into two, measure the head's height against the faces around it. One tall hat over S3's round face would make a 58 px head among 20 px faces, so it is a second man behind."
+ ]
+}

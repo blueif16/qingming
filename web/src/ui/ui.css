@@ -1,0 +1,257 @@
+/* The ink UI (gen/ui/STYLE.md). Tokens first, then one block per component. Every rule is scoped to .qm-* or to the
+   page's existing ids (#help, #stats, #dial, #crosshair, #soundCtl, .sh-*, .lil-gui), restyled without renaming them:
+   the tools read those ids (gen/ui/current_ui.md). Frames are SVG data URIs set by ink.js as custom properties. */
+
+:root {
+  /* materials */
+  --qm-ink: #2a2420;
+  --qm-ink-soft: rgba(42, 36, 32, 0.72);
+  --qm-ink-faint: rgba(42, 36, 32, 0.38);
+  --qm-cinnabar: #b5321e;
+  --qm-seal: #ae3a26;
+  --qm-paper: #efe4cc;
+  --qm-paper-hi: #f7efdc;
+  --qm-mist: 246, 241, 230; /* rgb of the white wash (江南百景圖's mist blocks) */
+  --qm-mount: #4e4033;
+  --qm-shadow: 0 2px 6px rgba(30, 20, 10, 0.28), 0 1px 1px rgba(30, 20, 10, 0.18);
+  --qm-lift: drop-shadow(0 2px 3px rgba(30, 20, 10, 0.3));
+  /* type roles (gen/ui/fonts/CHOICE.md, assets/ui/fonts/fonts.css): display = Bakudai brush (titles, place names, seals),
+     text = 霞鶩文楷 TC Medium (bubbles, tags, help, HUD), seal = 霞鶩篆書 (ornament only); then a system 楷 */
+  --qm-font-title: "QM Display", "QM Text", "BiauKai", "DFKai-SB", "Kaiti TC", "STKaiti", "KaiTi", serif;
+  --qm-font-text: "QM Text", "BiauKai", "DFKai-SB", "Kaiti TC", "STKaiti", "KaiTi", "Noto Serif TC", serif;
+  --qm-font-seal: "QM Seal", "QM Display", serif;
+  --qm-font-latin: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  /* motion */
+  --qm-t-fast: 160ms;
+  --qm-t-mid: 320ms;
+  --qm-t-slow: 600ms;
+  --qm-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --qm-ease-back: cubic-bezier(0.3, 1.5, 0.5, 1);
+  /* safe areas */
+  --qm-top: calc(env(safe-area-inset-top, 0px) + 14px);
+  --qm-right: calc(env(safe-area-inset-right, 0px) + 14px);
+  --qm-bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);
+  --qm-left: calc(env(safe-area-inset-left, 0px) + 14px);
+}
+/* after dark the paper is lamp-lit: a little deeper, with a firmer shadow so it holds against the night street */
+html[data-night] {
+  --qm-paper: #e8d9b8;
+  --qm-paper-hi: #efe2c4;
+  --qm-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.35);
+  --qm-lift: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.55));
+}
+@media (max-width: 640px) {
+  :root { --qm-top: calc(env(safe-area-inset-top, 0px) + 10px); --qm-right: calc(env(safe-area-inset-right, 0px) + 10px);
+          --qm-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px); --qm-left: calc(env(safe-area-inset-left, 0px) + 10px); }
+}
+
+html, body { background: var(--qm-paper); }
+html[lang^="zh"] body { font-family: var(--qm-font-text); }
+
+/* ------------------------------------------------------------------ materials as classes */
+.qm-ui { position: fixed; inset: 0; z-index: 800; pointer-events: none; color: var(--qm-ink); font-family: var(--qm-font-text);
+  -webkit-font-smoothing: antialiased; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.qm-slip { border: 12px solid transparent; border-image: var(--qm-frame-slip) 24 / 12px / 0 stretch; border-image-slice: 24 fill;
+  filter: var(--qm-lift); }
+.qm-seal { display: inline-grid; place-items: center; width: 1.6em; height: 1.6em; background: var(--qm-seal); color: var(--qm-paper-hi);
+  font-family: var(--qm-font-title); font-weight: 400; line-height: 1; transform: rotate(-4deg);
+  -webkit-mask: var(--qm-seal-mask) center / 100% 100% no-repeat; mask: var(--qm-seal-mask) center / 100% 100% no-repeat; }
+.qm-kbd { display: inline-grid; place-items: center; min-width: 1.7em; height: 1.7em; padding: 0 0.35em; box-sizing: border-box;
+  font: 600 0.78em/1 var(--qm-font-latin); color: var(--qm-ink); background: var(--qm-paper-hi); border-radius: 3px;
+  box-shadow: 0 0 0 1.4px var(--qm-ink), 0 2px 0 1.4px var(--qm-ink); }
+.qm-gloss { font: italic 0.82em/1.2 var(--qm-font-latin); color: var(--qm-ink-soft); letter-spacing: 0; }
+.qm-ringbtn { width: 46px; height: 46px; border: 0; padding: 0; border-radius: 50%; cursor: pointer; display: grid; place-items: center;
+  background: var(--qm-ring) center / 100% 100% no-repeat, radial-gradient(circle, var(--qm-paper-hi) 0 64%, var(--qm-paper) 66% 70%, transparent 71%);
+  filter: var(--qm-lift); color: var(--qm-ink); }
+
+/* ------------------------------------------------------------------ motion: ink bleeds in, a brush wipes, a seal stamps */
+@keyframes qm-bleed { from { opacity: 0; filter: blur(3px); } to { opacity: 1; filter: blur(0); } }
+@keyframes qm-wipe-x { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes qm-wipe-y { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes qm-stamp { 0% { opacity: 0; transform: scale(1.7) rotate(-11deg); } 60% { opacity: 1; transform: scale(0.93) rotate(-4deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-4deg); } }
+@keyframes qm-pop { 0% { opacity: 0; transform: translate(-50%, 0) scale(0.55); } 60% { opacity: 1; transform: translate(-50%, 0) scale(1.05); }
+  100% { opacity: 1; transform: translate(-50%, 0) scale(1); } }
+@keyframes qm-glyph { 0% { opacity: 0; transform: translateY(0.18em); } 50% { opacity: 0.55; } 100% { opacity: 1; transform: none; } }
+@keyframes qm-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes qm-slide-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes qm-breathe { 0%, 100% { transform: translate(-50%, -100%) scale(1); } 50% { transform: translate(-50%, -100%) scale(1.06); } }
+.qm-out { transition: opacity var(--qm-t-slow) ease, filter var(--qm-t-slow) ease !important; opacity: 0 !important; filter: blur(2px); }
+
+/* ------------------------------------------------------------------ region banner: a vertical name in a drifting mist block,
+   a seal under it (江南百景圖's 「汴河漕運」), top left beside the sundial */
+.qm-banner { position: absolute; top: var(--qm-top); left: calc(var(--qm-left) + var(--qm-dial-w, 114px) + 14px); /* right of the time instrument (time.css) */ display: grid; grid-template-columns: auto auto;
+  grid-template-rows: auto auto; align-items: start; justify-items: center; gap: 0.5em 0.45em; padding: 1.2em 2.4em 1.6em 1.8em; font-size: 16px; }
+.qm-banner-wash { position: absolute; inset: -18% -40% -16% -45%; z-index: -1; pointer-events: none;
+  background: radial-gradient(42% 40% at 55% 40%, rgba(var(--qm-mist), 0.92), rgba(var(--qm-mist), 0.7) 42%, rgba(var(--qm-mist), 0) 72%),
+    radial-gradient(30% 26% at 34% 74%, rgba(var(--qm-mist), 0.62), rgba(var(--qm-mist), 0) 70%),
+    radial-gradient(26% 20% at 76% 20%, rgba(var(--qm-mist), 0.55), rgba(var(--qm-mist), 0) 70%),
+    radial-gradient(22% 16% at 18% 30%, rgba(var(--qm-mist), 0.4), rgba(var(--qm-mist), 0) 70%);
+  animation: qm-fade-in var(--qm-t-slow) ease both, qm-drift 9s linear both; }
+@keyframes qm-drift { from { transform: translateX(-14px); } to { transform: translateX(22px); } }
+html[data-night] .qm-banner-wash { --qm-mist: 226, 216, 194; }
+.qm-banner-name, .qm-banner-sub { writing-mode: vertical-rl; text-orientation: upright; margin: 0; }
+/* QM Display sits small in its em box: 1.15x, tighter (gen/ui/fonts/CHOICE.md) */
+.qm-banner-name { grid-column: 2; grid-row: 1; font: 400 calc(4.6em * 1.15)/1 var(--qm-font-title); letter-spacing: -0.06em; color: var(--qm-ink);
+  text-shadow: 0 0 0.4em rgba(var(--qm-mist), 0.95); animation: qm-wipe-y 700ms var(--qm-ease) both 120ms; }
+.qm-banner-sub { grid-column: 1; grid-row: 1 / span 2; margin-top: 1.6em; font: 400 1.4em/1.05 var(--qm-font-text); letter-spacing: 0.2em;
+  color: var(--qm-ink-soft); text-shadow: 0 0 0.25em rgba(var(--qm-mist), 1), 0 0 0.6em rgba(var(--qm-mist), 0.9); animation: qm-wipe-y 600ms var(--qm-ease) both 560ms; }
+.qm-banner-rule { position: absolute; right: 1.1em; top: 1.2em; bottom: 2.4em; width: 0.45em; opacity: 0.5; animation: qm-wipe-y 520ms var(--qm-ease) both; }
+.qm-banner-rule svg { width: 100%; height: 100%; display: block; }
+.qm-banner-rule path { fill: var(--qm-ink); }
+.qm-banner .qm-seal { grid-column: 2; grid-row: 2; font-size: 1.25em; animation: qm-stamp 260ms var(--qm-ease) both 1000ms; }
+/* a phone has no room beside the instrument: the banner hangs under it */
+@media (max-width: 640px) { .qm-banner { font-size: 11px; left: var(--qm-left); top: calc(var(--qm-top) + var(--qm-dial-h, 72px) + 4px); padding: 0.8em 1.6em 1.2em 1.2em; } }
+
+/* ------------------------------------------------------------------ landmark plaque: a white slip on a string over the place */
+.qm-plaque { position: absolute; left: 0; top: 0; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center;
+  transition: opacity var(--qm-t-mid) ease; }
+.qm-plaque-slip { writing-mode: vertical-rl; text-orientation: upright; font: 400 calc(16px * 1.15)/1 var(--qm-font-title); letter-spacing: -0.04em;
+  color: #1d1916; padding: 3px 0; border: 8px solid transparent; border-image: var(--qm-frame-plaque) 24 / 8px / 0 stretch; border-image-slice: 24 fill;
+  filter: var(--qm-lift); animation: qm-wipe-y 420ms var(--qm-ease) both; }
+.qm-plaque-string { width: 0; height: 22px; border-left: 1.5px dashed rgba(42, 36, 32, 0.6); position: relative; animation: qm-fade-in 400ms ease both 300ms; }
+.qm-plaque-string::after { content: ''; position: absolute; left: -4px; bottom: -3px; width: 6.5px; height: 6.5px; border-radius: 50%; background: var(--qm-cinnabar); }
+.qm-plaque.qm-gone { opacity: 0; }
+@media (max-width: 640px) { .qm-plaque-slip { font-size: calc(13px * 1.15); border-width: 7px; } .qm-plaque-string { height: 16px; } }
+
+/* ------------------------------------------------------------------ landmark toast: a paper slip in the top right */
+.qm-toasts { position: absolute; top: var(--qm-top); right: var(--qm-right); display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+html.qm-touch .qm-toasts { top: calc(var(--qm-top) + 58px); }
+.qm-toast { display: flex; align-items: center; gap: 12px; width: max-content; max-width: 360px; min-width: 210px; box-sizing: border-box; padding: 4px 10px 5px 6px;
+  animation: qm-slide-in var(--qm-t-mid) var(--qm-ease) both; }
+.qm-toast .qm-seal { flex: none; font-size: 22px; animation: qm-stamp 240ms var(--qm-ease) both 260ms; }
+.qm-toast-text { display: grid; gap: 3px; min-width: 0; }
+.qm-toast-name { font: 400 24px/1.1 var(--qm-font-title); letter-spacing: 0.06em; animation: qm-wipe-x 420ms var(--qm-ease) both 120ms; }
+.qm-toast-line { font: 400 16px/1.35 var(--qm-font-text); color: var(--qm-ink-soft); animation: qm-bleed 500ms ease both 380ms; }
+@media (max-width: 640px) {
+  .qm-toast { max-width: min(280px, calc(100vw - 108px)); min-width: 0; gap: 9px; }
+  .qm-toast .qm-seal { font-size: 18px; }
+  .qm-toast-name { font-size: 18px; }
+  .qm-toast-line { font-size: 13px; }
+}
+
+/* ------------------------------------------------------------------ anchored: name tag, speech and thought bubbles, prompt */
+.qm-anchors { position: absolute; inset: 0; overflow: hidden; }
+.qm-anchor { position: absolute; left: 0; top: 0; will-change: transform; }
+/* one speaker: the bubble centred over the head point, the name tag hung on its left shoulder */
+.qm-say { position: absolute; left: 0; bottom: 0; width: max-content; transform: translate(-50%, 0); transform-origin: 50% 100%; display: block;
+  animation: qm-pop 380ms var(--qm-ease-back) both; }
+.qm-bubble { position: relative; max-width: 13.5em; min-width: 3.2em; padding: 6px 12px 8px; box-sizing: border-box; font: 400 18px/1.4 var(--qm-font-text);
+  color: var(--qm-ink); text-align: center; border: 12px solid transparent; border-image: var(--qm-frame-bubble) 24 / 12px / 0 stretch;
+  border-image-slice: 24 fill; filter: var(--qm-lift); margin-bottom: 18px; white-space: normal; line-break: strict; }
+.qm-bubble-tail { position: absolute; left: 50%; bottom: 2px; width: 22px; height: 22px; margin-left: -11px; overflow: visible; }
+.qm-bubble-tail .qm-tail-fill { fill: var(--qm-paper-hi); stroke: none; }
+.qm-bubble-tail .qm-tail-line { fill: none; stroke: var(--qm-ink); stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.qm-bubble-tail .qm-tail-dot { fill: var(--qm-paper-hi); stroke: var(--qm-ink); stroke-width: 1.8; }
+.qm-thought .qm-bubble { border-width: 14px; border-image: var(--qm-frame-cloud) 32 / 14px / 0 round; border-image-slice: 32 fill; padding: 4px 10px 6px; }
+.qm-glyph { display: inline-block; animation: qm-glyph 150ms steps(3, end) both; }
+.qm-tag { position: absolute; right: 100%; bottom: 18px; margin-right: -6px; padding: 2px 0; writing-mode: vertical-rl; text-orientation: upright;
+  font: 400 17px/1 var(--qm-font-title); letter-spacing: 0.12em; color: var(--qm-ink); border: 9px solid transparent;
+  border-image: var(--qm-frame-slip) 24 / 9px / 0 stretch; border-image-slice: 24 fill; filter: var(--qm-lift);
+  animation: qm-wipe-y 360ms var(--qm-ease) both 80ms; transform: rotate(-2deg); }
+.qm-tag::after { content: ''; position: absolute; left: 50%; bottom: -12px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--qm-cinnabar); }
+/* the prompt: an ink keycap on desktop, a seal you tap on touch screens */
+.qm-prompt { position: absolute; left: 0; top: 0; transform: translate(-50%, -100%); display: flex; align-items: center; gap: 7px;
+  padding: 3px 10px 4px 6px; font: 400 17px/1 var(--qm-font-title); letter-spacing: 0.08em; white-space: nowrap;
+  background: rgba(var(--qm-mist), 0.86); border-radius: 999px; box-shadow: var(--qm-shadow); animation: qm-bleed 260ms ease both; }
+.qm-prompt .qm-kbd { font-size: 15px; }
+button.qm-prompt { border: 0; pointer-events: auto; cursor: pointer; padding: 0; background: none; box-shadow: none; animation: qm-stamp 240ms var(--qm-ease) both; transform: none; }
+button.qm-prompt .qm-seal { font-size: 26px; width: 46px; height: 46px; }
+.qm-prompt-touch-wrap { position: absolute; left: 0; top: 0; transform: translate(-50%, -100%); display: grid; justify-items: center; gap: 3px; z-index: 1; }
+.qm-prompt-touch-wrap > span { font: 400 13px/1 var(--qm-font-title); color: var(--qm-ink); background: rgba(var(--qm-mist), 0.85);
+  border-radius: 999px; padding: 3px 8px; letter-spacing: 0.1em; }
+@media (max-width: 640px) {
+  .qm-bubble { font-size: 15px; max-width: 13em; padding: 4px 8px 6px; }
+  .qm-tag { font-size: 14px; }
+}
+
+/* ------------------------------------------------------------------ help: a paper slip that folds into a seal */
+#help { all: unset; position: fixed; left: var(--qm-left); bottom: var(--qm-bottom); z-index: 810; pointer-events: none; max-width: none;
+  display: block; color: var(--qm-ink); font-family: var(--qm-font-text); }
+#help .qm-help { pointer-events: auto; cursor: pointer; padding: 6px 14px 8px 10px; width: max-content; max-width: min(420px, calc(100vw - 40px)); box-sizing: border-box; animation: qm-fade-in var(--qm-t-mid) ease both; }
+#help .qm-help[hidden], #help .qm-help-seal[hidden] { display: none; }
+#help .qm-help h2 { margin: 0 0 6px; font: 400 18px/1.2 var(--qm-font-title); letter-spacing: 0.12em; display: flex; align-items: baseline; gap: 8px; }
+#help .qm-help dl { margin: 0; display: grid; grid-template-columns: max-content max-content 1fr; gap: 5px 9px; align-items: center; font-size: 15px; }
+#help .qm-help dt { justify-self: end; display: flex; gap: 3px; }
+#help .qm-help dd { margin: 0; letter-spacing: 0.06em; }
+#help .qm-help .qm-gloss { font-size: 12.5px; }
+#help .qm-help-lead { margin: 0 0 6px; font-size: 15px; }
+#help .qm-credit { margin: 7px 0 0; font: 400 11.5px/1.2 var(--qm-font-latin); color: var(--qm-ink-faint); }
+#help .qm-help-seal { pointer-events: auto; font-size: 13px; }
+#help .qm-help-seal .qm-seal { width: 2.5em; height: 2.5em; font-size: 15px; line-height: 1.05; writing-mode: vertical-rl; text-orientation: upright; letter-spacing: 0.05em; }
+#help .qm-help-icon { width: 22px; height: 22px; display: inline-block; vertical-align: middle; }
+/* round 2 (settings agent): the touch rows' view tiles and › (icons.js), and the seal stamping in once on later visits */
+#help .qm-help-ic { display: inline-grid; place-items: center; width: 24px; height: 24px; color: var(--qm-ink); }
+#help .qm-help-ic svg { width: 20px; height: 20px; fill: currentColor; }
+#help .qm-help-ic .qm-ic-hi { fill: var(--qm-paper); }
+#help .qm-help-ic.qm-sealed { background: var(--qm-seal); color: var(--qm-paper-hi); transform: rotate(-3deg);
+  -webkit-mask: var(--qm-seal-mask) center / 100% 100% no-repeat; mask: var(--qm-seal-mask) center / 100% 100% no-repeat; }
+#help .qm-help-ic.qm-sealed .qm-ic-hi { fill: var(--qm-seal); }
+#help .qm-help-seal.qm-stamp-in .qm-seal { animation: qm-stamp 260ms var(--qm-ease) both 400ms; }
+@media (max-width: 640px) {
+  #help .qm-help dl { font-size: 14px; gap: 4px 7px; }
+  #help .qm-help { padding: 4px 10px 6px 6px; }
+}
+
+/* ------------------------------------------------------------------ debug-only stats (?stats=1) */
+#stats { display: none !important; }
+html.qm-debug #stats { display: block !important; z-index: 1000; }
+
+/* ------------------------------------------------------------------ the sundial in a brush ring */
+html .sundial { position: fixed; top: var(--qm-top); left: var(--qm-left); width: 100px; height: 100px; z-index: 805;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35)); }
+html .sundial svg { display: block; width: 100%; height: 100%; }
+html .sundial::before { content: ''; position: absolute; inset: -6px; background: var(--qm-ring) center / 100% 100% no-repeat; pointer-events: none; z-index: 1; opacity: 0.9; }
+html[data-night] .sundial::before { filter: invert(0.85) sepia(0.4); opacity: 0.7; }
+@media (max-width: 640px) { html .sundial { width: 72px; height: 72px; } html .sundial svg { display: block; width: 100%; height: 100%; }
+html .sundial::before { inset: -4px; } }
+
+/* ------------------------------------------------------------------ crosshair: an ink dot on a paper halo */
+html #crosshair { width: 5px; height: 5px; margin: -2.5px; border-radius: 50%; background: var(--qm-ink); box-shadow: 0 0 0 1.5px rgba(var(--qm-mist), 0.75); opacity: 0.8; }
+
+/* ------------------------------------------------------------------ the bell and the volume bar (sound.js #soundCtl) */
+html #soundCtl { right: var(--qm-right); bottom: var(--qm-bottom); gap: 8px; }
+html #soundCtl button { width: 46px; height: 46px; border-radius: 50%; padding: 8px;
+  background: var(--qm-ring) center / 100% 100% no-repeat, radial-gradient(circle, var(--qm-paper-hi) 0 64%, var(--qm-paper) 66% 70%, transparent 71%);
+  filter: var(--qm-lift); }
+html #soundCtl button svg path, html #soundCtl button svg circle { stroke: var(--qm-ink); }
+html #soundCtl button svg circle { fill: var(--qm-ink); }
+html #soundCtl button[data-on="0"] svg { opacity: 0.45; }
+html #soundCtl .bar { height: 40px; padding: 0 16px; border-radius: 0; background: none; border: 10px solid transparent;
+  border-image: var(--qm-frame-slip) 24 / 10px / 0 stretch; border-image-slice: 24 fill; filter: var(--qm-lift); box-sizing: border-box; height: 46px; }
+html #soundCtl input::-webkit-slider-runnable-track { height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgba(42, 36, 32, 0.25), var(--qm-ink)); }
+html #soundCtl input::-moz-range-track { height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgba(42, 36, 32, 0.25), var(--qm-ink)); }
+html #soundCtl input::-webkit-slider-thumb { width: 16px; height: 16px; margin-top: -6.5px; border-radius: 2px; transform: rotate(-4deg);
+  background: var(--qm-seal); border: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+html #soundCtl input::-moz-range-thumb { width: 16px; height: 16px; border-radius: 2px; background: var(--qm-seal); border: 0; }
+
+/* ------------------------------------------------------------------ the scroll HUD's chrome (scroll_hud.js .sh-*) */
+html .sh-root { font-family: var(--qm-font-text); }
+html .sh-title { background: none; box-shadow: none; border: 10px solid transparent; border-image: var(--qm-frame-slip) 24 / 10px / 0 stretch;
+  border-image-slice: 24 fill; padding: 0 8px 1px; top: -19px; font-size: 15px; filter: var(--qm-lift); }
+html .sh-title b { font-family: var(--qm-font-title); font-weight: 400; font-size: 1.12em; letter-spacing: 0.16em; }
+html .sh-btn { width: 36px; height: 36px; border: 0; box-shadow: none;
+  background: var(--qm-ring) center / 100% 100% no-repeat, radial-gradient(circle, var(--qm-paper-hi) 0 64%, var(--qm-paper) 66% 70%, transparent 71%);
+  filter: var(--qm-lift); }
+html .sh-btn:hover { background: var(--qm-ring) center / 100% 100% no-repeat, radial-gradient(circle, #fffaf0 0 66%, transparent 71%); }
+html .sh-tip { font-family: var(--qm-font-text); background: var(--qm-paper-hi); }
+html .sh-foot { font-family: var(--qm-font-text); font-size: 14px; letter-spacing: 0.04em; }
+html .sh-foot .qm-gloss { color: rgba(243, 233, 212, 0.8); margin-left: 0.6em; }
+html .sh-credit { font-style: normal; }
+html .sh-open { position: fixed; z-index: 899; display: grid; place-items: center; padding: 0; width: 46px; height: 46px; border: 0; top: var(--qm-top); right: var(--qm-right);
+  background: var(--qm-ring) center / 100% 100% no-repeat, radial-gradient(circle, var(--qm-paper-hi) 0 64%, var(--qm-paper) 66% 70%, transparent 71%);
+  filter: var(--qm-lift); box-shadow: none; }
+html .sh-open svg { width: 26px; height: 26px; }
+@media (max-width: 640px) { html .sh-title { font-size: 13px; } html .sh-btn { width: 32px; height: 32px; } html .sh-foot { font-size: 12px; } }
+
+/* ------------------------------------------------------------------ the tuning panel (lil-gui), shown in the HUD only */
+html .lil-gui { --background-color: #efe4cc; --text-color: #2a2420; --title-background-color: #4e4033; --title-text-color: #f3e9d4;
+  --widget-color: #e1d2b0; --hover-color: #d6c49d; --focus-color: #cdb88c; --number-color: #8a2a18; --string-color: #4e4033;
+  --font-family: var(--qm-font-latin); --font-size: 12px; }
+
+/* ------------------------------------------------------------------ reduced motion: fades only */
+@media (prefers-reduced-motion: reduce) {
+  .qm-ui *, #help *, #loading, #loading * { animation-name: qm-fade-in !important; animation-duration: 150ms !important; animation-delay: 0s !important;
+    animation-timing-function: linear !important; transition-duration: 150ms !important; }
+  .qm-glyph { animation: none !important; }
+}

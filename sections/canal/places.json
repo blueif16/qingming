@@ -1,0 +1,110 @@
+{
+ "about": "Place names the player is told (ink UI round, gen/ui/STYLE.md 'Place notifications'). region: the large banner shown when you walk into this section's region (sections sharing a region id show it once). landmarks: a vertical name plaque stands over the map entity id as you approach (江南百景圖's plaques), and a toast with the line from the painting's reading when you come within r metres of its footprint (or its point); top: the plaque's height when the map has none. Every name and line in 繁體, from the painting and its readings; src says where. Lore (round 2, gen/ui/r2_lore.md): long is the longer description under the toast's fold and in the 圖志 journal; quote and quoteSrc an exact line from a period or scholarly source; cite the sources as the player reads them; longSrc one note per claim (never shown); crop the map IDs that frame the painting's crop (tools/place_crops.mjs). Bundled for the page by tools/ui_data.mjs into web/public/assets/ui/places.json (short) and lore.json (long, fetched when needed).",
+ "region": {
+  "id": "bianhe",
+  "name": "汴河",
+  "sub": "運河兩岸",
+  "seal": "汴",
+  "src": "map/sections.json S2 '汴河 · 运河两岸'; 余辉《深度游》第二段 运河两岸",
+  "long": "過了城鄉交界，汴河流進畫面。這條運河自洛口引黃河水，東流入淮，東南的糧米貨物都由它運進京城。宋太宗說過，京城「養兵數十萬，居人百萬家」，全仰這一渠水。岸邊泊著吃水很深的糧船，腳夫扛著糧袋上岸，船主坐在貨包上歇息；沿河一條街多是飯館茶肆，臨河的雅座開窗對著水面。高處一座望火樓卻空無一人，余輝讀作繁華底下的隱憂。",
+  "quote": "運東南之糧，凡東南方物，自此入京城，公私仰給焉。",
+  "quoteSrc": "《東京夢華錄》卷一〈河道〉",
+  "cite": "《東京夢華錄》・故宮名畫記・余輝〈十大看點〉",
+  "longSrc": [
+   "DJ 卷一 河道: 汴河自西京洛口分水入京城，东去至泗州，入淮",
+   "MHJ 7: 汴河之水来自于黄河; 宋太宗 \"东京养兵数十万，居人百万家，天下转漕仰给，在此一渠水\"",
+   "MHJ 8 万石船 (two heavy-laden boats moored); MHJ 9 仓前成市 (porters unloading sacks, the owner sits on the bales)",
+   "MHJ 10, 14: the riverside street, mostly eateries; 沿河雅座 windows open to the river",
+   "YH15 看点二 虚设的望火楼: 楼上无一人守望"
+  ]
+ },
+ "landmarks": [
+  {
+   "id": "S2.bld.yanhe_yazuo_hall_25690",
+   "name": "沿河雅座",
+   "line": "臨河的飯館，開窗看汴水。",
+   "seal": "座",
+   "r": 6,
+   "src": "名画记 14 沿河雅座",
+   "long": "從河邊停泊的船隻看，這裏是個大碼頭。臨河一座長廳架在岸上，一排大窗全敞著，窗裏擺著長桌和交腳的坐具，西頭窗下坐著一位客人，身旁還有個小些的人影。故宮名畫記說，客人在這裏一邊飲酒，一邊看河上風景；乘船來的客人，興許也會拉著船主上岸喝兩杯。長廳東頭同一道屋頂下，是一座門扇緊閉的倉房。",
+   "cite": "故宮名畫記・畫中所見",
+   "longSrc": [
+    "MHJ 14: 从停泊的船只数量上看，这里是一个大码头…有窗户敞开正对着河面，客人一边喝酒，一边欣赏风景。乘船的客人，兴许会拉着船主，去岸上喝两杯",
+    "map S2.bld.yanhe_yazuo_hall_25690 (open windows, long tables, crossed-leg seats, seated man and a smaller figure)",
+    "map S2.bld.warehouse_26070 under the same roof"
+   ],
+   "crop": [
+    "S2.bld.yanhe_yazuo_hall_25690"
+   ]
+  },
+  {
+   "id": "S2.bld.wang_paper_horse_shop_27100",
+   "name": "王家紙馬",
+   "line": "清明上墳的紙馬，都在這裏買。",
+   "seal": "紙",
+   "r": 6,
+   "src": "名画记 13 王家纸马铺 (the painted sign 王家纸马); 余辉 2023 列售纸码",
+   "long": "丁字路口有一家專賣紙紮冥器的鋪子，門前立著高高的招牌，學者讀作「王家紙馬」；鋪前一座木架，紙錢紙馬一直疊到屋簷。故宮名畫記說，宋人不像唐人那樣厚葬，多用紙做的錢和冥器代替實物，這風俗一直流傳到今天。招牌前，一位戴著高帽兜的人騎驢停下，正朝鋪子張望。",
+   "quote": "紙馬鋪皆於當街用紙袞疊成樓閣之狀。",
+   "quoteSrc": "《東京夢華錄》卷七〈清明節〉",
+   "cite": "故宮名畫記・《東京夢華錄》・畫中所見",
+   "longSrc": [
+    "MHJ 13: 丁字路口有一家专门卖冥器的纸马铺…宋人…主张薄葬，多以纸做的钱和冥器代替实物冥器，这种风俗影响至今",
+    "map S2.prop.signboard_wang_paper_horse_26896 (illegible on our scan; 王家纸马 per MHJ 13, Hansen plate 8)",
+    "map S2.prop.paper_goods_stack_27070 (to the eave)",
+    "map S2.fig.rider_26832 (hooded rider on a donkey facing the signboard)",
+    "quote: DJ 卷七 清明节"
+   ],
+   "cropBox": [
+    26700,
+    0,
+    27480,
+    520
+   ],
+   "crop": [
+    "S2.bld.wang_paper_horse_shop_27100",
+    "S2.prop.signboard_wang_paper_horse_26896"
+   ]
+  },
+  {
+   "id": "S2.bld.fire_tower_28440",
+   "name": "望火樓",
+   "line": "樓上本該有人瞭望，如今空著。",
+   "seal": "火",
+   "r": 7,
+   "src": "《东京梦华录》卷三 防火 '于高处砖砌望火楼，楼上有人卓望'; 余辉: the empty lookout (盛世危图 reading)",
+   "long": "磚砌的高臺上一座小亭，一道木梯從西邊攀上臺頂。照《東京夢華錄》，京城的望火樓樓上該有人瞭望，樓下駐著兵士，備著水桶、麻搭、梯子，一見火起便奔報撲救。畫中這座卻空無一人，余輝說臺上原本的高柱被截去大半，改成了供人歇息的涼亭，樓下兩排營房也做了飯鋪。他把這裏讀作「虛設的望火樓」。",
+   "quote": "於高處磚砌望火樓，樓上有人卓望。",
+   "quoteSrc": "《東京夢華錄》卷三〈防火〉",
+   "cite": "《東京夢華錄》・余輝〈十大看點〉〈最後三問〉・畫中所見",
+   "longSrc": [
+    "map S2.str.fire_tower_platform_28450 (brick platform, wooden stair from the west, nobody on it); S2.bld.fire_tower_28440 (nobody in it)",
+    "DJ 卷三 防火: 下有官屋数间，屯驻军兵…救火家事，谓如大小桶、洒子、麻搭、斧锯、梯子…每遇有遗火去处，则有马军奔报",
+    "YH21: 砖台上原本立了四个高高的柱子…眼下四根木柱被截去大半，支撑的却是凉亭…其下的两排营房变成了饭铺",
+    "YH15 看点二 虚设的望火楼"
+   ],
+   "crop": [
+    "S2.bld.fire_tower_28440",
+    "S2.str.fire_tower_platform_28450"
+   ]
+  },
+  {
+   "id": "S2.bld.wanglou_shed_28660",
+   "name": "望樓飯鋪",
+   "line": "望火樓下的飯鋪。",
+   "seal": "飯",
+   "r": 6,
+   "src": "余辉 2014 vignette 望楼饭铺",
+   "long": "望火樓下一長排草頂棚屋，柱子底下擺滿桌凳，坐著吃喝的客人。余輝以為，這本是望火樓下兵營式的平房，如今改成了飯館。這一帶正是城鄉交界，碼頭對著一條沿河小街，店鋪多賣小吃。故宮名畫記寫街口一景：兩個過路客人卸下驢背上的行李歇腳，店主坐在涼棚下休息，大家的目光都被鄰家小孩的哭聲引了過去。",
+   "cite": "余輝〈十大看點〉・故宮名畫記・畫中所見",
+   "longSrc": [
+    "map S2.bld.wanglou_shed_28660: long open eating shed under thatch, tables, benches, seated customers",
+    "YH15 看点二: 望火楼下两排兵营式的平房已被改作饭馆",
+    "MHJ 10 城乡交界处: 沿河街…主要店铺是餐馆，以小吃为多…两个过路的客人正在歇脚，行李也从驴身上卸下来…店主坐在凉棚底下歇息…被邻居家小孩的哭声所吸引"
+   ],
+   "crop": [
+    "S2.bld.wanglou_shed_28660"
+   ]
+  }
+ ]
+}

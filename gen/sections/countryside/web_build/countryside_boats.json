@@ -1,0 +1,40 @@
+{
+ "about": "Written by blender/build_boats.py: the section's boats as built for the page (both detail levels in the GLB). tris: visible triangles per detail level, collider triangles, triangles per node.",
+ "section": "S1",
+ "boats": {
+  "S1.veh.boat_sampan_36440": {
+   "kind": "small",
+   "pose": "moored",
+   "motion": "moored",
+   "lw": 4.8,
+   "loa": 6.1,
+   "beam": 1.7249999999999999,
+   "deck_z": -0.03,
+   "roof_z": null,
+   "heading_deg": -14.0,
+   "water_H": -0.7,
+   "tris": {
+    "lod0": 1246,
+    "lod1": 484,
+    "colliders": 24,
+    "nodes": {
+     "body": 1202,
+     "deck__col": 12,
+     "rim__col": 12,
+     "board__edge": 28,
+     "wet__ring": 44
+    }
+   },
+   "kit": {
+    "kind": "small",
+    "lw": 4.8,
+    "awning": false,
+    "cargo": [],
+    "moor": [
+     "S1.prop.mooring_pole_36444"
+    ]
+   },
+   "note": "mapped waterline 3.0 m, built 4.8 m (real size, BUILDING.md rule 5)"
+  }
+ }
+}

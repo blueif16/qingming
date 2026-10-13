@@ -1,0 +1,57 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is the target art style. Paint a sheet of sixteen separate dressed-stone block faces in exactly image 1's style (hand-inked dark-brown linework, light hatching, muted painted colours, aged-silk palette). Flat, front-on, no perspective, no cast shadows, no text.\n\nA 4x4 grid of sixteen square cells with thin pale gaps between them. Each cell is filled edge to edge by one stone face seen straight on. Each stone face has a soft painted centre with faint chisel marks, and a hand-inked, irregular outline just inside the cell edge: worn, rounded, slightly chipped edges, darkened with a little hatching, so the block looks cut by hand and never like a perfect rectangle.\n\nThe sixteen stones all differ: light grey, warm grey, buff, pale ochre, grey-brown; a few with a faint green or rust stain, one or two with a hairline crack, a couple worn more on one edge. Mid tones only, never white, never black.",
+ "refs": [
+  "gen/v1/target_street_B1.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "sheet"
+ },
+ "format": "png",
+ "generation_s": 41.1,
+ "attempts": 1,
+ "idempotency_key": "f59815dc-ba59-4d60-aa30-23b46c85ed87",
+ "request_id": "ee878326-3aaf-4d37-b61c-d6b6c67ea258",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 2316,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 216
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 2316,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 2100,
+   "text_tokens": 216
+  },
+  "total_tokens": 3966
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/50bc8896-a00f-4b9e-84ea-e09d2b419539"
+ ],
+ "files": [
+  "gen/sections/gate/atlas_stone/sheet_0.png"
+ ]
+}

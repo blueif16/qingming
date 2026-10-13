@@ -1,0 +1,105 @@
+{
+ "section": "S3",
+ "entities": [
+  {
+   "id": "S3.prop.bridge_end_post_far_19176",
+   "kind": "prop",
+   "name": "far-side end post (表木) at the bridge's south end",
+   "what": "A tall plain timber pole rising behind the crowd at the crown's south side, with two bars crossed like an X at its top just under the silk's top edge: a 表木 like the bridge's near end posts, standing behind the deck's far edge or on the far bank (its X is painted smaller than either near post's). Its foot is hidden behind the deck crowd.",
+   "pts": {
+    "base": [
+     19176,
+     240,
+     "est"
+    ],
+    "top": [
+     19173,
+     18
+    ],
+    "cross": [
+     19176,
+     35
+    ]
+   },
+   "support": "ground",
+   "vis": "part: below v ~165 hidden behind the deck crowd's heads; it is drawn over t7's parasol canopy (S3.prop.parasol_19150)",
+   "conf": "low",
+   "note": "Added at the merge from t7's left-to list (pole at u ~19167-19180, an X crossbar at 19162-19190, v 20-50, foot hidden behind the deck crowd) and structures_e's (a tall pole at 19169-19179, v 21-157); the bridge part records only the two near-side posts and says the far ones would be hidden. Merge crops gen/map/S3/look/merge_far_post*.jpg: the pole (edges u ~19170-19180) runs from a knob at (19173, 18) through the X (bars spanning u ~19160-19192, v 20-50, centre (19176, 35), ±6 px) down to v ~165, drawn over the parasol's canopy, so it stands in front of (south of) that parasol. BASE est at the deck crowd's foot level at this u (v ~300; the rider's and the man behind the rump's feet are est at v 305-332): a placeholder. READINGS: (a) the far-side twin of S3.prop.bridge_end_post_19026 at the bridge's south end (the 表木 stand in pairs at a bridge's ends), conf med; (b) a pole on the far bank behind the deck (its foot at v ~165-200). Under the bridge agent's geometry the deck's far side lies 750 px west, not up the silk, so where its foot stands relative to the deck is for the lead and the bridge kit; the second pass should look again. SCALE: X ~30 px across against ~45 px for the north-east post and ~90 px for the south-east one. Second pass: the foot is still hidden; its v is now estimated from the post's own size instead of the deck crowd's feet. Its X is ~30 px across (u 19160-19192) against ~45 px for the north-east post S3.prop.bridge_end_post_20050 (foot est v 395, ~355 px foot to cross) and ~90 px for the south-east post S3.prop.bridge_end_post_19026 (~513 px foot to cross). Scaled by those two ratios (7.9 and 5.7 px of height per px of bar), its foot is ~171-237 px below its cross (v 35): v ~205-270; base est (19176, 240). The smaller X says it stands further back than the north-east post, so it is not the twin of either near post across the deck (whose width lies east-west, level in the picture: a twin would be painted the same size at the same v). Reading (b), a pole standing behind the deck's far edge or on the far bank, is now the likelier; reading (a) stays in the note. Crops: scratchpad/S3_second_middle/j_farpost.jpg, j_farposte.jpg.",
+   "group": "S3.grp.rainbow_bridge"
+  },
+  {
+   "id": "S3.grp.sedan_vs_horseman",
+   "kind": "group",
+   "name": "the sedan and the horseman on the south ramp (车轿相争)",
+   "members": [
+    "S3.veh.sedan_18842",
+    "S3.fig.sedan_bearer_front_18838",
+    "S3.fig.sedan_bearer_rear_18688",
+    "S3.fig.pointer_east_18830",
+    "S3.fig.wide_hat_pointer_18855",
+    "S3.fig.wide_hat_pointer_18890",
+    "S3.ani.horse_19055",
+    "S3.fig.rider_white_robe_19110",
+    "S3.fig.groom_holding_horse_19095",
+    "S3.fig.man_arms_flung_wide_18990",
+    "S3.fig.man_white_headcloth_19050",
+    "S3.fig.man_behind_rump_19165",
+    "S3.ani.second_horse_19230"
+   ],
+   "src": "余辉: 车轿相争",
+   "what": "On the bridge's south ramp a sedan chair carried up by two bearers, with a man at its front pointing east up the bridge and two men in wide hats pointing back at it, meets a rider in white on a brown horse coming down westward from the crown: his groom hugs the horse's lowered neck to hold it, a man in front flings his arms wide, two men stand behind the horse, and a second horse's head shows behind the first.",
+   "note": "Joined at the merge from t6's S3.grp.sedan_party_18760 (the sedan's side) and t7's S3.grp.horseman_party (the horseman's side), both retired. Sedan side: S3.veh.sedan_18842 (no passenger painted), the bearers S3.fig.sedan_bearer_front_18838 and S3.fig.sedan_bearer_rear_18688, S3.fig.pointer_east_18830, and S3.fig.wide_hat_pointer_18855 and S3.fig.wide_hat_pointer_18890 (they point back at the sedan and may be the horseman's men, t6). Horseman side: S3.ani.horse_19055, S3.fig.rider_white_robe_19110 (seated, med), S3.fig.groom_holding_horse_19095, S3.fig.man_arms_flung_wide_18990 (low; may be one of the sedan's men), S3.fig.man_white_headcloth_19050, S3.fig.man_behind_rump_19165, S3.ani.second_horse_19230 (low: a second horse or a man in a dark head-cloth bent forward). Possibly in it but not joined: S3.fig.man_folded_arms_tall_cap_19270 (may ride the second horse, t7) and t7's S3.fig.man_dark_jacket_pointing_18915 and S3.fig.man_light_robe_reaching_18958 (in S3.grp.south_rail_watchers; may be on the sedan's side)."
+  },
+  {
+   "id": "S3.grd.far_bank_seam_15500",
+   "kind": "grd",
+   "name": "far bank at the S4b seam, running off the silk's top edge",
+   "what": "The east end of the far (north) bank's strip that S4b paints along the silk's top edge: it continues S4b's far bank past the seam and leaves the silk at its top edge within about 150 px; a willow's whips hang over it from beyond the edge.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       15500,
+       75,
+       "est"
+      ],
+      [
+       15540,
+       66,
+       "est"
+      ],
+      [
+       15600,
+       0,
+       "est"
+      ]
+     ],
+     "shore": [
+      [
+       15500,
+       112,
+       "est"
+      ],
+      [
+       15560,
+       85,
+       "est"
+      ],
+      [
+       15650,
+       0,
+       "est"
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "support_by": {
+    "shore": "water"
+   },
+   "vis": "part: under the willow's whips; plain silk east of them",
+   "conf": "low",
+   "note": "FRAME (the cross-key seam check, asked for by the second pass west): S4b.grd.far_bank_15330 ends its bank_top and shore at u 15500 (est, hidden behind S4b's small cabin boat), and S3.water.bian_west_15500 had no shore_n west of (16150, 150): the water ran to the silk's top edge. On the scan, 15480-16150, v 0-150 is plain silk except the whips of S3.tree.willow_crown_top_15520 (no bank ink, no ripples), so the strokes cannot settle where the far bank leaves the silk. This entity is the shortest join: point 0 of each line is S4b's point at u 15500 (read from map/strokes/S4b.json each run), and both lines turn up off the silk's top edge by u 15600-15650, so the willow's est foot (15520, 70) stands on the bank. Other reading: the far bank runs on along the top edge to u ~16150 (then S3 would build a strip of far bank 650 px long). A question in map/frames/S3.json."
+  }
+ ]
+}

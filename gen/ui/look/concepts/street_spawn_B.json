@@ -1,0 +1,58 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 is a screenshot of our 3D walkable world: a Northern Song (Kaifeng, 12th century) inner-city street at mid-morning, seen from behind a walker, with townspeople, a cart loaded with sacks on the right, shop fronts with grey tile roofs and red-ochre timber, scaffold poles. Image 2 is a style reference.\nKeep exactly the composition, camera angle, perspective, buildings, objects, people, their poses and positions from image 1; change only how it is rendered. Render it as a Chinese ink-and-colour painting on paper in the painting language of image 2 (study its line, washes and colour handling, not its content): fine ink outlines of varying weight that break into dry-brush strokes on timber, tiles and bark; flat mineral-pigment washes that bleed slightly past the lines, with soft gradients inside each wash; roof tiles drawn row by row in grey-blue ink wash; white lime walls with faint ink edges; flat soft cast shadows as grey washes; distance fading into pale mist. Colours are the true daylight colours of a real Northern Song town, NOT aged yellow paper and NOT sepia: neutral grey brick and tiles, white plaster, weathered brown timber, red-ochre paint, dusty grey-brown ground, muted malachite greens, azurite and indigo blues for water, small cinnabar accents. The sky is a clear blue day sky painted as a few flat horizontal wash bands with a few soft white cloud blocks edged by thin broken ink lines, with plenty of empty space. No text, no calligraphy, no seals, no UI, no border.\nVariant: lighter and more poetic: thinner colour washes, more visible ink line and brush texture, more empty misty space in the distance and the sky (liu bai), the colours still true daylight colours, never yellowed.",
+ "refs": [
+  "gen/ui/look/concepts/src/street_spawn.jpg",
+  "gen/ui/look/ref_small/jn2_bridge_ink_sky_1600.jpg"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x864",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "street_spawn_B"
+ },
+ "format": "png",
+ "generation_s": 39.9,
+ "attempts": 1,
+ "idempotency_key": "3b98f6ee-2f86-4a99-b3c6-527adf9e1c22",
+ "request_id": "ef8d67cb-033d-4ce2-8f3f-19d7e298f330",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1640,
+  "completion_tokens_details": {
+   "image_tokens": 1640,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 5171,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4786,
+   "text_tokens": 385
+  },
+  "output_tokens": 1640,
+  "output_tokens_details": {
+   "image_tokens": 1640,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 5171,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4786,
+   "text_tokens": 385
+  },
+  "total_tokens": 6811
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/55619000-7b69-469e-b927-ce022c7a2c50"
+ ],
+ "files": [
+  "gen/ui/look/concepts/street_spawn_B_0.png"
+ ]
+}

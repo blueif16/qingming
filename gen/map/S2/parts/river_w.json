@@ -1,0 +1,1134 @@
+{
+ "section": "S2",
+ "entities": [
+  {
+   "id": "S2.water.bian_river_w",
+   "kind": "water",
+   "name": "the 汴河, west reach of the canal (u 20500-21850)",
+   "what": "The river east of the Rainbow Bridge: plain silk with ink ripple ticks and round swirl eddies, filling the silk from the north bank's moored boats (v ~200-500) down to the south bank at v ~1240-1440; in the middle two great willows on the south bank throw their whips over the water (u 20500-22000, v 450-1300). Boats moored along the north bank (a long cargo boat, a mat-roofed boat and a big cabin boat), a small covered boat and an open skiff off the south bank, and a man standing in the open water among the willow whips.",
+   "pts": {
+    "lines": {
+     "shore_n": [
+      [
+       20500,
+       310,
+       "est"
+      ],
+      [
+       20580,
+       300,
+       "est"
+      ],
+      [
+       20668,
+       250,
+       "est"
+      ],
+      [
+       20780,
+       238,
+       "est"
+      ],
+      [
+       20900,
+       215,
+       "est"
+      ],
+      [
+       21000,
+       205,
+       "est"
+      ],
+      [
+       21100,
+       192,
+       "est"
+      ],
+      [
+       21300,
+       185,
+       "est"
+      ],
+      [
+       21500,
+       185,
+       "est"
+      ],
+      [
+       21650,
+       195,
+       "est"
+      ],
+      [
+       21720,
+       240,
+       "est"
+      ],
+      [
+       21780,
+       300,
+       "est"
+      ],
+      [
+       21820,
+       335
+      ],
+      [
+       21850,
+       345,
+       "est"
+      ]
+     ],
+     "shore_s": [
+      [
+       20500,
+       1235,
+       "est"
+      ],
+      [
+       20640,
+       1240,
+       "est"
+      ],
+      [
+       20760,
+       1255,
+       "est"
+      ],
+      [
+       20880,
+       1265,
+       "est"
+      ],
+      [
+       21000,
+       1290,
+       "est"
+      ],
+      [
+       21100,
+       1325,
+       "est"
+      ],
+      [
+       21200,
+       1365,
+       "est"
+      ],
+      [
+       21280,
+       1400,
+       "est"
+      ],
+      [
+       21340,
+       1422,
+       "est"
+      ],
+      [
+       21420,
+       1415
+      ],
+      [
+       21500,
+       1430
+      ],
+      [
+       21550,
+       1425
+      ],
+      [
+       21600,
+       1402
+      ],
+      [
+       21700,
+       1398
+      ],
+      [
+       21790,
+       1405
+      ],
+      [
+       21850,
+       1432
+      ]
+     ]
+    }
+   },
+   "support": "water",
+   "vis": "part: the north shore is hidden behind the moored boats from u 20500 to ~21780; the south shore behind S3's south-bank boat, the willow whips, the small covered boat and t1's people west of u 21420",
+   "conf": "med",
+   "note": "No shoreline is inked west of u ~21780; the lines are where the land or the boats stop and the ripples begin. SEAM POINTS: u 20500 shore_n (20500, 330, est) and shore_s (20500, 1235, est) are S3's river_e points (S3.water.bian_river_18300), copied; u 21850 shore_n (21850, 345) and shore_s (21850, 1432) for river_w2. shore_n: at 20500-20600 behind the north-bank cargo boat's mat roof, just south of the top willows' feet (bank top v ~272-290); at 20650-21100 it runs under the mooring rope's west end and behind the mat-shelter boat (its far side north of v ~240); at 21100-21700 behind the big cabin boat's far side, just south of the bank strip in front of the shops (figures' feet at v ~125-146, the strip's edge v ~160-175); from ~21780 it is the lower edge of the wash-drawn bank slope below the trackers' path (visible, v 330-345). shore_s: at 20500-20640 behind S3's boat moored along the south bank (S3's est v ~1220-1235); at 20640-20900 behind the branches of the dark-trunked tree (t1's S2.tree.dark_trunk_willow_20530) and the willow whips, north of the big tiled roof (top v ~1310-1340); at 21000-21300 between the covered boat's waterline (v ~1240-1250) and t1's people on the bank (feet v ~1370-1440), est +-40 px; at 21300-21420 at the great willow's foot (S2.tree.willow_great_21345, t2's, base est (21345, 1450)); from 21420 east it is the crest of the south-bank mound (S2.grd.mound_south_bank_21420), whose north foot is hidden right behind its silhouette. CURRENT: ripples are ticks and loops, densest in the open water at u 20500-20950, v 500-620 (round eddies at (20540, 590), (20640, 540), (20900, 560)) and along the north boats' waterline; strong swirls at (21880, 450) and (21250, 1145) and (21540, 1290); no bands of fierce current (汴水悍激 is river_e's, u ~26670). The restyle paints the water the same; it adds nothing on the water here except a tiled roof on the covered boat and a child beside the man in the water. Merge: seam points set so the reaches join: (20500, 310) est is S3's north shore (map/strokes/S3.json; this unit had 330); at u 21850 the north shore is (21850, 345) est on both sides (river_w2 had 425: on the merge crop gen/map/S2/look/merge_seam_21850.jpg the ripple lines start at v ~345-350) and the south shore is the mound's crest (21850, 1432)."
+  },
+  {
+   "id": "S2.grd.north_bank_20500",
+   "kind": "grd",
+   "name": "north bank of the canal, u 20500-21850",
+   "what": "The north bank: a narrow earth strip in front of the shops and wattle fences along the silk's top edge, with two pollarded willows at its west end; the boats are moored along it the whole way, so its edge shows only east of the big cabin boat's stern (u ~21720-21850), where it falls to the water in a wash-drawn slope under the trackers' path.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       20500,
+       300,
+       "est"
+      ],
+      [
+       20560,
+       282,
+       "est"
+      ],
+      [
+       20668,
+       230,
+       "est"
+      ],
+      [
+       20780,
+       225,
+       "est"
+      ],
+      [
+       20900,
+       198,
+       "est"
+      ],
+      [
+       21000,
+       185,
+       "est"
+      ],
+      [
+       21100,
+       172,
+       "est"
+      ],
+      [
+       21300,
+       166,
+       "est"
+      ],
+      [
+       21450,
+       165,
+       "est"
+      ],
+      [
+       21550,
+       162,
+       "est"
+      ],
+      [
+       21650,
+       170,
+       "est"
+      ],
+      [
+       21720,
+       198,
+       "est"
+      ],
+      [
+       21800,
+       232
+      ],
+      [
+       21850,
+       274,
+       "est"
+      ]
+     ],
+     "shore": [
+      [
+       20500,
+       310,
+       "est"
+      ],
+      [
+       20580,
+       300,
+       "est"
+      ],
+      [
+       20668,
+       250,
+       "est"
+      ],
+      [
+       20780,
+       238,
+       "est"
+      ],
+      [
+       20900,
+       215,
+       "est"
+      ],
+      [
+       21000,
+       205,
+       "est"
+      ],
+      [
+       21100,
+       192,
+       "est"
+      ],
+      [
+       21300,
+       185,
+       "est"
+      ],
+      [
+       21500,
+       185,
+       "est"
+      ],
+      [
+       21650,
+       195,
+       "est"
+      ],
+      [
+       21720,
+       240,
+       "est"
+      ],
+      [
+       21780,
+       300,
+       "est"
+      ],
+      [
+       21820,
+       335
+      ],
+      [
+       21850,
+       345,
+       "est"
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: hidden behind the moored boats west of u ~21720",
+   "conf": "low",
+   "note": "bank_top = the ground's edge nearest the water. 20500-20670: just south of the feet of the two top willows (t1: S2.tree.willow_top_20552 base est (20552, 272), S2.tree.willow_top_20668 base (20668, 222)); the cargo boat's mat roof (v 280-330) hides the edge; the seam point (20500, 300, est) is S3's (S3.grd.north_bank_20250), copied. 20700-21100: open ground in front of the fences (t1's loose wheel at (20965, 147)), its edge behind the mat-shelter boat's roofs (v 190-245). 21100-21700: the strip in front of the shops, where t2's two men stand with feet at v 124-146; its edge behind the big cabin boat's cabin roofs (v 160-200). 21720-21850: the top of the wash slope where the trackers walk (t2: lead tracker's foot (21867, 235)). No stair, jetty, quay face or post in the water's edge on this bank in u 20500-21850. The strip is very narrow: about 30-60 px of v between the shop fronts and the water (under 1-1.5 m at the frame's depth rate). Merge: seam points set: shore (20500, 310) est (S3's); at u 21850 bank_top (21850, 274) est, the mean of this unit's 248 and river_w2's 300 (on the merge crop the level ground under the lead tracker ends at v ~270-280 where the dark bank tufts begin), shore (21850, 345) est. FRAME: its shore line stands on the support `water` (support_by), like the river's shores; its bank_top on the ground.",
+   "support_by": {
+    "shore": "water"
+   }
+  },
+  {
+   "id": "S2.grd.south_bank_20500",
+   "kind": "grd",
+   "name": "south bank of the canal, u 20500-21420 (west of the mound)",
+   "what": "The near (south) bank at the west end: low ground under the big tiled roofs at the silk's bottom, crossed at its west end by the branches of the dark-trunked tree, the people standing and sitting at the water's edge opposite the small covered boat, and the great knobbed willow at its east end, whose crown hangs over the river.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       20500,
+       1255,
+       "est"
+      ],
+      [
+       20640,
+       1262,
+       "est"
+      ],
+      [
+       20760,
+       1275,
+       "est"
+      ],
+      [
+       20880,
+       1290,
+       "est"
+      ],
+      [
+       21000,
+       1310,
+       "est"
+      ],
+      [
+       21100,
+       1345,
+       "est"
+      ],
+      [
+       21200,
+       1385,
+       "est"
+      ],
+      [
+       21280,
+       1415,
+       "est"
+      ],
+      [
+       21345,
+       1450,
+       "est"
+      ],
+      [
+       21410,
+       1440,
+       "est"
+      ]
+     ],
+     "shore": [
+      [
+       20500,
+       1235,
+       "est"
+      ],
+      [
+       20640,
+       1240,
+       "est"
+      ],
+      [
+       20760,
+       1255,
+       "est"
+      ],
+      [
+       20880,
+       1265,
+       "est"
+      ],
+      [
+       21000,
+       1290,
+       "est"
+      ],
+      [
+       21100,
+       1325,
+       "est"
+      ],
+      [
+       21200,
+       1365,
+       "est"
+      ],
+      [
+       21280,
+       1400,
+       "est"
+      ],
+      [
+       21340,
+       1422,
+       "est"
+      ],
+      [
+       21420,
+       1415
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: the bank faces away from the viewer; hidden behind S3's moored boat, the willow whips, the small covered boat and the bank's people",
+   "conf": "low",
+   "note": "Never drawn as an edge. bank_top read as where land things begin: S3's south bank point (20500, 1255, est); the dark-trunked tree's forked branches at u 20560-20750, v 1100-1300 (t1's S2.tree.dark_trunk_willow_20530; at zoom 2 they look like posts of a shed, at zoom 3 they are branches); the big tiled roof's top at v ~1310-1340 (structures_w); t1's people on the bank (feet v 1372-1444 at u 21085-21255: S2.grp.south_bank_people_21150); the great willow's foot (t2: S2.tree.willow_great_21345, base est (21345, 1450)). Between u 21000 and 21300 the bank lies about 80-130 px of v south of the covered boat's waterline, so the line is +-40 px. No landing stair, jetty or post is painted on this bank in u 20500-21420. FRAME: its shore line stands on the support `water` (support_by), like the river's shores; its bank_top on the ground.",
+   "support_by": {
+    "shore": "water"
+   }
+  },
+  {
+   "id": "S2.grd.mound_south_bank_21420",
+   "kind": "grd",
+   "name": "south-bank mound: a long low earth bank at the water",
+   "what": "A long, low, rounded earth bank on the south side of the river east of the great willow, drawn in grey ink wash with a dark band of low growth along its crest and a small shrub at its west end; water lies north of it, and the thatched and tiled roofs of the south bank run along its southern foot. Its east end slopes down to the water by the open boat at u ~21980.",
+   "pts": {
+    "lines": {
+     "bank_top": [
+      [
+       21420,
+       1415
+      ],
+      [
+       21450,
+       1428
+      ],
+      [
+       21500,
+       1432
+      ],
+      [
+       21550,
+       1425
+      ],
+      [
+       21590,
+       1410
+      ],
+      [
+       21600,
+       1402
+      ],
+      [
+       21650,
+       1400
+      ],
+      [
+       21700,
+       1398
+      ],
+      [
+       21750,
+       1400
+      ],
+      [
+       21790,
+       1405
+      ],
+      [
+       21820,
+       1415
+      ],
+      [
+       21850,
+       1432
+      ],
+      [
+       21870,
+       1448
+      ],
+      [
+       21890,
+       1468
+      ],
+      [
+       21910,
+       1488
+      ],
+      [
+       21935,
+       1508
+      ],
+      [
+       21960,
+       1530
+      ]
+     ],
+     "shore": [
+      [
+       21420,
+       1415,
+       "est"
+      ],
+      [
+       21500,
+       1430,
+       "est"
+      ],
+      [
+       21550,
+       1425,
+       "est"
+      ],
+      [
+       21600,
+       1402,
+       "est"
+      ],
+      [
+       21700,
+       1398,
+       "est"
+      ],
+      [
+       21790,
+       1405,
+       "est"
+      ],
+      [
+       21850,
+       1432,
+       "est"
+      ],
+      [
+       21910,
+       1488,
+       "est"
+      ],
+      [
+       21960,
+       1530,
+       "est"
+      ]
+     ]
+    }
+   },
+   "support": "ground",
+   "vis": "part: its north foot is hidden right behind the crest's silhouette; its south foot under the roofs",
+   "conf": "med",
+   "note": "bank_top = the crest's silhouette against the water (zoom 1.5-2 on the scan; t2's reading of the crest agrees within 5 px: (21600, 1402), (21700, 1402), (21800, 1403), (21870, 1440)). The shore is taken at the crest: the water shows right above it. The body of the mound is the wash at v 1430-1530 between the crest and the roofs (the roof's ridge from (21380, 1450) to (21900, 1650) is structures_w's). The dark band of low growth along the crest (u 21630-21810, v 1398-1420) is part of this mound; the shrub at its west end is t2's S2.tree.shrub_mound_21605. East of 21850 (river_w2's look range) the crest falls to the water at about (21960, 1530) beside the open boat. t2 left the mound to structures_w; recorded here as the south bank's own ground feature (the banks are the river agents'). If structures_w also records it, keep one. Height: crest about 30-40 px above where its foot would be, i.e. a low bank (est 0.5-1 m). Merge: river_w2 recorded the same mound as S2.grd.south_bank_mound_21700 (retired as a duplicate); its crest (21413, 1407), (21480, 1430), (21547, 1428), (21600, 1402), (21700, 1402), (21800, 1403), (21840, 1420), (21870, 1440), (21910, 1480), (21960, 1530), (21980, 1545) agrees with this one within 5 px and runs 20 px further east to (21980, 1545), where river_w2's S2.grd.south_bank_flat_21850 begins; the open boat's rope ends on its east face at (21905, 1490). structures_w's crest reading also agrees (it recorded none). FRAME: its shore line stands on the support `water` (support_by), like the river's shores; its bank_top on the ground.",
+   "support_by": {
+    "shore": "water"
+   }
+  },
+  {
+   "id": "S2.veh.boat_mat_cargo_21055",
+   "kind": "vehicle",
+   "name": "long cargo boat with mat roofs, moored along the north bank (bow east)",
+   "what": "A long, low cargo boat moored along the north bank, its west end hidden behind the stern of S3's big boat at the bridge: a long dark arched mat roof over its west part (u ~20380-20620, v 280-330); amidships a low mat cover over the cargo, two big round woven baskets or mat-wrapped bales (u 20690-20800, v 330-420) and a coil of rope on deck (u ~20800-20870, v 300-340) from which its mooring rope runs up to the foot of the second top willow (S2.tree.willow_top_20668, t1's) at about (20660, 205); a small cabin at the east end with a planked doorway and a sloping mat roof (u 20830-21000, v 300-425), a lattice rail at u 20600-20680, and a big lidded water jar on the foredeck (u 20970-21020, v 365-410). No mast, sweep or oars are painted. Six crew: a pole man and two men leaning west toward S3's big boat, a man on the roof stretching his arm toward it, and two men at the east cabin.",
+   "pts": {
+    "front": [
+     21055,
+     493,
+     "est"
+    ],
+    "rear": [
+     20385,
+     465,
+     "est"
+    ],
+    "beam_s": [
+     20760,
+     482
+    ],
+    "bow_top": [
+     21000,
+     423
+    ],
+    "stern_top": [
+     20390,
+     405,
+     "est"
+    ],
+    "mooring_rope": [
+     [
+      20660,
+      205
+     ],
+     [
+      20700,
+      245
+     ],
+     [
+      20760,
+      282
+     ],
+     [
+      20800,
+      292
+     ],
+     [
+      20835,
+      318
+     ]
+    ],
+    "jar": [
+     20995,
+     405
+    ]
+   },
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 356,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: the west end (u 20380-20470) is hidden behind S3's big boat's stern and rudder; willow whips cross the east end",
+   "conf": "med",
+   "note": "WHICH END IS THE BOW (conf med, both readings): no rudder or sweep is painted at either end. The east end is a long, low, tapering hull that comes to a point at the waterline (u 21000-21070, v 470-500) with open water and willow whips under and beyond it, where a rudder would have to show: so the east end is the bow, front (21055, 493, est), facing ~356. OTHER READING: bow west (upstream, like the big cabin boat beside it), with the rudder hidden behind S3's big boat's stern: then front/rear swap, facing ~176, and the stem at ~20385 puts the boat in S3 by the seam rule (map/index.md); S3's river_e does not record it ('the north-bank boat (S2's)'). WATERLINE: the near side's lowest planking line and its shadow band, (20500, ~462) -> (20760, 482) -> (21000, 488) -> the point (21055, 493); the west end est behind S3's stern. SCALE CUE: waterline length ~670 px (20385-21055); gunwale v 412 (u 20500) -> 428 (20760) -> 423 (21000), so ~50-55 px of freeboard above the near waterline; crew painted 79-90 px tall standing (feet est on the deck behind the gunwale). Hull axis slope dv/du ~ +0.04 (a depth cue only). The mooring rope is a double line (a thick rope) from the willow's foot down to the coil on deck; its far end is t1's tree S2.tree.willow_top_20668. MOORED TO: the willow's foot by that rope. The restyle draws the east end with an upswept prow and the water jar; it agrees on the cargo baskets and the mat roofs."
+  },
+  {
+   "id": "S2.fig.boatman_pole_20495",
+   "kind": "figure",
+   "name": "boatman with a pole at the west end",
+   "what": "Boatman in a short jacket with a topknot at the west end of the cargo boat, holding a long pole slanting down to the west past the gunwale, fending off (or reaching for) the stern of S3's big boat that lies against this boat.",
+   "pts": {
+    "foot": [
+     20495,
+     412,
+     "est"
+    ],
+    "head": [
+     20490,
+     333
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_mat_cargo_21055",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: legs behind the gunwale; S3's boat's stern covers his west side",
+   "conf": "med",
+   "note": "Feet est on the deck behind the gunwale (gunwale v ~412, near waterline ~462 at u 20495). The pole runs from his hands at about (20505, 345) down-west to about (20440, 420), where S3's stern hides it. Painted ~79 px."
+  },
+  {
+   "id": "S2.fig.boatman_leaning_20558",
+   "kind": "figure",
+   "name": "boatman leaning over the gunwale",
+   "what": "Boatman with dark hair leaning far forward over the gunwale with both arms stretched west and down toward S3's big boat, as if pushing it off or catching a rope.",
+   "pts": {
+    "foot": [
+     20560,
+     415,
+     "est"
+    ],
+    "head": [
+     20553,
+     368
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_mat_cargo_21055",
+   "pose": "leaning",
+   "facing_deg": 180,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: legs behind the gunwale",
+   "conf": "med",
+   "note": "Feet est on the deck (gunwale v ~415, near waterline ~465 at u 20558). Head low (bent at the waist), so the painted height (47 px) is not a scale."
+  },
+  {
+   "id": "S2.fig.boatman_standing_20615",
+   "kind": "figure",
+   "name": "boatman in a pale jacket by the lattice rail",
+   "what": "Boatman in a pale short jacket standing behind the lattice rail amidships, bending a little forward with his arms out to the west, watching S3's big boat.",
+   "pts": {
+    "foot": [
+     20617,
+     420,
+     "est"
+    ],
+    "head": [
+     20612,
+     330
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_mat_cargo_21055",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: legs behind the rail and gunwale",
+   "conf": "med",
+   "note": "Feet est on the deck (gunwale v ~420, near waterline ~470 at u 20615). Painted ~90 px."
+  },
+  {
+   "id": "S2.fig.boatman_on_roof_20683",
+   "kind": "figure",
+   "name": "man on the mat roof stretching his arm west",
+   "what": "Man in a short jacket standing on the boat's low mat cover over the cargo, bent forward with his right arm stretched far out to the west toward S3's big boat (calling or signalling to it).",
+   "pts": {
+    "foot": [
+     20683,
+     338,
+     "est"
+    ],
+    "head": [
+     20658,
+     255
+    ]
+   },
+   "support": "boat roof: S2.veh.boat_mat_cargo_21055",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: his feet are among the mat's strokes",
+   "conf": "high",
+   "note": "Support is the mat cover over the cargo (v ~330-345 under his feet), about 85 px above the near gunwale (v ~425) and 135 px above the near waterline (v ~475) at u 20683. Painted ~83 px. The restyle shows him on the cabin roof too."
+  },
+  {
+   "id": "S2.fig.man_cabin_door_20877",
+   "kind": "figure",
+   "name": "man seated in the east cabin's doorway",
+   "what": "Man with a round face and dark hair seated or squatting in the planked doorway of the cargo boat's east cabin, facing the viewer.",
+   "pts": {
+    "foot": [
+     20877,
+     425,
+     "est"
+    ],
+    "head": [
+     20873,
+     386
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_mat_cargo_21055",
+   "pose": "seated",
+   "facing_deg": 270,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: only head and shoulders above the gunwale",
+   "conf": "med",
+   "note": "Feet est on the cabin floor at the gunwale's level (gunwale v ~428, near waterline ~484 at u 20877). Seated: ~39 px to the gunwale."
+  },
+  {
+   "id": "S2.fig.boatman_cap_20938",
+   "kind": "figure",
+   "name": "boatman in a dark cap at the east cabin's rail",
+   "what": "Boatman in a dark cap standing behind a low railing at the east end of the cabin, facing the viewer, beside the big water jar on the foredeck.",
+   "pts": {
+    "foot": [
+     20938,
+     427,
+     "est"
+    ],
+    "head": [
+     20936,
+     372
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_mat_cargo_21055",
+   "pose": "standing",
+   "facing_deg": 270,
+   "group": "S2.grp.boat_mat_cargo_21055",
+   "vis": "part: below the chest behind the railing and gunwale",
+   "conf": "med",
+   "note": "Feet est on the deck (gunwale v ~427, near waterline ~486 at u 20938). Visible height to the deck ~55 px: smaller than the west crew; he may stand in a well lower than the gunwale."
+  },
+  {
+   "id": "S2.grp.boat_mat_cargo_21055",
+   "kind": "group",
+   "name": "the north-bank cargo boat and its crew",
+   "what": "The long cargo boat moored at the north bank and its six crew: four at its west half turn toward S3's big boat drifting against their boat's stern (one fends off with a pole, one leans over the gunwale, one stands at the rail, one on the mat roof stretches his arm out to it), and two at the east cabin look on.",
+   "members": [
+    "S2.veh.boat_mat_cargo_21055",
+    "S2.fig.boatman_pole_20495",
+    "S2.fig.boatman_leaning_20558",
+    "S2.fig.boatman_standing_20615",
+    "S2.fig.boatman_on_roof_20683",
+    "S2.fig.man_cabin_door_20877",
+    "S2.fig.boatman_cap_20938"
+   ],
+   "src": "余辉: 大船抢险 (setting: the neighbouring boat)",
+   "vis": "part",
+   "conf": "med",
+   "note": "The big boat they face is S3's S3.veh.boat_mast_lowering_19518 (its high stern at u ~20330-20480, against this boat's hidden west end); S3's boatman in its cabin door (S3.fig.boatman_cabin_door_pole_20300) holds a pole out east toward this boat (S3: pole end ~(20600, 548))."
+  },
+  {
+   "id": "S2.veh.boat_mat_shelter_20805",
+   "kind": "vehicle",
+   "name": "low boat with mat roofs, moored between the cargo boat and the bank",
+   "what": "A low boat moored close in to the north bank, north of the cargo boat and end to end with the big cabin boat's bow: a woven mat roof over its west half (u 20800-20990, v 190-245) with a big coil of rope (or a round coiled mat) lying on it (u 20860-20990, v 190-235); east of it a flat roof with a slatted eave (u 20960-21100, v 230-290) and a higher woven mat roof (u 21000-21115, v 150-210), with jars or boxes on deck under it (u 21020-21080, v 215-240). Hull planking shows only at the west end (u 20800-20900, v 255-300). No crew, mast or sweep is painted.",
+   "pts": {
+    "front": [
+     20805,
+     300,
+     "est"
+    ],
+    "rear": [
+     21112,
+     305,
+     "est"
+    ],
+    "bow_top": [
+     20805,
+     222,
+     "est"
+    ]
+   },
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 180,
+   "vis": "part: its hull below v ~300 is hidden behind the cargo boat's roofs and cargo, its east end behind the big cabin boat's bow",
+   "conf": "med",
+   "note": "ONE BOAT OR TWO (conf med): the setup's 'big cabin boat ≈ 20820-21800' is read here as two boats: this one (u ~20800-21115) and the big cabin boat, whose curved stem head with a windlass hub stands at u ~21120 (S2.veh.boat_big_cabin_21120). OTHER READING: one long boat with its bow at u ~20800 and these roofs as its fore cabins; nailed hull planks at v 245-265 do show just west of the stem head at u 21090-21120, which suits either reading. The restyle draws a separate boat at 20810-21000 and a cabin at 21000-21110. BOW: unknown (conf low): front put at the west end, upstream like the big cabin boat beside it; other reading front (21112, 305), facing 0. Either way its main point is in river_w's range. WATERLINE est: the near side is hidden; v ~300-305 from the cargo boat's roof line and the hull planks' lowest visible line (v ~300 at u 20850). SCALE CUE: length ~310 px; mat roof ~55 px high over the hull's visible top. A mooring rope from the willow at (20660, 205) passes its west end but ends on the cargo boat's deck coil (see S2.veh.boat_mat_cargo_21055)."
+  },
+  {
+   "id": "S2.veh.boat_big_cabin_21120",
+   "kind": "vehicle",
+   "name": "big cabin boat moored along the north bank (bow west, rudder east)",
+   "what": "A big river boat moored along the north bank in front of the shops, bow to the west-north-west: a curved stem head with a round windlass hub at the bow (u 21110-21190, v 155-210) and a long oar or pole slanting down from the bow into the water (to about (21265, 318)); a flat mat awning on posts (u 21220-21350, v 160-200) over a row of six coiled ropes hanging along the far gunwale (u 21225-21350, v 195-225); a short upright post on deck (u ~21362, v 150-200); a low cabin with a window (u 21290-21400, v 240-300) where a man sits; a big round-arched cabin frame (u 21400-21500, v 200-300) and a deckhouse with a sloping mat roof (u 21430-21660, v 160-280); a high stern with a gabled rudder house (u 21650-21800, v 170-260) and a big rudder hung over the stern, its blade in the water (u 21650-21780, v 345-420). The hull is planked with rows of nails and bellies down to v ~388 under the deckhouse. No mast or sail. Three crew are painted.",
+   "pts": {
+    "front": [
+     21120,
+     300,
+     "est"
+    ],
+    "rear": [
+     21665,
+     387,
+     "est"
+    ],
+    "beam_s": [
+     21540,
+     388
+    ],
+    "bow_top": [
+     21118,
+     175
+    ],
+    "stern_top": [
+     21662,
+     255
+    ],
+    "rudder": [
+     21715,
+     412
+    ],
+    "rudder_stock_top": [
+     21672,
+     280
+    ],
+    "bow_oar_tip": [
+     21265,
+     318
+    ],
+    "deck_post": [
+     21362,
+     150
+    ]
+   },
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 168,
+   "group": "S2.grp.boat_big_cabin_21120",
+   "vis": "part: willow whips of the south willow's crown cross the hull's lower half west of u 21550; the bow's waterline is hidden",
+   "conf": "high",
+   "note": "WHICH END IS THE BOW (conf high): the rudder hangs over the east end (stock from (21672, 280), blade (21650-21780, 345-420) in the water) under a gabled rudder house: the east end is the stern, by the lead's rule; the west end carries the curved stem head and a windlass hub. WATERLINE: the hull's lowest near-side planks, (21400, ~345) -> (21540, 388) -> the stern (21665, 387); toward the bow it is hidden behind willow whips and est along the same line (slope ~0.2) to (21120, 300). The diagonal from (21110, 230) to (21265, 318), with a dark blade-like wedge at u 21200-21260, v 290-320, is read as a long oar or pole from the bow into the water (part of the boat); it could also be the bow's forefoot. HEADING: rear -> front rises ~87 px of v over 545 px of u: about 12 deg north of west (facing ~168) at dx ~40 px/m. SCALE CUE: waterline length ~545 px (21120-21665); stem head v ~170 over the bow's est waterline ~300 (130 px); the stern's top v ~255 over its waterline 387; crew painted ~80-85 px tall (est feet). The upright post (21362, 150-200) is part of the boat (a bitt or short pole on deck); t2 recorded it as a bank mooring post (S2.prop.post_north_bank_21364, conf low): keep one at the merge. The setup's 'big cabin boat ≈ 20820-21800' includes the mat-shelter boat (S2.veh.boat_mat_shelter_20805), read here as a separate boat. The restyle's 'railing with a standing man' on this boat (u ~21000-21360, v 150-220) is the row of coiled ropes and the deck post; one possible figure under the awning's west end is recorded with conf low. Merge: t2's S2.prop.post_north_bank_21364 (a faint upright u 21362-21366 from the shop's sill v ~140 down to v ~188, read as a mooring post on the bank, conf low) was retired as this boat's deck post (pts.deck_post): it stands among the deck's gear (u 21353-21385, v 167-195), and the bank strip there is the shop's sill. Second pass: the possible figure under the awning's west end (figure_under_awning_21245 (retired at the second pass)) is a white silk fleck at the awning's tip, retired; three crew."
+  },
+  {
+   "id": "S2.fig.man_cabin_window_21333",
+   "kind": "figure",
+   "name": "man looking out of the low cabin's window",
+   "what": "Man with dark hair seated inside the low cabin amidships, his head and shoulders in the window, looking out toward the viewer.",
+   "pts": {
+    "foot": [
+     21335,
+     302,
+     "est"
+    ],
+    "head": [
+     21332,
+     268
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_big_cabin_21120",
+   "pose": "seated",
+   "facing_deg": 270,
+   "group": "S2.grp.boat_big_cabin_21120",
+   "vis": "part: only head and shoulders in the window",
+   "conf": "high",
+   "note": "Feet est on the cabin floor at the near gunwale's level (gunwale v ~300, near waterline ~345 est at u 21335)."
+  },
+  {
+   "id": "S2.fig.boatman_far_deck_21505",
+   "kind": "figure",
+   "name": "boatman standing on the far-side deck between the cabins",
+   "what": "Man with dark hair or a dark cap standing on the boat's far (north) side between the arched cabin and the deckhouse, head and shoulders above the roofs, turned south-west toward the water.",
+   "pts": {
+    "foot": [
+     21505,
+     212,
+     "est"
+    ],
+    "head": [
+     21503,
+     128
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_big_cabin_21120",
+   "pose": "standing",
+   "facing_deg": 225,
+   "group": "S2.grp.boat_big_cabin_21120",
+   "vis": "part: below the shoulders hidden by the cabin roofs",
+   "conf": "med",
+   "note": "Feet est on the deck at v ~212 from a crew height of ~85 px (far gunwale v ~205-215 here; near gunwale ~300, near waterline ~385 at u 21505). On the boat, not the bank: the bank strip's edge here is at v ~160-175 (t2's men on it stand with feet at v 124-146 and are 46-73 px tall), so a man on the strip with his head at v 128 would be about 30-45 px tall, far smaller than painted. t2 recorded him on the bank as S2.fig.man_behind_boat_roof_21503 (conf low, both readings): keep one at the merge. The restyle paints him standing at the boat's edge. Merge: t2 recorded the same man on the bank behind the boat as S2.fig.man_behind_boat_roof_21503 (conf low, both readings; head u 21495-21512, v 128-142), retired: on the bank strip (edge v ~160-175) a man with his head at v 128 would be 30-45 px tall, far smaller than painted, so he is crew."
+  },
+  {
+   "id": "S2.fig.steersman_stern_21678",
+   "kind": "figure",
+   "name": "steersman on the high stern",
+   "what": "Man in a dark cap standing on the boat's high stern behind the rudder house's roof, head and shoulders above it, facing west along the boat (the steersman).",
+   "pts": {
+    "foot": [
+     21678,
+     210,
+     "est"
+    ],
+    "head": [
+     21675,
+     130
+    ]
+   },
+   "support": "boat stern deck: S2.veh.boat_big_cabin_21120",
+   "pose": "standing",
+   "facing_deg": 180,
+   "group": "S2.grp.boat_big_cabin_21120",
+   "vis": "part: below the shoulders hidden by the rudder house's roof",
+   "conf": "med",
+   "note": "Feet est on the stern deck at v ~210 (stern top ~255 at the transom; waterline 387). On the boat by the same argument as S2.fig.boatman_far_deck_21505: the bank here is the shop front (t2's shop figures at v 98-101). t2 recorded him on the bank as S2.fig.man_behind_boat_stern_21673 (conf low): keep one. The restyle paints a man in a white shirt on the stern roof. Merge: t2 recorded the same man on the bank as S2.fig.man_behind_boat_stern_21673 (conf low, both readings; cap u 21665-21685, v 130-147), retired for the reason given in S2.fig.boatman_far_deck_21505's note. FRAME: support -> `boat stern deck: S2.veh.boat_big_cabin_21120`: he stands on the high stern (stern_top (21662, 255) over rear (21665, 387), 132 px), not on the cabin deck at the near gunwale (45 px over the water)."
+  },
+  {
+   "id": "S2.grp.boat_big_cabin_21120",
+   "kind": "group",
+   "name": "the big cabin boat and its crew",
+   "what": "The big cabin boat moored along the north bank with its crew at rest: a man looks out of the low cabin's window, a boatman stands on the far-side deck between the cabins, and the steersman stands on the high stern.",
+   "members": [
+    "S2.veh.boat_big_cabin_21120",
+    "S2.fig.man_cabin_window_21333",
+    "S2.fig.boatman_far_deck_21505",
+    "S2.fig.steersman_stern_21678"
+   ],
+   "vis": "part",
+   "conf": "med",
+   "note": "t2's bank figures S2.fig.man_behind_boat_roof_21503 and S2.fig.man_behind_boat_stern_21673 are the same two men as S2.fig.boatman_far_deck_21505 and S2.fig.steersman_stern_21678: the merge keeps one of each. Merge: river_w's two men are kept; t2's copies on the bank (S2.fig.man_behind_boat_roof_21503, S2.fig.man_behind_boat_stern_21673) were retired, and so was t2's post S2.prop.post_north_bank_21364 (this boat's deck post)."
+  },
+  {
+   "id": "S2.veh.boat_covered_21205",
+   "kind": "vehicle",
+   "name": "small covered boat off the south bank (bow east)",
+   "what": "A small boat lying off the south bank under the great willow's whips, with a mat canopy on four thin posts over most of its length (u 20880-21240, v 1060-1110; gabled at its east end) and a squared, raised bow board at the east end (u 21190-21215, v 1145-1200); a man sits under the canopy beside a small upright figure or tall vase, and a round basket lies on the deck at the west (u 20985-21010, v 1185-1205). No mast, oars or sweep are painted; people on the bank in front of it (t1's group) reach or hold something up toward it.",
+   "pts": {
+    "front": [
+     21205,
+     1235,
+     "est"
+    ],
+    "rear": [
+     20875,
+     1242,
+     "est"
+    ],
+    "bow_top": [
+     21210,
+     1162
+    ],
+    "stern_top": [
+     20880,
+     1222,
+     "est"
+    ],
+    "canopy_w": [
+     20880,
+     1062
+    ],
+    "canopy_e": [
+     21240,
+     1095
+    ]
+   },
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 1,
+   "group": "S2.grp.boat_covered_21205",
+   "vis": "part: willow whips cross the whole boat; its west end and its near waterline are hidden",
+   "conf": "med",
+   "note": "WHICH END IS THE BOW (conf low): the east end shows a squared, raised bow board and no rudder; the west end tapers under the willow whips (u ~20870-20900, v 1220-1240) and is hidden. Read bow east (facing ~1); other reading bow west (front (20875, 1242), facing ~181). WATERLINE est: gunwale (21200, 1165) -> (21000, 1215) -> (20880, 1225); the hull's lower edge reads at v ~1210-1240 through the whips (t1: v ~1210-1235), so the waterline is est at v ~1235-1242. SCALE CUE: length ~335 px; canopy ~55 px above the gunwale at the posts (posts at u ~21095 and ~21200); the seated man ~70 px from head to deck. Restyle: it draws the mat canopy as a tiled pavilion roof (an invention) and the upright shape beside the man as a child. Possibly 余辉's 船侧祭神 (an offering at a boat's side): the bank man (t1's S2.fig.bank_man_seated_21140) holds up a small round object toward it, and the boat carries a tall vase-like thing; unconfirmed, not tagged."
+  },
+  {
+   "id": "S2.fig.man_seated_canopy_21120",
+   "kind": "figure",
+   "name": "man seated under the boat's canopy",
+   "what": "Man in a dark, wide-sleeved robe with his hair in a knot, seated on the deck under the mat canopy beside its post, hunched forward and turned west toward the small upright figure (or vase) beside him.",
+   "pts": {
+    "foot": [
+     21125,
+     1195,
+     "est"
+    ],
+    "head": [
+     21107,
+     1122
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_covered_21205",
+   "pose": "seated",
+   "facing_deg": 180,
+   "group": "S2.grp.boat_covered_21205",
+   "vis": "part: willow whips cross him; the gunwale hides his legs",
+   "conf": "high",
+   "note": "Feet est on the deck (gunwale v ~1195 at u 21125; waterline est ~1245). Head to deck ~73 px."
+  },
+  {
+   "id": "S2.fig.child_or_vase_21076",
+   "kind": "figure",
+   "name": "small upright figure (child?) or tall vase beside him",
+   "what": "A small, narrow upright shape with a flat, brimmed top standing on the deck beside the seated man: a small child in a flat hat facing him, or a tall vase or jar on a stand. Low confidence either way.",
+   "pts": {
+    "foot": [
+     21077,
+     1197,
+     "est"
+    ],
+    "head": [
+     21075,
+     1140
+    ]
+   },
+   "support": "boat deck: S2.veh.boat_covered_21205",
+   "pose": "standing",
+   "facing_deg": 0,
+   "group": "S2.grp.boat_covered_21205",
+   "vis": "part: willow whips cross it",
+   "conf": "low",
+   "note": "BOTH READINGS: (a) a child standing on the deck, as the restyle paints it (a small figure in a dark cap facing the man); (b) a tall vase or jar with a flat lid on a stand (narrow neck, wider shoulder, u 21065-21088, v 1140-1197), which is how it reads at zoom 4 on the scan (no face or arms). If a vase, it is the boat's cargo and this entity is retired. 57 px tall against the seated man's 73 px."
+  },
+  {
+   "id": "S2.grp.boat_covered_21205",
+   "kind": "group",
+   "name": "the small covered boat and the people on it",
+   "what": "The small covered boat lying off the south bank: a man sits under its mat canopy beside a small upright figure or a tall vase, facing the people on the bank who hold something up toward the boat.",
+   "members": [
+    "S2.veh.boat_covered_21205",
+    "S2.fig.man_seated_canopy_21120",
+    "S2.fig.child_or_vase_21076"
+   ],
+   "vis": "part",
+   "conf": "med",
+   "note": "The people on the bank in front of it are t1's (S2.grp.south_bank_people_21150: S2.fig.bank_man_seated_21140, S2.fig.bank_figure_raised_hands_21085, S2.fig.bank_tall_man_21205, S2.fig.bank_small_figure_21255, S2.fig.bank_crouching_21155); the two groups face each other across the water's edge."
+  },
+  {
+   "id": "S2.veh.boat_skiff_21080",
+   "kind": "vehicle",
+   "name": "open skiff among the south willow's whips",
+   "what": "A small open boat (skiff) lying diagonally under the great south-bank willow's whips, its pointed west end at about (21068, 835) and its hull running east-south-east behind the willow's lower branches and trunk: planked sides (the near gunwale from (21090, 880) to (21290, 950)) and thwarts or gear inside (u 21140-21200, v 840-895). No one aboard, no mast or oars.",
+   "pts": {
+    "front": [
+     21080,
+     920,
+     "est"
+    ],
+    "rear": [
+     21330,
+     1030,
+     "est"
+    ],
+    "bow_top": [
+     21068,
+     835
+    ],
+    "beam_s": [
+     21200,
+     990,
+     "est"
+    ]
+   },
+   "support": "water",
+   "pose": "moored",
+   "facing_deg": 154,
+   "vis": "part: willow whips cover all of it; its east end is hidden behind the willow's trunk and lower branches (u > ~21290)",
+   "conf": "med",
+   "note": "The setup asked whether the hull seen through the willows at u ~20900-21250, v 830-1000 is the small covered boat: it is a separate open boat (its west end at v ~835-880, 200 px north of the covered boat's canopy, and no canopy). The restyle also draws a hull here. BOW: unknown (conf low): front put at the visible pointed west end; other reading front (21330, 1030), facing ~334. WATERLINE est: the near side's lower edge reads at (21110, ~945) -> (21260, ~1005) through the whips; front and rear est on that line. SCALE CUE: visible length ~230 px, total est ~265 px; near gunwale to waterline ~55 px. MOORED: probably to the willow, whose trunk (t2's S2.tree.willow_great_21345) stands where its east end disappears; no rope is visible. The shapes inside at u 21140-21200 read at zoom 4-6 as crossed sticks, not a person (the restyle paints no one)."
+  },
+  {
+   "id": "S2.fig.man_in_river_20970",
+   "kind": "figure",
+   "name": "man standing in the open water among the willow whips",
+   "what": "Man with a dark headcloth or cap and a light robe or jacket, seen from the waist up in the open water among the south willow's whips, facing east with his right hand raised to his face holding a small dark round thing (a cup or bowl, a bird?); nothing is painted under his waist.",
+   "pts": {
+    "foot": [
+     20970,
+     702,
+     "est"
+    ],
+    "head": [
+     20968,
+     626
+    ]
+   },
+   "support": "water",
+   "pose": "standing",
+   "facing_deg": 0,
+   "vis": "part: painted only from the waist up; willow whips cross his east side",
+   "conf": "low",
+   "note": "The figure is certain (head with a dark cap at u 20955-20985, v 622-645, face turned east, robe outline down to v ~700, the hand and the dark round object at u 21005-21030, v 645-665); what he stands on is not. READINGS: (a) wading waist-deep in the river: the body stops at v ~700, where the water surface would cut him (foot est there, at the surface: support water); (b) standing in a small craft hidden by the willow whips: no hull, gunwale or deck is painted under him; a long straight line from (20705, 812) to (20990, 760) below him may be a pole or a straight whip. The restyle paints him as a man holding a child (the dark round thing becomes a child's head): count one person. A second dark blob at (21125, 640) on a willow twig is probably a bird (left to t1). The setup listed this as 'a mark in the open water at about (20970, 630)'."
+  }
+ ]
+}

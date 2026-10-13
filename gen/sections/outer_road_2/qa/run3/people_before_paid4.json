@@ -1,0 +1,1309 @@
+{
+ "about": "Who the outer road's part 2 people and animals are and what they do: every painted figure and animal of S4b (map/text/S4b.md, u 12600-15500) at its mapped spot (layout.json, with its recorded moves), and nobody else (map/BUILDING.md). Written by gen/sections/outer_road_2/make_people.py (the casting of gen/expand/outer_road_2_needs.md, from the 22 existing characters, at the area builder's real sizes); rerun it after a layout move, a build or a workshop delivery. figures: character (a character not made yet plays its stand_in; a seated figure whose character has no seated clip yet is played by the nearest look that can sit: cast_why), do = [clip, seconds] cycles with clips the playing character has (clips_why: what is still to make), nudge = [dX, dD] (nudge_why), facing_deg where the real-size scene needs another (facing_why), scale for children (scale_why), props = carried prop_<name> parts (props_why). The five crew stand on their moored boats by their layout support (boat deck:/boat roof:) at their layout spots (which carry their boats' moves) and are never nudged; no boat moves or is worked, so there is no `boats` block. walkers: figures painted mid-stride or carrying a load, walking along their painted direction and back (walkers_why). animals: each painted animal at its map position facing hind to fore, model and load from web/public/assets/animals/animals.json (animals_why: what stands in for an unmade coat or tack). Seats the map lacks: gen/sections/outer_road_2/seats.json, for the builder. wanted: what S4b would take from the catalogue later. No traffic.",
+ "figures": {
+  "official_seated_12728": {
+   "character": "official",
+   "do": [
+    [
+     "write",
+     20
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    0.0
+   ]
+  },
+  "man_dark_cap_by_stair_12700": {
+   "character": "idler",
+   "do": [
+    [
+     "sit_floor",
+     30
+    ]
+   ],
+   "nudge": [
+    0,
+    0.82
+   ]
+  },
+  "dark_figure_or_garment_12825": {
+   "character": "inspector",
+   "do": [
+    [
+     "chin",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.31,
+    -0.17
+   ]
+  },
+  "small_figure_cart_rear_12706": {
+   "character": "child",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "scale": 0.74,
+   "nudge": [
+    -0.52,
+    0.0
+   ]
+  },
+  "man_seated_front_of_hall_12866": {
+   "character": "robed_man",
+   "do": [
+    [
+     "listen",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.38,
+    0.01
+   ]
+  },
+  "man_in_shed_13220": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "onlooker_grey_jacket_13152": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.22,
+    0.06
+   ]
+  },
+  "small_onlooker_13180": {
+   "character": "child",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "scale": 1.05,
+   "nudge": [
+    -0.15,
+    -0.2
+   ]
+  },
+  "onlooker_light_robe_13200": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    0.18
+   ]
+  },
+  "man_standing_by_hall_12942": {
+   "character": "sightseer",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "onlooker_dark_robe_13222": {
+   "character": "townsman",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.12,
+    0.06
+   ]
+  },
+  "youth_onlooker_13265": {
+   "character": "child_robed",
+   "do": [
+    [
+     "chin",
+     8
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "scale": 1.11,
+   "nudge": [
+    -0.08,
+    0.01
+   ]
+  },
+  "seated_man_13240": {
+   "character": "sightseer",
+   "do": [
+    [
+     "knees_up",
+     30
+    ]
+   ],
+   "nudge": [
+    -0.52,
+    0.09
+   ]
+  },
+  "customer_light_12990": {
+   "character": "scholar",
+   "do": [
+    [
+     "drink",
+     16
+    ]
+   ],
+   "nudge": [
+    0.02,
+    0.33
+   ]
+  },
+  "tall_onlooker_leaning_13290": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    0.08,
+    -0.01
+   ]
+  },
+  "customer_dark_hat_13027": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.14,
+    -0.13
+   ]
+  },
+  "stall_keeper_13415": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    0.05
+   ]
+  },
+  "bearded_onlooker_13350": {
+   "character": "robed_man",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.14,
+    0.03
+   ]
+  },
+  "onlooker_back_view_13332": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "seated_in_bottom_shop_12792": {
+   "character": "idler",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "facing_deg": 90,
+   "nudge": [
+    -0.01,
+    0.06
+   ]
+  },
+  "seated_in_cart_front_12995": {
+   "character": "idler",
+   "do": [
+    [
+     "sit_floor",
+     30
+    ]
+   ],
+   "nudge": [
+    0.26,
+    -0.01
+   ]
+  },
+  "young_onlooker_13387": {
+   "character": "sightseer",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "crane",
+     4
+    ]
+   ],
+   "nudge": [
+    0.1,
+    -0.03
+   ]
+  },
+  "onlooker_profile_13382": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "figure_in_shop_13242": {
+   "character": "carter",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.06,
+    -0.17
+   ]
+  },
+  "onlooker_behind_13428": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "onlooker_dark_robe_13425": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "crane",
+     4
+    ]
+   ]
+  },
+  "sedan_attendant_13160": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "talk",
+     4
+    ]
+   ],
+   "nudge": [
+    0.07,
+    -0.39
+   ]
+  },
+  "man_white_jacket_12773": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "porter_tall_load_13402": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ],
+   "nudge": [
+    0.17,
+    0.07
+   ]
+  },
+  "man_big_hat_12895": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "counter_man_leaning_13325": {
+   "character": "idler",
+   "do": [
+    [
+     "lean_chin",
+     14
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_in_white_at_horse_13360": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    0.0
+   ]
+  },
+  "man_behind_tree_13850": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "wheelwright_bending_13620": {
+   "character": "idler",
+   "do": [
+    [
+     "bucket_lift",
+     10
+    ],
+    [
+     "browse",
+     5
+    ]
+   ],
+   "facing_deg": 225
+  },
+  "man_bowed_at_horse_13410": {
+   "character": "inspector",
+   "do": [
+    [
+     "lean_over",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "man_bending_to_donkey_13440": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.06,
+    -0.19
+   ]
+  },
+  "porter_at_cart_rear_13090": {
+   "character": "idler",
+   "do": [
+    [
+     "push_flank",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -0.48,
+    0.89
+   ]
+  },
+  "cart_driver_13303": {
+   "character": "idler",
+   "do": [
+    [
+     "point",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "man_behind_donkey_13512": {
+   "character": "idler",
+   "do": [
+    [
+     "point",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.07,
+    0.13
+   ]
+  },
+  "man_wide_hat_13760": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "crane",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    -0.06
+   ]
+  },
+  "carter_at_shaft_ox_13243": {
+   "character": "idler",
+   "do": [
+    [
+     "bridle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "man_bending_sack_13607": {
+   "character": "porter",
+   "do": [
+    [
+     "hold_tray",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "stall_keeper_seated_13940": {
+   "character": "carter",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.17,
+    0.06
+   ]
+  },
+  "man_looking_up_13755": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "figure_behind_rail_13995": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "small_companion_14654": {
+   "character": "child",
+   "do": [
+    [
+     "reach",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "scale": 1.24,
+   "nudge": [
+    -0.02,
+    0.0
+   ]
+  },
+  "man_on_bank_14686": {
+   "character": "townsman",
+   "do": [
+    [
+     "talk",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.02,
+    -0.0
+   ]
+  },
+  "man_at_gate_post_14540": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "customer_bent_14420": {
+   "character": "inspector",
+   "do": [
+    [
+     "lean_over",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -0.14,
+    -0.01
+   ]
+  },
+  "customer_hat_14462": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "tell_fortune",
+     10
+    ],
+    [
+     "sit",
+     6
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.06
+   ]
+  },
+  "customer_white_14560": {
+   "character": "robed_man",
+   "do": [
+    [
+     "listen",
+     16
+    ]
+   ],
+   "nudge": [
+    0.48,
+    -0.06
+   ]
+  },
+  "seated_man_cabin_roof_15012": {
+   "character": "boatman",
+   "stand_in": "scholar",
+   "do": [
+    [
+     "knees_up",
+     30
+    ]
+   ]
+  },
+  "man_on_bank_14928": {
+   "character": "idler",
+   "do": [
+    [
+     "point",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "customer_cap_14785": {
+   "character": "official",
+   "do": [
+    [
+     "write",
+     16
+    ]
+   ],
+   "nudge": [
+    0.7,
+    -0.04
+   ]
+  },
+  "figure_at_front_rail_14752": {
+   "character": "idler",
+   "do": [
+    [
+     "crouch",
+     12
+    ]
+   ],
+   "nudge": [
+    -0.12,
+    0.36
+   ]
+  },
+  "head_in_cabin_door_15097": {
+   "character": "boatman",
+   "stand_in": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "man_east_bay_14958": {
+   "character": "scholar",
+   "do": [
+    [
+     "knees_up",
+     20
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.56
+   ]
+  },
+  "boatman_dark_cap_15046": {
+   "character": "boatman",
+   "stand_in": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "boatman_light_hat_15066": {
+   "character": "boatman",
+   "stand_in": "hat_traveller",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "seated_boatman_stern_15372": {
+   "character": "boatman",
+   "stand_in": "idler",
+   "do": [
+    [
+     "sit_floor",
+     30
+    ]
+   ]
+  },
+  "man_dark_cap_15075": {
+   "character": "sightseer",
+   "do": [
+    [
+     "chat",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.29,
+    0.02
+   ]
+  },
+  "man_frame_or_hat_15125": {
+   "character": "robed_man",
+   "do": [
+    [
+     "talk",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.11,
+    -0.02
+   ]
+  }
+ },
+ "nudge_why": {
+  "official_seated_12728": "painted seated, the map's point his seat (\"seat est\"); official's write keeps the hips 0.03 m from the root, so the root stands where the hips land on that seat (seats.json)",
+  "man_dark_cap_by_stair_12700": "his foot point is 0.16 m from the big jar's centre (0.84 m across at real size, the builder's kit_outer_road_2.big_jar; it hides his lower body in the painting, so it stands in front of him, toward the viewer): he sits on the ground just behind (north of) it, facing west to the stair",
+  "dark_figure_or_garment_12825": "his spot lies within 0.3 m of S4.bld.official_hall_12530 at real size (its mapped footprint): he steps 0.12 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "small_figure_cart_rear_12706": "painted under the fringe of the first palm cart's thatch at its west end; at real size the cart's body (3.9 m, centred on its painted wheel) and its collider reach X 54.73, -0.20 m past his spot: he stands just behind its tail, where he is painted; then his spot lies within 0.3 m of S4b.veh.palm_cart_13070 at real size (its mapped footprint): he steps 0.02 m straight out of it, to stand clear of it",
+  "man_seated_front_of_hall_12866": "painted seated with his feet at the painted point (the map's foot est); robed_man's listen keeps its root 0.38 m from the feet and the hips 0.04 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "onlooker_grey_jacket_13152": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "small_onlooker_13180": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "onlooker_light_robe_13200": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "onlooker_dark_robe_13222": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "youth_onlooker_13265": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "seated_man_13240": "painted seated with his feet at the painted point (the map's foot est); sightseer's knees_up keeps its root 0.53 m from the feet and the hips 0.00 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "customer_light_12990": "painted seated with his feet at the painted point (the map's foot est); scholar's drink keeps its root 0.33 m from the feet and the hips 0.02 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "tall_onlooker_leaning_13290": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "customer_dark_hat_13027": "painted seated with his feet at the painted point (the map's foot est); scholar's sit keeps its root 0.19 m from the feet and the hips 0.27 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "stall_keeper_13415": "his spot lies within 0.3 m of S4b.prop.stall_13480 at the builder's size: he steps 0.06 m straight out of it, to stand clear of it",
+  "bearded_onlooker_13350": "his spot lies within 0.3 m of S4b.prop.goods_on_mat_13282 at the builder's size: he steps 0.24 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "seated_in_bottom_shop_12792": "seated on S4b.prop.bench_12835 (a mapped bench, 0.45 m high as the builder makes it), as painted: idler's sit keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.46 m from the painted foot point",
+  "seated_in_cart_front_12995": "seated on the first palm cart's seat, as painted under its thatch hood: the plank the area kit lays across the sills 0.32 m past the bed's front (top 1.08 m; kit_outer_road_2.palm_cart, parked), cross-legged (sit_floor keeps the root under the hips): at real size the cart's front is 0.26 m from his painted point",
+  "young_onlooker_13387": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "figure_in_shop_13242": "painted seated with his feet at the painted point (the map's foot est); carter's sit keeps its root 0.18 m from the feet and the hips 0.34 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "sedan_attendant_13160": "painted standing between the set-down sedan chair's two poles at its east end, facing us; at real size the north pole (0.465 m off the chair's axis, 0.74 m up, as the builder runs it to the crossbar at X 61.86) runs through his painted spot and the cabin's east face (with its collider) is at X 60.00: he stands on the axis between the poles, just east of the cabin",
+  "porter_tall_load_13402": "his spot lies within 0.3 m of S4b.bld.shop_hall_13170 at real size (its mapped footprint): he steps 0.18 m straight out of it, to stand clear of it",
+  "man_in_white_at_horse_13360": "painted against the saddled horse (horse, 2.05 m long and 0.65 m wide at real size), his spot fell inside its body: he steps 0.03 m straight out from its head, on the side he is painted",
+  "man_bending_to_donkey_13440": "painted against the small dark donkey (donkey, 1.49 m long and 0.40 m wide at real size), his spot fell inside its body: he steps 0.20 m straight out from its flank, on the side he is painted",
+  "porter_at_cart_rear_13090": "painted with both arms raised to the second palm cart's underside at its rear half (his hands against its bed); at real size (the area kit's body 1.3 m wide, its wheels' collider 1.10 m off the axis) his painted spot is 1.31 m off its side, so he steps in to stand against it, 1.75 m along it as painted",
+  "man_behind_donkey_13512": "painted against the saddled horse (horse, 2.05 m long and 0.65 m wide at real size), his spot fell inside its body: he steps 0.09 m straight out from its flank, on the side he is painted; then painted against the small dark donkey (donkey, 1.49 m long and 0.40 m wide at real size), his spot fell inside its body: he steps 0.23 m straight out from its flank, on the side he is painted",
+  "man_wide_hat_13760": "his spot lies within 0.3 m of S4b.bld.wheelwright_shed_13840 at real size (its mapped footprint): he steps 0.24 m straight out of it, to stand clear of it; then his spot lies within 0.3 m of S4b.prop.timber_pile_13745 at the builder's size: he steps 0.08 m straight out of it, to stand clear of it",
+  "stall_keeper_seated_13940": "painted seated with his feet at the painted point (the map's foot est); carter's sit keeps its root 0.18 m from the feet and the hips 0.34 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "small_companion_14654": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "man_on_bank_14686": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "porter_baskets_14778": "painted stepping onto the mat-cargo boat's gangplank at its bank end (scan 14760, 402); at real size the boat lies moved outward (build_choices.json moves) and its plank lands on its north side, foot at (75.45, 24.45) (the gangplank's foot the builder sets (build_choices.json boats S4b.veh.boat_mat_cargo_14900 kit.gangplank)): his place is 0.35 m short of that foot, where his walk turns (the page starts a walker on the path point nearest his painted spot)",
+  "customer_bent_14420": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "customer_hat_14462": "seated on S4b.prop.chair_14458 (a mapped chair, 0.45 m high as the builder makes it), as painted: fortune_teller's tell_fortune keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.07 m from the painted foot point",
+  "customer_white_14560": "seated on S4b.prop.stool_14595 (a mapped stool, 0.42 m high as the builder makes it), as painted: robed_man's listen keeps the hips 0.04 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.38 m from the painted foot point",
+  "customer_cap_14785": "seated on S4b.prop.stool_14840 (a mapped stool, 0.42 m high as the builder makes it), as painted: official's write keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.43 m from the painted foot point",
+  "figure_at_front_rail_14752": "his spot lies within 0.3 m of S4b.prop.bundle_heap_14680 at the builder's size: he steps 0.26 m straight out of it, to stand clear of it; then his spot is 0.29 m from the centre of S4b.prop.round_basket_or_drum_14795 (0.25 m in radius at real size): he steps 0.16 m out from it",
+  "man_east_bay_14958": "painted seated with his feet at the painted point (the map's foot est); scholar's knees_up keeps its root 0.56 m from the feet and the hips 0.04 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "man_dark_cap_15075": "his spot lies inside S4b.prop.bundle_heap_14970 at the builder's size: he steps 0.40 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "man_frame_or_hat_15125": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them"
+ },
+ "walkers": [
+  {
+   "id": "muleteer_13560",
+   "figure": "muleteer_13560",
+   "character": "idler",
+   "clip": "walk",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     60.49,
+     20.95
+    ],
+    [
+     58.14,
+     20.1
+    ]
+   ]
+  },
+  {
+   "id": "porter_pole_bundle_13537",
+   "figure": "porter_pole_bundle_13537",
+   "character": "porter",
+   "props": [
+    "pole_bundle"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     58.32,
+     17.11
+    ],
+    [
+     63.02,
+     17.11
+    ]
+   ]
+  },
+  {
+   "id": "figure_behind_roof_14583",
+   "figure": "figure_behind_roof_14583",
+   "character": "porter",
+   "clip": "walk",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     75.47,
+     14.59
+    ],
+    [
+     75.47,
+     19.0
+    ]
+   ]
+  },
+  {
+   "id": "porter_baskets_14778",
+   "figure": "porter_baskets_14778",
+   "character": "porter",
+   "props": [
+    "pole_baskets"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     68.19,
+     23.41
+    ],
+    [
+     75.1,
+     24.49
+    ]
+   ],
+   "nudge": [
+    -0.4,
+    1.82
+   ]
+  }
+ ],
+ "walkers_why": {
+  "muleteer_13560": "2.4 m along his painted facing (200 deg) to S4b.tree.gnarled_13318, and 0.1 m back behind his spot to animal mule_pack_head_down_13612",
+  "porter_pole_bundle_13537": "1.4 m along his painted facing (0 deg) to S4b.prop.striped_load_13684, and 3.4 m back behind his spot to S4b.bld.big_roof_hall_12990",
+  "figure_behind_roof_14583": "2.4 m along his painted facing (90 deg) to D 19.0, short of the arched-awning boat's bow, which overhangs the bank from D 19.25 (its boarding bridges), and 2.0 m back behind his spot",
+  "porter_baskets_14778": "up the bank to the mat-cargo boat's gangplank, as painted (stepping down it with his baskets): from 7.0 m out on the bank (heading 9 deg toward the plank) to 0.35 m short of the gangplank's foot the builder sets (build_choices.json boats S4b.veh.boat_mat_cargo_14900 kit.gangplank), (75.45, 24.45); the plank itself is the boat kit's, so he turns there and walks back",
+  "held": {
+   "drivers": "carter_at_shaft_ox_13243 and cart_driver_13303 are painted walking with the second palm-covered cart, which is built standing in its team's harness: they stay with it, at their painted spots",
+   "porter_at_cart_rear_13090": "painted carrying, his arms raised to the second cart's underside, lifting a load down or steadying it: he stays at the cart"
+  }
+ },
+ "animals": {
+  "ox_shaft_13442": {
+   "model": "ox",
+   "load": "draught",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "facing_deg": 40.4
+  },
+  "ox_lead_13458": {
+   "model": "ox",
+   "load": "draught",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "facing_deg": 134.3
+  },
+  "horse_saddled_13378": {
+   "model": "horse",
+   "load": "saddle",
+   "do": [
+    [
+     "head_low",
+     9
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.45,
+    -0.02
+   ]
+  },
+  "horse_12862": {
+   "model": "horse",
+   "scale": 0.85,
+   "do": [
+    [
+     "head_low",
+     9
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "donkey_13474": {
+   "model": "donkey",
+   "do": [
+    [
+     "graze",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "mule_pack_head_down_13612": {
+   "model": "mule",
+   "load": "pack_saddle",
+   "do": [
+    [
+     "graze",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.8,
+    -0.8
+   ]
+  },
+  "mule_pack_head_up_13645": {
+   "model": "mule",
+   "load": "pack_saddle",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    0.6
+   ]
+  },
+  "mule_pack_east_13752": {
+   "model": "mule",
+   "load": "pack_saddle",
+   "do": [
+    [
+     "graze",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.5,
+    -1.9
+   ]
+  },
+  "mule_pack_behind_13787": {
+   "model": "mule",
+   "load": "pack_saddle",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.6
+   ]
+  },
+  "bird_12827": {
+   "model": "bird",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  }
+ },
+ "animals_why": {
+  "models": "species as painted (map/text/S4b.md): 2 oxen (the second palm cart's team), 2 horses (the saddled dark horse, the small light horse at the second cart's rear), a small dark donkey, 4 pack mules on the top street (125 px nose to rump against the 99 px muleteer: mules, not donkeys) and a small dark bird",
+  "teams": "the second palm-covered cart's shaft ox (facing 40) and lead ox (facing 134, seen from behind walking north-west, head turned west) stand in their harness, which belongs to the cart (the builder's harness reads the same positions and facing_deg): idle, none walking on the spot, none nudged here (a move goes through build_choices.json and the layout)",
+  "loads": "the oxen wear the draught tack (girth band, breast strap, nose rope; the yoke is the cart's); the saddled horse its saddle; the mules the pack saddle; the small horse, the donkey and the bird nothing",
+  "fallbacks": {
+   "horse_saddled_13378": "painted DARK with a dark saddle cloth hanging down its side (the restyle: blue under a red saddle); the registry horse is pale grey-white and its saddle has no long cloth, so it stands as the pale horse with the saddle until a dark coat (body_from horse + tone, free) and a dark-cloth saddle variant exist",
+   "horse_12862": "small and light with a long dark tail, mane and forelock, a dark band across its middle (a girth or a short cloth): the pale horse at scale 0.85 (choice: painted pony-sized, its back 110 px beside a 170 px man), no tack until a girth-only variant exists",
+   "donkey_13474": "small and DARK, no load: the grey-dun donkey until a dark tone variant exists (free)",
+   "mules": "each carries a pack saddle heaped with a DARK hatched load (sacks or bundles under a dark cloth); the registry mule's pack_saddle carries white side bundles, so it stands in until a dark heaped load variant exists (the donkey's pannier_charcoal palette has the colours)",
+   "ox_lead_13458": "long curved horns pointing up; the registry ox has short horns (a horn variant, optional)"
+  },
+  "doing": "the saddled horse (head lowered at the man in white's shoulder) and the small horse (head held low toward the cart's underside) hold their heads low (head_low); the donkey and the two head-down mules graze; the others stand; the bird perches",
+  "perched": "the bird sits among the sprays of part 1's S4.tree.willow_12588 above the official hall, 5.29 m up (layout H, support perched), tail to the west; S4b's people.json places it, so it shows when S4b is loaded",
+  "nudges": {
+   "horse_saddled_13378": "at real size (2.05 m long against its painted 1.67 m) its body ran into S4b.bld.shop_hall_13170: it steps 0.45 m back along its own heading, keeping its painted place in its group",
+   "mule_pack_head_down_13612": "the four pack mules are painted overlapping far up the silk (about 0.6 of the street's scale); at real size (2.09 m long, packs 0.8 m wide) they ran into each other and the hipped roof behind the trees, so each steps the least that frees them all (searched on a 0.1 m grid), keeping its painted heading and the train's painted order (the first two at its west end, the second and the fourth each behind the one before it), clear of the muleteer and the man behind the tree",
+   "mule_pack_head_up_13645": "the four pack mules are painted overlapping far up the silk (about 0.6 of the street's scale); at real size (2.09 m long, packs 0.8 m wide) they ran into each other and the hipped roof behind the trees, so each steps the least that frees them all (searched on a 0.1 m grid), keeping its painted heading and the train's painted order (the first two at its west end, the second and the fourth each behind the one before it), clear of the muleteer and the man behind the tree",
+   "mule_pack_east_13752": "the four pack mules are painted overlapping far up the silk (about 0.6 of the street's scale); at real size (2.09 m long, packs 0.8 m wide) they ran into each other and the hipped roof behind the trees, so each steps the least that frees them all (searched on a 0.1 m grid), keeping its painted heading and the train's painted order (the first two at its west end, the second and the fourth each behind the one before it), clear of the muleteer and the man behind the tree",
+   "mule_pack_behind_13787": "the four pack mules are painted overlapping far up the silk (about 0.6 of the street's scale); at real size (2.09 m long, packs 0.8 m wide) they ran into each other and the hipped roof behind the trees, so each steps the least that frees them all (searched on a 0.1 m grid), keeping its painted heading and the train's painted order (the first two at its west end, the second and the fourth each behind the one before it), clear of the muleteer and the man behind the tree"
+  }
+ },
+ "clips_why": {
+  "about": "Actions the painting needs that the character its dress calls for lacks. \"to make\": a free local retarget (t2m:/from:, tools/retarget_local.mjs) onto that character; \"NEW\": a new Text to Motion take (10 credits); \"being made\": already in characters/<name>.json. Rerun make_people.py when they land; until then each figure plays the nearest clip its playing character has.",
+  "bend_goods": "bent double at the waist over goods on the ground (free: t2m:bend_goods) -- porter [to make]: man_bending_sack_13607 (plays hold_tray now)",
+  "bridle": "holding an animal's bridle at its head (free: t2m:hold_bridle) -- hat_traveller [to make]: man_big_hat_12895 (plays idle now); scholar [to make]: man_in_white_at_horse_13360 (plays idle now)",
+  "crane": "leaning forward from the waist to see and hear (free: t2m:crane_listen) -- scholar [to make]: tall_onlooker_leaning_13290, onlooker_light_robe_13200 (plays look now)",
+  "drive_team": "walking behind a team with the reins (free: t2m:drive_team; a walk, as steer) -- idler [to make]: cart_driver_13303 (plays point now)",
+  "girth": "NEW (optional): tightening a saddle girth, head bowed against the horse's flank, both hands under the saddle -- inspector [NEW]: man_bowed_at_horse_13410 (plays lean_over now)",
+  "knee_on_stool": "NEW (optional): seated on a low stool, one knee drawn up onto the seat, talking across a table -- robed_man [NEW]: customer_white_14560 (plays listen now)",
+  "knees_up": "sitting on the ground, knees drawn up, arms round the shins (free: t2m:sit_knees_up) -- boatman [to make]: seated_man_cabin_roof_15012 (plays knees_up now)",
+  "lean_over": "leaning forward over a waist-high edge, both hands on it (free: t2m:lean_over) -- scholar [to make]: man_bending_to_donkey_13440 (plays idle now)",
+  "listen": "seated on a low bench, leaning toward a speaker, forearms on the knees (free: t2m:sit_listen) -- sightseer [to make]: customer_cap_14785 (plays write now); townsman [to make]: customer_hat_14462 (plays tell_fortune now)",
+  "look": "the townsman's Long Breathe and Look Around (free: from:townsman/look) -- hat_traveller [to make]: man_wide_hat_13760 (plays crane now); porter [to make]: onlooker_back_view_13332 (plays idle now)",
+  "look_up": "NEW (optional): standing with the head tilted back, looking up and to one side -- robed_man [NEW]: man_looking_up_13755 (plays idle now)",
+  "reach_up_load": "NEW: standing under the back of a cart bed, both arms raised above the head, steadying a load and easing it down -- idler [NEW]: porter_at_cart_rear_13090 (plays push_flank now)",
+  "rest_on_stick": "NEW (optional): standing still under a tall back load, resting it on a waist-high T-shaped stick (打杵) held behind him; with new props back_tall_bundle and t_stick -- porter [NEW]: porter_tall_load_13402 (plays idle now)",
+  "show_goods_seated": "NEW: seated cross-legged on the ground, bending forward, both hands reaching down to small goods on a mat before him, lifting one to show it, talking up at the men round him -- storyteller [NEW]: seated_man_13240 (plays knees_up now)",
+  "sit": "the chair sit (free: from:scholar/sit) -- townsman [to make]: customer_hat_14462, customer_dark_hat_13027 (plays sit/tell_fortune now)",
+  "steer": "walking between a cart's shafts gripping them (free: t2m:steer_shafts; a walk: it plays only if the cart is ever made to move) -- idler [to make]: carter_at_shaft_ox_13243 (plays bridle now)",
+  "tiller_seated": "NEW (optional): seated on a stern deck, one hand on the tiller -- boatman [NEW]: seated_boatman_stern_15372 (plays sit_floor now)",
+  "wheelwright": "NEW: bent from the waist over a big wheel lying flat on the ground, the left hand on its rim, the right swinging a short mallet down onto the rim or a spoke in short strokes, shifting along it (车铺劳作); with a new prop mallet -- idler [NEW]: wheelwright_bending_13620 (plays bucket_lift now)"
+ },
+ "scale_why": {
+  "small_figure_cart_rear_12706": "painted about 0.5 of the adults near him (head 13 px against their 20; about 75-80 px tall where adults paint 150-170): 0.5 x 1.70 m / the child model's 1.15 m = 0.74 (0.85 m tall)",
+  "small_onlooker_13180": "painted about 0.71 of the crowd round him (about 100 px against the adults' 140): 0.71 x 1.70 m / the child model's 1.15 m = 1.05 (1.21 m tall)",
+  "small_companion_14654": "painted about 0.83 of the man in the long robe beside him (57 px against 69): 0.83 x 1.72 m / the child model's 1.15 m = 1.24 (1.43 m tall)",
+  "youth_onlooker_13265": "painted about 0.78 of the men round him (99 px against 127 for the tall man bent beside him): 0.78 x 1.70 m / the child_robed model's 1.20 m = 1.11 (1.33 m tall)",
+  "about": "people.js scale multiplies the playing character's own height, so each child's painted ratio to its neighbouring adults becomes a scale of the child model"
+ },
+ "facing_why": {
+  "seated_in_bottom_shop_12792": "painted seated at the west end of the tray table, hunched and facing east (conf low); he sits on S4b.prop.bench_12835, which the builder lays east-west in front of the table: facing east along it, his chair sit would run his legs through the bench, so he faces the table he is painted at (north), his legs under its west end",
+  "wheelwright_bending_13620": "the map reads him facing west (his head at the west end, his back to the east), bending over the big wheel that lies flat to his south at real size (the kit's R 0.85 wheel centred on S4b.prop.loose_wheel_13665); turned south-west so his bent hands reach its west rim, as painted"
+ },
+ "cast_why": {
+  "stand_in seated_boatman_stern_15372": "boatman (not made) plays idler: dark hair or cap, seated by the stern: the idler (hemp jacket, dark head-wrap) sits cross-legged on the deck (sit_floor)",
+  "stand_in boatman_dark_cap_15046": "boatman (not made) plays porter: a dark cap over a robe or jacket, standing on the long boat's deck: the porter (hemp jacket, indigo trousers)",
+  "stand_in boatman_light_hat_15066": "boatman (not made) plays hat_traveller: a light hat beside him: the hat traveller's light straw hat",
+  "stand_in seated_man_cabin_roof_15012": "boatman (not made) plays scholar: light robe, bare head or close cap, seated on the cabin roof with his knees drawn up: the scholar (pale robe) has knees_up; the robed man, the needs list's cast if he is a passenger, has no floor sit",
+  "stand_in head_in_cabin_door_15097": "boatman (not made) plays porter: only a dark round head shows in the cabin door: the porter",
+  "recast customer_dark_hat_13027": "townsman is his look; played by scholar until townsman has a seated clip: seated at the shop table, a dark round hat over light clothes: the townsman has no sit yet; the scholar (pale robe, dark futou) sits",
+  "recast customer_hat_14462": "townsman is his look; played by fortune_teller until townsman has a seated clip: seated on the chair at the tea table's west end in a dark hat and a robe (the restyle paints it blue), leaning over the table toward the man in white: the townsman has no sit yet; the fortune-teller (ink-blue robe, futou) sits at a table with his forearms on it, talking (tell_fortune), and his root stays under his hips, clear of the table top",
+  "recast customer_cap_14785": "sightseer is his look; played by official until sightseer has a seated clip: seated on a stool in a dark cap and a robe (grey in the restyle), both forearms on the table: the sightseer has no sit yet; the official (warm-grey robe, black futou) sits at a desk with his forearms on it (write), his root under his hips",
+  "recast seated_man_13240": "storyteller is his look; played by sightseer until storyteller has a seated clip: seated on the ground at the heart of the crowd, dark cap and dark long robe, bearded: the storyteller is his look but has no seated clip; the sightseer (cornflower robe, futou) sits on the ground with his knees up (knees_up) until the storyteller gets sit_floor",
+  "porter_at_cart_rear_13090": "idler, not the needs list's porter: both wear the short jacket and trousers he is painted in, and only the idler has push_flank (both arms out against something big at chest height), the nearest clip to his arms raised to the cart's underside",
+  "bearded_onlooker_13350": "robed_man as listed, playing crane, not listen: the robed man's listen is the seated sit_listen, and he is painted standing, looking down at the seated man",
+  "seated_in_cart_front_12995": "idler, not the needs list's carter: the scan paints him in light clothes (the orange-brown jacket is the restyle's), and the parked palm cart's seat is a plank on the bed's front with the jutting frame for his feet only 0.11 m lower (kit_outer_road_2.palm_cart): a floor sit, which the idler has (sit_floor) and the carter hasn't",
+  "muleteer_13560": "idler as listed; his folded arms are the idler's lean_wall (the lean_wall_idle take: arms crossed, glancing round), the same take the inspector plays as arms_folded",
+  "about": "by dress (needs list \"Casting\"): short jackets and trousers are the idler or the porter, long light robes with a dark cap the scholar, a light robe without a cap the robed man, dark long robes the townsman or the inspector, blue robes the sightseer, wide hats the hat traveller"
+ },
+ "props_why": {
+  "porter_pole_bundle_13537": "pole_bundle: on (porter, held in carry_pole)",
+  "porter_baskets_14778": "pole_baskets: on (porter, held in carry_pole)",
+  "wanted": {
+   "cart_driver_13303": "stick (the porter's 1.5 m stick) on the idler, held in a standing clip: the stick or lead rope in his right hand",
+   "wheelwright_bending_13620": "NEW mallet: a short-handled wooden mallet in the right hand (with the wheelwright action)",
+   "man_bending_sack_13607": "NEW open_sack: a pale cloth sack held open by its mouth in both hands at knee height (he plays hold_tray without its tray until then)",
+   "stall_keeper_13415": "NEW lidded_basket: a round lidded basket with a loop handle, held down at his right side",
+   "man_white_jacket_12773": "NEW cloth_bag: a cloth or small bag hanging from his hand at his west side",
+   "man_on_bank_14686": "NEW (optional) cloth_bag: a small bag at his west side, where the small figure's hand meets it",
+   "porter_tall_load_13402": "NEW back_tall_bundle + t_stick (conf low): a tall dark cylindrical bundle with a pale band on a back frame, and a waist-high T-shaped stick (打杵)",
+   "man_frame_or_hat_15125": "NEW back_chair_frame (reading a): a wooden frame, chair or pedlar's rack carried on the back; the monk's back_frame (笈) is the fallback, but it is the monk's and he plays it only walking (back_load)"
+  },
+  "about": "carried props as painted (needs list \"Props carried by figures\"), switched on only when the playing character's GLB has prop_<name> and the figure plays the clip that holds it (characters/props.json): never a carry clip without its load, never a prop in the wrong hands"
+ },
+ "wanted": {
+  "about": "What S4b would take from the catalogue later, each with the figures (map ID slugs) it is for; nothing here is needed to show the section (every figure is cast and acts).",
+  "characters": {
+   "boatman": "the river's crew, for all five here (seated_boatman_stern_15372, boatman_dark_cap_15046, boatman_light_hat_15066, seated_man_cabin_roof_15012, head_in_cabin_door_15097); S4b paints them 38-54 px and faint, so take the model figure from S3 or S2 (a sweep crew painted at full size); its best here is seated_man_cabin_roof_15012, crop [15000, 500, 15045, 558]",
+   "hat_traveller dark-hat variant": "a big round black or wide flat dark hat on the hat traveller (a texture variant): man_big_hat_12895 (crop [12855, 1515, 12975, 1700]), man_wide_hat_13760 (crop [13705, 630, 13780, 790]); customer_hat_14462's broad dark hat too"
+  },
+  "actions_new": {
+   "wheelwright": "NEW: bent from the waist over a big wheel lying flat on the ground, the left hand on its rim, the right swinging a short mallet down onto the rim or a spoke in short strokes, shifting along it (车铺劳作); with a new prop mallet -- wheelwright_bending_13620",
+   "show_goods_seated": "NEW: seated cross-legged on the ground, bending forward, both hands reaching down to small goods on a mat before him, lifting one to show it, talking up at the men round him -- seated_man_13240",
+   "reach_up_load": "NEW: standing under the back of a cart bed, both arms raised above the head, steadying a load and easing it down -- porter_at_cart_rear_13090",
+   "rest_on_stick": "NEW (optional): standing still under a tall back load, resting it on a waist-high T-shaped stick (打杵) held behind him; with new props back_tall_bundle and t_stick -- porter_tall_load_13402",
+   "knee_on_stool": "NEW (optional): seated on a low stool, one knee drawn up onto the seat, talking across a table -- customer_white_14560",
+   "look_up": "NEW (optional): standing with the head tilted back, looking up and to one side -- man_looking_up_13755",
+   "girth": "NEW (optional): tightening a saddle girth, head bowed against the horse's flank, both hands under the saddle -- man_bowed_at_horse_13410",
+   "tiller_seated": "NEW (optional): seated on a stern deck, one hand on the tiller -- seated_boatman_stern_15372"
+  },
+  "actions_free": {
+   "bend_goods": "bent double at the waist over goods on the ground (free: t2m:bend_goods) -- porter [to make]: man_bending_sack_13607 (plays hold_tray now)",
+   "bridle": "holding an animal's bridle at its head (free: t2m:hold_bridle) -- hat_traveller [to make]: man_big_hat_12895 (plays idle now); scholar [to make]: man_in_white_at_horse_13360 (plays idle now)",
+   "crane": "leaning forward from the waist to see and hear (free: t2m:crane_listen) -- scholar [to make]: tall_onlooker_leaning_13290, onlooker_light_robe_13200 (plays look now)",
+   "drive_team": "walking behind a team with the reins (free: t2m:drive_team; a walk, as steer) -- idler [to make]: cart_driver_13303 (plays point now)",
+   "knees_up": "sitting on the ground, knees drawn up, arms round the shins (free: t2m:sit_knees_up) -- boatman [to make]: seated_man_cabin_roof_15012 (plays knees_up now)",
+   "lean_over": "leaning forward over a waist-high edge, both hands on it (free: t2m:lean_over) -- scholar [to make]: man_bending_to_donkey_13440 (plays idle now)",
+   "listen": "seated on a low bench, leaning toward a speaker, forearms on the knees (free: t2m:sit_listen) -- sightseer [to make]: customer_cap_14785 (plays write now); townsman [to make]: customer_hat_14462 (plays tell_fortune now)",
+   "look": "the townsman's Long Breathe and Look Around (free: from:townsman/look) -- hat_traveller [to make]: man_wide_hat_13760 (plays crane now); porter [to make]: onlooker_back_view_13332 (plays idle now)",
+   "sit": "the chair sit (free: from:scholar/sit) -- townsman [to make]: customer_hat_14462, customer_dark_hat_13027 (plays sit/tell_fortune now)",
+   "steer": "walking between a cart's shafts gripping them (free: t2m:steer_shafts; a walk: it plays only if the cart is ever made to move) -- idler [to make]: carter_at_shaft_ox_13243 (plays bridle now)"
+  },
+  "props": {
+   "cart_driver_13303": "stick (the porter's 1.5 m stick) on the idler, held in a standing clip: the stick or lead rope in his right hand",
+   "wheelwright_bending_13620": "NEW mallet: a short-handled wooden mallet in the right hand (with the wheelwright action)",
+   "man_bending_sack_13607": "NEW open_sack: a pale cloth sack held open by its mouth in both hands at knee height (he plays hold_tray without its tray until then)",
+   "stall_keeper_13415": "NEW lidded_basket: a round lidded basket with a loop handle, held down at his right side",
+   "man_white_jacket_12773": "NEW cloth_bag: a cloth or small bag hanging from his hand at his west side",
+   "man_on_bank_14686": "NEW (optional) cloth_bag: a small bag at his west side, where the small figure's hand meets it",
+   "porter_tall_load_13402": "NEW back_tall_bundle + t_stick (conf low): a tall dark cylindrical bundle with a pale band on a back frame, and a waist-high T-shaped stick (打杵)",
+   "man_frame_or_hat_15125": "NEW back_chair_frame (reading a): a wooden frame, chair or pedlar's rack carried on the back; the monk's back_frame (笈) is the fallback, but it is the monk's and he plays it only walking (back_load)"
+  },
+  "animals": {
+   "horse_saddled_13378": "painted DARK with a dark saddle cloth hanging down its side (the restyle: blue under a red saddle); the registry horse is pale grey-white and its saddle has no long cloth, so it stands as the pale horse with the saddle until a dark coat (body_from horse + tone, free) and a dark-cloth saddle variant exist",
+   "horse_12862": "small and light with a long dark tail, mane and forelock, a dark band across its middle (a girth or a short cloth): the pale horse at scale 0.85 (choice: painted pony-sized, its back 110 px beside a 170 px man), no tack until a girth-only variant exists",
+   "donkey_13474": "small and DARK, no load: the grey-dun donkey until a dark tone variant exists (free)",
+   "mules": "each carries a pack saddle heaped with a DARK hatched load (sacks or bundles under a dark cloth); the registry mule's pack_saddle carries white side bundles, so it stands in until a dark heaped load variant exists (the donkey's pannier_charcoal palette has the colours)",
+   "ox_lead_13458": "long curved horns pointing up; the registry ox has short horns (a horn variant, optional)"
+  },
+  "not_needed_here": "no poling, sweep, oar or hauling: every boat in S4b is moored and nobody works a sweep, an oar or a pole (the sweeps are at rest or shipped raised); S3 and S2 will want them"
+ },
+ "builder_notes": {
+  "about": "What this casting assumes of blender/outer_road_2_scene.py (read on every run: its furniture sizes, the palm carts of kit_outer_road_2, the sedan), and what it found.",
+  "seats_json": "seats.json X, D is the seat's centre under the hips: build each stool there (outer_road_2_scene.seats() steps 0.15 m back from it); the cart sitter needs a hidden block under his root (seats.json build)",
+  "table_tops": "people.js stands a figure on the highest surface under rays at X and X +- 0.12 from H + 1.2 m, and song_kit.table's top collides; roots over a table top at the builder's sizes: none",
+  "tea_house_posts": "the tea house's front posts (tea_house(): x gx0 - 2.2, gx0, gx1, hx1 - 2.6, hx1 at D yf + 0.05) against the seated customers and their seats: customer_hat_14462 (root 77.63, 7.30) 0.13 m from the post at (77.75, 7.32); S4b.prop.chair_14458 (77.65, 7.32) 0.10 m from the post at (77.75, 7.32)",
+  "gangplank": "porter_baskets_14778 walks to 0.35 m short of the gangplank's foot the builder sets (build_choices.json boats S4b.veh.boat_mat_cargo_14900 kit.gangplank), (75.45, 24.45), arriving along the plank's line toward the boat's bow; his path follows kit.gangplank on every run",
+  "palm_carts": "both palm carts as kit_outer_road_2.palm_cart builds them (CART_KIT: body 3.9 x 1.3 m, wheel_at 0.56, R 0.85, collider bx0 - 0.3 to bx1 + 0.04, +-(hw + 0.45) across; the parked cart's seat plank at bx1 + 0.32, top 1.08 m); change CART_KIT if the kit changes",
+  "sedan": "the sedan attendant stands on the set-down chair's axis between its poles, just east of the cabin (its collider's east face at X 60.00, the cabin centred at X 59.49 as vehicles() sets cabin_at)",
+  "bird": "the bird is placed by this people.json at H 5.29 in part 1's willow S4.tree.willow_12588 (its card is part 1's)",
+  "crew": "the five crew are at their layout spots (with their boats' recorded moves) and are never nudged here: the two on the long boat (boatman_dark_cap_15046, boatman_light_hat_15066) are painted 0.22 m apart, closer than two bodies (0.52 m); the boats page places both on the deck below their spots, so they overlap unless a recorded move (build_choices.json, with their boat) separates them"
+ }
+}

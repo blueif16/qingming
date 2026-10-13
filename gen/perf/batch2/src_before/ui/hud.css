@@ -1,0 +1,55 @@
+/* The direct HUD (hud.js; gen/ui/STYLE.md §14): the view tiles and the › under the time instrument (#dial) on a
+   desktop, right of it on a phone. #dial's footprint comes from the time agent's --qm-dial-w / --qm-dial-h (time.css);
+   the fallbacks are the round-1 sundial's. Always loaded (small); the settings screen's own sheet is settings.css. */
+
+.qm-hud { position: fixed; z-index: 806; left: var(--qm-left); top: calc(var(--qm-top) + var(--qm-dial-h, 100px) + 8px);
+  display: flex; align-items: center; gap: 8px; pointer-events: none; color: var(--qm-ink);
+  -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none;
+  transition: opacity var(--qm-t-mid) ease; }
+.qm-hud > * { pointer-events: auto; }
+
+/* the view switch: two paper tiles in a brush frame; the active one is sealed */
+.qm-view { display: flex; gap: 4px; }
+.qm-view-tile { width: 40px; height: 40px; box-sizing: border-box; padding: 0; margin: 0; cursor: pointer; display: grid; place-items: center;
+  color: var(--qm-ink); background: none; border: 8px solid transparent; border-image: var(--qm-frame-slip) 24 / 8px / 0 stretch;
+  border-image-slice: 24 fill; filter: var(--qm-lift); --qm-ic-hole: var(--qm-paper); }
+.qm-view-tile svg { width: 24px; height: 24px; fill: currentColor; opacity: 0.62; transition: opacity var(--qm-t-fast) ease; }
+.qm-view-tile svg .qm-ic-hi { fill: var(--qm-ic-hole); }
+.qm-view-tile:hover svg, .qm-view-tile:focus-visible svg { opacity: 1; }
+.qm-view-tile[aria-checked="true"] { border: 0; border-image: none; background: var(--qm-seal); color: var(--qm-paper-hi); filter: none;
+  --qm-ic-hole: var(--qm-seal); transform: rotate(-3deg);
+  -webkit-mask: var(--qm-seal-mask) center / 100% 100% no-repeat; mask: var(--qm-seal-mask) center / 100% 100% no-repeat; }
+.qm-view-tile[aria-checked="true"] svg { opacity: 1; width: 25px; height: 25px; }
+.qm-view-tile[aria-checked="true"] + .qm-view-tile { transform: rotate(1.5deg); }
+.qm-view-tile:focus-visible { outline: 2px dashed var(--qm-cinnabar); outline-offset: 3px; }
+.qm-view-sm .qm-view-tile { width: 36px; height: 36px; border-width: 7px; }
+.qm-view-sm .qm-view-tile svg { width: 21px; height: 21px; }
+
+/* the › that opens the settings screen: a paper disc in a brush ring (the help seal's and the scroll button's kin) */
+.qm-more { width: 40px; height: 40px; }
+.qm-more svg { width: 22px; height: 22px; fill: var(--qm-ink); margin-left: 2px; }
+.qm-more:hover svg, .qm-more:focus-visible svg { transform: translateX(1.5px); }
+.qm-more:focus-visible { outline: 2px dashed var(--qm-cinnabar); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  /* beside the instrument, vertically centred on it; the region banner goes under the instrument (time agent) */
+  .qm-hud { left: calc(var(--qm-left) + var(--qm-dial-w, 72px) + 8px); top: calc(var(--qm-top) + (var(--qm-dial-h, 72px) - 36px) / 2); gap: 6px; }
+  .qm-view { gap: 3px; }
+  .qm-view-tile { width: 36px; height: 36px; border-width: 7px; }
+  .qm-view-tile svg { width: 21px; height: 21px; }
+  .qm-view-tile[aria-checked="true"] svg { width: 22px; height: 22px; }
+  .qm-more { width: 36px; height: 36px; }
+  .qm-more svg { width: 20px; height: 20px; }
+  /* landmark toasts below the instrument: a toast up to 100vw - 108px wide reaches under it */
+  html.qm-touch .qm-toasts { top: calc(var(--qm-top) + max(58px, var(--qm-dial-h, 72px) + 10px)); }
+}
+
+/* the bell and the volume slip (sound.js #soundCtl) leave the street: they show only beside the painting (the scroll
+   HUD), and in the settings screen's 聲音 page; M still mutes */
+html #soundCtl:not(.open) { display: none; }
+
+/* while the settings screen is open, the walking HUD steps back */
+html.qm-set-open .qm-hud, html.qm-set-open #dial, html.qm-set-open #help, html.qm-set-open #crosshair { opacity: 0; pointer-events: none; }
+html.qm-set-open .qm-hud > *, html.qm-set-open #help * { pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) { .qm-view-tile, .qm-hud { transition: none; } }

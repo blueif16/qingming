@@ -1,0 +1,211 @@
+{
+  "section": "S3",
+  "pass": "second pass, west: owns u 15500-17800, looked at 15350-17950 (2026-10-12). Read against map/strokes/S3.json (462 entities, the merge of 2026-10-12): overlays at zoom 1 (grid 50) over the whole range, then zoom 2-5 (contrast-stretched, with the restyle beside the scan) over the dense and faint parts and over every item the merge notes list for `west`.",
+  "crops": "/tmp/claude-1000/-home-ran-3d-director/5a5a3bca-3a69-416d-986a-71fd47398c96/scratchpad/S3_second_west/ (z1_*.jpg: zoom-1 overlays of the whole range; c_*.jpg: contrast-stretched scan crops with a 10 px grid; insp_*.jpg: scan beside the tile restyle; o_*.jpg: zoom-2 overlays)",
+  "summary": "6 new entities (all conf low: a willow crown at the S4b seam recorded by nobody, a boatman named only in a boat's what, a sixth sweep man, a figure behind the lamp-box, a pot on a wall rack, and a basin that replaces a misread figure), 1 retirement (S3.fig.diner_back_16180 -> S3.prop.basin_16180), 8 note or text edits, the 8 open items of the merge notes answered, 2 seam items for the lead. No marker found off its stroke in the range; no cross-kind duplicate.",
+  "entities": [
+    {
+      "id": "S3.tree.willow_crown_top_15520",
+      "kind": "tree",
+      "name": "willow crown hanging in at the silk's top edge by the S4b seam",
+      "what": "Long, fine, curving whips fanning down and east from a point at the silk's very top edge (about (15495, 20-30)) to about u 15570, v 70: the lower part of a far-bank willow's crown whose head and trunk lie beyond the silk's top edge. Bare, early spring. No hull, cabin or shore line goes with these strokes.",
+      "pts": { "base": [15520, 70, "est"], "top": [15495, 0, "est"], "crown_w": [15455, 25], "crown_e": [15570, 70] },
+      "support": "ground",
+      "vis": "part: head and trunk beyond the silk's top edge",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): recorded by nobody (merge notes, seam S4b: 'a willow crown hangs from beyond the silk's top edge at 15200-15570, v 15-70, with no trunk on the silk: recorded by nobody'; t1 left the same strokes to river_w as 'a faded boat or ripples'). Strokes: a fan of 6-8 parallel curved whips converging at (15490-15500, 20-33) and spreading down-east to (15540-15567, 50-70); more whips west of the seam at 15380-15463, v 17-50 belong to S4b's far-bank trees (S4b.tree.far_bank_15308, crown_e (15392, 40)) or to this crown. Below v 75 the silk is plain from 15480 to 15750 (no hull, no shore ink). BASE est: S4b's far-bank ground S4b.grd.far_bank_15330 names, in its note, a willow foot at about (15520, 70) est with no entity; I take that point, so the main point is on S3's side by 20 px. The lead may give it to S4b as its third far-bank tree (then it is a seam note here). OTHER READINGS: (a) the tile restyle paints an arched mat roof here, as the after part of S4b's small cabin boat (S4b.veh.boat_small_cabin_15182, stern_top (15460, 78)): the scan has no hull under the strokes, so not a boat; (b) the east end of S4b.tree.far_bank_15308's crown: then drop this entity and set that tree's crown_e to (15570, 70). Crops: c_topcrown.jpg, insp_topcrown.jpg, c_topseam.jpg, o_topseam_s4b.jpg."
+    },
+    {
+      "id": "S3.fig.awning_boatman_17435",
+      "kind": "figure",
+      "name": "boatman crouching under the awning boat's fore awning (or cargo)",
+      "what": "A rounded, hunched shape under the mat awning on the awning boat's foredeck, with a small round top like a bowed head: a boatman crouching or sitting under the awning among the poles and ropes laid across the foredeck. Reading B: a heap of cargo or coiled rope.",
+      "pts": { "foot": [17437, 312, "est"], "head": [17435, 279] },
+      "support": "boat deck: S3.veh.boat_awning_17442",
+      "pose": "crouching",
+      "facing_deg": 180,
+      "group": "S3.grp.boat_awning_17442",
+      "vis": "part: under the awning; legs hidden by the gunwale and the poles",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): named only in the boat's `what` ('cargo (or a crouching man, unread) under the awning at 17420-17470'; README rule 6). Strokes: a rounded mass u 17417-17454, v 277-306 just under the awning's lower edge (v 263-277), with a smaller round top at (17429-17442, 277-288); the poles across the foredeck run under it at v 300-340. Painted about 30 px tall, which fits a crouching man at this distance (S3.fig.passenger_seated_17632 in the same boat is about 30 px to the waist). The tile restyle paints a seated man under this awning. Facing not legible (180 assumed, toward the bow). If the lead reads cargo, decline this and keep the boat's `what` as is. Crops: c_awningboat.jpg, insp_awningboat.jpg, c_boats_17340-17960.jpg."
+    },
+    {
+      "id": "S3.fig.sweep_man_15888",
+      "kind": "figure",
+      "name": "sixth man at the sweep (faint)",
+      "what": "A head with a light face in profile just east of the dark-capped man leaning on the sweep's loom, at the same height, between him and the crouching man at the pivot: a sixth man working the sweep of the boat under way, his body hidden behind the others.",
+      "pts": { "foot": [15888, 472, "est"], "head": [15888, 386] },
+      "support": "boat deck: S3.veh.boat_under_way_15595",
+      "pose": "standing",
+      "facing_deg": 0,
+      "group": "S3.grp.boat_under_way_15595",
+      "vis": "part: only the head and a shoulder show between the others",
+      "conf": "low",
+      "src": "余辉: 摇橹向前 (setting)",
+      "note": "SECOND PASS (west): river_w counted five at the sweep 'head by head at zoom 3-4' and noted the restyle shows six. At zoom 3-4.5 on the scan I read a rounded head at u 15878-15897, v 386-400, east of S3.fig.sweep_man_15862's dark cap (15861-15879, 376-390) and west of S3.fig.sweep_man_15915's head (15901-15919, 398-411): six heads at about u 15810, 15838, 15852, 15868, 15888 and 15910. The tile restyle also paints six, one at about u 15884-15897, v 400-420. Reading B: the forearm or dark sleeve of S3.fig.sweep_man_15862 on the loom, or the loom's lashing: then decline. Foot est on the stern deck (floor v ~465-478, as the others). Crops: c_sweep6.jpg, c_sweep6g.jpg, insp_sweep6.jpg, c_sweepcrew.jpg, o_sweepcrew.jpg."
+    },
+    {
+      "id": "S3.fig.behind_lampbox_17090",
+      "kind": "figure",
+      "name": "figure inside the tavern gate behind the lamp-box (faint)",
+      "what": "A faint figure standing inside 十千脚店's gate just east of the lamp-box, behind the bar fence: a small pointed cap or topknot, a robe whose back edge runs down its west side, and a diagonal fold or sleeve crossing to the east; below v ~1650 it is lost among the fence's slats. Reading B: a cloth or curtain gathered and tied at the gate's west post, like the striped curtain at the east post.",
+      "pts": { "foot": [17092, 1735, "est"], "head": [17085, 1582] },
+      "support": "ground",
+      "pose": "standing",
+      "facing_deg": 200,
+      "vis": "part: below the waist hidden by the bar fence (S3.str.gate_fence_16955); west side against the lamp-box",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): the merge's open item ('the figure structures_w saw behind the lamp-box (17076-17100, v 1560-1640); t3: nobody'). Strokes, at zoom 2.5-3.5 contrast-stretched: a pointed or knotted top at (17078-17090, 1580-1588); a curving back edge from (17072, 1585) down to (17083, 1640); a diagonal stroke from (17085, 1600) to (17100, 1640) (a sleeve, an arm or a fold); a rounded lower end at (17088-17100, 1634-1648); a pale rounded area east of it at 17100-17137, v 1610-1660. About 70 px from the top to the fence's top rail (v ~1692); a standing man here would be about 150 px (the street figures at the door are 152-160 px), so his feet are behind the fence (foot est v ~1735). THREE READINGS, not settled by the strokes: (a) a person standing in the gate (structures_w's and mine, low); (b) a gathered cloth (the tile restyle paints a white cloth tied in a knot here; then it is part of S3.bld.tavern_gate_16870 and this entity is declined); (c) the overview restyle paints the lamp-box's east face wider here, as a white panel with characters, but the scan's 十千 face is at u 17052-17068, west of these strokes. If accepted, join it to S3.grp.shiqian_jiaodian_16800 (a servant or doorman of the tavern). Crops: c_gatefront.jpg, c_behindlamp_c.jpg, c_behindlamp3.jpg, insp_behindlamp.jpg, insp_gate.jpg, ovr_lamp.png."
+    },
+    {
+      "id": "S3.prop.pot_on_rack_16140",
+      "kind": "prop",
+      "name": "pot on the wall rack behind the diners' table",
+      "what": "A small dark round pot or jar standing on the lowest shelf of an open rack (horizontal bars between uprights) at the back wall of the riverside hall's middle bay, behind the dining table and beside the gathered light curtain; red touches on the rack.",
+      "pts": { "base": [16140, 1390, "est"] },
+      "support": "upper floor: S3.bld.tavern_river_hall_15540",
+      "group": "S3.grp.hall_diners_16120",
+      "vis": "part: behind the diners and the table",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): named only in t1's report ('a rack or shelf with a pot and red touches behind the table at u 16123-16160, v 1300-1355', left to structures_w as fixed to the hall); the hall's `what` names only the hanging cloth, so neither has an entry. Strokes: the rack's bars at u 16122-16160, v 1295-1337 (the rack is part of the hall: see the edit to S3.bld.tavern_river_hall_15540); the dark rounded pot at u 16130-16147, v 1327-1340 on its lowest shelf. Base est on the back wall's floor line straight below it (v ~1390, as S3.fig.diner_east_16183's foot); the pot stands on the shelf about 50 px (~0.6 m) above the floor: a builder choice. Reading B: a dark patch of the rack or the curtain's shadow (then decline). Crops: c_rackpot.jpg, insp_rackpot.jpg, c_hall_m.jpg."
+    },
+    {
+      "id": "S3.prop.basin_16180",
+      "kind": "prop",
+      "name": "big round basin of fruit or flowers in front of the diners' table",
+      "what": "A large round, bowl-shaped vessel (a basin, or a woven basket) standing on the balcony floor in front of the dining table's east end, its belly hatched, heaped high with lumpy round things touched with pink and red (S3.prop.food_heap_16170): fruit, buns or flowers.",
+      "pts": { "base": [16180, 1414, "est"] },
+      "support": "upper floor: S3.bld.tavern_river_hall_15540",
+      "group": "S3.grp.hall_diners_16120",
+      "vis": "part: its foot behind the balcony's inner rail",
+      "conf": "low",
+      "src": "",
+      "note": "SECOND PASS (west): replaces S3.fig.diner_back_16180 (reading (b) of that figure's own note; see edits). Strokes: the rounded outline u 16152-16208, v 1380-1413 is narrowest at the top, where the heap sits on it (v ~1380), and widens into a smooth convex belly at the bottom (v 1405-1413), with diagonal hatching inside: the shape of a bowl or a basket, not of a back. A seated back would be widest at the shoulders, at its top, and show a collar, a neck or hair under the heap; none is drawn, and the heap (58 x 38 px) is too big for a head (heads here are 18-25 px). The restyle paints a big blue-grey man here, like the woman in red and the extra diners it invents in this hall. Base est at the vessel's bottom; the floor line in front of the table is v ~1430 (S3.fig.diner_hunched_16050). About 55 px across (~0.7 m at the street's scale; a builder choice). Crops: c_heap.jpg, insp_heap.jpg, c_hall_m.jpg."
+    }
+  ],
+  "edits": [
+    {
+      "id": "S3.fig.diner_back_16180",
+      "action": "retire",
+      "replaced_by": "S3.prop.basin_16180",
+      "reason": "Misread (README rule 7): the rounded light mass in front of the table's east end is a bowl-shaped basin or basket with the heap piled on it, not a diner's back (see S3.prop.basin_16180's note). Remove it from S3.grp.hall_diners_16120's members and add S3.prop.basin_16180 there. The cast on the hall's balcony becomes: diner_hunched_16050, diner_cap_16077, diner_east_16183 (3 certain, as t1 counted), plus the doorway figure and the head at the partition in the west bay."
+    },
+    {
+      "id": "S3.prop.food_heap_16170",
+      "action": "edit",
+      "set": {
+        "support": "table top: S3.prop.basin_16180",
+        "what": "A big heap of lumpy round things touched with pink and red, piled high in the round basin (S3.prop.basin_16180) that stands in front of the dining table's east end: fruit, buns or flowers."
+      },
+      "add_note": "Second pass: the heap sits on the basin's rim (v ~1380), not on the table; its support follows the basin (S3.fig.diner_back_16180 retired). Readings (a) and (b) of the note above are settled as (b).",
+      "reason": "Follows the retirement of S3.fig.diner_back_16180."
+    },
+    {
+      "id": "S3.prop.table_16145",
+      "action": "edit",
+      "set": {
+        "what": "A long low table across the balcony's middle bay, set with dishes, with the diners around it: one behind its west end, one at its east end and one hunched west of it; a round basin heaped with fruit or flowers stands in front of its east end (S3.prop.basin_16180)."
+      },
+      "reason": "Its `what` names 'perhaps one seen from behind in front of it' (the retired S3.fig.diner_back_16180)."
+    },
+    {
+      "id": "S3.bld.tavern_river_hall_15540",
+      "action": "note",
+      "add_to_what": " At the back of the middle bay an open rack of shelves (u 16122-16160, v 1295-1337) stands beside the hanging cloth, a pot on it (S3.prop.pot_on_rack_16140); in the west doorway a plain partition panel (u 15837-15860, v 1320-1390) stands east of the doorway figure.",
+      "add_note": "Second pass: (1) the rack and the partition were left to this entity by t1 (fixed to the hall) and were in no `what`. (2) t1's 'small object on the gallery railing at about (16358, 1400)' is the railing's corner post cap where the balcony's front railing turns into the side gallery's, a small looped knob at u 16318-16334, v 1398-1412: part of this building; nothing loose stands on the railing (crops c_gallery.jpg, c_railobj.jpg). (3) The east part of the side gallery (u 16400-16540, v 1260-1440) shows only railings and balusters, no further figure (insp_gallery_e.jpg).",
+      "reason": "Painted things named only in a report (README rule 6), and the merge's open item on the railing object."
+    },
+    {
+      "id": "S3.bld.tavern_gate_16870",
+      "action": "note",
+      "add_note": "Second pass: (1) between the 杈子's north end and the lamp-box, u 16965-17000, v 1595-1690, a narrow upright panel with curved and scrolled strokes (t2's 'curved strokes at 16977-16997, v 1610-1667'): a carved door leaf or screen at the gate's west side; the tile restyle paints a carved panel here. Part of this building, not a figure (crops c_doorleaf.jpg, insp_doorleaf.jpg, c_gatefront.jpg). (2) The west-front post: its lower end (u 16905-16930, v 1515-1545) is a ringed bulb about as wide as the ringed collar at its top (v 1440-1475), with plain ground under it; it reads more like the carved knob of a hanging post than a drum base, and the tile restyle paints a hanging post ending in mid-air. This weighs toward this entity's 垂柱 reading; t2's and t3's column-on-a-base reading stays possible (crops c_pendant.jpg, insp_pendant.jpg). (3) If S3.fig.behind_lampbox_17090 is declined as a gathered cloth, that cloth (u 17072-17100, v 1580-1650) belongs in this `what`.",
+      "reason": "The merge's open items on t2's curved strokes and on the west-front post."
+    },
+    {
+      "id": "S3.tree.bare_tree_16520",
+      "action": "note",
+      "add_note": "Second pass: the upright shoots behind the riverside hall's east gable (u 16427-16530, v 860-1100; t1's 'upright shoots', left to t2) are this tree's: they fan up from about (16530-16550, 1100-1125), on the line of this trunk below the knot and about 20 px north-east of the base est (16520, 1150); no other trunk or stool shows (crops c_gableshoots.jpg, c_gableshoots2.jpg, c_gableshoots3.jpg, insp_gableshoots.jpg; the restyle paints them as this tree's lower branches too). No new tree.",
+      "reason": "The merge's open item on t1's upright shoots."
+    },
+    {
+      "id": "S3.tree.far_willow_16582",
+      "action": "note",
+      "add_note": "Second pass: t2's 'small roof-like form under the west far willow (16465-16540, v 115-135)' is this willow's pollard head: a dark wedge at u 16468-16500, v 116-132 from which the whips radiate and down to which the leaning trunk's two outlines run from the foot (16572, 236). No shed (crops c_farwillow.jpg, insp_farwillow.jpg).",
+      "reason": "The merge's open item on t2's roof-like form."
+    },
+    {
+      "id": "S3.tree.willow_far_17205",
+      "action": "note",
+      "add_note": "Second pass: two trees, settled as far as the strokes go. This upright trunk (u 17191-17200) ends on open ground at v ~186-190, about 10 px east of S3.tree.willow_far_17185's leaning trunk at the same height (that trunk runs down to (17182-17202, 222-247)); the ground between them is plain, so the two do not fork from one stool (crops c_willowfork.jpg, c_willows17200.jpg).",
+      "reason": "The merge's open item 'one far-bank willow with two stems or two (17185/17205)'."
+    },
+    {
+      "id": "S3.veh.boat_awning_17442",
+      "action": "edit",
+      "only_if_accepted": "S3.fig.awning_boatman_17435",
+      "replace_in_what": ["cargo (or a crouching man, unread) under the awning at 17420-17470", "a crouching boatman under the awning at 17420-17470 (S3.fig.awning_boatman_17435; low, or cargo)"],
+      "reason": "The figure named only in the boat's `what` gets its own entry."
+    }
+  ],
+  "items": [
+    {
+      "item": "the figure structures_w saw behind the lamp-box (17076-17100, v 1560-1640); t3: nobody",
+      "answer": "Something is painted there that no entity covers. I read a faint standing figure behind the fence, low; the tile restyle reads a gathered cloth, the overview restyle a wider lamp-box face. Proposed as S3.fig.behind_lampbox_17090 (low, the three readings in its note); if declined, the cloth goes into the gate's `what`."
+    },
+    {
+      "item": "t2's curved strokes at 16977-16997, v 1610-1667 (a door leaf?)",
+      "answer": "A carved door leaf or screen panel at the gate's west side (16965-17000, v 1595-1690), part of S3.bld.tavern_gate_16870: note proposed. Not a figure."
+    },
+    {
+      "item": "t1's upright shoots behind the hall's east gable (16427-16520, v 860-1000)",
+      "answer": "S3.tree.bare_tree_16520's own shoots, fanning from about (16530-16550, 1100-1125) near its base est: note proposed, no new tree."
+    },
+    {
+      "item": "t1's small object on the gallery railing (16358, 1400)",
+      "answer": "The railing's corner post cap (16318-16334, 1398-1412), part of the hall: note proposed. At (16358, 1400) itself there are only balusters."
+    },
+    {
+      "item": "t2's small roof-like form under the west far willow (16465-16540, v 115-135)",
+      "answer": "S3.tree.far_willow_16582's pollard head (16468-16500, 116-132): note proposed, no shed."
+    },
+    {
+      "item": "t2's thin mark on the water (16478-16492, 470-500)",
+      "answer": "No entity: a short dark stroke with a blot at its foot (16478-16492, 470-502) in open mid-river, among other specks (16463, 537), (16530, 547); no outline, no reflection, nothing like a stake or a floating timber at this size. An ink speck or stain (crop c_watermark.jpg)."
+    },
+    {
+      "item": "the gate's west-front post and the barrier/stair (two readings)",
+      "answer": "Post: the ringed lower end and the plain ground under it weigh toward the hanging post (垂柱), as the tile restyle paints it; both readings stay in the gate's note. Barrier/stair: the zigzag between the two rails (16740-16990, v 1560-1790) reads equally as crossed bars seen obliquely or as stair treads in profile, and a row of upright balusters runs along the near rail's south end (16790-16830, v 1700-1780); not settled, no change (crop c_chazi.jpg)."
+    },
+    {
+      "item": "one far-bank willow with two stems or two (17185/17205)",
+      "answer": "Two trees: the upright trunk ends on its own ground (17191-17200, 186-190), about 10 px east of the leaning trunk at that height, with plain ground between them: note proposed on S3.tree.willow_far_17205."
+    },
+    {
+      "item": "t2's 'small tick at the far-bank waterline at (16248, 153), probably a stake' (left to river_w, not recorded)",
+      "answer": "No entity: a 10 px dark tick (16246-16250, 148-158) on the wash-drawn bank slope below the towline; too small to read as a stake rather than a speck (crop c_stake.jpg)."
+    },
+    {
+      "item": "the restyle's extra tree at (16485, 212) and bird at (16440, 220) on the far bank (t2)",
+      "answer": "Confirmed absent on the scan (whips only): nothing to add."
+    }
+  ],
+  "seam": [
+    {
+      "with": "S4b, u 15500, the far bank and the north shore",
+      "note": "S4b ends its far bank at the seam with S4b.grd.far_bank_15330 bank_top (15500, 75, est) and shore (15500, 112, est), and its note puts a willow foot at (15520, 70) est (proposed here as S3.tree.willow_crown_top_15520). S3.water.bian_west_15500 has no shore_n west of (16150, 150, est) and says the water runs to the silk's top edge there. On the scan, 15480-16150, v 0-150 is plain silk except the whips at 15455-15570, v 0-75 (no bank ink, no ripples). The two readings must meet at the frame's cross-key seam check: either S3's shore_n starts at S4b's (15500, 112, est) and runs off the silk's top edge (est) east of the willow, or S4b's far bank turns off the top edge at about u 15450-15500. The strokes can't settle it; it decides whether S3 builds a strip of far bank at its west end."
+    },
+    {
+      "with": "S4b, u 15500, the willow crown at the top edge",
+      "note": "S3.tree.willow_crown_top_15520 (proposed) sits on the seam: its base est (15520, 70) is S4b's own reading, 20 px east of the seam. If the lead gives it to S4b, it becomes S4b's third far-bank tree (or the east end of S4b.tree.far_bank_15308's crown) and a seam note here."
+    }
+  ],
+  "lessons": [
+    "Second pass: read every neighbour's `note` for things placed on your side of the seam. S4b's far-bank ground named a willow foot at (15520, 70), 20 px into S3, with no entity in either map; S3's merge had already flagged the same crown as 'recorded by nobody'. A point named in a neighbour's note is a missing entity on whichever side its main point falls.",
+    "Second pass: a rounded mass with no collar, neck or hair is not a back. Read the outline's widest part: a seated back is widest at the shoulders (its top), a basin or basket at its belly (its bottom). On S3 the 'diner seen from behind' was a basin under a heap of fruit or flowers; the restyle had invented a man there, as it invents diners all over that hall.",
+    "Second pass: contrast-stretched crops (sharp normalise 1-99 %) at zoom 2.5-3.5 read faint figures best; zoom 4-5 adds only the silk's weave, and plain crops at zoom 3 lose faint strokes. Put the tile restyle and, where it disagrees, the overview restyle beside the scan: when the three readings differ (figure, cloth, panel), record the thing at low with all three."
+  ]
+}
