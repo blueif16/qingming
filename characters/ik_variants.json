@@ -1,0 +1,2377 @@
+{
+ "about": "IK clip variants (tools/ik_clip.mjs; gen/details/contacts/fix_standard.md step 4): per variant, the ops that pin a clip's contact sites onto targets in the figure's root frame (x its left, y up, z forward, page metres). A character gets one as a clip source \"ik:<base clip>@<variant>\" in characters/<name>.json, under the clip name \"<base clip>~<variant>\". Targets are in the frame the page draws once the clip's ground offset (clip_meta sole_m, tools/clip_ground.mjs) is applied (\"frame\": \"proposed\", the default; \"page\": people.js today).",
+ "pole": {
+  "why": "sedan_carry with the pole really on the right shoulder and both hands on it: the shoulder top held at the clip's median place (x 0.048, y 1.432: gen/details/joints_proposed/bearer.json sedan_carry, its soles on the ground) all through the cycle, the hips taking up its sway (0.24 m across, 0.06 m up and down) with the feet kept where the clip plants them; both palms on the pole's axis line over that shoulder (pole radius 0.038: its axis at y 1.470), 0.05 m from the axis. The sedan kit's pole_h is fitted to this (blender/outer_road_scene.py).",
+  "ops": [
+   {
+    "site": "shoulder_R",
+    "via": "hips",
+    "to": {
+     "x": 0.048,
+     "y": 1.432
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.048,
+       1.47,
+       0
+      ],
+      "dir": [
+       0,
+       0,
+       1
+      ]
+     },
+     "off": 0.05
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.048,
+       1.47,
+       0
+      ],
+      "dir": [
+       0,
+       0,
+       1
+      ]
+     },
+     "off": 0.05
+    }
+   }
+  ]
+ },
+ "pole_ends": {
+  "why": "sedan_carry for the front bearer standing between the pole ends, facing the chair, both hands on them (S4's bearer_bending_10440: \"bending forward ... with both hands at the west ends of the west sedan chair's poles\"): the hips held at the clip's median place across (x 0.112: gen/details/joints/bearer.json) with the feet kept, so the body doesn't sway out of reach; the palms on the two poles' axes 0.465 m either side of the body's middle (x 0.112 +- 0.465: the kit's poles at +-(cabin half-width 0.39 + 0.075)), 1.25 m up (the west chair's front ends: blender/outer_road_scene.py SEDAN_POLE_HANDS, kit pole_fit (rear, front)), so his arms reach down and out to them, not straight out, from 0.25 m ahead of the root (he stands with the pole ends 0.15 m ahead), 0.05 m from the axis; the hands keep the clip's turn.",
+  "ops": [
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "x": 0.112
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.577,
+       1.25,
+       0
+      ],
+      "dir": [
+       0,
+       0,
+       1
+      ],
+      "s0": 0.25
+     },
+     "off": 0.05
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       -0.353,
+       1.25,
+       0
+      ],
+      "dir": [
+       0,
+       0,
+       1
+      ],
+      "s0": 0.25
+     },
+     "off": 0.05
+    }
+   }
+  ]
+ },
+ "table_palms": {
+  "why": "seated at a table 0.80 m high with both palms resting on its top, over the papers (S4's fortune_teller_12232, \"arms spread on the table over his papers\"): each palm held 0.02 m over the top (0.85 m: the table fitted to his reach, 0.83 m) (the palm site is the hand's middle) where the clip has it across and forward; the hands keep the clip's turn. The table is the S4 builder's k.table(h=0.83), fitted: at 0.8 his left arm, fully stretched, stopped 2.5 cm short of the top, at 0.825 still 0.5 cm.",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "y": 0.85
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "y": 0.85
+    }
+   }
+  ]
+ },
+ "table_forearms": {
+  "why": "seated at a table 0.83 m high, leaning forward with both forearms on its top (S4's client_seated_12185, \"leaning forward with both forearms on the table\"): each forearm's middle held 0.035 m over the top (the forearm's half thickness) where the clip has it across and forward, then each hand turned about the wrist to lie on the top (palm 0.02 m over it) instead of dropping into the table.",
+  "ops": [
+   {
+    "site": "forearm_L",
+    "via": "arm",
+    "to": {
+     "y": 0.865
+    }
+   },
+   {
+    "site": "forearm_R",
+    "via": "arm",
+    "to": {
+     "y": 0.865
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "hand",
+    "to": {
+     "y": 0.85
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "hand",
+    "to": {
+     "y": 0.85
+    }
+   }
+  ]
+ },
+ "steady_seat": {
+  "why": "ride_fan held in the saddle: the take's last 2 s sink the hips 0.19 m (gen/details/joints/hat_traveller.json ride_fan, t 5.9-7.95 s), which put the rider 0.13 m into his horse for a tenth of the cycle; the seat site is held at the take's steady height (0.64 m over the root) all through, the legs hanging as they do",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0.64
+    }
+   }
+  ]
+ },
+ "groom_rider_10255": {
+  "why": "bridle for outer_road/groom_rider_10255 at its solved placement (X 22.54, D 7.56, facing 170): palm_R, palm_L laid onto outer_road/horse_rider_10205 where the clip has them nearest (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.278,
+      1.419,
+      0.032
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.06,
+      1.09,
+      0.195
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "ox_leader_10050": {
+  "why": "bridle for outer_road/ox_leader_10050 at its solved placement (X 22.11, D 2.98, facing -20): palm_R, palm_L laid onto outer_road/ox_far_10045 where the clip has them nearest (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.149,
+      1.304,
+      -0.066
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.033,
+      1.029,
+      0.004
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "bearded_man_10142": {
+  "why": "browse for outer_road/bearded_man_10142 at its solved placement (X 20, D 8.68, facing 196): palm_L laid onto S4.prop.big_basket_10000 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.009,
+      1.08,
+      0.552
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "man_cart_tail_10405": {
+  "why": "push for outer_road/man_cart_tail_10405 at its solved placement (X 24.95, D 4.03, facing 65): palm_L, palm_R laid onto S4.veh.covered_ox_cart_10550 where the clip has them nearest (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.193,
+      1.019,
+      0.42
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.224,
+      1.058,
+      0.408
+     ]
+    }
+   }
+  ]
+ },
+ "ox_driver_10635": {
+  "why": "push_flank for outer_road/ox_driver_10635 at its solved placement (X 27.57, D 7.31, facing 50): palm_L, palm_R laid onto outer_road/ox_shaft_10712 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.209,
+      1.206,
+      0.652
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.06,
+      1.049,
+      0.655
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "child_at_table_12597": {
+  "why": "reach for outer_road/child_at_table_12597 at its solved placement (X 57.56, D -2.82, facing 0): palm_L, palm_R laid onto S4b.prop.table_12645 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.124,
+      0.756,
+      0.294
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.108,
+      0.756,
+      0.278
+     ]
+    }
+   }
+  ]
+ },
+ "soles": {
+  "why": "a chair clip whose feet rest at two heights (the official's sit, sit_talk and write: one sole 5-6 cm over the floor, the other 5-6 cm into it, once their middle is on the ground by clip_meta sole_m, the chair rule of tools/clip_ground.mjs): both soles held on the floor (y 0 in the root frame: the ground under the root) by leg IK (tools/ik_clip.mjs via leg, fix-inner 2026-10-13), the knees on the side the clip has them, each foot turned as the clip has it in the world, the hips untouched, so the seat stays where the clip has it and the middle of the soles stays at 0 (the variant's sole_m comes out as its base's)",
+  "ops": [
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": 0
+    }
+   }
+  ]
+ },
+ "office_bench": {
+  "why": "the gate's tax office (fix-gate, 2026-10-13): seated on one of its benches, top 0.42 m over the floor boards the feet stand on (blender/gate_scene.py _office: bench zt..zt+0.45, boards zt..zt+0.03): the seat site held 0.425 m over the root all through (the official's sit_talk put it 0.50, sit 0.40-0.48 as the take sinks), the feet kept where the clip plants them, then both soles held on the floor by leg IK (as \"soles\": one sole of the official's chair clips rests 6 cm up, the other 6 cm into the floor)",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0.425
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": 0
+    }
+   }
+  ]
+ },
+ "office_desk": {
+  "why": "the tax official writing at his desk (fix-gate, 2026-10-13): as office_bench (the seat 0.425 m over the floor boards, both soles on them), and the left hand flat on the desk holding the paper: the palm held 0.77 m over the root (the desk's top 0.75 m over the boards: song_kit.table h 0.78 on the plinth, the palm site 0.02 over it) where the clip has it across and forward, the hand keeping the clip's turn",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0.425
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": 0
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "y": 0.77
+    }
+   }
+  ]
+ },
+ "moat_rail": {
+  "why": "lean_chin at the gate's moat-bridge railings (fix-gate, 2026-10-13): the top rail's top is 1.075 m over the deck (blender/gate_scene.py bridge: beam centred 1.02 m, 0.11 m tall, 0.12 m wide), and the forearms rest on it: the right elbow joint held 1.10 m over the root by moving the whole body (the sightseer's take holds the elbows 1.15-1.16 m up, 8 cm over the rail; the idler's 1.10-1.11 with 1.5 cm of sway), the feet kept where the clip plants them; the left elbow, 1 cm lower in both takes, rests 1.09 m up (an arm op on the elbow turned the forearm 163 degrees, so none)",
+  "ops": [
+   {
+    "site": "elbow_R",
+    "via": "hips",
+    "to": {
+     "y": 1.1
+    },
+    "keep_soles": true
+   }
+  ]
+ },
+ "tub_vendor_27765": {
+  "why": "sit_offer for canal/tub_vendor_27765 (idler, seated on the ground by the big tub, holding out a bowl): the take's seat bobs -0.02..+0.06 m over the ground (gen/details/joints/idler.json sit_offer), so a tenth of the cycle he hovered 4-6 cm over it; the seat site held at 0.005 m all through the cycle by the hips, the rest of the take as it is (fix-river)",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0.005
+    }
+   }
+  ]
+ },
+ "traveller_rider_30165": {
+  "why": "ride for countryside/traveller_rider_30165 (townsman on the walking donkey donkey_traveller_30216): the seat site held at the take's median height (0.56 m over the root, gen/details/joints/townsman.json ride) all through the cycle, so its bob doesn't lift it off the saddle cloth (4.1 cm at the cycle's top tenth); the legs hang as they do (fix-river, as hat_traveller's steady_seat)",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0.56
+    }
+   }
+  ]
+ },
+ "staff_foot": {
+  "why": "the porter's stand_pole holding the staff (characters/props.json staff, 1.98 m) upright with its foot on the ground (fix-gate, 2026-10-13: the fix-boats pole rules caught it): as built the take holds the right palm 0.996 m up (median) and the staff's foot hangs 0.0-0.12 m over the ground (median 0.069; gen/details/joints/props_porter.json), so the right palm is held 0.937 m over the root all through (0.059 m lower than the take's median: the foot's median 0.01 over the ground), where the take has it across and forward, the hand keeping its world turn so the staff keeps the take's tilt; it also takes out the take's 12 cm bob. For every porter with the staff in stand_pole (gate hat_pole_man_5940, inner_city pole_man_5578, countryside party_porter_staff_31131)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "y": 0.937
+    }
+   }
+  ]
+ },
+ "carter_24218": {
+  "why": "bridle for canal/carter_24218 at its solved placement (X 190.7, D 25.7, facing 240): palm_R, palm_L laid on cart_mule_lead_24192's body where it stays within 0.02 m over every frame of its clips (idle), within the arm's reach, nearest where the clip has the hand (gen/details/contacts/fix_river/tools/animal_hold.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.109,
+      1.238,
+      0.341
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.183,
+      0.987,
+      0.096
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "man_at_horse_head_24506": {
+  "why": "bridle for canal/man_at_horse_head_24506 at its solved placement (X 194.09, D 27.15, facing 40): palm_R, palm_L laid on horse_24565's body where it stays within 0.03 m over every frame of its clips (head_low), within the arm's reach, nearest where the clip has the hand (gen/details/contacts/fix_river/tools/animal_hold.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.195,
+      1.248,
+      0.22
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.058,
+      1.085,
+      0.164
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "man_at_railing_27650": {
+  "why": "lean_chin for canal/man_at_railing_27650 at its solved placement (X 261.49, D 23.58, facing 245): the chest held at the take's median place across and along (x 0.011, z 0.136: gen/details/joints/sightseer.json lean_chin; it swayed 5 cm) by the hips, the feet kept, so the elbows can rest; elbow_L, elbow_R laid onto S2.str.railed_stair_27630's slanted rail where the clip has them nearest within the arm's reach, 0.022 m off it (tools/ik_targets.mjs --off 0.022; fix-river)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.011,
+     "z": 0.136
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "elbow_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.257,
+      1.159,
+      0.234
+     ]
+    }
+   },
+   {
+    "site": "elbow_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.191,
+      1.172,
+      0.287
+     ]
+    }
+   }
+  ]
+ },
+ "terrace_diner_leaning_23216": {
+  "why": "lean_over for canal/terrace_diner_leaning_23216 at its solved placement (X 181.73, D 20.35, facing 15): palm_L, palm_R laid onto S2.bld.river_terrace_23250 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.286,
+      0.873,
+      0.22
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.205,
+      0.91,
+      0.151
+     ]
+    }
+   }
+  ]
+ },
+ "barrow_pusher_25532": {
+  "why": "push for canal/barrow_pusher_25532 at its solved placement (X 207.24, D 28.73, facing 40): palm_L, palm_R laid onto S2.veh.barrow_crates_25598's west end, each at a point the arm reaches in every frame of the take (push is a locomotion take the page holds in place, so no hips op; fix-river); palm_R, palm_L re-targeted to points reachable in every frame of the take (gen/details/contacts/fix_river/tools/reach_hold.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.29,
+      1.148,
+      0.399
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.312,
+      1.142,
+      0.453
+     ]
+    }
+   }
+  ]
+ },
+ "pennant_pole_holder_27810": {
+  "why": "fend_pole for canal/pennant_pole_holder_27810 at its solved placement (X 260.36, D 12.88, facing 90): palm_L, palm_R laid onto S2.prop.pennant_frame_27930 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.021,
+      1.276,
+      -0.131
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.191,
+      1.4,
+      -0.117
+     ]
+    }
+   }
+  ]
+ },
+ "rail_watcher_19923": {
+  "why": "lean_over for rainbow_bridge/rail_watcher_19923 at its solved placement (X 142.81, D 23.51, H 1.693, facing 327): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0226,
+     "z": 0.058
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.308,
+      1.038,
+      0.381
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.122,
+      1.198,
+      0.31
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": 0.214
+    }
+   }
+  ]
+ },
+ "rail_watcher_19892": {
+  "why": "lean_over for rainbow_bridge/rail_watcher_19892 at its solved placement (X 142.47, D 23.12, H 1.911, facing 319): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0408,
+     "z": 0.068
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.329,
+      1.048,
+      0.331
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.041,
+      1.271,
+      0.321
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": 0.205
+    }
+   }
+  ]
+ },
+ "deck_rail_leaner_19715": {
+  "why": "lean_over for rainbow_bridge/deck_rail_leaner_19715 at its solved placement (X 140.13, D 20.4, H 4.16, facing 327): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0226,
+     "z": 0.058
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.312,
+      0.958,
+      0.343
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.115,
+      1.181,
+      0.271
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.344,
+     "y": 0.161
+    }
+   }
+  ]
+ },
+ "deck_rail_leaner_19538": {
+  "why": "lean_over for rainbow_bridge/deck_rail_leaner_19538 at its solved placement (X 138.55, D 18.55, H 5.059, facing 329): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0223,
+     "z": 0.096
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.281,
+      1.152,
+      0.315
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.149,
+      1.213,
+      0.229
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": 0.158
+    }
+   }
+  ]
+ },
+ "deck_rail_face_19350": {
+  "why": "lean_over for rainbow_bridge/deck_rail_face_19350 at its solved placement (X 137.1, D 17, H 5.214, facing 309): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0225,
+     "z": 0.058
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.344,
+      1.232,
+      0.268
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.172,
+      1.18,
+      0.356
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0.121
+    }
+   }
+  ]
+ },
+ "man_leaning_on_railing_19225": {
+  "why": "lean_over for rainbow_bridge/man_leaning_on_railing_19225 at its solved placement (X 136.4, D 16.22, H 5.003, facing 309): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0409,
+     "z": 0.068
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.214,
+      1.235,
+      0.296
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.148,
+      1.137,
+      0.362
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0.154
+    }
+   }
+  ]
+ },
+ "man_arms_on_railing_18982": {
+  "why": "lean_over for rainbow_bridge/man_arms_on_railing_18982 at its solved placement (X 135, D 14.62, H 4.068, facing 319): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0227,
+     "z": 0.058
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.202,
+      1.399,
+      0.326
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.246,
+      1.151,
+      0.327
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.229,
+     "y": 0.243
+    }
+   }
+  ]
+ },
+ "man_head_bowed_18962": {
+  "why": "lean_over for rainbow_bridge/man_head_bowed_18962 at its solved placement (X 134.68, D 14.24, H 3.849, facing 319): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0401,
+     "z": 0.068
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.14,
+      1.272,
+      0.313
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.207,
+      1.16,
+      0.315
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0.239
+    }
+   }
+  ]
+ },
+ "deck_stooping_hat_19765": {
+  "why": "reach_over_rail for rainbow_bridge/deck_stooping_hat_19765 at its solved placement (X 141.12, D 21.52, H 3.427, facing 319): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "belly",
+    "via": "hips",
+    "to": {
+     "y": 0.938,
+     "z": 0.273
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0.021
+    }
+   }
+  ]
+ },
+ "deck_rail_leaner_19578": {
+  "why": "reach_over_rail for rainbow_bridge/deck_rail_leaner_19578 at its solved placement (X 139.46, D 19.77, H 4.631, facing 349): the belly on the railing (the whole body moved down and forward, the feet kept) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "belly",
+    "via": "hips",
+    "to": {
+     "y": 0.956,
+     "z": 0.335
+    },
+    "keep_soles": true
+   }
+  ]
+ },
+ "man_lowering_rope_19295": {
+  "why": "reach_over_rail for rainbow_bridge/man_lowering_rope_19295 at its solved placement (X 136.71, D 16.59, H 5.14, facing 335): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "belly",
+    "via": "hips",
+    "to": {
+     "y": 0.977,
+     "z": 0.323
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0.04
+    }
+   }
+  ]
+ },
+ "man_bent_over_railing_19195": {
+  "why": "reach_over_rail for rainbow_bridge/man_bent_over_railing_19195 at its solved placement (X 136.1, D 15.57, H 4.885, facing 299): the belly on the railing (the whole body moved down and forward, the feet kept) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "belly",
+    "via": "hips",
+    "to": {
+     "y": 0.751,
+     "z": 0.221
+    },
+    "keep_soles": true
+   }
+  ]
+ },
+ "man_over_railing_19025": {
+  "why": "reach_over_rail for rainbow_bridge/man_over_railing_19025 at its solved placement (X 135.43, D 14.87, H 4.429, facing 334): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "belly",
+    "via": "hips",
+    "to": {
+     "y": 0.894,
+     "z": 0.23
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": 0.025
+    }
+   }
+  ]
+ },
+ "cart_pusher_5727": {
+  "why": "push for gate/cart_pusher_5727 at its solved placement (X -39.3, D 8.31, facing 179): palm_L, palm_R laid onto S6.veh.sack_cart_5412 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.19,
+      1.078,
+      0.421
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.198,
+      1.029,
+      0.428
+     ]
+    }
+   }
+  ]
+ },
+ "cart_shaftman_8498": {
+  "why": "S5's front carter of the 串车 (cart_shaftman_8498), \"bent forward over the front shafts ... gripping a shaft\" (map), standing (the carter's idle: hands hanging at his sides at 0.81 m, 0.32 m out) between the barrow's front shafts facing east, at his painted spot (0.17 m behind the shafts' ends): each palm on the top of its shaft (the kit's bent rails, blender/kit_vehicles.py _barrow: axis 0.72 m up, 0.33 m left and 0.36 m right of his root, 0.05 m ahead, measured on the built rails), the palm site 0.055 m over the rail's axis; the hips held 0.07 m under the take's (0.893 m, knees a little bent, the feet kept) so the hands reach down to them (hanging straight, the take's hands stop 4 cm over the shafts); the hands keep the clip's turn (fix-gate, 2026-10-13: on steer, the take's whip lift and lean took the right hand out of reach of the shaft for a third of the cycle; the first, tool-made targets went to the draught pole between his feet)",
+  "ops": [
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "y": 0.893
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.33,
+      0.777,
+      0.05
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.36,
+      0.777,
+      0.05
+     ]
+    }
+   }
+  ]
+ },
+ "groom_8167": {
+  "why": "bridle for gate/groom_8167 at its solved placement (X -4.65, D 6.24, facing 204): palm_R laid onto gate/donkey_8121 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.25,
+      1.384,
+      0.109
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "pack_handler_5837": {
+  "why": "browse for gate/pack_handler_5837 at its solved placement (X -39.6, D 11.07, facing 180): palm_L, palm_R laid onto S5.prop.pack_box_5780 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.28,
+      0.875,
+      0.38
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.219,
+      0.872,
+      0.365
+     ]
+    }
+   }
+  ]
+ },
+ "cart_pusher_8254": {
+  "why": "S5's rear carter of the 串车 (cart_pusher_8254), who \"grips its rear handles and pushes it east\" (map), in steer standing between the barrow's rear handles just behind their tips, facing east: each palm on the top of its handle (the kit's rails, blender/kit_vehicles.py _barrow, held: the tips 0.86 m up, 0.35 m either side of the barrow's axis, sloping down eastward), 0.15 m ahead of the root (0.36 m left, 0.37 m right, axis 0.833 m up there), the palm site 0.055 m over the axis; the hands keep the clip's turn (fix-gate, 2026-10-13: push held his palms 1.03-1.10 m up, 0.2 m over the handles and out of the arm's reach from where he can stand; steer's hands rest at the handles' height at his sides)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.354,
+      0.888,
+      0.15
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.369,
+      0.888,
+      0.15
+     ]
+    }
+   }
+  ]
+ },
+ "sweep_bar": {
+  "why": "fix-boats (details pass, contacts): work_sweep with both hands on the sweep's crossbar. The kit stands the crew 0.15 m behind the bar (pt_sweep_crew, kit option sweep_crew_in) and puts the bar 0.85 m over their deck (sweep_bar_h): the take's palms are at 0.72-0.87 m (median), 0.1-0.5 m behind the bar line, and its hips rock 0.38 m fore and aft. Here the hips are held at z -0.08 (the feet kept where the take plants them) and both palms lie on the bar's line across the figure (y 0.85, z 0.15; bar radius 0.035 + the hand's half thickness 0.015). Shared by every sweep hand (boatman, inspector).",
+  "ops": [
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "z": -0.08
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0,
+       0.85,
+       0.15
+      ],
+      "dir": [
+       1,
+       0,
+       0
+      ]
+     },
+     "off": 0.05
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0,
+       0.85,
+       0.15
+      ],
+      "dir": [
+       1,
+       0,
+       0
+      ]
+     },
+     "off": 0.05
+    }
+   }
+  ]
+ },
+ "pole_hold_boatman": {
+  "why": "fix-boats: pole_boat with both hands on the pole and the pole still (boatman). The pole (props.json long_pole_low) is skinned to the hips, which the take turns and bends, so the pole swung through the deck under the man's feet while his palms were 0.14-0.36 m off it. Here the hips are frozen as the take has them at 0.9 s (turn and place; the feet kept), so the pole stays as it is then: slanting 65 deg, crossing the deck 0.58 m ahead of the root (the crew stand at the gunwale facing out: tools/crew_solve.mjs), its foot 2.5 m under the deck. Both palms lie on its axis (radius 0.04 + 0.015), sliding along it as the take pushes down. (Hold and freeze times differ by 0.5-1 ms: ik_clip poseAt at the same time twice in a row leaves the bones at rest, because three.js skips re-applying an unchanged value; reported to the lead.)",
+  "ops": [
+   {
+    "freeze": "Hips",
+    "t": 0.9
+   },
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "hold_t": 0.9005
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.759,
+       -2.505,
+       1.569
+      ],
+      "dir": [
+       -0.215,
+       0.9079,
+       -0.3598
+      ],
+      "s0": 0.3,
+      "s1": 4.3502
+     },
+     "off": 0.055
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.759,
+       -2.505,
+       1.569
+      ],
+      "dir": [
+       -0.215,
+       0.9079,
+       -0.3598
+      ],
+      "s0": 0.3,
+      "s1": 4.3502
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "pole_hold_straw_hat": {
+  "why": "fix-boats: pole_boat with both hands on the pole and the pole still (straw_hat). The pole (props.json long_pole_low) is skinned to the hips, which the take turns and bends, so the pole swung through the deck under the man's feet while his palms were 0.14-0.36 m off it. Here the hips are frozen as the take has them at 0.9 s (turn and place; the feet kept), so the pole stays as it is then: slanting 65 deg, crossing the deck 0.58 m ahead of the root (the crew stand at the gunwale facing out: tools/crew_solve.mjs), its foot 2.5 m under the deck. Both palms lie on its axis (radius 0.04 + 0.015), sliding along it as the take pushes down. (Hold and freeze times differ by 0.5-1 ms: ik_clip poseAt at the same time twice in a row leaves the bones at rest, because three.js skips re-applying an unchanged value; reported to the lead.)",
+  "ops": [
+   {
+    "freeze": "Hips",
+    "t": 0.9
+   },
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "hold_t": 0.9005
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.776,
+       -2.522,
+       1.53
+      ],
+      "dir": [
+       -0.2167,
+       0.908,
+       -0.3584
+      ],
+      "s0": 0.3,
+      "s1": 4.3507
+     },
+     "off": 0.055
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.776,
+       -2.522,
+       1.53
+      ],
+      "dir": [
+       -0.2167,
+       0.908,
+       -0.3584
+      ],
+      "s0": 0.3,
+      "s1": 4.3507
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "fend_up": {
+  "why": "fix-boats: fend_pole held still, raised 47 deg up to his right and a little ahead (the raised end 3.1 m high): pushing a pole up at an arch or a high stern (the take holds a raised pole in both hands only so; the figure is turned so it points at what it fends). The pole (long_pole_mid) is skinned to the right hand, which the take swings from overhead to waist height (the pole swept through the deck and the man) while the left palm was 0.34 m off it. Here the right hand is held in place and turn as the take has it at 3.8 s (frame Armature: still in the root frame), so the pole stays as it is then, and the left palm lies on its axis (radius 0.04 + 0.015). The figure is turned and placed so the forward end meets what it fends (tools/crew_solve.mjs, rule reach). The hips, spine and shoulders are frozen as at 3.8 s too, so the take's crouch (1.2-2.4 s, hands at 0.7 m) doesn't pull the hands off the still pole (the legs, neck and head keep the take's motion). (Hold and freeze times differ by 0.5-1 ms: ik_clip poseAt at the same time twice in a row leaves the bones at rest, because three.js skips re-applying an unchanged value; reported to the lead.)",
+  "ops": [
+   {
+    "freeze": [
+     "Hips",
+     "Spine",
+     "Spine01",
+     "Spine02",
+     "LeftShoulder",
+     "RightShoulder"
+    ],
+    "t": 3.8
+   },
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "hold_t": 3.8005
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "frame": "Armature",
+    "to": {
+     "hold_t": 3.801
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       -1.739,
+       3.141,
+       0.409
+      ],
+      "dir": [
+       0.6118,
+       -0.7358,
+       -0.2903
+      ],
+      "s0": 0.3,
+      "s1": 4.3504000000000005
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "fend_out": {
+  "why": "fix-boats: fend_pole held still, slanting 12 deg down ahead (the end in front 0.7 m over the deck, 2 m out): pushing off another boat's side or stern. The pole (long_pole_mid) is skinned to the right hand, which the take swings from overhead to waist height (the pole swept through the deck and the man) while the left palm was 0.34 m off it. Here the right hand is held in place and turn as the take has it at 4.2 s (frame Armature: still in the root frame), so the pole stays as it is then, and the left palm lies on its axis (radius 0.04 + 0.015). The figure is turned and placed so the forward end meets what it fends (tools/crew_solve.mjs, rule reach).",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "frame": "Armature",
+    "to": {
+     "hold_t": 4.2
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       -1.139,
+       0.71,
+       1.954
+      ],
+      "dir": [
+       0.3819,
+       0.206,
+       -0.901
+      ],
+      "s0": 0.3,
+      "s1": 4.3506
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "man_big_hat_12895": {
+  "why": "idle for outer_road_2/man_big_hat_12895 at his placement (X 62.12, D -3.50, facing -80; fix-s4b): standing against the far (north) side of the small horse S4b.ani.horse_12862 (scale 0.85, its withers 1.1 m up), his knees bent a little (the hips 0.16 m lower, the feet kept), both hands laid on its withers, the part of its body that stays put while it lowers and raises its head (head_low, idle). The bridle take holds a tall horse's head high and leans back, out of reach of a small horse's withers; its own contact rule (characters/contacts.json): the palms on the animal",
+  "ops": [
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "y": 0.811
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.124,
+      1.086,
+      0.257
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.211,
+      1.098,
+      0.248
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "man_bowed_at_horse_13410": {
+  "why": "girth for outer_road_2/man_bowed_at_horse_13410 at his placement (X 63.58, D 9.16, facing 80; fix-s4b): both hands on the saddled horse's girth line under the saddle (S4b.ani.horse_saddled_13378's barrel, which stays put while it lowers its head), 1.6 cm off its surface",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.027,
+      0.903,
+      0.3
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.191,
+      0.948,
+      0.313
+     ]
+    }
+   }
+  ]
+ },
+ "counter_man_leaning_13325": {
+  "why": "lean_over for outer_road_2/counter_man_leaning_13325 at his placement (X 61.44, D 10.56, facing 270; fix-s4b): both hands held at the height of the top of the counter with the bowls (S4b.prop.table_bowls_13275, fitted to 0.94 m), 0.02 m over it (the palm site is the hand's middle), keeping the take's rocking along it, as table_palms does",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "y": 0.947
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "y": 0.947
+    }
+   }
+  ]
+ },
+ "porter_at_cart_rear_13090": {
+  "why": "reach_up_load for outer_road_2/porter_at_cart_rear_13090 at his placement (X 63.66, D -1.57, facing 101; fix-s4b): both raised hands held against the underside of the second palm cart's rear (S4b.veh.palm_cart_13455: the low edge of its thatch hood, over him), where the take's hands are nearest it (tools/ik_targets.mjs), 1.5 cm off it, as painted (\"both arms raised to the underside of the cart's rear half\")",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.115,
+      1.253,
+      -0.077
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.165,
+      1.224,
+      -0.12
+     ]
+    }
+   }
+  ]
+ },
+ "carter_at_shaft_ox_13243": {
+  "why": "push_flank for outer_road_2/carter_at_shaft_ox_13243 at his placement (X 66.18, D 0.09, facing 104; fix-s4b): both palms held on the shaft ox's hindquarters (S4b.ani.ox_shaft_13442, idle only), 1.6 cm off its surface, where the take's palms are nearest it",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.201,
+      1.147,
+      0.685
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.324,
+      1.161,
+      0.602
+     ]
+    }
+   }
+  ]
+ },
+ "man_bending_to_donkey_13440": {
+  "why": "lean_over for outer_road_2/man_bending_to_donkey_13440 at his placement (X 64.58, D 8.41, facing 72; fix-s4b): bending over the small donkey S4b.ani.donkey_13474 with both hands on its back (the barrel, which stays put while it grazes), 1.6 cm off it; its own contact rule (characters/contacts.json): the palms on the animal",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.125,
+      0.968,
+      0.265
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.171,
+      1.048,
+      0.259
+     ]
+    }
+   }
+  ]
+ },
+ "customer_white_14560": {
+  "why": "knee_on_stool for outer_road_2/customer_white_14560 (fix-s4b): the take's seat rises and sinks 5 cm through the cycle (0.37-0.42 m over the floor), more than a stool's tolerance; the seat is held at its middle height (0.218 m over the root) by the hips, the feet put back where the take has them (keep_soles), so he sits on his stool all through",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0.218
+    },
+    "keep_soles": true
+   }
+  ]
+ },
+ "seated_man_13240": {
+  "why": "show_goods_seated for outer_road_2/seated_man_13240 (fix-s4b): sitting cross-legged on the ground, the take lifts his seat up to 5 cm off it as he leans to his goods; the seat is held on the ground (y 0, its middle height) by the hips, the feet put back where the take has them (keep_soles)",
+  "ops": [
+   {
+    "site": "seat",
+    "via": "hips",
+    "to": {
+     "y": 0
+    },
+    "keep_soles": true
+   }
+  ]
+ },
+ "wagon_shaft_carter_3642": {
+  "why": "steer for inner_city/wagon_shaft_carter_3642 at its solved placement (X -74.48, D 19.49, facing 215): palm_L, palm_R laid onto S6.veh.taiping_wagon_3600 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.264,
+       1.143,
+       0.172
+      ],
+      "dir": [
+       -0.06,
+       -0.019,
+       -0.998
+      ]
+     },
+     "off": 0.063
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.359,
+      1.119,
+      0.031
+     ]
+    }
+   }
+  ]
+ },
+ "handcart_man_3130": {
+  "why": "steer for inner_city/handcart_man_3130 at its solved placement (X -76.26, D 15.87, facing 32): palm_L, palm_R laid onto S6.veh.barrow_casks_3300 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.094,
+      0.842,
+      0.188
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.284,
+      0.931,
+      0.003
+     ]
+    },
+    "fade": [
+     0.12,
+     0.35
+    ],
+    "fade_from": [
+     -0.284,
+     0.881,
+     0.003
+    ]
+   }
+  ]
+ },
+ "barrow_pusher_3390": {
+  "why": "steer for inner_city/barrow_pusher_3390 at its solved placement (X -82.07, D 28.2, facing 180): palm_L, palm_R laid onto S6.veh.barrow_top_3340 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.101,
+      0.892,
+      0.2
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.286,
+      0.881,
+      0.015
+     ]
+    },
+    "fade": [
+     0.12,
+     0.35
+    ],
+    "fade_from": [
+     -0.287,
+     0.881,
+     0.001
+    ]
+   }
+  ]
+ },
+ "wagon_top_rider_3740": {
+  "why": "sit for inner_city/wagon_top_rider_3740 at its solved placement (X -74.07, D 19.72, facing 220): sole_L, sole_R laid onto S6.veh.taiping_wagon_3600 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "y": -0.158
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "y": -0.158
+    }
+   }
+  ]
+ },
+ "young_man_cart_rear_2675": {
+  "why": "push for inner_city/young_man_cart_rear_2675 at its solved placement (X -71, D -1.54, facing 15): palm_L, palm_R laid onto S6.veh.wine_cart_3090 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.194,
+      1.09,
+      0.439
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.198,
+      1.025,
+      0.42
+     ]
+    }
+   }
+  ]
+ },
+ "butcher_3920": {
+  "why": "chop for inner_city/butcher_3920 at its solved placement (X -66.37, D 15.82, facing 285): palm_L laid onto S6.prop.meat_pieces_3978 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.415,
+      0.902,
+      0.473
+     ]
+    }
+   }
+  ]
+ },
+ "seated_man_highseat_4070": {
+  "why": "sit for inner_city/seated_man_highseat_4070 (inspector) on the stall keeper's tall chair (S6.prop.high_seat_4060, seat 0.85 m; root_h 0.434): both soles laid on the chair's foot rail (top 0.434 m up, 0.155-0.225 m ahead of the root, x -0.23..0.17) by leg IK, drawn in from the clip's 0.49 m ahead and inside the rail's ends and 8-11 cm clear of the chair's legs (tools/ik_clip.mjs via leg, fix-inner)",
+  "ops": [
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "point": [
+      0.06,
+      0.002,
+      0.19
+     ]
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "point": [
+      -0.1,
+      0.002,
+      0.19
+     ]
+    }
+   }
+  ]
+ },
+ "child_arms": {
+  "why": "children (details pass): hold_child as the carried child (prop child_in_arms) needs it: both arms held on her spine as the take has them at 0.1 s (the left forearm and hand cradle the child in the crook of her arm, the right hand at her left side on it); in the take they swept 5.5-9.6 cm through the child against her spine while she sways. Her head turns damped to 0.3; the take's last arm fall cut (trim 0-7.3 s). (Freeze time 0.1007 s, not 0.1: the ik_clip same-t workaround.)",
+  "trim": [
+   0,
+   7.3
+  ],
+  "ops": [
+   {
+    "freeze": [
+     "LeftShoulder",
+     "LeftArm",
+     "LeftForeArm",
+     "LeftHand",
+     "RightShoulder",
+     "RightArm",
+     "RightForeArm",
+     "RightHand"
+    ],
+    "t": 0.1007
+   },
+   {
+    "damp": [
+     "neck",
+     "Head"
+    ],
+    "k": 0.3
+   }
+  ]
+ },
+ "child_shoulders": {
+  "why": "children (details pass): carry_child with the child on his shoulders (prop child_on_shoulders): both arms and his neck and head held on his spine as the take has them at 2.8 s. The hands hold the child's shins in front of his chest (in the take they moved 3-4 cm against his spine), and the child sits astride his neck behind his head (the take looks round, 4-11 cm against the spine, and swept into the child's thighs and body; damped to 0.3 it still pushed 2.2 cm into the child). His body keeps the take's sway. (Freeze time 2.8007 s, not 2.8: the ik_clip same-t workaround.)",
+  "ops": [
+   {
+    "freeze": [
+     "LeftShoulder",
+     "LeftArm",
+     "LeftForeArm",
+     "LeftHand",
+     "RightShoulder",
+     "RightArm",
+     "RightForeArm",
+     "RightHand",
+     "neck",
+     "Head"
+    ],
+    "t": 2.8007
+   }
+  ]
+ },
+ "cart_puller_19870": {
+  "why": "steer for rainbow_bridge/cart_puller_19870 at its solved placement (X 144.85, D 29.57, H -0.017, facing 173): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (his hands back on the shaft tips and their crossbar) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.108,
+      0.787,
+      -0.124
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.291,
+      0.793,
+      -0.127
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "cart_pusher_19922": {
+  "why": "push for rainbow_bridge/cart_pusher_19922 at its solved placement (X 146.56, D 28.62, H -0.003, facing 83): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (both hands on its top rail) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.193,
+      0.937,
+      0.363
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.19,
+      0.935,
+      0.368
+     ]
+    }
+   }
+  ]
+ },
+ "barrow_pusher_18295": {
+  "why": "push for rainbow_bridge/barrow_pusher_18295 at its solved placement (X 128.88, D 3.69, H -0.02, facing 220): palm_L, palm_R on S3.veh.barrow_hooped_load_18100 where it is nearest to them (a hand on each handle) (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.341,
+      0.937,
+      0.327
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.302,
+      0.912,
+      0.368
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "far_shopkeeper_19620": {
+  "why": "lean_over for rainbow_bridge/far_shopkeeper_19620 at its solved placement (X 132.98, D 30.12, H 0.003, facing 270): palm_L, palm_R on S3.prop.far_counter_19555 where it is nearest to them (both hands on the counter's top); the chest held steady (no forward sway: the hips move under it), the feet kept (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0409,
+     "z": 0.048
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.271,
+      0.911,
+      0.181
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.178,
+      0.911,
+      0.138
+     ]
+    }
+   }
+  ]
+ },
+ "mat_stall_keeper_18435": {
+  "why": "lean_over for rainbow_bridge/mat_stall_keeper_18435 at its solved placement (X 130.19, D 17.41, H 3.4, facing 8): palm_L, palm_R on S3.prop.stall_table_18540 where it is nearest to them (both hands on the stall table's top); the chest held steady (no forward sway: the hips move under it), the feet kept (gen/details/contacts/fix_bridge/tools/rail_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0594,
+     "z": 0.03
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.161,
+      0.895,
+      0.251
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.214,
+      0.933,
+      0.151
+     ]
+    }
+   }
+  ]
+ },
+ "groom_holding_horse_19095": {
+  "why": "hold_horse_neck for rainbow_bridge/groom_holding_horse_19095 at its solved placement (X 135.78, D 20.4, facing 150): chest_front, palm_L, palm_R laid onto rainbow_bridge/horse_19055 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": -0.054,
+     "z": 0.176
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.084,
+      1.112,
+      0.178
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.03,
+      1.041,
+      0.202
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "groom_at_donkey_18682": {
+  "why": "bridle for rainbow_bridge/groom_at_donkey_18682 at its solved placement (X 131.41, D 13.19, facing 30): palm_R, palm_L laid onto rainbow_bridge/donkey_ridden_18690 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.23,
+      1.185,
+      0.075
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.197,
+      1.094,
+      0.061
+     ]
+    }
+   }
+  ]
+ },
+ "donkey_man_east_18768": {
+  "why": "push_flank for rainbow_bridge/donkey_man_east_18768 at its solved placement (X 133.18, D 20.84, facing 220): palm_L, palm_R laid onto rainbow_bridge/donkey_dark_18745 where the clip has them nearest (or nearest within the arm's reach) (tools/ik_targets.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.252,
+      1.087,
+      0.592
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.078,
+      0.909,
+      0.411
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "passenger_leaning_in_bay_23385": {
+  "why": "lean_chin for canal/passenger_leaning_in_bay_23385 on its boat (fix-boats, tools/crew_ik_targets.mjs): elbow_L 0.243 m from S2.veh.boat_passenger_22545|body; elbow_R 0.08 m from S2.veh.boat_passenger_22545|body: the sites laid onto what the clip's rule touches there (0.012 m off its surface), in the root frame (the crew moves with its boat)",
+  "ops": [
+   {
+    "site": "elbow_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.016,
+      1.05,
+      0.329
+     ]
+    }
+   },
+   {
+    "site": "elbow_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.116,
+      1.048,
+      0.224
+     ]
+    }
+   }
+  ]
+ },
+ "man_leaning_casks_25650": {
+  "why": "lean_over for canal/man_leaning_casks_25650 on its boat (fix-boats, tools/crew_ik_targets.mjs): palm_L 0.029 m from S2.veh.boat_moored_mat_canopy_25145|body; palm_R 0.379 m from S2.veh.boat_moored_mat_canopy_25145|body: the sites laid onto what the clip's rule touches there (0.012 m off its surface), in the root frame (the crew moves with its boat)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.33,
+      0.905,
+      0.202
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.072,
+      1.076,
+      0.317
+     ]
+    },
+    "elbow": "down"
+   }
+  ]
+ },
+ "figure_in_windlass_24713": {
+  "why": "push for canal/figure_in_windlass_24713 on its boat (fix-boats, tools/crew_ik_targets.mjs): palm_L 0.075 m from S2.veh.boat_cargo_hooded_bow_23715|body; palm_R 0.17 m from S2.veh.boat_cargo_hooded_bow_23715|body: the sites laid onto what the clip's rule touches there (0.012 m off its surface), in the root frame (the crew moves with its boat)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.267,
+      1.138,
+      0.429
+     ]
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.065,
+      1.079,
+      0.579
+     ]
+    }
+   }
+  ]
+ },
+ "man_at_cabin_rail_19366": {
+  "why": "lean_chin for rainbow_bridge/man_at_cabin_rail_19366 on its boat (fix-boats, tools/crew_ik_targets.mjs): elbow_L 0.325 m from S3.veh.boat_cabin_under_arch_19225|body; elbow_R 0.166 m from S3.veh.boat_cabin_under_arch_19225|body: the sites laid onto what the clip's rule touches there (0.012 m off its surface), in the root frame (the crew moves with its boat)",
+  "ops": [
+   {
+    "site": "elbow_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.251,
+      1.412,
+      0.498
+     ]
+    }
+   },
+   {
+    "site": "elbow_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.223,
+      1.243,
+      0.53
+     ]
+    }
+   }
+  ]
+ },
+ "sedan_bearer_front_18838": {
+  "why": "sedan_carry for rainbow_bridge/sedan_bearer_front_18838 (S3's sedan on the south ramp, its poles sloping 8.7 deg down towards him): the shared pole_ends setup (hips held across at x 0.112, the feet kept; a hand on each pole end from 0.2 m ahead) with the poles' real slope and height at his placement (gen/details/contacts/fix_bridge/notes.md)",
+  "ops": [
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "x": 0.112
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.557,
+       1.282,
+       0
+      ],
+      "dir": [
+       0.001,
+       -0.153,
+       0.988
+      ],
+      "s0": 0.2
+     },
+     "off": 0.053
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       -0.37,
+       1.282,
+       0
+      ],
+      "dir": [
+       0.001,
+       -0.153,
+       0.988
+      ],
+      "s0": 0.2
+     },
+     "off": 0.053
+    }
+   }
+  ]
+ },
+ "sedan_bearer_rear_18688": {
+  "why": "sedan_carry for rainbow_bridge/sedan_bearer_rear_18688 (S3's sedan on the south ramp, its poles rising 8.7 deg ahead of him): the shared pole setup (the right shoulder top held at x 0.048, y 1.432, the feet kept) with both palms on the north pole's real line at his placement (gen/details/contacts/fix_bridge/notes.md)",
+  "ops": [
+   {
+    "site": "shoulder_R",
+    "via": "hips",
+    "to": {
+     "x": 0.048,
+     "y": 1.432
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.053,
+       1.471,
+       0
+      ],
+      "dir": [
+       0.001,
+       0.153,
+       0.988
+      ]
+     },
+     "off": 0.053
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.053,
+       1.471,
+       0
+      ],
+      "dir": [
+       0.001,
+       0.153,
+       0.988
+      ]
+     },
+     "off": 0.053
+    }
+   }
+  ]
+ }
+}

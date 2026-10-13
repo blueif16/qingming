@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is a tree painted in that style; copy exactly how its sprays of narrow pointed bamboo leaves are drawn: the same stroke, line weight, colours and spacing.\n\nPaint a sheet of four separate bamboo leaf sprays, arranged in a 2 by 2 grid, each one alone in its own quarter of the picture with clear white space all round it, never touching another one or the picture's edge.\n\nEach one is a single spray of narrow pointed bamboo leaves on a few thin green-grey stalks that spring from one point at the bottom centre of its quarter: the leaves drawn in clusters of three to five strokes like the character 个, layered densely in deep green (about #4e6b4a) and fresher green (about #6f8c58), never yellow. There is no culm below the point. The spray fills most of its quarter.\n\nThe four differ only in shape: (1) an upright spray; (2) a wide spray drooping a little at both sides; (3) a spray leaning to the left; (4) a spray leaning to the right.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed silk of the scroll. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no trunk, no branch, no ground, no shadow, no text, no seal, no grid lines, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/bamboo_2/f20cd75f852b_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "dee370c3a100",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 50.7,
+ "attempts": 1,
+ "idempotency_key": "d0d7156e-34d2-46ea-a42d-68ffccc6aa84",
+ "request_id": "8eb432d1-1abe-49d6-aa81-354bb9b726b7",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4058,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3759,
+   "text_tokens": 299
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4058,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3759,
+   "text_tokens": 299
+  },
+  "total_tokens": 5708
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/e6810a64-3785-4461-bb1c-7235e6c69cc4"
+ ],
+ "files": [
+  "gen/details/trees/clumps/bamboo/dee370c3a100_0.png"
+ ]
+}

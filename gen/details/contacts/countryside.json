@@ -1,0 +1,2100 @@
+{
+ "section": "countryside",
+ "owners": "MATCH",
+ "excluded_owners": [],
+ "people": 30,
+ "checked": 30,
+ "crew_not_covered": 0,
+ "fails": 1,
+ "figures_failing": 1,
+ "seconds": 0.119,
+ "results": [
+  {
+   "id": "man_with_stick_29205",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.man_with_stick_29205",
+   "support": "ground",
+   "root": [
+    278.31,
+    0.0327,
+    -9.17
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.005,
+     "max": -0.001,
+     "min": -0.008,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.033,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "traveller_standing_29996",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "scholar",
+   "character": "scholar",
+   "map_id": "S1.fig.traveller_standing_29996",
+   "support": "ground",
+   "root": [
+    283.61,
+    -0.1822,
+    -1.74
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.009,
+     "max": 0.016,
+     "min": -0.007,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.182,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "child_29674",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "child_robed",
+   "character": "child_robed",
+   "map_id": "S1.fig.child_29674",
+   "support": "ground",
+   "root": [
+    284.81,
+    0.0367,
+    -9.78
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.003,
+     "max": 0.001,
+     "min": -0.011,
+     "clip_offset": -0.002,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.037,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "stall_customer_29280",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.stall_customer_29280",
+   "support": "ground",
+   "root": [
+    285.39,
+    0.0335,
+    -18.6
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "drink~soles",
+     "site": "seat",
+     "target": "seat",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.02,
+     "hold": 0.9,
+     "with": [
+      "S1.fig.stall_customer_29280"
+     ],
+     "max": 0.013,
+     "mean": 0.004,
+     "gap_q": 0.005,
+     "pen_q": 0.002,
+     "deepest_pen": 0.002,
+     "status": "PASS"
+    },
+    {
+     "class": "contact",
+     "clip": "drink~soles",
+     "site": "sole_L",
+     "target": "floor",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.75,
+     "with": [
+      "ground"
+     ],
+     "max": -0.011,
+     "mean": -0.012,
+     "gap_q": -0.012,
+     "pen_q": -0.012,
+     "deepest_pen": 0.012,
+     "status": "PASS",
+     "clip_offset": 0,
+     "cause": "clip"
+    },
+    {
+     "class": "contact",
+     "clip": "drink~soles",
+     "site": "sole_R",
+     "target": "floor",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.75,
+     "with": [
+      "ground"
+     ],
+     "max": -0.017,
+     "mean": -0.017,
+     "gap_q": -0.017,
+     "pen_q": -0.017,
+     "deepest_pen": 0.017,
+     "status": "PASS",
+     "clip_offset": 0,
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.034,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0.004,
+     "with": [
+      [
+       "S1.bld.stall_annex_29350",
+       0.004
+      ]
+     ],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0.016,
+     "worst": [
+      {
+       "site": "palm_R",
+       "with": "S1.prop.stall_table_small_29285",
+       "depth": 0.016,
+       "clip": "drink~soles"
+      }
+     ],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "traveller_rider_30165",
+   "section": "countryside",
+   "kind": "rider",
+   "model": "townsman",
+   "character": "townsman",
+   "map_id": "S1.fig.traveller_rider_30165",
+   "support": "animal S1.ani.donkey_traveller_30216",
+   "root": [
+    286.8252,
+    0.1716,
+    -0.5373
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "ride~traveller_rider_30165",
+     "site": "seat",
+     "target": "ridden",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.04,
+     "hold": 0.9,
+     "with": [
+      "S1.ani.donkey_traveller_30216"
+     ],
+     "how": "ridden",
+     "max": 0.037,
+     "mean": 0.034,
+     "gap_q": 0.036,
+     "pen_q": 0.03,
+     "deepest_pen": 0,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "rider: placed on its animal every frame; body cylinder and stance soles not judged"
+   ]
+  },
+  {
+   "id": "stall_man_29328",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "townsman",
+   "character": "townsman",
+   "map_id": "S1.fig.stall_man_29328",
+   "support": "ground",
+   "root": [
+    285.67,
+    0.0554,
+    -17.65
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.001,
+     "max": 0.002,
+     "min": -0.001,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.055,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "man_at_post_29812",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "robed_man",
+   "character": "robed_man",
+   "map_id": "S1.fig.man_at_post_29812",
+   "support": "ground",
+   "root": [
+    286.45,
+    0.1538,
+    -8.65
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "beckon_lean",
+     "site": "forearm_L",
+     "target": "rail",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.03,
+     "hold": 0.8,
+     "with": [
+      "S1.prop.post_crossbar_29862"
+     ],
+     "max": 0.075,
+     "mean": 0.024,
+     "gap_q": 0.034,
+     "pen_q": 0.011,
+     "deepest_pen": 0.007,
+     "status": "PASS"
+    },
+    {
+     "class": "stance_soles",
+     "median": -0.02,
+     "max": 0.03,
+     "min": -0.03,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "placement"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.154,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0.017,
+     "with": [
+      "S1.prop.post_crossbar_29862"
+     ],
+     "clip": "beckon_lean",
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "traveller_rider_30495",
+   "section": "countryside",
+   "kind": "rider",
+   "model": "camel_driver",
+   "character": "camel_driver",
+   "map_id": "S1.fig.traveller_rider_30495",
+   "support": "animal S1.ani.donkey_traveller_30546",
+   "root": [
+    289.9231,
+    0.0141,
+    1.1338
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "ride",
+     "site": "seat",
+     "target": "ridden",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.04,
+     "hold": 0.9,
+     "with": [
+      "S1.ani.donkey_traveller_30546"
+     ],
+     "how": "ridden",
+     "max": 0.018,
+     "mean": 0.011,
+     "gap_q": 0.016,
+     "pen_q": 0.007,
+     "deepest_pen": 0,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "rider: placed on its animal every frame; body cylinder and stance soles not judged"
+   ]
+  },
+  {
+   "id": "far_figure_29230",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.far_figure_29230",
+   "support": "ground",
+   "root": [
+    291.27,
+    0.0074,
+    -28.26
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.003,
+     "max": 0.003,
+     "min": -0.015,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.05,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.007,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "far_figure_29257",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.far_figure_29257",
+   "support": "ground",
+   "root": [
+    291.85,
+    0.043,
+    -28.13
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.013,
+     "max": 0.021,
+     "min": 0.002,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.05,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.043,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "far_figure_29337",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.far_figure_29337",
+   "support": "ground",
+   "root": [
+    292.52,
+    0.0855,
+    -27.79
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.003,
+     "max": 0.001,
+     "min": -0.006,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.086,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "far_figure_29466",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.far_figure_29466",
+   "support": "ground",
+   "root": [
+    294.07,
+    0.1889,
+    -27.14
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.012,
+     "max": 0.018,
+     "min": 0.008,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.189,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "far_figure_29482",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "straw_hat",
+   "character": "straw_hat",
+   "map_id": "S1.fig.far_figure_29482",
+   "support": "ground",
+   "root": [
+    294.43,
+    0.1754,
+    -28.42
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.016,
+     "max": 0.02,
+     "min": 0.013,
+     "clip_offset": -0.003,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.175,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "sedan_bearer_front_30828",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "bearer",
+   "character": "bearer",
+   "map_id": "S1.fig.sedan_bearer_front_30828",
+   "support": "ground",
+   "root": [
+    305.39,
+    -0.0432,
+    -18.71
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "sedan_carry~pole",
+     "site": "shoulder_R",
+     "target": "vehicle",
+     "feature": "pole",
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.9,
+     "with": [
+      "S1.veh.sedan_willow_30805"
+     ],
+     "how": "group",
+     "rod": {
+      "owner": "S1.veh.sedan_willow_30805",
+      "a": [
+       304.839,
+       18.426,
+       1.422
+      ],
+      "b": [
+       308.379,
+       19.736,
+       1.494
+      ],
+      "r": 0.038,
+      "len": 3.775,
+      "key": "S1.veh.sedan_willow_30805@304.839,18.426"
+     },
+     "rel": {
+      "above_m": -0.046,
+      "side_m": 0.028
+     },
+     "max": 0.024,
+     "mean": 0.017,
+     "gap_q": 0.023,
+     "pen_q": 0.008,
+     "deepest_pen": 0,
+     "status": "PASS"
+    },
+    {
+     "class": "contact",
+     "clip": "sedan_carry~pole",
+     "site": "palm_L",
+     "target": "vehicle",
+     "feature": "pole",
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.9,
+     "with": [
+      "S1.veh.sedan_willow_30805"
+     ],
+     "how": "group",
+     "rod": {
+      "owner": "S1.veh.sedan_willow_30805",
+      "a": [
+       304.839,
+       18.426,
+       1.422
+      ],
+      "b": [
+       308.379,
+       19.736,
+       1.494
+      ],
+      "r": 0.038,
+      "len": 3.775,
+      "key": "S1.veh.sedan_willow_30805@304.839,18.426"
+     },
+     "rel": {
+      "above_m": -0.004,
+      "side_m": 0.055
+     },
+     "max": 0.025,
+     "mean": 0.01,
+     "gap_q": 0.022,
+     "pen_q": 0.001,
+     "deepest_pen": 0.001,
+     "status": "PASS"
+    },
+    {
+     "class": "contact",
+     "clip": "sedan_carry~pole",
+     "site": "palm_R",
+     "target": "vehicle",
+     "feature": "pole",
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.9,
+     "with": [
+      "S1.veh.sedan_willow_30805"
+     ],
+     "how": "group",
+     "rod": {
+      "owner": "S1.veh.sedan_willow_30805",
+      "a": [
+       304.839,
+       18.426,
+       1.422
+      ],
+      "b": [
+       308.379,
+       19.736,
+       1.494
+      ],
+      "r": 0.038,
+      "len": 3.775,
+      "key": "S1.veh.sedan_willow_30805@304.839,18.426"
+     },
+     "rel": {
+      "above_m": 0.025,
+      "side_m": 0.05
+     },
+     "max": 0.027,
+     "mean": 0.019,
+     "gap_q": 0.025,
+     "pen_q": 0.012,
+     "deepest_pen": 0,
+     "status": "PASS"
+    },
+    {
+     "class": "stance_soles",
+     "median": -0.003,
+     "max": 0.02,
+     "min": -0.016,
+     "clip_offset": -0.001,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.043,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "sedan_bearer_rear_30990",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "bearer",
+   "character": "bearer",
+   "map_id": "S1.fig.sedan_bearer_rear_30990",
+   "support": "ground",
+   "root": [
+    308.13,
+    -0.0007,
+    -19.69
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "sedan_carry~pole",
+     "site": "shoulder_R",
+     "target": "vehicle",
+     "feature": "pole",
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.9,
+     "with": [
+      "S1.veh.sedan_willow_30805"
+     ],
+     "how": "group",
+     "rod": {
+      "owner": "S1.veh.sedan_willow_30805",
+      "a": [
+       304.839,
+       18.426,
+       1.422
+      ],
+      "b": [
+       308.379,
+       19.736,
+       1.494
+      ],
+      "r": 0.038,
+      "len": 3.775,
+      "key": "S1.veh.sedan_willow_30805@304.839,18.426"
+     },
+     "rel": {
+      "above_m": -0.059,
+      "side_m": 0.005
+     },
+     "max": 0.024,
+     "mean": 0.021,
+     "gap_q": 0.023,
+     "pen_q": 0.019,
+     "deepest_pen": 0,
+     "status": "PASS"
+    },
+    {
+     "class": "contact",
+     "clip": "sedan_carry~pole",
+     "site": "palm_L",
+     "target": "vehicle",
+     "feature": "pole",
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.9,
+     "with": [
+      "S1.veh.sedan_willow_30805"
+     ],
+     "how": "group",
+     "rod": {
+      "owner": "S1.veh.sedan_willow_30805",
+      "a": [
+       304.839,
+       18.426,
+       1.422
+      ],
+      "b": [
+       308.379,
+       19.736,
+       1.494
+      ],
+      "r": 0.038,
+      "len": 3.775,
+      "key": "S1.veh.sedan_willow_30805@304.839,18.426"
+     },
+     "rel": {
+      "above_m": -0.017,
+      "side_m": 0.06
+     },
+     "max": 0.03,
+     "mean": 0.014,
+     "gap_q": 0.025,
+     "pen_q": -0.002,
+     "deepest_pen": 0.004,
+     "status": "PASS"
+    },
+    {
+     "class": "contact",
+     "clip": "sedan_carry~pole",
+     "site": "palm_R",
+     "target": "vehicle",
+     "feature": "pole",
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.9,
+     "with": [
+      "S1.veh.sedan_willow_30805"
+     ],
+     "how": "group",
+     "rod": {
+      "owner": "S1.veh.sedan_willow_30805",
+      "a": [
+       304.839,
+       18.426,
+       1.422
+      ],
+      "b": [
+       308.379,
+       19.736,
+       1.494
+      ],
+      "r": 0.038,
+      "len": 3.775,
+      "key": "S1.veh.sedan_willow_30805@304.839,18.426"
+     },
+     "rel": {
+      "above_m": 0.012,
+      "side_m": 0.033
+     },
+     "max": -0.001,
+     "mean": -0.004,
+     "gap_q": -0.002,
+     "pen_q": -0.006,
+     "deepest_pen": 0.006,
+     "status": "PASS"
+    },
+    {
+     "class": "stance_soles",
+     "median": 0.007,
+     "max": 0.035,
+     "min": -0.008,
+     "clip_offset": -0.001,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.001,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "porter_pole_31083",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "porter",
+   "character": "porter",
+   "map_id": "S1.fig.porter_pole_31083",
+   "support": "ground",
+   "root": [
+    309.95,
+    0.152,
+    -19.98
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0,
+     "max": 0.005,
+     "min": -0.006,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.152,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "porter_boxes_30908",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "porter",
+   "character": "porter",
+   "map_id": "S1.fig.porter_boxes_30908",
+   "support": "ground",
+   "root": [
+    310.1,
+    0.2057,
+    -24.27
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.003,
+     "max": 0.009,
+     "min": -0.003,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.206,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "rider_party_30988",
+   "section": "countryside",
+   "kind": "rider",
+   "model": "hat_traveller",
+   "character": "hat_traveller",
+   "map_id": "S1.fig.rider_party_30988",
+   "support": "animal S1.ani.horse_party_31023",
+   "root": [
+    311.4248,
+    1.0567,
+    -23.5612
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "ride",
+     "site": "seat",
+     "target": "ridden",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.04,
+     "hold": 0.9,
+     "with": [
+      "S1.ani.horse_party_31023"
+     ],
+     "how": "ridden",
+     "max": 0.068,
+     "mean": 0.004,
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "deepest_pen": 0,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "rider: placed on its animal every frame; body cylinder and stance soles not judged"
+   ]
+  },
+  {
+   "id": "porter_walking_31070",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "idler",
+   "character": "idler",
+   "map_id": "S1.fig.porter_walking_31070",
+   "support": "ground",
+   "root": [
+    311.61,
+    0.1483,
+    -22.71
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.006,
+     "max": 0.019,
+     "min": -0.011,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.148,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "party_porter_staff_31131",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "porter",
+   "character": "porter",
+   "map_id": "S1.fig.party_porter_staff_31131",
+   "support": "ground",
+   "root": [
+    311.79,
+    0.1165,
+    -21.8
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.002,
+     "max": 0.002,
+     "min": -0.006,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.117,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "bending_farmer_34252",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.bending_farmer_34252",
+   "support": "ground",
+   "root": [
+    346.89,
+    0.1426,
+    -13.6
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0,
+     "max": 0.016,
+     "min": -0.01,
+     "clip_offset": -0.001,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.143,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "farmer_by_hedge_34472",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.farmer_by_hedge_34472",
+   "support": "ground",
+   "root": [
+    350.25,
+    0.1351,
+    -14.06
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0,
+     "max": 0.011,
+     "min": -0.009,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.135,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "figure_in_shed_35108",
+   "section": "countryside",
+   "kind": "figure",
+   "model": "farmer",
+   "character": "farmer",
+   "map_id": "S1.fig.figure_in_shed_35108",
+   "support": "ground",
+   "root": [
+    358.56,
+    0.1668,
+    -14.24
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.009,
+     "max": 0.018,
+     "min": -0.003,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.05,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.167,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "traveller_staff_30357",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "porter",
+   "character": "porter",
+   "map_id": "S1.fig.traveller_staff_30357",
+   "support": "ground",
+   "root": [
+    288.1602,
+    -0.3764,
+    0.679
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "groom_leading_donkey_30648",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "robed_man",
+   "character": "robed_man",
+   "map_id": "S1.fig.groom_leading_donkey_30648",
+   "support": "ground",
+   "root": [
+    291.2895,
+    -0.5759,
+    0.4945
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "groom_chasing_30353",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "groom",
+   "character": "groom",
+   "map_id": "S1.fig.groom_chasing_30353",
+   "support": "ground",
+   "root": [
+    295.32,
+    -0.0487,
+    -15.28
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "groom_chasing_30518",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "groom",
+   "character": "groom",
+   "map_id": "S1.fig.groom_chasing_30518",
+   "support": "ground",
+   "root": [
+    297.22,
+    -0.0342,
+    -14.93
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "groom_chasing_30697",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "groom",
+   "character": "groom",
+   "map_id": "S1.fig.groom_chasing_30697",
+   "support": "ground",
+   "root": [
+    299.08,
+    -0.0767,
+    -17.21
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "charcoal_driver_36250",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "straw_hat",
+   "character": "straw_hat",
+   "map_id": "S1.fig.charcoal_driver_36250",
+   "support": "ground",
+   "root": [
+    373.8361,
+    -0.3659,
+    -13.6794
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "drive_donkeys",
+     "site": "palm_L",
+     "target": "animal",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.02,
+     "hold": 0.8,
+     "with": [
+      "S1.ani.donkey_charcoal_36323",
+      "S1.ani.donkey_charcoal_36410",
+      "S1.ani.donkey_charcoal_36508",
+      "S1.ani.donkey_charcoal_36666",
+      "S1.ani.donkey_charcoal_36745"
+     ],
+     "how": "group",
+     "max": 0.088,
+     "mean": 0.015,
+     "gap_q": 0.059,
+     "pen_q": -0.028,
+     "deepest_pen": 0.046,
+     "status": "FAIL"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [
+    {
+     "class": "contact:animal",
+     "clip": "drive_donkeys",
+     "site": "palm_L",
+     "value": 0.059,
+     "kind": "gap",
+     "with": [
+      "S1.ani.donkey_charcoal_36323",
+      "S1.ani.donkey_charcoal_36410",
+      "S1.ani.donkey_charcoal_36508",
+      "S1.ani.donkey_charcoal_36666",
+      "S1.ani.donkey_charcoal_36745"
+     ],
+     "note": null,
+     "rel": null,
+     "soft": false
+    }
+   ],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "charcoal_driver_36797",
+   "section": "countryside",
+   "kind": "walker",
+   "model": "straw_hat",
+   "character": "straw_hat",
+   "map_id": "S1.fig.charcoal_driver_36797",
+   "support": "ground",
+   "root": [
+    381.2607,
+    -0.4537,
+    -11.0361
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "drive_donkeys",
+     "site": "palm_L",
+     "target": "animal",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.02,
+     "hold": 0.8,
+     "with": [
+      "S1.ani.donkey_charcoal_36323",
+      "S1.ani.donkey_charcoal_36410",
+      "S1.ani.donkey_charcoal_36508",
+      "S1.ani.donkey_charcoal_36666",
+      "S1.ani.donkey_charcoal_36745"
+     ],
+     "how": "group",
+     "max": 0.071,
+     "mean": 0.003,
+     "gap_q": 0.009,
+     "pen_q": -0.006,
+     "deepest_pen": 0.017,
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  }
+ ]
+}

@@ -1,9 +1,29 @@
 #!/usr/bin/env node
 // Eyes, measured: every character's eyes from the texture as it lies on the face, in millimetres.
 //
-//   node tools/eye_check.mjs <character|a,b|all> [--src] [--dump <dir>]
+//   node tools/eye_check.mjs <character|a,b|all> [--out <dir>] [--zoom] [--no-src] [--no-fix] [--calibrate] [--no-overlay]
+//                            [--glb-dir <dir>]
+// (--glb-dir measures <dir>/<name>.glb instead of the shipped one; the source is measured with the character's "eyes"
+// fix applied, as the build makes it, unless --no-fix; --calibrate prints the calibration of RULE on CALIB)
+//   tools/chrome_slot.sh node tools/eye_check.mjs <names> --shots <dir> [--base http://127.0.0.1:5190]
+//   node tools/eye_check.mjs <names> --before-after <before_dir>,<after_dir>,<out.jpg> [--at name:x,y]
+//   node tools/eye_check.mjs <name> --seam <after.glb>,<before.glb>,<x:y:w:h>   (the colour step round an eye island)
+//   node tools/eye_check.mjs <name> --recolour-face <base.glb>,<out.glb>   (a recolour's texels on the face)
 //
-// (work in progress: probe of the face renderer)
+// For each character, the shipped GLB (web/public/assets/chars/<name>.glb, meshopt, webp 512) and the full-resolution
+// source texture tools/build_character.mjs starts from (the rigged GLB's):
+//   1. the body (no prop_/tack_ parts) in its rest pose, rendered orthographically along the head's forward axis
+//      (origin the Head joint, forward to the headfront marker, up the world's up) at 0.25 mm a pixel, so every pixel
+//      of the face knows its texel, its triangle and its depth (hat brims 25 mm in front of the face left out);
+//   2. the skin tone (median of the face's warm mid-light texels);
+//   3. the eyes: a pair of dark blobs mirrored about the midline, with skin between and below them, the brow pair
+//      (the compact pair with another 6-35 mm under it) told apart;
+//   4. each eye measured: iris, the lid outline (lid-dark and sclera texels joined to the iris), width, height,
+//      aspect, the lid's reach past the iris, the sclera fraction, eye/face width, left/right agreement;
+//   5. the verdict (RULE, calibrated on CALIB: see below) and the calibration's margins.
+// --out writes eyes.json, faces.jpg (the projected faces, eye outlines green, iris red, brows blue, measured texels
+// tinted: lid red, sclera cyan) and table.md. Exported functions are the measuring half of the eye fix
+// (tools/eye_fix.mjs, run by build_character.mjs --eyes).
 import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
 import { MeshoptDecoder } from 'meshoptimizer';
@@ -202,10 +222,10 @@ export function inkComponents(fr, skin, { x0 = -95, x1 = 95, y0 = 0, y1 = 240, i
     if (lab[q] || D[q] < ink) continue;
     const id = comps.length + 1;
     let sp = 0; stack[sp++] = q; lab[q] = id;
-    const c = { id, n: 0, sx: 0, sy: 0, sd: 0, imin: Infinity, imax: -Infinity, jmin: Infinity, jmax: -Infinity, px: [] };
+    const c = { id, n: 0, sx: 0, sy: 0, sd: 0, snf: 0, imin: Infinity, imax: -Infinity, jmin: Infinity, jmax: -Infinity, px: [] };
     while (sp) {
       const p = stack[--sp], pi = p % w, pj = (p / w) | 0;
-      c.n++; c.sx += pi; c.sy += pj; c.sd += D[p]; c.px.push(p);
+      c.n++; c.sx += pi; c.sy += pj; c.sd += D[p]; c.snf += NF[(pj + j0) * Wd + pi + i0]; c.px.push(p);
       c.imin = Math.min(c.imin, pi); c.imax = Math.max(c.imax, pi); c.jmin = Math.min(c.jmin, pj); c.jmax = Math.max(c.jmax, pj);
       for (let dj = -1; dj <= 1; dj++) for (let di = -1; di <= 1; di++) {
         const ni = pi + di, nj = pj + dj;
@@ -216,7 +236,7 @@ export function inkComponents(fr, skin, { x0 = -95, x1 = 95, y0 = 0, y1 = 240, i
     }
     // in mm
     Object.assign(c, {
-      area: c.n * MM * MM, cx: xOf(c.sx / c.n + i0), cy: yOf(c.sy / c.n + j0), dark: c.sd / c.n,
+      area: c.n * MM * MM, cx: xOf(c.sx / c.n + i0), cy: yOf(c.sy / c.n + j0), dark: c.sd / c.n, nf: c.snf / c.n,
       x0: xOf(c.imin + i0) - MM / 2, x1: xOf(c.imax + i0) + MM / 2, y1: yOf(c.jmin + j0) + MM / 2, y0: yOf(c.jmax + j0) - MM / 2,
     });
     c.w = c.x1 - c.x0; c.h = c.y1 - c.y0;
@@ -269,13 +289,17 @@ export function detectEyes(fr, skin) {
   for (const T of [0.38, 0.5, 0.62]) {
     const ic = inkComponents(fr, skin, { ink: T });
     const pairs = mirroredPairs(ic.comps);
-    const eyeish = pairs.filter((p) => p.minArea >= 12 && p.fill >= 0.45 && p.elong <= 2.4 && p.gap >= 12 && p.sep >= 35
+    const eyeish = pairs.filter((p) => p.minArea >= 12 && p.fill >= 0.4 && p.elong <= 4.5 && p.gap >= 12 && p.sep >= 35 && Math.min(p.a.nf, p.b.nf) >= 0.6
       && skinFrac(fr, skin, p.a.x1 + 2, p.b.x0 - 2, p.cy - 2, p.cy + 2) >= 0.5
       && [p.a, p.b].every((c) => skinFrac(fr, skin, c.x0, c.x1, c.y0 - 12, c.y0 - 4) >= 0.5));
     const browOf = (p, q) => p.cy - q.cy >= 6 && p.cy - q.cy <= 35 && overlapX(p.a, q.a) && overlapX(p.b, q.b);
     const cands = eyeish.filter((p) => !eyeish.some((q) => q !== p && browOf(p, q)));
     if (!cands.length) continue;
-    const eyes = cands[0];
+    // among the highest candidate and those level with it (within 8 mm), the biggest pair (the irises, not the lid
+    // strokes beside them), then the better mirrored
+    const level = cands.filter((p) => cands[0].cy - p.cy < 8);
+    const big = Math.max(...level.map((p) => p.minArea));
+    const eyes = level.filter((p) => p.minArea >= 0.6 * big).sort((p, q) => Math.abs(p.mid) + 5 * (p.ratio - 1) - (Math.abs(q.mid) + 5 * (q.ratio - 1)))[0];
     // each eye's brow: the nearest blob above it (any shape) that overlaps it across, within 40 mm
     const browFor = (e) => ic.comps.filter((c) => c !== e && c.area >= 4 && c.y0 > e.y1 - 1 && c.y0 - e.y1 < 40 && overlapX(c, e))
       .sort((p, q) => p.y0 - q.y0)[0] || null;
@@ -304,11 +328,25 @@ export function detectEyes(fr, skin) {
 // outline = lid + sclera: width, height, aspect; reach = how far the outline runs past the iris (both sides summed);
 // sclera fraction = sclera texels in the outline's inscribed ellipse / that ellipse.
 export const LID = 0.12;
-export function measureEye(fr, skin, det, core, brow) {
+export function measureEye(fr, skin, det, core0, brow) {
   const { ic } = det, { Wd, rgb, NF, TRI } = fr;
+  // the eye's parts: the paired blob and the blobs beside it at the same threshold (an iris and its lid strokes split by
+  // a gap of skin or sclera): within 4 mm across, centre within 8 mm, at most 3 mm higher (an iris hangs under its lid,
+  // a brow sits over it), small (< 150 mm2), never the brow
+  const parts = new Set([core0.id]);
+  const ub = { x0: core0.x0, x1: core0.x1, y0: core0.y0, y1: core0.y1 };
+  for (let round = 0; round < 3; round++) for (const b of ic.comps) {
+    if (parts.has(b.id) || b === brow || b.area >= 150) continue;
+    const gapX = Math.max(b.x0 - ub.x1, ub.x0 - b.x1, 0);
+    if (gapX <= 4 && Math.abs(b.cy - (ub.y0 + ub.y1) / 2) <= 8 && b.y0 >= ub.y0 - 12 && b.y1 <= ub.y1 + 3) {
+      parts.add(b.id);
+      ub.x0 = Math.min(ub.x0, b.x0); ub.x1 = Math.max(ub.x1, b.x1); ub.y0 = Math.min(ub.y0, b.y0); ub.y1 = Math.max(ub.y1, b.y1);
+    }
+  }
+  const core = { ...core0, ...ub, w: ub.x1 - ub.x0, h: ub.y1 - ub.y0, cx: core0.cx, cy: core0.cy, area: [...parts].reduce((t, id) => t + ic.comps[id - 1].area, 0) };
   // an eye joined to a fringe or a hat's shadow at the lowest threshold: only the ink threshold counts as lid, and the
   // big blob it sits in is not the eye
-  const side = core === det.pair.a ? 0 : 1, merged = !!det.merged?.[side];
+  const side = core0 === det.pair.a ? 0 : 1, merged = !!det.merged?.[side];
   const blob0 = merged ? det.blob0[side] : null;
   // the lid line lies on the dark core's top or at most 1.5 mm over it (a brow's or a fringe's halo never gets in)
   const upper = core.y1 + 1.5;
@@ -323,12 +361,27 @@ export function measureEye(fr, skin, det, core, brow) {
     scl[q] = lumOf(c) >= skin.lum * 0.97 && s <= skin.sat * 0.75 ? 1 : 0;
     const li = i + i0 - ic.i0, lj = j + j0 - ic.j0;
     const l = li >= 0 && lj >= 0 && li < ic.w && lj < ic.h ? ic.lab[lj * ic.w + li] : 0;
-    if (l === core.id) inCore[q] = 1; else if (l) other[q] = 1;
+    if (parts.has(l)) inCore[q] = 1; else if (l) other[q] = 1;
     if (blob0 && !inCore[q]) {
       const bi = i + i0 - blob0.ic.i0, bj = j + j0 - blob0.ic.j0;
       if (bi >= 0 && bj >= 0 && bi < blob0.ic.w && bj < blob0.ic.h && blob0.ic.lab[bj * blob0.ic.w + bi] === blob0.id) other[q] = 1;
     }
   }
+  // a big dark blob near the eye (hair, a fringe, a cap's shadow; >= 150 mm2) keeps a 1.5 mm halo the lid can't run along
+  const bigIds = new Set(ic.comps.filter((cc) => !parts.has(cc.id) && cc.area >= 150).map((cc) => cc.id));
+  const near = new Uint8Array(w * h), R = Math.round(1.5 / MM);
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+    const li = i + i0 - ic.i0, lj = j + j0 - ic.j0;
+    const l = li >= 0 && lj >= 0 && li < ic.w && lj < ic.h ? ic.lab[lj * ic.w + li] : 0;
+    let big = bigIds.has(l);
+    if (!big && blob0) { const bi = i + i0 - blob0.ic.i0, bj = j + j0 - blob0.ic.j0; big = bi >= 0 && bj >= 0 && bi < blob0.ic.w && bj < blob0.ic.h && blob0.ic.lab[bj * blob0.ic.w + bi] === blob0.id && !inCore[j * w + i]; }
+    if (!big) continue;
+    for (let dj = -R; dj <= R; dj++) for (let di = -R; di <= R; di++) {
+      const ni = i + di, nj = j + dj;
+      if (ni >= 0 && nj >= 0 && ni < w && nj < h && di * di + dj * dj <= R * R) near[nj * w + ni] = 1;
+    }
+  }
+  for (let q = 0; q < w * h; q++) if (near[q] && !inCore[q]) other[q] = 1;
   const lid = new Uint8Array(w * h), stack = [];
   for (let q = 0; q < w * h; q++) if (inCore[q]) { lid[q] = 1; stack.push(q); }
   const nb = (q, fn) => { const qi = q % w, qj = (q / w) | 0; for (let dj = -1; dj <= 1; dj++) for (let di = -1; di <= 1; di++) { const ni = qi + di, nj = qj + dj; if (ni >= 0 && nj >= 0 && ni < w && nj < h) fn(nj * w + ni); } };
@@ -372,14 +425,20 @@ export function measureEye(fr, skin, det, core, brow) {
   };
 }
 
-// the face's width at a height: the run of front-facing texels (n.fwd >= 0.3) through the midline
-export function faceWidthAt(fr, y, mid = 0) {
-  const j = pyOf(y), ok = (i) => fr.TRI[j * fr.Wd + i] >= 0 && fr.NF[j * fr.Wd + i] >= 0.3;
-  let a = pxOf(mid), b = a;
-  if (!ok(a)) return null;
-  while (a > 0 && ok(a - 1)) a--;
-  while (b < fr.Wd - 1 && ok(b + 1)) b++;
-  return { x0: xOf(a) - MM / 2, x1: xOf(b) + MM / 2, w: (b - a + 1) * MM };
+// the face's width at the eyes' height: the skin, from each eye's outer end outward until 3 mm of something else (hair,
+// a cap, an ear turned away, the surface's edge); the median over the rows 2 mm either side of the eye line
+export function faceWidthAt(fr, skin, y, el, er) {
+  const ws = [];
+  for (let yy = y - 2; yy <= y + 2; yy += 0.5) {
+    const j = pyOf(yy);
+    const good = (i) => { if (i < 0 || i >= fr.Wd) return false; const k = j * fr.Wd + i; return fr.TRI[k] >= 0 && fr.NF[k] >= 0.2 && skinLike(skin, [fr.rgb[k * 3], fr.rgb[k * 3 + 1], fr.rgb[k * 3 + 2]]); };
+    const run = Math.round(3 / MM);
+    const walk = (i, step) => { let last = i, miss = 0; for (let q = i; q >= 0 && q < fr.Wd; q += step) { if (good(q)) { last = q; miss = 0; } else if (++miss > run) break; } return last; };
+    const a = walk(pxOf(el), -1), b = walk(pxOf(er), 1);
+    ws.push((b - a + 1) * MM);
+  }
+  ws.sort((p, q) => p - q);
+  return { w: ws[ws.length >> 1] };
 }
 
 export function measureFace(fr) {
@@ -388,7 +447,7 @@ export function measureFace(fr) {
   if (!det) return { skin, found: false };
   const eyes = [det.pair.a, det.pair.b].map((c, k) => measureEye(fr, skin, det, c, det.brows[k]));
   const cy = (eyes[0].cy + eyes[1].cy) / 2, mid = (eyes[0].cx + eyes[1].cx) / 2;
-  const fw = faceWidthAt(fr, cy, mid);
+  const fw = faceWidthAt(fr, skin, cy, eyes[0].box.x0, eyes[1].box.x1);
   const lr = {
     width: Math.min(eyes[0].width, eyes[1].width) / Math.max(eyes[0].width, eyes[1].width),
     height: Math.min(eyes[0].height, eyes[1].height) / Math.max(eyes[0].height, eyes[1].height),
@@ -399,18 +458,78 @@ export function measureFace(fr) {
   return { skin, found: true, T: det.T, eyes, mid, cy, sep: eyes[1].cx - eyes[0].cx, face_w: fw?.w ?? null, lr };
 }
 
-// ---------------------------------------------------------------- the verdict (thresholds: see gen/details/eyes/notes.md)
-export const RULE = { width: 22, aspect: 1.8 };
+// ---------------------------------------------------------------- the verdict
+// Calibrated on the shipped textures (2026-10-13, gen/details/eyes/notes.md): the passing faces and the dots of the
+// brief, each threshold the geometric mean of the lowest passing face and the highest dot, both eyes averaged.
+// A face passes when its eyes' lid outline runs at least RULE.reach mm past the iris (both sides summed) and is at
+// least RULE.width mm wide. Inside the calibration gap (between the dots' highest and the passing faces' lowest
+// values) the verdict is marked "~".
+export const CALIB = { pass: ['groom', 'archer', 'woman', 'youth', 'bearer', 'storyteller'], fail: ['boatman', 'butcher', 'monk', 'official'] };
+export const RULE = { reach: 6.8, width: 17.2, gap: { reach: [4.4, 10.4], width: [14.6, 20.3] } };
+export const meanOf = (m, k) => (m.eyes[0][k] + m.eyes[1][k]) / 2;
 export function verdict(m) {
   if (!m.found) return 'NO EYES';
-  return m.eyes.every((e) => e.width >= RULE.width && e.aspect >= RULE.aspect) ? 'PASS' : 'FAIL';
+  const reach = meanOf(m, 'reach'), width = meanOf(m, 'width');
+  const pass = reach >= RULE.reach && width >= RULE.width;
+  const inGap = (v, [lo, hi]) => v > lo && v < hi;
+  const near = pass ? reach < RULE.gap.reach[1] || width < RULE.gap.width[1] : inGap(reach, RULE.gap.reach) && inGap(width, RULE.gap.width);
+  return (pass ? 'PASS' : 'FAIL') + (near ? '~' : '');
+}
+// the calibration: per metric, the lowest passing face, the highest dot, the threshold between them and the margin
+export function calibrate(rows) {
+  const get = (n) => rows.find((q) => q.name === n);
+  const out = {};
+  for (const k of ['reach', 'width', 'aspect', 'sclera']) {
+    const pv = CALIB.pass.map((n) => [n, get(n).mean[k]]), fv = CALIB.fail.map((n) => [n, get(n).mean[k]]);
+    const lo = pv.reduce((p, q) => (q[1] < p[1] ? q : p)), hi = fv.reduce((p, q) => (q[1] > p[1] ? q : p));
+    const thr = lo[1] > 0 && hi[1] > 0 ? Math.sqrt(lo[1] * hi[1]) : (lo[1] + hi[1]) / 2;
+    out[k] = { lowest_pass: lo, highest_dot: hi, threshold: +thr.toFixed(2), separates: lo[1] > hi[1], margin: hi[1] > 0 ? +(lo[1] / hi[1]).toFixed(2) : null };
+  }
+  return out;
+}
+
+// how much of the shipped texture the eye band gets: texels (at the texture's size) of the triangles seen in a band
+// 100 x 30 mm round the eyes, and how many UV islands they fall into (a face cut into islands of a few texels smears
+// when the texture is shrunk to 512)
+export const SLIVER = 6;
+export function eyeBandTexels(c) {
+  const { idx, T } = c.g, fr = c.fr, cy = c.m.found ? c.m.cy : 110, mid = c.m.found ? c.m.mid : 0;
+  const tris = new Set();
+  for (let y = cy - 15; y <= cy + 15; y += 0.5) for (let x = mid - 50; x <= mid + 50; x += 0.5) { const k = pyOf(y) * fr.Wd + pxOf(x); if (fr.TRI[k] >= 0) tris.add(fr.TRI[k]); }
+  const key = (v) => `${T[v * 2].toFixed(5)},${T[v * 2 + 1].toFixed(5)}`;
+  const parent = new Map(), find = (q) => { while (parent.get(q) !== q) q = parent.get(q); return q; }, byKey = new Map();
+  for (const f of tris) { parent.set(f, f); for (let k = 0; k < 3; k++) { const kk = key(idx[f + k]); if (!byKey.has(kk)) byKey.set(kk, []); byKey.get(kk).push(f); } }
+  for (const fs of byKey.values()) for (const f of fs.slice(1)) { const p = find(fs[0]), q = find(f); if (p !== q) parent.set(p, q); }
+  const isl = new Map(), S = c.tex * c.tex;
+  for (const f of tris) {
+    const [p, q, w] = [idx[f], idx[f + 1], idx[f + 2]];
+    const area = Math.abs((T[q * 2] - T[p * 2]) * (T[w * 2 + 1] - T[p * 2 + 1]) - (T[w * 2] - T[p * 2]) * (T[q * 2 + 1] - T[p * 2 + 1])) / 2 * S;
+    isl.set(find(f), (isl.get(find(f)) || 0) + area);
+  }
+  const sizes = [...isl.values()].sort((p, q) => p - q);
+  // per eye: the share of the eye's surroundings (the dark core +-10 mm across, +-4 mm up and down) that lies on UV
+  // islands under SLIVER texels: there the shrunk texture holds no drawing at all
+  const sliver = c.m.found ? c.m.eyes.map((e) => {
+    let n = 0, k = 0;
+    for (let y = e.core.y0 - 4; y <= e.core.y1 + 4; y += 0.25) for (let x = e.core.x0 - 10; x <= e.core.x1 + 10; x += 0.25) {
+      const q = pyOf(y) * fr.Wd + pxOf(x), f = fr.TRI[q];
+      if (f < 0) continue;
+      n++;
+      if (isl.get(find(f)) < SLIVER) k++;
+    }
+    return n ? +(k / n).toFixed(2) : 0;
+  }) : null;
+  return { texels: Math.round(sizes.reduce((p, q) => p + q, 0)), islands: sizes.length, median_island: +(sizes[sizes.length >> 1] || 0).toFixed(1), sliver };
 }
 
 // ---------------------------------------------------------------- one character, measured
-export async function checkCharacter(name, { src = false } = {}) {
+export async function checkCharacter(name, { src = false, glbDir = null } = {}) {
   const cf = charFiles(name);
-  const file = src ? cf.rigged : cf.glb;
+  const file = src ? cf.rigged : glbDir ? path.join(glbDir, `${name}.glb`) : cf.glb;
   const doc = await (await io()).read(r(file));
+  // the source as the build makes it: a character with an "eyes" spec (its own or its base's) gets the fix applied
+  const eyes = src ? cf.cfg.eyes || (cf.base ? JSON.parse(fs.readFileSync(r(`characters/${cf.base}.json`), 'utf8')).eyes : null) : null;
+  if (eyes && src !== 'plain') await (await import('./eye_fix.mjs')).applyEyes(doc, eyes, { log: () => {} });
   const g = bodyGeom(doc);
   const t = await decodeTex(g.tex);
   const fr = faceRender(g, t);
@@ -418,21 +537,21 @@ export async function checkCharacter(name, { src = false } = {}) {
   return { name, file, tex: t.W, g, t, fr, m, verdict: verdict(m) };
 }
 
-export async function faceTile(fr, m, label, { w = 300, sub = '', overlay = false, zoom = false } = {}) {
+export async function faceTile(fr, m, label, { w = 300, sub = "", overlay = false, zoom = false, boxes = true } = {}) {
   const cy = m.found ? m.cy : 110, mid = m.found ? m.mid : 0;
   const [x0, x1, y0, y1] = zoom ? [mid - 50, mid + 50, cy - 14, cy + 16] : [mid - 75, mid + 75, cy - 70, cy + 55];
   const img = await (await imageOf(fr, { x0, x1, y0, y1 })).png().toBuffer();
   const s = w / ((x1 - x0) / MM), H = Math.round(((y1 - y0) / MM) * s);
   const X = (x) => ((x - x0) / MM) * s, Y = (y) => ((y1 - y) / MM) * s;
   const rects = [];
-  if (m.found) for (const e of m.eyes) {
+  if (m.found && boxes) for (const e of m.eyes) {
     rects.push(`<rect x="${X(e.box.x0)}" y="${Y(e.box.y1)}" width="${X(e.box.x1) - X(e.box.x0)}" height="${Y(e.box.y0) - Y(e.box.y1)}" fill="none" stroke="#0f0" stroke-width="1.5"/>`);
     rects.push(`<rect x="${X(e.iris.x0)}" y="${Y(e.core.y1)}" width="${X(e.iris.x1) - X(e.iris.x0)}" height="${Y(e.core.y0) - Y(e.core.y1)}" fill="none" stroke="#f33" stroke-width="1"/>`);
     if (e.brow) rects.push(`<rect x="${X(e.brow.x0)}" y="${Y(e.brow.y1)}" width="${X(e.brow.x1) - X(e.brow.x0)}" height="${Y(e.brow.y0) - Y(e.brow.y1)}" fill="none" stroke="#39f" stroke-width="1"/>`);
   }
   // the measured texels: lid-dark red, sclera cyan
   const ov = Buffer.alloc(w * H * 4);
-  if (m.found) for (const e of m.eyes) {
+  if (m.found && overlay) for (const e of m.eyes) {
     const k = e.masks;
     for (let q = 0; q < k.w * k.h; q++) {
       if (!k.lid[q] && !k.sc[q]) continue;
@@ -466,41 +585,189 @@ export function summary(c) {
   const e = m.eyes;
   return {
     name: c.name, verdict: c.verdict, tex: c.tex, file: c.file, threshold: m.T,
+    mean: { reach: +f1(meanOf(m, 'reach')), width: +f1(meanOf(m, 'width')), aspect: +f2(meanOf(m, 'aspect')), sclera: +f2(meanOf(m, 'sclera')) },
     skin: m.skin.rgb.map((x) => +x.toFixed(3)), face_w: +f1(m.face_w), sep: +f1(m.sep), mid: +f1(m.mid), eye_y: +f1(m.cy),
     lr: { width: +f2(m.lr.width), height: +f2(m.lr.height), dy: +f1(m.lr.dy) },
     eyes: e.map((q, k) => ({ side: k ? 'viewer_right' : 'viewer_left', width: +f1(q.width), height: +f1(q.height), aspect: +f2(q.aspect),
       iris_w: +f1(q.iris_w), iris_h: +f1(q.iris_h), reach: +f1(q.reach), sclera: +f2(q.sclera), sclera_mm2: +f1(q.sclera_mm2), face_frac: q.face_frac == null ? null : +f2(q.face_frac),
-      cx: +f1(q.cx), cy: +f1(q.cy), box: Object.fromEntries(Object.entries(q.box).filter(([k2]) => k2 !== 'n').map(([k2, v]) => [k2, +f1(v)])),
+      merged: q.merged || undefined, reach_l: +f1(q.reach_l), reach_r: +f1(q.reach_r), cx: +f1(q.cx), cy: +f1(q.cy), box: Object.fromEntries(Object.entries(q.box).filter(([k2]) => k2 !== 'n').map(([k2, v]) => [k2, +f1(v)])),
       core: { x0: +f1(q.core.x0), x1: +f1(q.core.x1), y0: +f1(q.core.y0), y1: +f1(q.core.y1) }, brow: q.brow && Object.fromEntries(Object.entries(q.brow).map(([k2, v]) => [k2, +f1(v)])) })),
   };
 }
 
+// ---------------------------------------------------------------- face close-ups on the GPU (web/chars.html)
+// One frame per character, from the front at about the eye's height, idle at 1 s, props off. The page is run through
+// tools/chrome_slot.sh against tools/check_server.sh:
+//   tools/chrome_slot.sh node tools/eye_check.mjs a,b --shots <dir> [--base http://127.0.0.1:5190]
+export async function faceShots(names, dir, base, { level = false } = {}) {
+  const { chromium } = await import('playwright-core');
+  const browser = await chromium.connectOverCDP('http://127.0.0.1:' + (process.env.CDP_PORT || '9223'));
+  const reg = JSON.parse(fs.readFileSync(r('web/public/assets/chars/characters.json'), 'utf8'));
+  fs.mkdirSync(dir, { recursive: true });
+  for (const name of names) {
+    const c = await checkCharacter(name);
+    const k = reg[name].height_m / c.g.height, eyeH = (c.g.frame.o[1] + (c.m.found ? c.m.cy : 110) / 1000) * k;
+    const page = await browser.contexts()[0].newPage();
+    await page.setViewportSize({ width: 1280, height: 960 });
+    await page.goto(`${base}/chars.html?only=${name}&props=0`);
+    await page.waitForFunction(() => window.__test || document.getElementById('loading')?.textContent.startsWith('Failed'), null, { timeout: 60000 });
+    await page.evaluate(() => { document.querySelector('.lil-gui')?.remove(); document.getElementById('help')?.remove(); document.querySelectorAll('body > div').forEach((d) => { if (!d.id) d.remove(); }); });
+    // level: from 2 m at the eyes' height, under a wide brim (the camera sits 0.35 m over the point it looks at)
+    const [dist, tgt] = level ? [2.0, eyeH - 0.3] : [0.95, eyeH - 0.05];
+    await page.evaluate(([n, d, h]) => { const T = window.__test; T.ui.paused = true; const cl = T.clips[n].find((q) => q[0] === 'idle') ? 'idle' : T.clips[n][0][0]; T.pose(n, cl, 1); T.focus(n, 0, d, h); }, [name, dist, tgt]);
+    await page.waitForTimeout(400);
+    fs.writeFileSync(path.join(dir, `${name}.png`), await page.screenshot());
+    await page.close();
+    console.log('shot', name, 'eye height', eyeH.toFixed(3));
+  }
+  await browser.close();
+}
+// before | after pairs, one row per character, cropped round the pixels that changed (the eyes) with the face round them
+export async function beforeAfter(names, beforeDir, afterDir, file, at = {}) {
+  const rows = [];
+  for (const n of names) {
+    const files = [beforeDir, afterDir].map((d) => path.join(d, `${n}.png`));
+    const [rb, ra] = await Promise.all(files.map((f) => sharp(f).removeAlpha().raw().toBuffer({ resolveWithObject: true })));
+    const W = rb.info.width, H = rb.info.height, xs = [], ys = [];
+    // where a dark dot became skin or the white of an eye: light now, and the luminance up by more than 70/255 (a whole
+    // texture's re-encode moves texels by far less), else by 45 or 30
+    const lum = (d, q) => 0.299 * d[q * 3] + 0.587 * d[q * 3 + 1] + 0.114 * d[q * 3 + 2];
+    for (const t of [70, 45, 30]) {
+      for (let q = 0; q < W * H; q++) if (lum(ra.data, q) - lum(rb.data, q) > t && lum(ra.data, q) > 110) { xs.push(q % W); ys.push((q / W) | 0); }
+      if (xs.length > 10) break;
+    }
+    const med = (v) => v.slice().sort((p, q) => p - q)[v.length >> 1];
+    // faces in these shots sit near (690, 540) (idle bows the head under a camera 0.35 m above the eyes); a find far
+    // from there is something else
+    let cx = 690, cy = 540;
+    if (at[n]) [cx, cy] = at[n];
+    else if (xs.length > 30 && Math.abs(med(xs) - cx) < 200 && Math.abs(med(ys) - cy) < 160) { cx = med(xs); cy = med(ys); }
+    const cw = 380, chh = 285;
+    const left = Math.max(0, Math.min(W - cw, Math.round(cx - cw / 2))), top = Math.max(0, Math.min(H - chh, Math.round(cy - chh * 0.42)));
+    const [b, a] = await Promise.all(files.map((f) => sharp(f).extract({ left, top, width: cw, height: chh }).resize(400, 300).png().toBuffer()));
+    const lab = (t) => Buffer.from(`<svg width="400" height="24"><rect width="400" height="24" fill="#000" fill-opacity="0.55"/><text x="6" y="17" font-size="15" font-family="monospace" fill="#fff">${t}</text></svg>`);
+    rows.push(await sharp({ create: { width: 804, height: 300, channels: 3, background: '#000' } })
+      .composite([{ input: b, left: 0, top: 0 }, { input: a, left: 404, top: 0 }, { input: lab(`${n} before`), left: 0, top: 0 }, { input: lab(`${n} after`), left: 404, top: 0 }]).png().toBuffer());
+  }
+  await sheet(rows, file, 2);
+}
+
+// ---------------------------------------------------------------- checks for the eye fix's islands and for a hat's recolour
+// The colour step across an eye island's border on the face plane: for each border pixel, the mean colour of the
+// island's pixels and of the other pixels within 1.5 mm, their difference (0-255, the largest channel), averaged;
+// on the new GLB, on the old one at the same pixels, and on the source with the fix (the true step); and each side's
+// error against the source. rects: the islands' texels of the 512 map, [x, y, w, h].
+export async function seamCheck(name, afterGlb, beforeGlb, rects) {
+  const render = async (file) => { const doc = await (await io()).read(r(file)); const g = bodyGeom(doc), t = await decodeTex(g.tex); return faceRender(g, t); };
+  const frA = await render(afterGlb), frB = await render(beforeGlb), src = (await checkCharacter(name, { src: true })).fr;
+  const Wd = frA.Wd, Hd = frA.Hd, inIsl = new Uint8Array(Wd * Hd);
+  for (let k = 0; k < Wd * Hd; k++) { if (frA.TRI[k] < 0) continue; const u = frA.U[k] * 512, v = frA.V[k] * 512; if (rects.some(([x, y, w, h]) => u >= x && u < x + w && v >= y && v < y + h)) inIsl[k] = 1; }
+  const R = Math.round(1.5 / MM), border = [];
+  for (let j = 1; j < Hd - 1; j++) for (let i = 1; i < Wd - 1; i++) { const k = j * Wd + i; if (inIsl[k] && [-1, 1, -Wd, Wd].some((d) => frA.TRI[k + d] >= 0 && !inIsl[k + d])) border.push(k); }
+  const disc = (k, fn) => { const i = k % Wd, j = (k / Wd) | 0; for (let dj = -R; dj <= R; dj++) for (let di = -R; di <= R; di++) if (di * di + dj * dj <= R * R) fn((j + dj) * Wd + i + di); };
+  const step = (fr) => { let tot = 0, n = 0;
+    for (const k of border) { const a = [0, 0, 0], b = [0, 0, 0]; let na = 0, nb = 0;
+      disc(k, (q) => { if (fr.TRI[q] < 0) return; const tg = inIsl[q] ? a : b; for (let c = 0; c < 3; c++) tg[c] += fr.rgb[q * 3 + c]; if (inIsl[q]) na++; else nb++; });
+      if (na && nb) { tot += Math.max(...[0, 1, 2].map((c) => Math.abs(a[c] / na - b[c] / nb))) * 255; n++; } }
+    return +(tot / n).toFixed(1); };
+  const err = (fr, side) => { let tot = 0, n = 0; const seen = new Uint8Array(Wd * Hd);
+    for (const k of border) disc(k, (q) => { if (seen[q] || fr.TRI[q] < 0 || src.TRI[q] < 0 || inIsl[q] !== side) return; seen[q] = 1; tot += Math.max(...[0, 1, 2].map((c) => Math.abs(fr.rgb[q * 3 + c] - src.rgb[q * 3 + c]))) * 255; n++; });
+    return +(tot / n).toFixed(1); };
+  return { border_mm: +(border.length * MM).toFixed(0), step: { after: step(frA), before: step(frB), source: step(src) },
+    error_inside: { after: err(frA, 1), before: err(frB, 1) }, error_outside: { after: err(frA, 0), before: err(frB, 0) } };
+}
+// A recolour's texels on the face: the texels a recolour changed (base texture -> recoloured texture, full resolution),
+// counted on the face's triangles (seen in the face render from the chin to 150 mm over the Head joint, 45 mm either
+// side) and on the rest of the body; the character gives the geometry (its source, plain).
+export async function recolourFaceCheck(name, baseGlb, outGlbs) {
+  const c = await checkCharacter(name, { src: 'plain' }), { idx, T } = c.g, W = c.t.W, fr = c.fr, face = new Set();
+  for (let y = 0; y <= 150; y += 0.25) for (let x = -45; x <= 45; x += 0.25) { const k = pyOf(y) * fr.Wd + pxOf(x); if (fr.TRI[k] >= 0) face.add(fr.TRI[k]); }
+  const cls = new Uint8Array(W * W);
+  for (let f = 0; f < idx.length; f += 3) {
+    const uv = [0, 1, 2].map((k) => [T[idx[f + k] * 2] * W, T[idx[f + k] * 2 + 1] * W]), xs = uv.map((p) => p[0]), ys = uv.map((p) => p[1]);
+    const [ax, ay] = uv[0], [bx, by] = uv[1], [cx, cy] = uv[2], den = (by - cy) * (ax - cx) + (cx - bx) * (ay - cy);
+    if (Math.abs(den) < 1e-12) continue;
+    for (let y = Math.max(0, Math.floor(Math.min(...ys))); y <= Math.min(W - 1, Math.ceil(Math.max(...ys))); y++) for (let x = Math.max(0, Math.floor(Math.min(...xs))); x <= Math.min(W - 1, Math.ceil(Math.max(...xs))); x++) {
+      const px = x + 0.5, py = y + 0.5, l1 = ((by - cy) * (px - cx) + (cx - bx) * (py - cy)) / den, l2 = ((cy - ay) * (px - cx) + (ax - cx) * (py - cy)) / den;
+      if (l1 < 0 || l2 < 0 || 1 - l1 - l2 < 0) continue;
+      const k = y * W + x; if (face.has(f)) cls[k] = 1; else if (!cls[k]) cls[k] = 2;
+    }
+  }
+  const read = async (f) => sharp(Buffer.from((await (await io()).read(r(f))).getRoot().listTextures()[0].getImage())).removeAlpha().raw().toBuffer();
+  const b = await read(baseGlb), out = [];
+  for (const o of outGlbs) {
+    const a = await read(o), n = [0, 0, 0];
+    for (let k = 0; k < W * W; k++) if (a[k * 3] !== b[k * 3] || a[k * 3 + 1] !== b[k * 3 + 1] || a[k * 3 + 2] !== b[k * 3 + 2]) n[cls[k] === 1 ? 0 : cls[k] === 2 ? 1 : 2]++;
+    out.push({ file: o, face_texels: n[0], body_texels: n[1], gutter_texels: n[2] });
+  }
+  return out;
+}
+
 // ---------------------------------------------------------------- CLI
+// (run after this module has finished loading, so the eye fix can import it for the sources with an "eyes" spec)
 const isMain = process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url;
-if (isMain) {
+if (isMain) setTimeout(() => main().catch((e) => { console.error(e); process.exit(1); }), 0);
+async function main() {
   const args = process.argv.slice(2);
   const opt = (k) => { const i = args.indexOf(k); return i >= 0 ? args.splice(i, 2)[1] : null; };
   const out = opt('--out');
   const dump = opt('--dump');
-  const src = args.includes('--src');
   const target = args.filter((a) => !a.startsWith('--'))[0] || 'all';
   const names = target === 'all' ? Object.keys(JSON.parse(fs.readFileSync(r('web/public/assets/chars/characters.json'), 'utf8'))).sort() : target.split(',');
+  const glbDir = opt('--glb-dir');
+  // --seam <after.glb>,<before.glb>,<x:y:w:h>[;<x:y:w:h>]  |  --recolour-face <base.glb>,<out.glb>[,<out.glb>]
+  const seam = opt('--seam'), rf = opt('--recolour-face');
+  if (seam) { const [aG, bG, rs] = seam.split(','); console.log(JSON.stringify(await seamCheck(names[0], aG, bG, rs.split(';').map((q) => q.split(':').map(Number))))); process.exit(0); }
+  if (rf) { const [bG, ...oG] = rf.split(','); for (const q of await recolourFaceCheck(names[0], bG, oG)) console.log(JSON.stringify(q)); process.exit(0); }
+  const shotDir = opt('--shots'), base = opt('--base') || 'http://127.0.0.1:5190', ba = opt('--before-after');
+  if (shotDir) { await faceShots(names, shotDir, base, { level: args.includes('--level') }); process.exit(0); }
+  // --at name:x,y[;name:x,y]: where a face sits in the shots when it is not found
+  const at = Object.fromEntries((opt('--at') || '').split(';').filter(Boolean).map((q) => { const [n, xy] = q.split(':'); return [n, xy.split(',').map(Number)]; }));
+  if (ba) { const [bd, ad, file] = ba.split(','); await beforeAfter(names, bd, ad, file, at); console.log('wrote', file); process.exit(0); }
+  const zoom = args.includes('--zoom'), overlay = !args.includes('--no-overlay');
   const rows = [], tiles = [];
-  for (const name of names) {
-    const c = await checkCharacter(name, { src });
-    const s = summary(c);
-    rows.push(s);
-    if (dump) { fs.mkdirSync(dump, { recursive: true }); await (await imageOf(c.fr)).png().toFile(path.join(dump, `${name}${src ? '_src' : ''}.png`)); }
+  const line = (c) => {
     const e = c.m.found ? c.m.eyes : null;
-    const line = e ? `w ${f1(e[0].width)}/${f1(e[1].width)} asp ${f2(e[0].aspect)}/${f2(e[1].aspect)} reach ${f1(e[0].reach)}/${f1(e[1].reach)} scl ${f2(e[0].sclera)}/${f2(e[1].sclera)} iris ${f1(e[0].iris_w)}x${f1(e[0].iris_h)} T ${c.m.T}` : '';
-    console.log(`${name.padEnd(19)} ${c.verdict.padEnd(7)} ${line}`);
-    if (out) tiles.push(await faceTile(c.fr, c.m, `${name} ${c.verdict}`, { overlay: args.includes('--overlay'), zoom: args.includes('--zoom'), w: args.includes('--zoom') ? 600 : 300, sub: e ? `w ${f1(e[0].width)}/${f1(e[1].width)} a ${f2(e[0].aspect)}/${f2(e[1].aspect)} s ${f2(e[0].sclera)}/${f2(e[1].sclera)}` : '' }));
+    return e ? `reach ${f1(e[0].reach)}/${f1(e[1].reach)} w ${f1(e[0].width)}/${f1(e[1].width)} asp ${f2(e[0].aspect)}/${f2(e[1].aspect)} scl ${f2(e[0].sclera)}/${f2(e[1].sclera)}` : '';
+  };
+  for (const name of names) {
+    const c = await checkCharacter(name, { glbDir });
+    const s = summary(c);
+    s.eye_band = eyeBandTexels(c);
+    if (!args.includes('--no-src')) {
+      const cs = await checkCharacter(name, { src: args.includes('--no-fix') ? 'plain' : true });
+      s.source = summary(cs);
+      const cf2 = charFiles(name), eyes = cf2.cfg.eyes || (cf2.base ? JSON.parse(fs.readFileSync(r(`characters/${cf2.base}.json`), 'utf8')).eyes : null);
+      s.source.note = [cf2.base ? `the base's (${cf2.base}) source texture, before the variant's recolour` : '', eyes && !args.includes('--no-fix') ? `with the eye fix applied (from ${eyes.from})` : ''].filter(Boolean).join('; ') || undefined;
+    }
+    rows.push(s);
+    if (dump) { fs.mkdirSync(dump, { recursive: true }); await (await imageOf(c.fr)).png().toFile(path.join(dump, `${name}.png`)); }
+    console.log(`${name.padEnd(19)} ${c.verdict.padEnd(6)} ${line(c)}  | src ${s.source ? s.source.verdict : '-'}  | band ${s.eye_band.texels} tx, ${s.eye_band.islands} isl, sliver ${s.eye_band.sliver}`);
+    if (out) {
+      const e = c.m.found ? c.m.eyes : null;
+      tiles.push(await faceTile(c.fr, c.m, `${name} ${c.verdict}`, { overlay, zoom, w: zoom ? 600 : 300,
+        sub: e ? `reach ${f1(meanOf(c.m, 'reach'))} w ${f1(meanOf(c.m, 'width'))} a ${f2(meanOf(c.m, 'aspect'))} s ${f2(meanOf(c.m, 'sclera'))}` : '' }));
+    }
+  }
+  let cal = null;
+  if (args.includes('--calibrate') && CALIB.pass.concat(CALIB.fail).every((n) => rows.some((q) => q.name === n && q.mean))) {
+    cal = calibrate(rows);
+    for (const [k, v] of Object.entries(cal)) console.log(`calibration ${k.padEnd(6)} lowest pass ${v.lowest_pass[0]} ${v.lowest_pass[1]}, highest dot ${v.highest_dot[0]} ${v.highest_dot[1]}, threshold ${v.threshold}, separates ${v.separates}, margin x${v.margin}`);
   }
   if (out) {
     fs.mkdirSync(out, { recursive: true });
-    const tag = src ? '_src' : '';
-    fs.writeFileSync(path.join(out, `eyes${tag}.json`), JSON.stringify({ about: 'tools/eye_check.mjs: per character and eye, mm on the face plane (x to the viewer\'s right, y up from the Head joint)', rule: RULE, texture: src ? 'source (build input, full resolution)' : 'shipped GLB (webp 512)', characters: rows }, null, 1) + '\n');
-    await sheet(tiles, path.join(out, `faces${tag}.jpg`), args.includes('--zoom') ? 3 : 6);
-    console.log('wrote', path.join(out, `eyes${tag}.json`), path.join(out, `faces${tag}.jpg`));
+    fs.writeFileSync(path.join(out, 'eyes.json'), JSON.stringify({
+      about: 'tools/eye_check.mjs: eyes measured on the face plane in mm (x to the viewer\'s right, y up from the Head joint), from the shipped GLB (webp 512); "source" is the full-resolution texture build_character.mjs starts from',
+      glb_dir: glbDir || 'web/public/assets/chars', rule: RULE, calibration_sets: CALIB, calibration: cal || 'see gen/details/eyes/before/eyes.json (run with --calibrate on the shipped state before the fix)', characters: rows }, null, 1) + '\n');
+    await sheet(tiles, path.join(out, zoom ? 'faces_zoom.jpg' : 'faces.jpg'), zoom ? 3 : 6);
+    // the table for notes.md
+    const t = ['| character | verdict | reach L/R mm | width L/R mm | aspect L/R | sclera L/R | iris w x h mm | L/R width | source verdict (reach, width) | eye band texels / islands | sliver L/R |', '|---|---|---|---|---|---|---|---|---|---|---|'];
+    for (const q of rows) {
+      if (!q.eyes) { t.push(`| ${q.name} | ${q.verdict} | | | | | | | | | |`); continue; }
+      const [l, rr] = q.eyes;
+      t.push(`| ${q.name} | ${q.verdict} | ${l.reach} / ${rr.reach} | ${l.width} / ${rr.width} | ${l.aspect} / ${rr.aspect} | ${l.sclera} / ${rr.sclera} | ${l.iris_w}x${l.iris_h} | ${q.lr.width} | ${q.source ? `${q.source.verdict} (${q.source.mean?.reach}, ${q.source.mean?.width})` : ''} | ${q.eye_band.texels} / ${q.eye_band.islands} | ${q.eye_band.sliver ? q.eye_band.sliver.join(' / ') : ''} |`);
+    }
+    fs.writeFileSync(path.join(out, 'table.md'), t.join('\n') + '\n');
+    console.log('wrote', path.join(out, 'eyes.json'), path.join(out, 'table.md'), path.join(out, zoom ? 'faces_zoom.jpg' : 'faces.jpg'));
   }
 }

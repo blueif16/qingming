@@ -1,0 +1,361 @@
+{
+ "about": "The life pass (gen/life/progress.md): what the whole scroll's talk shares. kinds: who you play (world.js settings key avatar) -> the kind the painted people answer (guan official, shi scholar, seng monk, fu woman, tong child, jun soldier, li labourer, min anyone else); a beat's `as` gives a line per kind. threads: the plot lines that run across the scroll; each step is told by a scene, chatter exchange or bark in its section that carries the step's id in `step`; overhearing it inks the step into the 圖志 (prefs.discovered 'h:<step>'). note = the journal's line for the step (繁體, no numerals); hint = for the writers only (never shown). Bundled by tools/ui_data.mjs (tools/talk_data.mjs).",
+ "kinds": {
+  "official": "guan",
+  "official_rider": "guan",
+  "inspector": "guan",
+  "scholar": "shi",
+  "fortune_teller": "shi",
+  "storyteller": "shi",
+  "robed_man": "shi",
+  "monk": "seng",
+  "woman": "fu",
+  "woman_pale": "fu",
+  "child": "tong",
+  "child_red": "tong",
+  "child_robed": "tong",
+  "soldier": "jun",
+  "archer": "jun",
+  "porter": "li",
+  "grain_porter": "li",
+  "bearer": "li",
+  "carter": "li",
+  "boatman": "li",
+  "tracker": "li",
+  "farmer": "li",
+  "butcher": "li",
+  "groom": "li",
+  "camel_driver": "li",
+  "sightseer": "min",
+  "idler": "min",
+  "townsman": "min",
+  "youth": "min",
+  "dark_hat": "min",
+  "hat_traveller": "min",
+  "hat_traveller_dark": "min",
+  "straw_hat": "min",
+  "elder": "min"
+ },
+ "threads": [
+  {
+   "id": "tax",
+   "title": "城門爭稅",
+   "title_en": "Tax Row at the Gate",
+   "lead": "城門口的一場爭執，一路傳到城外。",
+   "lead_en": "A row at the city gate, talked of all the way out of town.",
+   "src": "余辉 2023/2015 (the quarrel at the tax office, the watchman looking down); 名画记 35 (the 引子 permit). That others along the road talk about it is our proposal.",
+   "steps": [
+    {
+     "id": "tax.1",
+     "section": "gate",
+     "note": "城門稅務所裏，稅吏說匹帛稅重，車夫驚得張大了嘴。",
+     "note_en": "At the gate's tax office the clerk names a heavy silk tax; a carter gapes.",
+     "src": "余辉 2023; 名画记 35",
+     "hint": "the tax quarrel itself (S5.grp.tax_quarrel): scene V5.1 or its chatter"
+    },
+    {
+     "id": "tax.2",
+     "section": "gate",
+     "note": "城門外閒坐的人說，稅務所裏又吵起來了。",
+     "note_en": "Idlers outside the gate say the tax office is quarrelling again.",
+     "src": "邵琦 (men resting by the wall); our proposal",
+     "hint": "the idlers at the gate block's foot (S5.grp.wall_idlers) talk of the row inside"
+    },
+    {
+     "id": "tax.3",
+     "section": "outer_road",
+     "note": "賣卦攤上，一個客商問：城門稅重，買賣還做得成麼？",
+     "note_en": "At the fortune-teller's a trader asks: with the gate tax so heavy, will my deal work?",
+     "src": "名画记 28 (the fortune-teller); our proposal",
+     "hint": "the fortune-teller's client (S4.grp.fortune_teller_stall)"
+    },
+    {
+     "id": "tax.4",
+     "section": "outer_road_2",
+     "note": "棕蓋車停在路邊，車夫說城門口查得緊。",
+     "note_en": "A palm-covered cart waits by the road; its carter says the gate checks are strict.",
+     "src": "名画记 27 (the palm-covered carts); our proposal",
+     "hint": "the first palm-covered cart, waiting (S4b.grp.palm_cart_13070), or its carters"
+    }
+   ]
+  },
+  {
+   "id": "grain",
+   "title": "漕糧入城",
+   "title_en": "Grain into the City",
+   "lead": "船上卸下的糧袋，一路運到城裏的正店。",
+   "lead_en": "Grain sacks from the boats, carried all the way to the town's wine house.",
+   "src": "名画记 9 (仓前成市: grain unloaded at the wharf), 名画记 37 and 余辉 2023 (the sack cart at 孫羊正店; grain for the brewing); the road between is our proposal.",
+   "steps": [
+    {
+     "id": "grain.1",
+     "section": "canal",
+     "note": "碼頭上卸糧，船主坐在麻袋上，記賬的一袋袋點數。",
+     "note_en": "Grain is unloaded at the wharf; the owner sits on his sacks while the tally man counts.",
+     "src": "名画记 9",
+     "hint": "grain unloading on the bank (S2.grp.grain_unloading): the owner on his sacks, the tally men"
+    },
+    {
+     "id": "grain.2",
+     "section": "canal",
+     "note": "扛袋的腳夫說，這些糧要運進城裏去。",
+     "note_en": "The sack porters say this grain is going into town.",
+     "src": "名画记 9; our proposal",
+     "hint": "porters carrying sacks along the bank (S2.grp.sack_porters_24312)"
+    },
+    {
+     "id": "grain.3",
+     "section": "rainbow_bridge",
+     "note": "虹橋下，馱著大糧袋的驢往城裏走。",
+     "note_en": "Below the Rainbow Bridge, donkeys with big grain sacks head for town.",
+     "src": "the map (S3.grp.sack_donkeys_18600); our proposal",
+     "hint": "the two donkeys with big sacks (S3.grp.sack_donkeys_18600) and whoever drives them"
+    },
+    {
+     "id": "grain.4",
+     "section": "gate",
+     "note": "城門裏，運糧的也要納稅，說是送去正店釀酒。",
+     "note_en": "Inside the gate the grain carriers pay tax too: the grain is for the wine house's brewing.",
+     "src": "余辉 2023 (more taxpayers; grain for the brewing 正店)",
+     "hint": "the pack train and cart by the depot (S5.grp.pack_train)"
+    },
+    {
+     "id": "grain.5",
+     "section": "inner_city",
+     "note": "孫羊正店門前，驢車卸下糧袋，正店要釀酒。",
+     "note_en": "At the Sun Yang wine house door a donkey cart unloads grain for brewing.",
+     "src": "名画记 37; 余辉 2023",
+     "hint": "the sack cart, its team and carters (S6.grp.sack_cart_5410)"
+    }
+   ]
+  },
+  {
+   "id": "wine",
+   "title": "節下的酒",
+   "title_en": "The Holiday Wine",
+   "lead": "從腳店的新酒旗，到軍巡鋪的酒桶，再到藥鋪的招牌。",
+   "lead_en": "From the tavern's new-wine banner to the fire post's casks to the doctor's sign.",
+   "src": "名画记 23 (新酒), 余辉 2023 (the fire post's casks, the wagons racing to fetch them), 名画记 36 (孫羊正店), 名画记 48 (趙太丞家: 治酒所伤真方集香丸, drinking was the fashion).",
+   "steps": [
+    {
+     "id": "wine.1",
+     "section": "rainbow_bridge",
+     "note": "十千腳店掛著新酒旗，酒客進進出出。",
+     "note_en": "The Shiqian tavern flies its new-wine banner; drinkers come and go.",
+     "src": "名画记 23",
+     "hint": "十千脚店 (S3.grp.shiqian_jiaodian_16800): a guest, the doorman, or the groom resting"
+    },
+    {
+     "id": "wine.2",
+     "section": "gate",
+     "note": "城門內的軍巡鋪裏，弓手守著酒桶，等車來拉。",
+     "note_en": "In the fire post inside the gate, archers guard the wine casks, waiting for the cart.",
+     "src": "余辉 2023/2015",
+     "hint": "archers in the wine depot (S5.grp.wine_depot_archers): where's the cart?"
+    },
+    {
+     "id": "wine.3",
+     "section": "inner_city",
+     "note": "十字街口，軍車急急轉彎，說是去拉節下的酒。",
+     "note_en": "At the crossroads army wagons swing round in a hurry, off to fetch the holiday wine.",
+     "src": "余辉 2023",
+     "hint": "the big wagon turning the corner (S6.grp.taiping_wagon_3600)"
+    },
+    {
+     "id": "wine.4",
+     "section": "inner_city",
+     "note": "孫羊正店樓上，酒客舉杯，說這香醪果然好。",
+     "note_en": "Upstairs at the Sun Yang wine house, drinkers raise cups to the fine brew.",
+     "src": "名画记 36; the lamp-box 香醪",
+     "hint": "drinkers upstairs at the 正店 (S6.grp.upper_table_5500)"
+    },
+    {
+     "id": "wine.5",
+     "section": "city_end",
+     "note": "趙太丞家的招牌寫著治酒所傷，可見喝酒成風。",
+     "note_en": "Doctor Zhao's sign offers a cure for drink: drinking was the fashion.",
+     "src": "名画记 48",
+     "hint": "at 赵太丞家 (S7.grp.zhao_taicheng_patients or the house): someone reads the sign"
+    }
+   ]
+  },
+  {
+   "id": "charcoal",
+   "title": "炭驢進城",
+   "title_en": "Charcoal Donkeys",
+   "lead": "畫卷開頭的炭驢，馱的是城裏酒店灶下的炭。",
+   "lead_en": "The charcoal donkeys at the scroll's start carry fuel for the town's tavern stoves.",
+   "src": "名画记 1 (赶驴入城: two drovers drive donkeys loaded with charcoal), 名画记 21 (the charcoal the donkey train brings feeds the riverside tavern's stoves); the map's charcoal(?) panniers at the S4 stall.",
+   "steps": [
+    {
+     "id": "charcoal.1",
+     "section": "countryside",
+     "note": "兩個腳夫趕著毛驢，馱著木炭往城裏去。",
+     "note_en": "Two drovers drive donkeys loaded with charcoal toward town.",
+     "src": "名画记 1",
+     "hint": "the charcoal donkey train (S1.grp.charcoal_train)"
+    },
+    {
+     "id": "charcoal.2",
+     "section": "rainbow_bridge",
+     "note": "虹橋邊的小酒館，灶下燒的正是城外運來的炭。",
+     "note_en": "The little tavern by the bridge burns charcoal brought from the country.",
+     "src": "名画记 21",
+     "hint": "the small tavern by the bridge (MHJ 21): its kitchen-door stall or its staff"
+    },
+    {
+     "id": "charcoal.3",
+     "section": "outer_road",
+     "note": "寺前路口，又有馱炭的驢在歇腳。",
+     "note_en": "At the road by the temple, more charcoal donkeys rest.",
+     "src": "the map (S4.grp.pack_donkeys_10487: charcoal?); our proposal",
+     "hint": "the pack donkeys' drover (S4.grp.pack_donkeys_10487)"
+    }
+   ]
+  },
+  {
+   "id": "horse",
+   "title": "郊外驚馬",
+   "title_en": "The Bolting Horse",
+   "lead": "郊外一匹馬驚了，消息傳到了河邊。",
+   "lead_en": "A horse bolted in the fields, and the news reached the river.",
+   "src": "余辉 (惊马闯市: a bolting horse, its chasers, an old man calling a child out of the way); 名画记 10 (the travellers resting at the shed); the news spreading is our proposal.",
+   "steps": [
+    {
+     "id": "horse.1",
+     "section": "countryside",
+     "note": "郊外一匹馬驚了，幾個人跟在後面追。",
+     "note_en": "Out in the fields a horse has bolted; men run after it.",
+     "src": "余辉 (惊马闯市)",
+     "hint": "the runaway horse and its chasers (S1.grp.runaway_horse)"
+    },
+    {
+     "id": "horse.2",
+     "section": "countryside",
+     "note": "路邊有人急喚孩子，躲開那匹驚馬。",
+     "note_en": "By the road someone calls a child out of the bolting horse's way.",
+     "src": "余辉; the map (the man at the post stretches his arm toward a child)",
+     "hint": "the man leaning on the post and the child (S1.grp.runaway_horse)"
+    },
+    {
+     "id": "horse.3",
+     "section": "canal",
+     "note": "河邊歇腳的客人說，郊外有馬驚了。",
+     "note_en": "Travellers resting by the river say a horse bolted out in the fields.",
+     "src": "名画记 10; our proposal",
+     "hint": "the travellers resting at the shed's east end (S2.grp.donkey_at_shed_east_end_28940) or the diners"
+    }
+   ]
+  },
+  {
+   "id": "boat",
+   "title": "大船過橋",
+   "title_en": "The Big Boat at the Bridge",
+   "lead": "一艘大船險些撞上虹橋，滿橋的人都在喊。",
+   "lead_en": "A big boat nearly hits the Rainbow Bridge; the whole bridge shouts.",
+   "src": "名画记 19, 20 (大船穿行虹桥, 拥挤的桥面); that the boatmen beyond talk of it is our proposal.",
+   "steps": [
+    {
+     "id": "boat.1",
+     "section": "rainbow_bridge",
+     "note": "大船要過虹橋，船工忙著放倒桅桿。",
+     "note_en": "A big boat must pass the Rainbow Bridge; the crew lower the mast.",
+     "src": "名画记 19",
+     "hint": "the big boat and its crew (S3.grp.boat_mast_lowering_crew)"
+    },
+    {
+     "id": "boat.2",
+     "section": "rainbow_bridge",
+     "note": "橋上的人朝下喊，有人拋下繩去。",
+     "note_en": "People on the bridge shout down; someone throws a rope.",
+     "src": "名画记 19, 20",
+     "hint": "the crowd at the near railing calling down (S3.grp.shouting_down_to_boat)"
+    },
+    {
+     "id": "boat.3",
+     "section": "outer_road_2",
+     "note": "泊在岸邊的船家說，方才虹橋底下好險。",
+     "note_en": "A moored boatman says it was a close call under the Rainbow Bridge.",
+     "src": "名画记 25 (boats moored at the bend); our proposal",
+     "hint": "a moored boat's boatman (S4b.grp.long_cabin_boat_crew or arched_awning_boat_crew)"
+    }
+   ]
+  },
+  {
+   "id": "qingming",
+   "title": "清明上墳",
+   "title_en": "Qingming at the Graves",
+   "lead": "清明時節，城裏城外都是上墳的人。",
+   "lead_en": "At Qingming, town and country are full of people visiting graves.",
+   "src": "名画记 6 (杨柳杂花装簇轿顶: 清明节扫墓回城), 名画记 13 (王家纸马铺), 名画记 27 (the palm cart family, perhaps back from the graves), 余辉 2014 (列售纸码 in the inner city).",
+   "steps": [
+    {
+     "id": "qingming.1",
+     "section": "countryside",
+     "note": "轎頂插著楊柳雜花，一家人上墳回城。",
+     "note_en": "Willow and flowers on the sedan roof: a family back from the graves.",
+     "src": "名画记 6",
+     "hint": "the tomb-sweeping party coming home (S1.grp.tomb_sweeping_party)"
+    },
+    {
+     "id": "qingming.2",
+     "section": "canal",
+     "note": "王家紙馬鋪前，有人來買上墳的紙錢。",
+     "note_en": "At the Wang paper-goods shop, people buy paper money for the graves.",
+     "src": "名画记 13",
+     "hint": "the hooded rider at the paper shop (S2.grp.rider_26832) or the shop"
+    },
+    {
+     "id": "qingming.3",
+     "section": "outer_road_2",
+     "note": "棕蓋車裏的婦人掀簾往外看，許是上墳回來。",
+     "note_en": "A woman lifts the curtain of a palm-covered cart, back from the graves perhaps.",
+     "src": "名画记 27",
+     "hint": "the palm-covered cart (S4b.grp.palm_cart_13070 / _13455): the woman at the back door, the servants"
+    },
+    {
+     "id": "qingming.4",
+     "section": "inner_city",
+     "note": "城裏也賣紙馬，清明了，上墳用的都有。",
+     "note_en": "Paper horses are sold in town too: everything for the graves at Qingming.",
+     "src": "余辉 2014 (列售纸码); 余辉 2023",
+     "hint": "the paper-horse stall (S6.grp.paper_stall)"
+    }
+   ]
+  },
+  {
+   "id": "screen",
+   "title": "書屏遭廢",
+   "title_en": "The Banned Screen",
+   "lead": "一扇草書屏風被當作苫布，推出城去。",
+   "lead_en": "A cursive-script screen, used as a tarp, carted out of town.",
+   "src": "余辉 2015 (书屏遭废: a banned 元祐 faction's cursive screen used as a tarp, carted out to be destroyed; its twin at 十千脚店). 名画记 24 reads the 串车's load as strings of coins: disputed, we stage 余辉's reading.",
+   "steps": [
+    {
+     "id": "screen.1",
+     "section": "gate",
+     "note": "出城的車上蓋著一扇草書屏風，推車的直說可惜。",
+     "note_en": "A cart leaving town is covered with a calligraphy screen; its pusher calls it a pity.",
+     "src": "余辉 2015",
+     "hint": "the screen cart crew (S5.grp.screen_cart_8510)"
+    },
+    {
+     "id": "screen.2",
+     "section": "rainbow_bridge",
+     "note": "腳店門前的串車上，也蓋著一扇字屏。",
+     "note_en": "The cart at the tavern door carries a calligraphy screen too.",
+     "src": "余辉 2015 (its twin at 十千脚店); 名画记 24 (the 串车)",
+     "hint": "the 串车 and the men at it (S3.grp.chuanche_17775)"
+    },
+    {
+     "id": "screen.3",
+     "section": "inner_city",
+     "note": "士子們低聲說，元祐諸公的字如今藏不得了。",
+     "note_en": "Scholars whisper that the Yuanyou men's calligraphy can no longer be kept.",
+     "src": "余辉 2015 (the 崇宁 bans on 元祐 writings); our proposal",
+     "hint": "the exam scholars (S6.grp.exam_scholars_3240), quietly"
+    }
+   ]
+  }
+ ]
+}

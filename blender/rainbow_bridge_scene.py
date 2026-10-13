@@ -594,6 +594,8 @@ def south_bank(rng):
         k2.hall(0.0, W, 0.0, dp, rng, z0=z, plinth=0.25, eave=3.0, rise=1.7, cols=[W * f for f in cols], kinds=kinds,
                 roof="hip", side=("wall", "wall"), back="wall", steps=False)
         k.board("hidden", True, (0.3, dp - 0.35), (W - 0.3, dp - 0.35), 0.1, z, z + 3.0)   # the open front's back
+    # its floor's top (plinth 0.25 + the boards' 0.03) and its plan, for the props that stand inside it (props())
+    STATE["open_shop_floor"] = ([tuple(q[:2]) for q in local_rect(o, yaw, 0.0, W, 0.0, dp)], z + 0.25 + 0.03)
 
     # S3.bld.front_roof_19800: a tiled roof at the silk's bottom edge in front of the open shop, its top edge along the
     # shop's floor line and a hip at its east end; two posts at its west end. choice: a pent roof falling south from
@@ -813,7 +815,17 @@ def props(rng):
         if th is not None and e is not None:
             tops[r["id"]] = z_at(e["pos"][0], e["pos"][1], e) + float(th)
     STATE["tops"] = tops
-    return kp.place_props(rows, E, z_at, rng, skip=skip)
+    # props standing inside the open shop stand on its floor (kit_outer_road_2.hall: plinth 0.25, boards 0.03 over it,
+    # colliding since fix-s4b), not on the ground under the plinth: their tops had sunk 0.14 m into the floor (the
+    # details pass, gen/details/contacts/fix_bridge/notes.md: the bench sitter's seat 0.2 m over a sunk bench)
+    shop = STATE.get("open_shop_floor")
+
+    def z_props(X, D, ent=None):
+        z = z_at(X, D, ent)
+        if shop and pip((X, D), shop[0]):
+            z = max(z, shop[1])
+        return z
+    return kp.place_props(rows, E, z_props, rng, skip=skip)
 
 
 # ---------------------------------------------------------------- vehicles (land)
@@ -845,6 +857,13 @@ def vehicles(rng):
     for kw in ("front_style", "front_kind", "face", "door", "front_type"):
         if extra and has(kv, "sedan_chair", kw):
             extra[kw] = "closed"
+    # choice (details pass, fix-bridge, 2026-10-13; gen/details/contacts/fix_bridge/notes.md): the poles fitted to their
+    # bearers (kit pole_fit, each end's axis over the smooth deck at that end): over the rear bearer's shoulder top (his
+    # tread 4.432 + 1.432 in sedan_carry~pole + the pole's radius 0.038, at s 0.21) and at the front ends in the front
+    # bearer's hands (his tread 4.972 + 1.25 in sedan_carry~pole_ends, as S4's front bearer): the ends 1.767 m (rear) and
+    # 1.273 m (front) over the deck there
+    if has(kv, "sedan_chair", "pole_fit"):
+        extra["pole_fit"] = (1.767, 1.273)
     with sb.entity("S3.veh.sedan_18842"):
         kv.sedan_chair(front=tuple(v["front"][:2]), rear=tuple(v["rear"][:2]),
                        z_of=lambda x, y: z_at(x, y, {"support": "bridge deck"}), rng=random.Random(18842), carried=True,
@@ -875,6 +894,10 @@ def seats(rng):
             continue
         x, y = s["X"], s["D"]
         z = z_at(x, y, FIG[mid])
+        if s.get("top_H") is not None and s.get("base_H") is not None:
+            # fitted to its sitter (seat_fit.json, the details pass): the base on the visible surface under it (a
+            # bridge tread, not the smooth deck z_at gives), the top at the clip's seat point less 0.0075 m
+            z, seat_h = float(s["base_H"]), float(s["top_H"]) - float(s["base_H"])
         with sb.entity(mid):
             ki.stool(x, y, z, h=seat_h, s=0.32)
         n += 1

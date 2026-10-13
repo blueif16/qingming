@@ -1694,6 +1694,22 @@ for dirn in (1, -1):
     planner('train', ROAD, TRAIN_AT, dirn)
     planner('travellers', TRAVELLERS_GUIDE, tv, dirn)
 
+# the details pass's contact fixes (sections/countryside/contact_fixes.json: solved nudges and turns, recasts, IK clip
+# variants, root_h; gen/details/contacts/fix_standard.md) are applied last
+import sys
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes
+apply_contact_fixes(people, SEC)
+# a walker who walks beside a painted walking animal, his hand on its load (contact_fixes.json "walkers": {id: {beside:
+# {animal, gap, along}, why}}; read by world.js once 3d-director-04 lands the `beside` diff, ignored before;
+# gen/details/contacts/fix_river/notes.md)
+from contact_fixes import load as _load_contact_fixes
+for _w in people.get('walkers', []):
+    _wf = (_load_contact_fixes(SEC).get('walkers') or {}).get(_w.get('id'))
+    if _wf and 'beside' in _wf:
+        _w['beside'] = _wf['beside']
+        people.setdefault('walkers_why', {})[_w['id']] = _wf.get('why', '') + (
+            ' || casting: ' + people['walkers_why'][_w['id']] if people.get('walkers_why', {}).get(_w['id']) else '')
 out = os.path.join(QM, f'sections/{SEC}/people.json')
 json.dump(people, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 cast_out = os.path.join(HERE, 'cast.json')

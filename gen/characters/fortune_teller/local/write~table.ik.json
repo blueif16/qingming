@@ -1,0 +1,35 @@
+{
+ "character": "fortune_teller",
+ "base": "write",
+ "spec": "table_palms",
+ "frame": "proposed",
+ "sole_shift_m": -0.009,
+ "clip": "write~table",
+ "frames": 160,
+ "duration": 7.95,
+ "verify_max_m": 0,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0.005,
+   "residual_mean_m": 0.002
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "LeftArm": 51,
+  "LeftForeArm": 93,
+  "LeftHand": 64,
+  "RightArm": 9,
+  "RightForeArm": 33,
+  "RightHand": 35,
+  "Hips": 0
+ }
+}

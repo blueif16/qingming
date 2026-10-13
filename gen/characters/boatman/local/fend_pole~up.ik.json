@@ -1,0 +1,59 @@
+{
+ "character": "boatman",
+ "base": "fend_pole",
+ "spec": "fend_up",
+ "frame": "proposed",
+ "sole_shift_m": -0.012,
+ "clip": "fend_pole~up",
+ "frames": 120,
+ "duration": 5.95,
+ "verify_max_m": 0.002,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "freeze Hips,Spine,Spine01,Spine02,LeftShoulder,RightShoulder",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "hips",
+   "via": "hips",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "frame": "Armature",
+   "residual_max_m": 0,
+   "residual_mean_m": 0,
+   "elbow_miss_max_m": 0
+  },
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0.009,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "Hips": 25,
+  "Spine": 25,
+  "Spine01": 24,
+  "Spine02": 6,
+  "LeftShoulder": 56,
+  "RightShoulder": 33,
+  "LeftUpLeg": 23,
+  "LeftLeg": 27,
+  "LeftFoot": 18,
+  "RightUpLeg": 21,
+  "RightLeg": 48,
+  "RightFoot": 28,
+  "RightArm": 169,
+  "RightForeArm": 110,
+  "RightHand": 176,
+  "LeftArm": 153,
+  "LeftForeArm": 71,
+  "LeftHand": 172
+ }
+}

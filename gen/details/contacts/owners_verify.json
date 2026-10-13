@@ -2,125 +2,175 @@
  {
   "section": "city_end",
   "status": "MATCH",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (31 nodes)",
+  "glb_mtime": "2026-10-13T13:06:35.904Z",
   "owners_tris": 48476,
   "shipped_tris": 48476,
-  "materials": 31,
+  "materials": 21,
   "diff": [],
+  "bucket_diff": [],
   "bounds_err_m": 0.0015,
-  "bounds_worst": "ground__col min[y]",
+  "bounds_worst": "ground min[y]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:14"
+  "built": "2026-10-13 06:06:32"
  },
  {
   "section": "inner_city",
-  "status": "MATCH",
-  "owners_tris": 118312,
+  "status": "DRIFT",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (44 nodes)",
+  "glb_mtime": "2026-10-12T20:21:48.739Z",
+  "owners_tris": 119108,
   "shipped_tris": 118312,
-  "materials": 44,
-  "diff": [],
-  "bounds_err_m": 0.0026,
-  "bounds_worst": "ground__col min[y]",
+  "materials": 29,
+  "diff": [
+   {
+    "material": "edge_east_hidden",
+    "owners": 616,
+    "shipped": 640
+   },
+   {
+    "material": "timber",
+    "owners": 34864,
+    "shipped": 34044
+   }
+  ],
+  "bucket_diff": [
+   {
+    "bucket": "hidden__col",
+    "owners": 568,
+    "shipped": 592
+   },
+   {
+    "bucket": "timber__col",
+    "owners": 4830,
+    "shipped": 4818
+   },
+   {
+    "bucket": "timber__nocol",
+    "owners": 30034,
+    "shipped": 29226
+   }
+  ],
+  "bounds_err_m": 0.2047,
+  "bounds_worst": "cloth_indigo min[y]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:33"
+  "built": "2026-10-13 06:22:04"
  },
  {
   "section": "gate",
   "status": "MATCH",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (40 nodes)",
+  "glb_mtime": "2026-10-13T13:06:14.630Z",
   "owners_tris": 108489,
   "shipped_tris": 108489,
-  "materials": 40,
+  "materials": 22,
   "diff": [],
+  "bucket_diff": [],
   "bounds_err_m": 0.0024,
-  "bounds_worst": "lattice__nocol min[y]",
+  "bounds_worst": "lattice min[y]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:26"
+  "built": "2026-10-13 06:06:09"
  },
  {
   "section": "outer_road",
   "status": "MATCH",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (37 nodes)",
+  "glb_mtime": "2026-10-13T09:54:20.841Z",
   "owners_tris": 108454,
   "shipped_tris": 108454,
-  "materials": 37,
+  "materials": 22,
   "diff": [],
+  "bucket_diff": [],
   "bounds_err_m": 0.0019,
-  "bounds_worst": "ground__col min[x]",
+  "bounds_worst": "ground min[x]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:29"
+  "built": "2026-10-13 02:54:17"
  },
  {
   "section": "outer_road_2",
-  "status": "DRIFT(explained)",
-  "owners_tris": 122561,
+  "status": "MATCH",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (37 nodes)",
+  "glb_mtime": "2026-10-13T13:43:02.118Z",
+  "owners_tris": 122441,
   "shipped_tris": 122441,
-  "materials": 37,
-  "diff": [
-   {
-    "material": "timber__nocol",
-    "owners": 28413,
-    "shipped": 28293
-   }
-  ],
+  "materials": 22,
+  "diff": [],
+  "bucket_diff": [],
   "bounds_err_m": 0.0025,
-  "bounds_worst": "ground__col min[x]",
-  "owner_diff": [
-   {
-    "owner": "S4b.fig.seated_boatman_stern_15372",
-    "owners": 60,
-    "placed": 0
-   },
-   {
-    "owner": "S4b.fig.seated_man_13240",
-    "owners": 60,
-    "placed": 0
-   }
-  ],
-  "exclude_owners": [
-   "S4b.fig.seated_boatman_stern_15372",
-   "S4b.fig.seated_man_13240"
-  ],
-  "built": "2026-10-13 00:59:32"
+  "bounds_worst": "ground min[x]",
+  "owner_diff": [],
+  "exclude_owners": [],
+  "built": "2026-10-13 06:36:44"
  },
  {
   "section": "rainbow_bridge",
   "status": "MATCH",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (42 nodes)",
+  "glb_mtime": "2026-10-13T02:13:47.176Z",
   "owners_tris": 109730,
   "shipped_tris": 109730,
-  "materials": 42,
+  "materials": 26,
   "diff": [],
+  "bucket_diff": [
+   {
+    "bucket": "timber__col",
+    "owners": 4268,
+    "shipped": 4244
+   },
+   {
+    "bucket": "timber__nocol",
+    "owners": 34725,
+    "shipped": 34749
+   }
+  ],
   "bounds_err_m": 0.0024,
-  "bounds_worst": "ground__col min[y]",
+  "bounds_worst": "ground min[y]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:42"
+  "built": "2026-10-13 06:33:05"
  },
  {
   "section": "canal",
   "status": "MATCH",
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (46 nodes)",
+  "glb_mtime": "2026-10-13T13:09:30.129Z",
   "owners_tris": 116766,
   "shipped_tris": 116766,
-  "materials": 46,
+  "materials": 27,
   "diff": [],
+  "bucket_diff": [],
   "bounds_err_m": 0.0038,
-  "bounds_worst": "lattice__nocol min[y]",
+  "bounds_worst": "lattice min[y]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:41"
+  "built": "2026-10-13 06:06:15"
  },
  {
   "section": "countryside",
   "status": "MATCH",
-  "owners_tris": 96567,
-  "shipped_tris": 96567,
-  "materials": 37,
+  "compared": "per glTF material over the whole GLB and per bucket node",
+  "glb_form": "one node per bucket (37 nodes)",
+  "glb_mtime": "2026-10-13T13:09:39.299Z",
+  "owners_tris": 96627,
+  "shipped_tris": 96627,
+  "materials": 22,
   "diff": [],
+  "bucket_diff": [],
   "bounds_err_m": 0.0035,
-  "bounds_worst": "ground__col min[y]",
+  "bounds_worst": "ground min[y]",
   "owner_diff": [],
   "exclude_owners": [],
-  "built": "2026-10-13 00:59:47"
+  "built": "2026-10-13 03:49:10"
  }
 ]

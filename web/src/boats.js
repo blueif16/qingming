@@ -141,8 +141,8 @@ export class Boats {
   }
 
   // ------------------------------------------------------------ loading (world.js fetchSection)
-  // the section's boats GLB, when its layout lists boats: a group of roots (added under the section's root, so the
-  // page's materials, shading, shader warm-up and disposal cover them), the colliders taken out of it
+  // the section's boats GLB, when its layout lists boats: a group of roots (added under the section's root; they hold no
+  // meshes: the pieces go into the page's batches when the section joins), the colliders taken out of it
   async fetch(name, layout) {
     const ids = Object.entries(layout?.entities || {}).filter(([id, e]) => isBoat(id, e)).map(([id]) => id);
     if (!ids.length) return null;
@@ -268,26 +268,74 @@ export class Boats {
         for (const holder of root.children) for (const c of [...holder.children]) { c.removeFromParent(); c.traverse((o) => o.geometry?.dispose()); }
       });
     }
-    set.batches = [];
-    for (const [name, { material, items }] of byMat) {
-      const geos = [...new Set(items.map((it) => it.geo))];
-      const nv = geos.reduce((a, g) => a + g.attributes.position.count, 0), ni = geos.reduce((a, g) => a + g.index.count, 0);
-      const bm = new THREE.BatchedMesh(items.length, nv, ni, material);
-      bm.name = `boats_${set.name}_${name}`;
-      // drawn whole in every pass: three's per-instance cull and sort (and the indirect texture it re-uploads) ran for
-      // every batch in every pass (colour, shadow), a third of the frame at the Rainbow Bridge for 7-16 boats; the GPU
-      // clips the few instances out of view (the perf batch, proposal rank 3)
-      bm.frustumCulled = false;
-      bm.perObjectFrustumCulled = false;
-      bm.sortObjects = false;
-      const ids = new Map(geos.map((g) => [g, bm.addGeometry(g)]));
-      for (const it of items) { it.bm = bm; it.gid = ids.get(it.geo); it.inst = bm.addInstance(it.gid); bm.setVisibleAt(it.inst, it.li === 0); }
-      geos.forEach((g) => g.dispose()); // copied into the batch
-      if (name === 'water_ring') { bm.renderOrder = 1; set.ring = bm; }
-      set.group.add(bm);
-      set.batches.push(bm);
+    // the pieces wait here, by material, until the section joins (add: join); the batches are the page's (pool)
+    set.byMat = [...byMat].map(([name, { material, items }]) => ({ name, material, items, geos: [...new Set(items.map((it) => it.geo))] }));
+  }
+
+  // One BatchedMesh per material across every loaded section (perf batch 2): at the Rainbow Bridge 32 batches of 14
+  // materials became 14, one draw per material a pass. A section joining adds its pieces' geometry and instances to the
+  // batch of their material (made by the first section that has it: its material, by name and texture), growing it when
+  // full; leaving deletes them (its flow copies go first, boatflow.js detach), and the last section out disposes the
+  // batch and its material. The page shades the batches (hooks.onBatch: its material variants, the scene).
+  poolKey(m) { return [m.name || 'boat', m.map?.source?.uuid || '', m.side, m.transparent, m.alphaTest].join('|'); }
+  join(set) {
+    this.pool ||= new Map();
+    for (const g of set.byMat || []) {
+      const key = this.poolKey(g.material);
+      let e = this.pool.get(key);
+      if (!e) {
+        const nv = g.geos.reduce((a, x) => a + x.attributes.position.count, 0), ni = g.geos.reduce((a, x) => a + x.index.count, 0);
+        const bm = new THREE.BatchedMesh(g.items.length + 8, nv, ni, g.material);
+        bm.name = `boats_${g.name}`;
+        // drawn whole in every pass: three's per-instance cull and sort (and the indirect texture it re-uploads) ran for
+        // every batch in every pass (colour, shadow), a third of the frame at the Rainbow Bridge for 7-16 boats; the
+        // GPU clips the few instances out of view (the perf batch, proposal rank 3)
+        bm.frustumCulled = false;
+        bm.perObjectFrustumCulled = false;
+        bm.sortObjects = false;
+        bm.castShadow = bm.receiveShadow = true;
+        bm.userData.shadowMover = true; // boats bob and sail: their shadows are redrawn with the people's (world.js shadowLayers)
+        if (g.name === 'water_ring') { bm.renderOrder = 1; bm.castShadow = false; this.hooks.noNormalPass.push(bm); } // the wet rings: no shadow, no ink
+        e = { key, bm, sets: new Set() };
+        this.pool.set(key, e);
+        if (this.hooks.onBatch) this.hooks.onBatch(bm, true); else this.hooks.scene.add(bm);
+      } else g.material.dispose(); // the batch draws with the first section's copy (its texture is the same cached one)
+      const bm = e.bm;
+      // room: freed space packed first (optimize), then the buffers grown
+      const nv = g.geos.reduce((a, x) => a + x.attributes.position.count, 0), ni = g.geos.reduce((a, x) => a + x.index.count, 0);
+      if (bm.unusedVertexCount < nv || bm.unusedIndexCount < ni) bm.optimize();
+      if (bm.unusedVertexCount < nv || bm.unusedIndexCount < ni) {
+        bm.setGeometrySize(Math.ceil((bm._maxVertexCount - bm.unusedVertexCount + nv) * 1.25), Math.ceil((bm._maxIndexCount - bm.unusedIndexCount + ni) * 1.25));
+      }
+      const room = bm.maxInstanceCount - bm._instanceInfo.length + bm._availableInstanceIds.length;
+      if (room < g.items.length) bm.setInstanceCount(Math.ceil((bm.maxInstanceCount + g.items.length - room) * 1.25) + 8);
+      const ids = new Map(g.geos.map((x) => [x, bm.addGeometry(x)]));
+      g.gids = [...ids.values()];
+      for (const it of g.items) { it.bm = bm; it.gid = ids.get(it.geo); it.inst = bm.addInstance(it.gid); bm.setVisibleAt(it.inst, it.li === 0); }
+      g.geos.forEach((x) => x.dispose()); // copied into the batch
+      g.geos = null;
+      e.sets.add(set);
+      g.entry = e;
     }
+    set.joined = true;
     for (const b of set.boats) this.place(b);
+  }
+  leave(set) {
+    if (!set.joined) return;
+    set.joined = false;
+    for (const g of set.byMat || []) {
+      const e = g.entry;
+      if (!e) continue;
+      for (const it of g.items) e.bm.deleteInstance(it.inst);
+      for (const id of g.gids) e.bm.deleteGeometry(id);
+      e.sets.delete(set);
+      if (e.sets.size) continue;
+      this.pool.delete(e.key);
+      const i = this.hooks.noNormalPass.indexOf(e.bm);
+      if (i >= 0) this.hooks.noNormalPass.splice(i, 1);
+      if (this.hooks.onBatch) this.hooks.onBatch(e.bm, false); else { e.bm.removeFromParent(); e.bm.material.dispose(); }
+      e.bm.dispose(); // its geometry, matrix and index textures
+    }
   }
 
   // the batch instances of a boat's shown detail level follow its root and their nodes
@@ -321,8 +369,8 @@ export class Boats {
       b.mastCycle = b.spec.mast_cycle_s ?? 24;
       this.local(b);
     }
+    this.join(set); // its pieces into the page's batches, one per material
     // each boat's deck, roof and gangplank, at rest, for the contact probes of its neighbours
-    if (set.ring) { set.ring.castShadow = false; this.hooks.noNormalPass.push(set.ring); } // the wet rings: no shadow, no ink
     const statics = [...new Set([...[...sections.values()].map((x) => x.bvh), sec.bvh])].filter(Boolean);
     for (const b of set.boats) this.contacts(b, statics, set.boats.filter((o) => o !== b));
     this.reciprocal(set.boats);
@@ -345,8 +393,7 @@ export class Boats {
       b.geom?.dispose(); b.probeGeom?.dispose();
       for (const hs of Object.values(b.colliders)) for (const h of hs) h.traverse((o) => o.geometry?.dispose());
     }
-    if (set.ring) { const i = this.hooks.noNormalPass.indexOf(set.ring); if (i >= 0) this.hooks.noNormalPass.splice(i, 1); }
-    for (const bm of set.batches || []) bm.dispose(); // its matrix and index textures (world.js disposes its geometry)
+    this.leave(set); // its pieces out of the batches (after its copies'), the last section out disposes them
     set.gateGeom?.dispose();
     sec.movers = [];
   }
@@ -949,7 +996,9 @@ export class Boats {
     for (let k = 1; k <= 8; k++) tries.push(at.clone().lerp(new THREE.Vector3(THREE.MathUtils.clamp(at.x, -(b.info.lw || 20) / 2 + 2, (b.info.lw || 20) / 2 - 2), at.y, 0), k / 8));
     for (const [i, p] of tries.entries()) {
       _ray.set(_a.set(p.x, 8, p.z), _down);
-      const hits = b.mover.bvh.raycast(_ray, THREE.DoubleSide).filter((h) => {
+      // three-mesh-bvh returns every hit unsorted: highest first, so a cargo mound over the deck is the surface (as
+      // surfaces() does; details pass, fix-boats E1)
+      const hits = b.mover.bvh.raycast(_ray, THREE.DoubleSide).sort((p, q) => q.point.y - p.point.y).filter((h) => {
         const c = b.cats[b.mover.origOf[h.faceIndex]];
         return (c === CAT.deck || c === CAT.roof) && h.face.normal.y > 0.3;
       });
@@ -1005,7 +1054,7 @@ export class Boats {
     const ms = b.set.flowMovers?.list, k = ms ? ms.indexOf(b.mover) : -1;
     if (k >= 0) ms.splice(k, 1);
     this.byId.delete(b.id);
-    for (const list of b.items || []) for (const it of list) { try { it.bm.deleteInstance(it.inst); } catch { /* its batch is gone with its section */ } }
+    if (b.set.joined) for (const list of b.items || []) for (const it of list) it.bm.deleteInstance(it.inst); // once its section left, its ids may be another's
   }
 
   // shown or not (a flow boat out of sight): its instances of the detail level it shows

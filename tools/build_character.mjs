@@ -1,13 +1,18 @@
 // Merge a Meshy rigged character with the clips from its animation GLBs into one GLB.
 // Clips are matched to the character's bones by node name (all Meshy rigs share bone names).
 // Usage: node build_character.mjs <out.glb> <rigged.glb> <clipName>=<anim.glb> [<clipName>=<anim.glb> ...]
-//        [--recolour <rules.json>]
+//        [--eyes <spec.json>] [--recolour <rules.json>]
+// --eyes (characters/<name>.json "eyes", or the base's for a variant): a passing character's eye, or a drawn ink eye,
+// stamped over the body texture's dot eyes at full resolution (tools/eye_fix.mjs; measured by tools/eye_check.mjs);
+// applied before --recolour, so a variant's recolour lands on top of it.
 // --recolour (a variant: another character's body with part of its texture recoloured, characters/<name>.json
 // "recolour"): rules [{mask, to}], applied in order to the body texture. mask: texels whose colour matches (hue
 // [h0, h1] degrees, sat [s0, s1], val [v0, v1]) and, optionally, that lie on faces of a part of the body in the rest
 // pose: y [f0, f1] (height as a fraction of the body's, every vertex of the face inside) and radial_min (distance
-// from the head's vertical axis, as a fraction of the height: a hat's brim). to: {hue (set, degrees), hue_shift,
-// sat_mul, val_mul, val_add, ramp [[value, "#rrggbb"], ...] (the texel's value mapped to a colour)}.
+// from the head's vertical axis, as a fraction of the height: a hat's brim; spare {radial_max, below}: faces with every
+// vertex nearer the axis than radial_max and the lowest under below are left out, the face under a brim).
+// to: {hue (set, degrees), hue_shift, sat_mul, val_mul, val_add, ramp [[value, "#rrggbb"], ...] (the texel's value
+// mapped to a colour)}.
 import { NodeIO } from '@gltf-transform/core';
 import { prune } from '@gltf-transform/functions';
 import fs from 'node:fs';
@@ -16,6 +21,8 @@ import { createRequire } from 'node:module';
 const argv = process.argv.slice(2);
 const ri = argv.indexOf('--recolour');
 const recolourFile = ri >= 0 ? argv.splice(ri, 2)[1] : null;
+const ei = argv.indexOf('--eyes');
+const eyesFile = ei >= 0 ? argv.splice(ei, 2)[1] : null;
 const [out, riggedFile, ...clipArgs] = argv;
 const io = new NodeIO();
 const doc = await io.read(riggedFile);
@@ -46,6 +53,11 @@ for (const arg of clipArgs) {
   }
   const dur = Math.max(...anim.listSamplers().map((s) => s.getInput().getMax([])[0]));
   console.log(`clip ${clipName}: ${channels} channels, ${dur.toFixed(2)} s${missing.size ? `, unmatched: ${[...missing]}` : ''}`);
+}
+if (eyesFile) {
+  const { applyEyes } = await import('./eye_fix.mjs');
+  const rep = await applyEyes(doc, JSON.parse(fs.readFileSync(eyesFile, 'utf8')));
+  fs.writeFileSync(eyesFile.replace(/\.json$/, '_report.json'), JSON.stringify(rep, null, 1) + '\n');
 }
 if (recolourFile) await recolour(JSON.parse(fs.readFileSync(recolourFile, 'utf8')));
 await doc.transform(prune());
@@ -83,13 +95,16 @@ async function recolour(rules) {
   for (const rule of rules) {
     const m = rule.mask || {};
     let geo = null;
-    if (m.y || m.radial_min != null) {
+    if (m.y || m.radial_min != null || m.spare) {
       // the faces of that part of the body, rasterised in UV space (glTF v runs down the image)
       geo = new Uint8Array(W * H);
       for (let f = 0; f < idx.length; f += 3) {
         const v = [idx[f], idx[f + 1], idx[f + 2]];
         if (m.y && !v.every((i) => yf(i) >= m.y[0] && yf(i) <= m.y[1])) continue;
         if (m.radial_min != null && !v.every((i) => rad(i) >= m.radial_min || yf(i) >= (m.crown ?? 2))) continue;
+        // spare: faces wholly inside the head's own cylinder below a height are never the hat (the nose tip reaches
+        // past a brim's radial_min)
+        if (m.spare && v.every((i) => rad(i) < m.spare.radial_max) && Math.min(...v.map(yf)) < m.spare.below) continue;
         const uv = v.map((i) => [T[i * 2] * W, T[i * 2 + 1] * H]);
         const xs = uv.map((q) => q[0]), ys = uv.map((q) => q[1]);
         const [ax, ay] = uv[0], [bx, by] = uv[1], [qx, qy] = uv[2];

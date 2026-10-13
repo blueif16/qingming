@@ -63,7 +63,8 @@ async function frame() {
   if (night) html.dataset.night = '';
   applyInk(html, night ? { paper: '#e8d9b8', bubble: '#efe2c4', ink: '#2a2420' } : { paper: '#efe4cc', bubble: '#f7efdc', ink: '#2a2420' });
   const still = stills[`${device}_${tod}`];
-  const [places, talk] = await Promise.all(['assets/ui/places.json', 'assets/ui/talk.json'].map((u) => fetch(u).then((r) => r.json())));
+  // the gate's talk file (the life pass split talk.json per section: assets/ui/talk/<section>.json)
+  const [places, talk] = await Promise.all(['assets/ui/places.json', 'assets/ui/talk/gate.json'].map((u) => fetch(u).then((r) => r.json())));
 
   if (scene === 'title') return title();
   if (still && scene !== 'hud') document.body.append(h('img', 'still', { src: new URL(`./kit/${still.file}`, import.meta.url).href, alt: '' }));

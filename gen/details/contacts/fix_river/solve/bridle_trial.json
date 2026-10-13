@@ -1,0 +1,72 @@
+[
+ {
+  "id": "carter_24218",
+  "model": "scholar",
+  "clips": [
+   "bridle",
+   "look"
+  ],
+  "base": {
+   "nudge": [
+    -0.79,
+    0.2
+   ],
+   "facing": 180
+  },
+  "nudge": [
+   -0.64,
+   0.02
+  ],
+  "facing_deg": 240,
+  "moved_m": 0.23,
+  "turned_deg": 60,
+  "before": {
+   "cost": 0.765,
+   "fails": "contact:animal palm_R 0.83; contact:animal palm_L 0.277",
+   "contacts": "bridle:palm_R->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.83/0.703 FAIL; bridle:palm_L->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.277/0.174 FAIL"
+  },
+  "after": {
+   "cost": 0.272,
+   "fails": "contact:animal palm_R 0.517; contact:animal palm_L 0.068; crowd 0.016",
+   "contacts": "bridle:palm_R->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.517/0.435 FAIL; bridle:palm_L->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.068/0.009 FAIL",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 46.468
+ },
+ {
+  "id": "man_at_horse_head_24506",
+  "model": "scholar",
+  "clips": [
+   "bridle",
+   "look"
+  ],
+  "base": {
+   "nudge": [
+    -0.2,
+    -0.04
+   ],
+   "facing": 270
+  },
+  "nudge": [
+   0.22,
+   0.38
+  ],
+  "facing_deg": 320,
+  "moved_m": 0.59,
+  "turned_deg": 50,
+  "before": {
+   "cost": 0.596,
+   "fails": "contact:animal palm_R 0.765; contact:animal palm_L 0.131",
+   "contacts": "bridle:palm_R->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.765/0.698 FAIL; bridle:palm_L->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.131/0.049 FAIL"
+  },
+  "after": {
+   "cost": 0.309,
+   "fails": "contact:animal palm_R 0.484; contact:animal palm_L 0.267; crowd 0.025",
+   "contacts": "bridle:palm_R->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.484/0.395 FAIL; bridle:palm_L->S2.ani.cart_mule_lead_24192+S2.ani.cart_mule_near_24215+S2.ani.horse_24565 q0.267/0.196 FAIL",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 48.359
+ }
+]

@@ -5,14 +5,15 @@
    "character": "official",
    "do": [
     [
-     "write",
+     "sit_talk~soles",
      20
     ]
    ],
    "nudge": [
-    -0.03,
-    0.0
-   ]
+    0.25,
+    0.15
+   ],
+   "facing_deg": 0
   },
   "man_dark_cap_by_stair_12700": {
    "character": "idler",
@@ -23,9 +24,10 @@
     ]
    ],
    "nudge": [
-    0,
-    0.82
-   ]
+    -0.03,
+    0.83
+   ],
+   "facing_deg": 180
   },
   "dark_figure_or_garment_12825": {
    "character": "inspector",
@@ -41,8 +43,9 @@
    ],
    "nudge": [
     -0.31,
-    -0.17
-   ]
+    -0.39
+   ],
+   "facing_deg": 270
   },
   "small_figure_cart_rear_12706": {
    "character": "child",
@@ -72,8 +75,9 @@
    ],
    "nudge": [
     -0.38,
-    0.01
-   ]
+    -0.25
+   ],
+   "facing_deg": 0
   },
   "man_in_shed_13220": {
    "character": "scholar",
@@ -151,7 +155,12 @@
      "look",
      5
     ]
-   ]
+   ],
+   "nudge": [
+    0,
+    -0.16
+   ],
+   "facing_deg": 270
   },
   "onlooker_dark_robe_13222": {
    "character": "townsman",
@@ -166,9 +175,10 @@
     ]
    ],
    "nudge": [
-    0.14,
-    0.08
-   ]
+    0.42,
+    0.09
+   ],
+   "facing_deg": 323
   },
   "youth_onlooker_13265": {
    "character": "youth",
@@ -192,7 +202,7 @@
    "character": "storyteller",
    "do": [
     [
-     "show_goods_seated",
+     "show_goods_seated~seated_man_13240",
      30
     ]
    ],
@@ -211,8 +221,9 @@
    ],
    "nudge": [
     0.02,
-    0.33
-   ]
+    0.1
+   ],
+   "facing_deg": 270
   },
   "tall_onlooker_leaning_13290": {
    "character": "scholar",
@@ -430,29 +441,39 @@
    "character": "official_rider",
    "do": [
     [
-     "bridle",
+     "idle~man_big_hat_12895",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    0.77,
+    -1.06
+   ],
+   "facing_deg": -80
   },
   "counter_man_leaning_13325": {
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_over~counter_man_leaning_13325",
      14
     ],
     [
      "idle",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    -0.07,
+    -0.29
+   ],
+   "facing_deg": 270
   },
   "man_in_white_at_horse_13360": {
    "character": "scholar",
    "do": [
     [
-     "bridle",
+     "idle",
      8
     ],
     [
@@ -486,30 +507,39 @@
      10
     ],
     [
-     "browse",
+     "bend_goods",
      5
     ]
    ],
-   "facing_deg": 225
+   "facing_deg": 225,
+   "nudge": [
+    -0.1,
+    0.08
+   ]
   },
   "man_bowed_at_horse_13410": {
    "character": "inspector",
    "do": [
     [
-     "girth",
+     "girth~man_bowed_at_horse_13410",
      10
     ],
     [
      "idle",
      3
     ]
-   ]
+   ],
+   "nudge": [
+    0.22,
+    0.18
+   ],
+   "facing_deg": 80
   },
   "man_bending_to_donkey_13440": {
    "character": "scholar",
    "do": [
     [
-     "lean_over",
+     "lean_over~man_bending_to_donkey_13440",
      8
     ],
     [
@@ -518,15 +548,16 @@
     ]
    ],
    "nudge": [
-    -0.06,
-    -0.19
-   ]
+    0.75,
+    -0.35
+   ],
+   "facing_deg": 72
   },
   "porter_at_cart_rear_13090": {
    "character": "idler",
    "do": [
     [
-     "reach_up_load",
+     "reach_up_load~porter_at_cart_rear_13090",
      9
     ],
     [
@@ -536,8 +567,9 @@
    ],
    "nudge": [
     -0.48,
-    0.89
-   ]
+    1.49
+   ],
+   "facing_deg": 101
   },
   "cart_driver_13303": {
    "character": "idler",
@@ -590,14 +622,19 @@
    "character": "idler",
    "do": [
     [
-     "steer",
+     "push_flank~carter_at_shaft_ox_13243",
      7
     ],
     [
      "look",
      5
     ]
-   ]
+   ],
+   "nudge": [
+    0.65,
+    1.71
+   ],
+   "facing_deg": 104
   },
   "man_bending_sack_13607": {
    "character": "porter",
@@ -651,7 +688,7 @@
    "character": "child",
    "do": [
     [
-     "reach",
+     "look",
      7
     ],
     [
@@ -689,13 +726,18 @@
      "idle",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    -0.08,
+    0
+   ],
+   "facing_deg": 180
   },
   "customer_bent_14420": {
    "character": "inspector",
    "do": [
     [
-     "lean_over",
+     "bend_goods",
      10
     ],
     [
@@ -704,39 +746,38 @@
     ]
    ],
    "nudge": [
-    -0.14,
-    -0.02
-   ]
+    -0.12,
+    0.25
+   ],
+   "facing_deg": 0
   },
   "customer_hat_14462": {
    "character": "townsman",
    "do": [
     [
      "listen",
-     10
-    ],
-    [
-     "sit",
-     6
+     16
     ]
    ],
    "nudge": [
-    -0.1,
-    -0.04
-   ]
+    -0.15,
+    0.31
+   ],
+   "facing_deg": 0
   },
   "customer_white_14560": {
    "character": "robed_man",
    "do": [
     [
-     "knee_on_stool",
+     "knee_on_stool~customer_white_14560",
      16
     ]
    ],
    "nudge": [
-    0.48,
-    -0.09
-   ]
+    0.44,
+    0.1
+   ],
+   "facing_deg": 225
   },
   "seated_man_cabin_roof_15012": {
    "character": "boatman",
@@ -764,7 +805,7 @@
    "character": "sightseer",
    "do": [
     [
-     "listen",
+     "listen~soles",
      16
     ]
    ],
@@ -815,7 +856,12 @@
      "idle",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    0.01,
+    -0.03
+   ],
+   "facing_deg": 270
   },
   "boatman_light_hat_15066": {
    "character": "straw_hat",
@@ -830,7 +876,7 @@
    "character": "boatman",
    "do": [
     [
-     "tiller_seated",
+     "sit_floor",
      30
     ]
    ]
@@ -871,45 +917,53 @@
   }
  },
  "nudge_why": {
-  "official_seated_12728": "painted seated, the map's point his seat (\"seat est\"); official's write keeps the hips 0.03 m from the root, so the root stands where the hips land on that seat (seats.json)",
-  "man_dark_cap_by_stair_12700": "his foot point is 0.16 m from the big jar's centre (0.84 m across at real size, the builder's kit_outer_road_2.big_jar; it hides his lower body in the painting, so it stands in front of him, toward the viewer): he sits on the ground just behind (north of) it, facing west to the stair",
-  "dark_figure_or_garment_12825": "his spot lies within 0.3 m of S4.bld.official_hall_12530 at real size (its mapped footprint): he steps 0.12 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "official_seated_12728": "the root moved so that sit_talk's hips (0.25 m behind it, 0.15 m to its right) land on the painted seat point, where his own stool stands (seats.json, fitted: contact_fixes seat) || casting: painted seated, the map's point his seat (\"seat est\"); official's write keeps the hips 0.03 m from the root, so the root stands where the hips land on that seat (seats.json)",
+  "man_dark_cap_by_stair_12700": "solved: contact seat->S4.bld.official_hall_12530; gap before seat 0.5, after seat 0.04; fixed contact:floor; moved 0.03 m from the casting's spot (limit 0.6 m) || casting: his foot point is 0.16 m from the big jar's centre (0.84 m across at real size, the builder's kit_outer_road_2.big_jar; it hides his lower body in the painting, so it stands in front of him, toward the viewer): he sits on the ground just behind (north of) it, facing west to the stair",
+  "dark_figure_or_garment_12825": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.22 m from the casting's spot (limit 0.6 m) || casting: his spot lies within 0.3 m of S4.bld.official_hall_12530 at real size (its mapped footprint): he steps 0.12 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "small_figure_cart_rear_12706": "painted under the fringe of the first palm cart's thatch at its west end; at real size the cart's body (3.9 m, centred on its painted wheel) and its collider reach X 54.73, -0.20 m past his spot: he stands just behind its tail, where he is painted; then his spot lies within 0.3 m of S4b.veh.palm_cart_13070 at real size (its mapped footprint): he steps 0.02 m straight out of it, to stand clear of it",
-  "man_seated_front_of_hall_12866": "painted seated with his feet at the painted point (the map's foot est); robed_man's listen keeps its root 0.38 m from the feet and the hips 0.04 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "man_seated_front_of_hall_12866": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.42, sole_L -0.12, sole_R 0.48, after seat 0.42, sole_L -0.01, sole_R -0.01; fixed contact:floor, contact:floor; moved 0.26 m from the casting's spot (limit 0.6 m); placed (--at) 0.26 m south of the casting's spot, off the official hall's plinth (part 1's, its front edge at D 11.1: his root stood on it, 0.45 m up, while his feet hung to the ground), in front of its railing as painted; his own stool goes under his hips there (contact_fixes seat) || casting: painted seated with his feet at the painted point (the map's foot est); robed_man's listen keeps its root 0.38 m from the feet and the hips 0.04 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
   "onlooker_grey_jacket_13152": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "small_onlooker_13180": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "onlooker_light_robe_13200": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
-  "onlooker_dark_robe_13222": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "onlooker_dark_robe_13222": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, site_inside; moved 0.28 m, turned -7 deg from the casting's spot (limit 0.6 m) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "youth_onlooker_13265": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "seated_man_13240": "painted seated with his feet at the painted point (the map's foot est); storyteller's show_goods_seated keeps its root 0.38 m from the feet and the hips 0.02 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
-  "customer_light_12990": "painted seated with his feet at the painted point (the map's foot est); scholar's drink keeps its root 0.33 m from the feet and the hips 0.02 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
+  "customer_light_12990": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.05, sole_L 0.17, sole_R 0.18, after seat 0.33, sole_L 0.01, sole_R 0.01; fixed contact:floor, contact:floor, furniture; moved 0.23 m from the casting's spot (limit 0.6 m); placed (--at) 0.23 m south of the casting's spot, off the shop hall's plinth edge (its stones stood him 0.19 m up while his feet hung to the ground); his own stool goes under his hips there (contact_fixes seat) || casting: painted seated with his feet at the painted point (the map's foot est); scholar's drink keeps its root 0.33 m from the feet and the hips 0.02 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
   "tall_onlooker_leaning_13290": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "customer_dark_hat_13027": "painted seated with his feet at the painted point (the map's foot est); townsman's sit keeps its root 0.38 m from the feet and the hips 0.02 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
   "stall_keeper_13415": "his spot lies within 0.3 m of S4b.prop.stall_13480 at the builder's size: he steps 0.06 m straight out of it, to stand clear of it",
   "bearded_onlooker_13350": "his spot lies within 0.3 m of S4b.prop.goods_on_mat_13282 at the builder's size: he steps 0.24 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
-  "seated_in_bottom_shop_12792": "seated on S4b.prop.bench_12835 (a mapped bench, 0.45 m high as the builder makes it), as painted: idler's sit keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.46 m from the painted foot point",
+  "seated_in_bottom_shop_12792": "seated on S4b.prop.bench_12835 (a mapped bench, 0.41 m high as the builder makes it), as painted: idler's sit keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.46 m from the painted foot point",
   "seated_in_cart_front_12995": "seated on the first palm cart's seat, as painted under its thatch hood: the plank the area kit lays across the sills 0.32 m past the bed's front (top 1.08 m; kit_outer_road_2.palm_cart, parked), cross-legged (sit_floor keeps the root under the hips): at real size the cart's front is 0.26 m from his painted point",
   "young_onlooker_13387": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "figure_in_shop_13242": "painted seated with his feet at the painted point (the map's foot est); carter's sit keeps its root 0.18 m from the feet and the hips 0.34 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
   "sedan_attendant_13160": "painted standing between the set-down sedan chair's two poles at its east end, facing us; at real size the north pole (0.465 m off the chair's axis, 0.74 m up, as the builder runs it to the crossbar at X 61.86) runs through his painted spot and the cabin's east face (with its collider) is at X 60.00: he stands on the axis between the poles, just east of the cabin",
   "porter_tall_load_13402": "his spot lies within 0.3 m of S4b.bld.shop_hall_13170 at real size (its mapped footprint): he steps 0.18 m straight out of it, to stand clear of it",
   "man_in_white_at_horse_13360": "painted against the saddled horse (horse, 2.05 m long and 0.65 m wide at real size), his spot fell inside its body: he steps 0.03 m straight out from its head, on the side he is painted",
-  "man_bending_to_donkey_13440": "painted against the small dark donkey (donkey, 1.49 m long and 0.40 m wide at real size), his spot fell inside its body: he steps 0.20 m straight out from its flank, on the side he is painted",
-  "porter_at_cart_rear_13090": "painted with both arms raised to the second palm cart's underside at its rear half (his hands against its bed); at real size (the area kit's body 1.3 m wide, its wheels' collider 1.10 m off the axis) his painted spot is 1.31 m off its side, so he steps in to stand against it, 1.75 m along it as painted",
+  "man_bending_to_donkey_13440": "solved: contact palm_L->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474, palm_R->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474; gap before palm_L 0.17, palm_R 0.47, after palm_L 0.04, palm_R 0.06; fixed nothing; moved 0.83 m, turned 62 deg from the casting's spot (limit 0.6 m); placed (--at) beyond the 0.6 m solve limit, a written reason: at real size his painted spot fell at the small donkey's head (its body 1.5 m long, a man painted at its head beside him), and he is painted bending over its back; he stands at its near (south) flank behind its shoulder, turned to it, both hands laid on its back by an IK variant whose rule is the donkey (lean_over~man_bending_to_donkey_13440: characters/contacts.json) || casting: painted against the small dark donkey (donkey, 1.49 m long and 0.40 m wide at real size), his spot fell inside its body: he steps 0.20 m straight out from its flank, on the side he is painted",
+  "porter_at_cart_rear_13090": "solved: contact palm_L->S4b.veh.palm_cart_13455, palm_R->S4b.veh.palm_cart_13455; gap before palm_L 0.6, palm_R 0.72, after palm_L 0.14, palm_R 0.12; fixed nothing; moved 0.6 m, turned 11 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK variant at this placement (tools/ik_targets.mjs: both hands up against the cart's bed, as painted) || casting: painted with both arms raised to the second palm cart's underside at its rear half (his hands against its bed); at real size (the area kit's body 1.3 m wide, its wheels' collider 1.10 m off the axis) his painted spot is 1.31 m off its side, so he steps in to stand against it, 1.75 m along it as painted",
   "man_behind_donkey_13512": "painted against the saddled horse (horse, 2.05 m long and 0.65 m wide at real size), his spot fell inside its body: he steps 0.09 m straight out from its flank, on the side he is painted; then painted against the small dark donkey (donkey, 1.49 m long and 0.40 m wide at real size), his spot fell inside its body: he steps 0.23 m straight out from its flank, on the side he is painted",
   "man_wide_hat_13760": "his spot lies within 0.3 m of S4b.bld.wheelwright_shed_13840 at real size (its mapped footprint): he steps 0.24 m straight out of it, to stand clear of it; then his spot lies within 0.3 m of S4b.prop.timber_pile_13745 at the builder's size: he steps 0.08 m straight out of it, to stand clear of it",
   "stall_keeper_seated_13940": "painted seated with his feet at the painted point (the map's foot est); carter's sit keeps its root 0.18 m from the feet and the hips 0.34 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
   "small_companion_14654": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "man_on_bank_14686": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
   "porter_baskets_14778": "painted stepping onto the mat-cargo boat's gangplank at its bank end (scan 14760, 402); at real size the boat lies moved outward (build_choices.json moves) and its plank lands on its north side, foot at (75.45, 24.45) (the gangplank's foot the builder sets (build_choices.json boats S4b.veh.boat_mat_cargo_14900 kit.gangplank)): his place is 0.35 m short of that foot, where his walk turns (the page starts a walker on the path point nearest his painted spot)",
-  "customer_bent_14420": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
-  "customer_hat_14462": "seated on S4b.prop.chair_14458 (a mapped chair, 0.45 m high as the builder makes it), as painted: townsman's listen keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.28 m from the painted foot point",
-  "customer_white_14560": "seated on S4b.prop.stool_14595 (a mapped stool, 0.42 m high as the builder makes it), as painted: robed_man's knee_on_stool keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.41 m from the painted foot point",
+  "customer_bent_14420": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles; moved 0.29 m from the casting's spot (limit 0.6 m); placed (--at) 0.27 m north onto the tea house platform he is painted on (support: tea house floor): his feet had stood 0.16 m inside its front face, the root on the ground in front of it; behind the hatted customer's (moved) chair || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "customer_hat_14462": "solved: contact seat->S4b.prop.chair_14458, sole_L->S4b.str.tea_house_platform_14520, sole_R->S4b.str.tea_house_platform_14520; gap before seat 0.03, sole_L 0.01, sole_R -0.11, after seat 0.03, sole_L 0.01, sole_R 0; fixed contact:floor; moved 0.11 m from the casting's spot (limit 0.6 m); placed (--at) 0.1 m north and 0.05 m west on his (moved) chair: his right foot had stood in the base of the tea house's west gable post and his hands in the table's apron || casting: seated on S4b.prop.chair_14458 (a mapped chair, 0.45 m high as the builder makes it), as painted: townsman's listen keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.35 m from the painted foot point",
+  "customer_white_14560": "solved: contact seat->S4b.prop.stool_14595, sole_L->S4b.str.tea_house_platform_14520; gap before seat 0.2, sole_L 0.01, after seat 0.2, sole_L 0.01; fixed nothing; moved 0.06 m from the casting's spot (limit 0.6 m); placed (--at) so knee_on_stool's seat point (0.06 m to the left of his root, measured) lands on the centre of his (moved) stool S4b.prop.stool_14595, whose height is fitted to it (0.205 m: the clip sits low, its right heel drawn up onto the seat; outer_road_2_scene.py choice) || casting: seated on S4b.prop.stool_14595 (a mapped stool, 0.23 m high as the builder makes it), as painted: robed_man's knee_on_stool keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.30 m from the painted foot point",
   "customer_cap_14785": "seated on S4b.prop.stool_14840 (a mapped stool, 0.42 m high as the builder makes it), as painted: sightseer's listen keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat; the feet then fall 0.31 m from the painted foot point",
   "figure_at_front_rail_14752": "his spot lies within 0.3 m of S4b.prop.bundle_heap_14680 at the builder's size: he steps 0.26 m straight out of it, to stand clear of it; then his spot is 0.29 m from the centre of S4b.prop.round_basket_or_drum_14795 (0.25 m in radius at real size): he steps 0.16 m out from it",
   "man_east_bay_14958": "painted seated with his feet at the painted point (the map's foot est); scholar's knees_up keeps its root 0.56 m from the feet and the hips 0.04 m from the root, so the root stands there and his seat goes under the hips (seats.json)",
   "man_dark_cap_15075": "his spot lies inside S4b.prop.bundle_heap_14970 at the builder's size: he steps 0.40 m straight out of it, to stand clear of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
-  "man_frame_or_hat_15125": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them"
+  "man_frame_or_hat_15125": "painted closer to a neighbour than two bodies (0.26 m each, people.js): pushed apart along the line between them",
+  "man_standing_by_hall_12942": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.16 m from the casting's spot (limit 0.6 m)",
+  "man_at_gate_post_14540": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "counter_man_leaning_13325": "solved: contact palm_L->S4b.prop.table_bowls_13275, palm_R->S4b.prop.table_bowls_13275; gap before palm_L 0.05, palm_R 0.25, after palm_L 0.03, palm_R 0.02; fixed contact:rail, contact:rail; moved 0.3 m, turned 70 deg from the casting's spot (limit 0.6 m); placed (--at) behind the counter's east end, facing it (south), his hands over its top, his west foot clear of the shop hall's plinth corner; the search drifted his hands onto the shop hall's wall, which isn't what he leans on; the hands are held on the counter's top by an IK variant (lean_over~counter_man_leaning_13325, height only: they keep the take's rocking along it)",
+  "man_big_hat_12895": "solved: contact palm_L->S4b.ani.horse_12862, palm_R->S4b.ani.horse_12862; gap before palm_L 1.33, palm_R 1, after palm_L 0, palm_R 0; fixed contact:animal, contact:animal; moved 1.31 m, turned -80 deg from the casting's spot (limit 0.6 m); beyond the 0.6 m solve limit, a written reason: his foot is an estimate (map: est foot, identification low; below the hips hidden by the horse), and the painting has him directly behind the small horse with his arm out toward its head; at real size the horse's flank lies 1.2 m south of his estimated foot, so he stands against its far (north) side at the withers, turned to it, his hands laid on its withers by an IK variant (the part of the horse that stays put while it lowers and raises its head)",
+  "man_bowed_at_horse_13410": "solved: contact palm_L->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474, palm_R->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474; gap before palm_L 0.22, palm_R 0.13, after palm_L 0.03, palm_R -0.02; fixed contact:animal; moved 0.28 m, turned -10 deg from the casting's spot (limit 0.6 m); placed (--at) just west of the small donkey's head (the solve's best spot put him at its nose, his right hand on it), bowed close against the saddled horse's flank under the saddle as painted; his hands are laid on its girth line by an IK variant (the barrel stays put while the horse lowers its head)",
+  "carter_at_shaft_ox_13243": "solved: contact palm_L->S4b.ani.ox_shaft_13442+S4b.ani.ox_lead_13458, palm_R->S4b.ani.ox_shaft_13442+S4b.ani.ox_lead_13458; gap before palm_L 1.37, palm_R 1.79, after palm_L 0.02, palm_R 0.03; fixed nothing; moved 1.83 m, turned 59 deg from the casting's spot (limit 0.6 m); beyond the 0.6 m solve limit, a written reason: he is painted beside the shaft ox's hindquarters under the cart's front, his arm raised to it; at real size the cart (6.4 m) and its team stand 1.9 m north of his painted feet, so he goes with them, beside the ox's hindquarters, turned to it; the last 2-3 cm closed by an IK variant",
+  "boatman_dark_cap_15046": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.032 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "wheelwright_bending_13620": "solved: contact palm_L->S4b.prop.pole_frame_basket_13690; gap before palm_L 0.56, after palm_L 0.6; fixed stance_soles; moved 0.13 m from the casting's spot (limit 0.6 m); placed (--at) 0.13 m north-west of the casting's spot so his feet stand clear of the wheel's rim (bend_goods put them on it); his left hand can't reach the rim lying on the ground (see notes)"
  },
  "walkers": [
   {
@@ -1192,7 +1246,25 @@
  },
  "facing_why": {
   "seated_in_bottom_shop_12792": "painted seated at the west end of the tray table, hunched and facing east (conf low); he sits on S4b.prop.bench_12835, which the builder lays east-west in front of the table: facing east along it, his chair sit would run his legs through the bench, so he faces the table he is painted at (north), his legs under its west end",
-  "wheelwright_bending_13620": "the map reads him facing west (his head at the west end, his back to the east), bending over the big wheel that lies flat to his south at real size (the kit's R 0.85 wheel centred on S4b.prop.loose_wheel_13665); turned south-west so his bent hands reach its west rim, as painted"
+  "wheelwright_bending_13620": "solved: contact palm_L->S4b.prop.pole_frame_basket_13690; gap before palm_L 0.56, after palm_L 0.6; fixed stance_soles; moved 0.13 m from the casting's spot (limit 0.6 m); placed (--at) 0.13 m north-west of the casting's spot so his feet stand clear of the wheel's rim (bend_goods put them on it); his left hand can't reach the rim lying on the ground (see notes)",
+  "man_dark_cap_by_stair_12700": "solved: contact seat->S4.bld.official_hall_12530; gap before seat 0.5, after seat 0.04; fixed contact:floor; moved 0.03 m from the casting's spot (limit 0.6 m)",
+  "dark_figure_or_garment_12825": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.22 m from the casting's spot (limit 0.6 m)",
+  "man_standing_by_hall_12942": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.16 m from the casting's spot (limit 0.6 m)",
+  "onlooker_dark_robe_13222": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, site_inside; moved 0.28 m, turned -7 deg from the casting's spot (limit 0.6 m)",
+  "man_at_gate_post_14540": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "counter_man_leaning_13325": "solved: contact palm_L->S4b.prop.table_bowls_13275, palm_R->S4b.prop.table_bowls_13275; gap before palm_L 0.05, palm_R 0.25, after palm_L 0.03, palm_R 0.02; fixed contact:rail, contact:rail; moved 0.3 m, turned 70 deg from the casting's spot (limit 0.6 m); placed (--at) behind the counter's east end, facing it (south), his hands over its top, his west foot clear of the shop hall's plinth corner; the search drifted his hands onto the shop hall's wall, which isn't what he leans on; the hands are held on the counter's top by an IK variant (lean_over~counter_man_leaning_13325, height only: they keep the take's rocking along it)",
+  "customer_light_12990": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.05, sole_L 0.17, sole_R 0.18, after seat 0.33, sole_L 0.01, sole_R 0.01; fixed contact:floor, contact:floor, furniture; moved 0.23 m from the casting's spot (limit 0.6 m); placed (--at) 0.23 m south of the casting's spot, off the shop hall's plinth edge (its stones stood him 0.19 m up while his feet hung to the ground); his own stool goes under his hips there (contact_fixes seat)",
+  "man_seated_front_of_hall_12866": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.42, sole_L -0.12, sole_R 0.48, after seat 0.42, sole_L -0.01, sole_R -0.01; fixed contact:floor, contact:floor; moved 0.26 m from the casting's spot (limit 0.6 m); placed (--at) 0.26 m south of the casting's spot, off the official hall's plinth (part 1's, its front edge at D 11.1: his root stood on it, 0.45 m up, while his feet hung to the ground), in front of its railing as painted; his own stool goes under his hips there (contact_fixes seat)",
+  "official_seated_12728": "the root moved so that sit_talk's hips (0.25 m behind it, 0.15 m to its right) land on the painted seat point, where his own stool stands (seats.json, fitted: contact_fixes seat)",
+  "customer_bent_14420": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles; moved 0.29 m from the casting's spot (limit 0.6 m); placed (--at) 0.27 m north onto the tea house platform he is painted on (support: tea house floor): his feet had stood 0.16 m inside its front face, the root on the ground in front of it; behind the hatted customer's (moved) chair",
+  "customer_hat_14462": "solved: contact seat->S4b.prop.chair_14458, sole_L->S4b.str.tea_house_platform_14520, sole_R->S4b.str.tea_house_platform_14520; gap before seat 0.03, sole_L 0.01, sole_R -0.11, after seat 0.03, sole_L 0.01, sole_R 0; fixed contact:floor; moved 0.11 m from the casting's spot (limit 0.6 m); placed (--at) 0.1 m north and 0.05 m west on his (moved) chair: his right foot had stood in the base of the tea house's west gable post and his hands in the table's apron",
+  "customer_white_14560": "solved: contact seat->S4b.prop.stool_14595, sole_L->S4b.str.tea_house_platform_14520; gap before seat 0.2, sole_L 0.01, after seat 0.2, sole_L 0.01; fixed nothing; moved 0.06 m from the casting's spot (limit 0.6 m); placed (--at) so knee_on_stool's seat point (0.06 m to the left of his root, measured) lands on the centre of his (moved) stool S4b.prop.stool_14595, whose height is fitted to it (0.205 m: the clip sits low, its right heel drawn up onto the seat; outer_road_2_scene.py choice)",
+  "man_big_hat_12895": "solved: contact palm_L->S4b.ani.horse_12862, palm_R->S4b.ani.horse_12862; gap before palm_L 1.33, palm_R 1, after palm_L 0, palm_R 0; fixed contact:animal, contact:animal; moved 1.31 m, turned -80 deg from the casting's spot (limit 0.6 m); beyond the 0.6 m solve limit, a written reason: his foot is an estimate (map: est foot, identification low; below the hips hidden by the horse), and the painting has him directly behind the small horse with his arm out toward its head; at real size the horse's flank lies 1.2 m south of his estimated foot, so he stands against its far (north) side at the withers, turned to it, his hands laid on its withers by an IK variant (the part of the horse that stays put while it lowers and raises its head)",
+  "man_bowed_at_horse_13410": "solved: contact palm_L->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474, palm_R->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474; gap before palm_L 0.22, palm_R 0.13, after palm_L 0.03, palm_R -0.02; fixed contact:animal; moved 0.28 m, turned -10 deg from the casting's spot (limit 0.6 m); placed (--at) just west of the small donkey's head (the solve's best spot put him at its nose, his right hand on it), bowed close against the saddled horse's flank under the saddle as painted; his hands are laid on its girth line by an IK variant (the barrel stays put while the horse lowers its head)",
+  "porter_at_cart_rear_13090": "solved: contact palm_L->S4b.veh.palm_cart_13455, palm_R->S4b.veh.palm_cart_13455; gap before palm_L 0.6, palm_R 0.72, after palm_L 0.14, palm_R 0.12; fixed nothing; moved 0.6 m, turned 11 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK variant at this placement (tools/ik_targets.mjs: both hands up against the cart's bed, as painted)",
+  "carter_at_shaft_ox_13243": "solved: contact palm_L->S4b.ani.ox_shaft_13442+S4b.ani.ox_lead_13458, palm_R->S4b.ani.ox_shaft_13442+S4b.ani.ox_lead_13458; gap before palm_L 1.37, palm_R 1.79, after palm_L 0.02, palm_R 0.03; fixed nothing; moved 1.83 m, turned 59 deg from the casting's spot (limit 0.6 m); beyond the 0.6 m solve limit, a written reason: he is painted beside the shaft ox's hindquarters under the cart's front, his arm raised to it; at real size the cart (6.4 m) and its team stand 1.9 m north of his painted feet, so he goes with them, beside the ox's hindquarters, turned to it; the last 2-3 cm closed by an IK variant",
+  "boatman_dark_cap_15046": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.032 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "man_bending_to_donkey_13440": "solved: contact palm_L->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474, palm_R->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474; gap before palm_L 0.17, palm_R 0.47, after palm_L 0.04, palm_R 0.06; fixed nothing; moved 0.83 m, turned 62 deg from the casting's spot (limit 0.6 m); placed (--at) beyond the 0.6 m solve limit, a written reason: at real size his painted spot fell at the small donkey's head (its body 1.5 m long, a man painted at its head beside him), and he is painted bending over its back; he stands at its near (south) flank behind its shoulder, turned to it, both hands laid on its back by an IK variant whose rule is the donkey (lean_over~man_bending_to_donkey_13440: characters/contacts.json)"
  },
  "cast_why": {
   "stand_in seated_boatman_stern_15372": "boatman (not made) plays idler: dark hair or cap, seated by the stern: the idler (hemp jacket, dark head-wrap) sits cross-legged on the deck (sit_floor)",
@@ -1200,11 +1272,26 @@
   "stand_in boatman_light_hat_15066": "straw_hat (not made) plays hat_traveller: a light hat beside him: the hat traveller's light straw hat",
   "stand_in seated_man_cabin_roof_15012": "boatman (not made) plays scholar: light robe, bare head or close cap, seated on the cabin roof with his knees drawn up: the scholar (pale robe) has knees_up; the robed man, the needs list's cast if he is a passenger, has no floor sit",
   "stand_in head_in_cabin_door_15097": "boatman (not made) plays porter: only a dark round head shows in the cabin door: the porter",
-  "porter_at_cart_rear_13090": "idler, not the needs list's porter: both wear the short jacket and trousers he is painted in, and only the idler has push_flank (both arms out against something big at chest height), the nearest clip to his arms raised to the cart's underside",
+  "porter_at_cart_rear_13090": "reach_up_load -> reach_up_load~porter_at_cart_rear_13090: an IK clip variant lays both hands against the edge of the second palm cart's bed at its rear half, as painted",
   "bearded_onlooker_13350": "robed_man as listed, playing crane, not listen: the robed man's listen is the seated sit_listen, and he is painted standing, looking down at the seated man",
   "seated_in_cart_front_12995": "idler, not the needs list's carter: the scan paints him in light clothes (the orange-brown jacket is the restyle's), and the parked palm cart's seat is a plank on the bed's front with the jutting frame for his feet only 0.11 m lower (kit_outer_road_2.palm_cart): a floor sit, which the idler has (sit_floor) and the carter hasn't",
   "muleteer_13560": "idler as listed; his folded arms are the idler's lean_wall (the lean_wall_idle take: arms crossed, glancing round), the same take the inspector plays as arms_folded",
-  "about": "by dress (needs list \"Casting\"): short jackets and trousers are the idler or the porter, long light robes with a dark cap the scholar, a light robe without a cap the robed man, dark long robes the townsman or the inspector, blue robes the sightseer, wide hats the hat traveller"
+  "about": "by dress (needs list \"Casting\"): short jackets and trousers are the idler or the porter, long light robes with a dark cap the scholar, a light robe without a cap the robed man, dark long robes the townsman or the inspector, blue robes the sightseer, wide hats the hat traveller",
+  "counter_man_leaning_13325": "lean_chin -> lean_over~counter_man_leaning_13325 (idler): painted leaning forward on the east end of the counter with the bowls (S4b.prop.table_bowls_13275, 0.87 m); lean_chin rests the elbows on a chest-high rail (1.1 m over his floor), so the solve found only the shop hall's wall for them; lean_over rests both hands on a waist-high edge, and its IK variant (characters/ik_variants.json) lays them flat on the counter's top",
+  "official_seated_12728": "write -> sit_talk~soles (official): no desk is painted (map: leaning forward \"as if reading or writing at a low desk\"; seats.json: none is built), so write's left hand on a desk touched nothing; of his seated clips, sit hunches forward but its seat drifts 8 cm through the cycle (no stool holds it), so sit_talk, its feet levelled on the floor by the shared leg-IK spec soles (fix-inner), seated on his own stool behind the railing",
+  "customer_bent_14420": "lean_over -> bend_goods (inspector): painted bent forward from behind, his head bowed out of sight, over the tea table's west end (identification low), but the hatted customer sits between him and that table (0.7 m away): lean_over's hands found only the back of that customer's chair. bend_goods bends him forward with his hands on his own knees, as painted, touching nothing that isn't there",
+  "customer_hat_14462": "listen + sit -> listen (townsman): one seated clip on his chair (sit put his seat 0.06 m over it, listen on it); listen leans him forward, forearms on his knees, toward the man opposite, as painted",
+  "customer_white_14560": "knee_on_stool -> knee_on_stool~customer_white_14560: the take's seat rises and sinks 5 cm, more than a stool holds; the variant holds it at its middle height, and his mapped stool (S4b.prop.stool_14595) is fitted under it: 0.215 m high (outer_road_2_scene.py choice), his right heel drawn up on it as painted. Its grounding by the one sole on the floor (tools/clip_ground.mjs, the lead, at fix-s4b's request) put his left foot on the floor",
+  "man_big_hat_12895": "bridle -> idle~man_big_hat_12895 (official_rider): painted behind the small horse reaching toward its head; the bridle take holds a tall horse's head high and leans back, out of reach of this small horse (scale 0.85, withers 1.1 m), so idle with an IK variant: his knees bent a little, both hands laid on its withers (the part of it that stays put while it lowers and raises its head); the variant's own rule (characters/contacts.json): the palms on the animal",
+  "man_in_white_at_horse_13360": "bridle -> idle, look (scholar): the map reads him standing at the saddled horse's head facing us, the lowered head just behind his shoulder, and only \"he may be holding it\": no hand on it is painted, and the horse he stands at lowers and raises its head (head_low, idle: its nose 0.6 m and 1.35 m up), so a held bridle would come off it; he stands at its head as painted, hands at rest",
+  "man_bowed_at_horse_13410": "girth -> girth~man_bowed_at_horse_13410: an IK clip variant lays both hands on the saddled horse's girth line under the saddle",
+  "carter_at_shaft_ox_13243": "steer -> push_flank~carter_at_shaft_ox_13243 (idler): steer holds a shaft in each hand from between them, but he is painted beside the shaft ox's hindquarters (the ox is between the shafts), his right arm raised to the ox or the shaft; push_flank puts his hands on the ox's hindquarters, held there by an IK variant",
+  "small_companion_14654": "reach -> look, idle (child): painted with one arm out to the taller man beside him, as if holding his sleeve or the bag he carries; reach lays both arms across a chest-high table top, and no table is painted here (no child clip holds a sleeve, and a sleeve is another figure, which the contact check does not measure): he stands at the man's side looking up at him",
+  "wheelwright_bending_13620": "browse -> bend_goods (idler) in his cycle: browse reaches into goods on a low table, and none is painted at the wheel; bend_goods keeps him bent over the wheel, hands on his knees, peering at the work. (wheelwright stays: see notes, its hand can't reach a rim lying on the ground)",
+  "man_bending_to_donkey_13440": "lean_over -> lean_over~man_bending_to_donkey_13440: painted bending over the small donkey with both arms out over its back; no rail is painted, so the variant (its own rule: palms on the animal, characters/contacts.json) lays both hands on the donkey's back",
+  "seated_man_13240": "show_goods_seated -> show_goods_seated~seated_man_13240: seated on the ground as painted (no stool shows: the casting's 0.48 m stool, never shipped, is gone), the take lifts his seat up to 5 cm off it as he leans to his goods; the variant holds it on the ground",
+  "customer_cap_14785": "listen -> listen~soles (sightseer): the shared leg-IK spec soles (fix-inner) puts both feet on the floor (listen's left sole was 4.4 cm into it, its right as far over)",
+  "seated_boatman_stern_15372": "recast (fix-boats): the map has him seated on the deck under the awning's east end by the stern head, 'a rudder stock and a slanting pole below him', no hand on a tiller (the kit's tiller is 2.25 m from his hand): sit_floor, seated on the deck (a floor sit needs no seat built)"
  },
  "props_why": {
   "porter_pole_bundle_13537": "pole_bundle: on (porter, held in carry_pole)",
@@ -1252,11 +1339,14 @@
   "about": "What this casting assumes of blender/outer_road_2_scene.py (read on every run: its furniture sizes, the palm carts of kit_outer_road_2, the sedan), and what it found.",
   "seats_json": "seats.json X, D is the seat's centre under the hips: build each stool there (outer_road_2_scene.seats() steps 0.15 m back from it); the cart sitter needs a hidden block under his root (seats.json build)",
   "table_tops": "people.js stands a figure on the highest surface under rays at X and X +- 0.12 from H + 1.2 m, and song_kit.table's top collides; roots over a table top at the builder's sizes: none",
-  "tea_house_posts": "the tea house's front posts (tea_house(): x gx0 - 2.2, gx0, gx1, hx1 - 2.6, hx1 at D yf + 0.05) against the seated customers and their seats: customer_hat_14462 (root 77.63, 7.32) 0.12 m from the post at (77.75, 7.32); S4b.prop.chair_14458 (77.65, 7.32) 0.10 m from the post at (77.75, 7.32)",
+  "tea_house_posts": "the tea house's front posts (tea_house(): x gx0 - 2.2, gx0, gx1, hx1 - 2.6, hx1 at D yf + 0.05) against the seated customers and their seats: S4b.prop.chair_14458 (77.65, 7.57) 0.27 m from the post at (77.75, 7.32)",
   "gangplank": "porter_baskets_14778 walks to 0.35 m short of the gangplank's foot the builder sets (build_choices.json boats S4b.veh.boat_mat_cargo_14900 kit.gangplank), (75.45, 24.45), arriving along the plank's line toward the boat's bow; his path follows kit.gangplank on every run",
   "palm_carts": "both palm carts as kit_outer_road_2.palm_cart builds them (CART_KIT: body 3.9 x 1.3 m, wheel_at 0.56, R 0.85, collider bx0 - 0.3 to bx1 + 0.04, +-(hw + 0.45) across; the parked cart's seat plank at bx1 + 0.32, top 1.08 m); change CART_KIT if the kit changes",
   "sedan": "the sedan attendant stands on the set-down chair's axis between its poles, just east of the cabin (its collider's east face at X 60.00, the cabin centred at X 59.49 as vehicles() sets cabin_at)",
   "bird": "the bird is placed by this people.json at H 5.29 in part 1's willow S4.tree.willow_12588 (its card is part 1's)",
   "crew": "the five crew are at their layout spots (with their boats' recorded moves) and are never nudged here: the two on the long boat (boatman_dark_cap_15046, boatman_light_hat_15066) are painted 0.22 m apart, closer than two bodies (0.52 m); the boats page places both on the deck below their spots, so they overlap unless a recorded move (build_choices.json, with their boat) separates them"
+ },
+ "contact_fixes_why": {
+  "about": "26 figures carry a contact fix from sections/outer_road_2/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
  }
 }

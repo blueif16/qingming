@@ -34,8 +34,9 @@ const logs = [];
 page.on('pageerror', (e) => logs.push(`[pageerror] ${e.message}`));
 try {
   // nothing precomputed is read, so the page measures everything itself; the low tier and no adaptive resolution keep
-  // the GPU work small
-  await page.goto(`${base}/world.html?clipmeta=0&corridors=0&tier=low&adapt=0&sound=0`);
+  // the GPU work small; the full character GLBs (clipfiles=0), so every clip of every model visited is measured, not
+  // only the clips the sections play (per-clip files: tools/clip_split.mjs)
+  await page.goto(`${base}/world.html?clipmeta=0&corridors=0&clipfiles=0&tier=low&adapt=0&sound=0`);
   await page.waitForFunction(() => window.__test, null, { timeout: 180000 });
   for (const name of want) {
     const t0 = Date.now();
@@ -65,12 +66,27 @@ try {
   // every clip of every model the page loaded on the way (the casts of the sections visited, the pinned and your own)
   const meta = await page.evaluate(() => window.__test.clipMeta);
   const f = path.join(PUB, 'clip_meta.json');
-  let merged = {};
-  if (pos.length && !pos.includes('all')) { try { merged = JSON.parse(fs.readFileSync(f, 'utf8')); } catch { /* none yet */ } }
+  let merged = {}, old = {};
+  try { old = JSON.parse(fs.readFileSync(f, 'utf8')); } catch { /* none yet */ }
+  if (pos.length && !pos.includes('all')) merged = old;
   let files = 0, clips = 0;
   for (const [file, cs] of Object.entries(meta)) {
+    const prev = old[file] || {};
     const e = (merged[file] = {});
-    for (const [clip, m] of Object.entries(cs)) { if (!m) continue; e[clip] = Object.fromEntries(Object.entries(m).map(([k, v]) => [k, sig(v)])); clips++; }
+    for (const [clip, m] of Object.entries(cs)) {
+      if (!m) continue;
+      e[clip] = Object.fromEntries(Object.entries(m).map(([k, v]) => [k, sig(v)]));
+      // the mesh-measured ground and seat offsets (tools/clip_ground.mjs) survive a re-measure of the same clip
+      const p = prev[clip];
+      if (p && p.n === e[clip].n && Math.abs(p.duration - e[clip].duration) < 1e-4) for (const k of ['sole_m', 'seat_m']) if (p[k] !== undefined) e[clip][k] = p[k];
+      clips++;
+    }
+    // an IK variant of a walking clip (`<clip>~<spec>`) travels as its base does: its speed and stride are the base's
+    // (tools/clip_ground.mjs sets them so too, so the two tools no longer undo each other)
+    for (const [clip, m] of Object.entries(e)) {
+      const b = clip.includes('~') ? e[clip.split('~')[0]] : null;
+      if (b?.locomotion) for (const k of ['locomotion', 'speed', 'stride']) if (b[k] !== undefined) m[k] = b[k];
+    }
     files++;
   }
   merged.about = 'Per model file and clip, what people.js prepareClip measures (n hips keys, duration, speed, locomotion, stride, hipsY, k = the hips lift applied, grounded), by tools/people_precompute.mjs';

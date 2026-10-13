@@ -1,0 +1,50 @@
+{
+ "character": "official",
+ "base": "write",
+ "spec": "office_desk",
+ "frame": "proposed",
+ "sole_shift_m": -0.085,
+ "clip": "write~office_desk",
+ "frames": 240,
+ "duration": 7.967,
+ "verify_max_m": 0.005,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "seat",
+   "via": "hips",
+   "residual_max_m": 0.009,
+   "residual_mean_m": 0.008
+  },
+  {
+   "site": "sole_L",
+   "via": "leg",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "sole_R",
+   "via": "leg",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "Hips": 0,
+  "LeftUpLeg": 14,
+  "LeftLeg": 16,
+  "LeftFoot": 2,
+  "RightUpLeg": 3,
+  "RightLeg": 2,
+  "RightFoot": 0,
+  "LeftArm": 6,
+  "LeftForeArm": 4,
+  "LeftHand": 8
+ }
+}

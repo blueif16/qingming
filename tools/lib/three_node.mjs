@@ -48,6 +48,41 @@ export const diskLoader = {
 };
 
 // load characters or animals exactly as the page does (sizes, clip drift and grounding from clip_meta.json)
-export async function loadModels(names, registry, meta) {
-  return loadCharacters(diskLoader, null, names, registry, null, meta);
+// opts.engine 'proposed': also what the details pass's engine patch would do (gen/details/contacts/fix_s4/engine_patches.md)
+// while people.js doesn't do it yet: a clip's clip_meta sole_m lifts it so its ground contact sits on the ground, and a
+// ride clip's seat_m becomes clip.userData.seatY
+export const PAGE_APPLIES_SOLE = /sole_m/.test(fs.readFileSync(path.join(W, 'src/people.js'), 'utf8'));
+export async function loadModels(names, registry, meta, opts = {}) {
+  const models = await loadCharacters(diskLoader, null, names, registry, null, meta);
+  if (opts.engine === 'proposed' && meta) {
+    // a clip clip_meta.json doesn't list yet (built after the last people_precompute) takes tools/clip_ground.mjs's value
+    const gf = path.join(QM, 'gen/details/contacts/clip_ground.json');
+    const ground = fs.existsSync(gf) ? JSON.parse(fs.readFileSync(gf, 'utf8')).files : {};
+    for (const [name, m] of Object.entries(models)) applyProposed(m, meta[registry[name].file] || {}, ground[registry[name].file]?.clips || {});
+  }
+  return models;
 }
+// a hips track's values array can be shared by two clips (gltf-transform's dedup merges identical accessors: an IK
+// variant that leaves the hips alone shares its base's), so each array is lifted once
+const LIFTED = new WeakSet();
+export function applyProposed(m, known, ground = {}) {
+  for (const clip of m.clips) {
+    const e = known[clip.name]?.sole_m !== undefined || known[clip.name]?.seat_m !== undefined ? known[clip.name] : ground[clip.name];
+    if (!e) continue;
+    if (e.seat_m !== undefined) clip.userData = { ...(clip.userData || {}), seatY: e.seat_m };
+    if (!e.sole_m || PAGE_APPLIES_SOLE) continue;
+    const tr = clip.tracks.find((t) => /Hips\.position$/.test(t.name));
+    if (!tr) continue;
+    const hips = m.scene.getObjectByName(tr.name.split('.')[0]);
+    const ws = new THREE.Vector3();
+    hips.parent.getWorldScale(ws);
+    if (!LIFTED.has(tr.values)) { for (let i = 1; i < tr.values.length; i += 3) tr.values[i] += e.sole_m / ws.y; LIFTED.add(tr.values); }
+    clip.userData = { ...(clip.userData || {}), soleApplied: e.sole_m };
+  }
+}
+
+// a loader for GLBs anywhere on disk (absolute paths as the registry's `file`): tools/ik_clip.mjs loads a rig with one
+// base clip merged in, sized and grounded by the page's own loadCharacters
+export const absLoader = {
+  loadAsync: (file) => new Promise((res, rej) => loader.parse(stripGlb(fs.readFileSync(file)), '', res, rej)),
+};

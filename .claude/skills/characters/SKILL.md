@@ -39,6 +39,14 @@ or a clip list redoes exactly what depends on it.
   `sat_mul`, `val_mul`, `val_add`. Measure the texture's hues first (Meshy's "teal" jacket was hue 100–120, not
   160–200) and check on the GPU (`gen/characters/<variant>/recolour_check.jpg`). Made: `hat_traveller_dark`,
   `woman_pale`, `child_red`.
+- `"eyes": {"from": "<donor>"}`: dot eyes replaced in the body texture by a passing character's eye (bearer for men,
+  youth for children), scaled, mirrored, written through the texel map before the 512 webp (`tools/eye_fix.mjs`, run
+  by `build_character.mjs --eyes`; a variant takes its base's, before its recolour). `node tools/eye_check.mjs all
+  --out <dir>` measures every shipped face (lid reach past the iris >= 6.8 mm and outline width >= 17.2 mm pass;
+  records and calibration: `gen/details/eyes/notes.md`). Check a new character with it before shipping. A face on UV
+  slivers the 512 map can't hold (eye_check's `sliver` share) gets texture space of its own first: `"reuv": {...}`
+  (scholar); `dy`/`scale` move and size the eye (hat_traveller, under its fringe). The recolour mask's `spare`
+  {radial_max, below} keeps a face out of a hat's `radial_min` (hat_traveller_dark's nose).
 - `characters/props.json`: the carried props per character ("Carried props" below).
 - `characters/notes.md`: the record in prose (who each character is, runs, credits, review findings). Update it after every run.
 - `prompts/char_turnaround.txt`: the shared sheet prompt; `{character}` pulls in the character's prompt and `{style_ref}` the
@@ -54,7 +62,7 @@ or a clip list redoes exactly what depends on it.
 | `mesh` | `tools/char_pipeline.py` → `tools/meshy_task.py` | Smart Topology 4k from the front view → retexture with the 3 views → rig (24 bones, Mixamo names, walk + run) | ~30 credits |
 | `motions` | `tools/meshy_task.py text-to-motion` | Each take the listed characters need (prime mode, 2–10 s), in the account each needs it in (`motion:` → the character's account, `t2m:…@acct` → that account) → `gen/motions/<name>/` | 10 credits each |
 | `clips` | `char_pipeline.py --rig-task`, `meshy_task.py animations`, `tools/retarget_local.mjs` | Library actions by `action_id` and `motion:` clips (paid, same account); `t2m:` and `from:` clips retargeted locally (`tools/motion_fbx2glb.py` converts a take's FBX once) | 3 / 0 credits each |
-| `build` | `tools/build_character.mjs` → `tools/char_props.mjs` → `gltf-transform optimize` | Rig + named clips + the `prop_` parts in one GLB (meshopt, webp 512) → `web/public/assets/chars/<name>.glb`; rewrites `characters.json` (`clips`, `motion` = clips that loop by cross-fade, `props`) | – |
+| `build` | `tools/build_character.mjs` → `tools/char_props.mjs` → `gltf-transform optimize` | Rig + named clips + the `prop_` parts in one GLB (meshopt, webp 512) → `web/public/assets/chars/<name>.glb`; rewrites `characters.json` (`clips`, `motion` = clips that loop by cross-fade, `props`) ; then `tools/char_lod.mjs` adds the far body and `tools/clip_split.mjs` cuts the world page's body and per-clip files from the new GLB (inside the same lock; a failed split fails the build) | – |
 | `review` | sharp | `gen/characters/review.jpg`: ref | front | side | back per character | – |
 
 `status` shows every step's state (ok / stale / missing) and the clips still to fetch; add `--dry-run` to any paid step
@@ -69,6 +77,11 @@ the local steps (sheets, retargets, builds) run one at a time.
 After every `build` (and an animal's), run `node tools/ktx2.mjs encode` and `check` (skill `web-scene`, KTX2): the page
 loads a GPU-compressed copy of each body texture from `web/public/assets/ktx2/emb/`, found by the image's bytes, and
 falls back to the GLB's own webp (4–8× the GPU memory) where none exists. The GLB is never changed; palettes stay webp.
+
+Anything else that rewrites a shipped character GLB has to cut its split again:
+`flock /tmp/qingming_charbuild.lock node tools/clip_split.mjs <name>`. `char_lod.mjs` does this itself.
+`node tools/cast_clips_check.mjs` FAILs on a stale split. A stale split still works on the page, which loads that
+character's full GLB, but it costs the bytes. Likewise `tools/char_lod.mjs <glb>` (the far body) under the lock after anything else rewrites a character or animal GLB.
 
 Meshy keeps a text-to-motion task for **3 days**, so a `motion:` retarget only works inside that window; a `t2m:` clip
 needs only the take's FBX, downloaded into `gen/` at once, so it never expires. Retargeted clips stay in `gen/` for
@@ -208,7 +221,23 @@ Method and per-prop reviews: `gen/expand/workshop_props_notes.md`.
   geoms, one per grip: `long_pole` (`stand_pole`), `long_pole_low` (`pole_boat`), `long_pole_mid` (`fend_pole`).
 - **Carried children** are drawn by their carrier's prop on the clip that holds it: `child_in_arms` (woman
   `hold_child`), `child_on_shoulders` (townsman `carry_child`), `child_on_back` (idler `carry_child`), `child_on_lap`
-  (woman `sit_hold_child`).
+  (woman `sit_hold_child`). Since 2026-10-13 each is the real rigged child posed onto its carrier, not kit primitives
+  (records: `gen/details/children/notes.md`):
+  - `node tools/carry_pose.mjs <prop|all> [--search]`, spec `gen/props/carry.json`: the child decimated to ~2000 tris,
+    placed by a recipe per support (back, shoulders, arms, lap) and its limbs solved by IK onto contact sites snapped on
+    the carrier's posed body; contact flattening; a seeded search over the recipe's numbers on the whole cycle. It
+    writes `gen/props/<prop>.glb` (posed in the carrier's frame: `at: "root"`) and the props.json binding (`t`,
+    `texture_from`: the child's body texture in a material of its own, so the KTX2 copy is the child's own).
+  - Each child part follows the carrier bones under its contacts (`_CARRY_JOINTS`/`_CARRY_WEIGHTS`), blending only
+    bones that move alike at the bind time: the page skins a blend with the bind-space inverse, and unlike bones (both
+    forearms) swing it far.
+  - `node tools/carry_check.mjs` must PASS on the shipped GLBs: gaps 2 cm at the bind time and 4 cm over the cycle,
+    floating 3 cm, penetration 1 cm; it also prints the departure from rigid and the largest edge stretch.
+  - A carrier embeds the child's texture: rebuild the carriers after the child's texture changes (eyes, recolours).
+  - Where the carry take moves the supports against the spine (her forearm, his hands and head), the carrier plays
+    a shared IK variant that freezes them on the spine (`hold_child~child`: ik_variants `child_arms`;
+    `carry_child~child`: `child_shoulders`; `freeze` + `damp` + `trim`). The child then rides the spine rigidly, and
+    the figure's `do` is switched through the section's contact_fixes.json.
 - **A prop bound to one clip can ride another only where its bone holds still:** check it with `char_props.py review`
   at several times. To hold a figure in a clip's calm opening, use a step of `[clip, 1]` (people.js restarts the clip at
   a random point of its first 3 s at every step).

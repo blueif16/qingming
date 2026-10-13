@@ -1,5 +1,9 @@
 # Next session: start here (written 2026-10-13, after round 2 and performance batch 1)
 
+**Update 2026-10-13 ~07:45: performance batch 2 is done and live** (record and next steps:
+`gen/perf/batch2/notes.md`, "Next"; the details pass: `gen/details/progress.md`). The prompt below was batch 2's;
+keep it as history. The open list and "Next" further down still stand, minus what batch 2 did.
+
 Paste the prompt below into a new session.
 
 ---

@@ -1071,8 +1071,9 @@ def stool(c, h=0.42, s=0.32):
     ki.stool(c.x, c.y, c.z(), h=h, s=s)
 
 
-def chair(c, facing=0.0, back_h=1.0, kind="slats", lod=0):
-    chair_body(c.x, c.y, c.z(), c.yaw(facing), c.rng, back_h=back_h, kind=kind, lod=lod)
+def chair(c, facing=0.0, back_h=1.0, kind="slats", lod=0, seat=0.46):
+    # seat: its top's height (choice; fitted to its sitter's seat point by the details pass)
+    chair_body(c.x, c.y, c.z(), c.yaw(facing), c.rng, back_h=back_h, seat=seat, kind=kind, lod=lod)
 
 
 def parasol(c, R, hub_h, hub_off=(0.0, 0.0), tilt=(0.0, 0.0), ribs=16, rise=0.3, mat="oilpaper", vase=False):

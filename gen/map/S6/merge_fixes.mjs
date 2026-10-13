@@ -161,5 +161,14 @@ setSup('S6.fig.child_on_back_2795', 'carried on back: S6.fig.man_carrying_child_
 setSup('S6.fig.well_rope_drawer_2097', 'well cover: S6.str.square_well_2000 (its back beam)');
 setSup('S6.fig.well_bucket_lifter_2032', 'well cover: S6.str.square_well_2000 (its back beam)');
 
+// Q8 (2026-10-13, gen/life/q8_figures.md): 名画记 40's fat owner at the meat shop's door is the man on the high seat: his reading added (what, src, note), not a new entity
+{
+  const e = get("S6.fig.seated_man_highseat_4070");
+  if (e && !/ Q8 \(2026-10-13/.test(e.note || '')) {
+    Object.assign(e, {"what":"Man in a broad-brimmed dark hat and dark jacket, broad in the body, sitting high on a tall chair at the meat shop's door behind the oval tray of goods, facing the viewer. The stall keeper, or (名画记 40) the meat shop's fat owner, sitting at his door while his hired hand works the chopping block.","src":"名画记 40 (城里的商铺: 店内有一人在操刀，大概是伙计；另一人则坐在门首板凳上，身体肥胖，应是老板)"});
+    e.note = (e.note || '') + " Q8 (2026-10-13, gen/life/q8_figures.md): 名画记 40's fat owner, who sits on a bench at the meat shop's door while a hired hand works the knife, is this figure, not a new one. He is the only seated figure at the shop's front: just east of the chopping block (S6.prop.chopping_block_3963) and the butcher (S6.fig.butcher_3920), in front of the junction of the corner shop's counter and the 孫羊店 building, about 1.9 m out from the shop floor's line (v ~790). He is broad in the body with a round face, and the restyle paints him fat too. Crops gen/life/q8/s6_meatshop_wide.jpg, s6_highseat_z2.jpg.";
+  }
+}
+
 for (const [f, p] of Object.entries(parts)) fs.writeFileSync(new URL(f, dir), JSON.stringify(p, null, 1) + '\n');
 console.log('fixes applied');

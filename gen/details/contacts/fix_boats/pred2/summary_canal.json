@@ -1,0 +1,964 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T11:07:24.331Z",
+ "sections": [
+  "canal"
+ ],
+ "owners_load_ms": 251,
+ "seconds": 12.317,
+ "people": 140,
+ "checked": 140,
+ "crew_not_covered": 0,
+ "figures_failing": 32,
+ "fails": 79,
+ "by_class": {
+  "contact:boat": 16,
+  "contact:vehicle": 13,
+  "stance_soles (placement)": 9,
+  "deck_support": 8,
+  "contact:rail": 7,
+  "contact:pole": 4,
+  "contact:table": 4,
+  "pole_through": 3,
+  "contact:reach": 2,
+  "contact:seat (no seat)": 2,
+  "contact:floor (placement)": 2,
+  "contact:structure": 2,
+  "contact:animal": 2,
+  "contact:floor": 1,
+  "head_inside": 1,
+  "site_inside": 1,
+  "contact:seat": 1,
+  "head_through": 1
+ },
+ "by_clip": {
+  "push:contact:vehicle": 12,
+  "work_sweep:contact:boat": 12,
+  "stance_soles": 9,
+  "deck_support": 8,
+  "fend_pole:contact:reach": 2,
+  "fend_pole:contact:pole": 2,
+  "fend_pole:pole_through": 2,
+  "reach:contact:table": 2,
+  "sit:contact:floor": 2,
+  "climb_ladder:contact:structure": 2,
+  "lean_chin:contact:rail": 2,
+  "haul_line:contact:boat": 2,
+  "push_flank:contact:animal": 2,
+  "pole_boat:contact:pole": 2,
+  "lean_over:contact:rail": 2,
+  "lean_over_seated:contact:table": 2,
+  "reach_over_rail:contact:rail": 1,
+  "push:contact:boat": 1,
+  "tow_walk:contact:boat": 1,
+  "sit_floor:contact:floor": 1,
+  "sit:contact:seat": 1,
+  "sit_talk~soles:head_inside": 1,
+  "sit_talk~soles:site_inside": 1,
+  "sit~soles:contact:seat": 1,
+  "pour_bucket:contact:rail": 1,
+  "look:head_through": 1,
+  "pole_boat:pole_through": 1,
+  "push~barrow_pusher_25532:contact:vehicle": 1,
+  "lean_chin~man_at_railing_27650:contact:rail": 1,
+  "lean_over_seated:contact:seat": 1
+ },
+ "table": {
+  "canal": {
+   "contact:reach": {
+    "n": 2,
+    "worst": 1.328,
+    "worst_id": "boatman_pole_20495"
+   },
+   "contact:pole": {
+    "n": 4,
+    "worst": 0.357,
+    "worst_id": "boatman_poling_24730"
+   },
+   "pole_through": {
+    "n": 3,
+    "worst": 1,
+    "worst_id": "boatman_poling_24730"
+   },
+   "contact:rail": {
+    "n": 7,
+    "worst": 0.6,
+    "worst_id": "boatman_leaning_20558"
+   },
+   "stance_soles (placement)": {
+    "n": 9,
+    "worst": 0.224,
+    "worst_id": "windlass_man_aft_24660"
+   },
+   "deck_support": {
+    "n": 8,
+    "worst": -0.284,
+    "worst_id": "man_leaning_casks_25650"
+   },
+   "contact:table": {
+    "n": 4,
+    "worst": 0.6,
+    "worst_id": "boatman_standing_20615"
+   },
+   "contact:vehicle": {
+    "n": 13,
+    "worst": 2.024,
+    "worst_id": "tracker_rear_22172"
+   },
+   "contact:boat": {
+    "n": 16,
+    "worst": 2.786,
+    "worst_id": "sweepman_leaning_on_loom_22285"
+   },
+   "contact:floor": {
+    "n": 1,
+    "worst": 0.041,
+    "worst_id": "man_seated_canopy_21120"
+   },
+   "contact:seat (no seat)": {
+    "n": 2,
+    "worst": 0.427,
+    "worst_id": "boatman_seated_open_boat_22060"
+   },
+   "contact:floor (placement)": {
+    "n": 2,
+    "worst": -0.126,
+    "worst_id": "boatman_seated_open_boat_22060"
+   },
+   "contact:structure": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "boatman_on_ladder_23275"
+   },
+   "head_inside": {
+    "n": 1,
+    "worst": 0.068,
+    "worst_id": "shop_man_dark_cap_23963"
+   },
+   "site_inside": {
+    "n": 1,
+    "worst": 0.066,
+    "worst_id": "shop_man_dark_cap_23963"
+   },
+   "contact:seat": {
+    "n": 1,
+    "worst": -0.026,
+    "worst_id": "doorway_man_topknot_24088"
+   },
+   "head_through": {
+    "n": 1,
+    "worst": 0.175,
+    "worst_id": "bowman_under_hood_23660"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": null,
+    "worst_id": null
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_R",
+   "value": 2.786,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_leaning_on_loom_22285",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_L",
+   "value": 2.594,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_leaning_on_loom_22285",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "haul_line",
+   "site": "palm_L",
+   "value": 2.265,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|line_shroud_s"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_hauling_mast_24140",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_L",
+   "value": 2.249,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_capped_22242",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "haul_line",
+   "site": "palm_R",
+   "value": 2.179,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|line_shroud_s"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_hauling_mast_24140",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 2.024,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_rear_22172",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 1.786,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_rear_22172",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_R",
+   "value": 1.5,
+   "kind": "crew",
+   "with": [],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_capped_22242",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 1.388,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_broad_hat_22057",
+   "section": "canal",
+   "model": "straw_hat"
+  },
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole",
+   "site": "pole_far",
+   "value": 1.328,
+   "kind": "crew",
+   "with": [
+    "water"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_pole_20495",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 1.249,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_broad_hat_22057",
+   "section": "canal",
+   "model": "straw_hat"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 1.053,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_hatched_coat_21994",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 1.003,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715|body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "figure_in_windlass_24713",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "pole_through",
+   "value": 1,
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715|body"
+   ],
+   "clip": "pole_boat",
+   "note": "the pole passes through S2.veh.boat_cargo_hooded_bow_23715|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_poling_24730",
+   "section": "canal",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 0.974,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_hatched_coat_21994",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_L",
+   "value": 0.933,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_capped_22208",
+   "section": "canal",
+   "model": "inspector"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_L",
+   "value": 0.864,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_upright_22168",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.846,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_bent_21939",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_R",
+   "value": 0.837,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_leaning_back_22110",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_L",
+   "value": 0.824,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_leaning_back_22110",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole",
+   "site": "pole_far",
+   "value": 0.822,
+   "kind": "crew",
+   "with": [
+    "water"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_fending_off_23688",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 0.817,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_bent_21939",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_R",
+   "value": 0.8,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_capped_22208",
+   "section": "canal",
+   "model": "inspector"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_L",
+   "value": 0.797,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_head_back_22132",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_R",
+   "value": 0.767,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_head_back_22132",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "work_sweep",
+   "site": "palm_R",
+   "value": 0.73,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_sweep_22000|sweep"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "sweepman_upright_22168",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "pole_through",
+   "value": 0.683,
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body"
+   ],
+   "clip": "fend_pole",
+   "note": "the pole passes through S2.veh.boat_towed_mast_23632|body in 68% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_fending_off_23688",
+   "section": "canal",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.656,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_lead_21867",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 0.655,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|body",
+    "S2.veh.boat_towed_mast_23632|line_backstay_p",
+    "S2.veh.boat_towed_mast_23632|line_backstay_s",
+    "S2.veh.boat_towed_mast_23632|line_forestay",
+    "S2.veh.boat_towed_mast_23632|line_shroud_p",
+    "S2.veh.boat_towed_mast_23632|line_shroud_s",
+    "S2.veh.boat_towed_mast_23632|line_tow",
+    "S2.veh.boat_towed_mast_23632|mast"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t20"
+   ],
+   "id": "tracker_lead_21867",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "pole_through",
+   "value": 0.65,
+   "with": [
+    "S2.veh.boat_mat_cargo_21055|body"
+   ],
+   "clip": "fend_pole",
+   "note": "the pole passes through S2.veh.boat_mat_cargo_21055|body in 65% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_pole_20495",
+   "section": "canal",
+   "model": "boatman",
+   "kind": "crew"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 139,
+ "contacts_failing": 54
+}

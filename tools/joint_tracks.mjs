@@ -28,42 +28,32 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { QM, THREE, loadModels } from './lib/three_node.mjs';
+import { bodyMeshes, skinned, defineSites, sampleSites } from './lib/body_sites.mjs';
 
-const VERSION = 5;
+const VERSION = 7; // 6: each clip records the sole_m it was measured with and whether its hips track is shared; 7: and whether the page used its clip_meta entry at all (meta_stale)
 const HZ = 10, ANIMAL_HZ = 2;
-const SEAT_R = 0.2; // the buttocks: hips and thigh vertices this close to the hips joint (the knees are further)
-const OUT = path.join(QM, 'gen/details/joints');
+// --engine proposed: measured as the page would draw it with the details pass's engine patch (tools/lib/three_node.mjs
+// applyProposed: clip_meta sole_m), into gen/details/joints_proposed/
+const ENGINE = (() => { const i = process.argv.indexOf('--engine'); return i >= 0 ? process.argv[i + 1] : 'page'; })();
+const OUT = path.join(QM, ENGINE === 'proposed' ? 'gen/details/joints_proposed' : 'gen/details/joints');
 const PUB = path.join(QM, 'web/public');
 const args = process.argv.slice(2);
 const force = args.includes('--force');
-const pos = args.filter((a) => !a.startsWith('--'));
+const pos = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--engine');
 const reg = JSON.parse(fs.readFileSync(path.join(PUB, 'assets/chars/characters.json'), 'utf8'));
 const beastReg = JSON.parse(fs.readFileSync(path.join(PUB, 'assets/animals/animals.json'), 'utf8'));
 const meta = JSON.parse(fs.readFileSync(path.join(PUB, 'assets/clip_meta.json'), 'utf8'));
 fs.mkdirSync(OUT, { recursive: true });
+// the page's own people.js does the sizing and the clip corrections: a change there (P1, 2026-10-13) redoes every track
+const PEOPLE_JS = crypto.createHash('sha256').update(fs.readFileSync(path.join(QM, 'web/src/people.js'))).digest('hex');
 
 const r3 = (x) => Math.round(x * 1000) / 1000;
 const key = (file, info) => crypto.createHash('sha256').update(fs.readFileSync(path.join(PUB, file)))
-  .update(JSON.stringify(meta[file] || {})).update(JSON.stringify([info.height_m, info.top_m, VERSION])).digest('hex').slice(0, 16);
-
-function bodyMeshes(scene) {
-  const out = [];
-  scene.traverse((o) => { if (o.isSkinnedMesh && !/^(tack|prop)_/.test(o.name) && !/^(tack|prop)_/.test(o.parent?.name || '')) out.push(o); });
-  return out;
+  .update(JSON.stringify(meta[file] || {})).update(JSON.stringify([info.height_m, info.top_m, VERSION, ENGINE])).update(PEOPLE_JS).update(ENGINE === 'proposed' ? JSON.stringify(groundOf(file)) : '').digest('hex').slice(0, 16);
+function groundOf(file) {
+  const gf = path.join(QM, 'gen/details/contacts/clip_ground.json');
+  return fs.existsSync(gf) ? JSON.parse(fs.readFileSync(gf, 'utf8')).files[file] || null : null;
 }
-function dominantBone(mesh, i) {
-  const si = mesh.geometry.attributes.skinIndex, sw = mesh.geometry.attributes.skinWeight;
-  let best = -1, bw = -1;
-  for (let k = 0; k < 4; k++) { const w = sw.getComponent(i, k); if (w > bw) { bw = w; best = si.getComponent(i, k); } }
-  return mesh.skeleton.bones[best]?.name;
-}
-const _v = new THREE.Vector3();
-function skinned(mesh, i, out = new THREE.Vector3()) {
-  mesh.getVertexPosition(i, out);
-  return out.applyMatrix4(mesh.matrixWorld);
-}
-// a bone-fixed site: the bone and the point in its local frame
-function fixedSite(bone, worldPoint) { return { bone, local: bone.worldToLocal(worldPoint.clone()) }; }
 
 async function character(name) {
   const info = reg[name];
@@ -73,86 +63,22 @@ async function character(name) {
     try { if (JSON.parse(fs.readFileSync(file, 'utf8')).key === k) return { name, cached: true }; } catch { /* redo */ }
   }
   const t0 = Date.now();
-  const models = await loadModels([name], reg, meta);
+  const models = await loadModels([name], reg, meta, { engine: ENGINE });
   const m = models[name], scene = m.scene;
   scene.updateMatrixWorld(true);
-  const B = (n) => scene.getObjectByName(n);
-  const meshes = bodyMeshes(scene);
-  // vertex sets by dominant bone (rest pose)
-  const sets = {};
-  for (const mesh of meshes) {
-    const n = mesh.geometry.attributes.position.count;
-    for (let i = 0; i < n; i++) { const b = dominantBone(mesh, i); (sets[b] ||= []).push([mesh, i]); }
-  }
-  const pick = (re) => Object.entries(sets).filter(([b]) => re.test(b)).flatMap(([, v]) => v);
-  const restPts = (list) => list.map(([mesh, i]) => skinned(mesh, i));
-  const defs = {}, fixed = {};
-  for (const side of ['Left', 'Right']) {
-    const s = side[0];
-    // palm: the middle of the hand's cross-section at 45% of its length from the wrist joint (the hand's own vertices,
-    // measured along the forearm -> hand axis), fixed in the hand bone
-    const hv = restPts(sets[`${side}Hand`] || []);
-    const hj = B(`${side}Hand`).getWorldPosition(new THREE.Vector3()), fj = B(`${side}ForeArm`).getWorldPosition(new THREE.Vector3());
-    const ax = hj.clone().sub(fj).normalize();
-    const hlen = Math.max(0.05, ...hv.map((p) => p.clone().sub(hj).dot(ax)));
-    const sec = hv.filter((p) => Math.abs(p.clone().sub(hj).dot(ax) - 0.45 * hlen) < 0.015);
-    const c = sec.length ? sec.reduce((a, p) => a.add(p), new THREE.Vector3()).multiplyScalar(1 / sec.length) : hj.clone().addScaledVector(ax, 0.08);
-    fixed[`palm_${s}`] = fixedSite(B(`${side}Hand`), c);
-    defs[`palm_${s}`] = { bone: `${side}Hand`, offset_m: r3(c.distanceTo(hj)), hand_len_m: r3(hlen), from: `centre of the hand's cross-section at 45% of its length (${sec.length} of ${hv.length} hand vertices)` };
-    // shoulder top: the mesh top above lerp(neck, arm, 0.55), fixed in the shoulder bone
-    const neck = B('neck').getWorldPosition(new THREE.Vector3()), arm = B(`${side}Arm`).getWorldPosition(new THREE.Vector3());
-    const p0 = neck.clone().lerp(arm, 0.55);
-    let top = -Infinity;
-    for (const mesh of meshes) for (let i = 0; i < mesh.geometry.attributes.position.count; i++) {
-      if (!/Shoulder$|Arm$|^Spine|^neck$/.test(dominantBone(mesh, i))) continue; // not the head, a hat brim or a bun
-      const p = skinned(mesh, i, _v);
-      if (Math.hypot(p.x - p0.x, p.z - p0.z) < 0.04 && p.y > p0.y - 0.05 && p.y < p0.y + 0.15) top = Math.max(top, p.y);
-    }
-    const st = new THREE.Vector3(p0.x, Number.isFinite(top) ? top : p0.y + 0.07, p0.z);
-    fixed[`shoulder_${s}`] = fixedSite(B(`${side}Shoulder`), st);
-    defs[`shoulder_${s}`] = { bone: `${side}Shoulder`, above_line_m: r3(st.y - p0.y), from: 'mesh top above lerp(neck, arm, 0.55)' };
-  }
-  // chest front: the top spine bone (the one just below the neck), the front-most vertex within 5 cm of its height
-  const spine = ['Spine', 'Spine01', 'Spine02'].map(B).filter(Boolean).sort((a, b) => b.getWorldPosition(new THREE.Vector3()).y - a.getWorldPosition(new THREE.Vector3()).y)[0];
-  const sy = spine.getWorldPosition(new THREE.Vector3());
-  let front = null;
-  for (const mesh of meshes) for (let i = 0; i < mesh.geometry.attributes.position.count; i++) {
-    const p = skinned(mesh, i, _v);
-    if (Math.abs(p.y - sy.y) < 0.05 && Math.abs(p.x - sy.x) < 0.08 && (!front || p.z > front.z)) front = p.clone();
-  }
-  fixed.chest_front = fixedSite(spine, front || sy.clone().add(new THREE.Vector3(0, 0, 0.12)));
-  defs.chest_front = { bone: spine.name, ahead_m: r3((front || sy).z - sy.z), from: 'front-most vertex at the top spine joint height' };
-  // back: the rear-most vertex at the same height (a back leaning on a wall or post); belly: the front-most vertex at
-  // the hips joint's height (the hips against a rail one bends over), fixed in the hips bone
-  let back = null, belly = null;
-  const hy0 = B('Hips').getWorldPosition(new THREE.Vector3());
-  for (const mesh of meshes) for (let i = 0; i < mesh.geometry.attributes.position.count; i++) {
-    const p = skinned(mesh, i, _v);
-    if (Math.abs(p.y - sy.y) < 0.05 && Math.abs(p.x - sy.x) < 0.08 && (!back || p.z < back.z)) back = p.clone();
-    if (Math.abs(p.y - hy0.y) < 0.04 && Math.abs(p.x - hy0.x) < 0.08 && (!belly || p.z > belly.z)) belly = p.clone();
-  }
-  fixed.back = fixedSite(spine, back || sy.clone().add(new THREE.Vector3(0, 0, -0.12)));
-  defs.back = { bone: spine.name, behind_m: r3(sy.z - (back || sy).z), from: 'rear-most vertex at the top spine joint height' };
-  fixed.belly = fixedSite(B('Hips'), belly || hy0.clone().add(new THREE.Vector3(0, 0, 0.12)));
-  defs.belly = { bone: 'Hips', ahead_m: r3((belly || hy0).z - hy0.z), from: 'front-most vertex at the hips joint height' };
-  // per-sample sets
-  const seatSet = pick(/^(Hips|LeftUpLeg|RightUpLeg)$/), headSet = pick(/^(Head|head_end|headfront)$/);
-  const footSet = { L: pick(/^Left(Foot|ToeBase)$/), R: pick(/^Right(Foot|ToeBase)$/) };
-  defs.seat = { from: `lowest of ${seatSet.length} hips/thigh vertices within ${SEAT_R} m (3D) of the hips joint: the buttocks` };
-  defs.sole_L = { from: `lowest of ${footSet.L.length} left foot/toe vertices` };
-  defs.sole_R = { from: `lowest of ${footSet.R.length} right foot/toe vertices` };
-  defs.head_top = { from: `highest of ${headSet.length} head vertices` };
-  defs.forearm_L = { from: 'midpoint LeftForeArm - LeftHand joints' };
-  defs.forearm_R = { from: 'midpoint RightForeArm - RightHand joints' };
-  defs.hips = { from: 'Hips joint' };
-  defs.elbow_L = { from: 'LeftForeArm joint' };
-  defs.elbow_R = { from: 'RightForeArm joint' };
-  const SITES = ['palm_L', 'palm_R', 'shoulder_L', 'shoulder_R', 'forearm_L', 'forearm_R', 'elbow_L', 'elbow_R', 'chest_front', 'back', 'belly', 'seat', 'sole_L', 'sole_R', 'head_top', 'hips'];
+  const S = defineSites(scene);
+  const { B, defs, SITES } = S;
   const rest = { height_box: null };
   const mixer = new THREE.AnimationMixer(scene);
   const clips = {};
   const w = new THREE.Vector3(), a = new THREE.Vector3(), b = new THREE.Vector3();
+  // people.js grounds a hips position array once (GROUNDED): a clip whose array is shared with another clip (the GLB
+  // writer merges identical accessors) gets whichever clip's lift came first, so its own sole_m can't apply
+  const hipsOwner = new Map();
   for (const clip of m.clips) {
+    const hipsV = clip.tracks.find((t) => /Hips\.position$/.test(t.name))?.values;
+    const sharedWith = hipsV && hipsOwner.has(hipsV) ? hipsOwner.get(hipsV) : null;
+    if (hipsV && !sharedWith) hipsOwner.set(hipsV, clip.name);
     const action = mixer.clipAction(clip).play();
     const n = Math.max(1, Math.floor(clip.duration * HZ) + 1);
     const tr = Object.fromEntries(SITES.map((s) => [s, []]));
@@ -163,37 +89,20 @@ async function character(name) {
       mixer.update(0);
       scene.updateMatrixWorld(true);
       ts.push(r3(t));
-      const put = (s, p) => tr[s].push(r3(p.x), r3(p.y), r3(p.z));
-      for (const [s, f] of Object.entries(fixed)) put(s, w.copy(f.local).applyMatrix4(f.bone.matrixWorld));
-      for (const s of ['L', 'R']) {
-        const side = s === 'L' ? 'Left' : 'Right';
-        put(`forearm_${s}`, B(`${side}ForeArm`).getWorldPosition(a).add(B(`${side}Hand`).getWorldPosition(b)).multiplyScalar(0.5));
-        put(`elbow_${s}`, B(`${side}ForeArm`).getWorldPosition(a));
-        let low = null;
-        for (const [mesh, vi] of footSet[s]) { const p = skinned(mesh, vi, w); if (!low || p.y < low.y) low = p.clone(); }
-        put(`sole_${s}`, low || B(`${side}Foot`).getWorldPosition(a));
-      }
-      const hips = B('Hips').getWorldPosition(new THREE.Vector3());
-      let seat = null;
-      for (const [mesh, vi] of seatSet) {
-        const p = skinned(mesh, vi, w);
-        if (p.distanceTo(hips) <= SEAT_R && (!seat || p.y < seat.y)) seat = p.clone();
-      }
-      put('seat', seat || hips.clone().add(new THREE.Vector3(0, -0.1, 0)));
-      let top = null;
-      for (const [mesh, vi] of headSet) { const p = skinned(mesh, vi, w); if (!top || p.y > top.y) top = p.clone(); }
-      put('head_top', top || B('Head').getWorldPosition(a));
-      put('hips', hips);
+      sampleSites(S, (s, p) => tr[s].push(r3(p.x), r3(p.y), r3(p.z)));
     }
     action.stop();
     mixer.uncacheAction(clip);
     const cm = meta[info.file]?.[clip.name] || {};
-    clips[clip.name] = { duration: r3(clip.duration), n, k: cm.k ?? null, locomotion: !!clip.userData?.locomotion, hipsY: clip.userData?.hipsY ?? null, t: ts, sites: tr };
+    // people.js prepareClip uses a clip_meta entry (and so its sole_m) only when its hips key count and duration match
+    // the clip; a stale entry is ignored and the page measures the clip itself, so its sole_m never applies
+    const metaUsed = !!hipsV && cm.n === hipsV.length / 3 && Math.abs((cm.duration ?? -1) - clip.duration) < 1e-4;
+    clips[clip.name] = { duration: r3(clip.duration), n, k: cm.k ?? null, locomotion: !!clip.userData?.locomotion, hipsY: clip.userData?.hipsY ?? null, seatY: clip.userData?.seatY ?? null, sole_applied: clip.userData?.soleApplied ?? null, sole_m_tracked: metaUsed ? (cm.sole_m ?? 0) : null, meta_stale: !metaUsed, hips_shared_with: sharedWith, t: ts, sites: tr };
   }
   mixer.uncacheRoot(scene);
   const out = {
     about: 'tools/joint_tracks.mjs: contact sites per clip at 10 Hz in the root frame the page draws (x the figure\'s left, y up, z forward; metres at people.js size). sites.<site> is a flat [x, y, z, ...] per sample time t.',
-    name, file: info.file, key: k, version: VERSION, height_m: info.height_m, scale: r3(scene.scale.x * 1000) / 1000, hz: HZ, site_defs: defs, sites: SITES,
+    name, file: info.file, key: k, version: VERSION, engine: ENGINE, height_m: info.height_m, scale: r3(scene.scale.x * 1000) / 1000, hz: HZ, site_defs: defs, sites: SITES,
     motion: info.motion || [], clips, seconds: (Date.now() - t0) / 1000,
   };
   fs.writeFileSync(file, JSON.stringify(out));

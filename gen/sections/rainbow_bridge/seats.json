@@ -1,10 +1,10 @@
 {
  "about": "Seats the map lacks, for the area builder (map/BUILDING.md rule 3: the seat of a figure painted seated is part of it), written by gen/sections/rainbow_bridge/make_people.py from the layout, the bridge as built and the playing clip (rerun after a layout move). Keys are figure map IDs. X, D: the seat's centre, under the hips; H: the height it stands on (the ground 0, the built deck under it, the riverside hall's upper floor 3.83, a boat's deck or roof); seat_h: its top above H (0: the figure sits on the support itself); what: stool (build a small non-colliding stool inside the figure's entity), ground (a floor sit on the ground, a floor or the deck: nothing to build), boat (on a boat: the boat kit's deck grounds him, nothing to build); facing_deg, root [X, D, H] (where people.js stands the figure), clip; why. Figures on mapped benches, stools and chairs are not listed: their nudges put their hips on those props.",
  "S3.fig.parasol_stall_seller_20290": {
-  "X": 157.34,
-  "D": -1.69,
-  "H": 0,
-  "seat_h": 0.57,
+  "X": 157.4,
+  "D": -1.649,
+  "H": -0.014,
+  "seat_h": 0.559,
   "what": "stool",
   "facing_deg": 180,
   "root": [
@@ -14,7 +14,9 @@
   ],
   "clip": "robed_man sit_talk",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.57 m (robed_man's sit_talk puts the hip joint 0.63 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.57 m (robed_man's sit_talk puts the hip joint 0.63 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.545 m (the seat point of robed_man sit_talk at its placement, median 0.552, less 0.0075), centred under it at (157.4, -1.649), its base on ground at -0.014",
+  "base_H": -0.014,
+  "top_H": 0.545
  },
  "S3.fig.boatman_stern_seated_20285": {
   "X": 147.28,
@@ -51,10 +53,10 @@
   "why": "a floor sit (camel_driver sit_floor) on ground itself: nothing to build"
  },
  "S3.fig.far_stall_vendor_19436": {
-  "X": 133.26,
-  "D": 28.95,
-  "H": 0,
-  "seat_h": 0.43,
+  "X": 133.211,
+  "D": 29.138,
+  "H": -0.013,
+  "seat_h": 0.431,
   "what": "stool",
   "facing_deg": 270,
   "root": [
@@ -64,13 +66,15 @@
   ],
   "clip": "carter sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (carter's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (carter's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.418 m (the seat point of carter sit at its placement, median 0.43, less 0.0075), centred under it at (133.211, 29.138), its base on ground at -0.013",
+  "base_H": -0.013,
+  "top_H": 0.418
  },
  "S3.fig.stall_sitter_east_19297": {
-  "X": 141.28,
-  "D": 4.97,
-  "H": 0,
-  "seat_h": 0.43,
+  "X": 141.329,
+  "D": 4.934,
+  "H": -0.008,
+  "seat_h": 0.424,
   "what": "stool",
   "facing_deg": 90,
   "root": [
@@ -80,13 +84,15 @@
   ],
   "clip": "robed_man sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (robed_man's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (robed_man's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.416 m (the seat point of robed_man sit~soles at its placement, median 0.424, less 0.0075), centred under it at (141.329, 4.934), its base on ground at -0.008",
+  "base_H": -0.008,
+  "top_H": 0.416
  },
  "S3.fig.stall_bearded_man_19235": {
-  "X": 140.76,
-  "D": 5.31,
+  "X": 140.753,
+  "D": 5.292,
   "H": 0,
-  "seat_h": 0.4,
+  "seat_h": 0.349,
   "what": "stool",
   "facing_deg": 180,
   "root": [
@@ -96,13 +102,15 @@
   ],
   "clip": "storyteller sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (storyteller's sit puts the hip joint 0.41 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (storyteller's sit puts the hip joint 0.41 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.35 m (the seat point of storyteller sit~soles at its placement, median 0.362, less 0.0075), centred under it at (140.753, 5.292), its base on ground at 0",
+  "base_H": 0,
+  "top_H": 0.35
  },
  "S3.fig.stall_man_with_dish_19173": {
   "X": 139.55,
-  "D": 5.68,
-  "H": 0,
-  "seat_h": 0.4,
+  "D": 5.674,
+  "H": 0.026,
+  "seat_h": 0.322,
   "what": "stool",
   "facing_deg": 270,
   "root": [
@@ -112,13 +120,15 @@
   ],
   "clip": "scholar drink",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (scholar's drink puts the hip joint 0.45 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (scholar's drink puts the hip joint 0.45 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.348 m (the seat point of scholar drink at its placement, median 0.356, less 0.0075), centred under it at (139.55, 5.674), its base on ground at 0.026",
+  "base_H": 0.026,
+  "top_H": 0.348
  },
  "S3.fig.stall_sitter_west_19088": {
-  "X": 138.36,
-  "D": 5.07,
-  "H": 0,
-  "seat_h": 0.43,
+  "X": 138.409,
+  "D": 5.034,
+  "H": 0.019,
+  "seat_h": 0.425,
   "what": "stool",
   "facing_deg": 90,
   "root": [
@@ -128,13 +138,15 @@
   ],
   "clip": "robed_man sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (robed_man's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (robed_man's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.444 m (the seat point of robed_man sit~soles at its placement, median 0.452, less 0.0075), centred under it at (138.409, 5.034), its base on ground at 0.019",
+  "base_H": 0.019,
+  "top_H": 0.444
  },
  "S3.fig.seated_man_topknot_18352": {
-  "X": 129.09,
-  "D": 17.6,
-  "H": 3.16,
-  "seat_h": 0.4,
+  "X": 129.031,
+  "D": 17.622,
+  "H": 3.161,
+  "seat_h": 0.21,
   "what": "stool",
   "facing_deg": 270,
   "root": [
@@ -144,13 +156,15 @@
   ],
   "clip": "robed_man drink",
   "support": "bridge deck: 600 px west of the near edge",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (robed_man's drink puts the hip joint 0.44 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.4 m (robed_man's drink puts the hip joint 0.44 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 3.372 m (the seat point of robed_man sit~soles at its placement, median 3.379, less 0.0075), centred under it at (129.031, 17.622), its base on S3.str.rainbow_bridge at 3.161",
+  "base_H": 3.161,
+  "top_H": 3.372
  },
  "S3.fig.seated_man_cap_18282": {
-  "X": 128.02,
-  "D": 17.39,
-  "H": 2.58,
-  "seat_h": 0.46,
+  "X": 128.012,
+  "D": 17.252,
+  "H": 2.515,
+  "seat_h": 0.617,
   "what": "stool",
   "facing_deg": 0,
   "root": [
@@ -160,7 +174,9 @@
   ],
   "clip": "scholar sit",
   "support": "bridge deck: 650 px west of the near edge",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's sit puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's sit puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 3.133 m (the seat point of scholar sit at its placement, median 3.14, less 0.0075), centred under it at (128.012, 17.252), its base on S3.str.rainbow_bridge at 2.515",
+  "base_H": 2.515,
+  "top_H": 3.133
  },
  "S3.fig.passenger_seated_18147": {
   "X": 117.07,
@@ -181,10 +197,10 @@
   "why": "seated on boat deck: S3.veh.boat_mat_cabin_18005 (a floor sit): the boat kit's deck grounds him and he rides with the boat; nothing to build"
  },
  "S3.fig.display_seller_18058": {
-  "X": 123.31,
-  "D": 7.22,
-  "H": 0,
-  "seat_h": 0.43,
+  "X": 123.333,
+  "D": 7.225,
+  "H": -0.013,
+  "seat_h": 0.428,
   "what": "stool",
   "facing_deg": 0,
   "root": [
@@ -194,13 +210,15 @@
   ],
   "clip": "fortune_teller sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (fortune_teller's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (fortune_teller's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.414 m (the seat point of fortune_teller sit at its placement, median 0.422, less 0.0075), centred under it at (123.333, 7.225), its base on ground at -0.013",
+  "base_H": -0.013,
+  "top_H": 0.414
  },
  "S3.fig.far_bank_seated_17922": {
-  "X": 107.91,
-  "D": 33.31,
-  "H": 0,
-  "seat_h": 0.43,
+  "X": 107.917,
+  "D": 33.305,
+  "H": -0.037,
+  "seat_h": 0.436,
   "what": "stool",
   "facing_deg": 270,
   "root": [
@@ -210,13 +228,15 @@
   ],
   "clip": "camel_driver sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (camel_driver's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (camel_driver's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.399 m (the seat point of camel_driver sit at its placement, median 0.407, less 0.0075), centred under it at (107.917, 33.305), its base on ground at -0.037",
+  "base_H": -0.037,
+  "top_H": 0.399
  },
  "S3.fig.man_seen_from_behind_17865": {
-  "X": 121.61,
-  "D": 5.9,
-  "H": 0,
-  "seat_h": 0.42,
+  "X": 121.64,
+  "D": 5.908,
+  "H": -0.018,
+  "seat_h": 0.406,
   "what": "stool",
   "facing_deg": 90,
   "root": [
@@ -226,13 +246,15 @@
   ],
   "clip": "idler sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.42 m (idler's sit puts the hip joint 0.48 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.42 m (idler's sit puts the hip joint 0.48 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.388 m (the seat point of idler sit at its placement, median 0.396, less 0.0075), centred under it at (121.64, 5.908), its base on ground at -0.018",
+  "base_H": -0.018,
+  "top_H": 0.388
  },
  "S3.fig.seated_man_at_stand_17795": {
-  "X": 120.34,
-  "D": 6.06,
-  "H": 0,
-  "seat_h": 0.42,
+  "X": 120.331,
+  "D": 6.046,
+  "H": -0.025,
+  "seat_h": 0.413,
   "what": "stool",
   "facing_deg": 0,
   "root": [
@@ -242,7 +264,9 @@
   ],
   "clip": "inspector sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.42 m (inspector's sit puts the hip joint 0.48 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.42 m (inspector's sit puts the hip joint 0.48 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.388 m (the seat point of inspector sit at its placement, median 0.395, less 0.0075), centred under it at (120.331, 6.046), its base on ground at -0.025",
+  "base_H": -0.025,
+  "top_H": 0.388
  },
  "S3.fig.passenger_seated_17632": {
   "X": 108.49,
@@ -264,9 +288,9 @@
  },
  "S3.fig.far_bank_seated_17366": {
   "X": 99.09,
-  "D": 33.53,
-  "H": 0,
-  "seat_h": 0.44,
+  "D": 33.529,
+  "H": -0.002,
+  "seat_h": 0.438,
   "what": "stool",
   "facing_deg": 270,
   "root": [
@@ -276,13 +300,15 @@
   ],
   "clip": "hat_traveller sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.44 m (hat_traveller's sit puts the hip joint 0.5 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.44 m (hat_traveller's sit puts the hip joint 0.5 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.437 m (the seat point of hat_traveller sit at its placement, median 0.444, less 0.0075), centred under it at (99.09, 33.529), its base on ground at -0.002",
+  "base_H": -0.002,
+  "top_H": 0.437
  },
  "S3.fig.far_bank_seated_17333": {
-  "X": 98.6,
-  "D": 33.47,
-  "H": 0,
-  "seat_h": 0.46,
+  "X": 98.558,
+  "D": 33.456,
+  "H": 0.008,
+  "seat_h": 0.398,
   "what": "stool",
   "facing_deg": 270,
   "root": [
@@ -292,13 +318,15 @@
   ],
   "clip": "scholar sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's sit puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's sit puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.406 m (the seat point of scholar sit at its placement, median 0.414, less 0.0075), centred under it at (98.558, 33.456), its base on ground at 0.008",
+  "base_H": 0.008,
+  "top_H": 0.406
  },
  "S3.fig.parasol_seated_17322": {
-  "X": 115.09,
-  "D": 4.16,
-  "H": 0,
-  "seat_h": 0.43,
+  "X": 115.022,
+  "D": 4.111,
+  "H": -0.024,
+  "seat_h": 0.442,
   "what": "stool",
   "facing_deg": 0,
   "root": [
@@ -308,13 +336,15 @@
   ],
   "clip": "carter sit",
   "support": "ground",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (carter's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.43 m (carter's sit puts the hip joint 0.49 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 0.418 m (the seat point of carter sit at its placement, median 0.43, less 0.0075), centred under it at (115.022, 4.111), its base on ground at -0.024",
+  "base_H": -0.024,
+  "top_H": 0.418
  },
  "S3.fig.diner_cap_16077": {
-  "X": 102.69,
-  "D": -2.29,
-  "H": 3.83,
-  "seat_h": 0.58,
+  "X": 102.717,
+  "D": -2.271,
+  "H": 3.76,
+  "seat_h": 0.554,
   "what": "stool",
   "facing_deg": 315,
   "root": [
@@ -324,13 +354,15 @@
   ],
   "clip": "scholar sit_talk",
   "support": "upper floor: S3.bld.tavern_river_hall_15540",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.58 m (scholar's sit_talk puts the hip joint 0.65 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.58 m (scholar's sit_talk puts the hip joint 0.65 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 4.314 m (the seat point of scholar sit_talk at its placement, median 4.322, less 0.0075), centred under it at (102.717, -2.271), its base on S3.bld.tavern_river_hall_15540 at 3.76",
+  "base_H": 3.76,
+  "top_H": 4.314
  },
  "S3.fig.diner_hunched_16050": {
-  "X": 102.49,
-  "D": -3.13,
-  "H": 3.83,
-  "seat_h": 0.46,
+  "X": 102.491,
+  "D": -3.194,
+  "H": 3.76,
+  "seat_h": 0.414,
   "what": "stool",
   "facing_deg": 0,
   "root": [
@@ -340,7 +372,9 @@
   ],
   "clip": "scholar listen",
   "support": "upper floor: S3.bld.tavern_river_hall_15540",
-  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's listen puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips"
+  "why": "painted seated with no seat in the map: choice: a stool 0.32 m square, top 0.46 m (scholar's listen puts the hip joint 0.52 m above the soles, about 0.06 m above the seat), centred under his hips || fit (fix_standard rule 3): the top 4.173 m (the seat point of scholar listen~soles at its placement, median 4.181, less 0.0075), centred under it at (102.491, -3.194), its base on S3.bld.tavern_river_hall_15540 at 3.76",
+  "base_H": 3.76,
+  "top_H": 4.173
  },
  "S3.fig.boatman_bow_15688": {
   "X": 98.11,

@@ -1,0 +1,457 @@
+{
+ "budgets": {
+  "about": "The size budget per section that tools/budget_check.mjs checks (proposed by the engine round, 2026-10-12, from S6 inner_city, S5 gate and S4 outer_road part 1 as shipped with KTX2 textures, plus headroom). A new section must PASS before it joins the world. The page holds three sections at once (yours and each neighbour, web/src/world.js), so the window budget is what a phone holds: about 200 MB of sections, plus the fixed render targets (about 60 MB on a phone at the 1.5 pixel-ratio cap), plus 100-150 MB of JS, well under the 1-1.5 GB at which an iPhone Safari tab dies. Measured on the desktop GPU, where ETC1S copies become BC7 (8 bits a pixel; a phone gets ETC1, 4); the texture MB estimates use the phone's formats.",
+  "section": {
+   "download_mb": 9,
+   "download_mb_why": "the section's GLB, its layout/people/scene/backdrop JSON, its panels and the tree cards it plants (KTX2 where adopted): 4.8 / 7.7 / 7.5 MB now, the cards 2.5-5.4 of it",
+   "download_with_shared_mb": 28,
+   "download_with_shared_mb_why": "plus the kit swatches its GLB uses and every character and animal it casts (GLB + KTX2 copies): 15.3 / 16.0 / 16.4 MB now; the first visit's worst case, shared things come from cache after. Raised from 20 to 28 by the lead, 2026-10-12 (round 2): the river sections cast 27+ models (boat crews), and each character now carries every take it plays (S2 25.1, S3 26.1 MB with the round-2 cast). The cast is shared and cached across sections, so this is a cold first visit's worst case; phone memory (the window budget) is the binding limit, not download",
+   "triangles_k": 130,
+   "triangles_k_why": "drawn triangles: 119.5k / 107.2k / 109.6k now; the web-scene skill's budget (about 38 per m2 at full detail, 130k for a 74 x 46 m section)",
+   "collider_triangles_k": 5,
+   "collider_triangles_k_why": "collider-only (hidden__) meshes: 0.6-1.2k now; invisible walls, trunks and ramps are boxes, not meshes",
+   "texture_own_mb": 24,
+   "texture_own_mb_why": "its panels and tree cards on the GPU (KTX2): 7.8 / 18.3 / 15.0 MB now; 69 MB for the gate as webp, so a section that ships cards without running tools/ktx2.mjs fails here",
+   "people": null,
+   "people_why": "every painted figure and animal (map/BUILDING.md): the painting sets the number, reported only (197 / 93 / 81 now)",
+   "draw_calls": 330,
+   "draw_calls_why": "all passes (colour, ink normals, shadow) at its worst camera spot, alone: 278 / 224 / 215 now",
+   "gpu_mb": 75,
+   "gpu_mb_why": "measured alone in a headless load (web/src/gpumem.js) once the crowd's bakes are done, minus the fixed render targets: 59.7 / 46.7 / 49.4 MB now (122-131 MB as webp)"
+  },
+  "window": {
+   "gpu_mb": 200,
+   "gpu_mb_why": "the most three neighbouring sections take together (each measured alone, so characters and kit shared between them are counted twice: an upper bound): 156 MB now"
+  },
+  "exceptions": {
+   "rainbow_bridge": {
+    "gpu_mb": 82,
+    "gpu_mb_why": "80.17 MB alone (2026-10-12): 233 people and animals, the most of any section, and the bridge's 73 deck figures; the cast's bone bakes dominate. The window budget (three neighbours, 200 MB) still applies"
+   }
+  }
+ },
+ "rows": [
+  {
+   "name": "city_end",
+   "people": 18,
+   "download": {
+    "own": 3.3174219131469727,
+    "glb": 0.80804443359375,
+    "json": 0.0570831298828125,
+    "panels": 0,
+    "cards": 2.45229434967041,
+    "kit": 1.0412235260009766,
+    "cast": 4.240955352783203,
+    "castFull": 8.407234191894531,
+    "castSplit": 11
+   },
+   "triangles": {
+    "drawn": 48000,
+    "collider": 476
+   },
+   "textures": {
+    "own": 6.974609375,
+    "kit": 3.4999999999999996,
+    "cast": 5.898437499999999
+   },
+   "geometryMB": 1.6090660095214844,
+   "castN": 13,
+   "cast": [
+    "robed_man",
+    "child",
+    "idler",
+    "camel_driver",
+    "scholar",
+    "woman_pale",
+    "fortune_teller",
+    "townsman",
+    "official_rider",
+    "groom",
+    "dark_hat",
+    "horse_white",
+    "bird"
+   ]
+  },
+  {
+   "name": "inner_city",
+   "people": 197,
+   "download": {
+    "own": 4.945234298706055,
+    "glb": 2.0104942321777344,
+    "json": 0.25649356842041016,
+    "panels": 0.20263385772705078,
+    "cards": 2.4756126403808594,
+    "kit": 1.064488410949707,
+    "cast": 9.723423957824707,
+    "castFull": 13.389866828918457,
+    "castSplit": 18
+   },
+   "triangles": {
+    "drawn": 118492,
+    "collider": 616
+   },
+   "textures": {
+    "own": 7.765299479166667,
+    "kit": 3.4999999999999996,
+    "cast": 9.264322916666666
+   },
+   "geometryMB": 4.095745086669922,
+   "castN": 22,
+   "cast": [
+    "porter",
+    "idler",
+    "scholar",
+    "carter",
+    "archer",
+    "sightseer",
+    "townsman",
+    "child",
+    "bearer",
+    "camel_driver",
+    "official",
+    "elder",
+    "woman",
+    "inspector",
+    "butcher",
+    "storyteller",
+    "monk",
+    "child_robed",
+    "donkey",
+    "horse",
+    "mule",
+    "dog"
+   ]
+  },
+  {
+   "name": "gate",
+   "people": 93,
+   "download": {
+    "own": 7.71697998046875,
+    "glb": 1.6563301086425781,
+    "json": 0.14603614807128906,
+    "panels": 0.6671619415283203,
+    "cards": 5.2474517822265625,
+    "kit": 1.22021484375,
+    "cast": 5.925656318664551,
+    "castFull": 10.53505802154541,
+    "castSplit": 12
+   },
+   "triangles": {
+    "drawn": 107249,
+    "collider": 1240
+   },
+   "textures": {
+    "own": 18.284505208333332,
+    "kit": 2.9999999999999996,
+    "cast": 6.565104166666667
+   },
+   "geometryMB": 3.426881790161133,
+   "castN": 15,
+   "cast": [
+    "official",
+    "inspector",
+    "carter",
+    "townsman",
+    "camel_driver",
+    "sightseer",
+    "idler",
+    "child",
+    "archer",
+    "elder",
+    "hat_traveller",
+    "porter",
+    "donkey",
+    "pig",
+    "camel"
+   ]
+  },
+  {
+   "name": "outer_road",
+   "people": 81,
+   "download": {
+    "own": 7.566740989685059,
+    "glb": 1.75762939453125,
+    "json": 0.15384769439697266,
+    "panels": 0.2920980453491211,
+    "cards": 5.363165855407715,
+    "kit": 1.0535888671875,
+    "cast": 7.197114944458008,
+    "castFull": 12.03538703918457,
+    "castSplit": 13
+   },
+   "triangles": {
+    "drawn": 107640,
+    "collider": 814
+   },
+   "textures": {
+    "own": 14.9814453125,
+    "kit": 3.666666666666666,
+    "cast": 7.329427083333334
+   },
+   "geometryMB": 3.629749298095703,
+   "castN": 19,
+   "cast": [
+    "porter",
+    "monk",
+    "idler",
+    "child",
+    "townsman",
+    "woman",
+    "carter",
+    "robed_man",
+    "bearer",
+    "hat_traveller",
+    "soldier",
+    "inspector",
+    "fortune_teller",
+    "ox",
+    "horse",
+    "horse_white",
+    "donkey",
+    "pig",
+    "bird"
+   ]
+  },
+  {
+   "name": "outer_road_2",
+   "people": 76,
+   "download": {
+    "own": 4.889773368835449,
+    "glb": 2.8822479248046875,
+    "json": 0.1927947998046875,
+    "panels": 0.22600269317626953,
+    "cards": 1.5887279510498047,
+    "kit": 0.8240251541137695,
+    "cast": 7.751436233520508,
+    "castFull": 13.915384292602539,
+    "castSplit": 16
+   },
+   "triangles": {
+    "drawn": 121745,
+    "collider": 696
+   },
+   "textures": {
+    "own": 5.903971354166667,
+    "kit": 2.1666666666666665,
+    "cast": 8.162760416666666
+   },
+   "geometryMB": 4.120649337768555,
+   "castN": 21,
+   "cast": [
+    "official",
+    "idler",
+    "inspector",
+    "child",
+    "robed_man",
+    "scholar",
+    "sightseer",
+    "townsman",
+    "youth",
+    "storyteller",
+    "porter",
+    "carter",
+    "camel_driver",
+    "official_rider",
+    "boatman",
+    "straw_hat",
+    "ox",
+    "horse",
+    "donkey",
+    "mule",
+    "bird"
+   ]
+  },
+  {
+   "name": "rainbow_bridge",
+   "people": 241,
+   "download": {
+    "own": 8.045083999633789,
+    "glb": 3.0703659057617188,
+    "json": 0.520538330078125,
+    "panels": 0.44037437438964844,
+    "cards": 4.013805389404297,
+    "kit": 1.2226877212524414,
+    "cast": 12.480071067810059,
+    "castFull": 18.59120464324951,
+    "castSplit": 26
+   },
+   "triangles": {
+    "drawn": 107390,
+    "collider": 2340
+   },
+   "textures": {
+    "own": 13.271484375,
+    "kit": 3.9999999999999996,
+    "cast": 12.764322916666666
+   },
+   "geometryMB": 3.6867332458496094,
+   "castN": 29,
+   "cast": [
+    "robed_man",
+    "boatman",
+    "camel_driver",
+    "porter",
+    "townsman",
+    "scholar",
+    "carter",
+    "sightseer",
+    "idler",
+    "straw_hat",
+    "dark_hat",
+    "storyteller",
+    "youth",
+    "fortune_teller",
+    "groom",
+    "inspector",
+    "woman",
+    "child",
+    "elder",
+    "bearer",
+    "child_red",
+    "grain_porter",
+    "child_robed",
+    "tracker",
+    "hat_traveller",
+    "butcher",
+    "horse",
+    "horse_dark",
+    "donkey_dark"
+   ]
+  },
+  {
+   "name": "canal",
+   "people": 149,
+   "download": {
+    "own": 8.985350608825684,
+    "glb": 3.7348594665527344,
+    "json": 0.36968326568603516,
+    "panels": 0.3711814880371094,
+    "cards": 4.509626388549805,
+    "kit": 0.9741477966308594,
+    "cast": 10.576956748962402,
+    "castFull": 16.809603691101074,
+    "castSplit": 21
+   },
+   "triangles": {
+    "drawn": 115162,
+    "collider": 1604
+   },
+   "textures": {
+    "own": 14.429453531901041,
+    "kit": 2.833333333333333,
+    "cast": 10.6953125
+   },
+   "geometryMB": 4.032367706298828,
+   "castN": 27,
+   "cast": [
+    "robed_man",
+    "boatman",
+    "scholar",
+    "child",
+    "camel_driver",
+    "tracker",
+    "woman",
+    "straw_hat",
+    "idler",
+    "youth",
+    "townsman",
+    "inspector",
+    "carter",
+    "dark_hat",
+    "sightseer",
+    "official",
+    "storyteller",
+    "fortune_teller",
+    "grain_porter",
+    "butcher",
+    "porter",
+    "mule",
+    "horse",
+    "horse_dark",
+    "donkey",
+    "donkey_dark",
+    "bird"
+   ]
+  },
+  {
+   "name": "countryside",
+   "people": 42,
+   "download": {
+    "own": 7.550413131713867,
+    "glb": 1.3784408569335938,
+    "json": 0.1992807388305664,
+    "panels": 0.2391510009765625,
+    "cards": 5.7335405349731445,
+    "kit": 0.9973068237304688,
+    "cast": 5.826089859008789,
+    "castFull": 10.51640510559082,
+    "castSplit": 12
+   },
+   "triangles": {
+    "drawn": 93185,
+    "collider": 3442
+   },
+   "textures": {
+    "own": 17.853271484375,
+    "kit": 2.5,
+    "cast": 6.764322916666668
+   },
+   "geometryMB": 2.5278873443603516,
+   "castN": 16,
+   "cast": [
+    "farmer",
+    "scholar",
+    "child_robed",
+    "townsman",
+    "robed_man",
+    "camel_driver",
+    "straw_hat",
+    "bearer",
+    "porter",
+    "hat_traveller",
+    "idler",
+    "groom",
+    "buffalo",
+    "ox",
+    "horse",
+    "donkey"
+   ]
+  },
+  {
+   "name": "boats_test",
+   "people": 19,
+   "download": {
+    "own": 1.1458969116210938,
+    "glb": 1.1310615539550781,
+    "json": 0.014835357666015625,
+    "panels": 0,
+    "cards": 0,
+    "kit": 0.6159133911132812,
+    "cast": 2.9118757247924805,
+    "castFull": 7.389731407165527,
+    "castSplit": 7
+   },
+   "triangles": {
+    "drawn": 6254,
+    "collider": 736
+   },
+   "textures": {
+    "own": 0,
+    "kit": 1.6666666666666667,
+    "cast": 3.833333333333333
+   },
+   "geometryMB": 0.22455215454101562,
+   "castN": 7,
+   "cast": [
+    "scholar",
+    "townsman",
+    "carter",
+    "idler",
+    "porter",
+    "robed_man",
+    "sightseer"
+   ]
+  }
+ ],
+ "measured": {}
+}

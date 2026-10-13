@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is one tree painted in that style.\n\nPaint the SAME tree again as the bare framework a 3D model will be built from: exactly the same trunk, the same root flare, the same lean, the same forks, the same main limbs and the same knobbly heads, each in the same place, at the same size and angle as in image 2, in the same picture frame. Remove everything thin: every shoot, whip, twig, needle, leaf, bud and spray is gone. Each limb ends cleanly in its rounded knobbly head (or a short clean cut stub where the fine growth began), so only the solid wood is left.\n\nThis is a huge old pollard willow: a massive, short, swollen bole, dark and mottled, lumpy with burls, knots and hollows, its foot flaring into exposed roots, rising to one or a few knobbly clubbed pollard heads. Keep the bole's burls, hollows, roots and the clubbed heads exactly as large and lumpy as in image 2; the fountain of long whips that sprang from the heads is removed, leaving the heads bare and rounded.\n\nKeep image 2's bark exactly: its colours, mottling, knots, burls, hollows, hatching and dark-brown ink outlines, in true natural daylight colours of the real tree, never the yellowed silk of the scroll. Even soft light from the front, no cast shadows.\n\nThe whole tree from the foot of the trunk to the top of the highest limb, centred as in image 2, nothing cut off. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no shadow, no mist, no other objects, no text, no seal, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/willow_burl_7/00ae2515b767_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1536x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "512928441da0",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 43.2,
+ "attempts": 1,
+ "idempotency_key": "999d0c73-e62e-459d-a5f2-b2a128c4ce9c",
+ "request_id": "27794f66-03c0-48c8-b3f9-e82612dd011a",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4973,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 384
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4973,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 384
+  },
+  "total_tokens": 6557
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3-2.fycsai.com/v1/images/assets/af371534-cec6-4f5f-8b65-848460fc9c65"
+ ],
+ "files": [
+  "gen/details/trees/bare/willow_burl_7/512928441da0_0.png"
+ ]
+}

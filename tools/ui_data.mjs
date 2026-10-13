@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { scanBoxes } from './scan_box.mjs';
+import { talkData, fontCoverage } from './talk_data.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SEC = path.join(ROOT, 'sections');
@@ -62,7 +63,8 @@ const areaOf = new Map((scanIndex?.sections || []).map((s) => [s.folder, s.area]
 const box = scanBoxes(ROOT);
 const places = { about: 'Built by tools/ui_data.mjs from sections/*/places.json; do not edit. u, v: the landmark on the scan (scroll HUD marks).', regions: {}, landmarks: [] };
 const lore = { about: 'Built by tools/ui_data.mjs from sections/*/places.json and gen/ui/lore/colophons.json; do not edit. Fetched by the page only when a toast unfolds or the 圖志 journal opens.', regions: {}, landmarks: {}, colophons: null };
-const talk = { about: 'Built by tools/ui_data.mjs from sections/*/talk.json; do not edit.', scenes: [] };
+let talk = null;
+const talkText = new Set(), talkNames = new Set(); // the life pass: bubble lines and name tags (lazily fetched font subsets)
 const regionNames = new Map();
 // the English under the Chinese (prefs.lang 'zh_en'; the user, 2026-10-13): each shown field's `<field>_en` sibling
 const en = (o, ...ks) => Object.fromEntries(ks.filter((k) => o[`${k}_en`]).map((k) => [`${k}_en`, o[`${k}_en`]]));
@@ -138,35 +140,23 @@ for (const name of sections) {
       lore.landmarks[m.id] = { ...loreOf(m), img: fs.existsSync(path.join(ROOT, 'web/public', img)) ? img : null };
     }
   }
-  if (tk) {
-    for (const sc of tk.scenes || []) {
-      const tag = `${name} talk ${sc.id}`;
-      if (!sc.reading) fail(`${tag}: no reading`);
-      if (!sc.roles?.[sc.host]) fail(`${tag}: host ${sc.host} is not a role`);
-      look(`${tag} title`, sc.title, 8);
-      const roles = {};
-      for (const [k, r] of Object.entries(sc.roles || {})) {
-        const f = figs.get(r.fig);
-        const spec = P.figures?.[r.fig];
-        const walker = (P.walkers || []).some((w) => w.id === r.fig);
-        if (!f) fail(`${tag} role ${k}: ${r.fig} is not a painted figure of ${name}`);
-        else if (!spec && !walker) fail(`${tag} role ${k}: ${r.fig} is not placed by people.json`);
-        if (r.name) look(`${tag} role ${k} name`, r.name, 4);
-        if (!r.src) fail(`${tag} role ${k}: no src`);
-        roles[k] = { fig: r.fig, name: r.name || '', carriedBy: spec?.carried_by || null };
-      }
-      const beats = [];
-      for (const [i, b] of (sc.beats || []).entries()) {
-        const text = b.say ?? b.think;
-        if (!roles[b.who]) fail(`${tag} beat ${i + 1}: speaker ${b.who} is not a role`);
-        look(`${tag} beat ${i + 1}`, text, 16);
-        if (!b.src) fail(`${tag} beat ${i + 1}: no src (every line cites its reading)`);
-        beats.push({ who: b.who, text, think: b.think != null, optional: !!b.optional });
-      }
-      if (beats.length < 2 || beats.length > 6) fail(`${tag}: ${beats.length} beats (2-6)`);
-      const host = roles[sc.host] && where(roles[sc.host].fig);
-      talk.scenes.push({ id: sc.id, section: name, title: sc.title, host: sc.host, roles, beats, X: host?.X, D: host?.D });
-    }
+  // talk.json (near talks, chatter, barks): tools/talk_data.mjs, after this loop
+}
+// the life pass (gen/life/progress.md): near talks, chatter, barks, plot lines
+const td = talkData({ ROOT, sections, read, fail, note: (m) => notes.push(m), look, eager: shown, lazyText: talkText, lazyNames: talkNames });
+talk = td.bundle;
+// every glyph a bubble can show is in a QM Text subset (fonts.css), every name in QM Display's or QM Text's (the stack)
+{
+  const cov = fontCoverage(ROOT);
+  if (!cov) notes.push('no fonts.css yet: run uv run tools/font_subset.py');
+  else {
+    const text = cov.get('QM Text') || new Set(), disp = cov.get('QM Display') || new Set();
+    const miss = [...talkText].filter((c) => /[^\x00-\x7f]/.test(c) && !text.has(c.codePointAt(0)));
+    const missN = [...talkNames].filter((c) => /[^\x00-\x7f]/.test(c) && !text.has(c.codePointAt(0)) && !disp.has(c.codePointAt(0)));
+    // build writes the bundle the font subsets are cut from, so here a missing glyph is only a note (check fails)
+    const ffail = mode === 'build' ? (m) => notes.push(m) : fail;
+    if (miss.length) ffail(`talk: ${miss.length} glyphs in no QM Text subset (${miss.slice(0, 40).join('')}): run node tools/ui_data.mjs build, then uv run tools/font_subset.py`);
+    if (missN.length) ffail(`talk names: ${missN.length} glyphs in no font subset (${missN.join('')}): uv run tools/font_subset.py`);
   }
 }
 for (const [id, r] of Object.entries(lore.regions)) if (!r.long) fail(`region ${id} (${r.folders.join(', ')}): no long text in any of its places.json`);
@@ -198,7 +188,7 @@ for (const c of shown) loreShown.delete(c);
 
 for (const n of notes) console.log(`note  ${n}`);
 const nLong = Object.keys(lore.landmarks).length + Object.values(lore.regions).filter((r) => r.long).length;
-console.log(`places: ${Object.keys(places.regions).length} sections, ${new Set(Object.values(places.regions).map((r) => r.id)).size} regions, ${places.landmarks.length} landmarks; lore: ${nLong} long texts, ${lore.colophons?.items.length ?? 0} colophons; talk: ${talk.scenes.length} scenes, ${talk.scenes.reduce((a, s) => a + s.beats.length, 0)} beats; ${shown.size} glyphs at first load, ${loreShown.size} more in the lore`);
+console.log(`places: ${Object.keys(places.regions).length} sections, ${new Set(Object.values(places.regions).map((r) => r.id)).size} regions, ${places.landmarks.length} landmarks; lore: ${nLong} long texts, ${lore.colophons?.items.length ?? 0} colophons; talk: ${talk.scenes.length} scenes, ${talk.chatter.length} chatter groups (${talk.chatter.reduce((a, g) => a + g.exchanges.length, 0)} exchanges), ${talk.barks.length} barks, ${talk.threads.length} plot lines (${talk.threads.reduce((a, t) => a + t.steps.length, 0)} steps), ${td.nLines} lines, ${talkText.size} talk glyphs; ${shown.size} glyphs at first load, ${loreShown.size} more in the lore`);
 for (const f of fails) console.log(`FAIL  ${f}`);
 if (fails.length) process.exit(1);
 console.log('PASS');
@@ -206,11 +196,21 @@ if (mode === 'build') {
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'places.json'), JSON.stringify(places));
   fs.writeFileSync(path.join(OUT, 'lore.json'), JSON.stringify(lore));
-  fs.writeFileSync(path.join(OUT, 'talk.json'), JSON.stringify(talk));
+  // the talk: a small core at load (who-you-play kinds, the plot lines, which file holds each section's talk), and one
+  // file per section, fetched as that section streams in (ui/index.js), so no visitor parses the whole scroll's talk
+  const bySec = {};
+  for (const k of ['scenes', 'chatter', 'barks']) for (const x of talk[k]) ((bySec[x.section] ??= { scenes: [], chatter: [], barks: [] })[k]).push(x);
+  fs.mkdirSync(path.join(OUT, 'talk'), { recursive: true });
+  for (const f of fs.readdirSync(path.join(OUT, 'talk'))) if (f.endsWith('.json') && !bySec[f.slice(0, -5)]) fs.rmSync(path.join(OUT, 'talk', f));
+  for (const [sec, d] of Object.entries(bySec)) fs.writeFileSync(path.join(OUT, 'talk', `${sec}.json`), JSON.stringify({ about: talk.about, section: sec, ...d }));
+  fs.writeFileSync(path.join(OUT, 'talk.json'), JSON.stringify({ about: talk.about, kinds: talk.kinds, threads: talk.threads,
+    sections: Object.fromEntries(Object.keys(bySec).map((sec) => [sec, `assets/ui/talk/${sec}.json`])) }));
   const list = (set) => [...set].filter((c) => c.trim()).sort().join('') + '\n';
   fs.writeFileSync(path.join(ROOT, 'web/src/ui/strings.txt'), list(shown));
   fs.mkdirSync(path.join(ROOT, 'gen/ui/lore'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'gen/ui/lore/strings_lore.txt'), list(loreShown));
+  fs.mkdirSync(path.join(ROOT, 'gen/life'), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, 'gen/life/strings_talk.txt'), list(new Set([...talkText, ...talkNames])));
   const kb = (f) => `${(fs.statSync(path.join(OUT, f)).size / 1024).toFixed(1)} KB`;
-  console.log(`-> web/public/assets/ui/places.json (${kb('places.json')}), lore.json (${kb('lore.json')}), talk.json (${kb('talk.json')}), web/src/ui/strings.txt, gen/ui/lore/strings_lore.txt`);
+  console.log(`-> web/public/assets/ui/places.json (${kb('places.json')}), lore.json (${kb('lore.json')}), talk.json (${kb('talk.json')}) + talk/<section>.json, web/src/ui/strings.txt, gen/ui/lore/strings_lore.txt`);
 }

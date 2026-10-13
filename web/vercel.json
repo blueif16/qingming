@@ -9,6 +9,11 @@
       "src": "^/assets/tex/[^/]+\\.[0-9a-f]{8}\\.(?:webp|ktx2)$",
       "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
       "continue": true
+    },
+    {
+      "src": "^/(?:assets|basis)/.+\\.[0-9a-f]{8}\\.(?:glb|json|ktx2|webp|webm|svg|css|js|wasm)$",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
+      "continue": true
     }
   ]
 }

@@ -60,6 +60,9 @@ RUN_ON = 16.0
 S3_NEAR_SHORE = [(88.39, 14.11), (90.81, 13.54), (93.13, 13.25), (95.92, 13.15), (98.93, 13.05), (102.59, 12.08),
                  (105.5, 11.9)]
 TEA_FLOOR = 0.18               # the frame's support `tea house floor` (the platform's front face, 14 px)
+# part 1's S4.bld.south_hall_12350 floor boards' top (outer_road_scene.py: plinth 0.2 + boards 0.03, they collide), on
+# which S4b.prop.table_12645 stands under that hall's open east side (fix-s4b, details pass 2026-10-13)
+S4_HALL_FLOOR = 0.23
 
 
 # ---------------------------------------------------------------- the map
@@ -720,8 +723,9 @@ def props(rng):
             z = h(x, y)
         return x, y, z
 
-    def table(eid, L_, W_, yaw, ht=0.78):
-        x, y, z = at(eid)
+    def table(eid, L_, W_, yaw, ht=0.78, z=None):
+        x, y, z0 = at(eid)
+        z = z0 if z is None else z
         with sb.entity(eid):
             with k.placed(k.frame(x, y, z, yaw)):
                 k.table(-L_ / 2, -W_ / 2, L_ / 2, W_ / 2, 0.0, h=ht)
@@ -756,8 +760,10 @@ def props(rng):
     x, y, z = at("S4b.prop.table_bowls_13275")
     with sb.entity("S4b.prop.table_bowls_13275"):
         c, s = math.cos(math.radians(hy)), math.sin(math.radians(hy))
-        ki.counter((x - c * 0.6, y - s * 0.6), (x + c * 0.6, y + s * 0.6), z, 0.85, 0.45, rng)
-        ki.dishes(x, y, z + 0.85, rng, n=2)
+        # choice: 0.92 m high, fitted to the counter man's hands (idler lean_over, palms 0.91-0.96 m: fix-s4b, details
+        # pass; it was 0.85, his hands 6-13 cm over it and his arms short of it when the take rocks back)
+        ki.counter((x - c * 0.6, y - s * 0.6), (x + c * 0.6, y + s * 0.6), z, 0.92, 0.45, rng)
+        ki.dishes(x, y, z + 0.92, rng, n=2)
     x, y, z = at("S4b.prop.funnel_vessel_12884")
     with sb.entity("S4b.prop.funnel_vessel_12884"):
         k2.funnel_vessel(x, y, z, rng)
@@ -770,7 +776,8 @@ def props(rng):
     # the bottom shop (under part 1's south hall's east end; squared to the frame, choice)
     table("S4b.prop.table_12900", 1.1, 0.6, 0)
     table("S4b.prop.table_tray_12845", 1.0, 0.55, 0, ht=0.56 + 0.0)
-    bench("S4b.prop.bench_12835", 1.6, 0)
+    # choice: 0.41 m high, fitted to the faint sitter's seat point (idler sit: 0.415-0.44 m; fix-s4b, details pass)
+    bench("S4b.prop.bench_12835", 1.6, 0, ht=0.41)
     x, y, z = at("S4b.prop.jug_12833")
     with sb.entity("S4b.prop.jug_12833"):
         ki.ewer(x, y, z, h=0.32)
@@ -789,7 +796,12 @@ def props(rng):
     x, y, z = at("S4b.prop.counter_frame_12655")
     with sb.entity("S4b.prop.counter_frame_12655"):
         k2.counter_frame(x, y, z, 0, rng)
-    table("S4b.prop.table_12645", 0.8, 0.5, 0, ht=0.72)
+    # the child's table: part 1's child (S4.fig.child_at_table_12597) reaches onto its west end. It stands on part 1's
+    # south hall's floor (S4_HALL_FLOOR), not on S4b's ground 0.33 m under it, moved clear of that hall's east column
+    # (build_choices.json moves). choice: 0.6 x 0.5 m (its west end on the seam, as painted at u 12599), 0.6 m high: the
+    # top at the child's reach palms less 0.02 (fix-s4b, details pass 2026-10-13; it was 0.8 x 0.5 x 0.72 on S4b's
+    # ground, its top 0.40 m over the floor the child stands on and its legs inside the hall's plinth)
+    table("S4b.prop.table_12645", 0.6, 0.5, 0, ht=0.6, z=S4_HALL_FLOOR)
     # the crowd's square and the top street
     x, y, z = at("S4b.prop.goods_on_mat_13282")
     with sb.entity("S4b.prop.goods_on_mat_13282"):
@@ -854,7 +866,9 @@ def props(rng):
         ki.stool(x, y, z, h=0.4, s=0.34)
     chair("S4b.prop.chair_14458", 0, "plain")
     table("S4b.prop.table_14518", 0.75, 0.6, 0, ht=0.75)
-    stool("S4b.prop.stool_14595")
+    # choice: 0.225 m high, fitted under the stout man's seat (robed_man knee_on_stool~customer_white_14560 holds it 0.40-0.42 m
+    # up; his right heel drawn up on it, his left foot tucked under its board, 0.17 m clear of it; fix-s4b, details pass)
+    stool("S4b.prop.stool_14595", ht=0.225)
     table("S4b.prop.table_14630", 1.2, 0.6, 0)
     bench("S4b.prop.bench_14665", 1.8, 0)
     table("S4b.prop.table_14722", 0.9, 0.6, 0)
@@ -940,6 +954,10 @@ def seats(rng):
     n = 0
     for mid, s in json.load(open(SEATS_JSON, encoding="utf-8")).items():
         if mid not in FIG or str(s.get("what", "")).startswith(("boat", "cart", "ground", "none")):
+            continue
+        # a seat on a boat is the boat's (its deck moves): the stern boatman's stool stood still in the water at the
+        # boat's rest place (fix-s4b, details pass 2026-10-13; the boat kit's to build: fix-boats)
+        if str(s.get("support", "")).startswith(("boat", "cart")):
             continue
         seat_h = float(s.get("seat_h") or 0)
         if seat_h < 0.15:

@@ -1,0 +1,229 @@
+[
+ {
+  "label": "S4b: back ashore from the arched-awning boat",
+  "start": [
+   75.0,
+   18.0
+  ],
+  "legs": [
+   [
+    60,
+    1.5
+   ],
+   [
+    240,
+    2.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    16.5,
+    18.6
+   ],
+   "H": [
+    -0.1,
+    0.1
+   ]
+  },
+  "from": "sections/outer_road_2/walks.json"
+ },
+ {
+  "label": "S2: north bank W->E: across the unloading yard (the sack porters' paths), past the scaffold house and 沿河雅座 to the warehouse front",
+  "start": [
+   196.5,
+   21.0
+  ],
+  "legs": [
+   [
+    347.9,
+    1.63
+   ],
+   [
+    349.7,
+    5.08
+   ],
+   [
+    353.8,
+    5.26
+   ]
+  ],
+  "expect": {
+   "X": [
+    221.5,
+    223.1
+   ],
+   "D": [
+    16.2,
+    17.8
+   ]
+  },
+  "why": "planned over the page's colliders at 0.25 m (clearance 0.1 m beyond the walker's 0.3); legs at 2.2 m/s",
+  "from": "sections/canal/walks.json"
+ },
+ {
+  "label": "S2: board the hooded-bow cargo boat from the north bank, up its west bridge (X 200, 28 deg) onto its high deck (H 1.0)",
+  "start": [
+   200.05,
+   19.0
+  ],
+  "legs": [
+   [
+    270,
+    2.0
+   ]
+  ],
+  "expect": {
+   "D": [
+    15.6,
+    16.6
+   ],
+   "H": [
+    0.9,
+    1.15
+   ]
+  },
+  "why": "its bank bridges at X 202 and 204 rise 40 and 37 deg, over the walker's 34 deg limit; the west one (rim piece 12) rises 28 deg. Its crew stand on the deck behind the rim (the seated man at 199.86, 15.76) | fix-boats 2026-10-13 07:10: the hatch covers forward of the deckhouse are walkable since the boats export at 06:44 (kit_boats._hatches: 0.25 m over the deck, where the painted crew sit; before, the crews sat 0.25 m inside them). Boarding here the walker now stops at the hatch's edge or at the seated man on it, at D 16.25-16.45 (H 0.98-1.18) instead of 16.0 on the bare deck: D up to 16.6 (it is aboard either way)",
+  "from": "sections/canal/walks.json"
+ },
+ {
+  "label": "S2: north bank E->W: from the warehouse front back across the yard, behind the eatery and the terrace to the trackers' bank",
+  "start": [
+   222.5,
+   17.0
+  ],
+  "legs": [
+   [
+    173.8,
+    5.26
+   ],
+   [
+    169.7,
+    5.08
+   ],
+   [
+    167.9,
+    1.63
+   ],
+   [
+    177.0,
+    2.16
+   ],
+   [
+    123.7,
+    0.82
+   ],
+   [
+    90.0,
+    0.34
+   ],
+   [
+    135.0,
+    1.29
+   ],
+   [
+    180.0,
+    0.11
+   ],
+   [
+    173.7,
+    1.03
+   ],
+   [
+    225.0,
+    0.64
+   ],
+   [
+    180.0,
+    0.23
+   ],
+   [
+    225.0,
+    0.16
+   ],
+   [
+    243.4,
+    0.25
+   ],
+   [
+    225.0,
+    0.16
+   ],
+   [
+    194.0,
+    1.87
+   ],
+   [
+    209.7,
+    0.92
+   ],
+   [
+    169.5,
+    3.12
+   ]
+  ],
+  "expect": {
+   "X": [
+    170.9,
+    172.5
+   ],
+   "D": [
+    22.2,
+    23.8
+   ]
+  },
+  "from": "sections/canal/walks.json"
+ },
+ {
+  "label": "S1: road W->E 4 up the dyke banks north-east to the terrace",
+  "start": [
+   312.4,
+   0.3
+  ],
+  "legs": [
+   [
+    90,
+    0.3
+   ],
+   [
+    32.2,
+    1.24
+   ],
+   [
+    36.0,
+    0.62
+   ],
+   [
+    18.4,
+    0.57
+   ],
+   [
+    22.1,
+    0.78
+   ],
+   [
+    35.0,
+    2.77
+   ],
+   [
+    36.6,
+    3.41
+   ]
+  ],
+  "expect": {
+   "X": [
+    326.1,
+    327.7
+   ],
+   "D": [
+    10.2,
+    11.8
+   ],
+   "H": [
+    -1.4,
+    2.5
+   ]
+  },
+  "why": "the trunk colliders (2026-10-13) take each big bole's size from the 3D trees (trees3d.js trunkColliders, trees3d.json): it starts at the road's turn, now (312.4, 0.3) south-east of the great burled willow's bole (the old start was inside it), a short step north, then the same legs (the last 1.2 s longer).",
+  "from": "sections/countryside/walks.json"
+ }
+]

@@ -72,8 +72,9 @@ function glyphs(text, { reveal = true } = {}) {
   return { frag, ms: reveal ? 120 + chars.length * step + 150 : 0 };
 }
 
-// one speaker: a speech (or thought) bubble anchored at its foot, with the speaker's name tag on its left
-export function speech({ text, think = false, name = '', reveal = true }) {
+// one speaker: a speech (or thought) bubble anchored at its foot, with the speaker's name tag on its left. en (the
+// life pass: prefs.lang 'zh_en'): an English gloss under the Chinese line, with the speaker's role in English
+export function speech({ text, think = false, name = '', reveal = true, en = '', nameEn = '' }) {
   const el = h('div', `qm-say${think ? ' qm-thought' : ''}`, { role: 'status', 'aria-live': 'polite' });
   const bubble = h('p', 'qm-bubble');
   let tail = tailEl(think);
@@ -83,13 +84,14 @@ export function speech({ text, think = false, name = '', reveal = true }) {
   const api = {
     el, think, name,
     revealMs: 0,
-    set(t, isThink = think) {
+    set(t, isThink = think, gloss = '') {
       el.classList.toggle('qm-thought', isThink);
       if (isThink !== api.think) { const t2 = tailEl(isThink); tail.replaceWith(t2); tail = t2; }
       api.think = isThink;
       const g = glyphs(t, { reveal });
       bubble.replaceChildren(g.frag);
-      bubble.setAttribute('aria-label', t);
+      if (gloss) bubble.append(h('span', 'qm-gloss qm-bubble-en', { text: nameEn ? `${nameEn}: ${gloss}` : gloss, lang: 'en' }));
+      bubble.setAttribute('aria-label', gloss ? `${t} (${gloss})` : t);
       api.revealMs = g.ms;
       api.shownAt = performance.now();
     },
@@ -97,7 +99,7 @@ export function speech({ text, think = false, name = '', reveal = true }) {
     finish() { for (const s of bubble.querySelectorAll('.qm-glyph')) s.style.animation = 'none'; api.revealMs = 0; },
     revealing() { return performance.now() - api.shownAt < api.revealMs; },
   };
-  api.set(text, think);
+  api.set(text, think, en);
   return api;
 }
 

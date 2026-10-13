@@ -1,0 +1,41 @@
+{
+ "character": "official",
+ "base": "sit_talk",
+ "spec": "office_bench",
+ "frame": "proposed",
+ "sole_shift_m": -0.035,
+ "clip": "sit_talk~office_bench",
+ "frames": 291,
+ "duration": 9.667,
+ "verify_max_m": 0.002,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "seat",
+   "via": "hips",
+   "residual_max_m": 0.01,
+   "residual_mean_m": 0.008
+  },
+  {
+   "site": "sole_L",
+   "via": "leg",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "sole_R",
+   "via": "leg",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "Hips": 0,
+  "LeftUpLeg": 3,
+  "LeftLeg": 4,
+  "LeftFoot": 1,
+  "RightUpLeg": 23,
+  "RightLeg": 26,
+  "RightFoot": 4
+ }
+}

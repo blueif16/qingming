@@ -1,0 +1,585 @@
+{
+ "figures": {
+  "man_dark_cap_by_stair_12700": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0.82
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.03,
+    0.83
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact seat->S4.bld.official_hall_12530; gap before seat 0.5, after seat 0.04; fixed contact:floor; moved 0.03 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:34",
+    "cost_before": 0.235,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "dark_figure_or_garment_12825": {
+   "class": "solve",
+   "base_nudge": [
+    -0.31,
+    -0.17
+   ],
+   "base_facing": 270,
+   "nudge": [
+    -0.31,
+    -0.39
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.22 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:34",
+    "cost_before": 1.063,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "man_standing_by_hall_12942": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    -0.16
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.16 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 2.12,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "onlooker_dark_robe_13222": {
+   "class": "solve",
+   "base_nudge": [
+    0.14,
+    0.08
+   ],
+   "base_facing": 330,
+   "nudge": [
+    0.42,
+    0.09
+   ],
+   "facing_deg": 323,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, site_inside; moved 0.28 m, turned -7 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 1.072,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "man_at_gate_post_14540": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.08,
+    0
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 0.163,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "counter_man_leaning_13325": {
+   "class": "recast",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 200,
+   "do": [
+    [
+     "lean_over~counter_man_leaning_13325",
+     14
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "why": "lean_chin -> lean_over~counter_man_leaning_13325 (idler): painted leaning forward on the east end of the counter with the bowls (S4b.prop.table_bowls_13275, 0.87 m); lean_chin rests the elbows on a chest-high rail (1.1 m over his floor), so the solve found only the shop hall's wall for them; lean_over rests both hands on a waist-high edge, and its IK variant (characters/ik_variants.json) lays them flat on the counter's top",
+   "nudge": [
+    -0.07,
+    -0.29
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact palm_L->S4b.prop.table_bowls_13275, palm_R->S4b.prop.table_bowls_13275; gap before palm_L 0.05, palm_R 0.25, after palm_L 0.03, palm_R 0.02; fixed contact:rail, contact:rail; moved 0.3 m, turned 70 deg from the casting's spot (limit 0.6 m); placed (--at) behind the counter's east end, facing it (south), his hands over its top, his west foot clear of the shop hall's plinth corner; the search drifted his hands onto the shop hall's wall, which isn't what he leans on; the hands are held on the counter's top by an IK variant (lean_over~counter_man_leaning_13325, height only: they keep the take's rocking along it)",
+   "solved": {
+    "date": "2026-10-13T13:42",
+    "cost_before": 0.061,
+    "cost_after": 0.001,
+    "pass": true
+   }
+  },
+  "customer_light_12990": {
+   "class": "seat",
+   "base_nudge": [
+    0.02,
+    0.33
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.02,
+    0.1
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.05, sole_L 0.17, sole_R 0.18, after seat 0.33, sole_L 0.01, sole_R 0.01; fixed contact:floor, contact:floor, furniture; moved 0.23 m from the casting's spot (limit 0.6 m); placed (--at) 0.23 m south of the casting's spot, off the shop hall's plinth edge (its stones stood him 0.19 m up while his feet hung to the ground); his own stool goes under his hips there (contact_fixes seat)",
+   "solved": {
+    "date": "2026-10-13T10:40",
+    "cost_before": 1.264,
+    "cost_after": 0.102,
+    "pass": false
+   },
+   "seat": {
+    "X": 57.31,
+    "D": 10.61,
+    "H": 0.013,
+    "seat_h": 0.32,
+    "why": "his own stool (rule 3) under his seat point at the solved placement (scholar drink: the seat 0.345 m over the ground all through), its top 0.335 m (fix-s4b)"
+   }
+  },
+  "man_seated_front_of_hall_12866": {
+   "class": "seat",
+   "base_nudge": [
+    -0.38,
+    0.01
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.38,
+    -0.25
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.42, sole_L -0.12, sole_R 0.48, after seat 0.42, sole_L -0.01, sole_R -0.01; fixed contact:floor, contact:floor; moved 0.26 m from the casting's spot (limit 0.6 m); placed (--at) 0.26 m south of the casting's spot, off the official hall's plinth (part 1's, its front edge at D 11.1: his root stood on it, 0.45 m up, while his feet hung to the ground), in front of its railing as painted; his own stool goes under his hips there (contact_fixes seat)",
+   "solved": {
+    "date": "2026-10-13T10:40",
+    "cost_before": 0.405,
+    "cost_after": 0.181,
+    "pass": false
+   },
+   "seat": {
+    "X": 55.07,
+    "D": 10.97,
+    "H": -0.033,
+    "seat_h": 0.41,
+    "why": "his own stool (rule 3) under his seat point at the solved placement (listen: the seat 0.385-0.388 m over the ground all through), its top 0.376 m (fix-s4b)"
+   }
+  },
+  "official_seated_12728": {
+   "class": "recast",
+   "do": [
+    [
+     "sit_talk~soles",
+     20
+    ]
+   ],
+   "base_nudge": [
+    -0.03,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0.25,
+    0.15
+   ],
+   "facing_deg": 0,
+   "why": "write -> sit_talk~soles (official): no desk is painted (map: leaning forward \"as if reading or writing at a low desk\"; seats.json: none is built), so write's left hand on a desk touched nothing; of his seated clips, sit hunches forward but its seat drifts 8 cm through the cycle (no stool holds it), so sit_talk, its feet levelled on the floor by the shared leg-IK spec soles (fix-inner), seated on his own stool behind the railing",
+   "nudge_why": "the root moved so that sit_talk's hips (0.25 m behind it, 0.15 m to its right) land on the painted seat point, where his own stool stands (seats.json, fitted: contact_fixes seat)",
+   "seat": {
+    "X": 53.2,
+    "D": 12.01,
+    "H": 0.48,
+    "seat_h": 0.495,
+    "why": "his own stool (rule 3) under sit_talk~soles's seat point (0.982-0.984 m), standing on the hall's floor boards (0.48 m: part 1's halls collide at their boards now), its top 0.975 m (fix-s4b)"
+   }
+  },
+  "figure_in_shop_13242": {
+   "class": "seat",
+   "seat": {
+    "X": 59.14,
+    "D": 12.83,
+    "H": 0.113,
+    "seat_h": 0.435,
+    "why": "his own stool (rule 3) stands on the shop hall's floor boards (0.113 m; they collide now, kit_outer_road_2.hall), not on the ground under them, under his seat point (carter sit: 0.536-0.564 m), its top 0.548 m (fix-s4b)"
+   }
+  },
+  "stall_keeper_seated_13940": {
+   "class": "seat",
+   "seat": {
+    "X": 68.87,
+    "D": 12.63,
+    "H": -0.019,
+    "seat_h": 0.435,
+    "why": "his own stool (rule 3) refitted under his seat point (carter sit: 0.404-0.432 m over the ground), its top 0.416 m; it was 0.49 m high, the seat 0.07 m inside it (fix-s4b)"
+   }
+  },
+  "seated_in_bottom_shop_12792": {
+   "class": "fit",
+   "why": "the mapped bench he sits on (S4b.prop.bench_12835) fitted to his seat point: idler sit puts it 0.415-0.44 m over the ground, so the builder's bench is 0.41 m high (was 0.45: his seat 0.04 m inside it; outer_road_2_scene.py choice, fix-s4b)"
+  },
+  "customer_bent_14420": {
+   "class": "recast",
+   "do": [
+    [
+     "bend_goods",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "lean_over -> bend_goods (inspector): painted bent forward from behind, his head bowed out of sight, over the tea table's west end (identification low), but the hatted customer sits between him and that table (0.7 m away): lean_over's hands found only the back of that customer's chair. bend_goods bends him forward with his hands on his own knees, as painted, touching nothing that isn't there",
+   "base_nudge": [
+    -0.03,
+    -0.03
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.12,
+    0.25
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles; moved 0.29 m from the casting's spot (limit 0.6 m); placed (--at) 0.27 m north onto the tea house platform he is painted on (support: tea house floor): his feet had stood 0.16 m inside its front face, the root on the ground in front of it; behind the hatted customer's (moved) chair",
+   "solved": {
+    "date": "2026-10-13T10:49",
+    "cost_before": 0.31,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "customer_hat_14462": {
+   "class": "recast",
+   "do": [
+    [
+     "listen",
+     16
+    ]
+   ],
+   "why": "listen + sit -> listen (townsman): one seated clip on his chair (sit put his seat 0.06 m over it, listen on it); listen leans him forward, forearms on his knees, toward the man opposite, as painted",
+   "base_nudge": [
+    -0.1,
+    0.21
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.15,
+    0.31
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact seat->S4b.prop.chair_14458, sole_L->S4b.str.tea_house_platform_14520, sole_R->S4b.str.tea_house_platform_14520; gap before seat 0.03, sole_L 0.01, sole_R -0.11, after seat 0.03, sole_L 0.01, sole_R 0; fixed contact:floor; moved 0.11 m from the casting's spot (limit 0.6 m); placed (--at) 0.1 m north and 0.05 m west on his (moved) chair: his right foot had stood in the base of the tea house's west gable post and his hands in the table's apron",
+   "solved": {
+    "date": "2026-10-13T10:48",
+    "cost_before": 0.007,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "customer_white_14560": {
+   "class": "ik",
+   "base_nudge": [
+    0.48,
+    0.06
+   ],
+   "base_facing": 225,
+   "nudge": [
+    0.44,
+    0.1
+   ],
+   "facing_deg": 225,
+   "nudge_why": "solved: contact seat->S4b.prop.stool_14595, sole_L->S4b.str.tea_house_platform_14520; gap before seat 0.2, sole_L 0.01, after seat 0.2, sole_L 0.01; fixed nothing; moved 0.06 m from the casting's spot (limit 0.6 m); placed (--at) so knee_on_stool's seat point (0.06 m to the left of his root, measured) lands on the centre of his (moved) stool S4b.prop.stool_14595, whose height is fitted to it (0.205 m: the clip sits low, its right heel drawn up onto the seat; outer_road_2_scene.py choice)",
+   "solved": {
+    "date": "2026-10-13T10:50",
+    "cost_before": 0.096,
+    "cost_after": 0.095,
+    "pass": false
+   },
+   "do": [
+    [
+     "knee_on_stool~customer_white_14560",
+     16
+    ]
+   ],
+   "why": "knee_on_stool -> knee_on_stool~customer_white_14560: the take's seat rises and sinks 5 cm, more than a stool holds; the variant holds it at its middle height, and his mapped stool (S4b.prop.stool_14595) is fitted under it: 0.215 m high (outer_road_2_scene.py choice), his right heel drawn up on it as painted. Its grounding by the one sole on the floor (tools/clip_ground.mjs, the lead, at fix-s4b's request) put his left foot on the floor"
+  },
+  "man_big_hat_12895": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0.77,
+    -1.06
+   ],
+   "facing_deg": -80,
+   "nudge_why": "solved: contact palm_L->S4b.ani.horse_12862, palm_R->S4b.ani.horse_12862; gap before palm_L 1.33, palm_R 1, after palm_L 0, palm_R 0; fixed contact:animal, contact:animal; moved 1.31 m, turned -80 deg from the casting's spot (limit 0.6 m); beyond the 0.6 m solve limit, a written reason: his foot is an estimate (map: est foot, identification low; below the hips hidden by the horse), and the painting has him directly behind the small horse with his arm out toward its head; at real size the horse's flank lies 1.2 m south of his estimated foot, so he stands against its far (north) side at the withers, turned to it, his hands laid on its withers by an IK variant (the part of the horse that stays put while it lowers and raises its head)",
+   "solved": {
+    "date": "2026-10-13T13:37",
+    "cost_before": 2.844,
+    "cost_after": 0.052,
+    "pass": false
+   },
+   "do": [
+    [
+     "idle~man_big_hat_12895",
+     10
+    ]
+   ],
+   "why": "bridle -> idle~man_big_hat_12895 (official_rider): painted behind the small horse reaching toward its head; the bridle take holds a tall horse's head high and leans back, out of reach of this small horse (scale 0.85, withers 1.1 m), so idle with an IK variant: his knees bent a little, both hands laid on its withers (the part of it that stays put while it lowers and raises its head); the variant's own rule (characters/contacts.json): the palms on the animal"
+  },
+  "man_in_white_at_horse_13360": {
+   "class": "recast",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "why": "bridle -> idle, look (scholar): the map reads him standing at the saddled horse's head facing us, the lowered head just behind his shoulder, and only \"he may be holding it\": no hand on it is painted, and the horse he stands at lowers and raises its head (head_low, idle: its nose 0.6 m and 1.35 m up), so a held bridle would come off it; he stands at its head as painted, hands at rest"
+  },
+  "man_bowed_at_horse_13410": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 90,
+   "nudge": [
+    0.22,
+    0.18
+   ],
+   "facing_deg": 80,
+   "nudge_why": "solved: contact palm_L->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474, palm_R->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474; gap before palm_L 0.22, palm_R 0.13, after palm_L 0.03, palm_R -0.02; fixed contact:animal; moved 0.28 m, turned -10 deg from the casting's spot (limit 0.6 m); placed (--at) just west of the small donkey's head (the solve's best spot put him at its nose, his right hand on it), bowed close against the saddled horse's flank under the saddle as painted; his hands are laid on its girth line by an IK variant (the barrel stays put while the horse lowers its head)",
+   "solved": {
+    "date": "2026-10-13T13:23",
+    "cost_before": 0.04,
+    "cost_after": 0.001,
+    "pass": false
+   },
+   "do": [
+    [
+     "girth~man_bowed_at_horse_13410",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "girth -> girth~man_bowed_at_horse_13410: an IK clip variant lays both hands on the saddled horse's girth line under the saddle"
+  },
+  "porter_at_cart_rear_13090": {
+   "class": "ik",
+   "base_nudge": [
+    -0.48,
+    0.89
+   ],
+   "base_facing": 90,
+   "nudge": [
+    -0.48,
+    1.49
+   ],
+   "facing_deg": 101,
+   "nudge_why": "solved: contact palm_L->S4b.veh.palm_cart_13455, palm_R->S4b.veh.palm_cart_13455; gap before palm_L 0.6, palm_R 0.72, after palm_L 0.14, palm_R 0.12; fixed nothing; moved 0.6 m, turned 11 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK variant at this placement (tools/ik_targets.mjs: both hands up against the cart's bed, as painted)",
+   "solved": {
+    "date": "2026-10-13T11:02",
+    "cost_before": 0.898,
+    "cost_after": 0.029,
+    "pass": false
+   },
+   "do": [
+    [
+     "reach_up_load~porter_at_cart_rear_13090",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "reach_up_load -> reach_up_load~porter_at_cart_rear_13090: an IK clip variant lays both hands against the edge of the second palm cart's bed at its rear half, as painted"
+  },
+  "carter_at_shaft_ox_13243": {
+   "class": "recast",
+   "do": [
+    [
+     "push_flank~carter_at_shaft_ox_13243",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "why": "steer -> push_flank~carter_at_shaft_ox_13243 (idler): steer holds a shaft in each hand from between them, but he is painted beside the shaft ox's hindquarters (the ox is between the shafts), his right arm raised to the ox or the shaft; push_flank puts his hands on the ox's hindquarters, held there by an IK variant",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 45,
+   "nudge": [
+    0.65,
+    1.71
+   ],
+   "facing_deg": 104,
+   "nudge_why": "solved: contact palm_L->S4b.ani.ox_shaft_13442+S4b.ani.ox_lead_13458, palm_R->S4b.ani.ox_shaft_13442+S4b.ani.ox_lead_13458; gap before palm_L 1.37, palm_R 1.79, after palm_L 0.02, palm_R 0.03; fixed nothing; moved 1.83 m, turned 59 deg from the casting's spot (limit 0.6 m); beyond the 0.6 m solve limit, a written reason: he is painted beside the shaft ox's hindquarters under the cart's front, his arm raised to it; at real size the cart (6.4 m) and its team stand 1.9 m north of his painted feet, so he goes with them, beside the ox's hindquarters, turned to it; the last 2-3 cm closed by an IK variant",
+   "solved": {
+    "date": "2026-10-13T11:10",
+    "cost_before": 5.459,
+    "cost_after": 0.003,
+    "pass": false
+   }
+  },
+  "boatman_dark_cap_15046": {
+   "class": "solve",
+   "nudge": [
+    0.01,
+    -0.03
+   ],
+   "facing_deg": 270,
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge_why": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.032 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time"
+  },
+  "small_companion_14654": {
+   "class": "recast",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "why": "reach -> look, idle (child): painted with one arm out to the taller man beside him, as if holding his sleeve or the bag he carries; reach lays both arms across a chest-high table top, and no table is painted here (no child clip holds a sleeve, and a sleeve is another figure, which the contact check does not measure): he stands at the man's side looking up at him"
+  },
+  "wheelwright_bending_13620": {
+   "class": "recast",
+   "do": [
+    [
+     "wheelwright",
+     10
+    ],
+    [
+     "bend_goods",
+     5
+    ]
+   ],
+   "why": "browse -> bend_goods (idler) in his cycle: browse reaches into goods on a low table, and none is painted at the wheel; bend_goods keeps him bent over the wheel, hands on his knees, peering at the work. (wheelwright stays: see notes, its hand can't reach a rim lying on the ground)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 225,
+   "nudge": [
+    -0.1,
+    0.08
+   ],
+   "facing_deg": 225,
+   "nudge_why": "solved: contact palm_L->S4b.prop.pole_frame_basket_13690; gap before palm_L 0.56, after palm_L 0.6; fixed stance_soles; moved 0.13 m from the casting's spot (limit 0.6 m); placed (--at) 0.13 m north-west of the casting's spot so his feet stand clear of the wheel's rim (bend_goods put them on it); his left hand can't reach the rim lying on the ground (see notes)",
+   "solved": {
+    "date": "2026-10-13T13:18",
+    "cost_before": 0.518,
+    "cost_after": 0.344,
+    "pass": false
+   }
+  },
+  "man_bending_to_donkey_13440": {
+   "class": "ik",
+   "base_nudge": [
+    -0.06,
+    -0.19
+   ],
+   "base_facing": 10,
+   "nudge": [
+    0.75,
+    -0.35
+   ],
+   "facing_deg": 72,
+   "nudge_why": "solved: contact palm_L->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474, palm_R->S4b.ani.horse_saddled_13378+S4b.ani.donkey_13474; gap before palm_L 0.17, palm_R 0.47, after palm_L 0.04, palm_R 0.06; fixed nothing; moved 0.83 m, turned 62 deg from the casting's spot (limit 0.6 m); placed (--at) beyond the 0.6 m solve limit, a written reason: at real size his painted spot fell at the small donkey's head (its body 1.5 m long, a man painted at its head beside him), and he is painted bending over its back; he stands at its near (south) flank behind its shoulder, turned to it, both hands laid on its back by an IK variant whose rule is the donkey (lean_over~man_bending_to_donkey_13440: characters/contacts.json)",
+   "solved": {
+    "date": "2026-10-13T13:22",
+    "cost_before": 0.226,
+    "cost_after": 0.001,
+    "pass": false
+   },
+   "do": [
+    [
+     "lean_over~man_bending_to_donkey_13440",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "why": "lean_over -> lean_over~man_bending_to_donkey_13440: painted bending over the small donkey with both arms out over its back; no rail is painted, so the variant (its own rule: palms on the animal, characters/contacts.json) lays both hands on the donkey's back"
+  },
+  "seated_man_13240": {
+   "class": "ik",
+   "do": [
+    [
+     "show_goods_seated~seated_man_13240",
+     30
+    ]
+   ],
+   "why": "show_goods_seated -> show_goods_seated~seated_man_13240: seated on the ground as painted (no stool shows: the casting's 0.48 m stool, never shipped, is gone), the take lifts his seat up to 5 cm off it as he leans to his goods; the variant holds it on the ground"
+  },
+  "customer_cap_14785": {
+   "class": "ik",
+   "do": [
+    [
+     "listen~soles",
+     16
+    ]
+   ],
+   "why": "listen -> listen~soles (sightseer): the shared leg-IK spec soles (fix-inner) puts both feet on the floor (listen's left sole was 4.4 cm into it, its right as far over)"
+  },
+  "seated_boatman_stern_15372": {
+   "class": "recast",
+   "do": [
+    [
+     "sit_floor",
+     30
+    ]
+   ],
+   "why": "recast (fix-boats): the map has him seated on the deck under the awning's east end by the stern head, 'a rudder stock and a slanting pole below him', no hand on a tiller (the kit's tiller is 2.25 m from his hand): sit_floor, seated on the deck (a floor sit needs no seat built)"
+  }
+ },
+ "about": "Contact fixes for this section (gen/details/contacts/fix_standard.md): per figure, what tools/contact_solve.mjs solved (nudge, facing_deg: the root offset and yaw that put its contacts on what it touches, measured from the casting's own base_nudge / base_facing), or a recast (do, character) or a fit, with the reason. Applied last by the casting script through tools/contact_fixes.py.",
+ "limits": {
+  "max_move_m": 0.6,
+  "max_turn_deg": 30
+ }
+}

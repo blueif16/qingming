@@ -1,0 +1,1079 @@
+{
+ "about": [
+  "Animals for the scene pages, written by tools/animal.mjs build from gen/animals/<type>/rig.json. Metres, seconds, model space of the GLB (three.js: x = the animal's left, y up, z forward); the origin is on the ground between the four hooves at rest and the animal faces +z. Models are real size: place them at the map position (between fore and hind hooves), facing from hind to fore.",
+  "length_m: nose to rump; height_m: withers; back_m: the back at its lowest point (the seat); top_m: the highest point (ears, humps); width_m; hoof_span_m: fore toes to hind toes at rest (the map measures length_m the same way, on figures about 1.3x life size).",
+  "clips: name -> seconds; all loop. walk is in place: move the root at walk.speed_mps (= stride_m per cycle_s) along the facing and the planted hooves stay put (walk.slip_mm is the measured slide, ~1 mm). Ground contact bones: hoof_bones (their tails are the toes).",
+  "tack: variant -> {node, triangles, seat_m, saddle_rest}. Every tack_<variant> node ships visible: hide all of them at load and show the one people.json asks for (\"load\"/\"tack\").",
+  "saddle: {bone, rest}: a rider sits on the back at rest (or at tack[variant].saddle_rest when that variant is shown). Seat a character playing its ungrounded ride clip with its Hips bone 0.09 m x its scale above that point, facing the same way, and attach it to the bone (three.js Object3D.attach at bind pose) so it rides the back (web/src/creatures.js loadRider).",
+  "harness: {collar, trace_l, trace_r, yoke, bone}: where a vehicle's traces hook onto the collar variant's hames, and where an ox yoke rests on the neck (blender/kit_vehicles.py HARNESS holds the same numbers)."
+ ],
+ "bird": {
+  "file": "assets/animals/bird.glb",
+  "title": "Crow: the black bird perched in a willow (S4.ani.bird_12433, about 9.5 m up); built from kit shapes, its own small rig",
+  "plan": "bird",
+  "kind": "bird",
+  "length_m": 0.327,
+  "height_m": 0.268,
+  "back_m": 0.188,
+  "top_m": 0.268,
+  "width_m": 0.119,
+  "perch": {
+   "bone": "root",
+   "rest": [
+    0,
+    0,
+    0
+   ],
+   "about": "the feet's grip on the branch: put this point on the perch"
+  },
+  "clips": {
+   "idle": 8
+  },
+  "triangles": 382,
+  "bones": 6,
+  "tack": {}
+ },
+ "buffalo": {
+  "file": "assets/animals/buffalo.glb",
+  "title": "Water buffalo: the ox's body toned dark slate, with long flat crescent horns sweeping back and up (kit-built, part of the body) (S1 water_buffalo_lying_29462, lying with its head raised and turned toward the viewer)",
+  "plan": "bovid",
+  "length_m": 2.058,
+  "height_m": 1.329,
+  "back_m": 1.2,
+  "top_m": 1.359,
+  "width_m": 0.898,
+  "hoof_span_m": 0.935,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.267,
+   "stride_m": 1.2,
+   "speed_mps": 0.947,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 1.3
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.2,
+    -0.0459
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    0.936,
+    0.5894
+   ],
+   "trace_l": [
+    0.2879,
+    0.876,
+    0.5654
+   ],
+   "trace_r": [
+    -0.2879,
+    0.876,
+    0.5654
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.2043,
+    0.6614
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.267,
+   "graze": 6,
+   "lie": 8
+  },
+  "triangles": 3854,
+  "bones": 32,
+  "tack": {}
+ },
+ "camel": {
+  "file": "assets/animals/camel.glb",
+  "title": "Camel: the laden Bactrian camel of the caravan (S5: the lead camel in the gate passage and the two behind it)",
+  "plan": "camelid",
+  "length_m": 2.577,
+  "height_m": 2.209,
+  "back_m": 1.85,
+  "top_m": 2.303,
+  "width_m": 1.008,
+  "hoof_span_m": 1.104,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.3,
+   "stride_m": 1.85,
+   "speed_mps": 1.423,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 11.1
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.851,
+    0.0841
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    1.48,
+    0.743
+   ],
+   "trace_l": [
+    0.3496,
+    1.3875,
+    0.706
+   ],
+   "trace_r": [
+    -0.3496,
+    1.3875,
+    0.706
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.6147,
+    0.854
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.3,
+   "graze": 6,
+   "lie": 8
+  },
+  "triangles": 3958,
+  "bones": 32,
+  "tack": {
+   "pack": {
+    "node": "tack_pack",
+    "triangles": 1330,
+    "seat_m": 2.1433,
+    "saddle_rest": [
+     0,
+     2.1433,
+     0.0841
+    ]
+   },
+   "pack_sheaf": {
+    "node": "tack_pack_sheaf",
+    "triangles": 1554,
+    "seat_m": 2.1433,
+    "saddle_rest": [
+     0,
+     2.1433,
+     0.0841
+    ]
+   }
+  }
+ },
+ "dog": {
+  "file": "assets/animals/dog.glb",
+  "title": "Dog: the dark street dog of the inner city (S6 dog_4335, walking west under the south-side parasol; low confidence)",
+  "plan": "canid",
+  "length_m": 0.829,
+  "height_m": 0.569,
+  "back_m": 0.52,
+  "top_m": 0.719,
+  "width_m": 0.302,
+  "hoof_span_m": 0.528,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 0.733,
+   "stride_m": 0.546,
+   "speed_mps": 0.745,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.8
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    0.52,
+    0.0918
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    0.416,
+    0.2937
+   ],
+   "trace_l": [
+    0.0651,
+    0.39,
+    0.2833
+   ],
+   "trace_r": [
+    -0.0651,
+    0.39,
+    0.2833
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    0.6673,
+    0.3249
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 0.733,
+   "sniff": 6,
+   "lie": 8
+  },
+  "triangles": 3185,
+  "bones": 32,
+  "tack": {}
+ },
+ "donkey": {
+  "file": "assets/animals/donkey.glb",
+  "title": "Donkey: the grey-dun donkey of the gate (S5: 8 of its 12 animals: ridden, packed, in a trace collar, head down)",
+  "plan": "equid",
+  "length_m": 1.493,
+  "height_m": 1.026,
+  "back_m": 1,
+  "top_m": 1.397,
+  "width_m": 0.403,
+  "hoof_span_m": 0.706,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.067,
+   "stride_m": 0.92,
+   "speed_mps": 0.863,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.8
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.004,
+    0.0437
+   ]
+  },
+  "harness": {
+   "collar": [
+    0.0041,
+    0.9197,
+    0.3629
+   ],
+   "trace_l": [
+    0.2265,
+    0.9208,
+    0.3612
+   ],
+   "trace_r": [
+    -0.2183,
+    0.9186,
+    0.3645
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.2036,
+    0.5017
+   ],
+   "source": "tack_collar"
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.067,
+   "graze": 6,
+   "lie": 8,
+   "walk_low": 1.067
+  },
+  "triangles": 3784,
+  "bones": 32,
+  "tack": {
+   "saddle_cloth": {
+    "node": "tack_saddle_cloth",
+    "triangles": 416,
+    "seat_m": 1.0241,
+    "saddle_rest": [
+     0,
+     1.0241,
+     0.0437
+    ]
+   },
+   "collar": {
+    "node": "tack_collar",
+    "triangles": 348,
+    "seat_m": 1
+   },
+   "pack_saddle": {
+    "node": "tack_pack_saddle",
+    "triangles": 1016,
+    "seat_m": 1.0248,
+    "saddle_rest": [
+     0,
+     1.0248,
+     0.0437
+    ]
+   },
+   "pannier_charcoal": {
+    "node": "tack_pannier_charcoal",
+    "triangles": 1482,
+    "seat_m": 1.1651,
+    "saddle_rest": [
+     0,
+     1.1651,
+     0.0437
+    ]
+   }
+  }
+ },
+ "donkey_dark": {
+  "file": "assets/animals/donkey_dark.glb",
+  "title": "Dark donkey: the donkey's body toned near-black, its pale muzzle and belly kept a little lighter (S4b donkey_13474; S3 donkey_18048 with halter and breeching, the sack donkeys donkey_sack_18535 and _18690 with pack_bale, donkey_ridden_18690 with saddle_cloth, donkey_dark_18745; S2 donkey_dark_28921 with halter)",
+  "plan": "equid",
+  "length_m": 1.493,
+  "height_m": 1.026,
+  "back_m": 1,
+  "top_m": 1.397,
+  "width_m": 0.403,
+  "hoof_span_m": 0.706,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.067,
+   "stride_m": 0.92,
+   "speed_mps": 0.863,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.8
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.004,
+    0.0437
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    0.82,
+    0.4417
+   ],
+   "trace_l": [
+    0.1258,
+    0.77,
+    0.4217
+   ],
+   "trace_r": [
+    -0.1258,
+    0.77,
+    0.4217
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.2036,
+    0.5017
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.067,
+   "graze": 6,
+   "lie": 8,
+   "walk_low": 1.067
+  },
+  "triangles": 3784,
+  "bones": 32,
+  "tack": {
+   "saddle_cloth": {
+    "node": "tack_saddle_cloth",
+    "triangles": 416,
+    "seat_m": 1.0241,
+    "saddle_rest": [
+     0,
+     1.0241,
+     0.0437
+    ]
+   },
+   "pack_saddle": {
+    "node": "tack_pack_saddle",
+    "triangles": 1016,
+    "seat_m": 1.0248,
+    "saddle_rest": [
+     0,
+     1.0248,
+     0.0437
+    ]
+   },
+   "pack_bale": {
+    "node": "tack_pack_bale",
+    "triangles": 1136,
+    "seat_m": 1.293,
+    "saddle_rest": [
+     0,
+     1.293,
+     0.0437
+    ]
+   },
+   "halter": {
+    "node": "tack_halter",
+    "triangles": 272,
+    "seat_m": 1
+   },
+   "halter_breeching": {
+    "node": "tack_halter_breeching",
+    "triangles": 300,
+    "seat_m": 1
+   }
+  }
+ },
+ "horse": {
+  "file": "assets/animals/horse.glb",
+  "title": "Horse: the small pale horse (S4: the rider coming the other way, the white horse lying in the courier post's yard; S6: riders)",
+  "plan": "equid",
+  "length_m": 2.054,
+  "height_m": 1.438,
+  "back_m": 1.28,
+  "top_m": 1.836,
+  "width_m": 0.654,
+  "hoof_span_m": 0.982,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.067,
+   "stride_m": 1.178,
+   "speed_mps": 1.104,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.8
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.2818,
+    0.1694
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    1.0496,
+    0.6428
+   ],
+   "trace_l": [
+    0.1857,
+    0.9856,
+    0.6172
+   ],
+   "trace_r": [
+    -0.1857,
+    0.9856,
+    0.6172
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.6833,
+    0.7196
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.067,
+   "graze": 6,
+   "lie": 8,
+   "head_low": 8,
+   "walk_low": 1.067
+  },
+  "triangles": 3794,
+  "bones": 32,
+  "tack": {
+   "saddle": {
+    "node": "tack_saddle",
+    "triangles": 836,
+    "seat_m": 1.355,
+    "saddle_rest": [
+     0,
+     1.355,
+     0.1694
+    ]
+   },
+   "saddle_dark": {
+    "node": "tack_saddle_dark",
+    "triangles": 1564,
+    "seat_m": 1.355,
+    "saddle_rest": [
+     0,
+     1.355,
+     0.1694
+    ]
+   },
+   "girth_cloth": {
+    "node": "tack_girth_cloth",
+    "triangles": 396,
+    "seat_m": 1.2998,
+    "saddle_rest": [
+     0,
+     1.2998,
+     0.1694
+    ]
+   }
+  }
+ },
+ "horse_dark": {
+  "file": "assets/animals/horse_dark.glb",
+  "title": "Dark horse: the horse's body toned dark bay, mane, tail and points near-black (S4b horse_saddled_13378 with saddle_dark; S3 the horseman's brown horse horse_19055 with saddle; S2 horse_feeding_26072; S4 horse_dark_10372 if the lead recasts it)",
+  "plan": "equid",
+  "length_m": 2.054,
+  "height_m": 1.438,
+  "back_m": 1.28,
+  "top_m": 1.836,
+  "width_m": 0.654,
+  "hoof_span_m": 0.982,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.067,
+   "stride_m": 1.178,
+   "speed_mps": 1.104,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.8
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.2818,
+    0.1694
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    1.0496,
+    0.6428
+   ],
+   "trace_l": [
+    0.1857,
+    0.9856,
+    0.6172
+   ],
+   "trace_r": [
+    -0.1857,
+    0.9856,
+    0.6172
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.6833,
+    0.7196
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.067,
+   "graze": 6,
+   "lie": 8,
+   "head_low": 8,
+   "walk_low": 1.067
+  },
+  "triangles": 3794,
+  "bones": 32,
+  "tack": {
+   "saddle": {
+    "node": "tack_saddle",
+    "triangles": 836,
+    "seat_m": 1.355,
+    "saddle_rest": [
+     0,
+     1.355,
+     0.1694
+    ]
+   },
+   "saddle_dark": {
+    "node": "tack_saddle_dark",
+    "triangles": 1564,
+    "seat_m": 1.355,
+    "saddle_rest": [
+     0,
+     1.355,
+     0.1694
+    ]
+   },
+   "girth_cloth": {
+    "node": "tack_girth_cloth",
+    "triangles": 396,
+    "seat_m": 1.2998,
+    "saddle_rest": [
+     0,
+     1.2998,
+     0.1694
+    ]
+   }
+  }
+ },
+ "horse_white": {
+  "file": "assets/animals/horse_white.glb",
+  "title": "White horse: the horse's body recoloured clean white (S4: the white horse lying in the courier post's yard, S4.ani.white_horse_lying_11840)",
+  "plan": "equid",
+  "length_m": 2.054,
+  "height_m": 1.438,
+  "back_m": 1.28,
+  "top_m": 1.836,
+  "width_m": 0.654,
+  "hoof_span_m": 0.982,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.067,
+   "stride_m": 1.178,
+   "speed_mps": 1.104,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.8
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.2818,
+    0.1694
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    1.0496,
+    0.6428
+   ],
+   "trace_l": [
+    0.1857,
+    0.9856,
+    0.6172
+   ],
+   "trace_r": [
+    -0.1857,
+    0.9856,
+    0.6172
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.6833,
+    0.7196
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.067,
+   "graze": 6,
+   "lie": 8,
+   "head_low": 8,
+   "walk_low": 1.067
+  },
+  "triangles": 3794,
+  "bones": 32,
+  "tack": {
+   "saddle": {
+    "node": "tack_saddle",
+    "triangles": 836,
+    "seat_m": 1.355,
+    "saddle_rest": [
+     0,
+     1.355,
+     0.1694
+    ]
+   },
+   "saddle_fringe": {
+    "node": "tack_saddle_fringe",
+    "triangles": 1964,
+    "seat_m": 1.355,
+    "saddle_rest": [
+     0,
+     1.355,
+     0.1694
+    ]
+   }
+  }
+ },
+ "mule": {
+  "file": "assets/animals/mule.glb",
+  "title": "Mule: the dark mule of the four-mule wagons (S6: the two 太平车 at the crossroads)",
+  "plan": "equid",
+  "length_m": 2.089,
+  "height_m": 1.424,
+  "back_m": 1.3,
+  "top_m": 1.896,
+  "width_m": 0.554,
+  "hoof_span_m": 0.999,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.067,
+   "stride_m": 1.196,
+   "speed_mps": 1.121,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 1
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.301,
+    0.1567
+   ]
+  },
+  "harness": {
+   "collar": [
+    0.0005,
+    1.1984,
+    0.5282
+   ],
+   "trace_l": [
+    0.2557,
+    1.1985,
+    0.528
+   ],
+   "trace_r": [
+    -0.2547,
+    1.1982,
+    0.5284
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.59,
+    0.6992
+   ],
+   "source": "tack_collar"
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.067,
+   "graze": 6,
+   "lie": 8
+  },
+  "triangles": 3840,
+  "bones": 32,
+  "tack": {
+   "collar": {
+    "node": "tack_collar",
+    "triangles": 348,
+    "seat_m": 1.3
+   },
+   "pack_saddle": {
+    "node": "tack_pack_saddle",
+    "triangles": 1016,
+    "seat_m": 1.3197,
+    "saddle_rest": [
+     0,
+     1.3197,
+     0.1567
+    ]
+   },
+   "pack_heap_dark": {
+    "node": "tack_pack_heap_dark",
+    "triangles": 1588,
+    "seat_m": 1.5761,
+    "saddle_rest": [
+     0,
+     1.5761,
+     0.1567
+    ]
+   }
+  }
+ },
+ "ox": {
+  "file": "assets/animals/ox.glb",
+  "title": "Ox: the yellow draught ox of the covered carts (S4: the two three-ox covered carts; S5: the team of the covered ox cart)",
+  "plan": "bovid",
+  "length_m": 2.058,
+  "height_m": 1.329,
+  "back_m": 1.2,
+  "top_m": 1.339,
+  "width_m": 0.715,
+  "hoof_span_m": 0.935,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.267,
+   "stride_m": 1.2,
+   "speed_mps": 0.947,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 1.3
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.2,
+    -0.0459
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    0.936,
+    0.5894
+   ],
+   "trace_l": [
+    0.2879,
+    0.876,
+    0.5654
+   ],
+   "trace_r": [
+    -0.2879,
+    0.876,
+    0.5654
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.2043,
+    0.6614
+   ],
+   "trace_girth_l": [
+    0.3744,
+    0.744,
+    0.1701
+   ],
+   "trace_girth_r": [
+    -0.3307,
+    0.744,
+    0.1701
+   ],
+   "girth_source": "tack_draught"
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.267,
+   "graze": 6,
+   "lie": 8
+  },
+  "triangles": 3854,
+  "bones": 32,
+  "tack": {
+   "draught": {
+    "node": "tack_draught",
+    "triangles": 220,
+    "seat_m": 1.2
+   }
+  }
+ },
+ "ox_longhorn": {
+  "file": "assets/animals/ox_longhorn.glb",
+  "title": "Long-horned ox: the yellow ox with long horns curving up and out (kit-built, part of the body) (S4b ox_lead_13458)",
+  "plan": "bovid",
+  "length_m": 2.058,
+  "height_m": 1.329,
+  "back_m": 1.2,
+  "top_m": 1.538,
+  "width_m": 0.715,
+  "hoof_span_m": 0.935,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 1.267,
+   "stride_m": 1.2,
+   "speed_mps": 0.947,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 1.3
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    1.2,
+    -0.0459
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    0.936,
+    0.5894
+   ],
+   "trace_l": [
+    0.2879,
+    0.876,
+    0.5654
+   ],
+   "trace_r": [
+    -0.2879,
+    0.876,
+    0.5654
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    1.2043,
+    0.6614
+   ],
+   "trace_girth_l": [
+    0.3744,
+    0.744,
+    0.1701
+   ],
+   "trace_girth_r": [
+    -0.3307,
+    0.744,
+    0.1701
+   ],
+   "girth_source": "tack_draught"
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 1.267,
+   "graze": 6,
+   "lie": 8
+  },
+  "triangles": 3854,
+  "bones": 32,
+  "tack": {
+   "draught": {
+    "node": "tack_draught",
+    "triangles": 220,
+    "seat_m": 1.2
+   }
+  }
+ },
+ "pig": {
+  "file": "assets/animals/pig.glb",
+  "title": "Pig: the black pig of the open ground (S5: the lying animal and the small animal at the top of the silk, the dark animal rooting at the gate passage's mouth; scale a piglet down)",
+  "plan": "bovid",
+  "length_m": 1.132,
+  "height_m": 0.639,
+  "back_m": 0.6,
+  "top_m": 0.658,
+  "width_m": 0.376,
+  "hoof_span_m": 0.557,
+  "walk": {
+   "clip": "walk",
+   "cycle_s": 0.8,
+   "stride_m": 0.57,
+   "speed_mps": 0.713,
+   "footfall": "lateral four-beat: left hind, left fore, right hind, right fore",
+   "slip_mm": 0.6
+  },
+  "saddle": {
+   "bone": "spine2",
+   "rest": [
+    0,
+    0.6,
+    -0.0142
+   ]
+  },
+  "harness": {
+   "collar": [
+    0,
+    0.468,
+    0.3064
+   ],
+   "trace_l": [
+    0.133,
+    0.438,
+    0.2944
+   ],
+   "trace_r": [
+    -0.133,
+    0.438,
+    0.2944
+   ],
+   "bone": "chest",
+   "yoke": [
+    0,
+    0.6149,
+    0.3424
+   ]
+  },
+  "head_bone": "head",
+  "hoof_bones": [
+   "hoof_f.L",
+   "hoof_f.R",
+   "hoof_h.L",
+   "hoof_h.R"
+  ],
+  "clips": {
+   "idle": 8,
+   "walk": 0.8,
+   "graze": 6,
+   "lie": 8
+  },
+  "triangles": 3208,
+  "bones": 32,
+  "tack": {}
+ }
+}

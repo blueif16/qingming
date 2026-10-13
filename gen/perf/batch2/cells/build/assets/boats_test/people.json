@@ -1,0 +1,262 @@
+{
+ "about": "TEST FIXTURE: crew stand-ins for the boats test page. boats: per boat slug, its motion and what its crew do (web/src/boats.js).",
+ "figures": {
+  "a_roof_sitter": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "a_boatman": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "b_boatman": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     5
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "r_sweep_1": {
+   "character": "carter",
+   "do": [
+    [
+     "push",
+     8
+    ]
+   ]
+  },
+  "r_sweep_2": {
+   "character": "idler",
+   "do": [
+    [
+     "push",
+     8
+    ]
+   ]
+  },
+  "r_sweep_3": {
+   "character": "carter",
+   "do": [
+    [
+     "push",
+     8
+    ]
+   ]
+  },
+  "r_sweep_4": {
+   "character": "idler",
+   "do": [
+    [
+     "push",
+     8
+    ]
+   ]
+  },
+  "r_poler": {
+   "character": "porter",
+   "do": [
+    [
+     "stand_pole",
+     6
+    ]
+   ]
+  },
+  "t_poler": {
+   "character": "porter",
+   "do": [
+    [
+     "stand_pole",
+     6
+    ]
+   ]
+  },
+  "t_steersman": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     3
+    ]
+   ]
+  },
+  "s_rower_p": {
+   "character": "carter",
+   "do": [
+    [
+     "push",
+     8
+    ]
+   ]
+  },
+  "s_rower_s": {
+   "character": "idler",
+   "do": [
+    [
+     "push",
+     8
+    ]
+   ]
+  },
+  "g_boatman": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     3
+    ]
+   ]
+  },
+  "tracker_1": {
+   "character": "robed_man",
+   "do": [
+    [
+     "hold_rope",
+     6
+    ]
+   ]
+  },
+  "tracker_2": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     6
+    ]
+   ]
+  },
+  "tracker_3": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     6
+    ]
+   ]
+  },
+  "l_hauler": {
+   "character": "robed_man",
+   "do": [
+    [
+     "hold_rope",
+     8
+    ]
+   ]
+  },
+  "l_poler": {
+   "character": "porter",
+   "do": [
+    [
+     "stand_pole",
+     6
+    ]
+   ]
+  },
+  "l_roof_man": {
+   "character": "sightseer",
+   "do": [
+    [
+     "point",
+     4
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  }
+ },
+ "boats": {
+  "boat_sweep_r": {
+   "run_m": 10,
+   "speed_mps": 0.7,
+   "pause_s": [
+    8,
+    3
+   ],
+   "crew": {
+    "r_sweep_1": {
+     "work": "sweep"
+    },
+    "r_sweep_2": {
+     "work": "sweep"
+    },
+    "r_sweep_3": {
+     "work": "sweep"
+    },
+    "r_sweep_4": {
+     "work": "sweep"
+    }
+   }
+  },
+  "boat_small_s": {
+   "run_m": 6,
+   "speed_mps": 0.6,
+   "crew": {
+    "s_rower_p": {
+     "work": "oar",
+     "at": "pt_oar_p0"
+    },
+    "s_rower_s": {
+     "work": "oar",
+     "at": "pt_oar_s0"
+    }
+   }
+  },
+  "boat_towed_t": {
+   "run_m": 8,
+   "speed_mps": 0.5,
+   "haul": {
+    "tracker_1": {
+     "walk": "walk",
+     "stand": "hold_rope"
+    },
+    "tracker_2": {
+     "walk": "walk",
+     "stand": "idle"
+    },
+    "tracker_3": {
+     "walk": "walk",
+     "stand": "idle"
+    }
+   },
+   "tow": "tracker_1"
+  },
+  "boat_lowering_l": {
+   "run_m": 2,
+   "speed_mps": 0.2,
+   "mast_cycle_s": 24
+  }
+ }
+}

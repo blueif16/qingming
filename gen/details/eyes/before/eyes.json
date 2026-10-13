@@ -1,0 +1,6953 @@
+{
+ "about": "tools/eye_check.mjs: eyes measured on the face plane in mm (x to the viewer's right, y up from the Head joint), from the shipped GLB (webp 512); \"source\" is the full-resolution texture build_character.mjs starts from",
+ "glb_dir": "gen/details/eyes/before/glb",
+ "rule": {
+  "reach": 6.8,
+  "width": 17.2,
+  "gap": {
+   "reach": [
+    4.4,
+    10.4
+   ],
+   "width": [
+    14.6,
+    20.3
+   ]
+  }
+ },
+ "calibration_sets": {
+  "pass": [
+   "groom",
+   "archer",
+   "woman",
+   "youth",
+   "bearer",
+   "storyteller"
+  ],
+  "fail": [
+   "boatman",
+   "butcher",
+   "monk",
+   "official"
+  ]
+ },
+ "calibration": {
+  "reach": {
+   "lowest_pass": [
+    "storyteller",
+    10.4
+   ],
+   "highest_dot": [
+    "monk",
+    4.4
+   ],
+   "threshold": 6.76,
+   "separates": true,
+   "margin": 2.36
+  },
+  "width": {
+   "lowest_pass": [
+    "storyteller",
+    20.3
+   ],
+   "highest_dot": [
+    "butcher",
+    14.5
+   ],
+   "threshold": 17.16,
+   "separates": true,
+   "margin": 1.4
+  },
+  "aspect": {
+   "lowest_pass": [
+    "storyteller",
+    1.37
+   ],
+   "highest_dot": [
+    "monk",
+    1.14
+   ],
+   "threshold": 1.25,
+   "separates": true,
+   "margin": 1.2
+  },
+  "sclera": {
+   "lowest_pass": [
+    "archer",
+    0
+   ],
+   "highest_dot": [
+    "monk",
+    0.05
+   ],
+   "threshold": 0.03,
+   "separates": false,
+   "margin": 0
+  }
+ },
+ "characters": [
+  {
+   "name": "archer",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/archer.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 13.8,
+    "width": 22.6,
+    "aspect": 1.66,
+    "sclera": 0
+   },
+   "skin": [
+    0.824,
+    0.667,
+    0.499
+   ],
+   "face_w": 155.8,
+   "sep": 65.1,
+   "mid": -0.1,
+   "eye_y": 110.7,
+   "lr": {
+    "width": 0.93,
+    "height": 0.98,
+    "dy": 0.6
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 21.8,
+     "height": 13.8,
+     "aspect": 1.58,
+     "iris_w": 9,
+     "iris_h": 11,
+     "reach": 12.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.14,
+     "reach_l": 11.3,
+     "reach_r": 1.5,
+     "cx": -32.6,
+     "cy": 110.4,
+     "box": {
+      "x0": -43.5,
+      "x1": -21.8,
+      "y1": 117.3,
+      "y0": 103.5
+     },
+     "core": {
+      "x0": -41.8,
+      "x1": -23,
+      "y0": 104.8,
+      "y1": 115.8
+     },
+     "brow": {
+      "x0": -50.3,
+      "x1": -11.3,
+      "y0": 119.3,
+      "y1": 135.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 23.5,
+     "height": 13.5,
+     "aspect": 1.74,
+     "iris_w": 8.8,
+     "iris_h": 10.8,
+     "reach": 14.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "reach_l": 4.5,
+     "reach_r": 10.3,
+     "cx": 32.5,
+     "cy": 111,
+     "box": {
+      "x0": 20.8,
+      "x1": 44.3,
+      "y1": 117.8,
+      "y0": 104.3
+     },
+     "core": {
+      "x0": 23.5,
+      "x1": 34.5,
+      "y0": 105.5,
+      "y1": 116.3
+     },
+     "brow": {
+      "x0": 12.8,
+      "x1": 48,
+      "y0": 119.8,
+      "y1": 133.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1272,
+    "islands": 3,
+    "median_island": 394.8,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "archer",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/archer/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 13.4,
+     "width": 22.5,
+     "aspect": 1.72,
+     "sclera": 0.05
+    },
+    "skin": [
+     0.827,
+     0.666,
+     0.499
+    ],
+    "face_w": 155.8,
+    "sep": 65.5,
+    "mid": -0.3,
+    "eye_y": 110.8,
+    "lr": {
+     "width": 0.91,
+     "height": 0.98,
+     "dy": 0.4
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 21.5,
+      "height": 13.3,
+      "aspect": 1.62,
+      "iris_w": 9.3,
+      "iris_h": 11.5,
+      "reach": 12.3,
+      "sclera": 0.05,
+      "sclera_mm2": 10.7,
+      "face_frac": 0.14,
+      "reach_l": 11.3,
+      "reach_r": 1,
+      "cx": -33,
+      "cy": 110.6,
+      "box": {
+       "x0": -43.8,
+       "x1": -22.3,
+       "y1": 117.3,
+       "y0": 104
+      },
+      "core": {
+       "x0": -42,
+       "x1": -23,
+       "y0": 104.5,
+       "y1": 116
+      },
+      "brow": {
+       "x0": -50.3,
+       "x1": -10.8,
+       "y0": 119.3,
+       "y1": 135.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 23.5,
+      "height": 13,
+      "aspect": 1.81,
+      "iris_w": 9,
+      "iris_h": 10.5,
+      "reach": 14.5,
+      "sclera": 0.05,
+      "sclera_mm2": 12.6,
+      "face_frac": 0.15,
+      "reach_l": 4.5,
+      "reach_r": 10,
+      "cx": 32.5,
+      "cy": 111,
+      "box": {
+       "x0": 20.8,
+       "x1": 44.3,
+       "y1": 117.5,
+       "y0": 104.5
+      },
+      "core": {
+       "x0": 22,
+       "x1": 34.5,
+       "y0": 105.5,
+       "y1": 116
+      },
+      "brow": {
+       "x0": 12.5,
+       "x1": 48,
+       "y0": 119.5,
+       "y1": 133.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "bearer",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/bearer.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 14.6,
+    "width": 21.3,
+    "aspect": 2.17,
+    "sclera": 0.02
+   },
+   "skin": [
+    0.784,
+    0.606,
+    0.426
+   ],
+   "face_w": 126,
+   "sep": 59.3,
+   "mid": -1.5,
+   "eye_y": 121.2,
+   "lr": {
+    "width": 0.62,
+    "height": 0.93,
+    "dy": 0.1
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 26.3,
+     "height": 9.5,
+     "aspect": 2.76,
+     "iris_w": 5.8,
+     "iris_h": 7.3,
+     "reach": 20.5,
+     "sclera": 0.05,
+     "sclera_mm2": 11.9,
+     "face_frac": 0.21,
+     "reach_l": 15,
+     "reach_r": 5.5,
+     "cx": -31.1,
+     "cy": 121.3,
+     "box": {
+      "x0": -44.3,
+      "x1": -18,
+      "y1": 126,
+      "y0": 116.5
+     },
+     "core": {
+      "x0": -29.5,
+      "x1": -23,
+      "y0": 117.3,
+      "y1": 124.5
+     },
+     "brow": {
+      "x0": -52.3,
+      "x1": -12.3,
+      "y0": 131,
+      "y1": 145
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 16.3,
+     "height": 10.3,
+     "aspect": 1.59,
+     "iris_w": 7.5,
+     "iris_h": 8,
+     "reach": 8.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.13,
+     "reach_l": 6,
+     "reach_r": 2.8,
+     "cx": 28.1,
+     "cy": 121.1,
+     "box": {
+      "x0": 20,
+      "x1": 36.3,
+      "y1": 126.3,
+      "y0": 116
+     },
+     "core": {
+      "x0": 24.8,
+      "x1": 33.8,
+      "y0": 117,
+      "y1": 125
+     },
+     "brow": {
+      "x0": 13.5,
+      "x1": 52.8,
+      "y0": 132,
+      "y1": 145.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1104,
+    "islands": 4,
+    "median_island": 296.8,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "bearer",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/bearer/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 20.1,
+     "width": 27.3,
+     "aspect": 2.79,
+     "sclera": 0.23
+    },
+    "skin": [
+     0.788,
+     0.607,
+     0.423
+    ],
+    "face_w": 125.8,
+    "sep": 63.3,
+    "mid": 0.8,
+    "eye_y": 121.1,
+    "lr": {
+     "width": 1,
+     "height": 1,
+     "dy": 0
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 27.3,
+      "height": 9.8,
+      "aspect": 2.79,
+      "iris_w": 7,
+      "iris_h": 7.5,
+      "reach": 20.3,
+      "sclera": 0.24,
+      "sclera_mm2": 52.1,
+      "face_frac": 0.22,
+      "reach_l": 14.5,
+      "reach_r": 5.8,
+      "cx": -30.9,
+      "cy": 121.1,
+      "box": {
+       "x0": -44.5,
+       "x1": -17.3,
+       "y1": 126,
+       "y0": 116.3
+      },
+      "core": {
+       "x0": -43.3,
+       "x1": -22.3,
+       "y0": 117.5,
+       "y1": 125
+      },
+      "brow": {
+       "x0": -52.5,
+       "x1": -12,
+       "y0": 131,
+       "y1": 145.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 27.3,
+      "height": 9.8,
+      "aspect": 2.79,
+      "iris_w": 7.3,
+      "iris_h": 7.8,
+      "reach": 20,
+      "sclera": 0.22,
+      "sclera_mm2": 47.2,
+      "face_frac": 0.22,
+      "reach_l": 7.8,
+      "reach_r": 12.3,
+      "cx": 32.4,
+      "cy": 121.1,
+      "box": {
+       "x0": 18.8,
+       "x1": 46,
+       "y1": 126,
+       "y0": 116.3
+      },
+      "core": {
+       "x0": 21.3,
+       "x1": 34,
+       "y0": 117.3,
+       "y1": 125
+      },
+      "brow": {
+       "x0": 13.3,
+       "x1": 52.8,
+       "y0": 132,
+       "y1": 146
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "boatman",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/boatman.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 4.3,
+    "width": 13.5,
+    "aspect": 1.05,
+    "sclera": 0
+   },
+   "skin": [
+    0.783,
+    0.601,
+    0.439
+   ],
+   "face_w": 114.3,
+   "sep": 55.5,
+   "mid": 0.5,
+   "eye_y": 117.9,
+   "lr": {
+    "width": 1,
+    "height": 0.98,
+    "dy": 0.4
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 13.5,
+     "height": 13,
+     "aspect": 1.04,
+     "iris_w": 8.8,
+     "iris_h": 11,
+     "reach": 4.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.12,
+     "reach_l": 2.8,
+     "reach_r": 2,
+     "cx": -27.3,
+     "cy": 117.8,
+     "box": {
+      "x0": -34,
+      "x1": -20.5,
+      "y1": 124.3,
+      "y0": 111.3
+     },
+     "core": {
+      "x0": -32,
+      "x1": -21.8,
+      "y0": 111.8,
+      "y1": 122.8
+     },
+     "brow": {
+      "x0": -48.8,
+      "x1": -13,
+      "y0": 132.3,
+      "y1": 144.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 13.5,
+     "height": 12.8,
+     "aspect": 1.06,
+     "iris_w": 9.8,
+     "iris_h": 10.5,
+     "reach": 3.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.12,
+     "reach_l": 2,
+     "reach_r": 1.8,
+     "cx": 28.3,
+     "cy": 118.1,
+     "box": {
+      "x0": 21.5,
+      "x1": 35,
+      "y1": 124.5,
+      "y0": 111.8
+     },
+     "core": {
+      "x0": 22.8,
+      "x1": 34,
+      "y0": 112.8,
+      "y1": 123.3
+     },
+     "brow": {
+      "x0": 13.5,
+      "x1": 48,
+      "y0": 132,
+      "y1": 146.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1846,
+    "islands": 9,
+    "median_island": 141.7,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "boatman",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/boatman/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3,
+     "width": 12.3,
+     "aspect": 0.98,
+     "sclera": 0
+    },
+    "skin": [
+     0.788,
+     0.601,
+     0.437
+    ],
+    "face_w": 114.5,
+    "sep": 55.3,
+    "mid": 0.6,
+    "eye_y": 117.8,
+    "lr": {
+     "width": 0.96,
+     "height": 1,
+     "dy": 0.5
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 12,
+      "height": 12.5,
+      "aspect": 0.96,
+      "iris_w": 8.8,
+      "iris_h": 11,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0.1,
+      "face_frac": 0.1,
+      "reach_l": 1.8,
+      "reach_r": 1.5,
+      "cx": -27,
+      "cy": 117.5,
+      "box": {
+       "x0": -33,
+       "x1": -21,
+       "y1": 123.8,
+       "y0": 111.3
+      },
+      "core": {
+       "x0": -32.3,
+       "x1": -21.8,
+       "y0": 112,
+       "y1": 123
+      },
+      "brow": {
+       "x0": -49.8,
+       "x1": -13,
+       "y0": 132.5,
+       "y1": 145.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 12.5,
+      "height": 12.5,
+      "aspect": 1,
+      "iris_w": 9.8,
+      "iris_h": 10.5,
+      "reach": 2.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 1.8,
+      "reach_r": 1,
+      "cx": 28.3,
+      "cy": 118,
+      "box": {
+       "x0": 22,
+       "x1": 34.5,
+       "y1": 124.3,
+       "y0": 111.8
+      },
+      "core": {
+       "x0": 22.8,
+       "x1": 34,
+       "y0": 112.8,
+       "y1": 123.3
+      },
+      "brow": {
+       "x0": 13,
+       "x1": 48.3,
+       "y0": 132,
+       "y1": 147
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "butcher",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/butcher.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.8,
+    "width": 14.5,
+    "aspect": 0.96,
+    "sclera": 0
+   },
+   "skin": [
+    0.853,
+    0.631,
+    0.44
+   ],
+   "face_w": 160,
+   "sep": 71.5,
+   "mid": 1.6,
+   "eye_y": 103.2,
+   "lr": {
+    "width": 0.97,
+    "height": 0.95,
+    "dy": 0.9
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 14.8,
+     "height": 15.5,
+     "aspect": 0.95,
+     "iris_w": 11.3,
+     "iris_h": 13.3,
+     "reach": 3.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.09,
+     "reach_l": 2.3,
+     "reach_r": 1.3,
+     "cx": -34.1,
+     "cy": 102.8,
+     "box": {
+      "x0": -41.5,
+      "x1": -26.8,
+      "y1": 110.5,
+      "y0": 95
+     },
+     "core": {
+      "x0": -40.5,
+      "x1": -27.5,
+      "y0": 96.3,
+      "y1": 109.5
+     },
+     "brow": {
+      "x0": -52.5,
+      "x1": -35.5,
+      "y0": 128,
+      "y1": 135.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 14.3,
+     "height": 14.8,
+     "aspect": 0.97,
+     "iris_w": 10.3,
+     "iris_h": 13,
+     "reach": 4,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.09,
+     "reach_l": 2,
+     "reach_r": 2,
+     "cx": 37.4,
+     "cy": 103.6,
+     "box": {
+      "x0": 30.3,
+      "x1": 44.5,
+      "y1": 111,
+      "y0": 96.3
+     },
+     "core": {
+      "x0": 31.3,
+      "x1": 44,
+      "y0": 97.3,
+      "y1": 110.3
+     },
+     "brow": {
+      "x0": 32,
+      "x1": 56.5,
+      "y0": 131,
+      "y1": 136.3
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 5691,
+    "islands": 16,
+    "median_island": 286.4,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "butcher",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/butcher/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.4,
+     "width": 14.3,
+     "aspect": 0.94,
+     "sclera": 0
+    },
+    "skin": [
+     0.855,
+     0.631,
+     0.439
+    ],
+    "face_w": 160.5,
+    "sep": 71.5,
+    "mid": 1.8,
+    "eye_y": 103.2,
+    "lr": {
+     "width": 0.97,
+     "height": 0.95,
+     "dy": 0.9
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 14.5,
+      "height": 15.5,
+      "aspect": 0.94,
+      "iris_w": 11.5,
+      "iris_h": 13.3,
+      "reach": 3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.09,
+      "reach_l": 1.8,
+      "reach_r": 1.3,
+      "cx": -34,
+      "cy": 102.8,
+      "box": {
+       "x0": -41.3,
+       "x1": -26.8,
+       "y1": 110.5,
+       "y0": 95
+      },
+      "core": {
+       "x0": -40.5,
+       "x1": -27.5,
+       "y0": 96.3,
+       "y1": 109.5
+      },
+      "brow": {
+       "x0": -52.5,
+       "x1": -30.3,
+       "y0": 127.8,
+       "y1": 135.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 14,
+      "height": 14.8,
+      "aspect": 0.95,
+      "iris_w": 10.3,
+      "iris_h": 13.3,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.09,
+      "reach_l": 1.8,
+      "reach_r": 2,
+      "cx": 37.5,
+      "cy": 103.6,
+      "box": {
+       "x0": 30.5,
+       "x1": 44.5,
+       "y1": 111,
+       "y0": 96.3
+      },
+      "core": {
+       "x0": 31.5,
+       "x1": 43.8,
+       "y0": 97,
+       "y1": 110.3
+      },
+      "brow": {
+       "x0": 31.5,
+       "x1": 57.8,
+       "y0": 129.8,
+       "y1": 137
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "camel_driver",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/camel_driver.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 4.1,
+    "width": 10.4,
+    "aspect": 0.99,
+    "sclera": 0
+   },
+   "skin": [
+    0.835,
+    0.674,
+    0.503
+   ],
+   "face_w": 110.5,
+   "sep": 54.1,
+   "mid": 0.8,
+   "eye_y": 107.1,
+   "lr": {
+    "width": 0.84,
+    "height": 0.91,
+    "dy": 0.3
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 9.5,
+     "height": 10,
+     "aspect": 0.95,
+     "iris_w": 6,
+     "iris_h": 7.3,
+     "reach": 3.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.09,
+     "reach_l": 1.8,
+     "reach_r": 1.8,
+     "cx": -26.3,
+     "cy": 107.3,
+     "box": {
+      "x0": -31,
+      "x1": -21.5,
+      "y1": 112.3,
+      "y0": 102.3
+     },
+     "core": {
+      "x0": -29.8,
+      "x1": -22.8,
+      "y0": 103.5,
+      "y1": 110.8
+     },
+     "brow": {
+      "x0": -47.8,
+      "x1": -13.3,
+      "y0": 118.3,
+      "y1": 132.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 11.3,
+     "height": 11,
+     "aspect": 1.02,
+     "iris_w": 6.5,
+     "iris_h": 8.3,
+     "reach": 4.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.1,
+     "reach_l": 2.5,
+     "reach_r": 2.3,
+     "cx": 27.9,
+     "cy": 107,
+     "box": {
+      "x0": 22.3,
+      "x1": 33.5,
+      "y1": 112.5,
+      "y0": 101.5
+     },
+     "core": {
+      "x0": 24.3,
+      "x1": 31.8,
+      "y0": 103,
+      "y1": 111.3
+     },
+     "brow": {
+      "x0": 13,
+      "x1": 48.3,
+      "y0": 118,
+      "y1": 132
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1607,
+    "islands": 5,
+    "median_island": 307.4,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "camel_driver",
+    "verdict": "FAIL~",
+    "tex": 2048,
+    "file": "gen/characters/camel_driver/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 8.4,
+     "width": 14.8,
+     "aspect": 1.54,
+     "sclera": 0
+    },
+    "skin": [
+     0.836,
+     0.673,
+     0.502
+    ],
+    "face_w": 110.3,
+    "sep": 59,
+    "mid": 2,
+    "eye_y": 107.1,
+    "lr": {
+     "width": 0.69,
+     "height": 0.97,
+     "dy": 0.1
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 12,
+      "height": 9.8,
+      "aspect": 1.23,
+      "iris_w": 6,
+      "iris_h": 7.3,
+      "reach": 6,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 4.3,
+      "reach_r": 1.8,
+      "cx": -27.5,
+      "cy": 107.1,
+      "box": {
+       "x0": -33.5,
+       "x1": -21.5,
+       "y1": 112,
+       "y0": 102.3
+      },
+      "core": {
+       "x0": -29.8,
+       "x1": -22.8,
+       "y0": 103.3,
+       "y1": 110.5
+      },
+      "brow": {
+       "x0": -48,
+       "x1": -13.3,
+       "y0": 118,
+       "y1": 132.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 17.5,
+      "height": 9.5,
+      "aspect": 1.84,
+      "iris_w": 6.8,
+      "iris_h": 7.8,
+      "reach": 10.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "reach_l": 1.8,
+      "reach_r": 9,
+      "cx": 31.5,
+      "cy": 107,
+      "box": {
+       "x0": 22.8,
+       "x1": 40.3,
+       "y1": 111.8,
+       "y0": 102.3
+      },
+      "core": {
+       "x0": 23.5,
+       "x1": 31.8,
+       "y0": 103,
+       "y1": 110.8
+      },
+      "brow": {
+       "x0": 13,
+       "x1": 49,
+       "y0": 117.8,
+       "y1": 131.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "carter",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/carter.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.9,
+    "width": 13.6,
+    "aspect": 0.88,
+    "sclera": 0
+   },
+   "skin": [
+    0.83,
+    0.642,
+    0.469
+   ],
+   "face_w": 124.8,
+   "sep": 61.9,
+   "mid": 1.1,
+   "eye_y": 101.4,
+   "lr": {
+    "width": 0.95,
+    "height": 0.97,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 13.3,
+     "height": 15.8,
+     "aspect": 0.84,
+     "iris_w": 9.3,
+     "iris_h": 13.3,
+     "reach": 4,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.11,
+     "reach_l": 2,
+     "reach_r": 2,
+     "cx": -29.9,
+     "cy": 101.6,
+     "box": {
+      "x0": -36.5,
+      "x1": -23.3,
+      "y1": 109.5,
+      "y0": 93.8
+     },
+     "core": {
+      "x0": -35.3,
+      "x1": -24.8,
+      "y0": 95,
+      "y1": 108.3
+     },
+     "brow": {
+      "x0": -85,
+      "x1": 95.3,
+      "y0": 113,
+      "y1": 225.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 14,
+     "height": 15.3,
+     "aspect": 0.92,
+     "iris_w": 10.3,
+     "iris_h": 13.3,
+     "reach": 3.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.11,
+     "reach_l": 2,
+     "reach_r": 1.8,
+     "cx": 32,
+     "cy": 101.1,
+     "box": {
+      "x0": 25,
+      "x1": 39,
+      "y1": 108.8,
+      "y0": 93.5
+     },
+     "core": {
+      "x0": 26.3,
+      "x1": 38,
+      "y0": 94.8,
+      "y1": 108
+     },
+     "brow": {
+      "x0": -85,
+      "x1": 95.3,
+      "y0": 113,
+      "y1": 225.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1875,
+    "islands": 10,
+    "median_island": 82.6,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "carter",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/carter/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.5,
+     "width": 13,
+     "aspect": 0.9,
+     "sclera": 0
+    },
+    "skin": [
+     0.832,
+     0.641,
+     0.467
+    ],
+    "face_w": 124.8,
+    "sep": 62.3,
+    "mid": 1.1,
+    "eye_y": 101.4,
+    "lr": {
+     "width": 0.93,
+     "height": 1,
+     "dy": 0.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 12.5,
+      "height": 14.5,
+      "aspect": 0.86,
+      "iris_w": 8.8,
+      "iris_h": 13.3,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.1,
+      "reach_l": 2,
+      "reach_r": 1.8,
+      "cx": -30,
+      "cy": 101.5,
+      "box": {
+       "x0": -36.3,
+       "x1": -23.8,
+       "y1": 108.8,
+       "y0": 94.3
+      },
+      "core": {
+       "x0": -35.3,
+       "x1": -24.5,
+       "y0": 95,
+       "y1": 108.3
+      },
+      "brow": {
+       "x0": -85,
+       "x1": 95.3,
+       "y0": 113,
+       "y1": 225.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 13.5,
+      "height": 14.5,
+      "aspect": 0.93,
+      "iris_w": 10.3,
+      "iris_h": 13,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 1.5,
+      "reach_r": 1.8,
+      "cx": 32.3,
+      "cy": 101.3,
+      "box": {
+       "x0": 25.5,
+       "x1": 39,
+       "y1": 108.5,
+       "y0": 94
+      },
+      "core": {
+       "x0": 26.3,
+       "x1": 38,
+       "y0": 94.8,
+       "y1": 107.8
+      },
+      "brow": {
+       "x0": -85,
+       "x1": 95.3,
+       "y0": 113,
+       "y1": 225.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "child",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/child.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.9,
+    "width": 15.6,
+    "aspect": 0.81,
+    "sclera": 0
+   },
+   "skin": [
+    0.839,
+    0.671,
+    0.494
+   ],
+   "face_w": 133.5,
+   "sep": 72.9,
+   "mid": -0.9,
+   "eye_y": 70.4,
+   "lr": {
+    "width": 0.92,
+    "height": 0.93,
+    "dy": 0.8
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 16.3,
+     "height": 20,
+     "aspect": 0.81,
+     "iris_w": 11.8,
+     "iris_h": 17.5,
+     "reach": 4.5,
+     "sclera": 0.01,
+     "sclera_mm2": 3.3,
+     "face_frac": 0.12,
+     "reach_l": 2,
+     "reach_r": 2.5,
+     "cx": -37.4,
+     "cy": 70.8,
+     "box": {
+      "x0": -45.5,
+      "x1": -29.3,
+      "y1": 80.8,
+      "y0": 60.8
+     },
+     "core": {
+      "x0": -44.5,
+      "x1": -30.8,
+      "y0": 61.8,
+      "y1": 79.3
+     },
+     "brow": {
+      "x0": -93.5,
+      "x1": 95.3,
+      "y0": 79.8,
+      "y1": 223.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 15,
+     "height": 18.5,
+     "aspect": 0.81,
+     "iris_w": 11.8,
+     "iris_h": 16.5,
+     "reach": 3.3,
+     "sclera": 0,
+     "sclera_mm2": 1.8,
+     "face_frac": 0.11,
+     "reach_l": 1.8,
+     "reach_r": 1.5,
+     "cx": 35.5,
+     "cy": 70,
+     "box": {
+      "x0": 28,
+      "x1": 43,
+      "y1": 79.3,
+      "y0": 60.8
+     },
+     "core": {
+      "x0": 29,
+      "x1": 42.3,
+      "y0": 61.8,
+      "y1": 78.3
+     },
+     "brow": {
+      "x0": -93.5,
+      "x1": 95.3,
+      "y0": 79.8,
+      "y1": 223.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 2051,
+    "islands": 8,
+    "median_island": 159.1,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "child",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/child/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.3,
+     "width": 15,
+     "aspect": 0.82,
+     "sclera": 0
+    },
+    "skin": [
+     0.839,
+     0.671,
+     0.493
+    ],
+    "face_w": 133.3,
+    "sep": 73.5,
+    "mid": -1,
+    "eye_y": 70.3,
+    "lr": {
+     "width": 1,
+     "height": 0.97,
+     "dy": 0.5
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 15,
+      "height": 18.5,
+      "aspect": 0.81,
+      "iris_w": 11.8,
+      "iris_h": 17,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0.1,
+      "face_frac": 0.11,
+      "reach_l": 1.8,
+      "reach_r": 1.5,
+      "cx": -37.8,
+      "cy": 70.5,
+      "box": {
+       "x0": -45.3,
+       "x1": -30.3,
+       "y1": 79.8,
+       "y0": 61.3
+      },
+      "core": {
+       "x0": -44.5,
+       "x1": -30.8,
+       "y0": 62,
+       "y1": 79
+      },
+      "brow": {
+       "x0": -88.3,
+       "x1": 6.5,
+       "y0": 80.3,
+       "y1": 145.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 15,
+      "height": 18,
+      "aspect": 0.83,
+      "iris_w": 11.8,
+      "iris_h": 16.8,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 1.5,
+      "reach_r": 1.8,
+      "cx": 35.8,
+      "cy": 70,
+      "box": {
+       "x0": 28.3,
+       "x1": 43.3,
+       "y1": 79,
+       "y0": 61
+      },
+      "core": {
+       "x0": 29,
+       "x1": 42.3,
+       "y0": 61.8,
+       "y1": 78.5
+      },
+      "brow": {
+       "x0": -93.5,
+       "x1": 95.3,
+       "y0": 81,
+       "y1": 223.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "child_red",
+   "verdict": "FAIL~",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/child_red.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 4.5,
+    "width": 16.4,
+    "aspect": 0.87,
+    "sclera": 0
+   },
+   "skin": [
+    0.839,
+    0.675,
+    0.5
+   ],
+   "face_w": 133.3,
+   "sep": 72.1,
+   "mid": -0.6,
+   "eye_y": 70.3,
+   "lr": {
+    "width": 0.85,
+    "height": 0.97,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 17.8,
+     "height": 19,
+     "aspect": 0.93,
+     "iris_w": 12,
+     "iris_h": 17,
+     "reach": 5.8,
+     "sclera": 0.01,
+     "sclera_mm2": 2.5,
+     "face_frac": 0.13,
+     "reach_l": 2,
+     "reach_r": 3.8,
+     "cx": -36.6,
+     "cy": 70.5,
+     "box": {
+      "x0": -45.5,
+      "x1": -27.8,
+      "y1": 80,
+      "y0": 61
+     },
+     "core": {
+      "x0": -44.5,
+      "x1": -30.8,
+      "y0": 62,
+      "y1": 79
+     },
+     "brow": {
+      "x0": -93.5,
+      "x1": 95.3,
+      "y0": 79.8,
+      "y1": 223.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 15,
+     "height": 18.5,
+     "aspect": 0.81,
+     "iris_w": 11.8,
+     "iris_h": 16.5,
+     "reach": 3.3,
+     "sclera": 0,
+     "sclera_mm2": 1.6,
+     "face_frac": 0.11,
+     "reach_l": 1.8,
+     "reach_r": 1.5,
+     "cx": 35.5,
+     "cy": 70,
+     "box": {
+      "x0": 28,
+      "x1": 43,
+      "y1": 79.3,
+      "y0": 60.8
+     },
+     "core": {
+      "x0": 29,
+      "x1": 42.3,
+      "y0": 61.8,
+      "y1": 78.3
+     },
+     "brow": {
+      "x0": -93.5,
+      "x1": 95.3,
+      "y0": 79.8,
+      "y1": 223.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 2051,
+    "islands": 8,
+    "median_island": 159.1,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "child_red",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/child/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.3,
+     "width": 15,
+     "aspect": 0.82,
+     "sclera": 0
+    },
+    "skin": [
+     0.839,
+     0.671,
+     0.493
+    ],
+    "face_w": 133.3,
+    "sep": 73.5,
+    "mid": -1,
+    "eye_y": 70.3,
+    "lr": {
+     "width": 1,
+     "height": 0.97,
+     "dy": 0.5
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 15,
+      "height": 18.5,
+      "aspect": 0.81,
+      "iris_w": 11.8,
+      "iris_h": 17,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0.1,
+      "face_frac": 0.11,
+      "reach_l": 1.8,
+      "reach_r": 1.5,
+      "cx": -37.8,
+      "cy": 70.5,
+      "box": {
+       "x0": -45.3,
+       "x1": -30.3,
+       "y1": 79.8,
+       "y0": 61.3
+      },
+      "core": {
+       "x0": -44.5,
+       "x1": -30.8,
+       "y0": 62,
+       "y1": 79
+      },
+      "brow": {
+       "x0": -88.3,
+       "x1": 6.5,
+       "y0": 80.3,
+       "y1": 145.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 15,
+      "height": 18,
+      "aspect": 0.83,
+      "iris_w": 11.8,
+      "iris_h": 16.8,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 1.5,
+      "reach_r": 1.8,
+      "cx": 35.8,
+      "cy": 70,
+      "box": {
+       "x0": 28.3,
+       "x1": 43.3,
+       "y1": 79,
+       "y0": 61
+      },
+      "core": {
+       "x0": 29,
+       "x1": 42.3,
+       "y0": 61.8,
+       "y1": 78.5
+      },
+      "brow": {
+       "x0": -93.5,
+       "x1": 95.3,
+       "y0": 81,
+       "y1": 223.5
+      }
+     }
+    ],
+    "note": "the base's (child) source texture, before the variant's recolour"
+   }
+  },
+  {
+   "name": "child_robed",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/child_robed.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.9,
+    "width": 16,
+    "aspect": 1.09,
+    "sclera": 0
+   },
+   "skin": [
+    0.903,
+    0.724,
+    0.513
+   ],
+   "face_w": 130.8,
+   "sep": 71.5,
+   "mid": 1.9,
+   "eye_y": 71.8,
+   "lr": {
+    "width": 0.97,
+    "height": 0.97,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 16.3,
+     "height": 14.5,
+     "aspect": 1.12,
+     "iris_w": 12.3,
+     "iris_h": 12.5,
+     "reach": 4,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.12,
+     "reach_l": 2.3,
+     "reach_r": 1.8,
+     "cx": -33.9,
+     "cy": 72,
+     "box": {
+      "x0": -42,
+      "x1": -25.8,
+      "y1": 79.3,
+      "y0": 64.8
+     },
+     "core": {
+      "x0": -40.5,
+      "x1": -26.8,
+      "y0": 65.8,
+      "y1": 78.3
+     },
+     "brow": {
+      "x0": -51.3,
+      "x1": -24,
+      "y0": 96.8,
+      "y1": 102.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 15.8,
+     "height": 15,
+     "aspect": 1.05,
+     "iris_w": 12,
+     "iris_h": 12.8,
+     "reach": 3.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.12,
+     "reach_l": 1.8,
+     "reach_r": 2,
+     "cx": 37.6,
+     "cy": 71.5,
+     "box": {
+      "x0": 29.8,
+      "x1": 45.5,
+      "y1": 79,
+      "y0": 64
+     },
+     "core": {
+      "x0": 30.5,
+      "x1": 44.5,
+      "y0": 65,
+      "y1": 77.8
+     },
+     "brow": {
+      "x0": 27,
+      "x1": 49.5,
+      "y0": 97,
+      "y1": 101.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1689,
+    "islands": 6,
+    "median_island": 292.5,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "child_robed",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/child_robed/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3,
+     "width": 15.1,
+     "aspect": 1.07,
+     "sclera": 0
+    },
+    "skin": [
+     0.905,
+     0.721,
+     0.508
+    ],
+    "face_w": 130.8,
+    "sep": 71.4,
+    "mid": 1.9,
+    "eye_y": 71.7,
+    "lr": {
+     "width": 0.98,
+     "height": 0.98,
+     "dy": 0.9
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 15,
+      "height": 14.3,
+      "aspect": 1.05,
+      "iris_w": 12.3,
+      "iris_h": 12.5,
+      "reach": 2.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 1.5,
+      "reach_r": 1.3,
+      "cx": -33.8,
+      "cy": 72.1,
+      "box": {
+       "x0": -41.3,
+       "x1": -26.3,
+       "y1": 79.3,
+       "y0": 65
+      },
+      "core": {
+       "x0": -40.5,
+       "x1": -26.8,
+       "y0": 65.8,
+       "y1": 78.3
+      },
+      "brow": {
+       "x0": -52.3,
+       "x1": -23.5,
+       "y0": 96.5,
+       "y1": 102.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 15.3,
+      "height": 14,
+      "aspect": 1.09,
+      "iris_w": 12,
+      "iris_h": 12.5,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.12,
+      "reach_l": 1.5,
+      "reach_r": 1.8,
+      "cx": 37.6,
+      "cy": 71.3,
+      "box": {
+       "x0": 30,
+       "x1": 45.3,
+       "y1": 78.3,
+       "y0": 64.3
+      },
+      "core": {
+       "x0": 30.5,
+       "x1": 44.5,
+       "y0": 65.3,
+       "y1": 77.8
+      },
+      "brow": {
+       "x0": 26.5,
+       "x1": 50.8,
+       "y0": 96.5,
+       "y1": 101.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "dark_hat",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/dark_hat.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 11.4,
+    "width": 21.5,
+    "aspect": 1.93,
+    "sclera": 0
+   },
+   "skin": [
+    0.831,
+    0.646,
+    0.497
+   ],
+   "face_w": 130.5,
+   "sep": 62,
+   "mid": -2.9,
+   "eye_y": 108.8,
+   "lr": {
+    "width": 0.85,
+    "height": 0.93,
+    "dy": 0.4
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 23.3,
+     "height": 11.5,
+     "aspect": 2.02,
+     "iris_w": 9.5,
+     "iris_h": 9,
+     "reach": 13.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.18,
+     "reach_l": 10,
+     "reach_r": 3.8,
+     "cx": -33.9,
+     "cy": 109,
+     "box": {
+      "x0": -45.5,
+      "x1": -22.3,
+      "y1": 114.8,
+      "y0": 103.3
+     },
+     "core": {
+      "x0": -36.3,
+      "x1": -24.8,
+      "y0": 104.5,
+      "y1": 113.5
+     },
+     "brow": {
+      "x0": -54.5,
+      "x1": -16,
+      "y0": 124,
+      "y1": 135.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 19.8,
+     "height": 10.8,
+     "aspect": 1.84,
+     "iris_w": 10.8,
+     "iris_h": 8.8,
+     "reach": 9,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "reach_l": 5.5,
+     "reach_r": 3.5,
+     "cx": 28.1,
+     "cy": 108.6,
+     "box": {
+      "x0": 18.3,
+      "x1": 38,
+      "y1": 114,
+      "y0": 103.3
+     },
+     "core": {
+      "x0": 22.8,
+      "x1": 36,
+      "y0": 104.3,
+      "y1": 113
+     },
+     "brow": {
+      "x0": 13,
+      "x1": 49.3,
+      "y0": 124.3,
+      "y1": 135.3
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1697,
+    "islands": 6,
+    "median_island": 221.1,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "dark_hat",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/dark_hat/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 10.6,
+     "width": 20.6,
+     "aspect": 1.92,
+     "sclera": 0
+    },
+    "skin": [
+     0.835,
+     0.644,
+     0.496
+    ],
+    "face_w": 130.5,
+    "sep": 62.1,
+    "mid": -3.2,
+    "eye_y": 108.8,
+    "lr": {
+     "width": 0.92,
+     "height": 1,
+     "dy": 0.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 21.5,
+      "height": 10.8,
+      "aspect": 2,
+      "iris_w": 9.3,
+      "iris_h": 8.8,
+      "reach": 12.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "reach_l": 10,
+      "reach_r": 2.3,
+      "cx": -34.3,
+      "cy": 108.9,
+      "box": {
+       "x0": -45,
+       "x1": -23.5,
+       "y1": 114.3,
+       "y0": 103.5
+      },
+      "core": {
+       "x0": -36.5,
+       "x1": -24.8,
+       "y0": 104.8,
+       "y1": 113.5
+      },
+      "brow": {
+       "x0": -54.5,
+       "x1": -15.8,
+       "y0": 124.3,
+       "y1": 136.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 19.8,
+      "height": 10.8,
+      "aspect": 1.84,
+      "iris_w": 10.8,
+      "iris_h": 9,
+      "reach": 9,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.15,
+      "reach_l": 6,
+      "reach_r": 3,
+      "cx": 27.9,
+      "cy": 108.6,
+      "box": {
+       "x0": 18,
+       "x1": 37.8,
+       "y1": 114,
+       "y0": 103.3
+      },
+      "core": {
+       "x0": 22.8,
+       "x1": 36,
+       "y0": 104.3,
+       "y1": 113.3
+      },
+      "brow": {
+       "x0": 12.5,
+       "x1": 49.5,
+       "y0": 124.8,
+       "y1": 135.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "elder",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/elder.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 14.9,
+    "width": 23.6,
+    "aspect": 1.99,
+    "sclera": 0.04
+   },
+   "skin": [
+    0.854,
+    0.659,
+    0.491
+   ],
+   "face_w": 144.5,
+   "sep": 54.6,
+   "mid": 3.8,
+   "eye_y": 86.3,
+   "lr": {
+    "width": 0.89,
+    "height": 0.94,
+    "dy": 0.4
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 25,
+     "height": 12.3,
+     "aspect": 2.04,
+     "iris_w": 8,
+     "iris_h": 9.3,
+     "reach": 17,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.17,
+     "reach_l": 10.8,
+     "reach_r": 6.3,
+     "cx": -23.5,
+     "cy": 86.1,
+     "box": {
+      "x0": -36,
+      "x1": -11,
+      "y1": 92.3,
+      "y0": 80
+     },
+     "core": {
+      "x0": -35,
+      "x1": -13.8,
+      "y0": 81.5,
+      "y1": 90.8
+     },
+     "brow": {
+      "x0": -38.8,
+      "x1": -17.5,
+      "y0": 101.3,
+      "y1": 107.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 22.3,
+     "height": 11.5,
+     "aspect": 1.93,
+     "iris_w": 9.5,
+     "iris_h": 9.3,
+     "reach": 12.8,
+     "sclera": 0.07,
+     "sclera_mm2": 15,
+     "face_frac": 0.15,
+     "reach_l": 8,
+     "reach_r": 4.8,
+     "cx": 31.1,
+     "cy": 86.5,
+     "box": {
+      "x0": 20,
+      "x1": 42.3,
+      "y1": 92.3,
+      "y0": 80.8
+     },
+     "core": {
+      "x0": 21.8,
+      "x1": 38.5,
+      "y0": 82,
+      "y1": 91.3
+     },
+     "brow": {
+      "x0": 22.3,
+      "x1": 44.8,
+      "y0": 105,
+      "y1": 108.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 6792,
+    "islands": 12,
+    "median_island": 467.8,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "elder",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/elder/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 14.8,
+     "width": 23.6,
+     "aspect": 2.17,
+     "sclera": 0.04
+    },
+    "skin": [
+     0.858,
+     0.659,
+     0.49
+    ],
+    "face_w": 144.5,
+    "sep": 54.4,
+    "mid": 3.8,
+    "eye_y": 86.2,
+    "lr": {
+     "width": 0.91,
+     "height": 0.93,
+     "dy": 0.6
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 24.8,
+      "height": 11.3,
+      "aspect": 2.2,
+      "iris_w": 8,
+      "iris_h": 9.3,
+      "reach": 16.8,
+      "sclera": 0.03,
+      "sclera_mm2": 7.1,
+      "face_frac": 0.17,
+      "reach_l": 10.5,
+      "reach_r": 6.3,
+      "cx": -23.4,
+      "cy": 85.9,
+      "box": {
+       "x0": -35.8,
+       "x1": -11,
+       "y1": 91.5,
+       "y0": 80.3
+      },
+      "core": {
+       "x0": -35,
+       "x1": -12,
+       "y0": 81.5,
+       "y1": 90.8
+      },
+      "brow": {
+       "x0": -38.8,
+       "x1": -17.8,
+       "y0": 101.5,
+       "y1": 107.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 22.5,
+      "height": 10.5,
+      "aspect": 2.14,
+      "iris_w": 9.8,
+      "iris_h": 9.3,
+      "reach": 12.8,
+      "sclera": 0.05,
+      "sclera_mm2": 8.6,
+      "face_frac": 0.16,
+      "reach_l": 8,
+      "reach_r": 4.8,
+      "cx": 31,
+      "cy": 86.5,
+      "box": {
+       "x0": 19.8,
+       "x1": 42.3,
+       "y1": 91.8,
+       "y0": 81.3
+      },
+      "core": {
+       "x0": 21.3,
+       "x1": 38.8,
+       "y0": 82,
+       "y1": 91.3
+      },
+      "brow": {
+       "x0": 19,
+       "x1": 45.3,
+       "y0": 104.8,
+       "y1": 108.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "farmer",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/farmer.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 13.6,
+    "width": 21.8,
+    "aspect": 2.17,
+    "sclera": 0.02
+   },
+   "skin": [
+    0.682,
+    0.517,
+    0.323
+   ],
+   "face_w": 118,
+   "sep": 65.5,
+   "mid": -3.9,
+   "eye_y": 117.4,
+   "lr": {
+    "width": 0.96,
+    "height": 1,
+    "dy": 0.3
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 22.3,
+     "height": 10,
+     "aspect": 2.23,
+     "iris_w": 8.5,
+     "iris_h": 7.5,
+     "reach": 13.8,
+     "sclera": 0.04,
+     "sclera_mm2": 7.4,
+     "face_frac": 0.19,
+     "reach_l": 10.3,
+     "reach_r": 3.5,
+     "cx": -36.6,
+     "cy": 117.5,
+     "box": {
+      "x0": -47.8,
+      "x1": -25.5,
+      "y1": 122.5,
+      "y0": 112.5
+     },
+     "core": {
+      "x0": -40.3,
+      "x1": -27.8,
+      "y0": 113.5,
+      "y1": 121
+     },
+     "brow": {
+      "x0": -53,
+      "x1": -18,
+      "y0": 130.5,
+      "y1": 141
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 21.3,
+     "height": 10,
+     "aspect": 2.13,
+     "iris_w": 7.8,
+     "iris_h": 7.8,
+     "reach": 13.5,
+     "sclera": 0.01,
+     "sclera_mm2": 1.1,
+     "face_frac": 0.18,
+     "reach_l": 2.8,
+     "reach_r": 10.8,
+     "cx": 28.9,
+     "cy": 117.3,
+     "box": {
+      "x0": 18.3,
+      "x1": 39.5,
+      "y1": 122.3,
+      "y0": 112.3
+     },
+     "core": {
+      "x0": 19.3,
+      "x1": 37,
+      "y0": 113,
+      "y1": 120.8
+     },
+     "brow": {
+      "x0": 9,
+      "x1": 42,
+      "y0": 130.5,
+      "y1": 140.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 6586,
+    "islands": 21,
+    "median_island": 164.6,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "farmer",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/farmer/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 13.5,
+     "width": 21.6,
+     "aspect": 2.31,
+     "sclera": 0.02
+    },
+    "skin": [
+     0.691,
+     0.519,
+     0.321
+    ],
+    "face_w": 118.3,
+    "sep": 65.6,
+    "mid": -3.9,
+    "eye_y": 117.1,
+    "lr": {
+     "width": 0.97,
+     "height": 0.97,
+     "dy": 0.1
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 22,
+      "height": 9.5,
+      "aspect": 2.32,
+      "iris_w": 8.5,
+      "iris_h": 7.8,
+      "reach": 13.5,
+      "sclera": 0.01,
+      "sclera_mm2": 2.2,
+      "face_frac": 0.19,
+      "reach_l": 10,
+      "reach_r": 3.5,
+      "cx": -36.8,
+      "cy": 117,
+      "box": {
+       "x0": -47.8,
+       "x1": -25.8,
+       "y1": 121.8,
+       "y0": 112.3
+      },
+      "core": {
+       "x0": -46.3,
+       "x1": -27.8,
+       "y0": 113.3,
+       "y1": 121
+      },
+      "brow": {
+       "x0": -53,
+       "x1": -17.8,
+       "y0": 130.3,
+       "y1": 141.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 21.3,
+      "height": 9.3,
+      "aspect": 2.3,
+      "iris_w": 7.8,
+      "iris_h": 7.8,
+      "reach": 13.5,
+      "sclera": 0.03,
+      "sclera_mm2": 5.3,
+      "face_frac": 0.18,
+      "reach_l": 2.8,
+      "reach_r": 10.8,
+      "cx": 28.9,
+      "cy": 117.1,
+      "box": {
+       "x0": 18.3,
+       "x1": 39.5,
+       "y1": 121.8,
+       "y0": 112.5
+      },
+      "core": {
+       "x0": 19.3,
+       "x1": 37.5,
+       "y0": 113,
+       "y1": 120.8
+      },
+      "brow": {
+       "x0": 8.8,
+       "x1": 42.3,
+       "y0": 130.5,
+       "y1": 141
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "fortune_teller",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/fortune_teller.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 5.8,
+    "width": 14.3,
+    "aspect": 1.2,
+    "sclera": 0.11
+   },
+   "skin": [
+    0.972,
+    0.782,
+    0.559
+   ],
+   "face_w": 121,
+   "sep": 56.8,
+   "mid": 1.6,
+   "eye_y": 103.8,
+   "lr": {
+    "width": 0.97,
+    "height": 0.94,
+    "dy": 1.4
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 14.5,
+     "height": 11.5,
+     "aspect": 1.26,
+     "iris_w": 9,
+     "iris_h": 8.5,
+     "reach": 5.5,
+     "sclera": 0.07,
+     "sclera_mm2": 11.9,
+     "face_frac": 0.12,
+     "reach_l": 3.8,
+     "reach_r": 1.8,
+     "cx": -26.8,
+     "cy": 104.5,
+     "box": {
+      "x0": -34,
+      "x1": -19.5,
+      "y1": 110.3,
+      "y0": 98.8
+     },
+     "core": {
+      "x0": -30.8,
+      "x1": -21,
+      "y0": 100.3,
+      "y1": 108.8
+     },
+     "brow": {
+      "x0": -41.3,
+      "x1": -12.8,
+      "y0": 122,
+      "y1": 131.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 14,
+     "height": 12.3,
+     "aspect": 1.14,
+     "iris_w": 8,
+     "iris_h": 9.3,
+     "reach": 6,
+     "sclera": 0.15,
+     "sclera_mm2": 20.9,
+     "face_frac": 0.12,
+     "reach_l": 4.8,
+     "reach_r": 1.3,
+     "cx": 30,
+     "cy": 103.1,
+     "box": {
+      "x0": 23,
+      "x1": 37,
+      "y1": 109.3,
+      "y0": 97
+     },
+     "core": {
+      "x0": 27.3,
+      "x1": 36,
+      "y0": 99.3,
+      "y1": 108.5
+     },
+     "brow": {
+      "x0": 20.3,
+      "x1": 51.8,
+      "y0": 122.3,
+      "y1": 132
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 5936,
+    "islands": 18,
+    "median_island": 155.3,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "fortune_teller",
+    "verdict": "FAIL~",
+    "tex": 2048,
+    "file": "gen/characters/fortune_teller/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 6.3,
+     "width": 14.8,
+     "aspect": 1.34,
+     "sclera": 0.13
+    },
+    "skin": [
+     0.974,
+     0.78,
+     0.554
+    ],
+    "face_w": 127,
+    "sep": 58,
+    "mid": 4.6,
+    "eye_y": 104.1,
+    "lr": {
+     "width": 1,
+     "height": 0.96,
+     "dy": 0.5
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 14.8,
+      "height": 11.3,
+      "aspect": 1.31,
+      "iris_w": 9,
+      "iris_h": 9,
+      "reach": 5.8,
+      "sclera": 0.12,
+      "sclera_mm2": 17.6,
+      "face_frac": 0.12,
+      "reach_l": 1.5,
+      "reach_r": 4.3,
+      "cx": -24.4,
+      "cy": 104.4,
+      "box": {
+       "x0": -31.8,
+       "x1": -17,
+       "y1": 110,
+       "y0": 98.8
+      },
+      "core": {
+       "x0": -30.8,
+       "x1": -21,
+       "y0": 99.8,
+       "y1": 108.8
+      },
+      "brow": {
+       "x0": -41.5,
+       "x1": -12.3,
+       "y0": 122,
+       "y1": 131.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 14.8,
+      "height": 10.8,
+      "aspect": 1.37,
+      "iris_w": 8,
+      "iris_h": 9.3,
+      "reach": 6.8,
+      "sclera": 0.14,
+      "sclera_mm2": 17.8,
+      "face_frac": 0.12,
+      "reach_l": 1.5,
+      "reach_r": 5.3,
+      "cx": 33.6,
+      "cy": 103.9,
+      "box": {
+       "x0": 26.3,
+       "x1": 41,
+       "y1": 109.3,
+       "y0": 98.5
+      },
+      "core": {
+       "x0": 27,
+       "x1": 36,
+       "y0": 99.3,
+       "y1": 108.5
+      },
+      "brow": {
+       "x0": 20,
+       "x1": 51.8,
+       "y0": 122,
+       "y1": 132
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "grain_porter",
+   "verdict": "FAIL~",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/grain_porter.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 10.1,
+    "width": 17,
+    "aspect": 1.73,
+    "sclera": 0.03
+   },
+   "skin": [
+    0.718,
+    0.558,
+    0.413
+   ],
+   "face_w": 116.3,
+   "sep": 58.8,
+   "mid": -0.5,
+   "eye_y": 106.6,
+   "lr": {
+    "width": 0.81,
+    "height": 0.93,
+    "dy": 1.1
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 18.8,
+     "height": 9.5,
+     "aspect": 1.97,
+     "iris_w": 6.3,
+     "iris_h": 7.3,
+     "reach": 12.5,
+     "sclera": 0.01,
+     "sclera_mm2": 1.6,
+     "face_frac": 0.16,
+     "reach_l": 10.3,
+     "reach_r": 2.3,
+     "cx": -29.9,
+     "cy": 106,
+     "box": {
+      "x0": -39.3,
+      "x1": -20.5,
+      "y1": 110.8,
+      "y0": 101.3
+     },
+     "core": {
+      "x0": -37.5,
+      "x1": -22.5,
+      "y0": 102.3,
+      "y1": 109.5
+     },
+     "brow": {
+      "x0": -45.3,
+      "x1": -12.5,
+      "y0": 116.3,
+      "y1": 129.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 15.3,
+     "height": 10.3,
+     "aspect": 1.49,
+     "iris_w": 7.5,
+     "iris_h": 8.5,
+     "reach": 7.8,
+     "sclera": 0.05,
+     "sclera_mm2": 6.3,
+     "face_frac": 0.13,
+     "reach_l": 4.5,
+     "reach_r": 3.3,
+     "cx": 28.9,
+     "cy": 107.1,
+     "box": {
+      "x0": 21.3,
+      "x1": 36.5,
+      "y1": 112.3,
+      "y0": 102
+     },
+     "core": {
+      "x0": 24.5,
+      "x1": 34.8,
+      "y0": 103,
+      "y1": 111.5
+     },
+     "brow": {
+      "x0": 13.3,
+      "x1": 47,
+      "y0": 116.5,
+      "y1": 128.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 6453,
+    "islands": 19,
+    "median_island": 168.5,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "grain_porter",
+    "verdict": "PASS~",
+    "tex": 2048,
+    "file": "gen/characters/grain_porter/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 12.1,
+     "width": 19.1,
+     "aspect": 1.96,
+     "sclera": 0.03
+    },
+    "skin": [
+     0.722,
+     0.556,
+     0.412
+    ],
+    "face_w": 116.3,
+    "sep": 61.4,
+    "mid": 0.7,
+    "eye_y": 106.4,
+    "lr": {
+     "width": 0.89,
+     "height": 0.95,
+     "dy": 0.8
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 18,
+      "height": 9.5,
+      "aspect": 1.89,
+      "iris_w": 6.8,
+      "iris_h": 7.3,
+      "reach": 11.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.15,
+      "reach_l": 9.8,
+      "reach_r": 1.5,
+      "cx": -30,
+      "cy": 106,
+      "box": {
+       "x0": -39,
+       "x1": -21,
+       "y1": 110.8,
+       "y0": 101.3
+      },
+      "core": {
+       "x0": -37.8,
+       "x1": -22.3,
+       "y0": 102.3,
+       "y1": 109.5
+      },
+      "brow": {
+       "x0": -45.5,
+       "x1": -12.3,
+       "y0": 116.3,
+       "y1": 129.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 20.3,
+      "height": 10,
+      "aspect": 2.02,
+      "iris_w": 7.3,
+      "iris_h": 8.5,
+      "reach": 13,
+      "sclera": 0.06,
+      "sclera_mm2": 9.7,
+      "face_frac": 0.17,
+      "reach_l": 4.8,
+      "reach_r": 8.3,
+      "cx": 31.4,
+      "cy": 106.8,
+      "box": {
+       "x0": 21.3,
+       "x1": 41.5,
+       "y1": 111.8,
+       "y0": 101.8
+      },
+      "core": {
+       "x0": 24,
+       "x1": 35.3,
+       "y0": 102.8,
+       "y1": 111.3
+      },
+      "brow": {
+       "x0": 13.3,
+       "x1": 47.5,
+       "y0": 116.5,
+       "y1": 128.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "groom",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/groom.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 19.3,
+    "width": 30.8,
+    "aspect": 1.75,
+    "sclera": 0.22
+   },
+   "skin": [
+    0.91,
+    0.694,
+    0.478
+   ],
+   "face_w": 116.8,
+   "sep": 64.5,
+   "mid": -0.3,
+   "eye_y": 107.6,
+   "lr": {
+    "width": 0.95,
+    "height": 0.99,
+    "dy": 0.6
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 31.5,
+     "height": 17.5,
+     "aspect": 1.8,
+     "iris_w": 11.5,
+     "iris_h": 13.8,
+     "reach": 20,
+     "sclera": 0.24,
+     "sclera_mm2": 107.4,
+     "face_frac": 0.27,
+     "reach_l": 11.3,
+     "reach_r": 8.8,
+     "cx": -32.5,
+     "cy": 107.3,
+     "box": {
+      "x0": -48.3,
+      "x1": -16.8,
+      "y1": 116,
+      "y0": 98.5
+     },
+     "core": {
+      "x0": -46.5,
+      "x1": -24.8,
+      "y0": 100.8,
+      "y1": 114.5
+     },
+     "brow": {
+      "x0": -51.8,
+      "x1": -12.8,
+      "y0": 119,
+      "y1": 135.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 30,
+     "height": 17.8,
+     "aspect": 1.69,
+     "iris_w": 11.5,
+     "iris_h": 14.3,
+     "reach": 18.5,
+     "sclera": 0.21,
+     "sclera_mm2": 89.1,
+     "face_frac": 0.26,
+     "reach_l": 7.3,
+     "reach_r": 11.3,
+     "cx": 32,
+     "cy": 107.9,
+     "box": {
+      "x0": 17,
+      "x1": 47,
+      "y1": 116.8,
+      "y0": 99
+     },
+     "core": {
+      "x0": 23.8,
+      "x1": 43.5,
+      "y0": 101,
+      "y1": 115.3
+     },
+     "brow": {
+      "x0": 12.3,
+      "x1": 46.3,
+      "y0": 119.3,
+      "y1": 134.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 2217,
+    "islands": 10,
+    "median_island": 245.4,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "groom",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/groom/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 19,
+     "width": 30.4,
+     "aspect": 1.82,
+     "sclera": 0.24
+    },
+    "skin": [
+     0.913,
+     0.693,
+     0.475
+    ],
+    "face_w": 116.8,
+    "sep": 64.9,
+    "mid": -0.1,
+    "eye_y": 107.5,
+    "lr": {
+     "width": 0.93,
+     "height": 0.94,
+     "dy": 0.8
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 31.5,
+      "height": 16.3,
+      "aspect": 1.94,
+      "iris_w": 11.3,
+      "iris_h": 13.8,
+      "reach": 20.3,
+      "sclera": 0.22,
+      "sclera_mm2": 95.6,
+      "face_frac": 0.27,
+      "reach_l": 11.3,
+      "reach_r": 9,
+      "cx": -32.5,
+      "cy": 107.1,
+      "box": {
+       "x0": -48.3,
+       "x1": -16.8,
+       "y1": 115.3,
+       "y0": 99
+      },
+      "core": {
+       "x0": -47,
+       "x1": -19.5,
+       "y0": 100.8,
+       "y1": 114.5
+      },
+      "brow": {
+       "x0": -52,
+       "x1": -12.8,
+       "y0": 119,
+       "y1": 135.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 29.3,
+      "height": 17.3,
+      "aspect": 1.7,
+      "iris_w": 11.5,
+      "iris_h": 13.8,
+      "reach": 17.8,
+      "sclera": 0.25,
+      "sclera_mm2": 104.4,
+      "face_frac": 0.25,
+      "reach_l": 6.5,
+      "reach_r": 11.3,
+      "cx": 32.4,
+      "cy": 107.9,
+      "box": {
+       "x0": 17.8,
+       "x1": 47,
+       "y1": 116.5,
+       "y0": 99.3
+      },
+      "core": {
+       "x0": 21.8,
+       "x1": 46,
+       "y0": 101.3,
+       "y1": 115
+      },
+      "brow": {
+       "x0": 12.3,
+       "x1": 46.3,
+       "y0": 119.3,
+       "y1": 134.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "hat_traveller",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/hat_traveller.glb",
+   "threshold": 0.62,
+   "mean": {
+    "reach": 3.3,
+    "width": 12.4,
+    "aspect": 0.73,
+    "sclera": 0
+   },
+   "skin": [
+    0.812,
+    0.608,
+    0.452
+   ],
+   "face_w": 84.8,
+   "sep": 72.1,
+   "mid": 8.6,
+   "eye_y": 145.3,
+   "lr": {
+    "width": 0.94,
+    "height": 1,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 12,
+     "height": 17,
+     "aspect": 0.71,
+     "iris_w": 8.5,
+     "iris_h": 17,
+     "reach": 3.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.14,
+     "merged": true,
+     "reach_l": 1.8,
+     "reach_r": 1.8,
+     "cx": -27.5,
+     "cy": 145.5,
+     "box": {
+      "x0": -33.5,
+      "x1": -21.5,
+      "y1": 154,
+      "y0": 137
+     },
+     "core": {
+      "x0": -33.5,
+      "x1": -21.5,
+      "y0": 137,
+      "y1": 154
+     },
+     "brow": {
+      "x0": -29.3,
+      "x1": -27.5,
+      "y0": 180.8,
+      "y1": 184.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 12.8,
+     "height": 17,
+     "aspect": 0.75,
+     "iris_w": 9.8,
+     "iris_h": 17,
+     "reach": 3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "merged": true,
+     "reach_l": 1.8,
+     "reach_r": 1.3,
+     "cx": 44.6,
+     "cy": 145,
+     "box": {
+      "x0": 38.3,
+      "x1": 51,
+      "y1": 153.5,
+      "y0": 136.5
+     },
+     "core": {
+      "x0": 38.3,
+      "x1": 51,
+      "y0": 136.5,
+      "y1": 153.5
+     },
+     "brow": null
+    }
+   ],
+   "eye_band": {
+    "texels": 2901,
+    "islands": 17,
+    "median_island": 50.4,
+    "sliver": [
+     0.11,
+     0
+    ]
+   },
+   "source": {
+    "name": "hat_traveller",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/hat_traveller/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.62,
+    "mean": {
+     "reach": 4.1,
+     "width": 13.9,
+     "aspect": 0.77,
+     "sclera": 0
+    },
+    "skin": [
+     0.818,
+     0.609,
+     0.452
+    ],
+    "face_w": 85.5,
+    "sep": 71.4,
+    "mid": 8.9,
+    "eye_y": 145.6,
+    "lr": {
+     "width": 0.98,
+     "height": 0.95,
+     "dy": 1.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 14,
+      "height": 18.5,
+      "aspect": 0.76,
+      "iris_w": 10.3,
+      "iris_h": 18.5,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "merged": true,
+      "reach_l": 0.5,
+      "reach_r": 3.3,
+      "cx": -26.8,
+      "cy": 146.3,
+      "box": {
+       "x0": -33.8,
+       "x1": -19.8,
+       "y1": 155.5,
+       "y0": 137
+      },
+      "core": {
+       "x0": -33.8,
+       "x1": -19.8,
+       "y0": 137,
+       "y1": 155.5
+      },
+      "brow": {
+       "x0": -29.5,
+       "x1": -26.5,
+       "y0": 180,
+       "y1": 185.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 13.8,
+      "height": 17.5,
+      "aspect": 0.79,
+      "iris_w": 9.3,
+      "iris_h": 17.5,
+      "reach": 4.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "merged": true,
+      "reach_l": 2.8,
+      "reach_r": 1.8,
+      "cx": 44.6,
+      "cy": 145,
+      "box": {
+       "x0": 37.8,
+       "x1": 51.5,
+       "y1": 153.8,
+       "y0": 136.3
+      },
+      "core": {
+       "x0": 37.8,
+       "x1": 51.5,
+       "y0": 136.3,
+       "y1": 153.8
+      },
+      "brow": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "hat_traveller_dark",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/hat_traveller_dark.glb",
+   "threshold": 0.62,
+   "mean": {
+    "reach": 3.5,
+    "width": 12.6,
+    "aspect": 0.75,
+    "sclera": 0
+   },
+   "skin": [
+    0.814,
+    0.609,
+    0.454
+   ],
+   "face_w": 84.5,
+   "sep": 71.6,
+   "mid": 8.8,
+   "eye_y": 145.4,
+   "lr": {
+    "width": 0.98,
+    "height": 0.99,
+    "dy": 0.6
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 12.5,
+     "height": 17,
+     "aspect": 0.74,
+     "iris_w": 8.5,
+     "iris_h": 17,
+     "reach": 4,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "merged": true,
+     "reach_l": 1.5,
+     "reach_r": 2.5,
+     "cx": -27,
+     "cy": 145.8,
+     "box": {
+      "x0": -33.3,
+      "x1": -20.8,
+      "y1": 154.3,
+      "y0": 137.3
+     },
+     "core": {
+      "x0": -33.3,
+      "x1": -20.8,
+      "y0": 137.3,
+      "y1": 154.3
+     },
+     "brow": {
+      "x0": -29.3,
+      "x1": -27.3,
+      "y0": 180.5,
+      "y1": 185
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 12.8,
+     "height": 16.8,
+     "aspect": 0.76,
+     "iris_w": 9.8,
+     "iris_h": 16.8,
+     "reach": 3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "merged": true,
+     "reach_l": 1.8,
+     "reach_r": 1.3,
+     "cx": 44.6,
+     "cy": 145.1,
+     "box": {
+      "x0": 38.3,
+      "x1": 51,
+      "y1": 153.5,
+      "y0": 136.8
+     },
+     "core": {
+      "x0": 38.3,
+      "x1": 51,
+      "y0": 136.8,
+      "y1": 153.5
+     },
+     "brow": null
+    }
+   ],
+   "eye_band": {
+    "texels": 2872,
+    "islands": 18,
+    "median_island": 48.3,
+    "sliver": [
+     0.11,
+     0
+    ]
+   },
+   "source": {
+    "name": "hat_traveller_dark",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/hat_traveller/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.62,
+    "mean": {
+     "reach": 4.1,
+     "width": 13.9,
+     "aspect": 0.77,
+     "sclera": 0
+    },
+    "skin": [
+     0.818,
+     0.609,
+     0.452
+    ],
+    "face_w": 85.5,
+    "sep": 71.4,
+    "mid": 8.9,
+    "eye_y": 145.6,
+    "lr": {
+     "width": 0.98,
+     "height": 0.95,
+     "dy": 1.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 14,
+      "height": 18.5,
+      "aspect": 0.76,
+      "iris_w": 10.3,
+      "iris_h": 18.5,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "merged": true,
+      "reach_l": 0.5,
+      "reach_r": 3.3,
+      "cx": -26.8,
+      "cy": 146.3,
+      "box": {
+       "x0": -33.8,
+       "x1": -19.8,
+       "y1": 155.5,
+       "y0": 137
+      },
+      "core": {
+       "x0": -33.8,
+       "x1": -19.8,
+       "y0": 137,
+       "y1": 155.5
+      },
+      "brow": {
+       "x0": -29.5,
+       "x1": -26.5,
+       "y0": 180,
+       "y1": 185.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 13.8,
+      "height": 17.5,
+      "aspect": 0.79,
+      "iris_w": 9.3,
+      "iris_h": 17.5,
+      "reach": 4.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "merged": true,
+      "reach_l": 2.8,
+      "reach_r": 1.8,
+      "cx": 44.6,
+      "cy": 145,
+      "box": {
+       "x0": 37.8,
+       "x1": 51.5,
+       "y1": 153.8,
+       "y0": 136.3
+      },
+      "core": {
+       "x0": 37.8,
+       "x1": 51.5,
+       "y0": 136.3,
+       "y1": 153.8
+      },
+      "brow": null
+     }
+    ],
+    "note": "the base's (hat_traveller) source texture, before the variant's recolour"
+   }
+  },
+  {
+   "name": "idler",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/idler.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.6,
+    "width": 12.4,
+    "aspect": 0.81,
+    "sclera": 0
+   },
+   "skin": [
+    0.757,
+    0.573,
+    0.401
+   ],
+   "face_w": 132.8,
+   "sep": 65.1,
+   "mid": 4.7,
+   "eye_y": 96.5,
+   "lr": {
+    "width": 0.9,
+    "height": 0.97,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 11.8,
+     "height": 15,
+     "aspect": 0.78,
+     "iris_w": 8.3,
+     "iris_h": 12.8,
+     "reach": 3.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.09,
+     "reach_l": 2,
+     "reach_r": 1.5,
+     "cx": -27.9,
+     "cy": 96.8,
+     "box": {
+      "x0": -33.8,
+      "x1": -22,
+      "y1": 104.3,
+      "y0": 89.3
+     },
+     "core": {
+      "x0": -32.5,
+      "x1": -23,
+      "y0": 90.5,
+      "y1": 103.3
+     },
+     "brow": {
+      "x0": -79.3,
+      "x1": 83.8,
+      "y0": 110.3,
+      "y1": 240
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 13,
+     "height": 15.5,
+     "aspect": 0.84,
+     "iris_w": 9.3,
+     "iris_h": 13.5,
+     "reach": 3.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.1,
+     "reach_l": 2,
+     "reach_r": 1.8,
+     "cx": 37.3,
+     "cy": 96.3,
+     "box": {
+      "x0": 30.8,
+      "x1": 43.8,
+      "y1": 104,
+      "y0": 88.5
+     },
+     "core": {
+      "x0": 31.8,
+      "x1": 42.3,
+      "y0": 89.5,
+      "y1": 103
+     },
+     "brow": {
+      "x0": -79.3,
+      "x1": 83.8,
+      "y0": 110.3,
+      "y1": 240
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 2188,
+    "islands": 7,
+    "median_island": 233.4,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "idler",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/idler/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.3,
+     "width": 12,
+     "aspect": 0.79,
+     "sclera": 0
+    },
+    "skin": [
+     0.761,
+     0.573,
+     0.398
+    ],
+    "face_w": 132.8,
+    "sep": 64.8,
+    "mid": 4.6,
+    "eye_y": 96.6,
+    "lr": {
+     "width": 0.92,
+     "height": 0.98,
+     "dy": 0.4
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 11.5,
+      "height": 15,
+      "aspect": 0.77,
+      "iris_w": 8.3,
+      "iris_h": 12.8,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.09,
+      "reach_l": 1.8,
+      "reach_r": 1.5,
+      "cx": -27.8,
+      "cy": 96.8,
+      "box": {
+       "x0": -33.5,
+       "x1": -22,
+       "y1": 104.3,
+       "y0": 89.3
+      },
+      "core": {
+       "x0": -32.3,
+       "x1": -23,
+       "y0": 90.5,
+       "y1": 103.3
+      },
+      "brow": {
+       "x0": -79.3,
+       "x1": 83.5,
+       "y0": 110,
+       "y1": 240
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 12.5,
+      "height": 15.3,
+      "aspect": 0.82,
+      "iris_w": 9.3,
+      "iris_h": 13.3,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.09,
+      "reach_l": 2,
+      "reach_r": 1.3,
+      "cx": 37,
+      "cy": 96.4,
+      "box": {
+       "x0": 30.8,
+       "x1": 43.3,
+       "y1": 104,
+       "y0": 88.8
+      },
+      "core": {
+       "x0": 31.8,
+       "x1": 42.3,
+       "y0": 89.5,
+       "y1": 102.8
+      },
+      "brow": {
+       "x0": -79.3,
+       "x1": 83.5,
+       "y0": 110,
+       "y1": 240
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "inspector",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/inspector.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 2.6,
+    "width": 9.1,
+    "aspect": 0.99,
+    "sclera": 0
+   },
+   "skin": [
+    0.816,
+    0.675,
+    0.55
+   ],
+   "face_w": 113.3,
+   "sep": 54.6,
+   "mid": 2.7,
+   "eye_y": 109.8,
+   "lr": {
+    "width": 0.97,
+    "height": 0.95,
+    "dy": 0
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 9.3,
+     "height": 9.5,
+     "aspect": 0.97,
+     "iris_w": 6.3,
+     "iris_h": 7.3,
+     "reach": 3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.08,
+     "reach_l": 2,
+     "reach_r": 1,
+     "cx": -24.6,
+     "cy": 109.8,
+     "box": {
+      "x0": -29.3,
+      "x1": -20,
+      "y1": 114.5,
+      "y0": 105
+     },
+     "core": {
+      "x0": -28,
+      "x1": -20.8,
+      "y0": 106.3,
+      "y1": 113.5
+     },
+     "brow": {
+      "x0": -44,
+      "x1": -11.8,
+      "y0": 126,
+      "y1": 136.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 9,
+     "height": 9,
+     "aspect": 1,
+     "iris_w": 6.8,
+     "iris_h": 7,
+     "reach": 2.3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.08,
+     "reach_l": 1.3,
+     "reach_r": 1,
+     "cx": 30,
+     "cy": 109.8,
+     "box": {
+      "x0": 25.5,
+      "x1": 34.5,
+      "y1": 114.3,
+      "y0": 105.3
+     },
+     "core": {
+      "x0": 26.5,
+      "x1": 33.8,
+      "y0": 106.3,
+      "y1": 113.3
+     },
+     "brow": {
+      "x0": 16,
+      "x1": 46.5,
+      "y0": 126,
+      "y1": 136
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 4888,
+    "islands": 17,
+    "median_island": 213.8,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "inspector",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/inspector/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 2.8,
+     "width": 9,
+     "aspect": 1.01,
+     "sclera": 0
+    },
+    "skin": [
+     0.819,
+     0.673,
+     0.547
+    ],
+    "face_w": 113.3,
+    "sep": 54.5,
+    "mid": 2.8,
+    "eye_y": 109.7,
+    "lr": {
+     "width": 1,
+     "height": 0.97,
+     "dy": 0.1
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 9,
+      "height": 9,
+      "aspect": 1,
+      "iris_w": 6,
+      "iris_h": 7.3,
+      "reach": 3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.08,
+      "reach_l": 2,
+      "reach_r": 1,
+      "cx": -24.5,
+      "cy": 109.8,
+      "box": {
+       "x0": -29,
+       "x1": -20,
+       "y1": 114.3,
+       "y0": 105.3
+      },
+      "core": {
+       "x0": -28,
+       "x1": -20.8,
+       "y0": 106.3,
+       "y1": 113.5
+      },
+      "brow": {
+       "x0": -44.5,
+       "x1": -11.8,
+       "y0": 126,
+       "y1": 136.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 9,
+      "height": 8.8,
+      "aspect": 1.03,
+      "iris_w": 6.5,
+      "iris_h": 7,
+      "reach": 2.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.08,
+      "reach_l": 1.5,
+      "reach_r": 1,
+      "cx": 30,
+      "cy": 109.6,
+      "box": {
+       "x0": 25.5,
+       "x1": 34.5,
+       "y1": 114,
+       "y0": 105.3
+      },
+      "core": {
+       "x0": 26.5,
+       "x1": 33.8,
+       "y0": 106.3,
+       "y1": 113.3
+      },
+      "brow": {
+       "x0": 15.8,
+       "x1": 46.5,
+       "y0": 126,
+       "y1": 135.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "monk",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/monk.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 4.4,
+    "width": 11.1,
+    "aspect": 1.14,
+    "sclera": 0.05
+   },
+   "skin": [
+    0.888,
+    0.643,
+    0.437
+   ],
+   "face_w": 140.5,
+   "sep": 58.9,
+   "mid": 4.7,
+   "eye_y": 113,
+   "lr": {
+    "width": 0.98,
+    "height": 0.95,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 11,
+     "height": 10,
+     "aspect": 1.1,
+     "iris_w": 7.3,
+     "iris_h": 6.8,
+     "reach": 3.8,
+     "sclera": 0.04,
+     "sclera_mm2": 4.4,
+     "face_frac": 0.08,
+     "reach_l": 2,
+     "reach_r": 1.8,
+     "cx": -24.8,
+     "cy": 112.8,
+     "box": {
+      "x0": -30.3,
+      "x1": -19.3,
+      "y1": 117.8,
+      "y0": 107.8
+     },
+     "core": {
+      "x0": -28.8,
+      "x1": -20,
+      "y0": 109.8,
+      "y1": 116.5
+     },
+     "brow": null
+    },
+    {
+     "side": "viewer_right",
+     "width": 11.3,
+     "height": 9.5,
+     "aspect": 1.18,
+     "iris_w": 6.3,
+     "iris_h": 7.3,
+     "reach": 5,
+     "sclera": 0.07,
+     "sclera_mm2": 8.5,
+     "face_frac": 0.08,
+     "reach_l": 3.3,
+     "reach_r": 1.8,
+     "cx": 34.1,
+     "cy": 113.3,
+     "box": {
+      "x0": 28.5,
+      "x1": 39.8,
+      "y1": 118,
+      "y0": 108.5
+     },
+     "core": {
+      "x0": 31.3,
+      "x1": 38.8,
+      "y0": 109.5,
+      "y1": 116.8
+     },
+     "brow": {
+      "x0": 30,
+      "x1": 34.5,
+      "y0": 134.8,
+      "y1": 137.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 6686,
+    "islands": 20,
+    "median_island": 150.9,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "monk",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/monk/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 5,
+     "width": 11.9,
+     "aspect": 1.32,
+     "sclera": 0.06
+    },
+    "skin": [
+     0.889,
+     0.643,
+     0.433
+    ],
+    "face_w": 140.3,
+    "sep": 58.6,
+    "mid": 4.4,
+    "eye_y": 113.3,
+    "lr": {
+     "width": 0.98,
+     "height": 1,
+     "dy": 0
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 11.8,
+      "height": 9,
+      "aspect": 1.31,
+      "iris_w": 7.3,
+      "iris_h": 6.8,
+      "reach": 4.5,
+      "sclera": 0.03,
+      "sclera_mm2": 3.9,
+      "face_frac": 0.08,
+      "reach_l": 2.5,
+      "reach_r": 2,
+      "cx": -24.9,
+      "cy": 113.3,
+      "box": {
+       "x0": -30.8,
+       "x1": -19,
+       "y1": 117.8,
+       "y0": 108.8
+      },
+      "core": {
+       "x0": -28.8,
+       "x1": -20,
+       "y0": 109.8,
+       "y1": 116.5
+      },
+      "brow": null
+     },
+     {
+      "side": "viewer_right",
+      "width": 12,
+      "height": 9,
+      "aspect": 1.33,
+      "iris_w": 6.5,
+      "iris_h": 7,
+      "reach": 5.5,
+      "sclera": 0.09,
+      "sclera_mm2": 11.8,
+      "face_frac": 0.09,
+      "reach_l": 4,
+      "reach_r": 1.5,
+      "cx": 33.8,
+      "cy": 113.3,
+      "box": {
+       "x0": 27.8,
+       "x1": 39.8,
+       "y1": 117.8,
+       "y0": 108.8
+      },
+      "core": {
+       "x0": 31,
+       "x1": 39,
+       "y0": 109.5,
+       "y1": 116.5
+      },
+      "brow": {
+       "x0": 28.3,
+       "x1": 34.8,
+       "y0": 134.3,
+       "y1": 137.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "official",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/official.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3,
+    "width": 11.5,
+    "aspect": 0.94,
+    "sclera": 0
+   },
+   "skin": [
+    0.945,
+    0.766,
+    0.553
+   ],
+   "face_w": 115.3,
+   "sep": 57.3,
+   "mid": -1.8,
+   "eye_y": 112.4,
+   "lr": {
+    "width": 0.96,
+    "height": 0.96,
+    "dy": 0.3
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 11.3,
+     "height": 12.5,
+     "aspect": 0.9,
+     "iris_w": 8,
+     "iris_h": 10.5,
+     "reach": 3.3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.1,
+     "reach_l": 1.5,
+     "reach_r": 1.8,
+     "cx": -30.4,
+     "cy": 112.3,
+     "box": {
+      "x0": -36,
+      "x1": -24.8,
+      "y1": 118.5,
+      "y0": 106
+     },
+     "core": {
+      "x0": -35,
+      "x1": -26,
+      "y0": 107.3,
+      "y1": 117.8
+     },
+     "brow": {
+      "x0": -50,
+      "x1": -18.3,
+      "y0": 131.5,
+      "y1": 139.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 11.8,
+     "height": 12,
+     "aspect": 0.98,
+     "iris_w": 9,
+     "iris_h": 10,
+     "reach": 2.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.1,
+     "reach_l": 1.3,
+     "reach_r": 1.5,
+     "cx": 26.9,
+     "cy": 112.5,
+     "box": {
+      "x0": 21,
+      "x1": 32.8,
+      "y1": 118.5,
+      "y0": 106.5
+     },
+     "core": {
+      "x0": 22,
+      "x1": 31.8,
+      "y0": 107.5,
+      "y1": 117.5
+     },
+     "brow": {
+      "x0": 13.3,
+      "x1": 47.8,
+      "y0": 131.3,
+      "y1": 139
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 6397,
+    "islands": 17,
+    "median_island": 254.8,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "official",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/official/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.5,
+     "width": 11.6,
+     "aspect": 0.96,
+     "sclera": 0
+    },
+    "skin": [
+     0.949,
+     0.765,
+     0.552
+    ],
+    "face_w": 115.5,
+    "sep": 57.1,
+    "mid": -1.9,
+    "eye_y": 112.4,
+    "lr": {
+     "width": 0.98,
+     "height": 0.98,
+     "dy": 0.1
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 11.5,
+      "height": 12.3,
+      "aspect": 0.94,
+      "iris_w": 7.8,
+      "iris_h": 10.8,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.1,
+      "reach_l": 2,
+      "reach_r": 1.8,
+      "cx": -30.5,
+      "cy": 112.4,
+      "box": {
+       "x0": -36.3,
+       "x1": -24.8,
+       "y1": 118.5,
+       "y0": 106.3
+      },
+      "core": {
+       "x0": -34.8,
+       "x1": -26,
+       "y0": 107,
+       "y1": 117.8
+      },
+      "brow": {
+       "x0": -50.5,
+       "x1": -17.5,
+       "y0": 131.3,
+       "y1": 139.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 11.8,
+      "height": 12,
+      "aspect": 0.98,
+      "iris_w": 8.5,
+      "iris_h": 10.3,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.1,
+      "reach_l": 1.8,
+      "reach_r": 1.5,
+      "cx": 26.6,
+      "cy": 112.5,
+      "box": {
+       "x0": 20.8,
+       "x1": 32.5,
+       "y1": 118.5,
+       "y0": 106.5
+      },
+      "core": {
+       "x0": 22,
+       "x1": 31.8,
+       "y0": 107.5,
+       "y1": 117.8
+      },
+      "brow": {
+       "x0": 13.3,
+       "x1": 47.8,
+       "y0": 131.3,
+       "y1": 139
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "official_rider",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/official_rider.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.6,
+    "width": 12.1,
+    "aspect": 1.1,
+    "sclera": 0
+   },
+   "skin": [
+    0.893,
+    0.689,
+    0.468
+   ],
+   "face_w": 109,
+   "sep": 58.6,
+   "mid": -0.7,
+   "eye_y": 123.4,
+   "lr": {
+    "width": 0.94,
+    "height": 0.96,
+    "dy": 0
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 12.5,
+     "height": 11.3,
+     "aspect": 1.11,
+     "iris_w": 8.8,
+     "iris_h": 9.3,
+     "reach": 3.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.11,
+     "reach_l": 2,
+     "reach_r": 1.8,
+     "cx": -30,
+     "cy": 123.4,
+     "box": {
+      "x0": -36.3,
+      "x1": -23.8,
+      "y1": 129,
+      "y0": 117.8
+     },
+     "core": {
+      "x0": -34.8,
+      "x1": -24.8,
+      "y0": 118.8,
+      "y1": 128
+     },
+     "brow": {
+      "x0": -44.8,
+      "x1": -20.3,
+      "y0": 146.5,
+      "y1": 153.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 11.8,
+     "height": 10.8,
+     "aspect": 1.09,
+     "iris_w": 8.3,
+     "iris_h": 8.8,
+     "reach": 3.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.11,
+     "reach_l": 1.5,
+     "reach_r": 2,
+     "cx": 28.6,
+     "cy": 123.4,
+     "box": {
+      "x0": 22.8,
+      "x1": 34.5,
+      "y1": 128.8,
+      "y0": 118
+     },
+     "core": {
+      "x0": 23.8,
+      "x1": 33.5,
+      "y0": 119.3,
+      "y1": 128
+     },
+     "brow": {
+      "x0": 18.5,
+      "x1": 45,
+      "y0": 146.8,
+      "y1": 154
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 3445,
+    "islands": 9,
+    "median_island": 185.7,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "official_rider",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/official_rider/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.5,
+     "width": 12,
+     "aspect": 1.1,
+     "sclera": 0
+    },
+    "skin": [
+     0.895,
+     0.687,
+     0.463
+    ],
+    "face_w": 109.3,
+    "sep": 58.8,
+    "mid": -0.6,
+    "eye_y": 123.3,
+    "lr": {
+     "width": 0.92,
+     "height": 0.98,
+     "dy": 0.1
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 12.5,
+      "height": 11,
+      "aspect": 1.14,
+      "iris_w": 8.8,
+      "iris_h": 9.3,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 2,
+      "reach_r": 1.8,
+      "cx": -30,
+      "cy": 123.3,
+      "box": {
+       "x0": -36.3,
+       "x1": -23.8,
+       "y1": 128.8,
+       "y0": 117.8
+      },
+      "core": {
+       "x0": -35,
+       "x1": -24.8,
+       "y0": 118.8,
+       "y1": 128
+      },
+      "brow": {
+       "x0": -45.8,
+       "x1": -20.3,
+       "y0": 146.5,
+       "y1": 153.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 11.5,
+      "height": 10.8,
+      "aspect": 1.07,
+      "iris_w": 8.3,
+      "iris_h": 9,
+      "reach": 3.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 1.3,
+      "reach_r": 2,
+      "cx": 28.8,
+      "cy": 123.4,
+      "box": {
+       "x0": 23,
+       "x1": 34.5,
+       "y1": 128.8,
+       "y0": 118
+      },
+      "core": {
+       "x0": 23.8,
+       "x1": 33.5,
+       "y0": 119,
+       "y1": 128
+      },
+      "brow": {
+       "x0": 17,
+       "x1": 46,
+       "y0": 146.3,
+       "y1": 154
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "porter",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/porter.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.3,
+    "width": 11.6,
+    "aspect": 0.74,
+    "sclera": 0
+   },
+   "skin": [
+    0.737,
+    0.545,
+    0.38
+   ],
+   "face_w": 140,
+   "sep": 60.6,
+   "mid": -11.6,
+   "eye_y": 105.4,
+   "lr": {
+    "width": 0.98,
+    "height": 1,
+    "dy": 0
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 11.8,
+     "height": 15.8,
+     "aspect": 0.75,
+     "iris_w": 8.3,
+     "iris_h": 13.8,
+     "reach": 3.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.08,
+     "reach_l": 1.8,
+     "reach_r": 1.8,
+     "cx": -41.9,
+     "cy": 105.4,
+     "box": {
+      "x0": -47.8,
+      "x1": -36,
+      "y1": 113.3,
+      "y0": 97.5
+     },
+     "core": {
+      "x0": -46.5,
+      "x1": -37.3,
+      "y0": 98.5,
+      "y1": 112.3
+     },
+     "brow": {
+      "x0": -60.5,
+      "x1": -28.8,
+      "y0": 125,
+      "y1": 133
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 11.5,
+     "height": 15.8,
+     "aspect": 0.73,
+     "iris_w": 8.5,
+     "iris_h": 13.5,
+     "reach": 3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.08,
+     "reach_l": 1.3,
+     "reach_r": 1.8,
+     "cx": 18.8,
+     "cy": 105.4,
+     "box": {
+      "x0": 13,
+      "x1": 24.5,
+      "y1": 113.3,
+      "y0": 97.5
+     },
+     "core": {
+      "x0": 13.8,
+      "x1": 23.3,
+      "y0": 98.8,
+      "y1": 112.3
+     },
+     "brow": {
+      "x0": 4.5,
+      "x1": 37,
+      "y0": 125.8,
+      "y1": 134
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 1313,
+    "islands": 4,
+    "median_island": 375.3,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "porter",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/v1/porter_final_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.3,
+     "width": 11.5,
+     "aspect": 0.75,
+     "sclera": 0
+    },
+    "skin": [
+     0.741,
+     0.541,
+     0.377
+    ],
+    "face_w": 139.8,
+    "sep": 60.8,
+    "mid": -11.6,
+    "eye_y": 105.3,
+    "lr": {
+     "width": 1,
+     "height": 0.97,
+     "dy": 0
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 11.5,
+      "height": 15.5,
+      "aspect": 0.74,
+      "iris_w": 8,
+      "iris_h": 13.5,
+      "reach": 3.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.08,
+      "reach_l": 1.8,
+      "reach_r": 1.8,
+      "cx": -42,
+      "cy": 105.3,
+      "box": {
+       "x0": -47.8,
+       "x1": -36.3,
+       "y1": 113,
+       "y0": 97.5
+      },
+      "core": {
+       "x0": -46.5,
+       "x1": -37.3,
+       "y0": 98.8,
+       "y1": 112.3
+      },
+      "brow": {
+       "x0": -60.8,
+       "x1": -28.8,
+       "y0": 125,
+       "y1": 133
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 11.5,
+      "height": 15,
+      "aspect": 0.77,
+      "iris_w": 8.5,
+      "iris_h": 13,
+      "reach": 3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.08,
+      "reach_l": 1.5,
+      "reach_r": 1.5,
+      "cx": 18.8,
+      "cy": 105.3,
+      "box": {
+       "x0": 13,
+       "x1": 24.5,
+       "y1": 112.8,
+       "y0": 97.8
+      },
+      "core": {
+       "x0": 14,
+       "x1": 23.5,
+       "y0": 99,
+       "y1": 112
+      },
+      "brow": {
+       "x0": 4.3,
+       "x1": 37.3,
+       "y0": 125.5,
+       "y1": 133.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "robed_man",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/robed_man.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 5.9,
+    "width": 12.6,
+    "aspect": 1.39,
+    "sclera": 0
+   },
+   "skin": [
+    0.788,
+    0.628,
+    0.455
+   ],
+   "face_w": 113.5,
+   "sep": 55.6,
+   "mid": 6.8,
+   "eye_y": 117.2,
+   "lr": {
+    "width": 0.91,
+    "height": 0.92,
+    "dy": 0.6
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 12,
+     "height": 9.5,
+     "aspect": 1.26,
+     "iris_w": 6.8,
+     "iris_h": 7.3,
+     "reach": 5.3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.11,
+     "reach_l": 1.8,
+     "reach_r": 3.5,
+     "cx": -21,
+     "cy": 117.5,
+     "box": {
+      "x0": -27,
+      "x1": -15,
+      "y1": 122.3,
+      "y0": 112.8
+     },
+     "core": {
+      "x0": -26,
+      "x1": -16.3,
+      "y0": 113.5,
+      "y1": 120.8
+     },
+     "brow": {
+      "x0": -41,
+      "x1": -9.3,
+      "y0": 132.3,
+      "y1": 140.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 13.3,
+     "height": 8.8,
+     "aspect": 1.51,
+     "iris_w": 6.8,
+     "iris_h": 6.3,
+     "reach": 6.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.12,
+     "reach_l": 2.3,
+     "reach_r": 4.3,
+     "cx": 34.6,
+     "cy": 116.9,
+     "box": {
+      "x0": 28,
+      "x1": 41.3,
+      "y1": 121.3,
+      "y0": 112.5
+     },
+     "core": {
+      "x0": 29.3,
+      "x1": 37.5,
+      "y0": 114,
+      "y1": 120.3
+     },
+     "brow": {
+      "x0": 20.8,
+      "x1": 48.3,
+      "y0": 132.5,
+      "y1": 140.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 6321,
+    "islands": 18,
+    "median_island": 284.1,
+    "sliver": [
+     0,
+     0.02
+    ]
+   },
+   "source": {
+    "name": "robed_man",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/robed_man/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 4.6,
+     "width": 11.5,
+     "aspect": 1.29,
+     "sclera": 0
+    },
+    "skin": [
+     0.791,
+     0.627,
+     0.455
+    ],
+    "face_w": 113.8,
+    "sep": 54.8,
+    "mid": 6.3,
+    "eye_y": 117.3,
+    "lr": {
+     "width": 0.88,
+     "height": 0.97,
+     "dy": 0.4
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 12.3,
+      "height": 9,
+      "aspect": 1.36,
+      "iris_w": 6.8,
+      "iris_h": 7.3,
+      "reach": 5.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.11,
+      "reach_l": 2,
+      "reach_r": 3.5,
+      "cx": -21.1,
+      "cy": 117.5,
+      "box": {
+       "x0": -27.3,
+       "x1": -15,
+       "y1": 122,
+       "y0": 113
+      },
+      "core": {
+       "x0": -26,
+       "x1": -16.3,
+       "y0": 113.8,
+       "y1": 121
+      },
+      "brow": {
+       "x0": -41.5,
+       "x1": -9,
+       "y0": 132,
+       "y1": 140.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 10.8,
+      "height": 8.8,
+      "aspect": 1.23,
+      "iris_w": 7,
+      "iris_h": 6.5,
+      "reach": 3.8,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.09,
+      "reach_l": 2,
+      "reach_r": 1.8,
+      "cx": 33.6,
+      "cy": 117.1,
+      "box": {
+       "x0": 28.3,
+       "x1": 39,
+       "y1": 121.5,
+       "y0": 112.8
+      },
+      "core": {
+       "x0": 29.3,
+       "x1": 37.8,
+       "y0": 113.8,
+       "y1": 120.3
+      },
+      "brow": {
+       "x0": 20.5,
+       "x1": 48.3,
+       "y0": 132.8,
+       "y1": 140.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "scholar",
+   "verdict": "FAIL~",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/scholar.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 10.1,
+    "width": 14.9,
+    "aspect": 1.43,
+    "sclera": 0.02
+   },
+   "skin": [
+    0.814,
+    0.672,
+    0.501
+   ],
+   "face_w": 109.3,
+   "sep": 55.6,
+   "mid": 1.1,
+   "eye_y": 119.9,
+   "lr": {
+    "width": 0.78,
+    "height": 0.98,
+    "dy": 1.1
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 13,
+     "height": 10.3,
+     "aspect": 1.27,
+     "iris_w": 5.3,
+     "iris_h": 7,
+     "reach": 7.8,
+     "sclera": 0.05,
+     "sclera_mm2": 5.4,
+     "face_frac": 0.12,
+     "reach_l": 3.5,
+     "reach_r": 4.3,
+     "cx": -26.8,
+     "cy": 119.4,
+     "box": {
+      "x0": -33.3,
+      "x1": -20.3,
+      "y1": 124.5,
+      "y0": 114.3
+     },
+     "core": {
+      "x0": -30.3,
+      "x1": -23.5,
+      "y0": 117.5,
+      "y1": 124.5
+     },
+     "brow": {
+      "x0": -39,
+      "x1": -19,
+      "y0": 136.3,
+      "y1": 142.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 16.8,
+     "height": 10.5,
+     "aspect": 1.6,
+     "iris_w": 4.3,
+     "iris_h": 7,
+     "reach": 12.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "reach_l": 3.8,
+     "reach_r": 8.8,
+     "cx": 28.9,
+     "cy": 120.5,
+     "box": {
+      "x0": 20.5,
+      "x1": 37.3,
+      "y1": 125.8,
+      "y0": 115.3
+     },
+     "core": {
+      "x0": 23,
+      "x1": 29.5,
+      "y0": 117.3,
+      "y1": 124.3
+     },
+     "brow": {
+      "x0": 16.8,
+      "x1": 41.3,
+      "y0": 135.5,
+      "y1": 142.3
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 302,
+    "islands": 30,
+    "median_island": 3,
+    "sliver": [
+     0.39,
+     0.63
+    ]
+   },
+   "source": {
+    "name": "scholar",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/scholar/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 14.4,
+     "width": 21.3,
+     "aspect": 2.27,
+     "sclera": 0.11
+    },
+    "skin": [
+     0.822,
+     0.668,
+     0.487
+    ],
+    "face_w": 126.3,
+    "sep": 58.8,
+    "mid": 0.5,
+    "eye_y": 121.1,
+    "lr": {
+     "width": 0.87,
+     "height": 0.97,
+     "dy": 0.4
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 22.8,
+      "height": 9.3,
+      "aspect": 2.46,
+      "iris_w": 6.3,
+      "iris_h": 7,
+      "reach": 16.5,
+      "sclera": 0.11,
+      "sclera_mm2": 19.5,
+      "face_frac": 0.18,
+      "reach_l": 10.5,
+      "reach_r": 6,
+      "cx": -28.9,
+      "cy": 120.9,
+      "box": {
+       "x0": -40.3,
+       "x1": -17.5,
+       "y1": 125.5,
+       "y0": 116.3
+      },
+      "core": {
+       "x0": -30.5,
+       "x1": -21.5,
+       "y0": 117.5,
+       "y1": 124.5
+      },
+      "brow": {
+       "x0": -39.3,
+       "x1": -14,
+       "y0": 136.3,
+       "y1": 142
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 19.8,
+      "height": 9.5,
+      "aspect": 2.08,
+      "iris_w": 7.5,
+      "iris_h": 8,
+      "reach": 12.3,
+      "sclera": 0.11,
+      "sclera_mm2": 15.8,
+      "face_frac": 0.16,
+      "reach_l": 3,
+      "reach_r": 9.3,
+      "cx": 29.9,
+      "cy": 121.3,
+      "box": {
+       "x0": 20,
+       "x1": 39.8,
+       "y1": 126,
+       "y0": 116.5
+      },
+      "core": {
+       "x0": 22.5,
+       "x1": 33.3,
+       "y0": 117.3,
+       "y1": 125.3
+      },
+      "brow": {
+       "x0": 14,
+       "x1": 42.8,
+       "y0": 135.3,
+       "y1": 142.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "sightseer",
+   "verdict": "FAIL",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/sightseer.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 3.5,
+    "width": 13,
+    "aspect": 0.9,
+    "sclera": 0
+   },
+   "skin": [
+    0.939,
+    0.769,
+    0.633
+   ],
+   "face_w": 160.8,
+   "sep": 63,
+   "mid": 2,
+   "eye_y": 112,
+   "lr": {
+    "width": 0.93,
+    "height": 1,
+    "dy": 0
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 12.5,
+     "height": 14.5,
+     "aspect": 0.86,
+     "iris_w": 9.3,
+     "iris_h": 12.3,
+     "reach": 3.3,
+     "sclera": 0,
+     "sclera_mm2": 0.5,
+     "face_frac": 0.08,
+     "reach_l": 1.8,
+     "reach_r": 1.5,
+     "cx": -29.5,
+     "cy": 112,
+     "box": {
+      "x0": -35.8,
+      "x1": -23.3,
+      "y1": 119.3,
+      "y0": 104.8
+     },
+     "core": {
+      "x0": -34.8,
+      "x1": -24,
+      "y0": 106,
+      "y1": 118.3
+     },
+     "brow": {
+      "x0": -55.3,
+      "x1": 17.3,
+      "y0": 131,
+      "y1": 155
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 13.5,
+     "height": 14.5,
+     "aspect": 0.93,
+     "iris_w": 9.8,
+     "iris_h": 12.5,
+     "reach": 3.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.08,
+     "reach_l": 2,
+     "reach_r": 1.8,
+     "cx": 33.5,
+     "cy": 112,
+     "box": {
+      "x0": 26.8,
+      "x1": 40.3,
+      "y1": 119.3,
+      "y0": 104.8
+     },
+     "core": {
+      "x0": 27.5,
+      "x1": 39.3,
+      "y0": 106,
+      "y1": 118.5
+     },
+     "brow": {
+      "x0": 17.5,
+      "x1": 53.8,
+      "y0": 131,
+      "y1": 140.3
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 2499,
+    "islands": 6,
+    "median_island": 584,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "sightseer",
+    "verdict": "FAIL",
+    "tex": 2048,
+    "file": "gen/characters/sightseer/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 3.5,
+     "width": 13.1,
+     "aspect": 0.93,
+     "sclera": 0
+    },
+    "skin": [
+     0.941,
+     0.768,
+     0.631
+    ],
+    "face_w": 160.8,
+    "sep": 62.9,
+    "mid": 1.9,
+    "eye_y": 112.1,
+    "lr": {
+     "width": 0.91,
+     "height": 0.98,
+     "dy": 0.1
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 12.5,
+      "height": 14.3,
+      "aspect": 0.88,
+      "iris_w": 9,
+      "iris_h": 12.5,
+      "reach": 3.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.08,
+      "reach_l": 1.8,
+      "reach_r": 1.8,
+      "cx": -29.5,
+      "cy": 112.1,
+      "box": {
+       "x0": -35.8,
+       "x1": -23.3,
+       "y1": 119.3,
+       "y0": 105
+      },
+      "core": {
+       "x0": -34.8,
+       "x1": -24.5,
+       "y0": 106,
+       "y1": 118.5
+      },
+      "brow": {
+       "x0": -55.3,
+       "x1": 18,
+       "y0": 130.8,
+       "y1": 155
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 13.8,
+      "height": 14,
+      "aspect": 0.98,
+      "iris_w": 10.3,
+      "iris_h": 12.3,
+      "reach": 3.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.09,
+      "reach_l": 2,
+      "reach_r": 1.5,
+      "cx": 33.4,
+      "cy": 112,
+      "box": {
+       "x0": 26.5,
+       "x1": 40.3,
+       "y1": 119,
+       "y0": 105
+      },
+      "core": {
+       "x0": 27.8,
+       "x1": 39.3,
+       "y0": 106,
+       "y1": 118.3
+      },
+      "brow": {
+       "x0": 17.3,
+       "x1": 53.8,
+       "y0": 130.8,
+       "y1": 140.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "soldier",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/soldier.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 12.4,
+    "width": 21.5,
+    "aspect": 1.75,
+    "sclera": 0.17
+   },
+   "skin": [
+    0.851,
+    0.655,
+    0.493
+   ],
+   "face_w": 164.5,
+   "sep": 68,
+   "mid": 1.9,
+   "eye_y": 108,
+   "lr": {
+    "width": 0.85,
+    "height": 0.96,
+    "dy": 0.5
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 19.8,
+     "height": 12,
+     "aspect": 1.65,
+     "iris_w": 9,
+     "iris_h": 10.3,
+     "reach": 10.8,
+     "sclera": 0.18,
+     "sclera_mm2": 33.6,
+     "face_frac": 0.12,
+     "reach_l": 6.3,
+     "reach_r": 4.5,
+     "cx": -32.1,
+     "cy": 107.8,
+     "box": {
+      "x0": -42,
+      "x1": -22.3,
+      "y1": 113.8,
+      "y0": 101.8
+     },
+     "core": {
+      "x0": -37,
+      "x1": -26.8,
+      "y0": 102.5,
+      "y1": 112.8
+     },
+     "brow": {
+      "x0": -51.3,
+      "x1": -17.8,
+      "y0": 128.3,
+      "y1": 136.3
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 23.3,
+     "height": 12.5,
+     "aspect": 1.86,
+     "iris_w": 9.3,
+     "iris_h": 10,
+     "reach": 14,
+     "sclera": 0.16,
+     "sclera_mm2": 41.6,
+     "face_frac": 0.14,
+     "reach_l": 4.5,
+     "reach_r": 9.5,
+     "cx": 35.9,
+     "cy": 108.3,
+     "box": {
+      "x0": 24.3,
+      "x1": 47.5,
+      "y1": 114.5,
+      "y0": 102
+     },
+     "core": {
+      "x0": 26.8,
+      "x1": 38.3,
+      "y0": 103.3,
+      "y1": 113.3
+     },
+     "brow": {
+      "x0": 21.3,
+      "x1": 51.8,
+      "y0": 128.3,
+      "y1": 134.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 3392,
+    "islands": 13,
+    "median_island": 193.4,
+    "sliver": [
+     0,
+     0.02
+    ]
+   },
+   "source": {
+    "name": "soldier",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/soldier/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 16.3,
+     "width": 25.4,
+     "aspect": 2.16,
+     "sclera": 0.17
+    },
+    "skin": [
+     0.852,
+     0.654,
+     0.49
+    ],
+    "face_w": 163.8,
+    "sep": 71.1,
+    "mid": 1.4,
+    "eye_y": 107.9,
+    "lr": {
+     "width": 0.99,
+     "height": 0.92,
+     "dy": 0
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 25.3,
+      "height": 12.3,
+      "aspect": 2.06,
+      "iris_w": 9,
+      "iris_h": 10.3,
+      "reach": 16.3,
+      "sclera": 0.17,
+      "sclera_mm2": 41,
+      "face_frac": 0.15,
+      "reach_l": 10.8,
+      "reach_r": 5.5,
+      "cx": -34.1,
+      "cy": 107.9,
+      "box": {
+       "x0": -46.8,
+       "x1": -21.5,
+       "y1": 114,
+       "y0": 101.8
+      },
+      "core": {
+       "x0": -37.3,
+       "x1": -26.5,
+       "y0": 102.5,
+       "y1": 112.8
+      },
+      "brow": {
+       "x0": -52,
+       "x1": -17.3,
+       "y0": 127.8,
+       "y1": 136
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 25.5,
+      "height": 11.3,
+      "aspect": 2.27,
+      "iris_w": 9.3,
+      "iris_h": 9,
+      "reach": 16.3,
+      "sclera": 0.17,
+      "sclera_mm2": 39.4,
+      "face_frac": 0.16,
+      "reach_l": 4.5,
+      "reach_r": 11.8,
+      "cx": 37,
+      "cy": 107.9,
+      "box": {
+       "x0": 24.3,
+       "x1": 49.8,
+       "y1": 113.5,
+       "y0": 102.3
+      },
+      "core": {
+       "x0": 25.3,
+       "x1": 38.3,
+       "y0": 103,
+       "y1": 112
+      },
+      "brow": {
+       "x0": 31.3,
+       "x1": 38,
+       "y0": 111.8,
+       "y1": 113.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "storyteller",
+   "verdict": "PASS~",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/storyteller.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 10.4,
+    "width": 20.3,
+    "aspect": 1.37,
+    "sclera": 0
+   },
+   "skin": [
+    0.741,
+    0.558,
+    0.431
+   ],
+   "face_w": 128.8,
+   "sep": 67,
+   "mid": 1.1,
+   "eye_y": 112.8,
+   "lr": {
+    "width": 0.95,
+    "height": 1,
+    "dy": 0.3
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 20.8,
+     "height": 14.8,
+     "aspect": 1.41,
+     "iris_w": 9.8,
+     "iris_h": 12.3,
+     "reach": 11,
+     "sclera": 0,
+     "sclera_mm2": 0.1,
+     "face_frac": 0.16,
+     "reach_l": 8.8,
+     "reach_r": 2.3,
+     "cx": -32.4,
+     "cy": 112.9,
+     "box": {
+      "x0": -42.8,
+      "x1": -22,
+      "y1": 120.3,
+      "y0": 105.5
+     },
+     "core": {
+      "x0": -39.3,
+      "x1": -23.3,
+      "y0": 106.8,
+      "y1": 119
+     },
+     "brow": {
+      "x0": -51.3,
+      "x1": -11,
+      "y0": 126.8,
+      "y1": 145
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 19.8,
+     "height": 14.8,
+     "aspect": 1.34,
+     "iris_w": 10,
+     "iris_h": 12.3,
+     "reach": 9.8,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.15,
+     "reach_l": 3.5,
+     "reach_r": 6.3,
+     "cx": 34.6,
+     "cy": 112.6,
+     "box": {
+      "x0": 24.8,
+      "x1": 44.5,
+      "y1": 120,
+      "y0": 105.3
+     },
+     "core": {
+      "x0": 25.8,
+      "x1": 40.8,
+      "y0": 106.5,
+      "y1": 118.8
+     },
+     "brow": {
+      "x0": 15.3,
+      "x1": 50.5,
+      "y0": 126.8,
+      "y1": 144
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 2096,
+    "islands": 9,
+    "median_island": 202.1,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "storyteller",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/storyteller/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 10.6,
+     "width": 20.4,
+     "aspect": 1.43,
+     "sclera": 0
+    },
+    "skin": [
+     0.745,
+     0.557,
+     0.43
+    ],
+    "face_w": 129,
+    "sep": 67.4,
+    "mid": 1.3,
+    "eye_y": 112.5,
+    "lr": {
+     "width": 0.96,
+     "height": 1,
+     "dy": 0.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 20.8,
+      "height": 14.3,
+      "aspect": 1.46,
+      "iris_w": 9.8,
+      "iris_h": 12.3,
+      "reach": 11,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "reach_l": 8.8,
+      "reach_r": 2.3,
+      "cx": -32.4,
+      "cy": 112.6,
+      "box": {
+       "x0": -42.8,
+       "x1": -22,
+       "y1": 119.8,
+       "y0": 105.5
+      },
+      "core": {
+       "x0": -39.8,
+       "x1": -23.3,
+       "y0": 106.8,
+       "y1": 119
+      },
+      "brow": {
+       "x0": -51.5,
+       "x1": -10.8,
+       "y0": 126.8,
+       "y1": 144.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 20,
+      "height": 14.3,
+      "aspect": 1.4,
+      "iris_w": 9.8,
+      "iris_h": 12.5,
+      "reach": 10.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.16,
+      "reach_l": 3.3,
+      "reach_r": 7,
+      "cx": 35,
+      "cy": 112.4,
+      "box": {
+       "x0": 25,
+       "x1": 45,
+       "y1": 119.5,
+       "y0": 105.3
+      },
+      "core": {
+       "x0": 25.8,
+       "x1": 42.5,
+       "y0": 106.3,
+       "y1": 118.8
+      },
+      "brow": {
+       "x0": 15,
+       "x1": 50.5,
+       "y0": 126.8,
+       "y1": 143.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "straw_hat",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/straw_hat.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 13,
+    "width": 21.9,
+    "aspect": 2.31,
+    "sclera": 0
+   },
+   "skin": [
+    0.738,
+    0.589,
+    0.444
+   ],
+   "face_w": 119.8,
+   "sep": 53.1,
+   "mid": 0.7,
+   "eye_y": 114.5,
+   "lr": {
+    "width": 0.82,
+    "height": 0.77,
+    "dy": 0.3
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 19.8,
+     "height": 8.3,
+     "aspect": 2.39,
+     "iris_w": 8.5,
+     "iris_h": 6.5,
+     "reach": 11.3,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.16,
+     "reach_l": 2,
+     "reach_r": 9.3,
+     "cx": -25.9,
+     "cy": 114.6,
+     "box": {
+      "x0": -35.8,
+      "x1": -16,
+      "y1": 118.8,
+      "y0": 110.5
+     },
+     "core": {
+      "x0": -34,
+      "x1": -17.5,
+      "y0": 111.3,
+      "y1": 117.8
+     },
+     "brow": null
+    },
+    {
+     "side": "viewer_right",
+     "width": 24,
+     "height": 10.8,
+     "aspect": 2.23,
+     "iris_w": 9.3,
+     "iris_h": 7.3,
+     "reach": 14.8,
+     "sclera": 0,
+     "sclera_mm2": 0.8,
+     "face_frac": 0.2,
+     "reach_l": 8.8,
+     "reach_r": 6,
+     "cx": 27.3,
+     "cy": 114.4,
+     "box": {
+      "x0": 15.3,
+      "x1": 39.3,
+      "y1": 119.8,
+      "y0": 109
+     },
+     "core": {
+      "x0": 22.8,
+      "x1": 36.3,
+      "y0": 111.3,
+      "y1": 118.5
+     },
+     "brow": null
+    }
+   ],
+   "eye_band": {
+    "texels": 4113,
+    "islands": 23,
+    "median_island": 63.8,
+    "sliver": [
+     0,
+     0.02
+    ]
+   },
+   "source": {
+    "name": "straw_hat",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/straw_hat/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 20.1,
+     "width": 28.9,
+     "aspect": 3.26,
+     "sclera": 0
+    },
+    "skin": [
+     0.744,
+     0.585,
+     0.443
+    ],
+    "face_w": 120,
+    "sep": 59.9,
+    "mid": -1.9,
+    "eye_y": 114.8,
+    "lr": {
+     "width": 0.79,
+     "height": 0.85,
+     "dy": 0.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 32.3,
+      "height": 8.3,
+      "aspect": 3.91,
+      "iris_w": 8.3,
+      "iris_h": 6.5,
+      "reach": 24,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.27,
+      "reach_l": 14.5,
+      "reach_r": 9.5,
+      "cx": -31.9,
+      "cy": 114.6,
+      "box": {
+       "x0": -48,
+       "x1": -15.8,
+       "y1": 118.8,
+       "y0": 110.5
+      },
+      "core": {
+       "x0": -44,
+       "x1": -17.5,
+       "y0": 111.3,
+       "y1": 117.8
+      },
+      "brow": null
+     },
+     {
+      "side": "viewer_right",
+      "width": 25.5,
+      "height": 9.8,
+      "aspect": 2.62,
+      "iris_w": 9.3,
+      "iris_h": 7.5,
+      "reach": 16.3,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.21,
+      "reach_l": 9,
+      "reach_r": 7.3,
+      "cx": 28,
+      "cy": 114.9,
+      "box": {
+       "x0": 15.3,
+       "x1": 40.8,
+       "y1": 119.8,
+       "y0": 110
+      },
+      "core": {
+       "x0": 17.8,
+       "x1": 36.5,
+       "y0": 111.3,
+       "y1": 118.8
+      },
+      "brow": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "townsman",
+   "verdict": "PASS~",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/townsman.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 7.8,
+    "width": 18.6,
+    "aspect": 1.42,
+    "sclera": 0.03
+   },
+   "skin": [
+    0.953,
+    0.808,
+    0.677
+   ],
+   "face_w": 121.5,
+   "sep": 64.9,
+   "mid": -16.2,
+   "eye_y": 117.2,
+   "lr": {
+    "width": 0.77,
+    "height": 0.98,
+    "dy": 1.1
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 16.3,
+     "height": 13,
+     "aspect": 1.25,
+     "iris_w": 10.8,
+     "iris_h": 10.3,
+     "reach": 5.5,
+     "sclera": 0.01,
+     "sclera_mm2": 1.3,
+     "face_frac": 0.13,
+     "reach_l": 4,
+     "reach_r": 1.5,
+     "cx": -48.6,
+     "cy": 117.8,
+     "box": {
+      "x0": -56.8,
+      "x1": -40.5,
+      "y1": 124.3,
+      "y0": 111.3
+     },
+     "core": {
+      "x0": -54,
+      "x1": -41.3,
+      "y0": 112.5,
+      "y1": 122.8
+     },
+     "brow": {
+      "x0": -64.5,
+      "x1": -31.8,
+      "y0": 135,
+      "y1": 141.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 21,
+     "height": 13.3,
+     "aspect": 1.58,
+     "iris_w": 11,
+     "iris_h": 11,
+     "reach": 10,
+     "sclera": 0.05,
+     "sclera_mm2": 12.1,
+     "face_frac": 0.17,
+     "reach_l": 5.5,
+     "reach_r": 4.5,
+     "cx": 16.3,
+     "cy": 116.6,
+     "box": {
+      "x0": 5.8,
+      "x1": 26.8,
+      "y1": 123.3,
+      "y0": 110
+     },
+     "core": {
+      "x0": 10.5,
+      "x1": 23.3,
+      "y0": 111.5,
+      "y1": 122.5
+     },
+     "brow": {
+      "x0": 3.5,
+      "x1": 35.8,
+      "y0": 134.3,
+      "y1": 141.3
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 4994,
+    "islands": 21,
+    "median_island": 157.8,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "townsman",
+    "verdict": "PASS~",
+    "tex": 2048,
+    "file": "gen/v1/townsman_pipe/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 8,
+     "width": 18.9,
+     "aspect": 1.51,
+     "sclera": 0.04
+    },
+    "skin": [
+     0.954,
+     0.807,
+     0.671
+    ],
+    "face_w": 121.5,
+    "sep": 64.9,
+    "mid": -16.2,
+    "eye_y": 117,
+    "lr": {
+     "width": 0.8,
+     "height": 0.89,
+     "dy": 0.8
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 16.8,
+      "height": 11.8,
+      "aspect": 1.43,
+      "iris_w": 10.8,
+      "iris_h": 10.3,
+      "reach": 6,
+      "sclera": 0,
+      "sclera_mm2": 0.4,
+      "face_frac": 0.14,
+      "reach_l": 4.3,
+      "reach_r": 1.8,
+      "cx": -48.6,
+      "cy": 117.4,
+      "box": {
+       "x0": -57,
+       "x1": -40.3,
+       "y1": 123.3,
+       "y0": 111.5
+      },
+      "core": {
+       "x0": -55.3,
+       "x1": -41.5,
+       "y0": 112.5,
+       "y1": 122.8
+      },
+      "brow": {
+       "x0": -64.5,
+       "x1": -31.5,
+       "y0": 134.8,
+       "y1": 141.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 21,
+      "height": 13.3,
+      "aspect": 1.58,
+      "iris_w": 11,
+      "iris_h": 11,
+      "reach": 10,
+      "sclera": 0.07,
+      "sclera_mm2": 16.3,
+      "face_frac": 0.17,
+      "reach_l": 5.5,
+      "reach_r": 4.5,
+      "cx": 16.3,
+      "cy": 116.6,
+      "box": {
+       "x0": 5.8,
+       "x1": 26.8,
+       "y1": 123.3,
+       "y0": 110
+      },
+      "core": {
+       "x0": 10.5,
+       "x1": 23.3,
+       "y0": 111.5,
+       "y1": 122.5
+      },
+      "brow": {
+       "x0": 2.8,
+       "x1": 37,
+       "y0": 134.5,
+       "y1": 141.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "tracker",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/tracker.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 15,
+    "width": 25.8,
+    "aspect": 2.13,
+    "sclera": 0
+   },
+   "skin": [
+    0.826,
+    0.602,
+    0.425
+   ],
+   "face_w": 112.8,
+   "sep": 57.3,
+   "mid": 2.4,
+   "eye_y": 120.4,
+   "lr": {
+    "width": 0.81,
+    "height": 0.98,
+    "dy": 0.4
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 28.5,
+     "height": 12,
+     "aspect": 2.38,
+     "iris_w": 11,
+     "iris_h": 10.5,
+     "reach": 17.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.25,
+     "reach_l": 8.8,
+     "reach_r": 8.8,
+     "cx": -26.3,
+     "cy": 120.3,
+     "box": {
+      "x0": -40.5,
+      "x1": -12,
+      "y1": 126.3,
+      "y0": 114.3
+     },
+     "core": {
+      "x0": -36.8,
+      "x1": -16,
+      "y0": 115,
+      "y1": 125.5
+     },
+     "brow": {
+      "x0": -65.5,
+      "x1": 65.8,
+      "y0": 134.3,
+      "y1": 235.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 23,
+     "height": 12.3,
+     "aspect": 1.88,
+     "iris_w": 10.5,
+     "iris_h": 10,
+     "reach": 12.5,
+     "sclera": 0,
+     "sclera_mm2": 0,
+     "face_frac": 0.2,
+     "reach_l": 5.8,
+     "reach_r": 6.8,
+     "cx": 31,
+     "cy": 120.6,
+     "box": {
+      "x0": 19.5,
+      "x1": 42.5,
+      "y1": 126.8,
+      "y0": 114.5
+     },
+     "core": {
+      "x0": 24,
+      "x1": 36.5,
+      "y0": 116,
+      "y1": 126
+     },
+     "brow": {
+      "x0": -65.5,
+      "x1": 65.8,
+      "y0": 134.3,
+      "y1": 235.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 7567,
+    "islands": 17,
+    "median_island": 208.7,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "tracker",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/tracker/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 15,
+     "width": 25.8,
+     "aspect": 2.15,
+     "sclera": 0
+    },
+    "skin": [
+     0.834,
+     0.601,
+     0.423
+    ],
+    "face_w": 112.8,
+    "sep": 58.3,
+    "mid": 1.9,
+    "eye_y": 120.4,
+    "lr": {
+     "width": 0.87,
+     "height": 1,
+     "dy": 0.3
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 27.5,
+      "height": 12,
+      "aspect": 2.29,
+      "iris_w": 11,
+      "iris_h": 10.5,
+      "reach": 16.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.24,
+      "reach_l": 9.3,
+      "reach_r": 7.3,
+      "cx": -27.3,
+      "cy": 120.3,
+      "box": {
+       "x0": -41,
+       "x1": -13.5,
+       "y1": 126.3,
+       "y0": 114.3
+      },
+      "core": {
+       "x0": -36.8,
+       "x1": -15.5,
+       "y0": 115,
+       "y1": 125.5
+      },
+      "brow": {
+       "x0": -65.5,
+       "x1": 65.8,
+       "y0": 134.3,
+       "y1": 235.3
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 24,
+      "height": 12,
+      "aspect": 2,
+      "iris_w": 10.5,
+      "iris_h": 10,
+      "reach": 13.5,
+      "sclera": 0,
+      "sclera_mm2": 0,
+      "face_frac": 0.21,
+      "reach_l": 6.3,
+      "reach_r": 7.3,
+      "cx": 31,
+      "cy": 120.5,
+      "box": {
+       "x0": 19,
+       "x1": 43,
+       "y1": 126.5,
+       "y0": 114.5
+      },
+      "core": {
+       "x0": 23.8,
+       "x1": 40.8,
+       "y0": 116,
+       "y1": 126
+      },
+      "brow": {
+       "x0": -65.5,
+       "x1": 65.8,
+       "y0": 134.3,
+       "y1": 235.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "woman",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/woman.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 17,
+    "width": 29.5,
+    "aspect": 1.56,
+    "sclera": 0.1
+   },
+   "skin": [
+    0.971,
+    0.805,
+    0.659
+   ],
+   "face_w": 126.3,
+   "sep": 67,
+   "mid": 1.6,
+   "eye_y": 90.6,
+   "lr": {
+    "width": 0.98,
+    "height": 0.99,
+    "dy": 0.1
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 29.3,
+     "height": 18.8,
+     "aspect": 1.56,
+     "iris_w": 13,
+     "iris_h": 16.5,
+     "reach": 16.3,
+     "sclera": 0.12,
+     "sclera_mm2": 51.9,
+     "face_frac": 0.23,
+     "reach_l": 10.3,
+     "reach_r": 6,
+     "cx": -31.9,
+     "cy": 90.6,
+     "box": {
+      "x0": -46.5,
+      "x1": -17.3,
+      "y1": 100,
+      "y0": 81.3
+     },
+     "core": {
+      "x0": -44.3,
+      "x1": -20.5,
+      "y0": 82.3,
+      "y1": 98.8
+     },
+     "brow": {
+      "x0": -47.5,
+      "x1": -16.8,
+      "y0": 109,
+      "y1": 114.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 29.8,
+     "height": 19,
+     "aspect": 1.57,
+     "iris_w": 12,
+     "iris_h": 16.8,
+     "reach": 17.8,
+     "sclera": 0.08,
+     "sclera_mm2": 34.7,
+     "face_frac": 0.24,
+     "reach_l": 6,
+     "reach_r": 11.8,
+     "cx": 35.1,
+     "cy": 90.5,
+     "box": {
+      "x0": 20.3,
+      "x1": 50,
+      "y1": 100,
+      "y0": 81
+     },
+     "core": {
+      "x0": 22.5,
+      "x1": 48.3,
+      "y0": 82,
+      "y1": 98.8
+     },
+     "brow": {
+      "x0": 20.5,
+      "x1": 50,
+      "y0": 111,
+      "y1": 115.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 7684,
+    "islands": 19,
+    "median_island": 317.7,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "woman",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/woman/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 16.6,
+     "width": 29.1,
+     "aspect": 1.52,
+     "sclera": 0.1
+    },
+    "skin": [
+     0.973,
+     0.804,
+     0.655
+    ],
+    "face_w": 122.8,
+    "sep": 67.6,
+    "mid": 1.4,
+    "eye_y": 90.6,
+    "lr": {
+     "width": 0.94,
+     "height": 0.99,
+     "dy": 0.4
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 28.3,
+      "height": 19,
+      "aspect": 1.49,
+      "iris_w": 13,
+      "iris_h": 16.8,
+      "reach": 15.3,
+      "sclera": 0.12,
+      "sclera_mm2": 56.6,
+      "face_frac": 0.23,
+      "reach_l": 10.3,
+      "reach_r": 5,
+      "cx": -32.4,
+      "cy": 90.8,
+      "box": {
+       "x0": -46.5,
+       "x1": -18.3,
+       "y1": 100.3,
+       "y0": 81.3
+      },
+      "core": {
+       "x0": -44.5,
+       "x1": -20.3,
+       "y0": 82.3,
+       "y1": 99
+      },
+      "brow": {
+       "x0": -48,
+       "x1": -16.5,
+       "y0": 109,
+       "y1": 114.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 30,
+      "height": 19.3,
+      "aspect": 1.56,
+      "iris_w": 12,
+      "iris_h": 16.8,
+      "reach": 18,
+      "sclera": 0.09,
+      "sclera_mm2": 41,
+      "face_frac": 0.24,
+      "reach_l": 6,
+      "reach_r": 12,
+      "cx": 35.3,
+      "cy": 90.4,
+      "box": {
+       "x0": 20.3,
+       "x1": 50.3,
+       "y1": 100,
+       "y0": 80.8
+      },
+      "core": {
+       "x0": 22.5,
+       "x1": 48.5,
+       "y0": 82,
+       "y1": 98.8
+      },
+      "brow": {
+       "x0": 20.8,
+       "x1": 56,
+       "y0": 109,
+       "y1": 115.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "woman_pale",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/woman_pale.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 17.5,
+    "width": 30,
+    "aspect": 1.57,
+    "sclera": 0.1
+   },
+   "skin": [
+    0.971,
+    0.807,
+    0.659
+   ],
+   "face_w": 126.3,
+   "sep": 66.8,
+   "mid": 1.6,
+   "eye_y": 90.6,
+   "lr": {
+    "width": 1,
+    "height": 0.99,
+    "dy": 0.1
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 30,
+     "height": 19.3,
+     "aspect": 1.56,
+     "iris_w": 13,
+     "iris_h": 16.5,
+     "reach": 17,
+     "sclera": 0.12,
+     "sclera_mm2": 54,
+     "face_frac": 0.24,
+     "reach_l": 10.5,
+     "reach_r": 6.5,
+     "cx": -31.8,
+     "cy": 90.6,
+     "box": {
+      "x0": -46.8,
+      "x1": -16.8,
+      "y1": 100.3,
+      "y0": 81
+     },
+     "core": {
+      "x0": -44.3,
+      "x1": -20.5,
+      "y0": 82.3,
+      "y1": 98.8
+     },
+     "brow": {
+      "x0": -47.5,
+      "x1": -16.8,
+      "y0": 109,
+      "y1": 114.8
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 30,
+     "height": 19,
+     "aspect": 1.58,
+     "iris_w": 12,
+     "iris_h": 16.8,
+     "reach": 18,
+     "sclera": 0.08,
+     "sclera_mm2": 35.4,
+     "face_frac": 0.24,
+     "reach_l": 6.3,
+     "reach_r": 11.8,
+     "cx": 35,
+     "cy": 90.5,
+     "box": {
+      "x0": 20,
+      "x1": 50,
+      "y1": 100,
+      "y0": 81
+     },
+     "core": {
+      "x0": 22.5,
+      "x1": 48.3,
+      "y0": 82,
+      "y1": 98.8
+     },
+     "brow": {
+      "x0": 21,
+      "x1": 49.5,
+      "y0": 111,
+      "y1": 115.8
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 7684,
+    "islands": 19,
+    "median_island": 317.7,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "woman_pale",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/woman/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 16.6,
+     "width": 29.1,
+     "aspect": 1.52,
+     "sclera": 0.1
+    },
+    "skin": [
+     0.973,
+     0.804,
+     0.655
+    ],
+    "face_w": 122.8,
+    "sep": 67.6,
+    "mid": 1.4,
+    "eye_y": 90.6,
+    "lr": {
+     "width": 0.94,
+     "height": 0.99,
+     "dy": 0.4
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 28.3,
+      "height": 19,
+      "aspect": 1.49,
+      "iris_w": 13,
+      "iris_h": 16.8,
+      "reach": 15.3,
+      "sclera": 0.12,
+      "sclera_mm2": 56.6,
+      "face_frac": 0.23,
+      "reach_l": 10.3,
+      "reach_r": 5,
+      "cx": -32.4,
+      "cy": 90.8,
+      "box": {
+       "x0": -46.5,
+       "x1": -18.3,
+       "y1": 100.3,
+       "y0": 81.3
+      },
+      "core": {
+       "x0": -44.5,
+       "x1": -20.3,
+       "y0": 82.3,
+       "y1": 99
+      },
+      "brow": {
+       "x0": -48,
+       "x1": -16.5,
+       "y0": 109,
+       "y1": 114.8
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 30,
+      "height": 19.3,
+      "aspect": 1.56,
+      "iris_w": 12,
+      "iris_h": 16.8,
+      "reach": 18,
+      "sclera": 0.09,
+      "sclera_mm2": 41,
+      "face_frac": 0.24,
+      "reach_l": 6,
+      "reach_r": 12,
+      "cx": 35.3,
+      "cy": 90.4,
+      "box": {
+       "x0": 20.3,
+       "x1": 50.3,
+       "y1": 100,
+       "y0": 80.8
+      },
+      "core": {
+       "x0": 22.5,
+       "x1": 48.5,
+       "y0": 82,
+       "y1": 98.8
+      },
+      "brow": {
+       "x0": 20.8,
+       "x1": 56,
+       "y0": 109,
+       "y1": 115.8
+      }
+     }
+    ],
+    "note": "the base's (woman) source texture, before the variant's recolour"
+   }
+  },
+  {
+   "name": "youth",
+   "verdict": "PASS",
+   "tex": 512,
+   "file": "gen/details/eyes/before/glb/youth.glb",
+   "threshold": 0.38,
+   "mean": {
+    "reach": 13.5,
+    "width": 24.3,
+    "aspect": 1.5,
+    "sclera": 0.02
+   },
+   "skin": [
+    0.98,
+    0.788,
+    0.583
+   ],
+   "face_w": 117,
+   "sep": 64.3,
+   "mid": 0.1,
+   "eye_y": 85.9,
+   "lr": {
+    "width": 0.94,
+    "height": 0.98,
+    "dy": 0.4
+   },
+   "eyes": [
+    {
+     "side": "viewer_left",
+     "width": 23.5,
+     "height": 16,
+     "aspect": 1.47,
+     "iris_w": 10.3,
+     "iris_h": 13.5,
+     "reach": 13.3,
+     "sclera": 0.01,
+     "sclera_mm2": 2.6,
+     "face_frac": 0.2,
+     "reach_l": 9.3,
+     "reach_r": 4,
+     "cx": -32,
+     "cy": 85.8,
+     "box": {
+      "x0": -43.8,
+      "x1": -20.3,
+      "y1": 93.8,
+      "y0": 77.8
+     },
+     "core": {
+      "x0": -41.8,
+      "x1": -21.8,
+      "y0": 78.8,
+      "y1": 92.3
+     },
+     "brow": {
+      "x0": -71.5,
+      "x1": 71.3,
+      "y0": 100.3,
+      "y1": 197.5
+     }
+    },
+    {
+     "side": "viewer_right",
+     "width": 25,
+     "height": 16.3,
+     "aspect": 1.54,
+     "iris_w": 11.3,
+     "iris_h": 13.8,
+     "reach": 13.8,
+     "sclera": 0.04,
+     "sclera_mm2": 13.1,
+     "face_frac": 0.21,
+     "reach_l": 5.3,
+     "reach_r": 8.5,
+     "cx": 32.3,
+     "cy": 86.1,
+     "box": {
+      "x0": 19.8,
+      "x1": 44.8,
+      "y1": 94.3,
+      "y0": 78
+     },
+     "core": {
+      "x0": 23.8,
+      "x1": 37.8,
+      "y0": 79,
+      "y1": 92.8
+     },
+     "brow": {
+      "x0": -71.5,
+      "x1": 71.3,
+      "y0": 100.3,
+      "y1": 197.5
+     }
+    }
+   ],
+   "eye_band": {
+    "texels": 4791,
+    "islands": 15,
+    "median_island": 210.4,
+    "sliver": [
+     0,
+     0
+    ]
+   },
+   "source": {
+    "name": "youth",
+    "verdict": "PASS",
+    "tex": 2048,
+    "file": "gen/characters/youth/meshy/3_rig/result_rigged_character_glb_url.glb",
+    "threshold": 0.38,
+    "mean": {
+     "reach": 13.4,
+     "width": 24.1,
+     "aspect": 1.58,
+     "sclera": 0.06
+    },
+    "skin": [
+     0.981,
+     0.788,
+     0.581
+    ],
+    "face_w": 117.5,
+    "sep": 63.9,
+    "mid": -0.2,
+    "eye_y": 85.6,
+    "lr": {
+     "width": 0.97,
+     "height": 1,
+     "dy": 0
+    },
+    "eyes": [
+     {
+      "side": "viewer_left",
+      "width": 23.8,
+      "height": 15.3,
+      "aspect": 1.56,
+      "iris_w": 10.3,
+      "iris_h": 13.8,
+      "reach": 13.5,
+      "sclera": 0.05,
+      "sclera_mm2": 15.6,
+      "face_frac": 0.2,
+      "reach_l": 9.8,
+      "reach_r": 3.8,
+      "cx": -32.1,
+      "cy": 85.6,
+      "box": {
+       "x0": -44,
+       "x1": -20.3,
+       "y1": 93.3,
+       "y0": 78
+      },
+      "core": {
+       "x0": -43,
+       "x1": -21.3,
+       "y0": 78.8,
+       "y1": 92.5
+      },
+      "brow": {
+       "x0": -71.5,
+       "x1": 71.3,
+       "y0": 99.8,
+       "y1": 197.5
+      }
+     },
+     {
+      "side": "viewer_right",
+      "width": 24.5,
+      "height": 15.3,
+      "aspect": 1.61,
+      "iris_w": 11.3,
+      "iris_h": 13.8,
+      "reach": 13.3,
+      "sclera": 0.07,
+      "sclera_mm2": 19.3,
+      "face_frac": 0.21,
+      "reach_l": 5.5,
+      "reach_r": 7.8,
+      "cx": 31.8,
+      "cy": 85.6,
+      "box": {
+       "x0": 19.5,
+       "x1": 44,
+       "y1": 93.3,
+       "y0": 78
+      },
+      "core": {
+       "x0": 23.3,
+       "x1": 43.8,
+       "y0": 79,
+       "y1": 92.8
+      },
+      "brow": {
+       "x0": -71.5,
+       "x1": 71.3,
+       "y0": 99.8,
+       "y1": 197.5
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

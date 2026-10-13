@@ -1,0 +1,47 @@
+{
+ "character": "inspector",
+ "base": "work_sweep",
+ "spec": "sweep_bar",
+ "frame": "proposed",
+ "sole_shift_m": -0.029,
+ "clip": "work_sweep~bar",
+ "frames": 160,
+ "duration": 7.95,
+ "verify_max_m": 0,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "hips",
+   "via": "hips",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0.015,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "residual_max_m": 0.01,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "Hips": 0,
+  "LeftUpLeg": 41,
+  "LeftLeg": 57,
+  "LeftFoot": 25,
+  "RightUpLeg": 21,
+  "RightLeg": 26,
+  "RightFoot": 38,
+  "LeftArm": 132,
+  "LeftForeArm": 107,
+  "LeftHand": 79,
+  "RightArm": 87,
+  "RightForeArm": 153,
+  "RightHand": 106
+ }
+}

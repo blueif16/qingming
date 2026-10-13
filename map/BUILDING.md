@@ -74,6 +74,26 @@ the water think about the most efficient treatment that considers sizing and eff
   tiers a *busy river* (also copies of the section's own painted boats coming in waves, at most 3 / 6 a section);
   *moored* is the motion above. This is the one place the world shows boats beyond the painted ones: copies of painted
   boats only, on the river, never on land or at a painted mooring.
+- **Ambient life** (the user, 2026-10-13: "small events … not part of the original scroll … birds flying or leaves
+  falling … tiny movements that can happen in a realistic scenario. You don't need to add a lot"). This is the
+  second place the world shows what the scroll doesn't paint, and it is limited to motion and air:
+  - birds in flight and small birds on the ground, insects;
+  - falling leaves, willow catkins (柳絮, the 清明 season), petals;
+  - smoke and steam rising from painted fires and stoves;
+  - dust at painted wheels;
+  - the wind's sway on trees, cloth, banners and signs.
+
+  It is never people, animals with an owner, buildings, props or traffic. It is never built into a section GLB, so
+  `loyalty_check` is untouched. It has no map ID: its module (`web/src/ambient.js`) places it from the map's own
+  things (birds near trees and roofs, catkins under willows, smoke over a painted stove). It stays sparse, and it
+  is cut by device tier. Record: `gen/details/ambient/`.
+- **Trees in 3D** (the user, 2026-10-13: the painted cards look "fake and just made with images"). Still one tree per
+  mapped tree, of its painted form. Near trees get a real trunk and limbs plus a crown of painted leaf clumps that sway
+  in the wind. The painted card stays as the far level of detail. Record: `gen/details/trees/`.
+  A trunk stops you at its real bole (`web/src/trees3d.js` trunkColliders: a bole wider than 0.45 m gets a collider
+  of its measured radius, `trees3d.json` `trunk.r`). Where the painting stands a great willow on a road or a dyke
+  (S1's road and dyke, S2's south bank), you go round it; walks are routed round the bole, never the bole shrunk.
+  On by default since the user's sign-off (2026-10-13), with the ambient life and the life layer's talk.
 - **Decks are walkable.** The player can step aboard any boat that touches a bank, a stair or a jetty (or another
   walkable boat) and is carried along while standing on a moving deck; the crew stand on the deck, not on the water.
 - **The water** is one flat surface per reach: no reflections, no refraction, no simulated waves; the painted current

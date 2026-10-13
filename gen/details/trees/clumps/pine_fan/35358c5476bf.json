@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is a tree painted in that style; copy exactly how its fans of needle strokes are drawn: the same stroke, line weight, colours and spacing.\n\nPaint a sheet of four separate fans of pine needles, arranged in a 2 by 2 grid, each one alone in its own quarter of the picture with clear white space all round it, never touching another one or the picture's edge.\n\nEach one is a single loose, see-through fan of fine, straight needle strokes, muted blue-green (about #5a7462) with a lighter green on the upper strokes: a half-circle of separate lines radiating from one point at the bottom centre of its quarter, like a half-open folding fan, with white showing between the strokes. Never a solid pad, never a clipped cloud shape. There is no branch and no trunk below the point. The fan fills most of its quarter.\n\nThe four differ only in shape: (1) an upright half-open fan; (2) a wide fan spreading almost flat; (3) a fan tilted to the left; (4) a fan tilted to the right.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed silk of the scroll. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no trunk, no branch, no ground, no shadow, no text, no seal, no grid lines, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/pine_fan_1/e0e3820b886b_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "35358c5476bf",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 58.1,
+ "attempts": 1,
+ "idempotency_key": "8b2961d5-68b1-41cd-9fad-a6ad8b607244",
+ "request_id": "02947ad4-cfd8-41ff-9822-14dc857c6743",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4890,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 301
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4890,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 301
+  },
+  "total_tokens": 6540
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/b73bebc3-c8c6-4f73-87bf-4fdbf809bc03"
+ ],
+ "files": [
+  "gen/details/trees/clumps/pine_fan/35358c5476bf_0.png"
+ ]
+}

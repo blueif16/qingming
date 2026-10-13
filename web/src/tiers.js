@@ -22,23 +22,48 @@ export const TIERS = {
     shadow: { size: 1024, half: 32, ahead: 12, snap: 2, peopleHz: 15, peopleFar: 15 },
     flowCap: 0, // the most extra boats on the river a section (boatflow.js): none here, so by device this tier's river
     // is the painted boats sailing it (world.js boatMode); 2 when Boats is set to waves by hand
+    // metres: people further off are drawn with their far body, a quarter of the triangles over the same vertices
+    // (crowd.js, tools/char_lod.mjs): here a person is ~70 px tall on a phone held upright and the body moves ~1 px
+    peopleLod: 20,
     // the window stays 1 here: 'ahead' (your section and the one you walk or look toward; ?window=ahead) failed two
     // of the world's walks (gen/perf/batch1/notes.md), so it waits for its own round
     window: 1,
+    // the optional detail systems' numbers (detail.js): trees3d (meshNear m: 3D trees within, cards beyond; by the
+    // rivers' tight GPU window meshNearRiver), ambient, the chatter bubbles; the details session tunes them
+    detail: {
+      trees: { meshNear: 25, meshNearRiver: 0, clumpDensity: 0.5, strands: 0.4, windFar: 15 },
+      ambient: { birds: 4, particles: 120, sparrows: 0, smoke: false, bannerSway: 'near' },
+      talk: { chatterOpen: 1, marks: 0, scanHz: 3, wakeM: 20, showM: 9, barkM: 7, gapScale: 1.35, perMin: 5 }, // ui/chatter.js DEFAULTS
+    },
   },
   // recent phones, laptops with integrated graphics
   mid: {
     dprCap: 1.5, scaleMin: 0.7, msaa: 0, fxaa: true, hdr: false,
     shadow: { size: 2048, sizeTouch: 1024, half: 36, ahead: 12, snap: 1, peopleHz: 20, peopleFar: 30 },
     flowCap: 3,
+    peopleLod: 30,
     window: 1,
+    detail: {
+      trees: { meshNear: 45, meshNearRiver: 45, clumpDensity: 0.75, strands: 0.6, windFar: 30 },
+      ambient: { birds: 12, particles: 400, sparrows: 6, smoke: true, bannerSway: 'near' },
+      talk: { chatterOpen: 2, marks: 4, scanHz: 4, wakeM: 26, showM: 10, barkM: 8, gapScale: 1, perMin: 8 },
+    },
   },
-  // a desktop or a discrete GPU: as before (4x MSAA on a half-float target, the shadow map every frame round you)
+  // a desktop or a discrete GPU: as before (4x MSAA on a half-float target, the shadow map round you, its people every
+  // frame); the box's centre snapped to 1 m, so the world's layer of the map (world.js shadowLayers) is redrawn as you
+  // walk a metre, not every frame
   high: {
     dprCap: 2.0, scaleMin: 0.8, msaa: 4, fxaa: false, hdr: true,
-    shadow: { size: 2048, sizeTouch: 1024, half: 48, ahead: 0, snap: 0, peopleHz: Infinity, peopleFar: Infinity },
+    shadow: { size: 2048, sizeTouch: 1024, half: 48, ahead: 0, snap: 1, peopleHz: Infinity, peopleFar: 40 }, // 40: past it a
+    // person's shadow changed no pixel at the crown, the grain wharf or the storyteller (gen/perf/batch2/framerate.md)
     flowCap: 6,
+    peopleLod: 50, // a person is about as many pixels tall here on a 4K screen as at 20 m on low and 30 m on mid on a phone
     window: 1,
+    detail: {
+      trees: { meshNear: 70, meshNearRiver: 70, clumpDensity: 1, strands: 1, windFar: 60 },
+      ambient: { birds: 30, particles: 900, sparrows: 12, smoke: true, bannerSway: 'all' },
+      talk: { chatterOpen: 2, marks: 6, scanHz: 4, wakeM: 26, showM: 10, barkM: 8, gapScale: 1, perMin: 9 },
+    },
   },
 };
 export const ORDER = ['low', 'mid', 'high'];
@@ -77,10 +102,13 @@ export function guessTier(gl, nav = navigator) {
 
 export class Tiers {
   // gl: the WebGL context; settings: the page's settings object (its `quality` key); query: URLSearchParams;
-  // onChange(cfg, name, previous): the page applies a new tier (targets, shadows, window)
-  constructor({ gl, settings, query, onChange }) {
+  // onChange(cfg, name, previous): the page applies a new tier (targets, shadows, window); onDetail(cfg, detailScale):
+  // the detail systems' counts scale (detail.js)
+  constructor({ gl, settings, query, onChange, onDetail }) {
     this.s = settings;
     this.onChange = onChange;
+    this.onDetail = onDetail;
+    this.detailScale = 1; // the detail systems' counts (detail.js): lowered 1 -> 0.5 before an automatic tier steps down
     const g = guessTier(gl);
     this.guess = g.tier;
     this.why = g.why;
@@ -117,6 +145,7 @@ export class Tiers {
     this.name = name;
     this.cfg = this.config(name);
     this.scale = 1;
+    this.detailScale = 1;
     Object.assign(this.ctl, { frames: 0, time: 0, cpu: 0, reversals: 0, last: 0, floorTime: 0 });
     this.note(`${prev} -> ${name}: ${reason}`);
     this.onChange?.(this.cfg, name, prev);
@@ -158,6 +187,15 @@ export class Tiers {
     if (fps < 30 && cpuShare < 0.7 && this.scale > lo + 1e-3) dir = -1;
     else if (fps >= 55 && this.scale < 1 - 1e-3) dir = 1;
     if (fps < 30 && (this.scale <= lo + 1e-3 || cpuShare >= 0.7)) k.floorTime += 4; else k.floorTime = 0;
+    // held at the floor and still slow: first fewer details (birds, particles, 3D trees' reach), a quarter at a time,
+    // then a tier down
+    if (k.floorTime >= 8 && !this.manual && this.detailScale > 0.5 + 1e-3) {
+      this.detailScale = +(this.detailScale - 0.25).toFixed(2);
+      k.floorTime = 0;
+      this.note(`details x${this.detailScale} (${fps.toFixed(0)} fps)`);
+      this.onDetail?.(this.cfg, this.detailScale);
+      return false;
+    }
     if (k.floorTime >= 8 && !this.manual && this.name !== 'low') {
       const to = lower(this.name);
       this.remember(to);
@@ -196,6 +234,6 @@ export class Tiers {
 
   stats() {
     return { name: this.name, guess: this.guess, why: this.why, gpu: this.gpu, manual: this.manual, url: this.url, scale: this.scale,
-      adapt: this.adapt, controller: { ...this.ctl }, check: this.check.result || null, log: this.log, cfg: this.cfg };
+      adapt: this.adapt, detailScale: this.detailScale, controller: { ...this.ctl }, check: this.check.result || null, log: this.log, cfg: this.cfg };
   }
 }

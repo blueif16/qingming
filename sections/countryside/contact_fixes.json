@@ -1,0 +1,158 @@
+{
+ "figures": {
+  "man_at_post_29812": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    0.5,
+    -0.15
+   ],
+   "facing_deg": 187,
+   "nudge_why": "solved: contact forearm_L->S1.prop.post_crossbar_29862; gap before forearm_L 0.29, after forearm_L 0.03; fixed contact:rail; moved 0.52 m, turned 7 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:27",
+    "cost_before": 0.072,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "stall_customer_29280": {
+   "do": [
+    [
+     "drink~soles",
+     12
+    ]
+   ],
+   "class": "ik",
+   "why": "drink -> drink~soles: an IK clip variant (characters/ik_variants.json \"soles\", fix-inner's leg op): drink's feet rest at two heights (-0.033 and +0.006 m once their middle is on the floor), so both soles are held on the floor by leg IK, the knees and the seat where the clip has them"
+  },
+  "traveller_rider_30165": {
+   "do": [
+    [
+     "ride~traveller_rider_30165",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "ride -> ride~traveller_rider_30165: an IK clip variant (characters/ik_variants.json \"traveller_rider_30165\") holds the seat at the take's median height through the cycle, so it stays on the saddle cloth (its bob lifted it 4.1 cm over it at the cycle's top tenth)"
+  },
+  "child_29674": {
+   "do": [
+    [
+     "hand_over",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "class": "recast",
+   "why": "recast (fix_standard.md step 1): painted \"standing alone on the open ground ... a hand held out toward the man at the post\"; reach is child_reach, both arms across a chest-high table top, and no table is painted (its palms were in the air): hand_over (from:townsman/hand_over, a new clip of child_robed: an arm held out in front; its rule touches nothing)"
+  },
+  "party_porter_staff_31131": {
+   "class": "recast",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "props": [
+    "staff_on_shoulder"
+   ],
+   "why": "recast (fix_standard.md step 1): painted walking with \"a long thin pole or staff [that] slants up behind his head over his shoulder\", so its foot touches nothing; stand_pole held it upright with its foot 10 cm over the ground: he stands (held with the sedan) in idle with the staff on his right shoulder (staff_on_shoulder, a new porter prop bound to Spine in idle, as the groom's staff; the porter's staff_shoulder is bound in carry_pole for the walking traveller)"
+  },
+  "sedan_bearer_front_30828": {
+   "class": "ik",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "why": "sedan_carry -> sedan_carry~pole (the shared IK variant, characters/ik_variants.json \"pole\": the right shoulder held under the pole at the take's median place, both palms on it), with the willow sedan's poles fitted to it (blender/countryside_scene.py SEDAN_POLE_FIT 1.47 m, kit pole_fit), as S4's bearers; painted with the pole on his right shoulder",
+   "base_nudge": [
+    -0.26,
+    0.32
+   ],
+   "base_facing": 205,
+   "nudge": [
+    0.09,
+    0.72
+   ],
+   "facing_deg": 205,
+   "nudge_why": "solved: contact shoulder_R->S1.veh.sedan_willow_30805, palm_L->S1.veh.sedan_willow_30805, palm_R->S1.veh.sedan_willow_30805; gap before shoulder_R 0.2, palm_L 0.42, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.53 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:49",
+    "cost_before": 0.243,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_bearer_rear_30990": {
+   "class": "ik",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "why": "sedan_carry -> sedan_carry~pole (the shared IK variant, characters/ik_variants.json \"pole\": the right shoulder held under the pole at the take's median place, both palms on it), with the willow sedan's poles fitted to it (blender/countryside_scene.py SEDAN_POLE_FIT 1.47 m, kit pole_fit), as S4's bearers; painted with the pole on his right shoulder",
+   "base_nudge": [
+    0.02,
+    0.22
+   ],
+   "base_facing": 205,
+   "nudge": [
+    -0.15,
+    0.39
+   ],
+   "facing_deg": 201,
+   "nudge_why": "solved: contact shoulder_R->S1.veh.sedan_willow_30805, palm_L->S1.veh.sedan_willow_30805, palm_R->S1.veh.sedan_willow_30805; gap before shoulder_R 0.2, palm_L 0.27, palm_R 0.17, after shoulder_R 0.02, palm_L 0.03, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.24 m, turned -4 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:49",
+    "cost_before": 0.118,
+    "cost_after": 0,
+    "pass": true
+   }
+  }
+ },
+ "about": "Contact fixes for this section (gen/details/contacts/fix_standard.md): per figure, what tools/contact_solve.mjs solved (nudge, facing_deg: the root offset and yaw that put its contacts on what it touches, measured from the casting's own base_nudge / base_facing), or a recast (do, character) or a fit, with the reason. Applied last by the casting script through tools/contact_fixes.py.",
+ "limits": {
+  "max_move_m": 0.6,
+  "max_turn_deg": 30
+ },
+ "seats": {
+  "S1.fig.stall_customer_29280": {
+   "top_H": 0.377,
+   "why": "build the missing seat (fix_standard.md rule 5; map/BUILDING.md rule 3: painted seated at the stall's small table, the seat part of his figure): his own seat centred under farmer drink~soles's seat point on the page (285.404, 18.602), its top at the seat point (0.385 m, median over the cycle, 0.381..0.395) less 0.008 m: top 0.377 m map H, on ground at 0.034 m (0.343 m high; 100% of the cycle in the rule's window)",
+   "X": 285.404,
+   "D": 18.602,
+   "base_H": 0.034,
+   "kind": "stool"
+  }
+ },
+ "walkers": {
+  "charcoal_driver_36797": {
+   "beside": {
+    "animal": "donkey_charcoal_36745",
+    "gap": 0.4,
+    "along": -0.15
+   },
+   "why": "contact fix (fix_standard.md step 4; engine items E1 + E1b, gen/details/contacts/fix_river/engine_beside.md): painted driving the charcoal train, a hand on a donkey's load (drive_donkeys: the left palm flat on the load beside him every step); a walker and a walking animal kept separate paces, stops and turns, so his hand was 0.7-1.7 m off any load. beside: he walks D5's own path as the follower of a pair, on its right (gap +0.40 m: + puts the donkey on his left as he walks), 0.15 m back (along -0.15): scanned on the 06:3x page dump across and along the donkey on the real ground (the bank falls 0.15-0.28 m away from the path), the palm within 1 cm of the pannier there"
+  },
+  "charcoal_driver_36250": {
+   "beside": {
+    "animal": "donkey_charcoal_36323",
+    "gap": 0.4,
+    "along": -0.15
+   },
+   "why": "contact fix (fix_standard.md step 4; engine items E1 + E1b, gen/details/contacts/fix_river/engine_beside.md): painted driving the charcoal train, a hand on a donkey's load (drive_donkeys: the left palm flat on the load beside him every step); a walker and a walking animal kept separate paces, stops and turns, so his hand was 0.7-1.7 m off any load. beside: he walks D1's own path as the follower of a pair, on its right (gap +0.40 m: + puts the donkey on his left as he walks), 0.15 m back (along -0.15): scanned on the 06:3x page dump across and along the donkey on the real ground (the bank falls 0.15-0.28 m away from the path), the palm within 1 cm of the pannier there"
+  }
+ }
+}

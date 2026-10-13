@@ -1,0 +1,27 @@
+[
+ {
+  "label": "S3: shore: the water's edge stops you (the west reach near the S4b seam)",
+  "start": [
+   92,
+   10
+  ],
+  "legs": [
+   [
+    90,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    91.3,
+    92.3
+   ],
+   "H": [
+    -0.7,
+    0.1
+   ]
+  },
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json) In the world the walker slides up to 0.5 m west along the shore wall (join agent).",
+  "from": "sections/rainbow_bridge/walks.json"
+ }
+]

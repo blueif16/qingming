@@ -1,0 +1,51 @@
+{
+ "child_arms": {
+  "why": "children (details pass): hold_child as the carried child (prop child_in_arms) needs it: both arms held on her spine as the take has them at 0.1 s (the left forearm and hand cradle the child in the crook of her arm, the right hand at her left side on it); in the take they swept 5.5-9.6 cm through the child against her spine while she sways. Her head turns damped to 0.3; the take's last arm fall cut (trim 0-7.3 s).",
+  "trim": [
+   0,
+   7.3
+  ],
+  "ops": [
+   {
+    "freeze": [
+     "LeftShoulder",
+     "LeftArm",
+     "LeftForeArm",
+     "LeftHand",
+     "RightShoulder",
+     "RightArm",
+     "RightForeArm",
+     "RightHand"
+    ],
+    "t": 0.1
+   },
+   {
+    "damp": [
+     "neck",
+     "Head"
+    ],
+    "k": 0.3
+   }
+  ]
+ },
+ "child_shoulders": {
+  "why": "children (details pass): carry_child with the child on his shoulders (prop child_on_shoulders): both arms and his neck and head held on his spine as the take has them at 2.8 s. The hands hold the child's shins in front of his chest (in the take they moved 3-4 cm against his spine), and the child sits astride his neck behind his head (the take looks round, 4-11 cm against the spine, and swept into the child's thighs and body; damped to 0.3 it still pushed 2.2 cm into the child). His body keeps the take's sway.",
+  "ops": [
+   {
+    "freeze": [
+     "LeftShoulder",
+     "LeftArm",
+     "LeftForeArm",
+     "LeftHand",
+     "RightShoulder",
+     "RightArm",
+     "RightForeArm",
+     "RightHand",
+     "neck",
+     "Head"
+    ],
+    "t": 2.8
+   }
+  ]
+ }
+}

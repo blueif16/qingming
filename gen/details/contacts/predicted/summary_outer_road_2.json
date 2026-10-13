@@ -1,0 +1,102 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T13:42:40.003Z",
+ "sections": [
+  "outer_road_2"
+ ],
+ "owners_load_ms": 293,
+ "seconds": 0.97,
+ "people": 66,
+ "checked": 66,
+ "crew_not_covered": 0,
+ "figures_failing": 2,
+ "fails": 3,
+ "by_class": {
+  "contact:structure": 1,
+  "contact:floor": 1,
+  "contact:boat": 1
+ },
+ "by_clip": {
+  "wheelwright:contact:structure": 1,
+  "tiller_seated:contact:floor": 1,
+  "tiller_seated:contact:boat": 1
+ },
+ "table": {
+  "outer_road_2": {
+   "contact:structure": {
+    "n": 1,
+    "worst": 0.599,
+    "worst_id": "wheelwright_bending_13620"
+   },
+   "contact:floor": {
+    "n": 1,
+    "worst": 0.214,
+    "worst_id": "seated_boatman_stern_15372"
+   },
+   "contact:boat": {
+    "n": 1,
+    "worst": 2.248,
+    "worst_id": "seated_boatman_stern_15372"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:boat",
+   "clip": "tiller_seated",
+   "site": "palm_R",
+   "value": 2.248,
+   "kind": "crew",
+   "with": [
+    "S4b.veh.boat_arched_awning_14945|body (tiller)"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "seated_boatman_stern_15372",
+   "section": "outer_road_2",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:structure",
+   "clip": "wheelwright",
+   "site": "palm_L",
+   "value": 0.599,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.pole_frame_basket_13690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "wheelwright_bending_13620",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "tiller_seated",
+   "site": "seat",
+   "value": 0.214,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "seated_boatman_stern_15372",
+   "section": "outer_road_2",
+   "model": "boatman"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 49,
+ "contacts_failing": 3
+}

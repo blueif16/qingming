@@ -680,14 +680,16 @@ def props(rng, h):
     x, y, z = at("bench_shop_west_1507")
     with ent("bench_shop_west_1507"):
         # 45 px long, seat 35 px up: a short bench along the front just inside the west column (the woman sits on it
-        # facing the doctor); choice: 0.62 m long, 0.55 m high (the woman's sit clip seats its hips at 0.56 m:
-        # at the painted 0.35 m she would hover over it)
+        # facing the doctor); choice: 0.62 m long, 0.435 m high: fitted to her sit_hold_child (fix-gate, details pass
+        # 2026-10-13, gen/details/contacts/fix_standard.md rule 3): its seat site, the lowest point of her hips and
+        # thighs, is 0.44 m over her feet (gen/details/joints/woman_pale.json), so the top is 0.005 under it (at 0.55,
+        # chosen from the hips joint, she sat 0.11 m into it)
         # it runs north-south, so she sits across it facing the doctor (along it, her shins went through its seat),
         # 0.13 m east of the column's plinth
         xb = x + 0.13
-        ki.bench((xb, y - 0.13), (xb, y + 0.49), z, h=0.55, w=0.3)
+        ki.bench((xb, y - 0.13), (xb, y + 0.49), z, h=0.435, w=0.3)
         SOLIDS["seats"]["bench_shop_west_1507"] = {"from": [round(xb, 2), round(y - 0.13, 2)],
-                                                   "to": [round(xb, 2), round(y + 0.49, 2)], "w": 0.3, "top": 0.55}
+                                                   "to": [round(xb, 2), round(y + 0.49, 2)], "w": 0.3, "top": 0.435}
     x, y, z = at("bench_shop_east_1752")
     with ent("bench_shop_east_1752"):
         # end-on to the street behind the east board, legs 45 px: choice 0.9 m long along D
@@ -709,10 +711,13 @@ def props(rng, h):
     # at the gate: the gatekeeper's box seat, the tied sack, the stones at the railing's foot
     x, y, z = at("seat_box_gatekeeper_1070")
     with ent("seat_box_gatekeeper_1070"):
-        # front 65 x 48 px: 0.65 x 0.48 m, 0.4 deep (choice); seats don't collide
-        k.soft_box("timber", False, (x - 0.33, y - 0.2, z - 0.02), (x + 0.33, y + 0.2, z + 0.48), rng, r=0.03, wob=0.005)
+        # front 65 x 48 px: 0.65 m wide, 0.4 deep (choice); seats don't collide. choice: 0.565 m high, fitted to the
+        # gatekeeper's sit_talk (fix-gate, details pass 2026-10-13, gen/details/contacts/fix_standard.md rule 3): its seat
+        # site is 0.569 m over his feet (gen/details/joints/robed_man.json), so the top is 0.005 under it (at the
+        # painted 0.48 he sat 0.09 m over it)
+        k.soft_box("timber", False, (x - 0.33, y - 0.2, z - 0.02), (x + 0.33, y + 0.2, z + 0.565), rng, r=0.03, wob=0.005)
         SOLIDS["seats"]["seat_box_gatekeeper_1070"] = {"from": [round(x - 0.33, 2), round(y, 2)],
-                                                       "to": [round(x + 0.33, 2), round(y, 2)], "w": 0.4, "top": 0.48}
+                                                       "to": [round(x + 0.33, 2), round(y, 2)], "w": 0.4, "top": 0.565}
     x, y, z = at("tied_sack_1365")
     with ent("tied_sack_1365"):
         kce.sack(x, y, z, rng, h=0.8, r=0.3)    # 42 x 80 px: 0.8 m tall; a hidden collider so it is no step

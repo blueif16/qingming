@@ -275,3 +275,30 @@ The user's sizing note ("mind the sizings and do optimizations for both quality 
 images: 31 cards 7.1 MB -> 4.0 MB. Read on the contact sheet (`gen/trees/sheet.jpg`): the shoots, needles and bark
 still read. A few dense crowns stay at 170-220 KB (the last step of the quality ladder). The page loads only the
 cards the loaded sections use.
+
+## 3D trees (the details pass, 2026-10-13)
+
+The user: the cards alone "look like they are fake and just made with images". Every mapped tree is now, near you, a
+real tree of its painted form; its card stays as the far level, cross-faded by a dither over 6 m. Until the lead
+signs it off, the page draws them only with `?trees=3d` (the default page draws the cards exactly as before). Method and survey:
+`gen/details/trees/method.md`; record: `gen/details/trees/notes.md`; tool: `tools/trees3d.mjs` (config
+`trees/trees3d.json`); page: `web/src/trees3d.js`, `web/src/wind.js`.
+
+- **From each card:** a bare painting (shyfai: the same tree, its trunk, limbs and heads only, no shoots), then Meshy
+  image-to-3D of it for the gnarled forms (23 variants, 345 credits), or wood grown along the card's own strokes for
+  the thin forms (19); the crown is painted clumps (8 sheets of 4, one 2048 px atlas) placed by how the form grows.
+- **The cards keep their job:** the far level (beyond 25-70 m by tier), the low tier by the rivers, and `?trees=cards`.
+  A card whose trees are all 3D within 40 m stays at its 256 px copy.
+- **Checks:** `node tools/trees3d.mjs check` (every mapped tree has its card, its far level and its 3D tree; the
+  atlases' KTX2 copies current) beside `tools/tree_cards.mjs check`.
+- **A new or redrawn card** needs its 3D tree again:
+  1. `trees3d.mjs bare --only <card>`;
+  2. `meshy --go` (or `proc`);
+  3. `convert`;
+  4. `build`;
+  5. `check`.
+
+  A new form needs a CROWN entry in `trees3d.mjs` and, for a new kind of clump, a sheet in `trees3d.json` and the
+  atlas rebuilt.
+- **The keyer** is shared: `tools/lib/paper_key.mjs` is `keyCard`'s core as a function (byte-identical output on
+  willow_fan_1); `tree_cards.mjs` keeps its own copy for now.

@@ -1,0 +1,1199 @@
+{
+ "section": "city_end",
+ "owners": "MATCH",
+ "excluded_owners": [],
+ "people": 16,
+ "checked": 16,
+ "crew_not_covered": 0,
+ "fails": 6,
+ "figures_failing": 4,
+ "seconds": 0.224,
+ "results": [
+  {
+   "id": "gatekeeper_seated_1082",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "robed_man",
+   "character": "robed_man",
+   "map_id": "S7.fig.gatekeeper_seated_1082",
+   "support": "ground",
+   "root": [
+    -102.63,
+    -0.0042,
+    -12.41
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "sit_talk",
+     "site": "seat",
+     "target": "seat",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.02,
+     "hold": 0.9,
+     "with": [
+      "S7.prop.seat_box_gatekeeper_1070"
+     ],
+     "max": 0.095,
+     "mean": 0.091,
+     "gap_q": 0.094,
+     "pen_q": 0.088,
+     "deepest_pen": 0,
+     "status": "FAIL"
+    },
+    {
+     "class": "contact",
+     "clip": "sit_talk",
+     "site": "sole_L",
+     "target": "floor",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.75,
+     "with": [
+      "ground"
+     ],
+     "max": 0.012,
+     "mean": -0.001,
+     "gap_q": 0.001,
+     "pen_q": -0.005,
+     "deepest_pen": 0.007,
+     "status": "PASS",
+     "clip_offset": -0.004,
+     "cause": "clip"
+    },
+    {
+     "class": "contact",
+     "clip": "sit_talk",
+     "site": "sole_R",
+     "target": "floor",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.75,
+     "with": [
+      "ground"
+     ],
+     "max": 0.012,
+     "mean": 0.003,
+     "gap_q": 0.005,
+     "pen_q": 0.002,
+     "deepest_pen": 0.002,
+     "status": "PASS",
+     "clip_offset": 0.005,
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.004,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [
+    {
+     "class": "contact:seat",
+     "clip": "sit_talk",
+     "site": "seat",
+     "value": 0.094,
+     "kind": "gap",
+     "with": [
+      "S7.prop.seat_box_gatekeeper_1070"
+     ],
+     "note": null,
+     "rel": null,
+     "soft": false
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "face_at_gate_door_1251",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "child",
+   "character": "child",
+   "map_id": "S7.fig.face_at_gate_door_1251",
+   "support": "ground",
+   "root": [
+    -101.08,
+    -0.0118,
+    -14.99
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.004,
+     "max": 0.008,
+     "min": -0.001,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.012,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "man_at_post_1118",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "idler",
+   "character": "idler",
+   "map_id": "S7.fig.man_at_post_1118",
+   "support": "ground",
+   "root": [
+    -102.48,
+    -0.0001,
+    -12.7
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "lean_post_talk",
+     "site": "back",
+     "target": "wall",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.03,
+     "hold": 0.8,
+     "with": [
+      "S7.bld.gatehouse_1240"
+     ],
+     "max": 0.447,
+     "mean": 0.406,
+     "gap_q": 0.423,
+     "pen_q": 0.392,
+     "deepest_pen": 0,
+     "status": "FAIL"
+    },
+    {
+     "class": "stance_soles",
+     "median": -0.003,
+     "max": 0.004,
+     "min": -0.008,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0.102,
+     "worst": [
+      {
+       "site": "forearm_R",
+       "with": "S7.bld.gatehouse_1240",
+       "depth": 0.102,
+       "clip": "lean_post_talk"
+      }
+     ],
+     "pen_m": 0.02,
+     "status": "FAIL"
+    }
+   ],
+   "fails": [
+    {
+     "class": "contact:wall",
+     "clip": "lean_post_talk",
+     "site": "back",
+     "value": 0.423,
+     "kind": "gap",
+     "with": [
+      "S7.bld.gatehouse_1240"
+     ],
+     "note": null,
+     "rel": null,
+     "soft": false
+    },
+    {
+     "class": "site_inside",
+     "value": 0.102,
+     "with": [
+      "S7.bld.gatehouse_1240"
+     ],
+     "site": "forearm_R",
+     "clip": "lean_post_talk"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "visitor_food_box_1308",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "camel_driver",
+   "character": "camel_driver",
+   "map_id": "S7.fig.visitor_food_box_1308",
+   "support": "ground",
+   "root": [
+    -98.98,
+    -0.0271,
+    -11.51
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.002,
+     "max": 0.009,
+     "min": -0.006,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.027,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "pointing_man_1370",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "scholar",
+   "character": "scholar",
+   "map_id": "S7.fig.pointing_man_1370",
+   "support": "ground",
+   "root": [
+    -98.57,
+    -0.0244,
+    -12.62
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.001,
+     "max": 0.007,
+     "min": -0.01,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.024,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0.025,
+     "with": [
+      [
+       "S7.prop.tied_sack_1365",
+       0.025
+      ]
+     ],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "seated_woman_child_1535",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "woman_pale",
+   "character": "woman_pale",
+   "map_id": "S7.fig.seated_woman_child_1535",
+   "support": "ground",
+   "root": [
+    -96.76,
+    0.0187,
+    -13.21
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "sit_hold_child",
+     "site": "seat",
+     "target": "seat",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.02,
+     "hold": 0.9,
+     "with": [],
+     "note": "no seat under the seat point (80/80 samples): only the ground; nearest seat-high piece S7.prop.bench_shop_west_1507 0.175 m away in plan (top 0.546)",
+     "nearest_seat": {
+      "owner": "S7.prop.bench_shop_west_1507",
+      "plan_m": 0.175,
+      "top": 0.546
+     },
+     "max": 0.443,
+     "mean": 0.439,
+     "gap_q": 0.443,
+     "pen_q": 0.433,
+     "deepest_pen": 0,
+     "status": "FAIL"
+    },
+    {
+     "class": "contact",
+     "clip": "sit_hold_child",
+     "site": "sole_L",
+     "target": "floor",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.75,
+     "with": [
+      "ground"
+     ],
+     "max": 0.008,
+     "mean": -0.002,
+     "gap_q": 0.004,
+     "pen_q": -0.007,
+     "deepest_pen": 0.009,
+     "status": "PASS",
+     "clip_offset": -0.003,
+     "cause": "clip"
+    },
+    {
+     "class": "contact",
+     "clip": "sit_hold_child",
+     "site": "sole_R",
+     "target": "floor",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.03,
+     "hold": 0.75,
+     "with": [
+      "ground"
+     ],
+     "max": 0.003,
+     "mean": 0,
+     "gap_q": 0.001,
+     "pen_q": 0,
+     "deepest_pen": 0.003,
+     "status": "PASS",
+     "clip_offset": 0.002,
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.019,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [
+    {
+     "class": "contact:seat",
+     "clip": "sit_hold_child",
+     "site": "seat",
+     "value": 0.443,
+     "kind": "gap",
+     "with": [],
+     "note": "no seat under the seat point (80/80 samples): only the ground; nearest seat-high piece S7.prop.bench_shop_west_1507 0.175 m away in plan (top 0.546)",
+     "rel": null,
+     "soft": false
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "standing_woman_1567",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "woman_pale",
+   "character": "woman_pale",
+   "map_id": "S7.fig.standing_woman_1567",
+   "support": "ground",
+   "root": [
+    -96.33,
+    0.0223,
+    -13.61
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.001,
+     "max": 0.007,
+     "min": -0.003,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.022,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "doctor_dark_robe_1615",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "fortune_teller",
+   "character": "fortune_teller",
+   "map_id": "S7.fig.doctor_dark_robe_1615",
+   "support": "ground",
+   "root": [
+    -95.49,
+    0.0175,
+    -13.01
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.002,
+     "max": 0.014,
+     "min": -0.008,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.018,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "folded_object_bearer_1490",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "townsman",
+   "character": "townsman",
+   "map_id": "S7.fig.folded_object_bearer_1490",
+   "support": "ground",
+   "root": [
+    -92.17,
+    0.0001,
+    -5.76
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.002,
+     "max": 0.007,
+     "min": -0.005,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "official_rider_1610",
+   "section": "city_end",
+   "kind": "rider",
+   "model": "official_rider",
+   "character": "official_rider",
+   "map_id": "S7.fig.official_rider_1610",
+   "support": "animal S7.ani.horse_official_1625",
+   "root": [
+    -90.6706,
+    0.8287,
+    -5.8
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "ride",
+     "site": "seat",
+     "target": "ridden",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.04,
+     "hold": 0.9,
+     "with": [
+      "S7.ani.horse_official_1625"
+     ],
+     "how": "ridden",
+     "max": 0.008,
+     "mean": 0.003,
+     "gap_q": 0.006,
+     "pen_q": 0,
+     "deepest_pen": 0.001,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "rider: placed on its animal every frame; body cylinder and stance soles not judged"
+   ]
+  },
+  {
+   "id": "bucket_man_1872",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "idler",
+   "character": "idler",
+   "map_id": "S7.fig.bucket_man_1872",
+   "support": "ground",
+   "root": [
+    -90.37,
+    -0.0176,
+    -11
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": -0.002,
+     "max": 0.031,
+     "min": -0.025,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.018,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0.063,
+     "with": [
+      [
+       "S7.prop.bucket_at_carrier_1890",
+       0.063
+      ]
+     ],
+     "fail_m": 0.1,
+     "status": "WARN"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0.006,
+     "worst": [
+      {
+       "site": "palm_L",
+       "with": "S7.prop.bucket_at_carrier_1890",
+       "depth": 0.006,
+       "clip": "bucket_lift"
+      }
+     ],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "groom_1698",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "groom",
+   "character": "groom",
+   "map_id": "S7.fig.groom_1698",
+   "support": "ground",
+   "root": [
+    -89.01,
+    -0.0211,
+    -5.6
+   ],
+   "checks": [
+    {
+     "class": "contact",
+     "clip": "bridle",
+     "site": "palm_R",
+     "target": "animal",
+     "feature": null,
+     "gap_m": 0.04,
+     "pen_m": 0.02,
+     "hold": 0.8,
+     "with": [
+      "S7.ani.horse_official_1625"
+     ],
+     "how": "group",
+     "max": 0.912,
+     "mean": 0.804,
+     "gap_q": 0.88,
+     "pen_q": 0.719,
+     "deepest_pen": 0,
+     "status": "FAIL"
+    },
+    {
+     "class": "contact",
+     "clip": "bridle",
+     "site": "palm_L",
+     "target": "animal",
+     "feature": null,
+     "gap_m": 0.03,
+     "pen_m": 0.02,
+     "hold": 0.8,
+     "with": [
+      "S7.ani.horse_official_1625"
+     ],
+     "how": "group",
+     "max": 0.765,
+     "mean": 0.703,
+     "gap_q": 0.732,
+     "pen_q": 0.672,
+     "deepest_pen": 0,
+     "status": "FAIL"
+    },
+    {
+     "class": "stance_soles",
+     "median": 0.003,
+     "max": 0.019,
+     "min": -0.003,
+     "clip_offset": -0.001,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.021,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [
+    {
+     "class": "contact:animal",
+     "clip": "bridle",
+     "site": "palm_R",
+     "value": 0.88,
+     "kind": "gap",
+     "with": [
+      "S7.ani.horse_official_1625"
+     ],
+     "note": null,
+     "rel": null,
+     "soft": false
+    },
+    {
+     "class": "contact:animal",
+     "clip": "bridle",
+     "site": "palm_L",
+     "value": 0.732,
+     "kind": "gap",
+     "with": [
+      "S7.ani.horse_official_1625"
+     ],
+     "note": null,
+     "rel": null,
+     "soft": false
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "attendant_pale_1750",
+   "section": "city_end",
+   "kind": "figure",
+   "model": "groom",
+   "character": "groom",
+   "map_id": "S7.fig.attendant_pale_1750",
+   "support": "ground",
+   "root": [
+    -88.5,
+    -0.0312,
+    -5.91
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.001,
+     "max": 0.009,
+     "min": -0.004,
+     "clip_offset": -0.001,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": -0.031,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "porter_baskets_1255",
+   "section": "city_end",
+   "kind": "walker",
+   "model": "dark_hat",
+   "character": "dark_hat",
+   "map_id": "S7.fig.porter_baskets_1255",
+   "support": "ground",
+   "root": [
+    -96.4052,
+    0.0237,
+    -2.6296
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "walker_bag_1885",
+   "section": "city_end",
+   "kind": "walker",
+   "model": "townsman",
+   "character": "townsman",
+   "map_id": "S7.fig.walker_bag_1885",
+   "support": "ground",
+   "root": [
+    -85.31,
+    -0.0449,
+    -6.05
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  },
+  {
+   "id": "bundle_man_1976",
+   "section": "city_end",
+   "kind": "walker",
+   "model": "dark_hat",
+   "character": "dark_hat",
+   "map_id": "S7.fig.bundle_man_1976",
+   "support": "ground",
+   "root": [
+    -87.33,
+    0.0022,
+    -2.66
+   ],
+   "checks": [
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": [
+    "walker: checked at the dump instant, on its walk clip"
+   ]
+  }
+ ]
+}

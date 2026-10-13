@@ -3,7 +3,8 @@
 // loads by URL, so the GPU holds 4-8 bits a pixel instead of 32 (web/src/assets.js loads the KTX2 when the manifest
 // lists it and its kind is adopted; the webp stays the source and the fallback, never deleted or overwritten).
 //   kit    web/public/assets/tex/*.webp            the kit's swatches and atlases (tiled; no alpha)
-//   tree   web/public/assets/trees/*.webp, willow_card.webp   tree cards (alpha-tested; flipped like TextureLoader's)
+//   tree   web/public/assets/trees/*.webp, willow_card.webp   tree cards (alpha-tested; flipped like TextureLoader's);
+//          trees3d/*.webp, the 3D trees' crown atlas (tools/trees3d.mjs)
 //   panel  web/public/assets/<section>/backdrop_*.webp        the painted backdrop panels (alpha; flipped)
 //   chars  the body textures embedded in the characters' and animals' GLBs (assets/chars|animals/*.glb, read only):
 //          copies in assets/ktx2/emb/, keyed emb:<bytes>:<FNV-1a of the bytes> so the page knows them without the
@@ -45,7 +46,9 @@ const MODES = {
   kit: { files: () => list('tex', /\.webp$/), mode: 'etc1s', wrap: 'wrap', flip: false,
     // the sign and script atlases: lettering, kept in UASTC
     per: [[/^(signs_|script_sheet)/, 'uastc']] },
-  tree: { files: () => [...list('trees', /\.webp$/), ...(fs.existsSync(path.join(ASSETS, 'willow_card.webp')) ? ['willow_card.webp'] : [])], mode: 'uastc', wrap: 'clamp', flip: true },
+  tree: { files: () => [...list('trees', /\.webp$/), ...list('trees3d', /\.webp$/), ...(fs.existsSync(path.join(ASSETS, 'willow_card.webp')) ? ['willow_card.webp'] : [])], mode: 'uastc', wrap: 'clamp', flip: true,
+    // the 3D trees' bark atlas: opaque painted bark, ETC1S holds it (the crown atlas keeps UASTC: its alpha must stay exact)
+    per: [[/^bark\.webp$/, 'etc1s']] },
   panel: { files: () => fs.readdirSync(ASSETS).filter((d) => fs.statSync(path.join(ASSETS, d)).isDirectory()).flatMap((d) => list(d, /^backdrop_.*\.webp$/)), mode: 'etc1s', wrap: 'clamp', flip: true },
   chars: { files: () => [...embedded().keys()], mode: 'etc1s', wrap: 'clamp', flip: false },
 };

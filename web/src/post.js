@@ -14,7 +14,7 @@
 // further it lies outside the walkable area, the more it turns to mist, ink and all, like the scroll's blank silk.
 // The walkable area is the sections' painted area (up to four edge lines) plus boxes past the silk's top and bottom
 // edges where recorded moves and edge walls carry it further (a far bank moved north, boats moored past the edge).
-// The sky and the backdrop ring (an ellipse round the centre) are left alone.
+// The sky (depth 1) and the backdrop ring (an ellipse round the centre) are left alone.
 import * as THREE from 'three';
 import { FullScreenQuad } from 'three/addons/postprocessing/Pass.js';
 
@@ -112,7 +112,9 @@ void main() {
   vec3 col = texture2D(tColor, vUv).rgb;
 #endif
   float dc = viewZ(vUv);
-  float mist = mistOn > 0.5 ? mistAt(vUv, dc) : 0.0;
+  // never on the sky (depth 1: the dome on the far plane, and the backdrop panels over it): rebuilt from the far plane,
+  // a pixel looked at upward lands just above you, inside the ring, and painted a lens of mist on the sky
+  float mist = mistOn > 0.5 && texture2D(tDepth, vUv).x < 1.0 ? mistAt(vUv, dc) : 0.0;
   col = mix(col, mistColor, mist);
   float edge = 0.0;
   if (inkOn > 0.5) {

@@ -1,0 +1,47 @@
+{
+ "character": "bearer",
+ "base": "sedan_carry",
+ "spec": "pole_ends",
+ "frame": "proposed",
+ "sole_shift_m": 0.03,
+ "clip": "sedan_carry~pole_ends",
+ "frames": 180,
+ "duration": 5.967,
+ "verify_max_m": 0.002,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "hips",
+   "via": "hips",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "residual_max_m": 0.024,
+   "residual_mean_m": 0.002
+  }
+ ],
+ "max_turn_deg": {
+  "Hips": 0,
+  "LeftUpLeg": 9,
+  "LeftLeg": 7,
+  "LeftFoot": 11,
+  "RightUpLeg": 10,
+  "RightLeg": 9,
+  "RightFoot": 10,
+  "LeftArm": 97,
+  "LeftForeArm": 25,
+  "LeftHand": 100,
+  "RightArm": 53,
+  "RightForeArm": 116,
+  "RightHand": 118
+ }
+}

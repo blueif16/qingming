@@ -1,0 +1,3210 @@
+{
+ "about": "Who the inner city's people are and what they do: every painted figure of the scroll map (map/text/S6.md), at its painted spot, and nobody else (map/BUILDING.md). Written by gen/sections/inner_city/make_people.py from gen/sections/inner_city/cast.json (the casting in gen/expand/inner_city_needs.md). figures: character (cast in cast.json, recasts in cast_why), do = [clip, seconds] cycles from the character's own clips (a requested action it lacks plays the nearest one it has: clips_why), props = the character's prop parts it holds (props_why), nudge = [dX, dD] (reasons in nudge_why), scale for children (times the child model: scale_why). walkers: figures painted mid-stride or carrying a load, walking along their painted direction from their spot and back, cut short at buildings, carts and the painted area's edge. animals: each painted animal at its map position (model and load from web/public/assets/animals/animals.json); riders are figures with ride = their animal's slug.",
+ "figures": {
+  "pole_man_5578": {
+   "character": "porter",
+   "do": [
+    [
+     "stand_pole~staff_foot",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "props": [
+    "staff"
+   ]
+  },
+  "walking_carter_5537": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.4,
+    -0.65
+   ]
+  },
+  "drinker_upper_5547": {
+   "character": "scholar",
+   "do": [
+    [
+     "drink",
+     14
+    ]
+   ],
+   "nudge": [
+    -0.75,
+    0.1
+   ],
+   "facing_deg": 180
+  },
+  "crouching_dark_5515": {
+   "character": "carter",
+   "do": [
+    [
+     "crouch",
+     12
+    ]
+   ]
+  },
+  "archer_waistguard_5465": {
+   "character": "archer",
+   "do": [
+    [
+     "bind",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.18,
+    -0.27
+   ],
+   "facing_deg": 90
+  },
+  "upper_standing_5452": {
+   "character": "scholar",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.99,
+    0
+   ],
+   "facing_deg": 0
+  },
+  "dark_figure_5440": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     8
+    ]
+   ]
+  },
+  "bearded_carter_5428": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    0.29,
+    0.92
+   ]
+  },
+  "tall_carter_5385": {
+   "character": "idler",
+   "do": [
+    [
+     "stand_sleeves",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "rider_5335": {
+   "character": "sightseer",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "ride": "horse_5262"
+  },
+  "groom_5290": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ]
+  },
+  "man_hands_raised_5180": {
+   "character": "idler",
+   "do": [
+    [
+     "tie_kerchief",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.45
+   ]
+  },
+  "drinker_upper_5140": {
+   "character": "scholar",
+   "do": [
+    [
+     "drink",
+     13
+    ]
+   ],
+   "nudge": [
+    0,
+    0.1
+   ],
+   "facing_deg": 270
+  },
+  "head_behind_ridge_5103": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.07,
+    0.05
+   ],
+   "facing_deg": 180
+  },
+  "capped_man_5090": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "talk",
+     5
+    ]
+   ]
+  },
+  "donkey_leader_5088": {
+   "character": "idler",
+   "do": [
+    [
+     "lead",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "boy_5050": {
+   "character": "child",
+   "scale": 1.06,
+   "do": [
+    [
+     "play",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "doorman_5015": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "talk",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.3,
+    0.1
+   ]
+  },
+  "man_child_on_shoulders_4975": {
+   "character": "townsman",
+   "do": [
+    [
+     "carry_child",
+     12
+    ]
+   ],
+   "props": [
+    "child_on_shoulders"
+   ]
+  },
+  "child_on_shoulders_4977": {
+   "character": "child",
+   "carried_by": "man_child_on_shoulders_4975",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "scale": 0.74
+  },
+  "youth_hair_bun_stick_4950": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ],
+   "props": [
+    "staff"
+   ],
+   "nudge": [
+    0.1,
+    0.1
+   ]
+  },
+  "sedan_bearer_front_far_4943": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    -0.1
+   ],
+   "facing_deg": 12
+  },
+  "man_behind_stooping_4925": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.1
+   ]
+  },
+  "shop_interior_faint_4905": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "sedan_bearer_front_near_4907": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.45,
+    -0.2
+   ],
+   "facing_deg": 12
+  },
+  "man_black_cap_from_behind_4878": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "man_back_turned_4845": {
+   "character": "camel_driver",
+   "do": [
+    [
+     "bow",
+     5
+    ],
+    [
+     "look",
+     6
+    ]
+   ]
+  },
+  "upper_storey_figure_4810": {
+   "character": "scholar",
+   "do": [
+    [
+     "drink",
+     15
+    ]
+   ],
+   "nudge": [
+    0.0,
+    -0.35
+   ]
+  },
+  "man_dark_robe_greeting_4772": {
+   "character": "townsman",
+   "do": [
+    [
+     "bow",
+     5
+    ],
+    [
+     "talk",
+     6
+    ]
+   ],
+   "nudge": [
+    0.1,
+    0.02
+   ]
+  },
+  "shop_interior_seated_4752": {
+   "character": "official",
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ]
+  },
+  "man_black_hat_4742": {
+   "character": "elder",
+   "do": [
+    [
+     "look",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.02
+   ]
+  },
+  "sedan_bearer_rear_far_4735": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0,
+    0.4
+   ],
+   "facing_deg": 8
+  },
+  "young_man_white_robe_4705": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "sedan_bearer_rear_near_4668": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.26,
+    -0.4
+   ],
+   "facing_deg": 10
+  },
+  "old_man_tall_hat_4666": {
+   "character": "elder",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.01,
+    0.03
+   ]
+  },
+  "boy_from_behind_4630": {
+   "character": "child",
+   "scale": 1.03,
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.01,
+    -0.03
+   ]
+  },
+  "basket_man_4590": {
+   "character": "townsman",
+   "do": [
+    [
+     "talk",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -0.18,
+    -0.18
+   ],
+   "facing_deg": 0
+  },
+  "sedan_attendant_4590": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "sedan_bearer_near_4530": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    -0.32,
+    0.08
+   ],
+   "facing_deg": 0
+  },
+  "sedan_bearer_far_4462": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0,
+    -0.08
+   ],
+   "facing_deg": 0
+  },
+  "seated_man_stool_4441": {
+   "character": "idler",
+   "do": [
+    [
+     "sit",
+     17
+    ]
+   ],
+   "nudge": [
+    0.47,
+    0
+   ],
+   "facing_deg": 270
+  },
+  "sedan_passenger_4362": {
+   "character": "woman",
+   "do": [
+    [
+     "sit",
+     14
+    ]
+   ],
+   "nudge": [
+    0.34,
+    -0.17
+   ],
+   "facing_deg": 0,
+   "root_h": 0.903
+  },
+  "man_below_sedan_4343": {
+   "character": "idler",
+   "do": [
+    [
+     "look",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "sedan_attendant_4255": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "sedan_rear_bearer_4195": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0,
+    0.48
+   ],
+   "facing_deg": 0
+  },
+  "man_bending_tray_4190": {
+   "character": "idler",
+   "do": [
+    [
+     "bend_goods",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "window_face_4155": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.35
+   ]
+  },
+  "man_by_boxes_4115": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.09,
+    0.11
+   ]
+  },
+  "young_man_4108": {
+   "character": "sightseer",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "chat",
+     5
+    ]
+   ],
+   "nudge": [
+    0,
+    -0.07
+   ],
+   "facing_deg": 270
+  },
+  "round_face_man_4092": {
+   "character": "townsman",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    -0.11
+   ]
+  },
+  "seated_man_highseat_4070": {
+   "character": "inspector",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.19,
+    0.11
+   ],
+   "facing_deg": 270,
+   "root_h": 0.434
+  },
+  "youth_umbrella_4028": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "chat",
+     4
+    ]
+   ]
+  },
+  "doorway_man_4026": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "man_red_jar_4005": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "shop_person_3991": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     8
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.2
+   ]
+  },
+  "fan_man_3972": {
+   "character": "elder",
+   "do": [
+    [
+     "fan",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "fan_round"
+   ]
+  },
+  "listener_purple_robe_3958": {
+   "character": "inspector",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "listener_hat_3932": {
+   "character": "sightseer",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.08,
+    -0.01
+   ]
+  },
+  "listener_dark_robe_3926": {
+   "character": "sightseer",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "butcher_3920": {
+   "character": "butcher",
+   "do": [
+    [
+     "chop",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "props": [
+    "cleaver"
+   ],
+   "nudge": [
+    0.3,
+    0.7
+   ],
+   "facing_deg": 285
+  },
+  "scholar_upstairs_3912": {
+   "character": "official",
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ]
+  },
+  "listener_3905": {
+   "character": "sightseer",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.08,
+    0.01
+   ]
+  },
+  "seated_cap_man_3905": {
+   "character": "official",
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ]
+  },
+  "listener_bag_3893": {
+   "character": "idler",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "crouching_man_3890": {
+   "character": "idler",
+   "do": [
+    [
+     "crouch",
+     12
+    ]
+   ]
+  },
+  "child_3885": {
+   "character": "child",
+   "scale": 0.98,
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "listener_3878": {
+   "character": "townsman",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.02,
+    0.07
+   ]
+  },
+  "light_jacket_man_3845": {
+   "character": "idler",
+   "do": [
+    [
+     "chat",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.06,
+    0.01
+   ]
+  },
+  "listener_3845": {
+   "character": "idler",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.09,
+    -0.05
+   ]
+  },
+  "storyteller_3822": {
+   "character": "storyteller",
+   "do": [
+    [
+     "tell",
+     20
+    ]
+   ],
+   "nudge": [
+    0.04,
+    0.08
+   ]
+  },
+  "child_listener_3812": {
+   "character": "child",
+   "scale": 0.83,
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.02
+   ]
+  },
+  "robed_man_3808": {
+   "character": "townsman",
+   "do": [
+    [
+     "bow",
+     5
+    ],
+    [
+     "talk",
+     6
+    ]
+   ],
+   "nudge": [
+    -0.06,
+    -0.01
+   ]
+  },
+  "wagon_side_man_3796": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "ring_listener_3788": {
+   "character": "townsman",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.04,
+    -0.08
+   ]
+  },
+  "cloth_shop_seated_3752": {
+   "character": "official",
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ],
+   "nudge": [
+    0.0,
+    0.81
+   ]
+  },
+  "ring_bending_hat_3748": {
+   "character": "sightseer",
+   "do": [
+    [
+     "crane",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "ring_standing_post_3745": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "wagon_top_rider_3740": {
+   "character": "carter",
+   "do": [
+    [
+     "sit",
+     12
+    ]
+   ],
+   "facing_deg": 220,
+   "nudge": [
+    -1.34,
+    -0.93
+   ],
+   "root_h": 0.761
+  },
+  "ring_face_3735": {
+   "character": "townsman",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.05,
+    0.26
+   ]
+  },
+  "ring_bun_3712": {
+   "character": "townsman",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "ring_dark_robe_3692": {
+   "character": "sightseer",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    -0.15
+   ]
+  },
+  "ring_fan_cap_3688": {
+   "character": "scholar",
+   "do": [
+    [
+     "fan",
+     8
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "props": [
+    "fan_round"
+   ]
+  },
+  "cloth_shop_standing_3686": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.04,
+    -0.05
+   ],
+   "facing_deg": 90
+  },
+  "ring_bending_3668": {
+   "character": "sightseer",
+   "do": [
+    [
+     "crane",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "nudge": [
+    0.04,
+    -0.13
+   ]
+  },
+  "cloth_shop_seated_3640": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ]
+  },
+  "wagon_shaft_carter_3642": {
+   "character": "carter",
+   "do": [
+    [
+     "steer",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -1.2,
+    -0.2
+   ],
+   "facing_deg": 215
+  },
+  "ring_bearded_robe_3630": {
+   "character": "carter",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "child_ring_edge_3577": {
+   "character": "child",
+   "scale": 1.06,
+   "do": [
+    [
+     "idle",
+     8
+    ]
+   ]
+  },
+  "ridge_dark_robe_3575": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     8
+    ]
+   ]
+  },
+  "dark_robe_reaching_3570": {
+   "character": "townsman",
+   "do": [
+    [
+     "hand_over",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "bearded_light_robe_3508": {
+   "character": "sightseer",
+   "do": [
+    [
+     "bow",
+     5
+    ],
+    [
+     "chat",
+     5
+    ]
+   ]
+  },
+  "ridge_reclining_3530": {
+   "character": "idler",
+   "do": [
+    [
+     "sleep_side",
+     14
+    ]
+   ]
+  },
+  "bowing_dark_robe_3470": {
+   "character": "townsman",
+   "do": [
+    [
+     "bow",
+     6
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "groom_whip_3452": {
+   "character": "inspector",
+   "do": [
+    [
+     "hold_whip",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "whip_hold"
+   ]
+  },
+  "upper_team_driver_3450": {
+   "character": "carter",
+   "do": [
+    [
+     "drive_team",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    0.1,
+    0.87
+   ]
+  },
+  "pointing_man_3405": {
+   "character": "idler",
+   "do": [
+    [
+     "point",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "barrow_pusher_3390": {
+   "character": "carter",
+   "do": [
+    [
+     "steer",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "rider_3375": {
+   "character": "sightseer",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "ride": "horse_3445"
+  },
+  "young_man_case_3340": {
+   "character": "inspector",
+   "do": [
+    [
+     "hand_over",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "top_edge_figure_3332": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     8
+    ]
+   ]
+  },
+  "box_carrier_3272": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "props": [
+    "back_boxes"
+   ]
+  },
+  "scholar_front_3240": {
+   "character": "scholar",
+   "do": [
+    [
+     "talk",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "scholar_back_3203": {
+   "character": "scholar",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "lattice_frame_east_3180": {
+   "character": "idler",
+   "do": [
+    [
+     "bucket_lift",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "handcart_man_3130": {
+   "character": "carter",
+   "do": [
+    [
+     "steer",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    1.28,
+    -0.85
+   ],
+   "facing_deg": 32
+  },
+  "garment_seller_3100": {
+   "character": "townsman",
+   "do": [
+    [
+     "show_garment",
+     8
+    ],
+    [
+     "talk",
+     4
+    ]
+   ]
+  },
+  "lattice_frame_west_3092": {
+   "character": "idler",
+   "do": [
+    [
+     "bucket_lift",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "white_jacket_stand_3072": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "chat",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.18,
+    -0.09
+   ]
+  },
+  "monk_3060": {
+   "character": "monk",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.05,
+    0.02
+   ]
+  },
+  "tray_vendor_3050": {
+   "character": "porter",
+   "do": [
+    [
+     "hold_tray",
+     8
+    ],
+    [
+     "talk",
+     4
+    ]
+   ],
+   "props": [
+    "tray"
+   ]
+  },
+  "man_behind_tree_3040": {
+   "character": "idler",
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "small_child_3035": {
+   "character": "child",
+   "scale": 0.68,
+   "do": [
+    [
+     "idle",
+     8
+    ]
+   ]
+  },
+  "dark_robe_cap_3022": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     6
+    ],
+    [
+     "talk",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.05,
+    -0.02
+   ]
+  },
+  "robed_hat_3002": {
+   "character": "sightseer",
+   "do": [
+    [
+     "chat",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.2,
+    0.2
+   ],
+   "facing_deg": 225
+  },
+  "arms_folded_2993": {
+   "character": "inspector",
+   "do": [
+    [
+     "stand_sleeves",
+     9
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "seated_by_pole_2970": {
+   "character": "scholar",
+   "do": [
+    [
+     "knees_up",
+     14
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    0.0
+   ]
+  },
+  "light_robe_2965": {
+   "character": "scholar",
+   "do": [
+    [
+     "talk",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "bearded_pouch_2949": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "wine_cart_driver_2945": {
+   "character": "carter",
+   "do": [
+    [
+     "drive_cart",
+     14
+    ]
+   ],
+   "props": [
+    "whip"
+   ],
+   "facing_deg": 57,
+   "nudge": [
+    -0.22,
+    -0.23
+   ],
+   "root_h": 0.768
+  },
+  "tall_dark_robe_2908": {
+   "character": "sightseer",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "stall_man_2890": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "child_by_dark_robe_2880": {
+   "character": "child",
+   "scale": 0.98,
+   "do": [
+    [
+     "look",
+     10
+    ]
+   ]
+  },
+  "grey_back_2862": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "dark_jacket_back_2848": {
+   "character": "inspector",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "white_jacket_skirt_2795": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    0.09,
+    0.03
+   ]
+  },
+  "child_on_back_2795": {
+   "character": "child",
+   "carried_by": "man_carrying_child_2790",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "scale": 0.74
+  },
+  "man_carrying_child_2790": {
+   "character": "idler",
+   "do": [
+    [
+     "carry_child",
+     12
+    ]
+   ],
+   "props": [
+    "child_on_back"
+   ]
+  },
+  "top_edge_lower_body_2775": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    0.09,
+    0
+   ],
+   "facing_deg": 270
+  },
+  "cap_white_trousers_2765": {
+   "character": "inspector",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.09,
+    -0.03
+   ]
+  },
+  "dark_jacket_back_row_2737": {
+   "character": "inspector",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "bearded_light_robe_2730": {
+   "character": "sightseer",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "dark_coat_2700": {
+   "character": "inspector",
+   "do": [
+    [
+     "hand_over",
+     6
+    ],
+    [
+     "talk",
+     5
+    ]
+   ]
+  },
+  "young_man_cart_rear_2675": {
+   "character": "idler",
+   "do": [
+    [
+     "push",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    0.14,
+    0.35
+   ],
+   "facing_deg": 15
+  },
+  "light_robe_behind_2650": {
+   "character": "scholar",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "round_face_robe_2641": {
+   "character": "townsman",
+   "do": [
+    [
+     "hand_over",
+     5
+    ],
+    [
+     "talk",
+     6
+    ]
+   ]
+  },
+  "bending_man_2638": {
+   "character": "inspector",
+   "do": [
+    [
+     "bend_goods",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "kerchief_jacket_2606": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "paper_stall_seller_2565": {
+   "character": "townsman",
+   "do": [
+    [
+     "browse",
+     8
+    ],
+    [
+     "talk",
+     5
+    ]
+   ],
+   "nudge": [
+    0,
+    0.39
+   ],
+   "facing_deg": 270
+  },
+  "robed_pointing_2528": {
+   "character": "sightseer",
+   "do": [
+    [
+     "point",
+     6
+    ],
+    [
+     "chat",
+     6
+    ]
+   ]
+  },
+  "robed_back_2482": {
+   "character": "inspector",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "talk",
+     5
+    ]
+   ]
+  },
+  "tall_hat_robed_2441": {
+   "character": "elder",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "robed_clasped_2420": {
+   "character": "sightseer",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "robed_back_2405": {
+   "character": "sightseer",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "boy_dark_robe_2380": {
+   "character": "child_robed",
+   "scale": 0.99,
+   "do": [
+    [
+     "chin",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "folded_arms_2338": {
+   "character": "idler",
+   "do": [
+    [
+     "stand_sleeves",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "robed_man_2333": {
+   "character": "townsman",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "donkey_rider_2308": {
+   "character": "inspector",
+   "do": [
+    [
+     "ride",
+     10
+    ]
+   ],
+   "ride": "donkey_2285"
+  },
+  "tall_hat_man_2285": {
+   "character": "inspector",
+   "do": [
+    [
+     "chin",
+     8
+    ],
+    [
+     "look",
+     4
+    ]
+   ]
+  },
+  "jie_seated_tan_2283": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ]
+  },
+  "donkey_groom_jacket_2252": {
+   "character": "carter",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "jie_faded_pale_2245": {
+   "character": "scholar",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "jie_dark_robe_back_2242": {
+   "character": "sightseer",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "boy_short_jacket_2229": {
+   "character": "child",
+   "scale": 1.06,
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "donkey_groom_pale_2200": {
+   "character": "townsman",
+   "do": [
+    [
+     "lead",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "well_bucket_hauler_2196": {
+   "character": "idler",
+   "do": [
+    [
+     "bucket_lift",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ]
+  },
+  "jie_pale_cap_2175": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.05,
+    0
+   ],
+   "facing_deg": 180
+  },
+  "leaning_over_awning_2168": {
+   "character": "inspector",
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "jie_young_standing_2168": {
+   "character": "inspector",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "jie_smiling_capped_2160": {
+   "character": "sightseer",
+   "do": [
+    [
+     "knees_up",
+     14
+    ]
+   ]
+  },
+  "jie_child_2143": {
+   "character": "child_robed",
+   "scale": 0.64,
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "look",
+     5
+    ]
+   ]
+  },
+  "jie_old_man_2138": {
+   "character": "elder",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "nudge": [
+    0.03,
+    0.04
+   ]
+  },
+  "jie_seated_back_2105": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ]
+  },
+  "jie_young_seated_2100": {
+   "character": "scholar",
+   "do": [
+    [
+     "sit_talk",
+     16
+    ]
+   ],
+   "nudge": [
+    -0.03,
+    -0.04
+   ]
+  },
+  "well_rope_drawer_2097": {
+   "character": "idler",
+   "do": [
+    [
+     "draw_water",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    0,
+    0.95
+   ],
+   "facing_deg": 270
+  },
+  "jie_listener_west_2062": {
+   "character": "official",
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ]
+  },
+  "well_bucket_lifter_2032": {
+   "character": "idler",
+   "do": [
+    [
+     "bucket_lift",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -0.13,
+    0.62
+   ],
+   "facing_deg": 93
+  },
+  "crouching_dark_2028": {
+   "character": "townsman",
+   "do": [
+    [
+     "crouch",
+     12
+    ]
+   ]
+  }
+ },
+ "nudge_why": {
+  "walking_carter_5537": "painted walking west past the front of the sack cart's near wheel; at real size his spot is in the wheel's plane: he walks 0.45 m outside it",
+  "drinker_upper_5547": "solved: contact seat->S5.bld.wine_depot, sole_L->S6.bld.sunyang_zhengdian, sole_R->S6.bld.sunyang_zhengdian; gap before seat 0.69, sole_L 0, sole_R 0, after seat 0.19, sole_L 0, sole_R 0; fixed furniture; moved 0.18 m from the casting's spot (limit 0.6 m); placed off the upper-room table he stood on (0.31 m up), his own stool then fitted under his seat point || casting: the 正店's east room ends at the wine depot's west wall (X -47.1, see build_choices.json): he sits at its table, moved 0.9 m west with it",
+  "upper_standing_5452": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.09 m from the casting's spot (limit 0.6 m) || casting: the 正店's east room ends at the wine depot's west wall (X -47.1): he stands at its table, moved 0.9 m west with it",
+  "bearded_carter_5428": "painted standing at the front of the sack cart: at real size the shaft tips and the swingletree are at his spot, the donkeys just ahead; he stands 0.45 m outside the north shaft",
+  "man_hands_raised_5180": "painted just behind (north of) the dark donkey at the door; at real size the donkey's body (0.4 x 1.5 m) covers his spot",
+  "head_behind_ridge_5103": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.12 m from the casting's spot (limit 0.6 m) || casting: his spot is 0.26 m north of house_south_4839's street wall (choice: its front at D -0.4): he stands 0.15 m further out, on the street",
+  "doorman_5015": "painted in the 正店's doorway beside the gardenia lamp: at real size the lamp's stand is at his hip; he stands 0.3 m west of it",
+  "upper_storey_figure_4810": "his spot (D 15.74) is in the gallery's window wall (choice: 1.15 m behind the balustrade, D 15.83): he sits in the gallery in front of it",
+  "sedan_passenger_4362": "solved: contact seat->S6.fig.sedan_passenger_4362, sole_L->S6.veh.sedan_4575, sole_R->S6.veh.sedan_4575; gap before seat 1.4, sole_L 0.01, sole_R 0.01, after seat 0.01, sole_L -0.01, sole_R 0.01; fixed contact:seat; moved 0.19 m from the casting's spot (limit 0.6 m); her seat is inside the west sedan's cabin, on her own bench under the clip's seat point || casting: her painted spot is 0.23 m off the west sedan's axis, outside its box at real size: she sits at the box's centre",
+  "window_face_4155": "his spot lies in the inn's upper south wall (he looks out of a window in it): he stands 0.35 m inside",
+  "shop_person_3991": "painted behind the clinic's counter: he stands 0.2 m further back, clear of it (the counter is built 0.45 m deep behind the front line)",
+  "butcher_3920": "solved: contact palm_L->S6.prop.meat_pieces_3978; gap before palm_L 0.23, after palm_L 0.13; fixed nothing; moved 0.21 m, turned 15 deg from the casting's spot (limit 0.6 m); nearer his chopping block and the meat on it (0.5 m east of his estimated foot, the painted 'hands at the block'), turned 15 deg toward it; his left hand then laid on the meat by IK || casting: his painted spot (D 15.1) is on the meat counter, which at real size covers D 14.9-15.4: he stands just behind it, at the back of the chopping block",
+  "cloth_shop_seated_3752": "painted seated at the second counter facing the street; at real size the counter (0.45 m deep, its top at 0.92 m) covers his spot: he sits just behind it (north)",
+  "wagon_top_rider_3740": "solved: contact seat->S6.veh.taiping_wagon_3600, sole_L->S6.veh.taiping_wagon_3600, sole_R->S6.veh.taiping_wagon_3600; gap before seat 0.01, sole_L 0.17, sole_R 0.79, after seat 0.01, sole_L 0.17, sole_R 0.16; fixed hidden_collider; moved 0.22 m from the casting's spot (limit 0.8 m); the seat point on the kit's driver seat with root_h; the soles then laid on the footboard by leg IK || casting: painted seated on the front of the big wagon's bed, looking west: he sits on the kit's driver's seat at the box's front, his feet on the footboard (seats.json)",
+  "wagon_shaft_carter_3642": "solved: contact palm_L->S6.veh.taiping_wagon_3600, palm_R->S6.veh.taiping_wagon_3600; gap before palm_L 0.71, palm_R 0.31, after palm_L 0.32, palm_R 0.26; fixed nothing; moved 1.4 m, turned -25 deg from the casting's spot (limit 0.6 m); between the wagon's shafts as painted ('at the front of the big wagon between the shafts, gripping a shaft in each hand'), centred between them and facing the team (the wagon's heading 215); the casting had him outside the south-east shaft because the driver's invisible footboard block filled the space, now gone (people.js root_h seats the driver); 1.25 m from the casting's spot, over the 0.6 m limit for that reason; his hands then laid on the shafts by IK || casting: painted gripping the shafts at the wagon's front: his spot is inside the box at real size; he walks just outside the south-east shaft, behind the team",
+  "upper_team_driver_3450": "painted walking behind the upper mule team with the reins, the traces beside him: at real size the shafts fill the space between the wagon's front and the team, and the shed tables stand south of it, so he walks just outside the north shaft",
+  "handcart_man_3130": "solved: contact palm_L->S6.veh.barrow_casks_3300, palm_R->S6.veh.barrow_casks_3300; gap before palm_L 0.14, palm_R 0.16, after palm_L 0.03, palm_R 0.07; fixed contact:vehicle; moved 0.55 m, turned -13 deg from the casting's spot (limit 0.6 m) || casting: he pushes the barrow with casks, which moves 1.8 m south-east out of the big wagon's team (build_choices.json); he moves with it, 0.35 m further back so he stands behind its handles, not in its deck",
+  "white_jacket_stand_3072": "painted beside the folding stand: at real size its frame (0.4 m round) reaches into his body; he stands 0.2 m further from it",
+  "seated_by_pole_2970": "painted sitting beside the low table under the umbrella: at real size the table reaches his knees; he sits 0.2 m further west",
+  "wine_cart_driver_2945": "solved: contact seat->S6.veh.wine_cart_3090; gap before seat 0.59, after seat 0.01; fixed contact:seat, hidden_collider; moved 0.29 m from the casting's spot (limit 0.8 m); on the cart's driver seat (root_h, people.js P2) || casting: painted seated at the front of the wine cart with the whip raised toward the donkeys: he sits on the kit's driver's seat across the shafts, his feet on the footboard (seats.json)",
+  "paper_stall_seller_2565": "solved: contact palm_L->S6.prop.umbrella_2594, palm_R->S6.prop.paper_stall_table_2395; gap before palm_L 0.18, palm_R 0.16, after palm_L 0.1, palm_R 0.08; fixed contact:table, contact:table; moved 0.26 m from the casting's spot (limit 0.6 m) || casting: his painted spot is inside the paper stall's table, on its goods tray, at real size: he stands behind the table (north), facing his customers",
+  "well_rope_drawer_2097": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.15 m from the casting's spot (limit 0.6 m) || casting: painted standing on the back beam of the well's cover; his estimated foot (D 12.5) falls in the open well: he stands on the curb's back timber (D 13.3)",
+  "well_bucket_lifter_2032": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.13 m, turned 3 deg from the casting's spot (limit 0.6 m) || casting: painted standing on the back beam of the well's cover; his estimated foot (D 12.68) falls in the open well: he stands on the curb's back timber (D 13.3)",
+  "youth_hair_bun_stick_4950": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "man_behind_stooping_4925": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "man_dark_robe_greeting_4772": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "man_black_hat_4742": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "old_man_tall_hat_4666": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "boy_from_behind_4630": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "man_by_boxes_4115": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "round_face_man_4092": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "listener_hat_3932": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "listener_3905": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "listener_3878": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "light_jacket_man_3845": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "listener_3845": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "storyteller_3822": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "child_listener_3812": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "robed_man_3808": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "ring_listener_3788": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "ring_face_3735": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "ring_dark_robe_3692": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "ring_bending_3668": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "monk_3060": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "dark_robe_cap_3022": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "white_jacket_skirt_2795": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "cap_white_trousers_2765": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "jie_old_man_2138": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "jie_young_seated_2100": "painted closer to a neighbour than two bodies (0.26 m each): pushed apart along the line between them",
+  "sedan_bearer_far_4462": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.06, palm_L 0.1, palm_R 0.02, after shoulder_R 0.01, palm_L 0.03, palm_R 0; fixed contact:vehicle, contact:vehicle; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_near_4530": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.06, palm_L 0.35, palm_R 0.17, after shoulder_R 0.01, palm_L 0.03, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.33 m from the casting's spot (limit 0.6 m)",
+  "sedan_rear_bearer_4195": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.4, palm_L 0.42, palm_R 0.37, after shoulder_R 0.02, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.48 m from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_front_far_4943": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.09, palm_L 0.33, palm_R 0.17, after shoulder_R 0.03, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.13 m, turned -33 deg from the casting's spot (limit 0.6 m); turned 33 deg from the map's NE to the east sedan's poles (12 deg): painted walking east under the pole on his shoulder, so he faces along it; the map's 'faces NE' is the painter's three-quarter view of a back",
+  "sedan_bearer_front_near_4907": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.14, palm_L 0.39, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.49 m, turned -33 deg from the casting's spot (limit 0.6 m); turned 33 deg from the map's NE to the east sedan's poles (12 deg): painted walking east under the pole on his shoulder, so he faces along it; the map's 'faces NE' is the painter's three-quarter view of a back",
+  "sedan_bearer_rear_far_4735": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.39, palm_L 0.4, palm_R 0.43, after shoulder_R 0, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.4 m, turned 8 deg from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_rear_near_4668": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.33, palm_L 0.33, palm_R 0.27, after shoulder_R 0, palm_L 0.03, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.48 m, turned 10 deg from the casting's spot (limit 0.6 m)",
+  "basket_man_4590": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.25 m from the casting's spot (limit 0.6 m)",
+  "cloth_shop_standing_3686": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.06 m from the casting's spot (limit 0.6 m)",
+  "robed_hat_3002": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder, head_inside; moved 0.28 m from the casting's spot (limit 0.6 m)",
+  "archer_waistguard_5465": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, head_inside; moved 0.32 m from the casting's spot (limit 0.6 m)",
+  "top_edge_lower_body_2775": "solved: contact none (placement checks); gap before -, after -; fixed site_inside; moved 0.09 m from the casting's spot (limit 0.6 m)",
+  "young_man_4108": "solved: contact none (placement checks); gap before -, after -; fixed site_inside; moved 0.07 m from the casting's spot (limit 0.6 m)",
+  "jie_pale_cap_2175": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.41, sole_L 0.01, sole_R 0.01, after seat 0.41, sole_L 0.02, sole_R 0.01; fixed contact:floor; moved 0.05 m from the casting's spot (limit 0.6 m); placed clear of the bench his foot was in (sole_L 0.14 inside), his own stool then fitted under his seat point",
+  "seated_man_stool_4441": "solved: contact seat->S6.prop.stool_4461, sole_L->ground, sole_R->ground; gap before seat 0.44, sole_L -0.01, sole_R 0.02, after seat 0, sole_L 0, sole_R 0.02; fixed nothing; moved 0.47 m from the casting's spot (limit 0.6 m); onto the small stool he is painted on (S6.prop.stool_4461, 0.4 m east of his estimated foot), the stool fitted to his sit",
+  "drinker_upper_5140": "solved: contact seat->seat, sole_L->S6.bld.sunyang_zhengdian, sole_R->S6.bld.sunyang_zhengdian; gap before seat 0.33, sole_L -0.13, sole_R 0, after seat 0.33, sole_L 0, sole_R 0; fixed contact:floor; moved 0.1 m from the casting's spot (limit 0.6 m); placed clear of the balustrade his foot was in (sole_L 0.13 inside), his own stool then fitted under his seat point",
+  "young_man_cart_rear_2675": "solved: contact palm_L->S6.veh.wine_cart_3090, palm_R->S6.veh.wine_cart_3090; gap before palm_L 0.24, palm_R 0.17, after palm_L 0.05, palm_R 0.08; fixed nothing; moved 0.38 m, turned -30 deg from the casting's spot (limit 0.6 m)",
+  "seated_man_highseat_4070": "solved: contact seat->S6.prop.high_seat_4060, sole_L->ground, sole_R->ground; gap before seat 0.7, sole_L 0.42, sole_R 0.44, after seat -0.01, sole_L 0.41, sole_R 0.43; fixed contact:seat; moved 0.22 m from the casting's spot (limit 0.6 m); his seat point on the tall chair's seat (root_h)"
+ },
+ "walkers": [
+  {
+   "id": "stooping_walker_4893",
+   "figure": "stooping_walker_4893",
+   "character": "inspector",
+   "clip": "walk",
+   "speed": 1.1,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -49.9,
+     9.33
+    ],
+    [
+     -54.1,
+     9.33
+    ]
+   ]
+  },
+  {
+   "id": "box_pole_porter_3745",
+   "figure": "box_pole_porter_3745",
+   "character": "porter",
+   "clip": "carry_pole",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -62.67,
+     5.37
+    ],
+    [
+     -58.87,
+     5.37
+    ]
+   ],
+   "props": [
+    "pole_boxes"
+   ]
+  },
+  {
+   "id": "box_shoulder_porter_3405",
+   "figure": "box_shoulder_porter_3405",
+   "character": "porter",
+   "clip": "shoulder_box",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -67.09,
+     6.72
+    ],
+    [
+     -67.09,
+     2.32
+    ]
+   ],
+   "props": [
+    "box_shoulder"
+   ]
+  },
+  {
+   "id": "basket_porter_3370",
+   "figure": "basket_porter_3370",
+   "character": "porter",
+   "clip": "carry_pole",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -77.5,
+     20.29
+    ],
+    [
+     -75.1,
+     20.29
+    ]
+   ],
+   "props": [
+    "pole_baskets"
+   ]
+  },
+  {
+   "id": "servant_boy_bundle_3270",
+   "figure": "servant_boy_bundle_3270",
+   "character": "child",
+   "clip": "back_load",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -73.41,
+     13.99
+    ],
+    [
+     -74.82,
+     12.58
+    ]
+   ],
+   "props": [
+    "back_bundle"
+   ],
+   "scale": 0.98
+  },
+  {
+   "id": "fan_man_3225",
+   "figure": "fan_man_3225",
+   "character": "sightseer",
+   "clip": "fan_walk",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -73.39,
+     13.0
+    ],
+    [
+     -80.59,
+     13.0
+    ]
+   ],
+   "props": [
+    "fan_round"
+   ]
+  },
+  {
+   "id": "white_walker_2990",
+   "figure": "white_walker_2990",
+   "character": "idler",
+   "clip": "walk",
+   "speed": 1.1,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -72.41,
+     5.41
+    ],
+    [
+     -67.32,
+     10.5
+    ]
+   ]
+  },
+  {
+   "id": "bearded_walker_2916",
+   "figure": "bearded_walker_2916",
+   "character": "carter",
+   "clip": "walk",
+   "speed": 1.1,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -72.91,
+     6.36
+    ],
+    [
+     -80.11,
+     6.36
+    ]
+   ]
+  },
+  {
+   "id": "porter_topknot_2605",
+   "figure": "porter_topknot_2605",
+   "character": "porter",
+   "clip": "carry_pole",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -76.72,
+     4.49
+    ],
+    [
+     -69.52,
+     4.49
+    ]
+   ],
+   "props": [
+    "pole_bundle"
+   ]
+  },
+  {
+   "id": "porter_baskets_2588",
+   "figure": "porter_baskets_2588",
+   "character": "porter",
+   "clip": "carry_pole",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -75.71,
+     4.14
+    ],
+    [
+     -82.91,
+     4.14
+    ]
+   ],
+   "props": [
+    "pole_baskets"
+   ]
+  },
+  {
+   "id": "young_man_walking_2570",
+   "figure": "young_man_walking_2570",
+   "character": "idler",
+   "clip": "walk",
+   "speed": 1.1,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -71.15,
+     -4.0
+    ],
+    [
+     -74.7,
+     2.15
+    ]
+   ]
+  },
+  {
+   "id": "pole_walker_2341",
+   "figure": "pole_walker_2341",
+   "character": "porter",
+   "clip": "walk",
+   "speed": 1.1,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -79.35,
+     3.26
+    ],
+    [
+     -72.15,
+     3.26
+    ]
+   ],
+   "props": [
+    "stick"
+   ]
+  },
+  {
+   "id": "itinerant_monk_2078",
+   "figure": "itinerant_monk_2078",
+   "character": "monk",
+   "clip": "back_load",
+   "speed": 0.9,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     -84.68,
+     6.19
+    ],
+    [
+     -77.48,
+     6.19
+    ]
+   ],
+   "props": [
+    "back_frame"
+   ]
+  }
+ ],
+ "animals": {
+  "donkey_team_near_5270": {
+   "model": "donkey",
+   "do": [
+    [
+     "graze",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "load": "collar"
+  },
+  "donkey_team_dark_5300": {
+   "model": "donkey",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar"
+  },
+  "donkey_team_pale_5285": {
+   "model": "donkey",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar"
+  },
+  "donkey_door_5150": {
+   "model": "donkey",
+   "do": [
+    [
+     "graze",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "donkey_head_down_5565": {
+   "model": "donkey",
+   "do": [
+    [
+     "graze",
+     9
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "donkey_wine_cart_3191": {
+   "model": "donkey",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar"
+  },
+  "donkey_wine_cart_3105": {
+   "model": "donkey",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar"
+  },
+  "donkey_2285": {
+   "model": "donkey",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "load": "saddle_cloth"
+  },
+  "horse_3445": {
+   "model": "horse",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "load": "saddle"
+  },
+  "horse_5262": {
+   "model": "horse",
+   "do": [
+    [
+     "graze",
+     6
+    ],
+    [
+     "idle",
+     6
+    ]
+   ],
+   "load": "saddle"
+  },
+  "mule_lower_1_3427": {
+   "model": "mule",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 230
+  },
+  "mule_lower_2_3462": {
+   "model": "mule",
+   "do": [
+    [
+     "graze",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 230
+  },
+  "mule_lower_3_3498": {
+   "model": "mule",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 220
+  },
+  "mule_lower_shaft_3560": {
+   "model": "mule",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 220
+  },
+  "mule_upper_1_3585": {
+   "model": "mule",
+   "do": [
+    [
+     "graze",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 355
+  },
+  "mule_upper_2_3620": {
+   "model": "mule",
+   "do": [
+    [
+     "graze",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 355
+  },
+  "mule_upper_3_3655": {
+   "model": "mule",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 355
+  },
+  "mule_upper_lead_3690": {
+   "model": "mule",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "load": "collar",
+   "facing_deg": 355
+  },
+  "dog_4335": {
+   "model": "dog",
+   "do": [
+    [
+     "walk",
+     4
+    ],
+    [
+     "idle",
+     6
+    ]
+   ],
+   "path": [
+    [
+     -51.55,
+     3.45
+    ],
+    [
+     -53.7,
+     3.29
+    ]
+   ]
+  }
+ },
+ "animals_why": {
+  "models": "species as painted (map/text/S6.md): 8 donkeys, 8 mules (the two four-mule teams at the crossroads), 2 horses, a dog (the workshop's dog is coming: the page skips it until then)",
+  "loads": "as painted: collars on every animal in a team (the sack cart's, the wine cart's, both wagons'), saddles on the two ridden horses, a saddle cloth under the young man's donkey; the donkey at the door and the one by the depot carry nothing painted",
+  "doing": "the head-down ones graze (near team donkey, the door donkey, the depot donkey, the mule with its head lowered); the rest stand in harness; the dog walks on the spot it is painted walking",
+  "moves": "teams painted overlapping are set out as real teams: build_choices.json moves (applied in layout.json)"
+ },
+ "walkers_why": {
+  "stooping_walker_4893": "4.0 m clear along its painted direction (180 deg)",
+  "box_pole_porter_3745": "3.6 m clear along its painted direction (0 deg)",
+  "box_shoulder_porter_3405": "4.2 m clear along its painted direction (270 deg)",
+  "basket_porter_3370": "2.2 m clear along its painted direction (0 deg)",
+  "servant_boy_bundle_3270": "1.8 m clear along its painted direction (225 deg); painted walking south-west straight into the crowd round the stall at X -75..-78, D 9.5-11.7 (seven standing figures across his line): he walks to its edge and back",
+  "fan_man_3225": "7.0 m clear along its painted direction (180 deg)",
+  "white_walker_2990": "7.0 m clear along its painted direction (45 deg)",
+  "bearded_walker_2916": "7.0 m clear along its painted direction (180 deg)",
+  "porter_topknot_2605": "7.0 m clear along its painted direction (0 deg)",
+  "porter_baskets_2588": "7.0 m clear along its painted direction (180 deg)",
+  "young_man_walking_2570": "7.0 m clear along its painted direction (120 deg)",
+  "pole_walker_2341": "7.0 m clear along its painted direction (0 deg)",
+  "itinerant_monk_2078": "7.0 m clear along its painted direction (0 deg)"
+ },
+ "clips_why": {
+  "about": "Actions the painting asks for that the playing character lacks (gen/expand/inner_city_needs.md): requested clip -> character -> figures (the clip each plays now, the nearest it has). Rerun make_people.py when the workshop adds them.",
+  "adjust_cap": {
+   "idler": [
+    "man_hands_raised_5180 (tie_kerchief)"
+   ]
+  },
+  "argue": {
+   "townsman": [
+    "basket_man_4590 (talk)"
+   ]
+  },
+  "carry_pole": {
+   "bearer": [
+    "sedan_bearer_front_far_4943 (sedan_carry)",
+    "sedan_bearer_front_near_4907 (sedan_carry)",
+    "sedan_bearer_rear_far_4735 (sedan_carry)",
+    "sedan_bearer_rear_near_4668 (sedan_carry)",
+    "sedan_bearer_near_4530 (sedan_carry)",
+    "sedan_bearer_far_4462 (sedan_carry)",
+    "sedan_rear_bearer_4195 (sedan_carry)"
+   ]
+  },
+  "cling": {
+   "child": [
+    "child_by_dark_robe_2880 (reach)"
+   ]
+  },
+  "hand_chin": {
+   "child_robed": [
+    "boy_dark_robe_2380 (chin)"
+   ],
+   "inspector": [
+    "tall_hat_man_2285 (chin)"
+   ]
+  },
+  "heave_bucket": {
+   "idler": [
+    "well_bucket_lifter_2032 (bucket_lift)"
+   ]
+  },
+  "hold_bridle": {
+   "carter": [
+    "donkey_groom_jacket_2252 (bridle)"
+   ],
+   "idler": [
+    "groom_5290 (bridle)"
+   ],
+   "townsman": [
+    "donkey_groom_pale_2200 (lead)"
+   ]
+  },
+  "lie": {
+   "idler": [
+    "ridge_reclining_3530 (sleep_side)"
+   ]
+  },
+  "lift": {
+   "idler": [
+    "lattice_frame_east_3180 (bucket_lift)",
+    "lattice_frame_west_3092 (bucket_lift)"
+   ]
+  },
+  "lift_bucket": {
+   "idler": [
+    "well_bucket_hauler_2196 (bucket_lift)"
+   ]
+  },
+  "listen": {
+   "idler": [
+    "listener_bag_3893 (crane)",
+    "listener_3845 (crane)"
+   ]
+  },
+  "listen_lean": {
+   "sightseer": [
+    "ring_bending_hat_3748 (crane)",
+    "ring_bending_3668 (crane)"
+   ]
+  },
+  "point": {
+   "storyteller": [
+    "storyteller_3822 (tell)"
+   ]
+  },
+  "sit_floor": {
+   "scholar": [
+    "seated_by_pole_2970 (knees_up)"
+   ],
+   "sightseer": [
+    "jie_smiling_capped_2160 (knees_up)"
+   ]
+  },
+  "sit_talk": {
+   "elder": [
+    "jie_old_man_2138 (sit)"
+   ],
+   "inspector": [
+    "seated_man_highseat_4070 (sit)"
+   ]
+  },
+  "steer_wagon": {
+   "carter": [
+    "wagon_shaft_carter_3642 (steer)"
+   ]
+  },
+  "talk": {
+   "idler": [
+    "youth_umbrella_4028 (chat)"
+   ],
+   "sightseer": [
+    "young_man_4108 (chat)",
+    "bearded_light_robe_3508 (chat)",
+    "robed_hat_3002 (chat)",
+    "robed_pointing_2528 (chat)"
+   ]
+  },
+  "tend_stall": {
+   "townsman": [
+    "paper_stall_seller_2565 (browse)"
+   ]
+  },
+  "tie_sash": {
+   "archer": [
+    "archer_waistguard_5465 (bind)"
+   ]
+  }
+ },
+ "props_why": {
+  "butcher_3920": "cleaver (butcher, held in chop)",
+  "ring_fan_cap_3688": "fan_round (scholar, held in fan): painted holding a dark fan up beside his face",
+  "fan_man_3972": "fan_round (elder, held in fan)",
+  "pole_man_5578": "staff (porter, held in stand_pole): painted holding a shoulder pole upright before his chin",
+  "porter_baskets_2588": "pole_baskets (porter, carry_pole): a big round basket at each end",
+  "basket_porter_3370": "pole_baskets (porter, carry_pole)",
+  "porter_topknot_2605": "pole_bundle (porter, carry_pole): one tall load at the pole's west end, as painted (a tall cylindrical basket; the bundle is the nearest prop)",
+  "box_pole_porter_3745": "pole_boxes (porter, carry_pole)",
+  "itinerant_monk_2078": "back_frame (monk, back_load): the 笈 piled with bundles",
+  "servant_boy_bundle_3270": "back_bundle (child, back_load)",
+  "fan_man_3225": "fan_round (sightseer, fan_walk): the 便面 screening his face",
+  "pole_walker_2341": "stick (porter, held in walk): the long thin pole he holds upright",
+  "youth_hair_bun_stick_4950": "staff (scholar, held in idle): the long upright stick he holds before him",
+  "box_shoulder_porter_3405": "box_shoulder (porter, shoulder_box): the long flat box on his shoulder, tilted over his head",
+  "tray_vendor_3050": "tray (porter, hold_tray): the long flat tray across his waist (the small lattice box at its east end is not on the prop)",
+  "groom_whip_3452": "whip_hold (inspector, hold_whip): the long curved whip held up in his right hand",
+  "wine_cart_driver_2945": "whip (carter, held in drive_cart): seated at the cart's front with the whip raised",
+  "man_child_on_shoulders_4975": "child_on_shoulders (townsman, carry_child): the child on his shoulders (child_on_shoulders_4977, carried_by)",
+  "man_carrying_child_2790": "child_on_back (idler, carry_child): the child riding on his back (child_on_back_2795, carried_by)",
+  "box_carrier_3272": "back_boxes (townsman, back_load): the tall banded box on his back; he stands (no room to walk), the box on his back all the same"
+ },
+ "scale_why": {
+  "boy_5050": "painted 0.72 of an adult: 0.72 x 1.70 m / the child model's 1.15 m = 1.06 (1.22 m tall)",
+  "child_on_shoulders_4977": "painted 0.5 of an adult: 0.5 x 1.70 m / the child model's 1.15 m = 0.74 (0.85 m tall)",
+  "boy_from_behind_4630": "painted 0.7 of an adult: 0.7 x 1.70 m / the child model's 1.15 m = 1.03 (1.19 m tall)",
+  "child_3885": "painted 0.66 of an adult: 0.66 x 1.70 m / the child model's 1.15 m = 0.98 (1.12 m tall)",
+  "child_listener_3812": "painted 0.56 of an adult: 0.56 x 1.70 m / the child model's 1.15 m = 0.83 (0.95 m tall)",
+  "child_ring_edge_3577": "painted 0.72 of an adult: 0.72 x 1.70 m / the child model's 1.15 m = 1.06 (1.22 m tall)",
+  "servant_boy_bundle_3270": "painted 0.66 of an adult: 0.66 x 1.70 m / the child model's 1.15 m = 0.98 (1.12 m tall)",
+  "small_child_3035": "painted 0.46 of an adult: 0.46 x 1.70 m / the child model's 1.15 m = 0.68 (0.78 m tall)",
+  "child_by_dark_robe_2880": "painted 0.66 of an adult: 0.66 x 1.70 m / the child model's 1.15 m = 0.98 (1.12 m tall)",
+  "child_on_back_2795": "painted 0.5 of an adult: 0.5 x 1.70 m / the child model's 1.15 m = 0.74 (0.85 m tall)",
+  "boy_dark_robe_2380": "painted 0.7 of an adult: 0.7 x 1.70 m / the child_robed model's 1.2 m = 0.99 (1.19 m tall)",
+  "boy_short_jacket_2229": "painted 0.72 of an adult: 0.72 x 1.70 m / the child model's 1.15 m = 1.06 (1.22 m tall)",
+  "jie_child_2143": "painted 0.45 of an adult: 0.45 x 1.70 m / the child_robed model's 1.2 m = 0.64 (0.77 m tall)"
+ },
+ "cast_why": {
+  "jie_listener_west_2062": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated facing east to the centre of the ring, his seat hidden: sit~soles alone (sit_talk~soles sits 0.06 m higher) on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50",
+  "pole_walker_2341": "painted striding with a long thin pole held upright: the porter carries a stick in his walk (prop stick); the idler has no pole",
+  "shop_interior_seated_4752": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated behind the counter in the 正店 front, his seat hidden: sit~soles alone on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50",
+  "scholar_upstairs_3912": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated at the window with his hand to his chin, looking at the lamp on his table: sit~soles alone (write asks for a palm on the desk he is not painted touching) on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50",
+  "seated_cap_man_3905": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated on a seat hidden behind others, hands busy in front of him: sit_talk~soles alone on his own stool fitted under his seat point",
+  "cloth_shop_seated_3752": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated at the second counter, knees forward and feet on the shop floor, no bench mapped: sit~soles alone on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50",
+  "sedan_bearer_far_4462": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "sedan_bearer_near_4530": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "sedan_rear_bearer_4195": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "sedan_bearer_front_far_4943": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "sedan_bearer_front_near_4907": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "sedan_bearer_rear_far_4735": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "sedan_bearer_rear_near_4668": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+  "ring_bun_3712": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)",
+  "ring_dark_robe_3692": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)",
+  "ring_face_3735": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)",
+  "ring_listener_3788": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)",
+  "listener_3878": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)",
+  "listener_dark_robe_3926": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)",
+  "ring_bearded_robe_3630": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (his character has no standing listen; he faces the storyteller)",
+  "child_listener_3812": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (his character has no standing listen; he faces the storyteller)",
+  "ring_standing_post_3745": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (painted facing the viewer and the ring from beside the storyteller or behind the crowd)",
+  "listener_3905": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (painted facing the viewer and the ring from beside the storyteller or behind the crowd)",
+  "listener_hat_3932": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (painted facing the viewer and the ring from beside the storyteller or behind the crowd)",
+  "jie_seated_back_2105": "painted seated on the bench in the ring (S6.prop.bench_2100) with his back to us: sit alone (sit_talk puts the seat 0.16 m higher than sit, so no one seat serves both)",
+  "jie_old_man_2138": "painted seated at the back of the ring, his seat hidden: on his own stool (map/BUILDING.md rule 3), fitted under his seat point",
+  "jie_pale_cap_2175": "painted seated, turned west to the man on the bench, his seat hidden: sit alone (sit_talk sits 0.16 m higher) on his own stool fitted under his seat point",
+  "jie_seated_tan_2283": "painted seated with his hands in his lap, his seat hidden: sit alone (sit_talk sits 0.16 m higher) on his own stool fitted under his seat point",
+  "jie_young_seated_2100": "painted seated, smiling, hands raised to his chest, his seat hidden: sit_talk alone (sit sits 0.16 m lower) on his own stool fitted under his seat point",
+  "cloth_shop_seated_3640": "painted seated on the low bench before the counter (S6.prop.cloth_bench_3598), hunched forward: sit alone (sit_talk sits 0.16 m higher), the bench fitted to it",
+  "seated_man_stool_4441": "painted seated on the small stool (S6.prop.stool_4461), knees apart, a cup in his hand: sit alone (sit_talk sits 0.12 m higher), the stool fitted to it",
+  "upper_storey_figure_4810": "painted seated in the 正店 upper storey, probably a drinker: drink alone (sit sits 0.07 m higher) on his own stool fitted under his seat point",
+  "drinker_upper_5140": "painted seated behind the 正店 upper balustrade, a drinker: drink alone (sit_talk sits 0.23 m higher) on his own stool fitted under his seat point",
+  "drinker_upper_5547": "painted seated on a bench that is not painted, leaning over the table to the dishes: drink alone (sit sits 0.07 m higher) on his own stool fitted under his seat point",
+  "pole_man_5578": "the staff's foot hung 9 cm over the ground in the porter's stand_pole (fix-boats' pole rule): stand_pole~staff_foot (characters/ik_variants.json \"staff_foot\", fix-gate's, shared) rests it on the ground",
+  "folded_arms_2338": "painted standing with his arms folded behind the rider, nothing behind him: lean_wall (a back against a wall) -> stand_sleeves (forearms folded at the chest, standing; as S4's onlooker_cap_12040)",
+  "tall_carter_5385": "painted standing north of the team with his arms folded at his chest, nothing behind him: lean_wall (a back against a wall) -> stand_sleeves (forearms folded at the chest, standing)",
+  "arms_folded_2993": "painted standing with his arms folded, turned to the tray vendor, nothing behind him: arms_folded (the lean_wall_idle take: a back against a wall) -> stand_sleeves (forearms folded at the chest, standing; the inspector gets the take t2m:stand_sleeves)",
+  "child_by_dark_robe_2880": "painted standing between two men with his arms round the tall man's waist: reach (arms across a chest-high table nobody painted) -> look (standing at his side; a hug of another figure is not a contact the checks measure)",
+  "young_man_cart_rear_2675": "painted with both hands on the rear of the wine cart, pushing or steadying it: push_flank (palms on an animal, 3.6 m away) -> push (palms on the vehicle: a cart's tail)",
+  "wine_cart_driver_2945": "painted seated at the front of the wine cart with the reins and the whip raised: drive_cart alone (on the cart's seat, feet hanging; sit asks for the floor his feet are not on); root_h 0.768: the kit's driver seat top 1.139 + 0.005 - drive_cart's seat height 0.376 (people.js P2, fix_standard rule 6), feet hanging as the clip has them",
+  "donkey_groom_jacket_2252": "painted standing at the donkey's near shoulder with his back to us, head turned toward it, things hanging from his belt; his hands are not painted on it (the man in the pale robe holds its head): bridle -> look (bridle put his palms 0.8-1.2 m off the real-size donkey, which a 0.6 m move cannot close)",
+  "groom_5290": "painted at the dark horse's shoulder with only his head and shoulders over the ridge (perhaps holding the bridle: his hands are hidden), the horse grazing with its head lowered: bridle -> idle (bridle put his palms 0.9-1.1 m off the horse and its bit sweeps 0.5 m as it grazes)",
+  "leaning_over_awning_2168": "painted leaning forward with his hands on the mat awning's back edge; at real size the mat stands 2.35-2.7 m up (the ring sits under it), out of any reach, and the painting shows no rail under his hands (map: perhaps a hidden rail): lean_over -> look (he looks over at the group)"
+ },
+ "facing_why": {
+  "sedan_bearer_far_4462": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.06, palm_L 0.1, palm_R 0.02, after shoulder_R 0.01, palm_L 0.03, palm_R 0; fixed contact:vehicle, contact:vehicle; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_near_4530": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.06, palm_L 0.35, palm_R 0.17, after shoulder_R 0.01, palm_L 0.03, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.33 m from the casting's spot (limit 0.6 m)",
+  "sedan_rear_bearer_4195": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.4, palm_L 0.42, palm_R 0.37, after shoulder_R 0.02, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.48 m from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_front_far_4943": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.09, palm_L 0.33, palm_R 0.17, after shoulder_R 0.03, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.13 m, turned -33 deg from the casting's spot (limit 0.6 m); turned 33 deg from the map's NE to the east sedan's poles (12 deg): painted walking east under the pole on his shoulder, so he faces along it; the map's 'faces NE' is the painter's three-quarter view of a back",
+  "sedan_bearer_front_near_4907": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.14, palm_L 0.39, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.49 m, turned -33 deg from the casting's spot (limit 0.6 m); turned 33 deg from the map's NE to the east sedan's poles (12 deg): painted walking east under the pole on his shoulder, so he faces along it; the map's 'faces NE' is the painter's three-quarter view of a back",
+  "sedan_bearer_rear_far_4735": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.39, palm_L 0.4, palm_R 0.43, after shoulder_R 0, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.4 m, turned 8 deg from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_rear_near_4668": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.33, palm_L 0.33, palm_R 0.27, after shoulder_R 0, palm_L 0.03, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.48 m, turned 10 deg from the casting's spot (limit 0.6 m)",
+  "sedan_passenger_4362": "solved: contact seat->S6.fig.sedan_passenger_4362, sole_L->S6.veh.sedan_4575, sole_R->S6.veh.sedan_4575; gap before seat 1.4, sole_L 0.01, sole_R 0.01, after seat 0.01, sole_L -0.01, sole_R 0.01; fixed contact:seat; moved 0.19 m from the casting's spot (limit 0.6 m); her seat is inside the west sedan's cabin, on her own bench under the clip's seat point",
+  "basket_man_4590": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.25 m from the casting's spot (limit 0.6 m)",
+  "cloth_shop_standing_3686": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.06 m from the casting's spot (limit 0.6 m)",
+  "robed_hat_3002": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder, head_inside; moved 0.28 m from the casting's spot (limit 0.6 m)",
+  "well_bucket_lifter_2032": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.13 m, turned 3 deg from the casting's spot (limit 0.6 m)",
+  "well_rope_drawer_2097": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.15 m from the casting's spot (limit 0.6 m)",
+  "archer_waistguard_5465": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, head_inside; moved 0.32 m from the casting's spot (limit 0.6 m)",
+  "head_behind_ridge_5103": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.12 m from the casting's spot (limit 0.6 m)",
+  "upper_standing_5452": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.09 m from the casting's spot (limit 0.6 m)",
+  "top_edge_lower_body_2775": "solved: contact none (placement checks); gap before -, after -; fixed site_inside; moved 0.09 m from the casting's spot (limit 0.6 m)",
+  "young_man_4108": "solved: contact none (placement checks); gap before -, after -; fixed site_inside; moved 0.07 m from the casting's spot (limit 0.6 m)",
+  "paper_stall_seller_2565": "solved: contact palm_L->S6.prop.umbrella_2594, palm_R->S6.prop.paper_stall_table_2395; gap before palm_L 0.18, palm_R 0.16, after palm_L 0.1, palm_R 0.08; fixed contact:table, contact:table; moved 0.26 m from the casting's spot (limit 0.6 m)",
+  "jie_pale_cap_2175": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.41, sole_L 0.01, sole_R 0.01, after seat 0.41, sole_L 0.02, sole_R 0.01; fixed contact:floor; moved 0.05 m from the casting's spot (limit 0.6 m); placed clear of the bench his foot was in (sole_L 0.14 inside), his own stool then fitted under his seat point",
+  "seated_man_stool_4441": "solved: contact seat->S6.prop.stool_4461, sole_L->ground, sole_R->ground; gap before seat 0.44, sole_L -0.01, sole_R 0.02, after seat 0, sole_L 0, sole_R 0.02; fixed nothing; moved 0.47 m from the casting's spot (limit 0.6 m); onto the small stool he is painted on (S6.prop.stool_4461, 0.4 m east of his estimated foot), the stool fitted to his sit",
+  "drinker_upper_5140": "solved: contact seat->seat, sole_L->S6.bld.sunyang_zhengdian, sole_R->S6.bld.sunyang_zhengdian; gap before seat 0.33, sole_L -0.13, sole_R 0, after seat 0.33, sole_L 0, sole_R 0; fixed contact:floor; moved 0.1 m from the casting's spot (limit 0.6 m); placed clear of the balustrade his foot was in (sole_L 0.13 inside), his own stool then fitted under his seat point",
+  "drinker_upper_5547": "solved: contact seat->S5.bld.wine_depot, sole_L->S6.bld.sunyang_zhengdian, sole_R->S6.bld.sunyang_zhengdian; gap before seat 0.69, sole_L 0, sole_R 0, after seat 0.19, sole_L 0, sole_R 0; fixed furniture; moved 0.18 m from the casting's spot (limit 0.6 m); placed off the upper-room table he stood on (0.31 m up), his own stool then fitted under his seat point",
+  "young_man_cart_rear_2675": "solved: contact palm_L->S6.veh.wine_cart_3090, palm_R->S6.veh.wine_cart_3090; gap before palm_L 0.24, palm_R 0.17, after palm_L 0.05, palm_R 0.08; fixed nothing; moved 0.38 m, turned -30 deg from the casting's spot (limit 0.6 m)",
+  "wine_cart_driver_2945": "solved: contact seat->S6.veh.wine_cart_3090; gap before seat 0.59, after seat 0.01; fixed contact:seat, hidden_collider; moved 0.29 m from the casting's spot (limit 0.8 m); on the cart's driver seat (root_h, people.js P2)",
+  "wagon_top_rider_3740": "solved: contact seat->S6.veh.taiping_wagon_3600, sole_L->S6.veh.taiping_wagon_3600, sole_R->S6.veh.taiping_wagon_3600; gap before seat 0.01, sole_L 0.17, sole_R 0.79, after seat 0.01, sole_L 0.17, sole_R 0.16; fixed hidden_collider; moved 0.22 m from the casting's spot (limit 0.8 m); the seat point on the kit's driver seat with root_h; the soles then laid on the footboard by leg IK",
+  "wagon_shaft_carter_3642": "solved: contact palm_L->S6.veh.taiping_wagon_3600, palm_R->S6.veh.taiping_wagon_3600; gap before palm_L 0.71, palm_R 0.31, after palm_L 0.32, palm_R 0.26; fixed nothing; moved 1.4 m, turned -25 deg from the casting's spot (limit 0.6 m); between the wagon's shafts as painted ('at the front of the big wagon between the shafts, gripping a shaft in each hand'), centred between them and facing the team (the wagon's heading 215); the casting had him outside the south-east shaft because the driver's invisible footboard block filled the space, now gone (people.js root_h seats the driver); 1.25 m from the casting's spot, over the 0.6 m limit for that reason; his hands then laid on the shafts by IK",
+  "handcart_man_3130": "solved: contact palm_L->S6.veh.barrow_casks_3300, palm_R->S6.veh.barrow_casks_3300; gap before palm_L 0.14, palm_R 0.16, after palm_L 0.03, palm_R 0.07; fixed contact:vehicle; moved 0.55 m, turned -13 deg from the casting's spot (limit 0.6 m)",
+  "butcher_3920": "solved: contact palm_L->S6.prop.meat_pieces_3978; gap before palm_L 0.23, after palm_L 0.13; fixed nothing; moved 0.21 m, turned 15 deg from the casting's spot (limit 0.6 m); nearer his chopping block and the meat on it (0.5 m east of his estimated foot, the painted 'hands at the block'), turned 15 deg toward it; his left hand then laid on the meat by IK",
+  "seated_man_highseat_4070": "solved: contact seat->S6.prop.high_seat_4060, sole_L->ground, sole_R->ground; gap before seat 0.7, sole_L 0.42, sole_R 0.44, after seat -0.01, sole_L 0.41, sole_R 0.43; fixed contact:seat; moved 0.22 m from the casting's spot (limit 0.6 m); his seat point on the tall chair's seat (root_h)"
+ },
+ "contact_fixes_why": {
+  "about": "60 figures carry a contact fix from sections/inner_city/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
+ }
+}

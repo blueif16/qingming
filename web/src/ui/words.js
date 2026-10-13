@@ -14,6 +14,8 @@ export const W = {
   view: { aria: '視角 · view (V)', first: ['第一人稱', 'first person'], third: ['第三人稱', 'third person'] },
   more: { title: '設定 · settings (O)', aria: 'Settings (O)' },
   // the landmark toast's fold and its way to the journal (places.js; lore agent). The journal's own words: journal_words.js
+  // a plot line's step overheard (the life pass): the note's seal and its line under the line's title
+  heard: { seal: '聞', line: '記入圖志', lineEn: 'into the journal' },
   lore: { more: '詳', moreAria: 'Tap or R: more about this place', cite: '據', journal: '圖志', journalAria: 'Journal of places (J)', journalSeal: '志' },
   helpLead: { desktop: ['點一下畫面，便可行走。', 'click the street to walk'], touch: ['雙手拇指，一走一看。', 'two thumbs: walk and look'] },
   // [keys, 繁體, English gloss]

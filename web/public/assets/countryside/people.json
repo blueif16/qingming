@@ -29,7 +29,7 @@
    "character": "child_robed",
    "do": [
     [
-     "reach",
+     "hand_over",
      8
     ],
     [
@@ -43,7 +43,7 @@
    "character": "farmer",
    "do": [
     [
-     "drink",
+     "drink~soles",
      12
     ]
    ],
@@ -56,7 +56,7 @@
    "character": "townsman",
    "do": [
     [
-     "ride",
+     "ride~traveller_rider_30165",
      10
     ]
    ],
@@ -89,7 +89,12 @@
      "beckon_lean",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    0.5,
+    -0.15
+   ],
+   "facing_deg": 187
   },
   "traveller_rider_30495": {
    "character": "camel_driver",
@@ -170,27 +175,29 @@
    "character": "bearer",
    "do": [
     [
-     "sedan_carry",
+     "sedan_carry~pole",
      10
     ]
    ],
    "nudge": [
-    -0.26,
-    0.32
-   ]
+    0.09,
+    0.72
+   ],
+   "facing_deg": 205
   },
   "sedan_bearer_rear_30990": {
    "character": "bearer",
    "do": [
     [
-     "sedan_carry",
+     "sedan_carry~pole",
      10
     ]
    ],
    "nudge": [
-    0.02,
-    0.22
-   ]
+    -0.15,
+    0.39
+   ],
+   "facing_deg": 201
   },
   "porter_pole_31083": {
    "character": "porter",
@@ -249,12 +256,12 @@
    "character": "porter",
    "do": [
     [
-     "stand_pole",
+     "idle",
      10
     ]
    ],
    "props": [
-    "staff"
+    "staff_on_shoulder"
    ]
   },
   "bending_farmer_34252": {
@@ -304,12 +311,13 @@
   "far_figure_29257": "the two small shapes crouching together in the far field: painted 0.35 m from far_figure_29230, closer than two bodies (0.52 m): each steps 0.13 m back from the other",
   "far_figure_29466": "one of the two small figures painted beside the far ox on the field bank: at real size (ox, 2.06 m long, 0.71 m wide, at its painted place) his spot fell inside its body; he steps 0.58 m to stand 0.30 m clear of its right flank",
   "far_figure_29482": "one of the two small figures painted beside the far ox on the field bank: at real size (ox, 2.06 m long, 0.71 m wide, at its painted place) his spot fell inside its body; he steps 0.68 m to stand 0.30 m clear of its left flank",
-  "sedan_bearer_front_30828": "painted under the front end of the willow sedan's poles, carrying them (the sedan is built carried and stands, S4's precedent): the kit's poles run 0.465 m either side of its axis, so he stands with his right shoulder under the right-hand pole (sedan_carry holds it 0.18 m right of his centre line), 0.15 m inside its end",
-  "sedan_bearer_rear_30990": "painted under the rear end of the willow sedan's poles, carrying them (the sedan is built carried and stands, S4's precedent): the kit's poles run 0.465 m either side of its axis, so he stands with his right shoulder under the right-hand pole (sedan_carry holds it 0.18 m right of his centre line), 0.15 m inside its end",
+  "sedan_bearer_front_30828": "solved: contact shoulder_R->S1.veh.sedan_willow_30805, palm_L->S1.veh.sedan_willow_30805, palm_R->S1.veh.sedan_willow_30805; gap before shoulder_R 0.2, palm_L 0.42, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.53 m from the casting's spot (limit 0.6 m) || casting: painted under the front end of the willow sedan's poles, carrying them (the sedan is built carried and stands, S4's precedent): the kit's poles run 0.465 m either side of its axis, so he stands with his right shoulder under the right-hand pole (sedan_carry holds it 0.18 m right of his centre line), 0.15 m inside its end",
+  "sedan_bearer_rear_30990": "solved: contact shoulder_R->S1.veh.sedan_willow_30805, palm_L->S1.veh.sedan_willow_30805, palm_R->S1.veh.sedan_willow_30805; gap before shoulder_R 0.2, palm_L 0.27, palm_R 0.17, after shoulder_R 0.02, palm_L 0.03, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.24 m, turned -4 deg from the casting's spot (limit 0.6 m) || casting: painted under the rear end of the willow sedan's poles, carrying them (the sedan is built carried and stands, S4's precedent): the kit's poles run 0.465 m either side of its axis, so he stands with his right shoulder under the right-hand pole (sedan_carry holds it 0.18 m right of his centre line), 0.15 m inside its end",
   "porter_boxes_30908": "painted walking east beside the party's rider, at his horse's rump: at real size (horse, 2.05 m long, 0.70 m wide, at its painted place) his spot fell inside its body; he steps 0.38 m to stand 0.30 m clear of its rump",
   "bending_farmer_34252": "as built, his spot was 0.20 m from S1.prop.yard_object_34208: he steps 0.06 m to stand 0.25 m clear of it",
   "farmer_by_hedge_34472": "as built, his spot was inside S1.tree.pale_trunk_34474: he steps 1.12 m to stand 0.25 m clear of it",
-  "figure_in_shed_35108": "as built, his spot was 0.08 m from S1.prop.jar_shed_35058: he steps 0.18 m to stand 0.25 m clear of it"
+  "figure_in_shed_35108": "as built, his spot was 0.08 m from S1.prop.jar_shed_35058: he steps 0.18 m to stand 0.25 m clear of it",
+  "man_at_post_29812": "solved: contact forearm_L->S1.prop.post_crossbar_29862; gap before forearm_L 0.29, after forearm_L 0.03; fixed contact:rail; moved 0.52 m, turned 7 deg from the casting's spot (limit 0.6 m)"
  },
  "walkers": [
   {
@@ -566,7 +574,12 @@
    ],
    "props": [
     "stick"
-   ]
+   ],
+   "beside": {
+    "animal": "donkey_charcoal_36323",
+    "gap": 0.4,
+    "along": -0.15
+   }
   },
   {
    "id": "charcoal_driver_36797",
@@ -606,7 +619,12 @@
    ],
    "props": [
     "stick"
-   ]
+   ],
+   "beside": {
+    "animal": "donkey_charcoal_36745",
+    "gap": 0.4,
+    "along": -0.15
+   }
   }
  ],
  "walkers_why": {
@@ -615,8 +633,8 @@
   "groom_chasing_30353": "runs west after the runaway horse, as painted: 2.0 m west of his spot (to the line X 295.29 (the horse's rump at its spot + 0.51 m: no groom reaches it)), and 3.0 m back east behind it, at 3.5 m/s; the horse walks west from its spot and never comes back east of it, so no groom ever reaches it",
   "groom_chasing_30518": "runs west after the runaway horse, as painted: 2.0 m west of his spot (to X 297.19, where groom_chasing_30353, painted 1.9 m ahead of him in his lane, turns, plus that spacing), and 3.0 m back east behind it, at 3.5 m/s; the horse walks west from its spot and never comes back east of it, so no groom ever reaches it",
   "groom_chasing_30697": "runs west after the runaway horse, as painted: 4.0 m west of his spot, and 1.0 m back east behind it, at 3.5 m/s; the horse walks west from its spot and never comes back east of it, so no groom ever reaches it",
-  "charcoal_driver_36250": "the charcoal train walks east-south-east as painted (the lead, build_rules.md: every readable head is at the east end, against the title 赶驴入城) along S1.road.main past the small bridge's landing: 2.5 m from each one's spot (then donkey_charcoal_36323 at +2.6 m: its body 0.07 m from edge:shore) and 0.0 m back behind it (then donkey_charcoal_36508 at -0.1 m: its body 0.06 m from edge:shore), in its painted order (D5 leading east, a driver at each end), all at the donkey's walking pace 0.863 m/s",
-  "charcoal_driver_36797": "the charcoal train walks east-south-east as painted (the lead, build_rules.md: every readable head is at the east end, against the title 赶驴入城) along S1.road.main past the small bridge's landing: 2.5 m from each one's spot (then donkey_charcoal_36323 at +2.6 m: its body 0.07 m from edge:shore) and 0.0 m back behind it (then donkey_charcoal_36508 at -0.1 m: its body 0.06 m from edge:shore), in its painted order (D5 leading east, a driver at each end), all at the donkey's walking pace 0.863 m/s",
+  "charcoal_driver_36250": "contact fix (fix_standard.md step 4; engine items E1 + E1b, gen/details/contacts/fix_river/engine_beside.md): painted driving the charcoal train, a hand on a donkey's load (drive_donkeys: the left palm flat on the load beside him every step); a walker and a walking animal kept separate paces, stops and turns, so his hand was 0.7-1.7 m off any load. beside: he walks D1's own path as the follower of a pair, on its right (gap +0.40 m: + puts the donkey on his left as he walks), 0.15 m back (along -0.15): scanned on the 06:3x page dump across and along the donkey on the real ground (the bank falls 0.15-0.28 m away from the path), the palm within 1 cm of the pannier there || casting: contact fix (fix_standard.md step 4; engine items E1 + E1b, gen/details/contacts/fix_river/engine_beside.md): painted driving the charcoal train, a hand on a donkey's load (drive_donkeys: the left palm flat on the load beside him every step); a walker and a walking animal kept separate paces, stops and turns, so his hand was 0.7-1.7 m off any load. beside: he walks D1's own path as the follower of a pair, on its right (gap +0.40 m: + puts the donkey on his left as he walks), 0.15 m back (along -0.15): scanned on the 06:3x page dump across and along the donkey on the real ground (the bank falls 0.15-0.28 m away from the path), the palm within 1 cm of the pannier there",
+  "charcoal_driver_36797": "contact fix (fix_standard.md step 4; engine items E1 + E1b, gen/details/contacts/fix_river/engine_beside.md): painted driving the charcoal train, a hand on a donkey's load (drive_donkeys: the left palm flat on the load beside him every step); a walker and a walking animal kept separate paces, stops and turns, so his hand was 0.7-1.7 m off any load. beside: he walks D5's own path as the follower of a pair, on its right (gap +0.40 m: + puts the donkey on his left as he walks), 0.15 m back (along -0.15): scanned on the 06:3x page dump across and along the donkey on the real ground (the bank falls 0.15-0.28 m away from the path), the palm within 1 cm of the pannier there || casting: contact fix (fix_standard.md step 4; engine items E1 + E1b, gen/details/contacts/fix_river/engine_beside.md): painted driving the charcoal train, a hand on a donkey's load (drive_donkeys: the left palm flat on the load beside him every step); a walker and a walking animal kept separate paces, stops and turns, so his hand was 0.7-1.7 m off any load. beside: he walks D5's own path as the follower of a pair, on its right (gap +0.40 m: + puts the donkey on his left as he walks), 0.15 m back (along -0.15): scanned on the 06:3x page dump across and along the donkey on the real ground (the bank falls 0.15-0.28 m away from the path), the palm within 1 cm of the pannier there",
   "held": {
    "the tomb-sweeping party": "the willow sedan is built carried and does not move (S4's precedent, the lead 2026-10-12): its bearers play sedan_carry in place under its poles, and the porters painted walking with it (porter_pole_31083, porter_walking_31070, party_porter_staff_31131) hold with it; the rider (on the standing horse) and the porter with the boxes face east as painted. Their walk waits for a procession routine on the page (clips_why procession)",
    "the riders": "traveller_rider_30165 and traveller_rider_30495 ride their walking donkeys (people.js seats a rider on its animal every frame), rider_party_30988 his standing horse"
@@ -991,7 +1009,13 @@
  "cast_why": {
   "soldier": "farmer_by_hedge_34472 (interim): the soldier (a belted knee-length jacket and a cap) plays the farmer by the hedge until the farmer lands (needs list: a new pairing)",
   "camel_driver": "traveller_rider_30495 and figure_in_shed_35108: the camel driver's indigo mantle is the hooded rider's cloak and the indigo-tinted cloak under the shed (needs list: a new pairing)",
-  "about": "character = the catalogue's cast (gen/expand/round2/catalogue.md §7: farmer 9, straw_hat 3, groom 3, the rest from the 22); stand_in = the needs list's cast by dress from the 22, which world.js plays until the target is built. A figure in a pose (seated, riding, crouching) whose target and interim both lack its clips plays the nearest character that has one, written as its character (POSE in the script), until one of them can"
+  "about": "character = the catalogue's cast (gen/expand/round2/catalogue.md §7: farmer 9, straw_hat 3, groom 3, the rest from the 22); stand_in = the needs list's cast by dress from the 22, which world.js plays until the target is built. A figure in a pose (seated, riding, crouching) whose target and interim both lack its clips plays the nearest character that has one, written as its character (POSE in the script), until one of them can",
+  "stall_customer_29280": "drink -> drink~soles: an IK clip variant (characters/ik_variants.json \"soles\", fix-inner's leg op): drink's feet rest at two heights (-0.033 and +0.006 m once their middle is on the floor), so both soles are held on the floor by leg IK, the knees and the seat where the clip has them",
+  "traveller_rider_30165": "ride -> ride~traveller_rider_30165: an IK clip variant (characters/ik_variants.json \"traveller_rider_30165\") holds the seat at the take's median height through the cycle, so it stays on the saddle cloth (its bob lifted it 4.1 cm over it at the cycle's top tenth)",
+  "child_29674": "recast (fix_standard.md step 1): painted \"standing alone on the open ground ... a hand held out toward the man at the post\"; reach is child_reach, both arms across a chest-high table top, and no table is painted (its palms were in the air): hand_over (from:townsman/hand_over, a new clip of child_robed: an arm held out in front; its rule touches nothing)",
+  "party_porter_staff_31131": "recast (fix_standard.md step 1): painted walking with \"a long thin pole or staff [that] slants up behind his head over his shoulder\", so its foot touches nothing; stand_pole held it upright with its foot 10 cm over the ground: he stands (held with the sedan) in idle with the staff on his right shoulder (staff_on_shoulder, a new porter prop bound to Spine in idle, as the groom's staff; the porter's staff_shoulder is bound in carry_pole for the walking traveller)",
+  "sedan_bearer_front_30828": "sedan_carry -> sedan_carry~pole (the shared IK variant, characters/ik_variants.json \"pole\": the right shoulder held under the pole at the take's median place, both palms on it), with the willow sedan's poles fitted to it (blender/countryside_scene.py SEDAN_POLE_FIT 1.47 m, kit pole_fit), as S4's bearers; painted with the pole on his right shoulder",
+  "sedan_bearer_rear_30990": "sedan_carry -> sedan_carry~pole (the shared IK variant, characters/ik_variants.json \"pole\": the right shoulder held under the pole at the take's median place, both palms on it), with the willow sedan's poles fitted to it (blender/countryside_scene.py SEDAN_POLE_FIT 1.47 m, kit pole_fit), as S4's bearers; painted with the pole on his right shoulder"
  },
  "props_why": {
   "man_with_stick_29205": "the hoe on his shoulder (bound to idle on the scholar); his painted pointing arm waits for point to hold it",
@@ -1003,5 +1027,13 @@
    "stick_bag": "NEW: a short stick (0.6 m) upright before the chest in both hands, a long dark bag hanging from its top. No stand-in (the staff is 1.98 m) -- traveller_standing_29996 (scholar: new prop)"
   },
   "about": "carried props as painted (needs list \"Props carried by figures\"), on only when the playing character's GLB has prop_<name> and the figure plays only the clip that holds it (characters/props.json); a stand-in prop is named in the figure's note"
+ },
+ "facing_why": {
+  "man_at_post_29812": "solved: contact forearm_L->S1.prop.post_crossbar_29862; gap before forearm_L 0.29, after forearm_L 0.03; fixed contact:rail; moved 0.52 m, turned 7 deg from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_front_30828": "solved: contact shoulder_R->S1.veh.sedan_willow_30805, palm_L->S1.veh.sedan_willow_30805, palm_R->S1.veh.sedan_willow_30805; gap before shoulder_R 0.2, palm_L 0.42, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.53 m from the casting's spot (limit 0.6 m)",
+  "sedan_bearer_rear_30990": "solved: contact shoulder_R->S1.veh.sedan_willow_30805, palm_L->S1.veh.sedan_willow_30805, palm_R->S1.veh.sedan_willow_30805; gap before shoulder_R 0.2, palm_L 0.27, palm_R 0.17, after shoulder_R 0.02, palm_L 0.03, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.24 m, turned -4 deg from the casting's spot (limit 0.6 m)"
+ },
+ "contact_fixes_why": {
+  "about": "9 figures carry a contact fix from sections/countryside/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
  }
 }

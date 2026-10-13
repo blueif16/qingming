@@ -723,8 +723,7 @@ PROPS = {
     "back_frame": prop_back_frame, "back_boxes": prop_back_boxes, "back_bundle": prop_back_bundle,
     "fan_round": prop_fan_round, "bucket": prop_bucket, "cleaver": prop_cleaver, "bow": prop_bow,
     "pole_shallow_baskets": prop_pole_shallow_baskets, "pole_bundles": prop_pole_bundles,
-    "goad": prop_goad, "stick": prop_stick, "staff": prop_staff, "whip": prop_whip, "child_in_arms": prop_child_in_arms,
-    "child_on_shoulders": prop_child_on_shoulders, "child_on_back": prop_child_on_back, "tray": prop_tray,
+    "goad": prop_goad, "stick": prop_stick, "staff": prop_staff, "whip": prop_whip, "tray": prop_tray,
     "tray_head": prop_tray_head, "box_shoulder": prop_box_shoulder, "lead_rope": prop_lead_rope,
 }
 
@@ -1228,8 +1227,12 @@ PROPS.update({
     "flat_basket": prop_flat_basket, "rope_coil": prop_rope_coil, "lidded_basket": prop_lidded_basket,
     "mallet": prop_mallet, "open_sack": prop_open_sack, "stick_bag": prop_stick_bag, "hoe": prop_hoe,
     "hat_on_back": prop_hat_on_back, "back_chair_frame": prop_back_chair_frame, "veiled_hat": prop_veiled_hat,
-    "back_bundle_pale": prop_back_bundle_pale, "child_on_lap": prop_child_on_lap,
+    "back_bundle_pale": prop_back_bundle_pale,
 })
+# The carried children (child_on_back, child_on_shoulders, child_in_arms, child_on_lap) are no longer built here: since
+# 2026-10-13 they are the rigged child posed onto each carrier by IK (tools/carry_pose.mjs, gen/props/carry.json), and
+# a full rebuild here must not overwrite them. prop_child_* above are the old kit-primitive children, kept for the
+# record (gen/details/children/before/props/).
 
 
 def bake(sb, name, mat):
@@ -1345,7 +1348,7 @@ def compose(rows, out):
     sheet.save()
 
 
-def mode_review(glb, out_png, clip, prop, times, views=((90, 6), (35, 14))):
+def mode_review(glb, out_png, clip, prop, times, views=((90, 6), (35, 14)), dist=4.2, z=1.0):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     sc = bpy.context.scene
     sc.render.fps = 30
@@ -1374,11 +1377,11 @@ def mode_review(glb, out_png, clip, prop, times, views=((90, 6), (35, 14))):
             bpy.context.view_layer.update()
             # follow the hips
             hips = arm.matrix_world @ arm.pose.bones["Hips"].head
-            target = Vector((hips.x, hips.y, 1.0))
+            target = Vector((hips.x, hips.y, z))
             a, e = math.radians(az), math.radians(el)
             # az 0 = from the front (the character faces -Y in Blender after import), 90 = from its left (+X)
             d = Vector((math.sin(a) * math.cos(e), -math.cos(a) * math.cos(e), math.sin(e)))
-            cam.location = target + d * 4.2
+            cam.location = target + d * dist
             cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
             cam.data.lens = 50
             p = os.path.join(tmp, f"_pr_{vi}_{ti}.png")
@@ -1394,11 +1397,13 @@ def mode_review(glb, out_png, clip, prop, times, views=((90, 6), (35, 14))):
 
 
 def mode_review_many(jobs_json):
-    """Many reviews in one Blender run: a JSON list of {glb, out, clip, prop, times} (UNC paths)."""
+    """Many reviews in one Blender run: a JSON list of {glb, out, clip, prop, times, views?, dist?, z?} (UNC paths;
+    dist: camera distance in metres, default 4.2; z: the height it aims at, default 1.0)."""
     import json
     for j in json.load(open(jobs_json, encoding="utf-8")):
         try:
-            mode_review(j["glb"], j["out"], j["clip"], j["prop"], j["times"], tuple(tuple(v) for v in j.get("views", ((90, 6), (35, 14)))))
+            mode_review(j["glb"], j["out"], j["clip"], j["prop"], j["times"], tuple(tuple(v) for v in j.get("views", ((90, 6), (35, 14)))),
+                        j.get("dist", 4.2), j.get("z", 1.0))
         except Exception as e:  # noqa: BLE001
             print("REVIEW FAILED", j["out"], repr(e), flush=True)
 

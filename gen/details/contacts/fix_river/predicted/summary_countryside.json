@@ -1,0 +1,312 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T10:27:39.632Z",
+ "sections": [
+  "countryside"
+ ],
+ "owners_load_ms": 270,
+ "seconds": 0.486,
+ "people": 30,
+ "checked": 30,
+ "crew_not_covered": 0,
+ "figures_failing": 7,
+ "fails": 13,
+ "by_class": {
+  "contact:vehicle": 6,
+  "contact:table": 2,
+  "contact:animal": 2,
+  "contact:seat (no seat)": 1,
+  "contact:floor (clip)": 1,
+  "contact:ridden": 1
+ },
+ "by_clip": {
+  "sedan_carry:contact:vehicle": 6,
+  "reach:contact:table": 2,
+  "drive_donkeys:contact:animal": 2,
+  "drink:contact:seat": 1,
+  "drink:contact:floor": 1,
+  "ride:contact:ridden": 1
+ },
+ "table": {
+  "countryside": {
+   "contact:table": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "child_29674"
+   },
+   "contact:seat (no seat)": {
+    "n": 1,
+    "worst": 0.354,
+    "worst_id": "stall_customer_29280"
+   },
+   "contact:floor (clip)": {
+    "n": 1,
+    "worst": -0.033,
+    "worst_id": "stall_customer_29280"
+   },
+   "contact:ridden": {
+    "n": 1,
+    "worst": 0.041,
+    "worst_id": "traveller_rider_30165"
+   },
+   "contact:vehicle": {
+    "n": 6,
+    "worst": 0.466,
+    "worst_id": "sedan_bearer_front_30828"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": 1.633,
+    "worst_id": "charcoal_driver_36250"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:animal",
+   "clip": "drive_donkeys",
+   "site": "palm_L",
+   "value": 1.633,
+   "kind": "walker",
+   "with": [
+    "S1.ani.donkey_charcoal_36323",
+    "S1.ani.donkey_charcoal_36410",
+    "S1.ani.donkey_charcoal_36508",
+    "S1.ani.donkey_charcoal_36666",
+    "S1.ani.donkey_charcoal_36745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "charcoal_driver_36250",
+   "section": "countryside",
+   "model": "straw_hat"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "drive_donkeys",
+   "site": "palm_L",
+   "value": 0.706,
+   "kind": "walker",
+   "with": [
+    "S1.ani.donkey_charcoal_36323",
+    "S1.ani.donkey_charcoal_36410",
+    "S1.ani.donkey_charcoal_36508",
+    "S1.ani.donkey_charcoal_36666",
+    "S1.ani.donkey_charcoal_36745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "charcoal_driver_36797",
+   "section": "countryside",
+   "model": "straw_hat"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [
+    "S1.grd.rock_29745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "child_29674",
+   "section": "countryside",
+   "model": "child_robed"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_R",
+   "value": 0.506,
+   "kind": "figure",
+   "with": [
+    "S1.grd.rock_29745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "child_29674",
+   "section": "countryside",
+   "model": "child_robed"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_L",
+   "value": 0.466,
+   "kind": "figure",
+   "with": [
+    "S1.veh.sedan_willow_30805"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.131,
+    "side_m": 0.311
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_30828",
+   "section": "countryside",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_L",
+   "value": 0.364,
+   "kind": "figure",
+   "with": [
+    "S1.veh.sedan_willow_30805"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.174,
+    "side_m": 0.307
+   },
+   "soft": false,
+   "id": "sedan_bearer_rear_30990",
+   "section": "countryside",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "drink",
+   "site": "seat",
+   "value": 0.354,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (112/112 samples): only the ground; nearest seat-high piece S1.bld.stall_annex_29350 0.258 m away in plan (top 0.256)",
+   "rel": null,
+   "soft": false,
+   "id": "stall_customer_29280",
+   "section": "countryside",
+   "model": "farmer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "shoulder_R",
+   "value": 0.327,
+   "kind": "figure",
+   "with": [
+    "S1.veh.sedan_willow_30805"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.136,
+    "side_m": 0.263
+   },
+   "soft": false,
+   "id": "sedan_bearer_rear_30990",
+   "section": "countryside",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_R",
+   "value": 0.318,
+   "kind": "figure",
+   "with": [
+    "S1.veh.sedan_willow_30805"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.225,
+    "side_m": 0.156
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_30828",
+   "section": "countryside",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "shoulder_R",
+   "value": 0.315,
+   "kind": "figure",
+   "with": [
+    "S1.veh.sedan_willow_30805"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.093,
+    "side_m": 0.267
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_30828",
+   "section": "countryside",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_R",
+   "value": 0.315,
+   "kind": "figure",
+   "with": [
+    "S1.veh.sedan_willow_30805"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.268,
+    "side_m": 0.153
+   },
+   "soft": false,
+   "id": "sedan_bearer_rear_30990",
+   "section": "countryside",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:ridden",
+   "clip": "ride",
+   "site": "seat",
+   "value": 0.041,
+   "kind": "rider",
+   "with": [
+    "S1.ani.donkey_traveller_30216"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "traveller_rider_30165",
+   "section": "countryside",
+   "model": "townsman"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "drink",
+   "site": "sole_L",
+   "value": -0.033,
+   "kind": "figure",
+   "with": [
+    "ground"
+   ],
+   "note": "the clip's own sole_L height -0.025 m (clip)",
+   "rel": null,
+   "soft": false,
+   "cause": "clip",
+   "id": "stall_customer_29280",
+   "section": "countryside",
+   "model": "farmer"
+  }
+ ],
+ "clip_level": [
+  {
+   "model": "farmer",
+   "clip": "drink",
+   "site": "sole_L",
+   "offset_m": -0.025,
+   "figures": [
+    "countryside/stall_customer_29280"
+   ]
+  }
+ ],
+ "contacts_checked": 17,
+ "contacts_failing": 13
+}

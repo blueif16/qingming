@@ -169,3 +169,23 @@ source with a radius, and an overall level that follows how busy a place is; and
   guarded passes. Volume bar beside the bell while the HUD is open.
 - Checks: `sound_web check` PASS (incl. the volume bar), `sound_gaps` at 4 Mb/s 0 gaps (min bed level 0.73),
   regression 210/211 (the miss is flaky: passes on rerun with and without sound), boats 12/12, rides 5/5.
+
+## Built: the life pass (details pass, 2026-10-13; record `gen/life/progress.md`)
+
+The three distances are in the world, with text only (voices still wait for a provider). Lasting rules:
+- **Far:** intent marks (`web/src/ui/marks.js`): an ink pictogram on a paper disc over the speaker of a group whose
+  exchange is playing, seen from beyond earshot; as many as the device tier allows (none on low), nearest first, not
+  behind walls.
+- **Earshot:** every painted group with two or more placed figures may have `chatter` in its section's `talk.json`:
+  exchanges of 1–4 turns with 2–3 alternatives a line, never repeated back to back, turn-taking timing, quiet gaps
+  (longer at night and on the light tier). Lone figures get rare `barks`; a `close` bark calls to you as you come near.
+  A line fits its body: sleepers only think; `when` ties a line to a clip. Bubbles only near you, at most two with the
+  near talk, the near talk wins.
+- **Close:** press-E scenes at the main figures; the first line depends on who you play (8 kinds, settings 扮作); talking
+  to the same host again plays its next `again` set (more of the reading).
+- **Plot lines** (`sections/world/talk.json` threads): a few stories that run across the scroll (the tax row at the
+  gate, the grain from the boats to the 正店, the holiday wine, the charcoal donkeys, the bolting horse, the big boat
+  at the bridge, Qingming at the graves, the banned screen); each step is a painted group's exchange, scene or bark;
+  overhearing it inks it into the 圖志's 見聞 leaf (only heard steps, no counts) with a small 聞 note.
+- **Loyalty:** only placed painted figures speak, about what their bodies do; roles in period words; every line
+  cites its reading or says "our proposal"; Chinese plus an English gloss for every line.

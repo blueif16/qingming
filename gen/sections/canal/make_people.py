@@ -2064,6 +2064,24 @@ seats['footings'] = {
                   'be deeper there): people.js drops him from H + 1.2 onto the highest colliding surface, and the water '
                   'strip doesn\'t collide'),
     }}
+# the details pass's seat fits (sections/canal/contact_fixes.json "seats"; gen/details/contacts/fix_standard.md rule 3:
+# a stool's or bench's top at the sitter's seat point less 0.005-0.01, centred under it, measured on the page's own
+# placement by gen/details/contacts/fix_river/tools/seat_fit.mjs): per figure map ID, the seat's centre X, D and its
+# top's height top_H (map H), and for a mapped bench or sack pile the owner whose top the builder fits ("fit_owner")
+import sys as _sys
+_sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import load as _load_contact_fixes
+for _mid, _sf in (_load_contact_fixes('canal').get('seats') or {}).items():
+    if _mid not in seats:
+        print(f'seat fit: {_mid} has no seat in seats.json (skipped)')
+        continue
+    _e = seats[_mid]
+    for _k in ('X', 'D', 'top_H', 'base_H', 'fit_owner'):
+        if _k in _sf:
+            _e[_k] = _sf[_k]
+    if 'top_H' in _sf:
+        _e['seat_h_cast'] = _e.get('seat_h')
+        _e['fit_why'] = _sf.get('why', '')
 json.dump(seats, open(os.path.join(HERE, 'seats.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 # ---------------------------------------------------------------- cast.json (the casting's recorded moves)
@@ -2130,6 +2148,21 @@ people['builder_notes'] = {
                       'stand on other boat supports and are hosted only when the boats block lists them under its '
                       '`crew`: ' + (', '.join(f'{s} ({FIG[s]["support"]})' for s in UNHOSTED) if UNHOSTED else 'all listed')),
 }
+# the details pass's contact fixes (sections/canal/contact_fixes.json: solved nudges and turns, recasts, IK clip
+# variants, root_h; gen/details/contacts/fix_standard.md) are applied last
+import sys
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes
+apply_contact_fixes(people, 'canal')
+# an animal a figure holds plays one clip (contact_fixes.json "animals": its do, with the reason): the details pass's
+# hand-on-animal targets sit where its body stays put through that clip (fix-river, gen/details/contacts/fix_river/)
+for _a, _af in (_load_contact_fixes('canal').get('animals') or {}).items():
+    if _a in people['animals']:
+        for _k in ('do', 'facing_deg'):
+            if _k in _af:
+                people['animals'][_a][_k] = _af[_k]
+        people['animals_why'][_a] = (_af.get('why', '') + (' || casting: ' + people['animals_why'][_a]
+                                                           if people['animals_why'].get(_a) else ''))
 out = os.path.join(QM, 'sections/canal/people.json')
 json.dump(people, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 

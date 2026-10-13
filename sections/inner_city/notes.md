@@ -306,3 +306,10 @@ The previous join agent made these changes; they are recorded here after the res
 - The servant boy's walk stops short of the crowd (`gen/sections/inner_city/make_people.py`, `STOP_AT_CROWD`).
 - S7's knots are in `map/frames/S6.json`.
 - Checks: S7|S6 walks 8/8; `people_check` joined PASS. Shots: `gen/sections/city_end/qa/run3/shots_joined/`.
+
+## Question 8: the fat butcher owner (2026-10-13, `gen/life/q8_figures.md`)
+
+- 名画记 40's fat owner, sitting at the meat shop's door, is the mapped `S6.fig.seated_man_highseat_4070`. Only his
+  reading was added (what, src, note in `map/strokes/S6.json` and the Q8 block of `gen/map/S6/merge_fixes.mjs`).
+  Positions, layout and cast are unchanged.
+- He now speaks as 掌櫃 in V6.6 and c6.traystall, with a new exchange to the hired hand.

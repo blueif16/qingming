@@ -280,3 +280,16 @@ Details are in `gen/expand/round2/joins_report.md`, Stage 3.
 - One joined walk changed: from S3's bank, the shore wall stops you at S4b's big cabin boat's stern, which stays
   railed past the seam. Joined walks 7/7; `people_check` S4b+S3 PASS.
 - Results: `gen/sections/rainbow_bridge/qa/run3/join_*`.
+
+## Question 8: the groom inside the fence (2026-10-13, `gen/life/q8_figures.md`)
+
+- 名画记 24 puts the horse's groom sitting on the ground inside 十千脚店's bar fence. The one figure painted there is
+  `S3.fig.behind_lampbox_17090`, and it is re-read as **seated** with its knees drawn up, facing east. The edit is in
+  `map/strokes/S3.json` and `gen/map/S3/merge_fixes.mjs` (the Q8 block). Its foot moved 1.4 m further inside the gate.
+  No new entity.
+- Cast: `sightseer` plays `knees_up` (`gen/sections/rainbow_bridge/cast.json`). robed_man's knees_up leaves the seat
+  6 cm up.
+- Talk: V3.5 swaps the roles. The groom is this figure; the keeper is the gate-post figure and stays the host. A new
+  bark, b3.groom, was added.
+- The data is copied to `web/public/assets/rainbow_bridge/` (layout.json, people.json) and the scroll index was
+  rebuilt. The GLB is unchanged.

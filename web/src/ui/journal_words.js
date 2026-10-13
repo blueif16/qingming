@@ -12,7 +12,10 @@ export const JW = {
   talkTab: '見聞',
   talkTitle: '路上見聞',
   talkLead: '在街上聽到的話，記在這裏。',
-  talkNone: '還沒有聽人說過話。走近畫中人，按 E 或輕觸談字搭話。',
+  talkNone: '還沒有聽人說過話。走近畫中人，聽他們說些甚麼，或按 E、輕觸談字搭話。',
+  // the plot lines overheard on the street (the life pass)
+  threadsTitle: '街談巷議',
+  threadSeal: '聞',
   colTab: '題跋',
   strip: 'The scroll: tap a region',
   hintDesktop: ['← → 翻頁 · J 或 Esc 合上', 'arrows: turn the leaf · J or Esc: close'],

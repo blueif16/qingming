@@ -43,10 +43,10 @@
    "args": {
     "L": 1.0,
     "yaw": "deck-90",
-    "h": 0.42,
+    "h": 0.286,
     "anchor": "center"
    },
-   "why": "Low wooden bench at the west stall's north-east corner, a man seated on it. Seat 42 px at s 0.68 -> 0.62 m; built 1.0 m, 0.42 m (choice), across the deck (level). Never collides."
+   "why": "Low wooden bench at the west stall's north-east corner, a man seated on it. Seat 42 px at s 0.68 -> 0.62 m; built 1.0 m, 0.42 m (choice), across the deck (level). Never collides. || fit (details pass, fix_standard rule 3): its top at stall_man_parasol_18612's seat point (sit~soles at his solved placement, both feet on one tread of the stepped deck) less 0.0075: 0.286 m over the smooth deck (moved 0.11 m down the ramp: choices/contacts.json) it is placed on (was 0.42); painted a low bench"
   },
   {
    "id": "S3.prop.big_parasol_18160",
@@ -340,9 +340,10 @@
     "facing": 180,
     "kind": "slats",
     "back_h": 0.95,
-    "lod": 1
+    "lod": 1,
+    "seat": 0.428
    },
-   "why": "Chair with four legs in the open shed, a man sits on it facing the table west of him. Real size (legs 43 px at s 0.22). Never collides."
+   "why": "Chair with four legs in the open shed, a man sits on it facing the table west of him. Real size (legs 43 px at s 0.22). Never collides. || fit (details pass): its seat at far_bank_seated_18318's seat point (robed_man sit~soles) less 0.0075: 0.428 m (the kit's default 0.46, choice)"
   },
   {
    "id": "S3.prop.far_counter_19555",
@@ -984,11 +985,11 @@
    "part": "bench",
    "args": {
     "L": 0.75,
-    "h": 0.45,
+    "h": 0.483,
     "anchor": "center",
     "lattice_side": true
    },
-   "why": "Wooden bench with a lattice side, east of the standing man. 35 px wide (19885-19920) -> 0.75 m at s 0.47; built 0.75 m, the lattice closing its east end; moved 0.15 m east (its sitter stays on it) to clear the standing man west of it."
+   "why": "Wooden bench with a lattice side, east of the standing man. 35 px wide (19885-19920) -> 0.75 m at s 0.47; built 0.75 m, the lattice closing its east end; moved 0.15 m east (its sitter stays on it) to clear the standing man west of it. || fit (details pass): it now stands on the open shop's floor (0.142 m: the builder's props() takes the shop's floor inside it), its top at shop_seated_on_bench_19905's seat point less 0.0075: 0.483 m over the floor (his seat dips 2 cm through the sit) (was 0.45 over the ground under the floor's plinth)"
   },
   {
    "id": "S3.prop.shop_chair_19725",
@@ -996,9 +997,10 @@
    "args": {
     "facing": 0,
     "back_h": 0.95,
-    "kind": "slats"
+    "kind": "slats",
+    "seat": 0.324
    },
-   "why": "Chair with a slatted back the man at the table sits on; faces the table (east). Back and seat 48 x 50 px; seat 0.46, back 0.95 m (choice). Never collides (a seated figure)."
+   "why": "Chair with a slatted back the man at the table sits on; faces the table (east). Back and seat 48 x 50 px; seat 0.46, back 0.95 m (choice). Never collides (a seated figure). || fit (details pass): it now stands on the open shop's floor (0.142 m), its seat at shop_seated_man_19772's seat point (scholar drink) less 0.0075: 0.324 m over the floor (the kit's default 0.46, choice)"
   },
   {
    "id": "S3.prop.shop_long_board_19601",
@@ -1271,10 +1273,10 @@
    "id": "S3.prop.stool_20126",
    "part": "stool",
    "args": {
-    "h": 0.42,
+    "h": 0.377,
     "s": 0.32
    },
-   "why": "Small stool under the seated customer (legs 21 px wide): 0.32 m, 0.42 high. Never collides."
+   "why": "Small stool under the seated customer (legs 21 px wide): 0.32 m, 0.42 high. Never collides. || fit (details pass, fix_standard rule 3): its top at seated_customer_20140's seat point (robed_man drink, at his solved placement) less 0.0075: 0.377 m (was 0.42)"
   },
   {
    "id": "S3.prop.table_15745",

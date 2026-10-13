@@ -259,6 +259,7 @@ function build(a) {
   fs.mkdirSync(r('web/public/assets/animals'), { recursive: true });
   execFileSync(r('tools/node_modules/.bin/gltf-transform'), ['optimize', r(a.raw), r(a.glb), '--compress', 'meshopt', '--texture-compress', 'webp', '--texture-size', '512',
     '--simplify', 'false', '--join', 'false', '--instance', 'false', '--palette', 'false', '--flatten', 'false', '--prune', 'false'], { stdio: ['ignore', 'ignore', 'inherit'] });
+  execFileSync('node', [r('tools/char_lod.mjs'), r(a.glb)], { stdio: ['ignore', 'ignore', 'inherit'] }); // the crowd's far body (perf batch 2)
   console.log(`${a.name}: ${a.glb} ${(fs.statSync(r(a.glb)).size / 1024).toFixed(0)} KB`);
 }
 

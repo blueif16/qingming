@@ -2,11 +2,12 @@
 // The painted tree cards: one alpha card per tree form the scroll paints, 2-4 variants each (trees/notes.md).
 // trees/cards.json lists the forms, their reference crops of the scan and their variants; the prompt of a card is
 // prompts/tree_card.txt around prompts/tree_<form>.txt (the form, then one [n] block per variant).
-//   node tools/tree_cards.mjs [status|refs|gen|key|ship|sheet|check|all] [--form a,b] [--only willow_fan_1,..] [--force] [--jobs 3]
+//   node tools/tree_cards.mjs [status|refs|gen|key|ship|small|sheet|check|all] [--form a,b] [--only willow_fan_1,..] [--force] [--jobs 3]
 //   refs   crop each form's reference strips from the scan     -> gen/trees/refs/<form>_<k>.jpg
 //   gen    draw the cards whose prompt, size or refs changed     -> gen/trees/raw/<card>/<key>_0.png (shyfai, opaque white)
 //   key    white background -> clean alpha, no halo               -> gen/trees/keyed/<card>.png, gen/trees/check/<card>.jpg
 //   ship   crop, 768 px tall (ship_h for small trees), webp      -> web/public/assets/trees/<card>.webp, trees.json
+//   small  (also after ship) a 256 px copy, shown first            -> web/public/assets/trees/small/<card>.webp, trees.json small
 //   sheet  every card on a grey and a dark backdrop, named        -> gen/trees/sheet.jpg
 //   check  every mapped tree has a card (trees/assign/<S>.json); none within 6 m share a card, none within 15 m unmirrored
 //          (both radii scale down for trees under 8 m tall; {"card": "kit"} = built as a kit model, no card)
@@ -319,6 +320,38 @@ async function ship() {
   fs.writeFileSync(regPath, JSON.stringify(ordered, null, 1) + '\n');
 }
 
+// ---------------------------------------------------------------- small: a 256 px copy of every card, loaded first
+// (perf batch 2, "First load"): the page puts these on the trees while the window streams in and swaps each for the
+// full card once the stream has nothing else to load (web/src/world.js, sharpenCards). trees/small/<card>.webp, listed
+// in trees.json as `small`; made again when the card's webp is newer. Not a KTX2 kind (tools/ktx2.mjs lists only
+// trees/*.webp): a 256 px webp is 5-25 KB, and it is dropped from the GPU after the swap.
+const SMALL_H = 256;
+async function small() {
+  const regPath = r(`${ASSETS}/trees.json`), dir = `${ASSETS}/small`;
+  const reg = JSON.parse(fs.readFileSync(regPath, 'utf8'));
+  fs.mkdirSync(r(dir), { recursive: true });
+  let made = 0, kb = 0, n = 0;
+  for (const [id, c] of Object.entries(reg)) {
+    if (id === 'about') continue;
+    const src = r(`web/public/${c.file}`), file = `${dir}/${id}.webp`;
+    delete c.small;
+    if (!fs.existsSync(src) || c.px[1] <= SMALL_H) continue;
+    if (flag('--force') || !fs.existsSync(r(file)) || fs.statSync(r(file)).mtimeMs < fs.statSync(src).mtimeMs) {
+      // the card's own aspect (its plane is width_m x height_m over the whole image); exact keeps the colour under the
+      // clear pixels, as the full card's, for the mipmaps
+      const w = Math.max(4, Math.round((c.px[0] * SMALL_H) / c.px[1]));
+      await sharp(src).resize(w, SMALL_H, { kernel: 'lanczos3' }).webp({ quality: 82, alphaQuality: 90, effort: 6, exact: true }).toFile(r(file));
+      made++;
+    }
+    c.small = `assets/trees/small/${id}.webp`;
+    kb += fs.statSync(r(file)).size / 1024;
+    n++;
+  }
+  for (const f of fs.readdirSync(r(dir))) if (!reg[f.replace(/\.webp$/, '')]?.small) fs.rmSync(r(`${dir}/${f}`)); // a retired card's copy
+  fs.writeFileSync(regPath, JSON.stringify(reg, null, 1) + '\n');
+  console.log(`small cards: ${n} (${made} made), ${Math.round(kb)} KB together, ${SMALL_H} px tall -> ${dir}/`);
+}
+
 // ---------------------------------------------------------------- sheet: every shipped card, named
 async function sheet() {
   const reg = JSON.parse(fs.readFileSync(r(`${ASSETS}/trees.json`), 'utf8'));
@@ -408,5 +441,6 @@ if (step === 'refs' || step === 'all') await refs();
 if (step === 'gen' || step === 'all') await gen();
 if (step === 'key' || step === 'all') await key();
 if (step === 'ship' || step === 'all') await ship();
+if (step === 'ship' || step === 'all' || step === 'small') await small(); // after every ship: ship rewrites trees.json
 if (step === 'sheet' || step === 'all') await sheet();
 if (step === 'check' || step === 'all') check();

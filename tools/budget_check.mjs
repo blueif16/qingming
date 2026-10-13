@@ -3,7 +3,9 @@
 // a window of sections: yours and one either side). For each section it reports, against tools/budgets.json:
 //   download   what loading it fetches (MB): its GLB, its layout/people/scene/backdrop JSON, its panels, the tree
 //              cards it plants, and (shared, reported apart) the kit swatches its GLB uses and the characters and
-//              animals it casts. KTX2 copies count where tools/ktx2.mjs's manifest adopts their kind.
+//              animals it casts. KTX2 copies count where tools/ktx2.mjs's manifest adopts their kind. A character split
+//              into per-clip files (tools/clip_split.mjs, current) counts as world.html loads it: its body and the
+//              clips the section's routines play (web/src/cast_clips.js); else its full GLB.
 //   triangles  drawn (visible meshes) and collider-only
 //   textures   decoded MB on the GPU, from image sizes: as RGBA8 with mipmaps, or the KTX2 copy's block size
 //   draw calls the most over its camera spots, all passes (colour, ink normals, shadow), from a headless load of the
@@ -16,7 +18,9 @@
 // PASS/FAIL per number; exit 1 on a FAIL. Budgets and why: tools/budgets.json.
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import sharp from 'sharp';
+import { castClips } from '../web/src/cast_clips.js';
 import { chromium } from 'playwright-core';
 
 const Q = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -79,20 +83,32 @@ function geometry(json) {
 
 // a model (character, animal): its download, geometry and textures (embedded webp)
 const regC = readJson('chars/characters.json') || {}, regA = readJson('animals/animals.json') || {};
+// per-clip files: a character's split, when it is current (cut from the full GLB as it is now, every clip covered)
+const clipFiles = readJson('chars/clips.json');
+const splitOf = (name) => {
+  const e = clipFiles?.chars?.[name], c = regC[name];
+  if (!e || !c?.file || !(c.clips || []).every((k) => e.base.includes(k) || e.clips[k])) return null;
+  return crypto.createHash('sha256').update(fs.readFileSync(path.join(A, c.file.replace(/^assets\//, '')))).digest('hex').slice(0, 8) === e.src ? e : null;
+};
 const models = {};
-async function model(name) {
-  if (models[name]) return models[name];
-  const file = regC[name]?.file || regA[name]?.file;
-  if (!file) return null;
-  const rel = file.replace(/^assets\//, ''), { json, bin } = glbJson(path.join(A, rel));
-  let tex = 0, extra = 0; // extra: KTX2 copies of its images, fetched besides the GLB
-  for (const im of json.images || []) {
-    const bv = json.bufferViews[im.bufferView];
-    if (!bv) continue;
-    const t = await texBytes(null, bin.slice(bv.byteOffset || 0, (bv.byteOffset || 0) + bv.byteLength));
-    tex += t.bytes; extra += t.download;
+// clips (optional): the clips the section plays, for a split character (its body and those clip files are its download)
+async function model(name, clips = null) {
+  if (!models[name]) {
+    const file = regC[name]?.file || regA[name]?.file;
+    if (!file) return null;
+    const rel = file.replace(/^assets\//, ''), { json, bin } = glbJson(path.join(A, rel));
+    let tex = 0, extra = 0; // extra: KTX2 copies of its images, fetched besides the GLB
+    for (const im of json.images || []) {
+      const bv = json.bufferViews[im.bufferView];
+      if (!bv) continue;
+      const t = await texBytes(null, bin.slice(bv.byteOffset || 0, (bv.byteOffset || 0) + bv.byteLength));
+      tex += t.bytes; extra += t.download;
+    }
+    models[name] = { name, full: size(rel) + extra, extra, split: regC[name] ? splitOf(name) : null, geometry: geometry(json).bytes, tex };
   }
-  return (models[name] = { name, download: size(rel) + extra, geometry: geometry(json).bytes, tex });
+  const m = models[name], e = m.split;
+  const download = e ? size(e.body.replace(/^assets\//, '')) + m.extra + [...(clips || [])].filter((k) => e.clips[k]).reduce((a, k) => a + size(e.clips[k].replace(/^assets\//, '')), 0) : m.full;
+  return { ...m, download };
 }
 
 async function offline(name) {
@@ -125,12 +141,14 @@ async function offline(name) {
   for (const f of Object.values(people.figures || {})) if (!f.carried_by) cast.add(castAs(f));
   for (const w of people.walkers || []) cast.add(castAs(w));
   for (const a of Object.values(people.animals || {})) if (regA[a.model]?.file) cast.add(a.model);
-  const castModels = (await Promise.all([...cast].map(model))).filter(Boolean);
+  const plays = castClips(people, castAs); // the clips its routines play, per character (fetched with the section)
+  const castModels = (await Promise.all([...cast].map((n) => model(n, plays.get(n))))).filter(Boolean);
   const people_n = Object.values(people.figures || {}).filter((f) => !f.carried_by).length + (people.walkers || []).length + Object.keys(people.animals || {}).length;
   return {
     name, people: people_n,
     download: { own: (own.glb + own.json + own.panels + own.cards) * MB, glb: own.glb * MB, json: own.json * MB, panels: own.panels * MB, cards: own.cards * MB,
-      kit: kitDownload * MB, cast: castModels.reduce((a, m) => a + m.download, 0) * MB },
+      kit: kitDownload * MB, cast: castModels.reduce((a, m) => a + m.download, 0) * MB, castFull: castModels.reduce((a, m) => a + m.full, 0) * MB,
+      castSplit: castModels.filter((m) => m.split).length },
     triangles: { drawn: geo.drawn, collider: geo.collider },
     textures: { own: texOwn * MB, kit: texKit * MB, cast: castModels.reduce((a, m) => a + m.tex, 0) * MB },
     geometryMB: geo.bytes * MB, castN: castModels.length, cast: castModels.map((m) => m.name),
@@ -190,7 +208,8 @@ for (const r of rows) {
   if ((budgets.exceptions || {})[r.name]) console.log(`      exceptions: ${Object.keys(budgets.exceptions[r.name]).filter((k) => !k.endsWith('_why')).join(', ')} (tools/budgets.json)`);
   console.log(`\n== ${r.name}: ${r.people} people and animals, cast ${r.castN} models`);
   console.log(check('download, the section', r.download.own, B.download_mb, 'MB'));
-  console.log(`      GLB ${r.download.glb.toFixed(2)}, JSON ${r.download.json.toFixed(2)}, panels ${r.download.panels.toFixed(2)}, cards ${r.download.cards.toFixed(2)}; shared: kit ${r.download.kit.toFixed(2)}, cast ${r.download.cast.toFixed(2)} MB`);
+  console.log(`      GLB ${r.download.glb.toFixed(2)}, JSON ${r.download.json.toFixed(2)}, panels ${r.download.panels.toFixed(2)}, cards ${r.download.cards.toFixed(2)}; shared: kit ${r.download.kit.toFixed(2)}, cast ${r.download.cast.toFixed(2)} MB`
+    + ` (${r.download.castSplit} of ${r.castN} as body + the clips played here; full GLBs ${r.download.castFull.toFixed(2)} MB)`);
   console.log(check('download, with kit and cast', r.download.own + r.download.kit + r.download.cast, B.download_with_shared_mb, 'MB'));
   console.log(check('triangles drawn', r.triangles.drawn / 1000, B.triangles_k, 'k', 1));
   console.log(check('triangles, colliders', r.triangles.collider / 1000, B.collider_triangles_k, 'k', 1));

@@ -1,0 +1,50 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T14:08:54.860Z",
+ "sections": [
+  "outer_road_2"
+ ],
+ "owners_load_ms": 307,
+ "seconds": 1.588,
+ "people": 66,
+ "checked": 66,
+ "crew_not_covered": 0,
+ "figures_failing": 1,
+ "fails": 1,
+ "by_class": {
+  "contact:structure": 1
+ },
+ "by_clip": {
+  "wheelwright:contact:structure": 1
+ },
+ "table": {
+  "outer_road_2": {
+   "contact:structure": {
+    "n": 1,
+    "worst": 0.599,
+    "worst_id": "wheelwright_bending_13620"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:structure",
+   "clip": "wheelwright",
+   "site": "palm_L",
+   "value": 0.599,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.pole_frame_basket_13690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "wheelwright_bending_13620",
+   "section": "outer_road_2",
+   "model": "idler"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 48,
+ "contacts_failing": 1
+}

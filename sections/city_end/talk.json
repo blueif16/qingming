@@ -1,0 +1,1286 @@
+{
+ "about": "S7 卷尾 · 趙太丞家 (city_end): who speaks and what (the life pass, gen/life/progress.md; format tools/talk_data.mjs; brief gen/life/brief_section.md). The scroll's end, 余辉's 結尾三問: 問病 at the doctor's shop, 問道 at the official's gate (問命 at the 解 sign is S6's). scenes: near talks (press E at the host; `as` = the line for who you play, `again` = the next talk with the same host). chatter: groups that talk among themselves when you are within earshot. barks: a lone figure's word now and then (`close`: a call to you as you come near). Every role is a painted figure of people.json; every line cites its reading (src); 繁體, no numbers on screen; lines fit the figure's clips. Plot-line step wine.5 (the sign 治酒所傷真方集香丸) is carried by V7.1 and the exchanges marked with it. Bundled by tools/ui_data.mjs into web/public/assets/ui/talk.json.",
+ "scenes": [
+  {
+   "id": "V7.1",
+   "title": "太丞問病",
+   "title_en": "At the Physician's",
+   "host": "doctor",
+   "group": "S7.grp.zhao_taicheng_patients",
+   "step": "wine.5",
+   "reading": "名画记 48: a medicine shop right by the well, its tablets read 赵太丞家; a counter inside with a written paper (perhaps a prescription) and what looks like an abacus; of the tall boards outside only one reads in full, 治酒所伤真方集香丸; the 正店 and 脚店 ahead are full, so drinking was the fashion and many were hurt by it. 余辉 2021 问病: two women bring a child; he guesses their husbands drank till drunk the day before; 赵太丞 served the court as a physician, where high and low drank themselves ill; the boards also offer cures for 五劳七伤. The map: the man in a dark robe stands facing the women and reaches with both hands to the child on the seated woman's lap, his armchair empty behind him. Scholars differ: 余辉 2021 sees an old woman of the shop comforting the women while they wait for the old doctor; we follow the map (the dark-robed man is the doctor, already examining the child). Which board carries the 集香丸 text the strokes don't show, so the lines say only 'the sign outside'.",
+   "roles": {
+    "doctor": {
+     "fig": "doctor_dark_robe_1615",
+     "name": "太丞",
+     "name_en": "Imperial Physician",
+     "src": "名画记 48 国医赵太丞家; the map (the man in a dark robe reaching to the child: the doctor or his assistant; we read him as the doctor)"
+    },
+    "mother": {
+     "fig": "seated_woman_child_1535",
+     "name": "婦人",
+     "name_en": "woman",
+     "src": "the map (seated on the bench, holding the child up toward the doctor; a mother is the map's reading)"
+    },
+    "companion": {
+     "fig": "standing_woman_1567",
+     "name": "婦人",
+     "name_en": "woman",
+     "src": "the map (the second woman, standing behind the seated one); 余辉 2021 (two women bring a child)"
+    },
+    "child": {
+     "fig": "child_on_lap_1546",
+     "name": "孩兒",
+     "name_en": "child",
+     "src": "the map (the small child on the seated woman's lap, facing the doctor)"
+    }
+   },
+   "beats": [
+    {
+     "who": "doctor",
+     "say": "客官稍候，先看這孩兒。",
+     "say_en": "A moment, please. The child comes first.",
+     "src": "our proposal (he is busy with the child, the map); 余辉 2021 (drink everywhere, even among the troops)",
+     "as": {
+      "guan": "官人可是酒後不適？稍候。",
+      "shi": "相公面色發白，可是苦讀傷神？",
+      "seng": "師父也來討藥？請稍候。",
+      "fu": "娘子莫急，這位先看。",
+      "tong": "小哥兒，莫碰那藥櫃。",
+      "jun": "軍爺，可是喝傷了？",
+      "li": "大哥哪裏不好？稍候。"
+     },
+     "as_en": {
+      "guan": "Feeling poorly after wine, sir? A moment.",
+      "shi": "You look pale, young sir. Too much study?",
+      "seng": "Come for medicine too, Master? A moment.",
+      "fu": "Don't worry, madam. This lady is first.",
+      "tong": "Little one, hands off the medicine chest.",
+      "jun": "Soldier, did the drink get you?",
+      "li": "What ails you, brother? A moment."
+     }
+    },
+    {
+     "who": "mother",
+     "say": "太丞，孩兒夜裏發熱，哭了一宿。",
+     "say_en": "Physician, the child had a fever and cried all night.",
+     "src": "our proposal (a mother brings her child to the doctor, the map)"
+    },
+    {
+     "who": "doctor",
+     "say": "莫慌，我摸摸額頭。",
+     "say_en": "Don't fret. Let me feel the brow.",
+     "src": "the map (he reaches out with both hands to the child)"
+    },
+    {
+     "who": "child",
+     "say": "娘……怕……",
+     "say_en": "Mama… scared…",
+     "optional": true,
+     "src": "our proposal (the small child faces the doctor's hands, the map)"
+    },
+    {
+     "who": "companion",
+     "say": "還有我家丈夫，昨夜又醉了。",
+     "say_en": "And my husband got drunk again last night.",
+     "src": "余辉 2021 (his guess: the women's husbands drank till drunk the day before)"
+    },
+    {
+     "who": "doctor",
+     "say": "門外牌上寫著：治酒所傷。",
+     "say_en": "The sign outside says it: for harm done by wine.",
+     "src": "名画记 48 (the board 治酒所伤真方集香丸; drinking was the fashion)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "doctor",
+       "say": "又來了？可是要集香丸？",
+       "say_en": "Back again? Is it Incense Pills you want?",
+       "src": "名画记 48 (集香丸, perhaps a ready-made medicine)",
+       "as": {
+        "guan": "官人又來？昨夜又醉了罷。",
+        "jun": "軍爺又來？營裏又吃酒了？"
+       },
+       "as_en": {
+        "guan": "Back, sir? Drunk again last night, I take it.",
+        "jun": "Back, soldier? More drinking in camp?"
+       }
+      },
+      {
+       "who": "companion",
+       "say": "治酒所傷真方集香丸，好長的名兒。",
+       "say_en": "'True remedy, Incense Pills, for harm done by wine': a long name.",
+       "src": "名画记 48 (the one board legible in full)"
+      },
+      {
+       "who": "doctor",
+       "say": "前頭正店腳店，天天滿座。",
+       "say_en": "The wine houses and taverns ahead are full every day.",
+       "src": "名画记 48 (豪华的正店和脚店顾客盈门)"
+      },
+      {
+       "who": "doctor",
+       "think": "宮裏上下，也是喝出病來的。",
+       "think_en": "At court too, high and low drank themselves ill.",
+       "src": "余辉 2021 (赵太丞 a court physician: at court high and low drank themselves ill)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "doctor",
+       "say": "這孩兒不妨事，吃兩服藥便好。",
+       "say_en": "The child will be fine. Two doses and he's well.",
+       "src": "our proposal (the examination, the map)"
+      },
+      {
+       "who": "mother",
+       "say": "阿彌陀佛，多謝太丞！",
+       "say_en": "Amitabha! Thank you, physician!",
+       "src": "our proposal"
+      },
+      {
+       "who": "companion",
+       "say": "馬行街那邊，也有醫小兒的。",
+       "say_en": "Over on Maxing Street there are children's doctors too.",
+       "src": "東京夢華錄 卷三 馬行街北諸醫鋪 (石魚兒、班防禦、銀孩兒、柏郎中家，醫小兒)"
+      },
+      {
+       "who": "mother",
+       "say": "還是太丞穩當，宮裏出來的。",
+       "say_en": "This physician is the safe choice. He served at court.",
+       "src": "余辉 2021 (赵太丞, a physician who served the Song court)"
+      },
+      {
+       "who": "doctor",
+       "say": "藥單開好了，櫃上抓藥。",
+       "say_en": "The prescription's written. Fill it at the counter.",
+       "src": "名画记 48 (a counter with a written paper on it, perhaps a prescription); the map (the counter and its rack of drawers)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V7.2",
+   "title": "門前問路",
+   "title_en": "Asking the Way",
+   "host": "visitor",
+   "group": "S7.grp.gatehouse_1240",
+   "reading": "名画记 49: next to 赵太丞家 a deep compound; the brackets under the gate's eave and the mounting block mark an official household; a stranger with a food box in his hand and a big bundle on his shoulder, come perhaps to visit kin in 汴京, is shown the way, and looking where the finger points, the street trees close in a haze and the scroll stops there. 余辉 2021 问道: a country man come to visit family has lost his way and asks at the official's gate; the painter, too, asks which way the country should go. 東京夢華錄 卷五 民俗: the townsfolk show newcomers the way and stand up for strangers. Who points: 名画记 and 余辉 call him the gatekeeper; the map paints a seated gatekeeper and a man in a dark cap who points west. Chosen: the man in the dark cap points (a doorman of the house, 門子); the seated man is the gatekeeper (門公). The small head at the door leaf may be a lamp (the map: one thing); people.json places a child, so a child it is.",
+   "roles": {
+    "visitor": {
+     "fig": "visitor_food_box_1308",
+     "name": "外鄉人",
+     "name_en": "stranger",
+     "src": "名画记 49 (外地人, a food box, a big bundle); 余辉 2021 (a country man come to visit kin)"
+    },
+    "doorman": {
+     "fig": "pointing_man_1370",
+     "name": "門子",
+     "name_en": "doorman",
+     "src": "the map (the man in a dark cap pointing the way west); 名画记 49 (看门人); doorman of the house is our reading"
+    },
+    "keeper": {
+     "fig": "gatekeeper_seated_1082",
+     "name": "門公",
+     "name_en": "gatekeeper",
+     "src": "the map (the bearded gatekeeper on his box seat)"
+    },
+    "peeker": {
+     "fig": "face_at_gate_door_1251",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the map (a small head peeking at the open door leaf; a child is our reading)"
+    }
+   },
+   "beats": [
+    {
+     "who": "visitor",
+     "say": "借問一聲，投親該往哪走？",
+     "say_en": "Excuse me, which way to find my kin?",
+     "src": "名画记 49 (come to visit kin); 余辉 2021 (he has lost his way)",
+     "as": {
+      "guan": "官人恕罪，小的迷了路。",
+      "shi": "相公是讀書人，可識得路？",
+      "seng": "師父，借問一聲路。",
+      "fu": "大嫂，這城裏的路好亂。",
+      "tong": "小哥兒，你家可在這左近？",
+      "jun": "軍爺，小的不是歹人，問個路。",
+      "li": "大哥，借問一聲路。"
+     },
+     "as_en": {
+      "guan": "Pardon me, sir. I've lost my way.",
+      "shi": "You're a scholar, sir. Do you know the way?",
+      "seng": "Master, may I ask the way?",
+      "fu": "Ma'am, the streets of this town are a maze.",
+      "tong": "Little one, do you live near here?",
+      "jun": "Soldier, I mean no harm. I'm only asking the way.",
+      "li": "Brother, may I ask the way?"
+     }
+    },
+    {
+     "who": "doorman",
+     "say": "順著這條街，一直往西。",
+     "say_en": "Follow this street, straight on west.",
+     "src": "the map (he points west); 名画记 49 (看门人很热心给他指路)"
+    },
+    {
+     "who": "visitor",
+     "say": "往西……那邊樹都合攏了。",
+     "say_en": "West… the trees close in over there.",
+     "src": "名画记 49 (两侧街树相合，朦胧一片)"
+    },
+    {
+     "who": "doorman",
+     "say": "樹後頭還有路，只管走。",
+     "say_en": "There's road beyond the trees. Just keep going.",
+     "src": "our proposal (名画记 49: the scroll stops there, leaving suspense)"
+    },
+    {
+     "who": "keeper",
+     "think": "這路，該往哪裏走呢……",
+     "think_en": "This road, which way should it go…",
+     "optional": true,
+     "src": "余辉 2021 问道 (the painter asks the way for the country; the line is our proposal)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "visitor",
+       "say": "這盒點心，是給親戚的。",
+       "say_en": "This box of cakes is for my relatives.",
+       "src": "名画记 49 (手提着食盒); 余辉 2021 (点心匣子)",
+       "as": {
+        "guan": "官人莫笑，鄉下點心。"
+       },
+       "as_en": {
+        "guan": "Don't laugh, sir. Country cakes."
+       }
+      },
+      {
+       "who": "doorman",
+       "say": "外方人來，指個路是應當的。",
+       "say_en": "A stranger comes, you show him the way. That's only right.",
+       "src": "東京夢華錄 卷五 民俗 (從外新來…指引買賣之類)"
+      },
+      {
+       "who": "keeper",
+       "say": "京師人厚道，莫怕。",
+       "say_en": "Folk in the capital are decent. Don't be afraid.",
+       "src": "東京夢華錄 卷五 民俗 (若見外方人為都人淩欺，眾必救護之)"
+      },
+      {
+       "who": "visitor",
+       "say": "背著這包袱，走了一路了。",
+       "say_en": "I've carried this bundle the whole way.",
+       "src": "名画记 49 (肩上背着一个大包袱)"
+      },
+      {
+       "who": "peeker",
+       "say": "門口有個外鄉人！",
+       "say_en": "There's a stranger at the gate!",
+       "optional": true,
+       "src": "the map (a small head peeks round the door leaf); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "visitor",
+       "say": "這街走到頭，又是甚麼地方？",
+       "say_en": "And where does this street end up?",
+       "src": "名画记 49 (the scroll stops here, leaving endless suspense)"
+      },
+      {
+       "who": "doorman",
+       "say": "前頭霧濛濛的，我也說不清。",
+       "say_en": "It's all haze ahead. I can't rightly say.",
+       "src": "名画记 49 (朦胧一片)"
+      },
+      {
+       "who": "keeper",
+       "say": "認準了路再走，莫走歪了。",
+       "say_en": "Be sure of the road, then go. Don't stray.",
+       "src": "余辉 2021 问道 (the painter's wish for the right road; the line is our proposal)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V7.3",
+   "title": "門房閒話",
+   "title_en": "Gatehouse Gossip",
+   "host": "keeper",
+   "group": "S7.grp.gatehouse_1240",
+   "reading": "名画记 49: the brackets under the gate's eave and the mounting block mark an official household, next door to 赵太丞家. The map: the bearded gatekeeper sits on a low box seat by the fence, head tilted back, mouth open, hands raised, talking up to a man leaning at the gate's west post (a servant or second doorman). That the household's master is the broad-hatted official riding east down the street is our proposal (the map puts the retinue a few steps east; Hansen plate 26 pairs the Zhao pharmacy and the rider).",
+   "roles": {
+    "keeper": {
+     "fig": "gatekeeper_seated_1082",
+     "name": "門公",
+     "name_en": "gatekeeper",
+     "src": "the map (the seated gatekeeper, talking up to the man at the post)"
+    },
+    "post": {
+     "fig": "man_at_post_1118",
+     "name": "家僕",
+     "name_en": "servant",
+     "src": "the map (the man leaning at the gate's west post: a servant or second doorman)"
+    },
+    "peeker": {
+     "fig": "face_at_gate_door_1251",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the map (the small head at the open door leaf; a child is our reading)"
+    }
+   },
+   "beats": [
+    {
+     "who": "keeper",
+     "say": "有甚麼事？",
+     "say_en": "What's your business?",
+     "src": "our proposal (the gatekeeper of an official household, 名画记 49)",
+     "as": {
+      "guan": "官人來拜我家相公？",
+      "shi": "相公可是來投門狀的？",
+      "seng": "師父化緣，請往後門。",
+      "fu": "娘子找哪一家？",
+      "tong": "誰家的孩子？莫在門前耍。",
+      "jun": "軍爺有公事？",
+      "li": "送東西的？擱下罷。"
+     },
+     "as_en": {
+      "guan": "Come to call on my master, sir?",
+      "shi": "Have you come to leave your card, sir?",
+      "seng": "Alms, Master? Please try the back door.",
+      "fu": "Which house are you looking for, madam?",
+      "tong": "Whose child are you? No playing at the gate.",
+      "jun": "On official business, soldier?",
+      "li": "A delivery? Set it down."
+     }
+    },
+    {
+     "who": "post",
+     "say": "相公方纔騎馬出去了。",
+     "say_en": "The master has just ridden out.",
+     "src": "our proposal (the official riding east, the map)"
+    },
+    {
+     "who": "keeper",
+     "say": "戴著寬簷帽，往東去了。",
+     "say_en": "In his broad hat, heading east.",
+     "src": "the map (the bearded official in a very broad hat rides east)"
+    },
+    {
+     "who": "post",
+     "say": "怕又是哪家請酒。",
+     "say_en": "Some house's wine party again, I'll bet.",
+     "src": "名画记 48 (drinking was the fashion); our proposal"
+    },
+    {
+     "who": "keeper",
+     "say": "回來又要找趙太丞了。",
+     "say_en": "Then he'll be back needing Physician Zhao.",
+     "src": "名画记 48 (治酒所伤, the shop next door); our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": "看這斗拱、這上馬石，就知是誰家。",
+       "say_en": "These brackets, this mounting stone: you know whose house.",
+       "src": "名画记 49 (门屋檐下的斗拱和门前的上马石)"
+      },
+      {
+       "who": "post",
+       "say": "隔壁醫鋪，倒比咱們熱鬧。",
+       "say_en": "The medicine shop next door is busier than we are.",
+       "src": "名画记 49 (赵太丞家的隔壁); the map (patients at the shop)"
+      },
+      {
+       "who": "keeper",
+       "say": "看門的，坐得住就好。",
+       "say_en": "A gatekeeper's job is to sit tight.",
+       "src": "the map (he sits on his box seat); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "post",
+       "say": "那外鄉人又在看招牌了。",
+       "say_en": "That stranger's reading the signs again.",
+       "src": "the map (the visitor stands by the doctor's tall boards); our proposal"
+      },
+      {
+       "who": "keeper",
+       "say": "鄉下人，沒見過這些。",
+       "say_en": "Country folk. Never seen the like.",
+       "src": "余辉 2021 (a country man come to town); our proposal"
+      },
+      {
+       "who": "peeker",
+       "say": "我也要出去看！",
+       "say_en": "I want to go out and look too!",
+       "optional": true,
+       "src": "the map (the small head peeks round the door leaf); our proposal"
+      },
+      {
+       "who": "keeper",
+       "say": "回去，莫叫門檻絆著。",
+       "say_en": "Back inside. Don't trip on the threshold.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V7.4",
+   "title": "官人出行",
+   "title_en": "The Official Rides Out",
+   "host": "official",
+   "group": "S7.grp.official_retinue",
+   "reading": "The map: a bearded official in a very broad hat and a pale round-collared robe rides east, a thin stick (a riding whip?) behind his shoulder; a groom at the horse's head looks up at him, an attendant in pale with a pole walks in front, and behind the horse an attendant with mouth open carries a long folded object over his shoulder (a parasol or a long-handled fan: we read a parasol). Hansen plate 26 pairs him with the Zhao pharmacy. 余辉 2021: the scroll's few horses are officials' mounts or haul wine, not one a warhorse. Where he rides (the wine house) is our proposal.",
+   "roles": {
+    "official": {
+     "fig": "official_rider_1610",
+     "name": "官人",
+     "name_en": "official",
+     "src": "the map (the bearded official in a broad hat riding east)"
+    },
+    "front": {
+     "fig": "attendant_pale_1750",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "the map (the attendant in pale with a pole, going in front); 從人 as in 東京夢華錄 卷七 清明節"
+    },
+    "groom": {
+     "fig": "groom_1698",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "the map (the groom at the horse's head, face turned to the official)"
+    },
+    "bearer": {
+     "fig": "folded_object_bearer_1490",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "the map (the attendant carrying the long folded object, mouth open)"
+    }
+   },
+   "beats": [
+    {
+     "who": "official",
+     "say": "前頭的，讓一讓。",
+     "say_en": "You ahead there, make way.",
+     "src": "our proposal (he rides east down the street, the map)",
+     "as": {
+      "guan": "原來是同僚，失敬。",
+      "shi": "後生，可是應考的？",
+      "seng": "師父先請。",
+      "fu": "娘子先過。",
+      "tong": "小娃兒，當心馬蹄。",
+      "jun": "你是哪一營的？",
+      "li": "閃開些，莫擋道。"
+     },
+     "as_en": {
+      "guan": "Ah, a colleague. Forgive me.",
+      "shi": "Young man, are you sitting the exams?",
+      "seng": "After you, Master.",
+      "fu": "After you, madam.",
+      "tong": "Little one, mind the hooves.",
+      "jun": "Which camp are you from?",
+      "li": "Stand aside. Don't block the road."
+     }
+    },
+    {
+     "who": "front",
+     "say": "讓道，官人過來了！",
+     "say_en": "Make way, the official's coming!",
+     "src": "the map (the attendant with a pole goes in front); our proposal"
+    },
+    {
+     "who": "groom",
+     "say": "官人坐穩，前頭人多。",
+     "say_en": "Sit tight, sir. Crowds ahead.",
+     "src": "the map (the groom at the horse's head looks up at the official)"
+    },
+    {
+     "who": "bearer",
+     "say": "官人，傘要撐起麼？",
+     "say_en": "Sir, shall I open the parasol?",
+     "src": "the map (the long folded object, a parasol or long fan; his mouth open)"
+    },
+    {
+     "who": "official",
+     "say": "日頭不大，收著罷。",
+     "say_en": "The sun's not strong. Keep it folded.",
+     "src": "our proposal (a spring day at 清明)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "bearer",
+       "say": "這傘扛了一路，肩都酸了。",
+       "say_en": "Carried this parasol the whole way. My shoulder aches.",
+       "src": "the map (the folded object over his shoulder); our proposal"
+      },
+      {
+       "who": "groom",
+       "say": "官人，往正店去，還是回府？",
+       "say_en": "Sir, to the wine house, or home?",
+       "src": "our proposal (he rides east, toward the inner city's 正店)"
+      },
+      {
+       "who": "official",
+       "say": "先去孫羊店，吃一盞再說。",
+       "say_en": "The Sun Yang house first. A cup, then we'll see.",
+       "src": "名画记 36 (孙羊店 正店); 名画记 48 (drinking was the fashion); our proposal"
+      },
+      {
+       "who": "front",
+       "think": "又要等到天黑了。",
+       "think_en": "We'll be waiting till dark again.",
+       "optional": true,
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": "滿街的馬，不是坐騎，就是拉酒。",
+       "say_en": "Every horse in the street is a mount or hauls wine.",
+       "src": "余辉 2021 (the few horses are officials' mounts or pull wine carts)"
+      },
+      {
+       "who": "official",
+       "say": "太平日久，要戰馬何用？",
+       "say_en": "Long years of peace. What use are warhorses?",
+       "src": "余辉 2021 (宋祁, 范仲淹: fewer horses, more foot); 東京夢華錄 序 (太平日久)"
+      },
+      {
+       "who": "groom",
+       "think": "這話，可不敢接。",
+       "think_en": "Best not answer that.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "chatter": [
+  {
+   "id": "c7.gate",
+   "title": "門房指路",
+   "title_en": "Directions at the Gate",
+   "mark": "voice",
+   "group": "S7.grp.gatehouse_1240",
+   "reading": "名画记 49 (the stranger with a food box and a bundle is shown the way; the trees close in a haze and the scroll stops); 余辉 2021 问道; 東京夢華錄 卷五 民俗 (townsfolk show newcomers the way); the map: the seated gatekeeper talks up to the man at the post while the man in a dark cap points the visitor west; the visitor stands by the doctor's tall boards, so he reads the sign (the wine thread, our proposal). The head at the door leaf only peeks (optional).",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "visitor": {
+     "fig": "visitor_food_box_1308",
+     "name": "外鄉人",
+     "name_en": "stranger",
+     "src": "名画记 49"
+    },
+    "doorman": {
+     "fig": "pointing_man_1370",
+     "name": "門子",
+     "name_en": "doorman",
+     "src": "map (pointing the way)"
+    },
+    "keeper": {
+     "fig": "gatekeeper_seated_1082",
+     "name": "門公",
+     "name_en": "gatekeeper",
+     "src": "map (seated, talking)"
+    },
+    "post": {
+     "fig": "man_at_post_1118",
+     "name": "家僕",
+     "name_en": "servant",
+     "src": "map (leaning at the gate post)"
+    },
+    "peeker": {
+     "fig": "face_at_gate_door_1251",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (peeking at the door leaf; a child is our reading)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "visitor",
+       "say": [
+        "借問一聲，投親往哪走？",
+        "煩請指條路。",
+        "借問，往西怎麼走？"
+       ],
+       "say_en": [
+        "Excuse me, which way to my kin's?",
+        "Could you point me the way?",
+        "Excuse me, how do I go west?"
+       ],
+       "src": "名画记 49; 余辉 2021 (lost, he asks the way)"
+      },
+      {
+       "who": "doorman",
+       "say": [
+        "順著這條街，一直往西。",
+        "往西，過了那棵老柳。"
+       ],
+       "say_en": [
+        "Follow this street, straight on west.",
+        "West, past that old willow."
+       ],
+       "when": [
+        "point_way"
+       ],
+       "src": "the map (he points west; the old willow at the cut edge)"
+      },
+      {
+       "who": "visitor",
+       "say": [
+        "多謝指點！",
+        "曉得了，多謝。"
+       ],
+       "say_en": [
+        "Thank you for your help!",
+        "I see. Thank you."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "step": "wine.5",
+     "beats": [
+      {
+       "who": "visitor",
+       "say": [
+        "治酒所傷，真方集香丸……",
+        "這牌上寫的，是治酒傷？"
+       ],
+       "say_en": [
+        "'For harm done by wine: true remedy, Incense Pills'…",
+        "This sign says it cures harm from wine?"
+       ],
+       "src": "名画记 48 (the one board legible in full); the map (he stands by the doctor's tall boards)"
+      },
+      {
+       "who": "doorman",
+       "say": [
+        "前頭正店腳店，天天滿座。",
+        "城裏酒肆多，喝傷的也多。"
+       ],
+       "say_en": [
+        "The wine houses and taverns ahead are full every day.",
+        "Many taverns in town, and many hurt by drink."
+       ],
+       "src": "名画记 48 (正店和脚店顾客盈门，可见当时喝酒成风)"
+      },
+      {
+       "who": "visitor",
+       "say": [
+        "鄉下人一年也醉不了幾回。",
+        "喝酒喝出病，城裏人真闊。"
+       ],
+       "say_en": [
+        "Back home we're drunk only a few times a year.",
+        "Drinking yourself sick: town folk are rich."
+       ],
+       "src": "余辉 2021 (the rich who drink themselves sick against the hungry poor); our proposal"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "keeper",
+       "say": [
+        "今日門前，倒是熱鬧。",
+        "相公出門了，咱們歇歇。"
+       ],
+       "say_en": [
+        "Busy at the gate today.",
+        "The master's gone out. We can rest."
+       ],
+       "src": "the map (he talks up to the man at the post); our proposal"
+      },
+      {
+       "who": "post",
+       "say": [
+        "隔壁醫鋪，又來了看病的。",
+        "正好，曬曬日頭。"
+       ],
+       "say_en": [
+        "More patients at the medicine shop next door.",
+        "Good. A bit of sun, then."
+       ],
+       "src": "名画记 49 (赵太丞家的隔壁); the map (leaning at the post)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "peeker",
+       "say": [
+        "那人背的是甚麼？",
+        "門外有個外鄉人。"
+       ],
+       "say_en": [
+        "What's that man carrying on his back?",
+        "There's a stranger outside."
+       ],
+       "optional": true,
+       "src": "the map (the small head at the door leaf); our proposal"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "回去，莫探頭探腦。",
+        "莫出來，外頭車馬多。"
+       ],
+       "say_en": [
+        "Back inside. Stop peeking.",
+        "Stay in. Lots of horses out here."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "think": [
+        "這條路，往哪裏去呢……",
+        "問路的人，一年比一年多。"
+       ],
+       "think_en": [
+        "This road, where does it lead…",
+        "More people asking the way every year."
+       ],
+       "src": "余辉 2021 问道 (the painter asks the way; the lines are our proposal)"
+      },
+      {
+       "who": "doorman",
+       "say": [
+        "前頭樹合攏了，霧濛濛的。",
+        "走到頭，就看不見了。"
+       ],
+       "say_en": [
+        "Ahead the trees close in, all haze.",
+        "Walk to the end and you can't see a thing."
+       ],
+       "src": "名画记 49 (两侧街树相合，朦胧一片，画卷却在这里戛然而止)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c7.doctor",
+   "title": "太丞問病",
+   "title_en": "At the Physician's",
+   "mark": "bowl",
+   "group": "S7.grp.zhao_taicheng_patients",
+   "reading": "名画记 48 (the counter, the paper and the abacus; the board 治酒所伤真方集香丸; drinking was the fashion); 余辉 2021 问病 (two women and a child; the husbands drunk the day before, his guess; a court physician; 五劳七伤); 東京夢華錄 卷三 (doctors for children on 馬行街) and 卷七 清明節 (cups set out under the trees, drunk on the way home); the map: the doctor reaches to the child on the seated woman's lap, the second woman stands behind. We follow the map: the doctor is already examining the child.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "doctor": {
+     "fig": "doctor_dark_robe_1615",
+     "name": "太丞",
+     "name_en": "Imperial Physician",
+     "src": "名画记 48; the map (examining the child)"
+    },
+    "mother": {
+     "fig": "seated_woman_child_1535",
+     "name": "婦人",
+     "name_en": "woman",
+     "src": "map (holding the child on her lap)"
+    },
+    "companion": {
+     "fig": "standing_woman_1567",
+     "name": "婦人",
+     "name_en": "woman",
+     "src": "map (standing behind); 余辉 2021 (two women)"
+    },
+    "child": {
+     "fig": "child_on_lap_1546",
+     "name": "孩兒",
+     "name_en": "child",
+     "src": "map (on the woman's lap)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "mother",
+       "say": [
+        "太丞，孩兒夜裏發熱。",
+        "太丞，給瞧瞧這孩兒。",
+        "孩兒哭了一宿，不肯吃奶。"
+       ],
+       "say_en": [
+        "Physician, the child had a fever in the night.",
+        "Physician, please look at this child.",
+        "The child cried all night and won't feed."
+       ],
+       "src": "our proposal (a mother brings her child, the map)"
+      },
+      {
+       "who": "doctor",
+       "say": [
+        "莫慌，我摸摸額頭。",
+        "莫急，待我瞧瞧。"
+       ],
+       "say_en": [
+        "Don't fret. Let me feel the brow.",
+        "Easy now. Let me have a look."
+       ],
+       "src": "the map (he reaches with both hands to the child)"
+      },
+      {
+       "who": "child",
+       "say": [
+        "娘……",
+        "嗚哇——"
+       ],
+       "say_en": [
+        "Mama…",
+        "Waaah —"
+       ],
+       "optional": true,
+       "src": "our proposal (the small child faces the doctor's hands)"
+      }
+     ]
+    },
+    {
+     "step": "wine.5",
+     "beats": [
+      {
+       "who": "companion",
+       "say": [
+        "還有我家丈夫，昨夜又醉了。",
+        "順帶給我家丈夫抓些藥。"
+       ],
+       "say_en": [
+        "And my husband got drunk again last night.",
+        "Some medicine for my husband too, while we're here."
+       ],
+       "src": "余辉 2021 (his guess: the husbands drank till drunk the day before)"
+      },
+      {
+       "who": "doctor",
+       "say": [
+        "門外牌上寫著：治酒所傷。",
+        "集香丸，專治酒所傷。"
+       ],
+       "say_en": [
+        "The sign outside says it: for harm done by wine.",
+        "Incense Pills, made for harm done by wine."
+       ],
+       "src": "名画记 48 (治酒所伤真方集香丸); 余辉 2021 (专治酒所伤)"
+      },
+      {
+       "who": "companion",
+       "say": [
+        "這城裏，哪家不喝酒？",
+        "清明出城，哪個不醉？"
+       ],
+       "say_en": [
+        "In this town, which house doesn't drink?",
+        "Out of town at Qingming, who doesn't get drunk?"
+       ],
+       "src": "名画记 48 (喝酒成风); 東京夢華錄 卷七 清明節 (羅列杯盤，互相勸酬…醉歸院落)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "doctor",
+       "think": [
+        "宮裏上下，也是喝出病來的。",
+        "這一條街，滿是酒氣。"
+       ],
+       "think_en": [
+        "At court too, high and low drank themselves ill.",
+        "This whole street smells of wine."
+       ],
+       "src": "余辉 2021 (a court physician; the whole city steeped in wine)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "companion",
+       "say": [
+        "太丞是宮裏出來的，信得過。",
+        "馬行街那邊，也有醫小兒的。"
+       ],
+       "say_en": [
+        "The physician served at court. You can trust him.",
+        "Over on Maxing Street there are children's doctors too."
+       ],
+       "src": "余辉 2021 (赵太丞 served the court); 東京夢華錄 卷三 馬行街北諸醫鋪 (醫小兒)"
+      },
+      {
+       "who": "mother",
+       "say": [
+        "還是太丞穩當。",
+        "就認準這一家。"
+       ],
+       "say_en": [
+        "This physician is the safe choice.",
+        "This is the house we trust."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "doctor",
+       "say": [
+        "五勞七傷，也治得。",
+        "藥單開了，櫃上抓藥。"
+       ],
+       "say_en": [
+        "The Five Strains and Seven Injuries, those too.",
+        "The prescription's written. Fill it at the counter."
+       ],
+       "src": "the map (the board on the west column reads 五勞七傷□□□); 余辉 2021 (五劳七伤); 名画记 48 (a paper on the counter, perhaps a prescription)"
+      },
+      {
+       "who": "companion",
+       "think": [
+        "那算盤，打得真響。",
+        "看病的錢，又不知多少。"
+       ],
+       "think_en": [
+        "That abacus clacks away.",
+        "And who knows what the doctoring will cost."
+       ],
+       "optional": true,
+       "src": "名画记 48 (an oblong thing on the counter much like an abacus); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c7.retinue",
+   "title": "官人出行",
+   "title_en": "The Official Rides Out",
+   "mark": "fan",
+   "group": "S7.grp.official_retinue",
+   "reading": "The map: the broad-hatted official rides east, the groom at the horse's head looking up at him, the attendant in pale with a pole in front, the attendant with the long folded object (a parasol, our reading) behind, mouth open. 余辉 2021: the few horses in the scroll are officials' mounts or haul wine, not one a warhorse. The wine house is our proposal.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "official": {
+     "fig": "official_rider_1610",
+     "name": "官人",
+     "name_en": "official",
+     "src": "map (riding east)"
+    },
+    "front": {
+     "fig": "attendant_pale_1750",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "map (in front, with a pole)"
+    },
+    "groom": {
+     "fig": "groom_1698",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "map (at the horse's head)"
+    },
+    "bearer": {
+     "fig": "folded_object_bearer_1490",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "map (carrying the folded parasol, mouth open)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "front",
+       "say": [
+        "讓道，讓道！",
+        "前頭的，閃一閃！"
+       ],
+       "say_en": [
+        "Make way, make way!",
+        "You ahead, step aside!"
+       ],
+       "src": "the map (the attendant with a pole goes in front); our proposal"
+      },
+      {
+       "who": "groom",
+       "say": [
+        "官人坐穩了。",
+        "慢些，前頭人多。"
+       ],
+       "say_en": [
+        "Sit tight, sir.",
+        "Easy, crowds ahead."
+       ],
+       "src": "the map (the groom at the horse's head looks up at the official)"
+      },
+      {
+       "who": "official",
+       "think": [
+        "今日街上，倒也熱鬧。",
+        "春日正好。"
+       ],
+       "think_en": [
+        "Lively on the street today.",
+        "A fine spring day."
+       ],
+       "src": "our proposal (清明, early spring)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bearer",
+       "say": [
+        "官人，傘要撐起麼？",
+        "日頭上來了，撐傘麼？"
+       ],
+       "say_en": [
+        "Sir, shall I open the parasol?",
+        "The sun's up. Open the parasol?"
+       ],
+       "src": "the map (the long folded object; his mouth open)"
+      },
+      {
+       "who": "official",
+       "say": [
+        "不必，收著罷。",
+        "不忙，到了再說。"
+       ],
+       "say_en": [
+        "No need. Keep it folded.",
+        "No hurry. When we get there."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bearer",
+       "say": [
+        "這傘扛了一路，肩都酸了。",
+        "跟著馬走，腿都走細了。"
+       ],
+       "say_en": [
+        "Carried this parasol the whole way. My shoulder aches.",
+        "Walking behind a horse wears your legs thin."
+       ],
+       "src": "the map (the folded object over his shoulder); our proposal"
+      },
+      {
+       "who": "front",
+       "say": [
+        "少說兩句，官人聽著呢。",
+        "噓，莫叫官人聽見。"
+       ],
+       "say_en": [
+        "Less talk. The master can hear.",
+        "Shh, don't let the master hear."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "think": [
+        "滿城難見一匹戰馬。",
+        "這馬，也只配馱官人逛街。"
+       ],
+       "think_en": [
+        "Not one warhorse in the whole town.",
+        "This horse is only fit for carrying the master about."
+       ],
+       "src": "余辉 2021 (not one proper warhorse among the scroll's fifty-odd animals; the few horses are officials' mounts)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "groom",
+       "say": [
+        "官人，往正店去？",
+        "官人，還是回府罷？"
+       ],
+       "say_en": [
+        "Sir, to the wine house?",
+        "Sir, home, perhaps?"
+       ],
+       "src": "our proposal (he rides east, toward the inner city's 正店)"
+      },
+      {
+       "who": "official",
+       "say": [
+        "先吃一盞再說。",
+        "回府，今日不吃酒了。"
+       ],
+       "say_en": [
+        "A cup first, then we'll see.",
+        "Home. No wine today."
+       ],
+       "src": "名画记 48 (drinking was the fashion); our proposal"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "id": "b7.water",
+   "who": {
+    "fig": "bucket_man_1872",
+    "name": "挑水的",
+    "name_en": "water carrier",
+    "src": "the map (bending over his bucket at the well's west end, a pole across his shoulder)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "起——這擔水真沉。",
+    "藥鋪煎藥，一日要幾擔水。",
+    "井水清，煎藥正好。"
+   ],
+   "say_en": [
+    "Up — this load of water's heavy.",
+    "The medicine shop brews all day. It takes loads of water.",
+    "Clear well water, just right for brewing medicine."
+   ],
+   "src": "the map (bucket_lift at the well's west end); 名画记 47 (water for a city of a million), 48 (the doctor's shop right by the well); the medicine is our proposal"
+  },
+  {
+   "id": "b7.porter",
+   "who": {
+    "fig": "porter_baskets_1255",
+    "name": "挑夫",
+    "name_en": "porter",
+    "src": "the map (striding with two round baskets on a shoulder pole)"
+   },
+   "close": true,
+   "every": [
+    40,
+    90
+   ],
+   "say": [
+    "借過，借過。",
+    "擔子沉，讓一讓。",
+    "這兩筐，壓得肩疼。"
+   ],
+   "say_en": [
+    "Coming through, coming through.",
+    "Heavy load. Make way.",
+    "These two baskets bite into the shoulder."
+   ],
+   "src": "the map (the porter with shoulder-pole baskets); our proposal",
+   "as": {
+    "guan": [
+     "官人借過！"
+    ],
+    "fu": [
+     "娘子讓讓！"
+    ],
+    "tong": [
+     "小娃兒閃開！"
+    ],
+    "seng": [
+     "師父借過！"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "By your leave, sir!"
+    ],
+    "fu": [
+     "Mind yourself, madam!"
+    ],
+    "tong": [
+     "Out of the way, kid!"
+    ],
+    "seng": [
+     "By your leave, Master!"
+    ]
+   }
+  },
+  {
+   "id": "b7.bundle",
+   "who": {
+    "fig": "bundle_man_1976",
+    "name": "行人",
+    "name_en": "passer-by",
+    "src": "the map (walking with both hands holding a small bundle at his chest)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "think": [
+    "揣緊了，莫叫人摸了去。",
+    "人多，包兒抱穩。"
+   ],
+   "think_en": [
+    "Hold it tight. Don't let anyone lift it.",
+    "Crowded. Hold the bundle close."
+   ],
+   "src": "the map (the bundle held at his chest); our proposal"
+  }
+ ]
+}

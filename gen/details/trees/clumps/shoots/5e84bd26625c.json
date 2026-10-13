@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is a tree painted in that style; copy exactly how its thin upright shoots and twigs with their buds are drawn: the same stroke, line weight, colours and spacing.\n\nPaint a sheet of four separate sprays of young bare shoots, arranged in a 2 by 2 grid, each one alone in its own quarter of the picture with clear white space all round it, never touching another one or the picture's edge.\n\nEach one is a single airy spray of many long, thin, straight shoots that spring from one small point at the bottom centre of its quarter and rise steeply and fan out, each branching once or twice into finer upright twigs, red-brown to grey-brown, the tips carrying tiny dark swelling buds and a few fresh pale green specks (about #93a866). There is no trunk below the point. The spray fills most of its quarter.\n\nThe four differ only in shape: (1) a tall narrow vase-shaped spray; (2) a wide spray, as wide as tall; (3) a spray leaning to the left; (4) a spray leaning to the right.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed silk of the scroll. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no trunk, no branch, no ground, no shadow, no text, no seal, no grid lines, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/shoot_tree_1/57c7a2c5b535_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "5e84bd26625c",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 50.2,
+ "attempts": 1,
+ "idempotency_key": "96e8b5bf-78af-4177-86f9-bcc60a9cbc23",
+ "request_id": "4975c9f5-c019-43f7-9224-e66d88c2d59d",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4062,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3759,
+   "text_tokens": 303
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4062,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 3759,
+   "text_tokens": 303
+  },
+  "total_tokens": 5712
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/67001150-f955-49a5-9756-fd52f7749219"
+ ],
+ "files": [
+  "gen/details/trees/clumps/shoots/5e84bd26625c_0.png"
+ ]
+}

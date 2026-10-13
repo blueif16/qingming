@@ -1,0 +1,35 @@
+{
+ "character": "idler",
+ "base": "push_flank",
+ "spec": "ox_driver_10635",
+ "frame": "proposed",
+ "sole_shift_m": 0,
+ "clip": "push_flank~ox_driver_10635",
+ "frames": 120,
+ "duration": 5.95,
+ "verify_max_m": 0.001,
+ "locomotion": true,
+ "ops": [
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "residual_max_m": 0.021,
+   "residual_mean_m": 0.001
+  }
+ ],
+ "max_turn_deg": {
+  "LeftArm": 17,
+  "LeftForeArm": 37,
+  "LeftHand": 28,
+  "RightArm": 71,
+  "RightForeArm": 59,
+  "RightHand": 45,
+  "Hips": 0
+ }
+}

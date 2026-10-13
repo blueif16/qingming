@@ -949,15 +949,15 @@
   ],
   "expect": {
    "X": [
-    91.7,
-    92.3
+    91.3,
+    92.5
    ],
    "H": [
     -0.7,
     0.1
    ]
   },
-  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json)"
+  "why": "edge:shore; the stop D is read from the trace (the shore line from river_plan.json) | fix-boats 2026-10-13 07:15: since the boats export at 06:44 (S4b's boat_big_cabin_14928's deck collider follows its deck boards' stations), a walker that reaches the water's edge here meets that moored boat's stern collider (D 13.05) as it meets the shore wall, and which one turns it decides the slide: west along the wall to X 91.5, or east along the hull to X 92.4 (a single run from a fresh load: east; the full suite 07:10: west, 211/211). Either way the edge stops you at D 13.0-13.2: X up to 92.5"
  },
  {
   "label": "shore: the water's edge stops you (the west reach by the riverside hall)",

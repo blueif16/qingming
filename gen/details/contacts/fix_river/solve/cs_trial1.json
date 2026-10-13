@@ -1,0 +1,173 @@
+[
+ {
+  "id": "child_29674",
+  "model": "child_robed",
+  "clips": [
+   "reach",
+   "look"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0
+   ],
+   "facing": 315
+  },
+  "nudge": [
+   0.31,
+   -0.51
+  ],
+  "facing_deg": 314,
+  "moved_m": 0.6,
+  "turned_deg": -1,
+  "before": {
+   "cost": 0.505,
+   "fails": "contact:table palm_L 0.6; contact:table palm_R 0.506",
+   "contacts": "reach:palm_L->S1.grd.rock_29745 q0.6/0.6 FAIL; reach:palm_R->S1.grd.rock_29745 q0.506/0.506 FAIL"
+  },
+  "after": {
+   "cost": 0.004,
+   "fails": "contact:table palm_L 0.136",
+   "contacts": "reach:palm_L->S1.grd.rock_29745 q0.136/0.136 FAIL; reach:palm_R->S1.grd.rock_29745 q0.003/0.003 PASS",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 11.42
+ },
+ {
+  "id": "stall_customer_29280",
+  "model": "farmer",
+  "clips": [
+   "drink"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0.32
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   0.41,
+   0.31
+  ],
+  "facing_deg": 0,
+  "moved_m": 0.41,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.116,
+   "fails": "contact:seat seat 0.354; contact:floor(clip) sole_L -0.033",
+   "contacts": "drink:seat->- q0.354/0.35 FAIL; drink:sole_L->ground q-0.031/-0.033 FAIL; drink:sole_R->ground q0.006/0.005 PASS"
+  },
+  "after": {
+   "cost": 0.113,
+   "fails": "contact:seat seat 0.35",
+   "contacts": "drink:seat->- q0.35/0.346 FAIL; drink:sole_L->ground q-0.02/-0.022 PASS; drink:sole_R->ground q0.017/0.016 PASS",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 12.286
+ },
+ {
+  "id": "man_at_post_29812",
+  "model": "robed_man",
+  "clips": [
+   "beckon_lean"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0
+   ],
+   "facing": 180
+  },
+  "nudge": [
+   0.5,
+   -0.15
+  ],
+  "facing_deg": 187,
+  "moved_m": 0.52,
+  "turned_deg": 7,
+  "before": {
+   "cost": 0.072,
+   "fails": "contact:rail forearm_L 0.294",
+   "contacts": "beckon_lean:forearm_L->S1.prop.post_crossbar_29862 q0.294/0.273 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "beckon_lean:forearm_L->S1.prop.post_crossbar_29862 q0.034/0.011 PASS",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 8.017
+ },
+ {
+  "id": "sedan_bearer_front_30828",
+  "model": "bearer",
+  "clips": [
+   "sedan_carry"
+  ],
+  "base": {
+   "nudge": [
+    -0.26,
+    0.32
+   ],
+   "facing": 205
+  },
+  "nudge": [
+   0.08,
+   0.63
+  ],
+  "facing_deg": 195,
+  "moved_m": 0.46,
+  "turned_deg": -10,
+  "before": {
+   "cost": 0.399,
+   "fails": "contact:vehicle shoulder_R 0.315; contact:vehicle palm_L 0.466; contact:vehicle palm_R 0.318",
+   "contacts": "sedan_carry:shoulder_R->S1.veh.sedan_willow_30805 q0.315/0.115 FAIL; sedan_carry:palm_L->S1.veh.sedan_willow_30805 q0.466/0.301 FAIL; sedan_carry:palm_R->S1.veh.sedan_willow_30805 q0.318/0.235 FAIL"
+  },
+  "after": {
+   "cost": 0.11,
+   "fails": "contact:vehicle shoulder_R 0.134; contact:vehicle palm_L 0.185; contact:vehicle palm_R 0.283",
+   "contacts": "sedan_carry:shoulder_R->S1.veh.sedan_willow_30805 q0.134/0.067 FAIL; sedan_carry:palm_L->S1.veh.sedan_willow_30805 q0.185/0.098 FAIL; sedan_carry:palm_R->S1.veh.sedan_willow_30805 q0.283/0.19 FAIL",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 2.206
+ },
+ {
+  "id": "sedan_bearer_rear_30990",
+  "model": "bearer",
+  "clips": [
+   "sedan_carry"
+  ],
+  "base": {
+   "nudge": [
+    0.02,
+    0.22
+   ],
+   "facing": 205
+  },
+  "nudge": [
+   -0.57,
+   0.17
+  ],
+  "facing_deg": 189,
+  "moved_m": 0.59,
+  "turned_deg": -16,
+  "before": {
+   "cost": 0.315,
+   "fails": "contact:vehicle shoulder_R 0.327; contact:vehicle palm_L 0.364; contact:vehicle palm_R 0.315",
+   "contacts": "sedan_carry:shoulder_R->S1.veh.sedan_willow_30805 q0.327/0.151 FAIL; sedan_carry:palm_L->S1.veh.sedan_willow_30805 q0.364/0.266 FAIL; sedan_carry:palm_R->S1.veh.sedan_willow_30805 q0.315/0.248 FAIL"
+  },
+  "after": {
+   "cost": 0.13,
+   "fails": "contact:vehicle shoulder_R 0.156; contact:vehicle palm_L 0.203; contact:vehicle palm_R 0.297",
+   "contacts": "sedan_carry:shoulder_R->S1.veh.sedan_willow_30805 q0.156/0.085 FAIL; sedan_carry:palm_L->S1.veh.sedan_willow_30805 q0.203/0.111 FAIL; sedan_carry:palm_R->S1.veh.sedan_willow_30805 q0.297/0.216 FAIL",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 0.824
+ }
+]

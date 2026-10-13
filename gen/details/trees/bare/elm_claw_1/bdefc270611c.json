@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is one tree painted in that style.\n\nPaint the SAME tree again as the bare framework a 3D model will be built from: exactly the same trunk, the same root flare, the same lean, the same forks, the same main limbs and the same knobbly heads, each in the same place, at the same size and angle as in image 2, in the same picture frame. Remove everything thin: every shoot, whip, twig, needle, leaf, bud and spray is gone. Each limb ends cleanly in its rounded knobbly head (or a short clean cut stub where the fine growth began), so only the solid wood is left.\n\nThis is a bare elm: a gnarled, knotted trunk with paler bark patches and dark hollows that twists up and splits into crooked limbs, which fork again into a few thinner crooked branches. Keep the trunk, the limbs and their first forks, each branch ending in a short blunt stub; the whole dense mass of thin crab-claw twigs and buds is removed.\n\nKeep image 2's bark exactly: its colours, mottling, knots, burls, hollows, hatching and dark-brown ink outlines, in true natural daylight colours of the real tree, never the yellowed silk of the scroll. Even soft light from the front, no cast shadows.\n\nThe whole tree from the foot of the trunk to the top of the highest limb, centred as in image 2, nothing cut off. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no shadow, no mist, no other objects, no text, no seal, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/elm_claw_1/aa521d48b1c0_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "bdefc270611c",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 33.2,
+ "attempts": 1,
+ "idempotency_key": "b39add00-a459-4b70-b7f3-3c5d3ae0345f",
+ "request_id": "668d9cf3-e56c-481a-b237-e6dfdf4e94fe",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4946,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 357
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4946,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 357
+  },
+  "total_tokens": 6530
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/1592349e-8f31-4427-bec6-95e3a399ec9b"
+ ],
+ "files": [
+  "gen/details/trees/bare/elm_claw_1/bdefc270611c_0.png"
+ ]
+}

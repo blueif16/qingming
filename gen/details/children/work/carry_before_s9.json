@@ -1,0 +1,619 @@
+{
+ "_about": "The carried children (tools/carry_pose.mjs bakes them, tools/carry_check.mjs checks them). Per prop: carrier, child (the rigged character worn), height_m (the child's standing height), tris (decimation budget), recipe and its numbers p, sites (carrier surface sites: the point nearest to joint + off, off in the carrier's body frame x left / y up / z forward, or in the axes of joint `axes`; snapped onto the triangles of `bones`), contacts (site = a carrier site, child = the child's bones whose surface must touch it; tol_bind / tol_cycle the gap limits, m). The clip and bind time are the carrier's characters/props.json entry.",
+ "child_on_back": {
+  "carrier": "idler",
+  "child": "child",
+  "height_m": 0.85,
+  "tris": 2000,
+  "recipe": "back",
+  "p": {
+   "pelvis": [-0.07227781264079444, 0.030440923441743775, -0.2865238445959934],
+   "lean": -0.280735676015041,
+   "roll": 0.4279961852640658,
+   "hunch": -0.1,
+   "head_yaw": -0.8260088789645138,
+   "head_pitch": -0.692456495626623,
+   "hand_r": 0.035256329499767675,
+   "knee_r": 0.1021479740712975,
+   "shin_drop": 0.9576279798932033,
+   "shin_out": 0.11915361695306642,
+   "head_roll": -0.4295516377132692,
+   "elbow_out": 0,
+   "elbow_back": 0.4000000000000001,
+   "elbow_down": -0.057952755861132105,
+   "head_at": [0.15656358026801775, -0.052727943536663546, -0.10881709075710151]
+  },
+  "sites": {
+   "Left shoulder": {
+    "joint": "LeftArm",
+    "axes": "Spine",
+    "off": [-0.03, 0.06, -0.07],
+    "bones": ["LeftShoulder", "LeftArm", "Spine", "neck"]
+   },
+   "Right shoulder": {
+    "joint": "RightArm",
+    "axes": "Spine",
+    "off": [0.03, 0.06, -0.07],
+    "bones": ["RightShoulder", "RightArm", "Spine", "neck"]
+   },
+   "Left flank": {
+    "joint": "Hips",
+    "axes": "Spine",
+    "off": [0.2, 0.04, -0.17],
+    "bones": ["Hips", "Spine02", "LeftUpLeg"]
+   },
+   "Right flank": {
+    "joint": "Hips",
+    "axes": "Spine",
+    "off": [-0.2, 0.04, -0.17],
+    "bones": ["Hips", "Spine02", "RightUpLeg"]
+   },
+   "Left palm": {
+    "joint": "LeftHand",
+    "off": [0, 0.03, -0.03],
+    "bones": ["LeftHand"]
+   },
+   "Right palm": {
+    "joint": "RightHand",
+    "off": [0, 0.03, -0.03],
+    "bones": ["RightHand"]
+   },
+   "upper back": {
+    "joint": "Spine",
+    "axes": "Spine",
+    "off": [0, -0.05, -0.3],
+    "bones": ["Spine", "Spine01", "Spine02"]
+   }
+  },
+  "contacts": [
+   {
+    "name": "child L hand on his L shoulder",
+    "site": "Left shoulder",
+    "child": ["LeftHand"]
+   },
+   {
+    "name": "child R hand on his R shoulder",
+    "site": "Right shoulder",
+    "child": ["RightHand"]
+   },
+   {
+    "name": "child L thigh at his L flank",
+    "site": "Left flank",
+    "child": ["LeftUpLeg", "LeftLeg"]
+   },
+   {
+    "name": "child R thigh at his R flank",
+    "site": "Right flank",
+    "child": ["RightUpLeg", "RightLeg"]
+   },
+   {
+    "name": "his L palm under the child",
+    "site": "Left palm",
+    "child": ["LeftUpLeg", "Hips"]
+   },
+   {
+    "name": "his R palm under the child",
+    "site": "Right palm",
+    "child": ["RightUpLeg", "Hips"]
+   },
+   {
+    "name": "child chest on his upper back",
+    "site": "upper back",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftShoulder", "RightShoulder"]
+   }
+  ],
+  "bone": "Spine",
+  "free": {
+   "pelvis.0": [-0.1, 0.1],
+   "pelvis.1": [-0.05, 0.15],
+   "pelvis.2": [-0.45, -0.25],
+   "lean": [-0.3, 0.3],
+   "roll": [-0.5, 0.5],
+   "hunch": [-0.1, 0.5],
+   "head_yaw": [-0.9, 0.9],
+   "head_pitch": [-0.7, 0.5],
+   "knee_r": [0.02, 0.12],
+   "shin_drop": [0.8, 0.99],
+   "shin_out": [0, 0.25],
+   "head_roll": [-0.5, 0.5],
+   "elbow_out": [0, 0.6],
+   "elbow_back": [-0.2, 0.4],
+   "elbow_down": [-0.3, 0.3],
+   "hand_r": [0.005, 0.04],
+   "head_at.0": [0.05, 0.2],
+   "head_at.1": [-0.12, 0.08],
+   "head_at.2": [-0.22, -0.02]
+  }
+ },
+ "child_on_shoulders": {
+  "carrier": "townsman",
+  "child": "child",
+  "height_m": 0.85,
+  "tris": 2000,
+  "recipe": "shoulders",
+  "bone": "Spine",
+  "preview_at": "neck",
+  "p": {
+   "pelvis": [-0.005582203102308461, 0.11434836977092852, -0.05308988342134585],
+   "lean": -0.14523578635623444,
+   "roll": -0.0526470880558442,
+   "hunch": 0.3188475995497348,
+   "head_yaw": 0,
+   "head_pitch": 0.024149256158705223,
+   "knee_r": 0.045,
+   "shin_r": 0.025117808871223175,
+   "shin_up": 0.030401643440054443,
+   "knee_up": 0.14901564040322493,
+   "hand_r": 0.017317245692204643,
+   "elbow_out": 0.46321138401547796,
+   "elbow_back": 0.2785818628313553,
+   "elbow_down": 0.01895177384614516
+  },
+  "free": {
+   "pelvis.0": [-0.05, 0.05],
+   "pelvis.1": [0.02, 0.15],
+   "pelvis.2": [-0.2, 0],
+   "lean": [-0.2, 0.4],
+   "roll": [-0.2, 0.2],
+   "hunch": [-0.2, 0.5],
+   "head_pitch": [-0.3, 0.5],
+   "shin_r": [0, 0.06],
+   "shin_up": [-0.06, 0.06],
+   "hand_r": [0.005, 0.04],
+   "elbow_out": [0, 0.6],
+   "elbow_back": [-0.2, 0.4],
+   "elbow_down": [-0.3, 0.3],
+   "knee_up": [-0.1, 0.3]
+  },
+  "sites": {
+   "neck back": {
+    "joint": "neck",
+    "off": [0, 0.05, -0.07],
+    "bones": ["neck", "Spine", "Head"]
+   },
+   "Left shoulder top": {
+    "joint": "LeftShoulder",
+    "off": [0.06, 0.1, 0],
+    "bones": ["LeftShoulder", "LeftArm", "Spine", "neck"]
+   },
+   "Right shoulder top": {
+    "joint": "RightShoulder",
+    "off": [-0.06, 0.1, 0],
+    "bones": ["RightShoulder", "RightArm", "Spine", "neck"]
+   },
+   "Left shoulder front": {
+    "joint": "LeftShoulder",
+    "off": [0.07, 0.06, 0.1],
+    "bones": ["LeftShoulder", "LeftArm", "Spine", "neck"]
+   },
+   "Right shoulder front": {
+    "joint": "RightShoulder",
+    "off": [-0.07, 0.06, 0.1],
+    "bones": ["RightShoulder", "RightArm", "Spine", "neck"]
+   },
+   "Left palm": {
+    "joint": "LeftHand",
+    "off": [0, 0, 0.06],
+    "bones": ["LeftHand"]
+   },
+   "Right palm": {
+    "joint": "RightHand",
+    "off": [0, 0, 0.06],
+    "bones": ["RightHand"]
+   },
+   "head left": {
+    "joint": "neck",
+    "off": [0.04, 0.03, -0.08],
+    "bones": ["neck", "Spine", "Head"]
+   },
+   "head right": {
+    "joint": "neck",
+    "off": [-0.04, 0.03, -0.08],
+    "bones": ["neck", "Spine", "Head"]
+   }
+  },
+  "contacts": [
+   {
+    "name": "child seat at the back of his neck",
+    "site": "neck back",
+    "child": ["Hips", "LeftUpLeg", "RightUpLeg"]
+   },
+   {
+    "name": "child L thigh on his L shoulder",
+    "site": "Left shoulder top",
+    "child": ["LeftUpLeg"]
+   },
+   {
+    "name": "child R thigh on his R shoulder",
+    "site": "Right shoulder top",
+    "child": ["RightUpLeg"]
+   },
+   {
+    "name": "his L palm on the child's L shin",
+    "site": "Left palm",
+    "child": ["LeftLeg", "LeftFoot"]
+   },
+   {
+    "name": "his R palm on the child's R shin",
+    "site": "Right palm",
+    "child": ["RightLeg", "RightFoot"]
+   },
+   {
+    "name": "child L hand at the back of his neck",
+    "site": "head left",
+    "child": ["LeftHand"]
+   },
+   {
+    "name": "child R hand at the back of his neck",
+    "site": "head right",
+    "child": ["RightHand"]
+   }
+  ],
+  "preview_extent": 0.6,
+  "target_bind": 0.006,
+  "follow_exclude": ["Head", "head_end", "headfront"],
+  "search_every": 2,
+  "search_full": true,
+  "search_evals": 1200,
+  "w_pen": 4
+ },
+ "child_in_arms": {
+  "carrier": "woman",
+  "child": "child_red",
+  "height_m": 0.62,
+  "tris": 2000,
+  "recipe": "arms",
+  "bone": "Spine",
+  "preview_at": "LeftShoulder",
+  "preview_extent": 0.7,
+  "p": {
+   "yaw": 0.22139426058476874,
+   "lean": 0.35,
+   "pelvis": [0.019721475102174188, 0.07706109039890852, 0.02],
+   "roll": -0.16974801464044587,
+   "hunch": 0,
+   "head_near": [0.0499618679957814, -0.043975061658744596, 0.05374187190486655],
+   "head_yaw": 0.6977236274479619,
+   "head_pitch": -0.0708148953340286,
+   "hand_r": 0.03,
+   "feet_apart": 0.12429583280805526,
+   "feet_down": 0.10694529006918771,
+   "feet_fwd": -0.011799227559737814
+  },
+  "free": {
+   "yaw": [-0.4, 0.4],
+   "lean": [0, 0.35],
+   "pelvis.0": [-0.06, 0.06],
+   "pelvis.1": [-0.06, 0.08],
+   "pelvis.2": [0.02, 0.12],
+   "roll": [-0.2, 0.2],
+   "hunch": [0, 0.45],
+   "head_near.0": [0.04, 0.16],
+   "head_near.1": [-0.12, 0.04],
+   "head_near.2": [-0.02, 0.12],
+   "head_yaw": [-1, 1],
+   "head_pitch": [-0.3, 0.4],
+   "hand_r": [0.005, 0.03],
+   "feet_apart": [0.04, 0.14],
+   "feet_down": [0.05, 0.13],
+   "feet_fwd": [-0.02, 0.12]
+  },
+  "sites": {
+   "L forearm": {
+    "joint": "LeftHand",
+    "off": [0.06, 0, -0.06],
+    "bones": ["LeftForeArm", "LeftHand"]
+   },
+   "L shoulder": {
+    "joint": "LeftShoulder",
+    "off": [0.06, 0.1, 0.04],
+    "bones": ["LeftShoulder", "LeftArm", "neck", "Spine"]
+   },
+   "child Left hand": {
+    "joint": "neck",
+    "off": [0.03, -0.03, 0.1],
+    "bones": ["neck", "Spine", "LeftShoulder", "RightShoulder"]
+   },
+   "child Right hand": {
+    "joint": "LeftShoulder",
+    "off": [0.04, 0.06, -0.08],
+    "bones": ["LeftShoulder", "LeftArm", "neck", "Spine"]
+   },
+   "L upper arm": {
+    "joint": "LeftArm",
+    "off": [-0.02, -0.02, 0.1],
+    "bones": ["LeftArm", "LeftShoulder"]
+   },
+   "crook": {
+    "joint": "LeftShoulder",
+    "off": [-0.03, -0.16, 0.16],
+    "bones": ["Spine", "Spine01", "Spine02", "LeftShoulder", "RightShoulder"]
+   },
+   "chest": {
+    "joint": "LeftShoulder",
+    "off": [-0.04, -0.1, 0.16],
+    "bones": ["Spine", "Spine01", "LeftShoulder", "RightShoulder"]
+   },
+   "R palm": {
+    "joint": "RightHand",
+    "off": [0.03, 0, 0.06],
+    "bones": ["RightHand"]
+   }
+  },
+  "contacts": [
+   {
+    "name": "her L forearm across the child",
+    "site": "L forearm",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftShoulder", "RightShoulder", "LeftArm", "RightArm", "LeftUpLeg", "RightUpLeg"]
+   },
+   {
+    "name": "child chest against her chest",
+    "site": "chest",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftShoulder", "RightShoulder", "LeftArm", "RightArm"]
+   },
+   {
+    "name": "her R palm on the child",
+    "site": "R palm",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftShoulder", "RightShoulder", "LeftArm", "RightArm", "LeftUpLeg", "RightUpLeg"]
+   },
+   {
+    "name": "child head on her L shoulder",
+    "site": "L shoulder",
+    "child": ["Head", "neck"]
+   },
+   {
+    "name": "child L hand on her collar",
+    "site": "child Left hand",
+    "child": ["LeftHand"]
+   },
+   {
+    "name": "child R hand on her L shoulder",
+    "site": "child Right hand",
+    "child": ["RightHand"]
+   }
+  ],
+  "search_every": 2,
+  "search_full": true,
+  "search_evals": 1200,
+  "w_pen": 4,
+  "target_bind": 0.006
+ },
+ "child_on_lap": {
+  "carrier": "woman",
+  "child": "child_red",
+  "height_m": 0.8,
+  "tris": 2000,
+  "recipe": "lap",
+  "bone": "Hips",
+  "preview_at": "Spine02",
+  "preview_extent": 0.8,
+  "p": {
+   "lean": 0.19744014106419772,
+   "pelvis": [-0.035246366311831215, 0.09896317878496269, -0.026830238205384396],
+   "roll": 0.0645202447518129,
+   "hunch": -0.2,
+   "head_yaw": 0,
+   "head_pitch": -0.08780800796018601,
+   "knee_up": 0.11307990745802658,
+   "knee_fwd": 0.04728830170112791,
+   "knee_out": -0.023434350416110087,
+   "shin_fwd": 0.07075787137076384,
+   "hand_r": 0.0151,
+   "hand_along": 0.6798951626356253,
+   "hand_up": 0.094,
+   "hand_out": 0.021387777394009135
+  },
+  "free": {
+   "lean": [-0.3, 0.2],
+   "pelvis.0": [-0.05, 0.05],
+   "pelvis.1": [0, 0.2],
+   "pelvis.2": [-0.15, 0.1],
+   "roll": [-0.2, 0.2],
+   "hunch": [-0.2, 0.3],
+   "head_pitch": [-0.3, 0.3],
+   "knee_up": [0, 0.15],
+   "knee_fwd": [-0.1, 0.15],
+   "knee_out": [-0.05, 0.08],
+   "shin_fwd": [-0.2, 0.5],
+   "hand_along": [0.3, 1],
+   "hand_up": [0.02, 0.1],
+   "hand_out": [-0.03, 0.06]
+  },
+  "sites": {
+   "L thigh": {
+    "joint": "LeftUpLeg",
+    "off": [0, 0.1, 0.18],
+    "bones": ["LeftUpLeg", "Hips"]
+   },
+   "R thigh": {
+    "joint": "RightUpLeg",
+    "off": [0, 0.1, 0.18],
+    "bones": ["RightUpLeg", "Hips"]
+   },
+   "L knee": {
+    "joint": "LeftLeg",
+    "off": [0, 0.1, 0],
+    "bones": ["LeftUpLeg", "LeftLeg"]
+   },
+   "R knee": {
+    "joint": "RightLeg",
+    "off": [0, 0.1, 0],
+    "bones": ["RightUpLeg", "RightLeg"]
+   },
+   "L palm": {
+    "joint": "LeftHand",
+    "off": [0, 0.02, 0.05],
+    "bones": ["LeftHand"]
+   },
+   "R palm": {
+    "joint": "RightHand",
+    "off": [0, 0.02, 0.05],
+    "bones": ["RightHand"]
+   }
+  },
+  "contacts": [
+   {
+    "name": "child seat on her L thigh",
+    "site": "L thigh",
+    "child": ["Hips", "LeftUpLeg", "RightUpLeg"]
+   },
+   {
+    "name": "child seat on her R thigh",
+    "site": "R thigh",
+    "child": ["Hips", "LeftUpLeg", "RightUpLeg"]
+   },
+   {
+    "name": "her L palm at the child's waist",
+    "site": "L palm",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftArm", "RightArm", "LeftShoulder", "RightShoulder"]
+   },
+   {
+    "name": "her R palm at the child's waist",
+    "site": "R palm",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftArm", "RightArm", "LeftShoulder", "RightShoulder"]
+   }
+  ],
+  "t": 5,
+  "follow_exclude": ["LeftHand", "RightHand", "LeftForeArm", "RightForeArm"],
+  "target_bind": 0.007
+ },
+ "_tried_child_on_back_s8": {
+  "carrier": "idler",
+  "child": "child",
+  "height_m": 0.85,
+  "tris": 2000,
+  "recipe": "back",
+  "p": {
+   "pelvis": [-0.016941402048452722, 0.17788049226874425, -0.33218118559297827],
+   "lean": -0.28620689276081923,
+   "roll": 0.48409400975725037,
+   "hunch": 0.1471272114125933,
+   "head_yaw": -0.7715130615846576,
+   "head_pitch": -0.41141899599332427,
+   "hand_r": 0.03747132437056303,
+   "knee_r": 0.09796424340425382,
+   "shin_drop": 0.99,
+   "shin_out": 0.16022913365518318,
+   "head_roll": -0.21780977467531776,
+   "elbow_out": 0.1252517104789934,
+   "elbow_back": 0.13163502178466757,
+   "elbow_down": 0.024751468282798728,
+   "head_at": [0.15511181066590785, -0.023391519494127336, -0.12683390698160685]
+  },
+  "sites": {
+   "Left shoulder": {
+    "joint": "LeftArm",
+    "axes": "Spine",
+    "off": [-0.03, 0.06, -0.07],
+    "bones": ["LeftShoulder", "LeftArm", "Spine", "neck"]
+   },
+   "Right shoulder": {
+    "joint": "RightArm",
+    "axes": "Spine",
+    "off": [0.03, 0.06, -0.07],
+    "bones": ["RightShoulder", "RightArm", "Spine", "neck"]
+   },
+   "Left flank": {
+    "joint": "Hips",
+    "axes": "Spine",
+    "off": [0.2, 0.04, -0.17],
+    "bones": ["Hips", "Spine02", "LeftUpLeg"]
+   },
+   "Right flank": {
+    "joint": "Hips",
+    "axes": "Spine",
+    "off": [-0.2, 0.04, -0.17],
+    "bones": ["Hips", "Spine02", "RightUpLeg"]
+   },
+   "Left palm": {
+    "joint": "LeftHand",
+    "off": [0, 0.03, -0.03],
+    "bones": ["LeftHand"]
+   },
+   "Right palm": {
+    "joint": "RightHand",
+    "off": [0, 0.03, -0.03],
+    "bones": ["RightHand"]
+   },
+   "upper back": {
+    "joint": "Spine",
+    "axes": "Spine",
+    "off": [0, -0.05, -0.3],
+    "bones": ["Spine", "Spine01", "Spine02"]
+   },
+   "beside his head": {
+    "joint": "Head",
+    "axes": "Spine",
+    "off": [0.1, 0, -0.06],
+    "bones": ["Head", "neck"]
+   }
+  },
+  "contacts": [
+   {
+    "name": "child L hand on his L shoulder",
+    "site": "Left shoulder",
+    "child": ["LeftHand"]
+   },
+   {
+    "name": "child R hand on his R shoulder",
+    "site": "Right shoulder",
+    "child": ["RightHand"]
+   },
+   {
+    "name": "child L thigh at his L flank",
+    "site": "Left flank",
+    "child": ["LeftUpLeg", "LeftLeg"]
+   },
+   {
+    "name": "child R thigh at his R flank",
+    "site": "Right flank",
+    "child": ["RightUpLeg", "RightLeg"]
+   },
+   {
+    "name": "his L palm on the child's leg",
+    "site": "Left palm",
+    "child": ["LeftUpLeg", "LeftLeg", "LeftFoot", "Hips"]
+   },
+   {
+    "name": "his R palm on the child's leg",
+    "site": "Right palm",
+    "child": ["RightUpLeg", "RightLeg", "RightFoot", "Hips"]
+   },
+   {
+    "name": "child chest on his upper back",
+    "site": "upper back",
+    "child": ["Hips", "Spine02", "Spine01", "Spine", "LeftShoulder", "RightShoulder"]
+   },
+   {
+    "name": "child head beside his",
+    "site": "beside his head",
+    "child": ["Head"]
+   }
+  ],
+  "bone": "Spine",
+  "free": {
+   "pelvis.0": [-0.1, 0.1],
+   "pelvis.1": [0.12, 0.28],
+   "pelvis.2": [-0.45, -0.25],
+   "lean": [-0.3, 0.3],
+   "roll": [-0.5, 0.5],
+   "hunch": [-0.1, 0.5],
+   "head_yaw": [-0.9, 0.9],
+   "head_pitch": [-0.7, 0.5],
+   "knee_r": [0.02, 0.12],
+   "shin_drop": [0.8, 0.99],
+   "shin_out": [0, 0.25],
+   "head_roll": [-0.5, 0.5],
+   "elbow_out": [0, 0.6],
+   "elbow_back": [-0.2, 0.4],
+   "elbow_down": [-0.3, 0.3],
+   "hand_r": [0.005, 0.04],
+   "head_at.0": [0.05, 0.2],
+   "head_at.1": [-0.1, 0.06],
+   "head_at.2": [-0.22, -0.02]
+  },
+  "search_every": 2,
+  "search_evals": 800,
+  "_note": "a higher piggyback (head beside his) tried 2026-10-13: fails his R palm 4.4 cm and penetration 1.2 cm; not built"
+ }
+}

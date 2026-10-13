@@ -345,8 +345,9 @@ def ux(u, D):
 
 
 SEDAN = {}
-SEDAN_POLES = {'S4.veh.sedan_chair_10623': (10500, 10715), 'S4.veh.sedan_chair_10810': (10735, 11005)}   # painted u (west
-# chair's front end 40 px short of its painted u 10460: its front bearer then stands clear of the dark horse beside him)
+SEDAN_POLES = {'S4.veh.sedan_chair_10623': (10500, 10725), 'S4.veh.sedan_chair_10810': (10725, 11005)}   # painted u (west
+# chair's front end 40 px short of its painted u 10460: its front bearer then stands clear of the dark horse beside him;
+# both chairs' poles meet at u 10725 over the middle bearers: blender/outer_road_scene.py vehicles(), fix-S4 2026-10-13)
 for eid, (u0, u1) in SEDAN_POLES.items():
     p = E[eid]['pts']
     xc, yc = (p['front'][0] + p['rear'][0]) / 2, (p['front'][1] + p['rear'][1]) / 2
@@ -826,6 +827,16 @@ people['clips_why'] = {
     **{clip: f'{WANT.get(clip, "")} -- ' + '; '.join(v) for clip, v in cw.items()},
     'notes': NOTES,
 }
+
+# the details pass's contact fixes (sections/outer_road/contact_fixes.json: solved nudges and turns, recasts, IK clip
+# variants; gen/details/contacts/fix_standard.md) are applied last, and the checks below see them
+import sys
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes
+apply_contact_fixes(people, 'outer_road')
+for _s, _f in people['figures'].items():
+    if _f.get('nudge') and _f['nudge'] != NUDGE.get(_s, ([0, 0],))[0]:
+        NUDGE[_s] = (_f['nudge'], people['nudge_why'].get(_s, ''))
 
 out = os.path.join(QM, 'sections/outer_road/people.json')
 json.dump(people, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

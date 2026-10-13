@@ -1624,7 +1624,8 @@
    "est": [
     "front",
     "rear"
-   ]
+   ],
+   "what": "Second tall sedan chair like the first: dark panelled box with vertical slats at its west end, a domed roof with an upturned eave curling out at the east; its poles run on east to the bearer at u ~10980. It hangs above the ground on its poles."
   },
   "S4.veh.sedan_chair_10623": {
    "kind": "vehicle",
@@ -1643,7 +1644,8 @@
    "est": [
     "front",
     "rear"
-   ]
+   ],
+   "what": "Tall sedan chair (轿): dark panelled box with a lattice window in its side and a curtained end, under a domed roof with upturned eaves; long poles run east and west along its sides at shoulder height. It hangs a little above the ground, lifted by its bearers."
   },
   "S4.veh.covered_ox_cart_10550": {
    "kind": "vehicle",
@@ -1664,7 +1666,8 @@
     "front",
     "rear",
     "wheel0"
-   ]
+   ],
+   "what": "Big two-wheeled covered cart seen from behind: a barrel-vaulted roof of woven mat over a body closed at the rear by a lattice door with a carved rail; it heads north-east up the road with its team (a shaft ox and a lead ox) ahead to the east."
   },
   "S4.prop.slatted_crate_12576": {
    "kind": "prop",
@@ -1781,11 +1784,11 @@
   "S4.prop.stool_12132": {
    "kind": "prop",
    "name": "client's stool",
-   "pos": [44.7, 13.99],
+   "pos": [45.23, 14.15],
    "H": 0,
    "support": "ground",
    "pts": {
-    "base": [44.7, 13.99, 0]
+    "base": [45.23, 14.15, 0]
    },
    "station": 58.1,
    "side": 5
@@ -3477,6 +3480,11 @@
    "dX": 0.54,
    "dD": 0.59,
    "why": "at real size its rump runs into the front corner of the second covered cart's body (the kit's 3.9 m body, 56% of it behind the painted wheel, ends 0.44 m past the painted front); it steps 0.8 m forward along its painted heading (48 deg), its harness with it (outer_road_scene.team applies the move to its hooves)"
+  },
+  "S4.prop.stool_12132": {
+   "dX": 0.53,
+   "dD": 0.16,
+   "why": "the client's stool, on which the client in white sits leaning his forearms on the fortune-teller's table (map): at real size his seat (listen~table: the seat point 0.08 m behind his root, the forearms 0.3 m ahead of it, resting on the table) is at X 45.23, D 14.15, 0.55 m east of the stool's estimated place, so the stool goes under him, against the table's west end (fix-S4, gen/details/contacts/fix_s4/notes.md)"
   }
  }
 }

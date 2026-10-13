@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is a tree painted in that style; copy exactly how its long straight whips with their tiny new leaves are drawn: the same stroke, line weight, colours and spacing.\n\nPaint a sheet of four separate sprays of willow whips, arranged in a 2 by 2 grid, each one alone in its own quarter of the picture with clear white space all round it, never touching another one or the picture's edge.\n\nEach one is a single dense spray of many long, straight, slender red-brown whips that all spring from one small point at the bottom centre of its quarter and rise upward and outward like a fountain, the longest arching over a little at their tips, with tiny pale fresh-green new leaves (about #8fa35f) just opening along them. The whips are single unbranched lines from that point; there is no knob, no branch and no trunk below the point. The spray fills most of its quarter.\n\nThe four differ only in shape: (1) a tall upright fountain, narrow at the bottom and wide at the top; (2) a wide dome of whips arching out on both sides; (3) a spray sweeping far out to the left; (4) a spray sweeping far out to the right.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed silk of the scroll. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no trunk, no branch, no ground, no shadow, no text, no seal, no grid lines, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/willow_burl_1/aa1bccb7158c_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "0b750a054dd2",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 58.2,
+ "attempts": 1,
+ "idempotency_key": "04ed09af-35cb-4b37-a326-5d6cf400e454",
+ "request_id": "9eafda7f-d771-40db-afb9-2e04da5d8aae",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4923,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 334
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4923,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 334
+  },
+  "total_tokens": 6573
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/19122e6f-4fe4-441e-8024-11713524bc9e"
+ ],
+ "files": [
+  "gen/details/trees/clumps/whips/0b750a054dd2_0.png"
+ ]
+}

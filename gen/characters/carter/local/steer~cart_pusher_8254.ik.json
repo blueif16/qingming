@@ -1,0 +1,35 @@
+{
+ "character": "carter",
+ "base": "steer",
+ "spec": "cart_pusher_8254",
+ "frame": "proposed",
+ "sole_shift_m": 0,
+ "clip": "steer~cart_pusher_8254",
+ "frames": 120,
+ "duration": 5.95,
+ "verify_max_m": 0.001,
+ "locomotion": true,
+ "ops": [
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "residual_max_m": 0.111,
+   "residual_mean_m": 0.018
+  }
+ ],
+ "max_turn_deg": {
+  "LeftArm": 64,
+  "LeftForeArm": 44,
+  "LeftHand": 65,
+  "RightArm": 109,
+  "RightForeArm": 117,
+  "RightHand": 130,
+  "Hips": 0
+ }
+}

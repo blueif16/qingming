@@ -1,0 +1,139 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T13:41:32.147Z",
+ "sections": [
+  "outer_road_2"
+ ],
+ "owners_load_ms": 286,
+ "seconds": 1.69,
+ "people": 66,
+ "checked": 66,
+ "crew_not_covered": 0,
+ "figures_failing": 3,
+ "fails": 4,
+ "by_class": {
+  "contact:rail": 1,
+  "contact:structure": 1,
+  "contact:floor": 1,
+  "contact:boat": 1
+ },
+ "by_clip": {
+  "lean_over~counter_man_leaning_13325:contact:rail": 1,
+  "wheelwright:contact:structure": 1,
+  "tiller_seated:contact:floor": 1,
+  "tiller_seated:contact:boat": 1
+ },
+ "table": {
+  "outer_road_2": {
+   "contact:rail": {
+    "n": 1,
+    "worst": 0.032,
+    "worst_id": "counter_man_leaning_13325"
+   },
+   "contact:structure": {
+    "n": 1,
+    "worst": 0.599,
+    "worst_id": "wheelwright_bending_13620"
+   },
+   "contact:floor": {
+    "n": 1,
+    "worst": 0.213,
+    "worst_id": "seated_boatman_stern_15372"
+   },
+   "contact:boat": {
+    "n": 1,
+    "worst": 2.249,
+    "worst_id": "seated_boatman_stern_15372"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:boat",
+   "clip": "tiller_seated",
+   "site": "palm_R",
+   "value": 2.249,
+   "kind": "crew",
+   "with": [
+    "S4b.veh.boat_arched_awning_14945|body (tiller)"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "seated_boatman_stern_15372",
+   "section": "outer_road_2",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:structure",
+   "clip": "wheelwright",
+   "site": "palm_L",
+   "value": 0.599,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.pole_frame_basket_13690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "wheelwright_bending_13620",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "tiller_seated",
+   "site": "seat",
+   "value": 0.213,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "seated_boatman_stern_15372",
+   "section": "outer_road_2",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over~counter_man_leaning_13325",
+   "site": "palm_L",
+   "value": 0.032,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.table_bowls_13275"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "counter_man_leaning_13325",
+   "section": "outer_road_2",
+   "model": "idler"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 49,
+ "contacts_failing": 4
+}

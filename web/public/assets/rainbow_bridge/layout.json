@@ -3300,14 +3300,14 @@
   {
    "id": "behind_lampbox_17090",
    "map_id": "S3.fig.behind_lampbox_17090",
-   "X": 116.86,
-   "D": -3.32,
+   "X": 116.34,
+   "D": -1.89,
    "H": 0,
-   "pose": "standing",
-   "facing_deg": 200,
+   "pose": "seated",
+   "facing_deg": 350,
    "support": "ground",
-   "station": 139.3,
-   "side": -8.5,
+   "station": 138.6,
+   "side": -7.1,
    "est": [
     "foot"
    ],
@@ -5219,11 +5219,11 @@
   "S3.prop.bench_18630": {
    "kind": "prop",
    "name": "low bench at the west stall",
-   "pos": [131.98, 18.98],
+   "pos": [131.91, 18.89],
    "H": 4.919,
    "support": "bridge deck: 500 px west of the near edge",
    "pts": {
-    "base": [131.98, 18.98, 4.92]
+    "base": [131.91, 18.89, 4.92]
    },
    "station": 153.6,
    "side": 1.2
@@ -8505,9 +8505,9 @@
    "why": "bridge fit: its layout footprint is a sliver running across the deck (its corners carry four supports' heights); moved to the middle of its painted extent on the built deck (deck_fit.json footprint_on_deck), with its keepers and customers; the builder sets its z on the deck"
   },
   "S3.prop.bench_18630": {
-   "dX": 3.28,
-   "dD": 6.31,
-   "why": "bridge fit: layout point s 3.0, 3.8 m from the near railing line, deck there 0.73 against layout H 4.92: off its painted place on the built deck; moved with its painted neighbours to s 9.9, 2.8 m from the far railing (painted 500 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+   "dX": 3.205,
+   "dD": 6.224,
+   "why": "[bridge] bridge fit: layout point s 3.0, 3.8 m from the near railing line, deck there 0.73 against layout H 4.92: off its painted place on the built deck; moved with its painted neighbours to s 9.9, 2.8 m from the far railing (painted 500 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck) + [contacts] contacts (details pass, fix-bridge, gen/details/contacts/fix_bridge/notes.md): its sitter stall_man_parasol_18612 sits with both feet on one tread of the stepped deck; the bench moves 0.11 m down the ramp's axis so his seat point stays over its middle all through his sit (painted: seated on the low bench at the stall's corner)"
   },
   "S3.prop.slatted_panel_18615": {
    "dX": 3.94,

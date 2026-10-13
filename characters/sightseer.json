@@ -25,12 +25,24 @@
     "fan_walk": "motion:fan_walk",
     "knees_up": "motion:sit_knees_up",
     "point": "motion:point_and_argue",
-    "listen": "t2m:sit_listen@msy_B7y3"
+    "listen": "t2m:sit_listen@msy_B7y3",
+    "lean_over": "t2m:lean_over@msy_B7y3",
+    "lean_chin~moat_rail": "ik:lean_chin@moat_rail",
+    "listen~soles": "ik:listen@soles",
+    "lean_chin~man_at_railing_27650": "ik:lean_chin@man_at_railing_27650",
+    "lean_over~rail_watcher_19923": "ik:lean_over@rail_watcher_19923",
+    "lean_over~deck_rail_leaner_19715": "ik:lean_over@deck_rail_leaner_19715",
+    "lean_over~deck_rail_face_19350": "ik:lean_over@deck_rail_face_19350",
+    "lean_over~man_arms_on_railing_18982": "ik:lean_over@man_arms_on_railing_18982"
   },
   "clips_dropped": {
     "lean_rail_swift": "motion:lean_on_rail_swift (Text to Motion swift mode, 2026-10-10): arms thrown overhead and 16 s long instead of 8; swift is not usable, use prime",
     "lean_rail": "motion:lean_on_rail (2026-10-10): leans the whole body like a stiff plank from the feet; looked like falling into the railing on the bridge",
     "lean_rail_v2": "motion:lean_on_rail_v2 (2026-10-10): an even steeper plank (about 45 deg, feet far back)"
   },
-  "account": "msy_czMs"
+  "account": "msy_czMs",
+  "eyes": {
+    "from": "bearer",
+    "why": "dot eyes on the shipped texture (tools/eye_check.mjs, 2026-10-13: lid reach 3.5 mm, width 13 mm, aspect 0.9; pass needs reach >= 6.8 and width >= 17.2); bearer's eye, an adult man's, scaled by the eyes' separation, mirrored; gen/details/eyes/notes.md"
+  }
 }

@@ -1,0 +1,37 @@
+{
+ "character": "boatman",
+ "base": "fend_pole",
+ "spec": "fend_out",
+ "frame": "proposed",
+ "sole_shift_m": -0.012,
+ "clip": "fend_pole~out",
+ "frames": 120,
+ "duration": 5.95,
+ "verify_max_m": 0.002,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "frame": "Armature",
+   "residual_max_m": 0,
+   "residual_mean_m": 0,
+   "elbow_miss_max_m": 0.245
+  },
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0.067,
+   "residual_mean_m": 0.007
+  }
+ ],
+ "max_turn_deg": {
+  "RightArm": 179,
+  "RightForeArm": 156,
+  "RightHand": 179,
+  "LeftArm": 146,
+  "LeftForeArm": 112,
+  "LeftHand": 142,
+  "Hips": 0
+ }
+}

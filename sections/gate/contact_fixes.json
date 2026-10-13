@@ -1,0 +1,825 @@
+{
+ "figures": {
+  "tax_carter_manifest": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 160,
+   "nudge": [
+    0,
+    -0.08
+   ],
+   "facing_deg": 160,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.174,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "tower_watchman": {
+   "class": "solve",
+   "base_nudge": [
+    -0.6,
+    0
+   ],
+   "base_facing": 200,
+   "nudge": [
+    -0.6,
+    -0.18
+   ],
+   "facing_deg": 200,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder; moved 0.18 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.897,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "rail_watcher_2": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0.21
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.21
+   ],
+   "facing_deg": 270,
+   "nudge_why": "the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13)",
+   "solved": {
+    "date": "2026-10-13T13:20",
+    "pass": true,
+    "note": "no move needed on the variant"
+   },
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning on the near railing, chin on his hands: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)"
+  },
+  "rail_watcher_4": {
+   "class": "ik",
+   "base_nudge": [
+    -0.1,
+    0.21
+   ],
+   "base_facing": 270,
+   "nudge": [
+    -0.1,
+    0.21
+   ],
+   "facing_deg": 270,
+   "nudge_why": "the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13)",
+   "solved": {
+    "date": "2026-10-13T13:20",
+    "pass": true,
+    "note": "no move needed on the variant"
+   },
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning on the near railing, chin on his hands: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)"
+  },
+  "wall_recliner": {
+   "class": "solve",
+   "base_nudge": [
+    1.07,
+    -1.2
+   ],
+   "base_facing": 330,
+   "nudge": [
+    0.68,
+    -0.8
+   ],
+   "facing_deg": 330,
+   "nudge_why": "solved: contact back->S5.str.gate_block; gap before back 0.38, after back 0.03; fixed contact:wall; moved 0.56 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.131,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "far_rail_dark_9308": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0.39
+   ],
+   "base_facing": 90,
+   "nudge": [
+    0,
+    0.68
+   ],
+   "facing_deg": 90,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.28, elbow_R 0.31, after elbow_L 0.01, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.29 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T13:08",
+    "cost_before": 0.142,
+    "cost_after": 0,
+    "pass": true
+   },
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning on the far railing: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)"
+  },
+  "far_rail_bending_8822": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0.15
+   ],
+   "base_facing": 90,
+   "nudge": [
+    0,
+    0.35
+   ],
+   "facing_deg": 90,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.19, elbow_R 0.18, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.2 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T13:08",
+    "cost_before": 0.048,
+    "cost_after": 0,
+    "pass": true
+   },
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted bending over the far railing: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)"
+  },
+  "hidden_man_6452": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 200,
+   "nudge": [
+    0.07,
+    0.06
+   ],
+   "facing_deg": 200,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles; moved 0.09 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.09,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "carter_6418": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 200,
+   "nudge": [
+    0.03,
+    -0.15
+   ],
+   "facing_deg": 200,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.15 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.64,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "tax_carter_gaping_6300": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    0.26,
+    -0.03
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.26 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 1.578,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "man_brown_awning_6245": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    0,
+    0.08
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.523,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "man_white_awning_6165": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0,
+    -0.12
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.12 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.353,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "figure_by_trunk_5772": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.29,
+    0.29
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder; moved 0.41 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 2.35,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "archer_wrist_5728": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.26,
+    0.23
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder, head_inside; moved 0.35 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 1.153,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "archer_drawing_bow_5635": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0.02,
+    -0.23
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, head_inside, site_inside; moved 0.23 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 0.405,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "caravan_leader_7388": {
+   "class": "solve",
+   "base_nudge": [
+    2.8,
+    -0.06
+   ],
+   "base_facing": 0,
+   "nudge": [
+    2.74,
+    0.03
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.11 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:32",
+    "cost_before": 9.166,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "tax_official": {
+   "class": "ik",
+   "do": [
+    [
+     "write~office_desk",
+     18
+    ],
+    [
+     "sit_talk~office_bench",
+     6
+    ]
+   ],
+   "why": "painted seated behind the long desk, brush in hand, about to write: write and sit_talk seat him at two heights (0.38 and 0.50 m over the floor) on one bench 0.42 m high, with one sole 6 cm up and the other as far into the floor: write~office_desk and sit_talk~office_bench (characters/ik_variants.json) hold the seat on the bench top and both soles on the floor, and his left hand flat on the desk",
+   "base_nudge": [
+    0,
+    0.1
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    -0.08
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact seat->S5.bld.tax_office, sole_L->S5.bld.tax_office, sole_R->S5.bld.tax_office, palm_L->S5.bld.tax_office; gap before seat 0.43, sole_L 0.42, sole_R 0.42, palm_L 0.44, seat 0.84, sole_L 0, sole_R 0, after seat 0.01, sole_L 0, sole_R 0, palm_L 0.02, seat 0, sole_L 0, sole_R 0; fixed contact:seat, contact:floor, contact:floor, contact:table, contact:seat, furniture; moved 0.18 m from the casting's spot (limit 0.6 m); 3 cm clear of the bench's front edge for the ground rays (at 0.05 m his root sat on the edge, and the page's quantised bench caught the rays: he stood on it)",
+   "solved": {
+    "date": "2026-10-13T13:08",
+    "cost_before": 5.953,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "tax_clerk_seated_6340": {
+   "class": "recast",
+   "do": [
+    [
+     "sit_talk~office_bench",
+     20
+    ]
+   ],
+   "why": "painted seated in the east bay behind a low rail, turned west toward the desk and the declarer, with no desk or paper of his own (map/text/S5.md): write (the left hand flat on a desk) had nothing within 0.6 m, so he sits talking toward the declarer, on sit_talk~office_bench (characters/ik_variants.json: his seat on the bench, 0.42 m, both soles on the floor); the official's sit take shifts its weight so its lowest thigh point jumps 9 cm and no hips pin holds it, so it is not used",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 190,
+   "nudge": [
+    -0.17,
+    0
+   ],
+   "facing_deg": 190,
+   "nudge_why": "solved: contact seat->S5.bld.tax_office, sole_L->S5.bld.tax_office, sole_R->S5.bld.tax_office; gap before seat 0.42, sole_L 0.42, sole_R 0.42, after seat 0, sole_L 0, sole_R 0; fixed contact:seat, contact:floor, contact:floor; moved 0.17 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 0.552,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "bridge_sightseer": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted hunched over the near railing, arms folded on the top rail, head on them: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+   "base_nudge": [
+    0.6,
+    0.21
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.6,
+    0.19
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.05, elbow_R 0.05, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.02 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 0,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "rail_watcher_3": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning on the near railing, chin on his clasped hands: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+   "base_nudge": [
+    -0.2,
+    0.21
+   ],
+   "base_facing": 270,
+   "nudge": [
+    -0.32,
+    0.17
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.06, elbow_R 0.06, after elbow_L 0.03, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.13 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 0.002,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "far_rail_white_bent_9255": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning forward over the far railing, back to us: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+   "base_nudge": [
+    0,
+    0.77
+   ],
+   "base_facing": 90,
+   "nudge": [
+    -0.09,
+    1.07
+   ],
+   "facing_deg": 89,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.34, elbow_R 0.28, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.31 m, turned -1 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 0.16,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "far_rail_white_8698": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning with both forearms stretched along the far top rail: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+   "base_nudge": [
+    0,
+    0.08
+   ],
+   "base_facing": 90,
+   "nudge": [
+    0.11,
+    0.27
+   ],
+   "facing_deg": 90,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.39, elbow_R 0.4, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail, stance_soles, furniture; moved 0.22 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 3.971,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "rail_leaner_8665": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted with his arms folded on the near top rail, face buried in them: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+   "base_nudge": [
+    0,
+    0.26
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.19
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.1, elbow_R 0.08, after elbow_L 0.03, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.07 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 0.006,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "far_rail_back_8615": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted standing at the far railing, his hands on the top rail, looking out over the moat: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (the take sways them 1.5 cm)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 90,
+   "nudge": [
+    0,
+    0.13
+   ],
+   "facing_deg": 89,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.14, elbow_R 0.08, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.13 m, turned -1 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:43",
+    "cost_before": 0.012,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "far_rail_turned_9100": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted leaning on a far-railing post, body bent, head turned west and down: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (the take sways them 1.5 cm)",
+   "base_nudge": [
+    0,
+    0.41
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.17,
+    0.72
+   ],
+   "facing_deg": 106,
+   "nudge_why": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.6, elbow_R 0.3, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.35 m, turned -74 deg from the casting's spot (limit 0.6 m); painted leaning on a far-railing post with his body bent and his head turned west and down; the casting turned his body west along the railing, which left nothing under his forearms, so his body turns 74 degrees toward the railing (north-north-west) (his head turns left and right as the take turns it)",
+   "solved": {
+    "date": "2026-10-13T10:47",
+    "cost_before": 0.422,
+    "cost_after": 0.001,
+    "pass": true
+   }
+  },
+  "beggar_boy_9205": {
+   "class": "recast",
+   "do": [
+    [
+     "hand_over",
+     5
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "why": "painted a small child standing before the long-robed sightseer, facing west toward the first boy and the men (少年乞丐): the child's reach is a table reach (workshop motion child_reach: arms across a chest-high table top), and nothing is painted under his hands: hand_over (from carter's hand_over_paper: both hands held out at chest height to the man before him, no contact) keeps the painted begging"
+  },
+  "beggar_boy_9138": {
+   "class": "recast",
+   "do": [
+    [
+     "hand_over",
+     6
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "painted a small boy among the far-rail sightseers, holding out his hands to them (少年乞丐): the child's reach is a table reach (workshop motion child_reach: arms across a chest-high table top), and nothing is painted under his hands: hand_over (from carter's hand_over_paper: both hands held out at chest height to the man before him, no contact) keeps the painted begging"
+  },
+  "pack_handler_5837": {
+   "class": "recast",
+   "do": [
+    [
+     "browse~pack_handler_5837",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "why": "painted bending slightly west to work on the box-like pack on legs beside the pack donkey's rump (S5.prop.pack_box_5780), not at a cart: push put his palms on S6's sack cart 1-1.5 m away; browse (from townsman's browse_goods: reaching into goods) with his hands in the pack; browse -> browse~pack_handler_5837: an IK clip variant (characters/ik_variants.json \"pack_handler_5837\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 165,
+   "nudge": [
+    -0.6,
+    0.9
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact palm_L->S5.prop.pack_box_5780, palm_R->S5.prop.pack_box_5780; gap before palm_L 0.6, palm_R 0.6, after palm_L 0.14, palm_R 0.12; fixed nothing; moved 1.08 m, turned 15 deg from the casting's spot (limit 1.4 m); the placement for his IK (browse~pack_handler_5837: the hands on the pack box): painted working on the box-like pack on legs (S5.prop.pack_box_5780) beside the pack donkey's rump, but his painted foot is 1.7 m from the box's mapped spot (both from the strokes; the box's identification is low), so he stands at the box's east end facing it, 1.1 m from his foot point",
+   "solved": {
+    "date": "2026-10-13T10:50",
+    "cost_before": 0.551,
+    "cost_after": 0.139,
+    "pass": false
+   }
+  },
+  "cart_shaftman_8498": {
+   "class": "ik",
+   "do": [
+    [
+     "idle~cart_shaftman_8498",
+     8
+    ]
+   ],
+   "why": "painted at the front of the 串车 facing east, bent forward over the front shafts, gripping a shaft (and the trace rope): idle~cart_shaftman_8498 (characters/ik_variants.json: standing between the front shafts, a hand on each) instead of push, whose palms reach forward away from the barrow behind him, and of steer, whose whip lift took his right hand off the shaft for a third of the cycle"
+  },
+  "hat_pole_man_5940": {
+   "class": "ik",
+   "do": [
+    [
+     "stand_pole~staff_foot",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "the staff's foot hung 4-12 cm over the ground in the porter's stand_pole (fix-boats' pole rule): stand_pole~staff_foot (characters/ik_variants.json \"staff_foot\") holds the right palm 6 cm lower, so the foot rests on the ground"
+  },
+  "tower_balcony_man_6600": {
+   "class": "ik",
+   "do": [
+    [
+     "lean_chin~moat_rail",
+     40
+    ]
+   ],
+   "why": "painted at the west end of the tower's front balcony leaning forward on the railing, looking west toward the tax office: lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\": the forearms on a 1.075 m top rail) on the balcony railing, built at that height for him (blender/gate_scene.py _podium, choice)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 200,
+   "nudge": [
+    0.55,
+    0
+   ],
+   "facing_deg": 196,
+   "nudge_why": "solved: contact elbow_L->S5.str.tower_podium, elbow_R->S5.str.tower_podium; gap before elbow_L 0.3, elbow_R 0.47, after elbow_L 0.02, elbow_R 0.04; fixed contact:rail, contact:rail, furniture; moved 0.55 m, turned -4 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:47",
+    "cost_before": 19.485,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "cart_pusher_8254": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.92,
+    -0.06
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact palm_L->S5.veh.cart_screen_8510, palm_R->S5.veh.cart_screen_8510; gap before palm_L 0.19, palm_R 0.19, after palm_L 0.05, palm_R 0.04; fixed nothing; moved 0.92 m from the casting's spot (limit 1.4 m); the placement for his IK (steer~cart_pusher_8254: a hand on each rear handle): painted gripping the barrow's rear handles in a wide stride, his estimated feet 0.7 m east of the mapped handle tips (the handles drawn rising toward him); at his foot point he stood inside the barrow's frame between its rails (its hidden walker collider), so he stands between the handles just behind their tips",
+   "solved": {
+    "date": "2026-10-13T10:55",
+    "cost_before": 0.058,
+    "cost_after": 0.001,
+    "pass": false
+   },
+   "do": [
+    [
+     "steer~cart_pusher_8254",
+     8
+    ]
+   ],
+   "why": "painted bent forward behind the 串车 gripping its rear handles, pushing it east: steer~cart_pusher_8254 (characters/ik_variants.json: a hand on each rear handle, at his sides) instead of push, whose palms stay 1.03-1.10 m up, 0.2 m over the handles and out of reach"
+  },
+  "cart_pusher_5727": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.51,
+    0.31
+   ],
+   "facing_deg": 179,
+   "nudge_why": "solved: contact palm_L->S6.veh.sack_cart_5412, palm_R->S6.veh.sack_cart_5412; gap before palm_L 0.49, palm_R 0.59, after palm_L 0.07, palm_R 0.06; fixed nothing; moved 0.6 m, turned -1 deg from the casting's spot (limit 0.6 m); the placement for his IK (push~cart_pusher_5727: palms on the sack cart's rear)",
+   "solved": {
+    "date": "2026-10-13T10:49",
+    "cost_before": 0.589,
+    "cost_after": 0.003,
+    "pass": false
+   },
+   "do": [
+    [
+     "push~cart_pusher_5727",
+     30
+    ]
+   ],
+   "why": "push -> push~cart_pusher_5727: an IK clip variant (characters/ik_variants.json \"cart_pusher_5727\") lays palm_L, palm_R on what the painting has it touch, from its solved placement"
+  },
+  "groom_8167": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.6,
+    0
+   ],
+   "facing_deg": 204,
+   "nudge_why": "solved: contact palm_R->S5.ani.donkey_8121, palm_L->S5.ani.donkey_8121; gap before palm_R 0.79, palm_L 0.63, after palm_R 0.31, palm_L 0.19; fixed nothing; moved 0.6 m, turned 24 deg from the casting's spot (limit 0.6 m); the placement for his IK (bridle~groom_8167: the right hand on the bridle)",
+   "solved": {
+    "date": "2026-10-13T10:49",
+    "cost_before": 1.028,
+    "cost_after": 0.113,
+    "pass": false
+   },
+   "do": [
+    [
+     "bridle~groom_8167",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "bridle -> bridle~groom_8167: an IK clip variant (characters/ik_variants.json \"groom_8167\") lays palm_R on what the painting has it touch, from its solved placement"
+  }
+ },
+ "about": "Contact fixes for this section (gen/details/contacts/fix_standard.md): per figure, what tools/contact_solve.mjs solved (nudge, facing_deg: the root offset and yaw that put its contacts on what it touches, measured from the casting's own base_nudge / base_facing), or a recast (do, character) or a fit, with the reason. Applied last by the casting script through tools/contact_fixes.py.",
+ "limits": {
+  "max_move_m": 0.6,
+  "max_turn_deg": 30
+ },
+ "walkers": {
+  "top_porter_backbox_8911": {
+   "path": [
+    [
+     -6.24,
+     28.41
+    ],
+    [
+     -3.24,
+     28.41
+    ]
+   ],
+   "why": "painted walking east right behind the distant rider (0.8 m E) on the far road; his path ran on east through the rider's donkey and the trunks of S5.tree.bare_leaning_9025, bare_leaning_9090 and bare_9128 (he was caught 0.26 m inside bare_9128's trunk on the page, fix-gate 2026-10-13), so it ends at his painted spot, behind the rider"
+  },
+  "porter_back_8050": {
+   "path": [
+    [
+     -3.68,
+     1.95
+    ],
+    [
+     -2.1,
+     4.68
+    ]
+   ],
+   "why": "painted walking away north-east with his shoulder pole; his path ran on through the 串车 (S5.veh.cart_screen_8510: on the page he stood 0.14 m inside it) and onto the moat bridge's railing, so it ends 0.6 m short of the barrow (fix-gate, 2026-10-13)"
+  }
+ }
+}

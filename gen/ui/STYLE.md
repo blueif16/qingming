@@ -108,13 +108,33 @@ have used for this? The answer is written next to it here.
 | **Stats** (`#stats`) | debug only: hidden unless `?stats=1` (still written every 0.5 s: the tools read its text) | top left | `?stats=1` | (none) |
 | **Crosshair** | an ink dot on a paper halo | centre | mouse captured | (none) |
 
-**Next step (the standard; not built yet):**
-- **Intent marks (far, ≤ 25 m):** a small painted pictogram over a figure at its scene's peak beat (a square-holed
-  coin, a frame scale, a razor, a bow, a manifest, "!?", Zzz), drawn as a plaque-sized paper disc with an ink
-  pictogram, at most about 6, nearest first (`gen/life/design.md`). Data: `talk.json` scene `icon` per beat.
-- **Earshot chatter (≤ 10 m):** a scene's beats loop on their own (the quarrel peaks every ~40 s) with bubbles drawn
-  only near the player, the same two-bubble cap shared with the near talk (the near talk wins). Data: `talk.json`
-  scene `mode: loop`, `period`.
+**The life layer (built in the details pass, 2026-10-13; record `gen/life/progress.md`, code `bubbles.js`,
+`chatter.js`, `marks.js`, `talk.js`):** the three distances of `gen/life/design.md`. **Opt-in with `?talk=1` until the
+user signs it off;** without it the page keeps the ink UI round's six press-E scenes and nothing else of this layer.
+
+| component | what | where | when | period object |
+|---|---|---|---|---|
+| **Earshot chatter** | the painted groups' own exchanges, as the speech and thought bubbles above (name tag and all) | over each speaker's head | a group within the tier's `wakeM` keeps talking (turn-taking, quiet gaps, alternatives never repeated); a line is drawn only when its speaker is within `showM` (≈ 10 m) and on screen, nearest first | as the bubbles |
+| **Bark** | a lone figure's word now and then (a hawker's cry, a porter's grunt, a sleeper's thought); a `close` bark calls to you once as you come near | over its head | rare: every 45–120 s while you are within `barkM` | as the bubbles |
+| **Intent mark** | a small paper disc in a brush ring with an ink pictogram (cash coin, steelyard, bow, manifest, Zzz, !?, cup, sack, book, boat, voice, sprig, fan, wheel, rope, bowl) | over the speaker of a group whose exchange is playing, seen from beyond earshot (`showM` < d ≤ `wakeM`), not behind a wall | at most the tier's `marks` (0 / 4 / 6), nearest first | a painted thing of the scroll, as on a shop's sign |
+| **Heard note** | a small paper slip: the 聞 seal, a plot line's title in display brush, 記入圖志 under it | bottom centre | the first time a step of a plot line is overheard, about 4 s | a note slipped into the album |
+
+- **Two bubbles at most, shared:** the near talk and the street use one pool (`bubbles.js`); the near talk wins (it
+  takes a chat slot; chat never takes its slot); the tier's `chatterOpen` (1 low, 2 mid/high) caps the chat bubbles.
+  While a near talk, the journal or the settings are open the street goes on silently.
+- **Calm by subtraction:** at most one new chat bubble every 0.8 s; gaps between exchanges per group (10–30 s), ×1.8
+  at night and ×`gapScale` on the light tier; barks every 45 s or more.
+- **Lines fit the body:** a figure whose clip is asleep only thinks; `when` ties a line to a clip of its cycle.
+- **Who you play** (settings 扮作; world setting `avatar` → a kind: 官 guan, 士 shi, 僧 seng, 婦 fu, 童 tong, 軍 jun,
+  力 li, 民 min): a beat's `as` gives its line for a kind, `only`/`not` keep beats for kinds; the next talk with the same
+  host plays its `again` set.
+- **Chinese plus English** (the user, 2026-10-13): every talk string has an `_en` gloss; with `prefs.lang` `zh_en` it
+  shows under the Chinese in the bubble (italic Latin serif, the role first) and in the journal's plot lines.
+- **Tiers** (`gen/details/tier_contract.md`): `tiers.js` `detail.talk` = `chatterOpen`, `marks`, `scanHz`, `wakeM`,
+  `showM`, `barkM`, `gapScale`; `applyTier` re-scales live (counts × detailScale, never below one bubble); the
+  scheduler runs at `scanHz` (≤ 10), per frame only the open bubbles' and marks' projections.
+**Next step (not built yet):**
+
 - **Visited places on the scroll HUD:** a small cinnabar dot on the HUD strip for each landmark whose toast you have
   seen this session (cheap: `places.js` already keeps `m.last`).
 - **The opening animation** grows out of the title screen: its layers (`.ld-paper`, `.ld-mist`, `.ld-mark`,
@@ -188,8 +208,10 @@ have used for this? The answer is written next to it here.
 - Updates happen on change. The only per-frame work is the transform of anchored elements (bubbles, the prompt,
   plaques): one `Vector3.project` and one `style.transform` each, `translate3d`, no layout reads. The searches (a
   host to talk to, which plaques to hang, landmark distances, the region) run every 0.12–0.25 s.
-- At most **6 anchored elements** (2 bubbles + their tags, 1 prompt, 3 plaques). A plaque's wall test is one BVH
-  ray per candidate per check.
+- At most **6 anchored elements** (2 bubbles + their tags, 1 prompt, 3 plaques), plus the intent marks of the tier
+  (`detail.talk.marks`: none on low, 4 mid, 6 high; one projection each). The chatter's scheduler runs at the tier's
+  `scanHz` (3–4 a second) over the loaded sections' groups (a distance each), never per frame. A plaque's wall test is
+  one BVH ray per candidate per check; a mark's likewise.
 - Animate only `transform`, `opacity` and `clip-path` on large elements; a blur only on small text, once.
 - Budget: the UI's script time under 0.1 ms a frame on a desktop; its first-load download (CSS, JS, the title
   screen's markup and the core font) under 60 KB; the full font set under 250 KB. Measured numbers are in
@@ -209,21 +231,37 @@ have used for this? The answer is written next to it here.
 - Trigger rules: a landmark fires on entering r, re-arms only after you leave `r × 1.5 + 3` m, and waits 240 s before it
   can fire again; a region is not announced again within 120 s; one toast at a time, two waiting at most.
 
-**`sections/<name>/talk.json`** (`gen/life/design.md`, the near conversations)
+**`sections/<name>/talk.json`** (the life pass; the full format is the header of `tools/talk_data.mjs`; the model is
+`sections/outer_road/talk.json`)
 ```json
-{ "scenes": [ { "id": "V5.5", "title": "城下修面", "host": "barber", "reading": "…",
-    "roles": { "barber": { "fig": "barber_7805", "name": "待詔", "src": "…" } },
-    "beats": [ { "who": "barber", "say": "客官，修個面？", "src": "…" },
-               { "who": "customer", "think": "舒坦……", "src": "…" } ] } ] }
+{ "scenes": [ { "id": "V4.1", "title": "懶兵候主", "title_en": "The Idle Soldiers", "host": "box", "reading": "…",
+    "roles": { "box": { "fig": "soldier_behind_box_11580", "name": "軍士", "name_en": "soldier", "src": "…" } },
+    "beats": [ { "who": "box", "say": "看甚麼？公文還沒下來。", "say_en": "…", "src": "…",
+                 "as": { "guan": "官人可是來催公文的？" }, "as_en": { "guan": "…" } } ],
+    "again": [ { "beats": [ … ], "step": "tax.3" } ] } ],
+  "chatter": [ { "id": "c4.courier", "title": "…", "mark": "zzz", "gap": [14, 32], "roles": { … },
+    "exchanges": [ { "beats": [ { "who": "stool", "say": ["差官還不出來？", "日頭都快晌午了。"], "say_en": ["…", "…"], "src": "…" },
+                                { "who": "lying", "think": ["呼……"], "think_en": ["Zzz…"], "optional": true, "src": "…" } ],
+                     "linked": false, "step": null } ] } ],
+  "barks": [ { "id": "b4.teller", "who": { "fig": "fortune_teller_12232", "name": "賣卦先生", "name_en": "…", "src": "…" },
+    "close": true, "every": [40, 80], "say": ["客官，看命？決疑？"], "say_en": ["…"], "src": "…" } ] }
 ```
 - `fig` is a painted figure's slug in that section's `people.json`; a figure carried by another (`carried_by`) speaks
-  from over its carrier's head. `optional: true` skips a beat whose speaker is off screen. 2–6 beats.
-- Timing: a line stays `max(2.2, 1.0 + characters / 5.5)` s; E (or a tap on a bubble) first shows the whole line,
-  then the next; Esc or walking 6.5 m from the host closes it.
+  from over its carrier's head. `optional: true` skips a beat whose speaker is off screen. 2–6 beats for every kind of
+  player.
+- `sections/world/talk.json`: `kinds` (avatar → kind) and `threads` (the plot lines: `id`, `title`, `lead`, `steps`
+  with `section` and `note`, each with `_en`); a scene, `again` set, exchange or bark carrying `step` tells it.
+- Timing: a line stays `max(2.2, 1.0 + characters / 5.5)` s (+1.2 s with English); in a near talk E (or a tap on a
+  bubble) first shows the whole line, then the next; Esc or walking 6.5 m from the host closes it.
 
 ## 13. Checks
 
 - `node tools/ui_data.mjs check` (data), `uv run tools/font_subset.py --check` (glyphs).
+- The life layer: `node tools/ui_data.mjs build` → `uv run tools/font_subset.py` → `node tools/ui_data.mjs check`
+  (talk_data's checks: speakers placed and painted, sources, lengths, English glosses, sleepers only think, clips,
+  kinds, plot-line steps told, every glyph in a subset); `tools/chrome_slot.sh node gen/life/life_check.mjs <tag>`
+  (bubbles sampled at the standard views: at most two open, no two overlapping; lines and steps heard; every near talk
+  by three kinds of player and twice); `gen/life/life_cost.mjs` (the phone proxy at the low tier, chatter off/on A/B).
 - `tools/chrome_slot.sh node gen/ui/shots/ui_shots.mjs <out> gen/ui/shots/plan_after.json` (every component in the
   world, desktop and phone, day and night) and `plan_kit.json` (the kit). Look at them: legibility, overlap, style.
 - `window.__test.ui` on the world page: `banner(folder)`, `toast(id)`, `talk(sceneId)`, `next()`, `close()`,

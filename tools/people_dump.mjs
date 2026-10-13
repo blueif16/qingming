@@ -23,6 +23,11 @@ const args = process.argv.slice(2);
 const opt = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
 const base = opt('--url', 'http://127.0.0.1:5190');
 const out = path.resolve(QM, opt('--out', 'gen/details/placements.json'));
+// boats (fix-boats, details pass): --boatflow moored|painted|waves sets the page's boat mode (default: the page's own
+// choice by tier); --boat-times 0,5,10 also writes the boats and their crews at those frozen clock times (seconds after
+// every boat's start, the page's own boats.step from a reset), as `boat_samples`
+const boatflow = opt('--boatflow', null);
+const boatTimes = opt('--boat-times', null) ? opt('--boat-times').split(',').map(Number).filter(Number.isFinite) : [];
 const ALL = fs.readFileSync(path.join(QM, 'web/world.html'), 'utf8').match(/data-sections="([^"]+)"/)[1].split(',');
 
 const t0 = Date.now();
@@ -34,7 +39,7 @@ page.on('pageerror', (e) => logs.push(`[pageerror] ${e.message}`));
 page.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') logs.push(`[${m.type()}] ${m.text()}`); });
 let dump;
 try {
-  await page.goto(`${base}/world.html?window=all&sound=0&tier=high&adapt=0`);
+  await page.goto(`${base}/world.html?window=all&sound=0&tier=high&adapt=0&start=0${boatflow ? `&boatflow=${boatflow}` : ''}`);
   await page.waitForFunction(() => window.__test, null, { timeout: 300000 });
   // every section in, with its people
   await page.waitForFunction((n) => {
@@ -81,7 +86,7 @@ try {
           model: p.model.name, character: sp.character || sp.model || null, stand_in: sp.stand_in || null,
           root: [r4(q.x), r4(q.y), r4(q.z)], yaw: r4(p.root.rotation.y), scale: r4(p.root.scale.x), model_scale: r4(p.model.scene.scale.x),
           clip: p.clip, do: sp.do || null, props: sp.props || null, load: sp.load || null, nudge: sp.nudge || null, facing_deg: sp.facing_deg ?? null,
-          spec_scale: sp.scale ?? null, ride: sp.ride || null, carried_by: sp.carried_by || null,
+          spec_scale: sp.scale ?? null, ride: sp.ride || null, carried_by: sp.carried_by || null, root_h: sp.root_h ?? null,
           map: f ? { X: f.X, D: f.D, H: f.H || 0, facing_deg: f.facing_deg, support: f.support || null, pose: f.pose || null, group: f.group || null, map_id: f.map_id }
             : e ? { X: e.pos[0], D: e.pos[1], H: e.H || 0, facing_deg: e.facing_deg, support: e.support || null, map_id: `${s.layout.section}.ani.${p.id}`, fore: e.pts?.fore, hind: e.pts?.hind } : null,
           body: p.body ? { r: p.body.r, along: p.body.along } : null,
@@ -94,10 +99,77 @@ try {
         out.people.push(rec);
       }
     }
+    // the boats at this instant (fix-boats): each painted boat's root matrix (page frame), its lod 0 nodes' matrices
+    // relative to the root (holders: body, sweep, oar_*, mast, line_*; three's GLTFLoader drops [].:/ from node names),
+    // its motion state; each crew member's boat and its spot as boats.js host() set it (crewSpots: local, node, yaw)
+    const boatState = (b) => {
+      const suf = (':' + b.id).replace(/[\[\].:/]/g, '');
+      const nodes = {};
+      for (const h of b.lods[0].root.children) {
+        if (!h.name.endsWith(suf)) continue;
+        h.updateMatrix();
+        nodes[h.name.slice(0, -suf.length)] = Array.from(h.matrix.elements, (x) => Math.round(x * 1e6) / 1e6);
+      }
+      return { id: b.id, section: b.section, root: Array.from(b.roots[0].matrixWorld.elements, (x) => Math.round(x * 1e6) / 1e6), nodes,
+        state: b.state, s: r4(b.s), effort: r4(b.effort), clock: r4(b.clock), flow: !!b.flow, hidden: !!b.hidden, under: !!b.under };
+    };
+    const B = T.boats;
+    if (B) {
+      out.boats = {};
+      out.boats_t = r4(B.t);
+      const crewBoat = new Map();
+      for (const b of B.list) {
+        if (b.extra) continue;
+        out.boats[b.id] = boatState(b);
+        const spots = new Map((b.crewSpots || []).map((c) => [c.id, c]));
+        const suf = (':' + b.id).replace(/[\[\].:/]/g, '');
+        for (const id of b.crew) {
+          const c = spots.get(id);
+          crewBoat.set(`${b.section}/${id}`, { id: b.id, haul: !!b.spec?.haul?.[id], work: b.spec?.crew?.[id]?.work || null,
+            spot: c ? { local: [r4(c.local.x), r4(c.local.y), r4(c.local.z)], node: c.node ? c.node.name.slice(0, -suf.length) : null, yaw: r4(c.yaw) } : null });
+        }
+      }
+      for (const rec of out.people) { const cb = rec.kind === 'crew' && crewBoat.get(`${rec.section}/${rec.id}`); if (cb) rec.boat = cb; }
+    }
     function rec0(y) { return Math.round(y * 1e4) / 1e4; }
     out.clip_meta_n = Object.keys(T.clipMeta || {}).length;
     return out;
   });
+  // the boats at frozen clock times (fix-boats): every painted boat back to its start (boats.js add(): clock = hash(id) * 4,
+  // at rest), boats.t = 0, then the page's own boats.step at 20 Hz up to t, boats.update (moving parts, ropes) and every
+  // attached person's place (crews, haulers); the boats, the crews' roots and clips at that instant
+  if (boatTimes.length) {
+    dump.boat_samples = [];
+    for (const tt of boatTimes) {
+      dump.boat_samples.push(await page.evaluate((tt) => {
+        const T = window.__test, B = T.boats, P = T.people;
+        const r4 = (x) => Math.round(x * 1e4) / 1e4;
+        const hash = (s) => { let h = 2166136261; for (const c of String(s)) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return (h >>> 0) / 4294967296; };
+        for (const b of B.list) { if (b.extra || b.flow) continue; b.clock = hash(b.id) * 4; b.state = 'rest'; b.s = 0; b.effort = 0; b.atRest = true; b.wave = 0; }
+        B.t = 0;
+        const dt = 0.05, n = Math.round(tt / dt);
+        for (let i = 0; i < n; i++) B.step(dt);
+        if (!n) B.step(0);
+        B.update(0, T.camera);
+        for (const a of P.attached) a.place(a.p, 0.2);
+        const boats = {};
+        for (const b of B.list) {
+          if (b.extra) continue;
+          const suf = (':' + b.id).replace(/[\[\].:/]/g, '');
+          const nodes = {};
+          for (const h of b.lods[0].root.children) { if (!h.name.endsWith(suf)) continue; h.updateMatrix(); nodes[h.name.slice(0, -suf.length)] = Array.from(h.matrix.elements, (x) => Math.round(x * 1e6) / 1e6); }
+          boats[b.id] = { root: Array.from(b.roots[0].matrixWorld.elements, (x) => Math.round(x * 1e6) / 1e6), nodes, state: b.state, s: r4(b.s), effort: r4(b.effort), flow: !!b.flow };
+        }
+        const crew = {};
+        for (const [name, s] of T.loaded) for (const p of s.persons || []) {
+          if (!P.attached.some((a) => a.p === p)) continue;
+          const q = p.root.position;
+          crew[`${name}/${p.id}`] = { root: [r4(q.x), r4(q.y), r4(q.z)], yaw: r4(p.root.rotation.y), clip: p.clip };
+        }
+        return { t: tt, boats_t: r4(B.t), boats, crew };
+      }, tt));
+    }
+  }
 } finally {
   await page.close().catch(() => {});
   await browser.close().catch(() => {});
@@ -106,7 +178,7 @@ dump.about = 'tools/people_dump.mjs: every person and animal as the page placed 
   + 'p.root; page frame x = X, y = H, z = -D. hits = a vertical ray through the root on each section\'s collider: [y, mesh, section] '
   + '(mesh "hidden" = a collider-only mesh). ground_hook = people.js hooks.ground(x, z, H + 1.2) asked again at dump time.';
 dump.date = new Date().toISOString();
-dump.url = `${base}/world.html?window=all&sound=0&tier=high&adapt=0`;
+dump.url = `${base}/world.html?window=all&sound=0&tier=high&adapt=0&start=0${boatflow ? `&boatflow=${boatflow}` : ''}`;
 dump.seconds = (Date.now() - t0) / 1000;
 dump.page_log = logs.slice(0, 50);
 fs.mkdirSync(path.dirname(out), { recursive: true });

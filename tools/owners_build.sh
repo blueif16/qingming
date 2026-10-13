@@ -49,5 +49,6 @@ for name in "$@"; do
     done < <(find "$d" -maxdepth 1 -type f -newer "$marker" ! -name owners.bin)
   done
   rm -f "$marker"
+  rm -rf "$bak"   # everything is back in place; only the drift copies and the logs stay
   echo "$name: build $status in $(( $(date +%s) - t0 )) s; $(grep -o '"owners_tris": [0-9]*' "$LOGDIR/$name.out" | head -1); drift: ${drift[*]:-none}"
 done

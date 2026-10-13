@@ -1,0 +1,589 @@
+[
+ {
+  "id": "figure_by_top_willow_20590",
+  "model": "robed_man",
+  "clips": [
+   "look",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    -0.3
+   ],
+   "facing": 180
+  },
+  "nudge": [
+   0,
+   -0.38
+  ],
+  "facing_deg": 180,
+  "moved_m": 0.08,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.159,
+   "fails": "body_cylinder 0.103",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 10.772
+ },
+ {
+  "id": "man_north_bank_small_21553",
+  "model": "child",
+  "clips": [
+   "look",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    -0.12
+   ],
+   "facing": 270
+  },
+  "nudge": [
+   0,
+   0.23
+  ],
+  "facing_deg": 270,
+  "moved_m": 0.35,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.437,
+   "fails": "body_cylinder 0.162",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "S2.bld.open_shop_21640"
+  },
+  "pass": true,
+  "seconds": 15.656
+ },
+ {
+  "id": "shop_standing_21726",
+  "model": "camel_driver",
+  "clips": [
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0.5,
+    0
+   ],
+   "facing": 270
+  },
+  "nudge": [
+   0.7,
+   0
+  ],
+  "facing_deg": 270,
+  "moved_m": 0.2,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.561,
+   "fails": "stance_soles(placement) -0.172; body_cylinder 0.121; site_inside elbow_R 0.06",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 10.689
+ },
+ {
+  "id": "bank_man_seated_21140",
+  "model": "robed_man",
+  "clips": [
+   "sit_floor"
+  ],
+  "base": {
+   "nudge": [
+    -0.18,
+    -0.01
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   -0.17,
+   0.21
+  ],
+  "facing_deg": 0,
+  "moved_m": 0.22,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.025,
+   "fails": "contact:floor seat 0.19",
+   "contacts": "sit_floor:seat->ground q0.19/0.19 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "sit_floor:seat->ground q0.032/0.032 PASS",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 0.222
+ },
+ {
+  "id": "bank_crouching_21155",
+  "model": "idler",
+  "clips": [
+   "crouch"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0
+   ],
+   "facing": 270
+  },
+  "nudge": [
+   0,
+   -0.06
+  ],
+  "facing_deg": 270,
+  "moved_m": 0.06,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.061,
+   "fails": "stance_soles(placement) -0.078",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 0.59
+ },
+ {
+  "id": "bank_tall_man_21205",
+  "model": "scholar",
+  "clips": [
+   "bow",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0
+   ],
+   "facing": 200
+  },
+  "nudge": [
+   -0.01,
+   -0.12
+  ],
+  "facing_deg": 200,
+  "moved_m": 0.12,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.159,
+   "fails": "stance_soles(placement) -0.126",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 1.239
+ },
+ {
+  "id": "bank_small_figure_21255",
+  "model": "youth",
+  "clips": [
+   "look",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0
+   ],
+   "facing": 180
+  },
+  "nudge": [
+   0,
+   0.07
+  ],
+  "facing_deg": 180,
+  "moved_m": 0.07,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.108,
+   "fails": "stance_soles(placement) -0.104",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 1.277
+ },
+ {
+  "id": "crouching_man_by_timber_21880",
+  "model": "idler",
+  "clips": [
+   "crouch"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0.44
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   -0.36,
+   0.26
+  ],
+  "facing_deg": -10,
+  "moved_m": 0.4,
+  "turned_deg": -10,
+  "before": {
+   "cost": 0.207,
+   "fails": "stance_soles(placement) -0.144",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 0.952
+ },
+ {
+  "id": "big_hat_man_south_bank_22045",
+  "model": "dark_hat",
+  "clips": [
+   "crouch"
+  ],
+  "base": {
+   "nudge": [
+    0,
+    0
+   ],
+   "facing": 135
+  },
+  "nudge": [
+   -0.01,
+   0.01
+  ],
+  "facing_deg": 135,
+  "moved_m": 0.01,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.027,
+   "fails": "stance_soles(placement) -0.052",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 0.547
+ },
+ {
+  "id": "cart_loader_24345",
+  "model": "scholar",
+  "clips": [
+   "lean_over",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    -0.12,
+    0.08
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   -0.52,
+   -0.19
+  ],
+  "facing_deg": 11,
+  "moved_m": 0.48,
+  "turned_deg": 11,
+  "before": {
+   "cost": 0.08,
+   "fails": "contact:rail palm_L 0.109; contact:rail palm_R 0.281",
+   "contacts": "lean_over:palm_L->S2.veh.mule_cart_24305 q0.109/0.043 FAIL; lean_over:palm_R->S2.veh.mule_cart_24305 q0.281/0.2 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "lean_over:palm_L->S2.veh.mule_cart_24305 q0.022/-0.013 PASS; lean_over:palm_R->S2.veh.mule_cart_24305 q0.027/-0.015 PASS",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 49.636
+ },
+ {
+  "id": "man_behind_cart_rear_24463",
+  "model": "townsman",
+  "clips": [
+   "look",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    -0.03,
+    0.01
+   ],
+   "facing": 270
+  },
+  "nudge": [
+   0.12,
+   0.18
+  ],
+  "facing_deg": 270,
+  "moved_m": 0.23,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.072,
+   "fails": "site_inside elbow_R 0.07",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 13.851
+ },
+ {
+  "id": "stall_keeper_24650",
+  "model": "townsman",
+  "clips": [
+   "browse",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    -0.18,
+    0
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   -0.03,
+   0.14
+  ],
+  "facing_deg": 3,
+  "moved_m": 0.21,
+  "turned_deg": 3,
+  "before": {
+   "cost": 0.02,
+   "fails": "contact:table palm_R 0.214",
+   "contacts": "browse:palm_L->S2.prop.stall_goods_24672 q0.056/0.056 PASS; browse:palm_R->S2.prop.stall_table_24708 q0.214/0.214 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "browse:palm_L->S2.prop.stall_goods_24672 q0.089/0.089 PASS; browse:palm_R->S2.prop.stall_goods_24672 q0.093/0.093 PASS",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 22.867
+ },
+ {
+  "id": "far_street_figure_25750",
+  "model": "inspector",
+  "clips": [
+   "hand_over",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0.1,
+    0
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   0.09,
+   -0.02
+  ],
+  "facing_deg": 0,
+  "moved_m": 0.02,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.014,
+   "fails": "site_inside palm_R 0.037",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 4.233
+ },
+ {
+  "id": "hall_seated_man_25600",
+  "model": "fortune_teller",
+  "clips": [
+   "sit"
+  ],
+  "base": {
+   "nudge": [
+    -0.32,
+    0.36
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   -0.22,
+   0.56
+  ],
+  "facing_deg": 8,
+  "moved_m": 0.22,
+  "turned_deg": 8,
+  "before": {
+   "cost": 0.727,
+   "fails": "contact:floor(clip) sole_L -0.036; body_cylinder 0.205",
+   "contacts": "sit:seat->S2.fig.hall_seated_man_25600 q-0.001/-0.018 PASS; sit:sole_L->S2.bld.yanhe_yazuo_hall_25690 q-0.004/-0.036 FAIL; sit:sole_R->S2.bld.yanhe_yazuo_hall_25690 q0.006/-0.014 PASS"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "contact:floor(clip) sole_L -0.032",
+   "contacts": "sit:seat->S2.fig.hall_seated_man_25600 q0.019/-0.009 PASS; sit:sole_L->S2.bld.yanhe_yazuo_hall_25690 q0/-0.032 FAIL; sit:sole_R->S2.bld.yanhe_yazuo_hall_25690 q0.01/-0.01 PASS",
+   "on": "S2.bld.yanhe_yazuo_hall_25690"
+  },
+  "pass": true,
+  "seconds": 20.84
+ },
+ {
+  "id": "hall_small_figure_25628",
+  "model": "child",
+  "clips": [
+   "sit"
+  ],
+  "base": {
+   "nudge": [
+    0.2,
+    -0.01
+   ],
+   "facing": 180
+  },
+  "nudge": [
+   0.2,
+   -0.05
+  ],
+  "facing_deg": 180,
+  "moved_m": 0.04,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0,
+   "fails": "contact:floor(placement) sole_L -0.032; contact:floor(placement) sole_R -0.037",
+   "contacts": "sit:seat->S2.fig.hall_small_figure_25628 q-0.003/-0.007 PASS; sit:sole_L->S2.bld.yanhe_yazuo_hall_25690 q-0.026/-0.032 FAIL; sit:sole_R->S2.fig.hall_small_figure_25628 q-0.035/-0.037 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "sit:seat->S2.fig.hall_small_figure_25628 q0.011/0.008 PASS; sit:sole_L->S2.bld.yanhe_yazuo_hall_25690 q-0.012/-0.017 PASS; sit:sole_R->S2.fig.hall_small_figure_25628 q-0.02/-0.023 PASS",
+   "on": "S2.bld.yanhe_yazuo_hall_25690"
+  },
+  "pass": true,
+  "seconds": 25.842
+ },
+ {
+  "id": "youth_topknot_28222",
+  "model": "idler",
+  "clips": [
+   "tie_kerchief",
+   "idle"
+  ],
+  "base": {
+   "nudge": [
+    0.24,
+    -0.18
+   ],
+   "facing": 0
+  },
+  "nudge": [
+   0.34,
+   -0.19
+  ],
+  "facing_deg": 0,
+  "moved_m": 0.1,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.269,
+   "fails": "body_cylinder 0.13",
+   "contacts": ""
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 3.461
+ },
+ {
+  "id": "stall_keeper_26174",
+  "model": "idler",
+  "clips": [
+   "sit"
+  ],
+  "base": {
+   "nudge": [
+    0.02,
+    0.49
+   ],
+   "facing": 270
+  },
+  "nudge": [
+   -0.02,
+   0.64
+  ],
+  "facing_deg": 270,
+  "moved_m": 0.16,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.007,
+   "fails": "contact:seat seat -0.062; site_inside palm_R 0.022",
+   "contacts": "sit:seat->S2.fig.stall_keeper_26174 q-0.038/-0.062 FAIL; sit:sole_L->ground q0.005/-0.003 PASS; sit:sole_R->ground q0.018/0.014 PASS"
+  },
+  "after": {
+   "cost": 0.002,
+   "fails": "contact:seat seat -0.058",
+   "contacts": "sit:seat->S2.fig.stall_keeper_26174 q-0.034/-0.058 FAIL; sit:sole_L->ground q0.006/-0.002 PASS; sit:sole_R->ground q0.018/0.014 PASS",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 8.038
+ }
+]

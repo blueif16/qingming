@@ -454,3 +454,19 @@ What the takes taught (frame sheets `gen/characters/<cast>/clips_paid4*.jpg`):
   `lie_wave` prop itself on an elbow.
 - A casting script can depend on a clip by its pose list: S4b's `make_people.py` stopped with a KeyError when the
   boatman landed without a seated clip from its list; giving the boatman `knees_up` (free) fixed it.
+
+## Eyes (details pass, 2026-10-13)
+
+The turnaround prompts asked for "dark dot eyes" and the sheets drew them, so many faces had solid round dots.
+`tools/eye_check.mjs` now measures every shipped face on the face plane in millimetres (the lid's reach past the iris
+and the outline's width, calibrated on six passing faces and four dots: reach >= 6.8 mm and width >= 17.2 mm, margins
+x2.36 and x1.40). 20 of 34 failed. 17 were fixed for free by `"eyes": {"from": "bearer" | "youth"}` (the bearer's
+almond eye for the men, the youth's for the boys; child_red inherits the child's): boatman, butcher, camel_driver,
+carter, child, child_red, child_robed, fortune_teller, grain_porter, idler, inspector, monk, official, official_rider,
+porter, robed_man, sightseer. All pass now (reach 14.5-25 mm, width 22-35 mm). Round 2: the scholar's whole face was
+on UV slivers the 512 map can't hold (eye band 302 texels in 30 islands), so `"reuv"` gives its face front one island
+of free texels (1.95 mm a texel, 470 triangles, only their UVs change) before the eye is drawn; hat_traveller(+_dark)
+had no free space for that, so its eyes sit 12 mm under the dots, clear of the fringe's slivers; hat_traveller_dark's
+hat recolour no longer blackens the nose (`spare` mask option). All 34 pass. The rebuilt GLBs differ from the old only in the body image (the monk's was spliced in,
+its back frame being newer than its last build). Records: `gen/details/eyes/notes.md`. A new character's sheet
+should not ask for dot eyes; check it with `eye_check` before it ships.

@@ -281,6 +281,71 @@ def _tri_count(B=None):
     return sum(len(f) - 2 for b in B.data.values() for f in b["f"])
 
 
+def _top_at(tris, x, y, zlo, zhi):
+    """The highest of the triangles (a, b, c) over (x, y) with its height in [zlo, zhi], or None."""
+    best = None
+    for a, b, c in tris:
+        if x < min(a.x, b.x, c.x) - 1e-6 or x > max(a.x, b.x, c.x) + 1e-6 or y < min(a.y, b.y, c.y) - 1e-6 or y > max(a.y, b.y, c.y) + 1e-6:
+            continue
+        det = (b.y - c.y) * (a.x - c.x) + (c.x - b.x) * (a.y - c.y)
+        if abs(det) < 1e-12:
+            continue
+        l1 = ((b.y - c.y) * (x - c.x) + (c.x - b.x) * (y - c.y)) / det
+        l2 = ((c.y - a.y) * (x - c.x) + (a.x - c.x) * (y - c.y)) / det
+        l3 = 1 - l1 - l2
+        if l1 < -1e-6 or l2 < -1e-6 or l3 < -1e-6:
+            continue
+        z = l1 * a.z + l2 * b.z + l3 * c.z
+        if zlo <= z <= zhi and (best is None or z > best):
+            best = z
+    return best
+
+
+@contextlib.contextmanager
+def _snap_cols(window=0.5, nodes=("roof__col", "deck__col")):
+    """fix-boats (details pass, contacts; gen/details/contacts/fix_boats/notes.md): the walkable tops of the colliders
+    built inside this block follow the visible surfaces built inside it. Each collider vertex that is the highest at
+    its (x, y) goes to the highest new visible face over that point within `window` of it. The page stands crews on the
+    colliders (boats.js host), and the walker walks on them: a roof's or a mound's collider 2-8 cm under its visible
+    top put the crews' soles inside the mat or the boards. Nodes sink only (the page's boats)."""
+    if S.mode != "nodes":
+        yield
+        return
+    vis_B = sb.B
+    vis_before = {kk: len(b["f"]) for kk, b in vis_B.data.items()}
+    col_before = {n: ({kk: len(b["v"]) for kk, b in S.nodes[n]["B"].data.items()} if n in S.nodes else {}) for n in nodes}
+    yield
+    tris = []
+    for kk, b in vis_B.data.items():
+        if kk[0] == "hidden":
+            continue
+        for f in b["f"][vis_before.get(kk, 0):]:
+            q = [b["v"][i] for i in f]
+            tris += [(q[0], q[j], q[j + 1]) for j in range(1, len(q) - 1)]
+    if not tris:
+        return
+    for n in nodes:
+        nd = S.nodes.get(n)
+        if not nd:
+            continue
+        for kk, b in nd["B"].data.items():
+            top = {}
+            for i in range(col_before[n].get(kk, 0), len(b["v"])):
+                v = b["v"][i]
+                key = (round(v.x, 3), round(v.y, 3))
+                if key not in top or v.z > b["v"][top[key]].z:
+                    top[key] = i
+            for i in top.values():
+                v = b["v"][i]
+                z = None
+                for dx, dy in ((0, 0), (0.02, 0), (-0.02, 0), (0, 0.02), (0, -0.02)):
+                    z = _top_at(tris, v.x + dx, v.y + dy, v.z - window, v.z + window)
+                    if z is not None:
+                        break
+                if z is not None:
+                    b["v"][i] = V((v.x, v.y, z))
+
+
 def _add(mat, verts, faces, inside, uvs=None, collide=False):
     """Add faces wound outward (inside: one point, or one per face, inside the solid), keeping explicit UVs in step."""
     verts = [V(p) for p in verts]
@@ -639,17 +704,24 @@ def _bulwark(H, drop, x_from, x_to, lod):
                 _bar("timber", (x, yi, zt - drop), (x, yi, zt - 0.02), 0.07, 0.07)
 
 
-def _deck(H, drop, x_from, x_to, rng, lod, holes=(), mat="deck"):
-    """Deck boards running fore and aft from x_from to x_to, following the sheer, each its own strip standing a
-    little proud of a dark underlay so the joints draw; boards inside a hole (x0, x1, half-width: under a cabin or a
-    hold cover) stop at its ends."""
+def _deck_stations(x_from, x_to, holes=(), lod=0):
+    """Where the deck boards break along the hull (their sheer is straight between): every 2.4 m (3.5 at lod 1) and at
+    every hole's ends. The deck collider uses lod 0's (fix-boats: on 2 m stations of its own it missed the boards'
+    sheer by up to 5-6 cm near the ends)."""
     seg = 2.4 if lod == 0 else 3.5
     cuts = {x_from, x_to}
     n = max(2, int((x_to - x_from) / seg) + 1)
     cuts |= {x_from + (x_to - x_from) * i / (n - 1) for i in range(n)}
     for h0, h1, _ in holes:
         cuts |= {h0, h1}
-    xs = sorted(c for c in cuts if x_from - 1e-9 <= c <= x_to + 1e-9)
+    return sorted(c for c in cuts if x_from - 1e-9 <= c <= x_to + 1e-9)
+
+
+def _deck(H, drop, x_from, x_to, rng, lod, holes=(), mat="deck"):
+    """Deck boards running fore and aft from x_from to x_to, following the sheer, each its own strip standing a
+    little proud of a dark underlay so the joints draw; boards inside a hole (x0, x1, half-width: under a cabin or a
+    hold cover) stop at its ends."""
+    xs = _deck_stations(x_from, x_to, holes, lod)
     hw = {x: H.inner(x, H.deck_z(x, drop)) - 0.01 for x in xs}
     nb = max(4, round(2 * max(hw.values()) / (0.42 if lod == 0 else 0.9)))
     tile = sb.MATERIALS[mat][1]
@@ -699,10 +771,13 @@ def _deck(H, drop, x_from, x_to, rng, lod, holes=(), mat="deck"):
 
 # ---------------------------------------------------------------- colliders, rim, boarding edge
 
-def _deck_collider(H, drop, x_from, x_to, step=2.0):
-    """Hidden walkable deck: a slab whose top is the deck surface from x_from to x_to (sheered)."""
-    n = max(2, int((x_to - x_from) / step) + 1)
-    xs = [x_from + (x_to - x_from) * i / (n - 1) for i in range(n)]
+def _deck_collider(H, drop, x_from, x_to, step=2.0, xs=None):
+    """Hidden walkable deck: a slab whose top is the deck surface from x_from to x_to (sheered), broken at `xs` (the
+    deck boards' stations, _deck_stations) or every `step` m."""
+    if xs is None:
+        n = max(2, int((x_to - x_from) / step) + 1)
+        xs = [x_from + (x_to - x_from) * i / (n - 1) for i in range(n)]
+    n = len(xs)
     verts = []
     for x in xs:
         z, y = H.deck_z(x, drop), H.inner(x, H.deck_z(x, drop))
@@ -865,15 +940,23 @@ def _board_roof(x0, x1, hw, ze, rise, rng, lod, thick=0.06, panel=1.1):
 
 
 def _roof_collider(xa, xb, hw, zd, ze, zc):
-    """Hidden: a deckhouse's block (its walls stop a walker) with a cambered top at the roof's surface."""
-    na = 4
+    """Hidden: a deckhouse's block (its walls stop a walker) with a cambered top at the roof's surface: rings at most
+    1 m apart along it, 8 pieces across (fix-boats: dense enough for _snap_cols to lay it on the visible roof)."""
+    na = 8
     prof = [(-hw + 2 * hw * i / na, ze + (zc - ze) * math.sin(math.pi * i / na) ** 0.8) for i in range(na + 1)]
-    ring_a = [V((xa, -hw, zd))] + [V((xa, y, z)) for y, z in prof] + [V((xa, hw, zd))]
-    ring_b = [V((xb, p.y, p.z)) for p in ring_a]
-    m = len(ring_a)
-    faces = [(i, i + 1, m + i + 1, m + i) for i in range(m - 1)] + [(m - 1, 0, m, 2 * m - 1)]
-    faces += [tuple(range(m)), tuple(range(2 * m - 1, m - 1, -1))]
-    _add("hidden", ring_a + ring_b, faces, V(((xa + xb) / 2, 0, (zd + ze) / 2)), collide=True)
+    nx = max(1, math.ceil((xb - xa) / 1.0 - 1e-9))
+    rings = []
+    for j in range(nx + 1):
+        x = xa + (xb - xa) * j / nx
+        rings.append([V((x, -hw, zd))] + [V((x, y, z)) for y, z in prof] + [V((x, hw, zd))])
+    m = len(rings[0])
+    verts = [p for r in rings for p in r]
+    faces = []
+    for j in range(nx):
+        a, b = j * m, (j + 1) * m
+        faces += [(a + i, a + i + 1, b + i + 1, b + i) for i in range(m - 1)] + [(a + m - 1, a, b, b + m - 1)]
+    faces += [tuple(range(m)), tuple(range(nx * m + m - 1, nx * m - 1, -1))]
+    _add("hidden", verts, faces, V(((xa + xb) / 2, 0, (zd + ze) / 2)), collide=True)
 
 
 def _cabin(H, drop, x0, x1, hw, wall_h, rng, lod, pattern="passenger", roof="board", segs=2, roof_rise=0.28,
@@ -950,19 +1033,20 @@ def _cabin(H, drop, x0, x1, hw, wall_h, rng, lod, pattern="passenger", roof="boa
         lift = 0.05 * si if segs > 1 else 0.0
         ext0 = over * 0.8 if si == 0 else 0.03
         ext1 = over * 0.8 if si == segs - 1 else 0.03
-        if roof == "mat":
-            zt = ze + roof_rise * 1.6 + lift
-            kv.barrel_cover(xa - ext0, xb + ext1, hw + over * 0.55, ze - 0.05 + lift, ze + roof_rise * 0.25 + lift, zt,
-                            hoops=max(3, round((xb - xa) / 1.1) + 1) if lod == 0 else 2, thick=0.035)
-        else:
-            zt = ze + lift + roof_rise + 0.06
-            _board_roof(xa - ext0, xb + ext1, hw + over, ze + lift, roof_rise, rng, lod)
-        crowns.append(zt)
-        with S.node("roof__col"):
-            if is_open:       # walkers and passengers go in under it: only the roof's top collides
-                _posts_roof_collider(xa - ext0, xb + ext1, hw + over * 0.5, zt - 0.02, th=max(0.15, zt - ze - lift))
+        with _snap_cols():    # fix-boats: the collider's top on the roof's visible top
+            if roof == "mat":
+                zt = ze + roof_rise * 1.6 + lift
+                kv.barrel_cover(xa - ext0, xb + ext1, hw + over * 0.55, ze - 0.05 + lift, ze + roof_rise * 0.25 + lift, zt,
+                                hoops=max(3, round((xb - xa) / 1.1) + 1) if lod == 0 else 2, thick=0.035)
             else:
-                _roof_collider(xa - ext0, xb + ext1, hw, zd, ze + lift, zt - 0.02)
+                zt = ze + lift + roof_rise + 0.06
+                _board_roof(xa - ext0, xb + ext1, hw + over, ze + lift, roof_rise, rng, lod)
+            crowns.append(zt)
+            with S.node("roof__col"):
+                if is_open:       # walkers and passengers go in under it: only the roof's top collides
+                    _posts_roof_collider(xa - ext0, xb + ext1, hw + over * 0.5, zt - 0.02, th=max(0.15, zt - ze - lift))
+                else:
+                    _roof_collider(xa - ext0, xb + ext1, hw, zd, ze + lift, zt - 0.02)
     if ladder is not None:
         xl, side = ladder
         zd = H.deck_z(xl, drop)
@@ -1077,9 +1161,10 @@ def _stern(H, drop, rng, lod, gallery=True, house=False, house_h=1.8, tiller=Tru
             _wall_quad("deck", hx0, hx1, zh, zh + 0.75, yy, side)
             _bar("timber", (hx0, yy, zh + 0.75), (hx1, yy, zh + 0.75), 0.08, 0.08)
             _bar("timber", (hx0, yy, zh + house_h - 0.05), (hx1, yy, zh + house_h - 0.05), 0.09, 0.09)
-        _board_roof(hx0 - 0.35, hx1 + 0.35, yb * 0.9 + 0.35, zh + house_h, 0.22, rng, lod, panel=0.9)
-        with S.node("roof__col"):
-            _roof_collider(hx0, hx1, yb * 0.9, zh, zh + house_h, zh + house_h + 0.24)
+        with _snap_cols():    # fix-boats: the collider's top on the roof's visible top
+            _board_roof(hx0 - 0.35, hx1 + 0.35, yb * 0.9 + 0.35, zh + house_h, 0.22, rng, lod, panel=0.9)
+            with S.node("roof__col"):
+                _roof_collider(hx0, hx1, yb * 0.9, zh, zh + house_h, zh + house_h + 0.24)
     return x0 - gal + 0.1, x0 + 0.4, zt + 0.23, tiller_end, xstock
 
 
@@ -1141,18 +1226,23 @@ def _mast(H, drop, x_m, height, angle_deg, lod, tow_to=None, crutch=True):
 SWEEP_AMP = 10.0     # choice: the sweep's sculling swing, degrees each way (the crew at its bar walk with it)
 
 
-def _sweep(H, drop, side, lod, pin, bar_x, bar_y, chest=1.15, pose="work"):
+def _sweep(H, drop, side, lod, pin, bar_x, bar_y, chest=1.15, pose="work", bar_w=None, crew_in=None, decked=False):
     """The great sweep (大橹) as painted (S3 u 15550-16140, #6; S2 u 21850-22950, #16): its pin on the stern frame (the
     gallery) at the quarter, the loom running forward and inboard over the open after deck, nearly level, to a short
     crossbar at chest height where four to six men push it, standing on the after deck aft of any house; past the pin
     the shaft bends down astern into the water and ends in a long flat blade curling up at its tip; a lanyard from the
     loom to the deck. pin: the pivot (boat frame); bar_x, bar_y: where the crossbar's centre is. Node `sweep` (pivot at
-    the pin: the page yaws it about its up axis to scull). Returns the bar's centre (boat frame)."""
+    the pin: the page yaws it about its up axis to scull). Returns the bar's centre (boat frame).
+    fix-boats (details pass, contacts): bar_w the crossbar's half-length (its crew spread 0.6 m either way and hold it
+    0.3-0.4 m to each side); crew_in: the crew stand that far inboard of the bar, on the deck there, and the bar is
+    `chest` over that deck (their measured grip, sweep_bar_h), with pt_sweep_crew the point the page stands them by
+    (0.55 m short of where they stand: boats.js host); decked: a decked hull's floor is its sheered deck (a narrow grain
+    boat used a small boat's low floor, and its bar stood 0.21 m over its crew's feet)."""
     big = H.B > 3
     reach, out, z_tip, blade_len = (6.0, 1.8, -0.25, 2.4) if big else (3.0, 0.9, -0.15, 1.2)
-    floor = (lambda x: H.deck_z(x, drop)) if big else (lambda x: H.zs(H.xm) - drop)   # noqa: E731 (a small boat's floor)
+    floor = (lambda x: H.deck_z(x, drop)) if (big or decked) else (lambda x: H.zs(H.xm) - drop)   # noqa: E731 (a small boat's floor)
     P = V(pin)
-    Hh = V((bar_x, bar_y, floor(bar_x) + chest))
+    Hh = V((bar_x, bar_y, floor(bar_x + (crew_in or 0.0)) + chest))
     E = V((P.x - reach, P.y + side * out, z_tip))
     if pose == "rest":        # B5: at rest, its loom lying on the gunwale, the blade trailing flat on the water astern
         Hh = V((bar_x, bar_y, H.zs(bar_x) + 0.12))
@@ -1172,12 +1262,24 @@ def _sweep(H, drop, side, lod, pin, bar_x, bar_y, chest=1.15, pose="work"):
         pts = [Bp + d2 * 0.15, E + d2 * (0.8 if big else 0.4), E + tipdir * (0.35 if big else 0.2)]
         for a_, b_ in zip(pts, pts[1:]):
             k.beam("timber", False, a_, b_, 0.32 if big else 0.2, 0.06 if big else 0.04, 0)
-        cb = d1.cross(UP).normalized() * (0.55 if big else 0.3)
-        _bar("timber", Hh - cb, Hh + cb, 0.07, 0.07)
+        cb = d1.cross(UP).normalized() * (bar_w if bar_w else (0.55 if big else 0.3))
+        e1, e2 = Hh - cb, Hh + cb
+        if crew_in is not None:
+            # fix-boats: each end `chest` over the deck its crew stand on there (the bar runs across the sheered after
+            # deck at the loom's slant, so the crew at its ends stand 5 cm higher or lower than at its middle)
+            dh = V((d1.x, d1.y, 0)).normalized() * crew_in
+            e1.z, e2.z = floor(e1.x + dh.x) + chest, floor(e2.x + dh.x) + chest
+        _bar("timber", e1, e2, 0.07, 0.07)
         q = V((Hh.x - 0.6, Hh.y - side * 0.2, 0))
         q.z = floor(q.x)
         kv._rope(Hh - d1 * 0.55, q, sag=0.0, r=0.012, n=2)
     S.point("pt_sweep_bar", "sweep", Hh - P, Hh)
+    if crew_in is not None and pose == "work":
+        # the point the page stands the crew by (boats.js host: 0.55 m on from it, away from the pin), so they stand
+        # crew_in inboard of the bar: on the bar's level line from the pin, (0.55 - crew_in) short of the bar
+        hz = V((Hh.x - P.x, Hh.y - P.y, 0))
+        k_ = max(0.1, hz.length - (0.55 - crew_in)) / max(1e-6, hz.length)
+        S.point("pt_sweep_crew", "sweep", V((hz.x * k_, hz.y * k_, Hh.z - P.z)), V((P.x + hz.x * k_, P.y + hz.y * k_, Hh.z)))
     return Hh
 
 
@@ -1287,11 +1389,12 @@ def _awnings(H, drop, x0, x1, n, lod, z_eave=None, rise=1.35, hw=None):
         h_w = hw or min(H.inner(xa, zd), H.inner(xb, zd)) + 0.06
         ze = z_eave if z_eave is not None else zd + 0.15
         zs_, zt = ze + rise * 0.3 + bump, ze + rise + bump
-        kv.barrel_cover(xa, xb, h_w, ze, zs_, zt, hoops=max(2, round((xb - xa) / 0.8) + 1) if lod == 0 else 2,
-                        thick=0.035)
+        with _snap_cols():    # fix-boats: the collider's top on the awning's visible top
+            kv.barrel_cover(xa, xb, h_w, ze, zs_, zt, hoops=max(2, round((xb - xa) / 0.8) + 1) if lod == 0 else 2,
+                            thick=0.035)
+            with S.node("roof__col"):
+                _roof_collider(xa, xb, h_w, min(zd, ze), zs_, zt - 0.02)
         crowns.append(zt)
-        with S.node("roof__col"):
-            _roof_collider(xa, xb, h_w, min(zd, ze), zs_, zt - 0.02)
     return max(crowns)
 
 
@@ -1349,6 +1452,9 @@ def _hatches(H, drop, x0, x1, rng, lod):
         zd = H.deck_z(x, drop) + 0.2
         w = H.inner(x, zd) - 0.3
         kv.plank("deck", (x, w), (x, -w), xb - xa, zd, zd + 0.05, rng)
+        if S.mode == "nodes":     # fix-boats: the hatch boards are walkable (crews stood 0.2-0.25 m inside them)
+            with S.node("deck__col"):
+                _flat_collider(xa, xb + 0.03, w, zd + 0.05)
     for side in (1, -1):
         _bar("lattice", (x0, side * (H.inner(x0, H.deck_z(x0, drop)) - 0.25), H.deck_z(x0, drop) + 0.1),
              (x1, side * (H.inner(x1, H.deck_z(x1, drop)) - 0.25), H.deck_z(x1, drop) + 0.1), 0.1, 0.2)
@@ -1709,11 +1815,27 @@ def _shell(xs, hw, ze, zs_, zt, mat="reed", thick=0.035, hoop_mat="timber", hoop
 
 
 def _posts_roof_collider(xa, xb, hw, z, th=0.12):
-    """Hidden: the top of a roof on posts (walkers pass under it; crew can stand on it)."""
-    v = [V((xa, -hw, z - th)), V((xb, -hw, z - th)), V((xb, hw, z - th)), V((xa, hw, z - th))]
-    v += [p + UP * th for p in v]
-    _add("hidden", v, [(0, 1, 2, 3), (4, 7, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)],
-         V(((xa + xb) / 2, 0, z - th / 2)), collide=True)
+    """Hidden: the top of a roof on posts (walkers pass under it; crew can stand on it): a slab th thick, its top a grid
+    (rings at most 1 m apart, 8 pieces across) that _snap_cols lays on the visible roof (fix-boats)."""
+    na = 8
+    nx = max(1, math.ceil((xb - xa) / 1.0 - 1e-9))
+    ys = [-hw + 2 * hw * i / na for i in range(na + 1)]
+    top = [[V((xa + (xb - xa) * j / nx, y, z)) for y in ys] for j in range(nx + 1)]
+    m = na + 1
+    verts = [p for r in top for p in r]
+    bot0 = len(verts)
+    verts += [V((p.x, p.y, z - th)) for p in (top[0][0], top[0][-1], top[-1][-1], top[-1][0])]
+    faces = []
+    for j in range(nx):
+        a, b = j * m, (j + 1) * m
+        faces += [(a + i, b + i, b + i + 1, a + i + 1) for i in range(na)]
+    faces.append((bot0, bot0 + 3, bot0 + 2, bot0 + 1))                       # the underside
+    # the sides: from the top's edge rings down to the underside's corners
+    faces.append(tuple([j * m for j in range(nx + 1)]) + (bot0 + 3, bot0))                  # y = -hw
+    faces.append(tuple([j * m + na for j in range(nx, -1, -1)]) + (bot0 + 1, bot0 + 2))     # y = +hw
+    faces.append(tuple(range(na, -1, -1)) + (bot0, bot0 + 1))                               # x = xa
+    faces.append(tuple([nx * m + i for i in range(na + 1)]) + (bot0 + 2, bot0 + 3))         # x = xb
+    _add("hidden", verts, faces, V(((xa + xb) / 2, 0, z - th / 2)), collide=True)
 
 
 def _awning(H, drop, kind, x0, x1, style, lod, rng, opts=None):
@@ -2053,7 +2175,7 @@ def _build(front, rear, water_h, kind, lw=None, beam=None, free=None, lod=0, rng
            oars=0, gangplank=None, moor=(), cargo=None, cloths=False, stern_house=None, bow_canopy=None, centre=None,
            mapped_length=None, pose=None, awnings=None, bow=None, windlass=None, sweep_pose=None, rudder=None,
            stern_frame=False, mast_form=None, mast_step=None, crutch=None, gangway=None, bow_deck=None, grapnel=False,
-           fenders=None, anchor=None, gangplank_at=None):
+           fenders=None, anchor=None, gangplank_at=None, sweep_bar_h=None, sweep_bar_w=None, sweep_crew_in=None):
     """Build one boat into the active sink S, in the boat frame. Returns (info dict, frame matrix M: boat -> scene)."""
     spec = dict(TYPES[kind])
     rng = rng or random.Random(int(abs(front[0] * 131 + front[1] * 71 + rear[0] * 17)) % 100000)
@@ -2146,7 +2268,7 @@ def _build(front, rear, water_h, kind, lw=None, beam=None, free=None, lod=0, rng
             _bulwark(H, drop, xa_d, xb_d, lod)
             _deck(H, drop, xa_d, xb_d, rng, lod, holes=holes)
             with S.node("deck__col"):
-                ring = _deck_collider(H, drop, xa_d, xb_d)
+                ring = _deck_collider(H, drop, xa_d, xb_d, xs=_deck_stations(xa_d, xb_d, holes, 0))
             deck_mid = H.deck_z(H.xm, drop)
             dpoly = ring + [(x, -y) for x, y in reversed(ring)]
             with S.node("rim__col"):
@@ -2217,7 +2339,8 @@ def _build(front, rear, water_h, kind, lw=None, beam=None, free=None, lod=0, rng
         elif kind == "grain":
             hx0, hx1 = H.lw * 0.3, H.lw * 0.78
             if hold == "laden":
-                roof_z = _laden_hold(H, drop, hx0, hx1, rng, lod)
+                with _snap_cols():    # fix-boats: the mound's collider on its visible mat
+                    roof_z = _laden_hold(H, drop, hx0, hx1, rng, lod)
                 covers.append((hx0, hx1))
             elif hold == "awning":
                 roof_z = _awnings(H, drop, hx0, hx1, 3, lod)
@@ -2264,7 +2387,8 @@ def _build(front, rear, water_h, kind, lw=None, beam=None, free=None, lod=0, rng
                 if rz is not None:
                     ao.setdefault("floor", rz - 0.08)
                     ao.setdefault("w", min(1.0, 0.3 * H.B))
-            crown, span = _awning(H, drop, kind, H.lw * ax0, H.lw * ax1, style, lod, rng, ao)
+            with _snap_cols():    # fix-boats: the collider's top on the awning's visible top
+                crown, span = _awning(H, drop, kind, H.lw * ax0, H.lw * ax1, style, lod, rng, ao)
             covers.append(span)
             awn_tops.append((span[0], span[1], crown))
             roof_z = max(roof_z or 0.0, crown)
@@ -2334,16 +2458,21 @@ def _build(front, rear, water_h, kind, lw=None, beam=None, free=None, lod=0, rng
                 bx_ = pin.x + loom
                 _sweep(H, drop, sweep_side, lod, pin, bx_, sweep_side * (H.w(bx_) - 0.12), pose="rest")
             else:
-                bar_x = max(pin.x + (1.2 if big else 0.8), min(pin.x + loom, end - 0.55 - 0.35))
-                if bar_x > end - 0.55 - 0.35 + 1e-6:
-                    rig_notes.append(f"sweep: its crew stand {bar_x + 0.9 - end:.1f} m under the house's eave")
-                # the crew's middle (the page: 0.55 m inboard of the bar, spread 0.6 m either way across the loom,
-                # swinging with it) stays inside the hull at both ends of the stroke
-                cx = bar_x + 0.5
-                swing = (math.hypot(bar_x - pin.x, pin.y) + 0.55) * math.sin(math.radians(SWEEP_AMP))
+                # ci: how far inboard of the bar its crew stand (the page: 0.55 m from the point it stands them by, so
+                # with sweep_crew_in the kit adds pt_sweep_crew that much nearer the pin: fix-boats, their hands on the bar)
+                ci = sweep_crew_in if sweep_crew_in is not None else 0.55
+                bar_x = max(pin.x + (1.2 if big else 0.8), min(pin.x + loom, end - ci - 0.35))
+                if bar_x > end - ci - 0.35 + 1e-6:
+                    rig_notes.append(f"sweep: its crew stand {bar_x + ci + 0.35 - end:.1f} m under the house's eave")
+                # the crew's middle (spread 0.6 m either way across the loom, swinging with it) stays inside the hull at
+                # both ends of the stroke
+                cx = bar_x + ci - 0.05
+                swing = (math.hypot(bar_x - pin.x, pin.y) + ci) * math.sin(math.radians(SWEEP_AMP))
                 c_y = max(0.0, min(0.55, H.inner(cx, H.deck_z(cx, drop)) - 0.2 - 0.6 - swing)) if big else 0.0
                 d0 = V((bar_x - pin.x, sweep_side * c_y - pin.y, 0)).normalized()
-                bar = _sweep(H, drop, sweep_side, lod, pin, bar_x, sweep_side * c_y - 0.55 * d0.y)
+                bar = _sweep(H, drop, sweep_side, lod, pin, bar_x, sweep_side * c_y - ci * d0.y,
+                             **({} if sweep_bar_h is None else {"chest": sweep_bar_h}), bar_w=sweep_bar_w,
+                             crew_in=sweep_crew_in, decked=kind != "small")
                 covers.append((pin.x - 0.3, bar.x + 1.2))
         if oars:
             covers.append(tiller_cover)

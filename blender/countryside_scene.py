@@ -553,13 +553,47 @@ def props(rng):
     return n
 
 
+SEDAN_POLE_FIT = (1.47, 1.44)   # choice: see vehicles(); (rear, front): the bearers' shoulder top in sedan_carry~pole + the
+# pole's radius; the front end 0.03 m lower, because the ground under the front end lies about 3 cm over the ground where
+# its bearer stands (contact_solve: his shoulder 3.2 cm under it at every placement within 0.8 m)
+
+
+def figure_seats(rng):
+    """The seat of a figure painted seated that the map doesn't list (map/BUILDING.md rule 3: part of the figure), fitted
+    to its sitter (details pass, fix-river 2026-10-13; gen/details/contacts/fix_standard.md rules 3 and 5): a stool
+    (kit_inner_city.stool, 0.32 m square, never colliding) centred under the figure's seat point on the page, its top
+    0.008 m under it, from sections/countryside/contact_fixes.json "seats" (measured by
+    gen/details/contacts/fix_river/tools/seat_fit.mjs at the figure's placement)."""
+    path = SEC + r"\contact_fixes.json"
+    if not os.path.exists(path):
+        path = "/home/ran/3d_director/qingming/sections/countryside/contact_fixes.json"
+    if not os.path.exists(path):
+        return 0
+    n = 0
+    for mid, s in (json.load(open(path, encoding="utf-8")).get("seats") or {}).items():
+        if s.get("kind", "stool") != "stool" or mid not in FIG:
+            continue
+        x, y = s["X"], s["D"]
+        z = zg(x, y)
+        with sb.entity(mid):
+            _sp_ki.stool(x, y, z, h=max(0.12, float(s["top_H"]) - z), s=0.32)
+        n += 1
+    return n
+
+
 def vehicles(rng):
     """The two land vehicles (the boat ships from the boat kit): the willow-decked sedan, the tipped trough barrow."""
     eid = "S1.veh.sedan_willow_30805"
     f, r = pt(eid, "front"), pt(eid, "rear")
     with sb.entity(eid):
+        # choice (details pass, fix-river 2026-10-13; gen/details/contacts/fix_standard.md rule 3, S4's precedent): the
+        # poles fitted to their two bearers (kit pole_fit), each end's axis over the ground under it at the bearer's
+        # shoulder-top height in sedan_carry~pole (1.432 m, characters/ik_variants.json "pole") plus the pole's radius
+        # 0.038: 1.47 m (the kit's pole_h 1.3 had them 0.1-0.14 m under the shoulder tops); both bearers carry the pole
+        # on the right shoulder, as painted
         try:      # the closed front (factory (c): boarded, a lattice window, no curtain), the low roof with its knob
-            _sp_kv.sedan_chair(f, r, z_of=zg, rng=random.Random(30805), carried=True, front_style="closed")
+            _sp_kv.sedan_chair(f, r, z_of=zg, rng=random.Random(30805), carried=True, front_style="closed",
+                               pole_fit=SEDAN_POLE_FIT)
         except TypeError:   # an older kit_vehicles: a dark curtain hung closed
             _sp_kv.sedan_chair(f, r, z_of=zg, rng=random.Random(30805), carried=True, panel="timber", curtain="interior")
         kc.willow_spray(f, r, zg, random.Random(30806))
@@ -1259,7 +1293,8 @@ def build(scene, seed=1):
     GROUND.clear()
     ground(rng)
     n_set = {"buildings": buildings(random.Random(101)), "structures": structures(random.Random(102)),
-             "props": props(random.Random(103)), "vehicles": vehicles(random.Random(104))}
+             "props": props(random.Random(103)), "vehicles": vehicles(random.Random(104)),
+             "figure_seats": figure_seats(random.Random(105))}
     colliders(L["trees"])
     ground_at()
 

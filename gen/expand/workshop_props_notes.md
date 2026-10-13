@@ -124,6 +124,10 @@ twice on one character under two names with different clips or placements.
 
 ### The carried-child pattern (`carried_by`)
 
+Superseded 2026-10-13 for the geometry: the four children below are now the rigged child posed onto each carrier by
+IK (`tools/carry_pose.mjs`, `gen/props/carry.json`, checked by `tools/carry_check.mjs`; skill `characters`, Carried
+props; records `gen/details/children/notes.md`). The `carried_by` casting is unchanged.
+
 - A child carried by an adult is its own map figure. It stays in people.json (loyalty) with `"carried_by": "<carrier figure>"`.
 - The page draws no body for it. The carrier plays its carry clip with the matching prop, which stands for the child, as the woman's `child_in_arms` does.
 - Pairs:

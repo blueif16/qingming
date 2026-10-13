@@ -341,8 +341,12 @@ HIPS = {   # (character, clip): (hips_left, hips_fwd, feet_left, feet_fwd, seat_
     ('soldier', 'sit'): (-0.02, -0.03, -0.01, 0.37, 0.48), ('child', 'listen'): (0.0, -0.01, -0.02, 0.26, 0.29),
     ('idler', 'sit_floor'): (0.0, 0.0, 0.0, 0.26, 0.0), ('scholar', 'knees_up'): (0.0, 0.04, 0.0, 0.56, 0.0),
     ('sightseer', 'knees_up'): (0.0, 0.0, 0.0, 0.53, 0.0), ('idler', 'sit_one_knee'): (0.0, 0.01, 0.0, 0.53, 0.0),
+    ('storyteller', 'show_goods_seated'): (0.0, 0.02, 0.0, 0.38, 0.0),
 }
-FLOOR_CLIPS = {'sit_floor', 'knees_up', 'sit_one_knee', 'doze_knees', 'kneel_sleep', 'sleep_side'}
+FLOOR_CLIPS = {'sit_floor', 'knees_up', 'sit_one_knee', 'doze_knees', 'kneel_sleep', 'sleep_side',
+               # the storyteller's sit_offer take sits cross-legged on the ground (characters/contacts.json); it was
+               # cast a 0.48 m stool, which the map doesn't paint (fix-s4b, details pass 2026-10-13)
+               'show_goods_seated'}
 
 
 def hips_of(model, clip):
@@ -420,9 +424,11 @@ def builder_furniture():
                 kw = dict(x.split('=', 1) for x in a[3:] if '=' in x)
                 out[eid] = dict(kind=kind, L=ev(a[0]), W=ev(a[1]), yaw=ev(a[2]), ht=ev(kw.get('ht', '0.78')))
             elif kind == 'bench':
-                out[eid] = dict(kind=kind, L=ev(a[0]), W=0.26, yaw=ev(a[1]), ht=0.45)
+                kw = dict(x.split('=', 1) for x in a[2:] if '=' in x)
+                out[eid] = dict(kind=kind, L=ev(a[0]), W=0.26, yaw=ev(a[1]), ht=ev(kw.get('ht', '0.45')))
             elif kind == 'stool':
-                out[eid] = dict(kind=kind, L=0.32, W=0.32, yaw=0.0, ht=0.42)
+                kw = dict(x.split('=', 1) for x in a if '=' in x)
+                out[eid] = dict(kind=kind, L=0.32, W=0.32, yaw=0.0, ht=ev(kw.get('ht', '0.42')))
             else:
                 out[eid] = dict(kind=kind, L=0.44, W=0.44, yaw=ev(a[0]), ht=0.45)
         except Exception:
@@ -433,7 +439,7 @@ def builder_furniture():
 
 FURN = builder_furniture()
 # the counters (kit_inner_city.counter along p0 -> p1, d deep to the left), as props() builds them
-COUNTERS = {'S4b.prop.back_counter_13175': (1.8, 0.45, 0.9), 'S4b.prop.table_bowls_13275': (1.2, 0.45, 0.85)}
+COUNTERS = {'S4b.prop.back_counter_13175': (1.8, 0.45, 0.9), 'S4b.prop.table_bowls_13275': (1.2, 0.45, 0.92)}
 
 # ---------------------------------------------------------------- geometry
 AREA = L['painted_area']['corners']
@@ -1351,6 +1357,21 @@ people['clips_why'] = {
     **{clip: f'{WANT.get(clip, "")} -- ' + '; '.join(v) for clip, v in cwh.items()},
 }
 
+# ---------------------------------------------------------------- the details pass's contact fixes
+# sections/outer_road_2/contact_fixes.json (solved nudges and turns, recasts, IK clip variants, fitted seats;
+# gen/details/contacts/fix_standard.md) are applied last: seats.json, people.json and the checks below see them. An entry's
+# "seat" ({X, D, seat_h[, H]}, with its reason) refits the seat this script lists for that figure (fix_standard.md rule 3)
+import sys
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes, load as load_contact_fixes
+apply_contact_fixes(people, 'outer_road_2')
+CF = load_contact_fixes('outer_road_2').get('figures', {})
+for _s, _f in people['figures'].items():
+    if _f.get('nudge') and _f['nudge'] != NUDGE.get(_s, ([0, 0],))[0]:
+        NUDGE[_s] = (_f['nudge'], people['nudge_why'].get(_s, ''))
+    if 'facing_deg' in _f and _s in FIG and _f['facing_deg'] != facing_of(_s):
+        FACING[_s] = (_f['facing_deg'], people.get('facing_why', {}).get(_s, ''))
+
 # ---------------------------------------------------------------- seats.json (the seats the map lacks)
 seats = {'about': 'Seats the map lacks, for the area builder (map/BUILDING.md rule 3: the seat of a figure painted seated '
                   'is part of it), written by gen/sections/outer_road_2/make_people.py from the layout, the builder\'s '
@@ -1402,6 +1423,10 @@ for slug, x in EXTRA.items():
         'root': [round(root[0], 2), round(root[1], 2), round(root_h, 2)],
         'clip': f'{x["model"]} {x["clip"]}',
     }
+    fit = CF.get(slug, {}).get('seat')
+    if fit:   # fitted to the sitter's measured seat point at his solved placement (contact_fixes.json)
+        seats[f['map_id']].update({k: fit[k] for k in ('X', 'D', 'H', 'seat_h') if k in fit})
+        seats[f['map_id']]['fit'] = fit.get('why', '')
 json.dump(seats, open(os.path.join(HERE, 'seats.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 # ---------------------------------------------------------------- the catalogue wish list (for the lead)

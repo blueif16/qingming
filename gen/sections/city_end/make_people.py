@@ -21,6 +21,7 @@ import json
 import math
 import os
 import struct
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 QM = os.path.abspath(os.path.join(HERE, '../../..'))
@@ -996,6 +997,12 @@ people['clips_why'] = {
                             'and back with its rider and the three walking beside it at their painted offsets, playing:',
                    **{s: f'{c}{" + " + ", ".join(p) if p else ""}: {w}' for s, (c, p, w) in PROCESSION.items()}},
 }
+
+# the details pass's contact fixes (sections/city_end/contact_fixes.json: solved nudges and turns, recasts, IK clip
+# variants; gen/details/contacts/fix_standard.md) are applied last, and the checks below see them
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes
+apply_contact_fixes(people, 'city_end')
 
 # ---------------------------------------------------------------- checks
 issues, expected, info = [], [], []

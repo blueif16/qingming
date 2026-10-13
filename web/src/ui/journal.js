@@ -203,11 +203,29 @@ export class Journal {
         ]))),
       ]));
     }
-    this.leafEl.replaceChildren(
+    // the plot lines (the life pass, gen/life/progress.md): a line shows once one of its steps is overheard, and then
+    // only the steps heard, in their order along the line, with a brush gap where something is still unheard; never a
+    // count or a list of what is left (STYLE.md §9, §15)
+    // with prefs.lang 'zh_en' (3d-director-da's pref) each title, lead and step note has its English under it
+    const threads = (this.talkData?.threads || []).map((th) => ({ th, got: th.steps.map((st) => found.has(`h:${st.id}`)) })).filter((x) => x.got.some(Boolean));
+    const enOn = (prefs.get('lang') ?? 'zh') === 'zh_en';
+    const gl = (t) => (enOn && t ? h('span', 'qm-jn-en', { text: t, lang: 'en' }) : null);
+    const lines = threads.length ? h('div', 'qm-jn-threads', {}, [h('h3', 'qm-jn-th-head', { text: JW.threadsTitle }), ...threads.map(({ th, got }) => {
+      const rows = [];
+      th.steps.forEach((st, i) => {
+        if (got[i]) rows.push(h('p', 'qm-jn-step', {}, [h('b', '', { text: this.places?.regions?.[st.section]?.name || '' }), h('span', '', { text: st.note }), gl(st.noteEn)]));
+        else if (rows.length && rows[rows.length - 1].className !== 'qm-jn-gap') rows.push(h('p', 'qm-jn-gap', { text: '……', 'aria-hidden': 'true' }));
+      });
+      if (rows.length && rows[rows.length - 1].className === 'qm-jn-gap') rows.pop();
+      return h('article', 'qm-jn-thread', { 'data-id': `th:${th.id}` }, [h('h4', 'qm-jn-ename', {}, [seal(JW.threadSeal), h('span', '', { text: th.title }), gl(th.titleEn)]),
+        h('p', 'qm-jn-eline', {}, [th.lead, gl(th.leadEn)]), ...rows]);
+    })]) : null;
+    this.leafEl.replaceChildren(...[
       h('div', 'qm-jn-rhead', {}, [h('div', 'qm-jn-rname', {}, [h('span', 'qm-jn-rname-v', { text: JW.talkTitle })]),
-        h('div', 'qm-jn-rtext', {}, [h('p', 'qm-jn-rsub', { text: heard.length ? JW.talkLead : JW.talkNone })])]),
+        h('div', 'qm-jn-rtext', {}, [h('p', 'qm-jn-rsub', { text: heard.length || threads.length ? JW.talkLead : JW.talkNone })])]),
+      lines,
       grid,
-    );
+    ].filter(Boolean));
   }
 
   renderColophons() {

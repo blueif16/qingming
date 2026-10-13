@@ -1816,7 +1816,14 @@ def wharf_frames(rng):
     east_foot = (ce[0], ce[1], z0 + 2.42)
     hf = FIG.get("S2.fig.pennant_pole_holder_27810")
     if hf:
-        west_foot = (hf["X"] + 0.15, hf["D"] - 0.05, hz_at(hf["X"], hf["D"]) + 1.0)
+        # choice (details pass, fix-river 2026-10-13; gen/details/contacts/fix_standard.md rule 3, fit the object to the
+        # body): the held end on the line from the apex through the middle of his two palms as fend_pole has them on the
+        # page at his spot (palms (260.31, 12.78, 1.24) and (260.58, 12.74, 1.34), measured from
+        # gen/details/joints/robed_man.json), 0.2 m past them; his palms are laid on the pole by an IK clip variant
+        # (characters/ik_variants.json "pennant_pole_holder_27810"); re-measure if his placement changes
+        mx, my, mz = 260.445, 12.756, 1.288
+        L_ = math.dist((mx, my, mz), apex)
+        west_foot = tuple(m + (m - a) / L_ * 0.2 for m, a in zip((mx, my, mz), apex))
     else:
         west_foot = (ux(27840, 14.0), 14.0, hz_at(ux(27840, 14.0), 14.0) + 1.0)
     xr = ux(27825, 14.4)
@@ -1848,6 +1855,16 @@ def support_z(eid):
     return hz_at(x, y)
 
 
+def fitted_ht(eid, z, ht):
+    """A mapped bench's, stool's or sack pile's height fitted to the figure painted seated on it (details pass, fix-river
+    2026-10-13; gen/details/contacts/fix_standard.md rule 3: the top at the sitter's seat point on the page less 0.008
+    m): seats.json entries with fit_owner == eid give its top_H (map H); else the builder's own choice ht."""
+    for v in _seats_data().values():
+        if isinstance(v, dict) and v.get("fit_owner") == eid and v.get("top_H") is not None:
+            return float(v["top_H"]) - z
+    return ht
+
+
 def props(rng):
     """Every painted prop at its mapped spot, at real size (painted props are drawn at the figures' scale: sizes are
     choices from what they are), furniture turned square to the building it stands in (choices)."""
@@ -1870,6 +1887,7 @@ def props(rng):
     def bench(eid, L_, yaw, ht=0.45, w=0.26):
         x, y = P(eid)
         z = support_z(eid)
+        ht = fitted_ht(eid, z, ht)
         c, s = math.cos(math.radians(yaw)), math.sin(math.radians(yaw))
         with sb.entity(eid):
             ki.bench((x - c * L_ / 2, y - s * L_ / 2), (x + c * L_ / 2, y + s * L_ / 2), z, h=ht, w=w)
@@ -2124,7 +2142,14 @@ def props(rng):
     x, y = (seat["X"], seat["D"]) if seat else (sum(p[0] for p in q) / 4, sum(p[1] for p in q) / 4)
     z = hz_at(x, y)
     with sb.entity(eid):
-        zt = kc.sack_pile(x, y, z - 0.16, 178.0, rng, lying=2, standing=1, seat=True)
+        top = fitted_ht(eid, z, None)
+        if top is None:
+            zt = kc.sack_pile(x, y, z - 0.16, 178.0, rng, lying=2, standing=1, seat=True)
+        else:
+            # choice (details pass, fix-river 2026-10-13; fix_standard.md rule 3): his sit_point puts the seat 0.29 m
+            # over his soles, so one lying sack is under him (its top 0.34 m over its foot, set down into the ground to
+            # the fitted top) and the second lies beside it; the standing sack west of him as painted
+            zt = kc.sack_pile(x, y, z + top - 0.34, 178.0, rng, lying=2, standing=1, seat=True, stack=1)
     H["tops"][eid] = zt
     H["owner_seat"] = round(zt - z, 3)
     eid = "S2.prop.sack_heap_28144"
@@ -2195,7 +2220,7 @@ def props(rng):
     table("S2.prop.shed_table_28806", 0.6, 0.45, wy2)
     x, y = P("S2.prop.shed_stool_28871")
     with sb.entity("S2.prop.shed_stool_28871"):
-        ki.stool(x, y, hz_at(x, y), h=0.42, s=0.32)
+        ki.stool(x, y, hz_at(x, y), h=fitted_ht("S2.prop.shed_stool_28871", hz_at(x, y), 0.42), s=0.32)
     bench("S2.prop.bench_29030", 0.75, wy2)
     # the far shed at the top: its crossed-leg benches, the trough in front of it
     x, y = P("S2.prop.far_shed_furniture_28728")
@@ -2351,11 +2376,18 @@ def seats(rng):
             z = H["yanhe"][3]
         else:
             z = hz_at(bx_, by_)
+        if s.get("base_H") is not None:
+            z = float(s["base_H"])   # the floor or ground under the seat point as the page has it (seat_fit.mjs)
+        if s.get("top_H") is not None:
+            # choice (details pass, fix-river 2026-10-13; gen/details/contacts/fix_standard.md rule 3): the seat's top
+            # fitted to the sitter's seat point on the page less 0.008 m (seats.json top_H, from contact_fixes.json
+            # "seats"), centred under it; the folding seat's webbing sags 0.041 m under its rails at the middle
+            seat_h = float(s["top_H"]) - z + (0.041 if kind == "folding_seat" else 0.0)
         with sb.entity(mid):
             if kind == "folding_seat":
-                kc.folding_seat(bx_, by_, z, float(s.get("facing_deg") or 0.0), rng, h=max(0.2, seat_h))
+                kc.folding_seat(bx_, by_, z, float(s.get("facing_deg") or 0.0), rng, h=max(0.12, seat_h))
             else:
-                ki.stool(bx_, by_, z, h=seat_h, s=0.32)
+                ki.stool(bx_, by_, z, h=max(0.12, seat_h), s=0.32)
         n += 1
     for mid, fo in (data.get("footings") or {}).items():
         if mid not in FIG:

@@ -168,22 +168,18 @@
     },
     "child_in_arms": {
       "bone": "Spine",
-      "at": "shoulder",
-      "side": "left",
-      "along": 0.6,
-      "lift": 0.0
+      "at": "root",
+      "texture_from": "child_red"
     },
     "child_on_shoulders": {
       "bone": "Spine",
-      "at": "back",
-      "bone_ref": "neck",
-      "follow": 0.6
+      "at": "root",
+      "texture_from": "child"
     },
     "child_on_back": {
       "bone": "Spine",
-      "at": "back",
-      "bone_ref": "Spine",
-      "follow": 1.0
+      "at": "root",
+      "texture_from": "child"
     },
     "tray": {
       "bone": "RightHand",
@@ -514,9 +510,8 @@
     },
     "child_on_lap": {
       "bone": "Hips",
-      "at": "back",
-      "bone_ref": "Hips",
-      "follow": 0.0
+      "at": "root",
+      "texture_from": "child_red"
     }
   },
   "porter": {
@@ -648,6 +643,17 @@
     "long_pole_mid": {
       "clip": "fend_pole",
       "t": 1.0
+    },
+    "staff_on_shoulder": {
+      "geom": "staff",
+      "clip": "idle",
+      "t": 0.0,
+      "bone": "Spine",
+      "at": "shoulder",
+      "side": "right",
+      "along": 0.8,
+      "lift": 0.08,
+      "pitch": 70
     }
   },
   "monk": {
@@ -816,8 +822,8 @@
       "t": 1.0
     },
     "child_on_shoulders": {
-      "clip": "carry_child",
-      "t": 3.0
+      "clip": "carry_child~child",
+      "t": 2.8
     },
     "back_sack": {
       "clip": "back_load",
@@ -926,8 +932,8 @@
   },
   "woman": {
     "child_in_arms": {
-      "clip": "hold_child",
-      "t": 0.0
+      "clip": "hold_child~child",
+      "t": 0.1
     },
     "veiled_hat": {
       "clip": "ride_side",
@@ -935,7 +941,7 @@
     },
     "child_on_lap": {
       "clip": "sit_hold_child",
-      "t": 2.0
+      "t": 5.0
     }
   },
   "hat_traveller": {

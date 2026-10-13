@@ -1,0 +1,823 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T13:43:29.488Z",
+ "sections": [
+  "rainbow_bridge"
+ ],
+ "owners_load_ms": 305,
+ "seconds": 12.143,
+ "people": 232,
+ "checked": 232,
+ "crew_not_covered": 0,
+ "figures_failing": 37,
+ "fails": 73,
+ "by_class": {
+  "contact:vehicle": 10,
+  "stance_soles (placement)": 9,
+  "contact:rail": 9,
+  "boat_body": 8,
+  "head_through": 7,
+  "contact:seat": 4,
+  "contact:reach": 4,
+  "pole_through": 4,
+  "contact:boat": 4,
+  "contact:floor": 3,
+  "site_inside": 2,
+  "contact:floor (placement)": 2,
+  "deck_support": 2,
+  "contact:animal": 2,
+  "contact:pole": 1,
+  "contact:floor (clip)": 1,
+  "furniture": 1
+ },
+ "by_clip": {
+  "stance_soles": 9,
+  "sedan_carry:contact:vehicle": 6,
+  "look:head_through": 4,
+  "push:contact:vehicle": 4,
+  "lean_over:contact:rail": 4,
+  "lean_chin:contact:rail": 4,
+  "idle:boat_body": 3,
+  "sit_floor:contact:floor": 3,
+  "work_sweep~bar:boat_body": 3,
+  "haul_line:contact:boat": 2,
+  "fend_pole~up:contact:reach": 2,
+  "fend_pole~up:pole_through": 2,
+  "deck_support": 2,
+  "bridle:contact:animal": 2,
+  "sit~soles:contact:seat": 2,
+  "drink:contact:seat": 1,
+  "drink:site_inside": 1,
+  "sit:contact:seat": 1,
+  "fend_pole~out:contact:reach": 1,
+  "fend_pole~out:head_through": 1,
+  "fend_pole~out:boat_body": 1,
+  "fend_pole~out:pole_through": 1,
+  "haul_line:head_through": 1,
+  "haul_line:boat_body": 1,
+  "sit:contact:floor": 1,
+  "fend_pole:contact:reach": 1,
+  "fend_pole:contact:pole": 1,
+  "reach_over_rail:contact:rail": 1,
+  "reach_over_rail:head_through": 1,
+  "sit~soles:contact:floor": 1,
+  "drink:contact:floor": 1,
+  "idle:contact:boat": 1,
+  "tow_walk:contact:boat": 1,
+  "pole_boat~hold:pole_through": 1,
+  "furniture": 1,
+  "idle:site_inside": 1
+ },
+ "table": {
+  "rainbow_bridge": {
+   "contact:seat": {
+    "n": 4,
+    "worst": 0.197,
+    "worst_id": "shop_seated_on_bench_19905"
+   },
+   "site_inside": {
+    "n": 2,
+    "worst": 0.147,
+    "worst_id": "pole_carrier_robe_18345"
+   },
+   "head_through": {
+    "n": 7,
+    "worst": 1,
+    "worst_id": "man_in_hatch_20172"
+   },
+   "boat_body": {
+    "n": 8,
+    "worst": 0.12,
+    "worst_id": "boatman_cabin_door_pole_20300"
+   },
+   "contact:reach": {
+    "n": 4,
+    "worst": 3.896,
+    "worst_id": "boatman_pole_raised_19775"
+   },
+   "stance_soles (placement)": {
+    "n": 9,
+    "worst": 0.78,
+    "worst_id": "far_bank_figure_16722"
+   },
+   "pole_through": {
+    "n": 4,
+    "worst": 1,
+    "worst_id": "boatman_cabin_door_pole_20300"
+   },
+   "contact:vehicle": {
+    "n": 10,
+    "worst": 0.823,
+    "worst_id": "sedan_bearer_front_18838"
+   },
+   "contact:boat": {
+    "n": 4,
+    "worst": 0.695,
+    "worst_id": "boatman_hauling_rope_20205"
+   },
+   "contact:floor (placement)": {
+    "n": 2,
+    "worst": -0.128,
+    "worst_id": "stall_man_parasol_18612"
+   },
+   "contact:rail": {
+    "n": 9,
+    "worst": 0.6,
+    "worst_id": "boatman_leaning_on_bundle_19650"
+   },
+   "deck_support": {
+    "n": 2,
+    "worst": -0.281,
+    "worst_id": "boatman_leaning_on_bundle_19650"
+   },
+   "contact:pole": {
+    "n": 1,
+    "worst": 0.273,
+    "worst_id": "deck_pole_holder_19625"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": 1.547,
+    "worst_id": "donkey_man_west_18728"
+   },
+   "contact:floor (clip)": {
+    "n": 1,
+    "worst": 0.042,
+    "worst_id": "seated_man_topknot_18352"
+   },
+   "contact:floor": {
+    "n": 3,
+    "worst": 0.079,
+    "worst_id": "passenger_seated_18112"
+   },
+   "furniture": {
+    "n": 1,
+    "worst": 0.603,
+    "worst_id": "far_bank_figure_16722"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole~up",
+   "site": "pole_far",
+   "value": 3.896,
+   "kind": "crew",
+   "with": [
+    "water"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_pole_raised_19775",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole~up",
+   "site": "pole_far",
+   "value": 3.821,
+   "kind": "crew",
+   "with": [
+    "water"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_both_arms_pole_19840",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole~out",
+   "site": "pole_far",
+   "value": 2.014,
+   "kind": "crew",
+   "with": [
+    "water"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_cabin_door_pole_20300",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.547,
+   "kind": "figure",
+   "with": [
+    "S3.ani.donkey_dark_18745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "donkey_man_west_18728",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole",
+   "site": "pole_far",
+   "value": 1.073,
+   "kind": "figure",
+   "with": [
+    "S3.str.rainbow_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump"
+   ],
+   "id": "deck_pole_holder_19625",
+   "section": "rainbow_bridge",
+   "model": "porter"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 1.056,
+   "kind": "figure",
+   "with": [
+    "S3.ani.donkey_dark_18745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "donkey_man_west_18728",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "head_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_moored_south_bank_19745|body"
+   ],
+   "clip": "look",
+   "note": "hips to head top crosses S3.veh.boat_moored_south_bank_19745|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "man_in_hatch_20172",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "head_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_moored_south_bank_19745|body"
+   ],
+   "clip": "look",
+   "note": "hips to head top crosses S3.veh.boat_moored_south_bank_19745|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "man_in_hatch_20148",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "pole_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_mast_lowering_19518|body"
+   ],
+   "clip": "fend_pole~out",
+   "note": "the pole passes through S3.veh.boat_mast_lowering_19518|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_cabin_door_pole_20300",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "pole_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_mast_lowering_19518|body"
+   ],
+   "clip": "fend_pole~up",
+   "note": "the pole passes through S3.veh.boat_mast_lowering_19518|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_both_arms_pole_19840",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "pole_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_mast_lowering_19518|body"
+   ],
+   "clip": "fend_pole~up",
+   "note": "the pole passes through S3.veh.boat_mast_lowering_19518|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_pole_raised_19775",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "pole_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_towed_mast_16228|body"
+   ],
+   "clip": "pole_boat~hold",
+   "note": "the pole passes through S3.veh.boat_towed_mast_16228|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_poling_16198",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "head_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_under_way_15595|body"
+   ],
+   "clip": "look",
+   "note": "hips to head top crosses S3.veh.boat_under_way_15595|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_bow_15664",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "head_through",
+   "value": 1,
+   "with": [
+    "S3.veh.boat_under_way_15595|body"
+   ],
+   "clip": "look",
+   "note": "hips to head top crosses S3.veh.boat_under_way_15595|body in 100% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_bow_15636",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_L",
+   "value": 0.823,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.538,
+    "side_m": 0.365
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_18838",
+   "section": "rainbow_bridge",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_R",
+   "value": 0.819,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.632,
+    "side_m": 0.425
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_18838",
+   "section": "rainbow_bridge",
+   "model": "bearer"
+  },
+  {
+   "class": "head_through",
+   "value": 0.783,
+   "with": [
+    "S3.veh.boat_mast_lowering_19518|body"
+   ],
+   "clip": "fend_pole~out",
+   "note": "hips to head top crosses S3.veh.boat_mast_lowering_19518|body in 78% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_cabin_door_pole_20300",
+   "section": "rainbow_bridge",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "stance_soles",
+   "value": 0.78,
+   "kind": "figure",
+   "cause": "placement",
+   "note": "clip sole height 0 m (placement)",
+   "id": "far_bank_figure_16722",
+   "section": "rainbow_bridge",
+   "model": "carter"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "haul_line",
+   "site": "palm_R",
+   "value": 0.695,
+   "kind": "crew",
+   "with": [
+    "S3.veh.boat_mast_lowering_19518|line_shroud_s"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_hauling_rope_20205",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "shoulder_R",
+   "value": 0.656,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.5,
+    "side_m": 0.376
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_18838",
+   "section": "rainbow_bridge",
+   "model": "bearer"
+  },
+  {
+   "class": "furniture",
+   "value": 0.603,
+   "with": [
+    "S3.bld.far_house_16560"
+   ],
+   "note": "stands on a ledge, step or rail base of S3.bld.far_house_16560: 0.603 m over the surface round it (only 2 of 8 points 0.3 m out on the same level)",
+   "id": "far_bank_figure_16722",
+   "section": "rainbow_bridge",
+   "model": "carter",
+   "kind": "figure"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "haul_line",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [
+    "S3.veh.boat_mast_lowering_19518|line_shroud_s"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_hauling_rope_20205",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_leaning_on_bundle_19650",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "boatman_leaning_on_bundle_19650",
+   "section": "rainbow_bridge",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_R",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "man_at_cabin_rail_19366",
+   "section": "rainbow_bridge",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "balcony_drinker_16358",
+   "section": "rainbow_bridge",
+   "model": "sightseer"
+  },
+  {
+   "class": "head_through",
+   "value": 0.575,
+   "with": [
+    "S3.veh.boat_cabin_under_arch_19225|body"
+   ],
+   "clip": "reach_over_rail",
+   "note": "hips to head top crosses S3.veh.boat_cabin_under_arch_19225|body in 57% of the samples",
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "man_leaning_over_rail_19432",
+   "section": "rainbow_bridge",
+   "model": "scholar",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "reach_over_rail",
+   "site": "belly",
+   "value": 0.573,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "man_leaning_over_rail_19432",
+   "section": "rainbow_bridge",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_L",
+   "value": 0.424,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "man_at_cabin_rail_19366",
+   "section": "rainbow_bridge",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_R",
+   "value": 0.407,
+   "kind": "figure",
+   "with": [
+    "S3.str.rainbow_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "mat_leaner_white_18220",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  }
+ ],
+ "clip_level": [
+  {
+   "model": "robed_man",
+   "clip": "drink",
+   "site": "sole_R",
+   "offset_m": 0.019,
+   "figures": [
+    "rainbow_bridge/seated_man_topknot_18352"
+   ]
+  }
+ ],
+ "contacts_checked": 185,
+ "contacts_failing": 38
+}

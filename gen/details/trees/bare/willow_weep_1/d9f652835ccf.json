@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is one tree painted in that style.\n\nPaint the SAME tree again as the bare framework a 3D model will be built from: exactly the same trunk, the same root flare, the same lean, the same forks, the same main limbs and the same knobbly heads, each in the same place, at the same size and angle as in image 2, in the same picture frame. Remove everything thin: every shoot, whip, twig, needle, leaf, bud and spray is gone. Each limb ends cleanly in its rounded knobbly head (or a short clean cut stub where the fine growth began), so only the solid wood is left.\n\nThis is an old willow: a gnarled, lumpy, knotted trunk with rough grey-brown bark that rises and divides into a few crooked limbs, one of them a long limb arching far out to the side. Keep the trunk, the knotted lump where the limbs spring, the tall stem and every limb, each ending in a short blunt stub; every hanging whip is removed.\n\nKeep image 2's bark exactly: its colours, mottling, knots, burls, hollows, hatching and dark-brown ink outlines, in true natural daylight colours of the real tree, never the yellowed silk of the scroll. Even soft light from the front, no cast shadows.\n\nThe whole tree from the foot of the trunk to the top of the highest limb, centred as in image 2, nothing cut off. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no ground, no grass, no shadow, no mist, no other objects, no text, no seal, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/willow_weep_1/4f64cc0fee6c_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1536",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "d9f652835ccf",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 37.0,
+ "attempts": 1,
+ "idempotency_key": "4cc783b7-4551-4a88-af0a-abdf06ad63f2",
+ "request_id": "6afc29f2-10b7-4863-b62d-2c53a81e7051",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1584,
+  "completion_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4949,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 360
+  },
+  "output_tokens": 1584,
+  "output_tokens_details": {
+   "image_tokens": 1584,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4949,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 360
+  },
+  "total_tokens": 6533
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v1.shyfai.cn/v1/images/assets/b4ced617-fc44-4027-b101-d850879dcd97"
+ ],
+ "files": [
+  "gen/details/trees/bare/willow_weep_1/d9f652835ccf_0.png"
+ ]
+}

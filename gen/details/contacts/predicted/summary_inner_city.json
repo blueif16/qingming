@@ -1,0 +1,50 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T13:44:07.075Z",
+ "sections": [
+  "inner_city"
+ ],
+ "owners_load_ms": 291,
+ "seconds": 1.236,
+ "people": 178,
+ "checked": 178,
+ "crew_not_covered": 0,
+ "figures_failing": 1,
+ "fails": 1,
+ "by_class": {
+  "contact:ridden": 1
+ },
+ "by_clip": {
+  "ride:contact:ridden": 1
+ },
+ "table": {
+  "inner_city": {
+   "contact:ridden": {
+    "n": 1,
+    "worst": 0.045,
+    "worst_id": "rider_5335"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:ridden",
+   "clip": "ride",
+   "site": "seat",
+   "value": 0.045,
+   "kind": "rider",
+   "with": [
+    "S6.ani.horse_5262"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "rider_5335",
+   "section": "inner_city",
+   "model": "sightseer"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 95,
+ "contacts_failing": 1
+}

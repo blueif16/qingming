@@ -177,6 +177,27 @@ export async function loadRig(file) {
   return { file, doc, root, armature, skin, joints, names, parent, rest, IBM, meshes, body, clips, index: (n) => names.indexOf(n) };
 }
 
+// local TRS of every joint at time t of a clip (null: the rest pose)
+export function localsAt(rig, clip, t) {
+  const over = new Map();
+  if (clip) {
+    const an = rig.root.listAnimations().find((a) => a.getName() === clip);
+    if (!an) throw new Error(`${rig.file}: no clip ${clip}`);
+    for (const ch of an.listChannels()) {
+      const n = ch.getTargetNode();
+      if (!over.has(n)) over.set(n, {});
+      over.get(n)[ch.getTargetPath()] = sampleCh(ch.getSampler(), t);
+    }
+  }
+  return rig.joints.map((j, i) => {
+    const o = over.get(j) || {};
+    return { t: o.translation || rig.rest[i].t, r: o.rotation || rig.rest[i].r, s: o.scale || rig.rest[i].s };
+  });
+}
+// two poses mixed as three.js's AnimationMixer cross-fades them: weight f on b (quaternions slerped, the rest lerped)
+export function mixLocals(a, b, f) {
+  return a.map((x, i) => ({ t: x.t.map((v, k) => v + (b[i].t[k] - v) * f), r: slerp(x.r, b[i].r, f), s: x.s.map((v, k) => v + (b[i].s[k] - v) * f) }));
+}
 // world (Armature space, cm) matrices of every joint at time t of a clip (null: the rest pose)
 export function poseClip(rig, clip, t) {
   const over = new Map();
@@ -263,70 +284,182 @@ export function closestOnTri(p, a, b, c) {
 }
 
 // a triangle soup with a uniform grid: closest point within a radius, and inside/outside by ray parity
+// (integer cell keys, flat arrays, no allocation in the inner loops)
+const KEY = (x, y, z) => ((x + 512) * 1024 + (y + 512)) * 1024 + (z + 512);
 export class TriGrid {
   constructor(P, idx, tris = null, cell = 0.04) {
     this.P = P; this.idx = idx; this.cell = cell;
     this.tris = tris || Uint32Array.from({ length: idx.length / 3 }, (_, i) => i);
     this.map = new Map();
-    const v = (i) => [P[i * 3], P[i * 3 + 1], P[i * 3 + 2]];
+    this.cols = new Map();
+    const inv = 1 / cell;
     for (const t of this.tris) {
-      const a = v(idx[t * 3]), b = v(idx[t * 3 + 1]), c = v(idx[t * 3 + 2]);
-      const lo = [0, 1, 2].map((k) => Math.floor(Math.min(a[k], b[k], c[k]) / cell)), hi = [0, 1, 2].map((k) => Math.floor(Math.max(a[k], b[k], c[k]) / cell));
+      const a = idx[t * 3] * 3, b = idx[t * 3 + 1] * 3, c = idx[t * 3 + 2] * 3;
+      const lo = [0, 1, 2].map((k) => Math.floor(Math.min(P[a + k], P[b + k], P[c + k]) * inv));
+      const hi = [0, 1, 2].map((k) => Math.floor(Math.max(P[a + k], P[b + k], P[c + k]) * inv));
       for (let x = lo[0]; x <= hi[0]; x++) for (let y = lo[1]; y <= hi[1]; y++) for (let z = lo[2]; z <= hi[2]; z++) {
-        const k = `${x},${y},${z}`;
+        const k = KEY(x, y, z);
         let l = this.map.get(k);
         if (!l) this.map.set(k, (l = []));
         l.push(t);
       }
+      for (let y = lo[1]; y <= hi[1]; y++) for (let z = lo[2]; z <= hi[2]; z++) {
+        const k = KEY(0, y, z);
+        let l = this.cols.get(k);
+        if (!l) this.cols.set(k, (l = []));
+        l.push(t);
+      }
     }
-    // columns for parity rays along +X: key y,z -> triangles
-    this.cols = new Map();
-    for (const t of this.tris) {
-      const a = v(idx[t * 3]), b = v(idx[t * 3 + 1]), c = v(idx[t * 3 + 2]);
-      for (let y = Math.floor(Math.min(a[1], b[1], c[1]) / cell); y <= Math.floor(Math.max(a[1], b[1], c[1]) / cell); y++)
-        for (let z = Math.floor(Math.min(a[2], b[2], c[2]) / cell); z <= Math.floor(Math.max(a[2], b[2], c[2]) / cell); z++) {
-          const k = `${y},${z}`;
-          let l = this.cols.get(k);
-          if (!l) this.cols.set(k, (l = []));
-          l.push(t);
-        }
-    }
+    this.stamp = new Uint32Array(idx.length / 3);
+    this.gen = 0;
   }
   vert(i) { return [this.P[i * 3], this.P[i * 3 + 1], this.P[i * 3 + 2]]; }
-  // closest point on the soup within r of p: {d, point, tri, bary} or null
+  // closest point on the soup within r of p: {d, point, tri, bary} or null; cells searched in rings outward, stopping
+  // once the best distance is inside the rings already searched
   closest(p, r = 0.1) {
-    const c = this.cell, lo = p.map((x) => Math.floor((x - r) / c)), hi = p.map((x) => Math.floor((x + r) / c));
-    let best = null;
-    const seen = new Set();
-    for (let x = lo[0]; x <= hi[0]; x++) for (let y = lo[1]; y <= hi[1]; y++) for (let z = lo[2]; z <= hi[2]; z++) {
-      const l = this.map.get(`${x},${y},${z}`);
-      if (!l) continue;
-      for (const t of l) {
-        if (seen.has(t)) continue;
-        seen.add(t);
-        const [q, u, v, w] = closestOnTri(p, this.vert(this.idx[t * 3]), this.vert(this.idx[t * 3 + 1]), this.vert(this.idx[t * 3 + 2]));
-        const d = dist(p, q);
-        if (d <= r && (!best || d < best.d)) best = { d, point: q, tri: t, bary: [u, v, w] };
+    const c = this.cell, inv = 1 / c;
+    const cx = Math.floor(p[0] * inv), cy = Math.floor(p[1] * inv), cz = Math.floor(p[2] * inv);
+    const K = Math.ceil(r * inv) + 1;
+    let best = null, bd = r;
+    const gen = ++this.gen;
+    for (let k = 0; k <= K; k++) {
+      for (let x = cx - k; x <= cx + k; x++) for (let y = cy - k; y <= cy + k; y++) for (let z = cz - k; z <= cz + k; z++) {
+        if (Math.max(Math.abs(x - cx), Math.abs(y - cy), Math.abs(z - cz)) !== k) continue;
+        const l = this.map.get(KEY(x, y, z));
+        if (!l) continue;
+        for (const t of l) {
+          if (this.stamp[t] === gen) continue;
+          this.stamp[t] = gen;
+          const [q, u, v, w] = closestOnTri(p, this.vert(this.idx[t * 3]), this.vert(this.idx[t * 3 + 1]), this.vert(this.idx[t * 3 + 2]));
+          const d = Math.hypot(p[0] - q[0], p[1] - q[1], p[2] - q[2]);
+          if (d <= bd) { bd = d; best = { d, point: q, tri: t, bary: [u, v, w] }; }
+        }
       }
+      // every point within k cells (Chebyshev) of p's cell is searched: anything nearer than k * cell is found
+      if (best && best.d <= k * c) break;
     }
     return best;
   }
   // ray parity along +X and -X (a vote of two; a closed body mesh gives the same answer both ways)
   inside(p) {
-    const l = this.cols.get(`${Math.floor(p[1] / this.cell)},${Math.floor(p[2] / this.cell)}`);
+    const inv = 1 / this.cell;
+    const l = this.cols.get(KEY(0, Math.floor(p[1] * inv), Math.floor(p[2] * inv)));
     if (!l) return false;
+    const P = this.P, idx = this.idx, py = p[1], pz = p[2];
     let pos = 0, neg = 0;
     for (const t of l) {
-      const a = this.vert(this.idx[t * 3]), b = this.vert(this.idx[t * 3 + 1]), c = this.vert(this.idx[t * 3 + 2]);
-      // intersect the line y = p.y, z = p.z with the triangle (2D barycentric in the YZ plane)
-      const d = (b[1] - a[1]) * (c[2] - a[2]) - (c[1] - a[1]) * (b[2] - a[2]);
+      const a = idx[t * 3] * 3, b = idx[t * 3 + 1] * 3, c = idx[t * 3 + 2] * 3;
+      const ay = P[a + 1], az = P[a + 2], by = P[b + 1], bz = P[b + 2], cy = P[c + 1], cz = P[c + 2];
+      const d = (by - ay) * (cz - az) - (cy - ay) * (bz - az);
       if (Math.abs(d) < 1e-14) continue;
-      const u = ((p[1] - a[1]) * (c[2] - a[2]) - (c[1] - a[1]) * (p[2] - a[2])) / d;
-      const v = ((b[1] - a[1]) * (p[2] - a[2]) - (p[1] - a[1]) * (b[2] - a[2])) / d;
-      if (u < 0 || v < 0 || u + v > 1) continue;
-      const x = a[0] + u * (b[0] - a[0]) + v * (c[0] - a[0]);
+      const u = ((py - ay) * (cz - az) - (cy - ay) * (pz - az)) / d;
+      if (u < 0 || u > 1) continue;
+      const v = ((by - ay) * (pz - az) - (py - ay) * (bz - az)) / d;
+      if (v < 0 || u + v > 1) continue;
+      const x = P[a] + u * (P[b] - P[a]) + v * (P[c] - P[a]);
       if (x > p[0]) pos++; else neg++;
     }
     return (pos % 2 === 1) && (neg % 2 === 1);
   }
+}
+
+// ---------------------------------------------------------------- a carrier posed at a time, its surface sites
+// C: the rig, joint matrices (W cm, Wm metres), the skinned body P (metres), each vertex's dominant joint, the body
+// frame at that time (fwd: the Hips' facing on the ground, up, left) and a TriGrid for queries
+export function carrierPose(rig, clip, t) {
+  const W = poseClip(rig, clip, t);
+  const Wm = W.map(inMetres);
+  const body = rig.meshes[rig.body];
+  const P = skinMesh(rig, body, W);
+  const J = (n) => posOf(Wm[rig.index(n)]);
+  const fwdRaw = xd(Wm[rig.index('Hips')], [0, 0, 1]);
+  const fwd = norm([fwdRaw[0], 0, fwdRaw[2]]), up = [0, 1, 0], left = norm(cross(up, fwd));
+  return { rig, clip, t, W, Wm, body, P, dom: rig._dom || (rig._dom = dominant(body)), J, fwd, up, left, grid: new TriGrid(P, body.idx) };
+}
+export async function carrierAt(file, clip, t) { return carrierPose(await loadRig(file), clip, t); }
+export const bodyPoint = (C, joint, off = [0, 0, 0]) => add(C.J(joint), add(scl(C.left, off[0]), add(scl(C.up, off[1]), scl(C.fwd, off[2]))));
+// barycentric closest point on a triangle: {p, bary}
+export function closestTri(p, a, b, c) {
+  const [q, u, v, w] = closestOnTri(p, a, b, c);
+  return { p: q, bary: [u, v, w] };
+}
+const vtx = (P, i) => [P[i * 3], P[i * 3 + 1], P[i * 3 + 2]];
+// a carrier surface site: the point nearest to `near` on the triangles with at least two corners dominated by
+// `bones` (all triangles if none): {p, n (face normal, outward for an outward-wound mesh), tri, bary}
+export function snapSite(C, near, bones = null) {
+  const set = bones ? new Set(bones.map((b) => C.rig.index(b))) : null;
+  const idx = C.body.idx;
+  let best = null;
+  for (let t = 0; t < idx.length / 3; t++) {
+    const a = idx[t * 3], b = idx[t * 3 + 1], c = idx[t * 3 + 2];
+    if (set && [a, b, c].filter((k) => set.has(C.dom[k])).length < 2) continue;
+    const pa = vtx(C.P, a), pb = vtx(C.P, b), pc = vtx(C.P, c);
+    const q = closestTri(near, pa, pb, pc);
+    const d = dist(near, q.p);
+    if (!best || d < best.d) best = { d, p: q.p, tri: t, bary: q.bary, n: norm(cross(sub(pb, pa), sub(pc, pa))) };
+  }
+  return best;
+}
+// the same surface point on the carrier posed at another time (its triangle and barycentrics)
+export function siteAt(C, s) {
+  const i = C.body.idx, t = s.tri;
+  const a = vtx(C.P, i[t * 3]), b = vtx(C.P, i[t * 3 + 1]), c = vtx(C.P, i[t * 3 + 2]);
+  return { p: add(scl(a, s.bary[0]), add(scl(b, s.bary[1]), scl(c, s.bary[2]))), n: norm(cross(sub(b, a), sub(c, a))) };
+}
+// the spec's sites (gen/props/carry.json), snapped on the carrier as posed in C
+export function sitesOf(C, sites) {
+  const out = {};
+  for (const [name, s] of Object.entries(sites)) {
+    const o = s.off || [0, 0, 0];
+    let near;
+    if (s.axes) { const F = C.Wm[C.rig.index(s.axes)]; near = add(C.J(s.joint), add(scl(axisOf(F, 0), o[0]), add(scl(axisOf(F, 1), o[1]), scl(axisOf(F, 2), o[2])))); }
+    else near = bodyPoint(C, s.joint, o);
+    out[name] = { ...snapSite(C, near, s.bones || null), near };
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------- measures (metres)
+// distance from a point to a set of triangles of a posed mesh (P, idx), with the closest point
+export function gapTo(p, P, idx, tris) {
+  let best = { d: Infinity, q: null };
+  for (const t of tris) {
+    const q = closestTri(p, vtx(P, idx[t * 3]), vtx(P, idx[t * 3 + 1]), vtx(P, idx[t * 3 + 2]));
+    const d = dist(p, q.p);
+    if (d < best.d) best = { d, q: q.p };
+  }
+  return best;
+}
+// child vertices inside the carrier's body (ray parity both ways) and how deep: {max, n, at}
+export function penetration(C, P, verts = null) {
+  const out = { max: 0, n: 0, at: -1 };
+  const n = P.length / 3;
+  for (let k = 0; k < (verts ? verts.length : n); k++) {
+    const i = verts ? verts[k] : k;
+    const p = vtx(P, i);
+    if (!C.grid.inside(p)) continue;
+    const q = C.grid.closest(p, 0.12);
+    const d = q ? q.d : 0.12;
+    out.n++;
+    if (d > out.max) { out.max = d; out.at = i; }
+  }
+  return out;
+}
+// the farthest of some child vertices from the carrier's surface (a contact patch that must lie on him)
+export function floating(C, P, verts, r = 0.06) {
+  let worst = 0;
+  for (const i of verts) { const q = C.grid.closest(vtx(P, i), r); worst = Math.max(worst, q ? q.d : r); }
+  return worst;
+}
+// the triangles of a part: at least two corners whose label (dominant child joint) is in `labels`
+export function partTris(idx, label, labels) {
+  const set = new Set(labels), tris = [];
+  for (let t = 0; t < idx.length / 3; t++) if ([0, 1, 2].filter((c) => set.has(label[idx[t * 3 + c]])).length >= 2) tris.push(t);
+  return tris;
+}
+// apply a 4x4 (metres) to every vertex
+export function xfAll(M, P) {
+  const o = new Float64Array(P.length);
+  for (let i = 0; i < P.length; i += 3) { const v = xf(M, [P[i], P[i + 1], P[i + 2]]); o[i] = v[0]; o[i + 1] = v[1]; o[i + 2] = v[2]; }
+  return o;
 }

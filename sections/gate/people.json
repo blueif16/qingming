@@ -5,18 +5,19 @@
    "character": "official",
    "do": [
     [
-     "write",
+     "write~office_desk",
      18
     ],
     [
-     "sit_talk",
+     "sit_talk~office_bench",
      6
     ]
    ],
    "nudge": [
     0,
-    0.1
-   ]
+    -0.08
+   ],
+   "facing_deg": 270
   },
   "tax_inspector": {
    "character": "inspector",
@@ -50,7 +51,12 @@
      "idle",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    0,
+    -0.08
+   ],
+   "facing_deg": 160
   },
   "tax_declarer": {
    "character": "townsman",
@@ -92,60 +98,65 @@
    ],
    "nudge": [
     -0.6,
-    0
-   ]
+    -0.18
+   ],
+   "facing_deg": 200
   },
   "bridge_sightseer": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     0.6,
-    0.21
-   ]
+    0.19
+   ],
+   "facing_deg": 270
   },
   "rail_watcher_2": {
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     0,
     0.21
-   ]
+   ],
+   "facing_deg": 270
   },
   "rail_watcher_3": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
-    -0.2,
-    0.21
-   ]
+    -0.32,
+    0.17
+   ],
+   "facing_deg": 270
   },
   "rail_watcher_4": {
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     -0.1,
     0.21
-   ]
+   ],
+   "facing_deg": 270
   },
   "wall_recliner": {
    "character": "idler",
@@ -156,9 +167,10 @@
     ]
    ],
    "nudge": [
-    1.07,
-    -1.2
-   ]
+    0.68,
+    -0.8
+   ],
+   "facing_deg": 330
   },
   "wall_idler_white": {
    "character": "idler",
@@ -225,27 +237,29 @@
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     0,
-    0.39
-   ]
+    0.68
+   ],
+   "facing_deg": 90
   },
   "far_rail_white_bent_9255": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
-    0,
-    0.77
-   ]
+    -0.09,
+    1.07
+   ],
+   "facing_deg": 89
   },
   "far_rail_long_robe_9200": {
    "character": "inspector",
@@ -264,14 +278,15 @@
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
-    0,
-    0.41
-   ]
+    -0.17,
+    0.72
+   ],
+   "facing_deg": 106
   },
   "far_rail_reaching_9010": {
    "character": "sightseer",
@@ -324,59 +339,63 @@
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     0,
-    0.15
-   ]
+    0.35
+   ],
+   "facing_deg": 90
   },
   "far_rail_white_8698": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
-    0,
-    0.08
-   ]
+    0.11,
+    0.27
+   ],
+   "facing_deg": 90
   },
   "far_rail_back_8615": {
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     0,
-    0
-   ]
+    0.13
+   ],
+   "facing_deg": 89
   },
   "rail_leaner_8665": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
    ],
    "nudge": [
     0,
-    0.26
-   ]
+    0.19
+   ],
+   "facing_deg": 270
   },
   "beggar_boy_9205": {
    "character": "child",
    "do": [
     [
-     "reach",
+     "hand_over",
      5
     ],
     [
@@ -390,7 +409,7 @@
    "character": "child",
    "do": [
     [
-     "reach",
+     "hand_over",
      6
     ],
     [
@@ -567,10 +586,15 @@
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~moat_rail",
      40
     ]
-   ]
+   ],
+   "nudge": [
+    0.55,
+    0
+   ],
+   "facing_deg": 196
   },
   "distant_figure_6729": {
    "character": "townsman",
@@ -612,7 +636,11 @@
      8
     ]
    ],
-   "facing_deg": 200
+   "facing_deg": 200,
+   "nudge": [
+    0.07,
+    0.06
+   ]
   },
   "carter_6418": {
    "character": "carter",
@@ -621,7 +649,12 @@
      "idle",
      7
     ]
-   ]
+   ],
+   "nudge": [
+    0.03,
+    -0.15
+   ],
+   "facing_deg": 200
   },
   "tax_carter_gaping_6300": {
    "character": "carter",
@@ -630,20 +663,26 @@
      "idle",
      6
     ]
-   ]
+   ],
+   "nudge": [
+    0.26,
+    -0.03
+   ],
+   "facing_deg": 180
   },
   "tax_clerk_seated_6340": {
    "character": "official",
    "do": [
     [
-     "sit",
-     12
-    ],
-    [
-     "write",
-     8
+     "sit_talk~office_bench",
+     20
     ]
-   ]
+   ],
+   "nudge": [
+    -0.17,
+    0
+   ],
+   "facing_deg": 190
   },
   "roof_man_white_6290": {
    "character": "townsman",
@@ -678,7 +717,12 @@
      "idle",
      3
     ]
-   ]
+   ],
+   "nudge": [
+    0,
+    0.08
+   ],
+   "facing_deg": 180
   },
   "man_white_awning_6165": {
    "character": "sightseer",
@@ -691,7 +735,12 @@
      "idle",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    0,
+    -0.12
+   ],
+   "facing_deg": 0
   },
   "man_tall_board_6030": {
    "character": "carter",
@@ -741,14 +790,19 @@
    "character": "carter",
    "do": [
     [
-     "push",
+     "browse~pack_handler_5837",
      6
     ],
     [
      "idle",
      5
     ]
-   ]
+   ],
+   "nudge": [
+    -0.6,
+    0.9
+   ],
+   "facing_deg": 180
   },
   "figure_by_trunk_5772": {
    "character": "sightseer",
@@ -761,7 +815,12 @@
      "look",
      5
     ]
-   ]
+   ],
+   "nudge": [
+    0.29,
+    0.29
+   ],
+   "facing_deg": 270
   },
   "archer_wrist_5728": {
    "character": "archer",
@@ -774,16 +833,26 @@
      "idle",
      3
     ]
-   ]
+   ],
+   "nudge": [
+    0.26,
+    0.23
+   ],
+   "facing_deg": 270
   },
   "cart_pusher_5727": {
    "character": "carter",
    "do": [
     [
-     "push",
+     "push~cart_pusher_5727",
      30
     ]
-   ]
+   ],
+   "nudge": [
+    -0.51,
+    0.31
+   ],
+   "facing_deg": 179
   },
   "roof_watcher_5712": {
    "character": "townsman",
@@ -812,7 +881,12 @@
    ],
    "props": [
     "bow"
-   ]
+   ],
+   "nudge": [
+    0.02,
+    -0.23
+   ],
+   "facing_deg": 0
   },
   "old_rider_9168": {
    "character": "elder",
@@ -867,8 +941,8 @@
     ]
    ],
    "nudge": [
-    2.8,
-    -0.06
+    2.74,
+    0.03
    ],
    "facing_deg": 0
   },
@@ -876,7 +950,7 @@
    "character": "carter",
    "do": [
     [
-     "bridle",
+     "bridle~groom_8167",
      8
     ],
     [
@@ -884,13 +958,17 @@
      3
     ]
    ],
-   "facing_deg": 180
+   "facing_deg": 204,
+   "nudge": [
+    -0.6,
+    0
+   ]
   },
   "cart_shaftman_8498": {
    "character": "carter",
    "do": [
     [
-     "push",
+     "idle~cart_shaftman_8498",
      8
     ]
    ],
@@ -900,17 +978,21 @@
    "character": "carter",
    "do": [
     [
-     "push",
+     "steer~cart_pusher_8254",
      8
     ]
    ],
-   "facing_deg": 0
+   "facing_deg": 0,
+   "nudge": [
+    -0.92,
+    -0.06
+   ]
   },
   "hat_pole_man_5940": {
    "character": "porter",
    "do": [
     [
-     "stand_pole",
+     "stand_pole~staff_foot",
      8
     ],
     [
@@ -924,18 +1006,43 @@
   }
  },
  "nudge_why": {
-  "tax_official": "sits on the bench behind the desk (bench at D 12.9-13.2); his feet are hidden in the painting",
+  "tax_official": "solved: contact seat->S5.bld.tax_office, sole_L->S5.bld.tax_office, sole_R->S5.bld.tax_office, palm_L->S5.bld.tax_office; gap before seat 0.43, sole_L 0.42, sole_R 0.42, palm_L 0.44, seat 0.84, sole_L 0, sole_R 0, after seat 0.01, sole_L 0, sole_R 0, palm_L 0.02, seat 0, sole_L 0, sole_R 0; fixed contact:seat, contact:floor, contact:floor, contact:table, contact:seat, furniture; moved 0.18 m from the casting's spot (limit 0.6 m); 3 cm clear of the bench's front edge for the ground rays (at 0.05 m his root sat on the edge, and the page's quantised bench caught the rays: he stood on it) || casting: sits on the bench behind the desk (bench at D 12.9-13.2); his feet are hidden in the painting",
   "rail watchers": "legs hidden behind the railing: stand 0.3 m behind the near railing's inner face so the elbows rest on its top rail (lean_chin keeps the feet under the hips); bridge_sightseer steps off the post at X 3.5, and watchers 3 and 4 stand 0.8 m apart so their elbows don't meet",
-  "wall_recliner": "half-reclining against the foot of the gate block's east face, as painted; his estimated foot maps 0.7 m north of the block's north end (the block is literal, 9 m along the wall), so he moves 1.2 m south onto the face, and 1.1 m east to lean on it",
-  "tower_watchman": "painted in the middle of the hall doorway (bay X -21.05..-19.15); now that people have bodies he would block the way in, so he stands 0.6 m to the side of it",
+  "wall_recliner": "solved: contact back->S5.str.gate_block; gap before back 0.38, after back 0.03; fixed contact:wall; moved 0.56 m from the casting's spot (limit 0.6 m) || casting: half-reclining against the foot of the gate block's east face, as painted; his estimated foot maps 0.7 m north of the block's north end (the block is literal, 9 m along the wall), so he moves 1.2 m south onto the face, and 1.1 m east to lean on it",
+  "tower_watchman": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder; moved 0.18 m from the casting's spot (limit 0.6 m) || casting: painted in the middle of the hall doorway (bay X -21.05..-19.15); now that people have bodies he would block the way in, so he stands 0.6 m to the side of it",
   "barber_7805": "crouches over the recliner, so he moves with him (1.07 m east, 1.2 m south)",
   "far rail": "far-railing figures stand 0.42 m south of the far railing's inner face so they can lean on its top rail (their feet are hidden behind it in the painting)",
-  "rail_leaner_8665": "as the near-rail watchers: 0.39 m north of the near railing",
+  "rail_leaner_8665": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.1, elbow_R 0.08, after elbow_L 0.03, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.07 m from the casting's spot (limit 0.6 m) || casting: as the near-rail watchers: 0.39 m north of the near railing",
   "far_figure_8205": "stands 0.5 m in front of the far shed's posts (his foot is painted against them)",
   "distant_figures": "the two distant marks are 0.14 m apart on the map; each steps 0.3 m aside so their bodies do not overlap",
   "hat_pole_man_5940": "painted at the corner of the low building, leaning forward toward the viewer; that way runs into the house within a step, so he steps 0.7 m off the corner and walks along the street toward the gate and back",
-  "caravan_leader_7388": "painted on the lead camel's far (north) side in the passage, where the 2.4 m passage has no room for him beside the camel and a walker: he stands just outside the mouth on that side, at the camel's head, facing out of the city (he leads it; the camel stands, so he does too)",
-  "cast_2026_10_12": "recast with the workshop's new characters (2026-10-12): the archers are the archer (one draws his bow, one binds his wrist); the beggar boys and the small figure are the child (holding out their hands); the old rider is the elder sitting side-saddle; the veiled rider the hat traveller; the carriers walk with their painted loads on the porter's shoulder-pole walk (bundles, baskets) and the back-box porter under his boxes; the 串车's two carters push it where it stands and the groom holds the donkey's bridle (the cart and the donkey stand, so they do too); the man with the long pole and board holds his pole upright"
+  "caravan_leader_7388": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.11 m from the casting's spot (limit 0.6 m) || casting: painted on the lead camel's far (north) side in the passage, where the 2.4 m passage has no room for him beside the camel and a walker: he stands just outside the mouth on that side, at the camel's head, facing out of the city (he leads it; the camel stands, so he does too)",
+  "cast_2026_10_12": "recast with the workshop's new characters (2026-10-12): the archers are the archer (one draws his bow, one binds his wrist); the beggar boys and the small figure are the child (holding out their hands); the old rider is the elder sitting side-saddle; the veiled rider the hat traveller; the carriers walk with their painted loads on the porter's shoulder-pole walk (bundles, baskets) and the back-box porter under his boxes; the 串车's two carters push it where it stands and the groom holds the donkey's bridle (the cart and the donkey stand, so they do too); the man with the long pole and board holds his pole upright",
+  "tax_carter_manifest": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "rail_watcher_2": "the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13) || casting: the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13) || casting: solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.05, elbow_R 0.05, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.03 m from the casting's spot (limit 0.6 m)",
+  "rail_watcher_4": "the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13) || casting: the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13) || casting: solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.05, elbow_R 0.03, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail; moved 0.02 m from the casting's spot (limit 0.6 m)",
+  "far_rail_dark_9308": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.28, elbow_R 0.31, after elbow_L 0.01, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.29 m from the casting's spot (limit 0.6 m) || casting: solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.28, elbow_R 0.31, after elbow_L 0.02, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.31 m, turned 1 deg from the casting's spot (limit 0.6 m)",
+  "far_rail_bending_8822": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.19, elbow_R 0.18, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.2 m from the casting's spot (limit 0.6 m) || casting: solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.2, elbow_R 0.19, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.34 m from the casting's spot (limit 0.6 m)",
+  "hidden_man_6452": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles; moved 0.09 m from the casting's spot (limit 0.6 m)",
+  "carter_6418": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.15 m from the casting's spot (limit 0.6 m)",
+  "tax_carter_gaping_6300": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.26 m from the casting's spot (limit 0.6 m)",
+  "man_brown_awning_6245": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "man_white_awning_6165": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.12 m from the casting's spot (limit 0.6 m)",
+  "figure_by_trunk_5772": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder; moved 0.41 m from the casting's spot (limit 0.6 m)",
+  "archer_wrist_5728": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder, head_inside; moved 0.35 m from the casting's spot (limit 0.6 m)",
+  "archer_drawing_bow_5635": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, head_inside, site_inside; moved 0.23 m from the casting's spot (limit 0.6 m)",
+  "tax_clerk_seated_6340": "solved: contact seat->S5.bld.tax_office, sole_L->S5.bld.tax_office, sole_R->S5.bld.tax_office; gap before seat 0.42, sole_L 0.42, sole_R 0.42, after seat 0, sole_L 0, sole_R 0; fixed contact:seat, contact:floor, contact:floor; moved 0.17 m from the casting's spot (limit 0.6 m)",
+  "bridge_sightseer": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.05, elbow_R 0.05, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.02 m from the casting's spot (limit 0.6 m)",
+  "rail_watcher_3": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.06, elbow_R 0.06, after elbow_L 0.03, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.13 m from the casting's spot (limit 0.6 m)",
+  "far_rail_white_bent_9255": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.34, elbow_R 0.28, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.31 m, turned -1 deg from the casting's spot (limit 0.6 m)",
+  "far_rail_white_8698": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.39, elbow_R 0.4, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail, stance_soles, furniture; moved 0.22 m from the casting's spot (limit 0.6 m)",
+  "far_rail_back_8615": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.14, elbow_R 0.08, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.13 m, turned -1 deg from the casting's spot (limit 0.6 m)",
+  "far_rail_turned_9100": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.6, elbow_R 0.3, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.35 m, turned -74 deg from the casting's spot (limit 0.6 m); painted leaning on a far-railing post with his body bent and his head turned west and down; the casting turned his body west along the railing, which left nothing under his forearms, so his body turns 74 degrees toward the railing (north-north-west) (his head turns left and right as the take turns it) || casting: solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.6, elbow_R 0.3, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.35 m, turned -74 deg from the casting's spot (limit 0.6 m); painted leaning on a far-railing post with his body bent and his head turned west and down; the casting turned his body west along the railing, which left nothing under his forearms, so his body turns 74 degrees toward the railing (north-north-west) and the take's head turn keeps him looking west",
+  "pack_handler_5837": "solved: contact palm_L->S5.prop.pack_box_5780, palm_R->S5.prop.pack_box_5780; gap before palm_L 0.6, palm_R 0.6, after palm_L 0.14, palm_R 0.12; fixed nothing; moved 1.08 m, turned 15 deg from the casting's spot (limit 1.4 m); the placement for his IK (browse~pack_handler_5837: the hands on the pack box): painted working on the box-like pack on legs (S5.prop.pack_box_5780) beside the pack donkey's rump, but his painted foot is 1.7 m from the box's mapped spot (both from the strokes; the box's identification is low), so he stands at the box's east end facing it, 1.1 m from his foot point || casting: solved: contact palm_L->S5.prop.pack_box_5780, palm_R->S5.prop.pack_box_5780; gap before palm_L 0.6, palm_R 0.6, after palm_L 0.16, palm_R 0.22; fixed nothing; moved 1.03 m, turned 15 deg from the casting's spot (limit 1.4 m); the placement for his IK (browse~pack_handler_5837: the hands on the pack box): painted working on the box-like pack on legs (S5.prop.pack_box_5780) beside the pack donkey's rump, but his painted foot is 1.7 m from the box's mapped spot (both from the strokes; the box's identification is low), so he stands at the box's east end facing it, 1.0 m from his foot point",
+  "tower_balcony_man_6600": "solved: contact elbow_L->S5.str.tower_podium, elbow_R->S5.str.tower_podium; gap before elbow_L 0.3, elbow_R 0.47, after elbow_L 0.02, elbow_R 0.04; fixed contact:rail, contact:rail, furniture; moved 0.55 m, turned -4 deg from the casting's spot (limit 0.6 m)",
+  "cart_pusher_8254": "solved: contact palm_L->S5.veh.cart_screen_8510, palm_R->S5.veh.cart_screen_8510; gap before palm_L 0.19, palm_R 0.19, after palm_L 0.05, palm_R 0.04; fixed nothing; moved 0.92 m from the casting's spot (limit 1.4 m); the placement for his IK (steer~cart_pusher_8254: a hand on each rear handle): painted gripping the barrow's rear handles in a wide stride, his estimated feet 0.7 m east of the mapped handle tips (the handles drawn rising toward him); at his foot point he stood inside the barrow's frame between its rails (its hidden walker collider), so he stands between the handles just behind their tips || casting: solved: contact palm_L->S5.veh.cart_screen_8510, palm_R->S5.veh.cart_screen_8510; gap before palm_L 0.46, palm_R 0.5, after palm_L 0.35, palm_R 0.37; fixed nothing; moved 0.9 m from the casting's spot (limit 1.4 m); the placement for his IK (push~cart_pusher_8254: palms on the rear handles): painted gripping the barrow's rear handles in a wide stride, his estimated feet 0.7 m east of the mapped handle tips (the handles drawn rising toward him); at his foot point he stood inside the barrow's frame between its rails (its hidden walker collider), so he stands between the handles just behind their tips",
+  "cart_pusher_5727": "solved: contact palm_L->S6.veh.sack_cart_5412, palm_R->S6.veh.sack_cart_5412; gap before palm_L 0.49, palm_R 0.59, after palm_L 0.07, palm_R 0.06; fixed nothing; moved 0.6 m, turned -1 deg from the casting's spot (limit 0.6 m); the placement for his IK (push~cart_pusher_5727: palms on the sack cart's rear)",
+  "groom_8167": "solved: contact palm_R->S5.ani.donkey_8121, palm_L->S5.ani.donkey_8121; gap before palm_R 0.79, palm_L 0.63, after palm_R 0.31, palm_L 0.19; fixed nothing; moved 0.6 m, turned 24 deg from the casting's spot (limit 0.6 m); the placement for his IK (bridle~groom_8167: the right hand on the bridle)"
  },
  "walkers": [
   {
@@ -1026,7 +1133,7 @@
      28.41
     ],
     [
-     -0.24,
+     -3.24,
      28.41
     ]
    ],
@@ -1074,8 +1181,8 @@
      1.95
     ],
     [
-     -0.3,
-     7.8
+     -2.1,
+     4.68
     ]
    ],
    "props": [
@@ -1441,5 +1548,68 @@
   "loads": "as painted: saddle cloths under the three riders, the trace donkey's collar, the pack donkey's pack saddle, the camels' pack frames (camel_6335's with the fan of straw, as the workshop read it)",
   "standing": "every animal stands at its painted spot with an idle cycle, the head-down ones grazing; the ones painted walking with a rider or a leader stay with them (walking paths for animals come later)",
   "nudges": "black_animal_7495 moves 1.5 m west and 0.25 m south, against the passage's south jamb: at its painted spot it closed the 1.3 m gap the painted idlers leave at the passage mouth, the only way through the gate (walks.json); camel_lead_7492 moves 0.31 m south: at its painted spot its north flank stood 0.3 m inside the passage's north jamb"
+ },
+ "facing_why": {
+  "tax_carter_manifest": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "tower_watchman": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder; moved 0.18 m from the casting's spot (limit 0.6 m)",
+  "rail_watcher_2": "the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13)",
+  "rail_watcher_4": "the casting's spot (0.36 m inside the near railing, square to it): on lean_chin~moat_rail both elbows rest on the rail there (contact_solve, fix-gate 2026-10-13)",
+  "wall_recliner": "solved: contact back->S5.str.gate_block; gap before back 0.38, after back 0.03; fixed contact:wall; moved 0.56 m from the casting's spot (limit 0.6 m)",
+  "far_rail_dark_9308": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.28, elbow_R 0.31, after elbow_L 0.01, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.29 m from the casting's spot (limit 0.6 m)",
+  "far_rail_bending_8822": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.19, elbow_R 0.18, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.2 m from the casting's spot (limit 0.6 m)",
+  "hidden_man_6452": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles; moved 0.09 m from the casting's spot (limit 0.6 m)",
+  "carter_6418": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.15 m from the casting's spot (limit 0.6 m)",
+  "tax_carter_gaping_6300": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.26 m from the casting's spot (limit 0.6 m)",
+  "man_brown_awning_6245": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.08 m from the casting's spot (limit 0.6 m)",
+  "man_white_awning_6165": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.12 m from the casting's spot (limit 0.6 m)",
+  "figure_by_trunk_5772": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder; moved 0.41 m from the casting's spot (limit 0.6 m)",
+  "archer_wrist_5728": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder, head_inside; moved 0.35 m from the casting's spot (limit 0.6 m)",
+  "archer_drawing_bow_5635": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, head_inside, site_inside; moved 0.23 m from the casting's spot (limit 0.6 m)",
+  "caravan_leader_7388": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.11 m from the casting's spot (limit 0.6 m)",
+  "tax_official": "solved: contact seat->S5.bld.tax_office, sole_L->S5.bld.tax_office, sole_R->S5.bld.tax_office, palm_L->S5.bld.tax_office; gap before seat 0.43, sole_L 0.42, sole_R 0.42, palm_L 0.44, seat 0.84, sole_L 0, sole_R 0, after seat 0.01, sole_L 0, sole_R 0, palm_L 0.02, seat 0, sole_L 0, sole_R 0; fixed contact:seat, contact:floor, contact:floor, contact:table, contact:seat, furniture; moved 0.18 m from the casting's spot (limit 0.6 m); 3 cm clear of the bench's front edge for the ground rays (at 0.05 m his root sat on the edge, and the page's quantised bench caught the rays: he stood on it)",
+  "tax_clerk_seated_6340": "solved: contact seat->S5.bld.tax_office, sole_L->S5.bld.tax_office, sole_R->S5.bld.tax_office; gap before seat 0.42, sole_L 0.42, sole_R 0.42, after seat 0, sole_L 0, sole_R 0; fixed contact:seat, contact:floor, contact:floor; moved 0.17 m from the casting's spot (limit 0.6 m)",
+  "bridge_sightseer": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.05, elbow_R 0.05, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.02 m from the casting's spot (limit 0.6 m)",
+  "rail_watcher_3": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.06, elbow_R 0.06, after elbow_L 0.03, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.13 m from the casting's spot (limit 0.6 m)",
+  "far_rail_white_bent_9255": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.34, elbow_R 0.28, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail; moved 0.31 m, turned -1 deg from the casting's spot (limit 0.6 m)",
+  "far_rail_white_8698": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.39, elbow_R 0.4, after elbow_L 0.03, elbow_R 0.04; fixed contact:rail, contact:rail, stance_soles, furniture; moved 0.22 m from the casting's spot (limit 0.6 m)",
+  "rail_leaner_8665": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.1, elbow_R 0.08, after elbow_L 0.03, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.07 m from the casting's spot (limit 0.6 m)",
+  "far_rail_back_8615": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.14, elbow_R 0.08, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.13 m, turned -1 deg from the casting's spot (limit 0.6 m)",
+  "far_rail_turned_9100": "solved: contact elbow_L->S5.str.moat_bridge, elbow_R->S5.str.moat_bridge; gap before elbow_L 0.6, elbow_R 0.3, after elbow_L 0.04, elbow_R 0.03; fixed contact:rail, contact:rail; moved 0.35 m, turned -74 deg from the casting's spot (limit 0.6 m); painted leaning on a far-railing post with his body bent and his head turned west and down; the casting turned his body west along the railing, which left nothing under his forearms, so his body turns 74 degrees toward the railing (north-north-west) (his head turns left and right as the take turns it)",
+  "pack_handler_5837": "solved: contact palm_L->S5.prop.pack_box_5780, palm_R->S5.prop.pack_box_5780; gap before palm_L 0.6, palm_R 0.6, after palm_L 0.14, palm_R 0.12; fixed nothing; moved 1.08 m, turned 15 deg from the casting's spot (limit 1.4 m); the placement for his IK (browse~pack_handler_5837: the hands on the pack box): painted working on the box-like pack on legs (S5.prop.pack_box_5780) beside the pack donkey's rump, but his painted foot is 1.7 m from the box's mapped spot (both from the strokes; the box's identification is low), so he stands at the box's east end facing it, 1.1 m from his foot point",
+  "tower_balcony_man_6600": "solved: contact elbow_L->S5.str.tower_podium, elbow_R->S5.str.tower_podium; gap before elbow_L 0.3, elbow_R 0.47, after elbow_L 0.02, elbow_R 0.04; fixed contact:rail, contact:rail, furniture; moved 0.55 m, turned -4 deg from the casting's spot (limit 0.6 m)",
+  "cart_pusher_8254": "solved: contact palm_L->S5.veh.cart_screen_8510, palm_R->S5.veh.cart_screen_8510; gap before palm_L 0.19, palm_R 0.19, after palm_L 0.05, palm_R 0.04; fixed nothing; moved 0.92 m from the casting's spot (limit 1.4 m); the placement for his IK (steer~cart_pusher_8254: a hand on each rear handle): painted gripping the barrow's rear handles in a wide stride, his estimated feet 0.7 m east of the mapped handle tips (the handles drawn rising toward him); at his foot point he stood inside the barrow's frame between its rails (its hidden walker collider), so he stands between the handles just behind their tips",
+  "cart_pusher_5727": "solved: contact palm_L->S6.veh.sack_cart_5412, palm_R->S6.veh.sack_cart_5412; gap before palm_L 0.49, palm_R 0.59, after palm_L 0.07, palm_R 0.06; fixed nothing; moved 0.6 m, turned -1 deg from the casting's spot (limit 0.6 m); the placement for his IK (push~cart_pusher_5727: palms on the sack cart's rear)",
+  "groom_8167": "solved: contact palm_R->S5.ani.donkey_8121, palm_L->S5.ani.donkey_8121; gap before palm_R 0.79, palm_L 0.63, after palm_R 0.31, palm_L 0.19; fixed nothing; moved 0.6 m, turned 24 deg from the casting's spot (limit 0.6 m); the placement for his IK (bridle~groom_8167: the right hand on the bridle)"
+ },
+ "cast_why": {
+  "tax_official": "painted seated behind the long desk, brush in hand, about to write: write and sit_talk seat him at two heights (0.38 and 0.50 m over the floor) on one bench 0.42 m high, with one sole 6 cm up and the other as far into the floor: write~office_desk and sit_talk~office_bench (characters/ik_variants.json) hold the seat on the bench top and both soles on the floor, and his left hand flat on the desk",
+  "tax_clerk_seated_6340": "painted seated in the east bay behind a low rail, turned west toward the desk and the declarer, with no desk or paper of his own (map/text/S5.md): write (the left hand flat on a desk) had nothing within 0.6 m, so he sits talking toward the declarer, on sit_talk~office_bench (characters/ik_variants.json: his seat on the bench, 0.42 m, both soles on the floor); the official's sit take shifts its weight so its lowest thigh point jumps 9 cm and no hips pin holds it, so it is not used",
+  "bridge_sightseer": "painted hunched over the near railing, arms folded on the top rail, head on them: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+  "rail_watcher_3": "painted leaning on the near railing, chin on his clasped hands: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+  "far_rail_white_bent_9255": "painted leaning forward over the far railing, back to us: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+  "far_rail_white_8698": "painted leaning with both forearms stretched along the far top rail: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+  "rail_leaner_8665": "painted with his arms folded on the near top rail, face buried in them: the sightseer's lean_chin holds the elbows 1.15-1.16 m up, 8 cm over the moat bridge's top rail (1.075 m): lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") lowers him, knees a little bent, so the forearms rest on the rail",
+  "far_rail_back_8615": "painted standing at the far railing, his hands on the top rail, looking out over the moat: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (the take sways them 1.5 cm)",
+  "far_rail_turned_9100": "painted leaning on a far-railing post, body bent, head turned west and down: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (the take sways them 1.5 cm)",
+  "beggar_boy_9205": "painted a small child standing before the long-robed sightseer, facing west toward the first boy and the men (少年乞丐): the child's reach is a table reach (workshop motion child_reach: arms across a chest-high table top), and nothing is painted under his hands: hand_over (from carter's hand_over_paper: both hands held out at chest height to the man before him, no contact) keeps the painted begging",
+  "beggar_boy_9138": "painted a small boy among the far-rail sightseers, holding out his hands to them (少年乞丐): the child's reach is a table reach (workshop motion child_reach: arms across a chest-high table top), and nothing is painted under his hands: hand_over (from carter's hand_over_paper: both hands held out at chest height to the man before him, no contact) keeps the painted begging",
+  "pack_handler_5837": "painted bending slightly west to work on the box-like pack on legs beside the pack donkey's rump (S5.prop.pack_box_5780), not at a cart: push put his palms on S6's sack cart 1-1.5 m away; browse (from townsman's browse_goods: reaching into goods) with his hands in the pack; browse -> browse~pack_handler_5837: an IK clip variant (characters/ik_variants.json \"pack_handler_5837\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "cart_shaftman_8498": "painted at the front of the 串车 facing east, bent forward over the front shafts, gripping a shaft (and the trace rope): idle~cart_shaftman_8498 (characters/ik_variants.json: standing between the front shafts, a hand on each) instead of push, whose palms reach forward away from the barrow behind him, and of steer, whose whip lift took his right hand off the shaft for a third of the cycle",
+  "hat_pole_man_5940": "the staff's foot hung 4-12 cm over the ground in the porter's stand_pole (fix-boats' pole rule): stand_pole~staff_foot (characters/ik_variants.json \"staff_foot\") holds the right palm 6 cm lower, so the foot rests on the ground",
+  "tower_balcony_man_6600": "painted at the west end of the tower's front balcony leaning forward on the railing, looking west toward the tax office: lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\": the forearms on a 1.075 m top rail) on the balcony railing, built at that height for him (blender/gate_scene.py _podium, choice)",
+  "cart_pusher_8254": "painted bent forward behind the 串车 gripping its rear handles, pushing it east: steer~cart_pusher_8254 (characters/ik_variants.json: a hand on each rear handle, at his sides) instead of push, whose palms stay 1.03-1.10 m up, 0.2 m over the handles and out of reach",
+  "cart_pusher_5727": "push -> push~cart_pusher_5727: an IK clip variant (characters/ik_variants.json \"cart_pusher_5727\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "groom_8167": "bridle -> bridle~groom_8167: an IK clip variant (characters/ik_variants.json \"groom_8167\") lays palm_R on what the painting has it touch, from its solved placement",
+  "rail_watcher_2": "painted leaning on the near railing, chin on his hands: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)",
+  "rail_watcher_4": "painted leaning on the near railing, chin on his hands: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)",
+  "far_rail_dark_9308": "painted leaning on the far railing: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)",
+  "far_rail_bending_8822": "painted bending over the far railing: the idler's lean_chin~moat_rail (characters/ik_variants.json \"moat_rail\") holds the right elbow 1.10 m up all through, the forearms on the 1.075 m top rail (on the take, the elbows' 1.5 cm sway left the right one 4.0-4.1 cm off it on the page)"
+ },
+ "contact_fixes_why": {
+  "about": "36 figures carry a contact fix from sections/gate/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
+ },
+ "walkers_why": {
+  "top_porter_backbox_8911": "painted walking east right behind the distant rider (0.8 m E) on the far road; his path ran on east through the rider's donkey and the trunks of S5.tree.bare_leaning_9025, bare_leaning_9090 and bare_9128 (he was caught 0.26 m inside bare_9128's trunk on the page, fix-gate 2026-10-13), so it ends at his painted spot, behind the rider",
+  "porter_back_8050": "painted walking away north-east with his shoulder pole; his path ran on through the 串车 (S5.veh.cart_screen_8510: on the page he stood 0.14 m inside it) and onto the moat bridge's railing, so it ends 0.6 m short of the barrow (fix-gate, 2026-10-13)"
  }
 }

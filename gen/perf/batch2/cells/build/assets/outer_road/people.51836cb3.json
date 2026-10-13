@@ -1,0 +1,1279 @@
+{
+ "about": "Who the outer road's people and animals are and what they do: every painted figure and animal of S4 part 1 (map/text/S4.md, u 9400-12600) at its mapped spot (layout.json), and nobody else (map/BUILDING.md). Written by gen/sections/outer_road/make_people.py (the casting of gen/expand/outer_road_needs.md and the lead's calls of 2026-10-12); rerun it when the workshop delivers characters, clips and props. figures: character (a new one plays its stand_in until it exists), do = [clip, seconds] cycles with clips the playing character has (clips_why: what is still to make), nudge = [dX, dD] (nudge_why), facing_deg where the map gives none (facing_why), scale for children (scale_why), ride = the animal a rider sits on, props = carried prop_<name> parts (props_why). walkers: figures painted mid-stride or carrying a load, walking along their painted direction from their spot and back (walkers_why). animals: each painted animal at its map position facing hind to fore, model and load from web/public/assets/animals/animals.json (horse_white, bird and the pannier_charcoal load are being made: the page skips them until then). No traffic.",
+ "figures": {
+  "far_figure_9563": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "facing_deg": 270
+  },
+  "monk_side_door_10208": {
+   "character": "monk",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "awning_stall_man_9495": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "chat",
+     5
+    ]
+   ]
+  },
+  "awning_stall_man_arm_raised_9625": {
+   "character": "idler",
+   "do": [
+    [
+     "hail",
+     6
+    ],
+    [
+     "chat",
+     5
+    ]
+   ],
+   "nudge": [
+    0,
+    -0.25
+   ],
+   "facing_deg": 270
+  },
+  "parasol_man_9875": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "chat",
+     5
+    ]
+   ]
+  },
+  "shopkeeper_10425": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "chat",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    0.7
+   ]
+  },
+  "child_by_basket_9915": {
+   "character": "child",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "scale": 0.9
+  },
+  "dark_robed_man_9885": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "crouching_man_10135": {
+   "character": "idler",
+   "do": [
+    [
+     "squat_sleeves",
+     14
+    ]
+   ]
+  },
+  "child_in_arms_10430": {
+   "character": "child",
+   "carried_by": "person_with_child_10430",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "person_with_child_10430": {
+   "character": "woman",
+   "do": [
+    [
+     "hold_child",
+     12
+    ]
+   ],
+   "props": [
+    "child_in_arms"
+   ]
+  },
+  "ox_driver_seated_9815": {
+   "character": "carter",
+   "do": [
+    [
+     "drive_cart",
+     16
+    ]
+   ],
+   "props": [
+    "goad"
+   ],
+   "nudge": [
+    -1.478,
+    0.484
+   ],
+   "facing_deg": -1.8,
+   "root_h": 0.7
+  },
+  "basket_leaner_10078": {
+   "character": "idler",
+   "do": [
+    [
+     "browse",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    0,
+    -0.3
+   ],
+   "facing_deg": 185
+  },
+  "waving_man_10155": {
+   "character": "idler",
+   "do": [
+    [
+     "hail",
+     6
+    ],
+    [
+     "chat",
+     5
+    ]
+   ]
+  },
+  "seated_man_bottom_9680": {
+   "character": "townsman",
+   "do": [
+    [
+     "squat_sleeves",
+     14
+    ]
+   ]
+  },
+  "bearded_man_10142": {
+   "character": "idler",
+   "do": [
+    [
+     "browse~bearded_man_10142",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.6,
+    0
+   ],
+   "facing_deg": 196
+  },
+  "ox_walker_9902": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "talk",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.02,
+    -0.25
+   ]
+  },
+  "drover_10578": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "nudge": [
+    0.77,
+    0.99
+   ]
+  },
+  "bearer_bending_10440": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole_ends",
+     10
+    ]
+   ],
+   "nudge": [
+    1.26,
+    -0.7
+   ],
+   "facing_deg": 0
+  },
+  "groom_10420": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     13
+    ]
+   ],
+   "nudge": [
+    0.1,
+    -0.19
+   ]
+  },
+  "ox_leader_10050": {
+   "character": "carter",
+   "do": [
+    [
+     "bridle~ox_leader_10050",
+     10
+    ]
+   ],
+   "nudge": [
+    0.22,
+    -0.34
+   ],
+   "facing_deg": -20
+  },
+  "man_with_staff_9852": {
+   "character": "robed_man",
+   "do": [
+    [
+     "talk",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "props": [
+    "staff"
+   ]
+  },
+  "groom_rider_10255": {
+   "character": "idler",
+   "do": [
+    [
+     "bridle~groom_rider_10255",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    0.05,
+    -0.11
+   ],
+   "facing_deg": 170
+  },
+  "rider_fan_10285": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "ride_fan~steady",
+     10
+    ]
+   ],
+   "props": [
+    "fan_round"
+   ],
+   "ride": "horse_rider_10205"
+  },
+  "child_bottom_9885": {
+   "character": "child",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "scale": 0.67,
+   "facing_deg": 260
+  },
+  "young_man_canopy_10558": {
+   "character": "idler",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "chat",
+     4
+    ]
+   ],
+   "nudge": [
+    0,
+    0.39
+   ]
+  },
+  "carter_whip_10380": {
+   "character": "carter",
+   "do": [
+    [
+     "stand_whip",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "props": [
+    "whip_stand"
+   ]
+  },
+  "young_man_bottom_9937": {
+   "character": "carter",
+   "do": [
+    [
+     "hand_over",
+     6
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "man_long_robe_10605": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     9
+    ],
+    [
+     "talk",
+     4
+    ]
+   ]
+  },
+  "man_behind_roof_10068": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "facing_deg": 120
+  },
+  "carter_front_10525": {
+   "character": "carter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "man_cart_tail_10405": {
+   "character": "idler",
+   "do": [
+    [
+     "push~man_cart_tail_10405",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -0.68,
+    -1.14
+   ],
+   "facing_deg": 65
+  },
+  "bearer_straining_10728": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0.17,
+    -0.32
+   ],
+   "facing_deg": 180
+  },
+  "man_behind_bearer_10755": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0,
+    0.2
+   ],
+   "facing_deg": 181
+  },
+  "walker_behind_sedan_10822": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "nudge": [
+    0,
+    0.83
+   ]
+  },
+  "ox_driver_10635": {
+   "character": "idler",
+   "do": [
+    [
+     "push_flank~ox_driver_10635",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "nudge": [
+    -0.36,
+    0.48
+   ],
+   "facing_deg": 50
+  },
+  "bearer_east_10982": {
+   "character": "bearer",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "nudge": [
+    0.14,
+    0.55
+   ],
+   "facing_deg": 177
+  },
+  "man_beside_porter_11066": {
+   "character": "porter",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ],
+   "scale": 0.85,
+   "nudge": [
+    0,
+    0.55
+   ]
+  },
+  "ox_leader_11017": {
+   "character": "robed_man",
+   "do": [
+    [
+     "hold_rope",
+     10
+    ]
+   ],
+   "props": [
+    "lead_rope"
+   ]
+  },
+  "youth_bending_11138": {
+   "character": "porter",
+   "do": [
+    [
+     "lift_pole",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "soldier_lying_11430": {
+   "character": "soldier",
+   "do": [
+    [
+     "sleep_side",
+     30
+    ]
+   ]
+  },
+  "man_behind_roof_11165": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "soldier_hugging_knees_11488": {
+   "character": "soldier",
+   "do": [
+    [
+     "doze_knees",
+     30
+    ]
+   ]
+  },
+  "soldier_behind_box_11580": {
+   "character": "soldier",
+   "do": [
+    [
+     "squat_sleeves",
+     20
+    ]
+   ],
+   "nudge": [
+    0,
+    0.35
+   ],
+   "facing_deg": 270
+  },
+  "soldier_on_stool_11630": {
+   "character": "soldier",
+   "do": [
+    [
+     "sit",
+     24
+    ]
+   ],
+   "nudge": [
+    0.28,
+    0.03
+   ]
+  },
+  "soldier_knee_up_11792": {
+   "character": "soldier",
+   "do": [
+    [
+     "sit_one_knee",
+     24
+    ]
+   ]
+  },
+  "soldier_slumped_11885": {
+   "character": "soldier",
+   "do": [
+    [
+     "doze_knees",
+     30
+    ]
+   ]
+  },
+  "figure_under_eave_11382": {
+   "character": "robed_man",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "soldier_asleep_on_box_12022": {
+   "character": "soldier",
+   "do": [
+    [
+     "kneel_sleep",
+     30
+    ]
+   ]
+  },
+  "onlooker_cap_12040": {
+   "character": "idler",
+   "do": [
+    [
+     "stand_sleeves",
+     12
+    ],
+    [
+     "idle",
+     4
+    ]
+   ]
+  },
+  "onlooker_hat_12084": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "crane",
+     9
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    -0.01,
+    0.12
+   ],
+   "facing_deg": 300
+  },
+  "onlooker_gesturing_12112": {
+   "character": "idler",
+   "do": [
+    [
+     "hail",
+     7
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    0.08,
+    0
+   ]
+  },
+  "onlooker_back_12089": {
+   "character": "inspector",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "talk",
+     4
+    ]
+   ]
+  },
+  "client_seated_12185": {
+   "character": "robed_man",
+   "do": [
+    [
+     "listen~table",
+     12
+    ]
+   ],
+   "nudge": [
+    -0.17,
+    0
+   ],
+   "facing_deg": 0
+  },
+  "fortune_teller_12232": {
+   "character": "fortune_teller",
+   "do": [
+    [
+     "write~table",
+     17
+    ]
+   ],
+   "nudge": [
+    0,
+    0.15
+   ],
+   "facing_deg": 270
+  },
+  "doorway_figure_11738": {
+   "character": "robed_man",
+   "do": [
+    [
+     "tie_kerchief",
+     10
+    ]
+   ]
+  },
+  "figure_in_shed_back_12382": {
+   "character": "townsman",
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "man_behind_roof_12164": {
+   "character": "hat_traveller",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "onlooker_east_12368": {
+   "character": "robed_man",
+   "do": [
+    [
+     "crane",
+     7
+    ],
+    [
+     "idle",
+     6
+    ]
+   ]
+  },
+  "man_seated_by_tree_12512": {
+   "character": "idler",
+   "do": [
+    [
+     "sit_one_knee",
+     16
+    ]
+   ]
+  },
+  "child_at_table_12597": {
+   "character": "child",
+   "do": [
+    [
+     "reach~child_at_table_12597",
+     10
+    ]
+   ],
+   "scale": 0.81,
+   "nudge": [
+    0.28,
+    0.12
+   ],
+   "facing_deg": -12
+  }
+ },
+ "nudge_why": {
+  "shopkeeper_10425": "painted behind his tray stand, but his foot point lies in front of it (the builder stands the stand at D 24.43-24.83, X 16.6-17.0); he stands just behind it, inside the shop's open front",
+  "child_in_arms_10430": "carried at the woman's shoulder, as painted: drawn by her child_in_arms prop while she plays hold_child (people.json carried_by), so it has no body of its own (lead, 2026-10-12)",
+  "ox_driver_seated_9815": "fitted: his seat point on the top of the kit's driver's seat on S5.veh.covered_ox_cart_9800 (top 1.070 m, X 17.823, D 2.965: owners), facing the cart's heading (-1.8 deg); his root 0.05 m behind the seat point, and its height root_h 0.70 = the seat top + 0.005 - drive_cart's seat height 0.375 (with its soles on the ground: joints_proposed), so his feet hang over the footboard. root_h needs the proposed people.js patch (gen/details/contacts/fix_s4/engine_patches.md); until it lands the page grounds him on the road under the seat, 0.7 m low, as before || casting: seated on the driver's seat the vehicle kit builds on the front of S5.veh.covered_ox_cart_9800 (its .seat: X 17.823, D 2.965, 1.07 m up, facing east): the gate builder makes the cart at real size from its painted wheel, so its front, and the seat, end 1.4 m short of his painted spot on the footboard",
+  "ox_walker_9902": "painted against the shaft ox's flank: his spot is 0.35 m from its centre line, inside the real-size ox (half-width 0.36 m), so he steps 0.25 m straight out to stand against the flank, on the side he is painted",
+  "drover_10578": "painted as a head between the loads of the middle and east donkeys, his spot on the middle donkey; at real size he stands in the gap behind (north of) their loads",
+  "bearer_bending_10440": "solved: contact palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before palm_L 0.68, palm_R 0.1, after palm_L 0, palm_R 0.02; fixed contact:vehicle, contact:vehicle; moved 0.74 m from the casting's spot (limit 0.9 m); beyond the 0.6 m solve limit: his role is read from the map (between the pole ends, a hand on each), not the casting's (right shoulder under the north pole), so he stands on the chair's centre line where the poles are, 0.16 m inside their west ends (just outside them his body ran into the dark horse's rump, 0.09 m away); his foot is estimated (map: est foot, legs hidden behind the groom and the horse) || casting: the front bearer, painted bending east to the west chair's pole ends: the builder's poles (2.9 m, centred on the cabin) end at X 22.72, 1.11 m east of his spot; he stands under their ends, right shoulder under the north pole, carrying them as built",
+  "groom_10420": "painted against the dark horse's flank: his spot is 0.36 m from its centre line, inside the real-size horse (half-width 0.33 m), so he steps 0.21 m straight out to stand against the flank, on the side he is painted",
+  "groom_rider_10255": "solved: contact palm_R->S4.ani.horse_rider_10205, palm_L->S4.ani.horse_rider_10205; gap before palm_R 0.36, palm_L 0.42, after palm_R 0.27, palm_L 0.26; fixed nothing; moved 0.13 m, turned -20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement || casting: painted against the rider's horse's flank: his spot is 0.32 m from its centre line, inside the real-size horse (half-width 0.33 m), so he steps 0.24 m straight out to stand against the flank, on the side he is painted",
+  "young_man_canopy_10558": "painted just behind (north of) the west chair's north pole, which at his spot ran through his chest at 1.3 m; he stands clear of it and of the front bearer at its end, under the arched canopy",
+  "man_cart_tail_10405": "solved: contact palm_L->S4.veh.covered_ox_cart_10550, palm_R->S4.veh.covered_ox_cart_10550; gap before palm_L 0.18, palm_R 0.32, after palm_L 0.1, palm_R 0.06; fixed nothing; moved 0.6 m, turned 5 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement || casting: bent double under the second cart's rear door: the kit's real-size body (3.9 m, centred on the painted wheel) ends 1.15 m behind the painted rear point, so his spot was 1.38 m inside it; he stands 0.55 m behind its tail, on the cart's axis line, his hands on it",
+  "bearer_straining_10728": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.2, palm_L 0.23, palm_R 0.15, after shoulder_R 0, palm_L 0.03, palm_R 0.01; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.27 m from the casting's spot (limit 0.6 m) || casting: the middle bearer, painted under the poles between the two chairs: the north poles rest on the second bearer (man_behind_bearer_10755, whose right shoulder is under them at his painted spot), so he takes the south poles, his right shoulder under them",
+  "walker_behind_sedan_10822": "only his legs show beneath the east chair, on its far side: his spot fell inside the cabin, so he stands just north of it, beside its north pole",
+  "bearer_east_10982": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.19, palm_L 0.24, palm_R 0.15, after shoulder_R 0.02, palm_L 0.02, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.2 m, turned -3 deg from the casting's spot (limit 0.6 m) || casting: the rear bearer of the east chair, painted with the pole on his right shoulder: his spot was between the two poles and just past their east end, so he stands with his right shoulder under the north pole, 0.15 m inside its end",
+  "man_beside_porter_11066": "only his face shows, above the slatted box, and his spot is 0.12 m from its centre; he stands just behind (north of) it, where the painting hides his body",
+  "soldier_on_stool_11630": "painted seated (seat hidden) at the east end of the document box, by the low stool S4.prop.stool_11662 0.28 m east of him; the soldier's sit is a chair sit, and with nothing under him he would sit on air, so he sits on that stool (as the restyle reads it), facing the viewer: his sit clip's root is under its hips (0.03 m in front of them), so his spot is the stool's centre and his feet rest 0.3-0.4 m in front of it",
+  "onlooker_hat_12084": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.14 m from the casting's spot (limit 0.6 m) || casting: stands 0.36 m from the gesturing man on the map; each steps 0.08 m aside so their bodies do not overlap",
+  "onlooker_gesturing_12112": "stands 0.36 m from the man in the dark hat on the map; each steps 0.08 m aside so their bodies do not overlap",
+  "child_at_table_12597": "solved: contact palm_L->S4b.prop.table_12645, palm_R->S4b.prop.table_12645; gap before palm_L 0.4, palm_R 0.41, after palm_L 0.14, palm_R 0.18; fixed nothing; moved 0.59 m, turned -12 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement || casting: his foot point is 0.04 m inside the painted area's east edge (u 12600, the edge wall); he steps 0.3 m west so his body stands inside it, reaching east toward the table beyond the seam",
+  "man_behind_bearer_10755": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.23, palm_L 0.36, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.2 m, turned -19 deg from the casting's spot (limit 0.6 m)",
+  "fortune_teller_12232": "solved: contact seat->S4.fig.fortune_teller_12232, sole_L->ground, sole_R->ground, palm_L->S4.prop.table_12183, palm_R->S4.prop.table_12183; gap before seat 0.83, sole_L -0.01, sole_R 0.01, palm_L 0.58, palm_R 0.57, after seat 0, sole_L 0, sole_R 0.01, palm_L 0.02, palm_R 0.02; fixed contact:seat, contact:table, contact:table, furniture; moved 0.15 m from the casting's spot (limit 0.6 m); his painted foot lay on the table's north edge (the ground ray stood him on the table top); 0.15 m north he sits on his own stool (builder, fitted under the write~table seat point) with both palms on the table",
+  "client_seated_12185": "solved: contact seat->S4.prop.stool_12132, sole_L->ground, sole_R->ground, forearm_L->S4.prop.table_12183, forearm_R->S4.prop.table_12183; gap before seat 0.42, sole_L 0, sole_R 0.01, forearm_L 0.03, forearm_R 0.03, after seat 0.01, sole_L 0, sole_R 0.01, forearm_L 0.03, forearm_R 0.03; fixed contact:seat; moved 0.17 m from the casting's spot (limit 0.6 m); the root 0.08 m in front of his seat point on the client's stool (moved under him: build_choices.json), facing the fortune-teller as painted",
+  "awning_stall_man_arm_raised_9625": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.25 m from the casting's spot (limit 0.6 m)",
+  "soldier_behind_box_11580": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.35 m from the casting's spot (limit 0.6 m)",
+  "basket_leaner_10078": "solved: contact palm_L->S4.prop.big_basket_10000, palm_R->S4.prop.big_basket_10000; gap before palm_L 0.05, palm_R 0.36, after palm_L 0.03, palm_R 0.1; fixed contact:table; moved 0.3 m, turned 5 deg from the casting's spot (limit 0.6 m)",
+  "ox_leader_10050": "solved: contact palm_R->S4.ani.ox_shaft_9972+S4.ani.ox_far_10045+S4.ani.ox_lead_10235, palm_L->S4.ani.ox_shaft_9972+S4.ani.ox_far_10045+S4.ani.ox_lead_10235; gap before palm_R 0.45, palm_L 0.39, after palm_R 0.44, palm_L 0.23; fixed nothing; moved 0.4 m, turned -20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "bearded_man_10142": "solved: contact palm_L->S4.prop.big_basket_10000, palm_R->S4.prop.big_basket_10000; gap before palm_L 0.59, palm_R 0.6, after palm_L 0.16, palm_R 0.21; fixed nothing; moved 0.6 m, turned 16 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "ox_driver_10635": "solved: contact palm_L->S4.ani.ox_shaft_10712+S4.ani.ox_lead_10872, palm_R->S4.ani.ox_shaft_10712+S4.ani.ox_lead_10872; gap before palm_L 0.59, palm_R 1.09, after palm_L -0.02, palm_R 0.31; fixed nothing; moved 0.6 m, turned 20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement"
+ },
+ "walkers": [
+  {
+   "id": "porter_baskets_10347",
+   "figure": "porter_baskets_10347",
+   "character": "porter",
+   "props": [
+    "pole_shallow_baskets"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     19.18,
+     14.12
+    ],
+    [
+     18.58,
+     20.99
+    ]
+   ]
+  },
+  {
+   "id": "walker_in_willows_9712",
+   "figure": "walker_in_willows_9712",
+   "character": "robed_man",
+   "clip": "walk",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     22.78,
+     -1.19
+    ],
+    [
+     15.83,
+     -1.19
+    ]
+   ]
+  },
+  {
+   "id": "striding_man_10148",
+   "figure": "striding_man_10148",
+   "character": "porter",
+   "props": [
+    "stick_stride"
+   ],
+   "clip": "stride_stick",
+   "speed": 1.0,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     22.01,
+     5.8
+    ],
+    [
+     15.01,
+     5.8
+    ]
+   ]
+  },
+  {
+   "id": "porter_two_bundles_11085",
+   "figure": "porter_two_bundles_11085",
+   "character": "porter",
+   "props": [
+    "pole_bundles"
+   ],
+   "clip": "carry_pole",
+   "speed": 0.85,
+   "pause": [
+    "idle",
+    3
+   ],
+   "path": [
+    [
+     31.39,
+     13.81
+    ],
+    [
+     31.39,
+     6.81
+    ]
+   ]
+  }
+ ],
+ "walkers_why": {
+  "porter_baskets_10347": "2.8 m along its painted facing (95 deg) to figure child_in_arms_10430, and 4.1 m back behind its spot to S4.prop.bench_10180",
+  "walker_in_willows_9712": "3.7 m along its painted facing (180 deg) to the painted area's edge, and 3.2 m back behind its spot",
+  "striding_man_10148": "7.0 m along its painted facing (180 deg)",
+  "porter_two_bundles_11085": "7.0 m along its painted facing (270 deg); his spot is 0.24 m from the slatted box's centre (the box stands in front of his legs), so his walk south starts 0.45 m east of it, past the box",
+  "held": {
+   "youth_bending_11138": "painted bending to lift the tied bundle at his feet (the map prop S4.prop.tied_bundle_11205, built where it is painted), not walking: he stays and lifts (lift_pole)",
+   "bearers": "bearer_bending_10440, bearer_straining_10728, bearer_east_10982, man_behind_bearer_10755 and walker_behind_sedan_10822 stay with the two chairs, which are built carried and do not move (the lead, 2026-10-12)",
+   "drivers": "ox_walker_9902, carter_whip_10380, carter_front_10525, ox_leader_11017 and groom_rider_10255 are painted walking with their cart or animal, which stands in its harness or under its rider: they stay with it",
+   "drover_10578": "walks among his pack donkeys, which stand: he stays with them"
+  }
+ },
+ "animals": {
+  "ox_shaft_9972": {
+   "model": "ox",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "ox_far_10045": {
+   "model": "ox",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "ox_lead_10235": {
+   "model": "ox",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "ox_shaft_10712": {
+   "model": "ox",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "ox_lead_10872": {
+   "model": "ox",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  },
+  "horse_rider_10205": {
+   "model": "horse",
+   "load": "saddle",
+   "do": [
+    [
+     "idle",
+     9
+    ],
+    [
+     "graze",
+     3
+    ]
+   ]
+  },
+  "horse_dark_10372": {
+   "model": "horse",
+   "do": [
+    [
+     "graze",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "white_horse_lying_11840": {
+   "model": "horse_white",
+   "do": [
+    [
+     "lie",
+     12
+    ]
+   ]
+  },
+  "donkey_10190": {
+   "model": "donkey",
+   "do": [
+    [
+     "graze",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ]
+  },
+  "pack_donkey_10487": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "nudge": [
+    -0.2,
+    -0.1
+   ]
+  },
+  "pack_donkey_10571": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "do": [
+    [
+     "idle",
+     9
+    ]
+   ],
+   "nudge": [
+    0.2,
+    0.1
+   ]
+  },
+  "pack_donkey_10632": {
+   "model": "donkey",
+   "load": "pannier_charcoal",
+   "do": [
+    [
+     "graze",
+     7
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "nudge": [
+    0.9,
+    0.1
+   ]
+  },
+  "pig_10185": {
+   "model": "pig",
+   "do": [
+    [
+     "graze",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "nudge": [
+    -0.1,
+    -0.15
+   ],
+   "path": [
+    [
+     14.74,
+     21.59
+    ],
+    [
+     17.93,
+     21.36
+    ]
+   ]
+  },
+  "pig_10236": {
+   "model": "pig",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "graze",
+     4
+    ]
+   ],
+   "path": [
+    [
+     15.38,
+     21.97
+    ],
+    [
+     18.48,
+     21.19
+    ]
+   ]
+  },
+  "pig_10262": {
+   "model": "pig",
+   "do": [
+    [
+     "idle",
+     7
+    ],
+    [
+     "graze",
+     4
+    ]
+   ],
+   "path": [
+    [
+     15.2,
+     22.88
+    ],
+    [
+     18.36,
+     22.35
+    ]
+   ]
+  },
+  "pig_dark_10282": {
+   "model": "pig",
+   "do": [
+    [
+     "idle",
+     8
+    ],
+    [
+     "graze",
+     3
+    ]
+   ],
+   "nudge": [
+    0.35,
+    0.05
+   ],
+   "path": [
+    [
+     16.27,
+     22.16
+    ],
+    [
+     19.21,
+     20.89
+    ]
+   ]
+  },
+  "bird_12433": {
+   "model": "bird",
+   "do": [
+    [
+     "idle",
+     10
+    ]
+   ]
+  }
+ },
+ "animals_why": {
+  "models": "species as painted (map/text/S4.md): 5 oxen, 3 horses (the fan rider's, the dark one held by the groom, the white one lying in the courier post's yard: horse_white), 4 donkeys, 4 pigs and a small black bird in the big willow (bird)",
+  "teams": "S5's covered cart's three oxen (ox_shaft_9972, ox_far_10045, ox_lead_10235; the gate builder's harness reaches to their map spots) and the second cart's two (ox_shaft_10712, ox_lead_10872) stand in their harness with an idle; none walks on the spot, and none is nudged, since each cart's harness is built to their map spots",
+  "loads": "the fan rider's horse carries a saddle (hidden behind the groom and the cart in the painting; the rider sits on it); the three pack donkeys carry the wicker pannier frames heaped with dark lumpy goods (pannier_charcoal); the grey donkey, the dark horse, the white horse and the pigs carry nothing painted",
+  "doing": "the head-down ones graze (the grey donkey, the east pack donkey, the dark horse, the rooting pig); the fan rider's horse, painted with its head hanging low, lowers it now and then; the white horse lies; the pack donkeys stand and root on the spot",
+  "pigs": "the pig herd is painted walking east along the top road: each pig walks 3.2 m along its painted heading and back (lead, 2026-10-12)",
+  "perched": "the bird sits 9.5 m up in the big willow (layout H, support perched; the page places a perched animal at its H)",
+  "nudges": {
+   "pack_donkey_10487": "the three pack donkeys are painted overlapping (far up the silk); at real size (1.49 m long, panniers 0.8 m wide) their bodies ran into each other, so they spread the least that frees them, keeping their painted order and headings and the porter's way up the side road",
+   "pack_donkey_10571": "the three pack donkeys are painted overlapping (far up the silk); at real size (1.49 m long, panniers 0.8 m wide) their bodies ran into each other, so they spread the least that frees them, keeping their painted order and headings and the porter's way up the side road",
+   "pack_donkey_10632": "the three pack donkeys are painted overlapping (far up the silk); at real size (1.49 m long, panniers 0.8 m wide) their bodies ran into each other, so they spread the least that frees them, keeping their painted order and headings and the porter's way up the side road",
+   "pig_10185": "the four pigs are painted half over each other; at real size (1.13 m long) the rooting pig and the dark one at the front ran into the grey-brown pig between them, so those two step the least that frees them",
+   "pig_dark_10282": "the four pigs are painted half over each other; at real size (1.13 m long) the rooting pig and the dark one at the front ran into the grey-brown pig between them, so those two step the least that frees them"
+  }
+ },
+ "clips_why": {
+  "about": "Actions the painting needs that the playing character lacks. \"being made\": the workshop has it in the character's characters/<name>.json; \"to make\": nobody has it for that character yet (NEW: a new action; otherwise a retarget of an existing motion). Rerun make_people.py when they land; until then each figure plays the nearest clip its character, or stand-in, has.",
+  "notes": {
+   "hold_child": "the woman plays hold_child with prop_child_in_arms, and her child (child_in_arms_10430) is carried_by her: the page draws it as her prop, so it has no body of its own (the lead, 2026-10-12)",
+   "seats": "fortune_teller_12232 (tell_fortune, sit) and ox_driver_seated_9815 (sit, drive_cart) play chair sits with no seat mapped under them (map: \"feet est under the table\"; the driver sits on the front of S5's cart's shafts, H 0.9); map/BUILDING.md rule 3 makes a painted-seated figure's seat part of it, and no builder makes these yet, so they sit on air until one does (the driver's: the gate builder's cart, whose draught pole passes under him; people.js stands his feet on whatever is under his foot point). soldier_on_stool_11630 sits on the mapped stool beside him (nudge_why)"
+  }
+ },
+ "scale_why": {
+  "child_at_table_12597": "painted about 0.55 of the road's adults (~155 px against his 84 px): 0.55 x 1.70 m / the child model's 1.15 m = 0.81 (0.93 m tall)",
+  "child_bottom_9885": "painted about 0.45 of the man with the staff beside him (~195 px against ~85 px): 0.45 x 1.72 m / the child model's 1.15 m = 0.67 (0.77 m tall)",
+  "child_by_basket_9915": "painted about 0.6 of the man in the dark robe beside him (~170 px against ~106 px): 0.6 x 1.72 m / the child model's 1.15 m = 0.9 (1.03 m tall)",
+  "man_beside_porter_11066": "0.85 of the porter: a smaller face beside the porter, possibly a youth (needs list)",
+  "about": "people.js scale multiplies the playing character's own height, so each child's painted ratio to its neighbouring adults becomes a scale of the 1.15 m child model"
+ },
+ "facing_why": {
+  "far_figure_9563": "too faint to read: faces the viewer, as the restyle paints him",
+  "child_bottom_9885": "faces the viewer between the two men, turned a little toward the man with the staff",
+  "man_behind_roof_10068": "seen from behind, his face turned west over his left shoulder",
+  "bearer_bending_10440": "solved: contact palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before palm_L 0.68, palm_R 0.1, after palm_L 0, palm_R 0.02; fixed contact:vehicle, contact:vehicle; moved 0.74 m from the casting's spot (limit 0.9 m); beyond the 0.6 m solve limit: his role is read from the map (between the pole ends, a hand on each), not the casting's (right shoulder under the north pole), so he stands on the chair's centre line where the poles are, 0.16 m inside their west ends (just outside them his body ran into the dark horse's rump, 0.09 m away); his foot is estimated (map: est foot, legs hidden behind the groom and the horse)",
+  "bearer_straining_10728": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.2, palm_L 0.23, palm_R 0.15, after shoulder_R 0, palm_L 0.03, palm_R 0.01; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.27 m from the casting's spot (limit 0.6 m)",
+  "man_behind_bearer_10755": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.23, palm_L 0.36, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.2 m, turned -19 deg from the casting's spot (limit 0.6 m)",
+  "bearer_east_10982": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.19, palm_L 0.24, palm_R 0.15, after shoulder_R 0.02, palm_L 0.02, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.2 m, turned -3 deg from the casting's spot (limit 0.6 m)",
+  "fortune_teller_12232": "solved: contact seat->S4.fig.fortune_teller_12232, sole_L->ground, sole_R->ground, palm_L->S4.prop.table_12183, palm_R->S4.prop.table_12183; gap before seat 0.83, sole_L -0.01, sole_R 0.01, palm_L 0.58, palm_R 0.57, after seat 0, sole_L 0, sole_R 0.01, palm_L 0.02, palm_R 0.02; fixed contact:seat, contact:table, contact:table, furniture; moved 0.15 m from the casting's spot (limit 0.6 m); his painted foot lay on the table's north edge (the ground ray stood him on the table top); 0.15 m north he sits on his own stool (builder, fitted under the write~table seat point) with both palms on the table",
+  "client_seated_12185": "solved: contact seat->S4.prop.stool_12132, sole_L->ground, sole_R->ground, forearm_L->S4.prop.table_12183, forearm_R->S4.prop.table_12183; gap before seat 0.42, sole_L 0, sole_R 0.01, forearm_L 0.03, forearm_R 0.03, after seat 0.01, sole_L 0, sole_R 0.01, forearm_L 0.03, forearm_R 0.03; fixed contact:seat; moved 0.17 m from the casting's spot (limit 0.6 m); the root 0.08 m in front of his seat point on the client's stool (moved under him: build_choices.json), facing the fortune-teller as painted",
+  "awning_stall_man_arm_raised_9625": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.25 m from the casting's spot (limit 0.6 m)",
+  "soldier_behind_box_11580": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.35 m from the casting's spot (limit 0.6 m)",
+  "basket_leaner_10078": "solved: contact palm_L->S4.prop.big_basket_10000, palm_R->S4.prop.big_basket_10000; gap before palm_L 0.05, palm_R 0.36, after palm_L 0.03, palm_R 0.1; fixed contact:table; moved 0.3 m, turned 5 deg from the casting's spot (limit 0.6 m)",
+  "onlooker_hat_12084": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.14 m from the casting's spot (limit 0.6 m)",
+  "groom_rider_10255": "solved: contact palm_R->S4.ani.horse_rider_10205, palm_L->S4.ani.horse_rider_10205; gap before palm_R 0.36, palm_L 0.42, after palm_R 0.27, palm_L 0.26; fixed nothing; moved 0.13 m, turned -20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "ox_leader_10050": "solved: contact palm_R->S4.ani.ox_shaft_9972+S4.ani.ox_far_10045+S4.ani.ox_lead_10235, palm_L->S4.ani.ox_shaft_9972+S4.ani.ox_far_10045+S4.ani.ox_lead_10235; gap before palm_R 0.45, palm_L 0.39, after palm_R 0.44, palm_L 0.23; fixed nothing; moved 0.4 m, turned -20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "bearded_man_10142": "solved: contact palm_L->S4.prop.big_basket_10000, palm_R->S4.prop.big_basket_10000; gap before palm_L 0.59, palm_R 0.6, after palm_L 0.16, palm_R 0.21; fixed nothing; moved 0.6 m, turned 16 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "man_cart_tail_10405": "solved: contact palm_L->S4.veh.covered_ox_cart_10550, palm_R->S4.veh.covered_ox_cart_10550; gap before palm_L 0.18, palm_R 0.32, after palm_L 0.1, palm_R 0.06; fixed nothing; moved 0.6 m, turned 5 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "ox_driver_10635": "solved: contact palm_L->S4.ani.ox_shaft_10712+S4.ani.ox_lead_10872, palm_R->S4.ani.ox_shaft_10712+S4.ani.ox_lead_10872; gap before palm_L 0.59, palm_R 1.09, after palm_L -0.02, palm_R 0.31; fixed nothing; moved 0.6 m, turned 20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "child_at_table_12597": "solved: contact palm_L->S4b.prop.table_12645, palm_R->S4b.prop.table_12645; gap before palm_L 0.4, palm_R 0.41, after palm_L 0.14, palm_R 0.18; fixed nothing; moved 0.59 m, turned -12 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+  "ox_driver_seated_9815": "fitted: his seat point on the top of the kit's driver's seat on S5.veh.covered_ox_cart_9800 (top 1.070 m, X 17.823, D 2.965: owners), facing the cart's heading (-1.8 deg); his root 0.05 m behind the seat point, and its height root_h 0.70 = the seat top + 0.005 - drive_cart's seat height 0.375 (with its soles on the ground: joints_proposed), so his feet hang over the footboard. root_h needs the proposed people.js patch (gen/details/contacts/fix_s4/engine_patches.md); until it lands the page grounds him on the road under the seat, 0.7 m low, as before"
+ },
+ "cast_why": {
+  "stand_in soldier": "idler (labourer in a hemp jacket and dark head-wrap, the nearest to the belted jacket and dark cap; it already has the workshop's sit_one_knee and squat_sleeves, and the floor sit and crouch)",
+  "stand_in robed_man": "scholar (pale long robe, as painted); the man with the staff plays the inspector, whose GLB has the workshop's staff (prop_staff, held in talk), so the staff he is painted holding shows now",
+  "stand_in fortune_teller": "official (seated behind a desk in a dark robe and cap: sit_talk fits him at his table)",
+  "stand_in hat_traveller": "elder for the two standing men in dark hats (his tall black hat reads as a dark hat); the rider rider_fan_10285 plays the sightseer, which has the ride clip (the elder has only ride_side)",
+  "bearers": "the bearer (sedan_carry) for the painted bearers (the lead, 2026-10-12), not the needs list's porter",
+  "man_behind_bearer_10755": "the second middle bearer (north poles), the pole on his right shoulder as painted, his hands on it: sedan_carry~pole (characters/ik_variants.json \"pole\": the shoulder held under the pole, the palms on it; the poles fitted to that shoulder, kit pole_fit 1.44 m)",
+  "man_seated_by_tree_12512": "idler as listed; he plays the workshop's sit_one_knee (one knee up, one leg out): the map's long wedge from his right knee may be his stretched-out leg",
+  "bearer_bending_10440": "the front bearer, painted between the west chair's pole ends, bending to them with both hands: sedan_carry~pole_ends (a hand on each pole end, 1.22 m up; characters/ik_variants.json \"pole_ends\"); sedan_carry put the pole on his shoulder and his hands in the air",
+  "bearer_straining_10728": "the straining middle bearer, the pole on his right shoulder as painted, his hands on it: sedan_carry~pole (characters/ik_variants.json \"pole\": the shoulder held under the pole, the palms on it; the poles fitted to that shoulder, kit pole_fit 1.44 m); the two chairs' poles meet over his shoulder (builder: u 10725)",
+  "bearer_east_10982": "the east chair's rear bearer, the pole on his right shoulder as painted, his hands on it: sedan_carry~pole (characters/ik_variants.json \"pole\": the shoulder held under the pole, the palms on it; the poles fitted to that shoulder, kit pole_fit 1.44 m)",
+  "groom_10420": "recast: painted standing in front of the dark horse facing the viewer, hands together at his waist holding the reins (map S4.md), not touching the horse; bridle (right hand at the bit, left on the neck) asked for a contact the painting doesn't show; the reins aren't built, so he stands (idle)",
+  "onlooker_cap_12040": "recast: painted standing at the west end of the awning, arms folded at his chest, nothing behind him (map S4.md); lean_wall leaned his back on air 0.26 m from the awning; stand_sleeves (from:farmer/stand_sleeves: standing, hands in the sleeves at the chest) is the painted pose with no contact",
+  "fortune_teller_12232": "recast: painted seated behind his table, arms spread on it over his papers (map S4.md); his tell_fortune take sits leaning back with the hands at the chest (gen/details/contacts/fix_s4/pose_fortune_teller_tell_fortune.png: forearms over his lap, out of reach of any table he could sit at), and sit is a plain chair sit; write~table (from:official/write, both palms held on the table top: characters/ik_variants.json \"table_palms\") puts his hands on the table as painted; his stool (builder, part of his figure) is fitted under its seat point",
+  "client_seated_12185": "painted seated on the stool at the table's west end, leaning forward with both forearms on the table (map S4.md): listen~table (sit_listen with both forearms held on the table top and the hands laid on it: characters/ik_variants.json \"table_forearms\"); sit_listen alone rested them on his knees, the right hand 2.5 cm inside the table",
+  "groom_rider_10255": "bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement",
+  "ox_leader_10050": "bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement",
+  "bearded_man_10142": "browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L on what the painting has it touch, from its solved placement",
+  "man_cart_tail_10405": "push -> push~man_cart_tail_10405: an IK clip variant (characters/ik_variants.json \"man_cart_tail_10405\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push -> push~man_cart_tail_10405: an IK clip variant (characters/ik_variants.json \"man_cart_tail_10405\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push -> push~man_cart_tail_10405: an IK clip variant (characters/ik_variants.json \"man_cart_tail_10405\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "ox_driver_10635": "push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "child_at_table_12597": "reach -> reach~child_at_table_12597: an IK clip variant (characters/ik_variants.json \"child_at_table_12597\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "rider_fan_10285": "ride_fan -> ride_fan~steady: the take sinks the rider 0.19 m in its last 2 s (0.13 m into the horse); the IK variant holds his seat at its steady height (characters/ik_variants.json \"steady_seat\")",
+  "ox_driver_seated_9815": "recast: painted seated on the front of S5's covered cart, driving (map: support vehicle S5.veh.covered_ox_cart_9800, H 0.9); drive_cart only (seated on the cart's front edge, feet hanging, the goad in hand): the chair sit (sit) put his seat 0.37 m behind his root, off the 0.3 m wide driver's plank"
+ },
+ "props_why": {
+  "person_with_child_10430": "child_in_arms: on (woman, held in hold_child)",
+  "porter_baskets_10347": "pole_shallow_baskets: on (porter, held in carry_pole)",
+  "ox_driver_seated_9815": "goad: on (carter, held in drive_cart)",
+  "striding_man_10148": "stick_stride: on (porter, held in stride_stick)",
+  "man_with_staff_9852": "staff: on (robed_man, held in idle)",
+  "rider_fan_10285": "fan_round: on (hat_traveller, held in ride_fan)",
+  "carter_whip_10380": "whip_stand: on (carter, held in stand_whip)",
+  "porter_two_bundles_11085": "pole_bundles: on (porter, held in carry_pole)",
+  "ox_leader_11017": "lead_rope: on (robed_man, held in hold_rope)",
+  "wanted": {
+   "youth_bending_11138": "a plain carrying pole (no load) held in the porter's lift_pole: its far end rests on the map prop S4.prop.tied_bundle_11205, built where it is painted"
+  },
+  "about": "carried props as painted (needs list \"Props carried by figures\"), switched on only when the playing character's GLB has prop_<name> and the figure plays the clip that holds it (characters/props.json): never a carry clip without its load, never a prop in the wrong hands"
+ },
+ "contact_fixes_why": {
+  "about": "20 figures carry a contact fix from sections/outer_road/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
+ }
+}

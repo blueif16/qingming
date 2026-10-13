@@ -1,0 +1,37 @@
+{
+ "character": "woman",
+ "base": "hold_child",
+ "spec": "child_arms",
+ "frame": "proposed",
+ "sole_shift_m": 0.005,
+ "clip": "hold_child~child",
+ "frames": 147,
+ "duration": 7.3,
+ "verify_max_m": 0,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "freeze LeftShoulder,LeftArm,LeftForeArm,LeftHand,RightShoulder,RightArm,RightForeArm,RightHand",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "damp neck,Head",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "LeftShoulder": 9,
+  "LeftArm": 22,
+  "LeftForeArm": 14,
+  "LeftHand": 14,
+  "RightShoulder": 14,
+  "RightArm": 13,
+  "RightForeArm": 9,
+  "RightHand": 13,
+  "neck": 21,
+  "Head": 12,
+  "Hips": 0
+ }
+}

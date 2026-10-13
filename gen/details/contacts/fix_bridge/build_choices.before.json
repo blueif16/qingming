@@ -1,0 +1,1553 @@
+{
+ "about": "Where the build of S3 (the Rainbow Bridge, u 15500-20500) departs from the scroll map, and why (map/BUILDING.md). moves: positions (metres, X east, D north), applied by tools/map_layout.mjs on top of map/world/S3.json when it writes layout.json. how: an entity built differently from its kind's default. unbuilt: mapped entities not built yet, with the reason. edges: the walkable area's invisible walls. boats: the boat kit's options per boat (blender/kit_boats.py). Merged by gen/sections/rainbow_bridge/merge_choices.py from the fragments in gen/sections/rainbow_bridge/choices/ (one per Run 2 agent: never edit this file by hand).",
+ "moves": {
+  "S3.fig.rail_watcher_19923": {
+   "dX": 0.07,
+   "dD": 1.27,
+   "why": "bridge fit: layout point s 19.6, -0.5 m from the near railing line, deck there 2.23 against layout H 1.18: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 20.6, deck 1.63), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.rail_watcher_19892": {
+   "dX": -0.15,
+   "dD": 1.12,
+   "why": "bridge fit: layout point s 19.2, -0.5 m from the near railing line, deck there 2.52 against layout H 1.60: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 19.9, deck 2.05), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.rail_watcher_19862": {
+   "dX": -0.37,
+   "dD": 1.01,
+   "why": "bridge fit: layout point s 18.7, -0.6 m from the near railing line, deck there 2.81 against layout H 2.02: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 19.2, deck 2.49), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.deck_stooping_hat_19765": {
+   "dX": -0.76,
+   "dD": 0.98,
+   "why": "bridge fit: layout point s 17.1, -0.9 m from the near railing line, deck there 3.80 against layout H 3.19: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 17.3, deck 3.66), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.deck_rail_leaner_19715": {
+   "dX": -0.88,
+   "dD": 0.91,
+   "why": "bridge fit: layout point s 16.3, -1.0 m from the near railing line, deck there 4.21 against layout H 3.70: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 16.4, deck 4.16), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.deck_rail_watcher_19670": {
+   "dX": -0.83,
+   "dD": 1.06,
+   "why": "bridge fit: layout point s 15.6, -1.0 m from the near railing line, deck there 4.55 against layout H 4.12: the deck is at its height, but the point is at or past the built near railing (the painted near edge lies 1.1-1.5 m outside the built one); moved in across the deck to 0.3 m from the near railing (s 15.8, deck 4.44)"
+  },
+  "S3.fig.deck_pole_holder_19625": {
+   "dX": -1.02,
+   "dD": 0.9,
+   "why": "bridge fit: layout point s 14.9, -1.1 m from the near railing line, deck there 4.82 against layout H 4.48: the deck is at its height, but the point is at or past the built near railing (the painted near edge lies 1.1-1.5 m outside the built one); moved in across the deck to 0.3 m from the near railing (s 14.9, deck 4.82)"
+  },
+  "S3.fig.deck_rail_leaner_19578": {
+   "dX": -0.29,
+   "dD": 1.46,
+   "why": "bridge fit: layout point s 14.5, -0.5 m from the near railing line, deck there 4.97 against layout H 4.45: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 15.4, deck 4.64), keeping its place in the near railing's crowd, 0.6 m from the near railing"
+  },
+  "S3.fig.deck_rail_leaner_19538": {
+   "dX": -0.64,
+   "dD": 0.56,
+   "why": "bridge fit: layout point s 13.9, -0.5 m from the near railing line, deck there 5.12 against layout H 4.72: the deck is at its height, but the point is at or past the built near railing (the painted near edge lies 1.1-1.5 m outside the built one); moved in across the deck to 0.3 m from the near railing (s 13.9, deck 5.12)"
+  },
+  "S3.fig.deck_capped_shouter_19492": {
+   "dX": -0.55,
+   "dD": 0.68,
+   "why": "bridge fit: layout point s 13.4, -0.1 m from the near railing line, deck there 5.21 against layout H 4.70: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 13.6, deck 5.18), keeping its place in the near railing's crowd, 0.8 m from the near railing"
+  },
+  "S3.fig.deck_youth_rope_19445": {
+   "dX": -0.1,
+   "dD": 0.35,
+   "why": "bridge fit: layout point s 12.8, -0.0 m from the near railing line, deck there 5.28 against layout H 4.95: the deck is at its height, but the point is at or past the built near railing (the painted near edge lies 1.1-1.5 m outside the built one); moved in across the deck to 0.3 m from the near railing (s 13.0, deck 5.26)"
+  },
+  "S3.fig.man_dark_cap_back_row_19325": {
+   "dX": 0.49,
+   "dD": 1.15,
+   "why": "bridge fit: on the built deck within 0.5 m of its layout H (s 11.3, deck 5.20, H 5.23) but overlapping a painted neighbour there; moved 1.25 m, the smallest move that keeps the bodies apart (deck 5.29)"
+  },
+  "S3.fig.man_at_railing_face_west_19318": {
+   "dX": -0.71,
+   "dD": 1.76,
+   "why": "bridge fit: layout point s 10.8, -0.2 m from the near railing line, deck there 5.08 against layout H 5.38: the deck is at its height, but the point is at or past the built near railing (the painted near edge lies 1.1-1.5 m outside the built one); moved in across the deck to 1.5 m from the near railing (s 11.7, deck 5.25)"
+  },
+  "S3.fig.man_lowering_rope_19295": {
+   "dX": -0.12,
+   "dD": 1.08,
+   "why": "bridge fit: layout point s 10.4, -0.1 m from the near railing line, deck there 4.96 against layout H 5.42: the deck is at its height, but the point is at or past the built near railing (the painted near edge lies 1.1-1.5 m outside the built one); moved in across the deck to 0.7 m from the near railing (s 11.1, deck 5.16)"
+  },
+  "S3.fig.man_behind_railing_19258": {
+   "dX": -0.48,
+   "dD": 0.99,
+   "why": "bridge fit: layout point s 10.0, -0.2 m from the near railing line, deck there 4.84 against layout H 5.43: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 10.5, deck 4.98), keeping its place in the near railing's crowd, 0.8 m from the near railing"
+  },
+  "S3.fig.man_leaning_on_railing_19225": {
+   "dX": 0.5,
+   "dD": 1.23,
+   "why": "bridge fit: layout point s 9.5, -0.1 m from the near railing line, deck there 4.61 against layout H 5.44: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 10.8, deck 5.07), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.man_bent_over_railing_19195": {
+   "dX": 0.43,
+   "dD": 1.49,
+   "why": "bridge fit: layout point s 8.8, -0.4 m from the near railing line, deck there 4.27 against layout H 5.37: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 10.2, deck 4.90), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.man_behind_rump_19165": {
+   "dX": 1.79,
+   "dD": 4.8,
+   "why": "bridge fit: layout point s 9.8, 2.2 m from the near railing line, deck there 4.73 against layout H 5.26: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 14.5, deck 4.94), 4.0 m from the near railing (painted 300 px of the deck's 750 px)"
+  },
+  "S3.fig.basket_carrier_19138": {
+   "dX": 0.53,
+   "dD": 2.14,
+   "why": "bridge fit: layout point s 8.6, 0.3 m from the near railing line, deck there 4.14 against layout H 5.44: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 10.5, deck 5.00), keeping its place in the near railing's crowd, 1.4 m from the near railing"
+  },
+  "S3.fig.groom_holding_horse_19095": {
+   "dX": 2.14,
+   "dD": 4.02,
+   "why": "bridge fit: layout point s 8.9, 2.5 m from the near railing line, deck there 4.32 against layout H 5.31: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 13.3, deck 5.22), 3.5 m from the near railing (painted 350 px of the deck's 750 px)"
+  },
+  "S3.fig.man_pointing_west_at_railing_19090": {
+   "dX": 0.63,
+   "dD": 2.35,
+   "why": "bridge fit: layout point s 7.5, -0.4 m from the near railing line, deck there 3.54 against layout H 4.99: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 9.7, deck 4.71), keeping its place in the near railing's crowd, 0.7 m from the near railing"
+  },
+  "S3.fig.man_bent_over_railing_19065": {
+   "dX": 1.03,
+   "dD": 2.09,
+   "why": "bridge fit: layout point s 7.0, -0.3 m from the near railing line, deck there 3.22 against layout H 4.74: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 9.3, deck 4.52), keeping its place in the near railing's crowd, 0.4 m from the near railing"
+  },
+  "S3.fig.man_white_headcloth_19050": {
+   "dX": 2.65,
+   "dD": 5.1,
+   "why": "bridge fit: layout point s 8.5, 3.1 m from the near railing line, deck there 4.12 against layout H 5.30: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 14.1, deck 5.07), 3.8 m from the far railing (painted 400 px of the deck's 750 px)"
+  },
+  "S3.fig.dark_head_behind_horse_19018": {
+   "dX": 2.41,
+   "dD": 5.31,
+   "why": "bridge fit: layout point s 8.1, 3.2 m from the near railing line, deck there 3.91 against layout H 5.37: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 13.7, deck 5.15), 3.4 m from the far railing (painted 400 px of the deck's 750 px)"
+  },
+  "S3.fig.man_over_railing_19025": {
+   "dX": 0.78,
+   "dD": 2.79,
+   "why": "bridge fit: layout point s 6.6, -0.3 m from the near railing line, deck there 2.89 against layout H 4.85: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 9.2, deck 4.46), keeping its place in the near railing's crowd, 0.9 m from the near railing"
+  },
+  "S3.fig.man_arms_flung_wide_18990": {
+   "dX": 2.26,
+   "dD": 4.87,
+   "why": "bridge fit: layout point s 7.6, 3.0 m from the near railing line, deck there 3.58 against layout H 5.41: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 12.8, deck 5.28), 3.8 m from the far railing (painted 400 px of the deck's 750 px)"
+  },
+  "S3.fig.tall_robed_man_18990": {
+   "dX": 2.91,
+   "dD": 4.23,
+   "why": "bridge fit: layout point s 7.8, 3.3 m from the near railing line, deck there 3.68 against layout H 5.41: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 12.9, deck 5.27), 3.9 m from the near railing (painted 400 px of the deck's 750 px)"
+  },
+  "S3.fig.man_arms_on_railing_18982": {
+   "dX": 1.26,
+   "dD": 2.48,
+   "why": "bridge fit: layout point s 6.1, -0.2 m from the near railing line, deck there 2.56 against layout H 4.56: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 8.8, deck 4.25), keeping its place in the near railing's crowd, 0.5 m from the near railing"
+  },
+  "S3.fig.man_head_bowed_18962": {
+   "dX": 1.34,
+   "dD": 2.05,
+   "why": "bridge fit: layout point s 5.8, -0.0 m from the near railing line, deck there 2.40 against layout H 4.38: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 8.3, deck 3.97), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.man_light_robe_reaching_18958": {
+   "dX": 1.49,
+   "dD": 3.5,
+   "why": "bridge fit: layout point s 6.1, 0.6 m from the near railing line, deck there 2.57 against layout H 5.07: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 9.7, deck 4.70), keeping its place in the near railing's crowd, 1.8 m from the near railing"
+  },
+  "S3.fig.man_reaching_with_stick_18930": {
+   "dX": 1.07,
+   "dD": 2.25,
+   "why": "bridge fit: layout point s 5.3, -0.4 m from the near railing line, deck there 2.06 against layout H 4.07: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 7.7, deck 3.63), keeping its place in the near railing's crowd, 0.3 m from the near railing"
+  },
+  "S3.fig.man_dark_cap_south_end_18930": {
+   "dX": 0.72,
+   "dD": 2.32,
+   "why": "bridge fit: layout point s 5.5, 0.2 m from the near railing line, deck there 2.16 against layout H 4.01: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 7.7, deck 3.63), keeping its place in the near railing's crowd, 1.2 m from the near railing"
+  },
+  "S3.fig.sack_porter_18915": {
+   "dX": 3.57,
+   "dD": 5.63,
+   "why": "bridge fit: layout point s 7.3, 4.6 m from the near railing line, deck there 3.37 against layout H 5.26: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 13.9, deck 5.12), 2.6 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.man_dark_jacket_pointing_18915": {
+   "dX": 2.34,
+   "dD": 3.43,
+   "why": "bridge fit: layout point s 6.2, 2.2 m from the near railing line, deck there 2.66 against layout H 5.33: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 10.3, deck 4.94), keeping its place in the near railing's crowd, 2.7 m from the near railing"
+  },
+  "S3.fig.man_behind_awning_18898": {
+   "dX": 0.32,
+   "dD": 2.76,
+   "why": "bridge fit: layout point s 4.8, -0.5 m from the near railing line, deck there 1.74 against layout H 3.71: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 7.1, deck 3.25), keeping its place in the near railing's crowd, 1.1 m from the near railing"
+  },
+  "S3.fig.head_behind_porter_18893": {
+   "dX": 3.59,
+   "dD": 6.33,
+   "why": "bridge fit: layout point s 7.0, 4.6 m from the near railing line, deck there 3.18 against layout H 5.31: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 14.1, deck 5.06), 2.2 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.wide_hat_pointer_18890": {
+   "dX": 1.4,
+   "dD": 4.02,
+   "why": "bridge fit: layout point s 5.0, 0.3 m from the near railing line, deck there 1.89 against layout H 4.65: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 9.0, deck 4.37), 1.9 m from the near railing (painted 200 px of the deck's 750 px)"
+  },
+  "S3.fig.white_sack_porter_18882": {
+   "dX": 3.34,
+   "dD": 5.99,
+   "why": "bridge fit: layout point s 6.8, 4.6 m from the near railing line, deck there 3.08 against layout H 5.34: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 13.5, deck 5.19), 2.2 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.wide_hat_pointer_18855": {
+   "dX": 2.24,
+   "dD": 4.75,
+   "why": "bridge fit: layout point s 5.3, 1.8 m from the near railing line, deck there 2.02 against layout H 5.07: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 10.3, deck 4.93), 3.3 m from the near railing (painted 300 px of the deck's 750 px)"
+  },
+  "S3.fig.pointer_east_18830": {
+   "dX": 1.3,
+   "dD": 4.11,
+   "why": "bridge fit: layout point s 4.3, 0.5 m from the near railing line, deck there 1.42 against layout H 4.07: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 8.2, deck 3.96), 2.2 m from the near railing (painted 200 px of the deck's 750 px)"
+  },
+  "S3.fig.man_behind_18822": {
+   "dX": 3.67,
+   "dD": 6.29,
+   "why": "bridge fit: layout point s 6.3, 5.2 m from the near railing line, deck there 2.69 against layout H 5.36: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 13.4, deck 5.21), 1.7 m from the far railing (painted 600 px of the deck's 750 px)"
+  },
+  "S3.fig.awning_worker_18815": {
+   "dX": -0.27,
+   "dD": 2.77,
+   "why": "bridge fit: layout point s 3.4, -1.1 m from the near railing line, deck there 0.93 against layout H 2.53: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 5.3, deck 2.07), keeping its place in the near railing's crowd, 1.0 m from the near railing"
+  },
+  "S3.fig.light_jacket_man_18812": {
+   "dX": 3.2,
+   "dD": 6.08,
+   "why": "bridge fit: layout point s 5.6, 4.1 m from the near railing line, deck there 2.28 against layout H 5.44: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 12.3, deck 5.29), 2.5 m from the far railing (painted 500 px of the deck's 750 px)"
+  },
+  "S3.fig.man_under_awning_18775": {
+   "dX": -0.63,
+   "dD": 1.71,
+   "why": "bridge fit: layout point s 3.1, -0.5 m from the near railing line, deck there 0.79 against layout H 1.70: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 4.0, deck 1.25), keeping its place in the near railing's crowd, 1.1 m from the near railing"
+  },
+  "S3.fig.donkey_man_east_18768": {
+   "dX": 3.53,
+   "dD": 6.28,
+   "why": "bridge fit: layout point s 5.3, 4.8 m from the near railing line, deck there 2.07 against layout H 5.44: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 12.4, deck 5.29), 2.0 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.man_light_jacket_18760": {
+   "dX": 0.13,
+   "dD": 3.3,
+   "why": "bridge fit: layout point s 2.9, -0.6 m from the near railing line, deck there 0.68 against layout H 2.44: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 5.5, deck 2.16), keeping its place in the near railing's crowd, 1.5 m from the near railing"
+  },
+  "S3.fig.hand_to_head_18752": {
+   "dX": 1.33,
+   "dD": 3.23,
+   "why": "bridge fit: layout point s 3.5, 1.1 m from the near railing line, deck there 0.97 against layout H 3.13: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 6.8, deck 3.05), 2.2 m from the near railing (painted 200 px of the deck's 750 px)"
+  },
+  "S3.fig.donkey_man_west_18728": {
+   "dX": 3.71,
+   "dD": 6.76,
+   "why": "bridge fit: layout point s 4.9, 5.1 m from the near railing line, deck there 1.81 against layout H 5.44: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 12.4, deck 5.29), 1.4 m from the far railing (painted 600 px of the deck's 750 px)"
+  },
+  "S3.fig.dark_head_ramp_foot_18720": {
+   "dX": -0.37,
+   "dD": 1.8,
+   "why": "bridge fit: layout point s 2.7, 0.1 m from the near railing line, deck there 0.58 against layout H 1.59: moved along the deck to the nearest station where the built deck is within 0.5 m of its height (s 3.8, deck 1.12), keeping its place in the near railing's crowd, 1.6 m from the near railing"
+  },
+  "S3.fig.leaning_man_arms_out_18703": {
+   "dX": 3.9,
+   "dD": 6.38,
+   "why": "bridge fit: layout point s 4.4, 4.8 m from the near railing line, deck there 1.51 against layout H 5.40: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 11.8, deck 5.26), 2.2 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.bowing_man_18688": {
+   "dX": 3.54,
+   "dD": 6.11,
+   "why": "bridge fit: layout point s 3.9, 4.1 m from the near railing line, deck there 1.21 against layout H 5.24: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 10.9, deck 5.10), 2.8 m from the far railing (painted 500 px of the deck's 750 px)"
+  },
+  "S3.fig.groom_at_donkey_18682": {
+   "dX": 1.09,
+   "dD": 2.29,
+   "why": "bridge fit: layout point s 2.6, 1.1 m from the near railing line, deck there 0.54 against layout H 1.86: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 5.0, deck 1.86), 1.8 m from the near railing (painted 200 px of the deck's 750 px)"
+  },
+  "S3.fig.youth_round_face_18643": {
+   "dX": 3.62,
+   "dD": 6.49,
+   "why": "bridge fit: layout point s 3.5, 4.5 m from the near railing line, deck there 0.97 against layout H 5.26: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 10.7, deck 5.07), 2.2 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.stall_man_parasol_18612": {
+   "dX": 3.41,
+   "dD": 6.02,
+   "why": "bridge fit: layout point s 2.9, 4.1 m from the near railing line, deck there 0.68 against layout H 4.81: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 9.7, deck 4.68), 2.8 m from the far railing (painted 500 px of the deck's 750 px)"
+  },
+  "S3.fig.robe_apron_man_18582": {
+   "dX": 0.04,
+   "dD": 1.97,
+   "why": "bridge fit: layout point s 1.4, 1.5 m from the near railing line, deck there 0.16 against layout H 0.70: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 2.9, deck 0.68), 2.8 m from the near railing (painted 250 px of the deck's 750 px)"
+  },
+  "S3.fig.porter_jar_bundle_18483": {
+   "dX": 1.2,
+   "dD": 5.27,
+   "why": "bridge fit: layout point s 0.2, 1.8 m from the near railing line, deck there 0.00 against layout H 1.88: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 5.0, deck 1.83), 3.9 m from the far railing (painted 400 px of the deck's 750 px)"
+  },
+  "S3.fig.mat_stall_keeper_18435": {
+   "dX": 2.95,
+   "dD": 6.84,
+   "why": "bridge fit: layout point s 0.4, 3.8 m from the near railing line, deck there 0.01 against layout H 3.56: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 7.4, deck 3.47), 2.2 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.robed_back_view_18425": {
+   "dX": 0.94,
+   "dD": 2.23,
+   "why": "bridge fit: layout point s 0.2, 3.6 m from the near railing line, deck there 0.00 against layout H 0.52: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 2.5, deck 0.51), 3.9 m from the far railing (painted 400 px of the deck's 750 px)"
+  },
+  "S3.fig.mat_stall_leaner_18375": {
+   "dX": 3.39,
+   "dD": 6.97,
+   "why": "bridge fit: layout point s -0.1, 4.5 m from the near railing line, deck there 0.00 against layout H 3.45: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 7.4, deck 3.42), 1.7 m from the far railing (painted 600 px of the deck's 750 px)"
+  },
+  "S3.fig.tray_bender_18356": {
+   "dX": 2.53,
+   "dD": 6.1,
+   "why": "bridge fit: layout point s -0.6, 4.1 m from the near railing line, deck there 0.00 against layout H 2.36: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 5.7, deck 2.31), 2.1 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.seated_man_topknot_18352": {
+   "dX": 3.11,
+   "dD": 7.0,
+   "why": "bridge fit: layout point s -0.5, 4.3 m from the near railing line, deck there 0.00 against layout H 3.13: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 6.8, deck 3.05), 1.7 m from the far railing (painted 600 px of the deck's 750 px)"
+  },
+  "S3.fig.bending_dark_top_18345": {
+   "dX": 1.91,
+   "dD": 6.53,
+   "why": "bridge fit: layout point s -1.1, 3.1 m from the near railing line, deck there 0.00 against layout H 2.14: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 5.1, deck 1.92), 2.2 m from the far railing (painted 550 px of the deck's 750 px)"
+  },
+  "S3.fig.bending_man_18305": {
+   "dX": 3.38,
+   "dD": 7.69,
+   "why": "bridge fit: layout point s -1.0, 4.7 m from the near railing line, deck there 0.00 against layout H 3.18: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 7.0, deck 3.19), 1.0 m from the far railing (painted 650 px of the deck's 750 px)"
+  },
+  "S3.fig.parasol_edge_crouching_18288": {
+   "dX": 2.37,
+   "dD": 6.77,
+   "why": "bridge fit: layout point s -1.5, 3.9 m from the near railing line, deck there 0.00 against layout H 2.00: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 5.1, deck 1.94), 1.7 m from the far railing (painted 600 px of the deck's 750 px)"
+  },
+  "S3.fig.seated_man_cap_18282": {
+   "dX": 3.08,
+   "dD": 7.55,
+   "why": "bridge fit: layout point s -1.4, 4.5 m from the near railing line, deck there 0.00 against layout H 2.81: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 6.3, deck 2.74), 1.1 m from the far railing (painted 650 px of the deck's 750 px)"
+  },
+  "S3.fig.mat_leaner_white_18220": {
+   "dX": 3.17,
+   "dD": 7.98,
+   "why": "bridge fit: layout point s -2.1, 4.8 m from the near railing line, deck there 0.00 against layout H 2.61: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 6.0, deck 2.54), 0.6 m from the far railing (painted 700 px of the deck's 750 px)"
+  },
+  "S3.ani.second_horse_19230": {
+   "dX": 0.95,
+   "dD": 3.46,
+   "why": "bridge fit: on the built deck within 0.5 m of its layout H (s 10.9, deck 5.12, H 5.31) but overlapping a painted neighbour there; moved 3.59 m, the smallest move that keeps the bodies apart (deck 5.05)"
+  },
+  "S3.ani.horse_19055": {
+   "dX": 1.91,
+   "dD": 4.9,
+   "why": "bridge fit: layout point s 8.9, 2.1 m from the near railing line, deck there 4.34 against layout H 5.39: moved along the deck to its painted place on the north flank (the same fraction of the crown's height: s 13.9, deck 5.12), 3.9 m from the near railing (painted 350 px of the deck's 750 px); moved whole (both hooves, its rider with it)"
+  },
+  "S3.fig.rider_white_robe_19110": {
+   "dX": 1.91,
+   "dD": 4.9,
+   "why": "bridge fit: rides S3.ani.horse_19055: moves with it (same move)"
+  },
+  "S3.ani.donkey_dark_18745": {
+   "dX": 3.52,
+   "dD": 5.95,
+   "why": "bridge fit: layout point s 5.0, 4.2 m from the near railing line, deck there 1.86 against layout H 5.39: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 11.8, deck 5.26), 2.8 m from the far railing (painted 500 px of the deck's 750 px); moved whole (both hooves, its rider with it)"
+  },
+  "S3.ani.donkey_ridden_18690": {
+   "dX": 0.78,
+   "dD": 2.35,
+   "why": "bridge fit: layout point s 2.3, 1.2 m from the near railing line, deck there 0.43 against layout H 2.04: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 4.5, deck 1.58), 2.2 m from the near railing (painted 200 px of the deck's 750 px); moved whole (both hooves, its rider with it)"
+  },
+  "S3.fig.donkey_rider_18650": {
+   "dX": 0.78,
+   "dD": 2.35,
+   "why": "bridge fit: rides S3.ani.donkey_ridden_18690: moves with it (same move)"
+  },
+  "S3.veh.sedan_18842": {
+   "dX": 3.3,
+   "dD": 4.3,
+   "why": "bridge fit: layout point s 4.0, 2.2 m from the near railing line, deck there 1.26 against layout H 4.44: moved along the deck to its painted place on the south flank (the same fraction of the crown's height: s 9.4, deck 4.58), 2.6 m from the near railing (painted 300 px of the deck's 750 px); its front and rear (pole ends) stay on the deck at its painted heading, its bearers at its poles"
+  },
+  "S3.fig.sedan_bearer_front_18838": {
+   "dX": 3.37,
+   "dD": 4.27,
+   "why": "bridge fit: the sedan's front bearer: moves with the sedan (S3.veh.sedan_18842) and stands at its front pole end, carrying it; built deck 4.95 under him (layout H 4.97)"
+  },
+  "S3.fig.sedan_bearer_rear_18688": {
+   "dX": 2.73,
+   "dD": 4.83,
+   "why": "bridge fit: the sedan's rear bearer: moves with the sedan (S3.veh.sedan_18842) and stands at its rear pole end, carrying it; built deck 4.11 under him (layout H 4.18)"
+  },
+  "S3.prop.bundle_over_rail_19392": {
+   "dX": 0.28,
+   "dD": -0.25,
+   "why": "bridge fit: layout point s 12.2, 0.4 m from the near railing line, deck there 5.29 against layout H 4.97: off its painted place on the built deck; moved with its painted neighbours to s 12.2, 0.0 m from the near railing (painted 150 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.parasol_19150": {
+   "dX": -0.2,
+   "dD": 0.01,
+   "why": "bridge fit: on the built deck at its layout point; only 0.20 m to clear a neighbour (spacing)"
+  },
+  "S3.prop.frame_awning_19070": {
+   "dX": -0.1,
+   "dD": -0.23,
+   "why": "bridge fit: on the built deck at its layout point; only 0.25 m to clear a neighbour (spacing)"
+  },
+  "S3.prop.awning_rack_18797": {
+   "dX": 0.35,
+   "dD": 3.1,
+   "why": "bridge fit: layout point s 3.6, -0.1 m from the near railing line, deck there 1.02 against layout H 3.06: off its painted place on the built deck; moved with its painted neighbours to s 6.2, 1.7 m from the near railing (painted 150 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.mat_awning_stall_18783": {
+   "dX": 1.02,
+   "dD": -0.41,
+   "why": "bridge fit: its layout footprint is a sliver running across the deck (its corners carry four supports' heights); moved to the middle of its painted extent on the built deck (deck_fit.json footprint_on_deck), with its keepers and customers; the builder sets its z on the deck"
+  },
+  "S3.prop.bench_18630": {
+   "dX": 3.28,
+   "dD": 6.31,
+   "why": "bridge fit: layout point s 3.0, 3.8 m from the near railing line, deck there 0.73 against layout H 4.92: off its painted place on the built deck; moved with its painted neighbours to s 9.9, 2.8 m from the far railing (painted 500 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.slatted_panel_18615": {
+   "dX": 3.94,
+   "dD": 7.3,
+   "why": "bridge fit: layout point s 3.3, 4.7 m from the near railing line, deck there 0.86 against layout H 5.35: off its painted place on the built deck; moved with its painted neighbours to s 11.4, 1.7 m from the far railing (painted 600 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.coiled_goods_18600": {
+   "dX": 2.77,
+   "dD": 4.23,
+   "why": "bridge fit: layout point s 2.4, 3.4 m from the near railing line, deck there 0.48 against layout H 3.73: off its painted place on the built deck; moved with its painted neighbours to s 7.4, 4.1 m from the near railing (painted 400 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.stall_table_18540": {
+   "dX": 2.86,
+   "dD": 5.2,
+   "why": "bridge fit: layout point s 1.7, 3.7 m from the near railing line, deck there 0.25 against layout H 3.62: off its painted place on the built deck; moved with its painted neighbours to s 7.5, 3.3 m from the far railing (painted 450 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.dark_basket_18500": {
+   "dX": 2.56,
+   "dD": 5.32,
+   "why": "bridge fit: layout point s 1.1, 3.4 m from the near railing line, deck there 0.10 against layout H 3.11: off its painted place on the built deck; moved with its painted neighbours to s 6.8, 3.3 m from the far railing (painted 450 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.parasol_stall_18585": {
+   "dX": 3.38,
+   "dD": 6.6,
+   "why": "bridge fit: layout point s 1.3, 4.2 m from the near railing line, deck there 0.15 against layout H 4.23: off its painted place on the built deck; moved with its painted neighbours to s 8.5, 2.2 m from the far railing (painted 550 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.round_tray_stand_18403": {
+   "dX": 2.71,
+   "dD": 4.81,
+   "why": "bridge fit: layout point s 0.2, 4.4 m from the near railing line, deck there 0.00 against layout H 2.30: off its painted place on the built deck; moved with its painted neighbours to s 5.6, 2.8 m from the far railing (painted 500 px of the deck's 750 px), where the deck has the height of its painted place (the builder sets its z on the deck)"
+  },
+  "S3.prop.mat_awning_stall_18330": {
+   "dX": 5.96,
+   "dD": -0.02,
+   "why": "bridge fit: its layout footprint is a sliver running across the deck (its corners carry four supports' heights); moved to the middle of its painted extent on the built deck (deck_fit.json footprint_on_deck), with its keepers and customers; the builder sets its z on the deck"
+  },
+  "S3.bld.north_bank_shed_19620": {
+   "dX": -2.27,
+   "dD": 1.16,
+   "why": "bridge fit (ground): the north-bank shed group (posts and beams at the silk's top edge, the long counter under its eaves, the man leaning over the counter, the man squatting in front of it): the built bridge's north abutment and far ramp skirt cover the shed's east third, and with the river plan's water reaching the arch's far edge and the abutment's river face the rest stands on the bank's slope; moved together 2.5 m west-north-west onto the flat bank north-west of the bank top (painted west of the landing: west / north-west of the ramp's far edge), keeping their painted arrangement; the shed's north part runs on past the silk's top edge, where its roof is off the silk as painted (its west side clear of S3.bld.north_bank_shop_19290)"
+  },
+  "S3.prop.far_counter_19555": {
+   "dX": -2.27,
+   "dD": 0.97,
+   "why": "[bridge] bridge fit (ground): the north-bank shed group (posts and beams at the silk's top edge, the long counter under its eaves, the man leaning over the counter, the man squatting in front of it): the built bridge's north abutment and far ramp skirt cover the shed's east third, and with the river plan's water reaching the arch's far edge and the abutment's river face the rest stands on the bank's slope; moved together 2.5 m west-north-west onto the flat bank north-west of the bank top (painted west of the landing: west / north-west of the ramp's far edge), keeping their painted arrangement; the shed's north part runs on past the silk's top edge, where its roof is off the silk as painted (under the shed's eaves; the props agent's 0.19 m spread adds on) + [props] a man leans over it from behind, mapped on its own line, and a dark vendor stands before it 0.56 m south: built 0.4 m deep and moved 0.19 m south, its back edge just south of the leaning man"
+  },
+  "S3.fig.far_shopkeeper_19620": {
+   "dX": -2.27,
+   "dD": 1.16,
+   "why": "bridge fit (ground): the north-bank shed group (posts and beams at the silk's top edge, the long counter under its eaves, the man leaning over the counter, the man squatting in front of it): the built bridge's north abutment and far ramp skirt cover the shed's east third, and with the river plan's water reaching the arch's far edge and the abutment's river face the rest stands on the bank's slope; moved together 2.5 m west-north-west onto the flat bank north-west of the bank top (painted west of the landing: west / north-west of the ramp's far edge), keeping their painted arrangement; the shed's north part runs on past the silk's top edge, where its roof is off the silk as painted"
+  },
+  "S3.fig.far_squatting_man_19618": {
+   "dX": -2.27,
+   "dD": 1.16,
+   "why": "bridge fit (ground): the north-bank shed group (posts and beams at the silk's top edge, the long counter under its eaves, the man leaning over the counter, the man squatting in front of it): the built bridge's north abutment and far ramp skirt cover the shed's east third, and with the river plan's water reaching the arch's far edge and the abutment's river face the rest stands on the bank's slope; moved together 2.5 m west-north-west onto the flat bank north-west of the bank top (painted west of the landing: west / north-west of the ramp's far edge), keeping their painted arrangement; the shed's north part runs on past the silk's top edge, where its roof is off the silk as painted (it stood in the water at the arch's far edge)"
+  },
+  "S3.fig.far_water_carrier_19720": {
+   "dX": -2.46,
+   "dD": 1.95,
+   "why": "bridge fit (ground): the porter with two buckets under the shed (painted at u 19720): stood at the north abutment's river face (now water); moved with the shed group onto the flat bank under the shed's east bay, 0.7 m from the man in the long robe"
+  },
+  "S3.fig.far_robed_figure_19768": {
+   "dX": -2.23,
+   "dD": 1.49,
+   "why": "bridge fit (ground): the man in a long robe under the shed's east end (painted at u 19768): stood under the north ramp's far half and abutment; moved with the shed group onto the flat bank under the shed's east end, 1.4 m clear of the ramp's far railing"
+  },
+  "S3.prop.far_tray_stand_19563": {
+   "dX": -0.91,
+   "dD": 0.67,
+   "why": "[bridge] bridge fit (ground): the peddler's tray stand in front of the counter: stood on the bank's slope 0.2 m from the river plan's water at the arch's far edge; moved 1.3 m north-west, square to the bank top, onto the flat bank (east of the parasol stall, south-east of the counter, as painted) + [props] the flat basket on its stand stands before the dark vendor (0.29 m south of him in the map): moved 0.2 m south so its legs clear him"
+  },
+  "S3.fig.far_vendor_dark_19578": {
+   "dX": -0.91,
+   "dD": 0.87,
+   "why": "bridge fit (ground): the man behind the tray stand: moved with it (same move)"
+  },
+  "S3.veh.handcart_19862": {
+   "dX": 5.34,
+   "dD": 3.02,
+   "why": "bridge fit (ground): the handcart pulled up the north bank (painted just north of the north ramp, u 19830-19960): the built north ramp, extended 3.0 m for the walk limit, covers it; moved with its two men and the dog to the north bank north-east of the built foot (painted east of the landing: east), heading west as painted, its rear 0.2 m inside the S2 seam, north of the tavern"
+  },
+  "S3.fig.cart_puller_19870": {
+   "dX": 5.34,
+   "dD": 3.02,
+   "why": "bridge fit (ground): pulls the handcart at its shafts: moved with it (same move)"
+  },
+  "S3.fig.cart_pusher_19922": {
+   "dX": 5.34,
+   "dD": 3.02,
+   "why": "bridge fit (ground): pushes the handcart at its near side: moved with it (same move)"
+  },
+  "S3.ani.dog_or_donkey_19825": {
+   "dX": 5.09,
+   "dD": 3.43,
+   "why": "bridge fit (ground): the small dark animal trotting east toward the man at the cart's shafts: moved with the cart group, west of the shaft tips as painted and 0.35 m north of them (the kit's shafts run 0.95 m past the cart's body), clear of the built foot's run-out"
+  },
+  "S3.fig.walker_topedge_19878": {
+   "dX": 4.61,
+   "dD": 1.35,
+   "why": "bridge fit (ground): walking along the north bank's back road at the silk's top edge (head cut off by it): the built north ramp covers the spot; moved east past the built foot (painted east of the landing), still at the top edge"
+  },
+  "S3.fig.figure_topedge_19925": {
+   "dX": 5.32,
+   "dD": 0.84,
+   "why": "bridge fit (ground): the second figure cut off by the silk's top edge, just east of the walker: moved with him past the built foot, at the top edge"
+  },
+  "S3.tree.shrub_or_heap_20025": {
+   "dX": 3.36,
+   "dD": -1.25,
+   "why": "bridge fit (ground): the low dark shrub (or covered heap) between the handcart and the bridge's north-east post: the built north ramp covers it; moved east into the corner between the ramp's near skirt and the tavern's west side at the water (0.3-1.0 m wide there: nobody walks through it), by the north-east post as painted"
+  },
+  "S3.prop.low_table_wares_20013": {
+   "dX": 3.94,
+   "dD": 0.27,
+   "why": "[bridge] bridge fit (ground): the long low table with wares at the bridge's north end (an outdoor stall or the little tavern's serving table): the built north ramp covers it; moved east into the tavern's west bay at the water, the first thing east of the bridge as painted (the area agent arranges the tavern's own furniture east of it) + [props] the stall-keeper and the man in the black hat stand behind it (0.34-0.39 m north of its legs in the map): 0.3 m south. The bridge-fit agent's move (into the tavern's west bay) adds to it: their final spot (146.85, 25.30) includes this one"
+  },
+  "S3.fig.stallkeeper_20030": {
+   "dX": 3.87,
+   "dD": 0.53,
+   "why": "bridge fit (ground): the stall-keeper behind the low table: moved with it, behind (north of) it in the tavern's west bay"
+  },
+  "S3.fig.dark_hat_figure_20070": {
+   "dX": 3.83,
+   "dD": -0.02,
+   "why": "bridge fit (ground): the man in the black hat at the tavern's west end just east of the low table: the built north ramp covers the spot; moved east with the table, just east of it, at the tavern's front"
+  },
+  "S3.prop.bridge_end_post_20050": {
+   "dX": -0.14,
+   "dD": 0.42,
+   "why": "bridge fit (ground): the north-east 表木 stood at the corner of the river plan's water by the north abutment (its pole on the shoreline, half its 0.76 m footing over the water); moved 0.44 m inland onto the bank between the abutment's near return and the water"
+  },
+  "S3.prop.bridge_end_post_19026": {
+   "dX": 0.0,
+   "dD": -0.55,
+   "why": "bridge fit (ground): the south-east 表木 was mapped on the estimated front-wall line of S3.bld.mat_shed_19160 (both est at v 1290), whose mat eave the builder runs 0.3 m out; the painting draws the pole over the shed's west gable, so it stands in front of (south of) it: moved 0.55 m south, its pole clear of the eave"
+  },
+  "S3.fig.child_red_18592": {
+   "dX": 0.26,
+   "dD": -0.22,
+   "why": "bridge fit (ground): the child at the bridge's south foot stood 0.14 m outside the built ramp's near railing line (its body through the railing posts); moved 0.34 m out from the railing"
+  },
+  "S3.prop.parasol_upper_18606": {
+   "dX": 0.0,
+   "dD": 0.5,
+   "why": "the twin flat parasols at real size (3.0 m across) stand with their poles 0.88 m apart on the same est foot line (both feet hidden behind the wall's coping): the upper's pole would pierce the lower's canopy. Its painted hub (18606, 1400) at its built 2.6 m maps 0.0 m from its est foot; moved 0.5 m north (and the lower 0.8 m south) so the poles stand 1.57 m apart, the upper canopy a little higher, as painted"
+  },
+  "S3.prop.parasol_lower_18538": {
+   "dX": 0.0,
+   "dD": -0.8,
+   "why": "its painted hub (18535, 1460) at its built 2.35 m maps 0.8 m south of the est foot (hidden behind the wall): the foot moved under the hub, which also clears the upper parasol's pole (see parasol_upper_18606)"
+  },
+  "S3.prop.hanging_signboard_18463": {
+   "dX": 0.0,
+   "dD": -0.8,
+   "why": "hangs from the lower parasol's west rim: moves with it"
+  },
+  "S3.prop.basin_16180": {
+   "dX": 0.0,
+   "dD": -0.7,
+   "why": "on the balcony 'in front of the dining table's east end': at real size (0.7 m basin, 0.55 m deep table) the mapped spots overlap (the upper storey is painted at ~0.55, its depth compressed); moved 0.7 m south to stand before the table, still inside the balcony's front (the floor line maps at D -4.0)"
+  },
+  "S3.prop.food_heap_16170": {
+   "dX": 0.0,
+   "dD": -0.7,
+   "why": "lies on the basin: moves with it"
+  },
+  "S3.prop.stick_on_ground_17615": {
+   "dX": 0.0,
+   "dD": -0.35,
+   "why": "lies 'just south of the bottle stand': at real size (0.4 m deep stand) its mapped line runs through the stand; moved 0.35 m south"
+  },
+  "S3.prop.far_bank_low_table_17652": {
+   "dX": -3.08,
+   "dD": 5.05,
+   "why": "[props] the figure in the conical hat stands behind it (at the back of the shop's front, 0.29 m north of the table's legs in the map): at real depth (0.45 m) the table would hold him; moved 0.45 m south + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_basin_17662": {
+   "dX": -3.08,
+   "dD": 4.75,
+   "why": "[props] lies on the ground before the low table: moved with it, and clear of its front + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_long_table_17945": {
+   "dX": -2.95,
+   "dD": 5.05,
+   "why": "[props] the small seated figure sits behind its west end (0.35 m north of the legs in the map): at real depth the table would hold him; moved 0.45 m south + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_thing_on_table_17968": {
+   "dX": -2.95,
+   "dD": 5.05,
+   "why": "[props] stands on the long table: moves with it + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves); on S3.prop.far_bank_long_table_17945, moved exactly with it"
+  },
+  "S3.prop.far_bank_counter_table_17347": {
+   "dX": -3.22,
+   "dD": 4.95,
+   "why": "[props] two men sit behind it facing the river, mapped on its own line (the far bank painted at ~0.29): at real depth (0.55 m) they would sit inside it; moved 0.55 m south + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_bench_17416": {
+   "dX": -3.04,
+   "dD": 5.35,
+   "why": "[props] 'in front of (south of)' the west square table: at real size it ran under the table's front; moved 0.15 m south, and 0.15 m east off the counter table's east end + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_bench_17470": {
+   "dX": -2.81,
+   "dD": 5.65,
+   "why": "[props] 'end-on, running back north-east from the east side' of the west square table: at real size (0.9 m table) its mapped spot is inside the table; moved 0.35 m east and 0.15 m north to its east side + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_bench_17515": {
+   "dX": -3.14,
+   "dD": 5.25,
+   "why": "[props] 'in front of (south of)' the east square table: moved 0.25 m south off its front + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_hall_table_18478": {
+   "dX": 0.35,
+   "dD": 0.0,
+   "why": "east of the hall's long table: at real size the two overlap 0.3 m; moved 0.35 m east"
+  },
+  "S3.prop.far_hall_bench_18447": {
+   "dX": 0.0,
+   "dD": -0.12,
+   "why": "between the hall's tables, before the long table: moved 0.12 m south off its front"
+  },
+  "S3.prop.hall_bench_18550": {
+   "dX": 0.35,
+   "dD": 0.0,
+   "why": "beside the hall's square table: at real size it ran 0.3 m under it; moved 0.35 m east"
+  },
+  "S3.prop.far_shed_table_18265": {
+   "dX": -3.06,
+   "dD": 5.5,
+   "why": "[props] west of the man seated on S3.prop.far_chair_18322 (whose chair stays under him): at real size the table reached under the chair; moved 0.25 m west + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_shed_bench_18288": {
+   "dX": -2.8,
+   "dD": 5.35,
+   "why": "[props] 'in front of the table': moved 0.15 m south off the table's front + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_shop_table_18168": {
+   "dX": -2.5,
+   "dD": 5.5,
+   "why": "[props] east of the shop's long table and west of the shed's table (painted 43 px apart, 0.56 m): at real size they overlap; moved 0.35 m east, between them + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_shop_bench_18060": {
+   "dX": -2.9,
+   "dD": 5.4,
+   "why": "[props] at the shop's front west end: moved 0.1 m south off the long table's front + [river] on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.tavern_chair_20325": {
+   "dX": -0.09,
+   "dD": 0.95,
+   "why": "the north-bank tavern is built narrowed to clear the bridge's north ramp (the area agent: plan X 146.4-148.8, D 24.92-26.6): the chair at the west end of the table, facing it, against the back posts (0.7 m strip behind the route's 0.9 m lane, D 25.9-26.6)"
+  },
+  "S3.prop.tavern_table_20340": {
+   "dX": 0.24,
+   "dD": 0.93,
+   "why": "the north-bank tavern is built narrowed to clear the bridge's north ramp (the area agent: plan X 146.4-148.8, D 24.92-26.6): the table between its two chairs, its north-east corner clear of the post at X 147.6"
+  },
+  "S3.prop.tavern_chair_20390": {
+   "dX": 0.23,
+   "dD": 0.78,
+   "why": "the north-bank tavern is built narrowed to clear the bridge's north ramp (the area agent: plan X 146.4-148.8, D 24.92-26.6): the chair at the table's east end, facing it, clear of the small table by the S2 seam"
+  },
+  "S3.prop.tavern_table_20168": {
+   "dX": 2.17,
+   "dD": 1.93,
+   "why": "the north-bank tavern is built narrowed to clear the bridge's north ramp (the area agent: plan X 146.4-148.8, D 24.92-26.6): no room inside for its west table and bench (chair, table and chair fill the 2.4 m between the corner posts; the ramp's skirt is at X 145.83 west of it): set behind it, the nearest free ground, under the back eave's overhang (centre 147.0, 27.2; the area agent's spot)"
+  },
+  "S3.prop.tavern_bench_20124": {
+   "dX": 2.74,
+   "dD": 2.48,
+   "why": "the north-bank tavern is built narrowed to clear the bridge's north ramp (the area agent: plan X 146.4-148.8, D 24.92-26.6): with the square table, along its north side (147.0, 27.75)"
+  },
+  "S3.prop.small_table_20460": {
+   "dX": -0.08,
+   "dD": 0.81,
+   "why": "the north-bank tavern is built narrowed to clear the bridge's north ramp (the area agent: plan X 146.4-148.8, D 24.92-26.6): out of the route's lane (D 25.0-25.9) so its exit at the S2 seam stays open; into the strip behind the lane, east of the east chair, clear of the corner post at X 148.8"
+  },
+  "S3.prop.shop_bench_19902": {
+   "dX": 0.15,
+   "dD": 0.0,
+   "why": "the standing man is painted just west of it, 0.39 m from its middle: moved 0.15 m east; its seated figure (0.03 m from its middle) stays on it"
+  },
+  "S3.prop.hooked_stick_on_wall_18474": {
+   "dX": 1.48,
+   "dD": -2.62,
+   "why": "painted standing on the tiled wall's coping at its north end (stroke (18472, 1536)): at the coping's height (1.9 m) the frame maps that stroke 1.42 m east and 2.85 m south of its ground reading, onto the wall's mapped north end (134.0, -1.99): moved there, 0.06 m in from the end; it stands on the coping (on_h 1.95)"
+  },
+  "S3.prop.stall_table_19228": {
+   "dX": 0.0,
+   "dD": -0.4,
+   "why": "the bearded man sits behind it leaning on it, mapped 0.16 m north of its est middle: moved 0.4 m south so he sits behind the real table (0.6 m deep)"
+  },
+  "S3.veh.boat_under_way_15595": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "S4b's raft at real size reaches 3-6 m past u 15500 over this boat's painted water (S4b's sterns at X 92-93 between D 13 and 29.7): moved east (astern, over open water) until its bow lies 0.3 m clear of S4b's mat-cargo boat's stern in the gap between S4b's arched-awning and mat-cargo boats, and 3 m south so that the towed boat passes north of it as painted (its run cut to 1 m: people_boats.json). The rest of the reach is packed: the towed boat north of it, the unloading boat south-east, its sweep blade 0.3 m off the near shore."
+  },
+  "S3.fig.sweep_man_15915": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.sweep_man_15888": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.sweep_man_15862": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.sweep_man_15855": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.sweep_man_15838": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.sweep_man_15810": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.boatman_bow_15688": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.boatman_bow_15664": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.fig.boatman_bow_15636": {
+   "dX": 11.61,
+   "dD": -2.97,
+   "why": "crew: moves with its boat (S3.veh.boat_under_way_15595)"
+  },
+  "S3.veh.boat_towed_mast_16228": {
+   "dX": 13.38,
+   "dD": -2.68,
+   "why": "S4b's raft sterns (X 92-93, D 23-29.7) cover its painted place at real size: moved east 13.4 m (outward, over open water) so its stern lies 0.3 m clear of S4b's mat-cargo and long-cabin boats, and 2.7 m south to pass south of the long passenger boat moored along the moved far bank and north of the boat under way, as painted (north-east of the boat under way, its bow toward the far row). Its 4 m run east (people_boats.json) stays clear of the lowered-mast and mat-cabin boats."
+  },
+  "S3.fig.boatman_poling_16198": {
+   "dX": 13.38,
+   "dD": -2.68,
+   "why": "crew: moves with its boat (S3.veh.boat_towed_mast_16228)"
+  },
+  "S3.fig.boatman_on_cargo_16032": {
+   "dX": 13.38,
+   "dD": -2.68,
+   "why": "crew: moves with its boat (S3.veh.boat_towed_mast_16228)"
+  },
+  "S3.fig.boatman_on_cargo_15998": {
+   "dX": 13.38,
+   "dD": -2.68,
+   "why": "crew: moves with its boat (S3.veh.boat_towed_mast_16228)"
+  },
+  "S3.veh.boat_passenger_long_16398": {
+   "dX": -1.64,
+   "dD": 4.89,
+   "why": "moored along the far bank: moved with it 5.5 m north (river_plan.json far_bank_move; about dX -3.3 along the receding direction), then 1.7 m east of that and 0.6 m south so that its bow clears the stern of S4b's long-cabin boat (0.3 m) and it lies 0.25 m off the far shore; it lies north of S4b's raft at the seam, at the far bank's west tip, as painted."
+  },
+  "S3.fig.passenger_door_16553": {
+   "dX": -1.64,
+   "dD": 4.89,
+   "why": "crew: moves with its boat (S3.veh.boat_passenger_long_16398)"
+  },
+  "S3.veh.boat_awning_17442": {
+   "dX": 0.53,
+   "dD": 5.81,
+   "why": "moored along the far bank: moved with it (5.5 m north) and on east along it, end to end behind the long passenger boat (the far row at real size is longer than its painted 28 m), 0.25 m off the far shore, its stern 0.6 m short of the mooring post."
+  },
+  "S3.fig.passenger_seated_17632": {
+   "dX": 0.53,
+   "dD": 5.81,
+   "why": "crew: moves with its boat (S3.veh.boat_awning_17442)"
+  },
+  "S3.fig.awning_boatman_17435": {
+   "dX": 0.53,
+   "dD": 5.81,
+   "why": "crew: moves with its boat (S3.veh.boat_awning_17442)"
+  },
+  "S3.veh.boat_lowered_mast_17708": {
+   "dX": -0.5,
+   "dD": 3.73,
+   "why": "the far row at real size is longer than the far bank west of the hall on stilts (P 17 m, then this and two small boats of 6.3 m each, from the far bank's west tip to the step at u 18300): this boat is moved outward over open water, rafted 0.3 m south-east of the awning boat's stern (the lead's rule: shorten to 0.6, then move outward), keeping the far row's order west to east."
+  },
+  "S3.veh.boat_mat_cabin_18005": {
+   "dX": 1.32,
+   "dD": -0.82,
+   "why": "the last of the far row: moved 1.3 m east and 0.8 m south so that it lies moored at the hall on stilts' west end (painted: its east end touches the hall at u 18322), in front of the far bank's step at u 18300 (the far bank west of it moved 5.5 m north), clear of the lowered-mast boat and the towed boat's run."
+  },
+  "S3.fig.passenger_seated_18147": {
+   "dX": 1.32,
+   "dD": -0.82,
+   "why": "crew: moves with its boat (S3.veh.boat_mat_cabin_18005)"
+  },
+  "S3.fig.passenger_seated_18112": {
+   "dX": 1.32,
+   "dD": -0.82,
+   "why": "crew: moves with its boat (S3.veh.boat_mat_cabin_18005)"
+  },
+  "S3.veh.boat_unloading_17705": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "at real size its stern ran onto the land at the bridge's south-west foot and its hull over the mapped near shore (the land in front of the mat shed juts to D 13.4): moved 3.7 m north (outward, over open water) so its hull lies 0.35 m off the near shore, and 4.3 m west so that its stern clears the south ramp's far skirt and the south abutment; it stays moored along the shore in front of the shed, bow west toward the 新酒 pole."
+  },
+  "S3.fig.porter_carrying_17922": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "crew: moves with its boat (S3.veh.boat_unloading_17705)"
+  },
+  "S3.fig.porter_standing_17886": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "crew: moves with its boat (S3.veh.boat_unloading_17705)"
+  },
+  "S3.fig.porter_standing_17860": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "crew: moves with its boat (S3.veh.boat_unloading_17705)"
+  },
+  "S3.fig.porter_standing_17833": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "crew: moves with its boat (S3.veh.boat_unloading_17705)"
+  },
+  "S3.fig.porter_hunched_17808": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "crew: moves with its boat (S3.veh.boat_unloading_17705)"
+  },
+  "S3.fig.porter_bending_17790": {
+   "dX": -4.27,
+   "dD": 3.69,
+   "why": "crew: moves with its boat (S3.veh.boat_unloading_17705)"
+  },
+  "S3.veh.boat_mast_lowering_19518": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "at real size the hull overlapped the arch, the skiff, S2's moored cargo boat and the seam: its stem post (3.1 m above the water) can't pass under the arch's near face (soffit less the 0.46 m facing timber: 3.23 m at the crown), so the bow lies outside the face; shortened to 0.6 and moved 3.6 m south and 1.3 m west along the face so that the hull lies wholly on S3's side of u 20500, 0.4 m south of S2.veh.boat_mat_cargo_21055 (taken at 0.6 of the grain type on its mapped place) and 0.4 m off the south shore, its bow 0.4 m outside the arch's near face. Cost to loyalty: the painted bow points at the arch's middle (u 19518, near the crown); built, it points at its south quarter (station 6.7 of 25.5)."
+  },
+  "S3.fig.boatman_stern_bending_20365": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_cabin_door_pole_20300": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_stern_seated_20285": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_hauling_rope_20205": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_crouching_20026": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_under_mat_roof_19970": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_under_mat_roof_19955": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_hat_pole_19915": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_standing_pole_19892": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_both_arms_pole_19840": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_bent_pole_19830": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_capped_19800": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_pole_raised_19775": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_bending_pole_19746": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_reaching_19681": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_leaning_on_bundle_19650": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.boatman_poling_bow_19632": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.bowman_arm_out_19583": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.fig.bowman_arm_out_19565": {
+   "dX": -1.31,
+   "dD": -3.58,
+   "why": "crew: moves with its boat (S3.veh.boat_mast_lowering_19518)"
+  },
+  "S3.veh.boat_skiff_19255": {
+   "dX": -0.7,
+   "dD": 3.13,
+   "why": "at its mapped place its west end ran into the south abutment and under the arch's ribs where they stand 0.6 m over the water (the review's clearance from its built geometry: -0.31 m): moved 3.1 m north and 0.7 m west, along the abutment's river face, its west end under the arch at station 6.7 (the ribs about 1.3 m over the water, about 0.3 m over its stern), its east end just outside the near face, clear of the big boat's bow and of the cabin boat. Still 'under the arch's south half, parallel to the south bank'; it no longer lies against the south bank (1.5 m off it)."
+  },
+  "S3.veh.boat_moored_south_bank_19745": {
+   "dX": 0.75,
+   "dD": 1.11,
+   "why": "at real size its west end ran onto the south bank's corner at X 144.6-146.2 and its south side 0.5 m onto the bank: moved 1.1 m north (off the bank, 0.4 m) and 0.75 m east along it. Its east end reaches about 6 m past u 20500 at the south bank, as painted (its east end at u 20637), over S2's water where S2 maps no boat."
+  },
+  "S3.fig.man_in_hatch_20172": {
+   "dX": 0.75,
+   "dD": 1.11,
+   "why": "crew: moves with its boat (S3.veh.boat_moored_south_bank_19745)"
+  },
+  "S3.fig.man_in_hatch_20148": {
+   "dX": 0.75,
+   "dD": 1.11,
+   "why": "crew: moves with its boat (S3.veh.boat_moored_south_bank_19745)"
+  },
+  "S3.fig.man_reclining_waving_20060": {
+   "dX": 0.75,
+   "dD": 1.11,
+   "why": "crew: moves with its boat (S3.veh.boat_moored_south_bank_19745)"
+  },
+  "S3.fig.man_waving_on_boat_roof_19952": {
+   "dX": 0.75,
+   "dD": 1.11,
+   "why": "crew: moves with its boat (S3.veh.boat_moored_south_bank_19745)"
+  },
+  "S3.prop.round_ribbed_object_19765": {
+   "dX": 0.75,
+   "dD": 1.11,
+   "why": "on the boat's roof: moves with it (S3.veh.boat_moored_south_bank_19745)"
+  },
+  "S3.prop.far_shop_long_table_18120": {
+   "dX": -2.87,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_table_17533": {
+   "dX": -3.13,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_table_17435": {
+   "dX": -3.18,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_bench_17278": {
+   "dX": -3.25,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_table_17245": {
+   "dX": -3.26,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_table_17105": {
+   "dX": -3.32,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.prop.far_bank_slatted_stand_17080": {
+   "dX": -3.33,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_bank_shed_18280": {
+   "dX": -2.8,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_hall_17875": {
+   "dX": -2.89,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_shop_17725": {
+   "dX": -3.0,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_shop_17575": {
+   "dX": -3.06,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_shop_17290": {
+   "dX": -3.16,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_shop_17170": {
+   "dX": -3.25,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.bld.far_house_16560": {
+   "dX": -3.35,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.str.far_wall_16895": {
+   "dX": -3.38,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_man_doorway_18008": {
+   "dX": -2.92,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_seated_17922": {
+   "dX": -2.96,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_crouching_17696": {
+   "dX": -3.06,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_figure_hat_17666": {
+   "dX": -3.07,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_seated_17366": {
+   "dX": -3.21,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_seated_17333": {
+   "dX": -3.22,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_seated_17277": {
+   "dX": -3.25,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_figure_17213": {
+   "dX": -3.27,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_standing_17174": {
+   "dX": -3.29,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_standing_17132": {
+   "dX": -3.31,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_figure_16823": {
+   "dX": -3.37,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.far_bank_figure_16722": {
+   "dX": -3.29,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.tree.willow_far_17205": {
+   "dX": -3.28,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.tree.willow_far_17185": {
+   "dX": -3.29,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.tree.shrub_16917": {
+   "dX": -3.41,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.tree.far_willow_16662": {
+   "dX": -3.24,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.tree.far_willow_16582": {
+   "dX": -3.17,
+   "dD": 5.5,
+   "why": "on the far bank west of the hall on stilts, moved with it 5.5 m north along the receding direction (its scan u kept): the far shore and bank top move so that the river holds its boats at real size (each at least 0.6 of its type) in painted order, and to meet S4b's far bank, moved the same 5.5 m, at the seam (river_plan.json far_bank_move; BUILDING.md: where a far bank painted small leaves no room, make room with recorded moves)"
+  },
+  "S3.fig.tracker_16333": {
+   "dX": 26.58,
+   "dD": 1.28,
+   "why": "the five trackers (纤夫) on the far bank, who tow S3.veh.boat_towed_mast_16228: they walk with it, the tow line made fast to the rear man (map). The towed boat had to move 13.4 m east to clear S4b's sterns at real size, so the file moves with it to stay ahead of its bow, north-east of it on the far bank, walking up the bank to the east-north-east, as painted; the moved far bank west of u 18300 has no room for them (its shops stand at the bank top), so they stand on the far bank's land just east of its step at u 18300, between the step and the hall on stilts' west end (X 116.5-116.7, D 29.3-30.3, so that their 4 m walk east with the boat passes 0.4 m north of the hall), their file's shape kept (same move for all five)"
+  },
+  "S3.fig.tracker_16358": {
+   "dX": 26.58,
+   "dD": 1.28,
+   "why": "the five trackers (纤夫) on the far bank, who tow S3.veh.boat_towed_mast_16228: they walk with it, the tow line made fast to the rear man (map). The towed boat had to move 13.4 m east to clear S4b's sterns at real size, so the file moves with it to stay ahead of its bow, north-east of it on the far bank, walking up the bank to the east-north-east, as painted; the moved far bank west of u 18300 has no room for them (its shops stand at the bank top), so they stand on the far bank's land just east of its step at u 18300, between the step and the hall on stilts' west end (X 116.5-116.7, D 29.3-30.3, so that their 4 m walk east with the boat passes 0.4 m north of the hall), their file's shape kept (same move for all five)"
+  },
+  "S3.fig.tracker_16385": {
+   "dX": 26.58,
+   "dD": 1.28,
+   "why": "the five trackers (纤夫) on the far bank, who tow S3.veh.boat_towed_mast_16228: they walk with it, the tow line made fast to the rear man (map). The towed boat had to move 13.4 m east to clear S4b's sterns at real size, so the file moves with it to stay ahead of its bow, north-east of it on the far bank, walking up the bank to the east-north-east, as painted; the moved far bank west of u 18300 has no room for them (its shops stand at the bank top), so they stand on the far bank's land just east of its step at u 18300, between the step and the hall on stilts' west end (X 116.5-116.7, D 29.3-30.3, so that their 4 m walk east with the boat passes 0.4 m north of the hall), their file's shape kept (same move for all five)"
+  },
+  "S3.fig.tracker_16405": {
+   "dX": 26.58,
+   "dD": 1.28,
+   "why": "the five trackers (纤夫) on the far bank, who tow S3.veh.boat_towed_mast_16228: they walk with it, the tow line made fast to the rear man (map). The towed boat had to move 13.4 m east to clear S4b's sterns at real size, so the file moves with it to stay ahead of its bow, north-east of it on the far bank, walking up the bank to the east-north-east, as painted; the moved far bank west of u 18300 has no room for them (its shops stand at the bank top), so they stand on the far bank's land just east of its step at u 18300, between the step and the hall on stilts' west end (X 116.5-116.7, D 29.3-30.3, so that their 4 m walk east with the boat passes 0.4 m north of the hall), their file's shape kept (same move for all five)"
+  },
+  "S3.fig.tracker_16423": {
+   "dX": 26.58,
+   "dD": 1.28,
+   "why": "the five trackers (纤夫) on the far bank, who tow S3.veh.boat_towed_mast_16228: they walk with it, the tow line made fast to the rear man (map). The towed boat had to move 13.4 m east to clear S4b's sterns at real size, so the file moves with it to stay ahead of its bow, north-east of it on the far bank, walking up the bank to the east-north-east, as painted; the moved far bank west of u 18300 has no room for them (its shops stand at the bank top), so they stand on the far bank's land just east of its step at u 18300, between the step and the hall on stilts' west end (X 116.5-116.7, D 29.3-30.3, so that their 4 m walk east with the boat passes 0.4 m north of the hall), their file's shape kept (same move for all five)"
+  },
+  "S3.prop.mooring_post_17702": {
+   "dX": 1.35,
+   "dD": 7.17,
+   "why": "the post at the far bank's water edge between the awning boat and the lowered-mast boat: the far bank moved 5.5 m north and the awning boat lies moored along it with the lowered-mast boat rafted outside its stern (boats), so the post stands at the moved water's edge 0.75 m past the awning boat's stern, its mooring line's end (boats.S3.veh.boat_awning_17442.kit.moor)"
+  },
+  "S3.fig.far_bank_seated_18318": {
+   "dX": -2.8,
+   "dD": 5.5,
+   "why": "in the far-bank shed S3.bld.far_bank_shed_18280 (u 18318-18322, just past the far bank's step at u 18300): moves with the shed, 5.5 m north along the receding direction (river_plan.json far_bank_move)"
+  },
+  "S3.prop.far_chair_18322": {
+   "dX": -2.8,
+   "dD": 5.5,
+   "why": "in the far-bank shed S3.bld.far_bank_shed_18280 (u 18318-18322, just past the far bank's step at u 18300): moves with the shed, 5.5 m north along the receding direction (river_plan.json far_bank_move)"
+  },
+  "S3.grd.far_bank_seam_15500": {
+   "dX": -2.26,
+   "dD": 5.5,
+   "why": "the far bank's piece at the S4b seam, running off the silk's top edge: moved with S4b's far bank (S4b.grd.far_bank_15330: dX -2.26, dD +5.5 along the receding direction), so the two far banks meet at the seam (the lead's call: our north bank meets S4b's at u 15500)"
+  },
+  "S3.tree.willow_crown_top_15520": {
+   "dX": -2.26,
+   "dD": 6.1,
+   "why": "on S3.grd.far_bank_seam_15500 (the far bank at the S4b seam): moved with it; and 0.6 m further north: its mapped foot (the top of its whips at the silk's edge) stood 0.3 m inside the water where the far shore meets S4b's moved one at the seam (its head and trunk are beyond the silk's top edge)"
+  }
+ },
+ "how": {
+  "S3.str.rainbow_bridge": {
+   "how": "model",
+   "why": "blender/kit_rainbow_bridge.py build(layout entity, map/frames/S3.json, params=gen/sections/rainbow_bridge/bridge_params.json): the woven arch (贯木拱) and its deck, square and walkable, 25.52 m foot to foot, 8.25 m wide, crown 5.29 m at s 12.38, span 15.51 m, steepest 33.9 deg (the walk limit 34), soffit 2.86 m above the water over the middle 40% (3.69 at the crown). The kit's choices: deck width from the mapped edge lines: median 8.25 m, built 8.25 m (real 6.5-10.0 m); centre line 4.13 m to the left of the mapped near edge, foot to foot; springings from the mapped rib line(s) ['rib_e'] (near face moved 4.13 m to the centre); choice: the north foot moved from the mapped (140.75, 25.43) to (141.34, 27.55): mapped -89 deg off the arch's axis, 0.96 m from its springing (allowed 40.0 deg, at least 2.0 m); choice: the ramp to (129.62, 11.89) is too short to turn onto the arch's axis (radius 5.6 m): its foot is put on the axis at (128.12, 12.51); WARNING: the mapped south end is skewed 41 deg from square to the arch's axis (its corners 10.3 m apart): the kit builds the bridge square, 8.25 m wide; things mapped at the far corners stand up to 3.4 m off the built deck's end (the frame's receding direction over the bridge: study.md); WARNING: the mapped north end is skewed 41 deg from square to the arch's axis (its corners 10.7 m apart): the kit builds the bridge square, 8.25 m wide; things mapped at the far corners stand up to 3.5 m off the built deck's end (the frame's receding direction over the bridge: study.md); deck heights: 70 points of the deck lines' lines_H; deck profile: crown 5.29 m at s 12.38, shape q 1.0/1.0, rms 2.51 m against the mapped heights (unconstrained fit: crown 4.67 m, rms 2.48 m); choice: the south ramp extended 2.5 m past the mapped foot along its end, so the deck stays within 34.0 deg; choice: the north ramp extended 3.0 m past the mapped foot along its end, so the deck stays within 34.0 deg; arch: span 15.51 m, rise 4.51 m (beam centre line), soffit 3.69 m above the water at the crown, 2.86 m over the middle 40%; WARNING: soffit 2.86 m above the water over the middle 40%, less than 3.5 m for the big boat. The painted deck is a parallelogram skewed 41 deg on S3's frame; the built deck is square, so the deck's entities are fitted onto it with recorded moves (deck_fit.json); its near railing lies 1.1-1.5 m inside the mapped near edge (the arch's axis comes from the mapped rib line). Plan, abutments, soffit and the deck table: gen/sections/rainbow_bridge/bridge_plan.json"
+  },
+  "S3.grd.south_bank_19300": {
+   "how": "ground",
+   "why": "the ground falls from the bank-top line (H 0) to the shore at the water's H"
+  },
+  "S3.grd.south_bank_20120": {
+   "how": "ground",
+   "why": "the ground falls from the bank-top line (H 0) to the shore at the water's H"
+  },
+  "S3.grd.far_bank_seam_15500": {
+   "how": "ground",
+   "why": "the far bank at the S4b seam, running off the silk's top edge: ground"
+  },
+  "S3.road.main": {
+   "how": "ground",
+   "why": "the route: worn ground along its land stretches (the south bank, the north bank); its stretch over the bridge is the bridge's deck"
+  },
+  "S3.road.tavern_front_16620": {
+   "how": "ground",
+   "why": "the forecourt in front of 十千脚店's gate: worn ground"
+  },
+  "S3.road.south_street_20250": {
+   "how": "ground",
+   "why": "the ground in front of the open shop: worn ground"
+  },
+  "S3.bld.tavern_20230": {
+   "how": "model",
+   "why": "narrowed (choice, map/BUILDING.md rule 5: narrowed, never shrunk): the bridge's built north ramp (kit_rainbow_bridge, extended 3.0 m past the mapped foot along its axis so the deck stays within the 34 deg walk limit) lands where the painting puts the tavern's west half (its west corner at the bridge's north-east end post), and the S2 seam (u 20500) bounds its east end 1.3 m past its painted east end. Built X 146.4-148.8 (its painted 143.7-147.9), at its painted front (the bank top, D 24.92) and painted depth (to D 26.6), real heights (eave 2.95), open on all four sides on slender posts so the route along the water runs through it, with its painted lattice band and the lattice-filled east gable; its furniture rearranged inside it by the props agent (choices/props.json)"
+  },
+  "S3.water.bian_west_15500": {
+   "how": "ground",
+   "why": "one flat strip (kb.water_strip, H -0.7, seams west and east) between the shore lines in gen/sections/rainbow_bridge/river_plan.json water, not the mapped ones: the near shore as mapped to the bridge's south-west foot, then 0.6 m off the south ramp's far skirt (the painted water meets the deck's west edge at u 18300-18480, river_e); the far shore = the far bank's mapped tops (the est shores lie 0.5-1.1 m north of them; the lead's call) moved 5.5 m north with the far bank, joined to S4b's moved far shore at the seam, and stepping back south along u 18300 to the hall on stilts' bank"
+  },
+  "S3.water.bian_river_18300": {
+   "how": "ground",
+   "why": "one flat strip between the shore lines in river_plan.json: under the bridge the south abutment's river face and the north abutment's river face with the arch's far edge as the shores (the mapped est shores crossed the abutments and left up to 5.4 m of north bank under the arch's far half: the bridge agent's proposal); east of it the mapped south shore and the north bank's tops 0.4 m out (the est north shore lies up to 0.86 m north of them), meeting S2's first points at u 20500"
+  },
+  "S3.grd.bank_n_16150": {
+   "how": "ground",
+   "why": "the far bank's slope and top from river_plan.json banks.north (its mapped tops moved 5.5 m north along the receding direction with the far bank, as the shore; its top 0.6 m further up): a move that keeps every point's scan u can't be one dX, dD, so the entity itself isn't moved in the layout. Not walkable (river_plan.json far_bank)."
+  },
+  "S3.grd.bank_s_15500": {
+   "how": "ground",
+   "why": "the near bank from river_plan.json banks.south: its mapped tops to (121.53, 11.71); its last three (the land at the bridge's south-west foot, X 121-122, D 13-18) are water now, the bank top running along the south ramp's far skirt to the abutment"
+  },
+  "S3.grd.north_bank_20250": {
+   "how": "ground",
+   "why": "the north bank east of the bridge from river_plan.json banks.north: the ground falls from its mapped top to a shore 0.4 m south of it (its est shore lies up to 0.86 m north of the top), ending on S2's first bank-top point (149.37, 24.68) at the seam"
+  },
+  "S3.grd.far_bank_18450": {
+   "how": "ground",
+   "why": "the far bank under the hall on stilts from river_plan.json: unmoved; its mapped shore where it lies south of the top, its first point (north of the top) dropped; the far bank's step along u 18300 rises north from its west end"
+  },
+  "S3.prop.round_ribbed_object_19765": {
+   "how": "model",
+   "why": "read as a rope reel in a frame (t8, t9), not a parasol top or a boatman's hat (conf low)"
+  },
+  "S3.prop.mooring_post_17702": {
+   "how": "model",
+   "why": "read as a mooring/lamp post standing in the water's edge, not part of the awning boat (conf low)"
+  },
+  "S3.prop.slanted_board_19912": {
+   "how": "model",
+   "why": "read as a shutter taken down and propped at a slant (one of three readings, conf low)"
+  },
+  "S3.prop.shop_long_board_19601": {
+   "how": "model",
+   "why": "read as a long bench set end-on (the map's first reading; else a ladder), conf low"
+  },
+  "S3.prop.shop_wall_bench_19582": {
+   "how": "model",
+   "why": "read as a low bench, not a railing of the shop (conf low)"
+  },
+  "S3.prop.far_tray_stand_19563": {
+   "how": "model",
+   "why": "read as a stand (the map's preferred reading), not a basket at a striding man's hip (conf low)"
+  },
+  "S3.prop.tavern_chair_20390": {
+   "how": "model",
+   "why": "one chair built (the map: one, possibly two overlapping), conf med"
+  },
+  "S3.prop.far_hall_chairs_18393": {
+   "how": "model",
+   "why": "one chair built (the map: perhaps two side by side), conf low"
+  },
+  "S3.prop.far_bank_tables_19210": {
+   "how": "model",
+   "why": "one entity for the row: seven small square tables, each with a bench before it (the map: about seven, tables and benches hard to tell apart), between its w_end and e_end stroke points"
+  },
+  "S3.prop.frame_awning_19070": {
+   "how": "model",
+   "why": "read as a gabled frame awning with a mat over it, on four posts on the deck (conf low)"
+  },
+  "S3.prop.pot_on_rack_16140": {
+   "how": "model",
+   "why": "the pot with the open rack it stands on (the rack is what makes the painted pot stand: rule 3); the tavern kit leaves the rack out of the hall"
+  },
+  "S3.prop.hooked_stick_on_wall_18474": {
+   "how": "model",
+   "why": "a short hooked post at its mapped point on its mapped support (ground); it may stand on the tiled wall's coping (conf low)"
+  },
+  "S3.prop.jar_20109": {
+   "how": "model",
+   "why": "read as a jar standing on the ground (not the seated figure's raised hand), conf low"
+  },
+  "S3.prop.basket_on_stand_18005": {
+   "how": "model",
+   "why": "read as a basket on a stand (not one carried by the man behind it), conf low"
+  },
+  "S3.prop.lamp_box_18676": {
+   "how": "model",
+   "why": "read as a small lidded box on a post (what carries it is not painted), conf low"
+  },
+  "S3.prop.bundle_over_rail_19392": {
+   "how": "model",
+   "why": "read as a cloth bundle hung on a rope over the near railing's outside (conf low)"
+  },
+  "S3.bld.tavern_river_hall_15540": {
+   "how": "model",
+   "why": "two storeys as tested (平坐 over 腰檐): the upper floor a colliding slab at the frame's measured 3.83 m over the balcony and the rooms behind it (all 7 mapped upper-floor figures and 5 props ground on it; nothing collides between it and 5.1 m above them). Its footprint is a placeholder: built X 96.75-107.0 (the upper storey's east end at its painted post u 16296 on the window wall's line, plus a 1.5 m side gallery for its two figures at X 106.3-106.7; its west end at X 96.75, 0.5 m east of the painted corner post u 15592, clear of S4b's south hall as S4b built it (walls to x 96.2, eave ~0.5 m beyond at z 3.4-3.85), which the painting shows overlapping the hall's west end), D -4.0 (the balcony's edge, 0.1 behind the est front) to 1.69 (1.5 m short of the route's edge); the window wall on D -2.1, set by the doorway figure painted standing in the doorway (D -2.3) and the rack painted at the back of the middle bay (D -2.34); its bays at the painted posts. Upper eave 7.1 m (sw_eave measured 7.27 at the est base), ridge 8.6 (painted 8.5 at the roof's est depth), the ridge nearly the eave's length with short steep hip skirts as painted (ridge X 96.5-106.5). The pent roof only under the balcony's east part, as painted (u 15955-16300). The lower storey's walls are not painted (bare trees and silk): plain plaster walls with timber posts, a door (invisible board) and two windows on the route side."
+  },
+  "S3.bld.tavern_wing_16300": {
+   "how": "model",
+   "why": "built wider than its placeholder footprint: walls X 107.0-112.4 (footprint 107.0-110.6), D -3.6..0.45. The painted east eave (16880,1508)->(16602,1787) at a real eave height of 3.1 m lies on X ~114.3, over the 杈子; the eave is kept at X 113.55 (0.4 m short of the 杈子 at X 113.94) and the east wall 1.15 m in from it, so bare ground lies under the eave as painted (the placeholder's wall at X 110.6 left a 3 m gap the scroll doesn't paint). The ridge at its painted place (X 109.5, from (16420,1470) and (16710,1160) at 5.0 m). The south gable wall stands 0.4 m behind the two bare trees painted at the bottom edge in front of it (D -4.04; with the footprint's -4.45 they stood inside the wall)."
+  },
+  "S3.bld.tavern_gate_16870": {
+   "how": "model",
+   "why": "an open gatehouse (门楼): no closed walls, four posts to the ground plus the two thin painted posts, the 垂柱 at the west front ending in mid-air at its painted knob (2.9 m), the valance, three boards (all illegible: □□□□, □□, □□ smudges), the striped curtain (kit_common.swag_curtain, a stand-in until it lands), the slatted panel with a curved top, the carved door leaf standing open; walkable from the open ground behind it to the bar fence. Its roof is flat-topped (盝顶) at the measured eave 5.49 (an upper bound from an est base, kept so the scaffold that stands on it projects onto its painted poles), its deck carrying the 彩楼欢门."
+  },
+  "S3.str.cailou_huanmen_16880": {
+   "how": "model",
+   "why": "the set piece, built on the gate's roof deck (not on the ground): a lashed cage (the diamond-lattice parapet, posts, the four painted tiers as ledgers, the dense uprights) and the 18 painted poles (plain, fans, A-frames, three bound spires and a short one) from structures_w's pole-by-pole points (map/strokes/S3.json, scan px; layout.json carries only the base), each placed at a chosen depth on the roof with the frame F1, so from the scroll's view every top projects onto its painted stroke. No flowers, streamers or lamps (as painted). Tallest top 15.0 m (pole15, painted (17230, 499))."
+  },
+  "S3.str.chazi_barrier_16800": {
+   "how": "model",
+   "why": "built as the map reads it, a 杈子 of crossed bars between two rails (1.05 m; painted 1.2 at 77 px/m), with the capped box post where the painted foot line passes u 16905; t2's other reading (a railed stair up to the gate) is not built."
+  },
+  "S3.prop.lamp_box_jiaodian_17035": {
+   "how": "model",
+   "why": "face 0.55 x 1.25 m on 0.7 m legs behind the bar fence: painted, its foot meets the fence's top in the scroll's view (H 0.37 at its depth); raised so both 腳 and 店 clear the 1.15 m fence for a walker in front of the gate. 腳店 on its south face and 十千 (small, faint) on its east face, from the section's sign atlas, as painted."
+  },
+  "S3.prop.xinjiu_flagpole_17630": {
+   "how": "model",
+   "why": "the pole at its est base (D 3.22, foot hidden behind the 串车's load), top, crossbar, bird vane (head west) and X-frame at their painted heights. The bar is level at the height painted at the pole (6.43 m) and tied to the scaffold's north-east post: painted, it is level across the picture from a pole at D 3.2 to a scaffold at D <= -0.9, which no level bar can be (it would climb 2.9 m to meet the painted tie), so it meets the scaffold 2.9 m lower than painted. The banner hangs from its own yard under the bar's east half, centred where it is painted (u 17428-17562), facing south as painted (the bar itself runs mostly north-south). The two guy ropes painted from the banner's west corner to the big parasol's rim are not built: they would end on the props agent's parasol, whose rim isn't known to this kit."
+  }
+ },
+ "edges": {
+  "sides": {
+   "what": "invisible walls round the painted area, one per side (edge:south, edge:east, edge:north, edge:west; the world page drops a side that is a seam with a loaded neighbour): the S4b seam at u 15500 (west), the silk's bottom (south) and top (north) edges, the S2 seam at u 20500 (east)",
+   "why": "outside the painted area the scroll paints nothing (north, south) or the neighbours stand (west: S4b, built; east: S2, a painted panel until it's built)"
+  },
+  "seams_on_land": {
+   "what": "edge:west and edge:east run only along the seams' land parts, from the silk's edge to the shore (river_plan.json `edges`); across the river the shore walls (edge:shore) and the boats' rails close the walk",
+   "why": "S4b's sterns run 3-6 m past the west seam and S3's moored south-bank boat runs past the east seam at real size: a wall on the seam would stand across their decks"
+  },
+  "ground_at_seams": {
+   "what": "the ground stops 0.5 m past both seams and dips 0.12 m toward them; it runs 16 m past the silk's top and bottom edges under the mist",
+   "why": "build_rules.md, Build 2: S4b (west) is built; S2 (east) is built at the same time, and its ground or panel covers the seam; the water strips stop exactly on the seams (the lead's note: seams=(\"west\", \"east\"))"
+  },
+  "north_detour": {
+   "what": "edge:north follows the silk's top edge from the S4b seam to the far railing of the bridge's north ramp (138.48, 30.54), runs along the far railing's wall and round the north foot 1-3 m past the top edge ((140.03, 32.30), (141.28, 33.73)), and back to the top edge at (144.91, 30.54), then on to the S2 seam (gen/sections/rainbow_bridge/bridge_plan.json edge_north); the ground runs on there (it runs 16 m past the top edge everywhere)",
+   "why": "the bridge's built north ramp, extended 3.0 m along its axis to walk at 34 deg, lands 2-3 m past the silk's top edge: a wall on the edge would stop walkers on the deck's low end. The far bank west of the bridge stays closed (river_plan.json far_bank) by the water, the far railing and the ramp's skirt"
+  }
+ },
+ "boats": {
+  "S3.veh.boat_under_way_15595": {
+   "kit": {
+    "kind": "grain",
+    "lw": 12.0,
+    "beam": 2.8,
+    "free": 0.6,
+    "hold": "awning",
+    "laden": false,
+    "cabin": false,
+    "sweep": "port",
+    "bow_deck": 1.82,
+    "sweep_bar_h": 0.85,
+    "sweep_bar_w": 1.0,
+    "sweep_crew_in": 0.15
+   },
+   "why": "摇橹向前 (types #6): a cargo boat riding high under a big arched mat roof, worked by its great sweep over the low stern. kind grain (as painted: mat-covered hold, horn beam at the bow). lw 12.0 (0.6 of the type): painted 370-400 px long against its 62-90 px crew, about 5 figure lengths (10-12 m), and at 20 m it would run into S4b's raft sterns. beam 2.8 (Song inland proportion for a 12 m hull; painted beam_n-beam_s 2.6 m). free 0.6 (choice): the layout's stern top gives 0.52 (the low stern the sweep crew stand on, deck H -0.13); with the kit's sheer the after deck lands at 0.66 above the water, the bow at 1.6 (painted raised bow deck H 1.12 = 1.82). hold awning: the arched mat roof (painted over most of the hull; the kit's awnings cover 0.30-0.78). cabin false: no crew house aft (the sweep crew stand where the kit's house would be; boats_page_lessons). sweep port: the blade trails astern a little to the south (u 16070-16135, v 555-570, just below the hull's axis). B9 raised bow deck built (fix-boats, details pass 2026-10-13: bow_deck 1.82 = the painted H 1.12 over the water at -0.7; the three bowmen stand on it). Waits on the kit factory: B1 awnings over the whole length. Sweep (fix-boats, details pass 2026-10-13): its crew stand 0.15 m behind the crossbar (sweep_crew_in; the kit's pt_sweep_crew, their people.json crew job `at`), the bar 0.85 m over the deck they stand on (sweep_bar_h: work_sweep~bar's grip, the take's palms 0.72-0.87 m) and 1.0 m to each side of the loom (sweep_bar_w: the crew spread 0.6 m either way across it and hold it 0.3-0.4 m to each side): both hands on the bar (contact_check work_sweep)."
+  },
+  "S3.veh.boat_towed_mast_16228": {
+   "kit": {
+    "kind": "grain",
+    "lw": 12.0,
+    "beam": 3.1,
+    "hold": "laden",
+    "mast": "up",
+    "tow_to": "tracker_16333"
+   },
+   "why": "逆水行舟's twin at S3 (types #7): a heavily laden cargo boat seen from its stern, its A-frame mast up with stays, towed by the five trackers. kind grain, hold laden (the mat-covered cargo heaped high over the stern half; the kit's mound with its rope net); free from the layout's bow top (0.65). lw 12.0 (0.6 of the type): seen end-on its mapped 2.5 m is foreshortened; 12 m keeps it in the river's packed west reach. beam 3.1. mast up (the kit's 9 m A-frame, the painted ladder look), tow_to tracker_16333: the tow line from the masthead made fast to the rear tracker, as the map says. Waits on the kit factory: B7 mast form (the painted mast is a single ladder-like pole or an A-frame seen edge-on), and the bow beam with the poler (the kit's grain horns stand in)."
+  },
+  "S3.veh.boat_passenger_long_16398": {
+   "kit": {
+    "kind": "passenger",
+    "lw": 11.4,
+    "beam": 2.9,
+    "cabin": {
+     "x0": 0.08,
+     "x1": 0.92,
+     "pattern": "passenger",
+     "roof": "board",
+     "segs": 3
+    },
+    "bow_canopy": false,
+    "stern_house": false,
+    "cargo": []
+   },
+   "why": "The very long passenger boat moored at the far bank (types #8): kind passenger, a continuous cabin of lattice windows from the bow deckhouse to the stern cabin (cabin 0.08-0.92 of the hull, three roof segments for the painted raised roof section and the upper deckhouse aft). lw 11.4 (0.6 of the type; painted 945 px, 11.9 m mapped): the far row (this boat and three more end to end) has about 28 m of far bank at the frame's scale. beam 2.9 (Song proportion). bow_canopy false (its deckhouse reaches the bow), stern_house false (the painted upper deckhouse is no higher than the cabin), cargo none (nothing on its roof). free from the layout (0.52: painted low, its doorway figure at H -0.36)."
+  },
+  "S3.veh.boat_awning_17442": {
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.2,
+    "moor": [
+     "S3.prop.mooring_post_17702"
+    ]
+   },
+   "why": "The boat with a fore awning and a high mat cabin moored at the far bank (types #9): kind small, not passenger (the catalogue's preset): painted 265 px against the long passenger boat's 945 px (0.28 of it), so at the passenger boat's 11.4 m it would be 3.2 m; the small type at 5.0 m (0.63 of its 8 m) is the closest real size, and a passenger hull (at least 11.4 m) would not fit the far row. The small type's arched mat awning stands for its high mat cabin. moor: to the mooring post at the water's edge past its stern. Waits on the kit factory: B1 awnings anywhere (its fore awning and its cabin), B2 pointed small bow."
+  },
+  "S3.veh.boat_lowered_mast_17708": {
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.2,
+    "mast": "down",
+    "mast_h": 6.0
+   },
+   "why": "The long low boat with its mast lowered on a crutch (types #9-10, conf low): kind small (painted 290 px, 0.31 of the passenger boat: a grain hull of at least 12 m, the catalogue's preset, would not fit the far row). mast down (the kit's A-frame laid aft over the roof, its foot at the bow, west: the painted crutch at the west end holding a spar that runs east past the stern), mast_h 6.0 (choice: the painted spar is 370 px, longer than the 290 px hull). Waits on the kit factory: B7 the mast crutch, B11 fenders (the heavy log-like wales), B1 its low roof."
+  },
+  "S3.veh.boat_mat_cabin_18005": {
+   "kit": {
+    "kind": "small",
+    "lw": 5.0,
+    "beam": 2.2
+   },
+   "why": "The boat with a dark arched mat cabin and two passengers (types #10, conf low): kind small (the catalogue's preset, small_awning): painted 315 px; lw 5.0 (0.63 of the type), beam 2.2. Its stern hood waits on the kit factory (B6 small-hull stern)."
+  },
+  "S3.veh.boat_unloading_17705": {
+   "kit": {
+    "kind": "grain",
+    "lw": 12.0,
+    "beam": 3.0,
+    "free": 1.2,
+    "hold": "hatch",
+    "laden": false,
+    "cabin": {
+     "x0": 0.03,
+     "x1": 0.42,
+     "pattern": "house",
+     "roof": "mat",
+     "segs": 2,
+     "wall_h": 1.3
+    },
+    "cargo": [
+     [
+      "jar",
+      0.9,
+      0.45,
+      "deck"
+     ],
+     [
+      "jar",
+      0.9,
+      -0.35,
+      "deck"
+     ],
+     [
+      "sack",
+      0.47,
+      0.6,
+      "deck"
+     ],
+     [
+      "sack",
+      0.47,
+      -0.6,
+      "deck"
+     ],
+     [
+      "basket",
+      0.5,
+      0.0,
+      "deck"
+     ]
+    ]
+   },
+   "why": "The cargo boat unloading at the south bank (types #11): kind grain, lw 12.0 (0.6 of the type; painted about 600 px with its stern under the awnings against 110-135 px porters, 10-12 m), beam 3.0. free 1.2: riding high, its foredeck where the six porters stand at H 0.21 (0.91 above the water; the layout's bow top gives 0.49). hold hatch (no awning over the foredeck, where the porters work: the kit's awnings would cover 0.30-0.78, over them), cabin: the arched mat hood and flat mat awnings over its stern half as a low mat-roofed house aft (0.03-0.42, wall_h 1.3: painted about 1.5 m over the deck; the kit's 1.7 m house roof stood 3.8 m over the water). cargo: jars at the bow, sacks and a basket amidships (painted: jars and bundles on the foredeck, dark sacks heaped amidships). It touches the south bank: the page opens its rail there (walk aboard from the bank). Waits on the kit factory: B10 grapnel under the bow, B1 flat mat awnings on poles over the stern."
+  },
+  "S3.veh.boat_mast_lowering_19518": {
+   "kit": {
+    "kind": "passenger",
+    "lw": 11.4,
+    "beam": 3.3,
+    "mast": "lowering",
+    "mast_at": 0.5,
+    "cabin": {
+     "x0": 0.03,
+     "x1": 0.55,
+     "pattern": "boards",
+     "roof": "board",
+     "segs": 3,
+     "wall_h": 1.4
+    },
+    "stern_house": false,
+    "bow_canopy": false,
+    "cargo": [
+     [
+      "coil",
+      0.9,
+      0.0,
+      "deck"
+     ],
+     [
+      "roll",
+      0.8,
+      0.75,
+      "deck"
+     ]
+    ]
+   },
+   "why": "大船抢险 (types #12): built with the passenger preset as the lead set (kind by hand: kind_of reads grain), mast lowering. lw 11.4 (0.6 of the type: the area agent's call (a): its painted 11.0 m, kept whole on S3's side of u 20500, its bow outside the arch's near face; at 19 m its stern would run 8-12 m into S2 over S2.veh.boat_mat_cargo_21055). beam 3.3 (choice, Song proportion; painted beam_n-beam_s 4.0 m). cabin: the painted planked after cabin under the high poop and the mat-roofed deckhouse amidships as one cabin of boards from 0.03 to 0.55 of the hull (three roof segments), wall_h 1.4 so that its roof (3.35 m above the water) lands near the painted poop (2.5-3 m, river_e; the four poop hands at H 2.29 drop onto it). stern_house false: the kit's raised house stands 4.7 m over the water, far over the painted poop. bow_canopy false (an open forward deck). mast lowering, mast_at 0.5: the A-frame's foot amidships (hidden), its head lowered aft over the poop (painted head at (20295, 175)). cargo: the coiled rope at the bow and the striated bundle (a mat roll) on the forward deck. free from the layout's bow top (0.86; painted 0.78 amidships, 0.86 at the bow). Clearance: wholly outside the arch's plan (incl. the facing timber) at rest and through its 0 m run, so nothing of it passes under the soffit (river report). Waits on the kit factory: B3 windlass at the squared bow (the kit's passenger bow platform and curled stem post stand in)."
+  },
+  "S3.veh.boat_cabin_under_arch_19225": {
+   "kit": {
+    "kind": "small",
+    "lw": 10.0,
+    "beam": 2.6,
+    "cargo": []
+   },
+   "why": "The cabin boat under the arch (not in the factory's inventory): kind small, lw 10.0 (the lead's small range 8-12 m), beam 2.6, free from the layout (0.73: the painted cabin floor 0.71 above the water). Why not the catalogue's passenger: a passenger hull at 0.6 (17.2 m over all) is longer than the arch is wide along its heading (12.96 m at D 20), so a high end (the curled stem post at 3.0 m, the stern gallery rail at 3.3 m) would stand under a face where the soffit less its facing timber is 1.9-2.1 m; and the long hull would overlap S2's moored cargo boat and the big boat. The small hull lies wholly under the arch with its mat awning crown 1.8 m above the water, under a soffit of 2.4-3.6 m along its 3 m drift. Cost to loyalty: painted as a long boat (≥ 725 px) with a railed open cabin under a planked roof; built as a 10 m awning boat. Waits on the kit factory: B4 open cabin (railed sides, planked roof) on a low hull."
+  },
+  "S3.veh.boat_skiff_19255": {
+   "kit": {
+    "kind": "small",
+    "lw": 4.8,
+    "beam": 1.6,
+    "awning": false,
+    "cargo": []
+   },
+   "why": "The narrow empty skiff under the arch's south foot (conf low): kind small, open (awning false: thwarts and floor boards), lw 4.8 (0.6 of the type; painted 340 px, mapped 4.8 m), beam 1.6 (painted slim), free from the layout (0.35: its gunwale painted 0.29 above the water). Nothing on it (no crew, oar, pole or line painted)."
+  },
+  "S3.veh.boat_moored_south_bank_19745": {
+   "kit": {
+    "kind": "small",
+    "lw": 12.0,
+    "beam": 3.0
+   },
+   "why": "The long boat moored along the south bank past the arch, its hull hidden by the shops' roofs (types #13): kind small (not the catalogue's grain): its painted mat roof stands about 1.2 m above the water (the waving man's feet at H 0.48), where a grain hull's awnings rise 3-3.8 m; the small hull's arched mat awning (crown 1.7 m) is the closest, so the two men on its roof stand on it. lw 12.0 (painted 895 px against its 155 px waver: about 12 m; the lead's small range 8-12 m), beam 3.0. Waits on the kit factory: B1 awnings anywhere (its mat roof at the west part, the hatch amidships, the long low planked roof aft)."
+  }
+ },
+ "unbuilt": {}
+}

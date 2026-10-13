@@ -1,0 +1,37 @@
+[
+ {
+  "id": "far_street_man_25688",
+  "model": "townsman",
+  "clips": [
+   "browse",
+   "look"
+  ],
+  "base": {
+   "nudge": [
+    -0.01,
+    0
+   ],
+   "facing": 180
+  },
+  "nudge": [
+   -0.85,
+   -0.51
+  ],
+  "facing_deg": 180,
+  "moved_m": 0.98,
+  "turned_deg": 0,
+  "before": {
+   "cost": 0.09,
+   "fails": "contact:table palm_L 0.356; contact:table palm_R 0.194",
+   "contacts": "browse:palm_L->S2.bld.far_shed_25785 q0.356/0.356 FAIL; browse:palm_R->S2.bld.far_shed_25785 q0.194/0.194 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "browse:palm_L->S2.bld.tall_rear_hall_25330 q0.02/0.02 PASS; browse:palm_R->S2.bld.tall_rear_hall_25330 q0.092/0.092 PASS",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 41.032
+ }
+]

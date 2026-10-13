@@ -102,7 +102,20 @@ for o in list(scene.objects):
     bpy.data.objects.remove(o, do_unlink=True)
 os.makedirs(os.path.dirname(raw) or ".", exist_ok=True)
 if bns:
-    kb.export_boats(bpy, scene, bns, raw)
+    coll = kb.export_boats(bpy, scene, bns, raw)
+    # the boats' geometry by node, for the contact checks of their crews (blender/boat_owners.py; details pass, fix-boats):
+    # gen/sections/<name>/boat_owners.{json,bin}; never fails the build
+    try:
+        import boat_owners
+        # argv[2] (optional): another directory for them (fix-boats: a kit change measured in scratch before export)
+        gdir = argv[2] if len(argv) > 2 else os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                                         "gen", "sections", os.path.basename(os.path.normpath(src)))
+        if os.path.isdir(gdir):
+            print("BOAT_OWNERS " + json.dumps(boat_owners.write(coll, os.path.join(gdir, "boat_owners.json"),
+                                                                os.path.join(gdir, "boat_owners.bin"),
+                                                                layout.get("section"))), flush=True)
+    except Exception as ex:  # noqa: BLE001
+        print(f"BOAT_OWNERS failed: {ex!r}", flush=True)
 man = raw[:-len("_raw.glb")] + ".json" if raw.endswith("_raw.glb") else raw + ".json"
 summary = {"about": "Written by blender/build_boats.py: the section's boats as built for the page (both detail levels "
                     "in the GLB). tris: visible triangles per detail level, collider triangles, triangles per node.",

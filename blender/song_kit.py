@@ -691,7 +691,9 @@ def house(W, D, rng, eave=2.9, rise=1.5, plinth=0.45, bays=3, door_bays=(1,), br
             bx("plaster", True, (xa, 0.0, zt), (xb, 0.12, zt + 0.85))
             lattice_window((xa, 0.0), (xb, 0.0), zt + 0.85, top - 0.55)
             bx("plaster", False, (xa, 0.0, top - 0.55), (xb, 0.12, top - 0.24))
-    bx("timber", False, (0.1, 0.1, zt), (W - 0.1, D - 0.1, zt + 0.04))  # floor boards
+    # floor boards: they collide (fix-gate, details pass 2026-10-13, as S4's halls): over the collide plinth alone the
+    # walkable top was zt - 0.015, so people and the player stood 5.5 cm inside the visible boards
+    bx("timber", True, (0.1, 0.1, zt), (W - 0.1, D - 0.1, zt + 0.04))
     if brackets:
         for x in xs:
             bracket(x, 0, top, (0, -1), s=0.55, mat="timber")
@@ -965,7 +967,7 @@ def open_hall(W, D, rng, eave=2.5, rise=1.2, bays=3):
     bx("plaster", True, (W - 0.06, 0.12, zt), (W + 0.06, D - 0.12, top))
     bx("plaster", True, (0.12, D - 0.06, zt), (W - 0.12, D + 0.06, top))
     beam("timber", True, (-0.2, 0, top - 0.12), (W + 0.2, 0, top - 0.12), 0.16, 0.22, 0.03)
-    bx("timber", False, (0.1, 0.1, zt), (W - 0.1, D - 0.1, zt + 0.04))
+    bx("timber", True, (0.1, 0.1, zt), (W - 0.1, D - 0.1, zt + 0.04))  # floor boards collide (fix-gate, as house())
     hip_roof(-0.7, W + 0.7, -0.75, D + 0.7, top + 0.15, top + 0.15 + rise, lift=0.35, ns=10, nt=5, ornament_s=0.8)
 
 

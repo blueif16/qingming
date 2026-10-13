@@ -24,10 +24,12 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { MeshBVH } from 'three-mesh-bvh';
 import { InkPost } from './post.js';
 import { Tiers } from './tiers.js';
+import { applyDetail, detailStats } from './detail.js';
 import { patchSurface, SURFACE_KINDS } from './surface.js';
 import { Player } from './player.js';
 import { DEFAULTS, loadSettings, buildGui, saveSettings } from './settings.js';
-import { loadCharacters, People, CLIP_META } from './people.js';
+import { loadCharacters, loadClips, People, CLIP_META } from './people.js';
+import { castClips, trafficClips, LATE_CLIPS } from './cast_clips.js';
 import { FollowCam } from './followcam.js';
 import { lightAt, Sky, localHour } from './daylight.js';
 import { TimeScroll } from './ui/time.js';
@@ -38,6 +40,9 @@ import { trackGpuMemory } from './gpumem.js';
 import { TextureCache, sharedTexturePlugin } from './assets.js';
 import { ScrollHud } from './scroll_hud.js';
 import { Boats } from './boats.js';
+import { Cells } from './cells.js';
+import { createAmbient } from './ambient.js';
+import { Trees3D, trunkColliders } from './trees3d.js';
 import { Sound } from './sound.js';
 import { createUI } from './ui/index.js';
 import { waitForStart } from './ui/start.js';
@@ -86,7 +91,8 @@ document.body.appendChild(renderer.domElement);
 // the device tier (tiers.js): render scale, anti-aliasing, the colour target, shadows and the streaming window by
 // device; ?tier=low|mid|high, ?adapt=0 (no adaptive resolution), ?mrt=0 (the separate normal pass, for A/B)
 const MRT = query.get('mrt') !== '0';
-const tiers = new Tiers({ gl: renderer.getContext(), settings: s, query, onChange: (cfg) => applyTier(cfg) });
+const tiers = new Tiers({ gl: renderer.getContext(), settings: s, query, onChange: (cfg) => applyTier(cfg), onDetail: applyDetail });
+applyDetail(tiers.cfg, tiers.detailScale); // the detail systems (detail.js) read the tier's numbers as they register
 const gpuMem = query.get('gpumem') === '1' ? trackGpuMemory(renderer.getContext()) : null; // ?gpumem=1: count GPU bytes (gpumem.js)
 
 const scene = new THREE.Scene();
@@ -99,9 +105,10 @@ const sun = new THREE.DirectionalLight(s.sunColor, s.sunIntensity);
 sun.castShadow = true;
 sun.shadow.mapSize.setScalar(tiers.cfg.shadow.size); // 1024 on touch screens and the low tier
 // the shadow map follows you along the joined world, snapped to its texels so shadows don't shimmer as you walk. Its box
-// and how often it is redrawn are the tier's (tiers.js shadow; placeSun, shadowPolicy): high, 96 x 96 m round you every
-// frame (as before); mid and low, a smaller box pushed ahead of where you look, its centre snapped to 1-2 m, redrawn
-// when that centre or the sun moves, and for the people (and boats) 20 or 15 times a second
+// and how often it is redrawn are the tier's (tiers.js shadow; placeSun, shadowPolicy): high, 96 x 96 m round you, its
+// centre snapped to 1 m, the people every frame; mid and low, a smaller box pushed ahead of where you look, its centre
+// snapped to 1-2 m, the people (and boats) 20 or 15 times a second. The world's own layer is redrawn only when that
+// centre or the sun moves (shadowLayers: the people's redraws draw over a kept copy of it)
 let SHADOW_HALF = tiers.cfg.shadow.half;
 Object.assign(sun.shadow.camera, { left: -SHADOW_HALF, right: SHADOW_HALF, top: SHADOW_HALF, bottom: -SHADOW_HALF, near: 1, far: 220 });
 sun.shadow.bias = -0.0004;
@@ -179,12 +186,79 @@ function shadowPolicy(dt) {
   st.age += dt;
   st.frames++;
   const moved = shadowCenter.x !== st.x || shadowCenter.z !== st.z || sunDir.x !== st.sx || sunDir.y !== st.sy || sunDir.z !== st.sz;
-  const redraw = st.dirty || moved || !(hz < Infinity) || st.age >= 1 / hz - 1e-4;
+  const turn = !(hz < Infinity) || st.age >= 1 / hz - 1e-4, redraw = st.dirty || moved || turn;
+  // the world's layer too (the people's turn alone redraws only the movers); the tree cards are in it and turn to the
+  // camera, so a people's turn also redraws it once the camera has gone CARD_STEP from where it was last drawn
+  if (st.dirty || moved || (turn && camera.position.distanceToSquared(shadowLayers.cam) > CARD_STEP * CARD_STEP)) shadowLayers.world = true;
   if (redraw) {
     Object.assign(st, { dirty: false, age: 0, x: shadowCenter.x, z: shadowCenter.z, sx: sunDir.x, sy: sunDir.y, sz: sunDir.z });
     st.redraws++;
   }
   post.shadowUpdate = redraw;
+}
+// Two layers (perf batch 2, proposal rank 4). The split rule: everything in the scene is the world's layer (static) by
+// default; a direct child of the scene with `userData.shadowMover = true` is a mover, its whole subtree drawn in the
+// per-frame layer. Movers today: the crowd's group and people's own roots (crowd.js, people.js), the boats' batches
+// (boats.js) and your character. Anything else that casts a shadow and moves must set the flag on the object it adds to
+// the scene, or its shadow stays where it was until the world's layer is redrawn (a wind sway in the shader is no move:
+// its shadow material keeps the rest pose). The world's layer is drawn into the shadow map only when it is due (above:
+// its snapped centre or the sun stepped, a section came or went, the shadows changed, the camera went CARD_STEP for the
+// tree cards; here: a static direct child of the scene came or went), and its depth is kept in a depth-only
+// renderbuffer. The other redraws (the people's turn, peopleHz) copy that depth back in place of the clear
+// (blitFramebuffer) and draw only the movers over it. A static thing that changes inside an object already in the scene
+// asks for the world's layer with shadowLayers.world = true. The map the materials sample is three's own, as before.
+// ?shadowcache=0: one layer, as before.
+const CARD_STEP = 1; // metres the camera goes before the tree cards' shadows (turned to it) are redrawn
+const shadowLayers = { on: query.get('shadowcache') !== '0', world: true, fb: null, rb: null, w: 0, h: 0, worldDraws: 0, moverDraws: 0,
+  cam: new THREE.Vector3(), last: [], // the camera and the scene's static children when the world's layer was last drawn
+  statics: new THREE.Object3D(), movers: new THREE.Object3D() }; // stand-in roots: the shadow pass walks only their children
+{
+  const sm = renderer.shadowMap, draw = sm.render, gl = renderer.getContext(), st = renderer.state, L = shadowLayers, ownClear = renderer.clear;
+  const fbOf = (rt) => renderer.properties.get(rt).__webglFramebuffer;
+  const copyDepth = (from, to) => {
+    st.bindFramebuffer(gl.READ_FRAMEBUFFER, from);
+    st.bindFramebuffer(gl.DRAW_FRAMEBUFFER, to);
+    gl.blitFramebuffer(0, 0, L.w, L.h, 0, 0, L.w, L.h, gl.DEPTH_BUFFER_BIT, gl.NEAREST);
+    st.bindFramebuffer(gl.READ_FRAMEBUFFER, null);
+  };
+  const statics = L.statics.children, movers = L.movers.children; // filled per pass (never the objects' parent)
+  sm.render = function (lights, sc, cam) {
+    if (!L.on || sc !== scene || !this.enabled || (!this.autoUpdate && !this.needsUpdate) || !lights.length) return draw.call(this, lights, sc, cam);
+    statics.length = movers.length = 0;
+    for (const o of sc.children) (o.userData.shadowMover ? movers : statics).push(o);
+    // something static came into the scene or left it (a section's trees, a module's meshes): the world's layer again
+    if (statics.length !== L.last.length || statics.some((o, i) => o !== L.last[i])) L.world = true;
+    let clear;
+    if (L.world || !sun.shadow.map || !L.fb || sun.shadow.map.width !== L.w || sun.shadow.map.height !== L.h) {
+      L.last = [...statics];
+      L.cam.copy(camera.position);
+      // the world's layer: cleared and drawn as three does, its depth kept (the same format: DEPTH_COMPONENT24), then
+      // the movers drawn over it without a clear
+      draw.call(this, lights, L.statics, cam);
+      const map = sun.shadow.map;
+      if (!L.fb || map.width !== L.w || map.height !== L.h) {
+        if (L.fb) { gl.deleteFramebuffer(L.fb); gl.deleteRenderbuffer(L.rb); }
+        L.w = map.width; L.h = map.height;
+        L.rb = gl.createRenderbuffer();
+        gl.bindRenderbuffer(gl.RENDERBUFFER, L.rb);
+        gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT24, L.w, L.h);
+        gl.bindRenderbuffer(gl.RENDERBUFFER, null);
+        L.fb = gl.createFramebuffer();
+        st.bindFramebuffer(gl.DRAW_FRAMEBUFFER, L.fb);
+        gl.framebufferRenderbuffer(gl.DRAW_FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, L.rb);
+      }
+      clear = () => { const m = fbOf(map); copyDepth(m, L.fb); st.bindFramebuffer(gl.DRAW_FRAMEBUFFER, m); };
+      L.world = false;
+      L.worldDraws++;
+      this.needsUpdate = true;
+    } else {
+      const map = sun.shadow.map;
+      clear = () => copyDepth(L.fb, fbOf(map)); // the world's depth in place of the clear
+    }
+    renderer.clear = clear;
+    try { draw.call(this, lights, L.movers, cam); } finally { renderer.clear = ownClear; statics.length = movers.length = 0; }
+    L.moverDraws++;
+  };
 }
 
 // daylight on: sun (or moon), fill, sky and haze from the hour (daylight.js); off: the panel's own sun and colours
@@ -274,14 +348,15 @@ function colorOf(std) {
   return trueColors.get(std);
 }
 function makeMaterial(std, mode) {
-  if (mode === 'pbr') return std;
+  if (mode === 'pbr') return std.userData.qmPatch ? std.userData.qmPatch(std) : std; // a material with its own shader patch (trees3d.js)
   const p = { map: std.map, color: colorOf(std).clone(), side: std.side, transparent: std.transparent, alphaTest: std.alphaTest, name: std.name };
   const kind = SURFACE_OFF ? null : SURFACE_KINDS[std.name]; // world materials only: no swatch may read as repeated tiles
   const m = mode === 'toon' ? new THREE.MeshToonMaterial({ ...p, gradientMap: toonRamp }) : mode === 'unlit' ? new THREE.MeshBasicMaterial(p) : new THREE.MeshLambertMaterial(p);
   // tree cards and the boats' wet rings write the empty normal (post.js): no ink from a camera-facing plane, and a ring
   // (transparent) leaves the water's normal under it, as when both were left out of the separate normal pass
   if (std.defines?.QM_INK_NEUTRAL !== undefined || std.name === 'water_ring') m.defines = { QM_INK_NEUTRAL: '' };
-  return patchSurface(m, kind);
+  const out = patchSurface(m, kind);
+  return std.userData.qmPatch ? std.userData.qmPatch(out) : out;
 }
 
 function materialFor(std) {
@@ -312,6 +387,10 @@ const without = (list, item) => { const i = list.indexOf(item); if (i >= 0) list
 const texCache = new TextureCache();
 const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 loader.register(sharedTexturePlugin(texCache));
+// the 3D trees (trees3d.js; gen/details/trees/): near you a tree's wood and painted crown, in the wind; its card stays the
+// far level. One top-level batch, static in the shadow layers (at rest). ?trees=cards: the cards alone, as before
+const trees3d = query.get('trees') === 'cards' ? null : new Trees3D({ scene, texture: (u) => texCache.image(u), release: (u) => texCache.release(u),
+  shade: (mesh, std, on) => { if (on) { shaded.push({ mesh, std }); mesh.material = materialFor(std); } else unshade(mesh); }, onChange: () => { shadowState.dirty = true; } });
 const player = new Player(camera, renderer.domElement, s);
 const postOptions = () => ({ mrt: MRT, samples: tiers.cfg.msaa, hdr: tiers.cfg.hdr, fxaa: tiers.cfg.fxaa });
 const post = new InkPost(renderer, postOptions());
@@ -329,8 +408,21 @@ const BOAT_Q = ['moored', 'painted', 'waves'].includes(query.get('boatflow')) ? 
 const boatMode = () => { const m = BOAT_Q || s.boats; return m === 'auto' || !['moored', 'painted', 'waves'].includes(m) ? (tiers.cfg.flowCap > 0 ? 'waves' : 'painted') : m; };
 const boatCap = () => (query.has('boatflowcap') ? Math.max(0, Math.floor(+query.get('boatflowcap')) || 0)
   : boatMode() === 'waves' ? Math.max(tiers.cfg.flowCap, 2) : 0);
-const boats = new Boats({ scene, loader, player, noNormalPass, getPeople: () => people, flow: boatMode() === 'moored' ? null : 'waves' });
+// the boats' batches are one per material across the loaded sections (boats.js join): the page shades them while they
+// live (their material's variant, as a section's meshes) and disposes the material with the last of them
+const onBatch = (bm, on) => {
+  if (on) { shaded.push({ mesh: bm, std: bm.material }); bm.material = materialFor(bm.material); scene.add(bm); return; }
+  const it = shaded.find((x) => x.mesh === bm);
+  scene.remove(bm); unshade(bm);
+  if (it) disposeStd(it.std);
+};
+const boats = new Boats({ scene, loader, player, noNormalPass, getPeople: () => people, onBatch, flow: boatMode() === 'moored' ? null : 'waves' });
 if (boats.flow) boats.flow.cap = boatCap(); // the most waves boats a section
+// the world in cells (cells.js; tools/cells.mjs cuts them at export): every material's meshes of the loaded sections as
+// one batch, drawn cell by cell; shaded and disposed through the same hook as the boats' batches. Opt-in (?cells=1):
+// the S3 pilot showed no clear gain on the phone proxy (the crowd, not the world, is most of what the crown draws), and
+// no shipped GLB is cut yet (gen/perf/batch2/notes.md, "Cells").
+const cells = new Cells({ renderer, onBatch, enabled: query.get('cells') === '1' });
 player.platforms = boats;
 
 const sections = new Map(); // the loaded ones: name -> { name, layout, people, scene, backdrop, root, bvh, edges: {side: geometry}, ... }
@@ -395,6 +487,7 @@ async function fetchSection(name) {
   sec.bvh = colliders.length ? new MeshBVH(colliders.length === 1 ? colliders[0] : mergeGeometries(colliders)) : null;
   sec.bvhMs = performance.now() - t0;
   for (const n of sec.materials) stdByName.get(n).n++;
+  cells.prepare(sec); // its cell meshes as batch geometry (cells.js); the meshes stay, hidden, their colliders built above
   return sec;
 }
 
@@ -420,7 +513,35 @@ function rebuildCollider() {
   const sm = seams(), walls = [];
   for (const sec of sections.values()) for (const [side, g] of Object.entries(sec.edges)) if (!sm.has(`${sec.name}:${side}`)) walls.push(g);
   wallsBVH = walls.length ? new MeshBVH(mergeGeometries(walls)) : null;
-  player.setColliders([...[...sections.values()].flatMap((x) => [x.bvh, ...(x.movers || [])]), wallsBVH].filter(Boolean)); // movers: boats.js
+  player.setColliders([...[...sections.values()].flatMap((x) => [x.bvh, x.trunks, ...(x.movers || [])]), wallsBVH].filter(Boolean)); // movers: boats.js; trunks: placeTrees
+}
+
+// P4 (details pass, gen/details/contacts/fix_s4/engine_patches.md): a static figure or animal of a loaded neighbour
+// standing within 3 m of a section that has just joined was grounded before that section's colliders existed (S6's
+// archer_waistguard_5465 stands on S5's casks when the gate loads first, on the ground when it loads after): ground it
+// again the way addFigure / addAnimal did. Walkers, riders, boat crews, root_h figures and perched animals keep theirs.
+function regroundNear(sec) {
+  const poly = sec.layout.painted_area.corners;
+  const segD = (x, d, a, b) => {
+    const ex = b[0] - a[0], ed = b[1] - a[1], t = Math.max(0, Math.min(1, ((x - a[0]) * ex + (d - a[1]) * ed) / (ex * ex + ed * ed || 1)));
+    return Math.hypot(x - a[0] - t * ex, d - a[1] - t * ed);
+  };
+  const near = (x, d) => poly.some((a, i) => segD(x, d, a, poly[(i + 1) % poly.length]) < 3);
+  const moving = new Set([...people.riders.map((r) => r.p), ...people.attached.map((a) => a.p)]);
+  for (const n of sections.values()) {
+    if (n === sec || !n.persons) continue;
+    const figs = n.people.figures || {}, anis = n.people.animals || {};
+    const byId = Object.fromEntries(n.layout.figures.map((f) => [f.id, f]));
+    for (const p of n.persons) {
+      if (moving.has(p) || people.agentOf.get(p)?.path) continue;
+      const q = p.root.position;
+      if (!near(q.x, -q.z)) continue;
+      const f = figs[p.id] ? byId[p.id] : null;
+      const e = !f && anis[p.id] ? n.layout.entities[`${n.layout.section}.ani.${p.id}`] : null;
+      if ((!f && !e) || Number.isFinite(figs[p.id]?.root_h) || (e && people.models[anis[p.id].model]?.info?.perch)) continue;
+      q.y = hooks.ground(q.x, q.z, ((f || e).H || 0) + 1.2);
+    }
+  }
 }
 
 function dropToSupport(x, z, fromY) {
@@ -510,6 +631,20 @@ function routePath(route, path) {
 // avatar, the load test), and disposed when nobody does
 let reg = {}, beastReg = {}; // assets/chars/characters.json, assets/animals/animals.json
 let clipMeta = null; // assets/clip_meta.json: each clip's grounding and stride, measured offline (people.js)
+// per-clip animation files (perf batch 2: tools/clip_split.mjs, assets/chars/clips.json): a character's body comes with
+// its idle, and a section's cast with the clips its routines play (castClips), fetched while the section loads; ?clipfiles=0
+// loads the full GLBs as before
+let clipFiles = null;
+const AVATAR_CLIPS = new Set(['idle', 'walk', 'run']); // updateAvatar
+// a character's split if the page may use it: listed, holding every clip characters.json gives it, and cut from the full
+// GLB this build ships (the build's content hash of that file, web/vite_asset_hashes.js; the dev and check servers have
+// no hashes and take the manifest's word); else its full GLB, so a split left stale costs bytes, never a clip
+function splitOf(n) {
+  const e = clipFiles?.chars?.[n];
+  if (!e || !reg[n]?.file || !(reg[n].clips || []).every((c) => e.base.includes(c) || e.clips[c])) return null;
+  const h = window.__qmAsset?.(reg[n].file).match(/\.([0-9a-f]{8})\.glb$/)?.[1];
+  return !h || h === e.src ? e : null;
+}
 const models = {}; // people.models is this object
 const modelUsers = new Map(); // model name -> Set of users
 const PINNED = ['sightseer', 'townsman']; // your fallback character, and the stand-in of last resort (populate)
@@ -522,15 +657,21 @@ function modelsOf(sec) {
   for (const a of Object.values(spec.animals || {})) if (beastReg[a.model]?.file) out.add(a.model);
   return out;
 }
+const clipsOf = (sec) => castClips(sec.people, castAs); // character -> the clips its routines here play
 const modelLoads = new Map(); // name -> promise, while it loads (two callers never load one model twice)
-async function ensureModels(names) {
+// clips (optional): character -> clips to have in before it returns (split characters; the others hold every clip)
+async function ensureModels(names, clips = null) {
   const want = [...names].filter((n) => !models[n] && !modelLoads.has(n));
   const chars = want.filter((n) => reg[n]?.file), beasts = want.filter((n) => !reg[n]?.file && beastReg[n]?.file);
-  const job = Promise.all([chars.length ? loadCharacters(loader, null, chars, reg, nextFrame, clipMeta) : {},
+  const split = Object.fromEntries(chars.map((n) => [n, splitOf(n)]).filter(([, e]) => e));
+  const job = Promise.all([chars.length ? loadCharacters(loader, null, chars, reg, nextFrame, clipMeta, split, clips) : {},
     beasts.length ? loadCharacters(loader, null, beasts, beastReg, nextFrame, clipMeta).catch((e) => { console.warn('animals', e); return {}; }) : {}])
     .then(([a, b]) => { Object.assign(models, a, b); });
   for (const n of [...chars, ...beasts]) modelLoads.set(n, job);
-  try { await Promise.all([job, ...[...names].map((n) => modelLoads.get(n))].filter(Boolean)); } finally { for (const n of [...chars, ...beasts]) modelLoads.delete(n); }
+  // the models already in (or loading for someone else): the clips they don't have yet, side by side with the new ones
+  const more = clips ? [...names].filter((n) => !want.includes(n) && clips.get(n)) : [];
+  const moreClips = more.map(async (n) => { await modelLoads.get(n); if (models[n]) await loadClips(models[n], clips.get(n)); });
+  try { await Promise.all([job, ...moreClips, ...[...names].map((n) => modelLoads.get(n))].filter(Boolean)); } finally { for (const n of [...chars, ...beasts]) modelLoads.delete(n); }
 }
 function useModels(user, names) { for (const n of names) { if (!modelUsers.has(n)) modelUsers.set(n, new Set()); modelUsers.get(n).add(user); } }
 function releaseModels(user) {
@@ -571,7 +712,19 @@ function populate(sec) {
   for (const [id, f] of Object.entries(spec.figures || {})) if (byId[id] && !f.carried_by) made.push(people.addFigure(byId[id], cast(f)));
   for (const w of spec.walkers || []) {
     const f = byId[w.figure];
-    made.push(people.addWalker({ ...cast(w), path: routePath(sec.layout.route, w.path), startAt: f ? [f.X, f.D] : undefined }).p);
+    // beside: a driver walking at a painted walking animal's side, a hand on its load (people.json walkers[].beside
+    // {animal: <slug>, gap: m across, + = left of travel, along: m ahead}; gen/details/contacts/fix_river/engine_beside.md):
+    // he walks the animal's own path as the follower of a pair (as addTraffic's pairs), at its place and pace, stopping
+    // and turning with it
+    const L = w.beside && people.walkers.find((q) => q.p.id === w.beside.animal);
+    const a = people.addWalker({ ...cast(w), path: L ? spec.animals[w.beside.animal].path : routePath(sec.layout.route, w.path), startAt: f ? [f.X, f.D] : undefined });
+    if (L) {
+      Object.assign(a, { follower: true, leader: L, beside: w.beside, gap: w.beside.gap ?? -0.57, sOff: w.beside.along || 0, sOffTarget: w.beside.along || 0, speed: L.speed });
+      L.partner = a;
+      a.l = a.targetL = people.laneOf(a);
+      people.startWalking(a);
+    }
+    made.push(a.p);
   }
   return made;
 }
@@ -586,6 +739,11 @@ function forget(list) {
 // (layout.json trees[].card, from trees/assign/<S>.json), mirrored where assigned. Drawn as one InstancedMesh per card,
 // turned to face the camera every frame. Without a card a tree takes the willow card. A card is loaded while a loaded
 // section has a tree on it, and freed with the last one.
+// A card comes first at 256 px (trees.json small: tools/tree_cards.mjs small; 5-60 KB instead of 100-600 KB) and is
+// swapped for the full card once the stream has nothing else to load, nearest first (sharpenCards; the tools'
+// settle() waits for the swaps, so their pictures are the full cards). ?smallcards=0 loads the full cards at once,
+// ?smallcards=only never swaps (to look at what a slow link shows first).
+const SMALL_CARDS = query.get('smallcards') !== '0', SMALL_ONLY = query.get('smallcards') === 'only';
 const cardReg = fetch('assets/trees/trees.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
 const cardKinds = new Map(); // card name -> { mesh, std, url, trees: [{x, y, z, s, flip, sec}] }
 const cards = [];
@@ -595,20 +753,23 @@ function cardKind(name) {
     cardKinds.set(name, (async () => {
       const reg = await cardReg;
       const c = reg[name] || WILLOW;
-      const tex = await texCache.image(c.file);
+      const url = SMALL_CARDS && c.small ? c.small : c.file;
+      const tex = await texCache.image(url);
       tex.colorSpace = THREE.SRGBColorSpace;
       tex.anisotropy = 4;
       const geo = new THREE.PlaneGeometry(c.width_m, c.height_m);
       geo.translate((0.5 - c.base_uv[0]) * c.width_m, (0.5 - c.base_uv[1]) * c.height_m, 0); // the trunk foot at the origin
       const std = new THREE.MeshStandardMaterial({ map: tex, alphaTest: 0.5, side: THREE.DoubleSide, name: reg[name] ? name : 'willow_card' });
       std.defines = { QM_INK_NEUTRAL: '' }; // a card writes the empty normal (post.js): no ink from a camera-facing plane
-      return { name, card: c, url: c.file, geo, std, trees: [], mesh: null };
+      if (trees3d) std.userData.qmPatch = trees3d.cardPatch(name); // the dithered hand-over to its 3D tree (trees3d.js)
+      return { name, card: c, url, full: url !== c.file ? c.file : null, geo, std, trees: [], mesh: null };
     })());
   }
   return cardKinds.get(name);
 }
 function dropCardMesh(kind) {
   if (!kind.mesh) return;
+  trees3d?.uncard(kind.mesh);
   scene.remove(kind.mesh); kind.mesh.dispose(); unshade(kind.mesh); without(noNormalPass, kind.mesh);
   kind.mesh = null;
 }
@@ -622,6 +783,7 @@ function buildCardMesh(kind) {
   noNormalPass.push(m);
   scene.add(m);
   kind.mesh = m;
+  trees3d?.card(m, kind.name); // its shadow: the 3D tree's, at rest, where the tier gives one (trees3d.js)
   if (!cards.includes(kind)) cards.push(kind);
 }
 async function placeTrees(sec) {
@@ -638,18 +800,56 @@ async function placeTrees(sec) {
   }
   for (const kind of touched) buildCardMesh(kind);
   sec.cards = touched;
+  const placed = [...touched].flatMap((k) => k.trees.filter((t) => t.sec === sec.name).map((t) => ({ ...t, card: k.name })));
+  // the 3D trees come in behind the stream (their cards show until they do): they never hold up a section's people
+  trees3d?.place(sec.name, placed);
+  // the trunks' colliders, as wide as the painted bole (trees3d.js trunkColliders), the cards' and the 3D trees' alike
+  const g = await trunkColliders(placed);
+  if (g && sections.get(sec.name) === sec && !sec.trunks) {
+    sec.trunks = new MeshBVH(g);
+    rebuildCollider();
+  } else g?.dispose();
 }
 function removeTrees(sec) {
+  sec.trunks?.geometry.dispose();
+  sec.trunks = null;
+  trees3d?.remove(sec.name);
   for (const kind of sec.cards || []) {
     kind.trees = kind.trees.filter((t) => t.sec !== sec.name);
     if (kind.trees.length) { buildCardMesh(kind); continue; }
     dropCardMesh(kind);
     without(cards, kind);
     cardKinds.delete(kind.name);
+    kind.gone = true; // a full card still loading for it is given back when it comes
     kind.geo.dispose();
     disposeStd(kind.std);
     texCache.release(kind.url);
   }
+}
+// the full cards of the small ones in use, nearest first, `limit` loading at once (the stream calls it every idle
+// frame: no allocation unless a card is waiting); with `wait`, a promise of every swap under way
+const wantsFull = (k) => k.full && !SMALL_ONLY && !trees3d?.keepsSmall(k.name); // a card only seen beyond its 3D tree stays small (trees3d.js)
+function sharpenCards(limit = 3, wait = false) {
+  let busy = 0, waiting = 0;
+  for (const k of cards) { if (k.sharpening) busy++; else if (wantsFull(k)) waiting++; }
+  if (waiting && busy < limit) {
+    const near = (k) => Math.min(...k.trees.map((t) => (t.x - player.pos.x) ** 2 + (t.z - player.pos.z) ** 2));
+    const todo = cards.filter((k) => wantsFull(k) && !k.sharpening).sort((a, b) => near(a) - near(b));
+    for (const kind of todo.slice(0, limit - busy)) sharpen(kind);
+  }
+  return wait ? Promise.all(cards.map((k) => k.sharpening).filter(Boolean)) : null;
+}
+function sharpen(kind) {
+  const url = kind.full;
+  kind.sharpening = texCache.image(url).then((tex) => {
+    if (kind.gone) { texCache.release(url); return; }
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.anisotropy = 4;
+    for (const m of new Set([kind.std, variants.get(kind.std)?.mat])) if (m) { m.map = tex; m.needsUpdate = true; }
+    texCache.release(kind.url); // the small card
+    kind.url = url;
+  }).catch((err) => console.warn(`tree card ${kind.name}: ${err.message || err}`)).finally(() => { kind.sharpening = null; kind.full = null; });
+  return kind.sharpening;
 }
 // turn every card to face the camera (about its trunk)
 const _cm = new THREE.Matrix4(), _cq = new THREE.Quaternion(), _cv = new THREE.Vector3(), _cs = new THREE.Vector3(), _up = new THREE.Vector3(0, 1, 0);
@@ -676,7 +876,7 @@ async function setCrowd(n) {
   if (!n || !sec) return;
   const spec = { ...sec.people.load_test_traffic, path: routePath(sec.layout.route, sec.people.load_test_traffic.path) };
   const kinds = new Set(spec.kinds.map((k) => k.character));
-  await ensureModels(kinds);
+  await ensureModels(kinds, trafficClips(spec));
   useModels('traffic', kinds);
   if (!sections.has(sec.name)) return;
   extraTraffic = people.addTraffic({ ...spec, count: n, seed: 1000, pairs: 0.25 }).map((a) => a.p);
@@ -708,11 +908,16 @@ function resize() {
   camera.updateProjectionMatrix();
 }
 addEventListener('resize', resize);
+// the distance past which people are drawn with their far body (tiers.js peopleLod; ?peoplelod=<m>, Infinity: never;
+// ?lodsplit=1 also draws the far people of a character with people near apart: crowd.js lodSplit)
+const peopleLod = (cfg) => (query.has('peoplelod') ? Number(query.get('peoplelod')) : cfg.peopleLod ?? Infinity);
 // a new tier: the colour target and its anti-aliasing, the shadow map, the window (the next streamUpdate)
 function applyTier(cfg) {
+  applyDetail(cfg, tiers.detailScale); // detail.js
   post.configure(postOptions());
   if (boats.flow) boats.flow.cap = boatCap(); // boatflow.js
   if (people?.crowd) people.crowd.shadowFar = cfg.shadow.peopleFar; // people cast no shadow past this (crowd.js)
+  if (people?.crowd) people.crowd.lodFar = peopleLod(cfg); // people's far bodies past this (crowd.js)
   shadowState.dirty = true;
   if (sun.shadow.mapSize.x !== cfg.shadow.size) {
     sun.shadow.mapSize.setScalar(cfg.shadow.size);
@@ -816,7 +1021,7 @@ hud.titleFor = (S, meta) => ui.regionTitle(meta?.folder);
 let avatar = null, avatarYaw = 0, followCam = null;
 async function setAvatar(name) {
   name = reg[name]?.file ? name : 'sightseer';
-  await ensureModels([name]);
+  await ensureModels([name], new Map([[name, AVATAR_CLIPS]]));
   useModels('avatar:new', [name]);
   if (avatar) {
     scene.remove(avatar.root);
@@ -929,6 +1134,7 @@ function streamUpdate(force = false) {
   if (drop) { run(() => unloadSection(drop)); return; }
   const next = index.map((e, i) => [e, ds[i]]).filter(([e]) => want.has(e) && e.state === 'out').sort((a, b) => a[1] - b[1])[0];
   if (next) { run(() => loadSection(next[0])); return; }
+  sharpenCards(); // nothing to load: the small tree cards' full ones
   if (stream.waiters.length && !index.some((e) => e.state === 'in' && e.idle != null)) {
     stream.hurry = false;
     for (const w of stream.waiters.splice(0)) w();
@@ -969,7 +1175,7 @@ async function loadSection(e) {
   try {
     const sec = await step('fetch', () => fetchSection(e.name));
     const cast = modelsOf(sec);
-    await step('models', () => ensureModels(cast));
+    await step('models', () => ensureModels(cast, clipsOf(sec)));
     useModels(sec.name, cast);
     await nextFrame();
     await addSection(sec);
@@ -995,12 +1201,15 @@ async function addSection(sec, { defer = false } = {}) {
     p.castShadow = o.castShadow; p.receiveShadow = o.receiveShadow;
     proxies.add(p);
   }
-  await step('compile', () => renderer.compileAsync(proxies, camera, scene));
+  const fresh = cells.join(sec); // its cells into the materials' batches; a new batch is hidden until compiled
+  await step('compile', () => Promise.all([renderer.compileAsync(proxies, camera, scene), ...fresh.map((b) => renderer.compileAsync(b, camera, scene))]));
+  cells.ready(fresh);
   sections.set(sec.name, sec);
   scene.add(sec.root);
   shadowState.dirty = true;
   await step('boats', () => boats.add(sec, sections)); // their colliders, contacts and the shore walls they open
   await step('collider', () => rebuildCollider());
+  regroundNear(sec); // neighbours' static people grounded before this section's colliders existed (P4)
   for (const w of sec.people.walkers || []) w.path = routePath(sec.layout.route, w.path);
   if (!defer) await finishSection(sec);
   await step('backdrop', () => rebuildBackdrop());
@@ -1027,6 +1236,7 @@ async function unloadSection(e) {
   scene.remove(sec.root);
   shadowState.dirty = true;
   boats.remove(sec);
+  cells.leave(sec);
   if (trafficSec === sec.name) { forget(extraTraffic); extraTraffic = []; trafficSec = null; releaseModels('traffic'); }
   forget(sec.persons || []);
   releaseModels(sec.name);
@@ -1049,20 +1259,31 @@ async function unloadSection(e) {
 }
 
 // wait until the window round where the player now stands is loaded (and what is too far is gone); the player is
-// held still while its own section is missing, so it can't fall through the ground that isn't there yet
-function settle() {
-  return new Promise((resolve) => { stream.waiters.push(resolve); stream.hurry = true; streamUpdate(true); });
+// held still while its own section is missing, so it can't fall through the ground that isn't there yet; then (sharp)
+// every small tree card swapped for its full one, so the tools see the full cards
+function settle(sharp = true) {
+  const p = new Promise((resolve) => { stream.waiters.push(resolve); stream.hurry = true; streamUpdate(true); });
+  return sharp ? p.then(() => sharpenCards(Infinity, true)) : p;
 }
 // a teleport for the tools: stand at (X, D) (on the floor there, or at height H), with the window loaded round it
+// Teleports can overlap (the page's own view() at load still waits for the full tree cards when a tool or the HUD
+// asks for another): only the latest one gives the player back, or the earlier one would unfreeze it mid-stream and it
+// fell through a section not yet in (batch 2, gen/perf/batch2/bisect/).
+let gotoLatest = 0, gotoActive = 0, gotoWas = false;
 async function goto(X, D, H) {
   if (X !== undefined) { player.pos.set(X, (H ?? 0) + 0.2, -D); player.vel.set(0, 0, 0); }
-  const was = player.frozen;
+  const me = ++gotoLatest;
+  if (gotoActive++ === 0) gotoWas = player.frozen;
   player.frozen = true;
   const done = settle();
-  const hold = setInterval(() => { const e = index[stream.cur]; if (e?.state === 'in' || e?.state === 'failed') { clearInterval(hold); player.frozen = was; } }, 50);
-  await done;
-  clearInterval(hold);
-  player.frozen = was;
+  const hold = setInterval(() => {
+    if (me !== gotoLatest) { clearInterval(hold); return; }
+    const e = index[stream.cur];
+    if (e?.state === 'in' || e?.state === 'failed') { clearInterval(hold); player.frozen = gotoWas; }
+  }, 50);
+  try { await done; } finally { clearInterval(hold); gotoActive--; }
+  if (me !== gotoLatest) return; // a later teleport took over
+  player.frozen = gotoWas;
   if (X !== undefined && H === undefined && player.bvh) {
     const hit = player.bvh.raycastFirst(new THREE.Ray(new THREE.Vector3(X, 40, -D), new THREE.Vector3(0, -1, 0)), THREE.DoubleSide);
     player.pos.set(X, (hit ? hit.point.y : 0) + 0.05, -D);
@@ -1074,6 +1295,8 @@ const streamStats = () => ({
   loading: index.filter((e) => e.state === 'loading').map((e) => e.name), failed: index.filter((e) => e.state === 'failed').map((e) => e.name),
   events: stream.events, textures: texCache.stats(), models: Object.keys(models).length, materials: stdByName.size, cards: cardKinds.size,
   baking: [...(people?.crowd?.sets?.values() || [])].reduce((a, x) => a + x.queue.length + (x.followers || []).reduce((b, f) => b + f.queue.length, 0), 0),
+  // per-clip files: the characters loaded as a body (and the clips they hold), and clips someone started before they came
+  split: Object.values(models).filter((m) => m.lazy).map((m) => `${m.name}:${m.clips.length}`), lateClips: [...LATE_CLIPS],
 });
 
 // ---------------------------------------------------------------- sound (sound.js; rules: sounds/rules.json)
@@ -1154,6 +1377,7 @@ function tick(now) {
   let q = null;
   if (tq) { q = gl.createQuery(); gl.beginQuery(tq.TIME_ELAPSED_EXT, q); }
   if (people.crowd && !post.opts.mrt) { crowdHide.length = 0; crowdHide.push(...people.farMeshes, ...people.crowd.meshes()); } // the separate normal pass only
+  cells.update(camera, post.shadowUpdate && sun.castShadow ? sun : null); // which cell batches draw, and their cells (cells.js)
   post.render(scene, camera, s, noNormalPass, people.crowd ? crowdHide : people.farMeshes, crowdOverlay);
   if (q) { gl.endQuery(tq.TIME_ELAPSED_EXT); pendingQ.push(q); gpuPoll(); }
   lastTickMs = performance.now() - t0;
@@ -1238,14 +1462,20 @@ async function rebuildBackdrop() {
 }
 
 try {
-  await waitForStart(query); // the start screen (ui/start.js): nothing heavy loads before you press 入畫
+  // the start screen (ui/start.js) waits for 入畫 while the first load runs behind it (the user, 2026-10-13: preload at
+  // the start screen, then the progressive loading as before): the small JSONs, your section, its kit and your
+  // character, its shaders compiled, then its cast. The press finds them in; the frames, the paper and the stream of the
+  // rest of the window wait for it. A visitor who leaves without pressing has spent that download (the user's call).
+  // Without the screen (?start=0, the headless tools) it resolves at once and the order is as before.
+  let pressedNow = false;
+  const pressed = waitForStart(query).then((glide) => { pressedNow = true; return { glide, at: performance.now() }; });
   applyLight();
   resize();
   // every section's painted area and camera spots, then the section you start in and only the characters it casts
   // (and yours); the rest of the window streams in after the world shows
   let ktx2;
-  [reg, beastReg, ktx2, clipMeta] = await Promise.all([fetch('assets/chars/characters.json').then((r) => r.json()), json('assets/animals/animals.json').then((r) => r || {}),
-    json('assets/ktx2.json'), query.get('clipmeta') === '0' ? null : json('assets/clip_meta.json'), buildIndex()]);
+  [reg, beastReg, ktx2, clipMeta, clipFiles] = await Promise.all([fetch('assets/chars/characters.json').then((r) => r.json()), json('assets/animals/animals.json').then((r) => r || {}),
+    json('assets/ktx2.json'), query.get('clipmeta') === '0' ? null : json('assets/clip_meta.json'), query.get('clipfiles') === '0' ? null : json('assets/chars/clips.json'), buildIndex()]);
   ui.progress(0.25, 0.6);
   texCache.useKtx2(ktx2, renderer, query.get('ktx2')); // the GPU-compressed copies of the adopted kinds (assets.js)
   renderer.domElement.addEventListener('webglcontextrestored', () => texCache.restoreKtx());
@@ -1263,9 +1493,13 @@ try {
   people.camera = camera;
   crowdOverlay = people.crowd?.normalPass() || null;
   if (people.crowd) people.crowd.shadowFar = tiers.cfg.shadow.peopleFar;
+  if (people.crowd) people.crowd.lodFar = peopleLod(tiers.cfg);
+  if (people.crowd) people.crowd.lodSplit = query.get('lodsplit') === '1'; // far people drawn apart (crowd.js; real-phone tests)
   player.pushOut = (pos, r) => { const moved = people.pushOut(pos, r); if (moved) sound?.bump(); return moved; };
+  // ambient life (ambient.js): birds, sparrows, catkins, smoke and the cloth in the wind, placed from each loaded section's map
+  try { createAmbient({ scene, camera, player, sections, people: () => people, hour: () => s.hour, query }); } catch (err) { console.warn('ambient off:', err); }
   const startAvatar = reg[s.avatar]?.file ? s.avatar : 'sightseer';
-  const [first] = await Promise.all([fetchSection(start.name), ensureModels([startAvatar, ...PINNED.filter((n) => reg[n]?.file)])]);
+  const [first] = await Promise.all([fetchSection(start.name), ensureModels([startAvatar, ...PINNED.filter((n) => reg[n]?.file)], new Map([[startAvatar, AVATAR_CLIPS]]))]);
   ui.progress(0.65, 0.9);
   useModels('pin', PINNED.filter((n) => models[n]));
   start.state = 'in';
@@ -1276,28 +1510,37 @@ try {
   stream.pending.push(async () => {
     beginOp('load', `${first.name}: people and trees`);
     const cast = modelsOf(first);
-    await step('models', () => ensureModels(cast));
+    await step('models', () => ensureModels(cast, clipsOf(first)));
     useModels(first.name, cast);
     if (sections.get(first.name) === first) await finishSection(first);
     endOp();
   });
+  // still on the start screen: your section's cast comes next (that op above then finds it in)
+  if (!pressedNow) ensureModels(modelsOf(first), clipsOf(first)).catch((err) => console.warn('cast preload:', err));
+  const press = await pressed;
   ui.progress(0.92, 0.98);
   followCam = new FollowCam(camera, player, { distance: s.camDistance });
   if (!models[s.avatar]) s.avatar = 'sightseer';
   await setAvatar(s.avatar);
   view();
   await warmUp(); // the first frames run under the paper (gen/ui/r2_time.md, "The loading stall")
+  const glideLeft = press.glide - (performance.now() - press.at); // the band lands where you start before the paper lifts
+  if (glideLeft > 0) await new Promise((r) => setTimeout(r, glideLeft));
   ui.loaded(); // #loading loses its id at once, then its paper wipes away (ui/loading.js)
   startSound();
   you.add(s, 'avatar', Object.keys(reg).filter((n) => reg[n]?.file).sort()).name('your character').onChange(ch('avatar'));
   // the rest of the window streams in while you look round; the test hooks appear once it is in, so the tools
   // (shots, walks, people, bench) start from a settled world, and goto()/view() move the window with them
-  await settle(); // the window, and your own section's people and trees (they come after the loading screen)
+  await settle(false); // the window, and your own section's people and trees (they come after the loading screen; small cards may still be sharpening)
   window.__test = {
     THREE, scene, camera, player, people, s, renderer, measure, view, goto, views: Object.keys(views), hud, boats,
+    trees3d, // the 3D trees (trees3d.js: stats(), applyTier(cfg)); null with ?trees=cards
     tiers, post, // the device tier (tiers.js: stats(), apply(name, why)) and the ink pass (post.js)
+    details: detailStats, // the detail systems' draws, triangles, instances, CPU ms (detail.js)
+    cells: { stats: () => cells.stats(camera), cells }, // the world in cells (cells.js)
     clipMeta: CLIP_META, loader, // what the page measured of each clip (tools/people_precompute.mjs)
     shadows: () => ({ ...shadowState, half: SHADOW_HALF, size: sun.shadow.mapSize.x, centre: shadowCenter.toArray() }), // the shadow policy
+    shadowLayers, // the two layers: on (false: one layer, as ?shadowcache=0), world (due), worldDraws, moverDraws
     // every section of the world (loaded or not): a loaded one is its section, the others { name, state }
     get sections() { return new Map(index.map((e) => [e.name, e.sec || { name: e.name, state: e.state }])); },
     loaded: sections, stream: { stats: streamStats, settle, internals: { index, models, modelUsers, stdByName, cardKinds, texCache, shaded, variants } },

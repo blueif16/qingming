@@ -1,0 +1,1148 @@
+{
+ "figures": {
+  "shop_interior_seated_4752": {
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ],
+   "class": "seat",
+   "why": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated behind the counter in the 正店 front, his seat hidden: sit~soles alone on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50"
+  },
+  "scholar_upstairs_3912": {
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ],
+   "class": "seat",
+   "why": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated at the window with his hand to his chin, looking at the lamp on his table: sit~soles alone (write asks for a palm on the desk he is not painted touching) on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50"
+  },
+  "seated_cap_man_3905": {
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ],
+   "class": "seat",
+   "why": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated on a seat hidden behind others, hands busy in front of him: sit_talk~soles alone on his own stool fitted under his seat point"
+  },
+  "cloth_shop_seated_3752": {
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ],
+   "class": "seat",
+   "why": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated at the second counter, knees forward and feet on the shop floor, no bench mapped: sit~soles alone on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50"
+  },
+  "jie_listener_west_2062": {
+   "do": [
+    [
+     "sit_talk~soles",
+     16
+    ]
+   ],
+   "class": "seat",
+   "why": "the official's chair clips rest the feet at two heights (one sole 5-6 cm up, the other 5-6 cm into the floor): sit, sit_talk, write -> ~soles, both soles held on the floor by leg IK (characters/ik_variants.json \"soles\", tools/ik_clip.mjs via leg); painted seated facing east to the centre of the ring, his seat hidden: sit~soles alone (sit_talk~soles sits 0.06 m higher) on his own stool fitted under his seat point; sit_talk~soles rather than sit~soles: the official's sit (library 33) drops its seat point 7 cm for a third of its cycle (a thigh, the hips stay), so no seat holds it; sit_talk's seat holds at 0.50"
+  },
+  "sedan_bearer_far_4462": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0,
+    -0.08
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.06, palm_L 0.1, palm_R 0.02, after shoulder_R 0.01, palm_L 0.03, palm_R 0; fixed contact:vehicle, contact:vehicle; moved 0.08 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.007,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_bearer_near_4530": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.32,
+    0.08
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.06, palm_L 0.35, palm_R 0.17, after shoulder_R 0.01, palm_L 0.03, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.33 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.134,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_rear_bearer_4195": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0,
+    0.48
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4575, palm_L->S6.veh.sedan_4575, palm_R->S6.veh.sedan_4575; gap before shoulder_R 0.4, palm_L 0.42, palm_R 0.37, after shoulder_R 0.02, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.48 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.443,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_bearer_front_far_4943": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 45,
+   "nudge": [
+    -0.09,
+    -0.1
+   ],
+   "facing_deg": 12,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.09, palm_L 0.33, palm_R 0.17, after shoulder_R 0.03, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.13 m, turned -33 deg from the casting's spot (limit 0.6 m); turned 33 deg from the map's NE to the east sedan's poles (12 deg): painted walking east under the pole on his shoulder, so he faces along it; the map's 'faces NE' is the painter's three-quarter view of a back",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.129,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_bearer_front_near_4907": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 45,
+   "nudge": [
+    -0.45,
+    -0.2
+   ],
+   "facing_deg": 12,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.14, palm_L 0.39, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.49 m, turned -33 deg from the casting's spot (limit 0.6 m); turned 33 deg from the map's NE to the east sedan's poles (12 deg): painted walking east under the pole on his shoulder, so he faces along it; the map's 'faces NE' is the painter's three-quarter view of a back",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.2,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_bearer_rear_far_4735": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0,
+    0.4
+   ],
+   "facing_deg": 8,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.39, palm_L 0.4, palm_R 0.43, after shoulder_R 0, palm_L 0.02, palm_R 0.02; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.4 m, turned 8 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.466,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_bearer_rear_near_4668": {
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "class": "ik",
+   "why": "painted with a sedan pole on his shoulder (map/text/S6.md): sedan_carry -> sedan_carry~pole (the shoulder top held under the pole and both palms on it: characters/ik_variants.json \"pole\", as S4's bearers); the poles fitted to 1.47 m over the ground under each end (kit sedan_chair pole_fit, blender/inner_city_scene.py)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.26,
+    -0.4
+   ],
+   "facing_deg": 10,
+   "nudge_why": "solved: contact shoulder_R->S6.veh.sedan_4965, palm_L->S6.veh.sedan_4965, palm_R->S6.veh.sedan_4965; gap before shoulder_R 0.33, palm_L 0.33, palm_R 0.27, after shoulder_R 0, palm_L 0.03, palm_R 0.03; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.48 m, turned 10 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:26",
+    "cost_before": 0.262,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "sedan_passenger_4362": {
+   "class": "seat",
+   "root_h": 0.903,
+   "why": "painted seated in the west sedan (her face at its south window): on her own bench across the back of the cabin (owner S6.fig.sedan_passenger_4362, top 1.343, map/BUILDING.md rule 3), her feet on the cabin floor: root_h 0.903 (the floor board top, people.js P2)",
+   "base_nudge": [
+    0.15,
+    -0.17
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0.34,
+    -0.17
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact seat->S6.fig.sedan_passenger_4362, sole_L->S6.veh.sedan_4575, sole_R->S6.veh.sedan_4575; gap before seat 1.4, sole_L 0.01, sole_R 0.01, after seat 0.01, sole_L -0.01, sole_R 0.01; fixed contact:seat; moved 0.19 m from the casting's spot (limit 0.6 m); her seat is inside the west sedan's cabin, on her own bench under the clip's seat point",
+   "solved": {
+    "date": "2026-10-13T10:25",
+    "cost_before": 2.065,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "ring_bun_3712": {
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)"
+  },
+  "ring_dark_robe_3692": {
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)"
+  },
+  "ring_face_3735": {
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)"
+  },
+  "ring_listener_3788": {
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)"
+  },
+  "listener_3878": {
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)"
+  },
+  "listener_dark_robe_3926": {
+   "do": [
+    [
+     "crane",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: crane (crane_listen: standing at the back of a crowd, leaning forward to hear)"
+  },
+  "ring_bearded_robe_3630": {
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (his character has no standing listen; he faces the storyteller)"
+  },
+  "child_listener_3812": {
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (his character has no standing listen; he faces the storyteller)"
+  },
+  "ring_standing_post_3745": {
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (painted facing the viewer and the ring from beside the storyteller or behind the crowd)"
+  },
+  "listener_3905": {
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (painted facing the viewer and the ring from beside the storyteller or behind the crowd)"
+  },
+  "listener_hat_3932": {
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     5
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing in the storyteller's ring (map/text/S6.md), but cast with listen, which is the seated sit_listen take (forearms on the knees, on a low bench nobody painted): recast to a standing clip that keeps the painted action: look (painted facing the viewer and the ring from beside the storyteller or behind the crowd)"
+  },
+  "basket_man_4590": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.18,
+    -0.18
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.25 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:34",
+    "cost_before": 2.377,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "cloth_shop_standing_3686": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 90,
+   "nudge": [
+    -0.04,
+    -0.05
+   ],
+   "facing_deg": 90,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.06 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:34",
+    "cost_before": 1.721,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "robed_hat_3002": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 225,
+   "nudge": [
+    0.2,
+    0.2
+   ],
+   "facing_deg": 225,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, body_cylinder, head_inside; moved 0.28 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 1.331,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "well_bucket_lifter_2032": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0.62
+   ],
+   "base_facing": 90,
+   "nudge": [
+    -0.13,
+    0.62
+   ],
+   "facing_deg": 93,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, furniture; moved 0.13 m, turned 3 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 1.903,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "well_rope_drawer_2097": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0.8
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.95
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.15 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 1.578,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "archer_waistguard_5465": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 90,
+   "nudge": [
+    0.18,
+    -0.27
+   ],
+   "facing_deg": 90,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder, head_inside; moved 0.32 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:35",
+    "cost_before": 0.165,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "head_behind_ridge_5103": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0.15
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.07,
+    0.05
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.12 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:36",
+    "cost_before": 0.213,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "upper_standing_5452": {
+   "class": "solve",
+   "base_nudge": [
+    -0.9,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.99,
+    0
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.09 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:36",
+    "cost_before": 0.225,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "top_edge_lower_body_2775": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.09,
+    0
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed site_inside; moved 0.09 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:36",
+    "cost_before": 0.049,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "young_man_4108": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    -0.07
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed site_inside; moved 0.07 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:36",
+    "cost_before": 0.03,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "paper_stall_seller_2565": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0.65
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.39
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact palm_L->S6.prop.umbrella_2594, palm_R->S6.prop.paper_stall_table_2395; gap before palm_L 0.18, palm_R 0.16, after palm_L 0.1, palm_R 0.08; fixed contact:table, contact:table; moved 0.26 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:37",
+    "cost_before": 0.015,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "jie_seated_back_2105": {
+   "class": "seat",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "why": "painted seated on the bench in the ring (S6.prop.bench_2100) with his back to us: sit alone (sit_talk puts the seat 0.16 m higher than sit, so no one seat serves both)"
+  },
+  "jie_old_man_2138": {
+   "class": "seat",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "why": "painted seated at the back of the ring, his seat hidden: on his own stool (map/BUILDING.md rule 3), fitted under his seat point"
+  },
+  "jie_pale_cap_2175": {
+   "class": "seat",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "why": "painted seated, turned west to the man on the bench, his seat hidden: sit alone (sit_talk sits 0.16 m higher) on his own stool fitted under his seat point",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    0.05,
+    0
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact seat->seat, sole_L->ground, sole_R->ground; gap before seat 0.41, sole_L 0.01, sole_R 0.01, after seat 0.41, sole_L 0.02, sole_R 0.01; fixed contact:floor; moved 0.05 m from the casting's spot (limit 0.6 m); placed clear of the bench his foot was in (sole_L 0.14 inside), his own stool then fitted under his seat point",
+   "solved": {
+    "date": "2026-10-13T10:39",
+    "cost_before": 0.173,
+    "cost_after": 0.16,
+    "pass": false
+   }
+  },
+  "jie_seated_tan_2283": {
+   "class": "seat",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "why": "painted seated with his hands in his lap, his seat hidden: sit alone (sit_talk sits 0.16 m higher) on his own stool fitted under his seat point"
+  },
+  "jie_young_seated_2100": {
+   "class": "seat",
+   "do": [
+    [
+     "sit_talk",
+     16
+    ]
+   ],
+   "why": "painted seated, smiling, hands raised to his chest, his seat hidden: sit_talk alone (sit sits 0.16 m lower) on his own stool fitted under his seat point"
+  },
+  "cloth_shop_seated_3640": {
+   "class": "seat",
+   "do": [
+    [
+     "sit",
+     16
+    ]
+   ],
+   "why": "painted seated on the low bench before the counter (S6.prop.cloth_bench_3598), hunched forward: sit alone (sit_talk sits 0.16 m higher), the bench fitted to it"
+  },
+  "seated_man_stool_4441": {
+   "class": "seat",
+   "do": [
+    [
+     "sit",
+     17
+    ]
+   ],
+   "why": "painted seated on the small stool (S6.prop.stool_4461), knees apart, a cup in his hand: sit alone (sit_talk sits 0.12 m higher), the stool fitted to it",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.47,
+    0
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact seat->S6.prop.stool_4461, sole_L->ground, sole_R->ground; gap before seat 0.44, sole_L -0.01, sole_R 0.02, after seat 0, sole_L 0, sole_R 0.02; fixed nothing; moved 0.47 m from the casting's spot (limit 0.6 m); onto the small stool he is painted on (S6.prop.stool_4461, 0.4 m east of his estimated foot), the stool fitted to his sit",
+   "solved": {
+    "date": "2026-10-13T10:39",
+    "cost_before": 0.185,
+    "cost_after": 0,
+    "pass": false
+   }
+  },
+  "upper_storey_figure_4810": {
+   "class": "seat",
+   "do": [
+    [
+     "drink",
+     15
+    ]
+   ],
+   "why": "painted seated in the 正店 upper storey, probably a drinker: drink alone (sit sits 0.07 m higher) on his own stool fitted under his seat point"
+  },
+  "drinker_upper_5140": {
+   "class": "seat",
+   "do": [
+    [
+     "drink",
+     13
+    ]
+   ],
+   "why": "painted seated behind the 正店 upper balustrade, a drinker: drink alone (sit_talk sits 0.23 m higher) on his own stool fitted under his seat point",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.1
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact seat->seat, sole_L->S6.bld.sunyang_zhengdian, sole_R->S6.bld.sunyang_zhengdian; gap before seat 0.33, sole_L -0.13, sole_R 0, after seat 0.33, sole_L 0, sole_R 0; fixed contact:floor; moved 0.1 m from the casting's spot (limit 0.6 m); placed clear of the balustrade his foot was in (sole_L 0.13 inside), his own stool then fitted under his seat point",
+   "solved": {
+    "date": "2026-10-13T10:39",
+    "cost_before": 0.113,
+    "cost_after": 0.101,
+    "pass": false
+   }
+  },
+  "drinker_upper_5547": {
+   "class": "seat",
+   "do": [
+    [
+     "drink",
+     14
+    ]
+   ],
+   "why": "painted seated on a bench that is not painted, leaning over the table to the dishes: drink alone (sit sits 0.07 m higher) on his own stool fitted under his seat point",
+   "base_nudge": [
+    -0.9,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.75,
+    0.1
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact seat->S5.bld.wine_depot, sole_L->S6.bld.sunyang_zhengdian, sole_R->S6.bld.sunyang_zhengdian; gap before seat 0.69, sole_L 0, sole_R 0, after seat 0.19, sole_L 0, sole_R 0; fixed furniture; moved 0.18 m from the casting's spot (limit 0.6 m); placed off the upper-room table he stood on (0.31 m up), his own stool then fitted under his seat point",
+   "solved": {
+    "date": "2026-10-13T10:39",
+    "cost_before": 3.351,
+    "cost_after": 0.037,
+    "pass": false
+   }
+  },
+  "pole_man_5578": {
+   "do": [
+    [
+     "stand_pole~staff_foot",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "class": "ik",
+   "why": "the staff's foot hung 9 cm over the ground in the porter's stand_pole (fix-boats' pole rule): stand_pole~staff_foot (characters/ik_variants.json \"staff_foot\", fix-gate's, shared) rests it on the ground"
+  },
+  "folded_arms_2338": {
+   "do": [
+    [
+     "stand_sleeves",
+     10
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing with his arms folded behind the rider, nothing behind him: lean_wall (a back against a wall) -> stand_sleeves (forearms folded at the chest, standing; as S4's onlooker_cap_12040)"
+  },
+  "tall_carter_5385": {
+   "do": [
+    [
+     "stand_sleeves",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing north of the team with his arms folded at his chest, nothing behind him: lean_wall (a back against a wall) -> stand_sleeves (forearms folded at the chest, standing)"
+  },
+  "arms_folded_2993": {
+   "do": [
+    [
+     "stand_sleeves",
+     9
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing with his arms folded, turned to the tray vendor, nothing behind him: arms_folded (the lean_wall_idle take: a back against a wall) -> stand_sleeves (forearms folded at the chest, standing; the inspector gets the take t2m:stand_sleeves)"
+  },
+  "child_by_dark_robe_2880": {
+   "do": [
+    [
+     "look",
+     10
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing between two men with his arms round the tall man's waist: reach (arms across a chest-high table nobody painted) -> look (standing at his side; a hug of another figure is not a contact the checks measure)"
+  },
+  "young_man_cart_rear_2675": {
+   "do": [
+    [
+     "push~young_man_cart_rear_2675",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "class": "recast",
+   "why": "painted with both hands on the rear of the wine cart, pushing or steadying it: push_flank (palms on an animal, 3.6 m away) -> push (palms on the vehicle: a cart's tail); push -> push~young_man_cart_rear_2675: an IK clip variant (characters/ik_variants.json \"young_man_cart_rear_2675\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 45,
+   "nudge": [
+    0.14,
+    0.35
+   ],
+   "facing_deg": 15,
+   "nudge_why": "solved: contact palm_L->S6.veh.wine_cart_3090, palm_R->S6.veh.wine_cart_3090; gap before palm_L 0.24, palm_R 0.17, after palm_L 0.05, palm_R 0.08; fixed nothing; moved 0.38 m, turned -30 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T13:17",
+    "cost_before": 0.073,
+    "cost_after": 0.004,
+    "pass": false
+   }
+  },
+  "wine_cart_driver_2945": {
+   "class": "seat",
+   "do": [
+    [
+     "drive_cart",
+     14
+    ]
+   ],
+   "why": "painted seated at the front of the wine cart with the reins and the whip raised: drive_cart alone (on the cart's seat, feet hanging; sit asks for the floor his feet are not on); root_h 0.768: the kit's driver seat top 1.139 + 0.005 - drive_cart's seat height 0.376 (people.js P2, fix_standard rule 6), feet hanging as the clip has them",
+   "root_h": 0.768,
+   "base_nudge": [
+    -0.05,
+    0
+   ],
+   "base_facing": 57,
+   "nudge": [
+    -0.22,
+    -0.23
+   ],
+   "facing_deg": 57,
+   "nudge_why": "solved: contact seat->S6.veh.wine_cart_3090; gap before seat 0.59, after seat 0.01; fixed contact:seat, hidden_collider; moved 0.29 m from the casting's spot (limit 0.8 m); on the cart's driver seat (root_h, people.js P2)",
+   "solved": {
+    "date": "2026-10-13T10:44",
+    "cost_before": 2.207,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "wagon_top_rider_3740": {
+   "class": "ik",
+   "root_h": 0.603,
+   "why": "painted seated on the front of the big wagon behind its front board: on the kit's driver seat, root_h 0.761 (seat top 1.203 + 0.005 - the carter sit's seat height 0.447, people.js P2, fix_standard rule 6); sit -> sit~wagon_top_rider_3740: an IK clip variant (characters/ik_variants.json \"wagon_top_rider_3740\") lays sole_L, sole_R on what the painting has it touch, from its solved placement; root_h 0.603 = the footboard top: the variant's soles are laid 0.158 m under the clip's seat-on-seat root, and the page grounds a chair clip by the middle of its soles (clip_meta sole_m), so its root is where its soles rest; its seat then lands on the driver seat (1.203)",
+   "base_nudge": [
+    -1.33,
+    -1.15
+   ],
+   "base_facing": 220,
+   "nudge": [
+    -1.34,
+    -0.93
+   ],
+   "facing_deg": 220,
+   "nudge_why": "solved: contact seat->S6.veh.taiping_wagon_3600, sole_L->S6.veh.taiping_wagon_3600, sole_R->S6.veh.taiping_wagon_3600; gap before seat 0.01, sole_L 0.17, sole_R 0.79, after seat 0.01, sole_L 0.17, sole_R 0.16; fixed hidden_collider; moved 0.22 m from the casting's spot (limit 0.8 m); the seat point on the kit's driver seat with root_h; the soles then laid on the footboard by leg IK",
+   "solved": {
+    "date": "2026-10-13T10:55",
+    "cost_before": 2.151,
+    "cost_after": 0.039,
+    "pass": false
+   },
+   "do": [
+    [
+     "sit~wagon_top_rider_3740",
+     12
+    ]
+   ]
+  },
+  "donkey_groom_jacket_2252": {
+   "do": [
+    [
+     "look",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "class": "recast",
+   "why": "painted standing at the donkey's near shoulder with his back to us, head turned toward it, things hanging from his belt; his hands are not painted on it (the man in the pale robe holds its head): bridle -> look (bridle put his palms 0.8-1.2 m off the real-size donkey, which a 0.6 m move cannot close)"
+  },
+  "groom_5290": {
+   "do": [
+    [
+     "idle",
+     12
+    ]
+   ],
+   "class": "recast",
+   "why": "painted at the dark horse's shoulder with only his head and shoulders over the ridge (perhaps holding the bridle: his hands are hidden), the horse grazing with its head lowered: bridle -> idle (bridle put his palms 0.9-1.1 m off the horse and its bit sweeps 0.5 m as it grazes)"
+  },
+  "leaning_over_awning_2168": {
+   "do": [
+    [
+     "look",
+     10
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "class": "recast",
+   "why": "painted leaning forward with his hands on the mat awning's back edge; at real size the mat stands 2.35-2.7 m up (the ring sits under it), out of any reach, and the painting shows no rail under his hands (map: perhaps a hidden rail): lean_over -> look (he looks over at the group)"
+  },
+  "wagon_shaft_carter_3642": {
+   "class": "ik",
+   "base_nudge": [
+    -0.08,
+    -1.04
+   ],
+   "base_facing": 240,
+   "nudge": [
+    -1.2,
+    -0.2
+   ],
+   "facing_deg": 215,
+   "nudge_why": "solved: contact palm_L->S6.veh.taiping_wagon_3600, palm_R->S6.veh.taiping_wagon_3600; gap before palm_L 0.71, palm_R 0.31, after palm_L 0.32, palm_R 0.26; fixed nothing; moved 1.4 m, turned -25 deg from the casting's spot (limit 0.6 m); between the wagon's shafts as painted ('at the front of the big wagon between the shafts, gripping a shaft in each hand'), centred between them and facing the team (the wagon's heading 215); the casting had him outside the south-east shaft because the driver's invisible footboard block filled the space, now gone (people.js root_h seats the driver); 1.25 m from the casting's spot, over the 0.6 m limit for that reason; his hands then laid on the shafts by IK",
+   "solved": {
+    "date": "2026-10-13T13:20",
+    "cost_before": 0.609,
+    "cost_after": 0.17,
+    "pass": false
+   },
+   "do": [
+    [
+     "steer~wagon_shaft_carter_3642",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "steer -> steer~wagon_shaft_carter_3642: an IK clip variant (characters/ik_variants.json \"wagon_shaft_carter_3642\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~wagon_shaft_carter_3642: an IK clip variant (characters/ik_variants.json \"wagon_shaft_carter_3642\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~wagon_shaft_carter_3642: an IK clip variant (characters/ik_variants.json \"wagon_shaft_carter_3642\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~wagon_shaft_carter_3642: an IK clip variant (characters/ik_variants.json \"wagon_shaft_carter_3642\") lays palm_L, palm_R on what the painting has it touch, from its solved placement"
+  },
+  "handcart_man_3130": {
+   "class": "ik",
+   "base_nudge": [
+    0.9,
+    -1.25
+   ],
+   "base_facing": 45,
+   "nudge": [
+    1.28,
+    -0.85
+   ],
+   "facing_deg": 32,
+   "nudge_why": "solved: contact palm_L->S6.veh.barrow_casks_3300, palm_R->S6.veh.barrow_casks_3300; gap before palm_L 0.14, palm_R 0.16, after palm_L 0.03, palm_R 0.07; fixed contact:vehicle; moved 0.55 m, turned -13 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T13:16",
+    "cost_before": 0.043,
+    "cost_after": 0.003,
+    "pass": false
+   },
+   "do": [
+    [
+     "steer~handcart_man_3130",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "steer -> steer~handcart_man_3130: an IK clip variant (characters/ik_variants.json \"handcart_man_3130\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~handcart_man_3130: an IK clip variant (characters/ik_variants.json \"handcart_man_3130\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~handcart_man_3130: an IK clip variant (characters/ik_variants.json \"handcart_man_3130\") lays palm_L, palm_R on what the painting has it touch, from its solved placement"
+  },
+  "butcher_3920": {
+   "class": "ik",
+   "base_nudge": [
+    0.15,
+    0.55
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0.3,
+    0.7
+   ],
+   "facing_deg": 285,
+   "nudge_why": "solved: contact palm_L->S6.prop.meat_pieces_3978; gap before palm_L 0.23, after palm_L 0.13; fixed nothing; moved 0.21 m, turned 15 deg from the casting's spot (limit 0.6 m); nearer his chopping block and the meat on it (0.5 m east of his estimated foot, the painted 'hands at the block'), turned 15 deg toward it; his left hand then laid on the meat by IK",
+   "solved": {
+    "date": "2026-10-13T13:21",
+    "cost_before": 0.071,
+    "cost_after": 0.026,
+    "pass": false
+   },
+   "do": [
+    [
+     "chop~butcher_3920",
+     8
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "chop -> chop~butcher_3920: an IK clip variant (characters/ik_variants.json \"butcher_3920\") lays palm_L on what the painting has it touch, from its solved placement"
+  },
+  "seated_man_highseat_4070": {
+   "class": "ik",
+   "root_h": 0.449,
+   "why": "painted sitting high on the tall chair behind the tray stall (S6.prop.high_seat_4060, seat 0.85 m): his seat point on its seat, root_h 0.434 (0.85 + 0.005 - the inspector sit's seat height 0.421, people.js P2), his feet on the chair's foot rail (the painted low bar) by leg IK; sit -> sit~seated_man_highseat_4070: his soles on the chair's foot rail by leg IK (characters/ik_variants.json); root_h 0.449: his feet drawn onto the rail lower his thighs, and his seat point sat 2.7 cm into the seat at 0.434; 1.5 cm up, his soles 1.7 cm over the rail",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    -0.19,
+    0.11
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact seat->S6.prop.high_seat_4060, sole_L->ground, sole_R->ground; gap before seat 0.7, sole_L 0.42, sole_R 0.44, after seat -0.01, sole_L 0.41, sole_R 0.43; fixed contact:seat; moved 0.22 m from the casting's spot (limit 0.6 m); his seat point on the tall chair's seat (root_h)",
+   "solved": {
+    "date": "2026-10-13T13:22",
+    "cost_before": 5.215,
+    "cost_after": 2.644,
+    "pass": false
+   },
+   "do": [
+    [
+     "sit~seated_man_highseat_4070",
+     16
+    ]
+   ]
+  },
+  "barrow_pusher_3390": {
+   "do": [
+    [
+     "steer~barrow_pusher_3390",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "class": "ik",
+   "why": "steer -> steer~barrow_pusher_3390: an IK clip variant (characters/ik_variants.json \"barrow_pusher_3390\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~barrow_pusher_3390: an IK clip variant (characters/ik_variants.json \"barrow_pusher_3390\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; steer -> steer~barrow_pusher_3390: an IK clip variant (characters/ik_variants.json \"barrow_pusher_3390\") lays palm_L, palm_R on what the painting has it touch, from its solved placement"
+  },
+  "man_child_on_shoulders_4975": {
+   "class": "ik",
+   "do": [
+    [
+     "carry_child~child",
+     12
+    ]
+   ],
+   "why": "children (details pass): carry_child~child (characters/ik_variants.json \"child_shoulders\": his arms, neck and head held on his spine as the take has them at 2.8 s, the body's sway kept) so his prop child_on_shoulders (the rigged child posed astride his neck by IK, tools/carry_pose.mjs) stays on him: carry_check PASS (gaps <= 1.9 cm, penetration 0.4 cm); on carry_child his hands moved 3-4 cm and his head 4-11 cm through the child"
+  }
+ },
+ "about": "Contact fixes for this section (gen/details/contacts/fix_standard.md): per figure, what tools/contact_solve.mjs solved (nudge, facing_deg: the root offset and yaw that put its contacts on what it touches, measured from the casting's own base_nudge / base_facing), or a recast (do, character) or a fit, with the reason. Applied last by the casting script through tools/contact_fixes.py.",
+ "limits": {
+  "max_move_m": 0.6,
+  "max_turn_deg": 30
+ }
+}

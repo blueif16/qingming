@@ -72,3 +72,22 @@ deployed world.
   merges them.
 - Your final message to the lead: a short summary (what landed, the phone-proxy numbers, the check results, files
   touched, anything the user must decide). No progress messages before that.
+
+## Round 2 of the batch (after the 06:30 deploy): the character items
+
+These were held until the details session (3d-director-2e) finished rebuilding the casts. Its terms (2026-10-13):
+- **Builds stay under `flock /tmp/qingming_charbuild.lock`** (`tools/character.mjs build`, clip_ground, joint_tracks,
+  ktx2 all take it). Anything that writes `web/public/assets/chars/`, `characters.json`, `clip_meta.json` or `ktx2/`
+  takes the same lock. The details session's fixers keep adding IK variants between builds, so no freeze is needed.
+- `character.mjs build` fails rather than silently drop a clip, and fails if two clips share a hips accessor (people.js
+  grounds a hips array once: the `GROUNDED` WeakSet in `prepareClip`). Keep both guards.
+- IK variants (`<clip>~<spec>`) are ordinary clips.
+- `clip_meta.json` stays keyed per character file and clip unless you agree a new key with 3d-director-2e (it updates
+  `tools/clip_ground.mjs` and joint_tracks, which read it).
+- `node tools/cast_clips_check.mjs` (every clip a shipped people.json asks for exists) must keep passing; update it for
+  any new layout.
+- Message the lead before any change to the character GLB layout lands; the lead tells 3d-director-2e.
+- Machine notes from round 1: `pkill -f`/`pgrep -f` match your own shell; kill by PID. The first teleport after load
+  used to drop the player (fixed in `goto`); if a bench's warm-up view lands wrong, say so.
+- The phone budget that matters most: rainbow_bridge downloads 27.4 of 28 MB with kit and cast
+  (`node tools/budget_check.mjs all --no-load`).

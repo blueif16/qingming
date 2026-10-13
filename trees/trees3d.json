@@ -1,0 +1,147 @@
+{
+ "about": "The 3D trees (tools/trees3d.mjs; gen/details/trees/method.md). Per form: how its wood is made (trunk: 'meshy' = a shyfai painting of the card's bare framework (gen/details/trees/prompts/bare.txt + bare_<form>.txt) -> Meshy image-to-3D -> Blender decimation (blender/trees3d_convert.py); 'proc' = built in Blender from the card's own trunk strokes) and which clump sheets dress it (gen/details/trees/prompts/clumps.txt + clumps_<sheet>.txt: four painted clumps a sheet, cut into the shared crown atlas). Per variant overrides go under variants.<n>.",
+ "model": "gpt-image-2.5",
+ "style": "prompts/style_B1.png",
+ "meshy": {
+  "endpoint": "image-to-3d",
+  "ai_model": "meshy-t2",
+  "model_type": "smart-topology",
+  "target_polycount": 3000,
+  "texture_resolution": "2k"
+ },
+ "forms": {
+  "willow_fan": {
+   "trunk": "meshy",
+   "clumps": [
+    "willow_fan"
+   ],
+   "trunk_tris": 2000,
+   "fit_scale": true
+  },
+  "willow_burl": {
+   "trunk": "meshy",
+   "clumps": [
+    "whips"
+   ],
+   "trunk_tris": 2000,
+   "fit_scale": true
+  },
+  "elm_claw": {
+   "trunk": "meshy",
+   "clumps": [
+    "elm_claw"
+   ],
+   "trunk_tris": 2400,
+   "fit_scale": true
+  },
+  "pine_fan": {
+   "trunk": "meshy",
+   "clumps": [
+    "pine_fan"
+   ],
+   "trunk_tris": 2400
+  },
+  "willow_weep": {
+   "trunk": "meshy",
+   "clumps": [
+    "weep"
+   ],
+   "trunk_tris": 2400
+  },
+  "shoot_tree": {
+   "trunk": "proc",
+   "clumps": [
+    "shoots"
+   ],
+   "proc": {
+    "open": 4,
+    "minSpur": 20
+   },
+   "variants": {
+    "4": {
+     "proc": {
+      "open": 5,
+      "minSpur": 20
+     }
+    }
+   }
+  },
+  "slender": {
+   "trunk": "proc",
+   "clumps": [
+    "willow_fan",
+    "elm_claw"
+   ]
+  },
+  "sapling": {
+   "trunk": "proc",
+   "clumps": [
+    "elm_claw"
+   ],
+   "proc": {
+    "open": 2,
+    "minSpur": 14
+   }
+  },
+  "whip_clump": {
+   "trunk": "none",
+   "clumps": [
+    "shoots"
+   ]
+  },
+  "bamboo": {
+   "trunk": "none",
+   "clumps": [
+    "bamboo"
+   ]
+  },
+  "leafy": {
+   "trunk": "none",
+   "clumps": [
+    "leafy"
+   ]
+  },
+  "hedge": {
+   "trunk": "none",
+   "clumps": [
+    "leafy"
+   ]
+  }
+ },
+ "sheets": {
+  "willow_fan": {
+   "card": "willow_fan_1",
+   "size": "1024x1024"
+  },
+  "whips": {
+   "card": "willow_burl_1",
+   "size": "1024x1024"
+  },
+  "elm_claw": {
+   "card": "elm_claw_1",
+   "size": "1024x1024"
+  },
+  "pine_fan": {
+   "card": "pine_fan_1",
+   "size": "1024x1024"
+  },
+  "weep": {
+   "card": "willow_weep_1",
+   "size": "1024x1024",
+   "root": "top"
+  },
+  "shoots": {
+   "card": "shoot_tree_1",
+   "size": "1024x1024"
+  },
+  "bamboo": {
+   "card": "bamboo_2",
+   "size": "1024x1024"
+  },
+  "leafy": {
+   "card": "leafy_1",
+   "size": "1024x1024",
+   "root": "centre"
+  }
+ }
+}

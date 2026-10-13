@@ -28,6 +28,11 @@ const SHARP = [0.75, 1, 1.5, 2];
 const QUALITY = ['auto', 'low', 'mid', 'high']; // the device tier (tiers.js, settings key `quality`)
 const SHADING = ['lambert', 'toon', 'unlit', 'pbr'];
 const BOATS = ['auto', 'moored', 'painted', 'waves']; // the river's boats (world.js boatMode, settings key `boats`)
+// who you play (world.js settings key `avatar`; the life pass, gen/life/progress.md): one character of each kind the
+// painted people answer differently (talk.json kinds)
+const PLAY = ['official', 'scholar', 'monk', 'woman', 'child', 'soldier', 'porter', 'sightseer'];
+// the life layer's rows, on by default since the user's sign-off; gone with ?talk=0 (ui/index.js `life`)
+const LIFE = (() => { try { return new URLSearchParams(location.search).get('talk') !== '0'; } catch { return false; } })();
 const mod = (x, n) => ((x % n) + n) % n;
 const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 const nearest = (list, v) => list.reduce((a, b) => (Math.abs(b - v) < Math.abs(a - v) ? b : a));
@@ -157,6 +162,7 @@ export class SettingsScreen {
       ];
       case 'view': return [
         world('view', 'tiles', { values: ['first', 'third'], text: (v) => SW.views[v === 'first' ? 'first' : 'third'] }),
+        ...(LIFE ? [world('avatar', 'step', { values: PLAY.includes(s.avatar) ? PLAY : [...PLAY, s.avatar], text: (v) => SW.play[v] || SW.play.other })] : []),
         slider('camDistance', 1.4, 7, { disabled: () => (s.view === 'first' ? SW.unused : null) }),
         slider('fov', 35, 85),
       ];
@@ -167,7 +173,7 @@ export class SettingsScreen {
       ];
       case 'ui': return [
         { id: 'lang', kind: 'step', values: ['zh', 'zh_en'], get: () => prefs.get('lang') || 'zh', set: (v) => prefs.set('lang', v), text: (v) => SW.langs[v] },
-        pref('expandDescriptions'), pref('placeNotes'), pref('plaques'),
+        pref('expandDescriptions'), pref('placeNotes'), pref('plaques'), ...(LIFE ? [pref('chatter')] : []),
         { id: 'help', kind: 'action', act: SW.open, run: () => { this.close(); c.help?.()?.set(true); } },
         ...(journal ? [{ id: 'journal', kind: 'action', act: SW.open, run: () => { this.close(); (journal.open || journal.toggle)?.call(journal); } }] : []),
       ];

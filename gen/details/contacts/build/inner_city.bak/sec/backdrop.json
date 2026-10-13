@@ -1,9 +1,0 @@
-{
- "about": "The painted backdrop beyond the inner city's walkable area (map/BUILDING.md: painting, not models). tools/backdrop.mjs restyles each panel from the scroll strip that lies past that edge (scan rect u0,v0,u1,v1), with prompts/backdrop_panel.txt + the panel's content prompt, and fades its edges into mist; web/src/backdrop.js stands the panels on a ring round the section (angles: 0 = east, 90 = north, 180 = west) and veils everything outside the painted area in mist (the scroll's blank silk). East is the gate (S5), built: no panel. North: the silk's top edge cuts the far row and nothing is painted above it: mist only. South (below the silk's edge): mist only.",
- "ring": { "radius": 70, "bottom": -3, "top": 24 },
- "mist": { "start": 0.6, "full": 9 },
- "panels": [
-  { "side": "west", "angle": 180, "width": 80, "scan": [815, 0, 2000, 1790], "content": "backdrop_inner_city_west", "why": "S7 (the end: the 解 building, 赵太丞家, the official riding out, the gatehouse, the willows to the cut edge) lies past the west seam and is not built yet" }
- ],
- "size": "3584x1024"
-}

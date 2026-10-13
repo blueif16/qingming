@@ -35,6 +35,9 @@ QM = r"\\wsl.localhost\Ubuntu\home\ran\3d_director\qingming"
 LAYOUT_JSON = QM + r"\sections\inner_city\layout.json"
 PLACED_JSON = QM + r"\sections\inner_city\placed.json"
 SEATS_JSON = QM + r"\gen\sections\inner_city\seats.json"   # the drivers' seats the vehicle kit returns (make_people reads it)
+# seats fitted under seated figures (details pass, fix-inner; gen/details/contacts/fix_inner/tools/fig_seats.mjs): a stool
+# owned by the figure where its seat is hidden or unpainted (map/BUILDING.md rule 3), or a mapped seat's fitted height
+FIG_SEATS_JSON = QM + r"\gen\sections\inner_city\fig_seats.json"
 COLL = "inner_city_scene"
 UP = V((0, 0, 1))
 
@@ -708,7 +711,8 @@ def props(rng, h):
                 k.beam("bamboo", False, (x + 0.2 * math.cos(a), y + 0.2 * math.sin(a), z + 0.4), (x, y, z + 1.6), 0.03, 0.03, 0)
     x, y, z = at("stool_4461")
     with ent("stool_4461"):
-        ki.stool(x, y, z, h=0.45)
+        # choice (fix-inner): the stool's height fitted to the seated man's sit (fig_seats.json), else 0.45
+        ki.stool(x, y, z, h=fitted_h("S6.prop.stool_4461", 0.45, z))
     x, y, z = at("tub_4320")
     with ent("tub_4320"):
         ki.tub(x, y, z, 0.27, 0.57, rng)    # 54 x 57 px
@@ -748,6 +752,11 @@ def props(rng, h):
     x, y, z = at("high_seat_4060")
     with ent("high_seat_4060"):
         ki.stool(x, y, z, h=0.85, s=0.42)
+        # the painted "long curved bar" low on the chair's front (map: an arm or rail sweeping down to v ~860, near
+        # the legs' feet) as its foot rail, where the stall keeper's feet rest (details pass, fix-inner: he sits 0.85 m
+        # up and his sit puts his soles 0.42 m under his seat). choice: a flat rail 0.07 deep, its top 0.434 m up,
+        # between the front legs
+        k.bx("timber", False, (x - 0.2, y - 0.215, z + 0.404), (x + 0.2, y - 0.145, z + 0.434))
         k.beam("timber", False, (x - 0.25, y + 0.2, z + 1.25), (x + 0.25, y + 0.2, z + 1.25), 0.04, 0.04, 0)
         for sx in (-0.21, 0.21):
             k.beam("timber", False, (x + sx, y + 0.19, z + 0.85), (x + sx, y + 0.2, z + 1.25), 0.035, 0.035, 0)
@@ -928,7 +937,8 @@ def props(rng, h):
             ki.counter((x - 0.75, y), (x + 0.75, y), 0.12, 0.8, 0.45, rng, front=False)   # real (the far row is painted small)
     x, y, z = at("cloth_bench_3598")
     with ent("cloth_bench_3598"):
-        ki.bench((x - 0.75, y - 0.1), (x + 0.75, y - 0.1), 0.0, h=0.45, w=0.28)
+        # choice (fix-inner): the top fitted to the customer's sit (fig_seats.json), else 0.45 over the ground
+        ki.bench((x - 0.75, y - 0.1), (x + 0.75, y - 0.1), 0.0, h=fitted_h("S6.prop.cloth_bench_3598", 0.45, 0.0), w=0.28)
     x, y, z = at("red_board_3936")
     with ent("red_board_3936"):
         k.board("cloth_red", True, (x - 0.5, y), (x + 0.5, y), 0.08, 0.0, 2.7)   # real: a 1 m board, 2.7 m tall (painted 77 px wide at 0.6)
@@ -994,18 +1004,50 @@ def team(*slugs):
 
 
 SEATS = {}
+SEDAN_POLE_FIT = 1.47   # choice: see vehicles(); the bearers' shoulder top in sedan_carry~pole + the pole's radius
 
 
 def seat_support(eid, built):
     """A painted driver sits on the kit's driver's seat (`built.seat`, hips; `built.feet`, the footboard). The seat
     and footboard are visible planks that don't collide, and people.js grounds a figure by a ray down from H + 1.2 m:
     an invisible block under the footboard (top 5 cm above it) is what the figure's feet stand on, so the sit clip
-    puts the hips on the seat 0.4 m behind. make_people.py puts the figure at the feet (seats.json)."""
+    puts the hips on the seat 0.4 m behind. make_people.py puts the figure at the feet (seats.json).
+    Details pass (fix-inner, 2026-10-13): both drivers now take their root height from people.json root_h (people.js P2,
+    fix_standard.md rule 6: the seat top less the clip's seat height), so the invisible block is gone; it held them 5 cm
+    over the visible footboard (the hidden_collider check) and filled the space between the wagon's shafts where its
+    carter stands. seats.json keeps the seat and the footboard."""
     if not getattr(built, "seat", None):
         return
     fx, fy, fz = built.feet
-    k.bx("hidden", True, (fx - 0.22, fy - 0.22, 0.0), (fx + 0.22, fy + 0.22, fz + 0.05))
     SEATS[eid] = {"seat": list(built.seat), "feet": [fx, fy, round(fz + 0.05, 3)]}
+
+
+def _fig_seats():
+    try:
+        with open(FIG_SEATS_JSON, encoding="utf-8") as fi:
+            return json.load(fi).get("seats", {})
+    except FileNotFoundError:
+        return {}
+
+
+def fitted_h(owner, default, z):
+    """A mapped seat's height over z, fitted to its sitter's seat point (fig_seats.json kind "fit"), else default."""
+    for e in _fig_seats().values():
+        if e["kind"] == "fit" and e["owner"] == owner:
+            return round(e["top"] - z, 3)
+    return default
+
+
+def figure_seats():
+    """Stools under figures painted seated whose seat is hidden or not painted (map/BUILDING.md rule 3: the seat is part
+    of the figure; fix_standard.md rule 5), each owned by the figure's map ID, centred under its clip's seat point at
+    its placement, its top 0.007 m under that point (fig_seats.json); not colliding (seats never do).
+    choice: 0.34 m square (the seat point moves 0.06-0.12 m over a cycle), on the visible floor under it."""
+    for slug, e in sorted(_fig_seats().items()):
+        if e["kind"] != "stool":
+            continue
+        with sb.entity(e["owner"]):
+            ki.stool(e["X"], e["D"], e["base"], h=e["h"], s=0.34)
 
 
 def vehicles(rng, h):
@@ -1026,10 +1068,33 @@ def vehicles(rng, h):
         # top 137 px above the hub)
         kv.sack_cart(f, r, wheels=w, team=team("donkey_team_near_5270", "donkey_team_dark_5300", "donkey_team_pale_5285"),
                      z_of=h, rng=random.Random(5412), low=True, low_R=0.75, bed_len=2.4)
+    # choice (details pass, fix-inner, 2026-10-13; gen/details/contacts/fix_inner/notes.md): the poles fitted to their
+    # bearers (kit pole_fit, as S4's): each end's axis over the ground under it at the bearer's shoulder-top height in
+    # sedan_carry~pole (1.432 m with his soles on the ground: characters/ik_variants.json "pole") plus the pole's
+    # radius 0.038 (the kit's pole_h 1.3 had them 0.1-0.2 m under the shoulders). All seven S6 bearers carry a pole on
+    # the shoulder (map/text/S6.md).
     for eid in ("S6.veh.sedan_4575", "S6.veh.sedan_4965"):
         f, r, w = pts(eid)
         with sb.entity(eid):
-            kv.sedan_chair(f, r, z_of=h, rng=random.Random(4575 if "4575" in eid else 4965), carried=True)
+            kv.sedan_chair(f, r, z_of=h, rng=random.Random(4575 if "4575" in eid else 4965), carried=True,
+                           pole_fit=SEDAN_POLE_FIT)
+    # the matchmaker's seat in the west sedan (map/BUILDING.md rule 3: the seat of a figure painted seated is part of
+    # her; "woman seated in the first sedan", her face at its south window): a bench across the back of the cabin, on
+    # the cabin's floor. choice: top 0.44 m over the floor (the woman's sit puts her seat point 0.447 m over her soles),
+    # 0.6 m across, 0.28 deep, centred 0.30 m behind the cabin's middle (the clip's seat is 0.6 m behind her feet);
+    # not colliding (seats never do). The floor's height is the kit's: the poles at the cabin less 0.6, the floor board
+    # 0.04 over that.
+    f, r, w = pts("S6.veh.sedan_4575")
+    o, fwd, left, L = kv._axis(r, f)
+    c = o + fwd * (L * 0.5)
+    zg = h(c.x, c.y)
+    z_p = ((h(r[0], r[1]) - zg + SEDAN_POLE_FIT) + (h(f[0], f[1]) - zg + SEDAN_POLE_FIT)) / 2
+    floor = zg + z_p - 0.6 + 0.04
+    b = c - fwd * 0.30
+    with sb.entity("S6.fig.sedan_passenger_4362"):
+        ki.bench((b - left * 0.3).xy, (b + left * 0.3).xy, floor, h=0.44, w=0.28)
+    SEATS["S6.fig.sedan_passenger_4362"] = {"seat": [round(b.x, 3), round(b.y, 3), round(floor + 0.44, 3)],
+                                             "floor": round(floor, 3), "why": "her bench in the west sedan's cabin"}
     f, r, w = pts("S6.veh.taiping_wagon_3600")
     with sb.entity("S6.veh.taiping_wagon_3600"):
         b = kv.mule_wagon(f, r, wheels=w, team=team("mule_lower_shaft_3560", "mule_lower_3_3498", "mule_lower_2_3462", "mule_lower_1_3427"),
@@ -1094,6 +1159,7 @@ def build(scene, seed=6):
         part(random.Random(zlib.crc32(part.__name__.encode())))
     props(random.Random(zlib.crc32(b"props")), h)
     vehicles(random.Random(zlib.crc32(b"vehicles")), h)
+    figure_seats()
     colliders(L["trees"])
 
     coll = bpy.data.collections.get(COLL) or bpy.data.collections.new(COLL)

@@ -1,0 +1,670 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T10:40:28.297Z",
+ "sections": [
+  "outer_road_2"
+ ],
+ "owners_load_ms": 334,
+ "seconds": 4.169,
+ "people": 66,
+ "checked": 66,
+ "crew_not_covered": 0,
+ "figures_failing": 28,
+ "fails": 57,
+ "by_class": {
+  "contact:floor (placement)": 7,
+  "contact:animal": 6,
+  "contact:rail": 6,
+  "contact:seat": 5,
+  "contact:table": 5,
+  "body_cylinder": 4,
+  "contact:vehicle": 4,
+  "contact:floor (clip)": 3,
+  "contact:floor": 3,
+  "contact:seat (no seat)": 3,
+  "stance_soles (placement)": 3,
+  "furniture": 2,
+  "site_inside": 1,
+  "contact:structure": 1,
+  "below_support": 1,
+  "boat_body": 1,
+  "deck_support": 1,
+  "contact:boat": 1
+ },
+ "by_clip": {
+  "body_cylinder": 4,
+  "bridle:contact:animal": 4,
+  "lean_over:contact:rail": 4,
+  "listen:contact:floor": 3,
+  "stance_soles": 3,
+  "sit:contact:seat": 3,
+  "write:contact:floor": 2,
+  "listen:contact:seat": 2,
+  "furniture": 2,
+  "drink:contact:floor": 2,
+  "sit:contact:floor": 2,
+  "lean_chin:contact:rail": 2,
+  "browse:contact:table": 2,
+  "girth:contact:animal": 2,
+  "reach_up_load:contact:vehicle": 2,
+  "steer:contact:vehicle": 2,
+  "reach:contact:table": 2,
+  "write:contact:seat": 1,
+  "write:contact:table": 1,
+  "sit_floor:contact:floor": 1,
+  "crane:site_inside": 1,
+  "show_goods_seated:contact:floor": 1,
+  "drink:contact:seat": 1,
+  "wheelwright:contact:structure": 1,
+  "below_support": 1,
+  "knee_on_stool:contact:seat": 1,
+  "knee_on_stool:contact:floor": 1,
+  "idle:boat_body": 1,
+  "deck_support": 1,
+  "tiller_seated:contact:floor": 1,
+  "tiller_seated:contact:boat": 1
+ },
+ "table": {
+  "outer_road_2": {
+   "contact:seat": {
+    "n": 5,
+    "worst": 0.466,
+    "worst_id": "customer_hat_14462"
+   },
+   "contact:floor (clip)": {
+    "n": 3,
+    "worst": 0.054,
+    "worst_id": "official_seated_12728"
+   },
+   "contact:table": {
+    "n": 5,
+    "worst": 0.6,
+    "worst_id": "small_companion_14654"
+   },
+   "contact:floor": {
+    "n": 3,
+    "worst": 0.502,
+    "worst_id": "man_dark_cap_by_stair_12700"
+   },
+   "body_cylinder": {
+    "n": 4,
+    "worst": 0.245,
+    "worst_id": "dark_figure_or_garment_12825"
+   },
+   "contact:seat (no seat)": {
+    "n": 3,
+    "worst": 0.461,
+    "worst_id": "customer_hat_14462"
+   },
+   "contact:floor (placement)": {
+    "n": 7,
+    "worst": 0.485,
+    "worst_id": "man_seated_front_of_hall_12866"
+   },
+   "stance_soles (placement)": {
+    "n": 3,
+    "worst": -0.159,
+    "worst_id": "customer_bent_14420"
+   },
+   "furniture": {
+    "n": 2,
+    "worst": 0.223,
+    "worst_id": "man_standing_by_hall_12942"
+   },
+   "site_inside": {
+    "n": 1,
+    "worst": 0.031,
+    "worst_id": "onlooker_dark_robe_13222"
+   },
+   "contact:animal": {
+    "n": 6,
+    "worst": 1.535,
+    "worst_id": "man_big_hat_12895"
+   },
+   "contact:rail": {
+    "n": 6,
+    "worst": 0.6,
+    "worst_id": "man_bending_to_donkey_13440"
+   },
+   "contact:structure": {
+    "n": 1,
+    "worst": 0.56,
+    "worst_id": "wheelwright_bending_13620"
+   },
+   "contact:vehicle": {
+    "n": 4,
+    "worst": 1.288,
+    "worst_id": "carter_at_shaft_ox_13243"
+   },
+   "below_support": {
+    "n": 1,
+    "worst": -0.16,
+    "worst_id": "customer_hat_14462"
+   },
+   "boat_body": {
+    "n": 1,
+    "worst": 0.079,
+    "worst_id": "boatman_dark_cap_15046"
+   },
+   "deck_support": {
+    "n": 1,
+    "worst": -0.297,
+    "worst_id": "boatman_dark_cap_15046"
+   },
+   "contact:boat": {
+    "n": 1,
+    "worst": 2.248,
+    "worst_id": "seated_boatman_stern_15372"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:boat",
+   "clip": "tiller_seated",
+   "site": "palm_R",
+   "value": 2.248,
+   "kind": "crew",
+   "with": [
+    "S4b.veh.boat_arched_awning_14945|body (tiller)"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump",
+    "t0",
+    "t5",
+    "t10",
+    "t15",
+    "t20",
+    "t25",
+    "t30"
+   ],
+   "id": "seated_boatman_stern_15372",
+   "section": "outer_road_2",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 1.535,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_12862"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_big_hat_12895",
+   "section": "outer_road_2",
+   "model": "official_rider"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.468,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_12862"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_big_hat_12895",
+   "section": "outer_road_2",
+   "model": "official_rider"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "steer",
+   "site": "palm_R",
+   "value": 1.288,
+   "kind": "figure",
+   "with": [
+    "S4b.veh.palm_cart_13455"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.088,
+    "side_m": 0.866
+   },
+   "soft": false,
+   "id": "carter_at_shaft_ox_13243",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.057,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_saddled_13378",
+    "S4b.ani.donkey_13474"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_in_white_at_horse_13360",
+   "section": "outer_road_2",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "steer",
+   "site": "palm_L",
+   "value": 1.002,
+   "kind": "figure",
+   "with": [
+    "S4b.veh.palm_cart_13455"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": -0.227,
+    "side_m": 1.058
+   },
+   "soft": false,
+   "id": "carter_at_shaft_ox_13243",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "reach_up_load",
+   "site": "palm_R",
+   "value": 0.719,
+   "kind": "figure",
+   "with": [
+    "S4b.veh.palm_cart_13455"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "porter_at_cart_rear_13090",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "reach_up_load",
+   "site": "palm_L",
+   "value": 0.604,
+   "kind": "figure",
+   "with": [
+    "S4b.veh.palm_cart_13455"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "porter_at_cart_rear_13090",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "man_bending_to_donkey_13440",
+   "section": "outer_road_2",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "man_bending_to_donkey_13440",
+   "section": "outer_road_2",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": true,
+   "id": "small_companion_14654",
+   "section": "outer_road_2",
+   "model": "child"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": true,
+   "id": "small_companion_14654",
+   "section": "outer_road_2",
+   "model": "child"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 0.56,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_saddled_13378",
+    "S4b.ani.donkey_13474"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_in_white_at_horse_13360",
+   "section": "outer_road_2",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:structure",
+   "clip": "wheelwright",
+   "site": "palm_L",
+   "value": 0.56,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.pole_frame_basket_13690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "wheelwright_bending_13620",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:table",
+   "clip": "browse",
+   "site": "palm_R",
+   "value": 0.532,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.pole_frame_basket_13690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "wheelwright_bending_13620",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "girth",
+   "site": "palm_L",
+   "value": 0.527,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_saddled_13378",
+    "S4b.ani.donkey_13474"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_bowed_at_horse_13410",
+   "section": "outer_road_2",
+   "model": "inspector"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "sit_floor",
+   "site": "seat",
+   "value": 0.502,
+   "kind": "figure",
+   "with": [
+    "ground"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_dark_cap_by_stair_12700",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "listen",
+   "site": "sole_R",
+   "value": 0.485,
+   "kind": "figure",
+   "with": [
+    "ground"
+   ],
+   "note": "the clip's own sole_R height 0.003 m (placement)",
+   "rel": null,
+   "soft": false,
+   "cause": "placement",
+   "id": "man_seated_front_of_hall_12866",
+   "section": "outer_road_2",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "sit",
+   "site": "seat",
+   "value": 0.466,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.chair_14458"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "customer_hat_14462",
+   "section": "outer_road_2",
+   "model": "townsman"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "listen",
+   "site": "seat",
+   "value": 0.461,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (80/80 samples): only the ground; nearest seat-high piece S4b.prop.chair_14458 0.17 m away in plan (top 0.53)",
+   "rel": null,
+   "soft": false,
+   "id": "customer_hat_14462",
+   "section": "outer_road_2",
+   "model": "townsman"
+  },
+  {
+   "class": "contact:table",
+   "clip": "browse",
+   "site": "palm_L",
+   "value": 0.422,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.pole_frame_basket_13690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "wheelwright_bending_13620",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "listen",
+   "site": "seat",
+   "value": 0.421,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (80/80 samples): only the ground; nearest seat-high piece S4.bld.official_hall_12530 0.098 m away in plan (top 0.87)",
+   "rel": null,
+   "soft": false,
+   "id": "man_seated_front_of_hall_12866",
+   "section": "outer_road_2",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "girth",
+   "site": "palm_R",
+   "value": 0.393,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_saddled_13378",
+    "S4b.ani.donkey_13474"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_bowed_at_horse_13410",
+   "section": "outer_road_2",
+   "model": "inspector"
+  },
+  {
+   "class": "contact:table",
+   "clip": "write",
+   "site": "palm_L",
+   "value": 0.329,
+   "kind": "figure",
+   "with": [
+    "S4b.fig.official_seated_12728"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "official_seated_12728",
+   "section": "outer_road_2",
+   "model": "official"
+  },
+  {
+   "class": "deck_support",
+   "value": -0.297,
+   "with": [
+    "S4b.veh.boat_long_cabin_14850"
+   ],
+   "note": "the root -0.297 m under the visible S4b.veh.boat_long_cabin_14850|body (bamboo__nocol)",
+   "at": [
+    "t30"
+   ],
+   "id": "boatman_dark_cap_15046",
+   "section": "outer_road_2",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_L",
+   "value": 0.247,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.table_bowls_13275"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "counter_man_leaning_13325",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "body_cylinder",
+   "value": 0.245,
+   "with": [
+    "S4.bld.official_hall_12530"
+   ],
+   "note": "the 0.26 m body overlaps S4.bld.official_hall_12530 by 0.245 m at body height",
+   "id": "dark_figure_or_garment_12825",
+   "section": "outer_road_2",
+   "model": "inspector",
+   "kind": "figure"
+  },
+  {
+   "class": "body_cylinder",
+   "value": 0.245,
+   "with": [
+    "S4b.bld.big_roof_hall_12990"
+   ],
+   "note": "the 0.26 m body overlaps S4b.bld.big_roof_hall_12990 by 0.245 m at body height",
+   "id": "onlooker_dark_robe_13222",
+   "section": "outer_road_2",
+   "model": "townsman",
+   "kind": "figure"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_R",
+   "value": 0.241,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.chair_14458"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "customer_bent_14420",
+   "section": "outer_road_2",
+   "model": "inspector"
+  },
+  {
+   "class": "furniture",
+   "value": 0.223,
+   "with": [
+    "S4b.bld.shop_hall_13170"
+   ],
+   "note": "stands on a ledge, step or rail base of S4b.bld.shop_hall_13170: 0.223 m over the surface round it (only 0 of 8 points 0.3 m out on the same level)",
+   "id": "man_standing_by_hall_12942",
+   "section": "outer_road_2",
+   "model": "sightseer",
+   "kind": "figure"
+  }
+ ],
+ "clip_level": [
+  {
+   "model": "official",
+   "clip": "write",
+   "site": "sole_L",
+   "offset_m": 0.051,
+   "figures": [
+    "outer_road_2/official_seated_12728"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "write",
+   "site": "sole_R",
+   "offset_m": -0.051,
+   "figures": [
+    "outer_road_2/official_seated_12728"
+   ]
+  },
+  {
+   "model": "sightseer",
+   "clip": "listen",
+   "site": "sole_L",
+   "offset_m": -0.024,
+   "figures": [
+    "outer_road_2/customer_cap_14785"
+   ]
+  }
+ ],
+ "contacts_checked": 61,
+ "contacts_failing": 44
+}

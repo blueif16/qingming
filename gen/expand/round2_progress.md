@@ -640,3 +640,9 @@ From the prep agent's drafts (`gen/expand/round2/phase0_questions.md`, briefs, `
   the world in cells. Landed by the lead: stepped shading by default, saved settings versioned (v2), boats by device
   and the Boats row. Agents running: frame rate, loading, cells (pilot S3). The crowd's LOD and per-clip clips wait
   for the details session's character rebuild (3d-director-2e, `gen/details/plan.md`).
+- **2026-10-13 ~07:45: performance batch 2 complete and live** (two deploys, 06:30 and 07:45; record
+  `gen/perf/batch2/notes.md`). Landed: stepped shading default, boats by device and a 船行 setting, cross-section boat
+  batches, two-layer shadows, empty crowd batches skipped, content-hashed asset names cached immutably, small tree cards
+  first, per-clip animation files, the crowd's far LOD, the detail-tier contract (`detail.js`), and a teleport-overlap
+  fix. Cells (the middle version) are built but opt-in (no phone gain). Both deploys carried the details session's
+  signed-off contact fixes and the Start screen v2. Lessons merged into `web-scene`, `deploy-web` and `characters`.

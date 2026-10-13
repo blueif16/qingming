@@ -408,8 +408,12 @@ def _podium():
         k.beam("redwood", False, (a[0], a[1], FLOOR - 0.2), (b[0], b[1], FLOOR - 0.2), 0.07, 0.24, 0)
     st = LAYOUT["entities"]["S5.str.tower_stair"]["footprint"]
     sx0, sx1 = (st[0][0] + st[3][0]) / 2, (st[1][0] + st[2][0]) / 2
+    # choice: the balcony railing's top 1.075 m over the deck, as the moat bridge's top rail (fix-gate, details pass
+    # 2026-10-13, gen/details/contacts/fix_standard.md rule 3): the man on the balcony leans on it with his forearms,
+    # in the same lean (lean_chin~moat_rail) as the bridge's rail watchers; at the default 1.0 m it was 13 cm under
+    # his elbows
     k.balustrade([(sx0 - 0.05, dy0 + 0.12), (dx0 + 0.12, dy0 + 0.12), (dx0 + 0.12, dy1 - 0.12), (dx1 - 0.12, dy1 - 0.12),
-                  (dx1 - 0.12, dy0 + 0.12), (sx1 + 0.05, dy0 + 0.12)], FLOOR)
+                  (dx1 - 0.12, dy0 + 0.12), (sx1 + 0.05, dy0 + 0.12)], FLOOR, h=1.075)
     # choice: the stair's run is what the strokes leave between the terrace's edge and the deck (the tower is
     # compressed in depth), so it is steep
     with sb.entity("S5.str.tower_stair"):
@@ -591,7 +595,9 @@ def _office(rng):
         k.bracket(x, yf, top, (0, -1), s=0.6, mat="timber")
     k.gable_roof(x0, x1, yf - 1.05, yb + 0.95, top + 0.45, top + 1.85, over=0.6)
     # inside: the official's desk and bench, the big frame scale, shelves and posted notices
-    bx("timber", False, (x0 + 0.1, yf + 0.1, zt), (x1 - 0.1, yb - 0.1, zt + 0.03))
+    # floor boards: they collide (fix-gate, details pass 2026-10-13, as S4's halls and song_kit.house): over the collide
+    # plinth alone the walkable top was zt - 0.015, so the declarer stood 4.5 cm inside the visible boards
+    bx("timber", True, (x0 + 0.1, yf + 0.1, zt), (x1 - 0.1, yb - 0.1, zt + 0.03))
     ox, oy = o["official"]
     k.table(ox - 0.8, oy - 0.85, ox + 0.8, oy - 0.3, zt)
     bx("timber", True, (ox - 0.6, oy - 0.05, zt), (ox + 0.6, oy + 0.25, zt + 0.45))

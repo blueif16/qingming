@@ -12,6 +12,11 @@ import { h, helpPanel, isTouchDevice } from './components.js';
 import { Loading } from './loading.js';
 import { Places } from './places.js';
 import { Talk } from './talk.js';
+import { Bubbles } from './bubbles.js';
+import { Chatter } from './chatter.js';
+import { Marks } from './marks.js';
+import './life.css';
+import { register as registerDetail } from '../detail.js';
 import { W } from './words.js';
 import { createHud } from './hud.js';
 import { prefs } from './prefs.js';
@@ -50,6 +55,7 @@ export function createUI(o) {
     isOpen: () => !!jn?.isOpen,
     async open(opts = {}) {
       if (off || o.hudOpen() || dhud.isOpen()) return;
+      await talkAll().catch(() => {}); // every section's talks, for the 見聞 leaf
       jnLoading ??= import('./journal.js').then((m) => (jn = new m.Journal({ places: placesData, talk: talkData, data: () => ({ places: placesData, talk: talkData }), lore, player: o.player,
         canvas: o.canvas || o.hud?.canvas, touch, sfx: o.sfx })));
       try { await jnLoading; } catch (err) { console.warn('journal failed to load:', err); jnLoading = null; return; }
@@ -106,25 +112,105 @@ export function createUI(o) {
     if (credit) credit.textContent = W.hud.credit;
   }
 
-  let places = null, talk = null;
-  const ready = Promise.all([json('assets/ui/places.json'), json('assets/ui/talk.json')]).then(([pl, tk]) => {
+  let places = null, talk = null, chatter = null, bubbles = null, marks = null;
+  // who you play (the life pass, gen/life/progress.md): the avatar's kind, from talk.json's table (guan, shi, seng, fu,
+  // tong, jun, li, min); the painted people answer each kind in its own words
+  const kind = () => (query.get('talk') !== '0' && talkData?.kinds?.[o.settings?.s?.avatar]) || 'min';
+  // a plot line's step overheard (a chatter exchange, a bark or a near talk with a `step`): into the 圖志, with a small
+  // ink note the first time (no counter, no quest log: STYLE.md §9, §15)
+  let heardEl = null, heardTimer = 0;
+  const heard = (step) => {
+    const key = `h:${step}`;
+    if (!places || places.found.has(key)) return;
+    places.discover(key);
+    const th = (talkData?.threads || []).find((x) => x.steps.some((st) => st.id === step));
+    if (!th || !(prefs.get('placeNotes') ?? true)) return;
+    heardEl?.remove();
+    heardEl = h('div', 'qm-heard qm-slip', { role: 'status', 'aria-live': 'polite' }, [
+      h('span', 'qm-seal', { text: W.heard.seal, 'aria-hidden': 'true' }),
+      h('span', 'qm-heard-text', {}, [h('b', '', { text: th.title }), h('span', '', { text: W.heard.line }),
+        (prefs.get('lang') ?? 'zh') === 'zh_en' && th.titleEn ? h('i', '', { text: `${th.titleEn}: ${W.heard.lineEn}`, lang: 'en' }) : null]),
+    ]);
+    root.append(heardEl);
+    o.sfx('bubble_tap', 0.4);
+    clearTimeout(heardTimer);
+    const el = heardEl;
+    heardTimer = setTimeout(() => { el.classList.add('qm-out'); setTimeout(() => el.remove(), 650); }, 3600);
+  };
+  const ready = json('assets/ui/places.json').then((pl) => {
     if (off) return;
     const where = () => { const p = o.player.pos; return { X: p.x, D: -p.z, H: p.y }; };
     places = new Places({ layer: { banner, toasts, anchors }, data: pl, current: o.current, where, sfx: o.sfx, camera: o.camera, bvh: () => o.player.bvh,
       lore, touch, blocked: () => o.hudOpen() || dhud.isOpen() || journal.isOpen(), journal: (id) => journal.open({ at: id }) });
-    talk = new Talk({ layer: anchors, data: tk, sections: o.sections, player: o.player, camera: o.camera, sfx: o.sfx, touch });
+    placesData = pl;
+    if (o.hud) o.hud.decorate = (...a) => places.hudMarks(...a);
+  });
+  // talk.json (who you play, the plot lines, an index) comes after the places; each section's near talks, chatter and
+  // barks (assets/ui/talk/<section>.json) are fetched as that section streams in (talkSync), all of them only when the
+  // journal opens (its 見聞 leaf lists every talk)
+  // On by default since the user's sign-off (2026-10-13): everything new in the life layer (chatter, barks, the new near
+  // talks, who-you-play lines, again sets, plot lines and their journal block, intent marks, the 扮作 and 街談 settings
+  // rows). ?talk=0: the page as before, the six press-E scenes of the ink UI round with their first lines only (their
+  // English glosses are fine), no chatter, no plot lines.
+  const life = query.get('talk') !== '0';
+  const ORIGINAL = ['V5.1', 'V5.5', 'V5.11', 'V6.5', 'V6.2', 'V4.2'];
+  const asBefore = (d) => ({ scenes: (d.scenes || []).filter((x) => ORIGINAL.includes(x.id)).map(({ again, step, ...x }) => ({
+    ...x, beats: x.beats.filter((b) => !b.only).map(({ as, asEn, only, not, ...b }) => b) })) });
+  const talkFiles = new Map(); // section -> Promise
+  const talkOf = (sec) => {
+    const url = talkData?.sections?.[sec];
+    if (!url || talkFiles.has(sec)) return talkFiles.get(sec) ?? Promise.resolve();
+    const p = json(url).then((d) => { if (d) { talk?.add(life ? d : asBefore(d)); if (life) chatter?.add(d); } });
+    talkFiles.set(sec, p);
+    return p;
+  };
+  const talkAll = () => Promise.all(Object.keys(talkData?.sections || {}).map(talkOf));
+  let talkSyncT = 0;
+  const talkSync = (dt) => { talkSyncT -= dt; if (talkSyncT > 0 || !talkData) return; talkSyncT = 1; for (const sec of o.sections().keys()) talkOf(sec); };
+  const talkReady = Promise.all([ready, json('assets/ui/talk.json')]).then(([, tk]) => {
+    if (off || !places) return;
+    if (!life) tk.threads = []; // no plot lines (nor their journal block, nor the heard note) with ?talk=0
+    talkData = tk;
+    bubbles = new Bubbles({ layer: anchors, camera: o.camera, touch, sfx: o.sfx });
+    talk = new Talk({ layer: anchors, data: tk, sections: o.sections, player: o.player, camera: o.camera, bubbles, sfx: o.sfx, touch, kind, heard });
+    tk.scenes = talk.scenes; // the journal's 見聞 reads the scenes as they come in
+    chatter = new Chatter({ data: tk, sections: o.sections, player: o.player, bubbles, kind, heard, night: () => o.night?.() ?? 0,
+      isHeard: (step) => places.found.has(`h:${step}`), enabled: () => life && prefs.get('chatter') !== false,
+      quiet: () => !!talk.conv || journal.isOpen() || dhud.isOpen() });
+    // intent marks over groups up to something, seen from beyond earshot (marks.js; the tier's detail.talk.marks)
+    marks = chatter.marks = new Marks({ layer: anchors, chatter, camera: o.camera, player: o.player, bvh: () => o.player.bvh });
+    // the device tier (gen/details/tier_contract.md, detail.js): the chatter's numbers re-scale live; its stats() is in
+    // __test.details(): open bubbles as instances, the life layer's CPU per frame (talk + chatter + bubbles)
+    registerDetail('talk', {
+      applyTier: (cfg) => chatter.applyTier(cfg),
+      stats: () => ({ draws: 0, triangles: 0, instances: bubbles.list.length + marks.shown.size, marks: marks.shown.size, cpuMs: +(lifeCost.n ? lifeCost.ms / lifeCost.n : 0).toFixed(4),
+        scheduled: chatter.state().awake.length, tier: chatter.tier, chatterOpen: chatter.cfg.chatterOpen,
+        life, chatter: life ? chatter.groups.length : 0, barks: life ? chatter.barks.length : 0, scenes: talk.scenes.length }),
+    });
     // the journal's memory and the painting's marks (lore agent): a conversation heard goes in 見聞; the scroll HUD draws
     // a cinnabar seal on each landmark reached (scroll_hud.js calls hud.decorate)
-    placesData = pl; talkData = tk;
     const start = talk.start.bind(talk);
     talk.start = (sc) => { const ok = start(sc); if (ok) places.discover(`t:${sc.id}`); return ok; };
-    if (o.hud) o.hud.decorate = (...a) => places.hudMarks(...a);
+    // the talk's own font subsets (text-talk, display-talk: lazy, gen/ui/fonts/roles.json), asked for at idle so the
+    // first bubble on the street doesn't flash in the system 楷 while they come
+    setTimeout(() => {
+      try {
+        const chars = new Set(), names = new Set();
+        for (const g of [...chatter.groups, ...chatter.barks, ...talk.scenes]) {
+          for (const r of Object.values(g.roles || { one: g.role })) for (const c of r?.name || '') names.add(c);
+          for (const t of [...(g.alts || []), ...(g.exchanges || []).flatMap((e) => e.beats.flatMap((b) => b.alts)), ...(g.beats || []).map((b) => b.text)]) for (const c of t) chars.add(c);
+        }
+        document.fonts?.load('18px "QM Text"', [...chars].join('')).catch(() => {});
+        document.fonts?.load('17px "QM Display"', [...names].join('')).catch(() => {});
+      } catch { /* fonts are optional */ }
+    }, 6000);
   });
 
   let started = false, nightAcc = 0;
   const cost = { ms: 0, n: 0 }; // the UI's own script time per frame (the checks read it: test.cost())
+  const lifeCost = { ms: 0, n: 0 }; // the life layer's share (talk, chatter, bubbles): detail.js stats, a running mean
   const ui = {
-    root, places: () => places, talk: () => talk, help, hud: dhud, journal,
+    root, places: () => places, talk: () => talk, chatter: () => chatter, help, hud: dhud, journal,
     progress: (f) => loading.progress(f),
     loaded() {
       loading.done();
@@ -138,7 +224,14 @@ export function createUI(o) {
       // anything the UI throws turns the UI off, never the page (as sound.js does)
       try {
         if (places) places.update(dt);
+        const t1 = performance.now();
+        talkSync(dt);
         if (talk) talk.update(dt);
+        if (chatter) chatter.update(dt);
+        if (bubbles) bubbles.update(dt);
+        if (marks) marks.update();
+        lifeCost.ms += performance.now() - t1;
+        if (++lifeCost.n >= 600) { lifeCost.ms /= 2; lifeCost.n /= 2; } // a running mean over the last few hundred frames
       } catch (err) { console.warn('ui stopped:', err); started = false; root.hidden = true; return; }
       cost.ms += performance.now() - t0;
       cost.n++;
@@ -161,7 +254,7 @@ export function createUI(o) {
     },
     regionTitle(folder) { const r = places?.regionOf(folder); return r ? (innerWidth < 640 ? r.name : `${r.name} · ${r.sub}`) : null; },
     test: {
-      ready: () => ready.then(() => !!places),
+      ready: () => Promise.all([ready, talkReady]).then(() => !!places && !!talk),
       started: () => started,
       banner: (folder) => places?.fireRegion(folder),
       toast: (id, open = false) => places?.fireLandmark(id, { open }),
@@ -171,8 +264,21 @@ export function createUI(o) {
       discover: (ids) => { for (const id of [].concat(ids)) { const m = places?.byId.get(id); if (m) places.reached(m); else places?.discover(id); } return places?.found.size ?? 0; },
       journal: { open: (at) => journal.open({ at }), close: () => journal.close(), state: () => journal.state(), turn: (step) => jn?.turn(step) },
       talk: (id) => { const sc = talk?.scenes.find((s) => s.id === id); return sc ? talk.start(sc) : false; },
+      // the life pass (gen/life/progress.md): chatter on/off (the cost A/B), its state and scan cost, the bubbles on
+      // screen (the overlap check), who you play
+      chatter: (on) => { if (chatter) { chatter.on = !!on; if (!on) bubbles?.dropWhere((e) => e.owner === 'chat'); } return chatter?.on ?? null; },
+      chatterState: () => (chatter ? { ...chatter.state(), marks: marks?.state() ?? [] } : null),
+      chatterStats: (reset = false) => { if (!chatter) return null; const r = chatter.state().stats; if (reset) Object.assign(chatter.stats, { scans: 0, scanMs: 0, lines: 0, shown: 0, skipped: 0 }); return r; },
+      bubbles: () => ({ open: bubbles?.list.length ?? 0, maxSeen: bubbles?.maxSeen ?? 0, shown: bubbles?.shown ?? 0, boxes: bubbles?.boxes() ?? [] }),
+      kind: () => kind(),
+      life: () => life,
+      loadTalk: () => talkAll().then(() => ({ scenes: talk?.scenes.length ?? 0, chatter: chatter?.groups.length ?? 0, barks: chatter?.barks.length ?? 0 })),
+      heard: (step) => heard(step),
       next: () => talk?.interact(),
       heads: (id) => talk?.headsOf(id) ?? null,
+      // a near talk's host in the world and how far you are from it (reachable: within 3.2 m and 1.6 m of height)
+      hostOf: (id) => { const sc = talk?.scenes.find((s) => s.id === id), p = sc && talk.people(sc)?.roles[sc.host]?.p; if (!p) return null;
+        const q = p.root.position, P = o.player.pos; return { x: q.x, y: q.y, z: q.z, dist: Math.hypot(q.x - P.x, q.z - P.z), dh: q.y - P.y }; },
       close: () => talk?.close(),
       help: (open) => help?.set(open),
       // the direct HUD and the settings screen (hud.js, settings_screen.js)

@@ -8,6 +8,7 @@ choices (actions, nudges, walks) are written here with their reasons and copied 
 import json
 import math
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 QM = os.path.abspath(os.path.join(HERE, '../../..'))
@@ -446,7 +447,9 @@ A = {
     'donkey_wine_cart_3105': ('donkey', 'collar', [['idle', 9]]),
     'donkey_2285': ('donkey', 'saddle_cloth', [['idle', 10]]),
     'horse_3445': ('horse', 'saddle', [['idle', 10]]),
-    'horse_5262': ('horse', 'saddle', [['graze', 6], ['idle', 6]]),
+    # details pass (fix-inner): painted with its head lowered, wearing a bridle, ridden: head_low (its held lowered
+    # head), not graze (the muzzle to the ground, its back moving under the rider: his seat stood 4.5 cm off it)
+    'horse_5262': ('horse', 'saddle', [['head_low', 9], ['idle', 4]]),
     'mule_lower_1_3427': ('mule', 'collar', [['idle', 9]]),
     'mule_lower_2_3462': ('mule', 'collar', [['graze', 6], ['idle', 5]]),
     'mule_lower_3_3498': ('mule', 'collar', [['idle', 9]]),
@@ -567,6 +570,11 @@ for clip in sorted(WANTED):
 people['props_why'] = PROPS_WHY
 people['scale_why'] = SCALE_WHY
 people['cast_why'] = {k: v[1] for k, v in RECAST.items()}
+# the details pass's contact fixes (sections/inner_city/contact_fixes.json: solved nudges and turns, recasts, IK clip
+# variants, seats; gen/details/contacts/fix_standard.md), applied last so a rerun of the casting keeps them
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes
+apply_contact_fixes(people, 'inner_city')
 json.dump(people, open(os.path.join(QM, 'sections/inner_city/people.json'), 'w'), ensure_ascii=False, indent=1)
 print(len(people['figures']), 'figures,', len(people['walkers']), 'walkers,', len(people['animals']), 'animals')
 for w in people['walkers']:

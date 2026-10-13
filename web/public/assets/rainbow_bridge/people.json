@@ -11,8 +11,9 @@
    ],
    "nudge": [
     0.35,
-    -0.02
-   ]
+    0.01
+   ],
+   "facing_deg": 180
   },
   "seated_customer_20140": {
    "character": "robed_man",
@@ -24,18 +25,19 @@
    ],
    "nudge": [
     -0.25,
-    -0.07
-   ]
+    0.03
+   ],
+   "facing_deg": 0
   },
   "man_in_hatch_20172": {
    "character": "boatman",
    "do": [
     [
-     "look",
+     "crouch",
      10
     ],
     [
-     "idle",
+     "look",
      4
     ]
    ],
@@ -78,11 +80,11 @@
    "character": "boatman",
    "do": [
     [
-     "look",
+     "crouch",
      10
     ],
     [
-     "idle",
+     "look",
      4
     ]
    ],
@@ -150,7 +152,12 @@
      "look",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    0.28,
+    0
+   ],
+   "facing_deg": 135
   },
   "boatman_stern_bending_20365": {
    "character": "boatman",
@@ -159,17 +166,25 @@
      "bend_goods",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    -0.2,
+    0
+   ],
+   "facing_deg": 0
   },
   "boatman_cabin_door_pole_20300": {
    "character": "boatman",
    "do": [
     [
-     "fend_pole",
+     "fend_pole~out",
      10
     ]
    ],
-   "facing_deg": 14.0
+   "facing_deg": 14.0,
+   "props": [
+    "long_pole_mid"
+   ]
   },
   "dark_hat_figure_20070": {
    "character": "townsman",
@@ -218,14 +233,15 @@
    "character": "carter",
    "do": [
     [
-     "push",
+     "push~cart_pusher_19922",
      10
     ]
    ],
    "nudge": [
-    -0.21,
-    -0.77
-   ]
+    -0.06,
+    -0.57
+   ],
+   "facing_deg": 82.8
   },
   "boatman_hauling_rope_20205": {
    "character": "boatman",
@@ -257,14 +273,14 @@
    "character": "idler",
    "do": [
     [
-     "steer",
+     "steer~cart_puller_19870",
      10
     ]
    ],
    "facing_deg": 172.8,
    "nudge": [
-    -1.14,
-    0.11
+    -0.96,
+    0.05
    ]
   },
   "bank_watcher_19672": {
@@ -310,9 +326,10 @@
     ]
    ],
    "nudge": [
-    -0.28,
-    0.91
-   ]
+    -0.08,
+    0.96
+   ],
+   "facing_deg": 270
   },
   "bank_waver_19612": {
    "character": "robed_man",
@@ -341,8 +358,9 @@
    ],
    "nudge": [
     -0.05,
-    0.73
-   ]
+    0.63
+   ],
+   "facing_deg": 270
   },
   "boatman_under_mat_roof_19955": {
    "character": "boatman",
@@ -357,9 +375,10 @@
     ]
    ],
    "nudge": [
-    -0.37,
-    0.64
-   ]
+    -0.29,
+    0.54
+   ],
+   "facing_deg": 270
   },
   "walker_topedge_19878": {
    "character": "porter",
@@ -385,57 +404,65 @@
    "character": "boatman",
    "do": [
     [
-     "pole_boat",
+     "pole_boat~hold",
      10
     ]
    ],
    "nudge": [
-    -0.18,
-    0.6
+    -0.16,
+    0.5
+   ],
+   "facing_deg": 300,
+   "props": [
+    "long_pole_low"
    ]
   },
   "rail_watcher_19923": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~rail_watcher_19923",
+     16
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 326.7,
    "nudge": [
-    -0.05,
-    0.04
-   ]
+    -0.14,
+    -0.07
+   ],
+   "root_h": 1.693
   },
   "boatman_bent_pole_19830": {
    "character": "boatman",
    "do": [
     [
-     "pole_boat",
+     "pole_boat~hold",
      10
     ]
    ],
    "nudge": [
     -0.22,
     0.73
+   ],
+   "props": [
+    "long_pole_low"
    ]
   },
   "boatman_hat_pole_19915": {
    "character": "straw_hat",
    "do": [
     [
-     "pole_boat",
+     "pole_boat~hold",
      10
     ]
    ],
    "nudge": [
-    0.05,
-    -0.17
+    0.03,
+    -0.09
+   ],
+   "facing_deg": 180,
+   "props": [
+    "long_pole_low"
    ]
   },
   "head_by_shed_post_19334": {
@@ -455,19 +482,16 @@
    "character": "idler",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~rail_watcher_19892",
+     16
     ]
    ],
    "facing_deg": 318.7,
    "nudge": [
-    -0.04,
-    0.04
-   ]
+    -0.01,
+    0.07
+   ],
+   "root_h": 1.911
   },
   "rail_watcher_19862": {
    "character": "townsman",
@@ -477,11 +501,12 @@
      12
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 314.7,
    "nudge": [
-    -0.04,
-    0.04
-   ]
+    -0.13,
+    -0.25
+   ],
+   "root_h": 2.764
   },
   "under_parasol_bender_19385": {
    "character": "robed_man",
@@ -492,30 +517,37 @@
     ]
    ],
    "nudge": [
-    0.06,
-    0.0
-   ]
+    0.04,
+    0.13
+   ],
+   "facing_deg": 0
   },
   "boatman_both_arms_pole_19840": {
    "character": "boatman",
    "do": [
     [
-     "fend_pole",
+     "fend_pole~up",
      10
     ]
+   ],
+   "props": [
+    "long_pole_mid"
    ]
   },
   "boatman_bending_pole_19746": {
    "character": "boatman",
    "do": [
     [
-     "pole_boat",
+     "pole_boat~hold",
      10
     ]
    ],
    "nudge": [
     -0.08,
     0.26
+   ],
+   "props": [
+    "long_pole_low"
    ]
   },
   "boatman_capped_19800": {
@@ -539,7 +571,7 @@
    "character": "robed_man",
    "do": [
     [
-     "sit",
+     "sit~soles",
      16
     ]
    ],
@@ -552,34 +584,38 @@
    "character": "boatman",
    "do": [
     [
-     "fend_pole",
+     "fend_pole~up",
      10
     ]
    ],
    "nudge": [
     0.01,
     -0.1
+   ],
+   "props": [
+    "long_pole_mid"
    ]
   },
   "deck_stooping_hat_19765": {
    "character": "dark_hat",
    "do": [
     [
-     "reach_over_rail",
+     "reach_over_rail~deck_stooping_hat_19765",
      12
     ]
    ],
    "facing_deg": 318.7,
    "nudge": [
-    -0.05,
-    0.04
-   ]
+    0.35,
+    0.42
+   ],
+   "root_h": 3.427
   },
   "stall_bearded_man_19235": {
    "character": "storyteller",
    "do": [
     [
-     "sit",
+     "sit~soles",
      16
     ]
    ],
@@ -592,19 +628,16 @@
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~deck_rail_leaner_19715",
+     16
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 326.7,
    "nudge": [
-    -0.02,
-    0.06
-   ]
+    -0.04,
+    -0.02
+   ],
+   "root_h": 4.16
   },
   "deck_rail_watcher_19670": {
    "character": "townsman",
@@ -621,15 +654,19 @@
    "nudge": [
     0.04,
     0.04
-   ]
+   ],
+   "root_h": 4.489
   },
   "boatman_poling_bow_19632": {
    "character": "boatman",
    "do": [
     [
-     "pole_boat",
+     "pole_boat~hold",
      10
     ]
+   ],
+   "props": [
+    "long_pole_low"
    ]
   },
   "boatman_reaching_19681": {
@@ -679,15 +716,16 @@
    "character": "idler",
    "do": [
     [
-     "reach_over_rail",
+     "reach_over_rail~deck_rail_leaner_19578",
      12
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 348.7,
    "nudge": [
-    0.21,
-    -0.19
-   ]
+    0.22,
+    -0.11
+   ],
+   "root_h": 4.631
   },
   "boatman_leaning_on_bundle_19650": {
    "character": "boatman",
@@ -706,15 +744,17 @@
    "character": "porter",
    "do": [
     [
-     "fend_pole",
+     "reach_over_rail~man_bent_over_railing_19195",
      12
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 316.7,
    "nudge": [
-    -0.09,
-    -0.02
-   ]
+    0.04,
+    0.01
+   ],
+   "props": [],
+   "root_h": 4.895
   },
   "bowman_arm_out_19583": {
    "character": "boatman",
@@ -746,33 +786,31 @@
     ]
    ],
    "nudge": [
-    0.13,
-    0.2
-   ]
+    -0.13,
+    0.22
+   ],
+   "facing_deg": 180
   },
   "deck_rail_leaner_19538": {
    "character": "scholar",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~deck_rail_leaner_19538",
+     16
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 328.7,
    "nudge": [
     0.05,
-    0.14
-   ]
+    0.03
+   ],
+   "root_h": 5.059
   },
   "stall_sitter_west_19088": {
    "character": "robed_man",
    "do": [
     [
-     "sit",
+     "sit~soles",
      16
     ]
    ],
@@ -814,9 +852,10 @@
    "scale": 1.0,
    "facing_deg": 318.7,
    "nudge": [
-    -0.07,
-    0.01
-   ]
+    -0.04,
+    -0.14
+   ],
+   "root_h": 5.284
   },
   "deck_wide_hat_19405": {
    "character": "dark_hat",
@@ -826,7 +865,12 @@
      12
     ]
    ],
-   "facing_deg": 318.7
+   "facing_deg": 325.7,
+   "nudge": [
+    0.08,
+    -0.31
+   ],
+   "root_h": 5.28
   },
   "bank_watcher_at_end_post_18998": {
    "character": "fortune_teller",
@@ -841,9 +885,10 @@
     ]
    ],
    "nudge": [
-    0.1,
-    -0.32
-   ]
+    0.15,
+    -0.09
+   ],
+   "facing_deg": 0
   },
   "man_dark_cap_back_row_19325": {
    "character": "townsman",
@@ -893,19 +938,16 @@
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~deck_rail_face_19350",
+     16
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 308.7,
    "nudge": [
-    0.22,
-    -0.05
-   ]
+    0.25,
+    -0.04
+   ],
+   "root_h": 5.214
   },
   "deck_hat_stick_19353": {
    "character": "straw_hat",
@@ -937,19 +979,16 @@
    "character": "idler",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~man_leaning_on_railing_19225",
+     16
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 308.7,
    "nudge": [
-    -0.07,
-    0.01
-   ]
+    -0.04,
+    0.04
+   ],
+   "root_h": 5.003
   },
   "bank_watcher_dark_vest_18945": {
    "character": "camel_driver",
@@ -972,15 +1011,16 @@
    "character": "idler",
    "do": [
     [
-     "reach_over_rail",
+     "reach_over_rail~man_lowering_rope_19295",
      12
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 334.7,
    "nudge": [
-    0.36,
+    0.35,
     -0.15
-   ]
+   ],
+   "root_h": 5.14
   },
   "man_behind_rump_19165": {
    "character": "groom",
@@ -1016,15 +1056,16 @@
    "character": "porter",
    "do": [
     [
-     "reach_over_rail",
+     "reach_over_rail~man_bent_over_railing_19195",
      12
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 298.7,
    "nudge": [
-    -0.06,
-    0.02
-   ]
+    0.02,
+    -0.2
+   ],
+   "root_h": 4.885
   },
   "bank_watcher_dark_hair_18905": {
    "character": "woman",
@@ -1119,33 +1160,40 @@
    "character": "groom",
    "do": [
     [
-     "hold_horse_neck",
+     "hold_horse_neck~groom_holding_horse_19095",
      10
     ]
    ],
    "nudge": [
-    -0.03,
-    -0.01
-   ]
+    0.06,
+    0.16
+   ],
+   "facing_deg": 150,
+   "root_h": 5.226
   },
   "man_at_cabin_rail_19366": {
    "character": "robed_man",
    "do": [
     [
-     "lean_chin",
+     "lean_chin~man_at_cabin_rail_19366",
      10
     ],
     [
      "look",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    0.33,
+    -0.5
+   ],
+   "facing_deg": 330
   },
   "man_folded_arms_tall_cap_19270": {
    "character": "elder",
    "do": [
     [
-     "arms_folded",
+     "stand_sleeves",
      10
     ],
     [
@@ -1183,9 +1231,11 @@
     "flat_basket"
    ],
    "nudge": [
-    -0.01,
-    0.01
-   ]
+    -0.11,
+    -0.09
+   ],
+   "facing_deg": 0,
+   "root_h": 4.885
   },
   "man_pointing_west_at_railing_19090": {
    "character": "sightseer",
@@ -1214,9 +1264,10 @@
    ],
    "facing_deg": 318.7,
    "nudge": [
-    0.22,
-    0.27
-   ]
+    0.25,
+    0.14
+   ],
+   "root_h": 4.58
   },
   "far_water_carrier_19720": {
    "character": "porter",
@@ -1299,61 +1350,61 @@
    "character": "bearer",
    "do": [
     [
-     "sedan_carry",
+     "sedan_carry~sedan_bearer_front_18838",
      10
     ]
    ],
-   "facing_deg": 14.0
+   "facing_deg": 194,
+   "nudge": [
+    0.17,
+    0.14
+   ],
+   "root_h": 4.972
   },
   "man_arms_on_railing_18982": {
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~man_arms_on_railing_18982",
+     16
     ]
    ],
    "facing_deg": 318.7,
    "nudge": [
-    0.02,
-    -0.25
-   ]
+    0.05,
+    -0.22
+   ],
+   "root_h": 4.068
   },
   "man_over_railing_19025": {
    "character": "inspector",
    "do": [
     [
-     "reach_over_rail",
+     "reach_over_rail~man_over_railing_19025",
      12
     ]
    ],
-   "facing_deg": 318.7,
+   "facing_deg": 333.7,
    "nudge": [
-    0.41,
-    -0.42
-   ]
+    0.52,
+    -0.54
+   ],
+   "root_h": 4.429
   },
   "man_head_bowed_18962": {
    "character": "idler",
    "do": [
     [
-     "lean_chin",
-     12
-    ],
-    [
-     "look",
-     4
+     "lean_over~man_head_bowed_18962",
+     16
     ]
    ],
    "facing_deg": 318.7,
    "nudge": [
-    -0.17,
-    -0.11
-   ]
+    -0.11,
+    -0.06
+   ],
+   "root_h": 3.849
   },
   "man_arms_flung_wide_18990": {
    "character": "inspector",
@@ -1449,7 +1500,8 @@
    "nudge": [
     -0.11,
     -0.13
-   ]
+   ],
+   "root_h": 3.628
   },
   "man_dark_jacket_pointing_18915": {
    "character": "inspector",
@@ -1525,7 +1577,12 @@
      "idle",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    -0.04,
+    -0.04
+   ],
+   "facing_deg": 180
   },
   "man_dark_cap_18812": {
    "character": "townsman",
@@ -1561,20 +1618,26 @@
      4
     ]
    ],
-   "facing_deg": 318.7
+   "facing_deg": 306.7,
+   "nudge": [
+    0,
+    -0.03
+   ],
+   "root_h": 3.626
   },
   "far_shopkeeper_19620": {
    "character": "idler",
    "do": [
     [
-     "lean_chin",
+     "lean_over~far_shopkeeper_19620",
      10
-    ],
-    [
-     "look",
-     4
     ]
-   ]
+   ],
+   "nudge": [
+    -0.53,
+    -0.05
+   ],
+   "facing_deg": 270
   },
   "man_behind_18822": {
    "character": "townsman",
@@ -1601,13 +1664,14 @@
      4
     ]
    ],
-   "facing_deg": 318.7
+   "facing_deg": 318.7,
+   "root_h": 3.161
   },
   "light_jacket_man_18812": {
    "character": "idler",
    "do": [
     [
-     "arms_folded",
+     "stand_sleeves",
      10
     ],
     [
@@ -1631,7 +1695,8 @@
      "idle",
      4
     ]
-   ]
+   ],
+   "root_h": 4.068
   },
   "head_under_parasol_hub_18780": {
    "character": "carter",
@@ -1656,8 +1721,9 @@
    ],
    "nudge": [
     -0.11,
-    0.12
-   ]
+    0.24
+   ],
+   "facing_deg": 270
   },
   "stout_man_18750": {
    "character": "townsman",
@@ -1689,21 +1755,27 @@
    "character": "porter",
    "do": [
     [
-     "lean_over",
+     "push_flank~donkey_man_east_18768",
      10
     ]
    ],
    "nudge": [
-    -0.03,
-    0.08
-   ]
+    0.15,
+    -0.49
+   ],
+   "facing_deg": 220,
+   "root_h": 5.271
   },
   "leaning_man_arms_out_18703": {
    "character": "idler",
    "do": [
     [
-     "push",
+     "point",
      10
+    ],
+    [
+     "look",
+     4
     ]
    ],
    "nudge": [
@@ -1715,11 +1787,16 @@
    "character": "bearer",
    "do": [
     [
-     "sedan_carry",
+     "sedan_carry~sedan_bearer_rear_18688",
      10
     ]
    ],
-   "facing_deg": 14.0
+   "facing_deg": 14,
+   "nudge": [
+    0.1,
+    0.45
+   ],
+   "root_h": 4.432
   },
   "donkey_man_west_18728": {
    "character": "idler",
@@ -1775,7 +1852,8 @@
      "look",
      4
     ]
-   ]
+   ],
+   "root_h": 3.156
   },
   "awning_worker_18815": {
    "character": "idler",
@@ -1789,7 +1867,12 @@
      4
     ]
    ],
-   "facing_deg": 318.7
+   "facing_deg": 318.7,
+   "nudge": [
+    -0.29,
+    -0.21
+   ],
+   "root_h": 1.836
   },
   "calling_man_18690": {
    "character": "townsman",
@@ -1830,20 +1913,23 @@
      4
     ]
    ],
-   "facing_deg": 48.7
+   "facing_deg": 48.7,
+   "root_h": 2.083
   },
   "stall_man_parasol_18612": {
    "character": "robed_man",
    "do": [
     [
-     "sit",
+     "sit~soles",
      16
     ]
    ],
    "nudge": [
-    0.21,
-    0.21
-   ]
+    0.11,
+    0.11
+   ],
+   "facing_deg": 199,
+   "root_h": 4.599
   },
   "man_under_parasol_18710": {
    "character": "camel_driver",
@@ -1862,10 +1948,16 @@
    "character": "idler",
    "do": [
     [
-     "bridle",
+     "bridle~groom_at_donkey_18682",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    -0.11,
+    0.33
+   ],
+   "facing_deg": 30,
+   "root_h": 1.836
   },
   "man_under_awning_18775": {
    "character": "porter",
@@ -1879,7 +1971,8 @@
      4
     ]
    ],
-   "facing_deg": 318.7
+   "facing_deg": 318.7,
+   "root_h": 1.194
   },
   "second_head_ramp_foot_18740": {
    "character": "carter",
@@ -1922,7 +2015,8 @@
    "nudge": [
     -0.05,
     -0.1
-   ]
+   ],
+   "root_h": 1.008
   },
   "donkey_rider_18650": {
    "character": "scholar",
@@ -1975,20 +2069,28 @@
      "idle",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    0.29,
+    -0.21
+   ],
+   "facing_deg": 7,
+   "root_h": 0.403
   },
   "mat_stall_keeper_18435": {
    "character": "inspector",
    "do": [
     [
-     "lean_over",
+     "lean_over~mat_stall_keeper_18435",
      10
     ]
    ],
    "nudge": [
-    0.05,
-    0.07
-   ]
+    0.25,
+    -0.08
+   ],
+   "facing_deg": 8,
+   "root_h": 3.4
   },
   "porter_jar_bundle_18483": {
    "character": "porter",
@@ -2002,7 +2104,12 @@
      4
     ]
    ],
-   "facing_deg": 48.7
+   "facing_deg": 48.7,
+   "nudge": [
+    0,
+    0
+   ],
+   "root_h": 1.837
   },
   "mat_stall_leaner_18375": {
    "character": "robed_man",
@@ -2019,7 +2126,8 @@
    "nudge": [
     0.09,
     0.07
-   ]
+   ],
+   "root_h": 3.402
   },
   "robe_apron_man_18582": {
    "character": "robed_man",
@@ -2035,20 +2143,28 @@
    ],
    "props": [
     "hip_bag"
-   ]
+   ],
+   "nudge": [
+    -0.05,
+    0.05
+   ],
+   "facing_deg": 18,
+   "root_h": 0.699
   },
   "seated_man_topknot_18352": {
    "character": "robed_man",
    "do": [
     [
-     "drink",
+     "sit~soles",
      16
     ]
    ],
    "nudge": [
     -0.02,
     0.26
-   ]
+   ],
+   "facing_deg": 264,
+   "root_h": 2.946
   },
   "bending_man_18305": {
    "character": "idler",
@@ -2062,7 +2178,8 @@
    "nudge": [
     -0.08,
     0.08
-   ]
+   ],
+   "root_h": 3.166
   },
   "tray_bender_18356": {
    "character": "porter",
@@ -2073,18 +2190,24 @@
     ]
    ],
    "nudge": [
-    -0.1,
-    0.17
-   ]
+    -0.17,
+    0.11
+   ],
+   "facing_deg": 90
   },
   "barrow_pusher_18295": {
    "character": "carter",
    "do": [
     [
-     "push",
+     "push~barrow_pusher_18295",
      10
     ]
-   ]
+   ],
+   "nudge": [
+    0.22,
+    0.12
+   ],
+   "facing_deg": 220
   },
   "black_hat_man_18458": {
    "character": "dark_hat",
@@ -2109,7 +2232,8 @@
    "nudge": [
     -0.19,
     0.05
-   ]
+   ],
+   "root_h": 1.837
   },
   "seated_man_cap_18282": {
    "character": "scholar",
@@ -2121,8 +2245,10 @@
    ],
    "nudge": [
     -0.13,
-    -0.14
-   ]
+    -0.16
+   ],
+   "facing_deg": 18,
+   "root_h": 2.737
   },
   "dark_robe_man_18400": {
    "character": "fortune_teller",
@@ -2148,7 +2274,8 @@
    "nudge": [
     -0.05,
     0.09
-   ]
+   ],
+   "root_h": 2.09
   },
   "robed_back_view_18425": {
    "character": "woman",
@@ -2167,17 +2294,22 @@
    "character": "idler",
    "do": [
     [
-     "lean_over",
+     "bend_goods",
      10
+    ],
+    [
+     "look",
+     4
     ]
    ],
-   "facing_deg": 138.7
+   "facing_deg": 138.7,
+   "root_h": 2.518
   },
   "bearded_barrow_man_18098": {
    "character": "grain_porter",
    "do": [
     [
-     "haul_line",
+     "hold_rope",
      10
     ]
    ],
@@ -2203,7 +2335,7 @@
    "character": "idler",
    "do": [
     [
-     "reach",
+     "point",
      10
     ],
     [
@@ -2302,11 +2434,11 @@
    "character": "child_robed",
    "do": [
     [
-     "reach",
+     "idle",
      10
     ],
     [
-     "idle",
+     "look",
      4
     ]
    ],
@@ -2389,8 +2521,12 @@
    "character": "inspector",
    "do": [
     [
-     "lean_over",
+     "point",
      10
+    ],
+    [
+     "look",
+     4
     ]
    ]
   },
@@ -2463,8 +2599,12 @@
    "character": "grain_porter",
    "do": [
     [
-     "push_flank",
+     "bend_goods",
      10
+    ],
+    [
+     "look",
+     4
     ]
    ]
   },
@@ -2493,19 +2633,6 @@
    "nudge": [
     0.03,
     0.05
-   ]
-  },
-  "behind_lampbox_17090": {
-   "character": "robed_man",
-   "do": [
-    [
-     "idle",
-     10
-    ],
-    [
-     "look",
-     4
-    ]
    ]
   },
   "tracker_16423": {
@@ -2583,6 +2710,15 @@
     -0.21
    ]
   },
+  "behind_lampbox_17090": {
+   "character": "sightseer",
+   "do": [
+    [
+     "knees_up",
+     16
+    ]
+   ]
+  },
   "parasol_seated_17322": {
    "character": "carter",
    "do": [
@@ -2600,7 +2736,7 @@
    "character": "robed_man",
    "do": [
     [
-     "sit",
+     "sit~soles",
      16
     ]
    ],
@@ -2764,11 +2900,11 @@
    "character": "sightseer",
    "do": [
     [
-     "lean_chin",
+     "look",
      10
     ],
     [
-     "look",
+     "idle",
      4
     ]
    ],
@@ -2841,9 +2977,12 @@
    "character": "boatman",
    "do": [
     [
-     "pole_boat",
+     "pole_boat~hold",
      10
     ]
+   ],
+   "props": [
+    "long_pole_low"
    ]
   },
   "diner_cap_16077": {
@@ -2863,7 +3002,7 @@
    "character": "scholar",
    "do": [
     [
-     "listen",
+     "listen~soles",
      16
     ]
    ],
@@ -2876,7 +3015,7 @@
    "character": "boatman",
    "do": [
     [
-     "work_sweep",
+     "work_sweep~bar",
      10
     ]
    ]
@@ -2891,7 +3030,7 @@
    ],
    "facing_deg": 355,
    "nudge": [
-    0.12,
+    -0.01,
     -0.38
    ]
   },
@@ -2906,14 +3045,14 @@
    "facing_deg": 355,
    "nudge": [
     -0.18,
-    -0.13
+    -0.22
    ]
   },
   "sweep_man_15888": {
    "character": "boatman",
    "do": [
     [
-     "work_sweep",
+     "work_sweep~bar",
      10
     ]
    ]
@@ -2922,7 +3061,7 @@
    "character": "boatman",
    "do": [
     [
-     "work_sweep",
+     "work_sweep~bar",
      10
     ]
    ]
@@ -2931,7 +3070,7 @@
    "character": "boatman",
    "do": [
     [
-     "work_sweep",
+     "work_sweep~bar",
      10
     ]
    ]
@@ -2940,7 +3079,7 @@
    "character": "boatman",
    "do": [
     [
-     "work_sweep",
+     "work_sweep~bar",
      10
     ]
    ]
@@ -2949,7 +3088,7 @@
    "character": "boatman",
    "do": [
     [
-     "work_sweep",
+     "work_sweep~bar",
      10
     ]
    ]
@@ -3024,8 +3163,9 @@
    ],
    "nudge": [
     0.27,
-    0.0
-   ]
+    0
+   ],
+   "facing_deg": 155
   },
   "boatman_bow_15664": {
    "character": "boatman",
@@ -3040,15 +3180,16 @@
     ]
    ],
    "nudge": [
-    -0.02,
-    0.0
-   ]
+    -0.26,
+    1.1
+   ],
+   "facing_deg": 180
   },
   "far_bank_seated_17277": {
    "character": "robed_man",
    "do": [
     [
-     "sit",
+     "sit~soles",
      16
     ]
    ],
@@ -3070,9 +3211,10 @@
     ]
    ],
    "nudge": [
-    -0.25,
-    0.0
-   ]
+    -0.07,
+    1.1
+   ],
+   "facing_deg": 180
   },
   "far_bank_figure_17213": {
    "character": "townsman",
@@ -3133,7 +3275,11 @@
      4
     ]
    ],
-   "facing_deg": 180
+   "facing_deg": 180,
+   "nudge": [
+    0,
+    -0.25
+   ]
   },
   "far_bank_figure_16823": {
    "character": "camel_driver",
@@ -3146,7 +3292,12 @@
      "look",
      4
     ]
-   ]
+   ],
+   "nudge": [
+    0,
+    0.32
+   ],
+   "facing_deg": 270
   },
   "far_bank_figure_16722": {
    "character": "carter",
@@ -3159,8 +3310,8 @@
   }
  },
  "nudge_why": {
-  "parasol_stall_seller_20290": "painted seated with his feet at the painted point; robed_man's sit_talk keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "seated_customer_20140": "seated on S3.prop.stool_20126 (a mapped seat), as painted: robed_man's drink keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat",
+  "parasol_stall_seller_20290": "solved (fix_bridge/tools/deck_solve.mjs): contacts seat 0.01, sole_L 0.01, sole_R 0 (before seat 0.01, sole_L -0.13, sole_R 0); moved 0.03 m from the casting's spot (limit 0.6 m); his foot out of the stall table's stretcher; his own stool refitted under his seat point (seat_fit) || casting: painted seated with his feet at the painted point; robed_man's sit_talk keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "seated_customer_20140": "solved (fix_bridge/tools/deck_solve.mjs): contacts seat -0.02, sole_L -0.02, sole_R 0.02 (before seat -0.02, sole_L -0.02, sole_R 0.02); moved 0.1 m from the casting's spot (limit 0.6 m); 0.1 m north: his right forearm out of the front roof's eave (S3.bld.front_roof_19800); S3.prop.stool_20126's height refitted under his seat point || casting: seated on S3.prop.stool_20126 (a mapped seat), as painted: robed_man's drink keeps the hips 0.03 m from the root, so the root stands where the hips land on the seat",
   "man_in_hatch_20172": "painted closer to a crewmate than two bodies on boat_moored_south_bank_19745: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "shop_low_head_19940": "his painted spot lies inside or within 0.3 m of S3.prop.signboard_19982 (the prop at its built size): he steps straight out of it; then his painted spot lies inside or within 0.3 m of S3.prop.slanted_board_19912 (the prop at its built size): he steps straight out of it",
   "shop_figure_hat_19972": "his painted spot lies inside or within 0.3 m of S3.prop.slanted_board_19912 (the prop at its built size): he steps straight out of it",
@@ -3169,86 +3320,86 @@
   "shop_seated_man_19772": "seated on S3.prop.shop_chair_19725 (a mapped seat), as painted: scholar's drink keeps the hips 0.02 m from the root, so the root stands where the hips land on the seat",
   "dark_hat_figure_20070": "his painted spot lies inside or within 0.3 m of S3.prop.low_table_wares_20013 (the prop at its built size): he steps straight out of it",
   "stallkeeper_20030": "his painted spot lies inside or within 0.3 m of S3.prop.tavern_table_20340 (the prop at its built size): he steps straight out of it; then his painted spot lies inside or within 0.2 m of S3.prop.tavern_chair_20325 (the seat): he steps straight out of it; then his painted spot lies inside or within 0.3 m of S3.prop.low_table_wares_20013 (the prop at its built size): he steps straight out of it",
-  "cart_pusher_19922": "his painted spot lies inside or within 0.3 m of S3.veh.handcart_19862 (the kit's real-size body): he steps straight out of it",
+  "cart_pusher_19922": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.22, palm_R 0.24 (before palm_L 0.29, palm_R 0.3); moved 0.25 m, turned -97 deg from the casting's spot (limit 0.6 m); at the handcart's near (south) side west of its wheel, square to it, 0.3 m from its top rail (the push clip's palms within reach all through its stride); palms on the rail by an IK variant || casting: his painted spot lies inside or within 0.3 m of S3.veh.handcart_19862 (the kit's real-size body): he steps straight out of it",
   "parasol_capped_man_19652": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19530 (its mapped footprint): he steps straight out of it",
-  "cart_puller_19870": "painted between the handcart's shaft tips, leaning forward with his arms back on them: at real size the shafts end at (144.97, 29.60) (the props kit's handcart, 0.95 m past its 1.6 m body); he stands 0.3 m ahead of the tips, between them",
+  "cart_puller_19870": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 1.25, palm_R 1.05 (before palm_L 1.29, palm_R 1.1); moved 0.19 m from the casting's spot (limit 0.7 m); 0.07 m west of the handcart's shaft tips, facing west along it, his hands back on the shafts (an IK variant); his body clear of the north-edge walk's line at X 145.4-145.6 (the player's 0.3 m body stops against people) || casting: painted between the handcart's shaft tips, leaning forward with his arms back on them: at real size the shafts end at (144.97, 29.60) (the props kit's handcart, 0.95 m past its 1.6 m body); he stands 0.3 m ahead of the tips, between them",
   "bank_watcher_19672": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19530 (its mapped footprint): he steps straight out of it",
   "figure_topedge_19925": "painted at the silk's edge (0.28 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.04 m in from it; then his painted spot lies inside or within 0.3 m of S3.veh.handcart_19862 load (the kit's real-size body): he steps straight out of it",
-  "boatman_crouching_20026": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.18 m along, +2.20 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
-  "boatman_under_mat_roof_19970": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-0.48 m along, +1.97 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "boatman_under_mat_roof_19955": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-0.30 m along, +1.97 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_crouching_20026": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.206 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.18 m along, +2.20 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "boatman_under_mat_roof_19970": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.1 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-0.48 m along, +1.97 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_under_mat_roof_19955": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.128 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (-0.30 m along, +1.97 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "walker_topedge_19878": "painted at the silk's edge (0.21 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.11 m in from it; then painted against dog_or_donkey_19825 (donkey, 1.19 m long and 0.32 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
-  "boatman_standing_pole_19892": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+0.48 m along, +1.87 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
-  "rail_watcher_19923": "leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.30 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m)",
+  "boatman_standing_pole_19892": "solved on its boat with the pole held still (pole_boat~hold / fend_pole~out) and the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.102 m, turned 0 deg in the boat's frame; still contact:pole:palm_L=0.036@8 || casting: on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+0.48 m along, +1.87 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "rail_watcher_19923": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.24, palm_R 0.22 (before palm_L 0.14, palm_R 0.29); moved 0.14 m, turned 8 deg from the casting's spot (limit 0.6 m); root_h 1.693: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.217 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.30 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m)",
   "boatman_bent_pole_19830": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+1.21 m along, +2.01 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
-  "boatman_hat_pole_19915": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+0.46 m along, -1.43 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
-  "rail_watcher_19892": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it",
-  "rail_watcher_19862": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it",
-  "under_parasol_bender_19385": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it",
+  "boatman_hat_pole_19915": "solved on its boat with the pole held still (pole_boat~hold / fend_pole~out) and the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.082 m, turned 0 deg in the boat's frame; still contact:pole:palm_L=0.035@8 || casting: on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+0.46 m along, -1.43 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
+  "rail_watcher_19892": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.19, palm_R 0.24 (before palm_L 0.2, palm_R 0.25); moved 0.04 m from the casting's spot (limit 0.6 m); root_h 1.911: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.207 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it",
+  "rail_watcher_19862": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.1); moved 0.3 m, turned -4 deg from the casting's spot (limit 0.6 m); root_h 2.764: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it",
+  "under_parasol_bender_19385": "solved (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.13 m from the casting's spot (limit 0.6 m) || casting: his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it",
   "boatman_bending_pole_19746": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+2.37 m along, +1.52 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it",
   "boatman_capped_19800": "painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "stall_sitter_east_19297": "painted seated with his feet at the painted point; robed_man's sit keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.stall_table_19228 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.08 m forward to clear it (people.js would stand him on the top)",
   "boatman_pole_raised_19775": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+2.23 m along, -1.26 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "deck_stooping_hat_19765": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.30 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m)",
+  "deck_stooping_hat_19765": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.08 (before belly 0.12); moved 0.55 m from the casting's spot (limit 0.6 m); root_h 3.427: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly) || casting: leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.30 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m)",
   "stall_bearded_man_19235": "painted seated with his feet at the painted point; storyteller's sit keeps its root 0.37 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "deck_rail_leaner_19715": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
-  "deck_rail_watcher_19670": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then on the deck within 0.3 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.3 m inside it",
+  "deck_rail_leaner_19715": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.21, palm_R 0.18 (before palm_L 0.26, palm_R 0.22); moved 0.08 m, turned 8 deg from the casting's spot (limit 0.6 m); root_h 4.16: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.328 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "deck_rail_watcher_19670": "solved: root_h 4.489: stood on S3.str.rainbow_bridge's hidden walk ramp 0.121 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.164 taken up) (people.js root_h) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then on the deck within 0.3 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.3 m inside it",
   "boatman_reaching_19681": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+3.49 m along, -1.65 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "stall_man_with_dish_19173": "painted seated with his feet at the painted point; scholar's drink keeps its root 0.33 m behind the feet and the hips 0.02 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "deck_rail_leaner_19578": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.64 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "deck_rail_leaner_19578": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.11 (before belly 0.1); moved 0.08 m, turned 30 deg from the casting's spot (limit 0.6 m); root_h 4.631: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly) || casting: leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.64 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "boatman_leaning_on_bundle_19650": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+3.90 m along, -1.50 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "deck_pole_holder_19625": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "deck_pole_holder_19625": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.11); moved 0.13 m, turned -2 deg from the casting's spot (limit 0.6 m); root_h 4.895: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); plays porter's reach_over_rail~man_bent_over_railing_19195 (the IK variant made for his neighbour at the railing: belly held on the slat rail), placed where it fits the railing here || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "bowman_arm_out_19583": "painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "bowman_arm_out_19565": "on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+4.75 m along, -0.08 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "deck_rail_leaner_19538": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "bowman_arm_out_19565": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.261 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: on boat_mast_lowering_19518, built at real size (passenger, 11.4 m long, 3.3 m in the beam, build_choices.json boats): his painted spot lay off its deck (+4.75 m along, -0.08 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_mast_lowering_19518: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "deck_rail_leaner_19538": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.13, palm_R 0.1 (before palm_L 0.13, palm_R 0.1); moved 0.11 m, turned 10 deg from the casting's spot (limit 0.6 m); root_h 5.059: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.132 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "stall_sitter_west_19088": "painted seated with his feet at the painted point; robed_man's sit keeps its root 0.35 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
   "deck_capped_shouter_19492": "leans over the near railing (hail): at real size the railing's line (the built deck's near edge) is +0.79 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
-  "deck_youth_rope_19445": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
-  "bank_watcher_at_end_post_18998": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then his painted spot lies inside or within 0.2 m of S3.prop.bridge_end_post_19026 (the prop at its built size): he steps straight out of it",
+  "deck_youth_rope_19445": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.05 (before belly 0.19); moved 0.15 m from the casting's spot (limit 0.6 m); root_h 5.284: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "bank_watcher_at_end_post_18998": "solved (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.24 m from the casting's spot (limit 0.6 m) || casting: his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then his painted spot lies inside or within 0.2 m of S3.prop.bridge_end_post_19026 (the prop at its built size): he steps straight out of it",
   "bank_watcher_crouching_18960": "his painted spot lies inside or within 0.3 m of S3.bld.mat_shed_19160 (its mapped footprint): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "bank_watcher_dark_robe_18968": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "deck_rail_face_19350": "leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.56 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
-  "man_leaning_on_railing_19225": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "deck_rail_face_19350": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.15, palm_R 0.26 (before palm_L 0.15, palm_R 0.26); moved 0.03 m, turned -10 deg from the casting's spot (limit 0.6 m); root_h 5.214: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.066 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.56 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_leaning_on_railing_19225": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.14, palm_R 0.27 (before palm_L 0.26, palm_R 0.21); moved 0.04 m, turned -10 deg from the casting's spot (limit 0.6 m); root_h 5.003: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.134 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "bank_watcher_dark_vest_18945": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "man_lowering_rope_19295": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.73 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_lowering_rope_19295": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.06 (before belly 0.04); moved 0.01 m, turned 16 deg from the casting's spot (limit 0.6 m); root_h 5.14: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly at the railing's inner face where the clip has it; held there by an IK variant (rail_ik belly) || casting: leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.73 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "man_behind_rump_19165": "painted against horse_19055 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
-  "man_bent_over_railing_19195": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_bent_over_railing_19195": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.06 (before belly 0.18); moved 0.23 m, turned -20 deg from the casting's spot (limit 0.6 m); root_h 4.885: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "bank_watcher_dark_hair_18905": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "man_behind_railing_19258": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "far_robed_figure_19768": "painted at the silk's edge (0.19 m inside the painted area, where the walkable area's invisible wall stands): a body is 0.26 m wide, so he steps 0.13 m in from it; then his painted spot lies inside or within 0.3 m of S3.bld.north_bank_shed_19620 (its mapped footprint): he steps straight out of it",
   "robe_man_east_18893": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "groom_holding_horse_19095": "painted against second_horse_19230 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its head, on the side he is painted",
+  "groom_holding_horse_19095": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts chest_front 0.12, palm_L 0.04, palm_R 0.25 (before chest_front 0.35, palm_L 0.3, palm_R 0.51); moved 0.19 m, turned -30 deg from the casting's spot (limit 0.6 m); root_h 5.226: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); against the horse's lowered neck; chest and hands onto it by an IK variant next || casting: painted against second_horse_19230 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its head, on the side he is painted",
   "man_white_headcloth_19050": "painted against horse_19055 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
-  "basket_carrier_19138": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "basket_carrier_19138": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.14 m from the casting's spot (limit 0.6 m); root_h 4.885: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "man_pointing_west_at_railing_19090": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "man_bent_over_railing_19065": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_bent_over_railing_19065": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.13); moved 0.13 m from the casting's spot (limit 0.6 m); root_h 4.58: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "far_water_carrier_19720": "his painted spot lies inside or within 0.3 m of S3.bld.north_bank_shed_19620 (its mapped footprint): he steps straight out of it",
   "long_robe_pole_18852": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "man_wide_hat_18615": "his painted spot lies inside or within 0.3 m of S3.bld.bridge_foot_hall_19000 (its mapped footprint): he steps straight out of it",
-  "man_arms_on_railing_18982": "leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.54 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
-  "man_over_railing_19025": "leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.94 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
-  "man_head_bowed_18962": "on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_arms_on_railing_18982": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.22, palm_R 0.22 (before palm_L 0.17, palm_R 0.25); moved 0.04 m from the casting's spot (limit 0.6 m); root_h 4.068: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.363 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: leans over the near railing (lean_chin): at real size the railing's line (the built deck's near edge) is +0.54 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_over_railing_19025": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.06 (before belly 0.18); moved 0.16 m, turned 15 deg from the casting's spot (limit 0.6 m); root_h 4.429: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly) || casting: leans over the near railing (lean_over): at real size the railing's line (the built deck's near edge) is +0.94 m from his spot; he stands 0.36 m inside it, square to it, so his forearms rest on its top rail (1.05 m); then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
+  "man_head_bowed_18962": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.18, palm_R 0.17 (before palm_L 0.2, palm_R 0.11); moved 0.08 m from the casting's spot (limit 0.6 m); root_h 3.849: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.219 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet) || casting: on the deck within 0.36 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.36 m inside it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them, along the railing",
   "man_arms_flung_wide_18990": "painted against horse_19055 (horse, 2.05 m long and 0.65 m wide at real size): his spot fell inside its body, so he steps straight out from its head, on the side he is painted",
   "man_light_robe_reaching_18958": "his painted spot lies inside or within 0.3 m of S3.veh.sedan_18842 (the kit's real-size body): he steps straight out of it",
   "far_vendor_dark_19578": "his painted spot lies inside or within 0.2 m of S3.prop.far_tray_stand_19563 (the prop at its built size): he steps straight out of it",
-  "man_reaching_with_stick_18930": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then on the deck within 0.3 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.3 m inside it",
+  "man_reaching_with_stick_18930": "solved: root_h 3.628: stood on S3.str.rainbow_bridge's hidden walk ramp 0.149 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.199 taken up) (people.js root_h) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them; then on the deck within 0.3 m of the near railing (or beyond it) at real size (the built deck is 8.25 m between its railings): he steps in, square to the railing, to 0.3 m inside it",
   "man_dark_jacket_pointing_18915": "his painted spot lies inside or within 0.3 m of S3.veh.sedan_18842 (the kit's real-size body): he steps straight out of it",
   "light_jacket_man_18812": "painted against donkey_dark_18745 (donkey, 1.49 m long and 0.80 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "far_stall_vendor_19436": "painted seated with his feet at the painted point; carter's sit keeps its root 0.18 m behind the feet and the hips 0.34 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.far_stall_table_19410, S3.prop.far_bank_tables_19210 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.08 m back and to one side to clear it (people.js would stand him on the top)",
-  "donkey_man_east_18768": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "far_stall_vendor_19436": "solved (fix_bridge/tools/deck_solve.mjs): contacts seat 0.45, sole_L 0.01, sole_R 0 (before seat 0.02, sole_L 0.01, sole_R 0); moved 0.12 m from the casting's spot (limit 0.6 m); his body out of the stall table; his own stool refitted under his seat point (seat_fit) || casting: painted seated with his feet at the painted point; carter's sit keeps its root 0.18 m behind the feet and the hips 0.34 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips; then seated at S3.prop.far_stall_table_19410, S3.prop.far_bank_tables_19210 with his legs under it: at its built size his hips (the root) were over its top, so he slides 0.08 m back and to one side to clear it (people.js would stand him on the top)",
+  "donkey_man_east_18768": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.12, palm_R 0.4 (before palm_L 0.75, palm_R 1.1); moved 0.6 m, turned 40 deg from the casting's spot (limit 0.6 m); root_h 5.271: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); at the dark donkey's load; palms on it by an IK variant next || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "leaning_man_arms_out_18703": "painted against donkey_dark_18745 (donkey, 1.49 m long and 0.80 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "donkey_man_west_18728": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "bowing_man_18688": "painted against donkey_dark_18745 (donkey, 1.49 m long and 0.80 m wide at real size): his spot fell inside its body, so he steps straight out from its flank, on the side he is painted",
-  "stall_man_parasol_18612": "seated on S3.prop.bench_18630 (a mapped seat), as painted: robed_man's sit keeps the hips 0.05 m from the root, so the root stands where the hips land on the seat",
-  "dark_head_ramp_foot_18720": "painted against donkey_ridden_18690 (donkey, 1.49 m long and 0.40 m wide at real size): his spot fell inside its body, so he steps straight out from its rump, on the side he is painted",
-  "mat_stall_keeper_18435": "his painted spot lies inside or within 0.3 m of S3.prop.stall_table_18540 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "mat_stall_leaner_18375": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "seated_man_topknot_18352": "painted seated with his feet at the painted point; robed_man's drink keeps its root 0.26 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "bending_man_18305": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "tray_bender_18356": "his painted spot lies inside or within 0.2 m of S3.prop.round_tray_stand_18403 (the prop at its built size): he steps straight out of it",
-  "bending_dark_top_18345": "his painted spot lies inside or within 0.2 m of S3.prop.round_tray_stand_18403 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
-  "seated_man_cap_18282": "painted seated with his feet at the painted point; scholar's sit keeps its root 0.19 m behind the feet and the hips 0.27 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "parasol_edge_crouching_18288": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "stall_man_parasol_18612": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts seat 0.29, sole_L 0, sole_R 0.01 (before seat 0.3, sole_L 0, sole_R 0.01); moved 0.14 m, turned 19 deg from the casting's spot (limit 0.6 m); root_h 4.599: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); both feet on one visible tread of the stepped deck (root_h), his seat point over S3.prop.bench_18630, whose height is refitted under it (props_table, choice) || casting: seated on S3.prop.bench_18630 (a mapped seat), as painted: robed_man's sit keeps the hips 0.05 m from the root, so the root stands where the hips land on the seat",
+  "dark_head_ramp_foot_18720": "solved: root_h 1.008: stood on S3.str.rainbow_bridge's hidden walk ramp 0.102 m over the visible steps; now on the visible surface under it (its stance soles' median gap 0 taken up) (people.js root_h) || casting: painted against donkey_ridden_18690 (donkey, 1.49 m long and 0.40 m wide at real size): his spot fell inside its body, so he steps straight out from its rump, on the side he is painted",
+  "mat_stall_keeper_18435": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.26, palm_R 0.06 (before palm_L 0.39, palm_R 0.11); moved 0.25 m, turned 8 deg from the casting's spot (limit 0.6 m); root_h 3.4: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); at the stall table's far side, square to it; palms on its top by an IK variant next || casting: his painted spot lies inside or within 0.3 m of S3.prop.stall_table_18540 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "mat_stall_leaner_18375": "solved: root_h 3.402: stood on S3.str.rainbow_bridge's hidden walk ramp 0.137 m over the visible steps; now on the visible surface under it (its stance soles' median gap 0 taken up) (people.js root_h) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "seated_man_topknot_18352": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts seat 0.05, sole_L 0, sole_R 0.01 (before seat 0.05, sole_L 0, sole_R 0.22); moved 0 m, turned -6 deg from the casting's spot (limit 0.6 m); root_h 2.946: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); both feet on one visible tread of the stepped deck (root_h), his own stool refitted under his seat point (seat_fit) || casting: painted seated with his feet at the painted point; robed_man's drink keeps its root 0.26 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "bending_man_18305": "solved: root_h 3.166: stood on S3.str.rainbow_bridge's hidden walk ramp 0.089 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.005 taken up) (people.js root_h) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "tray_bender_18356": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, hidden_collider; moved 0.09 m from the casting's spot (limit 0.3 m); on one tread of the stepped deck: the smooth hidden walk ramp held it over the visible steps || casting: his painted spot lies inside or within 0.2 m of S3.prop.round_tray_stand_18403 (the prop at its built size): he steps straight out of it",
+  "bending_dark_top_18345": "solved: root_h 1.837: stood on S3.str.rainbow_bridge's hidden walk ramp 0.078 m over the visible steps; now on the visible surface under it (its stance soles' median gap 0 taken up) (people.js root_h) || casting: his painted spot lies inside or within 0.2 m of S3.prop.round_tray_stand_18403 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
+  "seated_man_cap_18282": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts seat 0.11, sole_L 0.01, sole_R 0 (before seat 0.31, sole_L 0, sole_R 0.21); moved 0.02 m, turned 18 deg from the casting's spot (limit 0.6 m); root_h 2.737: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); both feet on one visible tread of the stepped deck (root_h), his own stool refitted under his seat point (seat_fit) || casting: painted seated with his feet at the painted point; scholar's sit keeps its root 0.19 m behind the feet and the hips 0.27 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
+  "parasol_edge_crouching_18288": "solved: root_h 2.09: stood on S3.str.rainbow_bridge's hidden walk ramp 0.151 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.223 taken up) (people.js root_h) || casting: painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "bearded_barrow_man_18098": "his painted spot lies inside or within 0.3 m of S3.veh.barrow_hooped_load_18100 load (the kit's real-size body): he steps straight out of it",
   "display_seller_18058": "painted seated with his feet at the painted point; fortune_teller's sit keeps its root 0.32 m behind the feet and the hips 0.04 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
   "man_behind_official_17982": "his painted spot lies inside or within 0.2 m of S3.prop.basket_on_stand_18005 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
@@ -3283,18 +3434,39 @@
   "far_bank_figure_hat_17666": "his painted spot lies inside or within 0.3 m of S3.prop.far_bank_low_table_17652 (the prop at its built size): he steps straight out of it",
   "diner_cap_16077": "painted seated with his feet at the painted point; scholar's sit_talk keeps its root 0.42 m behind the feet and the hips 0.05 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
   "diner_hunched_16050": "painted seated with his feet at the painted point; scholar's listen keeps its root 0.43 m behind the feet and the hips 0.03 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "boatman_on_cargo_16032": "on boat_towed_mast_16228, built at real size (grain, 12.0 m long, 3.1 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.68 m along, +1.52 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_towed_mast_16228: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "boatman_on_cargo_15998": "on boat_towed_mast_16228, built at real size (grain, 12.0 m long, 3.1 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.86 m along, +1.30 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_towed_mast_16228: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_on_cargo_16032": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.13 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: on boat_towed_mast_16228, built at real size (grain, 12.0 m long, 3.1 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.68 m along, +1.52 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_towed_mast_16228: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_on_cargo_15998": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.09 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: on boat_towed_mast_16228, built at real size (grain, 12.0 m long, 3.1 m in the beam, build_choices.json boats): his painted spot lay off its deck (-1.86 m along, +1.30 m across from its middle), so he stands on the deck inside its gunwale, where the boats page finds it; then painted closer to a crewmate than two bodies on boat_towed_mast_16228: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "head_at_partition_15848": "painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "doorway_figure_15818": "his painted spot lies inside or within 0.3 m of S3.prop.table_15745 (the prop at its built size): he steps straight out of it; then painted closer to a neighbour than two bodies (0.26 m each, people.js; 0.55 m apart on the deck): pushed apart along the line between them",
   "far_bank_seated_17366": "painted seated with his feet at the painted point; hat_traveller's sit keeps its root 0.34 m behind the feet and the hips 0.04 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
   "far_bank_seated_17333": "painted seated with his feet at the painted point; scholar's sit keeps its root 0.19 m behind the feet and the hips 0.27 m from the root, so the root stands there and his seat (a stool the map lacks, seats.json) goes under the hips",
-  "boatman_bow_15688": "painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
-  "boatman_bow_15664": "painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_bow_15688": "turned on the bow deck so his floor sit's seat lies on the deck (tools/crew_solve.mjs, fix-boats): moved 0 m, turned -25 deg in the boat's frame; every boat check passes at every frozen time || casting: painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_bow_15664": "solved onto the raised bow deck B9 (kit bow_deck 1.82, built by fix-boats; the map: 'standing on the raised bow deck at the west end', H 1.12): 1.1 m forward of the casting's spot, over the 0.6 m limit because the real-size hull's awning (0.30-0.78 of it) reaches over their painted spots and the raised deck starts past its end (tools/crew_solve.mjs): moved 1.126 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "far_bank_seated_17277": "seated on S3.prop.far_bank_bench_17278 (a mapped seat), as painted: robed_man's sit keeps the hips 0.05 m from the root, so the root stands where the hips land on the seat",
-  "boatman_bow_15636": "painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
+  "boatman_bow_15636": "solved onto the raised bow deck B9 (kit bow_deck 1.82, built by fix-boats; the map: 'standing on the raised bow deck at the west end', H 1.12): 1.1 m forward of the casting's spot, over the 0.6 m limit because the real-size hull's awning (0.30-0.78 of it) reaches over their painted spots and the raised deck starts past its end (tools/crew_solve.mjs): moved 1.115 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time || casting: painted closer to a crewmate than two bodies on boat_under_way_15595: pushed apart along the line between them (the boats page places him at his nudged spot on its deck)",
   "far_bank_figure_17213": "his painted spot lies inside or within 0.3 m of S3.prop.far_bank_table_17245 (the prop at its built size): he steps straight out of it",
-  "far_bank_standing_17174": "his painted spot lies inside or within 0.3 m of S3.bld.far_shop_17170 (its mapped footprint): he steps straight out of it"
+  "far_bank_standing_17174": "his painted spot lies inside or within 0.3 m of S3.bld.far_shop_17170 (its mapped footprint): he steps straight out of it",
+  "man_behind_awning_18898": "solved: root_h 3.161: stood on S3.str.rainbow_bridge's hidden walk ramp 0.144 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.001 taken up) (people.js root_h)",
+  "man_light_jacket_18760": "solved: root_h 2.083: stood on S3.str.rainbow_bridge's hidden walk ramp 0.13 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.001 taken up) (people.js root_h)",
+  "groom_at_donkey_18682": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_R 0.67, palm_L 0.15 (before palm_R 0.99, palm_L 0.54); moved 0.35 m, turned 30 deg from the casting's spot (limit 0.6 m); root_h 1.836: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); at the ridden donkey's head; hands to its head and neck by an IK variant next",
+  "man_under_awning_18775": "solved: root_h 1.194: stood on S3.str.rainbow_bridge's hidden walk ramp 0.106 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.001 taken up) (people.js root_h)",
+  "mat_leaner_white_18220": "solved: root_h 2.518: stood on S3.str.rainbow_bridge's hidden walk ramp 0.077 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.003 taken up) (people.js root_h)",
+  "wide_hat_pointer_18855": "solved: contact none (placement checks); gap before -, after -; fixed hidden_collider; moved 0.06 m from the casting's spot (limit 0.3 m); on one tread of the stepped deck: the smooth hidden walk ramp held it over the visible steps",
+  "sedan_bearer_rear_18688": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts shoulder_R -0.02, palm_L 0.03, palm_R 0.03 (before shoulder_R 0.21, palm_L 0.19, palm_R 0.18); moved 0.46 m from the casting's spot (limit 0.8 m); root_h 4.432: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); between the poles at their rear ends, his right shoulder under the north pole (the shared sedan_carry~pole), both feet on one tread; the poles fitted to both bearers' shoulders (kit pole_fit)",
+  "deck_wide_hat_19405": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.19); moved 0.32 m, turned 7 deg from the casting's spot (limit 0.6 m); root_h 5.28: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "far_bank_figure_16823": "solved (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.32 m from the casting's spot (limit 0.6 m)",
+  "man_waving_on_boat_roof_19952": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.28 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_stern_bending_20365": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.2 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "passenger_door_16553": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.25 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "man_dark_cap_south_end_18930": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.03 m, turned -12 deg from the casting's spot (limit 0.6 m); root_h 3.626: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "porter_jar_bundle_18483": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0 m from the casting's spot (limit 0.6 m); root_h 1.837: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "robe_apron_man_18582": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.07 m, turned 18 deg from the casting's spot (limit 0.6 m); root_h 0.699: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "dark_cap_man_18622": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.36 m, turned 7 deg from the casting's spot (limit 0.6 m); root_h 0.403: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "barrow_pusher_18295": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.28, palm_R 0.3 (before palm_L 0.26, palm_R 0.32); moved 0.25 m, turned 10 deg from the casting's spot (limit 0.6 m); between the barrow's handle ends, facing along it (219.8 deg), close enough for the push clip's arms all through its stride; palms on the handles by an IK variant",
+  "awning_worker_18815": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.09, palm_R 0.07 (before palm_L 0.25, palm_R 0.26); moved 0.36 m from the casting's spot (limit 0.6 m); root_h 1.836: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); out of the awning stall's rack, both feet on one tread",
+  "far_shopkeeper_19620": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.07, palm_R 0.09 (before palm_L 0.07, palm_R 0.09); moved 0.53 m from the casting's spot (limit 0.6 m); behind the long counter, square to it; palms on its top by an IK variant next",
+  "sedan_bearer_front_18838": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.05, palm_R 0.05 (before palm_L 0.05, palm_R 0.12); moved 0.22 m, turned 180 deg from the casting's spot (limit 0.8 m); root_h 4.972: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.055 m onto the tread above by a leg-IK op in its variant; the front bearer between the pole ends facing the chair, a hand on each end (the shared sedan_carry~pole_ends, as S4's front bearer: his hips 0.112 m left of the root on the chair's axis); the poles' front ends fitted to his hands (1.25 m over his tread, kit pole_fit)",
+  "man_at_cabin_rail_19366": "solved on its boat toward what it leans on or works (tools/crew_solve.mjs, fix-boats); the rest of the reach by its IK variant (tools/crew_ik_targets.mjs): moved 0.599 m, turned 30 deg in the boat's frame; still contact:rail:elbow_L=0.336@8, contact:rail:elbow_R=0.171@8"
  },
  "walkers": [
   {
@@ -3336,11 +3508,11 @@
    ],
    "path": [
     [
-     127.26,
+     126.11,
      -3.32
     ],
     [
-     134.21,
+     133.11,
      -3.32
     ]
    ]
@@ -3360,11 +3532,11 @@
    ],
    "path": [
     [
-     127.17,
+     126.22,
      -4.04
     ],
     [
-     134.12,
+     133.17,
      -4.04
     ]
    ]
@@ -3446,9 +3618,9 @@
   "far_water_carrier_19720": "painted walking, but he stands at his spot: only 0.0 m of room (0.0 m along the painted direction (180 deg) to S3.bld.north_bank_shed_19620)",
   "sack_porter_18915": "painted walking, but he stands at his spot: along the built deck (down toward the south foot, as painted), +1.47 m off its centre line: 1.0 m ahead to animal donkey_dark_18745, 6.0 m back; the deck rises from 5.27 to 2.07 m along it; but people.js starts a walker from its root at y 0 and grounds it by a ray from 1.5 m: on the deck at 5.12 m he would land under the bridge, so he stands at his spot until the page passes a start height (startAt [X, D, H])",
   "white_sack_porter_18882": "painted walking, but he stands at his spot: along the built deck (down toward the south foot, as painted), +1.92 m off its centre line: 1.3 m ahead to animal donkey_dark_18745, 5.7 m back; the deck rises from 5.29 to 2.46 m along it; but people.js starts a walker from its root at y 0 and grounds it by a ray from 1.5 m: on the deck at 5.19 m he would land under the bridge, so he stands at his spot until the page passes a start height (startAt [X, D, H])",
-  "pole_carrier_robe_18345": "1.4 m along the painted direction (0 deg) to S3.bld.bridge_foot_hall_19000, and 5.6 m back behind the painted spot",
+  "pole_carrier_robe_18345": "0.3 m along the painted direction (0 deg) to S3.str.tiled_wall_18450, and 6.7 m back behind the painted spot",
   "man_light_jacket_18760": "painted walking, but he stands at his spot: only 0.0 m of room (along the built deck (up toward the north foot, as painted), -2.62 m off its centre line: 0.0 m ahead to S3.prop.awning_rack_18797; the deck rises from 2.16 to 2.16 m along it)",
-  "porter_baskets_bottom_18175": "3.1 m along the painted direction (0 deg) to S3.bld.bridge_foot_hall_19000, and 3.9 m back behind the painted spot",
+  "porter_baskets_bottom_18175": "2.1 m along the painted direction (0 deg) to S3.str.tiled_wall_18450, and 4.8 m back behind the painted spot",
   "porter_jar_bundle_18483": "painted walking, but he stands at his spot: only 0.0 m of room (along the built deck (up toward the north foot, as painted), +0.28 m off its centre line: 0.0 m ahead to S3.prop.round_tray_stand_18403; the deck rises from 1.83 to 1.83 m along it)",
   "porter_two_baskets_18340": "7.0 m along the painted direction (0 deg)",
   "walker_with_stick_17884": "2.7 m along the painted direction (180 deg) to S3.prop.xinjiu_flagpole_17630, and 3.0 m back behind the painted spot to S3.veh.barrow_hooped_load_18100 (front to rear + 0.6 m, +-1.0 m)",
@@ -3624,22 +3796,28 @@
    "why": "rowed by its great sweep (摇橹向前), heading west-north-west toward S4b's raft: S4b's sterns lie 0.3 m off its bow at rest, so its run is cut from the default 8 m to 1 m (it sculls forward a metre and drifts back); the sweep sculls while it moves",
    "crew": {
     "sweep_man_15810": {
-     "work": "sweep"
+     "work": "sweep",
+     "at": "pt_sweep_crew"
     },
     "sweep_man_15838": {
-     "work": "sweep"
+     "work": "sweep",
+     "at": "pt_sweep_crew"
     },
     "sweep_man_15855": {
-     "work": "sweep"
+     "work": "sweep",
+     "at": "pt_sweep_crew"
     },
     "sweep_man_15862": {
-     "work": "sweep"
+     "work": "sweep",
+     "at": "pt_sweep_crew"
     },
     "sweep_man_15888": {
-     "work": "sweep"
+     "work": "sweep",
+     "at": "pt_sweep_crew"
     },
     "sweep_man_15915": {
-     "work": "sweep"
+     "work": "sweep",
+     "at": "pt_sweep_crew"
     },
     "boatman_bow_15636": {},
     "boatman_bow_15664": {},
@@ -3725,56 +3903,149 @@
  },
  "facing_why": {
   "boatman_cabin_door_pole_20300": "painted holding his long pole straight out east past the stern toward the north-bank boat (S2.veh.boat_mat_cargo_21055); S2's boats agent moved that boat 8.9 m east and 6.0 m south (the lead, 2026-10-12), so he faces where it lies now, about (152.5, 16.5)",
-  "cart_puller_19870": "hauling the handcart: facing the way its shafts point",
-  "rail_watcher_19923": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "rail_watcher_19892": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "rail_watcher_19862": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_stooping_hat_19765": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_rail_leaner_19715": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_rail_watcher_19670": "at the near railing (0.30 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "deck_rail_leaner_19578": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_pole_holder_19625": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_rail_leaner_19538": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "cart_puller_19870": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 1.25, palm_R 1.05 (before palm_L 1.29, palm_R 1.1); moved 0.19 m from the casting's spot (limit 0.7 m); 0.07 m west of the handcart's shaft tips, facing west along it, his hands back on the shafts (an IK variant); his body clear of the north-edge walk's line at X 145.4-145.6 (the player's 0.3 m body stops against people)",
+  "rail_watcher_19923": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.24, palm_R 0.22 (before palm_L 0.14, palm_R 0.29); moved 0.14 m, turned 8 deg from the casting's spot (limit 0.6 m); root_h 1.693: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.217 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
+  "rail_watcher_19892": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.19, palm_R 0.24 (before palm_L 0.2, palm_R 0.25); moved 0.04 m from the casting's spot (limit 0.6 m); root_h 1.911: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.207 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
+  "rail_watcher_19862": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.1); moved 0.3 m, turned -4 deg from the casting's spot (limit 0.6 m); root_h 2.764: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "deck_stooping_hat_19765": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.08 (before belly 0.12); moved 0.55 m from the casting's spot (limit 0.6 m); root_h 3.427: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly)",
+  "deck_rail_leaner_19715": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.21, palm_R 0.18 (before palm_L 0.26, palm_R 0.22); moved 0.08 m, turned 8 deg from the casting's spot (limit 0.6 m); root_h 4.16: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.328 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
+  "deck_rail_watcher_19670": "solved: root_h 4.489: stood on S3.str.rainbow_bridge's hidden walk ramp 0.121 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.164 taken up) (people.js root_h)",
+  "deck_rail_leaner_19578": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.11 (before belly 0.1); moved 0.08 m, turned 30 deg from the casting's spot (limit 0.6 m); root_h 4.631: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly)",
+  "deck_pole_holder_19625": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.11); moved 0.13 m, turned -2 deg from the casting's spot (limit 0.6 m); root_h 4.895: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); plays porter's reach_over_rail~man_bent_over_railing_19195 (the IK variant made for his neighbour at the railing: belly held on the slat rail), placed where it fits the railing here",
+  "deck_rail_leaner_19538": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.13, palm_R 0.1 (before palm_L 0.13, palm_R 0.1); moved 0.11 m, turned 10 deg from the casting's spot (limit 0.6 m); root_h 5.059: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_R raised 0.132 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
   "deck_capped_shouter_19492": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_youth_rope_19445": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "deck_wide_hat_19405": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_youth_rope_19445": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.05 (before belly 0.19); moved 0.15 m from the casting's spot (limit 0.6 m); root_h 5.284: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "deck_wide_hat_19405": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.19); moved 0.32 m, turned 7 deg from the casting's spot (limit 0.6 m); root_h 5.28: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
   "man_dark_cap_back_row_19325": "at the near railing (1.02 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "deck_rail_face_19350": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "deck_rail_face_19350": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.15, palm_R 0.26 (before palm_L 0.15, palm_R 0.26); moved 0.03 m, turned -10 deg from the casting's spot (limit 0.6 m); root_h 5.214: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.066 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
   "deck_hat_stick_19353": "at the near railing (1.06 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "man_leaning_on_railing_19225": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "man_lowering_rope_19295": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "man_bent_over_railing_19195": "painted leaning over the near railing facing 270 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_leaning_on_railing_19225": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.14, palm_R 0.27 (before palm_L 0.26, palm_R 0.21); moved 0.04 m, turned -10 deg from the casting's spot (limit 0.6 m); root_h 5.003: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.134 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
+  "man_lowering_rope_19295": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.06 (before belly 0.04); moved 0.01 m, turned 16 deg from the casting's spot (limit 0.6 m); root_h 5.14: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly at the railing's inner face where the clip has it; held there by an IK variant (rail_ik belly)",
+  "man_bent_over_railing_19195": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.06 (before belly 0.18); moved 0.23 m, turned -20 deg from the casting's spot (limit 0.6 m); root_h 4.885: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly)",
   "man_behind_railing_19258": "at the near railing (0.81 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "man_bent_over_railing_19065": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "sedan_bearer_front_18838": "carrying the sedan up the ramp: facing its heading, rear to front",
-  "man_arms_on_railing_18982": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "man_over_railing_19025": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
-  "man_head_bowed_18962": "painted leaning over the near railing facing 0 (the painter turns the railing toward us); the built railing runs along the deck at 49 deg, so he faces straight out over it (319), as a lean clip needs",
+  "man_bent_over_railing_19065": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.04 (before belly 0.13); moved 0.13 m from the casting's spot (limit 0.6 m); root_h 4.58: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "sedan_bearer_front_18838": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.05, palm_R 0.05 (before palm_L 0.05, palm_R 0.12); moved 0.22 m, turned 180 deg from the casting's spot (limit 0.8 m); root_h 4.972: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.055 m onto the tread above by a leg-IK op in its variant; the front bearer between the pole ends facing the chair, a hand on each end (the shared sedan_carry~pole_ends, as S4's front bearer: his hips 0.112 m left of the root on the chair's axis); the poles' front ends fitted to his hands (1.25 m over his tread, kit pole_fit)",
+  "man_arms_on_railing_18982": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.22, palm_R 0.22 (before palm_L 0.17, palm_R 0.25); moved 0.04 m from the casting's spot (limit 0.6 m); root_h 4.068: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.363 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
+  "man_over_railing_19025": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts belly 0.06 (before belly 0.18); moved 0.16 m, turned 15 deg from the casting's spot (limit 0.6 m); root_h 4.429: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); the belly onto the railing by an IK variant next (rail_ik belly)",
+  "man_head_bowed_18962": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.18, palm_R 0.17 (before palm_L 0.2, palm_R 0.11); moved 0.08 m from the casting's spot (limit 0.6 m); root_h 3.849: on the lower of the visible treads under its feet, not on the bridge's smooth hidden walk ramp (people.js root_h); its sole_L raised 0.219 m onto the tread above by a leg-IK op in its variant; the root 0.28-0.36 m inside the railing line (where the hands reach the top rail), on the lower tread under its feet; palms on the top rail and both soles on their treads by an IK variant (rail_ik palms_top --steady --feet)",
   "sack_porter_18915": "painted walking down the ramp (painted facing 180); the built deck runs at 48.7 deg, so he faces down it (228.7)",
-  "man_reaching_with_stick_18930": "at the near railing (0.30 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
+  "man_reaching_with_stick_18930": "solved: root_h 3.628: stood on S3.str.rainbow_bridge's hidden walk ramp 0.149 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.199 taken up) (people.js root_h)",
   "white_sack_porter_18882": "painted walking down the ramp (painted facing 180); the built deck runs at 48.7 deg, so he faces down it (228.7)",
-  "man_dark_cap_south_end_18930": "at the near railing (1.15 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "man_behind_awning_18898": "at the near railing (1.11 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "sedan_bearer_rear_18688": "carrying the sedan up the ramp: facing its heading, rear to front",
-  "awning_worker_18815": "at the near railing (0.95 m from it), his painted facing 0 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "man_light_jacket_18760": "painted walking up the ramp (painted facing 90); the built deck runs at 48.7 deg, so he faces up it (48.7)",
-  "man_under_awning_18775": "at the near railing (1.10 m from it), his painted facing 270 points into it (the painter turns the railing toward us): he faces square out over it (318.7)",
-  "porter_jar_bundle_18483": "painted walking up the ramp (painted facing 0); the built deck runs at 48.7 deg, so he faces up it (48.7)",
-  "bending_man_18305": "at the far railing (1.05 m from it), his painted facing 180 points into it (the painter turns the railing toward us): he faces square out over it (138.7)",
-  "mat_leaner_white_18220": "at the far railing (0.55 m from it), his painted facing 180 points into it (the painter turns the railing toward us): he faces square out over it (138.7)",
+  "man_dark_cap_south_end_18930": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.03 m, turned -12 deg from the casting's spot (limit 0.6 m); root_h 3.626: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "man_behind_awning_18898": "solved: root_h 3.161: stood on S3.str.rainbow_bridge's hidden walk ramp 0.144 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.001 taken up) (people.js root_h)",
+  "sedan_bearer_rear_18688": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts shoulder_R -0.02, palm_L 0.03, palm_R 0.03 (before shoulder_R 0.21, palm_L 0.19, palm_R 0.18); moved 0.46 m from the casting's spot (limit 0.8 m); root_h 4.432: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); between the poles at their rear ends, his right shoulder under the north pole (the shared sedan_carry~pole), both feet on one tread; the poles fitted to both bearers' shoulders (kit pole_fit)",
+  "awning_worker_18815": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.09, palm_R 0.07 (before palm_L 0.25, palm_R 0.26); moved 0.36 m from the casting's spot (limit 0.6 m); root_h 1.836: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); out of the awning stall's rack, both feet on one tread",
+  "man_light_jacket_18760": "solved: root_h 2.083: stood on S3.str.rainbow_bridge's hidden walk ramp 0.13 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.001 taken up) (people.js root_h)",
+  "man_under_awning_18775": "solved: root_h 1.194: stood on S3.str.rainbow_bridge's hidden walk ramp 0.106 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.001 taken up) (people.js root_h)",
+  "porter_jar_bundle_18483": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0 m from the casting's spot (limit 0.6 m); root_h 1.837: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "bending_man_18305": "solved: root_h 3.166: stood on S3.str.rainbow_bridge's hidden walk ramp 0.089 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.005 taken up) (people.js root_h)",
+  "mat_leaner_white_18220": "solved: root_h 2.518: stood on S3.str.rainbow_bridge's hidden walk ramp 0.077 m over the visible steps; now on the visible surface under it (its stance soles' median gap -0.003 taken up) (people.js root_h)",
   "passenger_seated_18147": "seated inside the mat cabin, seen through its open (south) side: facing us",
   "passenger_seated_18112": "seated inside the mat cabin beside the other, seen through its open side: facing us",
   "porter_standing_17886": "a face in profile between the others on the foredeck, who all look west over the bow: facing west with them",
   "passenger_seated_17632": "seated in the awning boat's cabin, seen through a window on its south side: facing us",
-  "boatman_on_cargo_16032": "crouching on the cargo of the boat towed east (heading 355): facing its bow",
-  "boatman_on_cargo_15998": "crouching on the cargo of the boat towed east (heading 355): facing its bow",
-  "passenger_door_16553": "filling the long boat's west cabin door: facing out of it, west"
+  "boatman_on_cargo_16032": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.13 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_on_cargo_15998": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.09 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "passenger_door_16553": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.25 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "groom_at_donkey_18682": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_R 0.67, palm_L 0.15 (before palm_R 0.99, palm_L 0.54); moved 0.35 m, turned 30 deg from the casting's spot (limit 0.6 m); root_h 1.836: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); at the ridden donkey's head; hands to its head and neck by an IK variant next",
+  "mat_stall_keeper_18435": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.26, palm_R 0.06 (before palm_L 0.39, palm_R 0.11); moved 0.25 m, turned 8 deg from the casting's spot (limit 0.6 m); root_h 3.4: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); at the stall table's far side, square to it; palms on its top by an IK variant next",
+  "wide_hat_pointer_18855": "solved: contact none (placement checks); gap before -, after -; fixed hidden_collider; moved 0.06 m from the casting's spot (limit 0.3 m); on one tread of the stepped deck: the smooth hidden walk ramp held it over the visible steps",
+  "tray_bender_18356": "solved: contact none (placement checks); gap before -, after -; fixed stance_soles, hidden_collider; moved 0.09 m from the casting's spot (limit 0.3 m); on one tread of the stepped deck: the smooth hidden walk ramp held it over the visible steps",
+  "seated_man_topknot_18352": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts seat 0.05, sole_L 0, sole_R 0.01 (before seat 0.05, sole_L 0, sole_R 0.22); moved 0 m, turned -6 deg from the casting's spot (limit 0.6 m); root_h 2.946: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); both feet on one visible tread of the stepped deck (root_h), his own stool refitted under his seat point (seat_fit)",
+  "stall_man_parasol_18612": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts seat 0.29, sole_L 0, sole_R 0.01 (before seat 0.3, sole_L 0, sole_R 0.01); moved 0.14 m, turned 19 deg from the casting's spot (limit 0.6 m); root_h 4.599: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); both feet on one visible tread of the stepped deck (root_h), his seat point over S3.prop.bench_18630, whose height is refitted under it (props_table, choice)",
+  "under_parasol_bender_19385": "solved (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.13 m from the casting's spot (limit 0.6 m)",
+  "bank_watcher_at_end_post_18998": "solved (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.24 m from the casting's spot (limit 0.6 m)",
+  "far_bank_figure_16823": "solved (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.32 m from the casting's spot (limit 0.6 m)",
+  "boatman_standing_pole_19892": "solved on its boat with the pole held still (pole_boat~hold / fend_pole~out) and the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.102 m, turned 0 deg in the boat's frame; still contact:pole:palm_L=0.036@8",
+  "boatman_hat_pole_19915": "solved on its boat with the pole held still (pole_boat~hold / fend_pole~out) and the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.082 m, turned 0 deg in the boat's frame; still contact:pole:palm_L=0.035@8",
+  "man_waving_on_boat_roof_19952": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.28 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_stern_bending_20365": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.2 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_crouching_20026": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.206 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_under_mat_roof_19970": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.1 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_under_mat_roof_19955": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.128 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "bowman_arm_out_19565": "solved on its boat with the kit's fixed colliders (tools/crew_solve.mjs, fix-boats): moved 0.261 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "seated_man_cap_18282": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts seat 0.11, sole_L 0.01, sole_R 0 (before seat 0.31, sole_L 0, sole_R 0.21); moved 0.02 m, turned 18 deg from the casting's spot (limit 0.6 m); root_h 2.737: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); both feet on one visible tread of the stepped deck (root_h), his own stool refitted under his seat point (seat_fit)",
+  "parasol_stall_seller_20290": "solved (fix_bridge/tools/deck_solve.mjs): contacts seat 0.01, sole_L 0.01, sole_R 0 (before seat 0.01, sole_L -0.13, sole_R 0); moved 0.03 m from the casting's spot (limit 0.6 m); his foot out of the stall table's stretcher; his own stool refitted under his seat point (seat_fit)",
+  "far_stall_vendor_19436": "solved (fix_bridge/tools/deck_solve.mjs): contacts seat 0.45, sole_L 0.01, sole_R 0 (before seat 0.02, sole_L 0.01, sole_R 0); moved 0.12 m from the casting's spot (limit 0.6 m); his body out of the stall table; his own stool refitted under his seat point (seat_fit)",
+  "basket_carrier_19138": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.14 m from the casting's spot (limit 0.6 m); root_h 4.885: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "robe_apron_man_18582": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.07 m, turned 18 deg from the casting's spot (limit 0.6 m); root_h 0.699: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "dark_cap_man_18622": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): placement checks; moved 0.36 m, turned 7 deg from the casting's spot (limit 0.6 m); root_h 0.403: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h)",
+  "cart_pusher_19922": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.22, palm_R 0.24 (before palm_L 0.29, palm_R 0.3); moved 0.25 m, turned -97 deg from the casting's spot (limit 0.6 m); at the handcart's near (south) side west of its wheel, square to it, 0.3 m from its top rail (the push clip's palms within reach all through its stride); palms on the rail by an IK variant",
+  "barrow_pusher_18295": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.28, palm_R 0.3 (before palm_L 0.26, palm_R 0.32); moved 0.25 m, turned 10 deg from the casting's spot (limit 0.6 m); between the barrow's handle ends, facing along it (219.8 deg), close enough for the push clip's arms all through its stride; palms on the handles by an IK variant",
+  "far_shopkeeper_19620": "solved (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.07, palm_R 0.09 (before palm_L 0.07, palm_R 0.09); moved 0.53 m from the casting's spot (limit 0.6 m); behind the long counter, square to it; palms on its top by an IK variant next",
+  "groom_holding_horse_19095": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts chest_front 0.12, palm_L 0.04, palm_R 0.25 (before chest_front 0.35, palm_L 0.3, palm_R 0.51); moved 0.19 m, turned -30 deg from the casting's spot (limit 0.6 m); root_h 5.226: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); against the horse's lowered neck; chest and hands onto it by an IK variant next",
+  "donkey_man_east_18768": "solved on the stepped deck (fix_bridge/tools/deck_solve.mjs): contacts palm_L 0.12, palm_R 0.4 (before palm_L 0.75, palm_R 1.1); moved 0.6 m, turned 40 deg from the casting's spot (limit 0.6 m); root_h 5.271: both soles on the visible tread under them, not on the bridge's smooth hidden walk ramp (people.js root_h); at the dark donkey's load; palms on it by an IK variant next",
+  "seated_customer_20140": "solved (fix_bridge/tools/deck_solve.mjs): contacts seat -0.02, sole_L -0.02, sole_R 0.02 (before seat -0.02, sole_L -0.02, sole_R 0.02); moved 0.1 m from the casting's spot (limit 0.6 m); 0.1 m north: his right forearm out of the front roof's eave (S3.bld.front_roof_19800); S3.prop.stool_20126's height refitted under his seat point",
+  "boatman_bow_15664": "solved onto the raised bow deck B9 (kit bow_deck 1.82, built by fix-boats; the map: 'standing on the raised bow deck at the west end', H 1.12): 1.1 m forward of the casting's spot, over the 0.6 m limit because the real-size hull's awning (0.30-0.78 of it) reaches over their painted spots and the raised deck starts past its end (tools/crew_solve.mjs): moved 1.126 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_bow_15636": "solved onto the raised bow deck B9 (kit bow_deck 1.82, built by fix-boats; the map: 'standing on the raised bow deck at the west end', H 1.12): 1.1 m forward of the casting's spot, over the 0.6 m limit because the real-size hull's awning (0.30-0.78 of it) reaches over their painted spots and the raised deck starts past its end (tools/crew_solve.mjs): moved 1.115 m, turned 0 deg in the boat's frame; every boat check passes at every frozen time",
+  "boatman_bow_15688": "turned on the bow deck so his floor sit's seat lies on the deck (tools/crew_solve.mjs, fix-boats): moved 0 m, turned -25 deg in the boat's frame; every boat check passes at every frozen time",
+  "man_at_cabin_rail_19366": "solved on its boat toward what it leans on or works (tools/crew_solve.mjs, fix-boats); the rest of the reach by its IK variant (tools/crew_ik_targets.mjs): moved 0.599 m, turned 30 deg in the boat's frame; still contact:rail:elbow_L=0.336@8, contact:rail:elbow_R=0.171@8"
  },
  "cast_why": {
   "bank_watcher_dark_hair_18905": "dark hair, smaller than the men beside it: the woman at her own 1.58 m (the needs list's other reading, a youth at about 0.85, is not taken)",
   "child_red_18592": "a small figure in a red garment: the child recoloured red (catalogue 2e, child_red; the child's jacket is teal)",
   "official_black_robe_17940": "catalogue 1b: a black 幞头 and a long black robe; recast free from the official (a warm-grey robe) to the fortune-teller (a dark ink-blue robe, a futou)",
-  "about": "by dress (needs list \"Casting\", catalogue 1b and 7): short jackets and trousers are the idler or the porter, long light robes with a dark cap the scholar, a light robe without a cap the robed man, dark long robes the townsman, the inspector or the fortune-teller, wide hats the hat traveller (dark broad hats dark_hat, straw hats straw_hat, when made), the crews the boatman (when made)"
+  "about": "by dress (needs list \"Casting\", catalogue 1b and 7): short jackets and trousers are the idler or the porter, long light robes with a dark cap the scholar, a light robe without a cap the robed man, dark long robes the townsman, the inspector or the fortune-teller, wide hats the hat traveller (dark broad hats dark_hat, straw hats straw_hat, when made), the crews the boatman (when made)",
+  "deck_stooping_hat_19765": "reach_over_rail -> reach_over_rail~deck_stooping_hat_19765: an IK clip variant (characters/ik_variants.json \"deck_stooping_hat_19765\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placementreach_over_rail -> reach_over_rail~deck_stooping_hat_19765: an IK clip variant (characters/ik_variants.json \"deck_stooping_hat_19765\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placementreach_over_rail -> reach_over_rail~deck_stooping_hat_19765: an IK clip variant (characters/ik_variants.json \"deck_stooping_hat_19765\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "man_arms_on_railing_18982": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~man_arms_on_railing_18982: an IK clip variant (characters/ik_variants.json \"man_arms_on_railing_18982\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "groom_at_donkey_18682": "bridle -> bridle~groom_at_donkey_18682: an IK clip variant (characters/ik_variants.json \"groom_at_donkey_18682\") lays palm_R, palm_L on what the painting has it touch, from its solved placement",
+  "mat_stall_keeper_18435": "lean_over -> lean_over~mat_stall_keeper_18435: an IK clip variant (characters/ik_variants.json \"mat_stall_keeper_18435\"): palm_L, palm_R on S3.prop.stall_table_18540 where it is nearest to them (both hands on the stall table's top), from its solved placementlean_over -> lean_over~mat_stall_keeper_18435: an IK clip variant (characters/ik_variants.json \"mat_stall_keeper_18435\"): palm_L, palm_R on S3.prop.stall_table_18540 where it is nearest to them (both hands on the stall table's top); the chest held steady (no forward sway: the hips move under it), the feet kept, from its solved placement",
+  "mat_leaner_white_18220": "recast (fix_standard rule 1): lean_over rests the hands on a waist-high edge; he is painted leaning west over the east end of the unloading boat's mat cover, both arms forward on the cargo: the boat (fix-boats', riding the water) lies more than 0.6 m from his spot on the ramp, nothing built within his reach: bend_goods (bent forward over the goods), no contact",
+  "sedan_bearer_rear_18688": "sedan_carry -> sedan_carry~sedan_bearer_rear_18688: the shared pole setup with the S3 poles' real slope (8.7 deg on the ramp) at his placement",
+  "seated_man_topknot_18352": "recast (fix_standard rule 1): drink (robed_man's) rests its feet at two heights (+-4 cm); he is painted seated by the round tray, face to the viewer (no cup): sit~soles (the shared soles variant: both feet on the tread)",
+  "stall_man_parasol_18612": "sit -> sit~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the floor (the clip rests them at two heights, +-2-3 cm)",
+  "deck_rail_leaner_19578": "reach_over_rail -> reach_over_rail~deck_rail_leaner_19578: an IK clip variant (characters/ik_variants.json \"deck_rail_leaner_19578\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placementreach_over_rail -> reach_over_rail~deck_rail_leaner_19578: an IK clip variant (characters/ik_variants.json \"deck_rail_leaner_19578\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placementreach_over_rail -> reach_over_rail~deck_rail_leaner_19578: an IK clip variant (characters/ik_variants.json \"deck_rail_leaner_19578\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placement",
+  "man_lowering_rope_19295": "reach_over_rail -> reach_over_rail~man_lowering_rope_19295: an IK clip variant (characters/ik_variants.json \"man_lowering_rope_19295\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placementreach_over_rail -> reach_over_rail~man_lowering_rope_19295: an IK clip variant (characters/ik_variants.json \"man_lowering_rope_19295\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placementreach_over_rail -> reach_over_rail~man_lowering_rope_19295: an IK clip variant (characters/ik_variants.json \"man_lowering_rope_19295\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placementreach_over_rail -> reach_over_rail~man_lowering_rope_19295: an IK clip variant (characters/ik_variants.json \"man_lowering_rope_19295\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "man_bent_over_railing_19195": "reach_over_rail -> reach_over_rail~man_bent_over_railing_19195: an IK clip variant (characters/ik_variants.json \"man_bent_over_railing_19195\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placementreach_over_rail -> reach_over_rail~man_bent_over_railing_19195: an IK clip variant (characters/ik_variants.json \"man_bent_over_railing_19195\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placementreach_over_rail -> reach_over_rail~man_bent_over_railing_19195: an IK clip variant (characters/ik_variants.json \"man_bent_over_railing_19195\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placement",
+  "man_over_railing_19025": "reach_over_rail -> reach_over_rail~man_over_railing_19025: an IK clip variant (characters/ik_variants.json \"man_over_railing_19025\"): the belly on the railing (the whole body moved down and forward, the feet kept), from its solved placementreach_over_rail -> reach_over_rail~man_over_railing_19025: an IK clip variant (characters/ik_variants.json \"man_over_railing_19025\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placementreach_over_rail -> reach_over_rail~man_over_railing_19025: an IK clip variant (characters/ik_variants.json \"man_over_railing_19025\"): the belly on the railing (the whole body moved down and forward, the feet kept); its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "man_folded_arms_tall_cap_19270": "recast (fix_standard rule 1): arms_folded is the lean_wall take (leaning back on a wall, the rule's back on a wall); he is painted standing at the crown with his arms folded behind the railing crowd, nothing behind him: stand_sleeves (from:farmer, arms folded, upright), as S4's onlooker",
+  "light_jacket_man_18812": "recast (fix_standard rule 1): arms_folded is the lean_wall take (leaning back on a wall); he is painted standing in the ramp's crowd, arms folded at his chest, nothing behind him: stand_sleeves (from:farmer, arms folded, upright), as S4's onlooker",
+  "leaning_man_arms_out_18703": "recast (fix_standard rule 1): push needs a vehicle; he is painted leaning west with both arms out, reaching for or pushing at the bowing man in front of him (a person, not a vehicle; the nearest vehicle is the sedan 3 m off): point (an arm out towards the bowing man), no contact",
+  "child_holding_robe_17520": "recast (fix_standard rule 1): reach is a table reach (arms across a chest-high top); the child is painted holding the robe of the man beside it, a person (no table, no rule or built thing for a robe): idle, standing at his side, no contact",
+  "reaching_man_18062": "recast (fix_standard rule 1): reach is a table reach; he is painted reaching east with one arm towards the barrow's load 2.2 m away (no table, the load out of reach): point (one arm out towards it), no contact",
+  "rail_watcher_19923": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~rail_watcher_19923: an IK clip variant (characters/ik_variants.json \"rail_watcher_19923\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "rail_watcher_19892": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~rail_watcher_19892: an IK clip variant (characters/ik_variants.json \"rail_watcher_19892\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "deck_rail_leaner_19715": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~deck_rail_leaner_19715: an IK clip variant (characters/ik_variants.json \"deck_rail_leaner_19715\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "deck_rail_leaner_19538": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~deck_rail_leaner_19538: an IK clip variant (characters/ik_variants.json \"deck_rail_leaner_19538\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_R pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "deck_rail_face_19350": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~deck_rail_face_19350: an IK clip variant (characters/ik_variants.json \"deck_rail_face_19350\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "man_leaning_on_railing_19225": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~man_leaning_on_railing_19225: an IK clip variant (characters/ik_variants.json \"man_leaning_on_railing_19225\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "man_head_bowed_18962": "recast (fix_standard rule 1): lean_chin (both elbows on the rail, chin on the hands) -> lean_over (both hands resting on the rail): the ramps' railing slopes 6-32 deg here, so the two elbows 0.5 m apart along it can't both rest on it (and sightseer's elbows ride 5 cm over a level 1.10 m top rail); painted leaning on the near railing; \"look\" left out: its stance straddles two treads of the stepped deck; lean_over -> lean_over~man_head_bowed_18962: an IK clip variant (characters/ik_variants.json \"man_head_bowed_18962\"): both palms laid on the top of the Rainbow Bridge's top rail where it passes each hand (the rail follows the ramp: each hand at its own height); the chest held steady (no forward sway: the hips move under it), the feet kept; its sole_L pinned onto the visible treads of the stepped deck under them (leg IK), from its solved placement",
+  "deck_pole_holder_19625": "recast (fix_standard rule 1): fend_pole holds a pole up with its far end on what it fends off; he is painted at the crown's railing bent forward over it, gripping a long pole held level across his body (no far end on anything: 5 m over the river), and porter's long_pole_mid sits 0.27 m off his left hand in fend_pole: reach_over_rail (bent over the railing), the pole left out",
+  "bearded_barrow_man_18098": "recast (fix_standard rule 1): haul_line is a boat line's haul (fix-boats' rule: a rope of his boat); he is painted at the barrow's front hauling the halter rope of the balking donkey S3.ani.donkey_18048, a rope that is not built (the donkey's halter_breeching tack has no lead): hold_rope (from:carter, a rope held at the hip, not built), as S4's groom whose reins aren't built",
+  "boatman_standing_pole_19892": "IK variant (fix-boats): pole_boat~hold (characters/ik_variants.json pole_hold_<character>): the pole held still, slanting 65 deg into the water ahead, both hands on it (the take's pole rode its hips through the deck, the palms 0.14-0.36 m off it)",
+  "boatman_bent_pole_19830": "IK variant (fix-boats): pole_boat~hold (characters/ik_variants.json pole_hold_<character>): the pole held still, slanting 65 deg into the water ahead, both hands on it (the take's pole rode its hips through the deck, the palms 0.14-0.36 m off it)",
+  "boatman_hat_pole_19915": "IK variant (fix-boats): pole_boat~hold (characters/ik_variants.json pole_hold_<character>): the pole held still, slanting 65 deg into the water ahead, both hands on it (the take's pole rode its hips through the deck, the palms 0.14-0.36 m off it)",
+  "boatman_bending_pole_19746": "IK variant (fix-boats): pole_boat~hold (characters/ik_variants.json pole_hold_<character>): the pole held still, slanting 65 deg into the water ahead, both hands on it (the take's pole rode its hips through the deck, the palms 0.14-0.36 m off it)",
+  "boatman_poling_bow_19632": "IK variant (fix-boats): pole_boat~hold (characters/ik_variants.json pole_hold_<character>): the pole held still, slanting 65 deg into the water ahead, both hands on it (the take's pole rode its hips through the deck, the palms 0.14-0.36 m off it)",
+  "boatman_poling_16198": "IK variant (fix-boats): pole_boat~hold (characters/ik_variants.json pole_hold_<character>): the pole held still, slanting 65 deg into the water ahead, both hands on it (the take's pole rode its hips through the deck, the palms 0.14-0.36 m off it)",
+  "boatman_both_arms_pole_19840": "IK variant (fix-boats): fend_pole~up (fend_up): the pole held still, raised 47 deg, both hands on it, aimed at what it fends (the take swung it through the deck and the man, the left palm 0.34 m off it)",
+  "boatman_pole_raised_19775": "IK variant (fix-boats): fend_pole~up (fend_up): the pole held still, raised 47 deg, both hands on it, aimed at what it fends (the take swung it through the deck and the man, the left palm 0.34 m off it)",
+  "boatman_cabin_door_pole_20300": "IK variant (fix-boats): fend_pole~out (fend_out): the pole held still, slanting down ahead to what it fends, both hands on it (the take swung it through the deck and the man, the left palm 0.34 m off it)",
+  "sweep_man_15810": "IK variant (fix-boats): work_sweep~bar (sweep_bar): both hands on the sweep's crossbar 0.15 m ahead at 0.85 m (the kit's sweep_bar_h, sweep_crew_in; the take's palms were 0.7-1.3 m off the sweep)",
+  "sweep_man_15838": "IK variant (fix-boats): work_sweep~bar (sweep_bar): both hands on the sweep's crossbar 0.15 m ahead at 0.85 m (the kit's sweep_bar_h, sweep_crew_in; the take's palms were 0.7-1.3 m off the sweep)",
+  "sweep_man_15855": "IK variant (fix-boats): work_sweep~bar (sweep_bar): both hands on the sweep's crossbar 0.15 m ahead at 0.85 m (the kit's sweep_bar_h, sweep_crew_in; the take's palms were 0.7-1.3 m off the sweep)",
+  "sweep_man_15862": "IK variant (fix-boats): work_sweep~bar (sweep_bar): both hands on the sweep's crossbar 0.15 m ahead at 0.85 m (the kit's sweep_bar_h, sweep_crew_in; the take's palms were 0.7-1.3 m off the sweep)",
+  "sweep_man_15888": "IK variant (fix-boats): work_sweep~bar (sweep_bar): both hands on the sweep's crossbar 0.15 m ahead at 0.85 m (the kit's sweep_bar_h, sweep_crew_in; the take's palms were 0.7-1.3 m off the sweep)",
+  "sweep_man_15915": "IK variant (fix-boats): work_sweep~bar (sweep_bar): both hands on the sweep's crossbar 0.15 m ahead at 0.85 m (the kit's sweep_bar_h, sweep_crew_in; the take's palms were 0.7-1.3 m off the sweep)",
+  "stall_sitter_east_19297": "sit -> sit~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the floor (the clip rests them at two heights, +-2-3 cm)",
+  "stall_sitter_west_19088": "sit -> sit~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the floor (the clip rests them at two heights, +-2-3 cm)",
+  "far_bank_seated_18318": "sit -> sit~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the floor (the clip rests them at two heights, +-2-3 cm)",
+  "far_bank_seated_17277": "sit -> sit~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the floor (the clip rests them at two heights, +-2-3 cm)",
+  "diner_hunched_16050": "listen -> listen~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the floor (the clip rests them at two heights, +-2-3 cm)",
+  "cart_puller_19870": "steer -> steer~cart_puller_19870: an IK clip variant (characters/ik_variants.json \"cart_puller_19870\"): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (a hand on each shaft), from its solved placementsteer -> steer~cart_puller_19870: an IK clip variant (characters/ik_variants.json \"cart_puller_19870\"): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (his hands back on the shaft tips and their crossbar), from its solved placementsteer -> steer~cart_puller_19870: an IK clip variant (characters/ik_variants.json \"cart_puller_19870\"): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (his hands back on the shaft tips and their crossbar), from its solved placement",
+  "cart_pusher_19922": "push -> push~cart_pusher_19922: an IK clip variant (characters/ik_variants.json \"cart_pusher_19922\"): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (both hands on its top rail), from its solved placementpush -> push~cart_pusher_19922: an IK clip variant (characters/ik_variants.json \"cart_pusher_19922\"): palm_L, palm_R on S3.veh.handcart_19862 where it is nearest to them (both hands on its top rail), from its solved placement",
+  "barrow_pusher_18295": "push -> push~barrow_pusher_18295: an IK clip variant (characters/ik_variants.json \"barrow_pusher_18295\"): palm_L, palm_R on S3.veh.barrow_hooped_load_18100 where it is nearest to them (a hand on each handle), from its solved placementpush -> push~barrow_pusher_18295: an IK clip variant (characters/ik_variants.json \"barrow_pusher_18295\"): palm_L, palm_R on S3.veh.barrow_hooped_load_18100 where it is nearest to them (a hand on each handle), from its solved placementpush -> push~barrow_pusher_18295: an IK clip variant (characters/ik_variants.json \"barrow_pusher_18295\"): palm_L, palm_R on S3.veh.barrow_hooped_load_18100 where it is nearest to them (a hand on each handle), from its solved placementpush -> push~barrow_pusher_18295: an IK clip variant (characters/ik_variants.json \"barrow_pusher_18295\"): palm_L, palm_R on S3.veh.barrow_hooped_load_18100 where it is nearest to them (a hand on each handle), from its solved placement",
+  "topknot_man_at_cart_17458": "recast (fix_standard rule 1): push_flank needs an animal (none in his group or within 4 m); painted at the 串车's west end looking down, gripping a dark shaggy bundle on its load: at real size the cart's west 1.8 m is its bare frame at 0.64 m and its load (2.0-2.5 m tall) starts at X 120.8, 2.3 m east of him, and the bundle he grips is not built: bend_goods (bent, looking down at goods), no contact",
+  "cap_man_at_cart_17545": "recast (fix_standard rule 1): lean_over needs a waist-high edge; painted behind the 串车's load leaning over it, his right hand reaching west towards the topknot man's bundle: at real size the load is built 2.0-2.5 m tall (kit_vehicles.barrow_screen stakes and panel), over his head, 1.1 m east of him, and the bundle is not built: point (an arm out west), no contact",
+  "far_shopkeeper_19620": "recast (fix_standard rule 1): lean_chin rests both elbows on a rail at 1.1 m; he is painted leaning forward over the long counter (0.9 m, built) from behind it: lean_over (both hands on the counter's edge); look left out (the hands stay on the counter); lean_over -> lean_over~far_shopkeeper_19620: an IK clip variant (characters/ik_variants.json \"far_shopkeeper_19620\"): palm_L, palm_R on S3.prop.far_counter_19555 where it is nearest to them (both hands on the counter's top); the chest held steady (no forward sway: the hips move under it), the feet kept, from its solved placement",
+  "groom_holding_horse_19095": "hold_horse_neck -> hold_horse_neck~groom_holding_horse_19095: an IK clip variant (characters/ik_variants.json \"groom_holding_horse_19095\") lays chest_front, palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "donkey_man_east_18768": "recast (fix_standard rule 1): lean_over rests the hands on a waist-high edge (rule: a rail or table: nothing within 0.6 m); he is painted bending over the light bundle on the dark donkey's back, lifting or tying the load: push_flank (both palms on the animal, its load included); push_flank -> push_flank~donkey_man_east_18768: an IK clip variant (characters/ik_variants.json \"donkey_man_east_18768\") lays palm_L, palm_R on what the painting has it touch, from its solved placement",
+  "balcony_drinker_16358": "recast (fix_standard rule 1): lean_chin rests the elbows on a rail at 1.1 m; he is painted in the side gallery's first bay with his arms forward on a cross-bar at chest height: the built gallery's front railing (0.85 m) is 2.0 m south of him and its east railing 0.9 m east, where his neighbour (the faint second figure) stands: look (standing, facing out), no contact",
+  "man_in_hatch_20172": "recast (fix-boats): the map has only his head showing in the hatch (the man is down in the hold); standing on the deck under the hold's mat awning put his head through it: crouching, as low as the page can put him on the deck",
+  "man_in_hatch_20148": "recast (fix-boats): the map has only his head showing in the hatch (the man is down in the hold); standing on the deck under the hold's mat awning put his head through it: crouching, as low as the page can put him on the deck",
+  "stall_bearded_man_19235": "sit -> sit~soles: the shared leg-IK variant (characters/ik_variants.json \"soles\", fix-inner) puts both soles on the ground (storyteller's sit rests them at two heights: his left sole 7 cm in the ground)",
+  "sedan_bearer_front_18838": "sedan_carry -> sedan_carry~pole_ends (shared, S4's front-bearer setup: between the pole ends facing the chair, a hand on each end; rule: palms on the poles): at real size the poles end at his shoulders where the painting has the front ends on his shoulder, and their ends in his hands are what holds them; on the north pole's end alone his hands were past its tip || sedan_carry -> sedan_carry~sedan_bearer_front_18838: the shared pole_ends setup with the S3 poles' real slope (8.7 deg on the ramp) at his placement",
+  "man_at_cabin_rail_19366": "IK variant (fix-boats): lean_chin for rainbow_bridge/man_at_cabin_rail_19366 on its boat (fix-boats, tools/crew_ik_targets.mjs): elbow_L 0.325 m from S3.veh.boat_cabin_under_arch_19225|body; elbow_R 0.166 m from S3.veh.boat_cabin_under_arch_19225|body: the sites laid onto what the clip's rule touches there (0.012 m off its surface), in the root frame (the crew moves with its boat)"
  },
  "props_why": {
   "porter_with_pole_20450": "pole_bundle: on as pole_bundle (porter, held in carry_pole)",
@@ -3989,5 +4260,11 @@
   "props": "sizes from gen/sections/rainbow_bridge/props_table.json args",
   "crew_close": [],
   "walker_start_height": "people.js starts walkers at y 0 (ray from 1.5 m): deck walkers above 1.3 m stand; proposed fix in walkers_why.deck"
+ },
+ "boats_fix_why": {
+  "boat_under_way_15595": "fix-boats: the sweep crew stand by pt_sweep_crew (0.15 m behind the crossbar: the kit options sweep_crew_in, sweep_bar_h, sweep_bar_w), hands on the bar (work_sweep~bar)"
+ },
+ "contact_fixes_why": {
+  "about": "103 figures carry a contact fix from sections/rainbow_bridge/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
  }
 }

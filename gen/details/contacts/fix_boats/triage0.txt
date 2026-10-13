@@ -1,0 +1,445 @@
+== outer_road_2/boatman_dark_cap_15046 [boatman] do=[['idle', 10]] props=None boat=S4b.veh.boat_long_cabin_14850 work=None
+   MAP: - **boatman in a dark cap on the long boat** `S4b.fig.boatman_dark_cap_15046`: station +90.4, 17.8 m N; H -0.12 m (boat deck: S4b.veh.boat_long_cabin_14850); 5.4 m SE of house with an open shop front and tables, by the moorings; standing; faces S. A figure standing on the long boat's south deck behind the mat-cargo boat's bales: a dark cap and, below it, the vertical folds of a robe or jacket; a b
+   boat_body idle  = 0.079 S4b.veh.boat_long_cabin_14850|body | S4b.veh.boat_long_cabin_14850|body 0.079 m into the torso (hips to neck, 0.12 m round) @6
+   deck_support   = -0.297 S4b.veh.boat_long_cabin_14850 | the root -0.297 m under the visible S4b.veh.boat_long_cabin_14850|body @1
+== outer_road_2/seated_boatman_stern_15372 [boatman] do=[['tiller_seated', 30]] props=None boat=S4b.veh.boat_arched_awning_14945 work=None
+   MAP: - **boatman seated at the arched-awning boat's stern** `S4b.fig.seated_boatman_stern_15372`: station +100.6, 15.3 m N; H 0.14 m (boat deck: S4b.veh.boat_arched_awning_14945); 9.8 m E of open mat-roofed shed at the top of the bank, behind the tea house; seated; faces E. A boatman with dark hair or a dark cap seated under the east end of the arched mat awning, by the stern head; a rudder stock and a
+   contact:floor tiller_seated seat = 0.214 body |  @8
+   contact:boat tiller_seated palm_R = 2.249 S4b.veh.boat_arched_awning_14945|body (tiller) |  @8
+== rainbow_bridge/man_in_hatch_20172 [boatman] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_moored_south_bank_19745 work=None
+   MAP: - **second man in the hatch (?)** `S3.fig.man_in_hatch_20172`: station +180.5, 17.3 m S; H 0.4 m (boat deck: S3.veh.boat_moored_south_bank_19745); 5.1 m NE of mat-roofed shed with board walls, south bank under the arch's crown; standing; faces N. A second dark head beside him in the hatch, looking north. (余辉: 上下呼救) Nearest: boat moored along the south bank 0.2 m E, man looking out of the hatch 0.3
+   head_through look  = 1 S3.veh.boat_moored_south_bank_19745|body | hips to head top crosses S3.veh.boat_moored_south_bank_19745|body in 100% of the samples @8
+   boat_body idle  = 0.08 S3.veh.boat_moored_south_bank_19745|body | S3.veh.boat_moored_south_bank_19745|body 0.08 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/man_in_hatch_20148 [boatman] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_moored_south_bank_19745 work=None
+   MAP: - **man looking out of the hatch** `S3.fig.man_in_hatch_20148`: station +180.2, 17.2 m S; H 0.4 m (boat deck: S3.veh.boat_moored_south_bank_19745); 4.8 m NE of mat-roofed shed with board walls, south bank under the arch's crown; standing; faces NW. Man with dark hair looking out of the hatch in the middle of the boat, turned west toward the wavers and the big boat. (余辉: 上下呼救) Nearest: second man i
+   head_through look  = 1 S3.veh.boat_moored_south_bank_19745|body | hips to head top crosses S3.veh.boat_moored_south_bank_19745|body in 100% of the samples @8
+   boat_body idle  = 0.078 S3.veh.boat_moored_south_bank_19745|body | S3.veh.boat_moored_south_bank_19745|body 0.078 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/man_reclining_waving_20060 [boatman] do=[['lie_wave', 16]] props=None boat=S3.veh.boat_moored_south_bank_19745 work=None
+   MAP: - **man reclining on the roof, waving** `S3.fig.man_reclining_waving_20060`: station +179.0, 16.9 m S; H 0.48 m (boat roof: S3.veh.boat_moored_south_bank_19745); 3.9 m NE of mat-roofed shed with board walls, south bank under the arch's crown; lying; faces N. Man half lying on the boat's roof on his back with his head to the west, raising his right arm high to wave at the big boat. (余辉: 上下呼救) Neare
+   contact:floor lie_wave seat = -0.074 body |  @8
+   deck_support   = -0.054 S3.veh.boat_moored_south_bank_19745 | the root -0.054 m under the visible S3.veh.boat_moored_south_bank_19745|body @8
+   boat_body lie_wave  = 0.086 S3.veh.boat_moored_south_bank_19745|body | S3.veh.boat_moored_south_bank_19745|body 0.086 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/man_waving_on_boat_roof_19952 [boatman] do=[['wave_arms', 10], ['look', 4]] props=None boat=S3.veh.boat_moored_south_bank_19745 work=None
+   MAP: - **man waving from the moored boat's roof** `S3.fig.man_waving_on_boat_roof_19952`: station +163.3, 17.0 m S; H 0.48 m (boat roof: S3.veh.boat_moored_south_bank_19745); 2.8 m NE of mat-roofed shed with board walls, south bank under the arch's crown; standing; faces NW. Man in a short belted jacket and trousers standing on the boat's mat roof with his back half to the viewer, both arms raised high
+   stance_soles(placement)   = 1.122  | clip sole height -0.003 m (placement) @8
+   deck_support   = -0.09 S3.veh.boat_moored_south_bank_19745 | the root -0.09 m under the visible S3.veh.boat_moored_south_bank_19745|body @8
+== rainbow_bridge/boatman_stern_bending_20365 [boatman] do=[['bend_goods', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman bending over the stern rail** `S3.fig.boatman_stern_bending_20365`: station +179.3, 5.7 m S; H 2.29 m (boat roof: S3.veh.boat_mast_lowering_19518); 5.4 m SE of tavern on the north bank at the bridge's north foot (虹桥边的小酒馆); crouching; faces E. Boatman in a cap bending forward over a box at the stern rail, reaching down to the east (toward the rudder's lines). (名画记: 大船穿行虹桥 (pin 19); 余辉: 
+   head_through bend_goods  = 0.367 S3.veh.boat_mast_lowering_19518|mast | hips to head top crosses S3.veh.boat_mast_lowering_19518|mast in 37% of the samples @2
+== rainbow_bridge/boatman_cabin_door_pole_20300 [boatman] do=[['fend_pole', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman in the after cabin's door with a long pole** `S3.fig.boatman_cabin_door_pole_20300`: station +178.8, 6.6 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 6.1 m SE of tavern on the north bank at the bridge's north foot (虹桥边的小酒馆); standing; faces E. Boatman standing in the open door on the south side of the after cabin, holding a long pole straight out to the east past the ste
+   contact:reach fend_pole pole_far = 1  | carries no pole @8
+   contact:pole fend_pole palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole fend_pole palm_R = 1  | carries no pole (people.json props: null) @8
+   stance_soles(placement)   = 0.068  | clip sole height 0 m (placement) @8
+   head_through fend_pole  = 0.817 S3.veh.boat_mast_lowering_19518|body | hips to head top crosses S3.veh.boat_mast_lowering_19518|body in 82% of the samples @8
+   boat_body fend_pole  = 0.12 S3.veh.boat_mast_lowering_19518|body | S3.veh.boat_mast_lowering_19518|body 0.12 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/boatman_stern_seated_20285 [boatman] do=[['sit_one_knee', 16]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman seated at the stern** `S3.fig.boatman_stern_seated_20285`: station +178.3, 5.9 m S; H 2.29 m (boat roof: S3.veh.boat_mast_lowering_19518); 5.3 m SE of tavern on the north bank at the bridge's north foot (虹桥边的小酒馆); seated; faces S. Boatman with dark hair seated or kneeling on the stern deck behind a box or windlass frame, facing the viewer, hands at the frame. (名画记: 大船穿行虹桥 (pin 19); 余辉:
+   contact:floor sit_one_knee seat = -0.05 body |  @8
+== rainbow_bridge/boatman_hauling_rope_20205 [boatman] do=[['haul_line', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman hauling a mast line on the stern deck** `S3.fig.boatman_hauling_rope_20205`: station +177.4, 6.0 m S; H 2.29 m (boat roof: S3.veh.boat_mast_lowering_19518); 5 m E of the Rainbow Bridge (虹桥); standing; faces E. Boatman on the high stern deck facing east, both hands forward hauling one of the mast's lines. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: boatman seated at the stern 1 m E,
+   contact:boat haul_line palm_L = 0.581 S3.veh.boat_mast_lowering_19518|line_shroud_s |  @8
+   contact:boat haul_line palm_R = 0.684 S3.veh.boat_mast_lowering_19518|line_shroud_s |  @8
+   stance_soles(placement)   = -0.064 body | the stance foot is inside body (a surface 0.064 m above the sole) @8
+   deck_support   = -0.055 S3.veh.boat_mast_lowering_19518 | the root -0.055 m under the visible S3.veh.boat_mast_lowering_19518|body @8
+   head_through haul_line  = 0.167 S3.veh.boat_mast_lowering_19518|mast | hips to head top crosses S3.veh.boat_mast_lowering_19518|mast in 17% of the samples @1
+   boat_body haul_line  = 0.116 S3.veh.boat_mast_lowering_19518|mast | S3.veh.boat_mast_lowering_19518|mast 0.116 m into the torso (hips to neck, 0.12 m round) @2
+== rainbow_bridge/boatman_crouching_20026 [boatman] do=[['crouch', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman crouching under the deckhouse's east end** `S3.fig.boatman_crouching_20026`: station +176.6, 8.9 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 5.9 m E of the Rainbow Bridge (虹桥); crouching; faces S. Boatman crouching under the east end of the deckhouse roof, hands together in front of him at a rope or pole. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: boatman under the
+   boat_body crouch  = 0.083 S3.veh.boat_mast_lowering_19518|mast | S3.veh.boat_mast_lowering_19518|mast 0.083 m into the torso (hips to neck, 0.12 m round) @5
+   stance_soles(placement)   = -0.149 body | the stance foot is inside body (a surface 0.149 m above the sole) @2
+== rainbow_bridge/boatman_under_mat_roof_19970 [boatman] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman under the deckhouse roof** `S3.fig.boatman_under_mat_roof_19970`: station +175.9, 8.9 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 5.3 m E of the Rainbow Bridge (虹桥); standing; faces S. Second boatman under the deckhouse's mat roof beside him, looking out to the south. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: boatman under the deckhouse roof 0.2 m W, boatman crouc
+   boat_body idle  = 0.12 S3.veh.boat_mast_lowering_19518|mast | S3.veh.boat_mast_lowering_19518|mast 0.12 m into the torso (hips to neck, 0.12 m round) @7
+   head_through idle  = 0.38 S3.veh.boat_mast_lowering_19518|mast | hips to head top crosses S3.veh.boat_mast_lowering_19518|mast in 38% of the samples @3
+   head_through look  = 0.509 S3.veh.boat_mast_lowering_19518|mast | hips to head top crosses S3.veh.boat_mast_lowering_19518|mast in 51% of the samples @1
+   boat_body look  = 0.119 S3.veh.boat_mast_lowering_19518|mast | S3.veh.boat_mast_lowering_19518|mast 0.119 m into the torso (hips to neck, 0.12 m round) @1
+== rainbow_bridge/boatman_under_mat_roof_19955 [boatman] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman under the deckhouse roof** `S3.fig.boatman_under_mat_roof_19955`: station +175.7, 8.9 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 5.2 m E of the Rainbow Bridge (虹桥); standing; faces S. Boatman under the low mat roof of the deckhouse amidships, his face turned out toward the viewer. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: boatman under the deckhouse roof 0.2 m E,
+   deck_support   = -0.299 S3.veh.boat_mast_lowering_19518 | the root -0.299 m under the visible S3.veh.boat_mast_lowering_19518|mast @8
+   head_through idle  = 0.46 S3.veh.boat_mast_lowering_19518|body | hips to head top crosses S3.veh.boat_mast_lowering_19518|body in 46% of the samples @7
+   boat_body idle  = 0.105 S3.veh.boat_mast_lowering_19518|body | S3.veh.boat_mast_lowering_19518|body 0.105 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/boatman_standing_pole_19892 [boatman] do=[['pole_boat', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman standing with a pole at the near gunwale** `S3.fig.boatman_standing_pole_19892`: station +167.0, 8.8 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 4.7 m E of the Rainbow Bridge (虹桥); standing; faces SE. Boatman in a short jacket standing at the near gunwale amidships, holding a long pole that slants down into the river off the south side. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 
+   contact:water pole_boat pole_lo = 1  | carries no pole @8
+   contact:pole pole_boat palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole pole_boat palm_R = 1  | carries no pole (people.json props: null) @8
+== rainbow_bridge/boatman_bent_pole_19830 [boatman] do=[['pole_boat', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman bent double with a pole** `S3.fig.boatman_bent_pole_19830`: station +166.2, 8.5 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 4.5 m E of the Rainbow Bridge (虹桥); crouching; faces S. Boatman bent double over the near gunwale, his back up, pushing a pole down into the river. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: boatman standing with a pole at the near gunwale 0.7
+   contact:water pole_boat pole_lo = 1  | carries no pole @8
+   contact:pole pole_boat palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole pole_boat palm_R = 1  | carries no pole (people.json props: null) @8
+== rainbow_bridge/boatman_hat_pole_19915 [straw_hat] do=[['pole_boat', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman in a hat holding a pole** `S3.fig.boatman_hat_pole_19915`: station +174.1, 5.9 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 1.9 m E of the Rainbow Bridge (虹桥); standing; faces W. Boatman in a hat standing by the mast's foot, holding a pole across his body to the west. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: boatman with both arms raised on a pole 0.9 m SW, boatma
+   contact:water pole_boat pole_lo = 1  | carries no pole @8
+   contact:pole pole_boat palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole pole_boat palm_R = 1  | carries no pole (people.json props: null) @8
+   boat_body pole_boat  = 0.074 S3.veh.boat_mast_lowering_19518|body | S3.veh.boat_mast_lowering_19518|body 0.074 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/boatman_both_arms_pole_19840 [boatman] do=[['fend_pole', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman with both arms raised on a pole** `S3.fig.boatman_both_arms_pole_19840`: station +168.0, 5.7 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 1.7 m E of the Rainbow Bridge (虹桥); standing; faces NW. Big boatman with a topknot standing amidships, both arms raised gripping a pole that slants up to the north-west toward the arch, his head turned east toward the mast. (名画记: 大船穿行虹
+   contact:reach fend_pole pole_far = 1  | carries no pole @8
+   contact:pole fend_pole palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole fend_pole palm_R = 1  | carries no pole (people.json props: null) @8
+== rainbow_bridge/boatman_bending_pole_19746 [boatman] do=[['pole_boat', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman bending with a pole at the near gunwale** `S3.fig.boatman_bending_pole_19746`: station +165.6, 7.5 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 3.4 m E of the Rainbow Bridge (虹桥); crouching; faces S. Big boatman with a bare head bending over the near (south) gunwale, his face turned to the viewer, both hands driving a pole down into the river. (名画记: 大船穿行虹桥 (pin 19); 余辉: 
+   contact:water pole_boat pole_lo = 1  | carries no pole @8
+   contact:pole pole_boat palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole pole_boat palm_R = 1  | carries no pole (people.json props: null) @8
+== rainbow_bridge/boatman_pole_raised_19775 [boatman] do=[['fend_pole', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman pushing a pole up at the arch** `S3.fig.boatman_pole_raised_19775`: station +167.2, 5.1 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 1.1 m E of the Rainbow Bridge (虹桥); standing; faces NW. Boatman in a dark cap on the far side, his arm raised up to the north-west, pushing a pole up toward the arch and the cabin boat's roof to fend the boat off the bridge. (名画记: 大船穿行虹桥 (p
+   contact:reach fend_pole pole_far = 1  | carries no pole @8
+   contact:pole fend_pole palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole fend_pole palm_R = 1  | carries no pole (people.json props: null) @8
+== rainbow_bridge/boatman_poling_bow_19632 [boatman] do=[['pole_boat', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman with a pole at the bow** `S3.fig.boatman_poling_bow_19632`: station +164.8, 5.5 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 1.4 m E of the Rainbow Bridge (虹桥); standing; faces SW. Boatman with a topknot just behind the bow men, holding a long pole that slants down past the near gunwale into the water at about (19730, 806). (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest:
+   contact:water pole_boat pole_lo = 1  | carries no pole @8
+   contact:pole pole_boat palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole pole_boat palm_R = 1  | carries no pole (people.json props: null) @8
+   stance_soles(placement)   = -0.057 body | the stance foot is inside body (a surface 0.057 m above the sole) @8
+== rainbow_bridge/boatman_leaning_on_bundle_19650 [boatman] do=[['lean_over', 10]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman leaning over the bundle** `S3.fig.boatman_leaning_on_bundle_19650`: station +165.8, 4.1 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 0.1 m E of the Rainbow Bridge (虹桥); leaning; faces W. Boatman lying forward over the long bundle on the forward deck, his arm stretched out to the west. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Nearest: man holding a long pole across the rail
+   contact:rail lean_over palm_L = 0.6 body |  @8
+   contact:rail lean_over palm_R = 0.6 body |  @8
+   deck_support   = -0.268 S3.veh.boat_mast_lowering_19518 | the root -0.268 m under the visible S3.veh.boat_mast_lowering_19518|body @8
+== rainbow_bridge/bowman_arm_out_19565 [boatman] do=[['point', 10], ['idle', 4]] props=None boat=S3.veh.boat_mast_lowering_19518 work=None
+   MAP: - **boatman at the bow, arm out** `S3.fig.bowman_arm_out_19565`: station +164.1, 5.0 m S; H 0.08 m (boat deck: S3.veh.boat_mast_lowering_19518); 0.8 m E of the Rainbow Bridge (虹桥); standing; faces W. Boatman in a short jacket standing at the bow behind the windlass, leaning forward and stretching his right arm out to the west toward the bridge, shouting. (名画记: 大船穿行虹桥 (pin 19); 余辉: 大船抢险, 上下呼救) Near
+   stance_soles(placement)   = -0.106 body | the stance foot is inside body (a surface 0.106 m above the sole) @8
+   deck_support   = -0.103 S3.veh.boat_mast_lowering_19518 | the root -0.103 m under the visible S3.veh.boat_mast_lowering_19518|body @8
+   boat_body point  = 0.119 S3.veh.boat_mast_lowering_19518|line_forestay | S3.veh.boat_mast_lowering_19518|line_forestay 0.119 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/man_leaning_over_rail_19432 [scholar] do=[['reach_over_rail', 10]] props=None boat=S3.veh.boat_cabin_under_arch_19225 work=None
+   MAP: - **passenger leaning over the cabin rail** `S3.fig.man_leaning_over_rail_19432`: station +164.5, on the centre line; H 0.01 m (boat deck: S3.veh.boat_cabin_under_arch_19225); inside the Rainbow Bridge (虹桥); leaning; faces SE. Man in a white robe leaning out over the cabin's railing, reaching down over it with his right hand, watching the big boat. (名画记: 大船穿行虹桥 (pin 19) (setting)) Nearest: passeng
+   contact:rail reach_over_rail belly = 0.561 body |  @8
+   deck_support   = -0.294 S3.veh.boat_cabin_under_arch_19225 | the root -0.294 m under the visible S3.veh.boat_cabin_under_arch_19225|body @8
+   head_through reach_over_rail  = 0.3 S3.veh.boat_cabin_under_arch_19225|body | hips to head top crosses S3.veh.boat_cabin_under_arch_19225|body in 30% of the samples @8
+== rainbow_bridge/man_at_cabin_rail_19366 [robed_man] do=[['lean_chin', 10], ['look', 4]] props=None boat=S3.veh.boat_cabin_under_arch_19225 work=None
+   MAP: - **passenger leaning on the cabin rail** `S3.fig.man_at_cabin_rail_19366`: station +163.9, 0.6 m N; H 0.01 m (boat deck: S3.veh.boat_cabin_under_arch_19225); inside the Rainbow Bridge (虹桥); leaning; faces SE. Man in a light robe leaning on the cabin's railing under the arch, looking out to the south-east at the big boat. (名画记: 大船穿行虹桥 (pin 19) (setting)) Nearest: passenger leaning over the cabin r
+   contact:rail lean_chin elbow_L = 0.424 body |  @8
+   contact:rail lean_chin elbow_R = 0.6  | nothing within 0.6 m @8
+== rainbow_bridge/tracker_16358 [tracker] do=[['tow_walk', 10]] props=None boat=S3.veh.boat_towed_mast_16228 work=None
+   MAP: - **tracker on the far-bank path (the second man from the rear)** `S3.fig.tracker_16358`: station +116.2, 22.5 m N; 2.4 m W of far-bank house among the willows (north bank); walking; faces NE. Tracker (纤夫), the second man from the rear: a small working man in short clothes (dress not legible at this size), bent far forward and leaning east as he hauls, walking east-north-east up the far-bank path 
+   stance_soles(placement)   = 0.059  | clip sole height 0 m (placement) @3
+== rainbow_bridge/passenger_seated_18112 [robed_man] do=[['sit_floor', 16]] props=None boat=S3.veh.boat_mat_cabin_18005 work=None
+   MAP: - **passenger seated in the mat cabin** `S3.fig.passenger_seated_18112`: station +134.3, 18.3 m N; H -0.23 m (boat deck: S3.veh.boat_mat_cabin_18005); 2 m SE of far-bank open hall with a counter and a lattice balustrade; seated. A figure in a pale robe seated inside the dark mat cabin, seen through its open side, facing the far bank or the viewer. Nearest: passenger seated in the mat cabin 0.5 m E
+   contact:floor sit_floor seat = 0.079 body |  @8
+== rainbow_bridge/tracker_16333 [tracker] do=[['tow_walk', 10]] props=None boat=S3.veh.boat_towed_mast_16228 work=None
+   MAP: - **tracker on the far-bank path (the rear man of the file)** `S3.fig.tracker_16333`: station +116.2, 22.2 m N; 2.5 m W of far-bank house among the willows (north bank); walking; faces NE. Tracker (纤夫), the rear man of the file, the tow line made fast to him at about (16325, 112): a small working man in short clothes (dress not legible at this size), bent far forward and leaning east as he hauls, 
+   stance_soles(placement)   = 0.037  | clip sole height 0 m (placement) @3
+   contact:boat idle shoulder = 0.176 S3.veh.boat_towed_mast_16228|line_tow | the tow line ends at the root + 1.3 m (boats.js), 0.176 m from his nearer shoulder top @4
+   contact:boat tow_walk shoulder = 0.362 S3.veh.boat_towed_mast_16228|line_tow | the tow line ends at the root + 1.3 m (boats.js), 0.362 m from his nearer shoulder top @4
+== rainbow_bridge/porter_carrying_17922 [porter] do=[['idle', 10], ['look', 4]] props=['back_bundle'] boat=S3.veh.boat_unloading_17705 work=None
+   MAP: - **porter with a load on his back** `S3.fig.porter_carrying_17922`: station +136.2, 8.9 m N; H 0.21 m (boat deck: S3.veh.boat_unloading_17705); 6.7 m W of the Rainbow Bridge (虹桥); carrying; faces W. Man at the east of the group standing upright, a bundle or sack on his shoulder and back, facing west. Nearest: porter standing on the foredeck (half hidden) 0.5 m W, boat unloading at the south bank 
+   stance_soles(placement)   = -0.244 body | the stance foot is inside body (a surface 0.244 m above the sole) @8
+   deck_support   = -0.244 S3.veh.boat_unloading_17705 | the root -0.244 m under the visible S3.veh.boat_unloading_17705|body @8
+== rainbow_bridge/porter_standing_17886 [porter] do=[['idle', 10], ['look', 4]] props=None boat=S3.veh.boat_unloading_17705 work=None
+   MAP: - **porter standing on the foredeck (half hidden)** `S3.fig.porter_standing_17886`: station +135.7, 8.8 m N; H 0.21 m (boat deck: S3.veh.boat_unloading_17705); 7.2 m W of the Rainbow Bridge (虹桥); standing. A face in profile between the others, half hidden; a man standing in the group. Nearest: porter standing on the foredeck 0.4 m W, porter with a load on his back 0.5 m E, porter standing on the f
+   stance_soles(placement)   = -0.236 body | the stance foot is inside body (a surface 0.236 m above the sole) @8
+   deck_support   = -0.236 S3.veh.boat_unloading_17705 | the root -0.236 m under the visible S3.veh.boat_unloading_17705|body @8
+== rainbow_bridge/porter_standing_17860 [idler] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_unloading_17705 work=None
+   MAP: - **porter standing on the foredeck** `S3.fig.porter_standing_17860`: station +135.3, 8.7 m N; H 0.21 m (boat deck: S3.veh.boat_unloading_17705); 7.5 m W of the Rainbow Bridge (虹桥); standing; faces W. Man with a topknot or cap standing behind, head turned west toward the bow. Nearest: porter standing on the foredeck 0.4 m W, porter standing on the foredeck (half hidden) 0.4 m E, porter hunched beh
+   stance_soles(placement)   = -0.227 body | the stance foot is inside body (a surface 0.227 m above the sole) @8
+   deck_support   = -0.228 S3.veh.boat_unloading_17705 | the root -0.228 m under the visible S3.veh.boat_unloading_17705|body @8
+== rainbow_bridge/porter_standing_17833 [porter] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_unloading_17705 work=None
+   MAP: - **porter standing on the foredeck** `S3.fig.porter_standing_17833`: station +135.0, 8.6 m N; H 0.21 m (boat deck: S3.veh.boat_unloading_17705); 7.9 m W of the Rainbow Bridge (虹桥); standing; faces W. Man in a light jacket and cap standing in the group on the foredeck, looking west over the bow. Nearest: porter standing on the foredeck 0.4 m E, porter hunched behind him 0.4 m W, porter bending ove
+   stance_soles(placement)   = -0.232 body | the stance foot is inside body (a surface 0.232 m above the sole) @8
+   deck_support   = -0.232 S3.veh.boat_unloading_17705 | the root -0.232 m under the visible S3.veh.boat_unloading_17705|body @8
+== rainbow_bridge/porter_hunched_17808 [idler] do=[['bend_goods', 10]] props=None boat=S3.veh.boat_unloading_17705 work=None
+   MAP: - **porter hunched behind him** `S3.fig.porter_hunched_17808`: station +135.0, 8.6 m N; H 0.21 m (boat deck: S3.veh.boat_unloading_17705); 8.3 m W of the Rainbow Bridge (虹桥); leaning; faces W. Man in a dark jacket hunched forward behind the first, leaning toward the bow, hands low. Nearest: porter bending over the bow 0.2 m SW, porter standing on the foredeck 0.4 m E, porter standing on the forede
+   stance_soles(placement)   = -0.239 body | the stance foot is inside body (a surface 0.239 m above the sole) @8
+   deck_support   = -0.251 S3.veh.boat_unloading_17705 | the root -0.251 m under the visible S3.veh.boat_unloading_17705|body @8
+== rainbow_bridge/porter_bending_17790 [porter] do=[['bend_goods', 10]] props=None boat=S3.veh.boat_unloading_17705 work=None
+   MAP: - **porter bending over the bow** `S3.fig.porter_bending_17790`: station +135.0, 8.3 m N; H 0.21 m (boat deck: S3.veh.boat_unloading_17705); 8.3 m W of the Rainbow Bridge (虹桥); crouching; faces W. Man in a short jacket bent far forward at the bow, reaching down to the jars and bundles at its tip; head to the west. Nearest: porter hunched behind him 0.2 m NE, porter standing on the foredeck 0.6 m E
+   stance_soles(placement)   = -0.243 body | the stance foot is inside body (a surface 0.243 m above the sole) @8
+   deck_support   = -0.245 S3.veh.boat_unloading_17705 | the root -0.245 m under the visible S3.veh.boat_unloading_17705|body @8
+== rainbow_bridge/passenger_seated_17632 [townsman] do=[['sit_floor', 16]] props=None boat=S3.veh.boat_awning_17442 work=None
+   MAP: - **man seated in the boat's cabin** `S3.fig.passenger_seated_17632`: station +129.1, 17.9 m N; H -0.44 m (boat deck: S3.veh.boat_awning_17442); 2.3 m SW of far-bank shop with a lattice front and racks; seated. A man in dark clothes seated inside the cabin of the boat with the fore awning, seen through a window. Nearest: boat with a fore awning and mat cabin, moored at the far bank 0.8 m W, post a
+   contact:floor sit_floor seat = 0.041 body |  @2
+== rainbow_bridge/boatman_poling_16198 [boatman] do=[['pole_boat', 10]] props=None boat=S3.veh.boat_towed_mast_16228 work=None
+   MAP: - **boatman poling at the bow** `S3.fig.boatman_poling_16198`: station +116.2, 20.0 m N; H -0.05 m (boat deck: S3.veh.boat_towed_mast_16228); 2.9 m SW of far-bank house among the willows (north bank); standing; faces E. Man at the bow end of the towed boat holding a long pole that runs down into the water ahead of the bow (pole foot ~(16245, 308)), fending or punting while the trackers pull. Neare
+   contact:water pole_boat pole_lo = 1  | carries no pole @8
+   contact:pole pole_boat palm_L = 1  | carries no pole (people.json props: null) @8
+   contact:pole pole_boat palm_R = 1  | carries no pole (people.json props: null) @8
+   stance_soles(placement)   = -0.223 body | the stance foot is inside body (a surface 0.223 m above the sole) @8
+   deck_support   = -0.211 S3.veh.boat_towed_mast_16228 | the root -0.211 m under the visible S3.veh.boat_towed_mast_16228|body @8
+== rainbow_bridge/sweep_man_15915 [boatman] do=[['work_sweep', 10]] props=None boat=S3.veh.boat_under_way_15595 work=sweep
+   MAP: - **boatman at the sweep's pivot** `S3.fig.sweep_man_15915`: station +116.2, 16.0 m N; H -0.13 m (boat deck: S3.veh.boat_under_way_15595); 6.2 m SW of far-bank house among the willows (north bank); crouching; faces E. Man crouching at the stern rail by the sweep's pivot, both hands on the loom. Nearest: sixth man at the sweep (faint) 0.3 m W, boatman leaning on the sweep 0.6 m W, boatman bending a
+   contact:boat work_sweep palm_L = 1.296 S3.veh.boat_under_way_15595|sweep |  @8
+   contact:boat work_sweep palm_R = 0.925 S3.veh.boat_under_way_15595|sweep |  @8
+   stance_soles(placement)   = -0.065 body | the stance foot is inside body (a surface 0.065 m above the sole) @7
+== rainbow_bridge/boatman_on_cargo_16032 [boatman] do=[['crouch', 10]] props=None boat=S3.veh.boat_towed_mast_16228 work=None
+   MAP: - **boatman on the cargo heap** `S3.fig.boatman_on_cargo_16032`: station +116.2, 22.3 m N; H -0.05 m (boat deck: S3.veh.boat_towed_mast_16228); 4.9 m W of far-bank house among the willows (north bank); crouching. A small dark figure crouching on top of the cargo near the masthead's stays, at the high stern end (faint: may be a knot of rigging; the restyle paints two men up there). Nearest: boatman
+   stance_soles(placement)   = -0.248 body | the stance foot is inside body (a surface 0.248 m above the sole) @8
+   deck_support   = -0.285 S3.veh.boat_towed_mast_16228 | the root -0.285 m under the visible S3.veh.boat_towed_mast_16228|body @8
+== rainbow_bridge/boatman_on_cargo_15998 [boatman] do=[['crouch', 10]] props=None boat=S3.veh.boat_towed_mast_16228 work=None
+   MAP: - **boatman on the cargo heap** `S3.fig.boatman_on_cargo_15998`: station +116.2, 22.2 m N; H -0.05 m (boat deck: S3.veh.boat_towed_mast_16228); 5.1 m W of far-bank house among the willows (north bank); crouching. A second faint figure on the cargo at the stern's west edge (faint strokes; the restyle paints a man in blue here). Nearest: boatman on the cargo heap 0.3 m NE, masted boat towed by track
+   stance_soles(placement)   = -0.238 body | the stance foot is inside body (a surface 0.238 m above the sole) @8
+   deck_support   = -0.26 S3.veh.boat_towed_mast_16228 | the root -0.26 m under the visible S3.veh.boat_towed_mast_16228|body @8
+== rainbow_bridge/sweep_man_15888 [boatman] do=[['work_sweep', 10]] props=None boat=S3.veh.boat_under_way_15595 work=sweep
+   MAP: - **sixth man at the sweep (faint)** `S3.fig.sweep_man_15888`: station +116.2, 16.2 m N; H -0.13 m (boat deck: S3.veh.boat_under_way_15595); 6.3 m SW of far-bank house among the willows (north bank); standing; faces E. A head with a light face in profile just east of the dark-capped man leaning on the sweep's loom, at the same height, between him and the crouching man at the pivot: a sixth man wor
+   contact:boat work_sweep palm_L = 1.176 S3.veh.boat_under_way_15595|sweep |  @8
+   contact:boat work_sweep palm_R = 0.844 S3.veh.boat_under_way_15595|sweep |  @8
+   stance_soles(placement)   = -0.045 body | the stance foot is inside body (a surface 0.045 m above the sole) @2
+   boat_body work_sweep  = 0.084 S3.veh.boat_under_way_15595|body | S3.veh.boat_under_way_15595|body 0.084 m into the torso (hips to neck, 0.12 m round) @1
+== rainbow_bridge/sweep_man_15862 [boatman] do=[['work_sweep', 10]] props=None boat=S3.veh.boat_under_way_15595 work=sweep
+   MAP: - **boatman leaning on the sweep** `S3.fig.sweep_man_15862`: station +116.2, 16.4 m N; H -0.13 m (boat deck: S3.veh.boat_under_way_15595); 6.4 m SW of far-bank house among the willows (north bank); leaning; faces E. Man in a dark cap leaning forward over the sweep's loom, pushing it. Nearest: boatman bending at the sweep 0.1 m SW, sixth man at the sweep (faint) 0.3 m E, boatman at the sweep 0.3 m 
+   contact:boat work_sweep palm_L = 1.103 S3.veh.boat_under_way_15595|sweep |  @8
+   contact:boat work_sweep palm_R = 0.805 S3.veh.boat_under_way_15595|sweep |  @8
+   boat_body work_sweep  = 0.12 S3.veh.boat_under_way_15595|body | S3.veh.boat_under_way_15595|body 0.12 m into the torso (hips to neck, 0.12 m round) @8
+   stance_soles(placement)   = -0.042 body | the stance foot is inside body (a surface 0.042 m above the sole) @2
+   head_through work_sweep  = 0.375 S3.veh.boat_under_way_15595|body | hips to head top crosses S3.veh.boat_under_way_15595|body in 38% of the samples @1
+== rainbow_bridge/sweep_man_15855 [boatman] do=[['work_sweep', 10]] props=None boat=S3.veh.boat_under_way_15595 work=sweep
+   MAP: - **boatman bending at the sweep** `S3.fig.sweep_man_15855`: station +116.2, 16.4 m N; H -0.13 m (boat deck: S3.veh.boat_under_way_15595); 6.4 m SW of far-bank house among the willows (north bank); crouching; faces E. Man bent low in a pale jacket under the others at the loom (faint; the restyle paints him bending over the sweep). Nearest: boatman leaning on the sweep 0.1 m NE, boatman at the swee
+   contact:boat work_sweep palm_L = 1.065 S3.veh.boat_under_way_15595|sweep |  @8
+   contact:boat work_sweep palm_R = 0.774 S3.veh.boat_under_way_15595|sweep |  @8
+   head_through work_sweep  = 0.475 S3.veh.boat_under_way_15595|body | hips to head top crosses S3.veh.boat_under_way_15595|body in 48% of the samples @7
+   boat_body work_sweep  = 0.119 S3.veh.boat_under_way_15595|body | S3.veh.boat_under_way_15595|body 0.119 m into the torso (hips to neck, 0.12 m round) @8
+== rainbow_bridge/sweep_man_15838 [boatman] do=[['work_sweep', 10]] props=None boat=S3.veh.boat_under_way_15595 work=sweep
+   MAP: - **boatman at the sweep** `S3.fig.sweep_man_15838`: station +116.2, 16.6 m N; H -0.13 m (boat deck: S3.veh.boat_under_way_15595); 6.5 m SW of far-bank house among the willows (north bank); standing; faces E. Man behind the first at the sweep, half hidden, pushing the loom east. Nearest: boatman bending at the sweep 0.3 m SE, boatman at the sweep 0.3 m W, boatman leaning on the sweep 0.3 m E. [est
+   contact:boat work_sweep palm_L = 1.033 S3.veh.boat_under_way_15595|sweep |  @8
+   contact:boat work_sweep palm_R = 0.781 S3.veh.boat_under_way_15595|sweep |  @8
+   boat_body work_sweep  = 0.078 S3.veh.boat_under_way_15595|body | S3.veh.boat_under_way_15595|body 0.078 m into the torso (hips to neck, 0.12 m round) @2
+== rainbow_bridge/sweep_man_15810 [boatman] do=[['work_sweep', 10]] props=None boat=S3.veh.boat_under_way_15595 work=sweep
+   MAP: - **boatman at the sweep** `S3.fig.sweep_man_15810`: station +116.2, 16.7 m N; H -0.13 m (boat deck: S3.veh.boat_under_way_15595); 6.6 m SW of far-bank house among the willows (north bank); standing; faces E. Man in a pale jacket standing upright at the stern, hands on the sweep's rope or loom. Nearest: boatman at the sweep 0.3 m E, boatman bending at the sweep 0.5 m E, boatman leaning on the swee
+   contact:boat work_sweep palm_L = 1.025 S3.veh.boat_under_way_15595|sweep |  @8
+   contact:boat work_sweep palm_R = 0.826 S3.veh.boat_under_way_15595|sweep |  @8
+   stance_soles(placement)   = -0.045 body | the stance foot is inside body (a surface 0.045 m above the sole) @6
+== rainbow_bridge/boatman_bow_15664 [boatman] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_under_way_15595 work=None
+   MAP: - **boatman standing at the bow** `S3.fig.boatman_bow_15664`: station +116.2, 18.8 m N; H 1.12 m (boat bow deck: S3.veh.boat_under_way_15595); 7.3 m SW of far-bank house among the willows (north bank); standing; faces W. Man in a short jacket and cap standing at the bow beside the first, facing ahead (west). Nearest: boatman crouching at the bow 0.2 m E, boatman standing at the bow 0.3 m W, boat u
+   head_through look  = 1 S3.veh.boat_under_way_15595|body | hips to head top crosses S3.veh.boat_under_way_15595|body in 100% of the samples @8
+== rainbow_bridge/boatman_bow_15636 [boatman] do=[['look', 10], ['idle', 4]] props=None boat=S3.veh.boat_under_way_15595 work=None
+   MAP: - **boatman standing at the bow** `S3.fig.boatman_bow_15636`: station +116.2, 18.9 m N; H 1.12 m (boat bow deck: S3.veh.boat_under_way_15595); 7.6 m SW of far-bank house among the willows (north bank); standing; faces W. Man in a short jacket and cap standing on the raised bow deck at the west end, looking ahead (west); one leg of the bow's A-frame of poles rises beside him. Nearest: boatman stand
+   stance_soles(placement)   = 0.045  | clip sole height -0.003 m (placement) @8
+   head_through look  = 1 S3.veh.boat_under_way_15595|body | hips to head top crosses S3.veh.boat_under_way_15595|body in 100% of the samples @8
+== rainbow_bridge/passenger_door_16553 [townsman] do=[['idle', 10], ['look', 4]] props=None boat=S3.veh.boat_passenger_long_16398 work=None
+   MAP: - **figure in the cabin doorway (faint)** `S3.fig.passenger_door_16553`: station +116.2, 18.0 m N; H -0.36 m (boat deck: S3.veh.boat_passenger_long_16398); 2.3 m S of far-bank house among the willows (north bank); standing. A dark rounded shape filling the doorway of the long boat's cabin at its west end, read as a person in a dark robe standing in the door (or only the dark doorway). Nearest: wil
+   head_through idle  = 0.353 S3.veh.boat_passenger_long_16398|body | hips to head top crosses S3.veh.boat_passenger_long_16398|body in 35% of the samples @5
+   boat_body look  = 0.12 S3.veh.boat_passenger_long_16398|body | S3.veh.boat_passenger_long_16398|body 0.12 m into the torso (hips to neck, 0.12 m round) @5
+   boat_body idle  = 0.12 S3.veh.boat_passenger_long_16398|body | S3.veh.boat_passenger_long_16398|body 0.12 m into the torso (hips to neck, 0.12 m round) @3
+   head_through look  = 0.368 S3.veh.boat_passenger_long_16398|body | hips to head top crosses S3.veh.boat_passenger_long_16398|body in 37% of the samples @2
+== canal/boatman_pole_20495 [boatman] do=[['fend_pole', 12]] props=['long_pole_mid'] boat=S2.veh.boat_mat_cargo_21055 work=None
+   MAP: - **boatman with a pole at the west end** `S2.fig.boatman_pole_20495`: station +179.5, 3.2 m S; H -0.02 m (boat deck: S2.veh.boat_mat_cargo_21055); 3.6 m S of tall slatted fence along the north bank, with a gateway, between the willows; standing; faces W. Boatman in a short jacket with a topknot at the west end of the cargo boat, holding a long pole slanting down to the west past the gunwale, fend
+   contact:reach fend_pole pole_far = 1.313 water |  @8
+   contact:pole fend_pole palm_L = 0.343 long_pole_mid |  @8
+   pole_through fend_pole  = 0.667 S2.veh.boat_mat_cargo_21055|body | the pole passes through S2.veh.boat_mat_cargo_21055|body in 67% of the samples @8
+== canal/boatman_leaning_20558 [boatman] do=[['reach_over_rail', 12], ['idle', 3]] props=None boat=S2.veh.boat_mat_cargo_21055 work=None
+   MAP: - **boatman leaning over the gunwale** `S2.fig.boatman_leaning_20558`: station +180.2, 3.4 m S; H -0.02 m (boat deck: S2.veh.boat_mat_cargo_21055); 3.8 m S of tall slatted fence along the north bank, with a gateway, between the willows; leaning; faces W. Boatman with dark hair leaning far forward over the gunwale with both arms stretched west and down toward S3's big boat, as if pushing it off or 
+   contact:rail reach_over_rail belly = 0.6  | nothing within 0.6 m @8
+   stance_soles(placement)   = -0.116 body | the stance foot is inside body (a surface 0.116 m above the sole) @8
+   deck_support   = -0.113 S2.veh.boat_mat_cargo_21055 | the root -0.113 m under the visible S2.veh.boat_mat_cargo_21055|body @8
+== canal/boatman_standing_20615 [boatman] do=[['reach', 9], ['look', 5]] props=None boat=S2.veh.boat_mat_cargo_21055 work=None
+   MAP: - **boatman in a pale jacket by the lattice rail** `S2.fig.boatman_standing_20615`: station +180.2, 3.7 m S; H -0.02 m (boat deck: S2.veh.boat_mat_cargo_21055); 4.2 m S of tall slatted fence along the north bank, with a gateway, between the willows; standing; faces W. Boatman in a pale short jacket standing behind the lattice rail amidships, bending a little forward with his arms out to the west, 
+   contact:table reach palm_L = 0.6 body |  @8
+   contact:table reach palm_R = 0.6  | nothing within 0.6 m @8
+== canal/boatman_on_roof_20683 [boatman] do=[['point', 7], ['hail', 5]] props=None boat=S2.veh.boat_mat_cargo_21055 work=None
+   MAP: - **man on the mat roof stretching his arm west** `S2.fig.boatman_on_roof_20683`: station +180.2, 4.1 m S; H 1.05 m (boat roof: S2.veh.boat_mat_cargo_21055); 4.5 m S of tall slatted fence along the north bank, with a gateway, between the willows; standing; faces W. Man in a short jacket standing on the boat's low mat cover over the cargo, bent forward with his right arm stretched far out to the we
+   stance_soles(placement)   = -0.072 body | the stance foot is inside body (a surface 0.072 m above the sole) @8
+   deck_support   = -0.074 S2.veh.boat_mat_cargo_21055 | the root -0.074 m under the visible S2.veh.boat_mat_cargo_21055|body @8
+== canal/tracker_lead_21867 [tracker] do=[['push', 10]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **lead tracker at the head of the file** `S2.fig.tracker_lead_21867`: station +194.3, on the centre line; 1.8 m SE of plain wall with a tiled coping, north bank; walking; faces W. Tracker (hired labourer) in a light short jacket and trousers with a small round cap or topknot, at the west head of the file: he walks west, leaning a little forward, his near arm bent up in front of his face (holding
+   contact:vehicle push palm_L = 0.656 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+   contact:vehicle push palm_R = 0.655 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+   contact:boat push shoulder = 0.21 S2.veh.boat_towed_mast_23632|line_tow | the tow line ends at the root + 1.3 m (boats.js), 0.21 m from his nearer shoulder top @4
+   contact:boat tow_walk shoulder = 0.362 S2.veh.boat_towed_mast_23632|line_tow | the tow line ends at the root + 1.3 m (boats.js), 0.362 m from his nearer shoulder top @4
+== canal/tracker_bent_21939 [tracker] do=[['push', 10]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **second tracker, bent far forward** `S2.fig.tracker_bent_21939`: station +195.4, on the centre line; 2.7 m SE of plain wall with a tiled coping, north bank; walking; faces W. Tracker in light short clothes and a small hat, bent far forward toward the west, his back almost level, both hands low on the tow rope (river_m's, part of 逆水行舟; S2.grp.boat_towed_mast_23632' note has its painted line on t
+   contact:vehicle push palm_L = 0.846 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+   contact:vehicle push palm_R = 0.817 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+== canal/tracker_hatched_coat_21994 [tracker] do=[['push', 10]] props=['straw_cape'] boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **third tracker in a hatched (straw?) cape** `S2.fig.tracker_hatched_coat_21994`: station +196.4, on the centre line; 3.2 m SW of tiled hall behind the white compound wall and the gateway, west of the long house (roof only); walking; faces W. Tracker whose back and shoulders are drawn with dense short hatching, a straw rain cape (蓑衣) or a dark rough jacket, over trousers; small cap; leaning west
+   contact:vehicle push palm_L = 1.053 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+   contact:vehicle push palm_R = 0.974 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+== canal/man_cabin_door_20877 [boatman] do=[['squat_sleeves', 20]] props=None boat=S2.veh.boat_mat_cargo_21055 work=None
+   MAP: - **man seated in the east cabin's doorway** `S2.fig.man_cabin_door_20877`: station +185.0, 5.2 m S; H -0.02 m (boat deck: S2.veh.boat_mat_cargo_21055); 5.5 m S of long tiled shop row on the north bank; seated; faces S. Man with a round face and dark hair seated or squatting in the planked doorway of the cargo boat's east cabin, facing the viewer. Nearest: boatman in a dark cap at the east cabin's
+   stance_soles(placement)   = -0.23 body | the stance foot is inside body (a surface 0.23 m above the sole) @8
+   deck_support   = -0.268 S2.veh.boat_mat_cargo_21055 | the root -0.268 m under the visible S2.veh.boat_mat_cargo_21055|body @8
+== canal/boatman_cap_20938 [boatman] do=[['idle', 8], ['look', 5]] props=None boat=S2.veh.boat_mat_cargo_21055 work=None
+   MAP: - **boatman in a dark cap at the east cabin's rail** `S2.fig.boatman_cap_20938`: station +185.5, 5.3 m S; H -0.02 m (boat deck: S2.veh.boat_mat_cargo_21055); 5.6 m S of long tiled shop row on the north bank; standing; faces S. Boatman in a dark cap standing behind a low railing at the east end of the cabin, facing the viewer, beside the big water jar on the foredeck. Nearest: man seated in the eas
+   head_through idle  = 1 S2.veh.boat_mat_cargo_21055|body | hips to head top crosses S2.veh.boat_mat_cargo_21055|body in 100% of the samples @8
+   boat_body idle  = 0.071 S2.veh.boat_mat_cargo_21055|body | S2.veh.boat_mat_cargo_21055|body 0.071 m into the torso (hips to neck, 0.12 m round) @8
+== canal/steersman_stern_21678 [boatman] do=[['look', 8], ['idle', 6]] props=None boat=S2.veh.boat_big_cabin_21120 work=None
+   MAP: - **steersman on the high stern** `S2.fig.steersman_stern_21678`: station +193.5, 1.8 m S; H 1.01 m (boat stern deck: S2.veh.boat_big_cabin_21120); 2.6 m S of plain wall with a tiled coping, north bank; standing; faces W. Man in a dark cap standing on the boat's high stern behind the rudder house's roof, head and shoulders above it, facing west along the boat (the steersman). Nearest: lead tracker
+   stance_soles(placement)   = -0.057 body | the stance foot is inside body (a surface 0.057 m above the sole) @8
+== canal/tracker_broad_hat_22057 [straw_hat] do=[['push', 10]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **fourth tracker in a broad hat, hunched** `S2.fig.tracker_broad_hat_22057`: station +197.6, on the centre line; 3 m SW of tiled hall behind the white compound wall and the gateway, west of the long house (roof only); walking; faces W. Tracker in a broad round hat, hunched forward toward the west with a rounded back (a bundle carried on his back, or only his bent back), the tow rope (river_m's, 
+   contact:vehicle push palm_L = 1.388 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+   contact:vehicle push palm_R = 1.249 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+== canal/tracker_rear_22172 [tracker] do=[['push', 10]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **rear tracker hauling 逆水行舟's tow rope** `S2.fig.tracker_rear_22172`: station +199.9, 0.6 m S; 2.8 m SW of white plastered compound wall with a tiled coping, west of the gateway; walking; faces W. Tracker (hired labourer) in a short jacket belted at the waist, trousers and a round cloth cap; the last (easternmost) of the five, leaning a little forward to the west in mid-stride, both hands grippi
+   contact:vehicle push palm_L = 2.024 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+   contact:vehicle push palm_R = 1.786 S2.veh.boat_towed_mast_23632|body,S2.veh.boat_towed_mast_236 |  @4
+== canal/man_seated_canopy_21120 [townsman] do=[['sit_floor', 24]] props=None boat=S2.veh.boat_covered_21205 work=None
+   MAP: - **man seated under the boat's canopy** `S2.fig.man_seated_canopy_21120`: station +201.1, 16.6 m S; H -0.14 m (boat deck: S2.veh.boat_covered_21205); 8.4 m N of big tiled hall on the south bank, seen only as its roof; seated; faces W. Man in a dark, wide-sleeved robe with his hair in a knot, seated on the deck under the mat canopy beside its post, hunched forward and turned west toward the small 
+   contact:floor sit_floor seat = 0.041 body |  @1
+== canal/sweepman_leaning_back_22110 [boatman] do=[['work_sweep', 10]] props=None boat=S2.veh.boat_sweep_22000 work=sweep
+   MAP: - **sweep hand leaning back, face up** `S2.fig.sweepman_leaning_back_22110`: station +208.0, 11.6 m S; H 0.73 m (boat deck: S2.veh.boat_sweep_22000); 11 m N of long thatched (mat-roofed) building on the south bank; leaning; faces W. A boatman in a light jacket at the west end of the loom, leaning far back with his face turned up, hauling on the loom. Nearest: boat with six men at its great stern s
+   contact:boat work_sweep palm_L = 0.821 S2.veh.boat_sweep_22000|sweep |  @8
+   contact:boat work_sweep palm_R = 0.827 S2.veh.boat_sweep_22000|sweep |  @8
+== canal/sweepman_head_back_22132 [boatman] do=[['work_sweep', 10]] props=None boat=S2.veh.boat_sweep_22000 work=sweep
+   MAP: - **sweep hand with head thrown back** `S2.fig.sweepman_head_back_22132`: station +208.0, 11.5 m S; H 0.73 m (boat deck: S2.veh.boat_sweep_22000); 11 m N of long thatched (mat-roofed) building on the south bank; leaning; faces W. A boatman beside him, bareheaded, head thrown back and face up, both hands on the loom, leaning back. Nearest: sweep hand leaning back, face up 0.3 m W, boat with six men
+   contact:boat work_sweep palm_L = 0.794 S2.veh.boat_sweep_22000|sweep |  @8
+   contact:boat work_sweep palm_R = 0.756 S2.veh.boat_sweep_22000|sweep |  @8
+   stance_soles(placement)   = -0.064 body | the stance foot is inside body (a surface 0.064 m above the sole) @1
+   deck_support   = -0.052 S2.veh.boat_sweep_22000 | the root -0.052 m under the visible S2.veh.boat_sweep_22000|body @1
+== canal/sweepman_upright_22168 [boatman] do=[['work_sweep', 10]] props=None boat=S2.veh.boat_sweep_22000 work=sweep
+   MAP: - **tall sweep hand standing upright** `S2.fig.sweepman_upright_22168`: station +208.0, 11.5 m S; H 0.73 m (boat deck: S2.veh.boat_sweep_22000); 11.1 m N of long thatched (mat-roofed) building on the south bank; standing; faces S. A tall boatman standing upright in the middle of the crew in a long light jacket, hands on the loom, looking toward the viewer. Nearest: sweep hand with head thrown back
+   contact:boat work_sweep palm_L = 0.864 S2.veh.boat_sweep_22000|sweep |  @8
+   contact:boat work_sweep palm_R = 0.73 S2.veh.boat_sweep_22000|sweep |  @8
+   stance_soles(placement)   = -0.091 body | the stance foot is inside body (a surface 0.091 m above the sole) @1
+   deck_support   = -0.078 S2.veh.boat_sweep_22000 | the root -0.078 m under the visible S2.veh.boat_sweep_22000|body @1
+== canal/sweepman_capped_22208 [inspector] do=[['work_sweep', 10]] props=None boat=S2.veh.boat_sweep_22000 work=sweep
+   MAP: - **capped sweep hand bending** `S2.fig.sweepman_capped_22208`: station +208.0, 11.5 m S; H 0.73 m (boat deck: S2.veh.boat_sweep_22000); 11 m S of rough landing steps at the terrace's west end; leaning; faces W. A boatman in a dark cap and dark coat bending forward over the loom, face turned west and laughing or shouting. Nearest: capped sweep hand 0.4 m E, tall sweep hand standing upright 0.5 m W
+   contact:boat work_sweep palm_L = 0.936 S2.veh.boat_sweep_22000|sweep |  @8
+   contact:boat work_sweep palm_R = 0.806 S2.veh.boat_sweep_22000|sweep |  @8
+   stance_soles(placement)   = -0.129 body | the stance foot is inside body (a surface 0.129 m above the sole) @6
+   deck_support   = -0.104 S2.veh.boat_sweep_22000 | the root -0.104 m under the visible S2.veh.boat_sweep_22000|body @1
+== canal/sweepman_capped_22242 [boatman] do=[['work_sweep', 10]] props=None boat=S2.veh.boat_sweep_22000 work=None
+   MAP: - **capped sweep hand** `S2.fig.sweepman_capped_22242`: station +208.2, 11.4 m S; H 0.73 m (boat deck: S2.veh.boat_sweep_22000); 10.9 m S of rough landing steps at the terrace's west end; leaning; faces W. A boatman in a dark cap bending over the loom, face turned west. Nearest: capped sweep hand bending 0.4 m W, sweep hand leaning on the loom 0.5 m E, tall sweep hand standing upright 0.9 m W. [es
+   contact:boat work_sweep palm_L = 2.249 S2.veh.boat_sweep_22000|sweep |  @8
+   contact:boat work_sweep palm_R = 1.5  |  @8
+== canal/sweepman_leaning_on_loom_22285 [boatman] do=[['work_sweep', 10]] props=None boat=S2.veh.boat_sweep_22000 work=None
+   MAP: - **sweep hand leaning on the loom** `S2.fig.sweepman_leaning_on_loom_22285`: station +208.8, 11.4 m S; H 0.73 m (boat deck: S2.veh.boat_sweep_22000); 10.8 m S of rough landing steps at the terrace's west end; leaning; faces W. The easternmost boatman, in a cap and a short jacket with rolled sleeves, leaning his weight down on the loom where it runs to the stern frame, face turned west. Nearest: c
+   contact:boat work_sweep palm_L = 2.595 S2.veh.boat_sweep_22000|sweep |  @8
+   contact:boat work_sweep palm_R = 2.79 S2.veh.boat_sweep_22000|sweep |  @8
+== canal/boatman_seated_open_boat_22060 [inspector] do=[['sit', 30]] props=None boat=S2.veh.boat_open_21968 work=None
+   MAP: - **man seated in the open boat** `S2.fig.boatman_seated_open_boat_22060`: station +209.4, 19.8 m S; H -0.43 m (boat deck: S2.veh.boat_open_21968); 3.3 m NE of long thatched (mat-roofed) building on the south bank; seated; faces N. A man in a dark coat seen from behind, sitting on a thwart in the middle of the open boat with a small dark cap, facing north across the river. Nearest: open boat tied 
+   contact:seat sit seat = 0.427  | no seat under the seat point (107/107 samples): only the ground; nearest seat-high piece body 0.368 m away in  @8
+   contact:floor(placement) sit sole_L = -0.128 body | the clip's own sole_L height -0.017 m (placement) @8
+   contact:floor(placement) sit sole_R = -0.082 body | the clip's own sole_R height 0.018 m (placement) @8
+== canal/passenger_reclining_on_cargo_22848 [idler] do=[['lie_wave', 30]] props=None boat=S2.veh.boat_passenger_22545 work=None
+   MAP: - **passenger reclining on the roof cargo** `S2.fig.passenger_reclining_on_cargo_22848`: station +210.0, 5.2 m S; H 2.03 m (boat roof: S2.veh.boat_passenger_22545); 4.1 m S of rough landing steps at the terrace's west end; lying; faces S. A man in a light jacket lying back on the bales on the cabin roof, propped on one arm over a round basket, head to the east against a long rolled mat, looking to
+   contact:floor lie_wave seat = 0.134 body |  @8
+   deck_support   = -0.261 S2.veh.boat_passenger_22545 | the root -0.261 m under the visible S2.veh.boat_passenger_22545|body @8
+   head_through lie_wave  = 1 S2.veh.boat_passenger_22545|body | hips to head top crosses S2.veh.boat_passenger_22545|body in 100% of the samples @8
+   boat_body lie_wave  = 0.12 S2.veh.boat_passenger_22545|body | S2.veh.boat_passenger_22545|body 0.12 m into the torso (hips to neck, 0.12 m round) @8
+== canal/boatman_on_ladder_23275 [boatman] do=[['climb_ladder', 10], ['idle', 3]] props=None boat=S2.veh.boat_passenger_22545 work=None
+   MAP: - **man climbing the ladder to the roof** `S2.fig.boatman_on_ladder_23275`: station +219.6, 7.9 m S; H 1.77 m (boat ladder: S2.veh.boat_passenger_22545); 7 m SE of riverside dining terrace on posts, with a gabled east pavilion (沿河 terrace); climbing; faces NW. A boatman in a short jacket on the ladder leaning against the cabin side, his head at the roof's edge and arms reaching onto the roof towar
+   contact:structure climb_ladder palm_L = 0.583 body |  @8
+   contact:structure climb_ladder palm_R = 0.6 body |  @8
+   stance_soles(placement)   = -0.129 body | the stance foot is inside body (a surface 0.129 m above the sole) @8
+   deck_support   = -0.126 S2.veh.boat_passenger_22545 | the root -0.126 m under the visible S2.veh.boat_passenger_22545|body @8
+== canal/passenger_in_cabin_bay_23340 [townsman] do=[['look', 8], ['idle', 5]] props=None boat=S2.veh.boat_passenger_22545 work=None
+   MAP: - **passenger standing in the open bay** `S2.fig.passenger_in_cabin_bay_23340`: station +219.9, 7.6 m S; H 0.21 m (boat deck: S2.veh.boat_passenger_22545); 7 m SE of riverside dining terrace on posts, with a gabled east pavilion (沿河 terrace); standing; faces S. A passenger in a long robe standing inside the open bay between the lattice cabin and the after cabin, half in shadow, facing out to the s
+   boat_body look  = 0.102 S2.veh.boat_passenger_22545|body | S2.veh.boat_passenger_22545|body 0.102 m into the torso (hips to neck, 0.12 m round) @8
+== canal/passenger_leaning_in_bay_23385 [woman] do=[['lean_chin', 20]] props=None boat=S2.veh.boat_passenger_22545 work=None
+   MAP: - **passenger leaning on the bay's sill** `S2.fig.passenger_leaning_in_bay_23385`: station +219.9, 7.6 m S; H 0.21 m (boat deck: S2.veh.boat_passenger_22545); 7.2 m SE of riverside dining terrace on posts, with a gabled east pavilion (沿河 terrace); leaning; faces S. A passenger with dark piled hair (perhaps a woman) leaning forward on the sill of the open bay, face turned down toward the water. (名画
+   contact:rail lean_chin elbow_L = 0.6  | nothing within 0.6 m @8
+   contact:rail lean_chin elbow_R = 0.6 body |  @8
+== canal/boatman_at_windlass_23465 [boatman] do=[['look', 8], ['idle', 5]] props=None boat=S2.veh.boat_passenger_22545 work=None
+   MAP: - **boatman by the windlass on the after-cabin roof** `S2.fig.boatman_at_windlass_23465`: station +220.7, 7.9 m S; H 3.39 m (boat after roof: S2.veh.boat_passenger_22545); 7.9 m SE of riverside dining terrace on posts, with a gabled east pavilion (沿河 terrace); standing; faces E. A boatman with dark hair or a cap standing on the deck on top of the after cabin, beside the windlass, behind its rail, 
+   stance_soles(placement)   = -0.104 body | the stance foot is inside body (a surface 0.104 m above the sole) @8
+   deck_support   = -0.086 S2.veh.boat_passenger_22545 | the root -0.086 m under the visible S2.veh.boat_passenger_22545|body @8
+== canal/boatman_pouring_bucket_22665 [boatman] do=[['pour_bucket', 12]] props=['bucket_pour'] boat=S2.veh.boat_mat_roof_22290 work=None
+   MAP: - **man pouring a bucket over the boat's side** `S2.fig.boatman_pouring_bucket_22665`: station +219.9, 23.4 m S; H 0.53 m (boat deck: S2.veh.boat_mat_roof_22290); 8.8 m E of tiled house with an open gable truss on the south bank, at the bottom edge; crouching; faces SW. A boatman with dark hair bent over the near gunwale under the mat roof's east end, tipping a wooden bucket so its water pours in 
+   contact:rail pour_bucket belly = 0.415 body |  @8
+== canal/boatman_fending_off_23688 [boatman] do=[['fend_pole', 12]] props=['long_pole_mid'] boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **boatman fending off with a pole** `S2.fig.boatman_fending_off_23688`: station +222.3, 9.5 m S; H 0.21 m (boat deck: S2.veh.boat_towed_mast_23632); 10.3 m SE of open-air eatery's mat-roofed shelter on posts; standing; faces NW. Boatman in a light short jacket standing on the foredeck just behind the bow hood, leaning forward to the north-west and pushing a long pole against the stern of 豪华客船 (r
+   contact:reach fend_pole pole_far = 0.818 water |  @8
+   contact:pole fend_pole palm_L = 0.343 long_pole_mid |  @8
+   pole_through fend_pole  = 0.683 S2.veh.boat_towed_mast_23632|body | the pole passes through S2.veh.boat_towed_mast_23632|body in 68% of the samples @8
+== canal/bowman_under_hood_23660 [robed_man] do=[['look', 9], ['idle', 5]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **bowman under the bow hood** `S2.fig.bowman_under_hood_23660`: station +228.9, 12.4 m S; H -0.28 m (boat bow deck: S2.veh.boat_towed_mast_23632); 13 m SW of plain-walled house with the pole scaffold on its roof; standing; faces W. Boatman in a long light robe standing on the low foredeck under the dark arched mat hood at the west end, his head bent, looking down past the bow ahead (west); the t
+   head_through look  = 0.175 S2.veh.boat_towed_mast_23632|line_forestay | hips to head top crosses S2.veh.boat_towed_mast_23632|line_forestay in 18% of the samples @2
+== canal/robed_man_foredeck_23930 [robed_man] do=[['point', 8]] props=['fan_point'] boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **robed man on the foredeck** `S2.fig.robed_man_foredeck_23930`: station +232.6, 10.1 m S; H 0.21 m (boat deck: S2.veh.boat_towed_mast_23632); 10.4 m SW of plain-walled house with the pole scaffold on its roof; standing; faces W. Man in a long pale robe with his hair tied up, standing on the foredeck at the west end of the cabin roof among coiled ropes and baskets, reaching west with a short sti
+   stance_soles(placement)   = -0.248 body | the stance foot is inside body (a surface 0.248 m above the sole) @8
+   deck_support   = -0.253 S2.veh.boat_towed_mast_23632 | the root -0.253 m under the visible S2.veh.boat_towed_mast_23632|body @8
+== canal/crewman_crouching_white_24067 [boatman] do=[['crouch', 16]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **crewman crouching on deck** `S2.fig.crewman_crouching_white_24067`: station +229.6, 6.9 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 7.7 m SW of plain-walled house with the pole scaffold on its roof; crouching; faces N. Crewman in white crouching with his back to the viewer on the cargo boat's deck beside the big round coils, working at something on the deck. Nearest: second 
+   stance_soles(placement)   = -0.248 body | the stance foot is inside body (a surface 0.248 m above the sole) @8
+   deck_support   = -0.25 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.25 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+== canal/crewman_crouching_24125 [boatman] do=[['crouch', 16]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **second crewman crouching on deck** `S2.fig.crewman_crouching_24125`: station +231.5, 6.6 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 7.2 m SW of plain-walled house with the pole scaffold on its roof; crouching; faces N. A second light rounded shape west of the mast on the cargo boat's deck: a crewman crouching beside the first. Nearest: crewman crouching on deck 0.8 m W, man
+   stance_soles(placement)   = -0.227 body | the stance foot is inside body (a surface 0.227 m above the sole) @8
+   deck_support   = -0.225 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.225 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+== canal/boatman_roof_leaning_24030 [boatman] do=[['crouch', 14], ['squat_sleeves', 6]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **boatman leaning on the cabin roof** `S2.fig.boatman_roof_leaning_24030`: station +233.2, 10.8 m S; H 1.7 m (boat roof: S2.veh.boat_towed_mast_23632); 11 m S of plain-walled house with the pole scaffold on its roof; crouching; faces W. Boatman with dark tied-up hair crouching on the cabin roof and leaning forward over it, both arms reaching out (working a line or a pole). (名画记: 逆水行舟 (pin 15)) N
+   stance_soles(placement)   = -0.094 body | the stance foot is inside body (a surface 0.094 m above the sole) @8
+   deck_support   = -0.083 S2.veh.boat_towed_mast_23632 | the root -0.083 m under the visible S2.veh.boat_towed_mast_23632|body @8
+== canal/man_seated_deckhouse_24393 [boatman] do=[['sit_floor', 24]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **man seated in the deckhouse** `S2.fig.man_seated_deckhouse_24393`: station +233.2, 4.7 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 4.9 m SW of plain-walled house with the pole scaffold on its roof; seated; faces E. Man in light clothes seated in the open-sided mat-roofed deckhouse amidships, facing east toward his companion. (名画记: 聊天的伙计 (pin 16, u 24280)) Nearest: man leanin
+   deck_support   = -0.247 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.247 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+   head_through sit_floor  = 1 S2.veh.boat_cargo_hooded_bow_23715|body | hips to head top crosses S2.veh.boat_cargo_hooded_bow_23715|body in 100% of the samples @8
+   boat_body sit_floor  = 0.101 S2.veh.boat_cargo_hooded_bow_23715|body | S2.veh.boat_cargo_hooded_bow_23715|body 0.101 m into the torso (hips to neck, 0.12 m round) @8
+== canal/passenger_window_24025 [sightseer] do=[['lean_chin', 20]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **passenger at a cabin window** `S2.fig.passenger_window_24025`: station +233.2, 12.7 m S; H 0.21 m (boat deck: S2.veh.boat_towed_mast_23632); 12.8 m S of plain-walled house with the pole scaffold on its roof; seated; faces S. A man (passenger) with dark hair seated inside the cabin, leaning his forearms on the sill of a large open lattice-framed window in the cabin's west part and looking out s
+   contact:rail lean_chin elbow_L = 0.244 body |  @8
+   contact:rail lean_chin elbow_R = 0.304 body |  @8
+   stance_soles(placement)   = -0.239 body | the stance foot is inside body (a surface 0.239 m above the sole) @8
+   deck_support   = -0.251 S2.veh.boat_towed_mast_23632 | the root -0.251 m under the visible S2.veh.boat_towed_mast_23632|body @8
+   head_through lean_chin  = 0.975 S2.veh.boat_towed_mast_23632|body | hips to head top crosses S2.veh.boat_towed_mast_23632|body in 98% of the samples @8
+   boat_body lean_chin  = 0.12 S2.veh.boat_towed_mast_23632|body | S2.veh.boat_towed_mast_23632|body 0.12 m into the torso (hips to neck, 0.12 m round) @8
+== canal/man_leaning_deckhouse_24447 [boatman] do=[['kneel_sleep', 30]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **man leaning forward in the deckhouse** `S2.fig.man_leaning_deckhouse_24447`: station +233.2, 4.2 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 4.3 m S of plain-walled house with the pole scaffold on its roof; lying; faces W. Man in a black cap lying forward on his chest over a bundle or a low table in the deckhouse, his head west toward the seated man (talking, or dozing). (名画
+   deck_support   = -0.239 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.239 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+== canal/boatman_hauling_mast_24140 [boatman] do=[['haul_line', 16]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **boatman kneeling at the mast, hauling a line** `S2.fig.boatman_hauling_mast_24140`: station +233.5, 10.9 m S; H 1.7 m (boat roof: S2.veh.boat_towed_mast_23632); 11 m S of plain-walled house with the pole scaffold on its roof; kneeling; faces W. Boatman in a short jacket kneeling on the cabin roof just west of the mast, leaning forward with both hands together on a line from the mast (hauling o
+   contact:boat haul_line palm_L = 2.272 S2.veh.boat_towed_mast_23632|line_shroud_s |  @8
+   contact:boat haul_line palm_R = 2.185 S2.veh.boat_towed_mast_23632|line_shroud_s |  @8
+   stance_soles(placement)   = -0.07 body | the stance foot is inside body (a surface 0.07 m above the sole) @8
+   deck_support   = -0.071 S2.veh.boat_towed_mast_23632 | the root -0.071 m under the visible S2.veh.boat_towed_mast_23632|body @8
+== canal/second_passenger_window_24050 [youth] do=[['look', 8], ['idle', 5]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **second, smaller figure at 逆水行舟's cabin window (faint)** `S2.fig.second_passenger_window_24050`: station +233.4, 12.7 m S; H 0.21 m (boat deck: S2.veh.boat_towed_mast_23632); 12.8 m S of plain-walled house with the pole scaffold on its roof; seated; faces S. A second, smaller person seen to the shoulders at the large lattice-framed window in 逆水行舟's cabin, just east of the dark-haired passenger 
+   stance_soles(placement)   = -0.24 body | the stance foot is inside body (a surface 0.24 m above the sole) @8
+   deck_support   = -0.272 S2.veh.boat_towed_mast_23632 | the root -0.272 m under the visible S2.veh.boat_towed_mast_23632|body @8
+   head_through idle  = 0.54 S2.veh.boat_towed_mast_23632|body | hips to head top crosses S2.veh.boat_towed_mast_23632|body in 54% of the samples @5
+   boat_body look  = 0.12 S2.veh.boat_towed_mast_23632|body | S2.veh.boat_towed_mast_23632|body 0.12 m into the torso (hips to neck, 0.12 m round) @3
+   boat_body idle  = 0.12 S2.veh.boat_towed_mast_23632|body | S2.veh.boat_towed_mast_23632|body 0.12 m into the torso (hips to neck, 0.12 m round) @5
+== canal/figure_deckhouse_east_24590 [boatman] do=[['idle', 8], ['look', 5]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **figure at the deckhouse's east end** `S2.fig.figure_deckhouse_east_24590`: station +234.9, 4.5 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 4.6 m S of plain-walled house with the pole scaffold on its roof; standing; faces W. A faint face-like shape under the east eave of the deckhouse: a third man there, or a hanging object. Nearest: man at the aft windlass 1.1 m E, possible 
+   stance_soles(placement)   = -0.239 body | the stance foot is inside body (a surface 0.239 m above the sole) @8
+   deck_support   = -0.236 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.236 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+== canal/windlass_man_aft_24660 [boatman] do=[['push_flank', 12]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **man at the aft windlass** `S2.fig.windlass_man_aft_24660`: station +236.0, 4.7 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 4.8 m S of plain-walled house with the pole scaffold on its roof; crouching; faces E. A man bent at the spoked wheel or windlass on its post east of the deckhouse, his head among its spokes. Nearest: possible second man at the aft windlass 0.7 m E, figur
+   contact:animal push_flank palm_L = None  | no animal in its group or within 4 m @8
+   contact:animal push_flank palm_R = None  | no animal in its group or within 4 m @8
+   deck_support   = -0.259 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.259 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+== canal/figure_in_windlass_24713 [boatman] do=[['push', 10], ['idle', 3]] props=None boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **possible second man at the aft windlass** `S2.fig.figure_in_windlass_24713`: station +236.5, 4.6 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 4.8 m S of plain-walled house with the pole scaffold on its roof; standing; faces S. A face-like shape inside the spokes of the aft wheel or windlass: a second man turning it from behind, or part of its frame. Nearest: man at the aft wi
+   contact:vehicle push palm_L = 0.565 S2.veh.boat_cargo_hooded_bow_23715|body |  @8
+   contact:vehicle push palm_R = 0.892 S2.veh.boat_cargo_hooded_bow_23715|body |  @8
+   stance_soles(placement)   = -0.24 body | the stance foot is inside body (a surface 0.24 m above the sole) @8
+   deck_support   = -0.238 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.238 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+== canal/boatman_poling_24730 [boatman] do=[['pole_boat', 12]] props=['long_pole_low'] boat=S2.veh.boat_cargo_hooded_bow_23715 work=None
+   MAP: - **boatman poling at the gunwale** `S2.fig.boatman_poling_24730`: station +238.1, 6.0 m S; H 1.77 m (boat deck: S2.veh.boat_cargo_hooded_bow_23715); 6.1 m S of plain-walled house with the pole scaffold on its roof; crouching; faces W. Boatman in a white jacket and cap bent double at the cargo boat's south gunwale, head down to the west, both hands on a long pole thrust down past 逆水行舟 (pushing the
+   contact:pole pole_boat palm_L = 0.357 long_pole_low |  @8
+   contact:pole pole_boat palm_R = 0.142 long_pole_low |  @8
+   stance_soles(placement)   = -0.194 body | the stance foot is inside body (a surface 0.194 m above the sole) @8
+   deck_support   = -0.197 S2.veh.boat_cargo_hooded_bow_23715 | the root -0.197 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body @8
+   pole_through pole_boat  = 1 S2.veh.boat_cargo_hooded_bow_23715|body | the pole passes through S2.veh.boat_cargo_hooded_bow_23715|body in 100% of the samples @8
+== canal/boatman_roof_seated_24478 [boatman] do=[['sit_floor', 30]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **boatman seated among coiled ropes** `S2.fig.boatman_roof_seated_24478`: station +241.9, 11.4 m S; H 1.7 m (boat roof: S2.veh.boat_towed_mast_23632); 11.7 m S of plain-walled house with the pole scaffold on its roof; seated; faces W. Boatman with dark hair sitting hunched among coils of rope on the cabin roof behind the mast, resting or minding the lines. (名画记: 逆水行舟 (pin 15)) Nearest: possible 
+   contact:floor sit_floor seat = -0.031 body |  @2
+== canal/figure_roof_coils_24508 [boatman] do=[['sit_floor', 30]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **possible second man among the coils** `S2.fig.figure_roof_coils_24508`: station +242.1, 11.3 m S; H 1.7 m (boat roof: S2.veh.boat_towed_mast_23632); 11.7 m S of plain-walled house with the pole scaffold on its roof; seated; faces W. A second rounded head-like shape just east of the seated boatman among the coils: a second boatman seated beside him, or a bundle. (名画记: 逆水行舟 (pin 15)) Nearest: bo
+   contact:floor sit_floor seat = -0.071 body |  @8
+   deck_support   = -0.077 S2.veh.boat_towed_mast_23632 | the root -0.077 m under the visible S2.veh.boat_towed_mast_23632|body @8
+== canal/figure_stern_roof_24622 [camel_driver] do=[['idle', 8], ['look', 5]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **possible man on the after roof** `S2.fig.figure_stern_roof_24622`: station +242.9, 10.7 m S; H 1.7 m (boat roof: S2.veh.boat_towed_mast_23632); 11.4 m S of 沿河雅座: the long riverside hall with open windows; standing; faces S. A small upright shape with a rounded top on the roof at the forward end of the stern awning, beside a box or chest: a crewman standing, or a post. (名画记: 逆水行舟 (pin 15)) Near
+   stance_soles(placement)   = -0.094 body | the stance foot is inside body (a surface 0.094 m above the sole) @8
+   deck_support   = -0.07 S2.veh.boat_towed_mast_23632 | the root -0.07 m under the visible S2.veh.boat_towed_mast_23632|body @8
+== canal/man_cabin_door_24728 [idler] do=[['look', 8], ['idle', 5]] props=None boat=S2.veh.boat_towed_mast_23632 work=None
+   MAP: - **man in the stern cabin's door** `S2.fig.man_cabin_door_24728`: station +242.9, 11.3 m S; H 0.21 m (boat deck: S2.veh.boat_towed_mast_23632); 11.7 m S of 沿河雅座: the long riverside hall with open windows; standing; faces S. Man with dark hair standing in the doorway of the cabin's after part, one hand on the door frame, looking out south at the water. (名画记: 逆水行舟 (pin 15)) Nearest: possible man on
+   head_through idle  = 0.353 S2.veh.boat_towed_mast_23632|body | hips to head top crosses S2.veh.boat_towed_mast_23632|body in 35% of the samples @4
+== canal/figure_under_canopy_25518 [boatman] do=[['sit_floor', 30]] props=None boat=S2.veh.boat_moored_mat_canopy_25145 work=None
+   MAP: - **figure under the mat canopy** `S2.fig.figure_under_canopy_25518`: station +248.8, 5.0 m S; H 2 m (boat deck: S2.veh.boat_moored_mat_canopy_25145); 4.9 m SW of closed warehouse with lattice doors on a plank-faced platform; seated; faces S. A faint seated figure under the moored boat's arched mat canopy, beside a lidded jar and a bowl: a boatman at his meal, or a potted plant and gear. Nearest: 
+   deck_support   = -0.26 S2.veh.boat_moored_mat_canopy_25145 | the root -0.26 m under the visible S2.veh.boat_moored_mat_canopy_25145|body @8
+   boat_body sit_floor  = 0.119 S2.veh.boat_moored_mat_canopy_25145|body | S2.veh.boat_moored_mat_canopy_25145|body 0.119 m into the torso (hips to neck, 0.12 m round) @8
+== canal/man_leaning_casks_25650 [boatman] do=[['lean_over', 12], ['idle', 3]] props=None boat=S2.veh.boat_moored_mat_canopy_25145 work=None
+   MAP: - **man leaning on the casks** `S2.fig.man_leaning_casks_25650`: station +249.2, 3.2 m S; H 2 m (boat deck: S2.veh.boat_moored_mat_canopy_25145); 3.1 m SW of closed warehouse with lattice doors on a plank-faced platform; leaning; faces S. Man in a light jacket and cap standing on the moored boat's deck on the bank side of its mat cabin, leaning forward with his arms on the casks and bundles stacke
+   contact:rail lean_over palm_L = 0.596 body |  @8
+   contact:rail lean_over palm_R = 0.6 body |  @8
+   deck_support   = -0.272 S2.veh.boat_moored_mat_canopy_25145 | the root -0.272 m under the visible S2.veh.boat_moored_mat_canopy_25145|body @4
+== canal/boatman_roof_26290 [boatman] do=[['crouch', 16]] props=['straw_cape'] boat=S2.veh.boat_mat_cabin_25980 work=None
+   MAP: - **boatman crouching on the cabin roof** `S2.fig.boatman_roof_26290`: station +262.5, 6.0 m S; H 2.83 m (boat roof: S2.veh.boat_mat_cabin_25980); 6.7 m S of white-walled house with a hipped roof at the east end of the halls; crouching; faces W. A boatman in a dark cap crouching or squatting on the front edge of the long cabin's roof, bent forward among the coiled bundles, a hatched (straw or padd
+   deck_support   = -0.053 S2.veh.boat_mat_cabin_25980 | the root -0.053 m under the visible S2.veh.boat_mat_cabin_25980|body @8
+== canal/man_stern_hood_26750 [boatman] do=[['sit_floor', 30]] props=None boat=S2.veh.boat_mat_cabin_25980 work=None
+   MAP: - **man in the mouth of the stern hood** `S2.fig.man_stern_hood_26750`: station +271.9, 5.8 m S; H 3.17 m (boat stern deck: S2.veh.boat_mat_cabin_25980); 5.5 m SW of low wattle fence (or the willow's knobbed foot) with a small post-and-rail frame, under the great willow; seated; faces S. A man (head and one arm) looking out of the open arched mat hood over the after deck, seated or leaning on the 
+   contact:floor sit_floor seat = 0.575 body |  @8
+   deck_support   = 0.568 S2.veh.boat_mat_cabin_25980 | the root 0.568 m over the visible S2.veh.boat_mat_cabin_25980|body @8
+== canal/steersman_27890 [boatman] do=[['look', 8], ['idle', 6]] props=None boat=S2.veh.boat_grain_27285 work=None
+   MAP: - **steersman (?) at the grain boat's rudder head** `S2.fig.steersman_27890`: station +290.5, 11.8 m S; H 1.96 m (boat stern deck: S2.veh.boat_grain_27285); 11.4 m SE of raised plank walkway (jetty) in front of the lower shed; standing; faces S. A dark round head with a cap showing above the tiller bar under the stern gallery's arch, as of a man standing at the rudder head; boatman or steersman. P
+   stance_soles(placement)   = -0.053 body | the stance foot is inside body (a surface 0.053 m above the sole) @8
+== canal/boatman_coils_28543 [boatman] do=[['idle', 8], ['look', 5]] props=None boat=S2.veh.boat_grain_28095 work=None
+   MAP: - **boatman (?) among the coiled cables** `S2.fig.boatman_coils_28543`: station +295.0, 11.3 m S; H 0.01 m (boat deck: S2.veh.boat_grain_28095); 11.1 m S of the lower eating shed with a front gable, by the grain boats; standing; faces W. A tall dark upright with a flat top among the coiled cables on the second grain boat's after deck, read as a man in a dark cap (幞头) standing behind the coils; boa
+   stance_soles(placement)   = -0.054 body | the stance foot is inside body (a surface 0.054 m above the sole) @8
+   deck_support   = -0.085 S2.veh.boat_grain_28095 | the root -0.085 m under the visible S2.veh.boat_grain_28095|body @8

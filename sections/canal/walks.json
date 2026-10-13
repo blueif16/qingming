@@ -177,9 +177,9 @@
   "why": "down the bank slope to the shore wall at the water's edge (shore D 13.3, the water H -0.7)"
  },
  {
-  "label": "shore wall: the south bank stops you above the west reach (X 168)",
+  "label": "shore wall: the south bank stops you above the west reach (X 173)",
   "start": [
-   168.0,
+   173.0,
    1.5
   ],
   "legs": [
@@ -195,9 +195,10 @@
    ],
    "H": [
     -0.4,
-    0.2
+    0.35
    ]
-  }
+  },
+  "why": "the trunk colliders (2026-10-13) take each big bole's size from the 3D trees (trees3d.js trunkColliders, trees3d.json): at X 168 the bank is now inside the great willow's bole (willow_great_21345, 169.1, 2.2; r 1.86, which reaches the water) and the bank figures stand west of it, so the wall is tested east of the bole, where the bank stands about 0.2 m higher (H to 0.35)."
  },
  {
   "label": "north bank W->E: from the S3 seam past the slat fence, along the trackers' bank",
@@ -605,8 +606,8 @@
   ],
   "legs": [
    [
-    168.7,
-    1.16
+    183,
+    1.6
    ],
    [
     161.6,
@@ -635,7 +636,7 @@
     26.6
    ]
   },
-  "why": "its last leg runs on into the S3 seam's wall (alone), so a pause behind the hauling trackers doesn't move the end"
+  "why": "its last leg runs on into the S3 seam's wall (alone), so a pause behind the hauling trackers doesn't move the end the trunk colliders (2026-10-13) take each big bole's size from the 3D trees (trees3d.js trunkColliders, trees3d.json): the first leg runs west under willow_split_22285's bole (168.5, 24.6; r 1.18) instead of into it."
  },
  {
   "label": "board the big cabin boat from the north bank (its open rim piece over the bank, X 165.5)",
@@ -702,14 +703,14 @@
   "expect": {
    "D": [
     15.6,
-    16.4
+    16.6
    ],
    "H": [
     0.9,
-    1.15
+    1.2
    ]
   },
-  "why": "its bank bridges at X 202 and 204 rise 40 and 37 deg, over the walker's 34 deg limit; the west one (rim piece 12) rises 28 deg. Its crew stand on the deck behind the rim (the seated man at 199.86, 15.76)"
+  "why": "its bank bridges at X 202 and 204 rise 40 and 37 deg, over the walker's 34 deg limit; the west one (rim piece 12) rises 28 deg. Its crew stand on the deck behind the rim (the seated man at 199.86, 15.76) | fix-boats 2026-10-13 07:10: the hatch covers forward of the deckhouse are walkable since the boats export at 06:44 (kit_boats._hatches: 0.25 m over the deck, where the painted crew sit; before, the crews sat 0.25 m inside them). Boarding here the walker now stops at the hatch's edge or at the seated man on it, at D 16.25-16.45 (H 0.98-1.18) instead of 16.0 on the bare deck: D up to 16.6 (it is aboard either way) | 2e 2026-10-13 10:35: the walk crosses sack_porter_bank_edge_24467's path (199.9, 17.7): where the porter is when it starts (the walks before it set the clock) delays the walker by up to half a second, and it ends on the hatch at H up to 1.17 (the H 0.98-1.18 above). H up to 1.2 (a longer leg climbs onto the hatch top, H 1.29). Not the trunk colliders: no tree near X 200."
  },
  {
   "label": "back ashore from the hooded-bow cargo boat",
@@ -730,13 +731,14 @@
   "expect": {
    "D": [
     17.8,
-    20.0
+    20.4
    ],
    "H": [
     -0.15,
     0.15
    ]
-  }
+  },
+  "why": "lead 2026-10-13 07:35: since the boats export at 06:44 the hatch covers forward of the deckhouse are walkable (the painted geometry), so the boarding leg stops about 0.3 m earlier (see the boarding walk) and the 1.6 s walk back starts that much further north; it ends at D 20.0-20.1, ashore (H ~0). Expect D widened from 20.0 to 20.4."
  },
  {
   "label": "board the mat-roofed boat from the south bank's spit",

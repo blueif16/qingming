@@ -25,11 +25,19 @@
    "run",
    "idle",
    "sedan_carry",
-   "chase_run"
+   "chase_run",
+   "sedan_carry~pole",
+   "sedan_carry~pole_ends",
+   "sedan_carry~sedan_bearer_front_18838",
+   "sedan_carry~sedan_bearer_rear_18688"
   ],
   "motion": [
    "sedan_carry",
-   "chase_run"
+   "chase_run",
+   "sedan_carry~pole",
+   "sedan_carry~pole_ends",
+   "sedan_carry~sedan_bearer_front_18838",
+   "sedan_carry~sedan_bearer_rear_18688"
   ],
   "props": {
    "bundle_hang": "idle"
@@ -73,7 +81,13 @@
    "pour_bucket",
    "climb_ladder",
    "tiller_seated",
-   "knees_up"
+   "knees_up",
+   "work_sweep~bar",
+   "pole_boat~hold",
+   "fend_pole~up",
+   "fend_pole~out",
+   "lean_over~man_leaning_casks_25650",
+   "push~figure_in_windlass_24713"
   ],
   "motion": [
    "point",
@@ -100,7 +114,12 @@
    "pour_bucket",
    "climb_ladder",
    "tiller_seated",
-   "knees_up"
+   "knees_up",
+   "work_sweep~bar",
+   "pole_boat~hold",
+   "fend_pole~up",
+   "fend_pole~out",
+   "lean_over~man_leaning_casks_25650"
   ],
   "props": {
    "long_pole": "stand_pole",
@@ -120,12 +139,14 @@
    "idle",
    "chop",
    "hold_tray",
-   "hand_over"
+   "hand_over",
+   "chop~butcher_3920"
   ],
   "motion": [
    "chop",
    "hold_tray",
-   "hand_over"
+   "hand_over",
+   "chop~butcher_3920"
   ],
   "props": {
    "cleaver": "chop",
@@ -188,7 +209,21 @@
    "arms_folded",
    "tow_walk",
    "pole_boat",
-   "haul_line"
+   "haul_line",
+   "bridle~ox_leader_10050",
+   "browse",
+   "stand_sleeves",
+   "push~cart_pusher_5727",
+   "bridle~groom_8167",
+   "browse~pack_handler_5837",
+   "steer~cart_pusher_8254",
+   "idle~cart_shaftman_8498",
+   "steer~wagon_shaft_carter_3642",
+   "steer~handcart_man_3130",
+   "steer~barrow_pusher_3390",
+   "sit~wagon_top_rider_3740",
+   "push~cart_pusher_19922",
+   "push~barrow_pusher_18295"
   ],
   "motion": [
    "hand_over",
@@ -206,7 +241,16 @@
    "arms_folded",
    "tow_walk",
    "pole_boat",
-   "haul_line"
+   "haul_line",
+   "browse",
+   "stand_sleeves",
+   "bridle~ox_leader_10050",
+   "bridle~groom_8167",
+   "browse~pack_handler_5837",
+   "steer~cart_pusher_8254",
+   "steer~wagon_shaft_carter_3642",
+   "steer~handcart_man_3130",
+   "steer~barrow_pusher_3390"
   ],
   "props": {
    "goad": "drive_cart",
@@ -233,14 +277,19 @@
    "listen",
    "crouch",
    "sit",
-   "reach_over_rail"
+   "reach_over_rail",
+   "reach~child_at_table_12597",
+   "hand_over",
+   "sit~soles"
   ],
   "motion": [
    "play",
    "back_load",
    "reach",
    "listen",
-   "reach_over_rail"
+   "reach_over_rail",
+   "hand_over",
+   "reach~child_at_table_12597"
   ],
   "props": {
    "back_boxes": "back_load",
@@ -262,14 +311,19 @@
    "listen",
    "crouch",
    "sit",
-   "reach_over_rail"
+   "reach_over_rail",
+   "reach~child_at_table_12597",
+   "hand_over",
+   "sit~soles"
   ],
   "motion": [
    "play",
    "back_load",
    "reach",
    "listen",
-   "reach_over_rail"
+   "reach_over_rail",
+   "hand_over",
+   "reach~child_at_table_12597"
   ],
   "props": {
    "back_boxes": "back_load",
@@ -286,11 +340,13 @@
    "idle",
    "chin",
    "look",
-   "reach"
+   "reach",
+   "hand_over"
   ],
   "motion": [
    "chin",
-   "reach"
+   "reach",
+   "hand_over"
   ],
   "props": {},
   "title": "Boy in a dark robe and cap (S6 boy_dark_robe_2380, watching with a hand at his chin)"
@@ -310,7 +366,8 @@
    "lean_over",
    "hold_tray",
    "reach_over_rail",
-   "walk_hold_chest"
+   "walk_hold_chest",
+   "reach_over_rail~deck_stooping_hat_19765"
   ],
   "motion": [
    "point",
@@ -318,7 +375,8 @@
    "lean_over",
    "hold_tray",
    "reach_over_rail",
-   "walk_hold_chest"
+   "walk_hold_chest",
+   "reach_over_rail~deck_stooping_hat_19765"
   ],
   "props": {
    "pole_baskets": "carry_pole",
@@ -340,12 +398,14 @@
    "sit",
    "look",
    "talk",
-   "arms_folded"
+   "arms_folded",
+   "stand_sleeves"
   ],
   "motion": [
    "ride_side",
    "fan",
-   "arms_folded"
+   "arms_folded",
+   "stand_sleeves"
   ],
   "props": {
    "fan_round": "fan"
@@ -365,7 +425,8 @@
    "bend_goods",
    "sit",
    "stand_sleeves",
-   "drink"
+   "drink",
+   "drink~soles"
   ],
   "motion": [
    "point",
@@ -389,12 +450,17 @@
    "hand_over",
    "look",
    "talk",
-   "examine_child"
+   "examine_child",
+   "write",
+   "write~table",
+   "sit~soles"
   ],
   "motion": [
    "tell_fortune",
    "hand_over",
-   "examine_child"
+   "examine_child",
+   "write",
+   "write~table"
   ],
   "props": {},
   "title": "Fortune-teller (临街神算, S4 fortune_teller_12232, seated behind his table)"
@@ -416,7 +482,8 @@
    "drive_team",
    "haul_line",
    "sack_carry",
-   "fend_pole"
+   "fend_pole",
+   "hold_rope"
   ],
   "motion": [
    "push_flank",
@@ -427,7 +494,8 @@
    "drive_team",
    "haul_line",
    "sack_carry",
-   "fend_pole"
+   "fend_pole",
+   "hold_rope"
   ],
   "props": {
    "back_sack": "sack_carry",
@@ -452,14 +520,16 @@
    "push_flank",
    "hold_rope",
    "chase_run",
-   "hold_horse_neck"
+   "hold_horse_neck",
+   "hold_horse_neck~groom_holding_horse_19095"
   ],
   "motion": [
    "bridle",
    "push_flank",
    "hold_rope",
    "chase_run",
-   "hold_horse_neck"
+   "hold_horse_neck",
+   "hold_horse_neck~groom_holding_horse_19095"
   ],
   "props": {
    "staff": "idle",
@@ -490,7 +560,8 @@
    "drink",
    "reach_over_rail",
    "tow_walk",
-   "pole_boat"
+   "pole_boat",
+   "ride_fan~steady"
   ],
   "motion": [
    "ride_fan",
@@ -503,7 +574,8 @@
    "carry_pole",
    "reach_over_rail",
    "tow_walk",
-   "pole_boat"
+   "pole_boat",
+   "ride_fan~steady"
   ],
   "props": {
    "fan_round": "ride_fan",
@@ -542,7 +614,8 @@
    "drink",
    "reach_over_rail",
    "tow_walk",
-   "pole_boat"
+   "pole_boat",
+   "ride_fan~steady"
   ],
   "motion": [
    "ride_fan",
@@ -555,7 +628,8 @@
    "carry_pole",
    "reach_over_rail",
    "tow_walk",
-   "pole_boat"
+   "pole_boat",
+   "ride_fan~steady"
   ],
   "props": {
    "fan_round": "ride_fan",
@@ -622,7 +696,26 @@
    "lie_wave",
    "wheelwright",
    "lean_post_talk",
-   "reach_up_load"
+   "reach_up_load",
+   "stand_sleeves",
+   "bridle~groom_rider_10255",
+   "browse~bearded_man_10142",
+   "push~man_cart_tail_10405",
+   "push_flank~ox_driver_10635",
+   "lean_chin~moat_rail",
+   "sit_offer~tub_vendor_27765",
+   "lean_over~rail_watcher_19892",
+   "lean_over~man_leaning_on_railing_19225",
+   "lean_over~man_head_bowed_18962",
+   "reach_over_rail~deck_rail_leaner_19578",
+   "reach_over_rail~man_lowering_rope_19295",
+   "lean_over~counter_man_leaning_13325",
+   "reach_up_load~porter_at_cart_rear_13090",
+   "push_flank~carter_at_shaft_ox_13243",
+   "push~young_man_cart_rear_2675",
+   "steer~cart_puller_19870",
+   "lean_over~far_shopkeeper_19620",
+   "bridle~groom_at_donkey_18682"
   ],
   "motion": [
    "lean_wall",
@@ -661,7 +754,24 @@
    "lie_wave",
    "wheelwright",
    "lean_post_talk",
-   "reach_up_load"
+   "reach_up_load",
+   "stand_sleeves",
+   "bridle~groom_rider_10255",
+   "browse~bearded_man_10142",
+   "push_flank~ox_driver_10635",
+   "lean_chin~moat_rail",
+   "sit_offer~tub_vendor_27765",
+   "lean_over~rail_watcher_19892",
+   "lean_over~man_leaning_on_railing_19225",
+   "lean_over~man_head_bowed_18962",
+   "reach_over_rail~deck_rail_leaner_19578",
+   "reach_over_rail~man_lowering_rope_19295",
+   "lean_over~counter_man_leaning_13325",
+   "reach_up_load~porter_at_cart_rear_13090",
+   "push_flank~carter_at_shaft_ox_13243",
+   "steer~cart_puller_19870",
+   "lean_over~far_shopkeeper_19620",
+   "bridle~groom_at_donkey_18682"
   ],
   "props": {
    "bucket": "bucket_shoulder",
@@ -707,7 +817,13 @@
    "reach_over_rail",
    "chase_run",
    "lunge_arms_wide",
-   "girth"
+   "girth",
+   "stand_sleeves",
+   "reach_over_rail~man_over_railing_19025",
+   "work_sweep~bar",
+   "girth~man_bowed_at_horse_13410",
+   "sit~seated_man_highseat_4070",
+   "lean_over~mat_stall_keeper_18435"
   ],
   "motion": [
    "point",
@@ -725,7 +841,12 @@
    "reach_over_rail",
    "chase_run",
    "lunge_arms_wide",
-   "girth"
+   "girth",
+   "stand_sleeves",
+   "reach_over_rail~man_over_railing_19025",
+   "work_sweep~bar",
+   "girth~man_bowed_at_horse_13410",
+   "lean_over~mat_stall_keeper_18435"
   ],
   "props": {
    "staff": "talk",
@@ -763,10 +884,14 @@
    "idle",
    "sit",
    "sit_talk",
-   "write"
+   "write",
+   "sit_talk~soles",
+   "write~office_desk",
+   "sit_talk~office_bench"
   ],
   "motion": [
-   "write"
+   "write",
+   "write~office_desk"
   ],
   "props": {},
   "title": "Tax official (税官), seated at his desk in the tax office, about to write the declaration"
@@ -781,7 +906,8 @@
    "look",
    "talk",
    "bridle",
-   "ride"
+   "ride",
+   "idle~man_big_hat_12895"
   ],
   "motion": [
    "bridle",
@@ -822,7 +948,10 @@
    "reach_over_rail",
    "pole_boat",
    "fend_pole",
-   "rest_on_stick"
+   "rest_on_stick",
+   "stand_pole~staff_foot",
+   "reach_over_rail~man_bent_over_railing_19195",
+   "push_flank~donkey_man_east_18768"
   ],
   "motion": [
    "carry_pole",
@@ -843,7 +972,10 @@
    "reach_over_rail",
    "pole_boat",
    "fend_pole",
-   "rest_on_stick"
+   "rest_on_stick",
+   "stand_pole~staff_foot",
+   "reach_over_rail~man_bent_over_railing_19195",
+   "push_flank~donkey_man_east_18768"
   ],
   "props": {
    "pole_baskets": "carry_pole",
@@ -875,7 +1007,8 @@
    "staff_shoulder": "carry_pole",
    "back_sack_carry": "sack_carry",
    "long_pole_low": "pole_boat",
-   "long_pole_mid": "fend_pole"
+   "long_pole_mid": "fend_pole",
+   "staff_on_shoulder": "idle"
   },
   "title": "Porter with a shoulder pole (B1 style test, 2026-10-09; views and mesh in gen/v1)"
  },
@@ -912,7 +1045,12 @@
    "beckon_lean",
    "lean_over_seated",
    "look_up",
-   "knee_on_stool"
+   "knee_on_stool",
+   "listen~table",
+   "sit~soles",
+   "fend_pole~pennant_pole_holder_27810",
+   "knee_on_stool~customer_white_14560",
+   "lean_chin~man_at_cabin_rail_19366"
   ],
   "motion": [
    "listen",
@@ -935,7 +1073,11 @@
    "beckon_lean",
    "lean_over_seated",
    "look_up",
-   "knee_on_stool"
+   "knee_on_stool",
+   "listen~table",
+   "fend_pole~pennant_pole_holder_27810",
+   "knee_on_stool~customer_white_14560",
+   "lean_chin~man_at_cabin_rail_19366"
   ],
   "props": {
    "staff": "idle",
@@ -974,7 +1116,13 @@
    "listen",
    "bow",
    "reach_over_rail",
-   "point_way"
+   "point_way",
+   "listen~soles",
+   "bridle~carter_24218",
+   "bridle~man_at_horse_head_24506",
+   "lean_over~terrace_diner_leaning_23216",
+   "lean_over~deck_rail_leaner_19538",
+   "lean_over~man_bending_to_donkey_13440"
   ],
   "motion": [
    "fan",
@@ -988,7 +1136,13 @@
    "listen",
    "bow",
    "reach_over_rail",
-   "point_way"
+   "point_way",
+   "listen~soles",
+   "bridle~carter_24218",
+   "bridle~man_at_horse_head_24506",
+   "lean_over~terrace_diner_leaning_23216",
+   "lean_over~deck_rail_leaner_19538",
+   "lean_over~man_bending_to_donkey_13440"
   ],
   "props": {
    "fan_round": "fan",
@@ -1016,7 +1170,15 @@
    "fan_walk",
    "knees_up",
    "point",
-   "listen"
+   "listen",
+   "lean_over",
+   "lean_chin~moat_rail",
+   "listen~soles",
+   "lean_chin~man_at_railing_27650",
+   "lean_over~rail_watcher_19923",
+   "lean_over~deck_rail_leaner_19715",
+   "lean_over~deck_rail_face_19350",
+   "lean_over~man_arms_on_railing_18982"
   ],
   "motion": [
    "lean_chin",
@@ -1026,7 +1188,15 @@
    "fan_walk",
    "knees_up",
    "point",
-   "listen"
+   "listen",
+   "lean_over",
+   "lean_chin~moat_rail",
+   "listen~soles",
+   "lean_chin~man_at_railing_27650",
+   "lean_over~rail_watcher_19923",
+   "lean_over~deck_rail_leaner_19715",
+   "lean_over~deck_rail_face_19350",
+   "lean_over~man_arms_on_railing_18982"
   ],
   "props": {
    "fan_round": "fan_walk"
@@ -1068,12 +1238,15 @@
    "sit_floor",
    "sit",
    "sit_point",
-   "show_goods_seated"
+   "show_goods_seated",
+   "show_goods_seated~seated_man_13240",
+   "sit~soles"
   ],
   "motion": [
    "tell",
    "sit_point",
-   "show_goods_seated"
+   "show_goods_seated",
+   "show_goods_seated~seated_man_13240"
   ],
   "props": {},
   "title": "Storyteller (闹市说书, S6 storyteller_3822, the one figure facing out of the ring)"
@@ -1095,7 +1268,9 @@
    "hold_rope",
    "tow_walk",
    "pole_boat",
-   "drive_donkeys"
+   "drive_donkeys",
+   "push~barrow_pusher_25532",
+   "pole_boat~hold"
   ],
   "motion": [
    "crane",
@@ -1104,7 +1279,8 @@
    "hold_rope",
    "tow_walk",
    "pole_boat",
-   "drive_donkeys"
+   "drive_donkeys",
+   "pole_boat~hold"
   ],
   "props": {
    "pole_shallow_baskets": "carry_pole",
@@ -1147,7 +1323,9 @@
    "hold_tray",
    "reach_over_rail",
    "sack_carry",
-   "sit_floor"
+   "sit_floor",
+   "ride~traveller_rider_30165",
+   "carry_child~child"
   ],
   "motion": [
    "ride",
@@ -1167,11 +1345,13 @@
    "kneel_sleep",
    "hold_tray",
    "reach_over_rail",
-   "sack_carry"
+   "sack_carry",
+   "ride~traveller_rider_30165",
+   "carry_child~child"
   ],
   "props": {
    "back_boxes": "back_load",
-   "child_on_shoulders": "carry_child",
+   "child_on_shoulders": "carry_child~child",
    "back_sack": "back_load",
    "sack_shoulder": "carry_pole",
    "hip_bag": "idle",
@@ -1217,17 +1397,21 @@
    "lean_chin",
    "tie_kerchief",
    "ride_side",
-   "sit_hold_child"
+   "sit_hold_child",
+   "hold_child~child",
+   "lean_chin~passenger_leaning_in_bay_23385"
   ],
   "motion": [
    "hold_child",
    "lean_chin",
    "tie_kerchief",
    "ride_side",
-   "sit_hold_child"
+   "sit_hold_child",
+   "hold_child~child",
+   "lean_chin~passenger_leaning_in_bay_23385"
   ],
   "props": {
-   "child_in_arms": "hold_child",
+   "child_in_arms": "hold_child~child",
    "veiled_hat": "ride_side",
    "child_on_lap": "sit_hold_child"
   },
@@ -1246,17 +1430,19 @@
    "lean_chin",
    "tie_kerchief",
    "ride_side",
-   "sit_hold_child"
+   "sit_hold_child",
+   "hold_child~child"
   ],
   "motion": [
    "hold_child",
    "lean_chin",
    "tie_kerchief",
    "ride_side",
-   "sit_hold_child"
+   "sit_hold_child",
+   "hold_child~child"
   ],
   "props": {
-   "child_in_arms": "hold_child",
+   "child_in_arms": "hold_child~child",
    "veiled_hat": "ride_side",
    "child_on_lap": "sit_hold_child"
   },

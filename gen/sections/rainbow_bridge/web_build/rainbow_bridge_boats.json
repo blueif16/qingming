@@ -16,13 +16,13 @@
    "tris": {
     "lod0": 2560,
     "lod1": 1168,
-    "colliders": 84,
+    "colliders": 204,
     "nodes": {
      "body": 2504,
      "deck__col": 12,
      "rim__col": 24,
      "board__edge": 56,
-     "roof__col": 48,
+     "roof__col": 168,
      "wet__ring": 56
     }
    },
@@ -47,13 +47,13 @@
    "tris": {
     "lod0": 4716,
     "lod1": 1834,
-    "colliders": 176,
+    "colliders": 364,
     "nodes": {
      "body": 4470,
-     "deck__col": 72,
+     "deck__col": 80,
      "rim__col": 32,
      "board__edge": 64,
-     "roof__col": 72,
+     "roof__col": 252,
      "mast": 152,
      "wet__ring": 64,
      "bow_wave": 30
@@ -138,13 +138,13 @@
    "tris": {
     "lod0": 2458,
     "lod1": 1098,
-    "colliders": 80,
+    "colliders": 200,
     "nodes": {
      "body": 2372,
      "deck__col": 12,
      "rim__col": 20,
      "board__edge": 48,
-     "roof__col": 48,
+     "roof__col": 168,
      "wet__ring": 56,
      "bow_wave": 30
     }
@@ -171,13 +171,13 @@
    "tris": {
     "lod0": 1918,
     "lod1": 1048,
-    "colliders": 72,
+    "colliders": 148,
     "nodes": {
      "body": 1870,
      "deck__col": 12,
      "rim__col": 12,
      "board__edge": 28,
-     "roof__col": 48,
+     "roof__col": 124,
      "wet__ring": 48
     }
    },
@@ -202,13 +202,13 @@
    "tris": {
     "lod0": 2166,
     "lod1": 1204,
-    "colliders": 72,
+    "colliders": 148,
     "nodes": {
      "body": 1966,
      "deck__col": 12,
      "rim__col": 12,
      "board__edge": 28,
-     "roof__col": 48,
+     "roof__col": 124,
      "mast": 152,
      "wet__ring": 48
     }
@@ -236,13 +236,13 @@
    "tris": {
     "lod0": 4744,
     "lod1": 2156,
-    "colliders": 152,
+    "colliders": 436,
     "nodes": {
      "body": 4684,
-     "deck__col": 72,
+     "deck__col": 236,
      "rim__col": 32,
      "board__edge": 64,
-     "roof__col": 48,
+     "roof__col": 168,
      "wet__ring": 60
     }
    },
@@ -310,13 +310,13 @@
    "tris": {
     "lod0": 1918,
     "lod1": 1098,
-    "colliders": 72,
+    "colliders": 148,
     "nodes": {
      "body": 1870,
      "deck__col": 12,
      "rim__col": 12,
      "board__edge": 28,
-     "roof__col": 48,
+     "roof__col": 124,
      "wet__ring": 48
     }
    },
@@ -344,13 +344,13 @@
    "tris": {
     "lod0": 4658,
     "lod1": 1612,
-    "colliders": 176,
+    "colliders": 430,
     "nodes": {
      "body": 4598,
-     "deck__col": 72,
+     "deck__col": 80,
      "rim__col": 32,
      "board__edge": 64,
-     "roof__col": 72,
+     "roof__col": 318,
      "wet__ring": 60
     }
    },
@@ -385,13 +385,13 @@
    "tris": {
     "lod0": 5220,
     "lod1": 1800,
-    "colliders": 152,
+    "colliders": 244,
     "nodes": {
      "body": 4978,
-     "deck__col": 96,
+     "deck__col": 128,
      "rim__col": 32,
      "board__edge": 64,
-     "roof__col": 24,
+     "roof__col": 84,
      "mast": 152,
      "wet__ring": 60,
      "bow_wave": 30
@@ -419,15 +419,15 @@
    "heading_deg": 159.0,
    "water_H": -0.7,
    "tris": {
-    "lod0": 4138,
-    "lod1": 1728,
-    "colliders": 176,
+    "lod0": 4382,
+    "lod1": 1884,
+    "colliders": 342,
     "nodes": {
-     "body": 3956,
-     "deck__col": 72,
-     "rim__col": 32,
+     "body": 4200,
+     "deck__col": 116,
+     "rim__col": 40,
      "board__edge": 64,
-     "roof__col": 72,
+     "roof__col": 186,
      "sweep": 92,
      "wet__ring": 60,
      "bow_wave": 30
@@ -441,7 +441,11 @@
     "hold": "awning",
     "laden": false,
     "cabin": false,
-    "sweep": "port"
+    "sweep": "port",
+    "bow_deck": 1.82,
+    "sweep_bar_h": 0.85,
+    "sweep_bar_w": 1.0,
+    "sweep_crew_in": 0.15
    },
    "note": "mapped waterline 4.5 m, built 12.0 m (real size, BUILDING.md rule 5)"
   }

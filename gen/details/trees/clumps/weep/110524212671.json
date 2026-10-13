@@ -1,0 +1,59 @@
+{
+ "model": "gpt-image-2.5",
+ "endpoint": "/images/edits",
+ "prompt": "Image 1 shows the target art style. Image 2 is a tree painted in that style; copy exactly how its hanging bare whips with their first specks of green are drawn: the same stroke, line weight, colours and spacing.\n\nPaint a sheet of four separate curtains of hanging willow whips, arranged in a 2 by 2 grid, each one alone in its own quarter of the picture with clear white space all round it, never touching another one or the picture's edge.\n\nEach one is a single loose curtain of long, thin, flexible bare whips that all hang from one small point at the TOP centre of its quarter and fall straight down like strings, spreading a little as they fall, yellow-green to red-brown (about #a6a46a), with tiny swelling buds and a few first specks of pale willow green (about #a3b56e). See-through, with plenty of white between the strands. There is no branch above the point. The curtain fills most of the height of its quarter.\n\nThe four differ only in shape: (1) a narrow curtain falling straight; (2) a wide curtain spreading as it falls; (3) a curtain swaying a little to the left; (4) a curtain swaying a little to the right.\n\nTrue natural early-spring daylight colours of the real tree, never the yellowed silk of the scroll. Isolated on a solid plain pure white background that fills the whole picture edge to edge: no trunk, no branch, no ground, no shadow, no text, no seal, no grid lines, no border.",
+ "refs": [
+  "prompts/style_B1.png",
+  "gen/trees/raw/willow_weep_1/4f64cc0fee6c_0.png"
+ ],
+ "mask": null,
+ "params": {
+  "n": 1,
+  "size": "1024x1024",
+  "quality": "auto",
+  "response_format": "url",
+  "output_format": "png",
+  "client_reference": "110524212671",
+  "background": "opaque"
+ },
+ "format": "png",
+ "generation_s": 58.2,
+ "attempts": 1,
+ "idempotency_key": "61ef884d-785f-4621-a2a5-60a5133817e0",
+ "request_id": "2df165a8-5073-4073-9c70-68ae9cf95d3e",
+ "status": "completed",
+ "usage": {
+  "completion_tokens": 1650,
+  "completion_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "input_tokens": 4918,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 329
+  },
+  "output_tokens": 1650,
+  "output_tokens_details": {
+   "image_tokens": 1650,
+   "reasoning_tokens": 0,
+   "text_tokens": 0
+  },
+  "prompt_tokens": 4918,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "image_tokens": 4589,
+   "text_tokens": 329
+  },
+  "total_tokens": 6568
+ },
+ "error": null,
+ "image_urls": [
+  "https://v4-gateway-v3.fycsai.com/v1/images/assets/371bbfc8-9801-4534-b814-eba1ffc76a62"
+ ],
+ "files": [
+  "gen/details/trees/clumps/weep/110524212671_0.png"
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T13:38:46.745Z",
+ "sections": [
+  "countryside"
+ ],
+ "owners_load_ms": 345,
+ "seconds": 0.604,
+ "people": 30,
+ "checked": 30,
+ "crew_not_covered": 0,
+ "figures_failing": 1,
+ "fails": 1,
+ "by_class": {
+  "contact:animal": 1
+ },
+ "by_clip": {
+  "drive_donkeys:contact:animal": 1
+ },
+ "table": {
+  "countryside": {
+   "contact:animal": {
+    "n": 1,
+    "worst": 0.046,
+    "worst_id": "charcoal_driver_36250"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:animal",
+   "clip": "drive_donkeys",
+   "site": "palm_L",
+   "value": 0.046,
+   "kind": "walker",
+   "with": [
+    "S1.ani.donkey_charcoal_36323",
+    "S1.ani.donkey_charcoal_36410",
+    "S1.ani.donkey_charcoal_36508",
+    "S1.ani.donkey_charcoal_36666",
+    "S1.ani.donkey_charcoal_36745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "charcoal_driver_36250",
+   "section": "countryside",
+   "model": "straw_hat"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 15,
+ "contacts_failing": 1
+}

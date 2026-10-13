@@ -1,0 +1,611 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T10:37:16.274Z",
+ "sections": [
+  "gate"
+ ],
+ "owners_load_ms": 350,
+ "seconds": 1.507,
+ "people": 81,
+ "checked": 81,
+ "crew_not_covered": 0,
+ "figures_failing": 36,
+ "fails": 77,
+ "by_class": {
+  "contact:rail": 23,
+  "body_cylinder": 8,
+  "contact:vehicle": 8,
+  "contact:table": 6,
+  "stance_soles (placement)": 6,
+  "contact:floor (placement)": 5,
+  "furniture": 5,
+  "contact:seat (no seat)": 4,
+  "contact:floor (clip)": 3,
+  "contact:wall": 2,
+  "head_inside": 2,
+  "site_inside": 2,
+  "contact:animal": 2,
+  "contact:water": 1
+ },
+ "by_clip": {
+  "lean_chin:contact:rail": 23,
+  "body_cylinder": 8,
+  "push:contact:vehicle": 8,
+  "stance_soles": 6,
+  "furniture": 5,
+  "write:contact:floor": 4,
+  "reach:contact:table": 4,
+  "write:contact:seat": 2,
+  "write:contact:table": 2,
+  "sit_talk:contact:floor": 2,
+  "lean_wall:contact:wall": 2,
+  "sit:contact:floor": 2,
+  "bridle:contact:animal": 2,
+  "sit_talk:contact:seat": 1,
+  "sit:contact:seat": 1,
+  "bind:head_inside": 1,
+  "bind:site_inside": 1,
+  "idle:head_inside": 1,
+  "draw_bow:site_inside": 1,
+  "stand_pole:contact:water": 1
+ },
+ "table": {
+  "gate": {
+   "contact:seat (no seat)": {
+    "n": 4,
+    "worst": 0.921,
+    "worst_id": "tax_official"
+   },
+   "contact:floor (placement)": {
+    "n": 5,
+    "worst": 0.471,
+    "worst_id": "tax_official"
+   },
+   "contact:table": {
+    "n": 6,
+    "worst": 0.6,
+    "worst_id": "beggar_boy_9205"
+   },
+   "contact:floor (clip)": {
+    "n": 3,
+    "worst": -0.062,
+    "worst_id": "tax_official"
+   },
+   "furniture": {
+    "n": 5,
+    "worst": 0.955,
+    "worst_id": "tower_balcony_man_6600"
+   },
+   "body_cylinder": {
+    "n": 8,
+    "worst": 0.246,
+    "worst_id": "archer_wrist_5728"
+   },
+   "stance_soles (placement)": {
+    "n": 6,
+    "worst": 0.443,
+    "worst_id": "figure_by_trunk_5772"
+   },
+   "contact:rail": {
+    "n": 23,
+    "worst": 0.6,
+    "worst_id": "far_rail_turned_9100"
+   },
+   "contact:wall": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "tree_leaner_7952"
+   },
+   "contact:vehicle": {
+    "n": 8,
+    "worst": 1.456,
+    "worst_id": "pack_handler_5837"
+   },
+   "head_inside": {
+    "n": 2,
+    "worst": 0.039,
+    "worst_id": "archer_wrist_5728"
+   },
+   "site_inside": {
+    "n": 2,
+    "worst": 0.029,
+    "worst_id": "archer_drawing_bow_5635"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": 0.792,
+    "worst_id": "groom_8167"
+   },
+   "contact:water": {
+    "n": 1,
+    "worst": 0.099,
+    "worst_id": "hat_pole_man_5940"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 1.456,
+   "kind": "figure",
+   "with": [
+    "S6.veh.sack_cart_5412"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "pack_handler_5837",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.967,
+   "kind": "figure",
+   "with": [
+    "S6.veh.sack_cart_5412"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "pack_handler_5837",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "furniture",
+   "value": 0.955,
+   "with": [
+    "S5.str.gate_block"
+   ],
+   "note": "stands on a ledge, step or rail base of S5.str.gate_block: 0.955 m over the surface round it (only 3 of 8 points 0.3 m out on the same level)",
+   "id": "tower_balcony_man_6600",
+   "section": "gate",
+   "model": "sightseer",
+   "kind": "figure"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "sit_talk",
+   "site": "seat",
+   "value": 0.921,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (98/98 samples): only the ground; nearest seat-high piece S5.bld.tax_office 0.682 m away in plan (top 1.13)",
+   "rel": null,
+   "soft": false,
+   "id": "tax_official",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "sit",
+   "site": "seat",
+   "value": 0.87,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (108/108 samples): only the ground; nearest seat-high piece S5.bld.tax_office 1.233 m away in plan (top 1.25)",
+   "rel": null,
+   "soft": false,
+   "id": "tax_clerk_seated_6340",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 0.792,
+   "kind": "figure",
+   "with": [
+    "S5.ani.donkey_8121"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_8167",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "furniture",
+   "value": 0.639,
+   "with": [
+    "S5.str.gate_block"
+   ],
+   "note": "stands on a ledge, step or rail base of S5.str.gate_block: 0.639 m over the surface round it (only 2 of 8 points 0.3 m out on the same level)",
+   "id": "caravan_leader_7388",
+   "section": "gate",
+   "model": "camel_driver",
+   "kind": "figure"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 0.629,
+   "kind": "figure",
+   "with": [
+    "S5.ani.donkey_8121"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_8167",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "far_rail_turned_9100",
+   "section": "gate",
+   "model": "idler"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [
+    "S5.str.moat_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "beggar_boy_9205",
+   "section": "gate",
+   "model": "child"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [
+    "S5.str.moat_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "beggar_boy_9205",
+   "section": "gate",
+   "model": "child"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [
+    "S5.str.moat_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "beggar_boy_9138",
+   "section": "gate",
+   "model": "child"
+  },
+  {
+   "class": "contact:table",
+   "clip": "reach",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [
+    "S5.str.moat_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "beggar_boy_9138",
+   "section": "gate",
+   "model": "child"
+  },
+  {
+   "class": "contact:wall",
+   "clip": "lean_wall",
+   "site": "back",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "tree_leaner_7952",
+   "section": "gate",
+   "model": "idler"
+  },
+  {
+   "class": "contact:table",
+   "clip": "write",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "tax_clerk_seated_6340",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 0.589,
+   "kind": "figure",
+   "with": [
+    "S6.veh.sack_cart_5412"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_pusher_5727",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 0.503,
+   "kind": "figure",
+   "with": [
+    "S5.veh.cart_screen_8510"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_pusher_8254",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_R",
+   "value": 0.498,
+   "kind": "figure",
+   "with": [
+    "S5.str.tower_podium"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "tower_balcony_man_6600",
+   "section": "gate",
+   "model": "sightseer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.494,
+   "kind": "figure",
+   "with": [
+    "S6.veh.sack_cart_5412"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_pusher_5727",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "write",
+   "site": "sole_L",
+   "value": 0.471,
+   "kind": "figure",
+   "with": [
+    "S5.bld.tax_office"
+   ],
+   "note": "the clip's own sole_L height 0.051 m (placement)",
+   "rel": null,
+   "soft": false,
+   "cause": "placement",
+   "id": "tax_official",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "write",
+   "site": "sole_L",
+   "value": 0.471,
+   "kind": "figure",
+   "with": [
+    "S5.bld.tax_office"
+   ],
+   "note": "the clip's own sole_L height 0.051 m (placement)",
+   "rel": null,
+   "soft": false,
+   "cause": "placement",
+   "id": "tax_clerk_seated_6340",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.46,
+   "kind": "figure",
+   "with": [
+    "S5.veh.cart_screen_8510"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_pusher_8254",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_R",
+   "value": 0.454,
+   "kind": "figure",
+   "with": [
+    "S5.str.moat_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "far_rail_white_8698",
+   "section": "gate",
+   "model": "sightseer"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin",
+   "site": "elbow_L",
+   "value": 0.446,
+   "kind": "figure",
+   "with": [
+    "S5.str.moat_bridge"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "far_rail_white_8698",
+   "section": "gate",
+   "model": "sightseer"
+  },
+  {
+   "class": "stance_soles",
+   "value": 0.443,
+   "kind": "figure",
+   "cause": "placement",
+   "note": "clip sole height -0.001 m (placement)",
+   "id": "figure_by_trunk_5772",
+   "section": "gate",
+   "model": "sightseer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.431,
+   "kind": "figure",
+   "with": [
+    "S5.veh.cart_screen_8510"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_shaftman_8498",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "furniture",
+   "value": 0.419,
+   "with": [
+    "S5.bld.tax_office"
+   ],
+   "note": "stands on a ledge, step or rail base of S5.bld.tax_office: 0.419 m over the surface round it (only 2 of 8 points 0.3 m out on the same level)",
+   "id": "tax_official",
+   "section": "gate",
+   "model": "official",
+   "kind": "figure"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 0.404,
+   "kind": "figure",
+   "with": [
+    "S5.veh.cart_screen_8510"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_shaftman_8498",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:table",
+   "clip": "write",
+   "site": "palm_L",
+   "value": 0.398,
+   "kind": "figure",
+   "with": [
+    "S5.bld.tax_office"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "tax_official",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "write",
+   "site": "seat",
+   "value": 0.387,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (80/80 samples): only the ground; nearest seat-high piece S5.bld.tax_office 0.436 m away in plan (top 1.13)",
+   "rel": null,
+   "soft": false,
+   "id": "tax_official",
+   "section": "gate",
+   "model": "official"
+  }
+ ],
+ "clip_level": [
+  {
+   "model": "official",
+   "clip": "sit_talk",
+   "site": "sole_L",
+   "offset_m": 0.06,
+   "figures": [
+    "gate/tax_official"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "sit_talk",
+   "site": "sole_R",
+   "offset_m": -0.06,
+   "figures": [
+    "gate/tax_official"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "sit",
+   "site": "sole_L",
+   "offset_m": 0.058,
+   "figures": [
+    "gate/tax_clerk_seated_6340"
+   ]
+  }
+ ],
+ "contacts_checked": 64,
+ "contacts_failing": 54
+}

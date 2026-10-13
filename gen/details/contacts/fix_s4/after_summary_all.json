@@ -1,0 +1,1208 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T09:56:12.940Z",
+ "sections": [
+  "city_end",
+  "inner_city",
+  "gate",
+  "outer_road",
+  "outer_road_2",
+  "rainbow_bridge",
+  "canal",
+  "countryside"
+ ],
+ "owners_load_ms": 213,
+ "seconds": 5.308,
+ "people": 807,
+ "checked": 691,
+ "crew_not_covered": 116,
+ "figures_failing": 260,
+ "fails": 527,
+ "by_class": {
+  "contact:rail": 71,
+  "contact:vehicle": 61,
+  "stance_soles (placement)": 60,
+  "contact:seat (no seat)": 50,
+  "contact:floor (clip)": 41,
+  "contact:seat": 40,
+  "contact:floor (placement)": 37,
+  "contact:animal": 33,
+  "contact:table": 31,
+  "hidden_collider": 26,
+  "body_cylinder": 22,
+  "site_inside": 16,
+  "furniture": 15,
+  "contact:wall": 9,
+  "head_inside": 5,
+  "order": 3,
+  "contact:floor": 3,
+  "contact:ridden": 2,
+  "contact:structure": 1,
+  "below_support": 1
+ },
+ "by_clip": {
+  "stance_soles": 60,
+  "lean_chin:contact:rail": 43,
+  "sit:contact:seat": 38,
+  "sit:contact:floor": 38,
+  "sedan_carry:contact:vehicle": 33,
+  "hidden_collider": 26,
+  "body_cylinder": 22,
+  "bridle:contact:animal": 20,
+  "lean_over:contact:rail": 18,
+  "listen:contact:seat": 17,
+  "push:contact:vehicle": 16,
+  "furniture": 15,
+  "sit_talk:contact:floor": 15,
+  "sit_talk:contact:seat": 14,
+  "reach:contact:table": 14,
+  "drink:contact:seat": 12,
+  "steer:contact:vehicle": 10,
+  "browse:contact:table": 9,
+  "reach_over_rail:contact:rail": 9,
+  "drink:contact:floor": 8,
+  "write:contact:floor": 8,
+  "listen:contact:floor": 8,
+  "push_flank:contact:animal": 6,
+  "lean_wall:contact:wall": 4,
+  "write:contact:seat": 4,
+  "write:contact:table": 4,
+  "arms_folded:contact:wall": 4,
+  "order": 3,
+  "idle:site_inside": 3,
+  "drink:site_inside": 3,
+  "hold_horse_neck:contact:animal": 3,
+  "bind:head_inside": 2,
+  "ride:contact:ridden": 2,
+  "idle:head_inside": 2,
+  "sit_floor:contact:floor": 2,
+  "girth:contact:animal": 2,
+  "reach_up_load:contact:vehicle": 2,
+  "sit:site_inside": 2,
+  "lean_over_seated:contact:table": 2,
+  "drive_donkeys:contact:animal": 2,
+  "lean_post_talk:contact:wall": 1,
+  "lean_post_talk:site_inside": 1,
+  "sit_hold_child:contact:seat": 1,
+  "chat:site_inside": 1,
+  "chop:contact:table": 1,
+  "drive_cart:contact:seat": 1,
+  "bind:site_inside": 1,
+  "reach~child_at_table_12597:contact:table": 1,
+  "crane:site_inside": 1,
+  "show_goods_seated:contact:floor": 1,
+  "wheelwright:contact:structure": 1,
+  "below_support": 1,
+  "knee_on_stool:contact:seat": 1,
+  "knee_on_stool:contact:floor": 1,
+  "bend_goods:site_inside": 1,
+  "look:site_inside": 1,
+  "sit_talk:head_inside": 1,
+  "sit_talk:site_inside": 1,
+  "hand_over:site_inside": 1,
+  "sit_point:contact:seat": 1,
+  "lean_over_seated:contact:seat": 1,
+  "beckon_lean:contact:rail": 1
+ },
+ "table": {
+  "city_end": {
+   "contact:seat": {
+    "n": 1,
+    "worst": 0.094,
+    "worst_id": "gatekeeper_seated_1082"
+   },
+   "contact:wall": {
+    "n": 1,
+    "worst": 0.423,
+    "worst_id": "man_at_post_1118"
+   },
+   "site_inside": {
+    "n": 1,
+    "worst": 0.102,
+    "worst_id": "man_at_post_1118"
+   },
+   "contact:seat (no seat)": {
+    "n": 1,
+    "worst": 0.443,
+    "worst_id": "seated_woman_child_1535"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": 0.88,
+    "worst_id": "groom_1698"
+   }
+  },
+  "inner_city": {
+   "stance_soles (placement)": {
+    "n": 7,
+    "worst": 0.186,
+    "worst_id": "well_bucket_lifter_2032"
+   },
+   "order": {
+    "n": 3,
+    "worst": 0.487,
+    "worst_id": "archer_waistguard_5465"
+   },
+   "contact:seat (no seat)": {
+    "n": 40,
+    "worst": 0.779,
+    "worst_id": "drinker_upper_5547"
+   },
+   "contact:floor (placement)": {
+    "n": 11,
+    "worst": 0.68,
+    "worst_id": "wagon_top_rider_3740"
+   },
+   "furniture": {
+    "n": 6,
+    "worst": 0.354,
+    "worst_id": "seated_man_highseat_4070"
+   },
+   "body_cylinder": {
+    "n": 4,
+    "worst": 0.26,
+    "worst_id": "archer_waistguard_5465"
+   },
+   "head_inside": {
+    "n": 2,
+    "worst": 0.032,
+    "worst_id": "robed_hat_3002"
+   },
+   "contact:wall": {
+    "n": 3,
+    "worst": 0.6,
+    "worst_id": "tall_carter_5385"
+   },
+   "contact:ridden": {
+    "n": 1,
+    "worst": 0.045,
+    "worst_id": "rider_5335"
+   },
+   "contact:animal": {
+    "n": 6,
+    "worst": 3.798,
+    "worst_id": "young_man_cart_rear_2675"
+   },
+   "contact:vehicle": {
+    "n": 27,
+    "worst": 0.705,
+    "worst_id": "wagon_shaft_carter_3642"
+   },
+   "contact:floor (clip)": {
+    "n": 21,
+    "worst": -0.062,
+    "worst_id": "cloth_shop_seated_3752"
+   },
+   "site_inside": {
+    "n": 2,
+    "worst": 0.07,
+    "worst_id": "top_edge_lower_body_2775"
+   },
+   "contact:seat": {
+    "n": 4,
+    "worst": 0.646,
+    "worst_id": "seated_man_highseat_4070"
+   },
+   "contact:table": {
+    "n": 6,
+    "worst": 0.6,
+    "worst_id": "child_by_dark_robe_2880"
+   },
+   "hidden_collider": {
+    "n": 2,
+    "worst": 0.052,
+    "worst_id": "wagon_top_rider_3740"
+   },
+   "contact:rail": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "leaning_over_awning_2168"
+   }
+  },
+  "gate": {
+   "contact:seat (no seat)": {
+    "n": 4,
+    "worst": 0.921,
+    "worst_id": "tax_official"
+   },
+   "contact:floor (placement)": {
+    "n": 5,
+    "worst": 0.471,
+    "worst_id": "tax_official"
+   },
+   "contact:table": {
+    "n": 6,
+    "worst": 0.6,
+    "worst_id": "beggar_boy_9205"
+   },
+   "contact:floor (clip)": {
+    "n": 3,
+    "worst": -0.062,
+    "worst_id": "tax_official"
+   },
+   "furniture": {
+    "n": 5,
+    "worst": 0.955,
+    "worst_id": "tower_balcony_man_6600"
+   },
+   "body_cylinder": {
+    "n": 8,
+    "worst": 0.234,
+    "worst_id": "top_porter_backbox_8911"
+   },
+   "stance_soles (placement)": {
+    "n": 6,
+    "worst": 0.443,
+    "worst_id": "figure_by_trunk_5772"
+   },
+   "contact:rail": {
+    "n": 23,
+    "worst": 0.6,
+    "worst_id": "far_rail_turned_9100"
+   },
+   "contact:wall": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "tree_leaner_7952"
+   },
+   "contact:vehicle": {
+    "n": 8,
+    "worst": 1.456,
+    "worst_id": "pack_handler_5837"
+   },
+   "head_inside": {
+    "n": 2,
+    "worst": 0.039,
+    "worst_id": "archer_wrist_5728"
+   },
+   "site_inside": {
+    "n": 1,
+    "worst": 0.056,
+    "worst_id": "archer_wrist_5728"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": 0.792,
+    "worst_id": "groom_8167"
+   }
+  },
+  "outer_road": {
+   "contact:table": {
+    "n": 1,
+    "worst": 0.098,
+    "worst_id": "child_at_table_12597"
+   }
+  },
+  "outer_road_2": {
+   "contact:seat": {
+    "n": 5,
+    "worst": 0.466,
+    "worst_id": "customer_hat_14462"
+   },
+   "contact:floor (clip)": {
+    "n": 3,
+    "worst": 0.054,
+    "worst_id": "official_seated_12728"
+   },
+   "contact:table": {
+    "n": 5,
+    "worst": 0.6,
+    "worst_id": "small_companion_14654"
+   },
+   "contact:floor": {
+    "n": 2,
+    "worst": 0.502,
+    "worst_id": "man_dark_cap_by_stair_12700"
+   },
+   "body_cylinder": {
+    "n": 4,
+    "worst": 0.245,
+    "worst_id": "dark_figure_or_garment_12825"
+   },
+   "contact:seat (no seat)": {
+    "n": 3,
+    "worst": 0.461,
+    "worst_id": "customer_hat_14462"
+   },
+   "contact:floor (placement)": {
+    "n": 7,
+    "worst": 0.485,
+    "worst_id": "man_seated_front_of_hall_12866"
+   },
+   "stance_soles (placement)": {
+    "n": 3,
+    "worst": -0.159,
+    "worst_id": "customer_bent_14420"
+   },
+   "furniture": {
+    "n": 2,
+    "worst": 0.223,
+    "worst_id": "man_standing_by_hall_12942"
+   },
+   "site_inside": {
+    "n": 1,
+    "worst": 0.031,
+    "worst_id": "onlooker_dark_robe_13222"
+   },
+   "contact:animal": {
+    "n": 6,
+    "worst": 1.535,
+    "worst_id": "man_big_hat_12895"
+   },
+   "contact:rail": {
+    "n": 6,
+    "worst": 0.6,
+    "worst_id": "man_bending_to_donkey_13440"
+   },
+   "contact:structure": {
+    "n": 1,
+    "worst": 0.56,
+    "worst_id": "wheelwright_bending_13620"
+   },
+   "contact:vehicle": {
+    "n": 4,
+    "worst": 1.288,
+    "worst_id": "carter_at_shaft_ox_13243"
+   },
+   "below_support": {
+    "n": 1,
+    "worst": -0.16,
+    "worst_id": "customer_hat_14462"
+   }
+  },
+  "rainbow_bridge": {
+   "contact:floor (placement)": {
+    "n": 12,
+    "worst": 0.302,
+    "worst_id": "seated_man_topknot_18352"
+   },
+   "contact:seat": {
+    "n": 15,
+    "worst": 0.153,
+    "worst_id": "shop_seated_on_bench_19905"
+   },
+   "site_inside": {
+    "n": 4,
+    "worst": 0.082,
+    "worst_id": "bank_watcher_at_end_post_18998"
+   },
+   "stance_soles (placement)": {
+    "n": 38,
+    "worst": 0.778,
+    "worst_id": "far_bank_figure_16722"
+   },
+   "contact:vehicle": {
+    "n": 14,
+    "worst": 3,
+    "worst_id": "leaning_man_arms_out_18703"
+   },
+   "contact:rail": {
+    "n": 34,
+    "worst": 0.6,
+    "worst_id": "donkey_man_east_18768"
+   },
+   "contact:floor (clip)": {
+    "n": 7,
+    "worst": -0.061,
+    "worst_id": "far_bank_seated_18318"
+   },
+   "hidden_collider": {
+    "n": 24,
+    "worst": 0.156,
+    "worst_id": "hand_to_head_18752"
+   },
+   "contact:animal": {
+    "n": 9,
+    "worst": 1.546,
+    "worst_id": "donkey_man_west_18728"
+   },
+   "contact:wall": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "man_folded_arms_tall_cap_19270"
+   },
+   "body_cylinder": {
+    "n": 1,
+    "worst": 0.145,
+    "worst_id": "far_stall_vendor_19436"
+   },
+   "contact:table": {
+    "n": 6,
+    "worst": 0.6,
+    "worst_id": "reaching_man_18062"
+   },
+   "furniture": {
+    "n": 2,
+    "worst": 0.604,
+    "worst_id": "far_bank_figure_16823"
+   }
+  },
+  "canal": {
+   "body_cylinder": {
+    "n": 5,
+    "worst": 0.205,
+    "worst_id": "hall_seated_man_25600"
+   },
+   "contact:seat": {
+    "n": 15,
+    "worst": 0.225,
+    "worst_id": "shop_seated_21683"
+   },
+   "stance_soles (placement)": {
+    "n": 6,
+    "worst": -0.172,
+    "worst_id": "shop_standing_21726"
+   },
+   "site_inside": {
+    "n": 7,
+    "worst": 0.07,
+    "worst_id": "man_behind_cart_rear_24463"
+   },
+   "contact:floor": {
+    "n": 1,
+    "worst": 0.193,
+    "worst_id": "bank_man_seated_21140"
+   },
+   "contact:rail": {
+    "n": 5,
+    "worst": 0.502,
+    "worst_id": "terrace_diner_leaning_23216"
+   },
+   "contact:floor (clip)": {
+    "n": 6,
+    "worst": -0.07,
+    "worst_id": "shop_man_dark_cap_23963"
+   },
+   "head_inside": {
+    "n": 1,
+    "worst": 0.068,
+    "worst_id": "shop_man_dark_cap_23963"
+   },
+   "contact:animal": {
+    "n": 6,
+    "worst": 0.83,
+    "worst_id": "carter_24218"
+   },
+   "contact:table": {
+    "n": 5,
+    "worst": 0.356,
+    "worst_id": "far_street_man_25688"
+   },
+   "contact:vehicle": {
+    "n": 2,
+    "worst": 0.366,
+    "worst_id": "barrow_pusher_25532"
+   },
+   "contact:floor (placement)": {
+    "n": 2,
+    "worst": -0.037,
+    "worst_id": "hall_small_figure_25628"
+   },
+   "contact:wall": {
+    "n": 1,
+    "worst": 0.6,
+    "worst_id": "overseer_28092"
+   },
+   "contact:seat (no seat)": {
+    "n": 1,
+    "worst": 0.204,
+    "worst_id": "man_leaning_over_donkey_29000"
+   }
+  },
+  "countryside": {
+   "contact:table": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "child_29674"
+   },
+   "contact:seat (no seat)": {
+    "n": 1,
+    "worst": 0.35,
+    "worst_id": "stall_customer_29280"
+   },
+   "contact:floor (clip)": {
+    "n": 1,
+    "worst": -0.038,
+    "worst_id": "stall_customer_29280"
+   },
+   "contact:ridden": {
+    "n": 1,
+    "worst": 0.041,
+    "worst_id": "traveller_rider_30165"
+   },
+   "contact:rail": {
+    "n": 1,
+    "worst": 0.294,
+    "worst_id": "man_at_post_29812"
+   },
+   "contact:vehicle": {
+    "n": 6,
+    "worst": 0.466,
+    "worst_id": "sedan_bearer_front_30828"
+   },
+   "contact:animal": {
+    "n": 2,
+    "worst": 1.636,
+    "worst_id": "charcoal_driver_36250"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:animal",
+   "clip": "push_flank",
+   "site": "palm_R",
+   "value": 3.798,
+   "kind": "figure",
+   "with": [
+    "S6.ani.donkey_wine_cart_3191",
+    "S6.ani.donkey_wine_cart_3105"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "young_man_cart_rear_2675",
+   "section": "inner_city",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "push_flank",
+   "site": "palm_L",
+   "value": 3.597,
+   "kind": "figure",
+   "with": [
+    "S6.ani.donkey_wine_cart_3191",
+    "S6.ani.donkey_wine_cart_3105"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "young_man_cart_rear_2675",
+   "section": "inner_city",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 3,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "leaning_man_arms_out_18703",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 3,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "leaning_man_arms_out_18703",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "drive_donkeys",
+   "site": "palm_L",
+   "value": 1.636,
+   "kind": "walker",
+   "with": [
+    "S1.ani.donkey_charcoal_36323",
+    "S1.ani.donkey_charcoal_36410",
+    "S1.ani.donkey_charcoal_36508",
+    "S1.ani.donkey_charcoal_36666",
+    "S1.ani.donkey_charcoal_36745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "charcoal_driver_36250",
+   "section": "countryside",
+   "model": "straw_hat"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.546,
+   "kind": "figure",
+   "with": [
+    "S3.ani.donkey_dark_18745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "donkey_man_west_18728",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 1.535,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_12862"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_big_hat_12895",
+   "section": "outer_road_2",
+   "model": "official_rider"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.468,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_12862"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_big_hat_12895",
+   "section": "outer_road_2",
+   "model": "official_rider"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 1.456,
+   "kind": "figure",
+   "with": [
+    "S6.veh.sack_cart_5412"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "pack_handler_5837",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "steer",
+   "site": "palm_L",
+   "value": 1.433,
+   "kind": "figure",
+   "with": [
+    "S3.veh.handcart_19862"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.314,
+    "side_m": 0.38
+   },
+   "soft": false,
+   "id": "cart_puller_19870",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "steer",
+   "site": "palm_R",
+   "value": 1.288,
+   "kind": "figure",
+   "with": [
+    "S4b.veh.palm_cart_13455"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.088,
+    "side_m": 0.866
+   },
+   "soft": false,
+   "id": "carter_at_shaft_ox_13243",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "steer",
+   "site": "palm_R",
+   "value": 1.232,
+   "kind": "figure",
+   "with": [
+    "S3.veh.handcart_19862"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": -0.001,
+    "side_m": 0.151
+   },
+   "soft": false,
+   "id": "cart_puller_19870",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.221,
+   "kind": "figure",
+   "with": [
+    "S6.ani.donkey_2285"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "donkey_groom_jacket_2252",
+   "section": "inner_city",
+   "model": "carter"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 1.064,
+   "kind": "figure",
+   "with": [
+    "S6.ani.horse_5262"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_5290",
+   "section": "inner_city",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.057,
+   "kind": "figure",
+   "with": [
+    "S4b.ani.horse_saddled_13378",
+    "S4b.ani.donkey_13474"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_in_white_at_horse_13360",
+   "section": "outer_road_2",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 1.055,
+   "kind": "figure",
+   "with": [
+    "S3.ani.donkey_dark_18745"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "donkey_man_west_18728",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 1.029,
+   "kind": "figure",
+   "with": [
+    "S3.ani.donkey_ridden_18690"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_at_donkey_18682",
+   "section": "rainbow_bridge",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "steer",
+   "site": "palm_L",
+   "value": 1.002,
+   "kind": "figure",
+   "with": [
+    "S4b.veh.palm_cart_13455"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": -0.227,
+    "side_m": 1.058
+   },
+   "soft": false,
+   "id": "carter_at_shaft_ox_13243",
+   "section": "outer_road_2",
+   "model": "idler"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.967,
+   "kind": "figure",
+   "with": [
+    "S6.veh.sack_cart_5412"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "pack_handler_5837",
+   "section": "gate",
+   "model": "carter"
+  },
+  {
+   "class": "furniture",
+   "value": 0.955,
+   "with": [
+    "S5.str.gate_block"
+   ],
+   "note": "stands on a ledge, step or rail base of S5.str.gate_block: 0.955 m over the surface round it (only 3 of 8 points 0.3 m out on the same level)",
+   "id": "tower_balcony_man_6600",
+   "section": "gate",
+   "model": "sightseer",
+   "kind": "figure"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 0.942,
+   "kind": "figure",
+   "with": [
+    "S6.ani.horse_5262"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_5290",
+   "section": "inner_city",
+   "model": "idler"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "sit_talk",
+   "site": "seat",
+   "value": 0.921,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (98/98 samples): only the ground; nearest seat-high piece S5.bld.tax_office 0.682 m away in plan (top 1.13)",
+   "rel": null,
+   "soft": false,
+   "id": "tax_official",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 0.88,
+   "kind": "figure",
+   "with": [
+    "S7.ani.horse_official_1625"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_1698",
+   "section": "city_end",
+   "model": "groom"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "sit",
+   "site": "seat",
+   "value": 0.87,
+   "kind": "figure",
+   "with": [],
+   "note": "no seat under the seat point (108/108 samples): only the ground; nearest seat-high piece S5.bld.tax_office 1.233 m away in plan (top 1.25)",
+   "rel": null,
+   "soft": false,
+   "id": "tax_clerk_seated_6340",
+   "section": "gate",
+   "model": "official"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 0.83,
+   "kind": "figure",
+   "with": [
+    "S2.ani.cart_mule_lead_24192",
+    "S2.ani.cart_mule_near_24215",
+    "S2.ani.horse_24565"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "carter_24218",
+   "section": "canal",
+   "model": "scholar"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.827,
+   "kind": "figure",
+   "with": [
+    "S3.veh.handcart_19862"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "cart_pusher_19922",
+   "section": "rainbow_bridge",
+   "model": "carter"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_L",
+   "value": 0.824,
+   "kind": "figure",
+   "with": [
+    "S6.ani.donkey_2285"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "donkey_groom_jacket_2252",
+   "section": "inner_city",
+   "model": "carter"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_L",
+   "value": 0.824,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.538,
+    "side_m": 0.365
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_18838",
+   "section": "rainbow_bridge",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "sedan_carry",
+   "site": "palm_R",
+   "value": 0.819,
+   "kind": "figure",
+   "with": [
+    "S3.veh.sedan_18842"
+   ],
+   "note": null,
+   "rel": {
+    "above_m": 0.632,
+    "side_m": 0.425
+   },
+   "soft": false,
+   "id": "sedan_bearer_front_18838",
+   "section": "rainbow_bridge",
+   "model": "bearer"
+  },
+  {
+   "class": "contact:animal",
+   "clip": "bridle",
+   "site": "palm_R",
+   "value": 0.792,
+   "kind": "figure",
+   "with": [
+    "S5.ani.donkey_8121"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "groom_8167",
+   "section": "gate",
+   "model": "carter"
+  }
+ ],
+ "clip_level": [
+  {
+   "model": "official",
+   "clip": "sit",
+   "site": "sole_L",
+   "offset_m": 0.058,
+   "figures": [
+    "inner_city/shop_interior_seated_4752",
+    "inner_city/scholar_upstairs_3912",
+    "inner_city/seated_cap_man_3905",
+    "inner_city/cloth_shop_seated_3752",
+    "inner_city/jie_listener_west_2062",
+    "gate/tax_clerk_seated_6340"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "sit_talk",
+   "site": "sole_L",
+   "offset_m": 0.06,
+   "figures": [
+    "inner_city/shop_interior_seated_4752",
+    "inner_city/seated_cap_man_3905",
+    "inner_city/cloth_shop_seated_3752",
+    "inner_city/jie_listener_west_2062",
+    "gate/tax_official",
+    "canal/shop_man_dark_cap_23963"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "sit_talk",
+   "site": "sole_R",
+   "offset_m": -0.06,
+   "figures": [
+    "inner_city/shop_interior_seated_4752",
+    "inner_city/seated_cap_man_3905",
+    "inner_city/cloth_shop_seated_3752",
+    "inner_city/jie_listener_west_2062",
+    "gate/tax_official",
+    "canal/shop_man_dark_cap_23963"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "sit",
+   "site": "sole_R",
+   "offset_m": -0.057,
+   "figures": [
+    "inner_city/shop_interior_seated_4752",
+    "inner_city/scholar_upstairs_3912",
+    "inner_city/seated_cap_man_3905",
+    "inner_city/cloth_shop_seated_3752",
+    "inner_city/jie_listener_west_2062"
+   ]
+  },
+  {
+   "model": "robed_man",
+   "clip": "sit",
+   "site": "sole_L",
+   "offset_m": -0.017,
+   "figures": [
+    "rainbow_bridge/stall_sitter_east_19297",
+    "rainbow_bridge/stall_sitter_west_19088",
+    "rainbow_bridge/far_bank_seated_18318",
+    "rainbow_bridge/far_bank_seated_17277",
+    "canal/doorway_man_topknot_24088"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "write",
+   "site": "sole_L",
+   "offset_m": 0.051,
+   "figures": [
+    "inner_city/scholar_upstairs_3912",
+    "outer_road_2/official_seated_12728"
+   ]
+  },
+  {
+   "model": "official",
+   "clip": "write",
+   "site": "sole_R",
+   "offset_m": -0.051,
+   "figures": [
+    "inner_city/scholar_upstairs_3912",
+    "outer_road_2/official_seated_12728"
+   ]
+  },
+  {
+   "model": "sightseer",
+   "clip": "listen",
+   "site": "sole_R",
+   "offset_m": 0.024,
+   "figures": [
+    "inner_city/listener_3905",
+    "canal/pavilion_diner_23388"
+   ]
+  },
+  {
+   "model": "scholar",
+   "clip": "listen",
+   "site": "sole_L",
+   "offset_m": 0.033,
+   "figures": [
+    "rainbow_bridge/diner_hunched_16050",
+    "canal/shed_diner_seated_28772"
+   ]
+  },
+  {
+   "model": "sightseer",
+   "clip": "listen",
+   "site": "sole_L",
+   "offset_m": -0.024,
+   "figures": [
+    "outer_road_2/customer_cap_14785"
+   ]
+  },
+  {
+   "model": "robed_man",
+   "clip": "sit",
+   "site": "sole_R",
+   "offset_m": 0.018,
+   "figures": [
+    "rainbow_bridge/stall_sitter_east_19297"
+   ]
+  },
+  {
+   "model": "scholar",
+   "clip": "listen",
+   "site": "sole_R",
+   "offset_m": -0.032,
+   "figures": [
+    "rainbow_bridge/diner_hunched_16050"
+   ]
+  },
+  {
+   "model": "fortune_teller",
+   "clip": "sit",
+   "site": "sole_L",
+   "offset_m": -0.006,
+   "figures": [
+    "canal/hall_seated_man_25600"
+   ]
+  },
+  {
+   "model": "farmer",
+   "clip": "drink",
+   "site": "sole_L",
+   "offset_m": -0.025,
+   "figures": [
+    "countryside/stall_customer_29280"
+   ]
+  }
+ ],
+ "contacts_checked": 595,
+ "contacts_failing": 379
+}

@@ -1596,11 +1596,11 @@ def _standing_sack(c, h, r, rng, mat):
     sb.cyl("rope", False, c + UP * (h * 0.85), c + UP * (h * 0.89), r * 0.3, segs=6, caps=False)
 
 
-def sack_pile(x, y, z, yaw_deg, rng, lying=4, standing=2, seat=False, mat="cloth_white"):
+def sack_pile(x, y, z, yaw_deg, rng, lying=4, standing=2, seat=False, mat="cloth_white", stack=None):
     """A pile of grain sacks (S2.prop.sack_pile_27996, the grain owner's seat; S2.prop.sack_heap_28144): long sacks
     lying one on another with tied ends (kit_vehicles.soft_sack), two to a course, each course a little askew and set
     back; short ones standing on end with tied necks beside them, along +yaw. seat=True: two lying sacks one on the
-    other (top about 0.58 m, a sitter's height; any more lie beside them), no collider (people.js grounds the sitter
+    other (top about 0.58 m, a sitter's height; any more lie beside them; stack=1 one under him, top 0.34 m), no collider (people.js grounds the sitter
     by a ray from above); else one hidden collider. Returns its top z.
     choice: long sacks 0.95 x 0.42 x 0.34 m, standing 0.72 m (painted 55-80 px long, 35-60 px high at v 900)."""
     import kit_vehicles as kv
@@ -1613,6 +1613,8 @@ def sack_pile(x, y, z, yaw_deg, rng, lying=4, standing=2, seat=False, mat="cloth
     i = 0
     course = 0
     n_stack = min(2, lying) if seat else lying      # a seat: two sacks one on the other (a sitter's height), the rest beside
+    if seat and stack is not None:                  # a lower seat: `stack` sacks under the sitter, the rest beside
+        n_stack = max(1, min(stack, lying))
     while i < n_stack:
         per = 1 if seat else min(2, n_stack - i)
         hh = 0.34 * (0.9 if course else 1.0)
@@ -1624,8 +1626,10 @@ def sack_pile(x, y, z, yaw_deg, rng, lying=4, standing=2, seat=False, mat="cloth
         top = zc + hh * 0.18
         i += per
         course += 1
+    # a low seat (stack given): the sacks beside it lie set back 0.5 m behind the sitter (along +yaw), clear of his feet
+    back = f * 0.5 if (seat and stack is not None) else f * 0.0
     for j in range(lying - n_stack):
-        kv.soft_sack(c - s * (0.48 * (j + 1)) + f * rng.uniform(-0.08, 0.08), 0.95 * rng.uniform(0.92, 1.05), 0.42, 0.34,
+        kv.soft_sack(c - s * (0.48 * (j + 1)) + back + f * rng.uniform(-0.08, 0.08), 0.95 * rng.uniform(0.92, 1.05), 0.42, 0.34,
                      a + rng.uniform(-0.15, 0.15), rng, mat=mat)
     for j in range(standing):
         p = c + f * (0.72 + 0.36 * j) + s * rng.uniform(-0.1, 0.1)

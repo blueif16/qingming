@@ -1175,7 +1175,8 @@ def south_row_hall(x0, x1, y0, y1, rng, z0=0.0, eave=3.2, rise=2.2, north_lift=0
     k.board("plaster", True, (x0, y1 - 0.1), (x0, y0 + 0.12), 0.14, zt, top)
     k.board("plaster", True, (x1, y0 + 0.12), (x1, y1 - 0.1), 0.14, zt, top)
     k.board("plaster", True, (x1 - 0.1, y1), (x0 + 0.1, y1), 0.14, zt, top)
-    k.bx("timber", False, (x0 + 0.08, y0 + 0.08, zt), (x1 - 0.08, y1 - 0.08, zt + 0.03))
+    # floor boards collide (fix-s4b, 2026-10-13, as hall() above): the walkable top was the plinth's, 4.5 cm under them
+    k.bx("timber", True, (x0 + 0.08, y0 + 0.08, zt), (x1 - 0.08, y1 - 0.08, zt + 0.03))
     # the open front's head boards between the columns, the tie beam across the gable, the plates along the sides
     W = x1 - x0
     fr = [(c - x0) / W for c in cols]
@@ -1314,7 +1315,10 @@ def hall(x0, x1, yf, yb, rng, z0=0.0, plinth=0.3, eave=2.9, rise=1.5, cols=None,
         k.board("plaster", True, (x1, yf + 0.12), (x1, yb - 0.1), 0.14, zt, top)
     if back == "wall":
         k.board("plaster", True, (x1 - 0.1, yb), (x0 + 0.1, yb), 0.14, zt, top)
-    k.bx("timber", False, (x0 + 0.08, yf + 0.08, zt), (x1 - 0.08, yb - 0.08, zt + 0.03))   # floor boards
+    # floor boards: they collide (fix-s4b, details pass 2026-10-13, as S4's halls and song_kit.house/open_hall): over
+    # the collide plinth alone the walkable top was the plinth's at zt - 0.015, so people and the player stood 4.5 cm
+    # inside the visible boards (S4b's man_in_shed_13220: a sole 0.045 m under them)
+    k.bx("timber", True, (x0 + 0.08, yf + 0.08, zt), (x1 - 0.08, yb - 0.08, zt + 0.03))
     if lintel:
         k.beam("timber", True, (x0 - 0.15, yf, top - 0.1), (x1 + 0.15, yf, top - 0.1), 0.16, 0.22, 0.03)
         k.beam("timber", False, (x0 - 0.15, yb, top - 0.1), (x1 + 0.15, yb, top - 0.1), 0.14, 0.2, 0.03)

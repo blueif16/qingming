@@ -15,8 +15,10 @@
 //           prompts/motion_<name>.txt -> gen/motions/<name>/  (prime 10 credits, swift 3); shared by all characters
 //   clips   tools/char_pipeline.py --rig-task: one Meshy library action per numeric clip  (3 credits each);
 //           tools/meshy_task.py animations: each "motion:<name>" clip retargeted onto this rig (motion_task_id)
-//   build   tools/build_character.mjs (rig + named clips in one GLB) -> gltf-transform optimize (meshopt, webp
-//           512) -> web/public/assets/chars/<name>.glb, and rewrites web/public/assets/chars/characters.json
+//   build   tools/build_character.mjs (rig + named clips in one GLB; "eyes" and "recolour" on the body texture) ->
+//           gltf-transform optimize (meshopt, webp 512) -> web/public/assets/chars/<name>.glb, and rewrites
+//           web/public/assets/chars/characters.json; --dry-out <dir> builds into <dir> only (diff it first:
+//           tools/glb_diff.mjs); then tools/clip_split.mjs cuts the body and per-clip files the world page loads
 //   review  gen/characters/review.jpg: ref | front | side | back for every character
 // Clips: "rig:walking" / "rig:running" are the rig task's own walk and run; a number is a Meshy animation
 // library action_id (catalog: reference/meshy/animation_library.json); "motion:<name>" is a custom action from
@@ -38,8 +40,9 @@ const sharp = createRequire(path.join(ROOT, 'tools/package.json'))('sharp');
 const r = (p) => path.join(ROOT, p);
 const args = process.argv.slice(2);
 const flag = (f) => args.includes(f);
-const [target, step = 'status'] = args.filter((a) => !a.startsWith('--'));
-if (!target) { console.log(fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').slice(1, 29).join('\n')); process.exit(1); }
+const opt = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
+const [target, step = 'status'] = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--dry-out' && args[i - 1] !== '--drop');
+if (!target) { console.log(fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split("\n").slice(1, 28).join('\n')); process.exit(1); }
 
 const STYLE = 'prompts/style_B1.png', MODEL = 'gpt-image-2.5', SHEET_SIZE = '1536x1024';
 const names = target === 'all' ? fs.readdirSync(r('characters')).filter((f) => f.endsWith('.json') && !['motions.json', 'props.json'].includes(f)).map((f) => f.slice(0, -5)).sort() : target.split(',');
@@ -176,6 +179,22 @@ function clipState(c, clip, src, depth = 0) {
       const key = sha(fileSha(fbx) + fileSha(c.rigged) + fileSha('tools/retarget_local.mjs'));
       return { clip, src, file, local: true, fbx, srcFile: smpl, key, state: exists(file) && readKey(`${file}.key`) === key ? 'ok' : 'missing' };
     }
+    if (typeof src === 'string' && src.startsWith('ik:')) {
+      // "ik:<base clip>@<variant>": the base clip with contact sites pinned by IK (tools/ik_clip.mjs, the spec in
+      // characters/ik_variants.json), local and free; rebuilt when the base clip, the rig, the spec or the tool changes
+      const [bClip, vName] = src.slice(3).split('@');
+      const file = `${c.localDir}/${clip}.glb`;
+      if (depth > 4 || !(bClip in c.cfg.clips)) return { clip, src, file, local: true, state: 'missing (no such base clip)' };
+      const bs = clipState(c, bClip, c.cfg.clips[bClip], depth + 1);
+      const specs = exists('characters/ik_variants.json') ? JSON.parse(fs.readFileSync(r('characters/ik_variants.json'), 'utf8')) : {};
+      if (!bs || bs.state !== 'ok' || !exists(c.rigged) || !specs[vName]) return { clip, src, file, local: true, state: `missing (${!specs[vName] ? 'no variant ' + vName : 'base clip or rig not ready'})` };
+      // the base clip's ground offset sets the frame the targets are in (tools/ik_clip.mjs "frame"): a new offset redoes it
+      const regFile = `assets/chars/${c.base || c.name}.glb`;
+      const metaSole = exists('web/public/assets/clip_meta.json') ? JSON.parse(fs.readFileSync(r('web/public/assets/clip_meta.json'), 'utf8'))[regFile]?.[bClip]?.sole_m : undefined;
+      const groundSole = exists('gen/details/contacts/clip_ground.json') ? JSON.parse(fs.readFileSync(r('gen/details/contacts/clip_ground.json'), 'utf8')).files[regFile]?.clips?.[bClip]?.sole_m : undefined;
+      const key = sha(fileSha(bs.file) + fileSha(c.rigged) + fileSha('tools/ik_clip.mjs') + fileSha('tools/lib/body_sites.mjs') + JSON.stringify(specs[vName]) + String(c.cfg.height_m) + String(metaSole ?? groundSole ?? 0));
+      return { clip, src, file, local: true, ik: { base: bClip, baseFile: bs.file, variant: vName }, key, state: exists(file) && readKey(`${file}.key`) === key ? 'ok' : 'missing' };
+    }
     if (typeof src === 'string' && src.startsWith('from:')) {
       // "from:<character>/<clip>": that character's clip retargeted onto this rig locally (tools/retarget_local.mjs),
       // free and across Meshy accounts
@@ -292,6 +311,12 @@ function makeLocal(c) {
       execFileSync(r('tools/blender_slot.sh'), ['-b', '--factory-startup', '--python', r('tools/motion_fbx2glb.py'), '--',
         execFileSync('wslpath', ['-w', r(s.fbx)]).toString().trim(), execFileSync('wslpath', ['-w', r(s.srcFile)]).toString().trim()], { cwd: ROOT, stdio: ['ignore', 'ignore', 'inherit'] });
     }
+    if (s.ik) {
+      execFileSync('node', ['tools/ik_clip.mjs', c.name, s.ik.base, s.file, '--spec', s.ik.variant, '--rigged', c.rigged, '--base-file', s.ik.baseFile, '--clip', s.clip,
+        '--report', `${s.file.replace(/\.glb$/, '')}.ik.json`], { cwd: ROOT, stdio: ['ignore', 'inherit', 'inherit'] });
+      fs.writeFileSync(r(`${s.file}.key`), s.key);
+      continue;
+    }
     execFileSync('node', ['tools/retarget_local.mjs', c.rigged, s.srcFile, s.file, '--clip', s.clip], { cwd: ROOT, stdio: ['ignore', 'ignore', 'inherit'] });
     fs.writeFileSync(r(`${s.file}.key`), s.key);
     console.log(`${c.name}: ${s.clip} retargeted locally from ${s.src.replace(/^(t2m|from):/, "")}`);
@@ -320,17 +345,37 @@ function clips(c) {
   console.log(`${c.name}: clips ${todo.map((s) => s.clip).join(' ')}`);
 }
 
+// --dry-out <dir>: build into <dir> (<name>_raw.glb, <name>.glb) and leave web/ and characters.json alone (to diff a
+// rebuild against the shipped GLB before it replaces it)
+const dryOut = (() => { const i = args.indexOf('--dry-out'); return i >= 0 ? path.resolve(args[i + 1]) : null; })();
 function build(c) {
+  if (dryOut) { fs.mkdirSync(dryOut, { recursive: true }); c = { ...c, raw: path.relative(ROOT, path.join(dryOut, `${c.name}_raw.glb`)), glb: path.relative(ROOT, path.join(dryOut, `${c.name}.glb`)) }; }
   makeLocal(c);
-  const all = clipStates(c);
+  let all = clipStates(c);
   if (!exists(c.rigged)) { console.log(`${c.name}: not built (no rig yet)`); return; }
+  // a local clip (an IK variant, a local retarget) that can be made but isn't current is remade, never left out: its key
+  // can go stale between makeLocal and here (another writer under the lock changed clip_meta's sole_m, a spec or a
+  // tool), and a build without it dropped it from the GLB and the registry, so its figures played idle (idler and
+  // scholar lost their variants that way, 2026-10-13)
+  for (let k = 0; k < 2 && all.some((s) => s.local && s.state === 'missing'); k++) { makeLocal(c); all = clipStates(c); }
+  const stuck = all.filter((s) => s.local && s.state === 'missing');
+  if (stuck.length) throw new Error(`${c.name}: local clips still not current after remaking them twice: ${stuck.map((s) => s.clip).join(' ')}`);
   // a clip not made yet (a take still to come) is left out of this build and listed; the registry lists only built ones
   const cs = all.filter((s) => s.state === 'ok');
   const later = all.filter((s) => s.state !== 'ok');
   if (later.length) console.log(`${c.name}: building without ${later.map((s) => `${s.clip} (${s.state})`).join(', ')}`);
+  // never drop a clip the shipped GLB holds (its figures would play idle): fail instead, unless --drop names it
+  if (!dryOut && exists(c.glb)) {
+    const keep = new Set(cs.map((s) => s.clip)), drop = (opt('--drop') || '').split(',');
+    const lost = [...glbClips(c.glb)].filter((n) => !keep.has(n) && !drop.includes(n));
+    if (lost.length) throw new Error(`${c.name}: this build would drop ${lost.join(' ')} from ${c.glb} (${lost.map((n) => all.find((s) => s.clip === n)?.state || 'not in the config').join('; ')}); fix the clip, or pass --drop ${lost.join(',')}`);
+  }
   fs.mkdirSync(r(c.out), { recursive: true });
   fs.mkdirSync(r('web/public/assets/chars'), { recursive: true });
   const rec = [];
+  // "eyes" (tools/eye_fix.mjs): the dot eyes replaced in the body texture; a variant takes its base's, before its recolour
+  const eyes = c.cfg.eyes || (c.base ? character(c.base).cfg.eyes : null);
+  if (eyes) { fs.writeFileSync(r(`${c.out}/eyes.json`), JSON.stringify(eyes)); rec.push('--eyes', r(`${c.out}/eyes.json`)); }
   if (c.cfg.recolour) { fs.writeFileSync(r(`${c.out}/recolour.json`), JSON.stringify(c.cfg.recolour)); rec.push('--recolour', r(`${c.out}/recolour.json`)); }
   execFileSync('node', ['tools/build_character.mjs', c.raw, c.rigged, ...cs.map((s) => `${s.clip}=${s.file}`), ...rec], { cwd: ROOT, stdio: ['ignore', rec.length ? 'inherit' : 'ignore', 'inherit'] });
   // carried props (characters/props.json): prop_<name> parts skinned rigidly to a bone (tools/char_props.mjs); a
@@ -339,10 +384,45 @@ function build(c) {
   if (pn) execFileSync('node', ['tools/char_props.mjs', c.raw, c.raw, pn], { cwd: ROOT, stdio: ['ignore', 'ignore', 'inherit'] });
   execFileSync(r('tools/node_modules/.bin/gltf-transform'), ['optimize', r(c.raw), r(c.glb), '--compress', 'meshopt', '--texture-compress', 'webp', '--texture-size', '512', '--simplify', 'false'],
     { stdio: ['ignore', 'ignore', 'inherit'] });
+  // no two clips may share one hips translation array: people.js grounds a hips array once (its GROUNDED guard), by
+  // whichever clip is prepared first, so a clip sharing it would never get its own sole_m (gltf-transform's dedup
+  // merges byte-identical accessors; tools/ik_clip.mjs signs every variant's hips track to keep it apart)
+  const shared = hipsShared(c.glb);
+  if (shared.length) throw new Error(`${c.name}: clips share a hips translation array in ${c.glb}: ${shared.map((g) => g.join(' = ')).join('; ')}`);
   console.log(`${c.name}: ${c.glb} ${(fs.statSync(r(c.glb)).size / 1024).toFixed(0)} KB, clips ${cs.map((s) => s.clip).join(' ')}`);
 }
 
+// groups of clips whose Hips translation channels read one accessor (from the GLB's JSON chunk)
+function hipsShared(file) {
+  const b = fs.readFileSync(r(file));
+  const j = JSON.parse(b.subarray(20, 20 + b.readUInt32LE(12)).toString('utf8'));
+  const by = new Map();
+  for (const a of j.animations || []) {
+    for (const ch of a.channels) {
+      if (ch.target.path !== 'translation' || j.nodes[ch.target.node]?.name !== 'Hips') continue;
+      const acc = a.samplers[ch.sampler].output;
+      by.set(acc, [...(by.get(acc) || []), a.name]);
+    }
+  }
+  return [...by.values()].filter((g) => g.length > 1);
+}
+
 const propsOf = (c) => (PROPS[c.name] ? c.name : c.base && PROPS[c.base] ? c.base : null);
+
+// the names of the animations a GLB holds (its JSON chunk only)
+function glbClips(file) {
+  const b = fs.readFileSync(r(file));
+  const n = b.readUInt32LE(12);
+  return new Set((JSON.parse(b.subarray(20, 20 + n).toString('utf8')).animations || []).map((a) => a.name));
+}
+
+// the world page loads a character as its body and the clips a section plays, each a file cut from the GLB just built
+// (tools/clip_split.mjs, perf batch 2; inside this build's lock); a failed split fails the build
+function splitClips(cs) {
+  // first the crowd's far body into each GLB just built (tools/char_lod.mjs, perf batch 2), so the split carries it
+  execFileSync('node', ['tools/char_lod.mjs', ...cs.filter((c) => exists(c.glb)).map((c) => r(c.glb))], { cwd: ROOT, stdio: 'inherit' });
+  execFileSync('node', ['tools/clip_split.mjs', cs.map((c) => c.name).join(',')], { cwd: ROOT, stdio: 'inherit' });
+}
 
 function registry() {
   const all = fs.readdirSync(r('characters')).filter((f) => f.endsWith('.json') && !['motions.json', 'props.json'].includes(f)).map((f) => character(f.slice(0, -5)));
@@ -353,10 +433,16 @@ function registry() {
     // local retargets (t2m:, from:) of Text to Motion takes don't loop cleanly either: the page cross-fades them
     const local = Object.entries(c.cfg.clips).filter(([, v]) => typeof v === 'string' && (v.startsWith('t2m:') || (v.startsWith('from:') && /motion:|t2m:/.test(JSON.stringify(character(v.slice(5).split('/')[0]).cfg.clips[v.slice(5).split('/')[1]] || ''))))).map(([k]) => k);
     const props = Object.fromEntries(Object.entries(PROPS[propsOf(c)] || {}).filter(([, d]) => c.cfg.clips[d.clip]).map(([p, d]) => [p, d.clip]));
-    // only the clips the GLB was built with (a clip whose take hasn't landed yet is listed in the config, not here)
-    const built = new Set(clipStates(c).filter((s) => s.state === 'ok').map((s) => s.clip));
+    // only the clips the GLB was built with (a clip whose take hasn't landed yet is listed in the config, not here):
+    // the shipped GLB's own animations, not the clips' cache states. A clip whose key went stale since the GLB was built
+    // (an edit of tools/ik_clip.mjs or of an IK spec) is still in the GLB until that character is rebuilt, so it stays
+    // listed; with the cache states, any other character's build dropped it from the registry and its figures played
+    // idle (fix-inner, 2026-10-13: S4's sedan_carry~pole and four more were dropped that way)
+    const built = glbClips(c.glb);
+    // an IK variant (ik:<base>@<spec>) loops the way its base clip does
+    const ikOf = Object.entries(c.cfg.clips).filter(([, v]) => typeof v === 'string' && v.startsWith('ik:') && [...motion, ...local].includes(v.slice(3).split('@')[0])).map(([k]) => k);
     reg[c.name] = { file: `assets/chars/${c.name}.glb`, height_m: c.cfg.height_m, clips: Object.keys(c.cfg.clips).filter((k) => built.has(k)),
-      motion: [...motion, ...local].filter((k) => built.has(k)), props: Object.fromEntries(Object.entries(props).filter(([, cl]) => built.has(cl))), title: c.cfg.title };
+      motion: [...motion, ...local, ...ikOf].filter((k) => built.has(k)), props: Object.fromEntries(Object.entries(props).filter(([, cl]) => built.has(cl))), title: c.cfg.title };
   }
   fs.writeFileSync(r('web/public/assets/chars/characters.json'), JSON.stringify(reg, null, 1) + '\n');
   console.log(`web/public/assets/chars/characters.json: ${Object.keys(reg).join(' ')}`);
@@ -407,11 +493,11 @@ const steps = {
   mesh: () => runParallel(real, 'mesh'),
   motions: () => motions(list),
   clips: () => runParallel(list, 'clips'),
-  build: async () => { for (const c of list) build(c); registry(); },
+  build: async () => { for (const c of list) build(c); if (!dryOut) { registry(); splitClips(list); } },
   review: () => review(list),
   all: async () => {
     await Promise.all(real.map(ref)); sheets(real); for (const c of real) await views(c);
-    await runParallel(real, 'mesh'); await motions(list); await runParallel(list, 'clips'); for (const c of list) build(c); registry(); await review(list);
+    await runParallel(real, 'mesh'); await motions(list); await runParallel(list, 'clips'); for (const c of list) build(c); registry(); splitClips(list); await review(list);
   },
 };
 

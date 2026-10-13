@@ -103,3 +103,13 @@ html[data-night] .qm-jn-mask { background: radial-gradient(ellipse at 50% 42%, r
   .qm-jn-foot .qm-gloss { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .qm-jn-book, .qm-jn-mask { animation: qm-fade-in 150ms linear both; } .qm-jn-tab { transition: none; } }
+
+/* the plot lines overheard (the life pass): one column per line, its steps in ink, a brush gap for the unheard */
+.qm-jn-threads { margin: 4px 0 18px; display: grid; gap: 10px; }
+.qm-jn-th-head { margin: 0; font: 400 19px/1.2 var(--qm-font-title); letter-spacing: 0.1em; color: var(--qm-ink); }
+.qm-jn-thread { padding: 8px 10px 10px; box-shadow: inset 0 0 0 1.4px rgba(42, 36, 32, 0.14); border-radius: 2px; }
+.qm-jn-step { margin: 4px 0; font: 400 15px/1.55 var(--qm-font-text); }
+.qm-jn-step b { font-family: var(--qm-font-title); font-weight: 400; margin-right: 0.5em; letter-spacing: 0.08em; color: var(--qm-cinnabar); }
+.qm-jn-gap { margin: 0 0 0 1.2em; color: var(--qm-ink-faint); letter-spacing: 0.3em; font: 400 14px/1 var(--qm-font-text); }
+.qm-jn-threads .qm-jn-en { display: block; font: italic 400 12.5px/1.3 var(--qm-font-latin); color: var(--qm-ink-soft); letter-spacing: 0; margin-top: 1px; }
+.qm-jn-step .qm-jn-en { margin-left: 0; }

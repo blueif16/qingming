@@ -1,0 +1,48 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T13:11:38.000Z",
+ "sections": [
+  "gate"
+ ],
+ "owners_load_ms": 261,
+ "seconds": 1.153,
+ "people": 81,
+ "checked": 81,
+ "crew_not_covered": 0,
+ "figures_failing": 1,
+ "fails": 1,
+ "by_class": {
+  "contact:wall": 1
+ },
+ "by_clip": {
+  "lean_wall:contact:wall": 1
+ },
+ "table": {
+  "gate": {
+   "contact:wall": {
+    "n": 1,
+    "worst": 0.6,
+    "worst_id": "tree_leaner_7952"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:wall",
+   "clip": "lean_wall",
+   "site": "back",
+   "value": 0.6,
+   "kind": "figure",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "id": "tree_leaner_7952",
+   "section": "gate",
+   "model": "idler"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 55,
+ "contacts_failing": 1
+}

@@ -1,86 +1,555 @@
 {
- "about": "Near conversations (ink UI round; design gen/life/design.md 'Close (≤ 2.5 m, facing)', lines from gen/life/vignettes_S4_S6.md). Walk within about 3 m of the host figure and face it; E (a seal on touch) plays the beats as speech (say) or thought (think) bubbles over each speaker's head, at most two open at once. roles: figure slugs of this section's people.json; name = the role in period terms (no invented personal names). Every beat cites its reading (src). Lines are proposals in Song vernacular, in 繁體; text only until a voice provider is chosen. Bundled by tools/ui_data.mjs into web/public/assets/ui/talk.json.",
+ "about": "S5 城門 (the gate): who speaks and what (the life pass, gen/life/progress.md; format tools/talk_data.mjs; lines from gen/life/vignettes_S4_S6.md and the readings: 名画记 32-35 and 37, 余辉 2014/2015/2021/2023, 東京夢華錄, 事物考, 邵琦, Hansen). scenes: near talks (press E at the host; `as` = the line for who you play, `again` = the next talk with the same host). chatter: groups that talk among themselves when you are within earshot. barks: a lone figure's word now and then (`close`: a call to you as you come near). Every role is a painted figure of people.json; every line cites its reading (src); 繁體, no numbers on screen; lines fit the figure's clips (sleepers only think). Bundled by tools/ui_data.mjs into web/public/assets/ui/talk.json.",
  "scenes": [
   {
    "id": "V5.1",
    "title": "貨到稅訖",
+   "title_en": "Goods Arrive, Tax Paid",
    "host": "inspector",
-   "reading": "余辉 2023/2015: carters bring textile bales; one declares inside; the inspector points at the bales and names a big sum; the second carter hands over the manifest; the third gapes; the row makes the watchman look down. 名画记 35 (hedged): the paper is an 引子 (permit); owner and official argue. Hansen: a plain tax payment. Chosen: 余辉's quarrel, with 名画记's permit.",
+   "group": "S5.grp.tax_quarrel",
+   "step": "tax.1",
+   "reading": "余辉 2023/2015: carters bring textile bales; one declares inside; the inspector points at the bales and names a big sum; the second carter hands over the manifest; the third gapes; the row makes the watchman look down. 余辉 2023 also: transit tax plus sales tax, and 力勝稅錢 on carts; cloth paid the most; a big frame scale for heavy goods. 名画记 35 (hedged): the paper is an 引子 (permit); owner and official argue. Hansen: a plain tax payment. Chosen: 余辉's quarrel, with 名画记's permit. The tower man is 余辉's watchman (Hansen: a sightseer).",
    "roles": {
     "inspector": {
      "fig": "tax_inspector",
      "name": "稅吏",
+     "name_en": "tax inspector",
      "src": "the inspector of 余辉 2023 (检查员), in a period word"
     },
     "official": {
      "fig": "tax_official",
      "name": "稅官",
+     "name_en": "tax official",
      "src": "the seated official about to write (map; 名画记 35)"
     },
     "owner": {
      "fig": "tax_carter_manifest",
      "name": "貨主",
+     "name_en": "goods owner",
      "src": "名画记 35: the goods' owner argues; 余辉: the carter with the manifest"
     },
     "gaper": {
      "fig": "tax_carter_gaping_6300",
      "name": "車夫",
+     "name_en": "carter",
      "src": "余辉 2023: the third carter, mouth open over the bale"
     },
     "watchman": {
      "fig": "tower_watchman",
      "name": "更夫",
+     "name_en": "watchman",
      "src": "余辉, 名画记 35, Tian: the watchman on the tower (Hansen: a sightseer)"
+    },
+    "declarer": {
+     "fig": "tax_declarer",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the carter declaring inside at the desk (map; 余辉 2023 一个运输工进屋向税务官报税)"
+    },
+    "clerk": {
+     "fig": "tax_clerk_seated_6340",
+     "name": "書吏",
+     "name_en": "clerk",
+     "src": "the seated man in the east bay (map: a second office man or a waiting merchant; clerk is our reading)"
     }
    },
    "beats": [
     {
      "who": "inspector",
      "say": "你的貨也在這裏？",
-     "src": "vignettes V5.1, near line (our proposal)"
+     "say_en": "Are your goods here too?",
+     "src": "vignettes V5.1, near line (our proposal)",
+     "as": {
+      "guan": "官人可是來查稅的？",
+      "shi": "相公是讀書人，也有貨麼？",
+      "seng": "師父化緣化到稅務來了？",
+      "fu": "娘子的貨，也得報上來。",
+      "tong": "小娃兒，莫在貨包上爬。",
+      "jun": "軍爺押酒的？鋪屋在西頭。",
+      "li": "你的貨也在這裏？貨單呢？"
+     },
+     "as_en": {
+      "guan": "Sir, have you come to check the tax?",
+      "shi": "A scholar, sir? Goods to declare too?",
+      "seng": "Master, begging alms at the tax office?",
+      "fu": "Madam, your goods must be declared too.",
+      "tong": "Kid, don't climb on the bales.",
+      "jun": "Escorting wine, soldier? The post is to the west.",
+      "li": "Yours here too? Where's the manifest?"
+     }
     },
     {
      "who": "inspector",
      "say": "匹帛稅重，照例該納這個數。",
+     "say_en": "Silk and cloth pay heavy. By the rule, this much.",
      "src": "vignettes V5.1 after 余辉 2023 (the inspector names a big sum)"
     },
     {
      "who": "owner",
      "say": "官人看貨單，一包一包都寫著。",
+     "say_en": "See the manifest, sir. Every bale is written down.",
      "src": "vignettes V5.1 after 余辉 2023 (manifest handed over)"
     },
     {
      "who": "gaper",
      "say": "啊——？這麼多！",
+     "say_en": "What? That much!",
      "src": "余辉 2023's own words for the gaping carter"
     },
     {
      "who": "official",
      "say": "引子拿來。沒有引子，照重稅算。",
+     "say_en": "Your permit. Without one, it's the heavy rate.",
      "src": "vignettes V5.1 after 名画记 35 (the 引子 permit)"
     },
     {
      "who": "watchman",
      "think": "底下吵甚麼？",
+     "think_en": "What's the row down there?",
      "optional": true,
      "src": "名画记 35 '连城楼上值班的人也探出头来张望'"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "inspector",
+       "say": "又來了？貨過城門，先納過稅。",
+       "say_en": "Back again? Goods through the gate pay transit tax first.",
+       "src": "余辉 2023 (过税, the transit tax)",
+       "as": {
+        "guan": "官人又來了，稅簿在此。",
+        "li": "又是你？貨過城門要納稅。"
+       },
+       "as_en": {
+        "guan": "Back again, sir. Here is the tax book.",
+        "li": "You again? Goods through the gate pay tax."
+       }
+      },
+      {
+       "who": "owner",
+       "say": "過稅之外，還要住稅？",
+       "say_en": "Transit tax, and sales tax on top?",
+       "src": "余辉 2023 (过税加住税)"
+      },
+      {
+       "who": "inspector",
+       "say": "車也要納力勝錢。",
+       "say_en": "And the cart pays its load tax.",
+       "src": "余辉 2023 (对车船征收力胜税钱)"
+      },
+      {
+       "who": "gaper",
+       "say": "這一趟，白跑了。",
+       "say_en": "This whole trip, for nothing.",
+       "src": "our proposal (the gaping carter, 余辉 2023)"
+      },
+      {
+       "who": "official",
+       "say": "莫吵，一筆一筆都記上。",
+       "say_en": "No shouting. Every sum goes in the book.",
+       "src": "the official about to write (map; 名画记 35 税官正在登记)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "declarer",
+       "say": "引子在此，請官人過目。",
+       "say_en": "Here is my permit, sir. Please look.",
+       "src": "名画记 35 (the 引子 names the goods, grade, amount and destination)"
+      },
+      {
+       "who": "official",
+       "say": "品名數目，和貨對得上。",
+       "say_en": "Kind and count match the goods.",
+       "src": "名画记 35 (what the 引子 records)"
+      },
+      {
+       "who": "inspector",
+       "say": "那桿大秤，專稱重貨。",
+       "say_en": "That big scale is for weighing heavy goods.",
+       "src": "余辉 2023 (场务里立着一台大架子秤); map (frame scale in the west bay)"
+      },
+      {
+       "who": "clerk",
+       "say": "記上了。下一個。",
+       "say_en": "Written down. Next.",
+       "src": "map (the seated man writes); our proposal"
+      },
+      {
+       "who": "inspector",
+       "think": "匹帛最重，向來如此。",
+       "think_en": "Cloth pays the most. Always has.",
+       "src": "余辉 2021/2023 (纺织品的课税最高)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.2",
+   "title": "禁軍運酒",
+   "title_en": "The Guards' Wine",
+   "host": "wrist",
+   "group": "S5.grp.wine_depot_archers",
+   "reading": "余辉 2015/2021/2023: the fire post (军巡铺屋; 東京夢華錄 卷三 防火) now holds eight casks; its water butts hold wine, the fire swab (麻搭) lies idle without its hemp; three archers sent to escort the Guards' holiday wine test their gear before the cart comes, the drawer 'probably just had a drink'; the only lively soldiers in the scroll, while the gate itself is unguarded. 名画记 37: three men preparing to set off. Hansen/Columbia: an archery shop. Chosen: 余辉. The third archer (waist guard) stands in S6, so two speak here.",
+   "roles": {
+    "wrist": {
+     "fig": "archer_wrist_5728",
+     "name": "弓手",
+     "name_en": "archer",
+     "src": "the archer binding his wrist (map; 余辉 2015 右侧一位在缠护腕)"
+    },
+    "drawer": {
+     "fig": "archer_drawing_bow_5635",
+     "name": "弓手",
+     "name_en": "archer",
+     "src": "the bare-armed archer drawing the bow (map; 余辉 2015 拉满弓试弦)"
+    }
+   },
+   "beats": [
+    {
+     "who": "wrist",
+     "say": "站遠些，這裏押著酒。",
+     "say_en": "Stand back. We're guarding wine here.",
+     "src": "余辉 2023 (三个弓箭兵奉命来此押送军酒)",
+     "as": {
+      "guan": "官人，這幾桶是禁軍的酒。",
+      "shi": "相公，這酒不賣。",
+      "seng": "師父，酒是戒的，莫看了。",
+      "fu": "娘子，這是軍鋪，請回。",
+      "tong": "小娃兒，莫碰酒桶！",
+      "jun": "兄弟也是來押酒的？",
+      "li": "你是來拉酒的？不是就走。"
+     },
+     "as_en": {
+      "guan": "Sir, these casks are the Guards' wine.",
+      "shi": "Sir, this wine isn't for sale.",
+      "seng": "Master, wine is forbidden you. Don't look.",
+      "fu": "Madam, this is a military post. Please go.",
+      "tong": "Kid, hands off the casks!",
+      "jun": "Brother, here to escort wine too?",
+      "li": "Here to haul the wine? If not, move on."
+     }
+    },
+    {
+     "who": "drawer",
+     "say": "好弓！拉得滿滿的。",
+     "say_en": "Good bow! It draws right full.",
+     "src": "vignettes V5.2 after 余辉 2015 (拉满弓试弦)"
+    },
+    {
+     "who": "wrist",
+     "say": "車子怎地還不來？",
+     "say_en": "Why isn't the cart here yet?",
+     "src": "vignettes V5.2; 余辉 2023 (装载梢桶的马车就要来了)"
+    },
+    {
+     "who": "drawer",
+     "say": "押了這趟酒，節下也分幾碗。",
+     "say_en": "Escort this lot, and we get a few bowls for the holiday.",
+     "src": "vignettes V5.2 (供禁军过节之用, 余辉 2023)"
+    },
+    {
+     "who": "drawer",
+     "think": "方才那碗，力氣都上來了。",
+     "think_en": "That bowl just now: I'm full of strength.",
+     "src": "余辉 2015 (他大概刚饮完了酒，浑身爆发出力量)"
+    }
+   ],
+   "again": [
+    {
+     "step": "wine.2",
+     "beats": [
+      {
+       "who": "wrist",
+       "say": "這本是軍巡鋪，防火的。",
+       "say_en": "This was a fire-watch post.",
+       "src": "東京夢華錄 卷三 防火 (軍巡鋪屋); 余辉 2021 (相当于消防站)"
+      },
+      {
+       "who": "drawer",
+       "say": "水桶如今裝了酒，倒也合用。",
+       "say_en": "The water butts hold wine now. They serve.",
+       "src": "余辉 2021 (原先用来装消防用水的大木桶正好用来装酒)"
+      },
+      {
+       "who": "wrist",
+       "say": "麻搭也閒著，沒纏麻。",
+       "say_en": "The fire swab lies idle, no hemp on it.",
+       "src": "余辉 2021 (麻搭上没有按要求捆上麻绳)"
+      },
+      {
+       "who": "drawer",
+       "say": "等車來拉，送進營裏。",
+       "say_en": "We wait for the cart, then it's off to camp.",
+       "src": "余辉 2023 (运到军营; the cart is coming)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "drawer",
+       "say": "路上怕人劫酒，弓得拉得開。",
+       "say_en": "Robbers might take the wine. The bow must draw.",
+       "src": "余辉 2021 (如果遇到…打劫的话，他们要能拉得开弓)"
+      },
+      {
+       "who": "wrist",
+       "say": "護腕綁緊了，才好開弓。",
+       "say_en": "Bind the wrist tight, then you can draw.",
+       "src": "余辉 2015 (缠护腕)"
+      },
+      {
+       "who": "drawer",
+       "think": "城門沒人守，倒來守酒。",
+       "think_en": "No one guards the gate, but we guard wine.",
+       "src": "余辉 2023 (本应该在城门口岗位上出现的军卒却…现身于酒铺)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.3",
+   "title": "糧也納稅",
+   "title_en": "Grain Pays Too",
+   "host": "bag",
+   "group": "S5.grp.pack_train",
+   "reading": "余辉 2023: on the tax office's left another batch of taxpayers, the leader with a manifest; the load looks like grain, perhaps sold to the 孫記正店 next door, licensed to brew. 名画记 37: a donkey cart loading or unloading at 孫羊店's door (the sack cart's front is in S6). The map: a man works at a box pack by the pack donkey, a man holds a pouch at his waist, a man pushes the big sack cart west. Who leads is our proposal (the man with the pouch).",
+   "roles": {
+    "bag": {
+     "fig": "man_with_bag_5892",
+     "name": "貨主",
+     "name_en": "goods owner",
+     "src": "the man holding a pouch at his waist (map); the leader of 余辉 2023's second taxpayers is our reading"
+    },
+    "pack": {
+     "fig": "pack_handler_5837",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "the man working at the box pack by the donkey (map)"
+    },
+    "pusher": {
+     "fig": "cart_pusher_5727",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the man bent over pushing the big sack cart west (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "bag",
+     "say": "前頭還吵著？咱的稅也得納。",
+     "say_en": "Still arguing up front? We've tax to pay too.",
+     "src": "余辉 2023 (他们的左侧也是一批要交税的货主)",
+     "as": {
+      "guan": "官人，糧也要納稅麼？",
+      "fu": "娘子讓讓，驢子踢人。",
+      "tong": "小哥兒，離驢屁股遠些。",
+      "li": "兄弟，搭把手卸了這馱。"
+     },
+     "as_en": {
+      "guan": "Sir, does grain pay tax too?",
+      "fu": "Mind, madam, the donkey kicks.",
+      "tong": "Little one, keep clear of the donkey's rump.",
+      "li": "Brother, lend a hand with this pack."
+     }
+    },
+    {
+     "who": "pack",
+     "say": "這馱糧，送去正店釀酒。",
+     "say_en": "This grain goes to the wine house for brewing.",
+     "src": "余辉 2023 (运的像是粮食，大概是卖给…孙记正店)"
+    },
+    {
+     "who": "bag",
+     "say": "稅錢都在這裏，點清了再走。",
+     "say_en": "The tax money's all here. Count it, then we go.",
+     "src": "vignettes V5.3 (the pouch at his waist)"
+    },
+    {
+     "who": "pusher",
+     "say": "再推一把，正店就在前頭。",
+     "say_en": "One more push. The wine house is just ahead.",
+     "src": "vignettes V5.3 (he pushes the sack cart west)"
+    }
+   ],
+   "again": [
+    {
+     "step": "grain.4",
+     "beats": [
+      {
+       "who": "bag",
+       "say": "糧也得納稅，一文不少。",
+       "say_en": "Grain pays tax too, to the last cash.",
+       "src": "余辉 2023 (also taxpayers)"
+      },
+      {
+       "who": "pack",
+       "say": "這糧是船上卸下來的。",
+       "say_en": "This grain came off the boats.",
+       "src": "the plot line (名画记 9 仓前成市); our proposal"
+      },
+      {
+       "who": "bag",
+       "say": "正店官許釀酒，糧都賣給它。",
+       "say_en": "The wine house may brew by licence. The grain goes there.",
+       "src": "余辉 2023 (\"正店\"是政府授权可以自己酿酒、卖酒的酒店)"
+      },
+      {
+       "who": "pusher",
+       "say": "到了門前，還得卸。",
+       "say_en": "At its door we still have to unload.",
+       "src": "名画记 37 (在孙羊店的门前，有辆驴车在装卸货物)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bag",
+       "say": "京裏正店七十二戶，家家要糧。",
+       "say_en": "The capital has seventy-two wine houses. All want grain.",
+       "src": "東京夢華錄 卷二 酒樓 (在京正店七十二戶); 余辉 2023"
+      },
+      {
+       "who": "pack",
+       "think": "這驢今日馱得夠了。",
+       "think_en": "This donkey has carried enough today.",
+       "src": "map (the pack donkey)"
+      },
+      {
+       "who": "pusher",
+       "say": "莫說了，推車！",
+       "say_en": "Enough talk. Push!",
+       "src": "our proposal (he only pushes)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.4",
+   "title": "駝隊出城",
+   "title_en": "Camels Leaving Town",
+   "host": "driver",
+   "group": "S5.grp.camel_caravan",
+   "reading": "名画记 34: a camel caravan walking out of the gate, the first camel half out, the last still inside; traders from the northwest. 余辉 2015/2021: a foreign-looking (胡人) driver at the passage mouth (荣新江); nobody guards or checks them (撤防). Texts that have the caravan entering contradict the painting: it leaves. The map: the driver walks behind the rear camel; a man behind the low roof looks up at the camels; a man in white behind the other roof looks west.",
+   "roles": {
+    "driver": {
+     "fig": "camel_driver",
+     "name": "趕駝的",
+     "name_en": "camel driver",
+     "src": "the driver behind the rear camel (map)"
+    },
+    "roofman": {
+     "fig": "roof_man_white_6290",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man in white behind the lower-right roof (map)"
+    },
+    "roofwatch": {
+     "fig": "roof_watcher_5712",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man behind the low roof looking up toward the camels (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "driver",
+     "say": "讓讓，駱駝要出城了。",
+     "say_en": "Make way, the camels are heading out.",
+     "src": "map (the caravan walks out of the gate); 名画记 34",
+     "as": {
+      "guan": "官人借過，駱駝性子慢。",
+      "fu": "娘子莫怕，牠不咬人。",
+      "tong": "小娃兒，莫拽駝毛！",
+      "seng": "師父先走，駝隊慢。",
+      "jun": "軍爺，可要查貨？"
+     },
+     "as_en": {
+      "guan": "By your leave, sir. Camels are slow.",
+      "fu": "Don't be afraid, madam. It doesn't bite.",
+      "tong": "Kid, don't pull the camel's hair!",
+      "seng": "After you, Master. The caravan is slow.",
+      "jun": "Soldier, will you check the goods?"
+     }
+    },
+    {
+     "who": "driver",
+     "say": "慢些，門洞窄。",
+     "say_en": "Easy, the passage is narrow.",
+     "src": "vignettes V5.4"
+    },
+    {
+     "who": "roofwatch",
+     "think": "好高的駱駝。",
+     "think_en": "What tall camels.",
+     "optional": true,
+     "src": "vignettes S5 witnesses (he looks up at the camels)"
+    },
+    {
+     "who": "roofman",
+     "say": "胡商又出城了。",
+     "say_en": "The foreign traders are leaving again.",
+     "src": "vignettes V5.4; 名画记 34"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "driver",
+       "say": "打西北來的，做完買賣就走。",
+       "say_en": "We came from the northwest. Trade done, we go.",
+       "src": "名画记 34 (从西北方来的外国人，经常都是赶着骆驼队而来)"
+      },
+      {
+       "who": "roofman",
+       "say": "城門口也沒人盤查。",
+       "say_en": "No one at the gate even checks them.",
+       "src": "余辉 2021 (无人盘查)"
+      },
+      {
+       "who": "driver",
+       "say": "頭駝已出了門洞。",
+       "say_en": "The lead camel is already through.",
+       "src": "名画记 34 (第一只骆驼已经探出了多半个身子)"
+      },
+      {
+       "who": "roofwatch",
+       "think": "前頭牽駝的，像是胡人。",
+       "think_en": "The one leading up front looks foreign.",
+       "src": "余辉 2015 (门洞口露出一个胡人模样的驭手)"
+      }
+     ]
     }
    ]
   },
   {
    "id": "V5.5",
    "title": "城下修面",
+   "title_en": "A Shave by the Wall",
    "host": "barber",
-   "reading": "事物考: an old goateed barber holds the chin and shaves, the customer's eyes half shut. The map marks it probable (no razor legible). 邵琦: men resting against the wall.",
+   "group": "S5.grp.barber_7700",
+   "reading": "事物考: an old goateed barber holds the chin and shaves, the customer's eyes half shut. The map marks it probable (no razor legible; the awning and the hair-knot sign are not visible, so nobody names them). 邵琦: men resting against the wall. 東京夢華錄 卷二: 剃剪 among the trades of the pleasure grounds. Chosen: 事物考's barber.",
    "roles": {
     "barber": {
      "fig": "barber_7805",
      "name": "待詔",
+     "name_en": "barber",
      "src": "Song barbers were addressed as 待詔 (事物考; vignettes V5.5)"
     },
     "customer": {
      "fig": "wall_recliner",
-     "name": "",
+     "name": "客人",
+     "name_en": "customer",
      "src": "the customer leaning back at the wall (map)"
     }
    },
@@ -88,69 +557,2966 @@
     {
      "who": "barber",
      "say": "客官，修個面？",
-     "src": "vignettes V5.5, near line (our proposal)"
+     "say_en": "A shave, sir?",
+     "src": "vignettes V5.5, near line (our proposal)",
+     "as": {
+      "guan": "官人，修個面？刀快手穩。",
+      "shi": "相公，修個面好見人。",
+      "seng": "師父的頭，也剃一剃？",
+      "fu": "娘子稍待，這位就好。",
+      "tong": "小哥兒，剃個頭？",
+      "jun": "軍爺，修修鬍子？"
+     },
+     "as_en": {
+      "guan": "A shave, sir? Sharp blade, steady hand.",
+      "shi": "A shave, sir, to look your best?",
+      "seng": "Master, a shave for your head too?",
+      "fu": "One moment, madam. He's nearly done.",
+      "tong": "Little one, a haircut?",
+      "jun": "Soldier, trim the beard?"
+     }
     },
     {
      "who": "barber",
      "say": "抬頭，莫動，這刀快。",
+     "say_en": "Chin up. Don't move. This razor's sharp.",
      "src": "vignettes V5.5 after 事物考 (he holds the chin and shaves)"
     },
     {
      "who": "customer",
      "think": "舒坦……",
+     "think_en": "Bliss…",
      "src": "vignettes V5.5 after 事物考 (the customer's eyes half shut)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "barber",
+       "say": "又來了？這位還沒修完。",
+       "say_en": "Back again? This one isn't done yet.",
+       "src": "our proposal"
+      },
+      {
+       "who": "customer",
+       "think": "莫說話，刀在喉下……",
+       "think_en": "Don't talk. The blade's at my throat…",
+       "src": "map (head tipped far back); our proposal"
+      },
+      {
+       "who": "barber",
+       "say": "城下風涼，修面最好。",
+       "say_en": "Cool by the wall. Best place for a shave.",
+       "src": "map (at the foot of the gate block); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "barber",
+       "say": "剃剪的，瓦子裏也有。",
+       "say_en": "There are barbers in the pleasure grounds too.",
+       "src": "東京夢華錄 卷二 東角樓街巷 (瓦中多有…剃剪)"
+      },
+      {
+       "who": "customer",
+       "say": "還是城門口便當。",
+       "say_en": "The gate is handier.",
+       "src": "our proposal"
+      },
+      {
+       "who": "barber",
+       "say": "進城出城，順路修一修。",
+       "say_en": "In or out of town, a shave on the way.",
+       "src": "our proposal (the barber sits where all traffic passes, map)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.6",
+   "title": "城下閒人",
+   "title_en": "Idlers at the Gate",
+   "host": "white",
+   "group": "S5.grp.wall_idlers",
+   "reading": "邵琦: men resting by the wall. The map: a knot of seven capped men at the gate block's foot, chatting and watching the camel coming out, the veiled rider and the kneeling man. 余辉 2015 看点七 撤防的城门: nobody guards the gate, so these idlers stand where guards should; Hansen gets there too ('so secure it has no soldiers'). The kneeling man: 余辉 2021's 祭拜路神 (chosen over the encyclopedic kneeling beggar). The row inside is the tax line (our proposal).",
+   "roles": {
+    "white": {
+     "fig": "wall_idler_white",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the idler in white, hands in his sleeves, facing the viewer (map)"
+    },
+    "blue": {
+     "fig": "wall_idler_blue",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the idler in the dark blue robe looking out at the road (map)"
+    },
+    "stick": {
+     "fig": "wall_idler_stick",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the idler in white with a stick (map)"
+    },
+    "grey": {
+     "fig": "wall_idler_grey",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the idler in grey behind the group (map)"
+    },
+    "front": {
+     "fig": "idler_front_7650",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the capped idler in front of the stick man (map)"
+    },
+    "greyfront": {
+     "fig": "idler_grey_front_7702",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the idler in grey at the front (map)"
+    },
+    "camelw": {
+     "fig": "camel_watcher_7600",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the man in a long robe watching the camel (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "white",
+     "say": "哪裏來的？",
+     "say_en": "Where are you from?",
+     "src": "vignettes V5.6, near line",
+     "as": {
+      "guan": "官人出城？門上今日沒人守。",
+      "shi": "相公也來看春景？",
+      "seng": "師父往哪座寺去？",
+      "fu": "娘子出城上墳？",
+      "tong": "誰家的娃兒，跑丟了？",
+      "jun": "軍爺來得巧，這門正缺人守。",
+      "li": "兄弟，挑的甚麼？"
+     },
+     "as_en": {
+      "guan": "Going out, sir? No one minds the gate today.",
+      "shi": "Out to see the spring too, sir?",
+      "seng": "Which temple are you bound for, Master?",
+      "fu": "Madam, going out to the graves?",
+      "tong": "Whose child are you? Lost?",
+      "jun": "Just in time, soldier. This gate needs a guard.",
+      "li": "Brother, what are you carrying?"
+     }
+    },
+    {
+     "who": "blue",
+     "say": "這城門也沒個看守的。",
+     "say_en": "Not even a guard on this gate.",
+     "src": "vignettes V5.6; 余辉 2015 看点七 (城门前后…没有一兵一卒把守)"
+    },
+    {
+     "who": "stick",
+     "say": "太平年月，守它作甚。",
+     "say_en": "Peaceful times. Why guard it?",
+     "src": "東京夢華錄 序 (太平日久…不識干戈); Hansen (so secure it has no soldiers)"
+    },
+    {
+     "who": "camelw",
+     "say": "看，駱駝出來了。",
+     "say_en": "Look, the camels are coming out.",
+     "src": "map (he watches the camel at the passage mouth)"
+    }
+   ],
+   "again": [
+    {
+     "step": "tax.2",
+     "beats": [
+      {
+       "who": "grey",
+       "say": "稅務所裏又吵起來了。",
+       "say_en": "The tax office is quarrelling again.",
+       "src": "the tax line (余辉 2023's quarrel); our proposal"
+      },
+      {
+       "who": "white",
+       "say": "匹帛稅重，哪回不吵？",
+       "say_en": "Cloth pays heavy. When don't they quarrel?",
+       "src": "余辉 2021 (纺织品的税收…最容易激起矛盾)"
+      },
+      {
+       "who": "blue",
+       "say": "連城樓上都探頭看了。",
+       "say_en": "Even the man on the tower is looking down.",
+       "src": "名画记 35 (连城楼上值班的人也探出头来张望)"
+      },
+      {
+       "who": "front",
+       "say": "進城頭一家，就是收稅的。",
+       "say_en": "The first house inside the gate takes tax.",
+       "src": "余辉 2021 (进城的第一家却是场务)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "stick",
+       "say": "那戴帷帽的，是誰家的？",
+       "say_en": "Whose is that one in the veiled hat?",
+       "src": "vignettes V5.6 (the rider party passes)"
+      },
+      {
+       "who": "greyfront",
+       "say": "看不清臉，許是哪家娘子。",
+       "say_en": "Can't see the face. Some lady, perhaps.",
+       "src": "Hansen (a woman in a veiled hat); the map cannot settle it"
+      },
+      {
+       "who": "blue",
+       "say": "那跪著的，在祭路神。",
+       "say_en": "The kneeling one is praying to the road god.",
+       "src": "余辉 2021 (当街举行祭拜路神的仪式)"
+      },
+      {
+       "who": "white",
+       "say": "出門在外，求個平安。",
+       "say_en": "Away from home, you pray for safety.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.8",
+   "title": "帷帽出城",
+   "title_en": "The Veiled Rider",
+   "host": "groom",
+   "group": "S5.grp.rider_party_8080",
+   "reading": "The map: a traveller in a veiled broad-brimmed hat (帷帽) rides a donkey east, out of the city; a groom leads at its head, a servant follows with luggage on a pole. sections.md: a man in a broad hat with servants; Hansen: 'a woman in a veiled hat on a donkey'. The face is too small to settle it (map). Chosen: we leave it open: the rider is 帷帽客 and nothing names a man or a woman (the idlers only guess).",
+   "roles": {
+    "groom": {
+     "fig": "groom_8167",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "the groom at the donkey's head (map)"
+    },
+    "rider": {
+     "fig": "rider_8080",
+     "name": "帷帽客",
+     "name_en": "veiled rider",
+     "src": "the rider in a veiled broad-brimmed hat (map; man or woman disputed)"
+    },
+    "servant": {
+     "fig": "luggage_servant_8002",
+     "name": "僕人",
+     "name_en": "servant",
+     "src": "the servant with the luggage pole (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "groom",
+     "say": "借過，驢子過來了。",
+     "say_en": "Coming through. Donkey passing.",
+     "src": "map (he leads the donkey east)",
+     "as": {
+      "guan": "官人請先，小的牽穩了。",
+      "fu": "娘子先請。",
+      "seng": "師父借過。",
+      "tong": "小娃兒閃開，驢要踢人！"
+     },
+     "as_en": {
+      "guan": "After you, sir. I have him steady.",
+      "fu": "After you, madam.",
+      "seng": "Excuse us, Master.",
+      "tong": "Kid, move! The donkey kicks!"
+     }
+    },
+    {
+     "who": "groom",
+     "say": "坐穩了，前頭過橋。",
+     "say_en": "Hold on. There's a bridge ahead.",
+     "src": "vignettes V5.8"
+    },
+    {
+     "who": "servant",
+     "say": "行李都在，一件不少。",
+     "say_en": "All the luggage is here, not a piece missing.",
+     "src": "vignettes V5.8"
+    },
+    {
+     "who": "rider",
+     "think": "這帷帽，擋得住風塵。",
+     "think_en": "This veil keeps off the wind and dust.",
+     "src": "map (the veil hangs from the brim); our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": "這一程，要走到天黑。",
+       "say_en": "This stretch takes us till dark.",
+       "src": "our proposal (they ride out of the city)"
+      },
+      {
+       "who": "servant",
+       "say": "包袱沉，肩都壓紅了。",
+       "say_en": "The bundle's heavy. My shoulder's red.",
+       "src": "map (a long bag and a bundle on his pole)"
+      },
+      {
+       "who": "rider",
+       "say": "到了前頭，歇一歇腳。",
+       "say_en": "Up ahead we'll rest a while.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.9",
+   "title": "書屏遭廢",
+   "title_en": "The Banned Screen",
+   "host": "pusher",
+   "group": "S5.grp.screen_cart_8510",
+   "reading": "余辉 2015 书屏遭废: in 1103 蔡京 ordered the 元祐 party's writings burnt and banned; carters use a banned cursive-script screen as a tarp over that party's other books and, on their master's orders, push the 串車 out of town to be destroyed; its twin is at 十千脚店 (S3). wenxueart: two men and a donkey; Hansen: a tarpaulined barrow. Chosen: 余辉. The map: one carter pushes at the rear, one hauls at the shafts, a man rides the trace donkey, another stoops at its head.",
+   "roles": {
+    "pusher": {
+     "fig": "cart_pusher_8254",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the carter pushing at the rear handles (map)"
+    },
+    "shaft": {
+     "fig": "cart_shaftman_8498",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the carter hauling at the front shafts (map)"
+    },
+    "rider": {
+     "fig": "trace_donkey_rider_8740",
+     "name": "趕驢的",
+     "name_en": "donkey driver",
+     "src": "the man riding the trace donkey, looking back at the cart (map)"
+    },
+    "bend": {
+     "fig": "bending_man_8905",
+     "name": "牽驢的",
+     "name_en": "donkey leader",
+     "src": "the man stooping at the donkey's head (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "pusher",
+     "say": "讓讓，車重！",
+     "say_en": "Make way, heavy load!",
+     "src": "vignettes V5.9, near line",
+     "as": {
+      "guan": "官人讓一讓，車重收不住。",
+      "shi": "相公莫看，快讓開。",
+      "seng": "師父借過，車要上橋。",
+      "fu": "娘子靠邊，莫碰著。",
+      "tong": "小娃兒，閃開！"
+     },
+     "as_en": {
+      "guan": "Step aside, sir. The cart is too heavy to stop.",
+      "shi": "Don't look, sir. Out of the way.",
+      "seng": "Excuse us, Master. The cart's going onto the bridge.",
+      "fu": "Madam, stand aside. Don't get hit.",
+      "tong": "Kid, get clear!"
+     }
+    },
+    {
+     "who": "shaft",
+     "say": "慢！輪子卡住了。",
+     "say_en": "Hold it! The wheel's stuck.",
+     "src": "vignettes V5.9"
+    },
+    {
+     "who": "pusher",
+     "say": "使勁！上橋了！",
+     "say_en": "Heave! Onto the bridge!",
+     "src": "vignettes V5.9"
+    },
+    {
+     "who": "rider",
+     "say": "驢也拉不動了。",
+     "say_en": "Even the donkey can't pull it.",
+     "src": "map (he rides the trace donkey, looking back at the cart); our proposal"
+    },
+    {
+     "who": "pusher",
+     "think": "這一屏好字，可惜了。",
+     "think_en": "Such fine writing on that screen. A pity.",
+     "src": "vignettes V5.9 after 余辉 2015"
+    }
+   ],
+   "again": [
+    {
+     "step": "screen.1",
+     "beats": [
+      {
+       "who": "pusher",
+       "say": "蓋的是一扇草書屏風。",
+       "say_en": "It's a cursive-script screen over the load.",
+       "src": "余辉 2015 (大字屏风当作苫布)"
+      },
+      {
+       "who": "shaft",
+       "say": "主家吩咐，推到城外去。",
+       "say_en": "The master's orders: out of town with it.",
+       "src": "余辉 2015 (奉主人之命推到郊外销毁)"
+      },
+      {
+       "who": "pusher",
+       "say": "好字，燒了可惜。",
+       "say_en": "Fine writing. A shame to burn it.",
+       "src": "余辉 2015; the plot line (its pusher calls it a pity)"
+      },
+      {
+       "who": "bend",
+       "say": "噓，莫多嘴。",
+       "say_en": "Shh. Hold your tongue.",
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "shaft",
+       "say": "底下包的，也是那些人的書。",
+       "say_en": "Under it, more books by the same men.",
+       "src": "余辉 2015 (包裹着旧党人的其他书籍文字)"
+      },
+      {
+       "who": "pusher",
+       "say": "朝廷禁了，家裏藏不得。",
+       "say_en": "The court has banned them. No keeping them at home.",
+       "src": "余辉 2015 (严禁生徒习读、藏家宝之)"
+      },
+      {
+       "who": "rider",
+       "think": "這種字，誰還敢留。",
+       "think_en": "Who would dare keep writing like that now?",
+       "src": "余辉 2015 (崇宁、大观焚毁之余，人间所藏，盖一二数也)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5.10",
+   "title": "橋頭觀水",
+   "title_en": "Watching the Water",
+   "host": "sight",
+   "group": "S5.grp.near_rail_watchers",
+   "reading": "邵琦: many at the railings watching fish; 余辉 2015: at Qingming the people of 汴京 liked to watch spring water and fish; 余辉 2014 桥头观水. The map: five men lean on the near railing, one (rail watcher 4) holds a small object over the water; feeding the fish is our guess.",
+   "roles": {
+    "sight": {
+     "fig": "bridge_sightseer",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "the sightseer in a dark robe hunched over the near railing (map)"
+    },
+    "youth": {
+     "fig": "rail_leaner_8665",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "the youth with his face in his folded arms on the rail (map)"
+    },
+    "w2": {
+     "fig": "rail_watcher_2",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "the bearded man with folded arms at the rail (map)"
+    },
+    "w3": {
+     "fig": "rail_watcher_3",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "the man with his chin on his hands (map)"
+    },
+    "w4": {
+     "fig": "rail_watcher_4",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "the man holding a small object over the water (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "sight",
+     "say": "這邊看得清。",
+     "say_en": "Better view from here.",
+     "src": "vignettes V5.10, near line",
+     "as": {
+      "guan": "官人也來看魚？這邊請。",
+      "shi": "相公，春水正好。",
+      "seng": "師父也來放生？",
+      "fu": "娘子這邊站，看得清。",
+      "tong": "小娃兒莫探身，掉下去！"
+     },
+     "as_en": {
+      "guan": "Come to see the fish, sir? This way.",
+      "shi": "Sir, the spring water is just right.",
+      "seng": "Master, here to set fish free?",
+      "fu": "Stand here, madam. You'll see better.",
+      "tong": "Kid, don't lean over. You'll fall in!"
+     }
+    },
+    {
+     "who": "w2",
+     "say": "看，那尾鯉魚又上來了。",
+     "say_en": "Look, that carp's up again.",
+     "src": "vignettes V5.10; 邵琦 (观鱼)"
+    },
+    {
+     "who": "w3",
+     "say": "春水漲了。",
+     "say_en": "The spring water's up.",
+     "src": "余辉 2015 (观赏春水和游鱼)"
+    },
+    {
+     "who": "w4",
+     "say": "撒些餅屑，魚都來了。",
+     "say_en": "Toss some crumbs and they all come.",
+     "src": "vignettes V5.10 (the small object he holds over the water; feeding is our guess)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "youth",
+       "say": "清明了，都來看春水。",
+       "say_en": "It's Qingming. Everyone comes to see the spring water.",
+       "src": "余辉 2015 (清明节，人们喜欢到河上观赏春水和游鱼)"
+      },
+      {
+       "who": "sight",
+       "say": "橋上人擠，水上清靜。",
+       "say_en": "Crowded on the bridge, calm on the water.",
+       "src": "map (traffic on the deck behind them)"
+      },
+      {
+       "who": "w2",
+       "say": "身後車馬，吵得很。",
+       "say_en": "The carts and horses behind are loud.",
+       "src": "map (the screen cart and riders pass behind)"
+      }
+     ]
     }
    ]
   },
   {
    "id": "V5.11",
    "title": "少年乞丐",
+   "title_en": "The Beggar Boys",
    "host": "boy1",
-   "reading": "名画记 32: two beggar boys hold out their hands; two sightseers pretend not to hear, two give one cash so the boys won't spoil the view. Who gives is our reading of the painted poses.",
+   "group": "S5.grp.beggar_boys",
+   "reading": "名画记 32: under 徽宗 the show of wealth could not hide the people's hardship; two beggar boys hold out their hands at the railing; two sightseers pretend not to hear, two give one cash so the boys won't spoil the view. 余辉 2021: one hands a copper from arm's length; a copper bought half a bun. Who gives is our reading of the painted poses.",
    "roles": {
     "boy1": {
      "fig": "beggar_boy_9138",
      "name": "小乞兒",
+     "name_en": "beggar boy",
      "src": "名画记 32 少年乞丐"
     },
     "boy2": {
      "fig": "beggar_boy_9205",
      "name": "小乞兒",
+     "name_en": "beggar boy",
      "src": "名画记 32 少年乞丐"
     },
     "giver": {
      "fig": "far_rail_reaching_9010",
      "name": "遊人",
+     "name_en": "sightseer",
      "src": "the sightseer with his arm out to the boys (map; giver is our reading)"
     },
     "ignorer": {
      "fig": "far_rail_long_robe_9200",
      "name": "遊人",
+     "name_en": "sightseer",
      "src": "a sightseer at the rail (ignorer is our reading)"
+    },
+    "turned": {
+     "fig": "far_rail_turned_9100",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "the sightseer turned down toward boy one (map)"
     }
    },
    "beats": [
     {
      "who": "boy1",
      "say": "這位客官，賞一文！",
-     "src": "vignettes V5.11, near line to the player"
+     "say_en": "Spare a coin, sir!",
+     "src": "vignettes V5.11, near line to the player",
+     "as": {
+      "guan": "官人行行好，賞一文罷！",
+      "shi": "相公心善，賞一文罷。",
+      "seng": "師父也是化緣的？那賞一文罷。",
+      "fu": "娘子，賞口飯吃罷。",
+      "tong": "你也來討？這邊是我的。",
+      "jun": "軍爺賞一文，買半個炊餅。",
+      "li": "大哥，賞一文罷。"
+     },
+     "as_en": {
+      "guan": "Have pity, sir. Spare a coin!",
+      "shi": "You have a kind heart, sir. A coin?",
+      "seng": "You beg alms too, Master? Then spare a coin.",
+      "fu": "Madam, spare a bite to eat.",
+      "tong": "You begging too? This spot's mine.",
+      "jun": "A coin, soldier, for half a bun.",
+      "li": "Brother, spare a coin."
+     }
     },
     {
      "who": "boy2",
      "say": "官人，賞一文罷！",
+     "say_en": "Sir, spare a coin!",
      "src": "vignettes V5.11 after 名画记 32 (the boys hold out their hands)"
     },
     {
      "who": "giver",
      "say": "拿去，快走罷。",
+     "say_en": "Here. Now be off.",
      "src": "名画记 32: two give one cash so the boys won't spoil the view"
     },
     {
      "who": "ignorer",
      "think": "只當沒聽見。",
+     "think_en": "Pretend you didn't hear.",
      "src": "名画记 32: two pretend not to hear"
     }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "boy1",
+       "say": "又是你！今日還沒吃飯哩。",
+       "say_en": "You again! I haven't eaten today.",
+       "src": "our proposal (名画记 32)",
+       "as": {
+        "guan": "官人又來了！賞一文罷。"
+       },
+       "as_en": {
+        "guan": "You're back, sir! Spare a coin."
+       }
+      },
+      {
+       "who": "giver",
+       "think": "一文錢，只買得半個饃。",
+       "think_en": "One coin buys half a bun.",
+       "src": "余辉 2021 (一个铜板…只能买半个馍馍)"
+      },
+      {
+       "who": "boy2",
+       "say": "謝官人！",
+       "say_en": "Thank you, sir!",
+       "src": "our proposal"
+      },
+      {
+       "who": "ignorer",
+       "think": "莫壞了看水的興致。",
+       "think_en": "Don't spoil the pleasure of the water.",
+       "src": "名画记 32 (怕乞儿破坏他们看风景的雅兴)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "turned",
+       "say": "小小年紀，怎地出來討？",
+       "say_en": "So young. Why are you out begging?",
+       "src": "map (he turns down to boy one); 名画记 32 (百姓苦难的真相)"
+      },
+      {
+       "who": "boy1",
+       "say": "家裏沒糧了。",
+       "say_en": "There's no food at home.",
+       "src": "our proposal"
+      },
+      {
+       "who": "boy2",
+       "say": "橋上人多，討得著。",
+       "say_en": "Lots of people on the bridge. We get something.",
+       "src": "our proposal (the crowded bridge, map)"
+      }
+     ]
+    }
    ]
+  }
+ ],
+ "chatter": [
+  {
+   "id": "c5.tax",
+   "title": "貨到稅訖",
+   "title_en": "Goods Arrive, Tax Paid",
+   "mark": "scale",
+   "group": "S5.grp.tax_quarrel",
+   "reading": "余辉 2023/2015 (the inspector names a big sum, the manifest handed over, the third carter gapes, transit and sales tax, 力勝稅錢 on carts); 名画记 35 (the 引子 permit; owner and official argue; everyone looks on). The map: a carter and a half-hidden man wait at the ramp foot.",
+   "gap": [
+    10,
+    24
+   ],
+   "roles": {
+    "inspector": {
+     "fig": "tax_inspector",
+     "name": "稅吏",
+     "name_en": "tax inspector",
+     "src": "map; 余辉 2023"
+    },
+    "official": {
+     "fig": "tax_official",
+     "name": "稅官",
+     "name_en": "tax official",
+     "src": "map (about to write)"
+    },
+    "declarer": {
+     "fig": "tax_declarer",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (declaring at the desk)"
+    },
+    "clerk": {
+     "fig": "tax_clerk_seated_6340",
+     "name": "書吏",
+     "name_en": "clerk",
+     "src": "map (clerk is our reading)"
+    },
+    "owner": {
+     "fig": "tax_carter_manifest",
+     "name": "貨主",
+     "name_en": "goods owner",
+     "src": "map (the manifest); 名画记 35"
+    },
+    "gaper": {
+     "fig": "tax_carter_gaping_6300",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (mouth open over the bale)"
+    },
+    "ramp": {
+     "fig": "carter_6418",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (at the ramp foot, hands clasped)"
+    },
+    "hidden": {
+     "fig": "hidden_man_6452",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (half hidden behind the carter)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "tax.1",
+     "beats": [
+      {
+       "who": "inspector",
+       "say": [
+        "匹帛稅重，照例該納這個數。",
+        "這幾包匹帛，稅錢不少。"
+       ],
+       "say_en": [
+        "Silk and cloth pay heavy. By the rule, this much.",
+        "These bales of cloth owe no small tax."
+       ],
+       "src": "余辉 2023 (the inspector names a big sum)"
+      },
+      {
+       "who": "gaper",
+       "say": [
+        "啊——？這麼多！",
+        "去年哪有這個數！"
+       ],
+       "say_en": [
+        "What? That much!",
+        "It was never this much last year!"
+       ],
+       "src": "余辉 2023 (啊——？这么多！); vignettes V5.1"
+      },
+      {
+       "who": "owner",
+       "say": [
+        "官人看貨單，一包一包都寫著。",
+        "貨單在此，官人細看。"
+       ],
+       "say_en": [
+        "See the manifest, sir. Every bale is written down.",
+        "Here's the manifest, sir. Look closely."
+       ],
+       "src": "余辉 2023 (递交了一份货单，进行解释)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "declarer",
+       "say": [
+        "小人報的是匹帛。",
+        "都在單上，官人過目。"
+       ],
+       "say_en": [
+        "I'm declaring silk cloth.",
+        "It's all on the list, sir. Please look."
+       ],
+       "src": "余辉 2023 (一个运输工进屋向税务官报税)"
+      },
+      {
+       "who": "official",
+       "say": [
+        "引子拿來。",
+        "沒有引子，照重稅算。"
+       ],
+       "say_en": [
+        "Your permit.",
+        "No permit, the heavy rate."
+       ],
+       "src": "名画记 35 (the 引子)"
+      },
+      {
+       "who": "clerk",
+       "say": [
+        "記上了。",
+        "這一筆，寫好了。"
+       ],
+       "say_en": [
+        "Written down.",
+        "That sum is entered."
+       ],
+       "src": "map (he writes); our proposal"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "inspector",
+       "say": [
+        "車也要納力勝錢。",
+        "過稅之外，還有住稅。"
+       ],
+       "say_en": [
+        "The cart pays its load tax too.",
+        "Transit tax, and sales tax besides."
+       ],
+       "src": "余辉 2023 (过税加住税; 力胜税钱)"
+      },
+      {
+       "who": "owner",
+       "say": [
+        "車也收錢？",
+        "一趟貨，兩道稅？"
+       ],
+       "say_en": [
+        "The cart pays too?",
+        "One load, two taxes?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "gaper",
+       "think": [
+        "這一趟，白跑了。",
+        "回去怎生交代。"
+       ],
+       "think_en": [
+        "This whole trip, for nothing.",
+        "How will I explain this back home?"
+       ],
+       "src": "our proposal (the gaping carter)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "ramp",
+       "say": [
+        "吵了半日了。",
+        "這稅，怕要納到天黑。"
+       ],
+       "say_en": [
+        "They've been at it half the day.",
+        "At this rate we'll pay tax till dark."
+       ],
+       "src": "map (the carter waiting at the ramp foot); our proposal"
+      },
+      {
+       "who": "hidden",
+       "say": [
+        "小聲些，城樓上有人看。",
+        "莫插嘴，等著罷。"
+       ],
+       "say_en": [
+        "Quiet. Someone on the tower is watching.",
+        "Don't butt in. Just wait."
+       ],
+       "src": "名画记 35 (连城楼上值班的人也探出头来张望); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.tower",
+   "title": "城樓上",
+   "title_en": "On the Tower",
+   "mark": "alarm",
+   "group": "S5.str.gate_tower",
+   "reading": "余辉 2015/2023 and 名画记 35: the man in the tower doorway is the watchman (更夫) looking down at the tax-office row (Hansen and Columbia: a sightseer; we follow 余辉). The map: a second small man leans on the west end of the balcony looking toward the tax office. 名画记 33: a big drum on a stand in the tower; 余辉 2014 城上暮鼓. Who beats it is our proposal.",
+   "gap": [
+    24,
+    48
+   ],
+   "roles": {
+    "watchman": {
+     "fig": "tower_watchman",
+     "name": "更夫",
+     "name_en": "watchman",
+     "src": "map; 余辉 (Hansen: a sightseer)"
+    },
+    "balcony": {
+     "fig": "tower_balcony_man_6600",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (leaning on the balcony, looking west)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "watchman",
+       "say": [
+        "底下吵甚麼？",
+        "稅務所又吵起來了。"
+       ],
+       "say_en": [
+        "What's the row down there?",
+        "The tax office is at it again."
+       ],
+       "src": "名画记 35; 余辉 2015 (惊动了城楼上的更夫向下张望)"
+      },
+      {
+       "who": "balcony",
+       "say": [
+        "看不清，許是爭稅。",
+        "又是那幾個車夫。"
+       ],
+       "say_en": [
+        "Can't see well. A tax row, maybe.",
+        "Those carters again."
+       ],
+       "src": "map (he looks west toward the tax office); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "watchman",
+       "say": [
+        "暮鼓還早哩。",
+        "天晚了，要擂鼓。"
+       ],
+       "say_en": [
+        "It's early yet for the dusk drum.",
+        "When it gets late, the drum."
+       ],
+       "src": "名画记 33 (楼内…一个大鼓); 余辉 2014 城上暮鼓; who beats it is our proposal"
+      },
+      {
+       "who": "balcony",
+       "think": [
+        "樓上風大。",
+        "這裏看得見城外。"
+       ],
+       "think_en": [
+        "Windy up here.",
+        "You can see outside the walls from here."
+       ],
+       "src": "our proposal (the tower is the tallest building, 名画记 33)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.archers",
+   "title": "禁軍運酒",
+   "title_en": "The Guards' Wine",
+   "mark": "bow",
+   "group": "S5.grp.wine_depot_archers",
+   "reading": "余辉 2015/2021/2023: archers in the fire post turned wine depot test bow, wrist guard and waist guard before escorting the Guards' holiday wine; the cart is coming; the drawer has just had a drink; the post's water butts hold wine and its fire swab is idle. Lines that only fit drawing or binding carry `when`.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "wrist": {
+     "fig": "archer_wrist_5728",
+     "name": "弓手",
+     "name_en": "archer",
+     "src": "map (binding his wrist)"
+    },
+    "drawer": {
+     "fig": "archer_drawing_bow_5635",
+     "name": "弓手",
+     "name_en": "archer",
+     "src": "map (drawing the bow)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "wine.2",
+     "beats": [
+      {
+       "who": "wrist",
+       "say": [
+        "車子怎地還不來？",
+        "拉酒的車，還在路上？"
+       ],
+       "say_en": [
+        "Why isn't the cart here yet?",
+        "The wine cart, still on the road?"
+       ],
+       "src": "vignettes V5.2; 余辉 2023 (装载梢桶的马车就要来了)"
+      },
+      {
+       "who": "drawer",
+       "say": [
+        "莫急，車就到了。",
+        "急甚麼，酒又跑不了。"
+       ],
+       "say_en": [
+        "Easy. The cart's nearly here.",
+        "What's the hurry? The wine won't run off."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "drawer",
+       "say": [
+        "好弓，拉得滿！",
+        "這弦，還緊。"
+       ],
+       "say_en": [
+        "Good bow, draws full!",
+        "This string's still taut."
+       ],
+       "when": [
+        "draw_bow"
+       ],
+       "src": "余辉 2015 (拉满弓试弦)"
+      },
+      {
+       "who": "wrist",
+       "say": [
+        "護腕再綁緊些。",
+        "綁好了，開得弓了。"
+       ],
+       "say_en": [
+        "Bind the wrist guard tighter.",
+        "Bound. Now I can draw."
+       ],
+       "when": [
+        "bind"
+       ],
+       "src": "余辉 2015 (缠护腕)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "drawer",
+       "say": [
+        "押了這趟酒，節下也分幾碗。",
+        "營裏弟兄，等這酒過節。"
+       ],
+       "say_en": [
+        "Escort this lot, and we get a few bowls for the holiday.",
+        "The lads in camp are waiting on this wine for the holiday."
+       ],
+       "src": "余辉 2023 (供禁军过节之用)"
+      },
+      {
+       "who": "wrist",
+       "think": [
+        "方才那碗，還在肚裏熱。",
+        "守酒強過守城門。"
+       ],
+       "think_en": [
+        "That bowl just now is still warm in my belly.",
+        "Better guarding wine than guarding the gate."
+       ],
+       "src": "余辉 2015 (他大概刚饮完了酒); 余辉 2023 (本应该在城门口岗位上)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "wrist",
+       "say": [
+        "這鋪屋本是防火的。",
+        "水桶裝酒，倒也合用。"
+       ],
+       "say_en": [
+        "This post was for fighting fires.",
+        "Water butts holding wine. They serve."
+       ],
+       "src": "東京夢華錄 卷三 防火; 余辉 2021 (消防站…变成了军酒转运站)"
+      },
+      {
+       "who": "drawer",
+       "say": [
+        "火起時再說罷。",
+        "麻搭閒著，也不纏麻。"
+       ],
+       "say_en": [
+        "We'll worry about fire when it starts.",
+        "The fire swab sits idle, no hemp on it."
+       ],
+       "src": "余辉 2021 (麻搭…闲置一边)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.pack",
+   "title": "糧也納稅",
+   "title_en": "Grain Pays Too",
+   "mark": "coin",
+   "group": "S5.grp.pack_train",
+   "reading": "余辉 2023: the second batch of taxpayers, the load looking like grain for the brewing 孫記正店 next door; 名画记 37: the donkey cart unloading at 孫羊店's door. The map: a man at the box pack by the donkey, a man with a pouch, a man pushing the sack cart west. Who leads is our proposal.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "bag": {
+     "fig": "man_with_bag_5892",
+     "name": "貨主",
+     "name_en": "goods owner",
+     "src": "map (holding a pouch); leader is our reading"
+    },
+    "pack": {
+     "fig": "pack_handler_5837",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (at the box pack)"
+    },
+    "pusher": {
+     "fig": "cart_pusher_5727",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (pushing the sack cart)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "grain.4",
+     "beats": [
+      {
+       "who": "bag",
+       "say": [
+        "這糧，送去正店釀酒。",
+        "正店等著這糧釀酒。"
+       ],
+       "say_en": [
+        "This grain goes to the wine house for brewing.",
+        "The wine house is waiting on this grain to brew."
+       ],
+       "src": "余辉 2023 (卖给旁边有酿酒资质的孙记正店)"
+      },
+      {
+       "who": "pack",
+       "say": [
+        "也得先納了稅。",
+        "稅務所那頭還吵著。"
+       ],
+       "say_en": [
+        "We pay the tax first, though.",
+        "Still a row at the tax office."
+       ],
+       "src": "余辉 2023 (也是一批要交税的货主)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pusher",
+       "say": [
+        "再推一把，正店就在前頭。",
+        "嘿——推！"
+       ],
+       "say_en": [
+        "One more push. The wine house is just ahead.",
+        "Hup — push!"
+       ],
+       "src": "vignettes V5.3 (he pushes the sack cart west)"
+      },
+      {
+       "who": "pack",
+       "say": [
+        "穩著些，莫翻了。",
+        "慢些，糧袋要掉。"
+       ],
+       "say_en": [
+        "Steady, don't tip it.",
+        "Slow down, the sacks are slipping."
+       ],
+       "src": "our proposal (the roped sacks, map)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bag",
+       "say": [
+        "稅錢都在這裏，點清了再走。",
+        "貨單收好，莫丟了。"
+       ],
+       "say_en": [
+        "The tax money's all here. Count it, then we go.",
+        "Keep the manifest safe. Don't lose it."
+       ],
+       "src": "vignettes V5.3; 余辉 2023 (领头的拿着货单)"
+      },
+      {
+       "who": "pack",
+       "say": [
+        "曉得。",
+        "放心。"
+       ],
+       "say_en": [
+        "I know.",
+        "Don't worry."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pack",
+       "say": [
+        "這馱子捆緊了。",
+        "再勒一道繩。"
+       ],
+       "say_en": [
+        "This pack is tied tight.",
+        "One more turn of rope."
+       ],
+       "when": [
+        "browse"
+       ],
+       "src": "map (working at the box pack); when follows people.json (2026-10-13)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.camels",
+   "title": "駝隊出城",
+   "title_en": "Camels Leaving Town",
+   "mark": "voice",
+   "group": "S5.grp.camel_caravan",
+   "reading": "名画记 34: the caravan walks out, the lead camel half out of the passage; traders from the northwest. 余辉 2015/2021: a foreign-looking (胡人) driver at the passage mouth; nobody checks them. The map: the long-robed man at the west end of the idlers turns to watch the camel come out. The caravan leader's lines are few and plain (our proposal).",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "leader": {
+     "fig": "caravan_leader_7388",
+     "name": "胡人馭手",
+     "name_en": "foreign driver",
+     "src": "余辉 2015 (门洞口露出一个胡人模样的驭手); 荣新江"
+    },
+    "camelw": {
+     "fig": "camel_watcher_7600",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map (watching the camel)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "camelw",
+       "say": [
+        "胡商又出城了。",
+        "好高的駱駝。"
+       ],
+       "say_en": [
+        "The foreign traders are off again.",
+        "What tall camels."
+       ],
+       "src": "vignettes V5.4; 名画记 34"
+      },
+      {
+       "who": "leader",
+       "say": [
+        "走，走。",
+        "低頭，過門洞。"
+       ],
+       "say_en": [
+        "Walk on, walk on.",
+        "Head down, through the passage."
+       ],
+       "src": "map (he walks east beside the lead camel)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "camelw",
+       "say": [
+        "城門口也沒人盤查。",
+        "馱的不知是甚麼貨。"
+       ],
+       "say_en": [
+        "No one at the gate checks them.",
+        "Who knows what goods they carry."
+       ],
+       "src": "余辉 2021 (长驱直入、扬长而去，无人盘查)"
+      },
+      {
+       "who": "leader",
+       "think": [
+        "回西北的路，還長哩。",
+        "過了橋，就是大路。"
+       ],
+       "think_en": [
+        "The road back northwest is long.",
+        "Past the bridge, the high road."
+       ],
+       "src": "名画记 34 (从西北方来); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.awning",
+   "title": "棚下討價",
+   "title_en": "Haggling Under the Awning",
+   "mark": "coin",
+   "group": "S5.grp.awning_talkers_6200",
+   "reading": "The map: a man in brown leans in and talks hard, hands raised, into the face of a man in white under the lean-to awning; a man seated in the shop front watches. What they argue over is not painted; a haggle is our proposal (vignettes V5.12).",
+   "gap": [
+    14,
+    32
+   ],
+   "roles": {
+    "brown": {
+     "fig": "man_brown_awning_6245",
+     "name": "賣主",
+     "name_en": "seller",
+     "src": "map (talking hard, mouth open); seller is our reading"
+    },
+    "white": {
+     "fig": "man_white_awning_6165",
+     "name": "買主",
+     "name_en": "buyer",
+     "src": "map (facing the man in brown); buyer is our reading"
+    },
+    "shop": {
+     "fig": "shop_seated_6290",
+     "name": "店家",
+     "name_en": "shopkeeper",
+     "src": "map (seated in the shop front, watching)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "brown",
+       "say": [
+        "這個價再公道不過！",
+        "你摸摸這料子！"
+       ],
+       "say_en": [
+        "As fair a price as there is!",
+        "Feel this stuff!"
+       ],
+       "src": "vignettes V5.12"
+      },
+      {
+       "who": "white",
+       "say": [
+        "再讓些，不然不要。",
+        "摸過了，不值這個價。"
+       ],
+       "say_en": [
+        "Come down, or no deal.",
+        "I've felt it. Not worth that."
+       ],
+       "src": "vignettes V5.12"
+      },
+      {
+       "who": "shop",
+       "think": [
+        "吵了半日，買不買？",
+        "又來討價了。"
+       ],
+       "think_en": [
+        "Half a day haggling. Buying or not?",
+        "Haggling again."
+       ],
+       "optional": true,
+       "src": "map (he watches the two talkers); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "brown",
+       "say": [
+        "實話說，本錢都不夠。",
+        "城裏問問，哪家更賤？"
+       ],
+       "say_en": [
+        "Truth is, it doesn't cover my cost.",
+        "Ask in town. Who sells it cheaper?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "white",
+       "say": [
+        "我再看看。",
+        "那就罷了。"
+       ],
+       "say_en": [
+        "I'll look around.",
+        "Forget it, then."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.barber",
+   "title": "城下修面",
+   "title_en": "A Shave by the Wall",
+   "mark": "zzz",
+   "group": "S5.grp.barber_7700",
+   "reading": "事物考: the barber holds the chin and shaves; the customer's eyes half shut. The map: the customer half-reclines with his head tipped far back; the barber bends over him (probable).",
+   "gap": [
+    18,
+    38
+   ],
+   "roles": {
+    "barber": {
+     "fig": "barber_7805",
+     "name": "待詔",
+     "name_en": "barber",
+     "src": "事物考; map (probable)"
+    },
+    "customer": {
+     "fig": "wall_recliner",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (head tipped back)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "barber",
+       "say": [
+        "抬頭，莫動。",
+        "下巴再抬些。"
+       ],
+       "say_en": [
+        "Chin up. Don't move.",
+        "Chin a little higher."
+       ],
+       "src": "事物考 (he holds the chin)"
+      },
+      {
+       "who": "customer",
+       "think": [
+        "舒坦……",
+        "這刀，真快。"
+       ],
+       "think_en": [
+        "Bliss…",
+        "Sharp razor, this."
+       ],
+       "src": "事物考 (eyes half shut)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "barber",
+       "say": [
+        "這邊再刮一刮。",
+        "鬢角也修一修。"
+       ],
+       "say_en": [
+        "A little more on this side.",
+        "The sideburns too."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "customer",
+       "say": [
+        "輕些，輕些。",
+        "莫刮破了。"
+       ],
+       "say_en": [
+        "Gently, gently.",
+        "Don't nick me."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.idlers",
+   "title": "城下閒人",
+   "title_en": "Idlers at the Gate",
+   "mark": "voice",
+   "group": "S5.grp.wall_idlers",
+   "reading": "邵琦: men resting by the wall; the map: seven capped men watching the camel, the veiled rider and the kneeling man; 余辉 2015 撤防: no guard on the gate. The row in the tax office is the tax line (our proposal). The kneeling man: 余辉 2021 祭拜路神. The veiled rider: Hansen's 'woman in a veiled hat' is only their guess.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "white": {
+     "fig": "wall_idler_white",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map"
+    },
+    "blue": {
+     "fig": "wall_idler_blue",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map"
+    },
+    "stick": {
+     "fig": "wall_idler_stick",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map"
+    },
+    "grey": {
+     "fig": "wall_idler_grey",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map"
+    },
+    "front": {
+     "fig": "idler_front_7650",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map"
+    },
+    "greyfront": {
+     "fig": "idler_grey_front_7702",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map"
+    },
+    "camelw": {
+     "fig": "camel_watcher_7600",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map (watching the camel)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "tax.2",
+     "beats": [
+      {
+       "who": "grey",
+       "say": [
+        "稅務所裏又吵起來了。",
+        "聽，裏頭又在爭稅。"
+       ],
+       "say_en": [
+        "The tax office is quarrelling again.",
+        "Listen. They're fighting over tax in there again."
+       ],
+       "src": "the tax line; our proposal"
+      },
+      {
+       "who": "white",
+       "say": [
+        "匹帛稅重，哪回不吵？",
+        "納稅的，哪個不罵？"
+       ],
+       "say_en": [
+        "Cloth pays heavy. When don't they quarrel?",
+        "Who pays tax without cursing?"
+       ],
+       "src": "余辉 2021 (纺织品的税收…最容易激起矛盾)"
+      },
+      {
+       "who": "blue",
+       "say": [
+        "連城樓上都探頭看了。",
+        "吵得城樓上都聽見。"
+       ],
+       "say_en": [
+        "Even the tower man is looking down.",
+        "So loud they hear it up on the tower."
+       ],
+       "src": "名画记 35; 余辉 2015 (惊动了城楼上的更夫)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "blue",
+       "say": [
+        "這城門也沒個看守的。",
+        "門上一個兵也不見。"
+       ],
+       "say_en": [
+        "Not even a guard on this gate.",
+        "Not one soldier at the gate."
+       ],
+       "src": "余辉 2015 看点七 撤防的城门"
+      },
+      {
+       "who": "stick",
+       "say": [
+        "太平年月，守它作甚。",
+        "守甚麼，駱駝都自在出城。"
+       ],
+       "say_en": [
+        "Peaceful times. Why guard it?",
+        "Guard what? Even the camels stroll out."
+       ],
+       "src": "東京夢華錄 序 (太平日久); 余辉 2021 (无人盘查)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "camelw",
+       "say": [
+        "看，駱駝出來了。",
+        "頭駝出了門洞。"
+       ],
+       "say_en": [
+        "Look, the camels are coming out.",
+        "The lead camel is out of the passage."
+       ],
+       "src": "map (the lead camel half out of the passage); 名画记 34"
+      },
+      {
+       "who": "front",
+       "say": [
+        "好高！",
+        "馱的甚麼貨？"
+       ],
+       "say_en": [
+        "So tall!",
+        "What are they carrying?"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "stick",
+       "say": [
+        "那戴帷帽的，是誰家的？",
+        "那騎驢的，好氣派。"
+       ],
+       "say_en": [
+        "Whose is that one in the veiled hat?",
+        "Fine figure on that donkey."
+       ],
+       "src": "vignettes V5.6"
+      },
+      {
+       "who": "greyfront",
+       "say": [
+        "看不清臉。",
+        "許是出城上墳的。"
+       ],
+       "say_en": [
+        "Can't see the face.",
+        "Off to the graves, maybe."
+       ],
+       "src": "map (face too small); 東京夢華錄 卷七 清明節 (皆出城上墳)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "white",
+       "say": [
+        "那跪著的在做甚麼？",
+        "看那人，跪在路當中。"
+       ],
+       "say_en": [
+        "What's that kneeling one doing?",
+        "Look, kneeling in the middle of the road."
+       ],
+       "src": "map (the kneeling man east of the group)"
+      },
+      {
+       "who": "blue",
+       "say": [
+        "祭路神哩。",
+        "求個出門平安。"
+       ],
+       "say_en": [
+        "Praying to the road god.",
+        "Praying for a safe journey."
+       ],
+       "src": "余辉 2021 (祭拜路神); 余辉 2014 (杀羊祭道)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.rider",
+   "title": "帷帽出城",
+   "title_en": "The Veiled Rider",
+   "group": "S5.grp.rider_party_8080",
+   "reading": "The map: the veiled rider rides a donkey east, out of the city; the groom leads at its head, the servant follows with luggage on a pole. Man or woman is left open (sections.md vs Hansen).",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "groom": {
+     "fig": "groom_8167",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "map"
+    },
+    "rider": {
+     "fig": "rider_8080",
+     "name": "帷帽客",
+     "name_en": "veiled rider",
+     "src": "map (man or woman disputed)"
+    },
+    "servant": {
+     "fig": "luggage_servant_8002",
+     "name": "僕人",
+     "name_en": "servant",
+     "src": "map (luggage pole)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": [
+        "坐穩了，前頭過橋。",
+        "慢些，前頭車多。"
+       ],
+       "say_en": [
+        "Hold on. There's a bridge ahead.",
+        "Slow now, lots of carts ahead."
+       ],
+       "src": "vignettes V5.8; map (the screen cart ahead)"
+      },
+      {
+       "who": "rider",
+       "think": [
+        "這帷帽，擋得住風塵。",
+        "出了城，天也寬了。"
+       ],
+       "think_en": [
+        "This veil keeps off the wind and dust.",
+        "Out of town, the sky opens up."
+       ],
+       "src": "map (the veil); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "servant",
+       "say": [
+        "行李都在，一件不少。",
+        "這擔子，越挑越沉。"
+       ],
+       "say_en": [
+        "All the luggage is here, not a piece missing.",
+        "This load gets heavier with every step."
+       ],
+       "src": "vignettes V5.8; vignettes S5 porters"
+      },
+      {
+       "who": "groom",
+       "say": [
+        "跟緊了，莫掉隊。",
+        "快到橋頭了。"
+       ],
+       "say_en": [
+        "Keep close. Don't fall behind.",
+        "Nearly at the bridge."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.screen",
+   "title": "書屏遭廢",
+   "title_en": "The Banned Screen",
+   "mark": "book",
+   "group": "S5.grp.screen_cart_8510",
+   "reading": "余辉 2015: a banned 元祐 cursive-script screen used as a tarp over that party's other writings, pushed out of town on the master's orders to be destroyed. The map: the pusher at the rear, the shaftman hauling, a man on the trace donkey looking back, a man stooping at the donkey's head.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "pusher": {
+     "fig": "cart_pusher_8254",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (pushing at the rear)"
+    },
+    "shaft": {
+     "fig": "cart_shaftman_8498",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (at the front shafts)"
+    },
+    "rider": {
+     "fig": "trace_donkey_rider_8740",
+     "name": "趕驢的",
+     "name_en": "donkey driver",
+     "src": "map (on the trace donkey)"
+    },
+    "bend": {
+     "fig": "bending_man_8905",
+     "name": "牽驢的",
+     "name_en": "donkey leader",
+     "src": "map (stooping at the donkey's head)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "pusher",
+       "say": [
+        "使勁！上橋了！",
+        "嘿——推！"
+       ],
+       "say_en": [
+        "Heave! Onto the bridge!",
+        "Hup — push!"
+       ],
+       "src": "vignettes V5.9"
+      },
+      {
+       "who": "shaft",
+       "say": [
+        "慢！輪子卡住了。",
+        "穩住，往左些。"
+       ],
+       "say_en": [
+        "Hold it! The wheel's stuck.",
+        "Steady, a bit to the left."
+       ],
+       "src": "vignettes V5.9"
+      },
+      {
+       "who": "rider",
+       "say": [
+        "駕！",
+        "這驢也乏了。"
+       ],
+       "say_en": [
+        "Gee up!",
+        "This donkey's worn out too."
+       ],
+       "src": "map (on the trace donkey)"
+      }
+     ]
+    },
+    {
+     "step": "screen.1",
+     "beats": [
+      {
+       "who": "shaft",
+       "say": [
+        "蓋的是一扇草書屏風。",
+        "這屏風上的字，真好。"
+       ],
+       "say_en": [
+        "That's a cursive-script screen on top.",
+        "The writing on this screen is fine."
+       ],
+       "src": "余辉 2015 (大字屏风当作苫布)"
+      },
+      {
+       "who": "pusher",
+       "say": [
+        "好字，可惜了。",
+        "推出城去，就要燒了。"
+       ],
+       "say_en": [
+        "Fine writing. A pity.",
+        "Out of town, and it burns."
+       ],
+       "src": "余辉 2015 (推到郊外销毁); the plot line"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bend",
+       "say": [
+        "驢頭我牽住了。",
+        "讓驢喘口氣。"
+       ],
+       "say_en": [
+        "I've got the donkey's head.",
+        "Let the donkey catch its breath."
+       ],
+       "src": "map (stooping at the donkey's head)"
+      },
+      {
+       "who": "rider",
+       "say": [
+        "好，走罷。",
+        "前頭讓開些！"
+       ],
+       "say_en": [
+        "Right, let's go.",
+        "Clear the way up front!"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pusher",
+       "think": [
+        "主家吩咐，不敢不推。",
+        "這一屏好字，可惜了。"
+       ],
+       "think_en": [
+        "The master's orders. I daren't refuse.",
+        "Such fine writing on that screen. A pity."
+       ],
+       "src": "余辉 2015 (奉主人之命)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.greeting",
+   "title": "柳下相逢",
+   "title_en": "A Meeting Under the Willow",
+   "group": "S5.grp.greeting_8265",
+   "reading": "The map: under the willow a man in a long robe with a walking stick stands face to face with a man in a short jacket who bows toward him, heads close. Who they are is not painted; the greeting is vignettes V5.12 (our proposal).",
+   "gap": [
+    18,
+    38
+   ],
+   "roles": {
+    "stick": {
+     "fig": "greeter_stick_8245",
+     "name": "拄杖的",
+     "name_en": "man with a stick",
+     "src": "map (long pale robe, walking stick)"
+    },
+    "bow": {
+     "fig": "greeter_bowing_8285",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (bowing toward him)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "stick",
+       "say": [
+        "多日不見，一向可好？",
+        "好巧，在這裏遇著。"
+       ],
+       "say_en": [
+        "Long time no see. Keeping well?",
+        "What luck, meeting you here."
+       ],
+       "src": "vignettes V5.12"
+      },
+      {
+       "who": "bow",
+       "say": [
+        "承蒙掛念，都好。",
+        "托福，托福。"
+       ],
+       "say_en": [
+        "Kind of you. All well.",
+        "Thanks to you, thanks to you."
+       ],
+       "src": "vignettes V5.12"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "bow",
+       "say": [
+        "這是要進城？",
+        "家中都好？"
+       ],
+       "say_en": [
+        "Heading into town?",
+        "All well at home?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "stick",
+       "say": [
+        "出城走走，看看春景。",
+        "都好，都好。"
+       ],
+       "say_en": [
+        "Out of town for a walk, to see the spring.",
+        "All well, all well."
+       ],
+       "src": "our proposal; 東京夢華錄 卷六 (都人爭先出城探春)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "stick",
+       "say": [
+        "清明了，上過墳了？",
+        "改日到舍下坐坐。"
+       ],
+       "say_en": [
+        "Qingming now. Been to the graves?",
+        "Come and sit at my place some day."
+       ],
+       "src": "東京夢華錄 卷七 清明節 (皆出城上墳); our proposal"
+      },
+      {
+       "who": "bow",
+       "say": [
+        "昨日去過了。",
+        "一定，一定。"
+       ],
+       "say_en": [
+        "Went yesterday.",
+        "I will, I will."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.nearrail",
+   "title": "橋頭觀水",
+   "title_en": "Watching the Water",
+   "mark": "boat",
+   "group": "S5.grp.near_rail_watchers",
+   "reading": "邵琦: many at the railings watching fish; 余辉 2015: at Qingming people watched spring water and fish. The map: five men lean on the near railing; rail watcher 4 holds a small object over the water (feeding is our guess).",
+   "gap": [
+    14,
+    32
+   ],
+   "roles": {
+    "sight": {
+     "fig": "bridge_sightseer",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map"
+    },
+    "youth": {
+     "fig": "rail_leaner_8665",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "map"
+    },
+    "w2": {
+     "fig": "rail_watcher_2",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map"
+    },
+    "w3": {
+     "fig": "rail_watcher_3",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map"
+    },
+    "w4": {
+     "fig": "rail_watcher_4",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (holding a small object over the water)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "w2",
+       "say": [
+        "看，那尾鯉魚又上來了。",
+        "那邊一群小魚。"
+       ],
+       "say_en": [
+        "Look, that carp's up again.",
+        "A shoal of little fish over there."
+       ],
+       "src": "vignettes V5.10; 邵琦 (观鱼)"
+      },
+      {
+       "who": "w3",
+       "say": [
+        "春水漲了。",
+        "水暖了，魚都浮上來。"
+       ],
+       "say_en": [
+        "The spring water's up.",
+        "The water's warm. The fish come up."
+       ],
+       "src": "余辉 2015 (春水和游鱼)"
+      },
+      {
+       "who": "w4",
+       "say": [
+        "撒些餅屑，魚都來了。",
+        "看，搶食哩。"
+       ],
+       "say_en": [
+        "Toss some crumbs and they all come.",
+        "Look, they're fighting for it."
+       ],
+       "optional": true,
+       "src": "vignettes V5.10 (feeding is our guess)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "youth",
+       "say": [
+        "趴久了，腰都酸了。",
+        "這欄干倒結實。"
+       ],
+       "say_en": [
+        "Leaning so long my back aches.",
+        "Sturdy railing, this."
+       ],
+       "src": "map (face buried in his arms on the rail); our proposal"
+      },
+      {
+       "who": "sight",
+       "say": [
+        "再看一會兒。",
+        "莫擠，莫擠。"
+       ],
+       "say_en": [
+        "A little longer.",
+        "Don't push, don't push."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "sight",
+       "think": [
+        "清明好時節。",
+        "身後吵，水上靜。"
+       ],
+       "think_en": [
+        "Qingming, a fine season.",
+        "Noisy behind, quiet on the water."
+       ],
+       "src": "余辉 2015; our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.farrail",
+   "title": "倚欄遠望",
+   "title_en": "At the Far Railing",
+   "group": "S5.grp.far_rail_sightseers",
+   "reading": "邵琦: watchers at the railings; Hansen: the bridge as 'a tableau of different social groups'; Columbia: young scholars looking out over the bridge. The map: six men at the far railing, backs to us, one bent far over peering down, the east one turned toward the big covered cart.",
+   "gap": [
+    18,
+    40
+   ],
+   "roles": {
+    "bending": {
+     "fig": "far_rail_bending_8822",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (bent far over the rail)"
+    },
+    "darkrobe": {
+     "fig": "far_rail_dark_robe_8902",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (tall, in a dark robe)"
+    },
+    "white": {
+     "fig": "far_rail_white_8955",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (in white, a basket at his feet)"
+    },
+    "east": {
+     "fig": "far_rail_dark_9308",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (head turned east toward the big cart)"
+    },
+    "back": {
+     "fig": "far_rail_back_8615",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (looking out over the moat)"
+    },
+    "white2": {
+     "fig": "far_rail_white_8698",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (forearms along the rail)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "bending",
+       "say": [
+        "好深的水。",
+        "底下有魚影。"
+       ],
+       "say_en": [
+        "Deep water.",
+        "Fish shadows down there."
+       ],
+       "src": "map (peering down into the moat); 邵琦"
+      },
+      {
+       "who": "darkrobe",
+       "say": [
+        "莫探太出去。",
+        "當心掉下去。"
+       ],
+       "say_en": [
+        "Don't lean out too far.",
+        "Careful you don't fall in."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "back",
+       "say": [
+        "這護城河，倒也寬。",
+        "看那岸上的柳。"
+       ],
+       "say_en": [
+        "Broad moat, this.",
+        "Look at the willows on the bank."
+       ],
+       "src": "map (looking out over the moat to the north bank)"
+      },
+      {
+       "who": "white2",
+       "say": [
+        "春風一吹，都綠了。",
+        "柳枝都發了。"
+       ],
+       "say_en": [
+        "One spring breeze and it all turns green.",
+        "The willows are budding."
+       ],
+       "src": "our proposal (Qingming, 東京夢華錄 卷七)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "east",
+       "say": [
+        "橋那頭來了大車。",
+        "車馬多，橋上擠。"
+       ],
+       "say_en": [
+        "A big cart coming at the far end.",
+        "So many carts. The bridge is jammed."
+       ],
+       "src": "map (he looks east toward the big covered cart)"
+      },
+      {
+       "who": "white",
+       "say": [
+        "倚著欄干，不礙事。",
+        "讓它過去罷。"
+       ],
+       "say_en": [
+        "We're by the rail. Not in the way.",
+        "Let it pass."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.beggars",
+   "title": "少年乞丐",
+   "title_en": "The Beggar Boys",
+   "mark": "coin",
+   "group": "S5.grp.beggar_boys",
+   "reading": "名画记 32: two beggar boys hold out their hands; two sightseers pretend not to hear, two give one cash to send them off. 余辉 2021: a copper bought half a bun. Who gives and who ignores is our reading of the poses. Begging lines play while the boys reach.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "boy1": {
+     "fig": "beggar_boy_9138",
+     "name": "小乞兒",
+     "name_en": "beggar boy",
+     "src": "名画记 32"
+    },
+    "boy2": {
+     "fig": "beggar_boy_9205",
+     "name": "小乞兒",
+     "name_en": "beggar boy",
+     "src": "名画记 32"
+    },
+    "giver": {
+     "fig": "far_rail_reaching_9010",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (arm out to the boys; giver is our reading)"
+    },
+    "turned": {
+     "fig": "far_rail_turned_9100",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (turned down to boy one; giver is our reading)"
+    },
+    "ignorer": {
+     "fig": "far_rail_long_robe_9200",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (ignorer is our reading)"
+    },
+    "bent": {
+     "fig": "far_rail_white_bent_9255",
+     "name": "遊人",
+     "name_en": "sightseer",
+     "src": "map (bent over the rail; ignorer is our reading)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "boy1",
+       "say": [
+        "官人，賞一文罷！",
+        "行行好，賞一文！"
+       ],
+       "say_en": [
+        "Sir, spare a coin!",
+        "Have pity, spare a coin!"
+       ],
+       "when": [
+        "hand_over"
+       ],
+       "src": "名画记 32 (正伸着手向看风景的人乞讨); when follows people.json (2026-10-13)"
+      },
+      {
+       "who": "giver",
+       "say": [
+        "拿去，快走罷。",
+        "給你一文，莫纏了。"
+       ],
+       "say_en": [
+        "Here. Now be off.",
+        "There's a coin. Stop pestering."
+       ],
+       "src": "名画记 32 (给了他一文钱，打发他快走)"
+      },
+      {
+       "who": "ignorer",
+       "think": [
+        "只當沒聽見。",
+        "莫理他。"
+       ],
+       "think_en": [
+        "Pretend you didn't hear.",
+        "Ignore him."
+       ],
+       "src": "名画记 32 (只装作没听见)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "boy2",
+       "say": [
+        "這位官人，也賞一文罷！",
+        "賞一文，買個炊餅！"
+       ],
+       "say_en": [
+        "You too, sir, spare a coin!",
+        "A coin, for a bun!"
+       ],
+       "when": [
+        "hand_over"
+       ],
+       "src": "名画记 32; 余辉 2021; when follows people.json (2026-10-13)"
+      },
+      {
+       "who": "bent",
+       "think": [
+        "莫擾了看水的興致。",
+        "吵得魚都跑了。"
+       ],
+       "think_en": [
+        "Don't spoil the pleasure of the water.",
+        "All this noise scares the fish."
+       ],
+       "src": "名画记 32 (怕乞儿破坏他们看风景的雅兴)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "turned",
+       "say": [
+        "小小年紀，怎地出來討？",
+        "你爹娘呢？"
+       ],
+       "say_en": [
+        "So young. Why are you out begging?",
+        "Where are your parents?"
+       ],
+       "src": "map (he turns down to boy one); 名画记 32"
+      },
+      {
+       "who": "boy1",
+       "say": [
+        "家裏沒糧了。",
+        "沒有爹娘了。"
+       ],
+       "say_en": [
+        "There's no food at home.",
+        "I have no parents now."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "boy2",
+       "say": [
+        "謝官人！",
+        "謝官人賞！"
+       ],
+       "say_en": [
+        "Thank you, sir!",
+        "Thank you for the coin, sir!"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.stick",
+   "title": "一杖二人",
+   "title_en": "Two Men, One Stick",
+   "group": "S5.grp.stick_pair_9035",
+   "reading": "The map: a grey-capped man with a long stick leans forward in the press on the bridge; a young man in white grips his arm and the stick from behind. Who they are to each other is our proposal (an elder helped across).",
+   "gap": [
+    18,
+    38
+   ],
+   "roles": {
+    "grey": {
+     "fig": "grey_cap_stick_9035",
+     "name": "拄杖的",
+     "name_en": "man with a stick",
+     "src": "map (grey cap, long stick)"
+    },
+    "young": {
+     "fig": "young_white_9088",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "map (gripping his arm); kinship is our proposal"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "young",
+       "say": [
+        "當心，人多。",
+        "慢些，我扶著你。"
+       ],
+       "say_en": [
+        "Careful, it's crowded.",
+        "Slowly. I've got you."
+       ],
+       "src": "vignettes V5.12; map (he grips the other's arm)"
+      },
+      {
+       "who": "grey",
+       "say": [
+        "不礙事。",
+        "這橋上真擠。"
+       ],
+       "say_en": [
+        "I'm all right.",
+        "This bridge is packed."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "grey",
+       "say": [
+        "往那邊走。",
+        "看，前頭過不去了。"
+       ],
+       "say_en": [
+        "Go that way.",
+        "Look, we can't get through ahead."
+       ],
+       "when": [
+        "point"
+       ],
+       "src": "map (the stick points west)"
+      },
+      {
+       "who": "young",
+       "say": [
+        "聽你的。",
+        "那就等等。"
+       ],
+       "say_en": [
+        "As you say.",
+        "Then we wait."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5.oldrider",
+   "title": "老者騎驢",
+   "title_en": "The Old Rider",
+   "group": "S5.grp.old_rider_party",
+   "reading": "The map: an old bearded man rides a donkey sideways, east off the bridge; his servant with a luggage pole walks ahead and turns back, mouth open, to speak to him. Lines: vignettes V5.12; 員外, the Song address for a man of means, is our proposal.",
+   "gap": [
+    20,
+    40
+   ],
+   "roles": {
+    "old": {
+     "fig": "old_rider_9168",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "map (riding sideways, hands on his knees)"
+    },
+    "servant": {
+     "fig": "pole_servant_9318",
+     "name": "僕人",
+     "name_en": "servant",
+     "src": "map (turned back, mouth open)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "servant",
+       "say": [
+        "員外，過了橋就是大路。",
+        "員外坐穩，下橋了。"
+       ],
+       "say_en": [
+        "Sir, past the bridge it's the high road.",
+        "Hold on, sir. We're coming off the bridge."
+       ],
+       "src": "vignettes V5.12 (he turns back to speak, mouth open)"
+      },
+      {
+       "who": "old",
+       "say": [
+        "不急，慢慢走。",
+        "曉得，你看路。"
+       ],
+       "say_en": [
+        "No hurry. Slowly.",
+        "I know. Watch the road."
+       ],
+       "src": "vignettes V5.12"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "old",
+       "think": [
+        "清明時節，路上人多。",
+        "城外的柳，都綠了。"
+       ],
+       "think_en": [
+        "Qingming. So many on the road.",
+        "The willows outside town have turned green."
+       ],
+       "src": "our proposal (東京夢華錄 卷七 清明節)"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "id": "b5.barber",
+   "who": {
+    "fig": "barber_7805",
+    "name": "待詔",
+    "name_en": "barber",
+    "src": "事物考; map (probable)"
+   },
+   "close": true,
+   "every": [
+    40,
+    90
+   ],
+   "say": [
+    "修面！修面！",
+    "刀快手穩，修個面？"
+   ],
+   "say_en": [
+    "Shaves! Shaves!",
+    "Sharp blade, steady hand. A shave?"
+   ],
+   "src": "vignettes V5.5 (the barber at the wall foot, 事物考)",
+   "as": {
+    "guan": [
+     "官人，修個面？"
+    ],
+    "seng": [
+     "師父，剃個頭？"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "A shave, sir?"
+    ],
+    "seng": [
+     "Master, shave your head?"
+    ]
+   }
+  },
+  {
+   "id": "b5.beggar",
+   "who": {
+    "fig": "beggar_boy_9205",
+    "name": "小乞兒",
+    "name_en": "beggar boy",
+    "src": "名画记 32"
+   },
+   "close": true,
+   "every": [
+    35,
+    80
+   ],
+   "say": [
+    "賞一文罷！",
+    "行行好！"
+   ],
+   "say_en": [
+    "Spare a coin!",
+    "Have pity!"
+   ],
+   "src": "名画记 32 (the boys hold out their hands)",
+   "as": {
+    "guan": [
+     "官人，賞一文罷！"
+    ],
+    "fu": [
+     "娘子，賞口吃的罷！"
+    ],
+    "seng": [
+     "師父，也化一文給我罷。"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Sir, spare a coin!"
+    ],
+    "fu": [
+     "Madam, something to eat!"
+    ],
+    "seng": [
+     "Master, beg a coin for me too."
+    ]
+   }
+  },
+  {
+   "id": "b5.kneel",
+   "who": {
+    "fig": "wall_squatter",
+    "name": "祭路的",
+    "name_en": "worshipper",
+    "src": "余辉 2021 (祭拜路神); map (kneeling over the thing on the ground)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "say": [
+    "路神在上，保佑一路平安。",
+    "保佑過往的，車穩人安。"
+   ],
+   "say_en": [
+    "God of the road, keep all travellers safe.",
+    "Bless all who pass: steady carts, safe people."
+   ],
+   "src": "余辉 2021 (当街举行祭拜路神的仪式); 余辉 2014 杀羊祭道. Chosen over the encyclopedic kneeling beggar."
+  },
+  {
+   "id": "b5.leaner",
+   "who": {
+    "fig": "tree_leaner_7952",
+    "name": "閒人",
+    "name_en": "idler",
+    "src": "map (leaning back against the big willow); 邵琦 (resting by the wall)"
+   },
+   "every": [
+    60,
+    140
+   ],
+   "think": [
+    "靠著樹，歇一歇。",
+    "日頭暖，人也懶了。"
+   ],
+   "think_en": [
+    "Lean on the tree and rest a bit.",
+    "Warm sun. Makes a man lazy."
+   ],
+   "src": "邵琦 (城墙下有人靠着城墙休息); map"
+  },
+  {
+   "id": "b5.bridgeporter",
+   "who": {
+    "fig": "bridge_porter",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "map (walking west into the city, two deep baskets)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "趕早進城，賣個好價。",
+    "借過，借過。"
+   ],
+   "say_en": [
+    "Into town early for a good price.",
+    "Coming through, coming through."
+   ],
+   "src": "vignettes S5 solo porters (bridge_porter heads in); 東京夢華錄 卷三 天曉諸人入市 (從城外守門入城貨賣)"
+  },
+  {
+   "id": "b5.bundle",
+   "who": {
+    "fig": "porter_bundle_9011",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "map (a big cloth bundle on his pole)"
+   },
+   "every": [
+    50,
+    110
+   ],
+   "say": [
+    "這擔子越挑越重。",
+    "讓讓，包袱寬。"
+   ],
+   "say_en": [
+    "This load gets heavier every step.",
+    "Mind, wide bundle."
+   ],
+   "src": "vignettes S5 solo porters; map"
+  },
+  {
+   "id": "b5.backporter",
+   "who": {
+    "fig": "porter_back_8050",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "map (a sack at one end, a basket at the other)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "一頭重，一頭輕，難挑。",
+    "這口袋，又往下墜。"
+   ],
+   "think_en": [
+    "Heavy one end, light the other. Hard to carry.",
+    "This sack keeps sagging."
+   ],
+   "src": "map (a tall sack at the west end, a round basket at the east end)"
+  },
+  {
+   "id": "b5.basket",
+   "who": {
+    "fig": "porter_7786",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "map (a small basket on a raised pole)"
+   },
+   "every": [
+    50,
+    120
+   ],
+   "say": [
+    "借光，借光。",
+    "出了城，腳下就快了。"
+   ],
+   "say_en": [
+    "Excuse me, excuse me.",
+    "Out of town, the feet go faster."
+   ],
+   "src": "vignettes S5 solo porters; our proposal"
+  },
+  {
+   "id": "b5.longpole",
+   "who": {
+    "fig": "pole_carrier_5840",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "map (a long pole with a pennant and a hanging bag)"
+   },
+   "every": [
+    50,
+    120
+   ],
+   "say": [
+    "借過，竿子長！",
+    "當心，莫碰著頭。"
+   ],
+   "say_en": [
+    "Coming through, long pole!",
+    "Mind your head."
+   ],
+   "src": "map (the long pole over his shoulder); our proposal"
   }
  ]
 }

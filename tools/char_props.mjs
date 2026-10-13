@@ -14,6 +14,12 @@
 // space: v_bind = IBM_j^-1 . W_j(t)^-1 . v_posed. The new node prop_<name> is a sibling of the body mesh under the
 // Armature with an identity transform and the body's skin, so three.js binds it with the body's bind matrix and
 // web/src/crowd.js shares the body's bake.
+// The carried children (tools/carry_pose.mjs) differ in three ways: their geometry is already posed in the carrier's
+// Armature frame at the bind time (placement `at: "root"`; the geometry's extras.carry names the carrier, clip and
+// time, checked here); each vertex may follow several of the carrier's bones (the geometry's _CARRY_JOINTS and
+// _CARRY_WEIGHTS, indices into extras.carry.bones), bound with the blended matrix v_bind = (sum_j w_j W_j(t) IBM_j)^-1 . v_posed; and they wear
+// the child character's body texture (`texture_from: "<character>"`, taken from its raw GLB) in a material of their
+// own, while every other prop keeps the shared palette.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -197,6 +203,11 @@ function placement(spec, P, cm) {
       F = frameOf(norm(cross(u, f)), u, f, o);
       break;
     }
+    case 'root': {
+      // already posed in the carrier's Armature frame at time t, in metres (the carried children)
+      F = I4();
+      break;
+    }
     default: throw new Error(`unknown placement ${spec.at}`);
   }
   return mul(mul(F, compose(scl(off, cm), [0, 0, 0, 1], [1, 1, 1])), compose([0, 0, 0], [0, 0, 0, 1], S));
@@ -205,13 +216,15 @@ function placement(spec, P, cm) {
 // ---------------------------------------------------------------- reading a prop's geometry (gen/props/<geom>.glb)
 async function readProp(io, file) {
   const doc = await io.read(file);
-  const out = { pos: [], nrm: [], uv: [], idx: [], image: null, mime: null };
+  const out = { pos: [], nrm: [], uv: [], idx: [], image: null, mime: null, joints: null, weights: null, carry: doc.getRoot().getExtras()?.carry || null };
   const walk = (node, parent) => {
     const m = mul(parent, node.getMatrix());
     const mesh = node.getMesh();
     if (mesh) for (const prim of mesh.listPrimitives()) {
       const base = out.pos.length / 3;
       const P = prim.getAttribute('POSITION').getArray(), N = prim.getAttribute('NORMAL')?.getArray(), T = prim.getAttribute('TEXCOORD_0')?.getArray();
+      const JJ = prim.getAttribute('_CARRY_JOINTS')?.getArray(), WW = prim.getAttribute('_CARRY_WEIGHTS')?.getArray();
+      if (JJ && WW) { out.joints ||= []; out.weights ||= []; out.joints.push(...JJ); out.weights.push(...WW); }
       for (let i = 0; i < P.length / 3; i++) {
         out.pos.push(...xf(m, [P[i * 3], P[i * 3 + 1], P[i * 3 + 2]]));
         out.nrm.push(...(N ? norm(xd(m, [N[i * 3], N[i * 3 + 1], N[i * 3 + 2]])) : [0, 1, 0]));
@@ -260,12 +273,20 @@ for (const node of armature.listChildren().filter((c) => /^prop_/.test(c.getName
   node.dispose();
   if (mesh) { mesh.listPrimitives().forEach((p) => p.listAttributes().concat([p.getIndices()]).forEach((a) => a && a.dispose())); mesh.dispose(); }
 }
-for (const m of root.listMaterials().filter((m) => m.getName() === 'prop_palette')) { m.getBaseColorTexture()?.dispose(); m.dispose(); }
+for (const m of root.listMaterials().filter((m) => m.getName() === 'prop_palette' || /^prop_tex_/.test(m.getName()))) { m.getBaseColorTexture()?.dispose(); m.dispose(); }
 
 const all = JSON.parse(fs.readFileSync(r('characters/props.json'), 'utf8'));
 const defaults = all._defaults || {};
 const specs = all[character] || {};
 let material = null;
+const ownMaterials = {};
+// a character's body texture (its raw GLB's body material image), for a prop that wears it
+async function bodyImage(name) {
+  const d = await io.read(r(`gen/characters/${name}/${name}_raw.glb`));
+  const node = d.getRoot().listNodes().find((n) => n.getSkin() && n.getMesh() && !/^(prop|tack)_/.test(n.getName()));
+  const tex = node.getMesh().listPrimitives()[0].getMaterial().getBaseColorTexture();
+  return { image: tex.getImage(), mime: tex.getMimeType() };
+}
 for (const [name, own] of Object.entries(specs)) {
   const spec = { ...(defaults[own.geom || name] || {}), ...own };
   if (!root.listAnimations().some((a) => a.getName() === spec.clip)) {
@@ -273,37 +294,71 @@ for (const [name, own] of Object.entries(specs)) {
     continue;
   }
   const geom = await readProp(io, r(`gen/props/${spec.geom || name}.glb`));
-  if (!material) {
+  if (geom.carry && (spec.at !== 'root' || geom.carry.carrier !== character || geom.carry.clip !== spec.clip || Math.abs(geom.carry.t - (spec.t || 0)) > 1e-6))
+    throw new Error(`${character}: prop_${name}'s geometry was posed on ${geom.carry.carrier} ${geom.carry.clip} @ ${geom.carry.t}s, but props.json binds it ${spec.at === 'root' ? '' : `with at: ${spec.at} (needs root) `}at ${spec.clip} @ ${spec.t || 0}s: rerun tools/carry_pose.mjs`);
+  let mat;
+  if (spec.texture_from) {
+    if (!ownMaterials[spec.texture_from]) {
+      const { image, mime } = await bodyImage(spec.texture_from);
+      const tex = doc.createTexture(`prop_tex_${spec.texture_from}`).setImage(image).setMimeType(mime);
+      const m = doc.createMaterial(`prop_tex_${spec.texture_from}`).setBaseColorTexture(tex).setRoughnessFactor(1).setMetallicFactor(0);
+      // the body materials' sampler (linear, mipmapped), not the palette's
+      m.getBaseColorTextureInfo().setMagFilter(9729).setMinFilter(9987);
+      ownMaterials[spec.texture_from] = m;
+    }
+    mat = ownMaterials[spec.texture_from];
+  }
+  if (!mat && !material) {
     const tex = doc.createTexture('prop_palette').setImage(geom.image).setMimeType(geom.mime || 'image/png');
     material = doc.createMaterial('prop_palette').setBaseColorTexture(tex).setRoughnessFactor(1).setMetallicFactor(0).setDoubleSided(true);
     material.getBaseColorTextureInfo().setMagFilter(9729).setMinFilter(9987);
   }
+  mat ||= material;
   const W = pose(doc, armature, spec.clip, spec.t || 0);
   const P = posedByName(W);
   const cm = 1 / armature.getScale()[0];   // prop metres -> Armature units
   const place = placement(spec, P, cm);
   const ji = joints.findIndex((j) => j.getName() === spec.bone);
   if (ji < 0) throw new Error(`${character}: no joint ${spec.bone}`);
-  const toBind = mul(invert(IBM(ji)), invert(P[spec.bone]));   // v_bind = IBM^-1 . W(t)^-1 . v_posed
-  const M = mul(toBind, place);
   const n = geom.pos.length / 3;
   const pos = new Float32Array(n * 3), nrm = new Float32Array(n * 3), uv = new Float32Array(geom.uv);
-  for (let i = 0; i < n; i++) {
-    pos.set(xf(M, geom.pos.slice(i * 3, i * 3 + 3)), i * 3);
-    nrm.set(norm(xd(M, geom.nrm.slice(i * 3, i * 3 + 3))), i * 3);
-  }
   const J = new Uint8Array(n * 4), Wt = new Float32Array(n * 4);
-  for (let i = 0; i < n; i++) { J[i * 4] = ji; Wt[i * 4] = 1; }
+  if (geom.joints && geom.carry?.bones) {
+    // each vertex follows its own carrier bones: bound with the blended skinning matrix at time t
+    const jidx = geom.carry.bones.map((b) => { const k = joints.findIndex((j) => j.getName() === b); if (k < 0) throw new Error(`${character}: no joint ${b}`); return k; });
+    const SK = jidx.map((k) => mul(P[joints[k].getName()], IBM(k)));
+    for (let i = 0; i < n; i++) {
+      const Mv = new Array(16).fill(0);
+      for (let c = 0; c < 4; c++) {
+        const w = geom.weights[i * 4 + c];
+        if (!w) continue;
+        const k = geom.joints[i * 4 + c];
+        for (let e = 0; e < 16; e++) Mv[e] += w * SK[k][e];
+        J[i * 4 + c] = jidx[k]; Wt[i * 4 + c] = w;
+      }
+      const Mi = mul(invert(Mv), place);
+      pos.set(xf(Mi, geom.pos.slice(i * 3, i * 3 + 3)), i * 3);
+      nrm.set(norm(xd(Mi, geom.nrm.slice(i * 3, i * 3 + 3))), i * 3);
+    }
+  } else {
+    const toBind = mul(invert(IBM(ji)), invert(P[spec.bone]));   // v_bind = IBM^-1 . W(t)^-1 . v_posed
+    const M = mul(toBind, place);
+    for (let i = 0; i < n; i++) {
+      pos.set(xf(M, geom.pos.slice(i * 3, i * 3 + 3)), i * 3);
+      nrm.set(norm(xd(M, geom.nrm.slice(i * 3, i * 3 + 3))), i * 3);
+      J[i * 4] = ji; Wt[i * 4] = 1;
+    }
+  }
   const buffer = root.listBuffers()[0];
   const acc = (type, arr) => doc.createAccessor().setType(type).setArray(arr).setBuffer(buffer);
   const prim = doc.createPrimitive()
     .setAttribute('POSITION', acc('VEC3', pos)).setAttribute('NORMAL', acc('VEC3', nrm)).setAttribute('TEXCOORD_0', acc('VEC2', uv))
     .setAttribute('JOINTS_0', acc('VEC4', J)).setAttribute('WEIGHTS_0', acc('VEC4', Wt))
-    .setIndices(acc('SCALAR', n > 65535 ? new Uint32Array(geom.idx) : new Uint16Array(geom.idx))).setMaterial(material);
+    .setIndices(acc('SCALAR', n > 65535 ? new Uint32Array(geom.idx) : new Uint16Array(geom.idx))).setMaterial(mat);
   const mesh = doc.createMesh(`prop_${name}`).addPrimitive(prim);
   const node = doc.createNode(`prop_${name}`).setMesh(mesh).setSkin(skin);
   armature.addChild(node);
-  console.log(`${character}: prop_${name} (${geom.idx.length / 3} tris) on ${spec.bone}, posed by ${spec.clip} at ${spec.t || 0} s`);
+  console.log(`${character}: prop_${name} (${geom.idx.length / 3} tris) on ${geom.joints && geom.carry?.bones ? geom.carry.bones.length + ' bones' : spec.bone}, posed by ${spec.clip} at ${spec.t || 0} s, material ${mat.getName()}`);
 }
 await io.write(outFile, doc);
 console.log('wrote', outFile);

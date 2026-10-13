@@ -1,0 +1,630 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T17:10:24.691Z",
+ "sections": [
+  "canal"
+ ],
+ "owners_load_ms": 272,
+ "seconds": 2.294,
+ "people": 140,
+ "checked": 140,
+ "crew_not_covered": 0,
+ "figures_failing": 16,
+ "fails": 31,
+ "by_class": {
+  "stance_soles (placement)": 7,
+  "contact:rail": 5,
+  "deck_support": 3,
+  "contact:boat": 3,
+  "contact:vehicle": 3,
+  "contact:seat (no seat)": 2,
+  "contact:floor (placement)": 2,
+  "contact:structure": 2,
+  "contact:table": 2,
+  "contact:reach": 1,
+  "boat_body": 1
+ },
+ "by_clip": {
+  "stance_soles": 7,
+  "deck_support": 3,
+  "lean_over:contact:rail": 2,
+  "sit:contact:floor": 2,
+  "climb_ladder:contact:structure": 2,
+  "haul_line:contact:boat": 2,
+  "push:contact:vehicle": 2,
+  "lean_over_seated:contact:table": 2,
+  "fend_pole~out:contact:reach": 1,
+  "reach_over_rail:contact:rail": 1,
+  "idle:contact:boat": 1,
+  "sit:contact:seat": 1,
+  "lean_chin~passenger_leaning_in_bay_23385:contact:rail": 1,
+  "push~figure_in_windlass_24713:contact:vehicle": 1,
+  "pole_boat~hold:boat_body": 1,
+  "lean_over~man_leaning_casks_25650:contact:rail": 1,
+  "lean_over_seated:contact:seat": 1
+ },
+ "table": {
+  "canal": {
+   "contact:reach": {
+    "n": 1,
+    "worst": 1.54,
+    "worst_id": "boatman_pole_20495"
+   },
+   "contact:rail": {
+    "n": 5,
+    "worst": 0.6,
+    "worst_id": "boatman_leaning_20558"
+   },
+   "stance_soles (placement)": {
+    "n": 7,
+    "worst": -0.127,
+    "worst_id": "boatman_on_ladder_23275"
+   },
+   "deck_support": {
+    "n": 3,
+    "worst": -0.09,
+    "worst_id": "boatman_leaning_20558"
+   },
+   "contact:boat": {
+    "n": 3,
+    "worst": 2.255,
+    "worst_id": "boatman_hauling_mast_24140"
+   },
+   "contact:seat (no seat)": {
+    "n": 2,
+    "worst": 0.427,
+    "worst_id": "boatman_seated_open_boat_22060"
+   },
+   "contact:floor (placement)": {
+    "n": 2,
+    "worst": -0.127,
+    "worst_id": "boatman_seated_open_boat_22060"
+   },
+   "contact:structure": {
+    "n": 2,
+    "worst": 0.6,
+    "worst_id": "boatman_on_ladder_23275"
+   },
+   "contact:vehicle": {
+    "n": 3,
+    "worst": 1,
+    "worst_id": "windlass_man_aft_24660"
+   },
+   "boat_body": {
+    "n": 1,
+    "worst": 0.073,
+    "worst_id": "boatman_poling_24730"
+   },
+   "contact:table": {
+    "n": 2,
+    "worst": 0.143,
+    "worst_id": "man_leaning_over_donkey_29000"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:boat",
+   "clip": "haul_line",
+   "site": "palm_L",
+   "value": 2.255,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|line_shroud_s"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_hauling_mast_24140",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "haul_line",
+   "site": "palm_R",
+   "value": 2.17,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|line_shroud_s"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_hauling_mast_24140",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:reach",
+   "clip": "fend_pole~out",
+   "site": "pole_far",
+   "value": 1.54,
+   "kind": "crew",
+   "with": [
+    "water"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_pole_20495",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_R",
+   "value": 1,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715|body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "windlass_man_aft_24660",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push",
+   "site": "palm_L",
+   "value": 0.985,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715|body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "windlass_man_aft_24660",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "reach_over_rail",
+   "site": "belly",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_leaning_20558",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_L",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [],
+   "note": "nothing within 0.6 m",
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_standing_20615",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_standing_20615",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:structure",
+   "clip": "climb_ladder",
+   "site": "palm_R",
+   "value": 0.6,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_on_ladder_23275",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:structure",
+   "clip": "climb_ladder",
+   "site": "palm_L",
+   "value": 0.578,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_on_ladder_23275",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "sit",
+   "site": "seat",
+   "value": 0.427,
+   "kind": "crew",
+   "with": [],
+   "note": "no seat under the seat point (107/107 samples): only the ground; nearest seat-high piece body 0.368 m away in plan (top 0)",
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_seated_open_boat_22060",
+   "section": "canal",
+   "model": "inspector"
+  },
+  {
+   "class": "contact:seat",
+   "clip": "lean_over_seated",
+   "site": "seat",
+   "value": 0.204,
+   "kind": "figure",
+   "with": [
+    "S2.prop.bench_29030"
+   ],
+   "note": "no seat under the seat point (64/80 samples): only the ground",
+   "rel": null,
+   "soft": false,
+   "id": "man_leaning_over_donkey_29000",
+   "section": "canal",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:boat",
+   "clip": "idle",
+   "site": "shoulder",
+   "value": 0.176,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_towed_mast_23632|line_tow"
+   ],
+   "note": "the tow line ends at the root + 1.3 m (boats.js), 0.176 m from his nearer shoulder top",
+   "at": [
+    "dump"
+   ],
+   "id": "tracker_lead_21867",
+   "section": "canal",
+   "model": "tracker"
+  },
+  {
+   "class": "contact:table",
+   "clip": "lean_over_seated",
+   "site": "forearm_L",
+   "value": 0.143,
+   "kind": "figure",
+   "with": [
+    "S2.prop.bench_29030"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_leaning_over_donkey_29000",
+   "section": "canal",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "sit",
+   "site": "sole_L",
+   "value": -0.127,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": "the clip's own sole_L height -0.017 m (placement)",
+   "rel": null,
+   "soft": false,
+   "cause": "placement",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_seated_open_boat_22060",
+   "section": "canal",
+   "model": "inspector"
+  },
+  {
+   "class": "stance_soles",
+   "value": -0.127,
+   "kind": "crew",
+   "cause": "placement",
+   "with": [
+    "body"
+   ],
+   "note": "the stance foot is inside body (a surface 0.127 m above the sole)",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_on_ladder_23275",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "contact:table",
+   "clip": "lean_over_seated",
+   "site": "forearm_R",
+   "value": 0.118,
+   "kind": "figure",
+   "with": [
+    "S2.prop.bench_29030"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "id": "man_leaning_over_donkey_29000",
+   "section": "canal",
+   "model": "robed_man"
+  },
+  {
+   "class": "contact:vehicle",
+   "clip": "push~figure_in_windlass_24713",
+   "site": "palm_R",
+   "value": 0.106,
+   "kind": "crew",
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715|body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "figure_in_windlass_24713",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "stance_soles",
+   "value": -0.092,
+   "kind": "crew",
+   "cause": "placement",
+   "with": [
+    "body"
+   ],
+   "note": "the stance foot is inside body (a surface 0.092 m above the sole)",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_leaning_20558",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "deck_support",
+   "value": -0.09,
+   "with": [
+    "S2.veh.boat_mat_cargo_21055"
+   ],
+   "note": "the root -0.09 m under the visible S2.veh.boat_mat_cargo_21055|body (rope__nocol)",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_leaning_20558",
+   "section": "canal",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_chin~passenger_leaning_in_bay_23385",
+   "site": "elbow_L",
+   "value": 0.087,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "passenger_leaning_in_bay_23385",
+   "section": "canal",
+   "model": "woman"
+  },
+  {
+   "class": "deck_support",
+   "value": -0.085,
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715"
+   ],
+   "note": "the root -0.085 m under the visible S2.veh.boat_cargo_hooded_bow_23715|body (lattice__nocol)",
+   "at": [
+    "dump"
+   ],
+   "id": "windlass_man_aft_24660",
+   "section": "canal",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:floor",
+   "clip": "sit",
+   "site": "sole_R",
+   "value": -0.081,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": "the clip's own sole_R height 0.018 m (placement)",
+   "rel": null,
+   "soft": false,
+   "cause": "placement",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_seated_open_boat_22060",
+   "section": "canal",
+   "model": "inspector"
+  },
+  {
+   "class": "boat_body",
+   "value": 0.073,
+   "with": [
+    "S2.veh.boat_cargo_hooded_bow_23715|body"
+   ],
+   "clip": "pole_boat~hold",
+   "note": "S2.veh.boat_cargo_hooded_bow_23715|body 0.073 m into the torso (hips to neck, 0.12 m round)",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_poling_24730",
+   "section": "canal",
+   "model": "boatman",
+   "kind": "crew"
+  },
+  {
+   "class": "contact:rail",
+   "clip": "lean_over~man_leaning_casks_25650",
+   "site": "palm_R",
+   "value": 0.069,
+   "kind": "crew",
+   "with": [
+    "body"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": false,
+   "at": [
+    "dump"
+   ],
+   "id": "man_leaning_casks_25650",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "stance_soles",
+   "value": 0.054,
+   "kind": "crew",
+   "cause": "placement",
+   "note": "clip sole height -0.001 m (placement)",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_pouring_bucket_22665",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "stance_soles",
+   "value": -0.052,
+   "kind": "crew",
+   "cause": "placement",
+   "with": [
+    "body"
+   ],
+   "note": "the stance foot is inside body (a surface 0.052 m above the sole)",
+   "at": [
+    "dump"
+   ],
+   "id": "boatman_poling_24730",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "stance_soles",
+   "value": -0.05,
+   "kind": "crew",
+   "cause": "placement",
+   "with": [
+    "body"
+   ],
+   "note": "the stance foot is inside body (a surface 0.05 m above the sole)",
+   "at": [
+    "dump"
+   ],
+   "id": "sweepman_capped_22208",
+   "section": "canal",
+   "model": "inspector"
+  },
+  {
+   "class": "stance_soles",
+   "value": -0.044,
+   "kind": "crew",
+   "cause": "placement",
+   "with": [
+    "body"
+   ],
+   "note": "the stance foot is inside body (a surface 0.044 m above the sole)",
+   "at": [
+    "dump"
+   ],
+   "id": "windlass_man_aft_24660",
+   "section": "canal",
+   "model": "boatman"
+  },
+  {
+   "class": "stance_soles",
+   "value": -0.041,
+   "kind": "crew",
+   "cause": "placement",
+   "with": [
+    "body"
+   ],
+   "note": "the stance foot is inside body (a surface 0.041 m above the sole)",
+   "at": [
+    "dump"
+   ],
+   "id": "crewman_crouching_24125",
+   "section": "canal",
+   "model": "boatman"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 129,
+ "contacts_failing": 20
+}

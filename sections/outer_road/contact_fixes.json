@@ -1,0 +1,495 @@
+{
+ "figures": {
+  "bearer_bending_10440": {
+   "class": "ik",
+   "do": [
+    [
+     "sedan_carry~pole_ends",
+     10
+    ]
+   ],
+   "why": "the front bearer, painted between the west chair's pole ends, bending to them with both hands: sedan_carry~pole_ends (a hand on each pole end, 1.22 m up; characters/ik_variants.json \"pole_ends\"); sedan_carry put the pole on his shoulder and his hands in the air",
+   "base_nudge": [
+    1.26,
+    0.04
+   ],
+   "base_facing": 0,
+   "nudge": [
+    1.26,
+    -0.7
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before palm_L 0.68, palm_R 0.1, after palm_L 0, palm_R 0.02; fixed contact:vehicle, contact:vehicle; moved 0.74 m from the casting's spot (limit 0.9 m); beyond the 0.6 m solve limit: his role is read from the map (between the pole ends, a hand on each), not the casting's (right shoulder under the north pole), so he stands on the chair's centre line where the poles are, 0.16 m inside their west ends (just outside them his body ran into the dark horse's rump, 0.09 m away); his foot is estimated (map: est foot, legs hidden behind the groom and the horse)",
+   "solved": {
+    "date": "2026-10-13T09:04",
+    "cost_before": 0.467,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "bearer_straining_10728": {
+   "class": "ik",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "why": "the straining middle bearer, the pole on his right shoulder as painted, his hands on it: sedan_carry~pole (characters/ik_variants.json \"pole\": the shoulder held under the pole, the palms on it; the poles fitted to that shoulder, kit pole_fit 1.44 m); the two chairs' poles meet over his shoulder (builder: u 10725)",
+   "base_nudge": [
+    0,
+    -0.53
+   ],
+   "base_facing": 180,
+   "nudge": [
+    0.17,
+    -0.32
+   ],
+   "facing_deg": 180,
+   "nudge_why": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.2, palm_L 0.23, palm_R 0.15, after shoulder_R 0, palm_L 0.03, palm_R 0.01; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.27 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:53",
+    "cost_before": 0.089,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "man_behind_bearer_10755": {
+   "class": "ik",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "why": "the second middle bearer (north poles), the pole on his right shoulder as painted, his hands on it: sedan_carry~pole (characters/ik_variants.json \"pole\": the shoulder held under the pole, the palms on it; the poles fitted to that shoulder, kit pole_fit 1.44 m)",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 200,
+   "nudge": [
+    0,
+    0.2
+   ],
+   "facing_deg": 181,
+   "nudge_why": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.23, palm_L 0.36, palm_R 0.23, after shoulder_R 0.02, palm_L 0.02, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.2 m, turned -19 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:53",
+    "cost_before": 0.21,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "bearer_east_10982": {
+   "class": "ik",
+   "do": [
+    [
+     "sedan_carry~pole",
+     10
+    ]
+   ],
+   "why": "the east chair's rear bearer, the pole on his right shoulder as painted, his hands on it: sedan_carry~pole (characters/ik_variants.json \"pole\": the shoulder held under the pole, the palms on it; the poles fitted to that shoulder, kit pole_fit 1.44 m)",
+   "base_nudge": [
+    0.14,
+    0.35
+   ],
+   "base_facing": 180,
+   "nudge": [
+    0.14,
+    0.55
+   ],
+   "facing_deg": 177,
+   "nudge_why": "solved: contact shoulder_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_L->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810, palm_R->S4.veh.sedan_chair_10623+S4.veh.sedan_chair_10810; gap before shoulder_R 0.19, palm_L 0.24, palm_R 0.15, after shoulder_R 0.02, palm_L 0.02, palm_R 0; fixed contact:vehicle, contact:vehicle, contact:vehicle; moved 0.2 m, turned -3 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:53",
+    "cost_before": 0.093,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "groom_10420": {
+   "class": "recast",
+   "do": [
+    [
+     "idle",
+     13
+    ]
+   ],
+   "why": "recast: painted standing in front of the dark horse facing the viewer, hands together at his waist holding the reins (map S4.md), not touching the horse; bridle (right hand at the bit, left on the neck) asked for a contact the painting doesn't show; the reins aren't built, so he stands (idle)"
+  },
+  "onlooker_cap_12040": {
+   "class": "recast",
+   "do": [
+    [
+     "stand_sleeves",
+     12
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "why": "recast: painted standing at the west end of the awning, arms folded at his chest, nothing behind him (map S4.md); lean_wall leaned his back on air 0.26 m from the awning; stand_sleeves (from:farmer/stand_sleeves: standing, hands in the sleeves at the chest) is the painted pose with no contact"
+  },
+  "fortune_teller_12232": {
+   "class": "recast",
+   "do": [
+    [
+     "write~table",
+     17
+    ]
+   ],
+   "why": "recast: painted seated behind his table, arms spread on it over his papers (map S4.md); his tell_fortune take sits leaning back with the hands at the chest (gen/details/contacts/fix_s4/pose_fortune_teller_tell_fortune.png: forearms over his lap, out of reach of any table he could sit at), and sit is a plain chair sit; write~table (from:official/write, both palms held on the table top: characters/ik_variants.json \"table_palms\") puts his hands on the table as painted; his stool (builder, part of his figure) is fitted under its seat point",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.15
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact seat->S4.fig.fortune_teller_12232, sole_L->ground, sole_R->ground, palm_L->S4.prop.table_12183, palm_R->S4.prop.table_12183; gap before seat 0.83, sole_L -0.01, sole_R 0.01, palm_L 0.58, palm_R 0.57, after seat 0, sole_L 0, sole_R 0.01, palm_L 0.02, palm_R 0.02; fixed contact:seat, contact:table, contact:table, furniture; moved 0.15 m from the casting's spot (limit 0.6 m); his painted foot lay on the table's north edge (the ground ray stood him on the table top); 0.15 m north he sits on his own stool (builder, fitted under the write~table seat point) with both palms on the table",
+   "solved": {
+    "date": "2026-10-13T09:20",
+    "cost_before": 5.368,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "client_seated_12185": {
+   "class": "ik",
+   "do": [
+    [
+     "listen~table",
+     12
+    ]
+   ],
+   "why": "painted seated on the stool at the table's west end, leaning forward with both forearms on the table (map S4.md): listen~table (sit_listen with both forearms held on the table top and the hands laid on it: characters/ik_variants.json \"table_forearms\"); sit_listen alone rested them on his knees, the right hand 2.5 cm inside the table",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.17,
+    0
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact seat->S4.prop.stool_12132, sole_L->ground, sole_R->ground, forearm_L->S4.prop.table_12183, forearm_R->S4.prop.table_12183; gap before seat 0.42, sole_L 0, sole_R 0.01, forearm_L 0.03, forearm_R 0.03, after seat 0.01, sole_L 0, sole_R 0.01, forearm_L 0.03, forearm_R 0.03; fixed contact:seat; moved 0.17 m from the casting's spot (limit 0.6 m); the root 0.08 m in front of his seat point on the client's stool (moved under him: build_choices.json), facing the fortune-teller as painted",
+   "solved": {
+    "date": "2026-10-13T09:20",
+    "cost_before": 0.164,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "awning_stall_man_arm_raised_9625": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    -0.25
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.25 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:20",
+    "cost_before": 15.552,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "soldier_behind_box_11580": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 270,
+   "nudge": [
+    0,
+    0.35
+   ],
+   "facing_deg": 270,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed furniture; moved 0.35 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:21",
+    "cost_before": 5.086,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "basket_leaner_10078": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.03,
+    -0.25
+   ],
+   "facing_deg": 190,
+   "nudge_why": "solved: contact palm_L->S4.prop.big_basket_10000, palm_R->S4.prop.big_basket_10000; gap before palm_L 0.05, palm_R 0.36, after palm_L 0.03, palm_R 0.1; fixed contact:table; moved 0.25 m, turned 10 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:53",
+    "cost_before": 0.084,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "onlooker_hat_12084": {
+   "class": "solve",
+   "base_nudge": [
+    -0.08,
+    0
+   ],
+   "base_facing": 300,
+   "nudge": [
+    -0.01,
+    0.12
+   ],
+   "facing_deg": 300,
+   "nudge_why": "solved: contact none (placement checks); gap before -, after -; fixed body_cylinder; moved 0.14 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T09:31",
+    "cost_before": 0.467,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "groom_rider_10255": {
+   "class": "ik",
+   "base_nudge": [
+    0.03,
+    -0.24
+   ],
+   "base_facing": 190,
+   "nudge": [
+    0.05,
+    -0.11
+   ],
+   "facing_deg": 170,
+   "nudge_why": "solved: contact palm_R->S4.ani.horse_rider_10205, palm_L->S4.ani.horse_rider_10205; gap before palm_R 0.36, palm_L 0.42, after palm_R 0.27, palm_L 0.26; fixed nothing; moved 0.13 m, turned -20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+   "solved": {
+    "date": "2026-10-13T09:32",
+    "cost_before": 0.276,
+    "cost_after": 0.134,
+    "pass": false
+   },
+   "do": [
+    [
+     "bridle~groom_rider_10255",
+     10
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~groom_rider_10255: an IK clip variant (characters/ik_variants.json \"groom_rider_10255\") lays palm_R, palm_L on what the painting has it touch, from its solved placement"
+  },
+  "ox_leader_10050": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0.22,
+    -0.34
+   ],
+   "facing_deg": -20,
+   "nudge_why": "solved: contact palm_R->S4.ani.ox_shaft_9972+S4.ani.ox_far_10045+S4.ani.ox_lead_10235, palm_L->S4.ani.ox_shaft_9972+S4.ani.ox_far_10045+S4.ani.ox_lead_10235; gap before palm_R 0.45, palm_L 0.39, after palm_R 0.44, palm_L 0.23; fixed nothing; moved 0.4 m, turned -20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+   "solved": {
+    "date": "2026-10-13T09:32",
+    "cost_before": 0.331,
+    "cost_after": 0.224,
+    "pass": false
+   },
+   "do": [
+    [
+     "bridle~ox_leader_10050",
+     10
+    ]
+   ],
+   "why": "bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement; bridle -> bridle~ox_leader_10050: an IK clip variant (characters/ik_variants.json \"ox_leader_10050\") lays palm_R, palm_L on what the painting has it touch, from its solved placement"
+  },
+  "bearded_man_10142": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 180,
+   "nudge": [
+    -0.6,
+    0
+   ],
+   "facing_deg": 196,
+   "nudge_why": "solved: contact palm_L->S4.prop.big_basket_10000, palm_R->S4.prop.big_basket_10000; gap before palm_L 0.59, palm_R 0.6, after palm_L 0.16, palm_R 0.21; fixed nothing; moved 0.6 m, turned 16 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+   "solved": {
+    "date": "2026-10-13T09:26",
+    "cost_before": 0.528,
+    "cost_after": 0.024,
+    "pass": false
+   },
+   "do": [
+    [
+     "browse~bearded_man_10142",
+     8
+    ],
+    [
+     "idle",
+     4
+    ]
+   ],
+   "why": "browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; browse -> browse~bearded_man_10142: an IK clip variant (characters/ik_variants.json \"bearded_man_10142\") lays palm_L on what the painting has it touch, from its solved placement"
+  },
+  "man_cart_tail_10405": {
+   "class": "ik",
+   "base_nudge": [
+    -0.99,
+    -1.65
+   ],
+   "base_facing": 60,
+   "nudge": [
+    -0.68,
+    -1.14
+   ],
+   "facing_deg": 65,
+   "nudge_why": "solved: contact palm_L->S4.veh.covered_ox_cart_10550, palm_R->S4.veh.covered_ox_cart_10550; gap before palm_L 0.18, palm_R 0.32, after palm_L 0.1, palm_R 0.06; fixed nothing; moved 0.6 m, turned 5 deg from the casting's spot (limit 0.6 m); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+   "solved": {
+    "date": "2026-10-13T09:26",
+    "cost_before": 0.119,
+    "cost_after": 0.006,
+    "pass": false
+   },
+   "do": [
+    [
+     "push~man_cart_tail_10405",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "push -> push~man_cart_tail_10405: an IK clip variant (characters/ik_variants.json \"man_cart_tail_10405\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push -> push~man_cart_tail_10405: an IK clip variant (characters/ik_variants.json \"man_cart_tail_10405\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push -> push~man_cart_tail_10405: an IK clip variant (characters/ik_variants.json \"man_cart_tail_10405\") lays palm_L, palm_R on what the painting has it touch, from its solved placement"
+  },
+  "ox_driver_10635": {
+   "class": "ik",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 30,
+   "nudge": [
+    -0.36,
+    0.48
+   ],
+   "facing_deg": 50,
+   "nudge_why": "solved: contact palm_L->S4.ani.ox_shaft_10712+S4.ani.ox_lead_10872, palm_R->S4.ani.ox_shaft_10712+S4.ani.ox_lead_10872; gap before palm_L 0.59, palm_R 1.09, after palm_L -0.02, palm_R 0.31; fixed nothing; moved 0.6 m, turned 20 deg from the casting's spot (limit 0.6 m); solved with the clip's own hands and the figure's root kept 0.15 m clear of the animal's real-size body (as the casting checks); the rest of the gap is closed by an IK clip variant (tools/ik_targets.mjs) at this placement",
+   "solved": {
+    "date": "2026-10-13T09:32",
+    "cost_before": 1.607,
+    "cost_after": 0.097,
+    "pass": false
+   },
+   "do": [
+    [
+     "push_flank~ox_driver_10635",
+     9
+    ],
+    [
+     "idle",
+     3
+    ]
+   ],
+   "why": "push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement; push_flank -> push_flank~ox_driver_10635: an IK clip variant (characters/ik_variants.json \"ox_driver_10635\") lays palm_L, palm_R on what the painting has it touch, from its solved placement"
+  },
+  "child_at_table_12597": {
+   "class": "ik",
+   "base_nudge": [
+    -0.3,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    0.03,
+    -0.26
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact palm_L->S4b.prop.table_12645, palm_R->S4b.prop.table_12645; gap before palm_L 0.32, palm_R 0.28, after palm_L 0.03, palm_R 0.02; fixed contact:table, contact:table; moved 0.42 m from the casting's spot (limit 0.6 m); placed (--at) so both palms come down 7 cm inside the table's west end and between its edges, not on its corner: the table (S4b.prop.table_12645) moved 0.27 m south-west onto part 1's south hall floor, clear of its east column (S4b build_choices.json); solved on the base clip reach, then the IK variant remade here (fix-s4b)",
+   "solved": {
+    "date": "2026-10-13T10:21",
+    "cost_before": 0.12,
+    "cost_after": 0,
+    "pass": true
+   },
+   "do": [
+    [
+     "reach~child_at_table_12597",
+     10
+    ]
+   ],
+   "why": "reach -> reach~child_at_table_12597: an IK clip variant (characters/ik_variants.json \"child_at_table_12597\", remade by fix-s4b at his new placement) lays palm_L, palm_R on the west end of S4b's table (S4b.prop.table_12645), which now stands on the floor he stands on (part 1's south hall), its top 0.60 m over it"
+  },
+  "rider_fan_10285": {
+   "class": "ik",
+   "do": [
+    [
+     "ride_fan~steady",
+     10
+    ]
+   ],
+   "why": "ride_fan -> ride_fan~steady: the take sinks the rider 0.19 m in its last 2 s (0.13 m into the horse); the IK variant holds his seat at its steady height (characters/ik_variants.json \"steady_seat\")"
+  },
+  "ox_driver_seated_9815": {
+   "class": "recast",
+   "do": [
+    [
+     "drive_cart",
+     16
+    ]
+   ],
+   "base_nudge": [
+    -1.43,
+    0.47
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -1.478,
+    0.484
+   ],
+   "facing_deg": -1.8,
+   "root_h": 0.7,
+   "why": "recast: painted seated on the front of S5's covered cart, driving (map: support vehicle S5.veh.covered_ox_cart_9800, H 0.9); drive_cart only (seated on the cart's front edge, feet hanging, the goad in hand): the chair sit (sit) put his seat 0.37 m behind his root, off the 0.3 m wide driver's plank",
+   "nudge_why": "fitted: his seat point on the top of the kit's driver's seat on S5.veh.covered_ox_cart_9800 (top 1.070 m, X 17.823, D 2.965: owners), facing the cart's heading (-1.8 deg); his root 0.05 m behind the seat point, and its height root_h 0.70 = the seat top + 0.005 - drive_cart's seat height 0.375 (with its soles on the ground: joints_proposed), so his feet hang over the footboard. root_h needs the proposed people.js patch (gen/details/contacts/fix_s4/engine_patches.md); until it lands the page grounds him on the road under the seat, 0.7 m low, as before"
+  },
+  "person_with_child_10430": {
+   "class": "ik",
+   "do": [
+    [
+     "hold_child~child",
+     12
+    ]
+   ],
+   "why": "children (details pass): hold_child~child (characters/ik_variants.json \"child_arms\": her arms held on her spine as the take has them at 0.1 s, her head turns damped, the last arm fall cut) so her prop child_in_arms (the rigged child_red, posed by IK in the crook of her left arm, tools/carry_pose.mjs) stays where her arms hold it: carry_check PASS (gaps <= 1.5 cm, penetration 0.8 cm); on hold_child her forearm swept 5.5-9.6 cm through the child"
+  }
+ },
+ "about": "Contact fixes for this section (gen/details/contacts/fix_standard.md): per figure, what tools/contact_solve.mjs solved (nudge, facing_deg: the root offset and yaw that put its contacts on what it touches, measured from the casting's own base_nudge / base_facing), or a recast (do, character) or a fit, with the reason. Applied last by the casting script through tools/contact_fixes.py.",
+ "limits": {
+  "max_move_m": 0.6,
+  "max_turn_deg": 30
+ }
+}

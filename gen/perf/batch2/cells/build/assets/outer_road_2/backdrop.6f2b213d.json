@@ -1,0 +1,34 @@
+{
+ "about": "The painted backdrop beyond the walkable area of S4 part 2 (outer_road_2, scan u 12600-15500) (map/BUILDING.md: painting, not models). tools/backdrop.mjs restyles each panel from the scroll strip that lies past that edge (scan rect u0,v0,u1,v1) with prompts/backdrop_panel.txt + the panel's content prompt (prompts/backdrop_outer_road_2_<side>.txt): seen at eye level on plain white, which ship keys out with clean edges; it measures the painted horizon, and web/src/backdrop.js stands the panel on the ring (angles: 0 = east, 90 = north, 180 = west) at its true aspect with that horizon at eye level, its foot in ground mist. Everything outside the painted area is veiled in mist (the scroll's blank silk). West is S4 part 1 (outer_road), built: no panel (part 1's own east panel, which paints this area, drops when this section is loaded). North: the silk's top edge cuts the top street's shops, the far bank with its shed and bare trees over the moorings, and the river where it reaches the far bank; nothing further is painted above them, so mist only. South (below the silk's bottom edge): mist only. A panel goes when its neighbouring section is built (streaming: it stands in whenever that neighbour isn't loaded).",
+ "ring": {
+  "radius": 70,
+  "bottom": -3,
+  "top": 24
+ },
+ "mist": {
+  "start": 0.6,
+  "full": 9
+ },
+ "size": "3584x1280",
+ "panels": [
+  {
+   "side": "east",
+   "angle": 11,
+   "width": 90,
+   "scan": [
+    15500,
+    0,
+    20500,
+    1790
+   ],
+   "content": "backdrop_outer_road_2_east",
+   "candidates": 2,
+   "pick": 0,
+   "why": "S3 (the Rainbow Bridge, rainbow_bridge, u 15500-20500) lies past the east seam and is not built yet: the whole of its strip, from 十千脚店's riverside hall and the boats under way at the seam, past the 彩楼欢门 scaffold, the 新酒 banner and the far bank's moored boats, to the bridge with the big boat lowering its mast and the shops beyond its north foot (S3 ends at u 20500). The seam leans with the scroll's receding direction (dx 31.6), so from the section's centre (69.98, 13.07) it spans -33.9 deg (se, 95.98/-4.39) to +56.3 deg (ne, 81.65/30.54): the panel is centred on 11 and as wide (90), its left (north) end over the open river, its right (south) end over the riverside hall. The bridge's feet (18810, 1090) and (20025, 396) map to (132.8, 9.3) and (143.9, 22.8) on S3's frame: from the centre they lie at -3.5 to +7.5 deg and 63-75 m away, on the ring itself, just right of the panel's middle",
+   "picked": "2026-10-12: candidates 0-1 are draw 2 (gen/sections/outer_road_2/backdrop/draw2_2026-10-12, made with the content prompt as it is now), 2-3 are draw 1 (draw1_2026-10-12, its first content prompt kept there as content_prompt.txt). Draw 1 painted the river and the road as a wide sheet reaching the image's bottom edge (ground strip 0.154 and 0.135 of the width: the page would lift the horizon about 9 deg over the eye). Draw 2's prompt added that the whole strip lies far off across mist, the river a flat sliver at the horizon with white mist below it, the arch made of lashed timbers (no stone, no pavilion on it), and the big boat beyond the arch closing the view: ground strip 0.072 and 0.088, the water ending in mist. Picked 0 (ground strip 0.072, horizon about 3 deg over the eye alone on its 110 m arc, as the shipped gate east 2.6 and outer road east 4.1; near-white 10.3%; 220 KB webp, 231 KB KTX2). It holds the strip's things: nearest on the right the riverside hall's upper balcony with diners; the lashed-pole scaffold with its tiers and spires; the pale banner with three dark bands on a bar; the cargo boat at the near bank heaped with goods; a cart under a domed load; dark donkeys under pale sacks; parasols and the crowd thickening up the bridge's south ramp; the single plain timber arch with no piers, poles with crossed bars at its ends, a rider and a crowd on its deck; a masted boat with its crew seen through the arch; the boat with an arched roof and a stern sweep coming toward us; five trackers hauling on the far (left) bank; moored cabin boats, open mat-roofed sheds and pollard willows (fans of shoots, none weeping) along the far bank. Its departures: the trackers' line runs to a moored cabin boat, while the masted boat lies mid-river with its mast up; no boat shows its mast being lowered; the arch's face is plain planking, not courses of beams; a small roofed box stands on the crown (the sedan chair, or a kiosk the strip does not paint); a faint reach of water and far shore shows through the arch; a short stone-edged quay under the unloading boat; the far bank is a sandy beach. Its near-white share is the pollards' crowns, painted as pale yellow-green washes, which key to pale puffs (white on the sheet's night row; on the page the panels take the hour's light). Rejected: 1 draws the arch in coursed stone on stone footings, opens a long tree-lined canal to the horizon beyond it, puts stone quays on both banks, rows the near boat with side oars, and has brown draught animals and a barrel cart instead of the sacked donkeys and the domed barrow (its towed boat with five trackers is the best of the four); 2 (draw 1) has ground strip 0.154, a pale stone-looking arch with a pavilion on its crown, and open water with an islet under the arch; 3 (draw 1) has ground strip 0.135, the river running on through the arch to a far bank with a tree line, a square tower for the scaffold, side oars, and a tow line to the near bank",
+   "horizon": 0.6585,
+   "foot": 0.919,
+   "aspect": 3.6056
+  }
+ ]
+}

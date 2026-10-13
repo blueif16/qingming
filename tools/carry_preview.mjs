@@ -3,14 +3,15 @@
 // without a Blender slot. The textured look is char_props.py review's job.
 // render(png, meshes [{P (metres, Armature axes), idx, color [r,g,b]}], dots [{p, color}], {views, size, center, extent})
 import sharp from 'sharp';
+// f points from the subject to the camera; r = (-f) x u (screen right), so no view is mirrored
 const VIEWS = {
-  left: { r: [0, 0, -1], u: [0, 1, 0], f: [1, 0, 0] },   // camera on the character's left (+X), looking -X; screen right = -Z (back)
+  left: { r: [0, 0, -1], u: [0, 1, 0], f: [1, 0, 0] },   // camera on the character's left (+X); screen right = his back
   right: { r: [0, 0, 1], u: [0, 1, 0], f: [-1, 0, 0] },
-  front: { r: [-1, 0, 0], u: [0, 1, 0], f: [0, 0, 1] },  // camera in front (+Z) looking -Z; screen right = character's right (-X)
-  back: { r: [1, 0, 0], u: [0, 1, 0], f: [0, 0, -1] },
-  top: { r: [-1, 0, 0], u: [0, 0, -1], f: [0, 1, 0] },
-  q3: { r: [-0.57, 0, 0.82], u: [0, 1, 0], f: [0.82, 0, 0.57] },
-  q3b: { r: [0.57, 0, -0.82], u: [0, 1, 0], f: [-0.82, 0, -0.57] },
+  front: { r: [1, 0, 0], u: [0, 1, 0], f: [0, 0, 1] },   // camera in front (+Z); his left on screen right
+  back: { r: [-1, 0, 0], u: [0, 1, 0], f: [0, 0, -1] },
+  top: { r: [1, 0, 0], u: [0, 0, -1], f: [0, 1, 0] },
+  q3: { r: [0.57, 0, -0.82], u: [0, 1, 0], f: [0.82, 0, 0.57] },     // front-left three-quarter
+  q3b: { r: [-0.57, 0, 0.82], u: [0, 1, 0], f: [-0.82, 0, -0.57] },  // back-right three-quarter
 };
 const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 export async function render(file, meshes, dots = [], { views = ['left', 'front', 'top'], size = 420, center = null, extent = 1.2 } = {}) {
@@ -34,6 +35,7 @@ export async function render(file, meshes, dots = [], { views = ['left', 'front'
         const L = Math.hypot(...nn) || 1; nn = nn.map((x) => x / L);
         const shade = 0.45 + 0.55 * Math.abs(dot(nn, [0.3 * V.f[0] + 0.5 * V.u[0] - 0.4 * V.r[0], 0.3 * V.f[1] + 0.5 * V.u[1] - 0.4 * V.r[1], 0.3 * V.f[2] + 0.5 * V.u[2] - 0.4 * V.r[2]].map((x, _, arr) => x / Math.hypot(...arr))));
         const col = (m.colors ? m.colors[ia] : m.color).map((x) => x * shade);
+        const tex = m.tex && m.uv ? m.tex : null;   // {data (RGB bytes), w, h}: textured by the mesh's UVs
         const minx = Math.max(0, Math.floor(Math.min(a[0], b[0], cc[0]))), maxx = Math.min(W - 1, Math.ceil(Math.max(a[0], b[0], cc[0])));
         const miny = Math.max(0, Math.floor(Math.min(a[1], b[1], cc[1]))), maxy = Math.min(H - 1, Math.ceil(Math.max(a[1], b[1], cc[1])));
         const den = (b[1] - cc[1]) * (a[0] - cc[0]) + (cc[0] - b[0]) * (a[1] - cc[1]);
@@ -47,7 +49,12 @@ export async function render(file, meshes, dots = [], { views = ['left', 'front'
           const k = y * W + x;
           if (z <= zb[k]) continue;
           zb[k] = z;
-          img[k * 3] = col[0]; img[k * 3 + 1] = col[1]; img[k * 3 + 2] = col[2];
+          if (tex) {
+            const u = l1 * m.uv[ia * 2] + l2 * m.uv[ib * 2] + l3 * m.uv[ic * 2], v = l1 * m.uv[ia * 2 + 1] + l2 * m.uv[ib * 2 + 1] + l3 * m.uv[ic * 2 + 1];
+            const tx = Math.min(tex.w - 1, Math.max(0, Math.floor((u - Math.floor(u)) * tex.w))), ty = Math.min(tex.h - 1, Math.max(0, Math.floor((v - Math.floor(v)) * tex.h)));
+            const o = (ty * tex.w + tx) * 3, sh = 0.55 + 0.45 * shade;
+            img[k * 3] = (tex.data[o] / 255) * sh; img[k * 3 + 1] = (tex.data[o + 1] / 255) * sh; img[k * 3 + 2] = (tex.data[o + 2] / 255) * sh;
+          } else { img[k * 3] = col[0]; img[k * 3 + 1] = col[1]; img[k * 3 + 2] = col[2]; }
         }
       }
     }

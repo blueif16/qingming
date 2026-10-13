@@ -1,0 +1,274 @@
+{
+ "about": "Written by blender/boat_owners.py (from blender/build_boats.py, after the export); never edit. boat_owners.bin: float32 triangles in each node's glTF frame (y up), 9 per triangle; rest matrices column-major (three.js Matrix4.elements), a root's in the page's world frame, a node's relative to its root. Detail level 0 only.",
+ "section": "S1",
+ "date": "2026-10-13 06:44:28",
+ "tris": 1306,
+ "boats": {
+  "S1.veh.boat_sampan_36440": {
+   "rest": [
+    0.970142,
+    0.0,
+    0.242536,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.242536,
+    0.0,
+    0.970142,
+    0.0,
+    370.880005,
+    -0.7,
+    -8.58,
+    1.0
+   ],
+   "info": {
+    "kind": "small",
+    "pose": "moored",
+    "motion": "moored",
+    "lw": 4.8,
+    "loa": 6.1,
+    "beam": 1.7249999999999999,
+    "deck_z": -0.03
+   },
+   "points": {
+    "pt_moor0_b": [
+     2.6994,
+     0.8,
+     -0.0048
+    ]
+   },
+   "world_points": [
+    "pt_moor0_b"
+   ],
+   "nodes": {
+    "board__edge": {
+     "rest": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      -2.4,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tris": [
+      [
+       0,
+       28,
+       "hidden__nocol"
+      ]
+     ],
+     "points": {}
+    },
+    "body": {
+     "rest": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      -2.4,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tris": [
+      [
+       28,
+       84,
+       "deck__nocol"
+      ],
+      [
+       112,
+       212,
+       "lattice__nocol"
+      ],
+      [
+       324,
+       862,
+       "timber__nocol"
+      ],
+      [
+       1186,
+       44,
+       "wet_hull__nocol"
+      ]
+     ],
+     "points": {
+      "pt_moor0_a": [
+       4.95,
+       0.8089,
+       -0.0
+      ],
+      "pt_deck": [
+       2.496,
+       -0.03,
+       -0.0
+      ],
+      "pt_bow": [
+       4.85,
+       0.1598,
+       -0.0
+      ],
+      "pt_stern": [
+       0.4,
+       -0.03,
+       -0.0
+      ],
+      "pt_tiller": [
+       0.6925,
+       0.97,
+       -0.0
+      ],
+      "pt_bitt_p": [
+       4.95,
+       0.8089,
+       -0.0
+      ]
+     }
+    },
+    "deck__col": {
+     "rest": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      -2.4,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tris": [
+      [
+       1230,
+       12,
+       "hidden__col"
+      ]
+     ],
+     "points": {}
+    },
+    "line_moor0": {
+     "rest": [
+      -0.032414,
+      0.0,
+      -0.999475,
+      0.0,
+      0.059337,
+      0.998236,
+      -0.001924,
+      0.0,
+      0.149398,
+      -0.00889,
+      -0.004845,
+      0.0,
+      2.55,
+      0.80889,
+      0.0,
+      1.0
+     ],
+     "tris": [
+      [
+       1242,
+       8,
+       "rope__nocol"
+      ]
+     ],
+     "points": {},
+     "line": {
+      "a": "pt_moor0_a",
+      "b": "pt_moor0_b",
+      "collide": false,
+      "kind": "rope",
+      "r": 0.016
+     }
+    },
+    "rim__col": {
+     "rest": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      -2.4,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tris": [
+      [
+       1250,
+       12,
+       "hidden__col"
+      ]
+     ],
+     "points": {}
+    },
+    "wet__ring": {
+     "rest": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      -2.4,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tris": [
+      [
+       1262,
+       44,
+       "water_ring__nocol"
+      ]
+     ],
+     "points": {},
+     "anim": {
+      "anim": "ripple"
+     }
+    }
+   }
+  }
+ },
+ "seconds": 0.01
+}

@@ -65,4 +65,13 @@ for p in / /world.html /assets/chars/characters.json /assets/gate.glb; do
   echo "  $code $p"
   [ "$code" = 200 ] || die "$PROD$p returned $code"
 done
+# the page fetches content-hashed copies (web/vite_asset_hashes.js, map in the build's asset_hashes.json), cached for
+# a year, immutable (web/vercel.json's routes, carried into config.json above)
+h=$(node -e 'try { console.log(JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))["assets/"]["gate.glb"] || "") } catch { }' "$STATIC/asset_hashes.json")
+if [ -n "$h" ]; then
+  p="/assets/gate.$h.glb"
+  cc=$(curl -sI "$PROD$p" | tr -d '\r' | awk -F': ' 'tolower($1) == "cache-control" { print $2 }')
+  echo "  $cc $p"
+  case "$cc" in *immutable*) ;; *) die "$PROD$p is not cached immutably (Cache-Control: $cc)" ;; esac
+fi
 echo "Live: $PROD"

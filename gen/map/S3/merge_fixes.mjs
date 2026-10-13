@@ -427,5 +427,14 @@ if (br) {
   }
 }
 
+// Q8 (2026-10-13, gen/life/q8_figures.md): 名画记 24's groom, seated on the ground inside the bar fence, is the figure behind the lamp-box: re-read as seated (pose, foot est, facing), not a new entity
+{
+  const e = get("S3.fig.behind_lampbox_17090");
+  if (e && !/ Q8 \(2026-10-13/.test(e.note || '')) {
+    Object.assign(e, {"name":"groom seated inside the tavern's bar fence (faint)","what":"A faint man seated on the ground inside 十千脚店's gate, just east of the lamp-box and behind the bar fence, resting with his knees drawn up and an arm round them, facing east toward the saddled horse outside the fence: a small pointed cap or topknot, a robe whose back edge runs down his west side. Read (名画记 24) as the horse's groom resting inside the fence while its rider drinks upstairs. Other readings: a man standing with his legs behind the fence, or a gathered cloth at the gate's west post.","pts":{"foot":[17118,1662,"est"],"head":[17085,1582]},"pose":"seated","facing_deg":350,"vis":"part: faint; his feet and the ground under him are lost among the gate's slats; his west side is against the lamp-box","src":"名画记 24 (串车: 栅栏外拴着一匹马…马夫则在栅栏内的地上坐着休息)"});
+    e.note = (e.note || '') + " Q8 (2026-10-13, gen/life/q8_figures.md): re-read as SEATED. This refines reading (a). The rounded lower end (17088-17100, 1634-1648) is his hips on the ground; the pale rounded area (17100-17137, 1610-1660) is his drawn-up knees; the diagonal stroke (17085, 1600) -> (17100, 1640) is his arm round them. So he sits facing east, his head about 60 px above his hips. That fits a man seated with his knees up, about 0.55-0.6 of the 152-160 px standing men at the door, so about 85-95 px from head to ground with the ground under him at v ~1650-1670; a standing man would leave the knee mass unexplained. Foot est (17118, 1662): his feet in front of his hips, about 2.5 m inside the fence's line (v ~1790). It was (17092, 1735, est) for a standing man, and facing 200. 名画记 24 puts the horse's groom here, on the ground inside the fence (栅栏外拴着一匹马…马夫则在栅栏内的地上坐着休息), with S3.ani.horse_17222 tied outside it. The tile restyle paints a seated figure behind the fence (crops gen/life/q8/s3_behind_lampbox_z3.jpg, s3_gate_fence_wide.jpg). Readings (b) and (c) stay open (conf low).";
+  }
+}
+
 for (const [f, p] of Object.entries(parts)) fs.writeFileSync(new URL(f, dir), JSON.stringify(p, null, 1) + '\n');
 console.log('fixes applied');

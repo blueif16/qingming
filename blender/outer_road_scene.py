@@ -268,7 +268,9 @@ def hall(x0, x1, yf, yb, rng, z0=0.0, plinth=0.3, eave=2.9, rise=1.5, cols=None,
         k.board("plaster", True, (x1, yf + 0.12), (x1, yb - 0.1), 0.14, zt, top)
     if back == "wall":
         k.board("plaster", True, (x1 - 0.1, yb), (x0 + 0.1, yb), 0.14, zt, top)
-    k.bx("timber", False, (x0 + 0.08, yf + 0.08, zt), (x1 - 0.08, yb - 0.08, zt + 0.03))   # floor boards
+    # floor boards: they collide (fix-S4, 2026-10-13): the walkable top was the plinth's at zt - 0.015, so people and
+    # the player stood 4.5 cm inside the visible boards (S4's shopkeeper_10425: a sole 0.083 m under them)
+    k.bx("timber", True, (x0 + 0.08, yf + 0.08, zt), (x1 - 0.08, yb - 0.08, zt + 0.03))
     if lintel:
         k.beam("timber", True, (x0 - 0.15, yf, top - 0.1), (x1 + 0.15, yf, top - 0.1), 0.16, 0.22, 0.03)
         k.beam("timber", False, (x0 - 0.15, yb, top - 0.1), (x1 + 0.15, yb, top - 0.1), 0.14, 0.2, 0.03)
@@ -557,7 +559,9 @@ def courier_props(rng):
         ko.document_box(x, y, h(x, y), 0.45, 0.32, 0.3, 12, rng)   # 42 x 30 px
     x, y = P("S4.prop.stool_11662")
     with sb.entity("S4.prop.stool_11662"):
-        ki.stool(x, y, h(x, y), h=0.45, s=0.42)
+        # choice: top 0.435 m, fitted to the soldier seated on it (his sit's seat point 0.430-0.450 m up with his soles
+        # on the ground; at 0.45 it sank 1.8 cm into the stool for a tenth of the cycle: fix-S4 2026-10-13)
+        ki.stool(x, y, h(x, y), h=0.435, s=0.42)
     x, y = P("S4.prop.furled_dark_banner_11870")
     with sb.entity("S4.prop.furled_dark_banner_11870"):
         # painted upright (its top straight above its foot on the silk), so it stands at its mapped foot, leaning a
@@ -851,6 +855,9 @@ def low_structures(rng):
 
 # ---------------------------------------------------------------- the fortune-teller (临街神算) and the south furniture
 
+TABLE_H_FORTUNE = 0.83   # choice: see fortune_teller()
+
+
 def fortune_teller(rng):
     """The fortune-teller's stall by the road: the woven-mat awning on poles sloping down toward the road, its east end
     closed by a bamboo blind behind the big willow; the three hanging signboards 決□, 看命, 神課 (as painted); the long
@@ -878,21 +885,31 @@ def fortune_teller(rng):
     with sb.entity("S4.prop.table_12183"):
         x0, x1, y0, y1 = sw_[0], se_[0], sw_[1], max(nw_[1], sw_[1] + 0.55)
         z = h(x0, y0)
-        k.table(x0, y0, x1, y1, z, h=0.8)
+        # choice: top 0.83 m, fitted to the seated fortune-teller's reach (write~table, both palms on it: at 0.8 his
+        # left arm stopped 2.5 cm short; fix-S4 2026-10-13); the client's forearms rest on it too (listen~table)
+        # its top TABLE_H_FORTUNE over the ground where he sits (the ground under the table dips 2.8 cm west to east)
+        f = FIG["fortune_teller_12232"]
+        th = h(f["X"], f["D"] + 0.15) + TABLE_H_FORTUNE - z
+        k.table(x0, y0, x1, y1, z, h=th)
         ki.quad2("cloth_indigo", V((x0 + 0.02, y0 - 0.03, z + 0.12)), V((x1 - 0.02, y0 - 0.03, z + 0.12)),
-                 V((x1 - 0.02, y0 - 0.03, z + 0.77)), V((x0 + 0.02, y0 - 0.03, z + 0.77)))
+                 V((x1 - 0.02, y0 - 0.03, z + th - 0.03)), V((x0 + 0.02, y0 - 0.03, z + th - 0.03)))
         for i in range(3):
             xx = x0 + 0.35 + 0.45 * i
-            sb.quad("cloth_white", False, (xx, y0 + 0.12, z + 0.805), (xx + 0.3, y0 + 0.14, z + 0.805),
-                    (xx + 0.28, y0 + 0.36, z + 0.805), (xx - 0.02, y0 + 0.34, z + 0.805))
+            sb.quad("cloth_white", False, (xx, y0 + 0.12, z + th + 0.005), (xx + 0.3, y0 + 0.14, z + th + 0.005),
+                    (xx + 0.28, y0 + 0.36, z + th + 0.005), (xx - 0.02, y0 + 0.34, z + th + 0.005))
     # the fortune-teller is painted seated behind the table, his seat hidden by it: the seat is part of his figure
-    # (map/BUILDING.md rule 3); the chair sit puts his hips about 0.4 m behind his feet (he faces the road)
+    # (map/BUILDING.md rule 3). choice (fitted to his body, fix-S4 2026-10-13): the stool under his seat point in his
+    # write~table clip (he stands 0.15 m north of his painted foot, which lay on the table's edge; the seat point is
+    # 0.03 m behind his root and 0.09 m to its right, i.e. west), its top 0.44 m (the clip's seat point 0.449 m up)
     f = FIG["fortune_teller_12232"]
+    sx, sy = f["X"] - 0.09, f["D"] + 0.18
     with sb.entity("S4.fig.fortune_teller_12232"):
-        ki.stool(f["X"], f["D"] + 0.4, h(f["X"], f["D"] + 0.4), h=0.45, s=0.36)
+        ki.stool(sx, sy, h(sx, sy), h=0.44, s=0.36)
+    # the client's stool (recorded move: under his seat at the table's west end); choice: top 0.41 m, fitted to his
+    # listen~table seat point (0.417 m up with his soles on the ground)
     x, y = P("S4.prop.stool_12132")
     with sb.entity("S4.prop.stool_12132"):
-        ki.stool(x, y, h(x, y), h=0.42, s=0.3)
+        ki.stool(x, y, h(x, y), h=0.41, s=0.3)
     x, y = P("S4.prop.stick_on_road_12260")
     with sb.entity("S4.prop.stick_on_road_12260"):
         z = h(x, y) + 0.025
@@ -958,6 +975,10 @@ def team(*eids):
     return out
 
 
+SEDAN_POLE_FIT = 1.47   # choice: see vehicles(); the bearers' shoulder top in sedan_carry~pole + the pole's radius
+SEDAN_POLE_HANDS = 1.25   # choice: the west chair's front ends in its front bearer's hands (sedan_carry~pole_ends)
+
+
 def vehicles(rng):
     """The second covered ox cart (kit covered_ox_cart) with its two legible oxen, and the two sedan chairs carried
     west (kit sedan_chair, carried). S5's covered cart, whose team is mapped here, is built by the gate builder."""
@@ -971,13 +992,23 @@ def vehicles(rng):
     # ~11005), each cabin at its painted place along them (kit cabin_at, a fraction from the rear (east) end).
     # choice: the west chair's poles end at u 10500, 0.5 m short of their painted end, so that its front bearer stands
     # clear of the dark horse beside him at real size
-    for eid, (u0, u1) in (("S4.veh.sedan_chair_10623", (10500, 10715)), ("S4.veh.sedan_chair_10810", (10735, 11005))):
+    # choice (details pass, fix-S4, 2026-10-13; gen/details/contacts/fix_s4/notes.md): the two chairs' poles meet at u
+    # 10725, over the shoulders of the two middle bearers who carry both (the straining bearer "under the poles between
+    # the two chairs, the pole across his shoulder"; painted ends u 10715 and 10735), so no pole end hangs unsupported;
+    # and the poles are fitted to their bearers (kit pole_fit): each end's axis over the ground under it at the
+    # bearer's shoulder-top height in his carry clip (sedan_carry~pole holds it at 1.432 m with his soles on the ground:
+    # characters/ik_variants.json "pole", gen/details/joints_proposed/bearer.json) plus the pole's radius 0.038, 1.470 m
+    # (the kit's pole_h 1.3 had them 0.07-0.13 m under the shoulder tops); the west chair's front (west) ends at 1.25
+    # m, in the hands of its front bearer, who stands between them "bending ... as if about to lift them"
+    # (sedan_carry~pole_ends)
+    for eid, (u0, u1), fit in (("S4.veh.sedan_chair_10623", (10500, 10725), (SEDAN_POLE_FIT, SEDAN_POLE_HANDS)),
+                               ("S4.veh.sedan_chair_10810", (10725, 11005), SEDAN_POLE_FIT)):
         p = E[eid]["pts"]
         xc, yc = (p["front"][0] + p["rear"][0]) / 2, (p["front"][1] + p["rear"][1]) / 2
         xf, xr = ux(u0, yc), ux(u1, yc)
         with sb.entity(eid):
             kv.sedan_chair(front=(xf, yc), rear=(xr, yc), z_of=h, rng=random.Random(int(xc * 100)), carried=True,
-                           cabin_at=(xr - xc) / (xr - xf))
+                           cabin_at=(xr - xc) / (xr - xf), pole_fit=fit)
 
 
 # ---------------------------------------------------------------- colliders and the road

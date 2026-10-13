@@ -13,7 +13,11 @@
         "val": [
           0.0,
           0.8
-        ]
+        ],
+        "spare": {
+          "radial_max": 0.07,
+          "below": 0.88
+        }
       },
       "to": {
         "ramp": [
@@ -36,5 +40,6 @@
         ]
       }
     }
-  ]
+  ],
+  "recolour_why": "spare: the hat's radial_min (0.056 of the height) also caught the nose tip and the cheeks in front of it (46 face triangles, 9,037 texels turned black). Faces with every vertex within 0.07 of the head's axis and the lowest under 0.88 of the height are left alone: face texels recoloured 9,037 -> 0, the hat's 328,126 texels identical (gen/details/eyes/notes.md, 2026-10-13)."
 }

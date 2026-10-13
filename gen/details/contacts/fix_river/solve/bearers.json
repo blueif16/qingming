@@ -1,0 +1,70 @@
+[
+ {
+  "id": "sedan_bearer_front_30828",
+  "model": "bearer",
+  "clips": [
+   "sedan_carry~pole"
+  ],
+  "base": {
+   "nudge": [
+    -0.26,
+    0.32
+   ],
+   "facing": 205
+  },
+  "nudge": [
+   0.11,
+   0.7
+  ],
+  "facing_deg": 200,
+  "moved_m": 0.53,
+  "turned_deg": -5,
+  "before": {
+   "cost": 0.242,
+   "fails": "contact:vehicle shoulder_R 0.203; contact:vehicle palm_L 0.416; contact:vehicle palm_R 0.229",
+   "contacts": "sedan_carry~pole:shoulder_R->S1.veh.sedan_willow_30805 q0.203/0.184 FAIL; sedan_carry~pole:palm_L->S1.veh.sedan_willow_30805 q0.416/0.267 FAIL; sedan_carry~pole:palm_R->S1.veh.sedan_willow_30805 q0.229/0.16 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "contact:vehicle shoulder_R 0.032",
+   "contacts": "sedan_carry~pole:shoulder_R->S1.veh.sedan_willow_30805 q0.032/0.029 FAIL; sedan_carry~pole:palm_L->S1.veh.sedan_willow_30805 q0.026/-0.006 PASS; sedan_carry~pole:palm_R->S1.veh.sedan_willow_30805 q0.007/-0.003 PASS",
+   "on": "ground"
+  },
+  "pass": false,
+  "seconds": 2.433
+ },
+ {
+  "id": "sedan_bearer_rear_30990",
+  "model": "bearer",
+  "clips": [
+   "sedan_carry~pole"
+  ],
+  "base": {
+   "nudge": [
+    0.02,
+    0.22
+   ],
+   "facing": 205
+  },
+  "nudge": [
+   -0.16,
+   0.39
+  ],
+  "facing_deg": 201,
+  "moved_m": 0.25,
+  "turned_deg": -4,
+  "before": {
+   "cost": 0.118,
+   "fails": "contact:vehicle shoulder_R 0.199; contact:vehicle palm_L 0.269; contact:vehicle palm_R 0.172",
+   "contacts": "sedan_carry~pole:shoulder_R->S1.veh.sedan_willow_30805 q0.199/0.18 FAIL; sedan_carry~pole:palm_L->S1.veh.sedan_willow_30805 q0.269/0.181 FAIL; sedan_carry~pole:palm_R->S1.veh.sedan_willow_30805 q0.172/0.157 FAIL"
+  },
+  "after": {
+   "cost": 0,
+   "fails": "PASS",
+   "contacts": "sedan_carry~pole:shoulder_R->S1.veh.sedan_willow_30805 q0.025/0.022 PASS; sedan_carry~pole:palm_L->S1.veh.sedan_willow_30805 q0.024/0 PASS; sedan_carry~pole:palm_R->S1.veh.sedan_willow_30805 q0/-0.004 PASS",
+   "on": "ground"
+  },
+  "pass": true,
+  "seconds": 0.996
+ }
+]

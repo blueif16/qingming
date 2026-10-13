@@ -2,15 +2,19 @@
 // press Start so that we can show some info on the start screen"; "show them the painting underneath so they can feel
 // like, okay, we're actually going to the scroll"). Its markup and CSS are inline in world.html (.ld-start and the
 // painting's band .ld-band inside #loading, shown while #loading has .ld-wait), so it paints before any script, on the
-// same paper the loading stroke then draws across. world.js awaits waitForStart() before it fetches anything heavy:
-// until 入畫 is pressed only the page's code, the band and a few small JSONs are in, which spares a phone the download
-// until you choose it. Pressing it starts the loading at once; meanwhile the band glides to where you start (its
+// same paper the loading stroke then draws across. Behind it world.js already loads the section you start in, its kit,
+// your character and then its cast (the user, 2026-10-13: "pre loading some of the assets at the start screen ... and
+// then we can continue with the progressive loadings"), so a visitor who reads it a while walks in almost at once; the
+// rest of the window streams in after the press, as before. Pressing it: the band glides to where you start (its
 // data-focus, a scan u) and swells into the paper, the lines fade, and the stroke takes their place.
+// waitForStart() resolves at the press with the glide's length in ms (0 when the screen was skipped or motion is
+// reduced): world.js lifts the paper no sooner, so the glide always lands.
 // No wait with ?start=0, on a page without the screen (gate.html), or in a browser under automation (navigator.webdriver:
 // the headless checks, benches and the deploy check), so the tools never stop at it and never see the band.
 import './start.css';
 
 const LEAVE_MS = 400;
+const GLIDE_MS = 1800; // the band's glide to where you start (focusBand)
 // the checks drive headless Chrome over CDP without --enable-automation, where navigator.webdriver stays false; its
 // user agent still says HeadlessChrome
 const automated = () => navigator.webdriver || /HeadlessChrome/.test(navigator.userAgent);
@@ -18,7 +22,7 @@ const automated = () => navigator.webdriver || /HeadlessChrome/.test(navigator.u
 export function waitForStart(query = new URLSearchParams(location.search)) {
   const box = document.getElementById('loading');
   const panel = box?.querySelector('.ld-start');
-  if (!panel) return Promise.resolve();
+  if (!panel) return Promise.resolve(0);
   const band = box.querySelector('.ld-band');
   // the info goes (no text may stay in #loading for the tools), and the stroke and its hint take its place
   const swap = () => {
@@ -29,7 +33,7 @@ export function waitForStart(query = new URLSearchParams(location.search)) {
     box.setAttribute('aria-label', '清明上河圖 · 載入中');
     box.removeAttribute('aria-modal');
   };
-  if (query.get('start') === '0' || automated()) { band?.remove(); swap(); return Promise.resolve(); }
+  if (query.get('start') === '0' || automated()) { band?.remove(); swap(); return Promise.resolve(0); }
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (still) focusBand(band, 0); // no drift: the band rests where you will start
   addAbout(box, panel);
@@ -51,15 +55,16 @@ export function waitForStart(query = new URLSearchParams(location.search)) {
       box.querySelector('.ld-about')?.remove();
       // the band swells until it fills the screen top to bottom, so the painting lies under the whole loading paper
       if (band) box.style.setProperty('--zoom', Math.max(2.6, (innerHeight * 1.1) / band.clientHeight).toFixed(2));
-      if (!still) focusBand(band, 1800);
+      if (!still) focusBand(band, GLIDE_MS);
       box.classList.add('ld-entering', 'ld-leaving');
       setTimeout(swap, still ? 0 : LEAVE_MS);
-      resolve();
+      resolve(still ? 0 : GLIDE_MS);
     };
     addEventListener('keydown', keys, true);
     addEventListener('keyup', keys, true);
     btn.addEventListener('click', go, { once: true });
     btn.focus({ preventScroll: true, focusVisible: false }); // Enter and Space press it; the ring shows once you Tab
+    if (window.__qmEarlyGo) go(); // pressed before this script was in (world.html keeps that tap): it counts
   });
 }
 

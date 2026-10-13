@@ -44,6 +44,13 @@ tools/deploy_web.sh            # about 35 s; --no-check skips the headless load
   river section's boats (`<name>_boats.glb`, `<name>/boats.json`) and the water tile (`assets/water/`); the test pages
   (`boats.html` with `assets/boats_test*`, about 1.2 MB, like `creatures.html`). v1 (2026-10-12 ~19:40): 762 files,
   81.9 MB (the morning's deploy was 118 files, 26.1 MB).
+- **Content-hashed copies** (perf batch 2, `web/vite_asset_hashes.js`): the build holds a hashed copy (hard link) of
+  each file the pages fetch, `<name>.<8 hex>.<ext>`, and `asset_hashes.json` at its root; each page carries the map
+  inline and fetches through it. The guard's "N files, X MB" counts the links twice; Vercel uploads each set of bytes
+  once. After the deploy, the live step also checks that `/assets/gate.<hash>.glb` is served `immutable` (it fails
+  after the deploy is live if the route didn't reach the CDN). The first visit after a deploy fetches changed files
+  under their new names; unchanged files keep their names and stay cached (the first hashed deploy, batch 2's,
+  refetches everything once).
 - **Before deploying new content:** `node tools/ktx2.mjs check` must PASS. The page takes a texture's KTX2 copy by URL,
   so a stale copy shows the old picture live.
 - **Never:** the project tree, `reference/` (`messenger_study` is third-party and study-only), `gen/`, `map/`,

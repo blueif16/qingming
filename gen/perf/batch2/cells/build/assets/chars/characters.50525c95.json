@@ -1,0 +1,1316 @@
+{
+ "archer": {
+  "file": "assets/chars/archer.glb",
+  "height_m": 1.74,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "draw_bow",
+   "bind"
+  ],
+  "motion": [
+   "bind"
+  ],
+  "props": {
+   "bow": "draw_bow"
+  },
+  "title": "Archer of the wine depot (S5 archer_drawing_bow_5635; plays the three archers of the wine depot)"
+ },
+ "bearer": {
+  "file": "assets/chars/bearer.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sedan_carry",
+   "chase_run",
+   "sedan_carry~pole",
+   "sedan_carry~pole_ends"
+  ],
+  "motion": [
+   "sedan_carry",
+   "chase_run",
+   "sedan_carry~pole",
+   "sedan_carry~pole_ends"
+  ],
+  "props": {
+   "bundle_hang": "idle"
+  },
+  "title": "Sedan bearer (S6 sedan_bearer_far_4462; plays the seven bearers of the two sedans)"
+ },
+ "boatman": {
+  "file": "assets/chars/boatman.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "sit",
+   "sit_talk",
+   "crouch",
+   "sit_floor",
+   "push",
+   "point",
+   "sit_one_knee",
+   "squat_sleeves",
+   "sleep_side",
+   "kneel_sleep",
+   "reach",
+   "lean_over",
+   "bend_goods",
+   "push_flank",
+   "stand_pole",
+   "steer",
+   "bucket_lift",
+   "hold_rope",
+   "hail",
+   "work_sweep",
+   "reach_over_rail",
+   "pole_boat",
+   "fend_pole",
+   "haul_line",
+   "wave_arms",
+   "lie_wave",
+   "pour_bucket",
+   "climb_ladder",
+   "tiller_seated",
+   "knees_up"
+  ],
+  "motion": [
+   "point",
+   "sit_one_knee",
+   "squat_sleeves",
+   "sleep_side",
+   "kneel_sleep",
+   "reach",
+   "lean_over",
+   "bend_goods",
+   "push_flank",
+   "stand_pole",
+   "steer",
+   "bucket_lift",
+   "hold_rope",
+   "hail",
+   "work_sweep",
+   "reach_over_rail",
+   "pole_boat",
+   "fend_pole",
+   "haul_line",
+   "wave_arms",
+   "lie_wave",
+   "pour_bucket",
+   "climb_ladder",
+   "tiller_seated",
+   "knees_up"
+  ],
+  "props": {
+   "long_pole": "stand_pole",
+   "long_pole_low": "pole_boat",
+   "long_pole_mid": "fend_pole",
+   "bucket_pour": "pour_bucket",
+   "straw_cape": "idle"
+  },
+  "title": "Boatman (S2 sweepman_upright_22168, the tall sweep hand standing upright among the crew; plays the boat crews of S3, S2 and S4b)"
+ },
+ "butcher": {
+  "file": "assets/chars/butcher.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "chop",
+   "hold_tray",
+   "hand_over"
+  ],
+  "motion": [
+   "chop",
+   "hold_tray",
+   "hand_over"
+  ],
+  "props": {
+   "cleaver": "chop",
+   "hand_dish_buns": "hold_tray"
+  },
+  "title": "Butcher of 孙羊店 (S6 butcher_3920, chopping at his block)"
+ },
+ "camel_driver": {
+  "file": "assets/chars/camel_driver.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "stroll",
+   "look",
+   "bow",
+   "sit_floor",
+   "sit",
+   "bend_goods",
+   "ride",
+   "crouch"
+  ],
+  "motion": [
+   "bow",
+   "bend_goods",
+   "ride"
+  ],
+  "props": {
+   "wind_hood": "ride",
+   "wind_cape": "ride",
+   "food_box": "idle",
+   "back_bundle_pale": "idle"
+  },
+  "title": "Driver of the camel caravan, leading it out through the gate"
+ },
+ "carter": {
+  "file": "assets/chars/carter.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "push",
+   "hand_over",
+   "ride",
+   "crouch",
+   "sit",
+   "drive_cart",
+   "steer",
+   "drive_team",
+   "bridle",
+   "walk_whip",
+   "stand_whip",
+   "listen",
+   "look",
+   "hold_rope",
+   "stand_pole",
+   "tie_kerchief",
+   "arms_folded",
+   "tow_walk",
+   "pole_boat",
+   "haul_line",
+   "bridle~ox_leader_10050"
+  ],
+  "motion": [
+   "hand_over",
+   "ride",
+   "drive_cart",
+   "steer",
+   "drive_team",
+   "bridle",
+   "walk_whip",
+   "stand_whip",
+   "listen",
+   "hold_rope",
+   "stand_pole",
+   "tie_kerchief",
+   "arms_folded",
+   "tow_walk",
+   "pole_boat",
+   "haul_line",
+   "bridle~ox_leader_10050"
+  ],
+  "props": {
+   "goad": "drive_cart",
+   "whip": "drive_cart",
+   "whip_walk": "walk_whip",
+   "whip_stand": "stand_whip",
+   "long_pole": "stand_pole",
+   "stick": "walk",
+   "stick_under_arm": "idle"
+  },
+  "title": "Carter at the tax office, handing over the manifest (one of four; the same type pulls the carts outside)"
+ },
+ "child": {
+  "file": "assets/chars/child.glb",
+  "height_m": 1.15,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "play",
+   "back_load",
+   "reach",
+   "look",
+   "listen",
+   "crouch",
+   "sit",
+   "reach_over_rail",
+   "reach~child_at_table_12597"
+  ],
+  "motion": [
+   "play",
+   "back_load",
+   "reach",
+   "listen",
+   "reach_over_rail",
+   "reach~child_at_table_12597"
+  ],
+  "props": {
+   "back_boxes": "back_load",
+   "back_bundle": "back_load"
+  },
+  "title": "Child in a short jacket (S6 boy_5050, running with his arms out; plays the street children, scaled to each painted height)"
+ },
+ "child_red": {
+  "file": "assets/chars/child_red.glb",
+  "height_m": 1.15,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "play",
+   "back_load",
+   "reach",
+   "look",
+   "listen",
+   "crouch",
+   "sit",
+   "reach_over_rail",
+   "reach~child_at_table_12597"
+  ],
+  "motion": [
+   "play",
+   "back_load",
+   "reach",
+   "listen",
+   "reach_over_rail",
+   "reach~child_at_table_12597"
+  ],
+  "props": {
+   "back_boxes": "back_load",
+   "back_bundle": "back_load"
+  },
+  "title": "Child in a red jacket (a recolour of the child: S3 child_red_18592)"
+ },
+ "child_robed": {
+  "file": "assets/chars/child_robed.glb",
+  "height_m": 1.2,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "chin",
+   "look",
+   "reach"
+  ],
+  "motion": [
+   "chin",
+   "reach"
+  ],
+  "props": {},
+  "title": "Boy in a dark robe and cap (S6 boy_dark_robe_2380, watching with a hand at his chin)"
+ },
+ "dark_hat": {
+  "file": "assets/chars/dark_hat.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "talk",
+   "point",
+   "crouch",
+   "carry_pole",
+   "lean_over",
+   "hold_tray",
+   "reach_over_rail",
+   "walk_hold_chest"
+  ],
+  "motion": [
+   "point",
+   "carry_pole",
+   "lean_over",
+   "hold_tray",
+   "reach_over_rail",
+   "walk_hold_chest"
+  ],
+  "props": {
+   "pole_baskets": "carry_pole",
+   "bundle_small": "walk_hold_chest",
+   "back_tall_bundle": "idle",
+   "tray": "hold_tray"
+  },
+  "title": "Dark-hat porter (S7 porter_baskets_1255, the porter in a wide dark hat with an upturned brim; plays the dark-hatted men of S7, S3 and S2)"
+ },
+ "elder": {
+  "file": "assets/chars/elder.glb",
+  "height_m": 1.66,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "ride_side",
+   "fan",
+   "sit",
+   "look",
+   "talk",
+   "arms_folded"
+  ],
+  "motion": [
+   "ride_side",
+   "fan",
+   "arms_folded"
+  ],
+  "props": {
+   "fan_round": "fan"
+  },
+  "title": "Old man in a tall black hat (S6 old_man_tall_hat_4666; plays five men in tall black hats, and the old rider sitting sideways on his donkey in S5)"
+ },
+ "farmer": {
+  "file": "assets/chars/farmer.glb",
+  "height_m": 1.66,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "point",
+   "crouch",
+   "bend_goods",
+   "sit",
+   "stand_sleeves",
+   "drink"
+  ],
+  "motion": [
+   "point",
+   "bend_goods",
+   "stand_sleeves"
+  ],
+  "props": {
+   "hoe": "idle"
+  },
+  "title": "Farmer (S1 man_with_stick_29205, the villager with a hoe on his shoulder; plays the villagers of S1)"
+ },
+ "fortune_teller": {
+  "file": "assets/chars/fortune_teller.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "tell_fortune",
+   "sit",
+   "hand_over",
+   "look",
+   "talk",
+   "examine_child",
+   "write",
+   "write~table"
+  ],
+  "motion": [
+   "tell_fortune",
+   "hand_over",
+   "examine_child",
+   "write",
+   "write~table"
+  ],
+  "props": {},
+  "title": "Fortune-teller (临街神算, S4 fortune_teller_12232, seated behind his table)"
+ },
+ "grain_porter": {
+  "file": "assets/chars/grain_porter.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "push",
+   "push_flank",
+   "bend_goods",
+   "back_load",
+   "carry_pole",
+   "steer",
+   "drive_team",
+   "haul_line",
+   "sack_carry",
+   "fend_pole"
+  ],
+  "motion": [
+   "push_flank",
+   "bend_goods",
+   "back_load",
+   "carry_pole",
+   "steer",
+   "drive_team",
+   "haul_line",
+   "sack_carry",
+   "fend_pole"
+  ],
+  "props": {
+   "back_sack": "sack_carry",
+   "back_sack_dark": "sack_carry",
+   "back_sack_load": "back_load",
+   "pole_bundle": "carry_pole",
+   "stick": "walk",
+   "open_sack": "bend_goods",
+   "long_pole_mid": "fend_pole"
+  },
+  "title": "Grain porter (S4b porter_pole_bundle_13537, the porter with a bundle on his shoulder pole; plays the wharf and cart labourers of S2, S4b and S3)"
+ },
+ "groom": {
+  "file": "assets/chars/groom.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "bridle",
+   "push_flank",
+   "hold_rope",
+   "chase_run",
+   "hold_horse_neck"
+  ],
+  "motion": [
+   "bridle",
+   "push_flank",
+   "hold_rope",
+   "chase_run",
+   "hold_horse_neck"
+  ],
+  "props": {
+   "staff": "idle",
+   "hat_on_back": "chase_run"
+  },
+  "title": "Groom (S7 groom_1698, the official's groom in a dark short jacket and round cap; plays the grooms and runners of S7, S3 and S1)"
+ },
+ "hat_traveller": {
+  "file": "assets/chars/hat_traveller.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "ride_fan",
+   "ride",
+   "crane",
+   "bridle",
+   "look",
+   "stand_pole",
+   "lean_over",
+   "point",
+   "talk",
+   "carry_pole",
+   "sit",
+   "push",
+   "crouch",
+   "drink",
+   "reach_over_rail",
+   "tow_walk",
+   "pole_boat",
+   "ride_fan~steady"
+  ],
+  "motion": [
+   "ride_fan",
+   "ride",
+   "crane",
+   "bridle",
+   "stand_pole",
+   "lean_over",
+   "point",
+   "carry_pole",
+   "reach_over_rail",
+   "tow_walk",
+   "pole_boat",
+   "ride_fan~steady"
+  ],
+  "props": {
+   "fan_round": "ride_fan",
+   "long_pole": "stand_pole",
+   "back_tall_bundle": "idle",
+   "pole_fringe_frame": "carry_pole",
+   "pole_shallow_baskets": "carry_pole",
+   "pole_bundles_small": "carry_pole",
+   "staff_walk": "walk",
+   "stick": "walk",
+   "stick_ride": "ride",
+   "stick_shoulder": "idle"
+  },
+  "title": "Traveller in a wide conical straw hat (S4 rider_fan_10285, riding with a round fan before his face)"
+ },
+ "hat_traveller_dark": {
+  "file": "assets/chars/hat_traveller_dark.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "ride_fan",
+   "ride",
+   "crane",
+   "bridle",
+   "look",
+   "stand_pole",
+   "lean_over",
+   "point",
+   "talk",
+   "carry_pole",
+   "sit",
+   "push",
+   "crouch",
+   "drink",
+   "reach_over_rail",
+   "tow_walk",
+   "pole_boat",
+   "ride_fan~steady"
+  ],
+  "motion": [
+   "ride_fan",
+   "ride",
+   "crane",
+   "bridle",
+   "stand_pole",
+   "lean_over",
+   "point",
+   "carry_pole",
+   "reach_over_rail",
+   "tow_walk",
+   "pole_boat",
+   "ride_fan~steady"
+  ],
+  "props": {
+   "fan_round": "ride_fan",
+   "long_pole": "stand_pole",
+   "back_tall_bundle": "idle",
+   "pole_fringe_frame": "carry_pole",
+   "pole_shallow_baskets": "carry_pole",
+   "pole_bundles_small": "carry_pole",
+   "staff_walk": "walk",
+   "stick": "walk",
+   "stick_ride": "ride",
+   "stick_shoulder": "idle"
+  },
+  "title": "Hat traveller with a black felt hat (a recolour of the hat traveller: the interim look of the dark-hatted men, dark_hat, and the official rider, official_rider)"
+ },
+ "idler": {
+  "file": "assets/chars/idler.glb",
+  "height_m": 1.66,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "chat",
+   "sit_floor",
+   "quick",
+   "lean_wall",
+   "lean_chin",
+   "crane",
+   "draw_water",
+   "bucket_shoulder",
+   "lead",
+   "point",
+   "crouch",
+   "push",
+   "bucket_lift",
+   "bridle",
+   "browse",
+   "hail",
+   "sit_one_knee",
+   "squat_sleeves",
+   "tie_kerchief",
+   "push_flank",
+   "sit",
+   "look",
+   "carry_child",
+   "steer",
+   "drive_team",
+   "arms_folded",
+   "bend_goods",
+   "sleep_side",
+   "stand_pole",
+   "lean_over",
+   "reach",
+   "back_load",
+   "sit_talk",
+   "knees_up",
+   "carry_pole",
+   "reach_over_rail",
+   "tow_walk",
+   "sack_carry",
+   "pole_boat",
+   "chase_run",
+   "sit_offer",
+   "lie_wave",
+   "wheelwright",
+   "lean_post_talk",
+   "reach_up_load",
+   "stand_sleeves",
+   "bridle~groom_rider_10255",
+   "browse~bearded_man_10142",
+   "push~man_cart_tail_10405",
+   "push_flank~ox_driver_10635"
+  ],
+  "motion": [
+   "lean_wall",
+   "lean_chin",
+   "crane",
+   "draw_water",
+   "bucket_shoulder",
+   "lead",
+   "point",
+   "bucket_lift",
+   "bridle",
+   "browse",
+   "hail",
+   "sit_one_knee",
+   "squat_sleeves",
+   "tie_kerchief",
+   "push_flank",
+   "carry_child",
+   "steer",
+   "drive_team",
+   "arms_folded",
+   "bend_goods",
+   "sleep_side",
+   "stand_pole",
+   "lean_over",
+   "reach",
+   "back_load",
+   "knees_up",
+   "carry_pole",
+   "reach_over_rail",
+   "tow_walk",
+   "sack_carry",
+   "pole_boat",
+   "chase_run",
+   "sit_offer",
+   "lie_wave",
+   "wheelwright",
+   "lean_post_talk",
+   "reach_up_load",
+   "stand_sleeves",
+   "bridle~groom_rider_10255",
+   "browse~bearded_man_10142",
+   "push_flank~ox_driver_10635"
+  ],
+  "props": {
+   "bucket": "bucket_shoulder",
+   "child_on_back": "carry_child",
+   "long_pole": "stand_pole",
+   "back_sack": "back_load",
+   "bag_hand": "idle",
+   "straw_cape": "idle",
+   "pole_hooks": "carry_pole",
+   "hoe": "carry_pole",
+   "mallet": "bend_goods",
+   "hat_on_back": "run",
+   "staff_shoulder": "carry_pole",
+   "stick_drive": "drive_team",
+   "bucket_pour": "bucket_lift"
+  },
+  "title": "Labourer idling at the foot of the wall outside the gate"
+ },
+ "inspector": {
+  "file": "assets/chars/inspector.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "talk",
+   "argue",
+   "point",
+   "ride",
+   "arms_folded",
+   "hand_over",
+   "chin",
+   "walk_whip",
+   "hold_whip",
+   "sit",
+   "look",
+   "bend_goods",
+   "lean_over",
+   "bridle",
+   "push_flank",
+   "push",
+   "work_sweep",
+   "reach_over_rail",
+   "chase_run",
+   "lunge_arms_wide",
+   "girth"
+  ],
+  "motion": [
+   "point",
+   "ride",
+   "arms_folded",
+   "hand_over",
+   "chin",
+   "walk_whip",
+   "hold_whip",
+   "bend_goods",
+   "lean_over",
+   "bridle",
+   "push_flank",
+   "work_sweep",
+   "reach_over_rail",
+   "chase_run",
+   "lunge_arms_wide",
+   "girth"
+  ],
+  "props": {
+   "staff": "talk",
+   "whip": "walk_whip",
+   "whip_hold": "hold_whip",
+   "bundle_hang": "walk",
+   "stick_point": "point"
+  },
+  "title": "Inspector outside the tax office, naming a large figure for the carters bales (余辉)"
+ },
+ "monk": {
+  "file": "assets/chars/monk.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "back_load",
+   "talk"
+  ],
+  "motion": [
+   "back_load"
+  ],
+  "props": {
+   "back_frame": "back_load"
+  },
+  "title": "Itinerant monk (行脚僧, S6 itinerant_monk_2078; the back-frame is the prop prop_back_frame)"
+ },
+ "official": {
+  "file": "assets/chars/official.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "sit_talk",
+   "write"
+  ],
+  "motion": [
+   "write"
+  ],
+  "props": {},
+  "title": "Tax official (税官), seated at his desk in the tax office, about to write the declaration"
+ },
+ "official_rider": {
+  "file": "assets/chars/official_rider.glb",
+  "height_m": 1.74,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "talk",
+   "bridle",
+   "ride"
+  ],
+  "motion": [
+   "bridle",
+   "ride"
+  ],
+  "props": {
+   "stick": "ride"
+  },
+  "title": "Official rider (S7 official_rider_1610, the bearded official in the broad black hat riding home, the scroll's last figure; also S4b's two men in broad dark hats)"
+ },
+ "porter": {
+  "file": "assets/chars/porter.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "carry_pole",
+   "stand_pole",
+   "lift_pole",
+   "stride_stick",
+   "talk",
+   "hold_tray",
+   "shoulder_box",
+   "push",
+   "look",
+   "bend_goods",
+   "point",
+   "lean_over",
+   "crouch",
+   "crane",
+   "back_load",
+   "sit_floor",
+   "push_flank",
+   "reach",
+   "tow_walk",
+   "sack_carry",
+   "reach_over_rail",
+   "pole_boat",
+   "fend_pole",
+   "rest_on_stick"
+  ],
+  "motion": [
+   "carry_pole",
+   "stand_pole",
+   "lift_pole",
+   "stride_stick",
+   "hold_tray",
+   "shoulder_box",
+   "bend_goods",
+   "point",
+   "lean_over",
+   "crane",
+   "back_load",
+   "push_flank",
+   "reach",
+   "tow_walk",
+   "sack_carry",
+   "reach_over_rail",
+   "pole_boat",
+   "fend_pole",
+   "rest_on_stick"
+  ],
+  "props": {
+   "pole_baskets": "carry_pole",
+   "pole_boxes": "carry_pole",
+   "pole_bundle": "carry_pole",
+   "pole_shallow_baskets": "carry_pole",
+   "pole_bundles": "carry_pole",
+   "stick": "walk",
+   "staff": "stand_pole",
+   "tray": "hold_tray",
+   "tray_head": "walk",
+   "box_shoulder": "shoulder_box",
+   "stick_stride": "stride_stick",
+   "long_pole": "stand_pole",
+   "back_sack": "back_load",
+   "back_sack_dark": "back_load",
+   "sack_shoulder": "carry_pole",
+   "back_tall_bundle": "idle",
+   "t_stick": "idle",
+   "straw_cape": "idle",
+   "pole_hampers": "carry_pole",
+   "pole_buckets": "carry_pole",
+   "pole_jar_bundle": "carry_pole",
+   "pole_basket_branches": "carry_pole",
+   "hoe": "carry_pole",
+   "flat_basket": "hold_tray",
+   "open_sack": "bend_goods",
+   "back_bundle": "idle",
+   "staff_shoulder": "carry_pole",
+   "back_sack_carry": "sack_carry",
+   "long_pole_low": "pole_boat",
+   "long_pole_mid": "fend_pole"
+  },
+  "title": "Porter with a shoulder pole (B1 style test, 2026-10-09; views and mesh in gen/v1)"
+ },
+ "robed_man": {
+  "file": "assets/chars/robed_man.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "talk",
+   "listen",
+   "tie_kerchief",
+   "hold_rope",
+   "crane",
+   "sit_talk",
+   "sit",
+   "look",
+   "knees_up",
+   "drink",
+   "hail",
+   "bend_goods",
+   "lean_chin",
+   "point",
+   "back_load",
+   "carry_pole",
+   "chin",
+   "sit_floor",
+   "stand_pole",
+   "lead",
+   "sack_carry",
+   "fend_pole",
+   "wave_arms",
+   "beckon_lean",
+   "lean_over_seated",
+   "look_up",
+   "knee_on_stool",
+   "listen~table"
+  ],
+  "motion": [
+   "listen",
+   "tie_kerchief",
+   "hold_rope",
+   "crane",
+   "knees_up",
+   "hail",
+   "bend_goods",
+   "lean_chin",
+   "point",
+   "back_load",
+   "carry_pole",
+   "chin",
+   "stand_pole",
+   "lead",
+   "sack_carry",
+   "fend_pole",
+   "wave_arms",
+   "beckon_lean",
+   "lean_over_seated",
+   "look_up",
+   "knee_on_stool",
+   "listen~table"
+  ],
+  "props": {
+   "staff": "idle",
+   "lead_rope": "hold_rope",
+   "long_pole": "stand_pole",
+   "back_sack_dark": "back_load",
+   "hip_bag": "idle",
+   "hand_dish_bowl": "drink",
+   "back_chair_frame": "idle",
+   "pole_bundles": "carry_pole",
+   "fan_point": "point",
+   "long_pole_mid": "fend_pole"
+  },
+  "title": "Man in a long loose white robe (S4 ox_leader_11017; plays the white-robed men of the outer road)"
+ },
+ "scholar": {
+  "file": "assets/chars/scholar.glb",
+  "height_m": 1.74,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "drink",
+   "talk",
+   "fan",
+   "knees_up",
+   "look",
+   "point",
+   "crane",
+   "bridle",
+   "lean_over",
+   "lean_chin",
+   "ride",
+   "sit_talk",
+   "listen",
+   "bow",
+   "reach_over_rail",
+   "point_way"
+  ],
+  "motion": [
+   "fan",
+   "knees_up",
+   "point",
+   "crane",
+   "bridle",
+   "lean_over",
+   "lean_chin",
+   "ride",
+   "listen",
+   "bow",
+   "reach_over_rail",
+   "point_way"
+  ],
+  "props": {
+   "fan_round": "fan",
+   "staff": "idle",
+   "lidded_basket": "idle",
+   "stick_bag": "idle",
+   "hoe": "idle",
+   "stick_ride": "ride"
+  },
+  "title": "Scholar in a pale robe (赶考士人, S6 scholar_front_3240; plays 19 pale-robed men)"
+ },
+ "sightseer": {
+  "file": "assets/chars/sightseer.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "chat",
+   "lean_chin",
+   "ride",
+   "crane",
+   "bow",
+   "fan_walk",
+   "knees_up",
+   "point",
+   "listen"
+  ],
+  "motion": [
+   "lean_chin",
+   "ride",
+   "crane",
+   "bow",
+   "fan_walk",
+   "knees_up",
+   "point",
+   "listen"
+  ],
+  "props": {
+   "fan_round": "fan_walk"
+  },
+  "title": "Scholar sightseer leaning on the moat bridge railing, watching the fish"
+ },
+ "soldier": {
+  "file": "assets/chars/soldier.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sleep_side",
+   "doze_knees",
+   "sit_one_knee",
+   "squat_sleeves",
+   "kneel_sleep",
+   "sit"
+  ],
+  "motion": [
+   "sleep_side",
+   "doze_knees",
+   "sit_one_knee",
+   "squat_sleeves",
+   "kneel_sleep"
+  ],
+  "props": {},
+  "title": "Courier-post soldier (递铺, S4 soldier_knee_up_11792; plays the seven dozing soldiers)"
+ },
+ "storyteller": {
+  "file": "assets/chars/storyteller.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "tell",
+   "sit_floor",
+   "sit",
+   "sit_point",
+   "show_goods_seated"
+  ],
+  "motion": [
+   "tell",
+   "sit_point",
+   "show_goods_seated"
+  ],
+  "props": {},
+  "title": "Storyteller (闹市说书, S6 storyteller_3822, the one figure facing out of the ring)"
+ },
+ "straw_hat": {
+  "file": "assets/chars/straw_hat.glb",
+  "height_m": 1.7,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "crouch",
+   "push",
+   "sit",
+   "crane",
+   "carry_pole",
+   "stand_pole",
+   "hold_rope",
+   "tow_walk",
+   "pole_boat",
+   "drive_donkeys"
+  ],
+  "motion": [
+   "crane",
+   "carry_pole",
+   "stand_pole",
+   "hold_rope",
+   "tow_walk",
+   "pole_boat",
+   "drive_donkeys"
+  ],
+  "props": {
+   "pole_shallow_baskets": "carry_pole",
+   "pole_bundles": "carry_pole",
+   "pole_bundles_small": "carry_pole",
+   "staff_walk": "walk",
+   "stick": "drive_donkeys",
+   "stick_shoulder": "idle",
+   "long_pole": "stand_pole",
+   "long_pole_low": "pole_boat"
+  },
+  "title": "Straw-hat labourer (S3 porter_straw_hat_17762, the porter in a broad straw hat; plays the hatted labourers, trackers and charcoal drivers of S3, S2 and S1)"
+ },
+ "townsman": {
+  "file": "assets/chars/townsman.glb",
+  "height_m": 1.72,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "talk",
+   "look",
+   "ride",
+   "crane",
+   "bow",
+   "lead",
+   "hand_over",
+   "crouch",
+   "back_load",
+   "show_garment",
+   "browse",
+   "carry_child",
+   "squat_sleeves",
+   "carry_pole",
+   "sit",
+   "listen",
+   "lean_over",
+   "hail",
+   "kneel_sleep",
+   "hold_tray",
+   "reach_over_rail",
+   "sack_carry",
+   "sit_floor"
+  ],
+  "motion": [
+   "ride",
+   "crane",
+   "bow",
+   "lead",
+   "hand_over",
+   "back_load",
+   "show_garment",
+   "browse",
+   "carry_child",
+   "squat_sleeves",
+   "carry_pole",
+   "listen",
+   "lean_over",
+   "hail",
+   "kneel_sleep",
+   "hold_tray",
+   "reach_over_rail",
+   "sack_carry"
+  ],
+  "props": {
+   "back_boxes": "back_load",
+   "child_on_shoulders": "carry_child",
+   "back_sack": "back_load",
+   "sack_shoulder": "carry_pole",
+   "hip_bag": "idle",
+   "wind_hood": "ride",
+   "wind_cape": "ride",
+   "folded_parasol": "carry_pole",
+   "rope_coil": "hold_tray",
+   "back_bundle": "idle"
+  },
+  "title": "Townsman and shop owner (B1 style test, 2026-10-09; views and mesh in gen/v1)"
+ },
+ "tracker": {
+  "file": "assets/chars/tracker.glb",
+  "height_m": 1.68,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "push",
+   "hold_rope",
+   "tow_walk"
+  ],
+  "motion": [
+   "hold_rope",
+   "tow_walk"
+  ],
+  "props": {
+   "straw_cape": "idle"
+  },
+  "title": "Tracker (S2 tracker_rear_22172, the last of the 纤夫 hauling the grain boat; plays the trackers of S3 and S2)"
+ },
+ "woman": {
+  "file": "assets/chars/woman.glb",
+  "height_m": 1.58,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "hold_child",
+   "look",
+   "lean_chin",
+   "tie_kerchief",
+   "ride_side",
+   "sit_hold_child"
+  ],
+  "motion": [
+   "hold_child",
+   "lean_chin",
+   "tie_kerchief",
+   "ride_side",
+   "sit_hold_child"
+  ],
+  "props": {
+   "child_in_arms": "hold_child",
+   "veiled_hat": "ride_side",
+   "child_on_lap": "sit_hold_child"
+  },
+  "title": "Woman (the matchmaker in the sedan, S6 sedan_passenger_4362; her dress from a woman bringing a child to 赵太丞家, S7, scan u 1575-1655)"
+ },
+ "woman_pale": {
+  "file": "assets/chars/woman_pale.glb",
+  "height_m": 1.58,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "sit",
+   "hold_child",
+   "look",
+   "lean_chin",
+   "tie_kerchief",
+   "ride_side",
+   "sit_hold_child"
+  ],
+  "motion": [
+   "hold_child",
+   "lean_chin",
+   "tie_kerchief",
+   "ride_side",
+   "sit_hold_child"
+  ],
+  "props": {
+   "child_in_arms": "hold_child",
+   "veiled_hat": "ride_side",
+   "child_on_lap": "sit_hold_child"
+  },
+  "title": "Woman in a pale over-robe (a recolour of the woman: S7's two women, standing_woman_1567 and seated_woman_child_1535)"
+ },
+ "youth": {
+  "file": "assets/chars/youth.glb",
+  "height_m": 1.45,
+  "clips": [
+   "walk",
+   "run",
+   "idle",
+   "look",
+   "chin",
+   "reach",
+   "crane",
+   "reach_over_rail"
+  ],
+  "motion": [
+   "chin",
+   "reach",
+   "crane",
+   "reach_over_rail"
+  ],
+  "props": {},
+  "title": "Youth (S3 youth_round_face_18643, the round-faced youth on the boat deck; plays the youths of S3, S2 and S4b)"
+ }
+}

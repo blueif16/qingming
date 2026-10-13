@@ -1,0 +1,63 @@
+{
+ "figures": {
+  "groom_1698": {
+   "class": "recast",
+   "do": [
+    [
+     "idle",
+     9
+    ],
+    [
+     "look",
+     4
+    ]
+   ],
+   "why": "painted walking at the horse's head with his hands together in front of him at the waist (holding the lead or something small), his body hiding where the horse's head is, face turned to the official (map/text/S7.md): no hand is painted on the horse, and no lead is built, so idle (hands together at the waist, as S4's groom_10420) instead of bridle, whose hands reached 0.7-0.9 m for a bit and neck that aren't there"
+  },
+  "man_at_post_1118": {
+   "class": "solve",
+   "base_nudge": [
+    0,
+    0
+   ],
+   "base_facing": 200,
+   "nudge": [
+    -0.31,
+    0.32
+   ],
+   "facing_deg": 207,
+   "nudge_why": "solved: contact back->S7.bld.gatehouse_1240; gap before back 0.42, after back 0.04; fixed contact:wall, site_inside; moved 0.45 m, turned 7 deg from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:41",
+    "cost_before": 0.446,
+    "cost_after": 0,
+    "pass": true
+   }
+  },
+  "seated_woman_child_1535": {
+   "class": "solve",
+   "base_nudge": [
+    0.08,
+    0
+   ],
+   "base_facing": 0,
+   "nudge": [
+    -0.11,
+    0
+   ],
+   "facing_deg": 0,
+   "nudge_why": "solved: contact seat->S7.prop.bench_shop_west_1507, sole_L->ground, sole_R->ground; gap before seat 0.44, sole_L 0.01, sole_R 0, after seat 0.02, sole_L 0.01, sole_R 0; fixed contact:seat; moved 0.19 m from the casting's spot (limit 0.6 m)",
+   "solved": {
+    "date": "2026-10-13T10:41",
+    "cost_before": 0.189,
+    "cost_after": 0,
+    "pass": true
+   }
+  }
+ },
+ "about": "Contact fixes for this section (gen/details/contacts/fix_standard.md): per figure, what tools/contact_solve.mjs solved (nudge, facing_deg: the root offset and yaw that put its contacts on what it touches, measured from the casting's own base_nudge / base_facing), or a recast (do, character) or a fit, with the reason. Applied last by the casting script through tools/contact_fixes.py.",
+ "limits": {
+  "max_move_m": 0.6,
+  "max_turn_deg": 30
+ }
+}

@@ -1,0 +1,2325 @@
+{
+ "about": "tools/clip_ground.mjs: per character file and clip, sole_m (metres to add so the clip's ground contact sits on flat ground) and seat_m (ride clips: the seat site over the root); measured on gen/details/joints/.",
+ "page_applies_sole_m": true,
+ "date": "2026-10-13T14:15:46.236Z",
+ "files": {
+  "assets/chars/archer.glb": {
+   "character": "archer",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.047
+    },
+    "draw_bow": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.041
+    },
+    "bind": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.031
+    }
+   }
+  },
+  "assets/chars/bearer.glb": {
+   "character": "bearer",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.05
+    },
+    "sedan_carry": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.03
+    },
+    "sedan_carry~pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.029
+    },
+    "sedan_carry~pole_ends": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.03
+    },
+    "sedan_carry~sedan_bearer_front_18838": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.03
+    },
+    "sedan_carry~sedan_bearer_rear_18688": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.029
+    }
+   }
+  },
+  "assets/chars/boatman.glb": {
+   "character": "boatman",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.015
+    },
+    "sit_talk": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.021
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.023
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.083
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "sit_one_knee": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "squat_sleeves": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.014
+    },
+    "sleep_side": {
+     "posture": "lie",
+     "measured_m": 0,
+     "sole_m": 0.068
+    },
+    "kneel_sleep": {
+     "posture": "kneel",
+     "measured_m": 0,
+     "sole_m": -0.018
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "bucket_lift": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.024
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "hail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "work_sweep": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.018
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.026
+    },
+    "fend_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "haul_line": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.061
+    },
+    "wave_arms": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "lie_wave": {
+     "posture": "lie",
+     "measured_m": 0,
+     "sole_m": -0.027
+    },
+    "pour_bucket": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "climb_ladder": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.137
+    },
+    "tiller_seated": {
+     "posture": "floor",
+     "measured_m": 0.002,
+     "sole_m": 0
+    },
+    "knees_up": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": 0.013
+    },
+    "work_sweep~bar": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.019
+    },
+    "pole_boat~hold": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.051
+    },
+    "fend_pole~up": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.015
+    },
+    "fend_pole~out": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "lean_over~man_leaning_casks_25650": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/butcher.glb": {
+   "character": "butcher",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.037
+    },
+    "chop": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "hold_tray": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "chop~butcher_3920": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    }
+   }
+  },
+  "assets/chars/camel_driver.glb": {
+   "character": "camel_driver",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.035
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.033
+    },
+    "bow": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.058
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.477
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.023
+    }
+   }
+  },
+  "assets/chars/carter.glb": {
+   "character": "carter",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.042
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.029
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.552
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.007
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.008
+    },
+    "drive_cart": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.052
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "stand_whip": {
+     "posture": "stand",
+     "measured_m": 0.003,
+     "sole_m": 0
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.008
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "tie_kerchief": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "arms_folded": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.026
+    },
+    "haul_line": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.055
+    },
+    "bridle~ox_leader_10050": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "browse": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "stand_sleeves": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "bridle~groom_8167": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "browse~pack_handler_5837": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "idle~cart_shaftman_8498": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.041
+    },
+    "sit~wagon_top_rider_3740": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": 0.148
+    }
+   }
+  },
+  "assets/chars/child.glb": {
+   "character": "child",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.03
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.02
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.015
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "reach~child_at_table_12597": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0.003,
+     "sole_m": 0
+    },
+    "sit~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.015
+    }
+   }
+  },
+  "assets/chars/child_red.glb": {
+   "character": "child_red",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.03
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.02
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.015
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "reach~child_at_table_12597": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0.003,
+     "sole_m": 0
+    },
+    "sit~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.015
+    }
+   }
+  },
+  "assets/chars/child_robed.glb": {
+   "character": "child_robed",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.03
+    },
+    "chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.027
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/dark_hat.glb": {
+   "character": "dark_hat",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.01
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "hold_tray": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.02
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "reach_over_rail~deck_stooping_hat_19765": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.009
+    }
+   }
+  },
+  "assets/chars/elder.glb": {
+   "character": "elder",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.039
+    },
+    "ride_side": {
+     "posture": "ride",
+     "seat_m": 0.315
+    },
+    "fan": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.041
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.005
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "arms_folded": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "stand_sleeves": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    }
+   }
+  },
+  "assets/chars/farmer.glb": {
+   "character": "farmer",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.011
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": -0.001,
+     "sole_m": 0
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "stand_sleeves": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "drink": {
+     "posture": "chair",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "drink~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/fortune_teller.glb": {
+   "character": "fortune_teller",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.028
+    },
+    "tell_fortune": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.008
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.032
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.037
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.039
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.023
+    },
+    "examine_child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.042
+    },
+    "write": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.009
+    },
+    "write~table": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.009
+    },
+    "sit~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.031
+    }
+   }
+  },
+  "assets/chars/grain_porter.glb": {
+   "character": "grain_porter",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "haul_line": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.053
+    },
+    "fend_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.011
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": -0.002,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/groom.glb": {
+   "character": "groom",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0.002,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": -0.001,
+     "sole_m": 0
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "hold_horse_neck": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.006
+    },
+    "hold_horse_neck~groom_holding_horse_19095": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.007
+    }
+   }
+  },
+  "assets/chars/hat_traveller.glb": {
+   "character": "hat_traveller",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.051
+    },
+    "ride_fan": {
+     "posture": "ride",
+     "seat_m": 0.638
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.45
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.02
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.025
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.022
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.012
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.006
+    },
+    "drink": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.01
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.014
+    },
+    "ride_fan~steady": {
+     "posture": "ride",
+     "seat_m": 0.638
+    }
+   }
+  },
+  "assets/chars/hat_traveller_dark.glb": {
+   "character": "hat_traveller_dark",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.051
+    },
+    "ride_fan": {
+     "posture": "ride",
+     "seat_m": 0.638
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.45
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.02
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.025
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.022
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.012
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.006
+    },
+    "drink": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.01
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.014
+    },
+    "ride_fan~steady": {
+     "posture": "ride",
+     "seat_m": 0.638
+    }
+   }
+  },
+  "assets/chars/idler.glb": {
+   "character": "idler",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.04
+    },
+    "chat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.034
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.057
+    },
+    "lean_wall": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.032
+    },
+    "lean_chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.022
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.031
+    },
+    "draw_water": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.015
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.035
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "bucket_lift": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.015
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.017
+    },
+    "browse": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "hail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.015
+    },
+    "sit_one_knee": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.009
+    },
+    "squat_sleeves": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": 0
+    },
+    "tie_kerchief": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "arms_folded": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.016
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "sleep_side": {
+     "posture": "lie",
+     "measured_m": 0,
+     "sole_m": 0.032
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "sit_talk": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.011
+    },
+    "knees_up": {
+     "posture": "floor",
+     "measured_m": -0.002,
+     "sole_m": 0
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.021
+    },
+    "sit_offer": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.055
+    },
+    "lie_wave": {
+     "posture": "lie",
+     "measured_m": 0,
+     "sole_m": -0.039
+    },
+    "wheelwright": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "lean_post_talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "reach_up_load": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.01
+    },
+    "stand_sleeves": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "bridle~groom_rider_10255": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.017
+    },
+    "browse~bearded_man_10142": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "lean_chin~moat_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.021
+    },
+    "sit_offer~tub_vendor_27765": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.06
+    },
+    "lean_over~rail_watcher_19892": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.007
+    },
+    "lean_over~man_leaning_on_railing_19225": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.031
+    },
+    "lean_over~man_head_bowed_18962": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.031
+    },
+    "reach_over_rail~deck_rail_leaner_19578": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "reach_over_rail~man_lowering_rope_19295": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.029
+    },
+    "lean_over~counter_man_leaning_13325": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    },
+    "reach_up_load~porter_at_cart_rear_13090": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.01
+    },
+    "lean_over~far_shopkeeper_19620": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.005
+    },
+    "bridle~groom_at_donkey_18682": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.017
+    }
+   }
+  },
+  "assets/chars/inspector.glb": {
+   "character": "inspector",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.026
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.023
+    },
+    "argue": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.031
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.026
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.535
+    },
+    "arms_folded": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.022
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.019
+    },
+    "chin": {
+     "posture": "stand",
+     "measured_m": -0.001,
+     "sole_m": 0
+    },
+    "hold_whip": {
+     "posture": "stand",
+     "measured_m": 0.004,
+     "sole_m": 0
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0.002,
+     "sole_m": 0
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.008
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.007
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "work_sweep": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.029
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0.003,
+     "sole_m": 0
+    },
+    "lunge_arms_wide": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.042
+    },
+    "girth": {
+     "posture": "stand",
+     "measured_m": 0.002,
+     "sole_m": 0
+    },
+    "stand_sleeves": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "reach_over_rail~man_over_railing_19025": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.024
+    },
+    "work_sweep~bar": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.03
+    },
+    "girth~man_bowed_at_horse_13410": {
+     "posture": "stand",
+     "measured_m": 0.002,
+     "sole_m": 0
+    },
+    "sit~seated_man_highseat_4070": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.014
+    },
+    "lean_over~mat_stall_keeper_18435": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.016
+    }
+   }
+  },
+  "assets/chars/monk.glb": {
+   "character": "monk",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.035
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": -0.001,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/official.glb": {
+   "character": "official",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.043
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.053
+    },
+    "sit_talk": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.035
+    },
+    "write": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.085
+    },
+    "sit_talk~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.035
+    },
+    "write~office_desk": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.085
+    },
+    "sit_talk~office_bench": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.035
+    }
+   }
+  },
+  "assets/chars/official_rider.glb": {
+   "character": "official_rider",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0.004,
+     "sole_m": 0
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.005
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.537
+    },
+    "idle~man_big_hat_12895": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.006
+    }
+   }
+  },
+  "assets/chars/porter.glb": {
+   "character": "porter",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.026
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.008
+    },
+    "lift_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.016
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.01
+    },
+    "hold_tray": {
+     "posture": "stand",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.011
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.014
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0.003,
+     "sole_m": 0
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.013
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.038
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.008
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.069
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.007
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.038
+    },
+    "fend_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.027
+    },
+    "rest_on_stick": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.011
+    },
+    "stand_pole~staff_foot": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.008
+    },
+    "reach_over_rail~man_bent_over_railing_19195": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.014
+    }
+   }
+  },
+  "assets/chars/robed_man.glb": {
+   "character": "robed_man",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.031
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.026
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.036
+    },
+    "tie_kerchief": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.045
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.038
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.051
+    },
+    "sit_talk": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.039
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.032
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.043
+    },
+    "knees_up": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": 0.013
+    },
+    "drink": {
+     "posture": "chair",
+     "measured_m": -0.001,
+     "sole_m": 0
+    },
+    "hail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "bend_goods": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.082
+    },
+    "lean_chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.071
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.037
+    },
+    "chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.046
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.044
+    },
+    "fend_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.069
+    },
+    "wave_arms": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "beckon_lean": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.058
+    },
+    "lean_over_seated": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.056
+    },
+    "look_up": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.05
+    },
+    "knee_on_stool": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "listen~table": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.036
+    },
+    "sit~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.036
+    },
+    "fend_pole~pennant_pole_holder_27810": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.069
+    },
+    "knee_on_stool~customer_white_14560": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "lean_chin~man_at_cabin_rail_19366": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.071
+    }
+   }
+  },
+  "assets/chars/scholar.glb": {
+   "character": "scholar",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.041
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.123
+    },
+    "drink": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.13
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.039
+    },
+    "fan": {
+     "posture": "stand",
+     "measured_m": -0.001,
+     "sole_m": 0
+    },
+    "knees_up": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.218
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.048
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.036
+    },
+    "bridle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.054
+    },
+    "lean_chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.049
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.49
+    },
+    "sit_talk": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.048
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.043
+    },
+    "bow": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.031
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.044
+    },
+    "point_way": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.027
+    },
+    "listen~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.044
+    },
+    "bridle~carter_24218": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "bridle~man_at_horse_head_24506": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.034
+    },
+    "lean_over~terrace_diner_leaning_23216": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.054
+    },
+    "lean_over~deck_rail_leaner_19538": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.089
+    },
+    "lean_over~man_bending_to_donkey_13440": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.054
+    }
+   }
+  },
+  "assets/chars/sightseer.glb": {
+   "character": "sightseer",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.028
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.025
+    },
+    "chat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.024
+    },
+    "lean_chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.023
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.61
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.018
+    },
+    "bow": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.023
+    },
+    "knees_up": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.245
+    },
+    "point": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.027
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.012
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "lean_chin~moat_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.023
+    },
+    "listen~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.012
+    },
+    "lean_chin~man_at_railing_27650": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.023
+    },
+    "lean_over~rail_watcher_19923": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.007
+    },
+    "lean_over~deck_rail_leaner_19715": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.007
+    },
+    "lean_over~deck_rail_face_19350": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.065
+    },
+    "lean_over~man_arms_on_railing_18982": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.065
+    }
+   }
+  },
+  "assets/chars/soldier.glb": {
+   "character": "soldier",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.054
+    },
+    "sleep_side": {
+     "posture": "lie",
+     "measured_m": 0,
+     "sole_m": 0.07
+    },
+    "doze_knees": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": 0.06
+    },
+    "sit_one_knee": {
+     "posture": "floor",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "squat_sleeves": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.009
+    },
+    "kneel_sleep": {
+     "posture": "kneel",
+     "measured_m": 0,
+     "sole_m": -0.014
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": -0.001,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/storyteller.glb": {
+   "character": "storyteller",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.013
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.106
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.124
+    },
+    "sit_point": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": -0.121
+    },
+    "show_goods_seated": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.089
+    },
+    "show_goods_seated~seated_man_13240": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.087
+    },
+    "sit~soles": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.123
+    }
+   }
+  },
+  "assets/chars/straw_hat.glb": {
+   "character": "straw_hat",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": -0.006
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": -0.003,
+     "sole_m": 0
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "stand_pole": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "pole_boat": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.025
+    },
+    "pole_boat~hold": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.054
+    }
+   }
+  },
+  "assets/chars/townsman.glb": {
+   "character": "townsman",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.038
+    },
+    "talk": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.038
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.031
+    },
+    "ride": {
+     "posture": "ride",
+     "seat_m": 0.56
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.025
+    },
+    "bow": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.02
+    },
+    "hand_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.027
+    },
+    "crouch": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": 0.011
+    },
+    "show_garment": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "browse": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "carry_child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "squat_sleeves": {
+     "posture": "squat",
+     "measured_m": 0,
+     "sole_m": 0.024
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.016
+    },
+    "listen": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": 0.019
+    },
+    "lean_over": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.01
+    },
+    "hail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "kneel_sleep": {
+     "posture": "kneel",
+     "measured_m": 0,
+     "sole_m": 0.01
+    },
+    "hold_tray": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.008
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": -0.006
+    },
+    "sit_floor": {
+     "posture": "floor",
+     "measured_m": 0,
+     "sole_m": -0.088
+    },
+    "ride~traveller_rider_30165": {
+     "posture": "ride",
+     "seat_m": 0.56
+    },
+    "carry_child~child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.01
+    }
+   }
+  },
+  "assets/chars/tracker.glb": {
+   "character": "tracker",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.006
+    },
+    "hold_rope": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.017
+    }
+   }
+  },
+  "assets/chars/woman.glb": {
+   "character": "woman",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.034
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.037
+    },
+    "hold_child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "lean_chin": {
+     "posture": "stand",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "tie_kerchief": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "ride_side": {
+     "posture": "ride",
+     "seat_m": 0.217
+    },
+    "sit_hold_child": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "hold_child~child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "lean_chin~passenger_leaning_in_bay_23385": {
+     "posture": "stand",
+     "measured_m": 0.001,
+     "sole_m": 0
+    }
+   }
+  },
+  "assets/chars/woman_pale.glb": {
+   "character": "woman_pale",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.034
+    },
+    "sit": {
+     "posture": "chair",
+     "measured_m": 0,
+     "sole_m": -0.037
+    },
+    "hold_child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "lean_chin": {
+     "posture": "stand",
+     "measured_m": 0.001,
+     "sole_m": 0
+    },
+    "tie_kerchief": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.007
+    },
+    "ride_side": {
+     "posture": "ride",
+     "seat_m": 0.217
+    },
+    "sit_hold_child": {
+     "posture": "chair",
+     "measured_m": 0.001,
+     "sole_m": 0.008
+    },
+    "hold_child~child": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    }
+   }
+  },
+  "assets/chars/youth.glb": {
+   "character": "youth",
+   "clips": {
+    "idle": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.005
+    },
+    "look": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "chin": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.014
+    },
+    "reach": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.009
+    },
+    "crane": {
+     "posture": "stand",
+     "measured_m": 0,
+     "sole_m": 0.012
+    },
+    "reach_over_rail": {
+     "posture": "stand",
+     "measured_m": -0.004,
+     "sole_m": 0
+    }
+   }
+  }
+ }
+}

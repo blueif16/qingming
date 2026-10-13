@@ -1,95 +1,6288 @@
 {
- "about": "Near conversations (ink UI round; design gen/life/design.md 'Close (≤ 2.5 m, facing)', lines from gen/life/vignettes_S4_S6.md). Walk within about 3 m of the host figure and face it; E (a seal on touch) plays the beats as speech (say) or thought (think) bubbles over each speaker's head, at most two open at once. roles: figure slugs of this section's people.json; name = the role in period terms (no invented personal names). Every beat cites its reading (src). Lines are proposals in Song vernacular, in 繁體; text only until a voice provider is chosen. Bundled by tools/ui_data.mjs into web/public/assets/ui/talk.json.",
+ "about": "S6 城內 (the inner city): who speaks and what (the life pass, gen/life/progress.md; format tools/talk_data.mjs; lines from gen/life/vignettes_S4_S6.md V6.1-V6.15 and the readings: 名画记 36-47, 余辉 2015/2021/2023, 东京梦华录). scenes: near talks (press E at the host; `as` = the line for who you play, `again` = the next talk with the same host). chatter: groups that talk among themselves when you are within earshot. barks: a lone figure's word now and then (`close`: a call to you as you come near). Every role is a painted figure of people.json; every line cites its reading (src); 繁體, no numbers on screen; lines fit the figure's clips. Plot-line steps told here: grain.5 (c6.sackcart), wine.3 (V6.7, c6.wagons), wine.4 (V6.4, c6.upstairs), qingming.4 (V6.12, c6.paper), screen.3 (V6.16, c6.scholars). Bundled by tools/ui_data.mjs into web/public/assets/ui/talk.json.",
  "scenes": [
   {
    "id": "V6.5",
    "title": "鬧市說書",
+   "title_en": "The Street Storyteller",
    "host": "teller",
-   "reading": "余辉 2023: a curly-bearded teller, 17-18 rapt listeners; the scroll's only public show. 名画记 39: 杂剧, 唱曲, 讲史, 小说. 《东京梦华录》卷五 京瓦伎艺: 讲史 and 小说 tellers, '霍四究，说《三分》'.",
+   "group": "S6.grp.storyteller_ring",
+   "reading": "余辉 2023: a curly-bearded teller, 17-18 rapt listeners; the scroll's only public show. 名画记 39: 杂剧, 唱曲, 讲史, 小说. 《东京梦华录》卷五 京瓦伎艺: 讲史 and 小说 tellers, '霍四究，说《三分》'. Chosen: he tells 三分 (the Three Kingdoms), after 东京梦华录; the episode (赤壁) is our proposal.",
    "roles": {
     "teller": {
      "fig": "storyteller_3822",
      "name": "說話人",
+     "name_en": "storyteller",
      "src": "the Song word for a storyteller (说话, 《东京梦华录》卷五 京瓦伎艺)"
     },
     "listener": {
      "fig": "listener_hat_3932",
      "name": "看官",
+     "name_en": "listener",
      "src": "a listener of the ring (map); the teller's own address 列位看官"
     },
     "child": {
      "fig": "child_listener_3812",
      "name": "孩童",
+     "name_en": "child",
      "src": "the child at the ring's front edge (map)"
+    },
+    "fan": {
+     "fig": "ring_fan_cap_3688",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "the listener with a knotted cap and a dark fan (map)"
+    },
+    "purple": {
+     "fig": "listener_purple_robe_3958",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "the listener in a dark purple robe at the ring's east edge (map)"
     }
    },
    "beats": [
     {
      "who": "teller",
      "say": "列位看官，今日接著說三分——",
-     "src": "vignettes V6.5; 《东京梦华录》卷五 '说《三分》'"
+     "say_en": "Gentlemen all, today we go on with the Three Kingdoms…",
+     "src": "vignettes V6.5; 《东京梦华录》卷五 '说《三分》'",
+     "as": {
+      "guan": "官人來得巧，正說到三分——",
+      "shi": "相公也愛聽三分？請站前頭。",
+      "seng": "師父也來聽？今日說三分——",
+      "fu": "娘子請，前頭還有空處。",
+      "tong": "小哥兒莫擠，站前頭聽。",
+      "jun": "軍爺也來聽三分？",
+      "li": "大哥放下擔子，聽一段。"
+     },
+     "as_en": {
+      "guan": "You've come just in time, sir: the Three Kingdoms…",
+      "shi": "You like the Three Kingdoms too, sir? Stand at the front.",
+      "seng": "You've come to listen too, Master? The Three Kingdoms…",
+      "fu": "This way, madam, there's room at the front.",
+      "tong": "Don't push, little one. Stand at the front.",
+      "jun": "You too, soldier, for the Three Kingdoms?",
+      "li": "Set down your load, brother, and hear a bit."
+     }
     },
     {
      "who": "listener",
      "say": "好！",
+     "say_en": "Bravo!",
      "src": "vignettes V6.5 (the ring cheers)"
     },
     {
      "who": "child",
      "say": "後來呢？",
+     "say_en": "And then what?",
      "src": "vignettes V6.5 (child_listener_3812)"
     },
     {
      "who": "teller",
      "say": "明日再說。",
+     "say_en": "More tomorrow.",
      "src": "vignettes V6.5 (the teller's close)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "teller",
+       "say": "又來了？今日正說到赤壁。",
+       "say_en": "Back again? Today we're at Red Cliff.",
+       "src": "our proposal (an episode of 三分, 《东京梦华录》卷五 '说《三分》')",
+       "as": {
+        "guan": "官人又來了？今日說赤壁。"
+       },
+       "as_en": {
+        "guan": "Back again, sir? Today it's Red Cliff."
+       }
+      },
+      {
+       "who": "fan",
+       "say": "瓦子裏霍四究說三分，那才叫好。",
+       "say_en": "Huo Sijiu tells it in the pleasure grounds. Now that's telling.",
+       "src": "东京梦华录 卷五 京瓦伎艺 ('霍四究，说《三分》')"
+      },
+      {
+       "who": "teller",
+       "say": "他在棚裏，我在街頭，隨意賞。",
+       "say_en": "He has a booth; I have the street. Pay what you like.",
+       "src": "东京梦华录 卷五 (the 瓦子's booths); 余辉 2023 (the scroll's only show in the street)"
+      },
+      {
+       "who": "child",
+       "say": "我明日還來聽！",
+       "say_en": "I'll come again tomorrow!",
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "teller",
+       "say": "雜劇、唱曲、傀儡、講史，京城樣樣有。",
+       "say_en": "Plays, songs, puppets, histories: the capital has it all.",
+       "src": "名画记 39 (杂剧, 唱曲, 傀儡戏, 讲史, 小说)"
+      },
+      {
+       "who": "listener",
+       "say": "還是聽說話的痛快。",
+       "say_en": "Nothing beats a good storyteller.",
+       "src": "our proposal"
+      },
+      {
+       "who": "purple",
+       "say": "說得好，賞你幾文。",
+       "say_en": "Well told. Here's a few cash for you.",
+       "src": "our proposal"
+      },
+      {
+       "who": "teller",
+       "say": "多謝看官！明日請早。",
+       "say_en": "Thank you kindly! Come early tomorrow.",
+       "src": "our proposal"
+      }
+     ]
     }
    ]
   },
   {
    "id": "V6.2",
    "title": "正店門前賣花",
+   "title_en": "Flowers at the Tavern Door",
    "host": "seller",
-   "reading": "余辉 2023: flower seedlings for sale at the 正店 door; an asker, a man with a child on his neck behind. 名画记 37: peddlers solicit at the door. The map makes the asker an old man in a tall hat. Chosen: 余辉's flower seller with the map's asker.",
+   "group": "S6.grp.big_basket_4543",
+   "reading": "余辉 2023: flower seedlings for sale; an asker, a man with a child on his neck behind. 名画记 37: peddlers solicit at the door. The map makes the asker an old man in a tall hat. Chosen: 余辉's flower seller with the map's asker (余辉's woman of means, her maid and the 女伎 in red are not on our map).",
    "roles": {
     "seller": {
      "fig": "basket_man_4590",
      "name": "賣花人",
+     "name_en": "flower seller",
      "src": "余辉 2023 (seedlings for sale; the basket man, painted mouth open)"
     },
     "asker": {
      "fig": "old_man_tall_hat_4666",
      "name": "老者",
+     "name_en": "old man",
      "src": "the map's asker: an old man in a tall hat"
     },
     "child": {
      "fig": "child_on_shoulders_4977",
      "name": "孩童",
+     "name_en": "child",
      "src": "the child on the man's shoulders (map; people.json carried_by)"
+    },
+    "father": {
+     "fig": "man_child_on_shoulders_4975",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "the man carrying the child on his shoulders (map; 余辉 2023 '像是一家人'; the kinship is our proposal)"
+    },
+    "stool": {
+     "fig": "seated_man_stool_4441",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "the man seated on a stool by the big basket (map)"
+    },
+    "white": {
+     "fig": "young_man_white_robe_4705",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "the young man in a long white robe (map)"
     }
    },
    "beats": [
     {
      "who": "seller",
      "say": "好花苗，栽下去開春就開。",
-     "src": "vignettes V6.2 after 余辉 2023"
+     "say_en": "Good seedlings. Plant them and they'll bloom this spring.",
+     "src": "vignettes V6.2 after 余辉 2023",
+     "as": {
+      "guan": "官人，買幾枝花苗回府？",
+      "shi": "相公，窗前栽一枝？",
+      "fu": "娘子，好花苗，插在院裏好看。",
+      "seng": "師父，買一枝供佛也好。",
+      "tong": "小哥兒，叫你爹爹買一枝。",
+      "li": "大哥，帶一枝回家哄娘子。"
+     },
+     "as_en": {
+      "guan": "Sir, a few seedlings for your house?",
+      "shi": "Sir, one to plant by your window?",
+      "fu": "Madam, fine seedlings. Lovely in your courtyard.",
+      "seng": "Master, one to offer before the Buddha?",
+      "tong": "Little one, get your father to buy one.",
+      "li": "Brother, take one home to please your wife."
+     }
     },
     {
      "who": "asker",
      "say": "幾文一枝？",
+     "say_en": "How much a sprig?",
      "src": "vignettes V6.2 (the asker)"
     },
     {
      "who": "seller",
      "say": "三枝十文，不二價。",
+     "say_en": "Three for ten cash. One price.",
      "src": "vignettes V6.2 (our proposal)"
     },
     {
      "who": "child",
      "say": "要那枝花！",
+     "say_en": "I want that flower!",
      "src": "vignettes V6.2 (the child on the shoulders)"
     }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "seller",
+       "say": "城外園子裏剛挖的，帶著土。",
+       "say_en": "Dug today in a garden outside the walls, soil and all.",
+       "src": "东京梦华录 卷六 收灯都人出城探春 ('都城左近，皆是园圃')",
+       "as": {
+        "guan": "官人看，根上還帶著土。"
+       },
+       "as_en": {
+        "guan": "Look, sir, the soil's still on the roots."
+       }
+      },
+      {
+       "who": "father",
+       "say": "坐穩了，莫亂動。",
+       "say_en": "Sit still. Don't wriggle.",
+       "src": "our proposal (the child on his shoulders)"
+      },
+      {
+       "who": "child",
+       "say": "爹爹，買那枝紅的！",
+       "say_en": "Daddy, buy the red one!",
+       "src": "our proposal (the kinship is ours)"
+      },
+      {
+       "who": "asker",
+       "say": "節下插一枝，圖個喜氣。",
+       "say_en": "A sprig for the holiday, for luck.",
+       "src": "东京梦华录 卷七 清明节 (名花异果 carried home); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "stool",
+       "say": "正店門口，買賣最好做。",
+       "say_en": "The tavern door's the best pitch in town.",
+       "src": "名画记 37 (peddlers solicit at the 正店's door)"
+      },
+      {
+       "who": "seller",
+       "say": "酒客出來，也愛帶一枝。",
+       "say_en": "Drinkers coming out like to take a sprig too.",
+       "src": "our proposal"
+      },
+      {
+       "who": "white",
+       "say": "賣花的，給我留兩枝。",
+       "say_en": "Flower man, keep two for me.",
+       "src": "our proposal (the young man in white looking on)"
+      }
+     ]
+    }
    ]
+  },
+  {
+   "id": "V6.1",
+   "title": "媒婆到店",
+   "title_en": "The Matchmakers Arrive",
+   "host": "match",
+   "group": "S6.grp.sedan_4575",
+   "reading": "余辉 2023: a girl seldom went out but a matchmaker could; the woman in a silk-flower 冠子 looking out of the sedan, and the lady in the sedan ahead, are matchmakers meeting at 孙记正店 to settle a match between two well-off families. 《东京梦华录》卷五 娶妇 (via vignettes V6.1): middle-rank matchmakers wear a 冠子 and always go in pairs. The map: a woman looks out of the west sedan's window; the east sedan has no passenger drawn.",
+   "roles": {
+    "match": {
+     "fig": "sedan_passenger_4362",
+     "name": "媒婆",
+     "name_en": "matchmaker",
+     "src": "余辉 2023 (the woman in a silk-flower 冠子 is a matchmaker); map (the woman at the west sedan's window)"
+    },
+    "att": {
+     "fig": "sedan_attendant_4590",
+     "name": "隨從",
+     "name_en": "attendant",
+     "src": "the attendant walking by the west sedan's front (map)"
+    },
+    "bearer": {
+     "fig": "sedan_bearer_near_4530",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "the near front bearer of the west sedan (map)"
+    },
+    "rear": {
+     "fig": "sedan_rear_bearer_4195",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "the west sedan's rear bearer (map)"
+    },
+    "att2": {
+     "fig": "sedan_attendant_4255",
+     "name": "隨從",
+     "name_en": "attendant",
+     "src": "the attendant walking beside the sedan (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "match",
+     "say": "到了麼？男家的人可來了？",
+     "say_en": "Are we there? Has the groom's side come?",
+     "src": "vignettes V6.1 (after 余辉 2023)",
+     "as": {
+      "guan": "這位官人好相貌，可曾婚配？",
+      "shi": "相公可曾定親？我這裏有好人家。",
+      "fu": "娘子家裏可有待嫁的姑娘？",
+      "tong": "小哥兒，等你長大了來找我。",
+      "seng": "師父莫看，這是說親的轎子。",
+      "jun": "軍爺讓讓，說親的轎子要落了。",
+      "li": "大哥讓一讓，轎子要落了。"
+     },
+     "as_en": {
+      "guan": "What a fine-looking gentleman. Are you married, sir?",
+      "shi": "Are you betrothed, young sir? I know a good family.",
+      "fu": "Madam, any daughters at home of an age to wed?",
+      "tong": "Little one, come and find me when you're grown.",
+      "seng": "Don't stare, Master. This chair goes matchmaking.",
+      "jun": "Make way, soldier. The matchmaker's chair is setting down.",
+      "li": "Step aside, brother. The chair's setting down."
+     }
+    },
+    {
+     "who": "att",
+     "say": "就是孫羊正店，到了。",
+     "say_en": "This is the Sun Yang wine house. We're here.",
+     "src": "余辉 2023 (they come to 孙记正店); map (the 孫羊店 flag)"
+    },
+    {
+     "who": "bearer",
+     "say": "落轎——",
+     "say_en": "Setting down!",
+     "src": "vignettes V6.1"
+    },
+    {
+     "who": "match",
+     "think": "這門親事，今日定要說成。",
+     "think_en": "This match gets settled today.",
+     "src": "vignettes V6.1"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "match",
+       "say": "前頭轎裏也是媒人，我倆一道。",
+       "say_en": "The chair in front holds a matchmaker too. We go in pairs.",
+       "src": "东京梦华录 卷五 娶妇 ('皆两人同行', via vignettes V6.1); 余辉 2023 (the front sedan's lady is a matchmaker too)"
+      },
+      {
+       "who": "att",
+       "say": "兩家都是體面人家。",
+       "say_en": "Both families are well-to-do.",
+       "src": "余辉 2023 ('看来男女双方都不是一般的家庭')"
+      },
+      {
+       "who": "match",
+       "say": "姑娘家出不得門，全憑我這張嘴。",
+       "say_en": "A girl can't go out, so it all rests on my tongue.",
+       "src": "余辉 2023 (未婚女子不随便出门，但媒婆可以破这个忌)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "match",
+       "say": "瞧我這冠子，新插的絹花。",
+       "say_en": "See my crown? Fresh silk flowers.",
+       "src": "余辉 2023 (头戴绢花冠子); 东京梦华录 卷五 娶妇 via vignettes V6.1 (matchmakers wear a 冠子)"
+      },
+      {
+       "who": "rear",
+       "say": "抬了一路，肩膀都腫了。",
+       "say_en": "Carried all the way. My shoulders are swollen.",
+       "src": "our proposal"
+      },
+      {
+       "who": "att2",
+       "say": "說成了，少不了你們的賞。",
+       "say_en": "Settle it, and there's a tip for all of you.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.4",
+   "title": "正店樓上",
+   "title_en": "Upstairs at the Wine House",
+   "host": "door",
+   "group": "S6.grp.upper_table_5500",
+   "reading": "名画记 36: 孙羊家正店, customers fill the house, the upstairs windows full of guests; one of the capital's seventy-two 正店. 余辉 2023: pairs drink upstairs; the lamp-boxes 香醪, 孙记, 正店 are lit with candles at night; the red 栀子灯 hint at women for hire (名画记 38). 余辉 2015 看点九: a 正店 is licensed to brew. The map paints only a few drinkers upstairs: two at the east table, one in the west part. Lines vignettes V6.4. The host is the man in the doorway (the drinkers sit upstairs).",
+   "roles": {
+    "door": {
+     "fig": "doorman_5015",
+     "name": "酒保",
+     "name_en": "tavern man",
+     "src": "map (the man in a dark cap in the 正店's doorway); 酒保, 余辉 2023's word for a tavern's man"
+    },
+    "drink": {
+     "fig": "drinker_upper_5547",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "the drinker leaning over the table, upper storey (map)"
+    },
+    "stand": {
+     "fig": "upper_standing_5452",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "the man standing at the upstairs table (map)"
+    },
+    "west": {
+     "fig": "drinker_upper_5140",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "the drinker behind the west balustrade (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "door",
+     "say": "客官樓上請，新開的香醪。",
+     "say_en": "Upstairs, sir. The Fragrant Brew's just been opened.",
+     "src": "vignettes V6.4 (the doorman); the lamp-box 香醪 (名画记 36); 东京梦华录 卷二 酒楼 (the taverns' small private rooms)",
+     "as": {
+      "guan": "官人樓上請，閣子還空著。",
+      "shi": "相公樓上請，憑欄看街景。",
+      "fu": "娘子打酒？櫃上就有。",
+      "tong": "小哥兒，替家裏打酒麼？",
+      "seng": "師父，這裏是酒樓呀。",
+      "jun": "軍爺樓上請，酒管夠。",
+      "li": "大哥，櫃上打一角，便宜些。"
+     },
+     "as_en": {
+      "guan": "Upstairs, sir. A private room is free.",
+      "shi": "Upstairs, sir. Sit at the rail and watch the street.",
+      "fu": "Wine to take home, madam? At the counter.",
+      "tong": "Little one, fetching wine for your family?",
+      "seng": "Master, this is a wine house, you know.",
+      "jun": "Upstairs, soldier. Plenty of wine.",
+      "li": "Brother, a measure at the counter's cheaper."
+     }
+    },
+    {
+     "who": "drink",
+     "say": "滿飲此杯！",
+     "say_en": "Drain your cup!",
+     "src": "vignettes V6.4"
+    },
+    {
+     "who": "stand",
+     "say": "這香醪果然好。",
+     "say_en": "This Fragrant Brew lives up to its name.",
+     "src": "vignettes V6.4 (the lamp-box's word 香醪)"
+    },
+    {
+     "who": "door",
+     "say": "京城正店七十二家，數我家熱鬧。",
+     "say_en": "Of the capital's seventy-two wine houses, ours is liveliest.",
+     "src": "名画记 36; 东京梦华录 卷二 酒楼 ('在京正店七十二户')"
+    }
+   ],
+   "again": [
+    {
+     "step": "wine.4",
+     "beats": [
+      {
+       "who": "door",
+       "say": "樓上客滿了，稍等一等。",
+       "say_en": "Upstairs is full. Wait just a moment.",
+       "src": "名画记 36 (店内顾客盈门)"
+      },
+      {
+       "who": "stand",
+       "say": "來，再敬一杯！這香醪果然好。",
+       "say_en": "Come, another cup! This Fragrant Brew is fine indeed.",
+       "src": "the lamp-box 香醪 (名画记 36); plot line wine.4"
+      },
+      {
+       "who": "drink",
+       "say": "正店自家釀的，腳店比不得。",
+       "say_en": "Brewed in the house. No little tavern can match it.",
+       "src": "余辉 2015 看点九 (the 正店 is licensed to brew); 东京梦华录 卷二 酒楼 (the rest are 脚店)"
+      },
+      {
+       "who": "door",
+       "think": "照這樣喝，今日的酒怕不夠賣。",
+       "think_en": "At this rate the wine won't last the day.",
+       "src": "our proposal (the holiday wine)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "door",
+       "say": "天黑了點上燈箱，更好看。",
+       "say_en": "After dark we light the lamp-boxes. Even finer.",
+       "src": "余辉 2023 (the lamp-boxes are lit with candles at night)"
+      },
+      {
+       "who": "door",
+       "say": "門口這紅燈，叫梔子燈。",
+       "say_en": "That red lamp at the door is a gardenia lamp.",
+       "src": "名画记 38 (栀子灯)"
+      },
+      {
+       "who": "west",
+       "say": "掛這燈的，樓上有人陪酒。",
+       "say_en": "A house with that lamp has company for drinkers.",
+       "src": "名画记 38 (the 栀子灯 a sign of women for hire); 余辉 2023",
+       "not": [
+        "tong"
+       ]
+      },
+      {
+       "who": "door",
+       "say": "客官莫多問，喝酒，喝酒。",
+       "say_en": "Ask no more, sir. Drink, drink.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.6",
+   "title": "孫羊店肉案",
+   "title_en": "The Sun Yang Butcher's",
+   "host": "butcher",
+   "group": "S6.grp.butcher_shop",
+   "reading": "Disputed meat: 余辉 2023 reads 孙羊店 as 孙记正店's mutton branch, with lungs, intestines, liver and tripe under a price board '□斤六十足' (sixty full cash a jin of offal, '足' refusing short strings; early 崇宁 prices, mutton about 120 文); the map reads a side of pork. 名画记 40: a hired hand wields the knife while a fat owner sits on a bench at the door: the map's stout man on the high seat at the shop's door, behind the tray (re-read for question 8, gen/life/q8_figures.md). Chosen: 余辉's mutton and price, 名画记's hired hand and fat owner.",
+   "roles": {
+    "butcher": {
+     "fig": "butcher_3920",
+     "name": "夥計",
+     "name_en": "butcher's man",
+     "src": "名画记 40 (a hired hand wields the knife); map (leaning over the chopping block)"
+    },
+    "owner": {
+     "fig": "seated_man_highseat_4070",
+     "name": "掌櫃",
+     "name_en": "owner",
+     "src": "名画记 40 (另一人则坐在门首板凳上，身体肥胖，应是老板); the map: the stout man on the high seat at the meat shop's door (gen/life/q8_figures.md)"
+    }
+   },
+   "beats": [
+    {
+     "who": "butcher",
+     "say": "羊肺羊肚，六十足一斤！",
+     "say_en": "Lungs and tripe! Sixty full cash a jin!",
+     "src": "vignettes V6.6 (余辉 2023's reading of the price board '□斤六十足')",
+     "as": {
+      "guan": "官人要幾斤？切好送到府上。",
+      "fu": "娘子，羊肝新鮮，切一塊？",
+      "seng": "師父莫看，這是葷腥。",
+      "tong": "小哥兒，莫碰刀！",
+      "jun": "軍爺，羊肉下酒最好。",
+      "li": "大哥，下水便宜，來一斤？"
+     },
+     "as_en": {
+      "guan": "How many jin, sir? Cut and sent to your house.",
+      "fu": "Madam, fresh lamb's liver. Cut you a piece?",
+      "seng": "Don't look, Master. It's meat.",
+      "tong": "Lad, don't touch the knife!",
+      "jun": "Soldier, mutton's the best thing with wine.",
+      "li": "Brother, offal's cheap. A jin?"
+     }
+    },
+    {
+     "who": "owner",
+     "say": "夥計，挑好的給客官切。",
+     "say_en": "Lad, cut the good bits for our customer.",
+     "src": "名画记 40 (the fat owner seated at the door, a hired hand at the knife); our proposal"
+    },
+    {
+     "who": "butcher",
+     "say": "要闊切，還是細抹？",
+     "say_en": "Cut thick, or minced fine?",
+     "src": "东京梦华录 卷四 肉行 ('阔切、片批、细抹、顿刀之类')"
+    },
+    {
+     "who": "butcher",
+     "say": "錢要足陌，省陌不收。",
+     "say_en": "Full strings only. No short strings.",
+     "src": "余辉 2023 (the board's 足: the shop refuses 省陌); 东京梦华录 卷三 都市钱陌"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "butcher",
+       "say": "掛著的是羊肺羊腸，下水便宜。",
+       "say_en": "Hanging there: lungs and guts. Offal's cheap.",
+       "src": "余辉 2023 (lungs, intestines, liver and tripe hang under the eave)"
+      },
+      {
+       "who": "butcher",
+       "say": "羊肉嘛，一斤要百二十文。",
+       "say_en": "Mutton itself? A hundred and twenty cash a jin.",
+       "src": "余辉 2023 (offal half the price of mutton, about 120 文 a jin early in 崇宁)"
+      },
+      {
+       "who": "butcher",
+       "think": "說書的一散場，生意就來了。",
+       "think_en": "When the storyteller's done, trade picks up.",
+       "src": "map (the storyteller's crowd stands before the counter); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "butcher",
+       "say": "掌櫃坐門口，我替他操刀。",
+       "say_en": "The owner sits at the door; I mind the knife for him.",
+       "src": "名画记 40 (a hired hand wields the knife; the fat owner sits at the door)"
+      },
+      {
+       "who": "butcher",
+       "say": "這肉鋪，是孫羊正店開的。",
+       "say_en": "This shop belongs to the Sun Yang wine house.",
+       "src": "余辉 2023 (the 孙羊店 flag; the 正店's mutton branch)"
+      },
+      {
+       "who": "butcher",
+       "say": "城裏處處有肉案，三五人操刀。",
+       "say_en": "Every lane has a meat counter, three or five at the knife.",
+       "src": "东京梦华录 卷四 肉行 ('坊巷桥市，皆有肉案，列三五人操刀')"
+      },
+      {
+       "who": "owner",
+       "say": "我只坐著收錢，刀是夥計的。",
+       "say_en": "I just sit and take the money; the knife is the lad's.",
+       "src": "名画记 40 (the owner seated at the door, the hired hand at the knife); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.7",
+   "title": "軍車轉彎",
+   "title_en": "Army Wagons at the Corner",
+   "host": "carter",
+   "group": "S6.grp.taiping_wagon_3600",
+   "reading": "余辉 2023 (and 2021): two four-mule wagons of the 禁军 race in and take the corner without slowing (the step at the left rear shows the Song kept left); a porter sets down his load and jumps aside; they go to fetch the wine casks at the fire post (V5.2), '馋酒已经馋得不顾一切了'. 东京梦华录 卷三 般载杂卖: the 太平车, the driver between the shafts, an iron bell so others give way. sections.md is neutral. Chosen: 余辉. The porter's dodge is our guess (he is painted walking).",
+   "roles": {
+    "carter": {
+     "fig": "wagon_shaft_carter_3642",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the burly carter at the shafts with a long whip (map); 余辉 2023 reads the wagons' men as 禁军"
+    },
+    "rider": {
+     "fig": "wagon_top_rider_3740",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the young man seated on the front of the wagon (map)"
+    },
+    "side": {
+     "fig": "wagon_side_man_3796",
+     "name": "跟車的",
+     "name_en": "wagon hand",
+     "src": "the man walking beside the wagon past the wheel (map)"
+    },
+    "upper": {
+     "fig": "upper_team_driver_3450",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the bearded carter driving the second wagon's team (map)"
+    },
+    "porter": {
+     "fig": "basket_porter_3370",
+     "name": "挑夫",
+     "name_en": "porter",
+     "src": "the porter with two baskets crossing past the corner shed (map; 余辉 2023's porter who jumps aside)"
+    }
+   },
+   "beats": [
+    {
+     "who": "carter",
+     "say": "閃開！閃開！",
+     "say_en": "Clear the way! Clear the way!",
+     "src": "vignettes V6.7 (painted shouting)",
+     "as": {
+      "guan": "官人站開些，軍車要過！",
+      "jun": "兄弟讓讓，拉酒去！",
+      "tong": "小娃兒，找死麼！快閃開！",
+      "fu": "娘子快躲開，車停不住！",
+      "seng": "師父借過，車快！",
+      "shi": "相公莫站在路當中！",
+      "li": "挑擔的，往邊上靠！"
+     },
+     "as_en": {
+      "guan": "Stand back, sir! Army wagon coming through!",
+      "jun": "Make way, brother, we're off for the wine!",
+      "tong": "Kid, want to get killed? Move!",
+      "fu": "Madam, get clear! It can't stop!",
+      "seng": "Excuse us, Master, the wagon's fast!",
+      "shi": "Sir, don't stand in the middle of the road!",
+      "li": "You with the load, keep to the side!"
+     }
+    },
+    {
+     "who": "rider",
+     "say": "當心那挑擔的！",
+     "say_en": "Mind the porter!",
+     "src": "vignettes V6.7"
+    },
+    {
+     "who": "porter",
+     "say": "哎喲，慢些！",
+     "say_en": "Whoa, slow down!",
+     "src": "vignettes V6.7 (余辉 2023's porter; our guess)"
+    },
+    {
+     "who": "carter",
+     "say": "誤了差事，誰擔得起？",
+     "say_en": "Who answers for it if we're late?",
+     "src": "our proposal (余辉 2023: no slowing at the corner)"
+    }
+   ],
+   "again": [
+    {
+     "step": "wine.3",
+     "beats": [
+      {
+       "who": "carter",
+       "say": "趕著去軍巡鋪拉酒。",
+       "say_en": "We're off to the fire post for the wine.",
+       "src": "余辉 2023 (they go to fetch the wine casks at the fire post)",
+       "as": {
+        "guan": "官人莫怪，趕著去拉酒。"
+       },
+       "as_en": {
+        "guan": "Pardon, sir. We're in a hurry to fetch the wine."
+       }
+      },
+      {
+       "who": "rider",
+       "say": "節下的酒，營裏等著喝呢。",
+       "say_en": "Holiday wine. The barracks are waiting for it.",
+       "src": "余辉 2023 (the army's holiday wine); plot line wine.3"
+      },
+      {
+       "who": "side",
+       "say": "饞酒饞成這樣，命都不要了。",
+       "say_en": "So thirsty for wine they'd risk their necks.",
+       "src": "余辉 2023 ('馋酒已经馋得不顾一切了')"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "carter",
+       "say": "聽見鈴響，就該讓道。",
+       "say_en": "Hear the bell, you give way.",
+       "src": "东京梦华录 卷三 般载杂卖 (the 太平车's iron bell, '使远来者车相避')"
+      },
+      {
+       "who": "upper",
+       "say": "後頭還有一輛，靠左走！",
+       "say_en": "Another one behind! Keep left!",
+       "src": "余辉 2023 (the step at the wagon's left rear: the Song kept left); map (the second team at the corner)"
+      },
+      {
+       "who": "rider",
+       "say": "四頭騾子，拉得動一屋子酒。",
+       "say_en": "Four mules could pull a houseful of wine.",
+       "src": "our proposal (the four-mule team)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.9",
+   "title": "以扇遮面",
+   "title_en": "Hiding Behind a Fan",
+   "host": "fan",
+   "group": "S6.grp.fan_traveller_3225",
+   "reading": "名画记 43: meeting someone you would rather not greet, you screened your face with a fan (便面), and that was taken as politeness. 余辉 2023: a shabby scholar with his book boy hides behind his fan as a white-robed official turns to greet (or mock) him; the factions' feud had just ended, the new party in power. Chosen: 余辉's shabby scholar is this man with his servant boy; the player is the one he avoids. Which figure is the official stays open.",
+   "roles": {
+    "fan": {
+     "fig": "fan_man_3225",
+     "name": "書生",
+     "name_en": "scholar",
+     "src": "余辉 2023 (a shabby scholar with his book boy); map (a man shielding his face with a round fan)"
+    },
+    "boy": {
+     "fig": "servant_boy_bundle_3270",
+     "name": "書童",
+     "name_en": "book boy",
+     "src": "map (his servant boy with a bundle on his back)"
+    }
+   },
+   "beats": [
+    {
+     "who": "fan",
+     "think": "莫叫他認出我。",
+     "think_en": "Don't let him know me.",
+     "src": "vignettes V6.9",
+     "as": {
+      "guan": "又是那位官人，快遮上。",
+      "shi": "是同窗……莫叫他瞧見我這身。"
+     },
+     "as_en": {
+      "guan": "That official again. Cover up, quick.",
+      "shi": "A fellow student… don't let him see me like this."
+     }
+    },
+    {
+     "who": "boy",
+     "say": "相公，那邊是……",
+     "say_en": "Sir, over there…",
+     "src": "vignettes V6.9"
+    },
+    {
+     "who": "fan",
+     "say": "噓，只管走。",
+     "say_en": "Hush. Keep walking.",
+     "src": "our proposal"
+    },
+    {
+     "who": "boy",
+     "think": "相公又拿扇子遮臉了。",
+     "think_en": "Master's hiding behind his fan again.",
+     "src": "our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "boy",
+       "say": "我家相公不是失禮。",
+       "say_en": "My master means no rudeness.",
+       "src": "our proposal",
+       "as": {
+        "guan": "官人莫怪，我家相公不是失禮。"
+       },
+       "as_en": {
+        "guan": "Don't take offence, sir. My master means no rudeness."
+       }
+      },
+      {
+       "who": "boy",
+       "say": "扇子遮臉，是不打招呼的禮數。",
+       "say_en": "A fan over the face is the polite way not to greet.",
+       "src": "名画记 43 (便面)"
+      },
+      {
+       "who": "fan",
+       "think": "見了面，又得寒暄半日。",
+       "think_en": "Meet, and it's half a day of pleasantries.",
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "fan",
+       "think": "新黨正得勢，少說為妙。",
+       "think_en": "The new faction rules now. Least said, best.",
+       "src": "余辉 2023 (新旧党争刚刚落下帷幕，新党得势)"
+      },
+      {
+       "who": "boy",
+       "say": "相公，扇子也擋擋灰。",
+       "say_en": "The fan keeps the dust off too, sir.",
+       "src": "余辉 2023 (the 便面 also against heat and dust)"
+      },
+      {
+       "who": "fan",
+       "say": "走罷，莫誤了正事。",
+       "say_en": "Come along. Let's not be late.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.10",
+   "title": "解字招牌",
+   "title_en": "The Jie Sign",
+   "host": "old",
+   "group": "S6.grp.jie_ring",
+   "reading": "Disputed. 名画记 45: the 解 sign may mark an office for candidates' exam formalities; young men in scholars' dress sit and stand round an old man, perhaps asking for exam news after handing in their papers. 余辉 2014 考前求解 and 2021 问命: an old fortune-teller consulted before the exams, which come two weeks after Qingming. Hong Kong teaching material: a pawnshop. Chosen: 名画记 45 (as the section's places.json); 余辉's reading is the onlooker's doubt.",
+   "roles": {
+    "old": {
+     "fig": "jie_old_man_2138",
+     "name": "老先生",
+     "name_en": "old master",
+     "src": "名画记 45 (young scholars round an old man); map (the hooded old man at the back of the ring)"
+    },
+    "center": {
+     "fig": "jie_seated_back_2105",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the pale-robed man seated at the ring's centre (map)"
+    },
+    "smile": {
+     "fig": "jie_smiling_capped_2160",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the smiling young man with his knees up (map)"
+    },
+    "young": {
+     "fig": "jie_young_seated_2100",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the young man seated facing us, smiling (map)"
+    },
+    "pale": {
+     "fig": "jie_pale_cap_2175",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the young man in a pale cap at the ring's east side (map)"
+    },
+    "folded": {
+     "fig": "folded_arms_2338",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man with folded arms watching from the north-east (map)"
+    },
+    "child": {
+     "fig": "jie_child_2143",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the small child at the bench's east end (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "old",
+     "say": "來打聽科場的？坐下說。",
+     "say_en": "Here for exam news? Sit and talk.",
+     "src": "名画记 45 (打探考试信息)",
+     "as": {
+      "guan": "官人也來打聽今科的消息？",
+      "shi": "相公是哪一州解送來的？",
+      "fu": "娘子是替郎君來問的？",
+      "tong": "小娃兒，讀了書再來。",
+      "seng": "師父也想求功名？",
+      "jun": "軍爺，這裏只管舉子的事。",
+      "li": "大哥，這裏是讀書人的地方。"
+     },
+     "as_en": {
+      "guan": "You too, sir, asking after this year's exams?",
+      "shi": "Which prefecture sent you up, young sir?",
+      "fu": "Asking on your husband's behalf, madam?",
+      "tong": "Little one, come back when you've studied.",
+      "seng": "Master, after an official post too?",
+      "jun": "Soldier, we deal only with candidates here.",
+      "li": "Brother, this is a place for scholars."
+     }
+    },
+    {
+     "who": "center",
+     "say": "老先生，此番可有指望？",
+     "say_en": "Old master, is there hope this time?",
+     "src": "vignettes V6.10"
+    },
+    {
+     "who": "old",
+     "say": "文章好，自然中。",
+     "say_en": "Write well and you'll pass.",
+     "src": "vignettes V6.10"
+    },
+    {
+     "who": "smile",
+     "say": "借你吉言！",
+     "say_en": "From your lips!",
+     "src": "vignettes V6.10 (the two smiling young men)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "old",
+       "say": "清明一過，就要開考了。",
+       "say_en": "Once Qingming's past, the exams begin.",
+       "src": "余辉 2021 (the exams two weeks after Qingming)"
+      },
+      {
+       "who": "young",
+       "say": "京城的客店，都住滿了舉子。",
+       "say_en": "The capital's inns are full of candidates.",
+       "src": "名画记 44 (京城里就住满了各地进京赶考的人)"
+      },
+      {
+       "who": "pale",
+       "say": "文書都遞了，就等日子。",
+       "say_en": "The papers are in. Now we wait for the day.",
+       "src": "名画记 45 (也许是刚递过材料)"
+      },
+      {
+       "who": "old",
+       "say": "莫慌，三年一回，總有出頭日。",
+       "say_en": "Easy now. Every third year: your day will come.",
+       "src": "余辉 2021 (每三年一次的进士考试)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "folded",
+       "think": "我看是個算命的攤子。",
+       "think_en": "Looks like a fortune-teller's stall to me.",
+       "src": "余辉 2014/2021 (考前求解: an old fortune-teller)"
+      },
+      {
+       "who": "child",
+       "say": "爺爺，解是甚麼意思？",
+       "say_en": "Grandpa, what does 'jie' mean?",
+       "src": "our proposal"
+      },
+      {
+       "who": "old",
+       "say": "這個解字，是科場的解。",
+       "say_en": "This 'jie' is the exam hall's word.",
+       "src": "名画记 45 (科举考试与'解'字密切相关)"
+      },
+      {
+       "who": "old",
+       "say": "州裏考中第一，叫解元。",
+       "say_en": "Top of the prefecture's list is called the jieyuan.",
+       "src": "our proposal (解元, the first of the 解试)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.16",
+   "title": "赴考士子",
+   "title_en": "Scholars Bound for the Exams",
+   "host": "front",
+   "group": "S6.grp.exam_scholars_3240",
+   "reading": "名画记 44: in exam years the capital filled with candidates; the map reads two scholars in white talking, a young servant with a long case reaching toward them and a man with a long box on his shoulder (their luggage). 余辉 2015 看点六: from 1103 蔡京 had the writings of 苏轼, 黄庭坚 and the 元祐 party burnt and forbade students to read or keep them; that these two whisper of it is our proposal (the screen plot line). Vignettes V6.10 (its street part).",
+   "roles": {
+    "front": {
+     "fig": "scholar_front_3240",
+     "name": "士子",
+     "name_en": "scholar",
+     "src": "the bearded scholar in a white robe facing us (map); 名画记 44"
+    },
+    "back": {
+     "fig": "scholar_back_3203",
+     "name": "士子",
+     "name_en": "scholar",
+     "src": "the scholar in a white robe seen from behind (map)"
+    },
+    "case": {
+     "fig": "young_man_case_3340",
+     "name": "書童",
+     "name_en": "servant",
+     "src": "the young servant holding a long case, reaching toward the scholars (map)"
+    },
+    "box": {
+     "fig": "box_shoulder_porter_3405",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "the man carrying a long box on his shoulder (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "front",
+     "say": "今科聽說要考策論。",
+     "say_en": "Policy essays this year, they say.",
+     "src": "vignettes V6.10",
+     "as": {
+      "guan": "見過官人。學生進京赴考。",
+      "shi": "兄台也是來赴考的？",
+      "seng": "師父好。我們是赴考的舉子。",
+      "fu": "娘子莫怪，借個道。",
+      "tong": "小哥兒，可知貢院怎麼走？"
+     },
+     "as_en": {
+      "guan": "My respects, sir. I've come up for the exams.",
+      "shi": "Are you here for the exams too, brother?",
+      "seng": "Good day, Master. We're candidates for the exams.",
+      "fu": "Pardon us, madam. Let us pass.",
+      "tong": "Lad, do you know the way to the exam hall?"
+     }
+    },
+    {
+     "who": "back",
+     "say": "但願一舉登科。",
+     "say_en": "May we pass at the first try.",
+     "src": "vignettes V6.10"
+    },
+    {
+     "who": "case",
+     "say": "相公，書箱在此。",
+     "say_en": "Your book box, sir.",
+     "src": "vignettes V6.10"
+    },
+    {
+     "who": "front",
+     "say": "仔細拿好，莫磕壞了。",
+     "say_en": "Hold it carefully. Don't knock it.",
+     "src": "our proposal"
+    }
+   ],
+   "again": [
+    {
+     "step": "screen.3",
+     "beats": [
+      {
+       "who": "back",
+       "say": "你箱裏可還有蘇學士的字？",
+       "say_en": "Have you still got any of Su's writing in your box?",
+       "src": "余辉 2015 看点六 (苏轼's writings banned); our proposal"
+      },
+      {
+       "who": "front",
+       "say": "噓！元祐諸公的字，如今藏不得了。",
+       "say_en": "Hush! The Yuanyou men's writing can't be kept now.",
+       "src": "余辉 2015 看点六 (崇宁 bans: '严禁生徒习读、藏家宝之'); plot line screen.3"
+      },
+      {
+       "who": "back",
+       "say": "聽說一車車推出城去燒了。",
+       "say_en": "They say cartloads went out of town to be burnt.",
+       "src": "余辉 2015 看点六 (screens used as tarps, carted out to be destroyed)"
+      },
+      {
+       "who": "front",
+       "think": "可惜了那一筆好字。",
+       "think_en": "Such fine brushwork. Such a waste.",
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "case",
+       "say": "相公，客店還有空房麼？",
+       "say_en": "Sir, will the inn still have a room?",
+       "src": "名画记 42, 44 (the inns full of candidates)",
+       "as": {
+        "guan": "官人可知哪家客店有空房？"
+       },
+       "as_en": {
+        "guan": "Sir, do you know an inn with a room free?"
+       }
+      },
+      {
+       "who": "front",
+       "say": "就住久住王員外家。",
+       "say_en": "We'll stay at Wang the Squire's Long-Stay Inn.",
+       "src": "名画记 42 (the inn's sign); our proposal"
+      },
+      {
+       "who": "back",
+       "say": "樓上那一位，天天讀到半夜。",
+       "say_en": "The one upstairs reads till midnight every night.",
+       "src": "余辉 士子苦读 (the scholar upstairs at the inn); map"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.11",
+   "title": "方井汲水",
+   "title_en": "Drawing Water at the Square Well",
+   "host": "rope",
+   "group": "S6.grp.square_well_drawers",
+   "reading": "Details disputed. 名画记 47: a shallow well whose 田 frame lets four draw at once; one tips the bucket in, one swings the rope, a third has just arrived; in a city of a million, water was a real problem (its poles hung in the willow's fork are not on our map). 余辉 2023: an official well in a rich quarter, framed so nobody falls in; two draw while a carrier shoulders his load to go (the map's lifter). Chosen: 名画记 47 for the well, 余辉's carrier for the lifter.",
+   "roles": {
+    "rope": {
+     "fig": "well_rope_drawer_2097",
+     "name": "汲水的",
+     "name_en": "water drawer",
+     "src": "the man drawing on the rope, facing us (map)"
+    },
+    "lifter": {
+     "fig": "well_bucket_lifter_2032",
+     "name": "挑水的",
+     "name_en": "water carrier",
+     "src": "the man heaving a bucket onto his shoulder (map; 余辉 2023's carrier about to go)"
+    },
+    "hauler": {
+     "fig": "well_bucket_hauler_2196",
+     "name": "汲水的",
+     "name_en": "water drawer",
+     "src": "the man bent double lifting a bucket out at the east end (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "rope",
+     "say": "你先打，我等著。",
+     "say_en": "You go first. I'll wait.",
+     "src": "vignettes V6.11",
+     "as": {
+      "guan": "官人要水？等我打上這一桶。",
+      "fu": "娘子先打，這井四個人打得。",
+      "tong": "小娃兒，離井口遠些！",
+      "seng": "師父喝口水？剛打上來的。",
+      "li": "兄弟也來挑水？這邊有空。"
+     },
+     "as_en": {
+      "guan": "Water, sir? Let me bring up this bucket.",
+      "fu": "After you, madam. Four can draw at this well.",
+      "tong": "Kid, keep away from the well-mouth!",
+      "seng": "A drink, Master? Fresh drawn.",
+      "li": "Here for water too, brother? There's room here."
+     }
+    },
+    {
+     "who": "hauler",
+     "say": "這井水甜。",
+     "say_en": "Sweet water, this.",
+     "src": "vignettes V6.11"
+    },
+    {
+     "who": "lifter",
+     "say": "走了，家裏等水做飯。",
+     "say_en": "I'm off. They're waiting for water to cook.",
+     "src": "vignettes V6.11 (余辉 2023's carrier)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "rope",
+       "say": "井口架成田字，四人一齊打。",
+       "say_en": "The mouth's framed in four, so four can draw at once.",
+       "src": "名画记 47"
+      },
+      {
+       "who": "hauler",
+       "say": "井不深，繩子放一截就夠。",
+       "say_en": "It's not deep. A short length of rope will do.",
+       "src": "名画记 47 (这口井不太深)"
+      },
+      {
+       "who": "rope",
+       "say": "京城百萬人，誰家不吃水？",
+       "say_en": "A million people in the capital. Who doesn't need water?",
+       "src": "名画记 47 (上百万的人口，饮水和用水确实是一个大问题)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "lifter",
+       "say": "這一擔挑到街東頭。",
+       "say_en": "This load goes to the east end of the street.",
+       "src": "our proposal"
+      },
+      {
+       "who": "hauler",
+       "say": "井架結實，掉不下人去。",
+       "say_en": "Strong frame. Nobody can fall in.",
+       "src": "余辉 2023 (田字框，以防打水人落井)"
+      },
+      {
+       "who": "rope",
+       "think": "清明了，水也暖些了。",
+       "think_en": "Qingming's come. The water's warmer.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.12",
+   "title": "清明紙馬",
+   "title_en": "Paper Horses for Qingming",
+   "host": "keeper",
+   "group": "S6.grp.paper_stall",
+   "step": "qingming.4",
+   "reading": "余辉 2014 列售纸码 and 2023: paper horses sold under umbrellas at Qingming, to be burnt at the graves. 东京梦华录 卷七 清明节: the paper-horse shops stack paper into pavilions on the street (the map's tiered paper tower); new graves are all swept that day; three days of grave visits. The customers are the map's men at the stall's west end.",
+   "roles": {
+    "keeper": {
+     "fig": "paper_stall_seller_2565",
+     "name": "賣紙馬的",
+     "name_en": "paper-horse seller",
+     "src": "map (the keeper behind the paper-horse stall); 余辉 2014 列售纸码"
+    },
+    "chin": {
+     "fig": "tall_hat_man_2285",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man in a tall black cap with a hand at his chin (map)"
+    },
+    "boy": {
+     "fig": "boy_short_jacket_2229",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the boy in a short jacket (map)"
+    },
+    "grey": {
+     "fig": "robed_man_2333",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "the man in a long grey robe by the stall (map)"
+    },
+    "tall": {
+     "fig": "tall_hat_robed_2441",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "the tall man in a dark robe at the stall (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "keeper",
+     "say": "紙馬、紙錢、紙樓，上墳用的都有。",
+     "say_en": "Paper horses, money, houses: all you need for the graves.",
+     "src": "vignettes V6.12",
+     "as": {
+      "guan": "清明了，官人帶一副去？",
+      "shi": "相公，替府上帶一副？",
+      "fu": "娘子，給先人燒一副紙錢？",
+      "tong": "小哥兒，紙馬碰不得，會破的。",
+      "li": "大哥，便宜的也有。"
+     },
+     "as_en": {
+      "guan": "It's Qingming, sir. Take a set?",
+      "shi": "Sir, a set for your family?",
+      "fu": "Madam, paper money to burn for your forebears?",
+      "tong": "Careful, lad. Paper horses tear.",
+      "li": "Cheaper ones too, brother."
+     }
+    },
+    {
+     "who": "grey",
+     "say": "這紙樓疊得好細。",
+     "say_en": "What fine folding on this paper tower.",
+     "src": "东京梦华录 卷七 清明节 ('纸马铺皆于当街用纸衮叠成楼阁之状')"
+    },
+    {
+     "who": "keeper",
+     "say": "城裏城外，今日都上墳去。",
+     "say_en": "In town and out, everyone visits the graves today.",
+     "src": "东京梦华录 卷七 清明节 ('凡新坟皆用此日拜扫', '都城人出郊'); plot line qingming.4"
+    },
+    {
+     "who": "chin",
+     "think": "他們說的甚麼買賣？",
+     "think_en": "What deal are they talking about?",
+     "src": "vignettes V6.12 (the man with his hand at his chin)",
+     "optional": true
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": "燒了紙馬，先人在那邊也有馬騎。",
+       "say_en": "Burn a paper horse, and your forebears have one to ride.",
+       "src": "余辉 2023 (paper horses burnt at the graves); our proposal"
+      },
+      {
+       "who": "tall",
+       "say": "出城上墳，天黑才回得來。",
+       "say_en": "Out to the graves, and back only after dark.",
+       "src": "东京梦华录 卷七 清明节 ('抵暮而归')"
+      },
+      {
+       "who": "boy",
+       "say": "我也要騎紙馬！",
+       "say_en": "I want to ride a paper horse too!",
+       "src": "our proposal"
+      },
+      {
+       "who": "keeper",
+       "say": "這可騎不得，是燒的。",
+       "say_en": "You can't ride this one. It's for burning.",
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": "一連三日，都有人來買。",
+       "say_en": "Three days running, people come to buy.",
+       "src": "东京梦华录 卷七 清明节 ('自此三日，皆出城上坟')"
+      },
+      {
+       "who": "grey",
+       "say": "上完墳，就在樹底下吃一頓。",
+       "say_en": "After the graves, a meal under the trees.",
+       "src": "东京梦华录 卷七 清明节 ('往往就芳树之下…罗列杯盘')"
+      },
+      {
+       "who": "chin",
+       "think": "那三個又說了半日。",
+       "think_en": "Those three have been at it for ages.",
+       "src": "our proposal (the three robed men talking)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V6.14",
+   "title": "賣衣遇僧",
+   "title_en": "A Robe for the Monk",
+   "host": "seller",
+   "group": "S6.grp.garment_seller_monk_3060",
+   "reading": "The map: a man holds up a long garment for a smiling monk and a man in a dark robe. 余辉 2023: more monks than usual on the street that day, for in this season they may leave the temple to beg alms. 东京梦华录 卷二 东角楼街巷: '喝故衣' (crying old clothes) among the market trades. Lines vignettes V6.14.",
+   "roles": {
+    "seller": {
+     "fig": "garment_seller_3100",
+     "name": "賣衣的",
+     "name_en": "clothes seller",
+     "src": "map (the man holding up a garment); 东京梦华录 卷二 '喝故衣'"
+    },
+    "monk": {
+     "fig": "monk_3060",
+     "name": "僧人",
+     "name_en": "monk",
+     "src": "map (the smiling monk); 余辉 2023 (monks out for alms this season)"
+    },
+    "cap": {
+     "fig": "dark_robe_cap_3022",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (the man in a dark robe and cap looking on)"
+    }
+   },
+   "beats": [
+    {
+     "who": "seller",
+     "say": "看看這件，厚實得很。",
+     "say_en": "Look at this one. Good and thick.",
+     "src": "vignettes V6.14",
+     "as": {
+      "guan": "官人，這件給府上下人穿正好。",
+      "seng": "師父也看看？做僧衣也好。",
+      "fu": "娘子，給當家的帶一件？",
+      "li": "大哥，這件耐穿，幹活正好。",
+      "tong": "小哥兒，叫你娘來看。",
+      "jun": "軍爺，夜裏守營穿著暖。"
+     },
+     "as_en": {
+      "guan": "Sir, this would suit a servant of your house.",
+      "seng": "Have a look too, Master? It'd make a fine robe.",
+      "fu": "Madam, one for your husband?",
+      "li": "Brother, this one lasts. Good for work.",
+      "tong": "Lad, go and fetch your mother to look.",
+      "jun": "Soldier, it'll keep you warm on night watch."
+     }
+    },
+    {
+     "who": "monk",
+     "say": "好是好，貧僧沒這許多錢。",
+     "say_en": "Fine, but a poor monk hasn't the money.",
+     "src": "vignettes V6.14 (the smiling monk)"
+    },
+    {
+     "who": "cap",
+     "say": "師父化了半日緣，也該添件衣裳。",
+     "say_en": "Half a day begging, Master. Time for a new robe.",
+     "src": "余辉 2023 (monks out begging alms this season)"
+    },
+    {
+     "who": "seller",
+     "say": "便宜些，算結個善緣。",
+     "say_en": "Cheaper for you. Call it a good deed.",
+     "src": "our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "seller",
+       "say": "是舊衣，洗得乾乾淨淨。",
+       "say_en": "Second-hand, but washed spotless.",
+       "src": "东京梦华录 卷二 东角楼街巷 ('喝故衣')"
+      },
+      {
+       "who": "monk",
+       "say": "阿彌陀佛，施主好心。",
+       "say_en": "Amitabha. You're kind, sir.",
+       "src": "our proposal"
+      },
+      {
+       "who": "cap",
+       "think": "這和尚笑嘻嘻的，倒好說話。",
+       "think_en": "A smiling monk. Easy to deal with.",
+       "src": "map (the smiling monk)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "monk",
+       "say": "這時節，寺裏放我們出來化緣。",
+       "say_en": "This season the temple lets us out to beg alms.",
+       "src": "余辉 2023 (在这个时节，他们可以到寺外化缘)"
+      },
+      {
+       "who": "seller",
+       "say": "今日街上的和尚，比平日多。",
+       "say_en": "More monks on the street today than usual.",
+       "src": "余辉 2023 (这一天街上的和尚也多起来了)"
+      },
+      {
+       "who": "monk",
+       "say": "貧僧再轉一轉，回頭再來。",
+       "say_en": "I'll go round once more and come back.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "chatter": [
+  {
+   "id": "c6.story",
+   "title": "鬧市說書",
+   "title_en": "The Street Storyteller",
+   "mark": "voice",
+   "group": "S6.grp.storyteller_ring",
+   "reading": "余辉 2023 (the curly-bearded teller, 17-18 rapt listeners, the scroll's only public show); 名画记 39; 东京梦华录 卷五 京瓦伎艺 ('霍四究，说《三分》'). Most listeners turn their backs to us, two crane forward, a child stands at the front. Chosen: he tells 三分.",
+   "gap": [
+    10,
+    22
+   ],
+   "roles": {
+    "teller": {
+     "fig": "storyteller_3822",
+     "name": "說話人",
+     "name_en": "storyteller",
+     "src": "the Song word for a storyteller (说话, 《东京梦华录》卷五 京瓦伎艺)"
+    },
+    "hat": {
+     "fig": "listener_hat_3932",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "map (beside the storyteller)"
+    },
+    "beside": {
+     "fig": "listener_3905",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "map (beside the storyteller)"
+    },
+    "child": {
+     "fig": "child_listener_3812",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (at the ring's front edge)"
+    },
+    "crane": {
+     "fig": "listener_3845",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "map (front row, craning)"
+    },
+    "bag": {
+     "fig": "listener_bag_3893",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "map (a pale jacket, a bag at his hip, craning)"
+    },
+    "purple": {
+     "fig": "listener_purple_robe_3958",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "map (dark purple robe, east edge)"
+    },
+    "fan": {
+     "fig": "ring_fan_cap_3688",
+     "name": "看官",
+     "name_en": "listener",
+     "src": "map (knotted cap, dark fan)"
+    },
+    "post": {
+     "fig": "ring_standing_post_3745",
+     "name": "閒人",
+     "name_en": "passer-by",
+     "src": "map (standing behind the crowd by the corner building)"
+    },
+    "edge": {
+     "fig": "child_ring_edge_3577",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (alone at the crowd's west edge)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "teller",
+       "say": [
+        "話說那赤壁江上，火光沖天——",
+        "只聽得一聲鼓響——",
+        "且說那江東的戰船——"
+       ],
+       "say_en": [
+        "Now on the river at Red Cliff, flames lit the sky…",
+        "Then came the sound of a drum…",
+        "Meanwhile, the warships of the south…"
+       ],
+       "src": "东京梦华录 卷五 ('说《三分》'); the episode is our proposal"
+      },
+      {
+       "who": "hat",
+       "say": [
+        "好！",
+        "說得好！"
+       ],
+       "say_en": [
+        "Bravo!",
+        "Well told!"
+       ],
+       "src": "vignettes V6.5 (the ring cheers)"
+      },
+      {
+       "who": "crane",
+       "think": [
+        "前頭的，頭低些……",
+        "看不見……"
+       ],
+       "think_en": [
+        "You in front, heads down…",
+        "Can't see…"
+       ],
+       "src": "map (craning in the front row)",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "後來呢？後來呢？",
+        "那船燒著了沒有？"
+       ],
+       "say_en": [
+        "And then? And then?",
+        "Did the ships burn?"
+       ],
+       "src": "vignettes V6.5 (the child listener)"
+      },
+      {
+       "who": "teller",
+       "say": [
+        "莫急，聽我慢慢道來。",
+        "小哥兒莫急。"
+       ],
+       "say_en": [
+        "Patience. Let me tell it in order.",
+        "Not so fast, little one."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "fan",
+       "think": [
+        "瓦子裏說得還細些。",
+        "這一段說得倒熟。"
+       ],
+       "think_en": [
+        "They tell it in more detail in the pleasure grounds.",
+        "He knows this part well."
+       ],
+       "src": "东京梦华录 卷五 (the tellers of the 瓦子)"
+      },
+      {
+       "who": "purple",
+       "say": [
+        "說得好，賞他幾文。",
+        "這一段值幾文。"
+       ],
+       "say_en": [
+        "Well told. A few cash for him.",
+        "That part's worth a few cash."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "post",
+       "say": [
+        "說到哪裏了？",
+        "又是三分？"
+       ],
+       "say_en": [
+        "Where's he got to?",
+        "The Three Kingdoms again?"
+       ],
+       "src": "our proposal (behind the crowd)"
+      },
+      {
+       "who": "bag",
+       "say": [
+        "噓，聽著。",
+        "正說到火燒戰船。"
+       ],
+       "say_en": [
+        "Shh. Listen.",
+        "He's at the burning of the ships."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "teller",
+       "say": [
+        "今日就說到這裏，明日請早。",
+        "列位看官，明日再說。"
+       ],
+       "say_en": [
+        "That's all for today. Come early tomorrow.",
+        "Gentlemen all, more tomorrow."
+       ],
+       "src": "vignettes V6.5 (the teller's close)"
+      },
+      {
+       "who": "beside",
+       "say": [
+        "再說一段！",
+        "好，明日再來。"
+       ],
+       "say_en": [
+        "One more!",
+        "Right, tomorrow then."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "edge",
+       "think": [
+        "我也想擠進去聽……",
+        "明日我早些來。"
+       ],
+       "think_en": [
+        "I want to squeeze in and hear…",
+        "I'll come earlier tomorrow."
+       ],
+       "src": "map (the child alone at the crowd's west edge)",
+       "optional": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.basket",
+   "title": "正店門前",
+   "title_en": "At the Tavern Door",
+   "mark": "flower",
+   "group": "S6.grp.big_basket_4543",
+   "reading": "余辉 2023 (flower seedlings for sale at the 正店 door; a man with a child on his neck behind, '像是一家人'; another greens seller's basket beside them); 名画记 37 (peddlers solicit at the door). The map: the old man in a tall hat asks, a man sits on a stool, a young man in white and a boy listen, a youth with a long stick behind the second basket. Kinship is our proposal.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "seller": {
+     "fig": "basket_man_4590",
+     "name": "賣花人",
+     "name_en": "flower seller",
+     "src": "余辉 2023; map (mouth open)"
+    },
+    "asker": {
+     "fig": "old_man_tall_hat_4666",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "map (the asker)"
+    },
+    "stool": {
+     "fig": "seated_man_stool_4441",
+     "name": "閒人",
+     "name_en": "idler",
+     "src": "map (on a stool by the basket)"
+    },
+    "hat": {
+     "fig": "man_black_hat_4742",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "map (a tall black hat, behind the young man)"
+    },
+    "white": {
+     "fig": "young_man_white_robe_4705",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "map (long white robe)"
+    },
+    "father": {
+     "fig": "man_child_on_shoulders_4975",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (carrying a child on his shoulders; kinship ours)"
+    },
+    "child": {
+     "fig": "child_on_shoulders_4977",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (on the man's shoulders)"
+    },
+    "youth": {
+     "fig": "youth_hair_bun_stick_4950",
+     "name": "賣菜的",
+     "name_en": "greens seller",
+     "src": "余辉 2023 (another greens seller's basket); map (a youth with a long stick behind the second basket)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "seller",
+       "say": [
+        "好花苗，栽下去開春就開！",
+        "賣花苗——三枝十文！"
+       ],
+       "say_en": [
+        "Good seedlings! Plant them and they bloom this spring!",
+        "Seedlings! Three for ten cash!"
+       ],
+       "src": "vignettes V6.2"
+      },
+      {
+       "who": "asker",
+       "say": [
+        "這花苗活得成麼？",
+        "是甚麼花？"
+       ],
+       "say_en": [
+        "Will these seedlings take?",
+        "What flower is it?"
+       ],
+       "src": "vignettes V6.2 (the asker)"
+      },
+      {
+       "who": "seller",
+       "say": [
+        "包活，栽下去就發芽。",
+        "開出來紅豔豔的。"
+       ],
+       "say_en": [
+        "They'll take. Plant them and they sprout.",
+        "It blooms bright red."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "要那枝花！",
+        "爹爹，買花！"
+       ],
+       "say_en": [
+        "I want that flower!",
+        "Daddy, buy a flower!"
+       ],
+       "src": "vignettes V6.2 (the child on the shoulders)"
+      },
+      {
+       "who": "father",
+       "say": [
+        "坐穩，莫亂動。",
+        "好，好，回頭買。"
+       ],
+       "say_en": [
+        "Sit still. Don't wriggle.",
+        "All right, all right, later."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "stool",
+       "say": [
+        "今日正店門口人真多。",
+        "坐這裏看人，比看戲還好。"
+       ],
+       "say_en": [
+        "So many people at the tavern door today.",
+        "Sitting here watching folk beats any show."
+       ],
+       "src": "名画记 36, 37 (the door's crowds)"
+      },
+      {
+       "who": "hat",
+       "say": [
+        "清明了，進城的都來喝一盅。",
+        "節下嘛。"
+       ],
+       "say_en": [
+        "Qingming: everyone in town drops in for a cup.",
+        "It's the holiday."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "youth",
+       "say": [
+        "新鮮菜蔬——",
+        "嫩菜，剛摘的！"
+       ],
+       "say_en": [
+        "Fresh greens!",
+        "Tender greens, just picked!"
+       ],
+       "src": "vignettes V6.2 (the east basket)"
+      },
+      {
+       "who": "white",
+       "think": [
+        "這菜倒新鮮。",
+        "回去帶一把。"
+       ],
+       "think_en": [
+        "Those greens look fresh.",
+        "I'll take a bunch home."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.sedan1",
+   "title": "媒婆到店",
+   "title_en": "The Matchmakers Arrive",
+   "mark": "flower",
+   "group": "S6.grp.sedan_4575",
+   "reading": "余辉 2023 (the matchmaker in a silk-flower 冠子 arrives at 孙记正店 to settle a match); 东京梦华录 卷五 娶妇 via vignettes V6.1 (matchmakers go in pairs). The map: two front bearers, a rear bearer, two attendants, a man just south of the sedan.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "match": {
+     "fig": "sedan_passenger_4362",
+     "name": "媒婆",
+     "name_en": "matchmaker",
+     "src": "余辉 2023; map (at the window)"
+    },
+    "near": {
+     "fig": "sedan_bearer_near_4530",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (front, near side)"
+    },
+    "far": {
+     "fig": "sedan_bearer_far_4462",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (front, far side)"
+    },
+    "rear": {
+     "fig": "sedan_rear_bearer_4195",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (rear)"
+    },
+    "att": {
+     "fig": "sedan_attendant_4590",
+     "name": "隨從",
+     "name_en": "attendant",
+     "src": "map (walking by the sedan's front)"
+    },
+    "att2": {
+     "fig": "sedan_attendant_4255",
+     "name": "隨從",
+     "name_en": "attendant",
+     "src": "map (walking beside the sedan)"
+    },
+    "below": {
+     "fig": "man_below_sedan_4343",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (just south of the sedan box)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "near",
+       "say": [
+        "穩著些！",
+        "前頭有人，慢點。"
+       ],
+       "say_en": [
+        "Steady!",
+        "People ahead, slow down."
+       ],
+       "src": "vignettes V6.1"
+      },
+      {
+       "who": "far",
+       "say": [
+        "曉得。",
+        "嘿——"
+       ],
+       "say_en": [
+        "Got it.",
+        "Hup —"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "rear",
+       "say": [
+        "後頭跟上了。",
+        "嘿——"
+       ],
+       "say_en": [
+        "Keeping up behind.",
+        "Hup —"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "match",
+       "say": [
+        "到了麼？",
+        "前頭可是孫羊正店？"
+       ],
+       "say_en": [
+        "Are we there?",
+        "Is that the Sun Yang wine house ahead?"
+       ],
+       "src": "vignettes V6.1"
+      },
+      {
+       "who": "att",
+       "say": [
+        "到了，到了。",
+        "快到了，就在前頭。"
+       ],
+       "say_en": [
+        "Here we are, here we are.",
+        "Nearly. Just ahead."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "match",
+       "think": [
+        "這門親事，今日定要說成。",
+        "兩家的帖子，都帶著了。"
+       ],
+       "think_en": [
+        "This match gets settled today.",
+        "I've brought both families' cards."
+       ],
+       "src": "vignettes V6.1; our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "below",
+       "say": [
+        "轎裏是哪家的？",
+        "好體面的轎子。"
+       ],
+       "say_en": [
+        "Whose household is in the chair?",
+        "What a fine chair."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "att2",
+       "say": [
+        "是說媒的。",
+        "閒人讓開。"
+       ],
+       "say_en": [
+        "A matchmaker.",
+        "Stand aside, you."
+       ],
+       "src": "余辉 2023 (the matchmaker)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.sedan2",
+   "title": "四人抬轎",
+   "title_en": "Four Bearers",
+   "group": "S6.grp.sedan_4965",
+   "reading": "The map: the east sedan carried east along the middle of the street by four bearers, two at each end; no passenger drawn. 余辉 2023: the lady in the front sedan is a matchmaker too; 东京梦华录 卷五 娶妇 via vignettes V6.1 (always two together).",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "fnear": {
+     "fig": "sedan_bearer_front_near_4907",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (front, near side)"
+    },
+    "ffar": {
+     "fig": "sedan_bearer_front_far_4943",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (front, far side)"
+    },
+    "rnear": {
+     "fig": "sedan_bearer_rear_near_4668",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (rear, near side)"
+    },
+    "rfar": {
+     "fig": "sedan_bearer_rear_far_4735",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (rear, far side)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "fnear",
+       "say": [
+        "前頭路寬，走快些。",
+        "起——"
+       ],
+       "say_en": [
+        "The road's wider ahead. Faster.",
+        "Up!"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "rnear",
+       "say": [
+        "慢點，後頭跟不上。",
+        "嘿——"
+       ],
+       "say_en": [
+        "Slower, the back can't keep up.",
+        "Hup —"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "rfar",
+       "say": [
+        "換肩罷？",
+        "肩上磨破了。"
+       ],
+       "say_en": [
+        "Change shoulders?",
+        "My shoulder's rubbed raw."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "ffar",
+       "say": [
+        "到了正店門口再歇。",
+        "忍著，快到了。"
+       ],
+       "say_en": [
+        "Rest at the tavern door.",
+        "Bear it. Nearly there."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "fnear",
+       "say": [
+        "後頭那頂也是說媒的。",
+        "兩頂轎子一道走。"
+       ],
+       "say_en": [
+        "The chair behind is a matchmaker too.",
+        "Two chairs travelling together."
+       ],
+       "src": "余辉 2023 (both sedans carry matchmakers)"
+      },
+      {
+       "who": "rfar",
+       "say": [
+        "說媒的，總是兩個一起。",
+        "又有人家要辦喜事了。"
+       ],
+       "say_en": [
+        "Matchmakers always go in pairs.",
+        "Another family's wedding coming."
+       ],
+       "src": "东京梦华录 卷五 娶妇 via vignettes V6.1 ('皆两人同行')"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.upstairs",
+   "title": "樓上對飲",
+   "title_en": "Drinking Upstairs",
+   "mark": "cup",
+   "group": "S6.grp.upper_table_5500",
+   "reading": "余辉 2023 (pairs drink upstairs at 孙记正店); 名画记 36 (the upstairs full of guests); the lamp-box 香醪; 余辉 2021 (wine by the 角: 羊羔酒 eighty 文, 银瓶酒 seventy-two). The map: one stands at the east table, one leans over the dishes with a ewer between them; one drinker in the west part, one figure behind the flowers.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "stand": {
+     "fig": "upper_standing_5452",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (standing at the table)"
+    },
+    "drink": {
+     "fig": "drinker_upper_5547",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (leaning over the dishes)"
+    },
+    "west": {
+     "fig": "drinker_upper_5140",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (west part, behind the balustrade)"
+    },
+    "gallery": {
+     "fig": "upper_storey_figure_4810",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (seated in the gallery behind the flower posts)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "wine.4",
+     "beats": [
+      {
+       "who": "stand",
+       "say": [
+        "來，滿飲此杯！",
+        "再斟上，再斟上。"
+       ],
+       "say_en": [
+        "Come, drain your cup!",
+        "Pour again, pour again."
+       ],
+       "src": "vignettes V6.4"
+      },
+      {
+       "who": "drink",
+       "say": [
+        "這香醪果然好！",
+        "好酒，正店的香醪！"
+       ],
+       "say_en": [
+        "This Fragrant Brew is fine indeed!",
+        "Good wine, the house's Fragrant Brew!"
+       ],
+       "src": "the lamp-box 香醪 (名画记 36); plot line wine.4"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "drink",
+       "say": [
+        "樓下好熱鬧。",
+        "那邊說書的又開場了。"
+       ],
+       "say_en": [
+        "Lively down there.",
+        "The storyteller's started again."
+       ],
+       "src": "map (the street below); our proposal"
+      },
+      {
+       "who": "stand",
+       "say": [
+        "趁節下，多喝幾盅。",
+        "管他的，喝酒。"
+       ],
+       "say_en": [
+        "It's the holiday. Have a few more.",
+        "Never mind them. Drink."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "west",
+       "say": [
+        "酒保，再打一角來！",
+        "酒保，添酒！"
+       ],
+       "say_en": [
+        "Waiter, another measure!",
+        "Waiter, more wine!"
+       ],
+       "src": "余辉 2021 (wine sold by the 角)"
+      },
+      {
+       "who": "gallery",
+       "think": [
+        "銀瓶酒一角，七十二文。",
+        "樓上的酒，貴是貴些。"
+       ],
+       "think_en": [
+        "Silver Flask wine: seventy-two cash a measure.",
+        "Wine upstairs costs a bit more."
+       ],
+       "src": "余辉 2021 (七十二文一角的银瓶酒)",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "gallery",
+       "think": [
+        "從樓上看街，倒也有趣。",
+        "喝到天黑再回。"
+       ],
+       "think_en": [
+        "Watching the street from up here is fun.",
+        "I'll drink till dark, then go."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.sackcart",
+   "title": "糧車到店",
+   "title_en": "Grain for the Wine House",
+   "mark": "sack",
+   "group": "S6.grp.sack_cart_5410",
+   "reading": "名画记 37 (a donkey cart loading and unloading at the 正店's door); 余辉 2023 (grain carriers taxed at the gate, the grain likely sold to the brewing 正店 next door; a 正店 is licensed to brew). The map: a big two-wheeled cart of roped sacks drawn by donkeys on slack traces, a man in white leads the dark donkey, carters stand at the front and walk beside the wheel.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "bearded": {
+     "fig": "bearded_carter_5428",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (at the cart's front)"
+    },
+    "tall": {
+     "fig": "tall_carter_5385",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (in a cap, arms folded)"
+    },
+    "dark": {
+     "fig": "dark_figure_5440",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (dark-clad, behind the bearded carter)"
+    },
+    "leader": {
+     "fig": "donkey_leader_5088",
+     "name": "趕驢的",
+     "name_en": "drover",
+     "src": "map (the man in white leading the dark donkey)"
+    },
+    "walk": {
+     "fig": "walking_carter_5537",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (walking beside the wheel)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "grain.5",
+     "beats": [
+      {
+       "who": "bearded",
+       "say": [
+        "這幾袋糧，卸到正店去。",
+        "糧袋卸下來，正店要釀酒。"
+       ],
+       "say_en": [
+        "These sacks of grain go into the wine house.",
+        "Unload the sacks. The house needs them for brewing."
+       ],
+       "src": "名画记 37; 余辉 2023 (grain for the brewing 正店); plot line grain.5"
+      },
+      {
+       "who": "tall",
+       "say": [
+        "正店有官許，自家能釀酒。",
+        "難怪要這許多糧。"
+       ],
+       "say_en": [
+        "A licensed house brews its own wine.",
+        "No wonder it takes so much grain."
+       ],
+       "src": "余辉 2015 看点九 (the 正店 licensed to brew)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "leader",
+       "say": [
+        "吁——站住！",
+        "這驢又不走了。"
+       ],
+       "say_en": [
+        "Whoa, stand!",
+        "This donkey won't move again."
+       ],
+       "src": "map (leading the dark donkey)"
+      },
+      {
+       "who": "walk",
+       "say": [
+        "拉緊些，莫叫牠亂跑。",
+        "給牠喝口水罷。"
+       ],
+       "say_en": [
+        "Hold it tight. Don't let it wander.",
+        "Give it a drink of water."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "walk",
+       "say": [
+        "城門口又交了一回稅。",
+        "這一路，稅交了好幾回。"
+       ],
+       "say_en": [
+        "Paid tax again at the gate.",
+        "Taxed several times on the way."
+       ],
+       "src": "余辉 2023 (the grain carriers at the tax office); the tax plot line"
+      },
+      {
+       "who": "bearded",
+       "say": [
+        "糧也要納稅，有甚麼法子。",
+        "少說兩句，卸貨要緊。"
+       ],
+       "say_en": [
+        "Grain pays tax too. What can you do.",
+        "Less talk. Unloading comes first."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "dark",
+       "think": [
+        "卸完這車，該歇歇了。",
+        "肚子餓了。"
+       ],
+       "think_en": [
+        "Once this cart's unloaded, a rest.",
+        "I'm hungry."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.wagons",
+   "title": "軍車轉彎",
+   "title_en": "Army Wagons at the Corner",
+   "mark": "alarm",
+   "group": "S6.grp.taiping_wagon_3600",
+   "reading": "余辉 2023: the 禁军's four-mule wagons take the corner without slowing, a porter jumps aside, all to fetch the holiday wine from the fire post ('馋酒已经馋得不顾一切了'); the Song kept left. The map: a burly carter at the shafts, a young man on the bed, a man by the wheel; the second team's driver at the corner shed; a porter with baskets crossing.",
+   "gap": [
+    10,
+    24
+   ],
+   "roles": {
+    "carter": {
+     "fig": "wagon_shaft_carter_3642",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the burly carter at the shafts with a long whip (map); 余辉 2023 reads the wagons' men as 禁军"
+    },
+    "rider": {
+     "fig": "wagon_top_rider_3740",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the young man seated on the front of the wagon (map)"
+    },
+    "side": {
+     "fig": "wagon_side_man_3796",
+     "name": "跟車的",
+     "name_en": "wagon hand",
+     "src": "the man walking beside the wagon past the wheel (map)"
+    },
+    "upper": {
+     "fig": "upper_team_driver_3450",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the bearded carter driving the second wagon's team (map)"
+    },
+    "porter": {
+     "fig": "basket_porter_3370",
+     "name": "挑夫",
+     "name_en": "porter",
+     "src": "the porter with two baskets crossing past the corner shed (map; 余辉 2023's porter who jumps aside)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "wine.3",
+     "beats": [
+      {
+       "who": "carter",
+       "say": [
+        "閃開！軍車拉酒去！",
+        "讓道！讓道！"
+       ],
+       "say_en": [
+        "Clear off! Army wagon going for the wine!",
+        "Make way! Make way!"
+       ],
+       "src": "vignettes V6.7; 余辉 2023"
+      },
+      {
+       "who": "rider",
+       "say": [
+        "快些，營裏等著節下的酒！",
+        "趕在晌午前裝上酒！"
+       ],
+       "say_en": [
+        "Faster, the barracks want their holiday wine!",
+        "Get the wine loaded before noon!"
+       ],
+       "src": "余辉 2023 (the army's holiday wine); plot line wine.3"
+      },
+      {
+       "who": "side",
+       "think": [
+        "饞酒饞得命都不要了。",
+        "這麼個轉法，要出事。"
+       ],
+       "think_en": [
+        "So thirsty for wine they'd risk their necks.",
+        "Turning like that, there'll be an accident."
+       ],
+       "src": "余辉 2023"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "upper",
+       "say": [
+        "後頭的跟緊！",
+        "靠左走！"
+       ],
+       "say_en": [
+        "Keep close behind!",
+        "Keep left!"
+       ],
+       "src": "余辉 2023 (the second wagon; keeping left)"
+      },
+      {
+       "who": "carter",
+       "say": [
+        "曉得！",
+        "駕——"
+       ],
+       "say_en": [
+        "Got it!",
+        "Gee up!"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "rider",
+       "say": [
+        "當心那挑擔的！",
+        "前頭有人！"
+       ],
+       "say_en": [
+        "Mind the porter!",
+        "Someone ahead!"
+       ],
+       "src": "vignettes V6.7"
+      },
+      {
+       "who": "porter",
+       "say": [
+        "哎喲，慢些！",
+        "差點撞著我！"
+       ],
+       "say_en": [
+        "Whoa, slow down!",
+        "You nearly hit me!"
+       ],
+       "src": "vignettes V6.7 (our guess)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.winecart",
+   "title": "驢車運酒",
+   "title_en": "The Wine Cart",
+   "mark": "cup",
+   "group": "S6.grp.wine_cart_3090",
+   "reading": "余辉 2023: an old carter drives a donkey cart with two wine casks east; most carts in the scroll serve Qingming drinking. 东京梦华录 卷二 酒楼 (the 脚店 besides the 正店) and 卷三 般载杂卖 (正店 carry wine casks on carts). The map: the driver with the whip, a young man steadying the rear, a man bent forward just west of him.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "driver": {
+     "fig": "wine_cart_driver_2945",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (with the whip); 余辉 2023 (an old carter)"
+    },
+    "rear": {
+     "fig": "young_man_cart_rear_2675",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "map (steadying the cart's rear)"
+    },
+    "bend": {
+     "fig": "bending_man_2638",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (bent forward, hands at his knees, behind the cart)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "driver",
+       "say": [
+        "駕！走穩些。",
+        "駕——"
+       ],
+       "say_en": [
+        "Gee up! Steady now.",
+        "Gee up —"
+       ],
+       "src": "vignettes V6.8"
+      },
+      {
+       "who": "rear",
+       "say": [
+        "桶晃了，慢些！",
+        "繩子鬆了！"
+       ],
+       "say_en": [
+        "The casks are rocking! Slow down!",
+        "The rope's loose!"
+       ],
+       "src": "vignettes V6.8"
+      },
+      {
+       "who": "driver",
+       "say": [
+        "曉得，曉得。",
+        "吁——"
+       ],
+       "say_en": [
+        "I know, I know.",
+        "Whoa —"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "rear",
+       "say": [
+        "這兩桶酒，送到哪家？",
+        "這酒是正店的？"
+       ],
+       "say_en": [
+        "Where are these two casks going?",
+        "Is this the wine house's wine?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "driver",
+       "say": [
+        "送腳店的，他們向正店打酒。",
+        "腳店的酒，都從正店來。"
+       ],
+       "say_en": [
+        "To a small tavern. They buy from the wine house.",
+        "Small taverns get their wine from the big house."
+       ],
+       "src": "东京梦华录 卷二 酒楼 (脚店); places.json (脚店 buy wine from the 正店)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "driver",
+       "say": [
+        "老了，趕不動快車了。",
+        "慢慢走，酒灑不得。"
+       ],
+       "say_en": [
+        "I'm old. Can't drive fast any more.",
+        "Slowly. Can't spill the wine."
+       ],
+       "src": "余辉 2023 (an old carter)"
+      },
+      {
+       "who": "rear",
+       "say": [
+        "您老坐穩。",
+        "我在後頭扶著。"
+       ],
+       "say_en": [
+        "Sit tight, old man.",
+        "I've got the back."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bend",
+       "think": [
+        "喘口氣再走。",
+        "腰酸得很。"
+       ],
+       "think_en": [
+        "Catch my breath, then go.",
+        "My back aches."
+       ],
+       "src": "map (bent forward, hands at his knees)",
+       "optional": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.well",
+   "title": "方井汲水",
+   "title_en": "Drawing Water",
+   "mark": "rope",
+   "group": "S6.grp.square_well_drawers",
+   "reading": "名画记 47 (three draw water at the square well; four can draw at once); 余辉 2023 (an official well; a carrier shoulders his load to go). Vignettes V6.11.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "rope": {
+     "fig": "well_rope_drawer_2097",
+     "name": "汲水的",
+     "name_en": "water drawer",
+     "src": "the man drawing on the rope, facing us (map)"
+    },
+    "lifter": {
+     "fig": "well_bucket_lifter_2032",
+     "name": "挑水的",
+     "name_en": "water carrier",
+     "src": "the man heaving a bucket onto his shoulder (map; 余辉 2023's carrier about to go)"
+    },
+    "hauler": {
+     "fig": "well_bucket_hauler_2196",
+     "name": "汲水的",
+     "name_en": "water drawer",
+     "src": "the man bent double lifting a bucket out at the east end (map)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "rope",
+       "say": [
+        "你先打，我等著。",
+        "繩子遞過來。"
+       ],
+       "say_en": [
+        "You go first. I'll wait.",
+        "Pass the rope over."
+       ],
+       "src": "vignettes V6.11"
+      },
+      {
+       "who": "hauler",
+       "say": [
+        "好，這桶滿了。",
+        "來了，接著。"
+       ],
+       "say_en": [
+        "Right, this bucket's full.",
+        "Here, take it."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "lifter",
+       "say": [
+        "走了，家裏等水做飯。",
+        "這一擔夠用半日。"
+       ],
+       "say_en": [
+        "I'm off. They're waiting for water to cook.",
+        "This load will last half a day."
+       ],
+       "src": "vignettes V6.11 (余辉 2023's carrier)"
+      },
+      {
+       "who": "rope",
+       "say": [
+        "慢走。",
+        "路上莫灑了。"
+       ],
+       "say_en": [
+        "Go carefully.",
+        "Don't spill it on the way."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "hauler",
+       "say": [
+        "這井水甜。",
+        "今日的水清。"
+       ],
+       "say_en": [
+        "Sweet water, this.",
+        "The water's clear today."
+       ],
+       "src": "vignettes V6.11"
+      },
+      {
+       "who": "rope",
+       "say": [
+        "街上數這口井好。",
+        "官井嘛。"
+       ],
+       "say_en": [
+        "Best well on the street.",
+        "It's the official well."
+       ],
+       "src": "余辉 2023 (an official well)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "rope",
+       "think": [
+        "繩子又磨細了。",
+        "井口滑，當心。"
+       ],
+       "think_en": [
+        "The rope's worn thin again.",
+        "Slippery at the mouth. Careful."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.paper",
+   "title": "清明紙馬",
+   "title_en": "Paper Horses for Qingming",
+   "mark": "paper",
+   "group": "S6.grp.paper_stall",
+   "reading": "余辉 2014 列售纸码, 余辉 2023 (paper horses for Qingming under umbrellas); 东京梦华录 卷七 清明节 (paper stacked into pavilions on the street; the town out at the graves). The map: three robed men talk at the stall's west end, a man in a tall cap with a hand at his chin and a boy beside them. That they talk business is our proposal (余辉 2023: deals and brokers everywhere).",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "keeper": {
+     "fig": "paper_stall_seller_2565",
+     "name": "賣紙馬的",
+     "name_en": "paper-horse seller",
+     "src": "map (the keeper behind the paper-horse stall); 余辉 2014 列售纸码"
+    },
+    "grey": {
+     "fig": "robed_man_2333",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (long grey robe)"
+    },
+    "back": {
+     "fig": "robed_back_2405",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (back to us)"
+    },
+    "tall": {
+     "fig": "tall_hat_robed_2441",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "map (tall, dark robe)"
+    },
+    "chin": {
+     "fig": "tall_hat_man_2285",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (hand at his chin)"
+    },
+    "boy": {
+     "fig": "boy_short_jacket_2229",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (short jacket)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "step": "qingming.4",
+     "beats": [
+      {
+       "who": "keeper",
+       "say": [
+        "紙馬紙錢，上墳用的都有！",
+        "清明了，帶一副紙馬去！"
+       ],
+       "say_en": [
+        "Paper horses, paper money, all for the graves!",
+        "It's Qingming! Take a set of paper horses!"
+       ],
+       "src": "vignettes V6.12; plot line qingming.4"
+      },
+      {
+       "who": "grey",
+       "say": [
+        "給我包一副。",
+        "這紙樓幾文？"
+       ],
+       "say_en": [
+        "Wrap me a set.",
+        "How much is the paper tower?"
+       ],
+       "src": "东京梦华录 卷七 清明节 (the paper pavilions)"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "好，包好了。",
+        "便宜，算你公道些。"
+       ],
+       "say_en": [
+        "There you are, wrapped.",
+        "Cheap. I'll give you a fair price."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "back",
+       "say": [
+        "城東那筆買賣，談妥了？",
+        "那批貨，你看如何？"
+       ],
+       "say_en": [
+        "That deal in the east of town: settled?",
+        "What do you think of that lot of goods?"
+       ],
+       "src": "余辉 2023 (brokers and deals everywhere); our proposal"
+      },
+      {
+       "who": "tall",
+       "say": [
+        "還差一點，再說罷。",
+        "牙人又要抽一份。"
+       ],
+       "say_en": [
+        "Not quite. We'll see.",
+        "The broker wants his cut again."
+       ],
+       "src": "余辉 2023 (middlemen push prices up)"
+      },
+      {
+       "who": "chin",
+       "think": [
+        "他們說的甚麼買賣？",
+        "聽不真切。"
+       ],
+       "think_en": [
+        "What deal are they talking about?",
+        "Can't quite hear."
+       ],
+       "src": "vignettes V6.12",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "boy",
+       "say": [
+        "那紙人好嚇人。",
+        "紙樓疊得真高。"
+       ],
+       "say_en": [
+        "That paper man's scary.",
+        "The paper tower's so tall."
+       ],
+       "src": "map (the paper figures and tower)"
+      },
+      {
+       "who": "chin",
+       "say": [
+        "莫亂摸，弄破了要賠。",
+        "看看就好。"
+       ],
+       "say_en": [
+        "Don't touch. Tear it and you pay.",
+        "Just look."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "tall",
+       "say": [
+        "今年上墳，比往年人多。",
+        "城外墳地，人都擠滿了。"
+       ],
+       "say_en": [
+        "More people at the graves than other years.",
+        "The graveyards outside town are packed."
+       ],
+       "src": "东京梦华录 卷七 清明节 ('四野如市')"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "所以紙馬賣得快。",
+        "我這攤子，就靠這幾日。"
+       ],
+       "say_en": [
+        "That's why the paper horses sell fast.",
+        "This stall lives on these few days."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.jie",
+   "title": "解字招牌",
+   "title_en": "The Jie Sign",
+   "mark": "book",
+   "group": "S6.grp.jie_ring",
+   "reading": "名画记 45 (young scholars round an old man under the 解 sign, asking exam news: chosen); 余辉 2014/2021 (an old fortune-teller consulted before the exams: the doubters' reading); 名画记 44 (candidates fill the capital). The map: two smiling young men, listeners west and east, a man with folded arms, a child at the bench, a man leaning over the awning's back edge.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "old": {
+     "fig": "jie_old_man_2138",
+     "name": "老先生",
+     "name_en": "old master",
+     "src": "名画记 45 (young scholars round an old man); map (the hooded old man at the back of the ring)"
+    },
+    "center": {
+     "fig": "jie_seated_back_2105",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the pale-robed man seated at the ring's centre (map)"
+    },
+    "smile": {
+     "fig": "jie_smiling_capped_2160",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the smiling young man with his knees up (map)"
+    },
+    "young": {
+     "fig": "jie_young_seated_2100",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the young man seated facing us, smiling (map)"
+    },
+    "pale": {
+     "fig": "jie_pale_cap_2175",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "the young man in a pale cap at the ring's east side (map)"
+    },
+    "west": {
+     "fig": "jie_listener_west_2062",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "map (seated at the ring's west side)"
+    },
+    "tan": {
+     "fig": "jie_seated_tan_2283",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "map (in tan, at the awning's east edge)"
+    },
+    "faded": {
+     "fig": "jie_faded_pale_2245",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "map (pale robe, the ring's back)"
+    },
+    "standing": {
+     "fig": "jie_young_standing_2168",
+     "name": "舉子",
+     "name_en": "candidate",
+     "src": "map (standing at the ring's south side)"
+    },
+    "child": {
+     "fig": "jie_child_2143",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the small child at the bench's east end (map)"
+    },
+    "folded": {
+     "fig": "folded_arms_2338",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man with folded arms watching from the north-east (map)"
+    },
+    "leaner": {
+     "fig": "leaning_over_awning_2168",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (leaning over the awning's back edge, looking at the group)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "center",
+       "say": [
+        "老先生，此番可有指望？",
+        "今科取多少人？"
+       ],
+       "say_en": [
+        "Old master, is there hope this time?",
+        "How many will they pass this year?"
+       ],
+       "src": "vignettes V6.10"
+      },
+      {
+       "who": "old",
+       "say": [
+        "文章好，自然中。",
+        "名額有限，各憑本事。"
+       ],
+       "say_en": [
+        "Write well and you'll pass.",
+        "Places are few. It's down to each of you."
+       ],
+       "src": "vignettes V6.10; our proposal"
+      },
+      {
+       "who": "smile",
+       "say": [
+        "借你吉言！",
+        "那我是中定了。"
+       ],
+       "say_en": [
+        "From your lips!",
+        "Then I've as good as passed."
+       ],
+       "src": "vignettes V6.10 (the smiling young men)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "young",
+       "say": [
+        "你倒會說。",
+        "你呀，先把字練好。"
+       ],
+       "say_en": [
+        "Fine words from you.",
+        "You'd better work on your handwriting first."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "smile",
+       "say": [
+        "哈哈，走著瞧。",
+        "哈哈，不勞費心。"
+       ],
+       "say_en": [
+        "Ha! We'll see.",
+        "Ha! Don't trouble yourself."
+       ],
+       "src": "map (smiling)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "west",
+       "say": [
+        "文書可遞上去了？",
+        "保狀找誰作保？"
+       ],
+       "say_en": [
+        "Have you handed in your papers?",
+        "Who'll stand guarantor for you?"
+       ],
+       "src": "名画记 45 (刚递过材料); our proposal"
+      },
+      {
+       "who": "pale",
+       "say": [
+        "遞了，就等消息。",
+        "同鄉的前輩作保。"
+       ],
+       "say_en": [
+        "Handed in. Now we wait for news.",
+        "A senior from my home town."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "tan",
+       "say": [
+        "京城的客店都住滿了。",
+        "我那客店，一屋住四個。"
+       ],
+       "say_en": [
+        "Every inn in the capital is full.",
+        "At my inn there are four to a room."
+       ],
+       "src": "名画记 44"
+      },
+      {
+       "who": "faded",
+       "say": [
+        "赴考的人，一年比一年多。",
+        "趕考嘛，擠一擠。"
+       ],
+       "say_en": [
+        "More candidates every year.",
+        "It's exam time. We squeeze in."
+       ],
+       "src": "名画记 44 (每逢科举考试，汴京城里就住满了…赶考的人)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "leaner",
+       "think": [
+        "這些書生，圍著問甚麼？",
+        "又是打聽科場的。"
+       ],
+       "think_en": [
+        "What are these scholars all asking?",
+        "More asking about the exams."
+       ],
+       "src": "map (leaning over the awning)",
+       "optional": true
+      },
+      {
+       "who": "folded",
+       "think": [
+        "我看是個算命的攤子。",
+        "問來問去，還不是靠命。"
+       ],
+       "think_en": [
+        "Looks like a fortune-teller's stall to me.",
+        "Ask all you like. It's down to fate."
+       ],
+       "src": "余辉 2014/2021 (考前求解, 问命)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "我長大了也要考。",
+        "他們笑甚麼？"
+       ],
+       "say_en": [
+        "When I grow up I'll sit the exams too.",
+        "What are they laughing at?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "standing",
+       "say": [
+        "好，先把書讀熟。",
+        "笑他自以為中了。"
+       ],
+       "say_en": [
+        "Good. Learn your books first.",
+        "At him, thinking he's passed already."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.donkey",
+   "title": "騎驢的小官人",
+   "title_en": "The Young Master's Donkey",
+   "group": "S6.grp.donkey_rider_2308",
+   "reading": "The map: a young man rides a dark donkey north-west into the crowd, a man in a pale robe holds its head, a groom in a short jacket at its shoulder, a boy watching at its rump with a hand at his chin. Lines vignettes V6.15.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "rider": {
+     "fig": "donkey_rider_2308",
+     "name": "小官人",
+     "name_en": "young master",
+     "src": "map (the young man riding the dark donkey)"
+    },
+    "pale": {
+     "fig": "donkey_groom_pale_2200",
+     "name": "牽驢的",
+     "name_en": "donkey man",
+     "src": "map (holding the donkey's head)"
+    },
+    "jacket": {
+     "fig": "donkey_groom_jacket_2252",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "map (short jacket, at the donkey's shoulder)"
+    },
+    "boy": {
+     "fig": "boy_dark_robe_2380",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (at the donkey's rump, hand at his chin)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "jacket",
+       "say": [
+        "小官人坐穩。",
+        "抓緊韁繩。"
+       ],
+       "say_en": [
+        "Sit tight, young master.",
+        "Hold the reins tight."
+       ],
+       "src": "vignettes V6.15"
+      },
+      {
+       "who": "rider",
+       "say": [
+        "曉得，走罷。",
+        "慢些走。"
+       ],
+       "say_en": [
+        "I know. Go on.",
+        "Go slowly."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pale",
+       "say": [
+        "讓一讓，驢要過。",
+        "借過，借過！"
+       ],
+       "say_en": [
+        "Make room, donkey coming.",
+        "Coming through!"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "rider",
+       "think": [
+        "人這麼多，走不動。",
+        "擠成這樣。"
+       ],
+       "think_en": [
+        "So many people. We can't move.",
+        "What a crush."
+       ],
+       "src": "map (riding into the crowd)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "boy",
+       "think": [
+        "我幾時也騎一騎？",
+        "這驢真俊。"
+       ],
+       "think_en": [
+        "When's my turn to ride?",
+        "What a handsome donkey."
+       ],
+       "src": "vignettes V6.15 (hand at his chin)"
+      },
+      {
+       "who": "pale",
+       "say": [
+        "小哥兒，莫站驢屁股後頭。",
+        "當心牠踢你。"
+       ],
+       "say_en": [
+        "Lad, don't stand behind its rump.",
+        "Careful, it'll kick you."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.robed3",
+   "title": "牙人說貨",
+   "title_en": "Brokers Talk Goods",
+   "mark": "coin",
+   "group": "S6.grp.robed_three_2420",
+   "reading": "余辉 2023: brokers (牙人) in long sleeves greet each other everywhere, trade is brisk and middlemen push prices up; 名画记 42: many deals are struck at the inns. The map: three robed men in the open street, one pointing east. That they are brokers is our reading (vignettes V6.13).",
+   "gap": [
+    14,
+    32
+   ],
+   "roles": {
+    "point": {
+     "fig": "robed_pointing_2528",
+     "name": "牙人",
+     "name_en": "broker",
+     "src": "map (pointing east); 余辉 2023 brokers (our reading)"
+    },
+    "back": {
+     "fig": "robed_back_2482",
+     "name": "客商",
+     "name_en": "trader",
+     "src": "map (back to us, between the others)"
+    },
+    "clasped": {
+     "fig": "robed_clasped_2420",
+     "name": "中人",
+     "name_en": "go-between",
+     "src": "map (hands clasped)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "point",
+       "say": [
+        "貨在東頭，隨我去看。",
+        "就在東頭客店裏。"
+       ],
+       "say_en": [
+        "The goods are at the east end. Come and see.",
+        "Right there, in the inn at the east end."
+       ],
+       "src": "vignettes V6.13; 名画记 42 (goods stored at the inn)",
+       "when": [
+        "point"
+       ]
+      },
+      {
+       "who": "back",
+       "say": [
+        "好，看了再說價。",
+        "貨色可好？"
+       ],
+       "say_en": [
+        "Good. We'll talk price once I've seen them.",
+        "Are they good quality?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "clasped",
+       "say": [
+        "我作個中人。",
+        "價錢好商量。"
+       ],
+       "say_en": [
+        "I'll stand go-between.",
+        "The price can be talked over."
+       ],
+       "src": "余辉 2023 (middlemen)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "clasped",
+       "say": [
+        "幸會，幸會！",
+        "多日不見。"
+       ],
+       "say_en": [
+        "Well met, well met!",
+        "Long time no see."
+       ],
+       "src": "vignettes V6.13"
+      },
+      {
+       "who": "back",
+       "say": [
+        "今日可有好買賣？",
+        "近來生意如何？"
+       ],
+       "say_en": [
+        "Any good business today?",
+        "How's trade lately?"
+       ],
+       "src": "vignettes V6.13"
+      },
+      {
+       "who": "point",
+       "say": [
+        "剛說成一樁。",
+        "托福，還過得去。"
+       ],
+       "say_en": [
+        "Just closed one.",
+        "Thanks to you, not bad."
+       ],
+       "src": "vignettes V6.13",
+       "when": [
+        "chat"
+       ]
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "back",
+       "say": [
+        "你這中人，抽幾分？",
+        "牙錢怎麼算？"
+       ],
+       "say_en": [
+        "And your cut as go-between?",
+        "How's the broker's fee reckoned?"
+       ],
+       "src": "余辉 2023 (middlemen push prices up)"
+      },
+      {
+       "who": "clasped",
+       "say": [
+        "老規矩。",
+        "少不了你的好處。"
+       ],
+       "say_en": [
+        "The usual.",
+        "You won't lose by it."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.porters",
+   "title": "挑夫相讓",
+   "title_en": "Porters Passing",
+   "group": "S6.grp.porters_2588",
+   "reading": "The map: two porters with shoulder poles pass each other in the open street, one west under two big round baskets, one east with a tall cylindrical basket.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "baskets": {
+     "fig": "porter_baskets_2588",
+     "name": "挑夫",
+     "name_en": "porter",
+     "src": "map (two big round baskets)"
+    },
+    "topknot": {
+     "fig": "porter_topknot_2605",
+     "name": "挑夫",
+     "name_en": "porter",
+     "src": "map (a top-knot, a tall cylindrical basket)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "baskets",
+       "say": [
+        "借過，借過。",
+        "讓讓，擔子寬。"
+       ],
+       "say_en": [
+        "Coming through, coming through.",
+        "Make room, wide load."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "topknot",
+       "say": [
+        "你也借過。",
+        "擠甚麼擠。"
+       ],
+       "say_en": [
+        "Pass, then.",
+        "What's the shoving for?"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "topknot",
+       "say": [
+        "今日挑了幾趟了？",
+        "這筐挑去哪裏？"
+       ],
+       "say_en": [
+        "How many trips today?",
+        "Where are those baskets going?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "baskets",
+       "say": [
+        "第三趟了。",
+        "挑到正店後頭。"
+       ],
+       "say_en": [
+        "This is my third.",
+        "Round the back of the wine house."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.crowd",
+   "title": "傘下糕點",
+   "title_en": "Cakes Under the Umbrellas",
+   "mark": "coin",
+   "group": "S6.grp.umbrella_crowd_2600",
+   "reading": "余辉 2023: a cake shop under umbrellas, and a snack shop under a square shed with a small price sign, draw passers-by (matching them to this crowd is our call). The map: at the west end a man in a dark coat hands something to a round-faced man; most stand with their backs to us facing the shed; a child clings to a tall man in a dark robe. Lines vignettes V6.14; kinship ours.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "coat": {
+     "fig": "dark_coat_2700",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (dark coat, handing something over; stallholder is our reading)"
+    },
+    "round": {
+     "fig": "round_face_robe_2641",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (round-faced, long robe)"
+    },
+    "kerchief": {
+     "fig": "kerchief_jacket_2606",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (short belted jacket, kerchief)"
+    },
+    "tall": {
+     "fig": "tall_dark_robe_2908",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (tall, dark robe; the child clings to him)"
+    },
+    "child": {
+     "fig": "child_by_dark_robe_2880",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (at the tall man's side, reaching)"
+    },
+    "stall": {
+     "fig": "stall_man_2890",
+     "name": "夥計",
+     "name_en": "shop hand",
+     "src": "map (behind the crowd under the east umbrella; our reading)"
+    },
+    "pouch": {
+     "fig": "bearded_pouch_2949",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (bearded, with a pouch)"
+    },
+    "light": {
+     "fig": "light_robe_behind_2650",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (light robe, behind the round-faced man)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "coat",
+       "say": [
+        "找你五文。",
+        "這是你的，拿好。"
+       ],
+       "say_en": [
+        "Five cash change.",
+        "Here's yours. Hold it carefully."
+       ],
+       "src": "vignettes V6.14",
+       "when": [
+        "hand_over"
+       ]
+      },
+      {
+       "who": "round",
+       "say": [
+        "多謝。",
+        "數清了。"
+       ],
+       "say_en": [
+        "Thanks.",
+        "Counted it."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "我也要吃！",
+        "爹爹，買一個！"
+       ],
+       "say_en": [
+        "I want some too!",
+        "Daddy, buy one!"
+       ],
+       "src": "vignettes V6.14 (the child at the tall man's side); when follows people.json (2026-10-13)"
+      },
+      {
+       "who": "tall",
+       "say": [
+        "方才吃過了。",
+        "莫鬧，回去再說。"
+       ],
+       "say_en": [
+        "You've just eaten.",
+        "Don't fuss. We'll see at home."
+       ],
+       "src": "our proposal (the kinship is ours)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "stall",
+       "say": [
+        "糕點，剛蒸的！",
+        "熱的，香的！"
+       ],
+       "say_en": [
+        "Cakes, fresh steamed!",
+        "Hot and sweet!"
+       ],
+       "src": "余辉 2023 (the cake shop under umbrellas)"
+      },
+      {
+       "who": "kerchief",
+       "think": [
+        "聞著真香。",
+        "排了半日了。"
+       ],
+       "think_en": [
+        "Smells good.",
+        "Been waiting ages."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pouch",
+       "say": [
+        "人擠人的，錢袋看緊。",
+        "這裏人多手雜。"
+       ],
+       "say_en": [
+        "Such a crush. Watch your purse.",
+        "Lots of hands in a crowd like this."
+       ],
+       "src": "map (the pouch at his side)"
+      },
+      {
+       "who": "light",
+       "say": [
+        "曉得。",
+        "你也當心。"
+       ],
+       "say_en": [
+        "I know.",
+        "You be careful too."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.incense",
+   "title": "香鋪街角",
+   "title_en": "At the Incense Shop Corner",
+   "group": "S6.grp.robed_pair_incense_corner",
+   "reading": "名画记 41: the incense shop's sign 刘家上色沉檀拣香; spices were a large share of Song imports (the 'spice trade') and a state-controlled source of profit. 东京梦华录 卷五 民俗: each trade wears its own dress, the incense men '顶帽披背'. The map: two robed men face to face at the shop's west corner.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "light": {
+     "fig": "light_robe_2965",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (long light robe)"
+    },
+    "hat": {
+     "fig": "robed_hat_3002",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (hat and wide-sleeved robe)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "hat",
+       "say": [
+        "劉家的沉檀，是上色的。",
+        "這香是海船運來的。"
+       ],
+       "say_en": [
+        "Liu's aloeswood and sandalwood are top grade.",
+        "This incense came by sea."
+       ],
+       "src": "名画记 41 (the sign; imports by sea)"
+      },
+      {
+       "who": "light",
+       "say": [
+        "貴是貴，好香。",
+        "官府管著，價錢下不來。"
+       ],
+       "say_en": [
+        "Dear, but it smells wonderful.",
+        "The state controls it. Prices won't fall."
+       ],
+       "src": "名画记 41 (the trade controlled by the state)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "light",
+       "say": [
+        "幸會，幸會。",
+        "多日不見，一向可好？"
+       ],
+       "say_en": [
+        "Well met.",
+        "Long time no see. Keeping well?"
+       ],
+       "src": "vignettes V6.13"
+      },
+      {
+       "who": "hat",
+       "say": [
+        "托福，托福。",
+        "好，好。"
+       ],
+       "say_en": [
+        "Thanks to you, thanks to you.",
+        "Well, well."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "hat",
+       "say": [
+        "香鋪的人頂帽披背，一看就認得。",
+        "那是香鋪裏裹香的。"
+       ],
+       "say_en": [
+        "Incense men wear a cap and cape. You know them at a glance.",
+        "That's one of the incense wrappers."
+       ],
+       "src": "东京梦华录 卷五 民俗 ('香铺裹香人，即顶帽披背')"
+      },
+      {
+       "who": "light",
+       "say": [
+        "京城裏，一行有一行的衣裳。",
+        "做甚麼的，看衣裳就知道。"
+       ],
+       "say_en": [
+        "In the capital every trade has its own dress.",
+        "You can tell a man's trade by his clothes."
+       ],
+       "src": "东京梦华录 卷五 民俗 ('诸行百户衣装，各有本色')"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.tray",
+   "title": "托盤叫賣",
+   "title_en": "The Tray Vendor",
+   "mark": "coin",
+   "group": "S6.grp.tray_vendor_3050",
+   "reading": "The map: a vendor with a long tray faces the street; a man in a white jacket holds a folding stand, a man with folded arms stands by, a small child between them. 东京梦华录 卷五 民俗: food sellers keep their trays and boxes spotless. Lines vignettes V6.14; that the stand is the vendor's is our reading.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "vendor": {
+     "fig": "tray_vendor_3050",
+     "name": "小販",
+     "name_en": "vendor",
+     "src": "map (carrying a long tray)"
+    },
+    "white": {
+     "fig": "white_jacket_stand_3072",
+     "name": "夥計",
+     "name_en": "helper",
+     "src": "map (a white jacket, a folding stand; our reading)"
+    },
+    "folded": {
+     "fig": "arms_folded_2993",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (arms folded)"
+    },
+    "small": {
+     "fig": "small_child_3035",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (small, in dark clothes)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "vendor",
+       "say": [
+        "來看來看！",
+        "挑一挑，看一看！"
+       ],
+       "say_en": [
+        "Come and see!",
+        "Look and choose!"
+       ],
+       "src": "vignettes V6.14"
+      },
+      {
+       "who": "white",
+       "say": [
+        "架子支好了。",
+        "架子放這裏？"
+       ],
+       "say_en": [
+        "The stand's set up.",
+        "Stand here?"
+       ],
+       "src": "map (the folding stand)"
+      },
+      {
+       "who": "vendor",
+       "say": [
+        "支穩了，莫叫盤子翻了。",
+        "放平些。"
+       ],
+       "say_en": [
+        "Make it steady. Don't let the tray tip.",
+        "Set it level."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "small",
+       "say": [
+        "那是甚麼？",
+        "我要那個。"
+       ],
+       "say_en": [
+        "What's that?",
+        "I want that one."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "folded",
+       "say": [
+        "看看就好。",
+        "莫伸手。"
+       ],
+       "say_en": [
+        "Just look.",
+        "Hands off."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "folded",
+       "think": [
+        "這一盤擺得倒好看。",
+        "賣吃食的，盤子都乾淨。"
+       ],
+       "think_en": [
+        "Nicely set out, this tray.",
+        "Food sellers keep their trays spotless."
+       ],
+       "src": "东京梦华录 卷五 民俗 ('凡百所卖饮食之人，装鲜净盘合器皿')"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.lattice",
+   "title": "抬架子",
+   "title_en": "Lifting the Frame",
+   "group": "S6.grp.lattice_frame_top_3120",
+   "reading": "The map: two men on the back street beyond the incense shop's roof handle a long low lattice frame between them; what it is for is not legible.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "west": {
+     "fig": "lattice_frame_west_3092",
+     "name": "夥計",
+     "name_en": "workman",
+     "src": "map (the frame's west end)"
+    },
+    "east": {
+     "fig": "lattice_frame_east_3180",
+     "name": "夥計",
+     "name_en": "workman",
+     "src": "map (leaning on the frame's east end)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "west",
+       "say": [
+        "一、二——起！",
+        "抬起來！"
+       ],
+       "say_en": [
+        "One, two, lift!",
+        "Lift it!"
+       ],
+       "src": "map (handling the frame)",
+       "when": [
+        "bucket_lift"
+       ]
+      },
+      {
+       "who": "east",
+       "say": [
+        "慢著，這頭沉。",
+        "起——"
+       ],
+       "say_en": [
+        "Wait, this end's heavy.",
+        "Up!"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "east",
+       "say": [
+        "這架子擱哪裏？",
+        "靠牆放著罷。"
+       ],
+       "say_en": [
+        "Where does this frame go?",
+        "Lean it on the wall."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "west",
+       "say": [
+        "先擱這裏。",
+        "等主人家回來再說。"
+       ],
+       "say_en": [
+        "Put it here for now.",
+        "Wait till the master's back."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.backchild",
+   "title": "背著孩子",
+   "title_en": "A Child on His Back",
+   "group": "S6.grp.man_with_child_2790",
+   "reading": "The map: a man walks west through the street with a small child on his back. Lines vignettes V6.15 (the carried child points and asks); kinship ours.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "man": {
+     "fig": "man_carrying_child_2790",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (a child on his back; kinship ours)"
+    },
+    "child": {
+     "fig": "child_on_back_2795",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (on the man's back)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "看那邊！",
+        "那是甚麼？"
+       ],
+       "say_en": [
+        "Look over there!",
+        "What's that?"
+       ],
+       "src": "vignettes V6.15"
+      },
+      {
+       "who": "man",
+       "say": [
+        "抓緊了，莫摔下來。",
+        "是說書的，回頭帶你去聽。"
+       ],
+       "say_en": [
+        "Hold on tight. Don't fall off.",
+        "A storyteller. I'll take you to hear him later."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "man",
+       "say": [
+        "背了一路，沉了。",
+        "趴好，快到家了。"
+       ],
+       "say_en": [
+        "Carried you all this way. You're getting heavy.",
+        "Lie still, we're nearly home."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "child",
+       "say": [
+        "我自己走！",
+        "嗯。"
+       ],
+       "say_en": [
+        "I'll walk myself!",
+        "Mm."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.garment",
+   "title": "賣衣遇僧",
+   "title_en": "A Robe for the Monk",
+   "mark": "coin",
+   "group": "S6.grp.garment_seller_monk_3060",
+   "reading": "The map: a man holds up a long garment for a smiling monk and a man in a dark robe. 余辉 2023 (monks out begging alms this season). Lines vignettes V6.14.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "seller": {
+     "fig": "garment_seller_3100",
+     "name": "賣衣的",
+     "name_en": "clothes seller",
+     "src": "map (holding up a garment)"
+    },
+    "monk": {
+     "fig": "monk_3060",
+     "name": "僧人",
+     "name_en": "monk",
+     "src": "map (smiling)"
+    },
+    "cap": {
+     "fig": "dark_robe_cap_3022",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (dark robe and cap)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "seller",
+       "say": [
+        "師父看這件，厚實。",
+        "這件算你便宜些。"
+       ],
+       "say_en": [
+        "Look at this one, Master. Thick.",
+        "I'll let you have this one cheap."
+       ],
+       "src": "vignettes V6.14"
+      },
+      {
+       "who": "monk",
+       "say": [
+        "好是好，貧僧沒這許多錢。",
+        "阿彌陀佛，再看看。"
+       ],
+       "say_en": [
+        "Fine, but a poor monk hasn't the money.",
+        "Amitabha. Let me look a while."
+       ],
+       "src": "vignettes V6.14 (smiling)"
+      },
+      {
+       "who": "cap",
+       "think": [
+        "和尚也買衣裳。",
+        "這價倒公道。"
+       ],
+       "think_en": [
+        "Even monks buy clothes.",
+        "That's a fair price."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "cap",
+       "say": [
+        "這件我穿著可合身？",
+        "給我也看一件。"
+       ],
+       "say_en": [
+        "Would this one fit me?",
+        "Show me one too."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "seller",
+       "say": [
+        "正合身，正合身。",
+        "有，有，還有好的。"
+       ],
+       "say_en": [
+        "Just right, just right.",
+        "Yes, yes, I've better ones."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.lowstall",
+   "title": "傘下小攤",
+   "title_en": "The Small Stall Under Umbrellas",
+   "group": "S6.grp.low_umbrella_stall_3000",
+   "reading": "The map: a small stall under two umbrellas at the bottom edge, a signboard by the near umbrella (its words not legible; the map's guess 香饮子 is not voiced), one man seated by the pole, another half hidden behind the tree. 东京梦华录 卷三 天晓诸人入市 (hot drinks sold in the street).",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "pole": {
+     "fig": "seated_by_pole_2970",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (seated by the umbrella pole; our reading)"
+    },
+    "tree": {
+     "fig": "man_behind_tree_3040",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (craning from behind the tree)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "tree",
+       "say": [
+        "那酒車過去了沒有？",
+        "外頭熱鬧甚麼？"
+       ],
+       "say_en": [
+        "Has the wine cart gone by?",
+        "What's all the fuss out there?"
+       ],
+       "src": "map (the wine cart just west; craning)"
+      },
+      {
+       "who": "pole",
+       "say": [
+        "過去了，往東走了。",
+        "看說書的罷。"
+       ],
+       "say_en": [
+        "Gone by, heading east.",
+        "The storyteller, probably."
+       ],
+       "src": "map (the wine cart heads east)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pole",
+       "say": [
+        "坐下歇歇，喝碗湯。",
+        "這傘底下涼快。"
+       ],
+       "say_en": [
+        "Sit and rest. Have a bowl of something hot.",
+        "It's cool under this umbrella."
+       ],
+       "src": "东京梦华录 卷三 天晓诸人入市 (煎点汤茶药)"
+      },
+      {
+       "who": "tree",
+       "say": [
+        "不了，看看就走。",
+        "好，坐一坐。"
+       ],
+       "say_en": [
+        "No, just looking.",
+        "All right, I'll sit a while."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.barrowtop",
+   "title": "街頭推車",
+   "title_en": "The Barrow Up the Street",
+   "group": "S6.grp.barrow_top_3340",
+   "reading": "The map: a man leans over a parked wheelbarrow at the top of the silk, a second figure behind it cut off by the silk's edge, and a man with a tall box on his back holding his hand out toward the barrow.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "pusher": {
+     "fig": "barrow_pusher_3390",
+     "name": "車夫",
+     "name_en": "barrow man",
+     "src": "map (leaning over the wheelbarrow)"
+    },
+    "edge": {
+     "fig": "top_edge_figure_3332",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (cut by the silk's top edge)"
+    },
+    "box": {
+     "fig": "box_carrier_3272",
+     "name": "腳夫",
+     "name_en": "carrier",
+     "src": "map (a tall banded box on his back, hand held out toward the barrow)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "box",
+       "say": [
+        "這車往哪裏去？",
+        "借我擱一擱？"
+       ],
+       "say_en": [
+        "Where's this barrow going?",
+        "Can I set my box on it?"
+       ],
+       "src": "map (hand held out toward the barrow)"
+      },
+      {
+       "who": "pusher",
+       "say": [
+        "往東頭，順路麼？",
+        "擱不下了。"
+       ],
+       "say_en": [
+        "To the east end. Your way?",
+        "No room."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pusher",
+       "say": [
+        "這輪子又澀了。",
+        "上點油才好推。"
+       ],
+       "say_en": [
+        "This wheel's sticking again.",
+        "Needs oil to push easy."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "edge",
+       "say": [
+        "回頭去修一修。",
+        "將就著推罷。"
+       ],
+       "say_en": [
+        "Get it mended later.",
+        "Make do and push."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.cloth",
+   "title": "匹帛鋪",
+   "title_en": "The Cloth Shop",
+   "mark": "scale",
+   "group": "S6.grp.cloth_shop_3600",
+   "reading": "名画记 40: at the cloth shop customers choose fabrics; the sign 王家罗明匹帛铺 (sections.md; legible □锦疋帛). The map: a customer seated at the counter, a slim figure standing, a figure seated at the second counter (the keeper is our reading). Vignettes V6.14.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "seated": {
+     "fig": "cloth_shop_seated_3640",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (seated at the counter)"
+    },
+    "standing": {
+     "fig": "cloth_shop_standing_3686",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (standing at the counter)"
+    },
+    "keeper": {
+     "fig": "cloth_shop_seated_3752",
+     "name": "店主",
+     "name_en": "shopkeeper",
+     "src": "map (seated at the second counter; keeper is our reading)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "seated",
+       "say": [
+        "這匹羅幾錢？",
+        "有素一些的麼？"
+       ],
+       "say_en": [
+        "How much this bolt of gauze?",
+        "Anything plainer?"
+       ],
+       "src": "vignettes V6.14; 名画记 40"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "上好的羅，價錢公道。",
+        "有，有，給你取來。"
+       ],
+       "say_en": [
+        "The finest gauze, a fair price.",
+        "Yes, yes, I'll fetch it."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "standing",
+       "say": [
+        "這花色好看。",
+        "摸著真軟。"
+       ],
+       "say_en": [
+        "Lovely pattern.",
+        "So soft to the touch."
+       ],
+       "src": "名画记 40 (customers choosing cloth)"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "是江南來的。",
+        "王家的匹帛，信得過。"
+       ],
+       "say_en": [
+        "It comes from the south.",
+        "The Wang shop's silks. You can trust them."
+       ],
+       "src": "the sign 王家罗明匹帛铺 (sections.md)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.topstreet",
+   "title": "後街寒暄",
+   "title_en": "Greetings on the Back Street",
+   "group": "S6.grp.top_street_talk",
+   "reading": "The map: on the street at the top of the silk a man in a long dark robe and black hat faces a man in a pale short jacket, close together as if greeting. 余辉 2021: common folk greet each other warmly. 东京梦华录 卷七 清明节 (out to the graves).",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "robed": {
+     "fig": "robed_man_3808",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (long dark robe, black hat)"
+    },
+    "jacket": {
+     "fig": "light_jacket_man_3845",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (light short jacket)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "robed",
+       "say": [
+        "幸會，幸會！",
+        "久違了！"
+       ],
+       "say_en": [
+        "Well met, well met!",
+        "It's been a long time!"
+       ],
+       "src": "余辉 2021 (百姓相遇，招呼频频)",
+       "when": [
+        "bow"
+       ]
+      },
+      {
+       "who": "jacket",
+       "say": [
+        "一向可好？",
+        "托福，托福。"
+       ],
+       "say_en": [
+        "Keeping well?",
+        "Thanks to you, thanks to you."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "jacket",
+       "say": [
+        "今日上墳去麼？",
+        "節下出城麼？"
+       ],
+       "say_en": [
+        "Off to the graves today?",
+        "Going out of town for the holiday?"
+       ],
+       "src": "东京梦华录 卷七 清明节"
+      },
+      {
+       "who": "robed",
+       "say": [
+        "明日一早就去。",
+        "一家老小都去。"
+       ],
+       "say_en": [
+        "First thing tomorrow.",
+        "The whole family's going."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.greet1",
+   "title": "牙人相見",
+   "title_en": "Brokers Meet",
+   "mark": "coin",
+   "group": "S6.grp.greeting_3490",
+   "reading": "余辉 2023 (brokers in long sleeves greet each other everywhere: trade is brisk); the map: one in a dark robe bows with joined hands to a bearded man, who returns the greeting. Vignettes V6.13.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "bow": {
+     "fig": "bowing_dark_robe_3470",
+     "name": "牙人",
+     "name_en": "broker",
+     "src": "map (bowing with joined hands); 余辉 2023 (our reading)"
+    },
+    "beard": {
+     "fig": "bearded_light_robe_3508",
+     "name": "牙人",
+     "name_en": "broker",
+     "src": "map (bearded, returning the greeting)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "bow",
+       "say": [
+        "幸會，幸會！今日可有好買賣？",
+        "久仰，久仰！"
+       ],
+       "say_en": [
+        "Well met! Any good business today?",
+        "Honoured, honoured!"
+       ],
+       "src": "vignettes V6.13",
+       "when": [
+        "bow"
+       ]
+      },
+      {
+       "who": "beard",
+       "say": [
+        "剛說成一樁。",
+        "不敢，不敢。"
+       ],
+       "say_en": [
+        "Just closed one.",
+        "Too kind, too kind."
+       ],
+       "src": "vignettes V6.13"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "beard",
+       "say": [
+        "改日到客店裏再敘。",
+        "得空吃盅酒去。"
+       ],
+       "say_en": [
+        "Let's talk more at the inn some day.",
+        "Come for a cup when you're free."
+       ],
+       "src": "名画记 42 (deals struck at the inn)"
+      },
+      {
+       "who": "bow",
+       "say": [
+        "一定，一定。",
+        "好說，好說。"
+       ],
+       "say_en": [
+        "Certainly, certainly.",
+        "By all means."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.greet2",
+   "title": "店前作揖",
+   "title_en": "A Bow Before the Shop",
+   "group": "S6.grp.greeting_4775",
+   "reading": "余辉 2023 (brokers greet each other everywhere; middlemen push prices up); the map: the stout man in the dark robe smiles and bows with joined hands to a man seen from behind. Vignettes V6.13.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "dark": {
+     "fig": "man_dark_robe_greeting_4772",
+     "name": "牙人",
+     "name_en": "broker",
+     "src": "map (stout, smiling, bowing); 余辉 2023 (our reading)"
+    },
+    "back": {
+     "fig": "man_back_turned_4845",
+     "name": "客商",
+     "name_en": "trader",
+     "src": "map (seen from behind, greeting)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "dark",
+       "say": [
+        "幸會，幸會！",
+        "哎呀，多日不見！"
+       ],
+       "say_en": [
+        "Well met, well met!",
+        "Well now, long time no see!"
+       ],
+       "src": "vignettes V6.13",
+       "when": [
+        "bow"
+       ]
+      },
+      {
+       "who": "back",
+       "say": [
+        "一向可好？",
+        "好巧，在這裏遇著。"
+       ],
+       "say_en": [
+        "Keeping well?",
+        "What luck, meeting here."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "dark",
+       "say": [
+        "那批貨出手了麼？",
+        "今日可有好買賣？"
+       ],
+       "say_en": [
+        "Did that lot of goods sell?",
+        "Any good business today?"
+       ],
+       "src": "vignettes V6.13"
+      },
+      {
+       "who": "back",
+       "say": [
+        "托你的福，剛說成。",
+        "還在等價錢。"
+       ],
+       "say_en": [
+        "Thanks to you, just settled.",
+        "Still waiting on the price."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "dark",
+       "think": [
+        "這一樁，又能抽個好價。",
+        "中人的錢，最好賺。"
+       ],
+       "think_en": [
+        "Another good cut from this one.",
+        "Go-between's money comes easiest."
+       ],
+       "src": "余辉 2023 (过多的中间商自然会引起物价上涨)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.boxporter",
+   "title": "擔箱的",
+   "title_en": "The Box Porter",
+   "group": "S6.grp.box_porter_3745",
+   "reading": "The map: a porter carries two boxes on a shoulder pole eastward and a man in a dark robe reaches toward the west box as it passes. 余辉 2023 names a maltose seller and a food-box carrier in the crossroads crowd: which this is stays open, so the line lets him be either.",
+   "gap": [
+    20,
+    40
+   ],
+   "roles": {
+    "reach": {
+     "fig": "dark_robe_reaching_3570",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (reaching toward the box)"
+    },
+    "porter": {
+     "fig": "box_pole_porter_3745",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (two boxes on a shoulder pole)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "reach",
+       "say": [
+        "站住，裏頭是甚麼？",
+        "這箱裏賣的甚麼？"
+       ],
+       "say_en": [
+        "Hold on, what's inside?",
+        "What are you selling in the box?"
+       ],
+       "src": "vignettes V6.14",
+       "when": [
+        "hand_over"
+       ]
+      },
+      {
+       "who": "porter",
+       "say": [
+        "送人家的食盒，賣不得。",
+        "是飴糖，要買麼？"
+       ],
+       "say_en": [
+        "Someone's food boxes. Not for sale.",
+        "Maltose. Want some?"
+       ],
+       "src": "余辉 2023 (送食盒的脚夫, 卖麦芽糖的挑夫)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.rider1",
+   "title": "白衣騎客",
+   "title_en": "The Rider in White",
+   "group": "S6.grp.rider_3375",
+   "reading": "余辉 2023: a man of letters in white rides with attendants, '像是很得势'; the map: a rider on a dark horse seen from behind, his groom walking at its side with a long whip. Vignettes V6.15.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "rider": {
+     "fig": "rider_3375",
+     "name": "騎客",
+     "name_en": "rider",
+     "src": "map (on a dark horse, seen from behind); 余辉 2023"
+    },
+    "groom": {
+     "fig": "groom_whip_3452",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "map (a long whip)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": [
+        "官人，這邊人少。",
+        "前頭擠，走這邊。"
+       ],
+       "say_en": [
+        "Sir, it's clearer this way.",
+        "It's crowded ahead. This way."
+       ],
+       "src": "vignettes V6.15"
+      },
+      {
+       "who": "rider",
+       "think": [
+        "好個熱鬧的街市。",
+        "慢慢走，不急。"
+       ],
+       "think_en": [
+        "What a lively market street.",
+        "Go slowly. No hurry."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": [
+        "讓一讓，馬來了！",
+        "借光！"
+       ],
+       "say_en": [
+        "Make way, horse coming!",
+        "By your leave!"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "rider",
+       "say": [
+        "莫嚷，慢些走。",
+        "由他們先過。"
+       ],
+       "say_en": [
+        "Don't shout. Go slowly.",
+        "Let them go first."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.rider2",
+   "title": "牆外騎馬",
+   "title_en": "Rider Beyond the Roofs",
+   "group": "S6.grp.rider_5262",
+   "reading": "The map: a man in a light robe rides a dark horse west along the street's south edge, a groom at the horse's head; seen only above the south-side ridges.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "rider": {
+     "fig": "rider_5335",
+     "name": "騎客",
+     "name_en": "rider",
+     "src": "map (light robe, riding the dark horse)"
+    },
+    "groom": {
+     "fig": "groom_5290",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "map (at the horse's head)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": [
+        "吁——慢些。",
+        "這馬見人多就躁。"
+       ],
+       "say_en": [
+        "Whoa, slow.",
+        "This horse frets in crowds."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "rider",
+       "say": [
+        "牽穩了。",
+        "往西走，莫進鬧市。"
+       ],
+       "say_en": [
+        "Hold it steady.",
+        "Go west. Keep out of the market."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "rider",
+       "think": [
+        "城裏比城外熱鬧多了。",
+        "那邊在說書。"
+       ],
+       "think_en": [
+        "So much livelier in town than outside.",
+        "Someone's telling stories over there."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.seated",
+   "title": "蹲身修物",
+   "title_en": "Mending Something",
+   "group": "S6.grp.seated_pair_3900",
+   "reading": "The map: a man in a square black cap sits facing us while a man in a pale jacket crouches before him, bent over something in his hands; what it is is not legible (mending it is our proposal).",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "seated": {
+     "fig": "seated_cap_man_3905",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (square black cap, seated)"
+    },
+    "crouch": {
+     "fig": "crouching_man_3890",
+     "name": "匠人",
+     "name_en": "craftsman",
+     "src": "map (crouching, bent over something in his hands; craftsman is our reading)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "seated",
+       "say": [
+        "你手裏是甚麼？",
+        "修好了沒有？"
+       ],
+       "say_en": [
+        "What's that in your hands?",
+        "Is it mended yet?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "crouch",
+       "say": [
+        "就快好了。",
+        "官人稍等。"
+       ],
+       "say_en": [
+        "Nearly done.",
+        "A moment, sir."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "crouch",
+       "think": [
+        "這活計真細。",
+        "眼都看花了。"
+       ],
+       "think_en": [
+        "Fiddly work, this.",
+        "My eyes are swimming."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.umbrella",
+   "title": "傘下抬箱",
+   "title_en": "Boxes Under the Umbrella",
+   "group": "S6.grp.umbrella_pair_4060",
+   "reading": "The map: a youth and a round-faced man under one wide dark umbrella with a pole between them at shoulder height and a stack of flat boxes below; a man looks up beside the boxes. They may be carrying the boxes on the pole (the map's reading).",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "youth": {
+     "fig": "youth_umbrella_4028",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "map (under the dark umbrella)"
+    },
+    "round": {
+     "fig": "round_face_man_4092",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (round-faced, at the umbrella's east edge)"
+    },
+    "boxes": {
+     "fig": "man_by_boxes_4115",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (looking up beside the boxes)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "round",
+       "say": [
+        "這幾箱抬到哪裏？",
+        "擔子扛穩了沒有？"
+       ],
+       "say_en": [
+        "Where do these boxes go?",
+        "Got the pole steady on your shoulder?"
+       ],
+       "src": "map (the pole and the boxes)"
+      },
+      {
+       "who": "youth",
+       "say": [
+        "抬到客店去。",
+        "穩了，走罷。"
+       ],
+       "say_en": [
+        "To the inn.",
+        "Steady. Let's go."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "boxes",
+       "think": [
+        "這一摞箱子不輕。",
+        "傘底下倒涼快。"
+       ],
+       "think_en": [
+        "That stack of boxes isn't light.",
+        "Cool under that umbrella."
+       ],
+       "src": "map (looking up beside the boxes)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "youth",
+       "say": [
+        "歇一歇再走。",
+        "傘撐好，莫叫雨淋了。"
+       ],
+       "say_en": [
+        "Rest a bit, then go.",
+        "Hold the umbrella up. Keep the rain off them."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "round",
+       "say": [
+        "好，歇一歇。",
+        "曉得。"
+       ],
+       "say_en": [
+        "All right, a rest.",
+        "I know."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.traystall",
+   "title": "高座攤子",
+   "title_en": "The Stall with the High Seat",
+   "group": "S6.grp.tray_stall_4110",
+   "reading": "The map: an oval tray of goods on a crossed-leg stand with a basket under it; a man on a high chair behind it (名画记 40's fat owner of the meat shop, seated at its door: gen/life/q8_figures.md), a young man beside him, a man bending over the tray, a man holding a small red jar at its west end. Lines vignettes V6.14.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "seat": {
+     "fig": "seated_man_highseat_4070",
+     "name": "掌櫃",
+     "name_en": "owner",
+     "src": "map (the stout man on the high seat at the meat shop's door, behind the tray); 名画记 40 (the fat owner on a bench at the door)"
+    },
+    "young": {
+     "fig": "young_man_4108",
+     "name": "夥計",
+     "name_en": "helper",
+     "src": "map (beside the high seat)"
+    },
+    "bend": {
+     "fig": "man_bending_tray_4190",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (bending over the tray)"
+    },
+    "jar": {
+     "fig": "man_red_jar_4005",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (holding a small red jar)"
+    },
+    "knife": {
+     "fig": "butcher_3920",
+     "name": "夥計",
+     "name_en": "butcher's man",
+     "src": "名画记 40 (a hired hand wields the knife); map (leaning over the chopping block)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "bend",
+       "say": [
+        "這個幾文？",
+        "這些都是新的？"
+       ],
+       "say_en": [
+        "How much is this?",
+        "Are these all new?"
+       ],
+       "src": "vignettes V6.14"
+      },
+      {
+       "who": "seat",
+       "say": [
+        "挑好的拿。",
+        "看中了再說價。"
+       ],
+       "say_en": [
+        "Take your pick.",
+        "Choose first, then we'll talk price."
+       ],
+       "src": "vignettes V6.14"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "jar",
+       "say": [
+        "這小罐子也要了。",
+        "罐子給我包上。"
+       ],
+       "say_en": [
+        "I'll take this little jar too.",
+        "Wrap the jar for me."
+       ],
+       "src": "map (the small red jar)"
+      },
+      {
+       "who": "young",
+       "say": [
+        "好，給你包上。",
+        "是，是。"
+       ],
+       "say_en": [
+        "Right, I'll wrap it.",
+        "Yes, yes."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "young",
+       "say": [
+        "今日生意不錯。",
+        "說書的一散，人就多了。"
+       ],
+       "say_en": [
+        "Good trade today.",
+        "When the storyteller stops, the crowd comes."
+       ],
+       "src": "map (beside the storyteller's ring)"
+      },
+      {
+       "who": "seat",
+       "say": [
+        "坐得高，看得遠。",
+        "眼睛盯著攤子。"
+       ],
+       "say_en": [
+        "Sit high and you see far.",
+        "Keep your eyes on the stall."
+       ],
+       "src": "map (the high seat)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "seat",
+       "say": [
+        "刀下利索些，客人等著呢。",
+        "羊肝切薄些，客人要下酒。"
+       ],
+       "say_en": [
+        "Quick with the knife; customers are waiting.",
+        "Slice the lamb liver thin; the customer wants it with wine."
+       ],
+       "src": "名画记 40 (the fat owner at the door, a hired hand at the knife); 余辉 2023 (mutton offal); our proposal"
+      },
+      {
+       "who": "knife",
+       "say": [
+        "是，這就切。",
+        "曉得，切得薄薄的。"
+       ],
+       "say_en": [
+        "Right, cutting now.",
+        "Got it, sliced nice and thin."
+       ],
+       "src": "名画记 40 (the hired hand); our proposal"
+      }
+     ],
+     "linked": true
+    }
+   ]
+  },
+  {
+   "id": "c6.scholars",
+   "title": "赴考士子",
+   "title_en": "Scholars Bound for the Exams",
+   "mark": "book",
+   "group": "S6.grp.exam_scholars_3240",
+   "reading": "名画记 44 (exam years fill the capital with candidates); vignettes V6.10. 余辉 2015 看点六: the 崇宁 bans burnt the 元祐 party's writings and forbade students to keep them; the whispered exchange is our proposal (the screen plot line), heard only close by.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "front": {
+     "fig": "scholar_front_3240",
+     "name": "士子",
+     "name_en": "scholar",
+     "src": "the bearded scholar in a white robe facing us (map); 名画记 44"
+    },
+    "back": {
+     "fig": "scholar_back_3203",
+     "name": "士子",
+     "name_en": "scholar",
+     "src": "the scholar in a white robe seen from behind (map)"
+    },
+    "case": {
+     "fig": "young_man_case_3340",
+     "name": "書童",
+     "name_en": "servant",
+     "src": "the young servant holding a long case, reaching toward the scholars (map)"
+    },
+    "box": {
+     "fig": "box_shoulder_porter_3405",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "the man carrying a long box on his shoulder (map)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "front",
+       "say": [
+        "今科聽說要考策論。",
+        "策論要寫得透。"
+       ],
+       "say_en": [
+        "Policy essays this year, they say.",
+        "A policy essay must go deep."
+       ],
+       "src": "vignettes V6.10"
+      },
+      {
+       "who": "back",
+       "say": [
+        "但願一舉登科。",
+        "我這幾篇還不熟。"
+       ],
+       "say_en": [
+        "May we pass at the first try.",
+        "I don't know these pieces well yet."
+       ],
+       "src": "vignettes V6.10"
+      }
+     ]
+    },
+    {
+     "step": "screen.3",
+     "beats": [
+      {
+       "who": "back",
+       "say": [
+        "蘇學士的字，你還留著麼？",
+        "那幾卷舊字，可藏好了？"
+       ],
+       "say_en": [
+        "Do you still keep any of Su's calligraphy?",
+        "Those old scrolls: hidden well?"
+       ],
+       "src": "余辉 2015 看点六 (苏轼's writings banned)"
+      },
+      {
+       "who": "front",
+       "say": [
+        "噓，元祐諸公的字藏不得了。",
+        "小聲些，如今看都看不得。"
+       ],
+       "say_en": [
+        "Shh. The Yuanyou men's writing can't be kept now.",
+        "Quietly. Now even looking is forbidden."
+       ],
+       "src": "余辉 2015 看点六 ('严禁生徒习读、藏家宝之'); plot line screen.3"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "case",
+       "say": [
+        "相公，書箱在此。",
+        "箱子給您放這裏？"
+       ],
+       "say_en": [
+        "Your book box, sir.",
+        "Shall I put the box here?"
+       ],
+       "src": "vignettes V6.10",
+       "when": [
+        "hand_over"
+       ]
+      },
+      {
+       "who": "front",
+       "say": [
+        "仔細拿好。",
+        "放穩了。"
+       ],
+       "say_en": [
+        "Carry it carefully.",
+        "Set it down steady."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "box",
+       "say": [
+        "借過，借過。",
+        "這箱子壓肩。"
+       ],
+       "say_en": [
+        "Coming through.",
+        "This box weighs on the shoulder."
+       ],
+       "src": "map (the long box on his shoulder)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6.fan",
+   "title": "以扇遮面",
+   "title_en": "Hiding Behind a Fan",
+   "mark": "fan",
+   "group": "S6.grp.fan_traveller_3225",
+   "reading": "名画记 43 (便面: hiding your face with a fan from someone you'd rather not greet); 余辉 2023 (a shabby scholar with his book boy hides behind his fan). Vignettes V6.9.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "fan": {
+     "fig": "fan_man_3225",
+     "name": "書生",
+     "name_en": "scholar",
+     "src": "map (shielding his face with a round fan); 余辉 2023"
+    },
+    "boy": {
+     "fig": "servant_boy_bundle_3270",
+     "name": "書童",
+     "name_en": "book boy",
+     "src": "map (a bundle on his back)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "boy",
+       "say": [
+        "相公，那邊是……",
+        "相公，有人看您。"
+       ],
+       "say_en": [
+        "Sir, over there…",
+        "Sir, someone's looking at you."
+       ],
+       "src": "vignettes V6.9"
+      },
+      {
+       "who": "fan",
+       "think": [
+        "莫叫他認出我。",
+        "扇子遮一遮。"
+       ],
+       "think_en": [
+        "Don't let him know me.",
+        "Up with the fan."
+       ],
+       "src": "vignettes V6.9; 名画记 43"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "fan",
+       "say": [
+        "走快些。",
+        "跟緊了。"
+       ],
+       "say_en": [
+        "Walk faster.",
+        "Keep close."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "boy",
+       "say": [
+        "包袱沉，走不快。",
+        "來了，來了。"
+       ],
+       "say_en": [
+        "The bundle's heavy. I can't go faster.",
+        "Coming, coming."
+       ],
+       "src": "map (a bundle on his back)"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "id": "b6.butcher",
+   "who": {
+    "fig": "butcher_3920",
+    "name": "夥計",
+    "name_en": "butcher's man",
+    "src": "名画记 40 (a hired hand wields the knife); map (leaning over the chopping block)"
+   },
+   "close": true,
+   "every": [
+    40,
+    80
+   ],
+   "say": [
+    "羊肺羊肚，六十足一斤！",
+    "要闊切還是細抹？"
+   ],
+   "say_en": [
+    "Lungs and tripe! Sixty full cash a jin!",
+    "Cut thick, or minced fine?"
+   ],
+   "src": "vignettes V6.6 (余辉 2023's price board); 东京梦华录 卷四 肉行",
+   "as": {
+    "guan": [
+     "官人，切幾斤？"
+    ],
+    "fu": [
+     "娘子，羊肝新鮮！"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "How many jin shall I cut, sir?"
+    ],
+    "fu": [
+     "Madam, fresh lamb's liver!"
+    ]
+   }
+  },
+  {
+   "id": "b6.paper",
+   "who": {
+    "fig": "paper_stall_seller_2565",
+    "name": "賣紙馬的",
+    "name_en": "paper-horse seller",
+    "src": "map (the keeper behind the paper-horse stall); 余辉 2014 列售纸码"
+   },
+   "close": true,
+   "every": [
+    40,
+    80
+   ],
+   "say": [
+    "清明了，帶一副紙馬去？",
+    "紙馬紙錢，上墳用的都有！"
+   ],
+   "say_en": [
+    "It's Qingming. Take a set of paper horses?",
+    "Paper horses and money, all for the graves!"
+   ],
+   "src": "vignettes V6.12 (the near line)",
+   "as": {
+    "guan": [
+     "官人，帶一副去？"
+    ],
+    "fu": [
+     "娘子，給先人燒一副？"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Sir, take a set?"
+    ],
+    "fu": [
+     "Madam, a set to burn for your forebears?"
+    ]
+   }
+  },
+  {
+   "id": "b6.door",
+   "who": {
+    "fig": "doorman_5015",
+    "name": "酒保",
+    "name_en": "tavern man",
+    "src": "map (the man in a dark cap in the 正店's doorway); 酒保, 余辉 2023's word for a tavern's man"
+   },
+   "close": true,
+   "every": [
+    40,
+    90
+   ],
+   "say": [
+    "客官樓上請。",
+    "新開的香醪，樓上請！"
+   ],
+   "say_en": [
+    "Upstairs, sir.",
+    "The Fragrant Brew's just opened. Upstairs!"
+   ],
+   "src": "vignettes V6.4 (the doorman); the lamp-box 香醪",
+   "as": {
+    "guan": [
+     "官人樓上請。"
+    ],
+    "jun": [
+     "軍爺，樓上請。"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Upstairs, sir, please."
+    ],
+    "jun": [
+     "Upstairs, soldier."
+    ]
+   }
+  },
+  {
+   "id": "b6.parasol",
+   "who": {
+    "fig": "seated_man_stool_4441",
+    "name": "攤主",
+    "name_en": "stallholder",
+    "src": "the map: the seated man at the 正店's door may keep the parasol stall (no seller is drawn at it)"
+   },
+   "close": true,
+   "every": [
+    40,
+    90
+   ],
+   "say": [
+    "粽子、饊子、甘蔗——",
+    "江南的甘蔗，甜得很！"
+   ],
+   "say_en": [
+    "Zongzi, fried twists, sugarcane!",
+    "Sugarcane from the south, very sweet!"
+   ],
+   "src": "vignettes V6.3 (余辉 2023: 粽子, fruit, 馓子 under the parasol, southern cane in a tub, shipped up the canal)",
+   "as": {
+    "tong": [
+     "小哥兒，甘蔗甜的！"
+    ],
+    "fu": [
+     "娘子，帶幾個粽子回去？"
+    ]
+   },
+   "as_en": {
+    "tong": [
+     "Lad, the sugarcane's sweet!"
+    ],
+    "fu": [
+     "Madam, take some zongzi home?"
+    ]
+   }
+  },
+  {
+   "id": "b6.monk",
+   "who": {
+    "fig": "itinerant_monk_2078",
+    "name": "行腳僧",
+    "name_en": "wandering monk",
+    "src": "名画记 46 (行脚僧: clappers in his hands, a pack on his back like 玄奘 in the Dunhuang murals)"
+   },
+   "close": true,
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "化些齋飯。",
+    "阿彌陀佛，施主結個善緣。"
+   ],
+   "say_en": [
+    "A little food, for alms.",
+    "Amitabha. Make a good deed, kind sir."
+   ],
+   "src": "名画记 46; vignettes S6 solo",
+   "as": {
+    "guan": [
+     "官人，布施些罷。"
+    ],
+    "fu": [
+     "女施主，結個善緣。"
+    ],
+    "seng": [
+     "師兄，從哪座寺來？"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Sir, a little alms?"
+    ],
+    "fu": [
+     "Kind lady, make a good deed."
+    ],
+    "seng": [
+     "Brother, which temple are you from?"
+    ]
+   }
+  },
+  {
+   "id": "b6.watcher",
+   "who": {
+    "fig": "crouching_dark_2028",
+    "name": "閒人",
+    "name_en": "onlooker",
+    "src": "map (crouching behind the awning, face turned toward the passing monk)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "好大一擔行李，從哪裏來的？",
+    "這和尚走了多遠的路？"
+   ],
+   "think_en": [
+    "What a load. Where's he come from?",
+    "How far has this monk walked?"
+   ],
+   "src": "名画记 46 (the monk brings the air of far places); map"
+  },
+  {
+   "id": "b6.archer",
+   "who": {
+    "fig": "archer_waistguard_5465",
+    "name": "弓手",
+    "name_en": "archer",
+    "src": "余辉 2023 (the left archer ties his waist guard); map (the west archer in the wine depot)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "腰護繫緊了，車一到就走。",
+    "車怎麼還不來？"
+   ],
+   "say_en": [
+    "Waist guard's tight. We go when the wagon comes.",
+    "Why isn't the wagon here yet?"
+   ],
+   "src": "余辉 2023 (三个弓箭兵…左侧一位正在系护腰…很快，装载梢桶的马车就要来了)"
+  },
+  {
+   "id": "b6.study",
+   "who": {
+    "fig": "scholar_upstairs_3912",
+    "name": "士子",
+    "name_en": "scholar",
+    "src": "余辉 士子苦读; map (the young scholar at the inn's upper window)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "think": [
+    "這一篇還背不熟……",
+    "樓下吵得讀不下去。"
+   ],
+   "think_en": [
+    "Still can't recite this one…",
+    "Too noisy down there to read."
+   ],
+   "src": "vignettes V6.10 (士子苦读); 名画记 42"
+  },
+  {
+   "id": "b6.window",
+   "who": {
+    "fig": "window_face_4155",
+    "name": "客人",
+    "name_en": "guest",
+    "src": "map (peering out of the inn's east upper window)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "say": [
+    "樓下好熱鬧。",
+    "說書的又開場了。"
+   ],
+   "say_en": [
+    "Lively down there.",
+    "The storyteller's started again."
+   ],
+   "src": "vignettes S6 solo (window_face_4155)"
+  },
+  {
+   "id": "b6.pointer",
+   "who": {
+    "fig": "pointing_man_3405",
+    "name": "後生",
+    "name_en": "young man",
+    "src": "map (pointing west toward the inn's signboard)"
+   },
+   "every": [
+    50,
+    110
+   ],
+   "say": [
+    "王員外家，就是這裏。",
+    "客店在那邊。"
+   ],
+   "say_en": [
+    "Wang the Squire's inn. This is it.",
+    "The inn's over there."
+   ],
+   "src": "vignettes S6 solo (the inn's sign 久住王員外家)",
+   "when": [
+    "point"
+   ]
+  },
+  {
+   "id": "b6.boy",
+   "who": {
+    "fig": "boy_5050",
+    "name": "孩童",
+    "name_en": "child",
+    "src": "map (a boy striding with both arms stretched out, playing)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "看我飛！",
+    "抓不著我！"
+   ],
+   "say_en": [
+    "Watch me fly!",
+    "Can't catch me!"
+   ],
+   "src": "map (arms out, playing); vignettes S6 solo",
+   "when": [
+    "play"
+   ]
+  },
+  {
+   "id": "b6.fanshade",
+   "who": {
+    "fig": "fan_man_3972",
+    "name": "老者",
+    "name_en": "gentleman",
+    "src": "map (a tall man in a pale robe holding a dark round fan beside his face)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "日頭毒，扇子遮一遮。",
+    "這街上灰真大。"
+   ],
+   "think_en": [
+    "Fierce sun. Shade under the fan.",
+    "So much dust on this street."
+   ],
+   "src": "余辉 2023 (the 便面 also against heat and dust)"
+  },
+  {
+   "id": "b6.barrow",
+   "who": {
+    "fig": "handcart_man_3130",
+    "name": "車夫",
+    "name_en": "barrow man",
+    "src": "map (between the barrow's shafts at the incense shop's corner)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "借過，借過！",
+    "車來了，讓一讓！"
+   ],
+   "say_en": [
+    "Coming through!",
+    "Barrow coming, make way!"
+   ],
+   "src": "vignettes V6.15 (perhaps 余辉 2023's barrow of pottery basins)"
+  },
+  {
+   "id": "b6.pole",
+   "who": {
+    "fig": "pole_walker_2341",
+    "name": "行人",
+    "name_en": "passer-by",
+    "src": "map (striding east with a long thin pole held upright)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "竿子來了，當心！",
+    "借過，莫碰著頭。"
+   ],
+   "say_en": [
+    "Pole coming, mind out!",
+    "Excuse me. Mind your head."
+   ],
+   "src": "map (the long pole); our proposal"
+  },
+  {
+   "id": "b6.restpole",
+   "who": {
+    "fig": "pole_man_5578",
+    "name": "挑夫",
+    "name_en": "porter",
+    "src": "map (holding his shoulder pole against his load, resting)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "歇口氣，再挑一程。",
+    "這擔子越挑越重。"
+   ],
+   "think_en": [
+    "Catch my breath, then on again.",
+    "The load gets heavier every step."
+   ],
+   "src": "map (the pole man resting); our proposal"
+  },
+  {
+   "id": "b6.kerchief",
+   "who": {
+    "fig": "man_hands_raised_5180",
+    "name": "行人",
+    "name_en": "passer-by",
+    "src": "map (both hands raised to a dark cap or a small load on his head)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "think": [
+    "頭巾又鬆了。",
+    "風大，紮緊些。"
+   ],
+   "think_en": [
+    "This kerchief's slipping again.",
+    "Windy. Tie it tighter."
+   ],
+   "src": "map (hands raised to his head)"
   }
  ]
 }

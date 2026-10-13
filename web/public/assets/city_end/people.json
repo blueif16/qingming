@@ -39,7 +39,12 @@
      "lean_post_talk",
      12
     ]
-   ]
+   ],
+   "nudge": [
+    -0.31,
+    0.32
+   ],
+   "facing_deg": 207
   },
   "visitor_food_box_1308": {
    "character": "camel_driver",
@@ -86,9 +91,10 @@
     "child_on_lap"
    ],
    "nudge": [
-    0.08,
-    0.0
-   ]
+    -0.11,
+    0
+   ],
+   "facing_deg": 0
   },
   "child_on_lap_1546": {
    "character": "child",
@@ -165,15 +171,15 @@
     ]
    ],
    "nudge": [
-    -0.08,
-    -0.08
+    -0.18,
+    -0.18
    ]
   },
   "groom_1698": {
    "character": "groom",
    "do": [
     [
-     "bridle",
+     "idle",
      9
     ],
     [
@@ -203,11 +209,12 @@
   "gatekeeper_seated_1082": "painted seated on his low box seat S7.prop.seat_box_gatekeeper_1070: robed_man's sit_talk puts the hips 0.27 m behind the feet and 0.14 m to the right (measured on the GLB), so at the mapped foot they sat -0.04 m from the edge of S7.prop.seat_box_gatekeeper_1070; he moves 0.10 m so the hips sit on it, 0.12 m in from its edge",
   "face_at_gate_door_1251": "only its head is painted, at the edge of the open door leaf; its estimated foot (on the hall's floor line where the leaf ends, X -102.53) lands 0.99 m inside the gate hall's west pier (the frame's weak west knot). It stands in the passage (X -101.54 to -99.59, solids.json) against the east face of the leaf, which stands open 82 deg against the passage's west side from its hinge at (-101.46, 14.45) to about (-101.34, 15.34): 0.2 m clear of it, at its mapped depth",
   "pointing_man_1370": "painted standing just behind (north of) the tied sack set down at the gate, his legs hidden by it (the map: foot est behind the sack's foot). As built, his spot was inside S7.prop.tied_sack_1365: he steps 0.42 m to stand 0.20 m clear of it",
-  "seated_woman_child_1535": "painted seated on the bench S7.prop.bench_shop_west_1507 holding the child: woman_pale's sit_hold_child puts the hips 0.33 m behind the feet and 0.17 m to the left (measured on the GLB), so at the mapped foot they sat -0.06 m from the edge of S7.prop.bench_shop_west_1507; he moves 0.08 m so the hips sit on it, 0.12 m in from its edge",
+  "seated_woman_child_1535": "solved: contact seat->S7.prop.bench_shop_west_1507, sole_L->ground, sole_R->ground; gap before seat 0.44, sole_L 0.01, sole_R 0, after seat 0.02, sole_L 0.01, sole_R 0; fixed contact:seat; moved 0.19 m from the casting's spot (limit 0.6 m) || casting: painted seated on the bench S7.prop.bench_shop_west_1507 holding the child: woman_pale's sit_hold_child puts the hips 0.33 m behind the feet and 0.17 m to the left (measured on the GLB), so at the mapped foot they sat -0.06 m from the edge of S7.prop.bench_shop_west_1507; he moves 0.08 m so the hips sit on it, 0.12 m in from its edge",
   "child_on_lap_1546": "held upright on the seated woman's lap, as painted: drawn by her child_in_arms prop while she sits (people.json carried_by), so it has no body of its own",
   "standing_woman_1567": "painted standing just behind the seated woman, looking at the doctor; her feet are estimated (hidden behind the seated woman and the child) at the seated woman's depth, which at real size puts her 0.06 m from the line between the doctor and the child on the seated woman's lap that he reaches for; she stands 0.44 m further back (north), behind the seated woman as painted, 0.35 m clear of it",
   "folded_object_bearer_1490": "painted walking just behind the official's horse with the folded parasol (the map: rump behind him): at real size (horse_white, 2.05 m long, 0.65 m wide, centred on its painted spot) his spot was inside its body; he steps 0.15 m to stand 0.30 m behind its rump, as painted",
-  "bucket_man_1872": "painted bent over the bucket at his feet, a hand on its handle; his bucket_lift (measured on the GLB) bends his head over a point about 0.3 m ahead of his spot, with his feet astride it, so he steps straight back along his facing and the bucket (0.2 m round, 0.68 m tall) stands before his feet, under his reach. As built, his spot was 0.09 m from S7.prop.bucket_at_carrier_1890 (built, not a collider): he steps 0.12 m to stand 0.20 m clear of it"
+  "bucket_man_1872": "painted bent over the bucket at his feet, a hand on its handle; his bucket_lift (measured on the GLB) bends his head over a point about 0.3 m ahead of his spot, with his feet astride it, so he steps straight back along his facing and the bucket (0.2 m round, 0.68 m tall) stands before his feet, under his reach. As built, his spot was 0.02 m from S7.prop.bucket_at_carrier_1890: he steps 0.26 m to stand 0.20 m clear of it",
+  "man_at_post_1118": "solved: contact back->S7.bld.gatehouse_1240; gap before back 0.42, after back 0.04; fixed contact:wall, site_inside; moved 0.45 m, turned 7 deg from the casting's spot (limit 0.6 m)"
  },
  "walkers": [
   {
@@ -334,7 +341,10 @@
   "face_at_gate_door_1251": "only the head is painted (12 x 17 px), about half the size of the gate's adults' heads: a small child peeking round the open leaf, 0.8 of the child model (the brief; by its estimated foot, 122 px against the gate's adults' 165, it would be about 1.1): 0.8 x the child model's 1.15 m = 0.92 m tall",
   "about": "people.js scale multiplies the playing character's own height (the child model is 1.15 m)"
  },
- "facing_why": {},
+ "facing_why": {
+  "man_at_post_1118": "solved: contact back->S7.bld.gatehouse_1240; gap before back 0.42, after back 0.04; fixed contact:wall, site_inside; moved 0.45 m, turned 7 deg from the casting's spot (limit 0.6 m)",
+  "seated_woman_child_1535": "solved: contact seat->S7.prop.bench_shop_west_1507, sole_L->ground, sole_R->ground; gap before seat 0.44, sole_L 0.01, sole_R 0, after seat 0.02, sole_L 0.01, sole_R 0; fixed contact:seat; moved 0.19 m from the casting's spot (limit 0.6 m)"
+ },
  "cast_why": {
   "stand_in dark_hat": "catalogue item 14 (model S7.fig.porter_baskets_1255: a wide dark hat with an upturned brim, a dark short belted jacket, light trousers): the porter plays the porter with his baskets (carry_pole, pole_baskets), the inspector the man with the small bundle, until it lands",
   "stand_in groom": "catalogue item 17 (model S7.fig.groom_1698: a dark short jacket, pale trousers, a dark round cap): the inspector plays the groom and the idler the attendant in pale, until it lands",
@@ -344,7 +354,8 @@
   "face_at_gate_door_1251": "child (conf low: the map's other reading is a small lamp hung in the gate); the area agent builds it as this figure, once (the lead, 2026-10-12)",
   "doctor_dark_robe_1615": "fortune_teller (long dark robe over pale trousers, dark cap; the townsman's slate robe is the fallback): examine_child is new, hand_over (free: from:carter/hand_over) stands in when it lands; until then idle",
   "child_on_lap_1546": "child, carried_by the seated woman: the page doesn't draw it, the carrier's prop does (people.json carried_by; S4's child_in_arms_10430)",
-  "about": "cast by dress from the 22 existing characters (needs list, \"Casting\"); a figure whose wanted character lacks the clip its pose needs (a seat) plays the nearest character that has it, until it lands; gestures a character lacks play the nearest clip it has (clips_why)"
+  "about": "cast by dress from the 22 existing characters (needs list, \"Casting\"); a figure whose wanted character lacks the clip its pose needs (a seat) plays the nearest character that has it, until it lands; gestures a character lacks play the nearest clip it has (clips_why)",
+  "groom_1698": "painted walking at the horse's head with his hands together in front of him at the waist (holding the lead or something small), his body hiding where the horse's head is, face turned to the official (map/text/S7.md): no hand is painted on the horse, and no lead is built, so idle (hands together at the waist, as S4's groom_10420) instead of bridle, whose hands reached 0.7-0.9 m for a bit and neck that aren't there"
  },
  "props_why": {
   "visitor_food_box_1308": "back_bundle: off (camel_driver has no prop_back_bundle yet); food_box: on (camel_driver, held in idle)",
@@ -366,5 +377,8 @@
   },
   "child_on_lap decision": "the seated woman (seated_woman_child_1535) keeps her child_in_arms prop on in her sit (Meshy 32) until sit_hold_child and child_on_lap land: rendered on the GLB (char_props.py review, 2026-10-12), the child sits upright on her lap at her left knee in the sit's calm opening (t 0-4.3 s), as painted, while from 4.4 to 10 s she leans forward chin in hand and presses it into her chest. So her cycle is [sit, 1]: people.js restarts the clip at a random point of its first 3 s at each step, which holds her in that opening (switch SIT_CHILD_CALM in the script); the plain sit without the prop would leave the child invisible",
   "about": "carried props as painted (needs list \"Props carried by figures\"), switched on only when the playing character's GLB has prop_<name> and the figure plays the clip that holds it (characters/props.json); wanted: what the workshop is asked for"
+ },
+ "contact_fixes_why": {
+  "about": "3 figures carry a contact fix from sections/city_end/contact_fixes.json (tools/contact_fixes.py; the standard: gen/details/contacts/fix_standard.md): their nudge / facing_deg / do say why in nudge_why or cast_why"
  }
 }

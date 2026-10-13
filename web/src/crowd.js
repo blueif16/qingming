@@ -13,6 +13,7 @@
 // material, near people only (normalPass); shadows use a baked depth material (customDepthMaterial).
 // The player's own character stays an ordinary skinned mesh (people.js createPerson).
 import * as THREE from 'three';
+import { settlePending } from './cast_clips.js';
 
 const FPS = 30;
 const MAX_ROWS = 2048; // rows per texture column (WebGL2 guarantees 2048); longer bakes wrap into more columns
@@ -323,6 +324,10 @@ class Batch {
     this.cap = 0;
     this.nearCount = 0;
     this.shadowCount = 0;
+    // the far body (tools/char_lod.mjs; people.js loadCharacters): the same vertices drawn with a simplified index, for
+    // the people past the tier's LOD distance (Crowd.lodFar). { mesh, anim, nearCount, shadowCount } once grown
+    this.lodIndex = this.src.geometry.userData.lodIndex || null;
+    this.far = null;
     // the material the page shades with: a copy of the character's own (so the player's avatar, an ordinary skinned
     // mesh of the same character, keeps the original), patched for baked skinning whatever variant the page makes
     this.std = this.src.material.clone();
@@ -333,7 +338,7 @@ class Batch {
 
   grow(n) {
     const cap = Math.max(16, 1 << Math.ceil(Math.log2(n)));
-    if (this.mesh) { this.crowd.group.remove(this.mesh); this.mesh.geometry.dispose(); this.mesh.dispose(); this.crowd.hooks.forget?.(this.mesh); }
+    this.drop();
     const g = this.src.geometry.clone();
     for (const k of Object.keys(g.attributes)) if (!['position', 'normal', 'uv', 'skinIndex', 'skinWeight'].includes(k)) g.deleteAttribute(k);
     if (this.map) { // a load sharing the body's bake: its bone indices become the body's
@@ -357,12 +362,28 @@ class Batch {
       g.setAttribute('skinIndex', new THREE.BufferAttribute(I, 4));
       g.computeBoundingSphere();
     }
-    this.anim = new THREE.InstancedBufferAttribute(new Float32Array(cap * 3), 3);
-    this.anim.setUsage(THREE.DynamicDrawUsage);
-    g.setAttribute('instAnim', this.anim);
+    ({ mesh: this.mesh, anim: this.anim } = this.instanced(g, cap, '', this));
+    // the far body shares the vertex buffers (the same attribute objects: uploaded once) and the material, so its draw
+    // follows the full one's with no program or material switch
+    if (this.lodIndex) {
+      const gf = new THREE.BufferGeometry();
+      for (const k of ['position', 'normal', 'uv', 'skinIndex', 'skinWeight']) if (g.attributes[k]) gf.setAttribute(k, g.attributes[k]);
+      gf.setIndex(this.lodIndex);
+      this.far = { nearCount: 0, shadowCount: 0 };
+      Object.assign(this.far, this.instanced(gf, cap, '_far', this.far));
+    }
+    this.cap = cap;
+  }
+
+  // one instanced mesh of this batch on geometry g, with its per-person rows (instAnim): { mesh, anim }. `lane` holds
+  // the count of its people within the shadow distance (the batch itself, or its far body)
+  instanced(g, cap, suffix, lane) {
+    const anim = new THREE.InstancedBufferAttribute(new Float32Array(cap * 3), 3);
+    anim.setUsage(THREE.DynamicDrawUsage);
+    g.setAttribute('instAnim', anim);
     const mesh = new THREE.InstancedMesh(g, this.std, cap);
     mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
-    mesh.name = `crowd_${this.model.name}${this.part ? '_' + this.part : ''}`;
+    mesh.name = `crowd_${this.model.name}${this.part ? '_' + this.part : ''}${suffix}`;
     mesh.frustumCulled = false; // culled per person in update()
     mesh.customDepthMaterial = this.depthMat;
     mesh.count = 0;
@@ -370,16 +391,50 @@ class Batch {
     mesh.onBeforeRender = () => { if (!mesh.material.userData.baked) patch(mesh.material, this.uniforms); };
     // the shadow pass draws only the people within the tier's shadow distance (they come first: Crowd.update)
     let drawn = 0;
-    mesh.onBeforeShadow = () => { drawn = mesh.count; mesh.count = Math.min(drawn, this.shadowCount); };
+    mesh.onBeforeShadow = () => { drawn = mesh.count; mesh.count = Math.min(drawn, lane.shadowCount); };
     mesh.onAfterShadow = () => { mesh.count = drawn; };
     this.crowd.group.add(mesh);
-    this.mesh = mesh;
-    this.cap = cap;
+    return { mesh, anim };
+  }
+
+  // its instanced meshes out of the scene, their GPU buffers freed (the far geometry's shared attributes go with the
+  // full one's; the LOD index stays the model's)
+  drop() {
+    for (const m of [this.mesh, this.far?.mesh]) if (m) { this.crowd.group.remove(m); m.geometry.dispose(); m.dispose(); this.crowd.hooks.forget?.(m); }
+    this.mesh = null;
+    this.far = null;
+  }
+
+  // the people of `list` into one of its meshes (lane: the batch's full body, or its far one): near ones first (within
+  // lim), each one's matrix and rows; only the rows in use are uploaded
+  fill(lane, list, lim, crowd) {
+    let near = 0;
+    for (let i = 0; i < list.length; i++) if (list[i]._d <= lim) { const t = list[near]; list[near] = list[i]; list[i] = t; near++; }
+    const mesh = lane.mesh, anim = lane.anim, mat = mesh.instanceMatrix.array, an = anim.array;
+    for (let i = 0; i < list.length; i++) {
+      const p = list[i];
+      _m.compose(p.root.position, p.root.quaternion, p.root.scale).toArray(mat, i * 16);
+      an[i * 3] = this.rowOf(p.cur);
+      const prev = p.prev && this.bs.clips[p.prev.clip.name] ? p.prev : null; // a fade from a clip not baked yet: none
+      an[i * 3 + 1] = prev ? this.rowOf(prev) : 0;
+      an[i * 3 + 2] = prev ? Math.max(0, prev.left / prev.fade) : 0;
+    }
+    mesh.count = list.length;
+    lane.nearCount = near;
+    lane.shadowCount = Number.isFinite(crowd.shadowFar) ? near : list.length;
+    // a mesh with nobody to draw is left out of the pass altogether (an empty instanced draw still costs its state
+    // changes): out of every pass when nobody is in view, out of the shadow pass when nobody is within shadowFar
+    mesh.visible = list.length > 0 || !crowd.skipEmpty;
+    mesh.castShadow = lane.shadowCount > 0 || !crowd.skipEmpty;
+    if (list.length) {
+      mesh.instanceMatrix.clearUpdateRanges(); mesh.instanceMatrix.addUpdateRange(0, list.length * 16); mesh.instanceMatrix.needsUpdate = true;
+      anim.clearUpdateRanges(); anim.addUpdateRange(0, list.length * 3); anim.needsUpdate = true;
+    }
   }
 
   // free its GPU buffers and materials (the bake belongs to its BakeSet)
   dispose() {
-    if (this.mesh) { this.crowd.group.remove(this.mesh); this.mesh.geometry.dispose(); this.mesh.dispose(); this.crowd.hooks.forget?.(this.mesh); this.mesh = null; }
+    this.drop();
     this.crowd.hooks.disposeMaterial?.(this.std);
     this.normalMat.dispose();
     this.depthMat.dispose();
@@ -402,11 +457,22 @@ export class Crowd {
     this.hooks = hooks;
     this.inkFar = inkFar;
     this.shadowFar = Infinity; // metres: people further off cast no shadow (the tier's, tiers.js)
+    this.skipEmpty = true; // a batch with nobody to draw leaves the pass (update; false: drawn empty, as before, for A/B)
+    this.lodFar = Infinity; // metres: people further off are drawn with their far body, where it has one (tiers.js peopleLod)
+    // By default a character is drawn with its far body only when all its people in view are past lodFar: no draw is
+    // added, so no CPU is spent (the phone proxy, a 4x-throttled CPU on a desktop GPU, showed no frame-time gain from
+    // the split; gen/perf/batch2/crowd.md). lodSplit (off; for a test on real phones, whose GPUs are vertex-bound): a
+    // character with people near too draws its far ones apart, in a draw of its own (about 0.05 ms of CPU at 4x), when
+    // there are lodMin or more of them
+    this.lodSplit = false;
+    this.lodMin = 3;
     this.group = new THREE.Group();
     this.group.name = 'crowd';
+    this.group.userData.shadowMover = true; // its shadows are redrawn every people's turn (world.js shadowLayers)
     hooks.scene.add(this.group);
     this.batches = new Map();
     this.order = [];
+    this.farOrder = [];
   }
 
   bodySet(model) {
@@ -488,56 +554,47 @@ export class Crowd {
     for (const s of this.sets?.values() || []) for (const x of [s, ...(s.followers || [])]) x.work(deadline); // urgent clips: whatever the deadline
     this.bakeMs = performance.now() - tb; // this frame's baking (the page counts it into a section load's stall)
     for (const b of this.batches.values()) {
-      if (!b.people.length || !b.bs.data) { if (b.mesh) b.mesh.count = 0; continue; }
+      if (!b.people.length || !b.bs.data) { for (const m of [b.mesh, b.far?.mesh]) if (m) { m.count = 0; m.visible = !this.skipEmpty; } continue; }
       b.sync();
       if (b.people.length > b.cap) b.grow(b.people.length);
-      const order = this.order;
+      const order = this.order, farOrder = this.farOrder, lod = b.far ? this.lodFar : Infinity;
       order.length = 0;
+      farOrder.length = 0;
       for (const p of b.people) {
         const q = p.root.position;
         if (!p.root.visible) continue;
         // not drawn until every mesh of theirs has their clip baked (someone a streamed-in section just added)
         if (!p.drawn && !p.batches.every((x) => x.bs.clips[p.cur.clip.name])) continue;
+        if (!p.drawn && p.pending) continue; // its first clip still on its way (per-clip files: cast_clips.js settlePending)
         p.drawn = true;
         _sph.center.set(q.x, q.y + 0.9, q.z);
         if (!_fr.intersectsSphere(_sph)) continue;
         p._d = Math.hypot(cx - q.x, cz - q.z);
-        order.push(p);
+        (p._d > lod ? farOrder : order).push(p); // past the LOD distance: the far body
       }
+      if (order.length && (!this.lodSplit || farOrder.length < this.lodMin)) { for (const p of farOrder) order.push(p); farOrder.length = 0; }
       // near ones first: within the shadow distance when the tier sets one (else within inkFar, for the separate normal pass)
       const lim = Number.isFinite(this.shadowFar) ? this.shadowFar : this.inkFar;
-      let near = 0;
-      for (let i = 0; i < order.length; i++) if (order[i]._d <= lim) { const t = order[near]; order[near] = order[i]; order[i] = t; near++; }
-      const mat = b.mesh.instanceMatrix.array, an = b.anim.array;
-      for (let i = 0; i < order.length; i++) {
-        const p = order[i];
-        _m.compose(p.root.position, p.root.quaternion, p.root.scale).toArray(mat, i * 16);
-        an[i * 3] = b.rowOf(p.cur);
-        const prev = p.prev && b.bs.clips[p.prev.clip.name] ? p.prev : null; // a fade from a clip not baked yet: none
-        an[i * 3 + 1] = prev ? b.rowOf(prev) : 0;
-        an[i * 3 + 2] = prev ? Math.max(0, prev.left / prev.fade) : 0;
-      }
-      b.mesh.count = order.length;
-      b.nearCount = near;
-      b.shadowCount = Number.isFinite(this.shadowFar) ? near : order.length;
-      b.mesh.instanceMatrix.needsUpdate = true;
-      b.anim.needsUpdate = true;
+      b.fill(b, order, lim, this);
+      if (b.far) b.fill(b.far, farOrder, lim, this);
     }
   }
 
-  meshes() { return [...this.batches.values()].map((b) => b.mesh).filter(Boolean); }
+  meshes() { return [...this.batches.values()].flatMap((b) => [b.mesh, b.far?.mesh]).filter(Boolean); }
 
   // the ink pass's normal buffer: the batches with their baked normal material, near people only
   normalPass() {
     const saved = [];
     return {
       object: this.group,
-      begin: () => { for (const b of this.batches.values()) if (b.mesh) { saved.push([b.mesh, b.mesh.material, b.mesh.count]); b.mesh.material = b.normalMat; b.mesh.count = b.nearCount; } },
+      begin: () => {
+        for (const b of this.batches.values()) for (const l of [b, b.far]) if (l?.mesh) { saved.push([l.mesh, l.mesh.material, l.mesh.count]); l.mesh.material = b.normalMat; l.mesh.count = l.nearCount; }
+      },
       end: () => { for (const [m, mat, n] of saved) { m.material = mat; m.count = n; } saved.length = 0; },
     };
   }
 
-  stats() { return [...this.batches.values()].map((b) => ({ name: b.model.name + (b.part ? ':' + b.part : ''), people: b.people.length, drawn: b.mesh?.count || 0, clips: [...b.bs.names], bakeKB: b.bs.data?.kb || 0, sharesBake: b.bs !== this.sets.get(b.model.name) ? false : !!b.part })); }
+  stats() { return [...this.batches.values()].map((b) => ({ name: b.model.name + (b.part ? ':' + b.part : ''), people: b.people.length, drawn: b.mesh?.count || 0, far: b.far?.mesh.count || 0, clips: [...b.bs.names], bakeKB: b.bs.data?.kb || 0, sharesBake: b.bs !== this.sets.get(b.model.name) ? false : !!b.part })); }
   // the bakes: per set its size, rows used and laid out, clips, and how it was written (relayouts, appends, prunes)
   bakeStats() {
     const out = [];
@@ -578,7 +635,9 @@ export class CrowdPerson {
 
   has(name) { return this.model.clips.some((c) => c.name === name); }
 
-  play(name, { fade = this.fadeDefault, timeScale = 1, offset = 0 } = {}) {
+  play(name, opts = {}) {
+    const { fade = this.fadeDefault, timeScale = 1, offset = 0 } = opts;
+    if (!opts.looping) settlePending(this, name, opts); // a clip still on its way: idle until it is in (playPending)
     if (!this.has(name)) name = this.has('idle') ? 'idle' : this.model.clips[0].name;
     const clip = this.model.clips.find((c) => c.name === name);
     this.clips.add(name);
@@ -592,8 +651,11 @@ export class CrowdPerson {
 
   keepLooping() {
     if (!this.cur || !this.model.motion.has(this.clip)) return;
-    if (this.cur.time > this.cur.clip.duration - this.fadeDefault - 0.05) this.play(this.clip, { timeScale: this.cur.timeScale });
+    if (this.cur.time > this.cur.clip.duration - this.fadeDefault - 0.05) this.play(this.clip, { timeScale: this.cur.timeScale, looping: true });
   }
+
+  // the clip it waited for (settlePending) is in: play it now (straight in when nobody has seen it yet)
+  playPending() { const { name, opts } = this.pending; this.play(name, this.drawn ? opts : { ...opts, fade: 0 }); }
 
   advance(dt) {
     for (const t of [this.cur, this.prev]) if (t) { t.time += dt * t.timeScale; const d = t.clip.duration; if (t.time >= d) t.time %= d; }

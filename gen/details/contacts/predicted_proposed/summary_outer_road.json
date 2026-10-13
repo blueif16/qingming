@@ -1,0 +1,50 @@
+{
+ "about": "tools/contact_check.mjs: FAIL counts per section and defect class (worst = the largest |value| in metres: a contact's gap or penetration at its hold-quantile, a raise, an overlap or a depth), per clip, and the worst 30.",
+ "date": "2026-10-13T09:44:56.139Z",
+ "sections": [
+  "outer_road"
+ ],
+ "owners_load_ms": 217,
+ "seconds": 0.644,
+ "people": 64,
+ "checked": 64,
+ "crew_not_covered": 0,
+ "figures_failing": 1,
+ "fails": 1,
+ "by_class": {
+  "contact:table": 1
+ },
+ "by_clip": {
+  "reach~child_at_table_12597:contact:table": 1
+ },
+ "table": {
+  "outer_road": {
+   "contact:table": {
+    "n": 1,
+    "worst": 0.097,
+    "worst_id": "child_at_table_12597"
+   }
+  }
+ },
+ "worst": [
+  {
+   "class": "contact:table",
+   "clip": "reach~child_at_table_12597",
+   "site": "palm_L",
+   "value": 0.097,
+   "kind": "figure",
+   "with": [
+    "S4b.prop.table_12645"
+   ],
+   "note": null,
+   "rel": null,
+   "soft": true,
+   "id": "child_at_table_12597",
+   "section": "outer_road",
+   "model": "child"
+  }
+ ],
+ "clip_level": [],
+ "contacts_checked": 44,
+ "contacts_failing": 1
+}

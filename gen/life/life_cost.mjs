@@ -17,7 +17,7 @@ const { chromium } = createRequire(`${Q}/tools/package.json`)('playwright-core')
 const args = process.argv.slice(2);
 const opt = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
 const tag = args.find((a, i) => !a.startsWith('--') && !(i > 0 && args[i - 1].startsWith('--'))) || 'run';
-const url = opt('--url', 'http://127.0.0.1:5190/world.html?tier=low&adapt=0');
+const url = opt('--url', 'http://127.0.0.1:5190/world.html?start=0&tier=low&adapt=0&talk=1');
 const views = opt('--views', 'storyteller,crown').split(',');
 const thr = +opt('--throttle', 4), reps = +opt('--reps', 3), secs = +opt('--secs', 4);
 const browser = await chromium.connectOverCDP('http://127.0.0.1:' + (process.env.CDP_PORT || '9223'));

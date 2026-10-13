@@ -1,0 +1,258 @@
+{
+ "sweep_bar": {
+  "why": "fix-boats (details pass, contacts): work_sweep with both hands on the sweep's crossbar. The kit stands the crew 0.15 m behind the bar (pt_sweep_crew, kit option sweep_crew_in) and puts the bar 0.85 m over their deck (sweep_bar_h): the take's palms are at 0.72-0.87 m (median), 0.1-0.5 m behind the bar line, and its hips rock 0.38 m fore and aft. Here the hips are held at z -0.08 (the feet kept where the take plants them) and both palms lie on the bar's line across the figure (y 0.85, z 0.15; bar radius 0.035 + the hand's half thickness 0.015). Shared by every sweep hand (boatman, inspector).",
+  "ops": [
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "z": -0.08
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0,
+       0.85,
+       0.15
+      ],
+      "dir": [
+       1,
+       0,
+       0
+      ]
+     },
+     "off": 0.05
+    }
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0,
+       0.85,
+       0.15
+      ],
+      "dir": [
+       1,
+       0,
+       0
+      ]
+     },
+     "off": 0.05
+    }
+   }
+  ]
+ },
+ "pole_hold_boatman": {
+  "why": "fix-boats: pole_boat with both hands on the pole and the pole still (boatman). The pole (props.json long_pole_low) is skinned to the hips, which the take turns and bends, so the pole swung through the deck under the man's feet while his palms were 0.14-0.36 m off it. Here the hips are frozen as the take has them at 0.9 s (turn and place; the feet kept), so the pole stays as it is then: slanting 65 deg, crossing the deck 0.58 m ahead of the root (the crew stand at the gunwale facing out: tools/crew_solve.mjs), its foot 2.5 m under the deck. Both palms lie on its axis (radius 0.04 + 0.015), sliding along it as the take pushes down. (Hold and freeze times differ by 0.5-1 ms: ik_clip poseAt at the same time twice in a row leaves the bones at rest, because three.js skips re-applying an unchanged value; reported to the lead.)",
+  "ops": [
+   {
+    "freeze": "Hips",
+    "t": 0.9
+   },
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "hold_t": 0.9005
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.759,
+       -2.505,
+       1.569
+      ],
+      "dir": [
+       -0.215,
+       0.9079,
+       -0.3598
+      ],
+      "s0": 0.3,
+      "s1": 4.3502
+     },
+     "off": 0.055
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.759,
+       -2.505,
+       1.569
+      ],
+      "dir": [
+       -0.215,
+       0.9079,
+       -0.3598
+      ],
+      "s0": 0.3,
+      "s1": 4.3502
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "pole_hold_straw_hat": {
+  "why": "fix-boats: pole_boat with both hands on the pole and the pole still (straw_hat). The pole (props.json long_pole_low) is skinned to the hips, which the take turns and bends, so the pole swung through the deck under the man's feet while his palms were 0.14-0.36 m off it. Here the hips are frozen as the take has them at 0.9 s (turn and place; the feet kept), so the pole stays as it is then: slanting 65 deg, crossing the deck 0.58 m ahead of the root (the crew stand at the gunwale facing out: tools/crew_solve.mjs), its foot 2.5 m under the deck. Both palms lie on its axis (radius 0.04 + 0.015), sliding along it as the take pushes down. (Hold and freeze times differ by 0.5-1 ms: ik_clip poseAt at the same time twice in a row leaves the bones at rest, because three.js skips re-applying an unchanged value; reported to the lead.)",
+  "ops": [
+   {
+    "freeze": "Hips",
+    "t": 0.9
+   },
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "hold_t": 0.9005
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.776,
+       -2.522,
+       1.53
+      ],
+      "dir": [
+       -0.2167,
+       0.908,
+       -0.3584
+      ],
+      "s0": 0.3,
+      "s1": 4.3507
+     },
+     "off": 0.055
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       0.776,
+       -2.522,
+       1.53
+      ],
+      "dir": [
+       -0.2167,
+       0.908,
+       -0.3584
+      ],
+      "s0": 0.3,
+      "s1": 4.3507
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "fend_up": {
+  "why": "fix-boats: fend_pole held still, raised 47 deg up to his right and a little ahead (the raised end 3.1 m high): pushing a pole up at an arch or a high stern (the take holds a raised pole in both hands only so; the figure is turned so it points at what it fends). The pole (long_pole_mid) is skinned to the right hand, which the take swings from overhead to waist height (the pole swept through the deck and the man) while the left palm was 0.34 m off it. Here the right hand is held in place and turn as the take has it at 3.8 s (frame Armature: still in the root frame), so the pole stays as it is then, and the left palm lies on its axis (radius 0.04 + 0.015). The figure is turned and placed so the forward end meets what it fends (tools/crew_solve.mjs, rule reach). The hips, spine and shoulders are frozen as at 3.8 s too, so the take's crouch (1.2-2.4 s, hands at 0.7 m) doesn't pull the hands off the still pole (the legs, neck and head keep the take's motion). (Hold and freeze times differ by 0.5-1 ms: ik_clip poseAt at the same time twice in a row leaves the bones at rest, because three.js skips re-applying an unchanged value; reported to the lead.)",
+  "ops": [
+   {
+    "freeze": [
+     "Hips",
+     "Spine",
+     "Spine01",
+     "Spine02",
+     "LeftShoulder",
+     "RightShoulder"
+    ],
+    "t": 3.8
+   },
+   {
+    "site": "hips",
+    "via": "hips",
+    "to": {
+     "hold_t": 3.8005
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "frame": "Armature",
+    "to": {
+     "hold_t": 3.801
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       -1.739,
+       3.141,
+       0.409
+      ],
+      "dir": [
+       0.6118,
+       -0.7358,
+       -0.2903
+      ],
+      "s0": 0.3,
+      "s1": 4.3504000000000005
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ },
+ "fend_out": {
+  "why": "fix-boats: fend_pole held still, slanting 12 deg down ahead (the end in front 0.7 m over the deck, 2 m out): pushing off another boat's side or stern. The pole (long_pole_mid) is skinned to the right hand, which the take swings from overhead to waist height (the pole swept through the deck and the man) while the left palm was 0.34 m off it. Here the right hand is held in place and turn as the take has it at 4.2 s (frame Armature: still in the root frame), so the pole stays as it is then, and the left palm lies on its axis (radius 0.04 + 0.015). The figure is turned and placed so the forward end meets what it fends (tools/crew_solve.mjs, rule reach).",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "frame": "Armature",
+    "to": {
+     "hold_t": 4.2
+    }
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "line": {
+      "p": [
+       -1.139,
+       0.71,
+       1.954
+      ],
+      "dir": [
+       0.3819,
+       0.206,
+       -0.901
+      ],
+      "s0": 0.3,
+      "s1": 4.3506
+     },
+     "off": 0.055
+    }
+   }
+  ]
+ }
+}

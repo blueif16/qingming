@@ -1,0 +1,30 @@
+/* The life pass (gen/life/progress.md): the small ink note when a plot line's step is overheard. A paper slip with
+   the 聞 seal and the line's title, bottom centre, for a few seconds; no counter (STYLE.md §9, §15). */
+.qm-heard { position: absolute; left: 50%; bottom: calc(var(--qm-bottom) + 8px); transform: translateX(-50%); display: flex; align-items: center;
+  gap: 10px; width: max-content; max-width: min(360px, calc(100vw - 40px)); padding: 3px 12px 4px 6px; box-sizing: border-box;
+  animation: qm-bleed var(--qm-t-slow) ease both; pointer-events: none; }
+.qm-heard .qm-seal { flex: none; font-size: 18px; animation: qm-stamp 260ms var(--qm-ease) both 240ms; }
+.qm-heard-text { display: grid; gap: 1px; }
+.qm-heard-text b { font: 400 20px/1.1 var(--qm-font-title); letter-spacing: 0.06em; font-weight: 400; animation: qm-wipe-x 420ms var(--qm-ease) both 120ms; }
+.qm-heard-text span { font: 400 13px/1.2 var(--qm-font-text); color: var(--qm-ink-soft); }
+html.qm-touch .qm-heard { bottom: calc(var(--qm-bottom) + 64px); }
+@media (max-width: 640px) { .qm-heard-text b { font-size: 16px; } .qm-heard .qm-seal { font-size: 15px; } }
+
+/* the English gloss under a bubble's Chinese line (prefs.lang 'zh_en'; the user, 2026-10-13: Chinese plus English) */
+/* .qm-gloss (ui.css) gives the face and the ink; here only its place in the bubble */
+.qm-bubble-en { display: block; margin-top: 2px; font-size: 13px; line-height: 1.25; animation: qm-bleed 360ms ease both 260ms; }
+@media (max-width: 640px) { .qm-bubble-en { font-size: 11.5px; } }
+@media (prefers-reduced-motion: reduce) { .qm-bubble-en { animation: none; } }
+.qm-heard-text i { font: italic 400 12px/1.2 var(--qm-font-latin); color: var(--qm-ink-soft); }
+
+/* intent marks (marks.js): a small paper disc in a brush ring with an ink pictogram, hung over a far figure's head */
+.qm-mark-a { pointer-events: none; }
+.qm-mark { position: absolute; left: 0; bottom: 0; transform: translate(-50%, 0); width: 30px; height: 30px; display: grid; place-items: center;
+  background: var(--qm-ring) center / 100% 100% no-repeat, radial-gradient(circle, var(--qm-paper-hi) 0 64%, transparent 66%);
+  color: var(--qm-ink); filter: var(--qm-lift); opacity: 0.92; animation: qm-pop 380ms var(--qm-ease-back) both; }
+.qm-mark svg { width: 19px; height: 19px; }
+.qm-mark-a.qm-out .qm-mark { opacity: 0; transition: opacity 500ms ease; }
+@media (max-width: 640px) { .qm-mark { width: 26px; height: 26px; } .qm-mark svg { width: 16px; height: 16px; } }
+
+/* a role of four characters (賣卦先生) must stay one column: the tag never wraps (its box is the bubble's height) */
+.qm-tag { white-space: nowrap; }

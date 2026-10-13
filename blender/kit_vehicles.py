@@ -1470,7 +1470,7 @@ def _lattice(p0, p1, z0, z1, out, nx=4, nz=3, frame="lattice", bar="lattice", ba
 
 def sedan_chair(front, rear, z_of=None, rng=None, carried=True, w=0.78, d=0.92, body_h=1.42, pole_h=1.3,
                 roof_rise=0.24, curtain="cloth_indigo", panel=None, cabin_at=0.5, front_style="curtain",
-                roof="concave", finial=True):
+                roof="concave", finial=True, pole_fit=None):
     """A sedan chair (轿, two stand at 孙羊正店's door): a tall cabin framed in dark timber, its walls divided into
     boarded panels, a lattice window high in each side, a door curtain hanging in folds in front, under a small roof
     of four concave slopes with upswept corners and a finial; two long poles run along its sides through iron-bound
@@ -1490,7 +1490,13 @@ def sedan_chair(front, rear, z_of=None, rng=None, carried=True, w=0.78, d=0.92, 
     - finial True: the turned finial on the concave roof's peak, a small knob on the round roof's crown; False: none
       (S1's "low roof and a knob finial": roof "concave", a lower roof_rise, finial True).
     panel: the wall boards' material, default "deck" (pale boards) with the curtain, "timber" (a dark box, as both
-    closed sedans are painted) when closed."""
+    closed sedans are painted) when closed.
+    pole_fit (carried only): the poles fitted to their bearers instead of pole_h (gen/details/contacts/fix_standard.md,
+    "fit the object to the body"): each pole end's axis this high over the ground under that end, so the pole rests on
+    the shoulders of bearers standing on that ground (the bearer's shoulder-top height in his carry clip plus the
+    pole's radius, 0.038), or in the hands of one holding the ends; a number, or (rear, front) when the two ends'
+    bearers hold them at different heights; the poles slope between their ends and the cabin hangs from them at its
+    place."""
     z_of = _zf(z_of)
     rng = rng or random.Random(4500)
     t0 = _tri_count()
@@ -1500,8 +1506,19 @@ def sedan_chair(front, rear, z_of=None, rng=None, carried=True, w=0.78, d=0.92, 
     zg = z_of(*(origin + fwd * mid).xy)
     M = _frame_m(origin, fwd, zg)
     pole_mid = 0.6      # poles pass the cabin this far up its side
-    z_f = (pole_h - pole_mid) if carried else 0.14
-    z_p = z_f + pole_mid
+    if carried and pole_fit is not None:
+        # each end over the ground under it (local heights: the frame's z 0 is the ground at the cabin's centre); a
+        # pair (rear, front) when the two ends' bearers hold them differently
+        fr, ff = (pole_fit, pole_fit) if isinstance(pole_fit, (int, float)) else pole_fit
+        z_p0 = z_of(*(origin).xy) - zg + fr
+        z_p1 = z_of(*(origin + fwd * L).xy) - zg + ff
+    else:
+        z_p0 = z_p1 = pole_h if carried else 0.14 + pole_mid
+
+    def zpx(x):
+        return z_p0 + (z_p1 - z_p0) * x / L
+    z_p = zpx(mid)
+    z_f = (z_p - pole_mid) if carried else 0.14
     hx, hy = d / 2, w / 2
     zt = z_f + body_h
     zw0, zw1 = z_f + 0.66, zt - 0.3          # the window band
@@ -1577,11 +1594,12 @@ def sedan_chair(front, rear, z_of=None, rng=None, carried=True, w=0.78, d=0.92, 
         # poles and their brackets
         for sgn in (1, -1):
             y = sgn * (hy + 0.075)
-            sb.cyl("timber", False, (0.0, y, z_p), (L, y, z_p), 0.038, 0.034, segs=6)
+            sb.cyl("timber", False, (0.0, y, zpx(0.0)), (L, y, zpx(L)), 0.038, 0.034, segs=6)
             for x in (x0 + 0.16, x1 - 0.16):
-                k.bx("lattice", False, (x - 0.055, min(sgn * hy, y + sgn * 0.05), z_p - 0.075),
-                     (x + 0.055, max(sgn * hy, y + sgn * 0.05), z_p - 0.04))
-                k.beam("lattice", False, (x, y, z_p - 0.05), (x, y, z_p + 0.05), 0.07, 0.1, 0.01)
+                zx = zpx(x)
+                k.bx("lattice", False, (x - 0.055, min(sgn * hy, y + sgn * 0.05), zx - 0.075),
+                     (x + 0.055, max(sgn * hy, y + sgn * 0.05), zx - 0.04))
+                k.beam("lattice", False, (x, y, zx - 0.05), (x, y, zx + 0.05), 0.07, 0.1, 0.01)
     return _tri_count() - t0
 
 

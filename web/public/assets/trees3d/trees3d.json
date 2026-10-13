@@ -1,0 +1,772 @@
+{
+ "about": "The 3D trees (tools/trees3d.mjs; gen/details/trees/method.md): per card a GLB of its wood and crown (y up, foot at the origin, the painted front facing +z), all sharing the crown atlas. extras: H (m), trunkIndex (indices of the wood), levels (index count after each clump, most important first), strands (the crown is hanging whips: the tier's strands share), crownCentre, crownRadius.",
+ "atlas": "assets/trees3d/crowns.webp",
+ "variants": {
+  "willow_fan_1": {
+   "file": "assets/trees3d/willow_fan_1.glb",
+   "form": "willow_fan",
+   "tris": 2143,
+   "woodTris": 2000,
+   "clumps": 20,
+   "H": 11.981,
+   "kb": 42,
+   "trunk": {
+    "x": 0,
+    "z": -0.02,
+    "r": 0.46,
+    "reach": 0.69
+   }
+  },
+  "willow_fan_2": {
+   "file": "assets/trees3d/willow_fan_2.glb",
+   "form": "willow_fan",
+   "tris": 2087,
+   "woodTris": 2000,
+   "clumps": 12,
+   "H": 12.428,
+   "kb": 39,
+   "trunk": {
+    "x": 0.03,
+    "z": -0.01,
+    "r": 0.32,
+    "reach": 0.46
+   }
+  },
+  "willow_fan_3": {
+   "file": "assets/trees3d/willow_fan_3.glb",
+   "form": "willow_fan",
+   "tris": 2056,
+   "woodTris": 1998,
+   "clumps": 8,
+   "H": 9.827,
+   "kb": 41,
+   "trunk": {
+    "x": -0.03,
+    "z": -0.01,
+    "r": 0.28,
+    "reach": 0.43
+   }
+  },
+  "willow_fan_4": {
+   "file": "assets/trees3d/willow_fan_4.glb",
+   "form": "willow_fan",
+   "tris": 2121,
+   "woodTris": 1999,
+   "clumps": 16,
+   "H": 9.401,
+   "kb": 41,
+   "trunk": {
+    "x": 0.04,
+    "z": 0.01,
+    "r": 0.47,
+    "reach": 0.8
+   }
+  },
+  "willow_burl_1": {
+   "file": "assets/trees3d/willow_burl_1.glb",
+   "form": "willow_burl",
+   "tris": 2055,
+   "woodTris": 2000,
+   "clumps": 7,
+   "H": 11.355,
+   "kb": 45,
+   "trunk": {
+    "x": -0.02,
+    "z": -0.01,
+    "r": 0.92,
+    "reach": 1.86
+   }
+  },
+  "willow_burl_2": {
+   "file": "assets/trees3d/willow_burl_2.glb",
+   "form": "willow_burl",
+   "tris": 2218,
+   "woodTris": 1998,
+   "clumps": 28,
+   "H": 10.96,
+   "kb": 54,
+   "trunk": {
+    "x": 0.09,
+    "z": 0.04,
+    "r": 0.86,
+    "reach": 1.5
+   }
+  },
+  "willow_burl_3": {
+   "file": "assets/trees3d/willow_burl_3.glb",
+   "form": "willow_burl",
+   "tris": 1755,
+   "woodTris": 1480,
+   "clumps": 35,
+   "H": 9.673,
+   "kb": 45,
+   "trunk": {
+    "x": 0.1,
+    "z": 0,
+    "r": 0.78,
+    "reach": 1.78
+   }
+  },
+  "willow_burl_4": {
+   "file": "assets/trees3d/willow_burl_4.glb",
+   "form": "willow_burl",
+   "tris": 2054,
+   "woodTris": 1999,
+   "clumps": 7,
+   "H": 19.009,
+   "kb": 39,
+   "trunk": {
+    "x": 0.04,
+    "z": -0.05,
+    "r": 1.76,
+    "reach": 2.93
+   }
+  },
+  "willow_burl_5": {
+   "file": "assets/trees3d/willow_burl_5.glb",
+   "form": "willow_burl",
+   "tris": 2220,
+   "woodTris": 2000,
+   "clumps": 28,
+   "H": 15.182,
+   "kb": 50,
+   "trunk": {
+    "x": -0.06,
+    "z": 0.04,
+    "r": 1.52,
+    "reach": 2.73
+   }
+  },
+  "willow_burl_6": {
+   "file": "assets/trees3d/willow_burl_6.glb",
+   "form": "willow_burl",
+   "tris": 2109,
+   "woodTris": 1999,
+   "clumps": 14,
+   "H": 11.471,
+   "kb": 44,
+   "trunk": {
+    "x": 0.16,
+    "z": -0.02,
+    "r": 1.69,
+    "reach": 2.93
+   }
+  },
+  "willow_burl_7": {
+   "file": "assets/trees3d/willow_burl_7.glb",
+   "form": "willow_burl",
+   "tris": 2054,
+   "woodTris": 1999,
+   "clumps": 7,
+   "H": 10.75,
+   "kb": 58,
+   "trunk": {
+    "x": -0.45,
+    "z": -0.05,
+    "r": 1.16,
+    "reach": 2.3
+   }
+  },
+  "elm_claw_1": {
+   "file": "assets/trees3d/elm_claw_1.glb",
+   "form": "elm_claw",
+   "tris": 2762,
+   "woodTris": 2400,
+   "clumps": 48,
+   "H": 12.398,
+   "kb": 56,
+   "trunk": {
+    "x": 0.06,
+    "z": -0.04,
+    "r": 0.57,
+    "reach": 0.93
+   }
+  },
+  "elm_claw_2": {
+   "file": "assets/trees3d/elm_claw_2.glb",
+   "form": "elm_claw",
+   "tris": 2727,
+   "woodTris": 2399,
+   "clumps": 44,
+   "H": 9.392,
+   "kb": 53,
+   "trunk": {
+    "x": 0.02,
+    "z": 0,
+    "r": 0.42,
+    "reach": 0.81
+   }
+  },
+  "elm_claw_3": {
+   "file": "assets/trees3d/elm_claw_3.glb",
+   "form": "elm_claw",
+   "tris": 3135,
+   "woodTris": 2399,
+   "clumps": 100,
+   "H": 10.693,
+   "kb": 68,
+   "trunk": {
+    "x": 0.14,
+    "z": 0.03,
+    "r": 0.56,
+    "reach": 1.02
+   }
+  },
+  "elm_claw_4": {
+   "file": "assets/trees3d/elm_claw_4.glb",
+   "form": "elm_claw",
+   "tris": 2962,
+   "woodTris": 2400,
+   "clumps": 76,
+   "H": 4.631,
+   "kb": 66,
+   "trunk": {
+    "x": 0.44,
+    "z": -0.25,
+    "r": 0.66,
+    "reach": 2.75
+   }
+  },
+  "elm_claw_5": {
+   "file": "assets/trees3d/elm_claw_5.glb",
+   "form": "elm_claw",
+   "tris": 2790,
+   "woodTris": 2400,
+   "clumps": 52,
+   "H": 10.893,
+   "kb": 56,
+   "trunk": {
+    "x": 0.11,
+    "z": 0,
+    "r": 0.36,
+    "reach": 0.62
+   }
+  },
+  "elm_claw_6": {
+   "file": "assets/trees3d/elm_claw_6.glb",
+   "form": "elm_claw",
+   "tris": 2640,
+   "woodTris": 2400,
+   "clumps": 32,
+   "H": 12.411,
+   "kb": 51,
+   "trunk": {
+    "x": 0.01,
+    "z": 0,
+    "r": 0.22,
+    "reach": 0.28
+   }
+  },
+  "pine_fan_1": {
+   "file": "assets/trees3d/pine_fan_1.glb",
+   "form": "pine_fan",
+   "tris": 5961,
+   "woodTris": 2400,
+   "clumps": 454,
+   "H": 8.399,
+   "kb": 156,
+   "trunk": {
+    "x": -0.14,
+    "z": 0.05,
+    "r": 0.86,
+    "reach": 1.73
+   }
+  },
+  "pine_fan_2": {
+   "file": "assets/trees3d/pine_fan_2.glb",
+   "form": "pine_fan",
+   "tris": 2558,
+   "woodTris": 1858,
+   "clumps": 90,
+   "H": 11.844,
+   "kb": 58,
+   "trunk": {
+    "x": 0.09,
+    "z": -0.01,
+    "r": 0.36,
+    "reach": 0.57
+   }
+  },
+  "pine_fan_3": {
+   "file": "assets/trees3d/pine_fan_3.glb",
+   "form": "pine_fan",
+   "tris": 5614,
+   "woodTris": 2014,
+   "clumps": 460,
+   "H": 6.284,
+   "kb": 153,
+   "trunk": {
+    "x": 0.17,
+    "z": 0.49,
+    "r": 0.9,
+    "reach": 2.75
+   }
+  },
+  "pine_fan_4": {
+   "file": "assets/trees3d/pine_fan_4.glb",
+   "form": "pine_fan",
+   "tris": 4388,
+   "woodTris": 2400,
+   "clumps": 254,
+   "H": 7.416,
+   "kb": 111,
+   "trunk": {
+    "x": 0.16,
+    "z": -0.03,
+    "r": 0.61,
+    "reach": 1.07
+   }
+  },
+  "pine_fan_5": {
+   "file": "assets/trees3d/pine_fan_5.glb",
+   "form": "pine_fan",
+   "tris": 2760,
+   "woodTris": 2399,
+   "clumps": 46,
+   "H": 7.372,
+   "kb": 55,
+   "trunk": {
+    "x": 0.1,
+    "z": -0.01,
+    "r": 0.16,
+    "reach": 0.34
+   }
+  },
+  "willow_weep_1": {
+   "file": "assets/trees3d/willow_weep_1.glb",
+   "form": "willow_weep",
+   "tris": 2498,
+   "woodTris": 2400,
+   "clumps": 14,
+   "H": 11.74,
+   "kb": 47,
+   "trunk": {
+    "x": 0.04,
+    "z": 0.01,
+    "r": 0.49,
+    "reach": 0.78
+   }
+  },
+  "shoot_tree_1": {
+   "file": "assets/trees3d/shoot_tree_1.glb",
+   "form": "shoot_tree",
+   "tris": 719,
+   "woodTris": 574,
+   "clumps": 20,
+   "H": 5.098,
+   "kb": 14,
+   "trunk": {
+    "x": 0.09,
+    "z": 0.15,
+    "r": 0.44,
+    "reach": 0.97
+   }
+  },
+  "shoot_tree_2": {
+   "file": "assets/trees3d/shoot_tree_2.glb",
+   "form": "shoot_tree",
+   "tris": 897,
+   "woodTris": 694,
+   "clumps": 28,
+   "H": 4.887,
+   "kb": 17,
+   "trunk": {
+    "x": -0.07,
+    "z": -0.15,
+    "r": 0.33,
+    "reach": 1.11
+   }
+  },
+  "shoot_tree_3": {
+   "file": "assets/trees3d/shoot_tree_3.glb",
+   "form": "shoot_tree",
+   "tris": 894,
+   "woodTris": 720,
+   "clumps": 24,
+   "H": 6.446,
+   "kb": 17,
+   "trunk": {
+    "x": 0.03,
+    "z": -0.05,
+    "r": 0.12,
+    "reach": 0.55
+   }
+  },
+  "shoot_tree_4": {
+   "file": "assets/trees3d/shoot_tree_4.glb",
+   "form": "shoot_tree",
+   "tris": 1502,
+   "woodTris": 1125,
+   "clumps": 52,
+   "H": 4.162,
+   "kb": 28,
+   "trunk": {
+    "x": -0.1,
+    "z": -0.19,
+    "r": 0.32,
+    "reach": 0.84
+   }
+  },
+  "slender_1": {
+   "file": "assets/trees3d/slender_1.glb",
+   "form": "slender",
+   "tris": 985,
+   "woodTris": 948,
+   "clumps": 5,
+   "H": 9.329,
+   "kb": 13,
+   "trunk": {
+    "x": 0,
+    "z": 0,
+    "r": 0.14,
+    "reach": 0.18
+   }
+  },
+  "slender_2": {
+   "file": "assets/trees3d/slender_2.glb",
+   "form": "slender",
+   "tris": 1491,
+   "woodTris": 1410,
+   "clumps": 11,
+   "H": 8.185,
+   "kb": 20,
+   "trunk": {
+    "x": 0.01,
+    "z": 0,
+    "r": 0.15,
+    "reach": 0.24
+   }
+  },
+  "slender_3": {
+   "file": "assets/trees3d/slender_3.glb",
+   "form": "slender",
+   "tris": 838,
+   "woodTris": 788,
+   "clumps": 7,
+   "H": 6.979,
+   "kb": 13,
+   "trunk": {
+    "x": -0.01,
+    "z": 0,
+    "r": 0.09,
+    "reach": 0.14
+   }
+  },
+  "slender_4": {
+   "file": "assets/trees3d/slender_4.glb",
+   "form": "slender",
+   "tris": 845,
+   "woodTris": 817,
+   "clumps": 4,
+   "H": 8.344,
+   "kb": 12,
+   "trunk": {
+    "x": 0.06,
+    "z": 0,
+    "r": 0.13,
+    "reach": 0.17
+   }
+  },
+  "slender_5": {
+   "file": "assets/trees3d/slender_5.glb",
+   "form": "slender",
+   "tris": 1825,
+   "woodTris": 1736,
+   "clumps": 12,
+   "H": 8.895,
+   "kb": 25,
+   "trunk": {
+    "x": 0.1,
+    "z": -0.05,
+    "r": 0.12,
+    "reach": 0.38
+   }
+  },
+  "slender_6": {
+   "file": "assets/trees3d/slender_6.glb",
+   "form": "slender",
+   "tris": 1784,
+   "woodTris": 1705,
+   "clumps": 11,
+   "H": 8.152,
+   "kb": 23,
+   "trunk": {
+    "x": 0.02,
+    "z": 0.11,
+    "r": 0.18,
+    "reach": 0.48
+   }
+  },
+  "slender_7": {
+   "file": "assets/trees3d/slender_7.glb",
+   "form": "slender",
+   "tris": 1363,
+   "woodTris": 1298,
+   "clumps": 9,
+   "H": 9.37,
+   "kb": 18,
+   "trunk": {
+    "x": -0.02,
+    "z": 0,
+    "r": 0.16,
+    "reach": 0.2
+   }
+  },
+  "slender_8": {
+   "file": "assets/trees3d/slender_8.glb",
+   "form": "slender",
+   "tris": 1193,
+   "woodTris": 1134,
+   "clumps": 8,
+   "H": 7.957,
+   "kb": 16,
+   "trunk": {
+    "x": -0.02,
+    "z": 0,
+    "r": 0.13,
+    "reach": 0.18
+   }
+  },
+  "sapling_1": {
+   "file": "assets/trees3d/sapling_1.glb",
+   "form": "sapling",
+   "tris": 657,
+   "woodTris": 608,
+   "clumps": 7,
+   "H": 2.293,
+   "kb": 12,
+   "trunk": {
+    "x": -0.01,
+    "z": 0,
+    "r": 0.11,
+    "reach": 0.42
+   }
+  },
+  "sapling_2": {
+   "file": "assets/trees3d/sapling_2.glb",
+   "form": "sapling",
+   "tris": 531,
+   "woodTris": 473,
+   "clumps": 8,
+   "H": 2.191,
+   "kb": 11,
+   "trunk": {
+    "x": 0.03,
+    "z": 0.11,
+    "r": 0.24,
+    "reach": 0.73
+   }
+  },
+  "sapling_3": {
+   "file": "assets/trees3d/sapling_3.glb",
+   "form": "sapling",
+   "tris": 1104,
+   "woodTris": 1020,
+   "clumps": 12,
+   "H": 2.124,
+   "kb": 18,
+   "trunk": {
+    "x": -0.03,
+    "z": 0.03,
+    "r": 0.15,
+    "reach": 0.62
+   }
+  },
+  "sapling_4": {
+   "file": "assets/trees3d/sapling_4.glb",
+   "form": "sapling",
+   "tris": 291,
+   "woodTris": 252,
+   "clumps": 5,
+   "H": 2.541,
+   "kb": 7,
+   "trunk": {
+    "x": 0,
+    "z": 0,
+    "r": 0.04,
+    "reach": 0.08
+   }
+  },
+  "sapling_5": {
+   "file": "assets/trees3d/sapling_5.glb",
+   "form": "sapling",
+   "tris": 1714,
+   "woodTris": 1605,
+   "clumps": 15,
+   "H": 2.167,
+   "kb": 25,
+   "trunk": {
+    "x": -0.01,
+    "z": -0.25,
+    "r": 0.33,
+    "reach": 0.58
+   }
+  },
+  "sapling_6": {
+   "file": "assets/trees3d/sapling_6.glb",
+   "form": "sapling",
+   "tris": 1097,
+   "woodTris": 970,
+   "clumps": 17,
+   "H": 1.669,
+   "kb": 18,
+   "trunk": {
+    "x": -0.07,
+    "z": -0.12,
+    "r": 0.31,
+    "reach": 0.96
+   }
+  },
+  "sapling_7": {
+   "file": "assets/trees3d/sapling_7.glb",
+   "form": "sapling",
+   "tris": 466,
+   "woodTris": 403,
+   "clumps": 9,
+   "H": 2.333,
+   "kb": 10,
+   "trunk": {
+    "x": 0.01,
+    "z": 0,
+    "r": 0.03,
+    "reach": 0.15
+   }
+  },
+  "whip_clump_1": {
+   "file": "assets/trees3d/whip_clump_1.glb",
+   "form": "whip_clump",
+   "tris": 43,
+   "woodTris": 0,
+   "clumps": 6,
+   "H": 1.8,
+   "kb": 4,
+   "trunk": null
+  },
+  "whip_clump_2": {
+   "file": "assets/trees3d/whip_clump_2.glb",
+   "form": "whip_clump",
+   "tris": 43,
+   "woodTris": 0,
+   "clumps": 6,
+   "H": 2.326,
+   "kb": 4,
+   "trunk": null
+  },
+  "bamboo_1": {
+   "file": "assets/trees3d/bamboo_1.glb",
+   "form": "bamboo",
+   "tris": 1074,
+   "woodTris": 920,
+   "clumps": 20,
+   "H": 7.318,
+   "kb": 16,
+   "trunk": {
+    "x": 0.08,
+    "z": -0.01,
+    "r": 0.26,
+    "reach": 0.62
+   }
+  },
+  "bamboo_2": {
+   "file": "assets/trees3d/bamboo_2.glb",
+   "form": "bamboo",
+   "tris": 1165,
+   "woodTris": 720,
+   "clumps": 58,
+   "H": 4.758,
+   "kb": 24,
+   "trunk": {
+    "x": 0.09,
+    "z": -0.04,
+    "r": 0.51,
+    "reach": 1.84
+   }
+  },
+  "bamboo_3": {
+   "file": "assets/trees3d/bamboo_3.glb",
+   "form": "bamboo",
+   "tris": 809,
+   "woodTris": 700,
+   "clumps": 14,
+   "H": 7.751,
+   "kb": 13,
+   "trunk": {
+    "x": -0.14,
+    "z": -0.01,
+    "r": 0.19,
+    "reach": 0.44
+   }
+  },
+  "bamboo_4": {
+   "file": "assets/trees3d/bamboo_4.glb",
+   "form": "bamboo",
+   "tris": 1332,
+   "woodTris": 1150,
+   "clumps": 24,
+   "H": 7.115,
+   "kb": 19,
+   "trunk": {
+    "x": 0.09,
+    "z": 0.02,
+    "r": 0.35,
+    "reach": 0.83
+   }
+  },
+  "bamboo_5": {
+   "file": "assets/trees3d/bamboo_5.glb",
+   "form": "bamboo",
+   "tris": 982,
+   "woodTris": 480,
+   "clumps": 66,
+   "H": 3.004,
+   "kb": 24,
+   "trunk": {
+    "x": 0.04,
+    "z": -0.03,
+    "r": 0.35,
+    "reach": 1.08
+   }
+  },
+  "bamboo_6": {
+   "file": "assets/trees3d/bamboo_6.glb",
+   "form": "bamboo",
+   "tris": 420,
+   "woodTris": 330,
+   "clumps": 12,
+   "H": 3.79,
+   "kb": 9,
+   "trunk": {
+    "x": 0.02,
+    "z": 0,
+    "r": 0.08,
+    "reach": 0.22
+   }
+  },
+  "leafy_1": {
+   "file": "assets/trees3d/leafy_1.glb",
+   "form": "leafy",
+   "tris": 714,
+   "woodTris": 184,
+   "clumps": 74,
+   "H": 1.875,
+   "kb": 22,
+   "trunk": {
+    "x": 0.01,
+    "z": -0.03,
+    "r": 0.65,
+    "reach": 1.01
+   }
+  },
+  "hedge_1": {
+   "file": "assets/trees3d/hedge_1.glb",
+   "form": "hedge",
+   "tris": 575,
+   "woodTris": 0,
+   "clumps": 80,
+   "H": 0.99,
+   "kb": 21,
+   "trunk": null
+  }
+ },
+ "bark": "assets/trees3d/bark.webp"
+}

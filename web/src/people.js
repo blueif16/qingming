@@ -16,6 +16,7 @@
 import * as THREE from 'three';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { Crowd, CrowdPerson } from './crowd.js';
+import { settlePending } from './cast_clips.js';
 
 const FADE = 0.45;
 const BODY_R = 0.26; // a person's radius for collisions
@@ -28,6 +29,8 @@ const WAIT = [1.0, 2.0]; // seconds a walker whose way is shut waits before turn
 const PLAN_EVERY = 0.1;
 const CSTEP = 0.5, CMAX = 2.4, CDL = 0.15; // corridor: samples along the path, how far and how finely to look sideways
 const LOW_BONES = /(Foot|ToeBase|Leg|Hips)$/;
+// a hips values array two clips share (gltf-transform dedup) is grounded once
+const GROUNDED = new WeakSet();
 const ANIM_LOD = [22, 50]; // metres from the camera: pose every frame within the first, every 2nd within the second
 const INK_FAR = 40; // metres: beyond this, people are left out of the ink pass's normal buffer (post.js)
 const _fr = new THREE.Frustum(), _m4 = new THREE.Matrix4(), _sph = new THREE.Sphere(new THREE.Vector3(), 1.4), _q = new THREE.Vector3();
@@ -39,13 +42,19 @@ const _fr = new THREE.Frustum(), _m4 = new THREE.Matrix4(), _sph = new THREE.Sph
 export const CLIP_META = {};
 // pause (optional): awaited before each model is prepared, so a streaming page spreads the work over frames
 // meta (optional): assets/clip_meta.json
-export async function loadCharacters(loader, url = 'assets/chars/characters.json', only = null, registry = null, pause = null, meta = null) {
+// split (optional): per-clip files (tools/clip_split.mjs, assets/chars/clips.json), by name, for the characters to load
+// that way: the body (with its base clips) instead of the full GLB, and every other clip fetched when asked for
+// (loadClips, or a person starting it: Person.play); want: name -> the clips to have before it is returned
+export async function loadCharacters(loader, url = 'assets/chars/characters.json', only = null, registry = null, pause = null, meta = null, split = null, want = null) {
   const reg = registry || await fetch(url).then((r) => r.json());
   const names = Object.keys(reg).filter((n) => reg[n]?.file && (!only || only.includes(n))); // skips 'about' and the like
   const models = {};
   let queue = Promise.resolve(); // one model prepared at a time, each after a pause
   await Promise.all(names.map(async (name) => {
-    const gltf = await loader.loadAsync(reg[name].file);
+    const sp = split?.[name];
+    if (sp && want?.get(name)) prefetchClips(loader, sp, want.get(name)); // the clips come in beside the body
+    const gltf = await loader.loadAsync(sp ? sp.body : reg[name].file);
+    await farBodies(gltf);
     if (pause) { const turn = queue.then(pause); queue = turn; await turn; }
     const root = gltf.scene;
     // the body's height only: carried props and tack (prop_*, tack_*, hidden until a figure asks for them) are in
@@ -63,9 +72,69 @@ export async function loadCharacters(loader, url = 'assets/chars/characters.json
     // an animal's walk is in place at its registry speed (animals.json walk.speed_mps at timeScale 1)
     const wc = reg[name].walk && clips.find((c) => c.name === (reg[name].walk.clip || 'walk'));
     if (wc) wc.userData = { ...(wc.userData || {}), stride: reg[name].walk.speed_mps };
-    models[name] = { name, scene: root, clips, motion: new Set(reg[name].motion || []), info: reg[name] };
+    const model = models[name] = { name, scene: root, clips, motion: new Set(reg[name].motion || []), info: reg[name] };
+    if (sp) {
+      // its other clips, each a file: grounded and measured as if from the full GLB (clip_meta keys: the full file)
+      Object.assign(model, { file: reg[name].file, lazy: new Map(Object.entries(sp.clips)), clipLoads: new Map(), loader, meta, pause });
+      model.fetchClip = (clip) => loadClips(model, [clip]);
+      if (want?.get(name)) await loadClips(model, want.get(name), null); // prepared with the body, after its pause
+    }
   }));
   return models;
+}
+
+// per-clip files (tools/clip_split.mjs): file -> the parsed GLB, fetched ahead (beside the body, or while a section's
+// bodies load) and taken once by loadClips
+const clipFetches = new Map();
+export function prefetchClips(loader, entry, names) {
+  for (const n of names) {
+    const file = entry.clips[n];
+    if (file && !clipFetches.has(file)) clipFetches.set(file, loader.loadAsync(file));
+  }
+}
+
+// a split model's clips (names that aren't its clips are skipped): fetched, then prepared as loadCharacters prepares
+// the full GLB's (after one pause), and added to model.clips; anyone who started one before it was in plays it now
+export async function loadClips(model, names, pause = model?.pause) {
+  if (!model?.lazy) return;
+  const todo = [...names].filter((n) => model.lazy.has(n) && !model.clips.some((c) => c.name === n));
+  const fresh = todo.filter((n) => !model.clipLoads.has(n));
+  if (fresh.length) {
+    const job = (async () => {
+      const got = await Promise.all(fresh.map((n) => {
+        const file = model.lazy.get(n), p = clipFetches.get(file) || model.loader.loadAsync(file);
+        clipFetches.delete(file);
+        return p.then((g) => g.animations[0], (err) => { console.warn(`clip ${model.name}/${n}:`, err); return null; });
+      }));
+      if (pause) await pause();
+      const known = model.meta?.[model.file] || {}, measured = (CLIP_META[model.file] ||= {});
+      got.forEach((clip, i) => {
+        if (!clip) return;
+        clip.name = fresh[i];
+        measured[clip.name] = prepareClip(model.scene, clip, known[clip.name]);
+        model.clips.push(clip);
+      });
+      for (const n of fresh) model.clipLoads.delete(n);
+      for (const p of model.waiting || []) if (p.pending && model.clips.some((c) => c.name === p.pending.name)) p.playPending();
+    })();
+    for (const n of fresh) model.clipLoads.set(n, job);
+  }
+  await Promise.all(todo.map((n) => model.clipLoads.get(n)));
+}
+
+// the crowd's far bodies (tools/char_lod.mjs, crowd.js): a mesh's extras.lod names an accessor of the GLB holding a
+// simplified index over the mesh's own vertices; kept as geometry.userData.lodIndex while it still fits the mesh (the
+// full index and vertex counts it was made for), so a file rebuilt or rewritten since simply has no far body
+async function farBodies(gltf) {
+  const todo = [];
+  gltf.scene.traverse((o) => {
+    const l = o.isSkinnedMesh && o.userData.lod;
+    if (l && o.geometry.index?.count === l.of && o.geometry.attributes.position.count === l.verts) todo.push([o.geometry, l]);
+  });
+  for (const [g, l] of todo) {
+    const a = await gltf.parser.getDependency('accessor', l.accessor).catch(() => null);
+    if (a?.count === l.count && !a.normalized) g.userData.lodIndex = a;
+  }
 }
 
 function prepareClip(root, clip, known = null) {
@@ -74,9 +143,15 @@ function prepareClip(root, clip, known = null) {
   const v = hipsTrack.values, n = v.length / 3;
   if (known && known.n === n && Math.abs(known.duration - clip.duration) < 1e-4) {
     // measured offline: drift removed and grounded the same way, without sampling the clip
-    clip.userData = { speed: known.speed, locomotion: known.locomotion, stride: known.stride, hipsY: known.hipsY };
+    clip.userData = { speed: known.speed, locomotion: known.locomotion, stride: known.stride, hipsY: known.hipsY, seatY: known.seat_m };
     if (known.locomotion) for (let i = 0; i < v.length; i += 3) { v[i] = v[0]; v[i + 2] = v[2]; }
-    if (known.k) { for (let i = 1; i < v.length; i += 3) v[i] += known.k; clip.userData.grounded = known.grounded; }
+    // sole_m (tools/clip_ground.mjs, measured on the mesh): metres more, so the clip's own soles (a floor sit's seat)
+    // touch the ground, not just its lowest foot bone (details pass, fix-S4 P1)
+    let k = known.k || 0;
+    const hipsParent = known.sole_m ? root.getObjectByName(hipsTrack.name.split('.')[0])?.parent : null;
+    if (hipsParent) { const ws = new THREE.Vector3(); hipsParent.getWorldScale(ws); k += known.sole_m / ws.y; }
+    if (k && !GROUNDED.has(v)) { for (let i = 1; i < v.length; i += 3) v[i] += k; GROUNDED.add(v); }
+    if (k) clip.userData.grounded = known.grounded;
     return known;
   }
   const hips = root.getObjectByName(hipsTrack.name.split('.')[0]);
@@ -133,6 +208,7 @@ class Person {
   constructor(model, hooks) {
     this.model = model;
     this.root = SkeletonUtils.clone(model.scene);
+    this.root.userData.shadowMover = true; // its shadow is redrawn with the people's (world.js shadowLayers)
     this.root.traverse((o) => { if (o.isMesh) { hooks.onMesh(o); if (/^(tack|prop)_/.test(o.name)) o.visible = false; } }); // optional parts: off until asked for
     this.mixer = new THREE.AnimationMixer(this.root);
     this.twins = new Map(); // clip name -> [action, action] for seam-free looping
@@ -155,7 +231,9 @@ class Person {
     return t;
   }
 
-  play(name, { fade = FADE, timeScale = 1, offset = 0 } = {}) {
+  play(name, opts = {}) {
+    const { fade = FADE, timeScale = 1, offset = 0 } = opts;
+    if (!opts.looping) settlePending(this, name, opts); // a clip still on its way: idle until it is in (playPending)
     if (!this.has(name)) name = this.has('idle') ? 'idle' : this.model.clips[0].name;
     const [a, b] = this.actionsFor(name);
     const next = this.action === a ? b : a;
@@ -173,8 +251,11 @@ class Person {
   keepLooping() {
     if (!this.action || !this.model.motion.has(this.clip)) return;
     const d = this.action.getClip().duration;
-    if (this.action.time > d - FADE - 0.05) this.play(this.clip, { timeScale: this.action.timeScale });
+    if (this.action.time > d - FADE - 0.05) this.play(this.clip, { timeScale: this.action.timeScale, looping: true });
   }
+
+  // the clip it waited for (settlePending) is in: play it now
+  playPending() { const { name, opts } = this.pending; this.play(name, opts); }
 }
 
 // ---------------------------------------------------------------- paths
@@ -294,7 +375,8 @@ export class People {
     const [nx, nd] = spec.nudge || [0, 0];
     const x = f.X + nx + offsetX, z = -(f.D + nd);
     if (spec.scale) p.root.scale.multiplyScalar(spec.scale); // children (painted small): times the character's own size
-    p.root.position.set(x, this.hooks.ground(x, z, (f.H || 0) + 1.2), z);
+    // root_h: a figure seated up on a vehicle, feet hanging (people.json; gen/details/contacts/fix_standard.md)
+    p.root.position.set(x, Number.isFinite(spec.root_h) ? spec.root_h : this.hooks.ground(x, z, (f.H || 0) + 1.2), z);
     p.root.rotation.y = deg(spec.facing_deg ?? f.facing_deg) + Math.PI / 2; // the rig faces +Z; facing 0 = +X
     p.id = f.id;
     // a figure on a boat (layout support "boat deck: <id>", or listed in people.json boats): the page's host places it
@@ -614,7 +696,12 @@ export class People {
     const lane = THREE.MathUtils.clamp(lane0, lo, hi);
     const mine = free.find(([f0, f1]) => a.l >= f0 - 0.02 && a.l <= f1 + 0.02);
     let target;
-    if (a.follower) {
+    if (a.follower && a.beside) {
+      // a driver at his animal's side (world.js walkers[].beside): he keeps his place by it, his hand on its load,
+      // whatever the corridor or the bodies round the pair (they move as one; gen/details/contacts/fix_river/engine_beside.md)
+      a.sOffTarget = a.beside.along || 0;
+      target = lane0;
+    } else if (a.follower) {
       // beside the leader if there's room on this side of everyone; otherwise in single file behind it
       const ok = (mine && lane >= mine[0] && lane <= mine[1]) || (!mine && free.some(([f0, f1]) => lane >= f0 && lane <= f1));
       a.sOffTarget = ok ? 0 : -0.8;
@@ -688,9 +775,11 @@ export class People {
       // the seat on the saddle cloth or saddle it carries, else the bare back (animals.json); the hips 9 cm above it
       const info = beast.model.info || {};
       const s = (beast.loads || []).map((n) => info.tack?.[n]?.saddle_rest).find(Boolean) || info.saddle?.rest || [0, 1.0, 0];
-      _q.set(s[0], s[1] + 0.09, s[2]).applyMatrix4(_m4.compose(beast.root.position, beast.root.quaternion, beast.root.scale));
-      const hy = p.model.clips.find((c) => c.name === p.clip)?.userData?.hipsY ?? 0.9;
-      p.root.position.set(_q.x, _q.y - hy * p.root.scale.y, _q.z);
+      // the clip's seat site on the saddle point (clip_meta seat_m), else the hips 0.09 m over it
+      const ud = p.model.clips.find((c) => c.name === p.clip)?.userData;
+      const onSeat = Number.isFinite(ud?.seatY);
+      _q.set(s[0], s[1] + (onSeat ? 0 : 0.09), s[2]).applyMatrix4(_m4.compose(beast.root.position, beast.root.quaternion, beast.root.scale));
+      p.root.position.set(_q.x, _q.y - (onSeat ? ud.seatY : ud?.hipsY ?? 0.9) * p.root.scale.y, _q.z);
       p.root.rotation.y = beast.root.rotation.y + turn;
     }
     // animation level of detail (the joined world has hundreds of people; Messenger switches detail by distance):
@@ -744,6 +833,7 @@ export class People {
   remove(list) {
     const gone = new Set(list);
     for (const p of list) {
+      if (p.pending) { p.model.waiting?.delete(p); p.pending = null; } // a clip it waited for comes to nobody
       this.hooks.scene.remove(p.root);
       this.crowd?.remove(p);
       p.mixer.stopAllAction();

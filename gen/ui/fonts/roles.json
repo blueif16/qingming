@@ -25,7 +25,8 @@
      "web/src/ui/about.json#title,head,seal"
     ],
     "talk": [
-     "web/public/assets/ui/talk.json#title,name"
+     "web/public/assets/ui/talk.json#title",
+     "web/public/assets/ui/talk/*.json#title,name"
     ],
     "lore": [
      "web/src/ui/journal_words.js",
@@ -60,7 +61,8 @@
      "web/src/ui/about.json#title,head,body,line"
     ],
     "talk": [
-     "web/public/assets/ui/talk.json#text,alts,lead,note,name,title,guan,shi,seng,fu,tong,jun,li,min"
+     "web/public/assets/ui/talk.json#lead,note,title",
+     "web/public/assets/ui/talk/*.json#text,alts,name,title,guan,shi,seng,fu,tong,jun,li,min"
     ],
     "settings": [
      "web/src/ui/settings_words.js"

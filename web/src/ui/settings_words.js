@@ -43,6 +43,9 @@ export const SW = {
   quality: { auto: ['隨宜', 'by device'], low: ['簡筆', 'light'], mid: ['兼工', 'balanced'], high: ['工筆', 'full'] },
   boats: { auto: ['隨宜', 'by device'], moored: ['繫泊', 'moored'], painted: ['行舟', 'sailing'], waves: ['往來', 'busy river'] },
   shading: { lambert: ['柔光', 'soft'], toon: ['分階', 'stepped'], unlit: ['無光', 'unlit'], pbr: ['寫實', 'physical'] },
+  // who you play (the life pass): the painted people answer each differently
+  play: { official: ['官人', 'an official'], scholar: ['士子', 'a scholar'], monk: ['僧人', 'a monk'], woman: ['婦人', 'a woman'],
+    child: ['孩童', 'a child'], soldier: ['軍士', 'a soldier'], porter: ['腳夫', 'a porter'], sightseer: ['遊人', 'a sightseer'], other: ['行人', 'a passer-by'] },
   // the language of the story (prefs.lang): Chinese only, or English under the Chinese
   langs: { zh: ['中文', 'Chinese'], zh_en: ['中英', 'Chinese and English'] },
 
@@ -98,6 +101,14 @@ export const SW = {
       costZh: '越寬，每一幀要畫的東西越多。',
       costEn: 'Wider means more to draw every frame.',
     },
+    avatar: {
+      label: ['扮作', 'who you are'],
+      zh: '你在畫中是甚麼人。街上的人看人說話：小乞兒向官人討錢，車夫給官人讓路，賣卦先生把士子拉住，腳夫和你稱兄道弟。換了身分，搭話時聽到的話也不同。',
+      en: 'Who you are in the painting. The street speaks to you as it sees you: the beggar boys ask an official for a coin, carters make way for him, the fortune-teller catches a scholar, porters talk to you as one of their own. Change it and the people you talk to answer differently.',
+      cost: 'tiny',
+      costZh: '換身分時載入另一個人物。',
+      costEn: 'A change loads another figure.',
+    },
     soundOn: {
       label: ['聲音', 'sound'],
       zh: '街上的人聲、叫賣、車馬、水聲與你的腳步。M 鍵隨時開關。',
@@ -137,6 +148,14 @@ export const SW = {
       cost: 'tiny',
       costZh: '最多三塊，跟著畫面移動。',
       costEn: 'At most three, moved with the view.',
+    },
+    chatter: {
+      label: ['街談', 'street chatter'],
+      zh: '畫中人自己說話：走近一群人，便看見他們你一言我一語；獨自一人的，偶爾也嘀咕一句。關掉，只有你上前搭話時才說。',
+      en: 'The painted people talk among themselves: come near a group and their words appear over their heads; someone on their own mutters now and then. Off, they speak only when you talk to them.',
+      cost: 'tiny',
+      costZh: '最多兩張紙條，只在你身邊。',
+      costEn: 'At most two slips, only near you.',
     },
     help: {
       label: ['說明', 'the controls'],

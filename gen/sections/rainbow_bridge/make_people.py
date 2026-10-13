@@ -652,6 +652,12 @@ for k, e in E.items():
 BUILD = {k: [tuple(q[:2]) for q in e['footprint']] for k, e in E.items()
          if e['kind'] in ('building', 'structure') and e.get('footprint') and k != 'S3.str.rainbow_bridge'}
 TRUNKS = [(t['map_id'], (t['X'], t['D']), 0.3 * t.get('scale', 1)) for t in L['trees'] if (t.get('height_m') or 0) >= 3.0]
+# walls mapped as a foot line only (no footprint: S3.str.tiled_wall_18450, built 0.34 m thick along its foot): walkers
+# stop short of them, the wall's half thickness plus 0.5 m for a carried pole's load ahead of the body (the details
+# pass: both bottom-edge pole carriers walked into the tiled wall, gen/details/contacts/fix_bridge/notes.md)
+WALL_LINES = [(k, [tuple(q[:2]) for q in e['lines']['foot']], 0.17 + 0.5) for k, e in E.items()
+              if e['kind'] == 'structure' and not e.get('footprint') and len((e.get('lines') or {}).get('foot') or []) >= 2
+              and (e.get('support') or 'ground').startswith('ground')]
 
 # the water: each reach between its mapped shores (the river agent's river_plan.json moves them through the layout)
 RIVER_PLAN = opt(f'gen/sections/{FOLDER}/river_plan.json')
@@ -1021,6 +1027,10 @@ def walk_clear(p, deck, me=None, need_extra=0.0):
             d, who = wd, 'the water'
         if under_deck(p):
             d, who = -1, 'the bridge\'s ramp (its skirt walls)'
+        for name, ln_, half in WALL_LINES:
+            dd = min(seg_dist(p, ln_[i], ln_[i + 1]) for i in range(len(ln_) - 1)) - half
+            if dd < d:
+                d, who = dd, name
     for name, kind, sh in obstacles_for(None, deck=deck):
         if kind == 'vehicle':
             continue
@@ -1840,6 +1850,22 @@ people['builder_notes'].update({
                             'people.js starts walkers at y 0 (ray from 1.5 m): deck walkers above 1.3 m stand; proposed fix in walkers_why.deck'),
 })
 OUT = os.path.join(QM, f'sections/{FOLDER}/people.json')
+# the details pass's contact fixes (sections/rainbow_bridge/contact_fixes.json: root_h for the deck figures the hidden
+# walk ramp held over the visible steps, solved nudges; gen/details/contacts/fix_standard.md), applied last
+sys.path.insert(0, os.path.join(QM, 'tools'))
+from contact_fixes import apply as apply_contact_fixes
+apply_contact_fixes(people, 'rainbow_bridge')
+# the stools' fit to their sitters (gen/sections/rainbow_bridge/seat_fit.json, written by
+# gen/details/contacts/fix_bridge/tools/seat_fit.mjs from the final placements and the clips' seat points; fix_standard.md
+# rule 3): the stool's centre under the seat point, its top at the seat point less 0.0075 m, its base on the visible
+# surface under it (the bridge's treads, not the smooth deck z_at gives); the builder's seats() builds base_H..top_H
+SEAT_FIT = (opt(f'gen/sections/{FOLDER}/seat_fit.json') or {}).get('seats', {})
+for mid, fit in SEAT_FIT.items():
+    s_ = seats.get(mid)
+    if not s_ or s_.get('what') != 'stool':
+        continue
+    s_.update(X=fit['X'], D=fit['D'], base_H=fit['base_H'], top_H=fit['top_H'], seat_h=fit['seat_h'], H=fit['base_H'],
+              why=s_['why'].split(' || fit')[0] + ' || ' + fit['why'])
 json.dump(people, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 json.dump(seats, open(os.path.join(HERE, 'seats.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
@@ -1866,7 +1892,7 @@ for x in issues:
     print('   ', x)
 print('table tops under roots:', tbl or 'none')
 print('crew closer than 0.5 m:', crew_close or 'none')
-print('nudges:', len(people['nudge_why']), ' largest:', ', '.join(f'{s} {math.hypot(*people["figures"][s]["nudge"]):.2f}' for s in sorted(people['nudge_why'], key=lambda s: -math.hypot(*people['figures'][s]['nudge']))[:8]))
+print('nudges:', len(people['nudge_why']), ' largest:', ', '.join(f'{s} {math.hypot(*people["figures"][s].get("nudge", [0, 0])):.2f}' for s in sorted(people['nudge_why'], key=lambda s: -math.hypot(*people["figures"][s].get("nudge", [0, 0])))[:8]))
 print('animal nudges:', {a: CA[a].get('nudge') for a in CA if CA[a].get('nudge')})
 print('wanted clips:', ', '.join(k for k in people['clips_why'] if k != 'about'))
 print('seats.json:', len(seats) - 1, 'entries;', Counter(v['what'] for k, v in seats.items() if k != 'about'))

@@ -1,0 +1,869 @@
+{
+ "about": "Per-clip animation files (tools/clip_split.mjs): per character, src (first 8 hex of the sha256 of its full GLB, characters.json file), body (meshes, skin, props, textures and the base clips), base (the clips in the body), clips (every other clip, a file each). world.js loads a body and the clips a section's routines play while the section loads; a character missing here, stale (src) or with a characters.json clip in neither the body nor a file is loaded from its full GLB.",
+ "base": [
+  "idle"
+ ],
+ "chars": {
+  "archer": {
+   "src": "056a4942",
+   "body": "assets/chars/body/archer.54984a4d.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/archer/walk.da31167b.glb",
+    "run": "assets/chars/clips/archer/run.41430caf.glb",
+    "draw_bow": "assets/chars/clips/archer/draw_bow.17b84a1f.glb",
+    "bind": "assets/chars/clips/archer/bind.66d94efe.glb"
+   }
+  },
+  "bearer": {
+   "src": "e854992c",
+   "body": "assets/chars/body/bearer.fb261bcd.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/bearer/walk.5d770067.glb",
+    "run": "assets/chars/clips/bearer/run.e8d8256f.glb",
+    "sedan_carry": "assets/chars/clips/bearer/sedan_carry.f97443ad.glb",
+    "chase_run": "assets/chars/clips/bearer/chase_run.d571f80e.glb",
+    "sedan_carry~pole": "assets/chars/clips/bearer/sedan_carry~pole.11deba3c.glb",
+    "sedan_carry~pole_ends": "assets/chars/clips/bearer/sedan_carry~pole_ends.2b488db2.glb",
+    "sedan_carry~sedan_bearer_front_18838": "assets/chars/clips/bearer/sedan_carry~sedan_bearer_front_18838.26a044e3.glb",
+    "sedan_carry~sedan_bearer_rear_18688": "assets/chars/clips/bearer/sedan_carry~sedan_bearer_rear_18688.4ccc9cec.glb"
+   }
+  },
+  "boatman": {
+   "src": "4b261caa",
+   "body": "assets/chars/body/boatman.a434c62d.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/boatman/walk.1398edae.glb",
+    "run": "assets/chars/clips/boatman/run.3be73e55.glb",
+    "look": "assets/chars/clips/boatman/look.11dd7fe2.glb",
+    "sit": "assets/chars/clips/boatman/sit.6cea5f30.glb",
+    "sit_talk": "assets/chars/clips/boatman/sit_talk.561d0cac.glb",
+    "crouch": "assets/chars/clips/boatman/crouch.1ff58c08.glb",
+    "sit_floor": "assets/chars/clips/boatman/sit_floor.1694973c.glb",
+    "push": "assets/chars/clips/boatman/push.96a094ea.glb",
+    "point": "assets/chars/clips/boatman/point.a2112fd5.glb",
+    "sit_one_knee": "assets/chars/clips/boatman/sit_one_knee.3c7db22c.glb",
+    "squat_sleeves": "assets/chars/clips/boatman/squat_sleeves.2a9e5495.glb",
+    "sleep_side": "assets/chars/clips/boatman/sleep_side.b73dd9e8.glb",
+    "kneel_sleep": "assets/chars/clips/boatman/kneel_sleep.bc7f19cc.glb",
+    "reach": "assets/chars/clips/boatman/reach.c0cd43e3.glb",
+    "lean_over": "assets/chars/clips/boatman/lean_over.7bf3fda7.glb",
+    "bend_goods": "assets/chars/clips/boatman/bend_goods.d069373d.glb",
+    "push_flank": "assets/chars/clips/boatman/push_flank.f9ccb574.glb",
+    "stand_pole": "assets/chars/clips/boatman/stand_pole.b03c3678.glb",
+    "steer": "assets/chars/clips/boatman/steer.69be4b4d.glb",
+    "bucket_lift": "assets/chars/clips/boatman/bucket_lift.38e7bda5.glb",
+    "hold_rope": "assets/chars/clips/boatman/hold_rope.fddbfebf.glb",
+    "hail": "assets/chars/clips/boatman/hail.43916075.glb",
+    "work_sweep": "assets/chars/clips/boatman/work_sweep.13c2ba1c.glb",
+    "reach_over_rail": "assets/chars/clips/boatman/reach_over_rail.0c130a18.glb",
+    "pole_boat": "assets/chars/clips/boatman/pole_boat.c7d888b4.glb",
+    "fend_pole": "assets/chars/clips/boatman/fend_pole.2438be71.glb",
+    "haul_line": "assets/chars/clips/boatman/haul_line.2c74bacb.glb",
+    "wave_arms": "assets/chars/clips/boatman/wave_arms.94470cfd.glb",
+    "lie_wave": "assets/chars/clips/boatman/lie_wave.3c91cb7f.glb",
+    "pour_bucket": "assets/chars/clips/boatman/pour_bucket.ebf6f136.glb",
+    "climb_ladder": "assets/chars/clips/boatman/climb_ladder.6d9e0a45.glb",
+    "tiller_seated": "assets/chars/clips/boatman/tiller_seated.ed5ace8a.glb",
+    "knees_up": "assets/chars/clips/boatman/knees_up.4908642c.glb",
+    "work_sweep~bar": "assets/chars/clips/boatman/work_sweep~bar.9c71d882.glb",
+    "pole_boat~hold": "assets/chars/clips/boatman/pole_boat~hold.f4980168.glb",
+    "fend_pole~up": "assets/chars/clips/boatman/fend_pole~up.7c05d518.glb",
+    "fend_pole~out": "assets/chars/clips/boatman/fend_pole~out.53dd70b2.glb",
+    "lean_over~man_leaning_casks_25650": "assets/chars/clips/boatman/lean_over~man_leaning_casks_25650.b26cf0fa.glb",
+    "push~figure_in_windlass_24713": "assets/chars/clips/boatman/push~figure_in_windlass_24713.4290ffdb.glb"
+   }
+  },
+  "butcher": {
+   "src": "eb50fe41",
+   "body": "assets/chars/body/butcher.c8691148.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/butcher/walk.d611df87.glb",
+    "run": "assets/chars/clips/butcher/run.6ce0b20f.glb",
+    "chop": "assets/chars/clips/butcher/chop.f12a226b.glb",
+    "hold_tray": "assets/chars/clips/butcher/hold_tray.aa325eba.glb",
+    "hand_over": "assets/chars/clips/butcher/hand_over.35bd5651.glb",
+    "chop~butcher_3920": "assets/chars/clips/butcher/chop~butcher_3920.11e5bffd.glb"
+   }
+  },
+  "camel_driver": {
+   "src": "5d35adc2",
+   "body": "assets/chars/body/camel_driver.433fd80d.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/camel_driver/walk.5b5186d6.glb",
+    "run": "assets/chars/clips/camel_driver/run.4bb74401.glb",
+    "stroll": "assets/chars/clips/camel_driver/stroll.5509b57a.glb",
+    "look": "assets/chars/clips/camel_driver/look.9f5957c0.glb",
+    "bow": "assets/chars/clips/camel_driver/bow.47b8296b.glb",
+    "sit_floor": "assets/chars/clips/camel_driver/sit_floor.37f7e45d.glb",
+    "sit": "assets/chars/clips/camel_driver/sit.4808ddd0.glb",
+    "bend_goods": "assets/chars/clips/camel_driver/bend_goods.3430b1ca.glb",
+    "ride": "assets/chars/clips/camel_driver/ride.eba5a083.glb",
+    "crouch": "assets/chars/clips/camel_driver/crouch.ce58e67c.glb"
+   }
+  },
+  "carter": {
+   "src": "3eff3aeb",
+   "body": "assets/chars/body/carter.b3db0d0d.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/carter/walk.47abc014.glb",
+    "run": "assets/chars/clips/carter/run.ee5644a0.glb",
+    "push": "assets/chars/clips/carter/push.374bc10a.glb",
+    "hand_over": "assets/chars/clips/carter/hand_over.bccd3a80.glb",
+    "ride": "assets/chars/clips/carter/ride.1ab6423b.glb",
+    "crouch": "assets/chars/clips/carter/crouch.dc11c216.glb",
+    "sit": "assets/chars/clips/carter/sit.c5fc4b01.glb",
+    "drive_cart": "assets/chars/clips/carter/drive_cart.192bf641.glb",
+    "steer": "assets/chars/clips/carter/steer.7e0192e2.glb",
+    "drive_team": "assets/chars/clips/carter/drive_team.0c228b98.glb",
+    "bridle": "assets/chars/clips/carter/bridle.1fd0fa47.glb",
+    "walk_whip": "assets/chars/clips/carter/walk_whip.6d82da33.glb",
+    "stand_whip": "assets/chars/clips/carter/stand_whip.a2dfbae5.glb",
+    "listen": "assets/chars/clips/carter/listen.81e51365.glb",
+    "look": "assets/chars/clips/carter/look.bd719e40.glb",
+    "hold_rope": "assets/chars/clips/carter/hold_rope.92380c99.glb",
+    "stand_pole": "assets/chars/clips/carter/stand_pole.0e10bbf2.glb",
+    "tie_kerchief": "assets/chars/clips/carter/tie_kerchief.97903ad6.glb",
+    "arms_folded": "assets/chars/clips/carter/arms_folded.5415fd51.glb",
+    "tow_walk": "assets/chars/clips/carter/tow_walk.9f6116c7.glb",
+    "pole_boat": "assets/chars/clips/carter/pole_boat.42206794.glb",
+    "haul_line": "assets/chars/clips/carter/haul_line.1d2f563a.glb",
+    "bridle~ox_leader_10050": "assets/chars/clips/carter/bridle~ox_leader_10050.3b53cc32.glb",
+    "browse": "assets/chars/clips/carter/browse.b60f341d.glb",
+    "stand_sleeves": "assets/chars/clips/carter/stand_sleeves.028b40c8.glb",
+    "push~cart_pusher_5727": "assets/chars/clips/carter/push~cart_pusher_5727.5cd503e8.glb",
+    "bridle~groom_8167": "assets/chars/clips/carter/bridle~groom_8167.7af6cfad.glb",
+    "browse~pack_handler_5837": "assets/chars/clips/carter/browse~pack_handler_5837.e3c5b4a9.glb",
+    "steer~cart_pusher_8254": "assets/chars/clips/carter/steer~cart_pusher_8254.fdf367a8.glb",
+    "idle~cart_shaftman_8498": "assets/chars/clips/carter/idle~cart_shaftman_8498.10b179e7.glb",
+    "steer~wagon_shaft_carter_3642": "assets/chars/clips/carter/steer~wagon_shaft_carter_3642.99dc1da8.glb",
+    "steer~handcart_man_3130": "assets/chars/clips/carter/steer~handcart_man_3130.740db4eb.glb",
+    "steer~barrow_pusher_3390": "assets/chars/clips/carter/steer~barrow_pusher_3390.40441816.glb",
+    "sit~wagon_top_rider_3740": "assets/chars/clips/carter/sit~wagon_top_rider_3740.4c040ec4.glb",
+    "push~cart_pusher_19922": "assets/chars/clips/carter/push~cart_pusher_19922.2c399bdd.glb",
+    "push~barrow_pusher_18295": "assets/chars/clips/carter/push~barrow_pusher_18295.749e4142.glb"
+   }
+  },
+  "child": {
+   "src": "323557ba",
+   "body": "assets/chars/body/child.c1e72d2f.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/child/walk.f44719d5.glb",
+    "run": "assets/chars/clips/child/run.9b0916bd.glb",
+    "play": "assets/chars/clips/child/play.44c67c54.glb",
+    "back_load": "assets/chars/clips/child/back_load.c9e3bb47.glb",
+    "reach": "assets/chars/clips/child/reach.4701a310.glb",
+    "look": "assets/chars/clips/child/look.7675fb46.glb",
+    "listen": "assets/chars/clips/child/listen.079b66ad.glb",
+    "crouch": "assets/chars/clips/child/crouch.f31299a5.glb",
+    "sit": "assets/chars/clips/child/sit.f0cb64ed.glb",
+    "reach_over_rail": "assets/chars/clips/child/reach_over_rail.285d300b.glb",
+    "reach~child_at_table_12597": "assets/chars/clips/child/reach~child_at_table_12597.a44b78bd.glb",
+    "hand_over": "assets/chars/clips/child/hand_over.c7f0a799.glb",
+    "sit~soles": "assets/chars/clips/child/sit~soles.ee557ebc.glb"
+   }
+  },
+  "child_red": {
+   "src": "1ebacf6b",
+   "body": "assets/chars/body/child_red.4d759411.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/child_red/walk.f44719d5.glb",
+    "run": "assets/chars/clips/child_red/run.9b0916bd.glb",
+    "play": "assets/chars/clips/child_red/play.44c67c54.glb",
+    "back_load": "assets/chars/clips/child_red/back_load.c9e3bb47.glb",
+    "reach": "assets/chars/clips/child_red/reach.4701a310.glb",
+    "look": "assets/chars/clips/child_red/look.7675fb46.glb",
+    "listen": "assets/chars/clips/child_red/listen.079b66ad.glb",
+    "crouch": "assets/chars/clips/child_red/crouch.f31299a5.glb",
+    "sit": "assets/chars/clips/child_red/sit.f0cb64ed.glb",
+    "reach_over_rail": "assets/chars/clips/child_red/reach_over_rail.285d300b.glb",
+    "reach~child_at_table_12597": "assets/chars/clips/child_red/reach~child_at_table_12597.a44b78bd.glb",
+    "hand_over": "assets/chars/clips/child_red/hand_over.c7f0a799.glb",
+    "sit~soles": "assets/chars/clips/child_red/sit~soles.ee557ebc.glb"
+   }
+  },
+  "child_robed": {
+   "src": "b131da49",
+   "body": "assets/chars/body/child_robed.c814f689.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/child_robed/walk.79c7cfcf.glb",
+    "run": "assets/chars/clips/child_robed/run.36911808.glb",
+    "chin": "assets/chars/clips/child_robed/chin.b1a2b144.glb",
+    "look": "assets/chars/clips/child_robed/look.62f1ffaa.glb",
+    "reach": "assets/chars/clips/child_robed/reach.813fa304.glb",
+    "hand_over": "assets/chars/clips/child_robed/hand_over.338972fc.glb"
+   }
+  },
+  "dark_hat": {
+   "src": "449bfc39",
+   "body": "assets/chars/body/dark_hat.91624b25.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/dark_hat/walk.df4504b8.glb",
+    "run": "assets/chars/clips/dark_hat/run.f758ddff.glb",
+    "look": "assets/chars/clips/dark_hat/look.2f371c95.glb",
+    "talk": "assets/chars/clips/dark_hat/talk.15a2e7ca.glb",
+    "point": "assets/chars/clips/dark_hat/point.5a3b0d0a.glb",
+    "crouch": "assets/chars/clips/dark_hat/crouch.529bdb50.glb",
+    "carry_pole": "assets/chars/clips/dark_hat/carry_pole.ad28e700.glb",
+    "lean_over": "assets/chars/clips/dark_hat/lean_over.274c9f65.glb",
+    "hold_tray": "assets/chars/clips/dark_hat/hold_tray.8e856244.glb",
+    "reach_over_rail": "assets/chars/clips/dark_hat/reach_over_rail.80ce3983.glb",
+    "walk_hold_chest": "assets/chars/clips/dark_hat/walk_hold_chest.a3b0e97b.glb",
+    "reach_over_rail~deck_stooping_hat_19765": "assets/chars/clips/dark_hat/reach_over_rail~deck_stooping_hat_19765.fed9ec40.glb"
+   }
+  },
+  "elder": {
+   "src": "9c02e0ef",
+   "body": "assets/chars/body/elder.d21d40c1.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/elder/walk.35aff384.glb",
+    "run": "assets/chars/clips/elder/run.70745cdd.glb",
+    "ride_side": "assets/chars/clips/elder/ride_side.f37e276a.glb",
+    "fan": "assets/chars/clips/elder/fan.c3740248.glb",
+    "sit": "assets/chars/clips/elder/sit.d8fd377e.glb",
+    "look": "assets/chars/clips/elder/look.b6efc076.glb",
+    "talk": "assets/chars/clips/elder/talk.552e5df8.glb",
+    "arms_folded": "assets/chars/clips/elder/arms_folded.e508db00.glb",
+    "stand_sleeves": "assets/chars/clips/elder/stand_sleeves.64e496c6.glb"
+   }
+  },
+  "farmer": {
+   "src": "f04d52fb",
+   "body": "assets/chars/body/farmer.7301824c.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/farmer/walk.f74d5a54.glb",
+    "run": "assets/chars/clips/farmer/run.3e09bea7.glb",
+    "look": "assets/chars/clips/farmer/look.04d7cd6a.glb",
+    "point": "assets/chars/clips/farmer/point.dfe99893.glb",
+    "crouch": "assets/chars/clips/farmer/crouch.9064494b.glb",
+    "bend_goods": "assets/chars/clips/farmer/bend_goods.f692f649.glb",
+    "sit": "assets/chars/clips/farmer/sit.f52d8a14.glb",
+    "stand_sleeves": "assets/chars/clips/farmer/stand_sleeves.ea8af99a.glb",
+    "drink": "assets/chars/clips/farmer/drink.4d58eda8.glb",
+    "drink~soles": "assets/chars/clips/farmer/drink~soles.efa2289e.glb"
+   }
+  },
+  "fortune_teller": {
+   "src": "04d3a0a6",
+   "body": "assets/chars/body/fortune_teller.9501cbc1.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/fortune_teller/walk.127507a1.glb",
+    "run": "assets/chars/clips/fortune_teller/run.db4f512a.glb",
+    "tell_fortune": "assets/chars/clips/fortune_teller/tell_fortune.92c13941.glb",
+    "sit": "assets/chars/clips/fortune_teller/sit.bc7c9dee.glb",
+    "hand_over": "assets/chars/clips/fortune_teller/hand_over.b503ca42.glb",
+    "look": "assets/chars/clips/fortune_teller/look.daab4ac3.glb",
+    "talk": "assets/chars/clips/fortune_teller/talk.c6b7b634.glb",
+    "examine_child": "assets/chars/clips/fortune_teller/examine_child.18616bff.glb",
+    "write": "assets/chars/clips/fortune_teller/write.d046529d.glb",
+    "write~table": "assets/chars/clips/fortune_teller/write~table.9e3be4f2.glb",
+    "sit~soles": "assets/chars/clips/fortune_teller/sit~soles.5698fe3e.glb"
+   }
+  },
+  "grain_porter": {
+   "src": "7ca73523",
+   "body": "assets/chars/body/grain_porter.60c0e10a.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/grain_porter/walk.401b8dc6.glb",
+    "run": "assets/chars/clips/grain_porter/run.a0a4272f.glb",
+    "look": "assets/chars/clips/grain_porter/look.7d120333.glb",
+    "push": "assets/chars/clips/grain_porter/push.307f0e88.glb",
+    "push_flank": "assets/chars/clips/grain_porter/push_flank.a630222f.glb",
+    "bend_goods": "assets/chars/clips/grain_porter/bend_goods.645a95cd.glb",
+    "back_load": "assets/chars/clips/grain_porter/back_load.c8727423.glb",
+    "carry_pole": "assets/chars/clips/grain_porter/carry_pole.b69b5533.glb",
+    "steer": "assets/chars/clips/grain_porter/steer.307b999c.glb",
+    "drive_team": "assets/chars/clips/grain_porter/drive_team.84728764.glb",
+    "haul_line": "assets/chars/clips/grain_porter/haul_line.ee00d3df.glb",
+    "sack_carry": "assets/chars/clips/grain_porter/sack_carry.74c8ebd0.glb",
+    "fend_pole": "assets/chars/clips/grain_porter/fend_pole.79ef35aa.glb",
+    "hold_rope": "assets/chars/clips/grain_porter/hold_rope.62d97339.glb"
+   }
+  },
+  "groom": {
+   "src": "8b6a3a90",
+   "body": "assets/chars/body/groom.1b504dc2.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/groom/walk.df598121.glb",
+    "run": "assets/chars/clips/groom/run.2db2b851.glb",
+    "look": "assets/chars/clips/groom/look.072f835d.glb",
+    "bridle": "assets/chars/clips/groom/bridle.4ea76db4.glb",
+    "push_flank": "assets/chars/clips/groom/push_flank.411a18cc.glb",
+    "hold_rope": "assets/chars/clips/groom/hold_rope.e26275f1.glb",
+    "chase_run": "assets/chars/clips/groom/chase_run.6a8a7e49.glb",
+    "hold_horse_neck": "assets/chars/clips/groom/hold_horse_neck.0c04ac57.glb",
+    "hold_horse_neck~groom_holding_horse_19095": "assets/chars/clips/groom/hold_horse_neck~groom_holding_horse_19095.bb057014.glb"
+   }
+  },
+  "hat_traveller": {
+   "src": "a557b940",
+   "body": "assets/chars/body/hat_traveller.40a90b34.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/hat_traveller/walk.1ad5364b.glb",
+    "run": "assets/chars/clips/hat_traveller/run.cfdc7a2e.glb",
+    "ride_fan": "assets/chars/clips/hat_traveller/ride_fan.1cc6b2ef.glb",
+    "ride": "assets/chars/clips/hat_traveller/ride.95631b28.glb",
+    "crane": "assets/chars/clips/hat_traveller/crane.a3e6ea13.glb",
+    "bridle": "assets/chars/clips/hat_traveller/bridle.254fe30b.glb",
+    "look": "assets/chars/clips/hat_traveller/look.fcb84fea.glb",
+    "stand_pole": "assets/chars/clips/hat_traveller/stand_pole.655d8068.glb",
+    "lean_over": "assets/chars/clips/hat_traveller/lean_over.121132f3.glb",
+    "point": "assets/chars/clips/hat_traveller/point.ee0db6c3.glb",
+    "talk": "assets/chars/clips/hat_traveller/talk.4f7cb3b1.glb",
+    "carry_pole": "assets/chars/clips/hat_traveller/carry_pole.ba412995.glb",
+    "sit": "assets/chars/clips/hat_traveller/sit.19ad7947.glb",
+    "push": "assets/chars/clips/hat_traveller/push.36dd92d1.glb",
+    "crouch": "assets/chars/clips/hat_traveller/crouch.0ac37b53.glb",
+    "drink": "assets/chars/clips/hat_traveller/drink.57a70388.glb",
+    "reach_over_rail": "assets/chars/clips/hat_traveller/reach_over_rail.997bab45.glb",
+    "tow_walk": "assets/chars/clips/hat_traveller/tow_walk.a72ace38.glb",
+    "pole_boat": "assets/chars/clips/hat_traveller/pole_boat.aa5150d8.glb",
+    "ride_fan~steady": "assets/chars/clips/hat_traveller/ride_fan~steady.b26037a4.glb"
+   }
+  },
+  "hat_traveller_dark": {
+   "src": "cbf4f396",
+   "body": "assets/chars/body/hat_traveller_dark.49759b8a.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/hat_traveller_dark/walk.1ad5364b.glb",
+    "run": "assets/chars/clips/hat_traveller_dark/run.cfdc7a2e.glb",
+    "ride_fan": "assets/chars/clips/hat_traveller_dark/ride_fan.1cc6b2ef.glb",
+    "ride": "assets/chars/clips/hat_traveller_dark/ride.95631b28.glb",
+    "crane": "assets/chars/clips/hat_traveller_dark/crane.a3e6ea13.glb",
+    "bridle": "assets/chars/clips/hat_traveller_dark/bridle.254fe30b.glb",
+    "look": "assets/chars/clips/hat_traveller_dark/look.fcb84fea.glb",
+    "stand_pole": "assets/chars/clips/hat_traveller_dark/stand_pole.655d8068.glb",
+    "lean_over": "assets/chars/clips/hat_traveller_dark/lean_over.121132f3.glb",
+    "point": "assets/chars/clips/hat_traveller_dark/point.ee0db6c3.glb",
+    "talk": "assets/chars/clips/hat_traveller_dark/talk.4f7cb3b1.glb",
+    "carry_pole": "assets/chars/clips/hat_traveller_dark/carry_pole.ba412995.glb",
+    "sit": "assets/chars/clips/hat_traveller_dark/sit.19ad7947.glb",
+    "push": "assets/chars/clips/hat_traveller_dark/push.36dd92d1.glb",
+    "crouch": "assets/chars/clips/hat_traveller_dark/crouch.0ac37b53.glb",
+    "drink": "assets/chars/clips/hat_traveller_dark/drink.57a70388.glb",
+    "reach_over_rail": "assets/chars/clips/hat_traveller_dark/reach_over_rail.997bab45.glb",
+    "tow_walk": "assets/chars/clips/hat_traveller_dark/tow_walk.a72ace38.glb",
+    "pole_boat": "assets/chars/clips/hat_traveller_dark/pole_boat.aa5150d8.glb",
+    "ride_fan~steady": "assets/chars/clips/hat_traveller_dark/ride_fan~steady.b26037a4.glb"
+   }
+  },
+  "idler": {
+   "src": "8f6a9d92",
+   "body": "assets/chars/body/idler.eff17c85.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/idler/walk.5db83c1e.glb",
+    "run": "assets/chars/clips/idler/run.31e7cf26.glb",
+    "chat": "assets/chars/clips/idler/chat.4437466b.glb",
+    "sit_floor": "assets/chars/clips/idler/sit_floor.d57206fb.glb",
+    "quick": "assets/chars/clips/idler/quick.7966b296.glb",
+    "lean_wall": "assets/chars/clips/idler/lean_wall.806789cb.glb",
+    "lean_chin": "assets/chars/clips/idler/lean_chin.915a0a88.glb",
+    "crane": "assets/chars/clips/idler/crane.58ce882d.glb",
+    "draw_water": "assets/chars/clips/idler/draw_water.96da95d9.glb",
+    "bucket_shoulder": "assets/chars/clips/idler/bucket_shoulder.34ef74d0.glb",
+    "lead": "assets/chars/clips/idler/lead.0b9437a4.glb",
+    "point": "assets/chars/clips/idler/point.558a318c.glb",
+    "crouch": "assets/chars/clips/idler/crouch.7cb504e5.glb",
+    "push": "assets/chars/clips/idler/push.2145de43.glb",
+    "bucket_lift": "assets/chars/clips/idler/bucket_lift.f973def5.glb",
+    "bridle": "assets/chars/clips/idler/bridle.54e6decb.glb",
+    "browse": "assets/chars/clips/idler/browse.01ed4f5d.glb",
+    "hail": "assets/chars/clips/idler/hail.1014589c.glb",
+    "sit_one_knee": "assets/chars/clips/idler/sit_one_knee.bed01f01.glb",
+    "squat_sleeves": "assets/chars/clips/idler/squat_sleeves.46f7b957.glb",
+    "tie_kerchief": "assets/chars/clips/idler/tie_kerchief.2578fa32.glb",
+    "push_flank": "assets/chars/clips/idler/push_flank.dfce67d8.glb",
+    "sit": "assets/chars/clips/idler/sit.b0b2239d.glb",
+    "look": "assets/chars/clips/idler/look.d5e39d8e.glb",
+    "carry_child": "assets/chars/clips/idler/carry_child.d6bf727a.glb",
+    "steer": "assets/chars/clips/idler/steer.1aa46bff.glb",
+    "drive_team": "assets/chars/clips/idler/drive_team.25868985.glb",
+    "arms_folded": "assets/chars/clips/idler/arms_folded.3dbcc10e.glb",
+    "bend_goods": "assets/chars/clips/idler/bend_goods.1cd9d66c.glb",
+    "sleep_side": "assets/chars/clips/idler/sleep_side.c9b56a18.glb",
+    "stand_pole": "assets/chars/clips/idler/stand_pole.deb25831.glb",
+    "lean_over": "assets/chars/clips/idler/lean_over.e9f807ca.glb",
+    "reach": "assets/chars/clips/idler/reach.c7af67e0.glb",
+    "back_load": "assets/chars/clips/idler/back_load.5c9cae5b.glb",
+    "sit_talk": "assets/chars/clips/idler/sit_talk.8f53802d.glb",
+    "knees_up": "assets/chars/clips/idler/knees_up.27bf3160.glb",
+    "carry_pole": "assets/chars/clips/idler/carry_pole.2242a82e.glb",
+    "reach_over_rail": "assets/chars/clips/idler/reach_over_rail.bf01b521.glb",
+    "tow_walk": "assets/chars/clips/idler/tow_walk.c3c187fb.glb",
+    "sack_carry": "assets/chars/clips/idler/sack_carry.b84b6c6d.glb",
+    "pole_boat": "assets/chars/clips/idler/pole_boat.25cb2add.glb",
+    "chase_run": "assets/chars/clips/idler/chase_run.96115fd5.glb",
+    "sit_offer": "assets/chars/clips/idler/sit_offer.73203aca.glb",
+    "lie_wave": "assets/chars/clips/idler/lie_wave.2a3b0eb0.glb",
+    "wheelwright": "assets/chars/clips/idler/wheelwright.2a9f8f43.glb",
+    "lean_post_talk": "assets/chars/clips/idler/lean_post_talk.19b4f9f5.glb",
+    "reach_up_load": "assets/chars/clips/idler/reach_up_load.120abb94.glb",
+    "stand_sleeves": "assets/chars/clips/idler/stand_sleeves.f0afbe35.glb",
+    "bridle~groom_rider_10255": "assets/chars/clips/idler/bridle~groom_rider_10255.87660f88.glb",
+    "browse~bearded_man_10142": "assets/chars/clips/idler/browse~bearded_man_10142.299c30b8.glb",
+    "push~man_cart_tail_10405": "assets/chars/clips/idler/push~man_cart_tail_10405.f38ebc0b.glb",
+    "push_flank~ox_driver_10635": "assets/chars/clips/idler/push_flank~ox_driver_10635.c11d3972.glb",
+    "lean_chin~moat_rail": "assets/chars/clips/idler/lean_chin~moat_rail.ab36b0e2.glb",
+    "sit_offer~tub_vendor_27765": "assets/chars/clips/idler/sit_offer~tub_vendor_27765.2f8169d6.glb",
+    "lean_over~rail_watcher_19892": "assets/chars/clips/idler/lean_over~rail_watcher_19892.8a06b6b4.glb",
+    "lean_over~man_leaning_on_railing_19225": "assets/chars/clips/idler/lean_over~man_leaning_on_railing_19225.dfc1877d.glb",
+    "lean_over~man_head_bowed_18962": "assets/chars/clips/idler/lean_over~man_head_bowed_18962.ca7c7d6c.glb",
+    "reach_over_rail~deck_rail_leaner_19578": "assets/chars/clips/idler/reach_over_rail~deck_rail_leaner_19578.4fa57761.glb",
+    "reach_over_rail~man_lowering_rope_19295": "assets/chars/clips/idler/reach_over_rail~man_lowering_rope_19295.98507dc2.glb",
+    "lean_over~counter_man_leaning_13325": "assets/chars/clips/idler/lean_over~counter_man_leaning_13325.13e9f62b.glb",
+    "reach_up_load~porter_at_cart_rear_13090": "assets/chars/clips/idler/reach_up_load~porter_at_cart_rear_13090.3367f9ac.glb",
+    "push_flank~carter_at_shaft_ox_13243": "assets/chars/clips/idler/push_flank~carter_at_shaft_ox_13243.3d574b1c.glb",
+    "push~young_man_cart_rear_2675": "assets/chars/clips/idler/push~young_man_cart_rear_2675.f5ecc06d.glb",
+    "steer~cart_puller_19870": "assets/chars/clips/idler/steer~cart_puller_19870.bdcefddd.glb",
+    "lean_over~far_shopkeeper_19620": "assets/chars/clips/idler/lean_over~far_shopkeeper_19620.0b9af5e0.glb",
+    "bridle~groom_at_donkey_18682": "assets/chars/clips/idler/bridle~groom_at_donkey_18682.6192c67f.glb"
+   }
+  },
+  "inspector": {
+   "src": "0ce48ec1",
+   "body": "assets/chars/body/inspector.c726d8ec.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/inspector/walk.c7882bce.glb",
+    "run": "assets/chars/clips/inspector/run.970830f6.glb",
+    "talk": "assets/chars/clips/inspector/talk.e2ee7fd7.glb",
+    "argue": "assets/chars/clips/inspector/argue.040a75a0.glb",
+    "point": "assets/chars/clips/inspector/point.b7d8e131.glb",
+    "ride": "assets/chars/clips/inspector/ride.5c141952.glb",
+    "arms_folded": "assets/chars/clips/inspector/arms_folded.134f8d26.glb",
+    "hand_over": "assets/chars/clips/inspector/hand_over.ecbf1ed2.glb",
+    "chin": "assets/chars/clips/inspector/chin.721c38bd.glb",
+    "walk_whip": "assets/chars/clips/inspector/walk_whip.c6cc7b20.glb",
+    "hold_whip": "assets/chars/clips/inspector/hold_whip.56b2a7b9.glb",
+    "sit": "assets/chars/clips/inspector/sit.760adc50.glb",
+    "look": "assets/chars/clips/inspector/look.d0a82017.glb",
+    "bend_goods": "assets/chars/clips/inspector/bend_goods.1bc3e010.glb",
+    "lean_over": "assets/chars/clips/inspector/lean_over.5ad67f15.glb",
+    "bridle": "assets/chars/clips/inspector/bridle.7ba32380.glb",
+    "push_flank": "assets/chars/clips/inspector/push_flank.89298b17.glb",
+    "push": "assets/chars/clips/inspector/push.09336a4b.glb",
+    "work_sweep": "assets/chars/clips/inspector/work_sweep.5a65d510.glb",
+    "reach_over_rail": "assets/chars/clips/inspector/reach_over_rail.eafa4756.glb",
+    "chase_run": "assets/chars/clips/inspector/chase_run.b3c5bafb.glb",
+    "lunge_arms_wide": "assets/chars/clips/inspector/lunge_arms_wide.195ac409.glb",
+    "girth": "assets/chars/clips/inspector/girth.fa67981b.glb",
+    "stand_sleeves": "assets/chars/clips/inspector/stand_sleeves.19b6ad46.glb",
+    "reach_over_rail~man_over_railing_19025": "assets/chars/clips/inspector/reach_over_rail~man_over_railing_19025.312bdce4.glb",
+    "work_sweep~bar": "assets/chars/clips/inspector/work_sweep~bar.555f5d81.glb",
+    "girth~man_bowed_at_horse_13410": "assets/chars/clips/inspector/girth~man_bowed_at_horse_13410.b40e446a.glb",
+    "sit~seated_man_highseat_4070": "assets/chars/clips/inspector/sit~seated_man_highseat_4070.2a74f09f.glb",
+    "lean_over~mat_stall_keeper_18435": "assets/chars/clips/inspector/lean_over~mat_stall_keeper_18435.28aabd09.glb"
+   }
+  },
+  "monk": {
+   "src": "d72be630",
+   "body": "assets/chars/body/monk.cd41174e.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/monk/walk.cf89a9d8.glb",
+    "run": "assets/chars/clips/monk/run.839e6197.glb",
+    "back_load": "assets/chars/clips/monk/back_load.acb734a6.glb",
+    "talk": "assets/chars/clips/monk/talk.739d3505.glb"
+   }
+  },
+  "official": {
+   "src": "6ca18e9b",
+   "body": "assets/chars/body/official.5f0500b6.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/official/walk.55e09d7b.glb",
+    "run": "assets/chars/clips/official/run.db09a19b.glb",
+    "sit": "assets/chars/clips/official/sit.2fd2c330.glb",
+    "sit_talk": "assets/chars/clips/official/sit_talk.a29b437b.glb",
+    "write": "assets/chars/clips/official/write.70ab6285.glb",
+    "sit_talk~soles": "assets/chars/clips/official/sit_talk~soles.99a4270b.glb",
+    "write~office_desk": "assets/chars/clips/official/write~office_desk.a493816b.glb",
+    "sit_talk~office_bench": "assets/chars/clips/official/sit_talk~office_bench.9b472092.glb"
+   }
+  },
+  "official_rider": {
+   "src": "e393378a",
+   "body": "assets/chars/body/official_rider.8febf153.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/official_rider/walk.0fdf7396.glb",
+    "run": "assets/chars/clips/official_rider/run.3eb6b06c.glb",
+    "look": "assets/chars/clips/official_rider/look.345bd41e.glb",
+    "talk": "assets/chars/clips/official_rider/talk.4bd1d3b5.glb",
+    "bridle": "assets/chars/clips/official_rider/bridle.7609d090.glb",
+    "ride": "assets/chars/clips/official_rider/ride.eead3d09.glb",
+    "idle~man_big_hat_12895": "assets/chars/clips/official_rider/idle~man_big_hat_12895.109d3625.glb"
+   }
+  },
+  "porter": {
+   "src": "81445bf2",
+   "body": "assets/chars/body/porter.ea917efa.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/porter/walk.1b5edabd.glb",
+    "run": "assets/chars/clips/porter/run.c3cec537.glb",
+    "carry_pole": "assets/chars/clips/porter/carry_pole.986ba05e.glb",
+    "stand_pole": "assets/chars/clips/porter/stand_pole.b640ef8e.glb",
+    "lift_pole": "assets/chars/clips/porter/lift_pole.32075b3e.glb",
+    "stride_stick": "assets/chars/clips/porter/stride_stick.1996f179.glb",
+    "talk": "assets/chars/clips/porter/talk.9dc9d776.glb",
+    "hold_tray": "assets/chars/clips/porter/hold_tray.1f0788d2.glb",
+    "shoulder_box": "assets/chars/clips/porter/shoulder_box.162fa197.glb",
+    "push": "assets/chars/clips/porter/push.05eb5cbb.glb",
+    "look": "assets/chars/clips/porter/look.c156837e.glb",
+    "bend_goods": "assets/chars/clips/porter/bend_goods.f45f1683.glb",
+    "point": "assets/chars/clips/porter/point.b71a1f6a.glb",
+    "lean_over": "assets/chars/clips/porter/lean_over.937079bb.glb",
+    "crouch": "assets/chars/clips/porter/crouch.f9ec2bed.glb",
+    "crane": "assets/chars/clips/porter/crane.756ab1f1.glb",
+    "back_load": "assets/chars/clips/porter/back_load.391b1f45.glb",
+    "sit_floor": "assets/chars/clips/porter/sit_floor.82a65e96.glb",
+    "push_flank": "assets/chars/clips/porter/push_flank.f689ba06.glb",
+    "reach": "assets/chars/clips/porter/reach.f6733297.glb",
+    "tow_walk": "assets/chars/clips/porter/tow_walk.b33e4737.glb",
+    "sack_carry": "assets/chars/clips/porter/sack_carry.92aa8b87.glb",
+    "reach_over_rail": "assets/chars/clips/porter/reach_over_rail.efcc2c33.glb",
+    "pole_boat": "assets/chars/clips/porter/pole_boat.aea45d60.glb",
+    "fend_pole": "assets/chars/clips/porter/fend_pole.29397b88.glb",
+    "rest_on_stick": "assets/chars/clips/porter/rest_on_stick.cb7a6b2f.glb",
+    "stand_pole~staff_foot": "assets/chars/clips/porter/stand_pole~staff_foot.be92c9b5.glb",
+    "reach_over_rail~man_bent_over_railing_19195": "assets/chars/clips/porter/reach_over_rail~man_bent_over_railing_19195.fd2006ca.glb",
+    "push_flank~donkey_man_east_18768": "assets/chars/clips/porter/push_flank~donkey_man_east_18768.bb20e52c.glb"
+   }
+  },
+  "robed_man": {
+   "src": "0845636f",
+   "body": "assets/chars/body/robed_man.a523bd54.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/robed_man/walk.46385e1a.glb",
+    "run": "assets/chars/clips/robed_man/run.5a6faadf.glb",
+    "talk": "assets/chars/clips/robed_man/talk.f299c790.glb",
+    "listen": "assets/chars/clips/robed_man/listen.7d347264.glb",
+    "tie_kerchief": "assets/chars/clips/robed_man/tie_kerchief.76620fb0.glb",
+    "hold_rope": "assets/chars/clips/robed_man/hold_rope.71baf622.glb",
+    "crane": "assets/chars/clips/robed_man/crane.95591c3e.glb",
+    "sit_talk": "assets/chars/clips/robed_man/sit_talk.81eb8d5c.glb",
+    "sit": "assets/chars/clips/robed_man/sit.6901dddb.glb",
+    "look": "assets/chars/clips/robed_man/look.0493c3c2.glb",
+    "knees_up": "assets/chars/clips/robed_man/knees_up.04dfee21.glb",
+    "drink": "assets/chars/clips/robed_man/drink.ddf02ce6.glb",
+    "hail": "assets/chars/clips/robed_man/hail.2d95fa9c.glb",
+    "bend_goods": "assets/chars/clips/robed_man/bend_goods.d3eaa931.glb",
+    "lean_chin": "assets/chars/clips/robed_man/lean_chin.9ee09f8c.glb",
+    "point": "assets/chars/clips/robed_man/point.8f69c8e8.glb",
+    "back_load": "assets/chars/clips/robed_man/back_load.154e4f90.glb",
+    "carry_pole": "assets/chars/clips/robed_man/carry_pole.752fdba7.glb",
+    "chin": "assets/chars/clips/robed_man/chin.da82dce7.glb",
+    "sit_floor": "assets/chars/clips/robed_man/sit_floor.ba3fd972.glb",
+    "stand_pole": "assets/chars/clips/robed_man/stand_pole.2e00f7f3.glb",
+    "lead": "assets/chars/clips/robed_man/lead.665d08cb.glb",
+    "sack_carry": "assets/chars/clips/robed_man/sack_carry.7374ac7b.glb",
+    "fend_pole": "assets/chars/clips/robed_man/fend_pole.c822ee4c.glb",
+    "wave_arms": "assets/chars/clips/robed_man/wave_arms.d3caa188.glb",
+    "beckon_lean": "assets/chars/clips/robed_man/beckon_lean.ea4dc0df.glb",
+    "lean_over_seated": "assets/chars/clips/robed_man/lean_over_seated.ca9c906d.glb",
+    "look_up": "assets/chars/clips/robed_man/look_up.02d8fe88.glb",
+    "knee_on_stool": "assets/chars/clips/robed_man/knee_on_stool.34dd59bb.glb",
+    "listen~table": "assets/chars/clips/robed_man/listen~table.a8e4a724.glb",
+    "sit~soles": "assets/chars/clips/robed_man/sit~soles.18723333.glb",
+    "fend_pole~pennant_pole_holder_27810": "assets/chars/clips/robed_man/fend_pole~pennant_pole_holder_27810.c55d6502.glb",
+    "knee_on_stool~customer_white_14560": "assets/chars/clips/robed_man/knee_on_stool~customer_white_14560.7efc3f5e.glb",
+    "lean_chin~man_at_cabin_rail_19366": "assets/chars/clips/robed_man/lean_chin~man_at_cabin_rail_19366.603b9425.glb"
+   }
+  },
+  "scholar": {
+   "src": "5e841127",
+   "body": "assets/chars/body/scholar.e2ddd30f.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/scholar/walk.0b17fbfc.glb",
+    "run": "assets/chars/clips/scholar/run.f60c9178.glb",
+    "sit": "assets/chars/clips/scholar/sit.90c981d4.glb",
+    "drink": "assets/chars/clips/scholar/drink.257f3fea.glb",
+    "talk": "assets/chars/clips/scholar/talk.77fec5ae.glb",
+    "fan": "assets/chars/clips/scholar/fan.ad0157bb.glb",
+    "knees_up": "assets/chars/clips/scholar/knees_up.de0e7b00.glb",
+    "look": "assets/chars/clips/scholar/look.3e999337.glb",
+    "point": "assets/chars/clips/scholar/point.a5e339c4.glb",
+    "crane": "assets/chars/clips/scholar/crane.f97fa3ed.glb",
+    "bridle": "assets/chars/clips/scholar/bridle.fd00d67d.glb",
+    "lean_over": "assets/chars/clips/scholar/lean_over.951ac3dc.glb",
+    "lean_chin": "assets/chars/clips/scholar/lean_chin.5e5646ce.glb",
+    "ride": "assets/chars/clips/scholar/ride.6298664a.glb",
+    "sit_talk": "assets/chars/clips/scholar/sit_talk.2cbd34fa.glb",
+    "listen": "assets/chars/clips/scholar/listen.1346b67e.glb",
+    "bow": "assets/chars/clips/scholar/bow.4868a59f.glb",
+    "reach_over_rail": "assets/chars/clips/scholar/reach_over_rail.822a89ad.glb",
+    "point_way": "assets/chars/clips/scholar/point_way.1e302880.glb",
+    "listen~soles": "assets/chars/clips/scholar/listen~soles.391cc6cb.glb",
+    "bridle~carter_24218": "assets/chars/clips/scholar/bridle~carter_24218.05c5267a.glb",
+    "bridle~man_at_horse_head_24506": "assets/chars/clips/scholar/bridle~man_at_horse_head_24506.427b1c8d.glb",
+    "lean_over~terrace_diner_leaning_23216": "assets/chars/clips/scholar/lean_over~terrace_diner_leaning_23216.7664b25e.glb",
+    "lean_over~deck_rail_leaner_19538": "assets/chars/clips/scholar/lean_over~deck_rail_leaner_19538.4945042b.glb",
+    "lean_over~man_bending_to_donkey_13440": "assets/chars/clips/scholar/lean_over~man_bending_to_donkey_13440.37bff710.glb"
+   }
+  },
+  "sightseer": {
+   "src": "123bb02c",
+   "body": "assets/chars/body/sightseer.69579e95.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/sightseer/walk.a8af8074.glb",
+    "run": "assets/chars/clips/sightseer/run.b42a7c48.glb",
+    "look": "assets/chars/clips/sightseer/look.ec09d94f.glb",
+    "chat": "assets/chars/clips/sightseer/chat.669a8e9f.glb",
+    "lean_chin": "assets/chars/clips/sightseer/lean_chin.331b184e.glb",
+    "ride": "assets/chars/clips/sightseer/ride.7792d145.glb",
+    "crane": "assets/chars/clips/sightseer/crane.4fa4fe62.glb",
+    "bow": "assets/chars/clips/sightseer/bow.fbc5d3ba.glb",
+    "fan_walk": "assets/chars/clips/sightseer/fan_walk.606a5f82.glb",
+    "knees_up": "assets/chars/clips/sightseer/knees_up.bd35613f.glb",
+    "point": "assets/chars/clips/sightseer/point.734bd7a1.glb",
+    "listen": "assets/chars/clips/sightseer/listen.218e8fc4.glb",
+    "lean_over": "assets/chars/clips/sightseer/lean_over.fedf283f.glb",
+    "lean_chin~moat_rail": "assets/chars/clips/sightseer/lean_chin~moat_rail.73965f6f.glb",
+    "listen~soles": "assets/chars/clips/sightseer/listen~soles.1954ba5d.glb",
+    "lean_chin~man_at_railing_27650": "assets/chars/clips/sightseer/lean_chin~man_at_railing_27650.53b06b0c.glb",
+    "lean_over~rail_watcher_19923": "assets/chars/clips/sightseer/lean_over~rail_watcher_19923.0a67e78e.glb",
+    "lean_over~deck_rail_leaner_19715": "assets/chars/clips/sightseer/lean_over~deck_rail_leaner_19715.4134636a.glb",
+    "lean_over~deck_rail_face_19350": "assets/chars/clips/sightseer/lean_over~deck_rail_face_19350.7278d58d.glb",
+    "lean_over~man_arms_on_railing_18982": "assets/chars/clips/sightseer/lean_over~man_arms_on_railing_18982.bf98f204.glb"
+   }
+  },
+  "soldier": {
+   "src": "9858a1dc",
+   "body": "assets/chars/body/soldier.4231a5e3.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/soldier/walk.87902fee.glb",
+    "run": "assets/chars/clips/soldier/run.fa8893df.glb",
+    "sleep_side": "assets/chars/clips/soldier/sleep_side.a1245cf5.glb",
+    "doze_knees": "assets/chars/clips/soldier/doze_knees.153b2979.glb",
+    "sit_one_knee": "assets/chars/clips/soldier/sit_one_knee.88f9ac0d.glb",
+    "squat_sleeves": "assets/chars/clips/soldier/squat_sleeves.626f15ef.glb",
+    "kneel_sleep": "assets/chars/clips/soldier/kneel_sleep.20fa05d4.glb",
+    "sit": "assets/chars/clips/soldier/sit.328118a9.glb"
+   }
+  },
+  "storyteller": {
+   "src": "7be3d0d8",
+   "body": "assets/chars/body/storyteller.aa0dc8f2.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/storyteller/walk.70dd886d.glb",
+    "run": "assets/chars/clips/storyteller/run.eab07760.glb",
+    "tell": "assets/chars/clips/storyteller/tell.03ab185f.glb",
+    "sit_floor": "assets/chars/clips/storyteller/sit_floor.8b46b4a8.glb",
+    "sit": "assets/chars/clips/storyteller/sit.5f63e839.glb",
+    "sit_point": "assets/chars/clips/storyteller/sit_point.9d804667.glb",
+    "show_goods_seated": "assets/chars/clips/storyteller/show_goods_seated.bb029972.glb",
+    "show_goods_seated~seated_man_13240": "assets/chars/clips/storyteller/show_goods_seated~seated_man_13240.492c13e3.glb",
+    "sit~soles": "assets/chars/clips/storyteller/sit~soles.1b92aa0e.glb"
+   }
+  },
+  "straw_hat": {
+   "src": "c9901d44",
+   "body": "assets/chars/body/straw_hat.3b7f3fe7.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/straw_hat/walk.8f60e2f6.glb",
+    "run": "assets/chars/clips/straw_hat/run.7c5e1e10.glb",
+    "look": "assets/chars/clips/straw_hat/look.54fd1ffa.glb",
+    "crouch": "assets/chars/clips/straw_hat/crouch.ce502387.glb",
+    "push": "assets/chars/clips/straw_hat/push.9c694724.glb",
+    "sit": "assets/chars/clips/straw_hat/sit.e8f29c16.glb",
+    "crane": "assets/chars/clips/straw_hat/crane.f9d29a50.glb",
+    "carry_pole": "assets/chars/clips/straw_hat/carry_pole.34ab32ba.glb",
+    "stand_pole": "assets/chars/clips/straw_hat/stand_pole.c59cdd0e.glb",
+    "hold_rope": "assets/chars/clips/straw_hat/hold_rope.74d8f864.glb",
+    "tow_walk": "assets/chars/clips/straw_hat/tow_walk.b4614811.glb",
+    "pole_boat": "assets/chars/clips/straw_hat/pole_boat.bbff2478.glb",
+    "drive_donkeys": "assets/chars/clips/straw_hat/drive_donkeys.bb6ba457.glb",
+    "push~barrow_pusher_25532": "assets/chars/clips/straw_hat/push~barrow_pusher_25532.9f4c0ac4.glb",
+    "pole_boat~hold": "assets/chars/clips/straw_hat/pole_boat~hold.86296328.glb"
+   }
+  },
+  "townsman": {
+   "src": "7a7d93ac",
+   "body": "assets/chars/body/townsman.947d1a21.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/townsman/walk.71cf637a.glb",
+    "run": "assets/chars/clips/townsman/run.a501e5cb.glb",
+    "talk": "assets/chars/clips/townsman/talk.3f4f49bc.glb",
+    "look": "assets/chars/clips/townsman/look.54a24cee.glb",
+    "ride": "assets/chars/clips/townsman/ride.6a4538b3.glb",
+    "crane": "assets/chars/clips/townsman/crane.b8b3ecff.glb",
+    "bow": "assets/chars/clips/townsman/bow.ef30150b.glb",
+    "lead": "assets/chars/clips/townsman/lead.3d63b334.glb",
+    "hand_over": "assets/chars/clips/townsman/hand_over.a5fe64d9.glb",
+    "crouch": "assets/chars/clips/townsman/crouch.d80f4977.glb",
+    "back_load": "assets/chars/clips/townsman/back_load.53529355.glb",
+    "show_garment": "assets/chars/clips/townsman/show_garment.a8e978d4.glb",
+    "browse": "assets/chars/clips/townsman/browse.0a57b4da.glb",
+    "carry_child": "assets/chars/clips/townsman/carry_child.1a76894c.glb",
+    "squat_sleeves": "assets/chars/clips/townsman/squat_sleeves.92d7f2be.glb",
+    "carry_pole": "assets/chars/clips/townsman/carry_pole.974c2c22.glb",
+    "sit": "assets/chars/clips/townsman/sit.a9e9a570.glb",
+    "listen": "assets/chars/clips/townsman/listen.286d500c.glb",
+    "lean_over": "assets/chars/clips/townsman/lean_over.cb05f75d.glb",
+    "hail": "assets/chars/clips/townsman/hail.5f06ebd2.glb",
+    "kneel_sleep": "assets/chars/clips/townsman/kneel_sleep.31624521.glb",
+    "hold_tray": "assets/chars/clips/townsman/hold_tray.f9630da9.glb",
+    "reach_over_rail": "assets/chars/clips/townsman/reach_over_rail.58a1068f.glb",
+    "sack_carry": "assets/chars/clips/townsman/sack_carry.bf85ec58.glb",
+    "sit_floor": "assets/chars/clips/townsman/sit_floor.b581e13d.glb",
+    "ride~traveller_rider_30165": "assets/chars/clips/townsman/ride~traveller_rider_30165.35eeac34.glb",
+    "carry_child~child": "assets/chars/clips/townsman/carry_child~child.f4d6d20f.glb"
+   }
+  },
+  "tracker": {
+   "src": "f4a9202a",
+   "body": "assets/chars/body/tracker.070c2990.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/tracker/walk.9a6007f6.glb",
+    "run": "assets/chars/clips/tracker/run.4ffb308c.glb",
+    "look": "assets/chars/clips/tracker/look.1ef3e7f3.glb",
+    "push": "assets/chars/clips/tracker/push.6461ce6d.glb",
+    "hold_rope": "assets/chars/clips/tracker/hold_rope.0b479f9d.glb",
+    "tow_walk": "assets/chars/clips/tracker/tow_walk.58c41ff0.glb"
+   }
+  },
+  "woman": {
+   "src": "b2f5a13e",
+   "body": "assets/chars/body/woman.b4365721.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/woman/walk.f40a20dd.glb",
+    "run": "assets/chars/clips/woman/run.4ad30207.glb",
+    "sit": "assets/chars/clips/woman/sit.01d5814d.glb",
+    "hold_child": "assets/chars/clips/woman/hold_child.681e076b.glb",
+    "look": "assets/chars/clips/woman/look.e82ead87.glb",
+    "lean_chin": "assets/chars/clips/woman/lean_chin.03e8c59f.glb",
+    "tie_kerchief": "assets/chars/clips/woman/tie_kerchief.f89b0952.glb",
+    "ride_side": "assets/chars/clips/woman/ride_side.36caa683.glb",
+    "sit_hold_child": "assets/chars/clips/woman/sit_hold_child.c584ec83.glb",
+    "hold_child~child": "assets/chars/clips/woman/hold_child~child.5f4ba655.glb",
+    "lean_chin~passenger_leaning_in_bay_23385": "assets/chars/clips/woman/lean_chin~passenger_leaning_in_bay_23385.661fdce3.glb"
+   }
+  },
+  "woman_pale": {
+   "src": "a3e6fa61",
+   "body": "assets/chars/body/woman_pale.d7904fc4.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/woman_pale/walk.f40a20dd.glb",
+    "run": "assets/chars/clips/woman_pale/run.4ad30207.glb",
+    "sit": "assets/chars/clips/woman_pale/sit.01d5814d.glb",
+    "hold_child": "assets/chars/clips/woman_pale/hold_child.681e076b.glb",
+    "look": "assets/chars/clips/woman_pale/look.e82ead87.glb",
+    "lean_chin": "assets/chars/clips/woman_pale/lean_chin.03e8c59f.glb",
+    "tie_kerchief": "assets/chars/clips/woman_pale/tie_kerchief.f89b0952.glb",
+    "ride_side": "assets/chars/clips/woman_pale/ride_side.36caa683.glb",
+    "sit_hold_child": "assets/chars/clips/woman_pale/sit_hold_child.c584ec83.glb",
+    "hold_child~child": "assets/chars/clips/woman_pale/hold_child~child.5f4ba655.glb"
+   }
+  },
+  "youth": {
+   "src": "05e3f4dd",
+   "body": "assets/chars/body/youth.8820c070.glb",
+   "base": [
+    "idle"
+   ],
+   "clips": {
+    "walk": "assets/chars/clips/youth/walk.2043c1ef.glb",
+    "run": "assets/chars/clips/youth/run.daa8a142.glb",
+    "look": "assets/chars/clips/youth/look.28e75a96.glb",
+    "chin": "assets/chars/clips/youth/chin.dbde4bda.glb",
+    "reach": "assets/chars/clips/youth/reach.7083a1eb.glb",
+    "crane": "assets/chars/clips/youth/crane.185aa165.glb",
+    "reach_over_rail": "assets/chars/clips/youth/reach_over_rail.6667afae.glb"
+   }
+  }
+ }
+}

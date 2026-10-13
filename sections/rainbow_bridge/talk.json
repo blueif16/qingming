@@ -1,0 +1,6541 @@
+{
+ "about": "S3 虹橋 (the Rainbow Bridge): who speaks and what (the life pass, gen/life/progress.md; format tools/talk_data.mjs; pilot sections/outer_road/talk.json). Lines come from 名画记 18–25 and 1, 9, 余辉 2015/2021/2023, 《東京夢華錄》, 《澠水燕談錄》 and the map; where the readings disagree, each scene's `reading` says which we follow. scenes: near talks (press E at the host; `as` = the line for who you play, `again` = the next talk with the same host). Hosts stand where you can reach them (the deck, the banks, the tavern's forecourt): the boat crews and the upstairs diners speak only through chatter. chatter: groups that talk among themselves when you are within earshot. barks: a lone figure's word now and then (`close`: a call to you as you come near). Every role is a painted figure of people.json; every line cites its reading (src); 繁體, no numbers on screen; lines fit the figure's clips. Plot-line steps told here: grain.3 (V3.10, c3.grain), wine.1 (V3.5, c3.diners), charcoal.2 (V3.7, c3.smalltavern), boat.1 (V3.2, c3.bigboat), boat.2 (V3.1, c3.rail), screen.2 (V3.6, c3.chuanche). Bundled by tools/ui_data.mjs into web/public/assets/ui/talk.json.",
+ "scenes": [
+  {
+   "id": "V3.1",
+   "step": "boat.2",
+   "title": "上下呼救",
+   "title_en": "Shouting Down to the Boat",
+   "host": "youth",
+   "group": "S3.grp.shouting_down_to_boat",
+   "reading": "名画记 19, 20: as the boat comes under the arch, people on the bridge throw down ropes and a man on the boat's roof takes them; the crowd shouts, points, gives advice, reaches out and cannot help. 余辉 2015 看点三: people above and below see the danger and shout (上下呼救), and a rope is thrown so the crew will not fall in; 2021: the bow is swung across to slow her, and ship and bridge come out safe. 名画记 calls her a laden cargo boat, 余辉 a big passenger boat of two or three hundred: we follow 余辉 for what she is and why she is in danger (the trackers towed her too close), 名画记 for the crew's work. The map: a youth leans over the near railing with a line in his hand, a man at the crown hangs far over as if lowering a rope, a capped man leans out with an arm raised; below, two boatmen point the way at the bow and one pushes a pole up at the arch.",
+   "roles": {
+    "youth": {
+     "fig": "deck_youth_rope_19445",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "the youth leaning over the railing with a line in his hand (map); 名画记 19 (ropes thrown from the bridge)"
+    },
+    "lowering": {
+     "fig": "man_lowering_rope_19295",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man bent far over the railing at the crown, arms down, as if lowering a rope (map)"
+    },
+    "shouter": {
+     "fig": "deck_capped_shouter_19492",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the capped man leaning out with one arm raised (map)"
+    },
+    "bow": {
+     "fig": "bowman_arm_out_19565",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "the boatman at the bow with his arm out, pointing the way (map; 名画记 19)"
+    },
+    "roof": {
+     "fig": "boatman_pole_raised_19775",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "the boatman pushing a pole up at the arch (map); 余辉 2015 (a boatman braces a long pole against the bridge beam)"
+    }
+   },
+   "beats": [
+    {
+     "who": "youth",
+     "say": "接住！繩子來了！",
+     "say_en": "Catch! Here comes the rope!",
+     "src": "名画记 19 (ropes thrown down from the bridge, taken up on the boat's roof)",
+     "as": {
+      "guan": "官人讓一讓，我拋繩下去！",
+      "shi": "相公搭把手，拉住這頭！",
+      "tong": "小娃兒閃開，莫掉下去！",
+      "fu": "娘子退後些，欄干邊擠！",
+      "seng": "師父借過，船要撞了！",
+      "jun": "軍爺，幫著拉一把！",
+      "li": "兄弟，來，一齊拋！"
+     },
+     "as_en": {
+      "guan": "Make room, sir, I'm throwing the rope down!",
+      "shi": "Lend a hand, sir, hold this end!",
+      "tong": "Out of the way, kid, don't fall over!",
+      "fu": "Stand back, madam, it's packed at the railing!",
+      "seng": "Excuse me, Master, the boat's about to hit!",
+      "jun": "Soldier, help me pull!",
+      "li": "Brother, come on, throw it together!"
+     }
+    },
+    {
+     "who": "bow",
+     "say": "桅桿還沒放倒！",
+     "say_en": "The mast's not down yet!",
+     "src": "名画记 19 (the crew lowering the mast); 余辉 2015 (the mast about to strike the bridge)"
+    },
+    {
+     "who": "lowering",
+     "say": "繩子夠長，再放些！",
+     "say_en": "The rope's long enough, let out more!",
+     "src": "the map (bent far over the railing, arms down, as if lowering a rope)"
+    },
+    {
+     "who": "shouter",
+     "say": "頂住！拿篙頂住！",
+     "say_en": "Brace it! Brace it with a pole!",
+     "src": "名画记 20 (the onlookers shout and give advice)"
+    },
+    {
+     "who": "roof",
+     "say": "頂住了！快放桅！",
+     "say_en": "I've got it braced! Lower the mast!",
+     "src": "余辉 2015 (a boatman braces a long pole against the bridge beam so the crew can lower the mast)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "youth",
+       "say": "方才好險，桅桿差點撞橋。",
+       "say_en": "That was close: the mast nearly hit the bridge.",
+       "src": "余辉 2015 看点三 (the mast about to strike the bridge)",
+       "as": {
+        "guan": "官人看見了？方才好險。",
+        "tong": "你瞧見沒有？好險！"
+       },
+       "as_en": {
+        "guan": "Did you see, sir? That was close.",
+        "tong": "Did you see? So close!"
+       }
+      },
+      {
+       "who": "shouter",
+       "say": "都怪拉縴的，只顧埋頭拉。",
+       "say_en": "Blame the trackers: heads down, just pulling.",
+       "src": "余辉 2015 (the trackers towed her right up to the bridge)"
+      },
+      {
+       "who": "lowering",
+       "say": "該在橋前就叫停的。",
+       "say_en": "Someone should have called a halt before the bridge.",
+       "src": "余辉 2021 (no one was posted to tell the trackers to stop and the crew to lower the mast)"
+      },
+      {
+       "who": "youth",
+       "say": "一船兩三百人，可不是耍的。",
+       "say_en": "Two or three hundred aboard: no joke.",
+       "src": "余辉 2021 (a big passenger boat carried two or three hundred)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "youth",
+       "say": "你瞧，桅桿放倒了。",
+       "say_en": "Look, the mast is down.",
+       "src": "名画记 19 (the crew lowering the mast)",
+       "as": {
+        "guan": "官人瞧，桅桿放倒了。"
+       },
+       "as_en": {
+        "guan": "Look, sir, the mast is down."
+       }
+      },
+      {
+       "who": "bow",
+       "say": "穩住船頭，橫過來！",
+       "say_en": "Hold the bow, swing her across!",
+       "src": "余辉 2021 (the polers turn the bow sideways to slow her)"
+      },
+      {
+       "who": "shouter",
+       "say": "好！過得去了！",
+       "say_en": "Good! She'll get through!",
+       "src": "余辉 2021 (ship and bridge seem about to come out safe)"
+      },
+      {
+       "who": "youth",
+       "think": "手都勒紅了。",
+       "think_en": "The rope's rubbed my hands red.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.2",
+   "step": "boat.1",
+   "title": "大船搶險",
+   "title_en": "The Big Boat in Danger",
+   "host": "waver",
+   "group": "S3.grp.bank_watchers_under_arch_19600",
+   "reading": "名画记 19: laden boats come upstream one after another; here the river is narrow and fast and the bridge low, so the whole crew works at once: some lower the mast, some pole hard, some brace poles against the bridge, some shout to the boats ahead. 余辉 2015/2021 (chosen for what she is and why she is in danger): a big passenger boat whose mast is about to strike the bridge because the trackers towed her too close; the crew drop the mast, one man braces a long pole against the beam, the polers swing her bow across to slow her; on the bridge and the banks everyone holds his breath. The map: on the south bank under the arch a man waves his arm high at the boat from behind the shed, another looks up; on board, men push poles up at the arch, the stern hands haul the mast's lines, a man in the after cabin's door holds a long pole out past the stern.",
+   "roles": {
+    "waver": {
+     "fig": "bank_waver_19612",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man waving at the big boat from behind the shed (map)"
+    },
+    "watcher": {
+     "fig": "bank_watcher_19672",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man behind the shed looking up at the boat (map)"
+    },
+    "pole": {
+     "fig": "boatman_both_arms_pole_19840",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "the boatman with both arms raised on a pole (map; 名画记 19)"
+    },
+    "haul": {
+     "fig": "boatman_hauling_rope_20205",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "the boatman hauling a mast line on the stern deck (map)"
+    },
+    "door": {
+     "fig": "boatman_cabin_door_pole_20300",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "the boatman in the after cabin's door with a long pole (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "waver",
+     "say": "快看！那船要撞橋了！",
+     "say_en": "Look! That boat's going to hit the bridge!",
+     "src": "余辉 2015 (people above and below see the danger and shout)",
+     "as": {
+      "guan": "官人快看，大船要撞橋了！",
+      "shi": "相公看那桅桿，要撞上了！",
+      "fu": "娘子莫怕，站遠些看。",
+      "tong": "小娃兒，站穩了，莫下水！",
+      "seng": "師父念聲佛罷，那船懸了！",
+      "jun": "軍爺，那船要出事了！",
+      "li": "兄弟，快去搭把手！"
+     },
+     "as_en": {
+      "guan": "Look, sir, the big boat's about to hit the bridge!",
+      "shi": "Look at the mast, sir, it's going to hit!",
+      "fu": "Don't be afraid, madam, watch from further back.",
+      "tong": "Little one, stand firm, don't go in the water!",
+      "seng": "Master, say a prayer: that boat's in trouble!",
+      "jun": "Soldier, that boat's in trouble!",
+      "li": "Brother, go and lend a hand!"
+     }
+    },
+    {
+     "who": "haul",
+     "say": "放桅！快放桅！",
+     "say_en": "Drop the mast! Quick, drop it!",
+     "src": "名画记 19 (some lower the mast); the map (hauling a mast line on the stern deck)"
+    },
+    {
+     "who": "pole",
+     "say": "篙頂住橋，莫叫船撞上去！",
+     "say_en": "Pole against the bridge, don't let her hit!",
+     "src": "名画记 19 (some brace poles against the bridge); the map (both arms raised on a pole)"
+    },
+    {
+     "who": "door",
+     "say": "船尾撐開，莫碰那條船！",
+     "say_en": "Push the stern off, don't hit that boat!",
+     "src": "the map (a long pole held out past the stern toward the north-bank boat)"
+    },
+    {
+     "who": "watcher",
+     "think": "捏一把汗……",
+     "think_en": "My palms are sweating…",
+     "src": "余辉 2015 (桥上和岸边百姓们都捏着一把汗)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "waver",
+       "say": "你也瞧見了？這河一到橋下就急。",
+       "say_en": "You saw it too? The river runs fast under the bridge.",
+       "src": "名画记 19 (the river narrow and fast here, the bridge low)",
+       "as": {
+        "guan": "官人也瞧見了？橋下水急。"
+       },
+       "as_en": {
+        "guan": "You saw it too, sir? The water's fast under the bridge."
+       }
+      },
+      {
+       "who": "watcher",
+       "say": "河窄水急，橋又低。",
+       "say_en": "Narrow river, fast water, and a low bridge.",
+       "src": "名画记 19"
+      },
+      {
+       "who": "haul",
+       "say": "早該放桅，拉縴的不喊停！",
+       "say_en": "We should've dropped the mast; the trackers never called a halt!",
+       "src": "余辉 2015 (the trackers towed her right under the bridge)"
+      },
+      {
+       "who": "waver",
+       "say": "幸好有人拿篙頂住了。",
+       "say_en": "Lucky someone braced it with a pole.",
+       "src": "余辉 2015 (one boatman braced a long pole against the beam)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.3",
+   "title": "車轎相爭",
+   "title_en": "Sedan Against Horseman",
+   "host": "groom",
+   "group": "S3.grp.sedan_vs_horseman",
+   "reading": "余辉 2015 看点三 (chosen): on the bridge a civil official in a sedan and a military officer on horseback meet and neither gives way; the bearers and the horseman's men each lean on their master's rank and quarrel, adding a second danger on the deck to the one under it; 2021: the deck is narrowed by stalls on both sides (侵街), the attendants of a civil official and a general argue and it all becomes a tangle. 名画记 20 reads only the crowd. The map: the sedan carried up the south ramp, a man at its front pointing up the bridge, two men in wide hats pointing back at it; the rider in white coming down, his groom hugging the horse's lowered neck, a man in front flinging his arms wide. No passenger shows in the closed sedan, so none speaks; the rider is 余辉's 武官, named 官人 here. Which side each pointing man is on is our reading.",
+   "roles": {
+    "groom": {
+     "fig": "groom_holding_horse_19095",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "the groom hugging the horse's lowered neck to hold it (map; 余辉 2015 车轿相争)"
+    },
+    "arms": {
+     "fig": "man_arms_flung_wide_18990",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "the man flinging his arms wide in front of the horse, clearing the way (map; the horseman's side is our reading)"
+    },
+    "pointer": {
+     "fig": "pointer_east_18830",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "the man at the sedan's front pointing up the bridge (map; the sedan's side is our reading)"
+    },
+    "hat": {
+     "fig": "wide_hat_pointer_18855",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "the man in a wide flat hat pointing back at the sedan (map: perhaps the horseman's side)"
+    },
+    "front": {
+     "fig": "sedan_bearer_front_18838",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "the front sedan bearer (map; 余辉 2015 轿夫)"
+    },
+    "rider": {
+     "fig": "rider_white_robe_19110",
+     "name": "官人",
+     "name_en": "official",
+     "src": "the rider in white on the brown horse (map); 余辉 2015 reads a military officer (武官)"
+    }
+   },
+   "beats": [
+    {
+     "who": "groom",
+     "say": "站開些，這馬性子烈！",
+     "say_en": "Stand back, this horse has a temper!",
+     "src": "the map (the groom hugs the lowered neck to hold the horse)",
+     "as": {
+      "guan": "官人站開些，這馬驚了！",
+      "shi": "相公莫近，這馬踢人！",
+      "fu": "娘子快躲開，馬要驚！",
+      "tong": "小娃兒，離馬蹄遠些！",
+      "seng": "師父借光，馬不聽話。",
+      "jun": "軍爺，幫我擋一擋那轎子！",
+      "li": "兄弟，搭把手按住牠！"
+     },
+     "as_en": {
+      "guan": "Stand back, sir, the horse is spooked!",
+      "shi": "Don't come close, sir, this horse kicks!",
+      "fu": "Get away, madam, the horse may bolt!",
+      "tong": "Kid, keep clear of the hooves!",
+      "seng": "Excuse me, Master, the horse won't behave.",
+      "jun": "Soldier, help me hold back that sedan!",
+      "li": "Brother, help me hold him!"
+     }
+    },
+    {
+     "who": "arms",
+     "say": "閃開！官人的馬下橋了！",
+     "say_en": "Clear the way! The official's horse is coming down!",
+     "src": "the map (arms flung wide in front of the horse, clearing the way)"
+    },
+    {
+     "who": "pointer",
+     "say": "我家相公的轎子，讓開！",
+     "say_en": "My master's sedan! Make way!",
+     "src": "余辉 2015 (the bearers lean on their master's rank); 相公, a Song word for an official"
+    },
+    {
+     "who": "hat",
+     "say": "下橋的先走，你們退下去！",
+     "say_en": "Those coming down go first. Back down, you!",
+     "src": "the map (pointing back at the sedan); our proposal (the horseman's side)"
+    },
+    {
+     "who": "front",
+     "say": "抬著轎子，怎麼退！",
+     "say_en": "How do we back down carrying a sedan?",
+     "src": "our proposal (the bearer climbing the ramp under the poles)"
+    },
+    {
+     "who": "rider",
+     "think": "文官的轎子，也來爭道。",
+     "think_en": "A civil official's sedan, fighting for the road.",
+     "src": "余辉 2015 (a civil official and a military officer, neither giving way)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": "還沒讓開呢，兩邊都不肯。",
+       "say_en": "Still stuck. Neither side will give way.",
+       "src": "余辉 2015 (互不相让)",
+       "as": {
+        "guan": "官人給評評理，誰該讓？"
+       },
+       "as_en": {
+        "guan": "Sir, you judge: who should give way?"
+       }
+      },
+      {
+       "who": "pointer",
+       "say": "橋面本就窄，兩邊又擺滿了攤。",
+       "say_en": "The deck's narrow, and stalls line both sides.",
+       "src": "余辉 2015 看点十, 2021 (stalls crowd onto the bridge: 侵街)"
+      },
+      {
+       "who": "hat",
+       "say": "官府也不管管這些攤子。",
+       "say_en": "And the authorities never deal with these stalls.",
+       "src": "余辉 2015 看点十 (no one manages the street)"
+      },
+      {
+       "who": "rider",
+       "think": "罷了，等他們吵完。",
+       "think_en": "Enough. Let them finish arguing.",
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "front",
+       "say": "這轎子沉，再停就壓斷肩了。",
+       "say_en": "This sedan's heavy; stop again and it'll break my shoulder.",
+       "src": "our proposal (the bearers on the ramp)",
+       "as": {
+        "guan": "官人，叫那馬讓一讓罷。"
+       },
+       "as_en": {
+        "guan": "Sir, have the horse give way, please."
+       }
+      },
+      {
+       "who": "groom",
+       "say": "這馬見人多就驚。",
+       "say_en": "This horse spooks in a crowd.",
+       "src": "our proposal (the groom hugs its lowered neck)"
+      },
+      {
+       "who": "arms",
+       "say": "前頭的，往欄干邊靠！",
+       "say_en": "You in front, keep to the railing!",
+       "src": "the map (arms flung wide)"
+      },
+      {
+       "who": "rider",
+       "think": "好好的清明，偏遇上這個。",
+       "think_en": "A fine Qingming, and this happens.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.4",
+   "title": "無柱飛橋",
+   "title_en": "The Bridge Without Piers",
+   "host": "post",
+   "group": "S3.grp.bank_watchers_under_arch",
+   "reading": "名画记 18: a pierless timber arch; the Bian rises and falls violently and wrecks pier bridges nearly every year, but this one is not struck by the current and lasts fifty years; it was thought up by a soldier held in a prison camp, and afterwards every bridge on the Bian copied it; Ming and Qing copies paint it as a stone arch. 《澠水燕談錄》卷八: in Qingzhou a discharged prison-camp soldier (牢城廢卒) built the first 飛橋 with no piers; it stood fifty years; 陳希亮 had it copied on the Bian, 'commonly called 虹橋'. 《東京夢華錄》卷一 河道: 虹橋, seven li outside the East Water Gate, no piers, great timbers spanned in the air, painted red, like a flying rainbow. 余辉 2021 notes that the painter wrote no name on the bridge (thirteen crossed the Bian); our old man uses the common name. The map: people in dark robes on the south bank under the arch's foot by the end post (表木) look up at the bridge and the boat.",
+   "roles": {
+    "post": {
+     "fig": "bank_watcher_at_end_post_18998",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "the figure in a dark robe at the end post (map); old age is our reading"
+    },
+    "robe": {
+     "fig": "robe_man_east_18893",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "the man in a long robe looking east (map)"
+    },
+    "vest": {
+     "fig": "bank_watcher_dark_vest_18945",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man in a dark vest looking up at the bridge (map)"
+    },
+    "crouch": {
+     "fig": "bank_watcher_crouching_18960",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "the man crouching in front of the watchers (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "post",
+     "say": "後生，你看這橋，底下沒一根柱子。",
+     "say_en": "Look at this bridge, lad: not one pier underneath.",
+     "src": "名画记 18; 東京夢華錄 卷一 河道 (其橋無柱)",
+     "as": {
+      "guan": "官人請看，這橋底下沒一根柱。",
+      "shi": "相公是讀書人，可知這橋無柱？",
+      "fu": "娘子瞧，這橋像天上的虹。",
+      "tong": "小哥兒，這橋像不像一道虹？",
+      "seng": "師父，這橋無柱，也立得穩。",
+      "jun": "軍爺可知，這橋是個牢城兵想的？",
+      "li": "兄弟，這橋全是大木頭搭的。"
+     },
+     "as_en": {
+      "guan": "See, sir: not one pier under this bridge.",
+      "shi": "You're a scholar, sir: did you know this bridge has no piers?",
+      "fu": "See, madam, the bridge is like a rainbow in the sky.",
+      "tong": "Little one, doesn't this bridge look like a rainbow?",
+      "seng": "Master, no piers, and yet it stands firm.",
+      "jun": "Soldier, did you know a prison-camp soldier thought this bridge up?",
+      "li": "Brother, it's all built of great timbers."
+     }
+    },
+    {
+     "who": "robe",
+     "say": "沒柱子，怎麼撐得住？",
+     "say_en": "No piers? How does it hold?",
+     "src": "our proposal"
+    },
+    {
+     "who": "post",
+     "say": "大木一根根交錯架起，洪水沖不著。",
+     "say_en": "Great timbers laid across each other; the floods can't strike it.",
+     "src": "名画记 18 (no piers, so the rushing water cannot strike it); 東京夢華錄 卷一 (皆以巨木虛架)"
+    },
+    {
+     "who": "vest",
+     "say": "怪不得叫虹橋，紅紅的一道。",
+     "say_en": "No wonder it's called the Rainbow Bridge: a red arc.",
+     "src": "東京夢華錄 卷一 河道 (飾以丹雘，宛如飛虹)"
+    },
+    {
+     "who": "crouch",
+     "think": "那大船的桅桿，可莫撞上……",
+     "think_en": "That big boat's mast, don't let it hit…",
+     "src": "名画记 19; the map (the watchers look up at the bridge and the boat)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "post",
+       "say": "這種橋，是青州一個廢卒想的。",
+       "say_en": "A discharged soldier in Qingzhou first thought of this kind of bridge.",
+       "src": "《澠水燕談錄》卷八 (牢城廢卒，有智思); 名画记 18",
+       "as": {
+        "guan": "官人可知，這橋是個廢卒想的？"
+       },
+       "as_en": {
+        "guan": "Did you know, sir, a discharged soldier thought it up?"
+       }
+      },
+      {
+       "who": "robe",
+       "say": "一個兵卒，倒有這般巧思。",
+       "say_en": "A common soldier, with such a clever idea.",
+       "src": "名画记 18 (出人意料)"
+      },
+      {
+       "who": "post",
+       "say": "五十年都不壞，後來汴河上都學。",
+       "say_en": "Fifty years and never broken; then the whole Bian copied it.",
+       "src": "名画记 18; 《澠水燕談錄》卷八 (至今沿汴皆飛橋)"
+      },
+      {
+       "who": "vest",
+       "say": "出了東水門七里，就是虹橋。",
+       "say_en": "Seven li out of the East Water Gate, there's the Rainbow Bridge.",
+       "src": "東京夢華錄 卷一 河道 (從東水門外七里曰虹橋)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "post",
+       "say": "汴河水漲得猛，有柱的橋年年沖壞。",
+       "say_en": "The Bian floods hard; bridges with piers wash out every year.",
+       "src": "名画记 18 (汴河的水暴涨暴落，几乎年年都会毁坏桥梁); 《澠水燕談錄》卷八"
+      },
+      {
+       "who": "crouch",
+       "think": "橋上那麼多人，壓得住麼？",
+       "think_en": "So many people on it. Will it hold?",
+       "src": "our proposal (the crowded deck, 名画记 20)"
+      },
+      {
+       "who": "post",
+       "say": "放心，這橋結實得很。",
+       "say_en": "Don't worry, this bridge is very sturdy.",
+       "src": "名画记 18 (坚固耐用)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.5",
+   "step": "wine.1",
+   "title": "十千腳店",
+   "title_en": "The Shiqian Tavern",
+   "host": "keeper",
+   "group": "S3.grp.shiqian_jiaodian_16800",
+   "reading": "名画记 24: the tavern door is lively; a horse is tied outside the fence, some guest's upstairs, and its groom sits on the ground inside the fence resting (the map's faint figure behind the lamp-box, re-read as seated for question 8, gen/life/q8_figures.md: he is the groom; the narrow figure at the gate's east post is the keeper, our proposal). 名画记 23: the 新酒 banner; wine tax was huge and wine a state monopoly; 新酒 is the wine sold from around mid-autumn. 《東京夢華錄》卷二: every tavern ties a 彩樓歡門 over its door; seventy-two 正店, the rest called 腳店; 卷五: a 正店 lends silver to a 腳店 that buys its wine a few times. 余辉 2023: the lamp-boxes of 孫記正店 and 十千腳店 are the earliest lit signs, candles inside at night. 余辉 2021: in such houses the dearest wines, 羊羔酒 at eighty cash a measure, 銀瓶酒 at seventy-two; at least half a string a head. The map: the narrow figure at the gate's east post, the faint man seated inside the bar fence behind the lamp-box, a waiter walking out with a plate, diners upstairs. The groom is 名画记 24's; the keeper is our proposal. The season the 新酒 banner implies (孔憲易: autumn) is told in the lore, not argued here.",
+   "roles": {
+    "keeper": {
+     "fig": "gate_post_figure_17332",
+     "name": "店家",
+     "name_en": "tavern keeper",
+     "src": "the narrow figure at the gate's east post holding out a small thing (map: the horse's groom or a tavern servant); the keeper calling guests in is our proposal"
+    },
+    "groom": {
+     "fig": "behind_lampbox_17090",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "名画记 24 (马夫则在栅栏内的地上坐着休息); the map: the faint man seated on the ground inside the bar fence behind the lamp-box, knees drawn up (gen/life/q8_figures.md)"
+    },
+    "waiter": {
+     "fig": "waiter_calling_17451",
+     "name": "酒保",
+     "name_en": "waiter",
+     "src": "the waiter in an apron walking out of the gate with a plate, mouth open (map); 余辉 2021 酒保"
+    },
+    "diner": {
+     "fig": "diner_cap_16077",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "the bearded diner upstairs, his hand held out over the table (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "keeper",
+     "say": "新酒上市，進來嘗嘗！",
+     "say_en": "New wine's in, come and taste!",
+     "src": "名画记 23 (新酒); 東京夢華錄 卷八 (諸店皆賣新酒); 余辉 2021 (羊羔酒); the keeper calling guests in at the gate post: our proposal",
+     "as": {
+      "guan": "官人裏邊請，新酒剛上市。",
+      "shi": "相公來飲新酒？樓上有座。",
+      "fu": "娘子打酒回家？櫃上就有。",
+      "tong": "小娃兒，酒可不賣給你。",
+      "seng": "師父，這是酒店，不是齋堂。",
+      "jun": "軍爺，羊羔酒來一角？",
+      "li": "兄弟，打碗小酒解解乏？"
+     },
+     "as_en": {
+      "guan": "Inside, sir! The new wine has just come in.",
+      "shi": "Here for the new wine, sir? There are seats upstairs.",
+      "fu": "Wine to take home, madam? We have it at the counter.",
+      "tong": "Kid, we don't sell wine to you.",
+      "seng": "Master, this is a tavern, not a temple hall.",
+      "jun": "Soldier, a measure of lamb wine?",
+      "li": "Brother, a bowl of plain wine to ease the day?"
+     }
+    },
+    {
+     "who": "groom",
+     "say": "莫碰這馬，是樓上客官的。",
+     "say_en": "Don't touch the horse; it belongs to a guest upstairs.",
+     "src": "名画记 24 (栅栏外拴着一匹马，不知是楼上哪位客人的，马夫则在栅栏内的地上坐着休息)",
+     "as": {
+      "guan": "官人也來吃酒？馬交給小的。",
+      "shi": "相公來飲新酒？樓上有座。",
+      "fu": "娘子莫走近，這馬會踢。",
+      "tong": "小娃兒，莫拔馬尾巴！",
+      "jun": "軍爺莫看了，這馬不賣。",
+      "li": "兄弟，替我看會兒馬？"
+     },
+     "as_en": {
+      "guan": "Here to drink too, sir? Leave your horse with me.",
+      "shi": "Here for the new wine, sir? There are seats upstairs.",
+      "fu": "Don't come close, madam, the horse kicks.",
+      "tong": "Kid, don't pull the horse's tail!",
+      "jun": "Don't eye it, soldier; the horse isn't for sale.",
+      "li": "Brother, mind the horse for me a while?"
+     }
+    },
+    {
+     "who": "waiter",
+     "say": "借過借過，外頭客官的點心！",
+     "say_en": "Coming through! Snacks for a guest outside!",
+     "src": "the map (walking out with a plate of buns, calling out); 余辉 2021 (the takeaway server)"
+    },
+    {
+     "who": "diner",
+     "say": "好酒！再打一角來！",
+     "say_en": "Good wine! Another measure!",
+     "src": "余辉 2021 (十千脚店里杯盘狼藉); our proposal"
+    },
+    {
+     "who": "keeper",
+     "think": "腳店的酒，也是正店打來的。",
+     "think_en": "A small tavern's wine comes from the big licensed house.",
+     "src": "東京夢華錄 卷二, 卷五 (正店 and 腳店: the 腳店 buys its wine from a 正店)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": "這燈箱，到夜裏點上蠟燭。",
+       "say_en": "At night we light candles in this lamp-box.",
+       "src": "余辉 2023 (the lamp-boxes of 孙记正店 and 十千脚店, candles inside at night)",
+       "as": {
+        "guan": "官人夜裏再來，燈箱都亮了。"
+       },
+       "as_en": {
+        "guan": "Come back at night, sir, when the lamp-box is lit."
+       }
+      },
+      {
+       "who": "groom",
+       "say": "十千二字在側面，客官瞧見沒？",
+       "say_en": "The words 'Shiqian' are on the side. See them?",
+       "src": "the map (the lamp-box: 腳店 on its face, 十千 on its east side)"
+      },
+      {
+       "who": "keeper",
+       "say": "門頭的歡門，是新紮起來的。",
+       "say_en": "The festive gate over the door is freshly tied.",
+       "src": "東京夢華錄 卷二 (凡京師酒店，門首皆縛彩樓歡門), 卷八 (重新結絡門面彩樓)"
+      },
+      {
+       "who": "waiter",
+       "say": "羊羔酒八十文一角，貴著呢。",
+       "say_en": "Lamb wine, eighty cash a measure: dear stuff.",
+       "src": "余辉 2021 (羊羔酒 eighty cash a measure, 银瓶酒 seventy-two)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": "又來了？樓上的客官還沒喝完。",
+       "say_en": "Back again? The guest upstairs isn't done drinking.",
+       "src": "名画记 24 (the groom waits for a guest upstairs)",
+       "as": {
+        "guan": "官人又來了？樓上正熱鬧。"
+       },
+       "as_en": {
+        "guan": "Back again, sir? It's lively upstairs."
+       }
+      },
+      {
+       "who": "groom",
+       "say": "我在欄裏歇腳，馬拴外頭。",
+       "say_en": "I rest inside the fence; the horse is tied outside.",
+       "src": "名画记 24 (栅栏外拴着一匹马…马夫则在栅栏内的地上坐着休息)"
+      },
+      {
+       "who": "diner",
+       "say": "新酒本是中秋前後才賣的。",
+       "say_en": "New wine usually goes on sale around mid-autumn.",
+       "src": "名画记 23; 東京夢華錄 卷八 中秋 (中秋節前，諸店皆賣新酒)"
+      },
+      {
+       "who": "keeper",
+       "say": "客官懂行。酒稅重，官家專賣。",
+       "say_en": "You know your wine. Wine tax is heavy; the state holds the trade.",
+       "src": "名画记 23 (酒税收入很高，官方对酒进行专卖)"
+      },
+      {
+       "who": "groom",
+       "think": "快些喝完，好回去。",
+       "think_en": "Hurry and finish, so we can go home.",
+       "src": "our proposal (the groom resting while his master drinks, 名画记 24)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.6",
+   "step": "screen.2",
+   "title": "串車字屏",
+   "title_en": "The Screen on the Cart",
+   "host": "count",
+   "group": "S3.grp.chuanche_17775",
+   "reading": "余辉 2015 看点六 (chosen): in 1102 the old party fell, and in 1103 蔡京 ordered the writings of 蘇軾, 黃庭堅 and the rest burned and banned; in two places in the scroll carters use a banned partisan's large cursive screen as a tarp over his other writings on a 串車, pushing it out of town on their master's orders to be destroyed; one is here at 十千脚店. 名画记 24 reads the load as strings of copper coins being loaded from the shop, two men loading and one counting: we voice that as a passer-by's guess. 《東京夢華錄》卷三: the 串車 is a one-wheeled cart steered by men front and back, a donkey drawing in front. The map: two men work at the load's handle end, a man stands north of it holding a stick across (名画记's counter); no animal or puller is painted at it.",
+   "roles": {
+    "count": {
+     "fig": "man_north_of_chuanche_17690",
+     "name": "管事",
+     "name_en": "steward",
+     "src": "the man behind the 串车 holding a stick across (map); 名画记 24 (one man counts)"
+    },
+    "topknot": {
+     "fig": "topknot_man_at_cart_17458",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the man with a topknot gripping a bundle on the load (map); 余辉 2015 (carters)"
+    },
+    "cap": {
+     "fig": "cap_man_at_cart_17545",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the man in a knotted cap leaning over the load (map)"
+    },
+    "bundle": {
+     "fig": "walker_with_bundle_17396",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "the man in knee breeches walking past with a dark bundle (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "count",
+     "say": "莫靠近，這車上的東西碰不得。",
+     "say_en": "Keep back. What's on this cart isn't to be touched.",
+     "src": "余辉 2015 (the banned writings); our proposal",
+     "as": {
+      "guan": "官人莫看，是主家要燒的舊物。",
+      "shi": "相公莫問，這是元祐的字。",
+      "fu": "娘子請讓讓，車要走了。",
+      "tong": "小娃兒走開，這不是耍的。",
+      "jun": "軍爺，主家吩咐，推出城去。",
+      "li": "兄弟，搭把手捆緊些。"
+     },
+     "as_en": {
+      "guan": "Don't look, sir. Old things my master wants burned.",
+      "shi": "Don't ask, sir. It's Yuanyou writing.",
+      "fu": "Please step aside, madam, the cart's leaving.",
+      "tong": "Go away, kid, this isn't a toy.",
+      "jun": "Soldier, master's orders: push it out of town.",
+      "li": "Brother, help tie it tighter."
+     }
+    },
+    {
+     "who": "bundle",
+     "say": "車上是一串串銅錢罷？",
+     "say_en": "Strings of copper coins on that cart, are they?",
+     "src": "名画记 24 (the load looks like strings of copper coins)"
+    },
+    {
+     "who": "topknot",
+     "say": "哪是錢，是一扇草書屏風。",
+     "say_en": "Not coins: a screen of cursive writing.",
+     "src": "余辉 2015 (a large-character cursive screen used as a tarp)"
+    },
+    {
+     "who": "cap",
+     "say": "拿它當苫布，蓋住底下的書。",
+     "say_en": "Used as a tarp, to cover the books underneath.",
+     "src": "余辉 2015 (当作苫布，包裹着旧党人的其他书籍文字)"
+    },
+    {
+     "who": "count",
+     "think": "好字，可惜了。",
+     "think_en": "Fine writing. A pity.",
+     "src": "余辉 2015 (the destruction of writing and art); our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "count",
+       "say": "主家吩咐，推到城外燒了。",
+       "say_en": "Master's orders: push it out of town and burn it.",
+       "src": "余辉 2015 (奉主人之命推到郊外销毁)",
+       "as": {
+        "guan": "官人，這是朝廷禁的，小的奉命。"
+       },
+       "as_en": {
+        "guan": "Sir, the court has banned it. I only follow orders."
+       }
+      },
+      {
+       "who": "topknot",
+       "say": "城門那邊，也推出一車去。",
+       "say_en": "Another cartload went out by the city gate too.",
+       "src": "余辉 2015 (two such carts in the scroll; the other at the gate)"
+      },
+      {
+       "who": "cap",
+       "say": "朝廷禁了，誰家還敢留？",
+       "say_en": "The court's banned it; who'd dare keep any?",
+       "src": "余辉 2015 (严禁生徒习读、藏家宝之)"
+      },
+      {
+       "who": "count",
+       "think": "這字，怕是蘇學士一路的。",
+       "think_en": "This hand looks like Scholar Su's school.",
+       "src": "余辉 2015 (the writings of 蘇軾, 黃庭堅 and the old party burned); our proposal (whose hand)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "count",
+       "say": "點一點，莫少了一卷。",
+       "say_en": "Count them, don't let a scroll go missing.",
+       "src": "名画记 24 (another man counts); our proposal (what he counts)",
+       "as": {
+        "guan": "官人稍候，小的點完就走。"
+       },
+       "as_en": {
+        "guan": "A moment, sir, I'll finish counting and go."
+       }
+      },
+      {
+       "who": "topknot",
+       "say": "這串車沒驢，全憑人推。",
+       "say_en": "No donkey for this cart; it's all pushing by hand.",
+       "src": "the map (no animal or puller painted); 東京夢華錄 卷三 (a 串車 usually has a donkey in front)"
+      },
+      {
+       "who": "cap",
+       "say": "起——走穩些！",
+       "say_en": "Up — steady now!",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.7",
+   "step": "charcoal.2",
+   "title": "橋邊酒館",
+   "title_en": "The Tavern by the Bridge",
+   "host": "keeper",
+   "group": "S3.grp.north_foot_stall_20013",
+   "reading": "名画记 21 (its pin at the bridge's north foot): the tavern by the bank does far better business than the one where the scroll enters town; a stall at its kitchen door is like a takeaway window; through the doors you see several fire mouths under the big stove; the charcoal the donkey train carries into town at the scroll's start feeds taverns like this. The map: a long low table of bowls or jars at the end post (an outdoor stall or the little tavern's serving table) with a faint keeper behind it, a man in a black hat at the tavern's west end, the tavern's tables and chairs standing empty. That the keeper serves from the kitchen-door table is our proposal from 名画记 21; why the tables are empty (everyone ran to watch the boat) is ours.",
+   "roles": {
+    "keeper": {
+     "fig": "stallkeeper_20030",
+     "name": "店家",
+     "name_en": "tavern keeper",
+     "src": "the faint keeper behind the low table at the end post (map); 名画记 21 (the stall at the kitchen door)"
+    },
+    "hat": {
+     "fig": "dark_hat_figure_20070",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "the man in a black hat and dark robe at the tavern's west end (map)"
+    },
+    "puller": {
+     "fig": "cart_puller_19870",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the man hauling the handcart up the north bank (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "keeper",
+     "say": "熱酒熱菜，帶走也成！",
+     "say_en": "Hot wine, hot food, to take away too!",
+     "src": "名画记 21 (a stall at the kitchen door, like a takeaway window)",
+     "as": {
+      "guan": "官人歇歇腳，熱酒現成的。",
+      "shi": "相公坐坐，看看河上的船。",
+      "fu": "娘子買些回去？包好給您。",
+      "tong": "小哥兒，買個餅？熱的。",
+      "seng": "師父，有素麵，熱的。",
+      "jun": "軍爺，打一角帶走？",
+      "li": "兄弟，一碗熱的，暖暖身子。"
+     },
+     "as_en": {
+      "guan": "Rest your feet, sir, hot wine's ready.",
+      "shi": "Sit a while, sir, and watch the boats.",
+      "fu": "Take some home, madam? I'll wrap it.",
+      "tong": "Want a bun, little one? It's hot.",
+      "seng": "Master, there are plain noodles, hot.",
+      "jun": "Soldier, a measure to take with you?",
+      "li": "Brother, a hot bowl to warm you up."
+     }
+    },
+    {
+     "who": "hat",
+     "say": "你這灶火倒旺。",
+     "say_en": "Your stove's burning well.",
+     "src": "名画记 21 (several fire mouths under the big stove)"
+    },
+    {
+     "who": "keeper",
+     "say": "燒的是城外驢馱來的炭。",
+     "say_en": "It's charcoal the donkeys bring in from the country.",
+     "src": "名画记 21 (the charcoal the donkey train brings in feeds these taverns); 名画记 1"
+    },
+    {
+     "who": "hat",
+     "say": "怪不得生意比郊外那家好。",
+     "say_en": "No wonder trade's better here than at that place in the country.",
+     "src": "名画记 21 (business far better than the tavern where the scroll enters town)"
+    },
+    {
+     "who": "keeper",
+     "think": "灶下幾個爐口，一刻不停。",
+     "think_en": "Several fire mouths under the stove, never idle.",
+     "src": "名画记 21 (大灶台下有好几个炉口)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": "又來了？靠河的座，風景好。",
+       "say_en": "Back again? The seats by the river have the view.",
+       "src": "名画记 21 (the tavern near the bank)",
+       "as": {
+        "guan": "官人又來了，靠河的座留著呢。"
+       },
+       "as_en": {
+        "guan": "Back again, sir; I've kept you a seat by the river."
+       }
+      },
+      {
+       "who": "hat",
+       "say": "方才那大船，就在你門前過。",
+       "say_en": "That big boat went right past your door just now.",
+       "src": "the map (the big boat's stern lies against this bank); 名画记 19"
+      },
+      {
+       "who": "keeper",
+       "say": "客人全跑去看了，桌子都空著。",
+       "say_en": "My guests all ran off to look; the tables are empty.",
+       "src": "the map (the tavern's tables and chairs stand empty, no customers painted); our proposal (why)"
+      },
+      {
+       "who": "puller",
+       "say": "借過，車子上坡了！",
+       "say_en": "Coming through, cart going uphill!",
+       "src": "the map (hauling the handcart up the north bank)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.8",
+   "title": "飲子",
+   "title_en": "Herbal Drinks",
+   "host": "seller",
+   "group": "S3.grp.twin_parasols_18570",
+   "reading": "名画记 22: under two big parasols hangs a small oblong signboard reading 飲子, our drinks, mostly boiled from herbs; those buying are all common folk in short jackets, so it cannot have been dear. The map: twin flat parasols behind the tile-capped wall with a small hanging signboard (illegible on the scan; scholars read 飲子), a man under them seen to the shoulders (their seller?); porters with shoulder poles walk past at the bottom edge. Who buys is our proposal: the porters are the short-jacket folk 名画记 names.",
+   "roles": {
+    "seller": {
+     "fig": "man_wide_hat_18615",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "the man under the twin parasols (map: their seller?); 名画记 22"
+    },
+    "porter": {
+     "fig": "porter_baskets_bottom_18175",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "the porter with two big baskets, mouth open (map)"
+    },
+    "pole": {
+     "fig": "pole_carrier_robe_18345",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "the man in a light robe with a pole across his shoulders (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "seller",
+     "say": "飲子！解渴解乏的飲子！",
+     "say_en": "Herbal drinks! Drinks to quench thirst and ease fatigue!",
+     "src": "名画记 22 (飲子, drinks boiled from herbs; cheap); the price in the tong line is our proposal",
+     "as": {
+      "guan": "官人也嘗一盞？草藥熬的。",
+      "shi": "相公讀書費神，喝盞飲子罷。",
+      "fu": "娘子，這飲子甜，孩子也愛喝。",
+      "tong": "小娃兒，一文錢一盞，要不要？",
+      "seng": "師父，素的，草藥熬的。",
+      "jun": "軍爺，喝一盞再上路。",
+      "li": "兄弟，挑擔累了罷？來一盞。"
+     },
+     "as_en": {
+      "guan": "A cup for you too, sir? Boiled from herbs.",
+      "shi": "Study wears you out, sir; have a cup.",
+      "fu": "Madam, it's sweet; children love it too.",
+      "tong": "Kid, one cash a cup, want one?",
+      "seng": "Master, it's meatless, boiled from herbs.",
+      "jun": "Soldier, a cup before the road.",
+      "li": "Tired from the load, brother? Have a cup."
+     }
+    },
+    {
+     "who": "porter",
+     "say": "來一盞！渴死我了。",
+     "say_en": "One cup! I'm dying of thirst.",
+     "src": "名画记 22 (the buyers are commoners in short jackets); the map (mouth open)"
+    },
+    {
+     "who": "seller",
+     "say": "一盞幾文錢，便宜得很。",
+     "say_en": "A few cash a cup, very cheap.",
+     "src": "名画记 22 (its price was not high)"
+    },
+    {
+     "who": "pole",
+     "say": "我也來一盞，擔子先放放。",
+     "say_en": "One for me too. Let me set the load down.",
+     "src": "our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "seller",
+       "say": "草藥熬了一夜，味兒正。",
+       "say_en": "Herbs boiled all night: just the right taste.",
+       "src": "名画记 22 (drinks boiled from herbs); our proposal",
+       "as": {
+        "guan": "官人又來了？今日熬得正好。"
+       },
+       "as_en": {
+        "guan": "Back again, sir? Today's brew is just right."
+       }
+      },
+      {
+       "who": "porter",
+       "say": "比酒便宜，又不醉人。",
+       "say_en": "Cheaper than wine, and it won't get you drunk.",
+       "src": "名画记 22 (cheap); our proposal"
+      },
+      {
+       "who": "seller",
+       "say": "挑擔的、推車的，都愛來這裏。",
+       "say_en": "Porters and carters all like coming here.",
+       "src": "名画记 22 (the buyers are all common folk in short jackets)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.9",
+   "title": "驢不肯走",
+   "title_en": "The Donkey Won't Budge",
+   "host": "beard",
+   "group": "S3.grp.barrow_18100",
+   "reading": "The map: a big one-wheeled barrow with a hooped load pushed from behind; a bearded man at its front leans back hauling the rope tied to a balking black donkey, whose hind legs are braced; a man in a light top reaches toward the load. 《東京夢華錄》卷三 般載雜賣: the 串車 is a one-wheeled cart, steered by men front and back, with a donkey drawing in front: this barrow and its donkey fit that word. What the load is, is not painted, so no line names it.",
+   "roles": {
+    "beard": {
+     "fig": "bearded_barrow_man_18098",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the bearded man hauling the balking donkey's rope (map)"
+    },
+    "push": {
+     "fig": "barrow_pusher_18295",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "the man pushing the barrow (map)"
+    },
+    "reach": {
+     "fig": "reaching_man_18062",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "the man in a light top reaching toward the barrow's load, helping perhaps (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "beard",
+     "say": "閃開些！這驢犯了倔！",
+     "say_en": "Stand clear! This donkey's turned stubborn!",
+     "src": "the map (the donkey's hind legs braced, the rope taut)",
+     "as": {
+      "guan": "官人恕罪，這畜生不聽使喚。",
+      "shi": "相公莫笑，這驢就是不走。",
+      "fu": "娘子退後，牠會踢人。",
+      "tong": "小娃兒，莫站在驢後頭！",
+      "seng": "師父，借您的佛力，叫牠走罷。",
+      "jun": "軍爺力氣大，幫拉一把？",
+      "li": "兄弟，幫我拽一拽！"
+     },
+     "as_en": {
+      "guan": "Pardon, sir, the beast won't obey.",
+      "shi": "Don't laugh, sir, the donkey just won't go.",
+      "fu": "Stand back, madam, it kicks.",
+      "tong": "Kid, don't stand behind the donkey!",
+      "seng": "Master, lend us your Buddha's power to make it go.",
+      "jun": "You're strong, soldier; help pull?",
+      "li": "Brother, help me haul!"
+     }
+    },
+    {
+     "who": "push",
+     "say": "你前頭拉，我後頭推！",
+     "say_en": "You pull in front, I'll push behind!",
+     "src": "東京夢華錄 卷三 (串車: men steering front and back, a donkey in front)"
+    },
+    {
+     "who": "beard",
+     "say": "走！再不走，賣了你！",
+     "say_en": "Move! Move, or I'll sell you!",
+     "src": "our proposal (hauling the balking donkey)"
+    },
+    {
+     "who": "reach",
+     "say": "這一車太重，驢也拉不動。",
+     "say_en": "This load's too heavy, even for the donkey.",
+     "src": "the map (the hooped load; he reaches toward it)"
+    },
+    {
+     "who": "push",
+     "think": "這畜生，比主家還難伺候。",
+     "think_en": "This beast is harder to please than the master.",
+     "src": "our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "beard",
+       "say": "還沒走成呢，牠就是不動。",
+       "say_en": "Still stuck. It just won't move.",
+       "src": "the map (the donkey balking)",
+       "as": {
+        "guan": "官人見笑，還沒走成。"
+       },
+       "as_en": {
+        "guan": "Forgive the show, sir, we're still stuck."
+       }
+      },
+      {
+       "who": "reach",
+       "say": "拿把草在前頭引牠。",
+       "say_en": "Hold some hay out in front to lead it.",
+       "src": "our proposal"
+      },
+      {
+       "who": "push",
+       "say": "這叫串車，前頭驢拽，後頭人推。",
+       "say_en": "That's a string cart: donkey pulls in front, men push behind.",
+       "src": "東京夢華錄 卷三 般載雜賣 (前有驢拽，謂之串車)"
+      },
+      {
+       "who": "beard",
+       "say": "動了！動了！慢慢走。",
+       "say_en": "It's moving! Moving! Easy now.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.10",
+   "step": "grain.3",
+   "title": "驢馱糧袋",
+   "title_en": "Donkeys with Grain Sacks",
+   "host": "call",
+   "group": "S3.grp.sack_donkeys_18600",
+   "reading": "The map: two dark donkeys under huge pale sacks push through the crowd at the bridge's south foot, one heading north-west and one east; a man in a dark robe bends toward them calling out, a child in red stands at the first donkey's head, and a man walks beside the pack donkey as if driving it. That the sacks hold grain going into town is our proposal on the grain thread: 名画记 9 (grain unloaded at the wharf), 《東京夢華錄》卷三 般載雜賣 (grain carried on donkeys in cloth sacks), 余辉 2015 (private dealers bring grain into the capital and hold it for a good price; prices rose and rose), 余辉 2023 (grain for the brewing 正店).",
+   "roles": {
+    "call": {
+     "fig": "calling_man_18690",
+     "name": "貨主",
+     "name_en": "owner",
+     "src": "the man in a dark robe bending and calling out to the loaded donkeys (map); owner is our reading"
+    },
+    "drive": {
+     "fig": "donkey_walker_18481",
+     "name": "趕驢的",
+     "name_en": "drover",
+     "src": "the man walking beside the pack donkey as if driving it (map)"
+    },
+    "child": {
+     "fig": "child_red_18592",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the small figure in red at the first donkey's head (map: a child?)"
+    }
+   },
+   "beats": [
+    {
+     "who": "call",
+     "say": "讓一讓！糧袋過來了！",
+     "say_en": "Make way! Grain sacks coming through!",
+     "src": "the map (calling out to the loaded donkeys); our proposal (grain)",
+     "as": {
+      "guan": "官人讓讓，驢馱著糧進城。",
+      "shi": "相公小心，莫叫袋子蹭了衣裳。",
+      "fu": "娘子靠邊，驢不認人。",
+      "tong": "小娃兒，莫站在驢前頭！",
+      "seng": "師父借過，糧袋沉。",
+      "jun": "軍爺，糧是送進城的，莫攔。",
+      "li": "兄弟，幫著扶一扶袋子！"
+     },
+     "as_en": {
+      "guan": "By your leave, sir: donkeys taking grain into town.",
+      "shi": "Careful, sir, don't let the sacks brush your robe.",
+      "fu": "Keep to the side, madam; donkeys don't look.",
+      "tong": "Kid, don't stand in front of the donkey!",
+      "seng": "Excuse me, Master, the sacks are heavy.",
+      "jun": "Soldier, the grain's for town; don't stop us.",
+      "li": "Brother, help steady the sack!"
+     }
+    },
+    {
+     "who": "drive",
+     "say": "這兩袋，是碼頭上剛卸的。",
+     "say_en": "These two sacks were just unloaded at the wharf.",
+     "src": "名画记 9 (grain unloaded at the wharf upriver); our proposal (the grain thread)"
+    },
+    {
+     "who": "child",
+     "say": "驢兒驢兒，你馱的是米麼？",
+     "say_en": "Donkey, donkey, is that rice you carry?",
+     "src": "the map (the child in red at the donkey's head); our proposal"
+    },
+    {
+     "who": "drive",
+     "say": "是糧，送進城裏去。",
+     "say_en": "It's grain, going into town.",
+     "src": "our proposal (the grain thread)"
+    },
+    {
+     "who": "call",
+     "think": "城裏糧價又漲，這趟賺得著。",
+     "think_en": "Grain's dearer in town again; this trip will pay.",
+     "src": "余辉 2015 (grain prices in the capital rose and rose; dealers waited for a good price)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "call",
+       "say": "又是你？這袋糧要送去正店。",
+       "say_en": "You again? This grain goes to a licensed wine house.",
+       "src": "余辉 2023 (grain for the brewing 正店); our proposal (the grain thread)",
+       "as": {
+        "guan": "官人又來了？糧是送正店釀酒的。"
+       },
+       "as_en": {
+        "guan": "Back again, sir? The grain's for a wine house's brewing."
+       }
+      },
+      {
+       "who": "drive",
+       "say": "過了城門，還得納稅。",
+       "say_en": "Through the gate, there's tax to pay.",
+       "src": "余辉 2023 (more taxpayers at the gate); our proposal"
+      },
+      {
+       "who": "child",
+       "say": "那邊那頭驢，往別處走了！",
+       "say_en": "That other donkey's going the other way!",
+       "src": "the map (one donkey heads north-west, one east)"
+      },
+      {
+       "who": "call",
+       "say": "快去攔住牠！",
+       "say_en": "Go and stop it!",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.11",
+   "title": "攔擔問價",
+   "title_en": "Stopping a Pedlar",
+   "host": "robe",
+   "group": "S3.grp.robed_man_and_porter_17680",
+   "reading": "The map: a man in a long grey robe holds his hand out, palm up, to a porter in a straw hat who has stopped with a bow-shaped frame of long strips hanging from his shoulder pole (goods for sale or a rack) and turns his head back; a small child holds the robed man's robe. A sale or a question; what hangs on the frame is not readable, so no line names it. Pedlar and the kinship are our proposal.",
+   "roles": {
+    "robe": {
+     "fig": "robed_man_gesturing_17567",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "the man in a long grey robe holding his hand out (map)"
+    },
+    "pedlar": {
+     "fig": "porter_straw_hat_17762",
+     "name": "貨郎",
+     "name_en": "pedlar",
+     "src": "the porter in a straw hat with a hanging frame of goods (map); pedlar is our reading"
+    },
+    "child": {
+     "fig": "child_holding_robe_17520",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "the small child holding the robed man's robe (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "robe",
+     "say": "煩你叫住那挑擔的！",
+     "say_en": "Please, call that porter back!",
+     "src": "the map (the robed man holds his hand out to the porter, who stops and turns)",
+     "as": {
+      "guan": "官人恕擾，前頭那挑擔的……",
+      "fu": "娘子，煩您叫住那貨郎。",
+      "tong": "小哥兒，替我喊那貨郎一聲。",
+      "li": "兄弟，喊住前頭那挑擔的！"
+     },
+     "as_en": {
+      "guan": "Pardon me, sir, that porter ahead…",
+      "fu": "Madam, would you call that pedlar back?",
+      "tong": "Little one, give that pedlar a shout for me.",
+      "li": "Brother, call that porter back!"
+     }
+    },
+    {
+     "who": "pedlar",
+     "say": "客官叫我？要些甚麼？",
+     "say_en": "Calling me, sir? What do you need?",
+     "src": "the map (he stops and turns his head toward the robed man)"
+    },
+    {
+     "who": "robe",
+     "say": "你這架上掛的，怎麼賣？",
+     "say_en": "How much for what hangs on your frame?",
+     "src": "the map (his hand held out, palm up, toward the frame)"
+    },
+    {
+     "who": "child",
+     "say": "爹爹，買一個給我！",
+     "say_en": "Daddy, buy me one!",
+     "src": "the map (the child holds the man's robe); our proposal (kinship)"
+    },
+    {
+     "who": "pedlar",
+     "say": "小哥兒好眼力，挑一樣罷。",
+     "say_en": "Sharp eyes, little one. Pick one.",
+     "src": "our proposal"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "robe",
+       "say": "這孩子，見了貨郎就走不動。",
+       "say_en": "This child can't walk past a pedlar.",
+       "src": "the map (the child holding his robe); our proposal",
+       "as": {
+        "guan": "官人見笑，孩子纏人。"
+       },
+       "as_en": {
+        "guan": "Forgive us, sir, the child pesters me."
+       }
+      },
+      {
+       "who": "child",
+       "say": "就要一個，就一個！",
+       "say_en": "Just one, only one!",
+       "src": "our proposal"
+      },
+      {
+       "who": "pedlar",
+       "say": "便宜賣你，圖個吉利。",
+       "say_en": "Cheap for you, for good luck.",
+       "src": "our proposal"
+      },
+      {
+       "who": "robe",
+       "think": "罷了，給他買一個。",
+       "think_en": "Fine, buy him one.",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3.12",
+   "title": "雜貨攤前",
+   "title_en": "At the Sundries Stall",
+   "host": "seller",
+   "group": "S3.grp.parasol_stall_18160",
+   "reading": "The map: under a very large parasol a sloping board of small goods (short rods, rings, scissors- and knife-like things, combs: small hardware or sundries) and a table of stacked bowls; the seller sits at the board's west end; a man in a dark cap leans forward pointing at the bowls, smiling, as if bargaining; a tall man in a long dark robe turns toward him with his hands raised. 余辉 2015 看点十 and 2021: stalls like these spread under parasols and awnings onto the street and up to the bridge (侵街).",
+   "roles": {
+    "seller": {
+     "fig": "display_seller_18058",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "the seller seated at the small-goods display (map)"
+    },
+    "point": {
+     "fig": "pointing_man_18318",
+     "name": "買主",
+     "name_en": "buyer",
+     "src": "the man in a dark cap pointing at the bowls, smiling, as if bargaining (map)"
+    },
+    "robe": {
+     "fig": "dark_robe_man_18400",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "the tall man in a long dark robe turned toward the pointing man, hands raised (map)"
+    }
+   },
+   "beats": [
+    {
+     "who": "seller",
+     "say": "剪子、梳子、針頭線腦，都有！",
+     "say_en": "Scissors, combs, needles and thread, all here!",
+     "src": "the map (rods, rings, scissors- and knife-like things, combs on the board)",
+     "as": {
+      "guan": "官人瞧瞧，小物件，樣樣有。",
+      "shi": "相公，裁紙的小刀要不要？",
+      "fu": "娘子，新到的梳子，挑一把？",
+      "tong": "小娃兒，莫亂摸，割手！",
+      "seng": "師父，剃刀也有。",
+      "li": "兄弟，換把好剪子罷。"
+     },
+     "as_en": {
+      "guan": "Have a look, sir: small things, all sorts.",
+      "shi": "Sir, a little knife for cutting paper?",
+      "fu": "Madam, new combs in. Pick one?",
+      "tong": "Kid, don't touch, you'll cut yourself!",
+      "seng": "Master, razors too.",
+      "li": "Brother, get yourself good scissors."
+     }
+    },
+    {
+     "who": "point",
+     "say": "那一摞碗，怎麼賣？",
+     "say_en": "That stack of bowls, how much?",
+     "src": "the map (pointing at the table of stacked bowls, smiling, as if bargaining)"
+    },
+    {
+     "who": "seller",
+     "say": "一摞十個，算你便宜。",
+     "say_en": "Ten to a stack, cheap for you.",
+     "src": "our proposal"
+    },
+    {
+     "who": "robe",
+     "say": "再便宜些，我也要一摞。",
+     "say_en": "A bit cheaper and I'll take a stack too.",
+     "src": "the map (the tall man turned toward the pointing man, hands raised); our proposal"
+    },
+    {
+     "who": "point",
+     "think": "這攤子都擺到橋腳下了。",
+     "think_en": "Stalls right up to the foot of the bridge.",
+     "src": "余辉 2015 看点十 (侵街)"
+    }
+   ],
+   "again": [
+    {
+     "beats": [
+      {
+       "who": "seller",
+       "say": "客官還要些甚麼？",
+       "say_en": "What else would you like?",
+       "src": "our proposal",
+       "as": {
+        "guan": "官人還要甚麼？包好送府上。"
+       },
+       "as_en": {
+        "guan": "Anything else, sir? I'll wrap it and send it over."
+       }
+      },
+      {
+       "who": "robe",
+       "say": "這把剪子，鋼口好不好？",
+       "say_en": "These scissors: is the steel good?",
+       "src": "the map (scissors-like things on the board); our proposal"
+      },
+      {
+       "who": "seller",
+       "say": "不好，不要錢！",
+       "say_en": "If they're not good, they're free!",
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "chatter": [
+  {
+   "id": "c3.sedan",
+   "title": "車轎相爭",
+   "title_en": "Sedan Against Horseman",
+   "mark": "alarm",
+   "group": "S3.grp.sedan_vs_horseman",
+   "reading": "余辉 2015 看点三 and 2021 (车轿相争: a civil official's sedan and a military officer's horse meet on the deck, the attendants quarrel, neither gives way, the narrowed deck jams); the map (who points at whom; which side each is on is our reading). No passenger shows in the sedan: it never speaks.",
+   "gap": [
+    12,
+    26
+   ],
+   "roles": {
+    "pointer": {
+     "fig": "pointer_east_18830",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "map (pointing up the bridge at the sedan's front)"
+    },
+    "hat1": {
+     "fig": "wide_hat_pointer_18855",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "map (wide flat hat, pointing back at the sedan)"
+    },
+    "hat2": {
+     "fig": "wide_hat_pointer_18890",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "map (second wide hat, pointing west, a bundle on his back)"
+    },
+    "front": {
+     "fig": "sedan_bearer_front_18838",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (front bearer)"
+    },
+    "rear": {
+     "fig": "sedan_bearer_rear_18688",
+     "name": "轎夫",
+     "name_en": "bearer",
+     "src": "map (rear bearer)"
+    },
+    "groom": {
+     "fig": "groom_holding_horse_19095",
+     "name": "馬夫",
+     "name_en": "groom",
+     "src": "map (hugging the horse's neck)"
+    },
+    "arms": {
+     "fig": "man_arms_flung_wide_18990",
+     "name": "從人",
+     "name_en": "attendant",
+     "src": "map (arms flung wide before the horse)"
+    },
+    "rider": {
+     "fig": "rider_white_robe_19110",
+     "name": "官人",
+     "name_en": "official",
+     "src": "map; 余辉 2015 (武官)"
+    },
+    "head": {
+     "fig": "man_white_headcloth_19050",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (behind the horse's neck)"
+    },
+    "rump": {
+     "fig": "man_behind_rump_19165",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (behind the horse's rump)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "pointer",
+       "say": [
+        "讓開！相公的轎子上橋！",
+        "前頭的，往邊上讓！",
+        "轎子要過，閃開！"
+       ],
+       "say_en": [
+        "Make way! The master's sedan is coming up!",
+        "You in front, stand aside!",
+        "The sedan's coming through, clear off!"
+       ],
+       "src": "余辉 2015 (轿夫与马弁各仗其势)"
+      },
+      {
+       "who": "hat1",
+       "say": [
+        "該你們讓！馬下坡停不住！",
+        "退下去！官人的馬先過！",
+        "往後退，橋頂上過不去！"
+       ],
+       "say_en": [
+        "You give way! A horse can't stop going downhill!",
+        "Back down! The official's horse goes first!",
+        "Back off, there's no getting past at the crown!"
+       ],
+       "src": "余辉 2015; the map (pointing back at the sedan)"
+      },
+      {
+       "who": "hat2",
+       "say": [
+        "說得是！退下去！",
+        "抬轎的，聽見沒有？"
+       ],
+       "say_en": [
+        "Quite right! Back down!",
+        "You bearers, hear that?"
+       ],
+       "src": "the map (the second wide hat pointing west)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "front",
+       "say": [
+        "抬著轎怎麼退？你們讓！",
+        "肩上壓著轎，退不得！",
+        "上坡容易退坡難！"
+       ],
+       "say_en": [
+        "How can we back down with a sedan? You give way!",
+        "With a sedan on our shoulders we can't back up!",
+        "Easy up a slope, hard to back down one!"
+       ],
+       "src": "our proposal (the bearer climbing the ramp)"
+      },
+      {
+       "who": "rear",
+       "say": [
+        "前頭的，站穩了！",
+        "嘿——別鬆手！"
+       ],
+       "say_en": [
+        "You in front, stand firm!",
+        "Hup — don't let go!"
+       ],
+       "src": "the map (the rear bearer striding up the ramp)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "groom",
+       "say": [
+        "吁——莫亂動！",
+        "吁，吁——好馬兒。",
+        "穩住，穩住！"
+       ],
+       "say_en": [
+        "Whoa — easy!",
+        "Whoa, whoa — good horse.",
+        "Steady, steady!"
+       ],
+       "src": "the map (the groom hugging the horse's lowered neck)"
+      },
+      {
+       "who": "arms",
+       "say": [
+        "閃開！馬驚了！",
+        "都往後退！"
+       ],
+       "say_en": [
+        "Clear off! The horse is spooked!",
+        "Everybody back!"
+       ],
+       "src": "the map (arms flung wide in front of the horse)",
+       "when": [
+        "lunge_arms_wide"
+       ]
+      },
+      {
+       "who": "rider",
+       "think": [
+        "好個不識相的轎子。",
+        "吵甚麼，叫他們讓。"
+       ],
+       "think_en": [
+        "What an ill-mannered sedan.",
+        "What's the fuss? Make them give way."
+       ],
+       "src": "余辉 2015 (互不相让)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "head",
+       "say": [
+        "兩邊都不肯讓。",
+        "這一吵，橋上更堵了。"
+       ],
+       "say_en": [
+        "Neither side will give way.",
+        "With this row, the bridge is jammed worse."
+       ],
+       "src": "余辉 2021 (乱成一团)"
+      },
+      {
+       "who": "rump",
+       "think": [
+        "看熱鬧的倒比吵的多。",
+        "等罷，一時過不去了。"
+       ],
+       "think_en": [
+        "More people watching than quarrelling.",
+        "Wait. Nobody's getting across for a while."
+       ],
+       "src": "名画记 20 (the crowded deck); our proposal",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pointer",
+       "say": [
+        "文官的轎子，也敢擋？",
+        "我家相公是朝中的官！"
+       ],
+       "say_en": [
+        "You'd block a civil official's sedan?",
+        "My master holds office at court!"
+       ],
+       "src": "余辉 2015 (坐轿的文官)"
+      },
+      {
+       "who": "hat1",
+       "say": [
+        "我家官人也不是好惹的！",
+        "武官就不是官？"
+       ],
+       "say_en": [
+        "Our master's no man to cross either!",
+        "Is a military officer no official, then?"
+       ],
+       "src": "余辉 2015 (骑马的武官)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.bigboat",
+   "title": "大船搶險",
+   "title_en": "The Big Boat in Danger",
+   "mark": "alarm",
+   "group": "S3.grp.boat_mast_lowering_crew",
+   "reading": "名画记 19 (the crew lowering the mast, poling hard, bracing poles against the bridge, shouting to the boats ahead; a rope thrown from the bridge and taken up on the roof); 余辉 2015/2021 (the mast about to strike; one man braces a long pole against the beam; the polers swing her bow across to slow her). The map: two men at the bow pointing the way, polers on the near gunwale, men pushing poles up at the arch, men under the deckhouse, the stern hands hauling the mast's lines, a man in the after cabin's door with a long pole.",
+   "gap": [
+    10,
+    22
+   ],
+   "roles": {
+    "haul": {
+     "fig": "boatman_hauling_rope_20205",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (hauling a mast line on the stern deck)"
+    },
+    "fend": {
+     "fig": "boatman_pole_raised_19775",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (pushing a pole up at the arch)"
+    },
+    "seated": {
+     "fig": "boatman_stern_seated_20285",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (seated at the stern behind a box or windlass frame)"
+    },
+    "bow1": {
+     "fig": "bowman_arm_out_19565",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (at the bow, arm out)"
+    },
+    "bow2": {
+     "fig": "bowman_arm_out_19583",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (at the bow, arm out)"
+    },
+    "bend": {
+     "fig": "boatman_bending_pole_19746",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (bending with a pole at the near gunwale)"
+    },
+    "bent": {
+     "fig": "boatman_bent_pole_19830",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (bent double with a pole)"
+    },
+    "reach": {
+     "fig": "boatman_reaching_19681",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (reaching out toward the cabin boat)"
+    },
+    "leaner": {
+     "fig": "boatman_leaning_on_bundle_19650",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (leaning over the bundle)"
+    },
+    "apron": {
+     "fig": "boatman_capped_19800",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (in a long apron)"
+    },
+    "door": {
+     "fig": "boatman_cabin_door_pole_20300",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (in the after cabin's door with a long pole)"
+    },
+    "sternbend": {
+     "fig": "boatman_stern_bending_20365",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (bending over the stern rail toward the rudder's lines)"
+    },
+    "crouch": {
+     "fig": "boatman_crouching_20026",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (crouching under the deckhouse's east end)"
+    },
+    "hat": {
+     "fig": "boatman_hat_pole_19915",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (in a hat, holding a pole)"
+    },
+    "mat": {
+     "fig": "boatman_under_mat_roof_19955",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (under the deckhouse roof)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "boat.1",
+     "beats": [
+      {
+       "who": "haul",
+       "say": [
+        "放桅！快放桅！",
+        "桅桿放倒！拉住繩！",
+        "鬆繩，慢慢放！"
+       ],
+       "say_en": [
+        "Lower the mast! Quick!",
+        "Mast down! Hold the line!",
+        "Pay out the line, slowly!"
+       ],
+       "src": "名画记 19 (some lower the mast); the map (hauling a mast line)"
+      },
+      {
+       "who": "fend",
+       "say": [
+        "頂住！頂住橋梁！",
+        "篙頂住了，快放！"
+       ],
+       "say_en": [
+        "Brace it! Brace against the beam!",
+        "Pole's braced, lower it, quick!"
+       ],
+       "src": "余辉 2015 (a boatman braces a long pole against the beam); the map"
+      },
+      {
+       "who": "seated",
+       "say": [
+        "慢些！桅腳要滑了！",
+        "穩住，穩住！"
+       ],
+       "say_en": [
+        "Slowly! The mast foot's slipping!",
+        "Steady, steady!"
+       ],
+       "src": "our proposal (seated at the stern behind a windlass frame)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bow1",
+       "say": [
+        "前頭的船，讓一讓！",
+        "前面的，靠邊！大船來了！"
+       ],
+       "say_en": [
+        "Boats ahead, give way!",
+        "You ahead, to the side! Big boat coming!"
+       ],
+       "src": "名画记 19 (some shout to the boats ahead)"
+      },
+      {
+       "who": "bow2",
+       "say": [
+        "往左！往左撐！",
+        "船頭橫過來！"
+       ],
+       "say_en": [
+        "To the left! Pole to the left!",
+        "Swing the bow across!"
+       ],
+       "src": "余辉 2021 (the polers turn the bow sideways to slow her); the map (arm out at the bow)"
+      },
+      {
+       "who": "bend",
+       "say": [
+        "一、二——撐！",
+        "大家一齊使勁！",
+        "腳下踩穩！"
+       ],
+       "say_en": [
+        "One, two — push!",
+        "All together, push!",
+        "Feet firm!"
+       ],
+       "src": "名画记 19 (some pole hard); the map (polers on the near gunwale)"
+      },
+      {
+       "who": "bent",
+       "say": [
+        "水太急，撐不住！",
+        "這水急得很！"
+       ],
+       "say_en": [
+        "The current's too strong, can't hold!",
+        "This water's fast!"
+       ],
+       "src": "名画记 19 (the river narrow and fast here)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "reach",
+       "say": [
+        "當心旁邊那條船！",
+        "莫撞了那客船！"
+       ],
+       "say_en": [
+        "Watch that boat alongside!",
+        "Don't hit that cabin boat!"
+       ],
+       "src": "the map (reaching toward the cabin boat under the arch)"
+      },
+      {
+       "who": "leaner",
+       "say": [
+        "貨捆住了沒有？",
+        "這捆貨莫掉下河！"
+       ],
+       "say_en": [
+        "Is the cargo tied down?",
+        "Don't let this bundle go in the river!"
+       ],
+       "src": "the map (leaning over the bundle)"
+      },
+      {
+       "who": "apron",
+       "think": [
+        "這一趟，要了老命了。",
+        "老天保佑……"
+       ],
+       "think_en": [
+        "This trip will be the death of me.",
+        "Heaven protect us…"
+       ],
+       "src": "our proposal",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "door",
+       "say": [
+        "船尾撐開！莫碰岸！",
+        "後頭頂住那條船！"
+       ],
+       "say_en": [
+        "Push the stern off! Don't touch the bank!",
+        "Brace against that boat astern!"
+       ],
+       "src": "the map (a long pole held out past the stern toward the north-bank boat)"
+      },
+      {
+       "who": "sternbend",
+       "say": [
+        "舵繩拉緊了！",
+        "舵穩著！"
+       ],
+       "say_en": [
+        "Rudder lines taut!",
+        "Rudder steady!"
+       ],
+       "src": "the map (bending over the stern rail toward the rudder's lines)"
+      },
+      {
+       "who": "crouch",
+       "think": [
+        "低頭，低頭，要過橋了。",
+        "莫碰著頭……"
+       ],
+       "think_en": [
+        "Heads down, heads down, we're going under.",
+        "Mind your head…"
+       ],
+       "src": "the map (crouching under the deckhouse's east end); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "hat",
+       "say": [
+        "橋上拋繩下來了！",
+        "上頭有人拋繩！"
+       ],
+       "say_en": [
+        "They're throwing a rope from the bridge!",
+        "Someone up there's throwing a rope!"
+       ],
+       "src": "名画记 19 (ropes thrown from the bridge)"
+      },
+      {
+       "who": "mat",
+       "say": [
+        "篷頂上的接住了！",
+        "接著了，接著了！"
+       ],
+       "say_en": [
+        "The man on the roof's caught it!",
+        "Caught it, caught it!"
+       ],
+       "src": "名画记 19 (船篷上则有人接应)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.rail",
+   "title": "上下呼救",
+   "title_en": "Shouting Down to the Boat",
+   "mark": "rope",
+   "group": "S3.grp.shouting_down_to_boat",
+   "reading": "名画记 19, 20 (ropes thrown down; the crowd shouts, points, gives advice, reaches out but cannot help; 人声水声，连成一片); 余辉 2015 (上下呼救; a rope thrown so the crew will not fall in), 2021 (ship and bridge come out safe). The map: a man at the crown hangs far over as if lowering a rope, a youth with a line in his hand, a man holding a long pole across the railing, three men leaning over at the north ramp.",
+   "gap": [
+    10,
+    22
+   ],
+   "roles": {
+    "youth": {
+     "fig": "deck_youth_rope_19445",
+     "name": "後生",
+     "name_en": "young man",
+     "src": "map (a line in his hand)"
+    },
+    "lowering": {
+     "fig": "man_lowering_rope_19295",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (bent far over, as if lowering a rope)"
+    },
+    "shouter": {
+     "fig": "deck_capped_shouter_19492",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (one arm raised)"
+    },
+    "widehat": {
+     "fig": "deck_wide_hat_19405",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (big round hat, bending over the railing)"
+    },
+    "stoop": {
+     "fig": "deck_stooping_hat_19765",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (broad hat, stooping over the railing)"
+    },
+    "n1": {
+     "fig": "rail_watcher_19862",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (leaning over the north ramp's railing)"
+    },
+    "n2": {
+     "fig": "rail_watcher_19892",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (north ramp, middle)"
+    },
+    "n3": {
+     "fig": "rail_watcher_19923",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (north ramp, east)"
+    },
+    "pole": {
+     "fig": "deck_pole_holder_19625",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (holding a long pole across the railing)"
+    },
+    "leaner": {
+     "fig": "deck_rail_leaner_19538",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (leaning on the railing, face forward)"
+    },
+    "basket": {
+     "fig": "basket_carrier_19138",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (holding a flat round basket)"
+    },
+    "behind": {
+     "fig": "man_behind_railing_19258",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (craning behind the railing crowd)"
+    },
+    "capback": {
+     "fig": "man_dark_cap_back_row_19325",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (back row at the crown)"
+    },
+    "face": {
+     "fig": "deck_rail_face_19350",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (face to the viewer)"
+    },
+    "hatstick": {
+     "fig": "deck_hat_stick_19353",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (a stick over his shoulder, second row)"
+    },
+    "bent": {
+     "fig": "man_bent_over_railing_19195",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (bent over the near railing)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "boat.2",
+     "beats": [
+      {
+       "who": "youth",
+       "say": [
+        "繩子拋下去了！接住！",
+        "接著！快接著！",
+        "繩子來了！"
+       ],
+       "say_en": [
+        "Rope's going down! Catch!",
+        "Catch it! Quick!",
+        "Here comes the rope!"
+       ],
+       "src": "名画记 19 (ropes thrown from the bridge)"
+      },
+      {
+       "who": "lowering",
+       "say": [
+        "再放長些！夠不著！",
+        "我這頭拉著，放心！"
+       ],
+       "say_en": [
+        "Let out more! They can't reach!",
+        "I've got this end, don't worry!"
+       ],
+       "src": "the map (bent far over, arms down, as if lowering a rope)"
+      },
+      {
+       "who": "shouter",
+       "say": [
+        "篷上的！抓住繩！",
+        "抓穩了，莫掉下水！"
+       ],
+       "say_en": [
+        "You on the roof! Grab the rope!",
+        "Hold tight, don't fall in!"
+       ],
+       "src": "余辉 2015 (a rope thrown so the crew will not fall in); the map (arm raised)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "widehat",
+       "say": [
+        "桅桿！桅桿要撞了！",
+        "快放桅呀！"
+       ],
+       "say_en": [
+        "The mast! The mast's going to hit!",
+        "Lower the mast!"
+       ],
+       "src": "余辉 2015 (the mast about to strike the bridge)"
+      },
+      {
+       "who": "stoop",
+       "say": [
+        "撐開！往外撐！",
+        "篙頂住橋！"
+       ],
+       "say_en": [
+        "Push off! Push out!",
+        "Brace a pole on the bridge!"
+       ],
+       "src": "名画记 20 (指手划脚出主意)"
+      },
+      {
+       "who": "n1",
+       "say": [
+        "往左！往左！",
+        "不對，往右！"
+       ],
+       "say_en": [
+        "Left! Left!",
+        "No, right!"
+       ],
+       "src": "名画记 20 (everyone gives advice); our proposal"
+      },
+      {
+       "who": "n2",
+       "think": [
+        "喊甚麼，他們聽得見麼？",
+        "人聲水聲，一片亂。"
+       ],
+       "think_en": [
+        "What's the use of shouting? Can they hear?",
+        "Voices and water, all one din."
+       ],
+       "src": "名画记 20 (人声水声，连成一片)",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pole",
+       "say": [
+        "這竿子遞下去，夠得著麼？",
+        "接住這竿子！"
+       ],
+       "say_en": [
+        "Will this pole reach if I pass it down?",
+        "Catch hold of this pole!"
+       ],
+       "src": "the map (holding a long pole across the railing)"
+      },
+      {
+       "who": "leaner",
+       "say": [
+        "夠不著，太高了。",
+        "再往下些！"
+       ],
+       "say_en": [
+        "Can't reach, it's too high.",
+        "Lower!"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "n3",
+       "think": [
+        "急死人，幫不上忙。",
+        "手伸得再長也沒用。"
+       ],
+       "think_en": [
+        "Maddening; I can't help.",
+        "Arms can't stretch that far."
+       ],
+       "src": "名画记 20 (急得伸手而帮不上什么忙)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "basket",
+       "say": [
+        "莫擠！我的籃子！",
+        "擠甚麼，看得見！"
+       ],
+       "say_en": [
+        "Don't shove! My basket!",
+        "Stop pushing, I can see!"
+       ],
+       "src": "the map (holding a flat round basket); 名画记 20 (the crowd)"
+      },
+      {
+       "who": "behind",
+       "say": [
+        "讓我也看看！",
+        "前頭的，低低頭！"
+       ],
+       "say_en": [
+        "Let me see too!",
+        "You in front, duck your head!"
+       ],
+       "src": "the map (craning behind the railing crowd)"
+      },
+      {
+       "who": "capback",
+       "say": [
+        "欄干莫擠斷了。",
+        "當心，莫擠下河去。"
+       ],
+       "say_en": [
+        "Don't break the railing.",
+        "Careful, don't push anyone in the river."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "face",
+       "think": [
+        "好險……",
+        "過去了麼？"
+       ],
+       "think_en": [
+        "That was close…",
+        "Is it through?"
+       ],
+       "src": "our proposal; the map (face to the viewer)"
+      },
+      {
+       "who": "hatstick",
+       "say": [
+        "好了好了，桅放倒了。",
+        "過得去了！"
+       ],
+       "say_en": [
+        "There, there, the mast's down.",
+        "It'll get through!"
+       ],
+       "src": "余辉 2021 (ship and bridge about to come out safe)"
+      },
+      {
+       "who": "bent",
+       "say": [
+        "好！好！",
+        "謝天謝地！"
+       ],
+       "say_en": [
+        "Good! Good!",
+        "Thank heaven!"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.southrail",
+   "title": "南頭看船",
+   "title_en": "Watching from the South End",
+   "mark": "boat",
+   "group": "S3.grp.south_rail_watchers",
+   "reading": "The map: men crowding the south end of the near railing and the deck between the sedan and the horse, gesturing east and looking out over the river; 名画记 20 (指手划脚); 余辉 2015 (the boat below and the sedan and horse above: 立体交叉性的矛盾).",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "jacket": {
+     "fig": "man_dark_jacket_pointing_18915",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (dark jacket, arm stretched east)"
+    },
+    "light": {
+     "fig": "man_light_robe_reaching_18958",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (light robe, arm stretched east)"
+    },
+    "stick": {
+     "fig": "man_reaching_with_stick_18930",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (reaching east with a stick)"
+    },
+    "pw": {
+     "fig": "man_pointing_west_at_railing_19090",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (pointing west behind the railing)"
+    },
+    "cap": {
+     "fig": "man_dark_cap_south_end_18930",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (dark cap, looking east)"
+    },
+    "arms": {
+     "fig": "man_arms_on_railing_18982",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (arms on the railing)"
+    },
+    "bowed": {
+     "fig": "man_head_bowed_18962",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (head bowed at the railing)"
+    },
+    "awning": {
+     "fig": "man_behind_awning_18898",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (behind the east mat awning)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "jacket",
+       "say": [
+        "看那邊！大船來了！",
+        "東邊！看東邊！"
+       ],
+       "say_en": [
+        "Look there! A big boat!",
+        "East! Look east!"
+       ],
+       "src": "the map (stretching an arm east); 名画记 20"
+      },
+      {
+       "who": "light",
+       "say": [
+        "好大的船，桅桿那麼高！",
+        "那桅桿比橋還高！"
+       ],
+       "say_en": [
+        "What a big boat, such a tall mast!",
+        "That mast is taller than the bridge!"
+       ],
+       "src": "余辉 2015 (the mast about to strike)"
+      },
+      {
+       "who": "stick",
+       "say": [
+        "拿竿子夠一夠？",
+        "我這竿子遞過去！"
+       ],
+       "say_en": [
+        "Reach out with a stick?",
+        "I'll pass my stick over!"
+       ],
+       "src": "the map (reaching east with a stick)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pw",
+       "say": [
+        "那邊又吵起來了。",
+        "轎子和馬頂上了。"
+       ],
+       "say_en": [
+        "There's a row over there too.",
+        "The sedan and the horse are at a standoff."
+       ],
+       "src": "the map (pointing west); 余辉 2015 (车轿相争)"
+      },
+      {
+       "who": "cap",
+       "say": [
+        "一邊船，一邊轎，今日好熱鬧。",
+        "橋上橋下都出事。"
+       ],
+       "say_en": [
+        "A boat on one side, a sedan on the other: what a day.",
+        "Trouble above and below the bridge."
+       ],
+       "src": "余辉 2015 (立体交叉性的矛盾)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "arms",
+       "think": [
+        "趴在欄干上，看得最清楚。",
+        "這裏風涼。"
+       ],
+       "think_en": [
+        "Leaning on the railing, I see best.",
+        "Cool breeze here."
+       ],
+       "src": "the map (arms on the railing)"
+      },
+      {
+       "who": "bowed",
+       "think": [
+        "看得頭都暈了。",
+        "水急，看著眼花。"
+       ],
+       "think_en": [
+        "Watching makes me dizzy.",
+        "The fast water makes my eyes swim."
+       ],
+       "src": "the map (head bowed at the railing)",
+       "optional": true
+      },
+      {
+       "who": "awning",
+       "say": [
+        "前頭的讓讓，我也看看。",
+        "看見甚麼了？"
+       ],
+       "say_en": [
+        "Let me see too, you in front.",
+        "What can you see?"
+       ],
+       "src": "the map (behind the east mat awning)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.cabin",
+   "title": "橋下客船",
+   "title_en": "The Cabin Boat Under the Arch",
+   "group": "S3.grp.cabin_boat_under_arch_crew",
+   "reading": "The map: a cabin boat under the bridge's arch with two men leaning on its railing, watching the big boat beside it. No boatman is painted on it: he is called, never heard.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "over": {
+     "fig": "man_leaning_over_rail_19432",
+     "name": "船客",
+     "name_en": "passenger",
+     "src": "map (leaning over the cabin rail)"
+    },
+    "chin": {
+     "fig": "man_at_cabin_rail_19366",
+     "name": "船客",
+     "name_en": "passenger",
+     "src": "map (leaning on the cabin rail, chin in hand)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "over",
+       "say": [
+        "那大船靠過來了！",
+        "當心！要擠著咱們了！"
+       ],
+       "say_en": [
+        "That big boat is coming at us!",
+        "Careful! It'll crush us!"
+       ],
+       "src": "the map (leaning over the rail toward the big boat)"
+      },
+      {
+       "who": "chin",
+       "say": [
+        "莫慌，他們撐住了。",
+        "看著呢，還隔著一篙。"
+       ],
+       "say_en": [
+        "Don't panic, they've braced it.",
+        "I'm watching: still a pole's length off."
+       ],
+       "src": "the map (watching the big boat beside it)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "chin",
+       "think": [
+        "坐船也不安生。",
+        "幸好不是咱們這條。"
+       ],
+       "think_en": [
+        "Not even a boat ride is peaceful.",
+        "Lucky it isn't ours."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "over",
+       "say": [
+        "船家，往岸邊靠些！",
+        "叫船家把船撐開！"
+       ],
+       "say_en": [
+        "Boatman, move toward the bank!",
+        "Tell the boatman to pole us away!"
+       ],
+       "src": "our proposal (no boatman is painted on the cabin boat)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.moored",
+   "title": "泊船呼喊",
+   "title_en": "Shouts from the Moored Boat",
+   "group": "S3.grp.south_bank_boat_crew",
+   "reading": "The map: two men on the roof of the boat moored at the south bank wave and shout to the big boat at the bridge, one or two more look out of its hatch; 余辉 2015 (上下呼救).",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "waver": {
+     "fig": "man_waving_on_boat_roof_19952",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (waving from the roof)"
+    },
+    "lie": {
+     "fig": "man_reclining_waving_20060",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (reclining on the roof, waving)"
+    },
+    "hatch1": {
+     "fig": "man_in_hatch_20148",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (looking out of the hatch)"
+    },
+    "hatch2": {
+     "fig": "man_in_hatch_20172",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (a second man in the hatch?)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "waver",
+       "say": [
+        "喂——放桅！放桅！",
+        "那邊的！快放桅桿！"
+       ],
+       "say_en": [
+        "Hey — lower the mast!",
+        "You there! Lower the mast, quick!"
+       ],
+       "src": "the map (waving and shouting from the roof); 余辉 2015 (上下呼救)"
+      },
+      {
+       "who": "lie",
+       "say": [
+        "喊也沒用，聽不見！",
+        "他們曉得了，你看。"
+       ],
+       "say_en": [
+        "No use shouting, they can't hear!",
+        "They know, look."
+       ],
+       "src": "the map (reclining on the roof, waving)"
+      },
+      {
+       "who": "hatch1",
+       "say": [
+        "出甚麼事了？",
+        "外頭吵甚麼？"
+       ],
+       "say_en": [
+        "What's happened?",
+        "What's all the noise?"
+       ],
+       "src": "the map (looking out of the hatch)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "hatch2",
+       "say": [
+        "大船要撞橋了？",
+        "我也看看。"
+       ],
+       "say_en": [
+        "The big boat's going to hit the bridge?",
+        "Let me look too."
+       ],
+       "src": "the map (a second man in the hatch)"
+      },
+      {
+       "who": "waver",
+       "say": [
+        "差一點！差一點！",
+        "幸好放倒了！"
+       ],
+       "say_en": [
+        "Nearly! So nearly!",
+        "Luckily they got it down!"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "lie",
+       "think": [
+        "咱們泊在這裏，倒是穩當。",
+        "看別人撐船，倒也有趣。"
+       ],
+       "think_en": [
+        "Moored here, we're safe enough.",
+        "Watching others pole is good fun."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.sweep",
+   "title": "搖櫓向前",
+   "title_en": "Sculling On",
+   "mark": "boat",
+   "group": "S3.grp.boat_under_way_15595",
+   "reading": "名画记 25: on the river two laden boats are under way; on one, six men fore and aft work the sweeps together (齐心协力地摇着橹), and both lead the eye on into the distance; the map: three men at the bow, five or six at the stern sweep (摇橹向前). Boats here go upstream, west, away from the bridge.",
+   "gap": [
+    12,
+    26
+   ],
+   "roles": {
+    "pivot": {
+     "fig": "sweep_man_15915",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (at the sweep's pivot)"
+    },
+    "s1": {
+     "fig": "sweep_man_15810",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (at the sweep)"
+    },
+    "s2": {
+     "fig": "sweep_man_15838",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (at the sweep)"
+    },
+    "lean": {
+     "fig": "sweep_man_15862",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (leaning on the sweep)"
+    },
+    "bend": {
+     "fig": "sweep_man_15855",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (bending at the sweep)"
+    },
+    "bow1": {
+     "fig": "boatman_bow_15636",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (standing at the bow)"
+    },
+    "bow2": {
+     "fig": "boatman_bow_15664",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (standing at the bow)"
+    },
+    "crouch": {
+     "fig": "boatman_bow_15688",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (crouching at the bow)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "pivot",
+       "say": [
+        "搖——！",
+        "嘿——搖！",
+        "一齊搖！"
+       ],
+       "say_en": [
+        "Scull —!",
+        "Hey — scull!",
+        "All together, scull!"
+       ],
+       "src": "名画记 25 (齐心协力地摇着橹)"
+      },
+      {
+       "who": "s1",
+       "say": [
+        "嘿喲！",
+        "搖呀！"
+       ],
+       "say_en": [
+        "Heave-ho!",
+        "Scull away!"
+       ],
+       "src": "名画记 25"
+      },
+      {
+       "who": "s2",
+       "say": [
+        "嘿喲——",
+        "使勁搖！"
+       ],
+       "say_en": [
+        "Heave — ho —",
+        "Scull hard!"
+       ],
+       "src": "名画记 25"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bow1",
+       "say": [
+        "前頭彎道，看著些！",
+        "前頭泊船多，當心！"
+       ],
+       "say_en": [
+        "Bend ahead, watch out!",
+        "Lots of moored boats ahead, careful!"
+       ],
+       "src": "名画记 25 (boats moored at the bend of the wide river)"
+      },
+      {
+       "who": "bow2",
+       "say": [
+        "曉得！往中間走！",
+        "水深，走中間。"
+       ],
+       "say_en": [
+        "Got it! Keep to the middle!",
+        "Deep water, keep to the middle."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "crouch",
+       "think": [
+        "歇口氣……",
+        "這一路，還早呢。"
+       ],
+       "think_en": [
+        "Catch my breath…",
+        "Still a long way to go."
+       ],
+       "src": "the map (crouching at the bow)",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "lean",
+       "say": [
+        "手都搖酸了。",
+        "換個人搖罷。"
+       ],
+       "say_en": [
+        "My arms ache from sculling.",
+        "Someone take a turn."
+       ],
+       "src": "the map (leaning on the sweep)"
+      },
+      {
+       "who": "bend",
+       "say": [
+        "再搖一程，到了碼頭再歇。",
+        "莫偷懶，船慢了。"
+       ],
+       "say_en": [
+        "Scull a bit more; rest at the wharf.",
+        "No slacking, the boat's slowing."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.towed",
+   "title": "縴夫拉船",
+   "title_en": "Trackers Towing",
+   "mark": "rope",
+   "group": "S3.grp.boat_towed_16228",
+   "reading": "名画记 25: the other laden boat is pulled by trackers on the bank; the map: five trackers in single file on the far-bank path, bent forward on one line from the masthead, the bowman poling, perhaps two men on the cargo. 余辉 2021 sets the trackers' toil against those who ride in sedans (纤夫之苦); 余辉 2015 blames the big boat's near-miss on trackers who would not stop: this boat's bowman calls for care.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "lead": {
+     "fig": "tracker_16423",
+     "name": "縴夫",
+     "name_en": "tracker",
+     "src": "map (the leading man of the file)"
+    },
+    "t3": {
+     "fig": "tracker_16385",
+     "name": "縴夫",
+     "name_en": "tracker",
+     "src": "map (the middle man of the file)"
+    },
+    "t1": {
+     "fig": "tracker_16333",
+     "name": "縴夫",
+     "name_en": "tracker",
+     "src": "map (the rear man of the file)"
+    },
+    "t2": {
+     "fig": "tracker_16358",
+     "name": "縴夫",
+     "name_en": "tracker",
+     "src": "map (second from the rear)"
+    },
+    "t4": {
+     "fig": "tracker_16405",
+     "name": "縴夫",
+     "name_en": "tracker",
+     "src": "map (the fourth man)"
+    },
+    "polebow": {
+     "fig": "boatman_poling_16198",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (poling at the bow)"
+    },
+    "cargo1": {
+     "fig": "boatman_on_cargo_16032",
+     "name": "船工",
+     "name_en": "boatman",
+     "src": "map (on the cargo heap)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "lead",
+       "say": [
+        "嘿——拉呀！",
+        "嘿喲——走！"
+       ],
+       "say_en": [
+        "Hey — pull!",
+        "Heave — walk!"
+       ],
+       "src": "名画记 25 (towed by trackers on the bank)"
+      },
+      {
+       "who": "t3",
+       "say": [
+        "嘿喲——",
+        "一步一步——"
+       ],
+       "say_en": [
+        "Heave — ho —",
+        "Step by step —"
+       ],
+       "src": "the map (the middle man of the file)"
+      },
+      {
+       "who": "t1",
+       "say": [
+        "嘿——拉緊了！",
+        "繩子莫鬆！"
+       ],
+       "say_en": [
+        "Hey — keep it taut!",
+        "Don't let the line slack!"
+       ],
+       "src": "the map (the rear man of the file)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "t2",
+       "think": [
+        "肩頭都磨破了。",
+        "這縴繩，越拉越沉。"
+       ],
+       "think_en": [
+        "My shoulder's rubbed raw.",
+        "This tow line gets heavier and heavier."
+       ],
+       "src": "余辉 2021 (纤夫之苦)"
+      },
+      {
+       "who": "t4",
+       "say": [
+        "莫說話，省些力氣。",
+        "低頭拉罷。"
+       ],
+       "say_en": [
+        "No talking, save your strength.",
+        "Head down and pull."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "polebow",
+       "say": [
+        "岸上的，慢些！前頭有船！",
+        "慢些拉，船頭要碰了！"
+       ],
+       "say_en": [
+        "You on the bank, slow down! Boat ahead!",
+        "Pull slower, the bow will hit!"
+       ],
+       "src": "the map (poling at the bow); 余辉 2015 (trackers who will not stop)"
+      },
+      {
+       "who": "cargo1",
+       "think": [
+        "坐在貨上，倒也自在。",
+        "看他們拉，我都覺得累。"
+       ],
+       "think_en": [
+        "Sitting on the cargo is pleasant enough.",
+        "Watching them pull wears me out."
+       ],
+       "src": "the map (a man on the cargo heap); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.awningboat",
+   "title": "篷船候客",
+   "title_en": "The Awning Boat Waits",
+   "group": "S3.grp.boat_awning_17442",
+   "reading": "The map: the boat with a fore awning and mat cabin moored at the far bank, a boatman crouched under the awning, a man seated in its cabin.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "pass": {
+     "fig": "passenger_seated_17632",
+     "name": "船客",
+     "name_en": "passenger",
+     "src": "map (seated in the cabin)"
+    },
+    "boat": {
+     "fig": "awning_boatman_17435",
+     "name": "船家",
+     "name_en": "boatman",
+     "src": "map (crouching under the fore awning)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "pass",
+       "say": [
+        "船家，幾時開船？",
+        "還要等多久？"
+       ],
+       "say_en": [
+        "Boatman, when do we sail?",
+        "How much longer?"
+       ],
+       "src": "our proposal (a moored boat, a passenger waiting)"
+      },
+      {
+       "who": "boat",
+       "say": [
+        "等貨裝齊了再走。",
+        "莫急，風順了就走。"
+       ],
+       "say_en": [
+        "When the cargo's all aboard.",
+        "Patience; we go when the wind's fair."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "boat",
+       "think": [
+        "橋那邊吵得熱鬧。",
+        "又是哪家的船出事了。"
+       ],
+       "think_en": [
+        "What a racket over by the bridge.",
+        "Whose boat is in trouble now?"
+       ],
+       "src": "名画记 20 (the din of the crisis); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.matboat",
+   "title": "蓆篷船客",
+   "title_en": "Passengers Under the Mat",
+   "group": "S3.grp.boat_mat_cabin_18005",
+   "reading": "The map: a boat with a dark mat cabin moored at the far bank, two passengers seated in it. 《東京夢華錄》卷一 河道 puts 虹橋 seven li outside the East Water Gate, so the city is near.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "s2": {
+     "fig": "passenger_seated_18147",
+     "name": "船客",
+     "name_en": "passenger",
+     "src": "map (seated, knees up)"
+    },
+    "s1": {
+     "fig": "passenger_seated_18112",
+     "name": "船客",
+     "name_en": "passenger",
+     "src": "map (seated in the mat cabin)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "s2",
+       "say": [
+        "這一路坐得腿都麻了。",
+        "到京城還有多遠？"
+       ],
+       "say_en": [
+        "My legs have gone numb from sitting.",
+        "How far to the capital?"
+       ],
+       "src": "the map (seated, knees up); our proposal"
+      },
+      {
+       "who": "s1",
+       "say": [
+        "快了，過了虹橋就近了。",
+        "不遠了，再忍忍。"
+       ],
+       "say_en": [
+        "Soon; past the Rainbow Bridge it's close.",
+        "Not far now. Bear it a little longer."
+       ],
+       "src": "東京夢華錄 卷一 河道 (虹橋 seven li outside the East Water Gate)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "s1",
+       "think": [
+        "進城先去吃一角酒。",
+        "聽說城裏的正店熱鬧。"
+       ],
+       "think_en": [
+        "In town, first a measure of wine.",
+        "They say the town's wine houses are lively."
+       ],
+       "src": "東京夢華錄 卷二 (the capital's 正店); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.unload",
+   "title": "船頭卸貨",
+   "title_en": "Unloading at the Bow",
+   "mark": "sack",
+   "group": "S3.grp.boat_unloading_17705",
+   "reading": "The map: the cargo boat moored along the south bank, six men on its foredeck handling jars and bundles at the bow, one with a load on his back; a man in a white jacket leans over the mat cover at its east end. What the jars hold is not painted. 余辉 2021: a day of carrying bales at the wharf earns about three hundred cash.",
+   "gap": [
+    12,
+    28
+   ],
+   "roles": {
+    "bend": {
+     "fig": "porter_bending_17790",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (bending over the bow)"
+    },
+    "stand1": {
+     "fig": "porter_standing_17833",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (standing on the foredeck)"
+    },
+    "hunch": {
+     "fig": "porter_hunched_17808",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (hunched behind him)"
+    },
+    "carry": {
+     "fig": "porter_carrying_17922",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (a load on his back)"
+    },
+    "stand2": {
+     "fig": "porter_standing_17860",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (standing on the foredeck)"
+    },
+    "white": {
+     "fig": "mat_leaner_white_18220",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (white jacket, leaning over the boat's mat cover)"
+    },
+    "stand3": {
+     "fig": "porter_standing_17886",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (standing, half hidden)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "bend",
+       "say": [
+        "遞過來，輕些！",
+        "這罈子沉，接穩了！"
+       ],
+       "say_en": [
+        "Pass it over, gently!",
+        "This jar's heavy, hold it steady!"
+       ],
+       "src": "the map (bending over the bow; jars and bundles)"
+      },
+      {
+       "who": "stand1",
+       "say": [
+        "接住了。",
+        "放這邊，排整齊。"
+       ],
+       "say_en": [
+        "Got it.",
+        "Put it here, line them up."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "hunch",
+       "say": [
+        "莫磕了罈口！",
+        "罈子碎了要賠的。"
+       ],
+       "say_en": [
+        "Don't chip the jar's mouth!",
+        "Break a jar and you pay for it."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "carry",
+       "say": [
+        "這一包背上岸去。",
+        "讓開，背著貨呢。"
+       ],
+       "say_en": [
+        "I'll carry this bale ashore.",
+        "Out of the way, I've a load on my back."
+       ],
+       "src": "the map (a porter with a load on his back)"
+      },
+      {
+       "who": "stand2",
+       "say": [
+        "一包幾文，可別算錯了。",
+        "今日卸完，好去領錢。"
+       ],
+       "say_en": [
+        "So much a bale: don't miscount.",
+        "Finish today and we'll collect our pay."
+       ],
+       "src": "余辉 2021 (a day of carrying bales earns about three hundred cash)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "white",
+       "say": [
+        "蓆子掀開，貨在底下。",
+        "拉一把，蓆子壓著了。"
+       ],
+       "say_en": [
+        "Lift the mat, the cargo's under it.",
+        "Pull, the mat's caught."
+       ],
+       "src": "the map (leaning over the mat cover, both arms forward)"
+      },
+      {
+       "who": "stand3",
+       "think": [
+        "扛一天大包，才三百文。",
+        "腰都直不起來了。"
+       ],
+       "think_en": [
+        "A whole day of bales for three hundred cash.",
+        "I can't straighten my back."
+       ],
+       "src": "余辉 2021 (三百文 a day at the wharf)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.diners",
+   "title": "樓上酒客",
+   "title_en": "Drinkers Upstairs",
+   "mark": "cup",
+   "group": "S3.grp.hall_diners_16120",
+   "reading": "名画记 23 (the 新酒 banner below); 余辉 2021 (十千脚店里杯盘狼藉; the dearest wines, half a string a head); the map: a bearded diner in a dark cap with his hand out over the table, one hunched forward on the rail (dozing, tipsy or listening), a light-robed figure at the table's east end (host or waiter), a basin heaped with fruit or flowers; a man at the east gallery's rail looking out. The 串车 and the bridge are in view below.",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "cap": {
+     "fig": "diner_cap_16077",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (bearded, dark cap, hand held out over the table)"
+    },
+    "east": {
+     "fig": "diner_east_16183",
+     "name": "酒保",
+     "name_en": "waiter",
+     "src": "map (light-robed figure at the table's east end: host or waiter)"
+    },
+    "hunch": {
+     "fig": "diner_hunched_16050",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (hunched forward on the rail)"
+    },
+    "balcony": {
+     "fig": "balcony_drinker_16358",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (at the east gallery's rail, looking out)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "wine.1",
+     "beats": [
+      {
+       "who": "cap",
+       "say": [
+        "這新酒好，再打一角！",
+        "酒保，新酒再來！",
+        "好酒！滿上！"
+       ],
+       "say_en": [
+        "This new wine's good, another measure!",
+        "Waiter, more new wine!",
+        "Good wine! Fill it up!"
+       ],
+       "src": "名画记 23 (新酒); 余辉 2021"
+      },
+      {
+       "who": "east",
+       "say": [
+        "來了，新開的一罈！",
+        "客官慢飲，菜就來。"
+       ],
+       "say_en": [
+        "Coming, a jar fresh opened!",
+        "Drink slowly, sir, the food is coming."
+       ],
+       "src": "our proposal (the light-robed figure at the table)"
+      },
+      {
+       "who": "hunch",
+       "think": [
+        "……再一杯……",
+        "這酒，上頭……"
+       ],
+       "think_en": [
+        "…one more cup…",
+        "This wine goes to the head…"
+       ],
+       "src": "the map (hunched forward on the rail: dozing, tipsy or listening)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "cap",
+       "say": [
+        "樓下那串車上，蓋的甚麼？",
+        "你看橋那邊，人擠人。"
+       ],
+       "say_en": [
+        "What's covered on that cart below?",
+        "Look at the bridge: packed solid."
+       ],
+       "src": "the map (the 串车 below; the bridge crowd)"
+      },
+      {
+       "who": "balcony",
+       "say": [
+        "誰知道，許是銅錢。",
+        "看熱鬧的比過橋的多。"
+       ],
+       "say_en": [
+        "Who knows, coins maybe.",
+        "More gawkers than people crossing."
+       ],
+       "src": "名画记 24 (the load like strings of coins); 名画记 20"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "east",
+       "say": [
+        "這一桌，要半貫錢呢。",
+        "羊羔酒，八十文一角。"
+       ],
+       "say_en": [
+        "This table comes to half a string.",
+        "Lamb wine, eighty cash a measure."
+       ],
+       "src": "余辉 2021 (at least half a string a head; 羊羔酒 eighty cash a measure)"
+      },
+      {
+       "who": "cap",
+       "say": [
+        "難得清明，吃個痛快。",
+        "記賬，記賬。"
+       ],
+       "say_en": [
+        "It's Qingming; let's enjoy it.",
+        "Put it on my account."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "balcony",
+       "think": [
+        "樓上看河，風景最好。",
+        "這一河的船，數不過來。"
+       ],
+       "think_en": [
+        "The river from upstairs: the best view.",
+        "Too many boats on the river to count."
+       ],
+       "src": "the map (at the gallery rail looking out)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.doorway",
+   "title": "門內夥計",
+   "title_en": "Inside the Doorway",
+   "group": "S3.grp.doorway_pair_15830",
+   "reading": "The map: a robed figure stands in the hall's west doorway facing out; a second, only a head and a raised hand over a screen, reaches toward it (handing something or beckoning). Whether a serving woman or a waiter is unclear: both are called 夥計 and kept neutral.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "head": {
+     "fig": "head_at_partition_15848",
+     "name": "夥計",
+     "name_en": "server",
+     "src": "map (a head and a raised hand over a screen)"
+    },
+    "door": {
+     "fig": "doorway_figure_15818",
+     "name": "夥計",
+     "name_en": "server",
+     "src": "map (standing in the west doorway; a serving woman or a waiter)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "head",
+       "say": [
+        "菜好了，端去罷。",
+        "這壺酒，送去前頭。"
+       ],
+       "say_en": [
+        "The food's ready, take it out.",
+        "Take this pot of wine to the front."
+       ],
+       "src": "the map (a hand raised toward the doorway figure: handing or beckoning); our proposal"
+      },
+      {
+       "who": "door",
+       "say": [
+        "曉得了。",
+        "就來。"
+       ],
+       "say_en": [
+        "Got it.",
+        "Coming."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "door",
+       "think": [
+        "站了半日，腿都酸了。",
+        "前頭那桌，喝了半日了。"
+       ],
+       "think_en": [
+        "Standing half a day; my legs ache.",
+        "That front table's been drinking half the day."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.farbank",
+   "title": "對岸食店",
+   "title_en": "The Far-Bank Eating Place",
+   "group": "S3.grp.far_bank_eating_place_17300",
+   "reading": "The map: an open eating place on the far bank under two willows, a man hunched on a bench at a small table, two seated behind a long counter facing the river, a faint figure at the west table (its keeper, our reading). 十千脚店 and its 彩楼欢门 stand across the river.",
+   "gap": [
+    18,
+    38
+   ],
+   "roles": {
+    "cap": {
+     "fig": "far_bank_seated_17333",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (black cap, seated behind the long table)"
+    },
+    "hat": {
+     "fig": "far_bank_seated_17366",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (in a hat, seated behind the long table)"
+    },
+    "bench": {
+     "fig": "far_bank_seated_17277",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (seated on a bench)"
+    },
+    "fig": {
+     "fig": "far_bank_figure_17213",
+     "name": "店家",
+     "name_en": "keeper",
+     "src": "map (faint figure at the west table; keeper is our reading)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "cap",
+       "say": [
+        "對岸那酒店，好氣派。",
+        "你看那彩樓，搭得多高。"
+       ],
+       "say_en": [
+        "The tavern across the river: very grand.",
+        "Look how high they've built that festive gate."
+       ],
+       "src": "the map (十千脚店's 彩楼欢门 across the river); 東京夢華錄 卷二"
+      },
+      {
+       "who": "hat",
+       "say": [
+        "咱們這裏，也便宜些。",
+        "那是腳店，花錢的地方。"
+       ],
+       "say_en": [
+        "It's cheaper here, anyway.",
+        "That's a tavern: a place to spend money."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bench",
+       "think": [
+        "吃飽了，再坐一會。",
+        "柳樹底下，涼快。"
+       ],
+       "think_en": [
+        "Full. I'll sit a little longer.",
+        "Cool under the willows."
+       ],
+       "src": "the map (hunched on a bench under the willows)"
+      },
+      {
+       "who": "fig",
+       "say": [
+        "客官還要甚麼？",
+        "茶來了。"
+       ],
+       "say_en": [
+        "Anything else, sirs?",
+        "Here's the tea."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.parasol",
+   "title": "門旁傘攤",
+   "title_en": "The Parasol Stall by the Gate",
+   "group": "S3.grp.parasol_stall_17400",
+   "reading": "The map: a stall under a big tilted parasol just east of 十千脚店's gate, things stowed under its table, a man standing behind its east end and perhaps a seated keeper at its west end. What it sells is not painted. 名画记 20: the crowd is drawn to the bridge.",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "keeper": {
+     "fig": "parasol_stallkeeper_17445",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (standing behind the stall table)"
+    },
+    "seated": {
+     "fig": "parasol_seated_17322",
+     "name": "夥計",
+     "name_en": "helper",
+     "src": "map (faint, seated at the table's west end)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": [
+        "客官，看一看！",
+        "傘底下歇歇腳！"
+       ],
+       "say_en": [
+        "Have a look, sir!",
+        "Rest your feet under the parasol!"
+       ],
+       "src": "our proposal (a stall under a parasol by the tavern gate)"
+      },
+      {
+       "who": "seated",
+       "say": [
+        "莫喊了，人都看大船去了。",
+        "今日人都往橋上擠。"
+       ],
+       "say_en": [
+        "Stop calling; everyone's gone to see the big boat.",
+        "Everyone's squeezing onto the bridge today."
+       ],
+       "src": "名画记 20 (the crowd drawn to the bridge)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "seated",
+       "think": [
+        "坐著守攤，倒也清閒。",
+        "日頭曬，幸好有傘。"
+       ],
+       "think_en": [
+        "Minding the stall sitting down: easy enough.",
+        "Hot sun; lucky we have a parasol."
+       ],
+       "src": "the map (seated at the stall's west end)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.chuanche",
+   "title": "串車字屏",
+   "title_en": "The Screen on the Cart",
+   "mark": "book",
+   "group": "S3.grp.chuanche_17775",
+   "reading": "余辉 2015 看点六 (chosen: a banned partisan's cursive screen as a tarp, his books under it, pushed out of town on the master's orders to be burned); 名画记 24 (loading from the shop, one man counting; the load like strings of coins, voiced upstairs as a guess). The map: two men at the handle end, a man north of it with a stick.",
+   "gap": [
+    12,
+    26
+   ],
+   "roles": {
+    "topknot": {
+     "fig": "topknot_man_at_cart_17458",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (gripping a bundle on the load)"
+    },
+    "cap": {
+     "fig": "cap_man_at_cart_17545",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (leaning over the load)"
+    },
+    "count": {
+     "fig": "man_north_of_chuanche_17690",
+     "name": "管事",
+     "name_en": "steward",
+     "src": "map (holding a stick across); 名画记 24 (one counts)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "screen.2",
+     "beats": [
+      {
+       "who": "topknot",
+       "say": [
+        "屏風蓋嚴了，莫露出字來。",
+        "苫布蓋好，捆緊！"
+       ],
+       "say_en": [
+        "Cover it all with the screen, don't let the writing show.",
+        "Tarp on, tie it tight!"
+       ],
+       "src": "余辉 2015 (the screen used as a tarp over the books)"
+      },
+      {
+       "who": "cap",
+       "say": [
+        "好好一扇字屏，拿來當苫布。",
+        "這字寫得真好，可惜了。"
+       ],
+       "say_en": [
+        "A fine calligraphy screen, used as a tarp.",
+        "Such fine writing. What a waste."
+       ],
+       "src": "余辉 2015 (the cursive screen used as a tarp)"
+      },
+      {
+       "who": "count",
+       "say": [
+        "少說兩句，主家吩咐的。",
+        "噓，莫叫人聽見。"
+       ],
+       "say_en": [
+        "Say less. Master's orders.",
+        "Shh, don't let anyone hear."
+       ],
+       "src": "余辉 2015 (奉主人之命); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "count",
+       "say": [
+        "一卷、兩卷……都在了。",
+        "點清楚了，一卷不少。"
+       ],
+       "say_en": [
+        "One scroll, two… all here.",
+        "All counted, not one missing."
+       ],
+       "src": "名画记 24 (another man counts)"
+      },
+      {
+       "who": "topknot",
+       "say": [
+        "裝完了，推出城去罷。",
+        "還有一捆，在店裏。"
+       ],
+       "say_en": [
+        "Loaded. Let's push it out of town.",
+        "One more bundle, inside the shop."
+       ],
+       "src": "余辉 2015 (推到郊外销毁); 名画记 24 (loaded from the shop)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "cap",
+       "think": [
+        "燒了這些書，可惜……",
+        "朝廷的事，咱們管不著。"
+       ],
+       "think_en": [
+        "Burning these books, a pity…",
+        "Court business. Not for us to judge."
+       ],
+       "src": "余辉 2015 (the 崇宁 burnings of the old party's writings)"
+      },
+      {
+       "who": "topknot",
+       "say": [
+        "莫多想，推車要緊。",
+        "幹活，幹活。"
+       ],
+       "say_en": [
+        "Don't brood; the cart comes first.",
+        "Back to work."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.jars",
+   "title": "瓶罐攤",
+   "title_en": "The Jar Stalls",
+   "mark": "coin",
+   "group": "S3.grp.jar_stalls_17650",
+   "reading": "The map: two small stalls at the canopy's west end selling jars and bottles under the 新酒 pole, a figure behind (or tall jars) and one bent over the table; a squatting man holds something small out toward the jar table (a coin, our reading). 名画记 23: the 新酒 banner above them; what the jars are for is our proposal.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "squat": {
+     "fig": "squatting_man_17768",
+     "name": "買主",
+     "name_en": "buyer",
+     "src": "map (squatting, holding something small out toward the jar table)"
+    },
+    "behind": {
+     "fig": "figure_behind_pole_17650",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (behind the 新酒 pole; or tall jars)"
+    },
+    "bent": {
+     "fig": "figure_bent_at_table_17658",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (bending over the jar table's west end)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "squat",
+       "say": [
+        "這幾文，打一瓶。",
+        "就這些錢，夠不夠？"
+       ],
+       "say_en": [
+        "These few cash, for one bottle.",
+        "This is all I have. Enough?"
+       ],
+       "src": "the map (holding something small out toward the jar table); our proposal (a coin)"
+      },
+      {
+       "who": "behind",
+       "say": [
+        "夠了夠了，拿去。",
+        "再添一文。"
+       ],
+       "say_en": [
+        "Enough, enough, take it.",
+        "Add one more cash."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bent",
+       "say": [
+        "這瓶口封得嚴不嚴？",
+        "這罈子有沒有裂？"
+       ],
+       "say_en": [
+        "Is this bottle sealed tight?",
+        "Is this jar cracked?"
+       ],
+       "src": "the map (bending over the jar table)"
+      },
+      {
+       "who": "behind",
+       "say": [
+        "你放心，新燒的。",
+        "保管滴酒不漏。"
+       ],
+       "say_en": [
+        "Don't worry, freshly fired.",
+        "Not a drop will leak, I promise."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "behind",
+       "say": [
+        "打新酒的瓶，這裏買！",
+        "裝酒的瓶罐，賤賣！"
+       ],
+       "say_en": [
+        "Bottles for your new wine, buy them here!",
+        "Bottles and jars for wine, cheap!"
+       ],
+       "src": "名画记 23 (the 新酒 banner over these stalls); our proposal (what the jars are for)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.foodstand",
+   "title": "圓盤攤",
+   "title_en": "The Round-Tray Stand",
+   "mark": "bowl",
+   "group": "S3.grp.food_stall_17830",
+   "reading": "The map: a tall stand with a round tray under the canopy's east half, one man seated with his hands on the tray (its seller, our reading), one seated with his back to the street, two behind it (a man in a dark cap and a figure in a pale kerchief). What is on the tray is not painted.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "seated": {
+     "fig": "seated_man_at_stand_17795",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (seated, hands on the tray)"
+    },
+    "back": {
+     "fig": "man_seen_from_behind_17865",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (seated with his back to the street)"
+    },
+    "darkcap": {
+     "fig": "man_dark_cap_17888",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (dark cap, behind the stand)"
+    },
+    "hood": {
+     "fig": "hooded_figure_17848",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (pale kerchief, behind the stand)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "seated",
+       "say": [
+        "熱的，剛出鍋！",
+        "來嘗嘗，一文一個。"
+       ],
+       "say_en": [
+        "Hot, just out of the pot!",
+        "Try one, a cash apiece."
+       ],
+       "src": "our proposal (his hands on the round tray)"
+      },
+      {
+       "who": "back",
+       "say": [
+        "給我包兩個。",
+        "再來一個。"
+       ],
+       "say_en": [
+        "Wrap me two.",
+        "One more."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "darkcap",
+       "say": [
+        "今日橋上人多，生意好罷？",
+        "這一盤賣得快。"
+       ],
+       "say_en": [
+        "Crowds on the bridge today; business good?",
+        "This tray sells fast."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "seated",
+       "say": [
+        "託福，託福。",
+        "看熱鬧的，也得吃。"
+       ],
+       "say_en": [
+        "Thanks to you.",
+        "Even gawkers have to eat."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "hood",
+       "think": [
+        "好香……",
+        "等會兒也買一個。"
+       ],
+       "think_en": [
+        "Smells good…",
+        "I'll buy one in a bit."
+       ],
+       "src": "the map (the figure in a pale kerchief behind the stand)",
+       "optional": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.pedlar",
+   "title": "攔擔問價",
+   "title_en": "Stopping a Pedlar",
+   "mark": "coin",
+   "group": "S3.grp.robed_man_and_porter_17680",
+   "reading": "The map: a man in a long robe holds his hand out to a porter in a straw hat stopped with a hanging frame of goods; a child holds the robed man's robe. A sale; what hangs is not named. Pedlar and kinship are ours.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "robe": {
+     "fig": "robed_man_gesturing_17567",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (hand held out)"
+    },
+    "pedlar": {
+     "fig": "porter_straw_hat_17762",
+     "name": "貨郎",
+     "name_en": "pedlar",
+     "src": "map (straw hat, hanging frame); pedlar is our reading"
+    },
+    "child": {
+     "fig": "child_holding_robe_17520",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (holding the man's robe)"
+    }
+   },
+   "exchanges": [
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "robe",
+       "say": [
+        "你這架上掛的，怎麼賣？",
+        "站一站，我看看。"
+       ],
+       "say_en": [
+        "How much for what hangs on your frame?",
+        "Wait a moment, let me look."
+       ],
+       "src": "the map (his hand held out toward the frame)"
+      },
+      {
+       "who": "pedlar",
+       "say": [
+        "客官挑一樣，便宜。",
+        "您慢慢看。"
+       ],
+       "say_en": [
+        "Pick one, sir, cheap.",
+        "Take your time."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "爹爹，我要那個！",
+        "那個好看！"
+       ],
+       "say_en": [
+        "Daddy, I want that one!",
+        "That one's pretty!"
+       ],
+       "src": "the map (the child holding the robe); our proposal (kinship)"
+      },
+      {
+       "who": "robe",
+       "say": [
+        "莫扯我衣裳。",
+        "就買一個。"
+       ],
+       "say_en": [
+        "Don't tug my robe.",
+        "Just one, then."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.traystall",
+   "title": "水邊湯攤",
+   "title_en": "The Soup Stall at the Water",
+   "mark": "bowl",
+   "group": "S3.grp.tray_stall_18403",
+   "reading": "The map: a round tray of food on a splayed-leg stand at the bank's edge west of the bridge's foot, a man in a light robe drinking, men seated, bending and standing around it; they face the bridge, where 余辉's 车轿相争 plays out.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "drink": {
+     "fig": "seated_man_topknot_18352",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (light robe, drinking at the tray)"
+    },
+    "trayb": {
+     "fig": "tray_bender_18356",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (bending at the tray; keeper is our reading)"
+    },
+    "capm": {
+     "fig": "seated_man_cap_18282",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (dark cap, seated facing east)"
+    },
+    "bend": {
+     "fig": "bending_man_18305",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (dark jacket, bending forward)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "drink",
+       "say": [
+        "這湯熱乎，喝得暖身。",
+        "好湯！再來一碗。"
+       ],
+       "say_en": [
+        "This soup's hot; warms you through.",
+        "Good soup! Another bowl."
+       ],
+       "src": "the map (the seated man drinking at the tray)"
+      },
+      {
+       "who": "trayb",
+       "say": [
+        "來了，小心燙。",
+        "慢喝，還有。"
+       ],
+       "say_en": [
+        "Coming, mind, it's hot.",
+        "Drink slowly, there's more."
+       ],
+       "src": "our proposal (bending at the tray)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "capm",
+       "say": [
+        "你看橋上，那轎子堵住了。",
+        "坐這裏，橋上橋下都看得見。"
+       ],
+       "say_en": [
+        "Look at the bridge: that sedan's blocking it.",
+        "From here you see above and below the bridge."
+       ],
+       "src": "余辉 2015 (车轿相争); the map (seated facing east toward the bridge)"
+      },
+      {
+       "who": "bend",
+       "say": [
+        "吃你的罷，管他們。",
+        "邊吃邊看，正好。"
+       ],
+       "say_en": [
+        "Eat up, never mind them.",
+        "Eat and watch: perfect."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.goods",
+   "title": "雜貨攤前",
+   "title_en": "At the Sundries Stall",
+   "mark": "coin",
+   "group": "S3.grp.parasol_stall_18160",
+   "reading": "The map: the seller at the small-goods board under the very large parasol, a man pointing at the stacked bowls, smiling, as if bargaining, a tall man in a dark robe turned toward him with hands raised, a figure crouching at the parasol's rim.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "point": {
+     "fig": "pointing_man_18318",
+     "name": "買主",
+     "name_en": "buyer",
+     "src": "map (pointing at the bowls, smiling)"
+    },
+    "seller": {
+     "fig": "display_seller_18058",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (seated at the display)"
+    },
+    "robe": {
+     "fig": "dark_robe_man_18400",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (long dark robe, hands raised)"
+    },
+    "crouch": {
+     "fig": "parasol_edge_crouching_18288",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (crouching at the parasol's rim)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "point",
+       "say": [
+        "那一摞碗，算便宜些。",
+        "這碗有缺口，再讓些。"
+       ],
+       "say_en": [
+        "That stack of bowls, cheaper.",
+        "This bowl's chipped, knock some off."
+       ],
+       "src": "the map (pointing at the bowls, smiling, as if bargaining)"
+      },
+      {
+       "who": "seller",
+       "say": [
+        "已是最低的價了。",
+        "好罷好罷，讓你一文。"
+       ],
+       "say_en": [
+        "That's already my lowest price.",
+        "All right, all right, one cash off."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "robe",
+       "say": [
+        "我也要一摞，一齊算。",
+        "兩摞一齊，再便宜些。"
+       ],
+       "say_en": [
+        "I'll take a stack too; ring them up together.",
+        "Two stacks together, cheaper still."
+       ],
+       "src": "the map (turned toward the pointing man, hands raised)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "crouch",
+       "think": [
+        "傘底下躲躲日頭。",
+        "蹲著歇會兒腳。"
+       ],
+       "think_en": [
+        "Hide from the sun under the parasol.",
+        "Squat and rest my feet."
+       ],
+       "src": "the map (crouching at the parasol's rim)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.barrow",
+   "title": "驢不肯走",
+   "title_en": "The Donkey Won't Budge",
+   "mark": "wheel",
+   "group": "S3.grp.barrow_18100",
+   "reading": "The map: the big one-wheeled barrow pushed from behind, the bearded man hauling the balking black donkey, a man reaching toward the load. 《東京夢華錄》卷三 般載雜賣: the 串車, men steering front and back, a donkey drawing in front.",
+   "gap": [
+    12,
+    26
+   ],
+   "roles": {
+    "beard": {
+     "fig": "bearded_barrow_man_18098",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (hauling the balking donkey)"
+    },
+    "push": {
+     "fig": "barrow_pusher_18295",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (pushing the barrow)"
+    },
+    "reach": {
+     "fig": "reaching_man_18062",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (reaching toward the load)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "beard",
+       "say": [
+        "走！走呀！",
+        "拉不動！這驢犯倔！"
+       ],
+       "say_en": [
+        "Move! Move!",
+        "Can't budge it! The donkey's balking!"
+       ],
+       "src": "the map (hauling the balking donkey)"
+      },
+      {
+       "who": "push",
+       "say": [
+        "我推著呢，你拉呀！",
+        "一、二——推！"
+       ],
+       "say_en": [
+        "I'm pushing, you pull!",
+        "One, two — push!"
+       ],
+       "src": "the map (leaning far forward against the load)"
+      },
+      {
+       "who": "reach",
+       "say": [
+        "慢些，貨要歪了！",
+        "扶住，扶住！"
+       ],
+       "say_en": [
+        "Easy, the load's tilting!",
+        "Hold it, hold it!"
+       ],
+       "src": "the map (reaching toward the load)",
+       "when": [
+        "point"
+       ]
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "beard",
+       "think": [
+        "這畜生，偏偏今日鬧脾氣。",
+        "到了城裏，非賣了牠不可。"
+       ],
+       "think_en": [
+        "This beast picks today to sulk.",
+        "Once in town, I'm selling it."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "push",
+       "say": [
+        "前頭驢拽，後頭人推，這才叫串車。",
+        "車重，慢慢來。"
+       ],
+       "say_en": [
+        "Donkey pulls in front, men push behind: that's a string cart.",
+        "Heavy cart; take it slow."
+       ],
+       "src": "東京夢華錄 卷三 (前有驢拽，謂之串車)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.yinzi",
+   "title": "飲子",
+   "title_en": "Herbal Drinks",
+   "mark": "bowl",
+   "group": "S3.grp.twin_parasols_18570",
+   "reading": "名画记 22 (the 飲子 signboard under twin parasols; drinks boiled from herbs; bought by common folk in short jackets, so cheap); the map: the seller under the parasols, porters with shoulder poles walking past at the bottom edge.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "seller": {
+     "fig": "man_wide_hat_18615",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (under the twin parasols)"
+    },
+    "porter": {
+     "fig": "porter_baskets_bottom_18175",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (two big baskets, mouth open)"
+    },
+    "pole": {
+     "fig": "pole_carrier_robe_18345",
+     "name": "腳夫",
+     "name_en": "porter",
+     "src": "map (a pole across his shoulders)"
+    },
+    "back": {
+     "fig": "back_view_dark_hair_18340",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (seen from behind in front of the pole-carrier)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "seller",
+       "say": [
+        "飲子！解渴的飲子！",
+        "熱飲子，一盞幾文！"
+       ],
+       "say_en": [
+        "Herbal drinks! Thirst-quenching drinks!",
+        "Hot herbal drink, a few cash a cup!"
+       ],
+       "src": "名画记 22"
+      },
+      {
+       "who": "porter",
+       "say": [
+        "來一盞！",
+        "等我放下擔子。"
+       ],
+       "say_en": [
+        "One cup!",
+        "Let me put my load down."
+       ],
+       "src": "名画记 22 (the buyers are common folk in short jackets)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "pole",
+       "say": [
+        "這飲子甚麼熬的？",
+        "苦不苦？"
+       ],
+       "say_en": [
+        "What's this drink boiled from?",
+        "Is it bitter?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "seller",
+       "say": [
+        "草藥熬的，甘裏帶苦。",
+        "先苦後甘，喝了提神。"
+       ],
+       "say_en": [
+        "Boiled from herbs: sweet with a bitter edge.",
+        "Bitter first, sweet after; it perks you up."
+       ],
+       "src": "名画记 22 (多用草药煮成)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "back",
+       "think": [
+        "喝一盞再走。",
+        "身上還有幾文錢。"
+       ],
+       "think_en": [
+        "One cup, then I'll go.",
+        "I've still a few cash on me."
+       ],
+       "src": "名画记 22 (cheap); the map (seen from behind)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.ridden",
+   "title": "騎驢上橋",
+   "title_en": "Riding to the Bridge",
+   "group": "S3.grp.ridden_donkey_18690",
+   "reading": "The map: a man in a light robe rides a dark donkey east toward the bridge's foot, whip in hand, a man walking at its head; ahead, 余辉's 车轿相争 blocks the deck.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "rider": {
+     "fig": "donkey_rider_18650",
+     "name": "騎驢客",
+     "name_en": "donkey rider",
+     "src": "map (riding a dark donkey, whip in hand)"
+    },
+    "groom": {
+     "fig": "groom_at_donkey_18682",
+     "name": "驢夫",
+     "name_en": "donkey man",
+     "src": "map (walking at the donkey's head)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "rider",
+       "say": [
+        "前頭怎麼不動了？",
+        "橋上堵住了？"
+       ],
+       "say_en": [
+        "Why's nothing moving ahead?",
+        "Is the bridge jammed?"
+       ],
+       "src": "the map (riding east toward the bridge's foot)"
+      },
+      {
+       "who": "groom",
+       "say": [
+        "轎子和馬頂在橋上了。",
+        "前頭在吵，過不去。"
+       ],
+       "say_en": [
+        "A sedan and a horse are stuck on the bridge.",
+        "There's a row ahead; we can't get through."
+       ],
+       "src": "余辉 2015 (车轿相争)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "rider",
+       "think": [
+        "早知道，走別的橋。",
+        "抽一鞭也沒用。"
+       ],
+       "think_en": [
+        "Should've taken another bridge.",
+        "No use whipping it."
+       ],
+       "src": "the map (whip in hand); our proposal"
+      },
+      {
+       "who": "groom",
+       "say": [
+        "驢也乏了，歇歇罷。",
+        "牽穩了，莫驚著驢。"
+       ],
+       "say_en": [
+        "The donkey's tired too; let's rest.",
+        "Hold it steady, don't frighten the donkey."
+       ],
+       "src": "the map (walking at the donkey's head)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.deckdonkey",
+   "title": "坡上小驢",
+   "title_en": "The Donkey on the Ramp",
+   "group": "S3.grp.deck_donkey_18745",
+   "reading": "The map: two men bend over a small dark donkey on the ramp, one at its lowered head and one over the bundle on its back.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "east": {
+     "fig": "donkey_man_east_18768",
+     "name": "驢夫",
+     "name_en": "donkey man",
+     "src": "map (bent over the donkey's load)"
+    },
+    "west": {
+     "fig": "donkey_man_west_18728",
+     "name": "驢夫",
+     "name_en": "donkey man",
+     "src": "map (bent over the donkey's neck)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "east",
+       "say": [
+        "貨要滑下來了，扶住！",
+        "這捆歪了，重新綁。"
+       ],
+       "say_en": [
+        "The load's slipping, hold it!",
+        "This bundle's crooked; tie it again."
+       ],
+       "src": "the map (bent over the load)"
+      },
+      {
+       "who": "west",
+       "say": [
+        "牽住了，你綁罷。",
+        "莫動，好驢兒。"
+       ],
+       "say_en": [
+        "I've got it, you tie it.",
+        "Easy, good donkey."
+       ],
+       "src": "the map (bent over the donkey's lowered head)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "west",
+       "think": [
+        "橋上這麼擠，牠也害怕。",
+        "人多，驢也犯怯。"
+       ],
+       "think_en": [
+        "So crowded on the bridge, it's scared too.",
+        "Crowds make even a donkey timid."
+       ],
+       "src": "the map (the donkey's head lowered); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.weststall",
+   "title": "橋口席棚",
+   "title_en": "The Mat Stall at the Bridgehead",
+   "group": "S3.grp.west_stall_18330",
+   "reading": "The map: a mat-awning stall with a table of coiled goods and bowls at the west side of the ramp's foot, its keeper in a dark cap leaning over it, a man in a light robe craning west under the mat, a man on a bench at its corner holding a parasol over it. 余辉 2015 看点十: stalls crowding onto the bridge (侵街).",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "keeper": {
+     "fig": "mat_stall_keeper_18435",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (dark cap, leaning over the table)"
+    },
+    "leaner": {
+     "fig": "mat_stall_leaner_18375",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (light robe, craning west)"
+    },
+    "parasol": {
+     "fig": "stall_man_parasol_18612",
+     "name": "夥計",
+     "name_en": "helper",
+     "src": "map (on a bench, holding the stall's parasol)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": [
+        "盤好的，一捆一捆賣！",
+        "看貨看貨，橋頭最便宜！"
+       ],
+       "say_en": [
+        "Coiled and ready, sold by the bundle!",
+        "Look at the goods, cheapest at the bridgehead!"
+       ],
+       "src": "the map (coiled goods on the table)"
+      },
+      {
+       "who": "leaner",
+       "say": [
+        "這一捆怎麼賣？",
+        "結實不結實？"
+       ],
+       "say_en": [
+        "How much is this bundle?",
+        "Is it sturdy?"
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "parasol",
+       "think": [
+        "傘舉得手都酸了。",
+        "風一吹，傘就歪。"
+       ],
+       "think_en": [
+        "My arm aches from holding the parasol.",
+        "A gust, and the parasol tips."
+       ],
+       "src": "the map (holding the stall's parasol)"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "攤子擺在橋口，生意才好。",
+        "挪也沒處挪，人太多。"
+       ],
+       "say_en": [
+        "Set up at the bridgehead: that's where trade is.",
+        "Nowhere to move, too many people."
+       ],
+       "src": "余辉 2015 看点十 (stalls at the bridge, 侵街)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "leaner",
+       "think": [
+        "那邊在喊甚麼？",
+        "橋上出事了？"
+       ],
+       "think_en": [
+        "What are they shouting over there?",
+        "Trouble on the bridge?"
+       ],
+       "src": "the map (craning west, looking)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.grain",
+   "title": "驢馱糧袋",
+   "title_en": "Donkeys with Grain Sacks",
+   "mark": "sack",
+   "group": "S3.grp.sack_donkeys_18600",
+   "reading": "The map: two dark donkeys under huge pale sacks at the bridge's south foot, one heading north-west, one east; a man in a dark robe calling out to them, a child in red at the first donkey's head, a man driving the pack donkey. Grain going into town is our proposal on the grain thread (名画记 9; 東京夢華錄 卷三 般載雜賣; 余辉 2015, 2023).",
+   "gap": [
+    14,
+    30
+   ],
+   "roles": {
+    "call": {
+     "fig": "calling_man_18690",
+     "name": "貨主",
+     "name_en": "owner",
+     "src": "map (calling out to the loaded donkeys); owner is our reading"
+    },
+    "drive": {
+     "fig": "donkey_walker_18481",
+     "name": "趕驢的",
+     "name_en": "drover",
+     "src": "map (walking beside the pack donkey)"
+    },
+    "child": {
+     "fig": "child_red_18592",
+     "name": "孩童",
+     "name_en": "child",
+     "src": "map (the small figure in red)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "grain.3",
+     "beats": [
+      {
+       "who": "call",
+       "say": [
+        "往城裏走，莫亂跑！",
+        "糧袋扶穩，莫掉了！"
+       ],
+       "say_en": [
+        "To town, this way, don't wander!",
+        "Keep the grain sack steady, don't drop it!"
+       ],
+       "src": "the map (calling out to the loaded donkeys); our proposal (grain into town)"
+      },
+      {
+       "who": "drive",
+       "say": [
+        "曉得，這驢認得路。",
+        "袋子紮緊了的。"
+       ],
+       "say_en": [
+        "I know, this donkey knows the way.",
+        "The sacks are tied tight."
+       ],
+       "src": "the map (walking beside the pack donkey as if driving it)"
+      },
+      {
+       "who": "child",
+       "say": [
+        "這袋子比驢還大！",
+        "驢兒馱得動麼？"
+       ],
+       "say_en": [
+        "The sack's bigger than the donkey!",
+        "Can the donkey carry it?"
+       ],
+       "src": "the map (huge pale sacks; the child in red at the donkey's head)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "drive",
+       "say": [
+        "碼頭上卸的糧，一袋袋往城裏送。",
+        "城裏正店，等著這糧釀酒。"
+       ],
+       "say_en": [
+        "Grain off the wharf, sack by sack into town.",
+        "The town's wine houses are waiting to brew with it."
+       ],
+       "src": "名画记 9; 余辉 2023 (grain for the brewing 正店); our proposal"
+      },
+      {
+       "who": "call",
+       "think": [
+        "糧價一天一個樣。",
+        "囤得住，才賺得著。"
+       ],
+       "think_en": [
+        "Grain prices change by the day.",
+        "Hold it long enough and you'll profit."
+       ],
+       "src": "余辉 2015 (private dealers hoard, waiting for a good price)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "child",
+       "say": [
+        "那頭驢往東走了！",
+        "牠走錯路了！"
+       ],
+       "say_en": [
+        "That donkey's going east!",
+        "It's going the wrong way!"
+       ],
+       "src": "the map (one donkey walks east)"
+      },
+      {
+       "who": "call",
+       "say": [
+        "快趕回來！",
+        "莫叫牠跑了！"
+       ],
+       "say_en": [
+        "Drive it back, quick!",
+        "Don't let it get away!"
+       ],
+       "src": "our proposal",
+       "when": [
+        "hail"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.eastawning",
+   "title": "欄邊席棚",
+   "title_en": "The Stall at the Railing",
+   "group": "S3.grp.east_awning_stall_18783",
+   "reading": "The map: a mat-awning stall leaning on the bridge's near railing at the ramp's foot; a man works at its slatted rack, another stands under its edge. 余辉 2015 看点十 (侵街).",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "worker": {
+     "fig": "awning_worker_18815",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (working at the slatted rack)"
+    },
+    "under": {
+     "fig": "man_under_awning_18775",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (dark cap, under the awning)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "worker",
+       "say": [
+        "架子上的，隨便挑。",
+        "擺正些，莫叫人碰倒。"
+       ],
+       "say_en": [
+        "Anything on the rack, take your pick.",
+        "Straighten them, so nobody knocks them over."
+       ],
+       "src": "the map (working at the slatted rack)"
+      },
+      {
+       "who": "under",
+       "say": [
+        "這攤子靠著欄干，倒穩當。",
+        "人擠過來了，當心架子。"
+       ],
+       "say_en": [
+        "Leaning on the railing, this stall's steady.",
+        "The crowd's pushing in; mind the rack."
+       ],
+       "src": "the map (a stall leaning on the near railing)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "under",
+       "think": [
+        "橋口本就窄，又多一攤。",
+        "攤子擺上橋，路都沒了。"
+       ],
+       "think_en": [
+        "The bridge mouth is narrow enough, and here's another stall.",
+        "Stalls up on the bridge, and the road's gone."
+       ],
+       "src": "余辉 2015 看点十 (侵街)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.archstall",
+   "title": "橋下飲酒",
+   "title_en": "Drinking Under the Arch",
+   "mark": "cup",
+   "group": "S3.grp.stall_under_arch",
+   "reading": "The map: four people seated at a long table under the mat-roofed shed on the south bank under the arch's south foot, eating or drinking, the big boat struggling just beyond. 名画记 18 (the pierless bridge) gives the bearded man his story.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "beard": {
+     "fig": "stall_bearded_man_19235",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (bearded, leaning on the table)"
+    },
+    "dish": {
+     "fig": "stall_man_with_dish_19173",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (in a cap, with a dish, drinking)"
+    },
+    "west": {
+     "fig": "stall_sitter_west_19088",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (seated at the west end)"
+    },
+    "east": {
+     "fig": "stall_sitter_east_19297",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (seated at the east end)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "beard",
+       "say": [
+        "看那大船，要撞上了！",
+        "那桅桿，懸！懸！"
+       ],
+       "say_en": [
+        "Look at that big boat, it's going to hit!",
+        "That mast — close, close!"
+       ],
+       "src": "the map (the shed at the water's edge under the arch); 名画记 19"
+      },
+      {
+       "who": "dish",
+       "say": [
+        "莫嚷，喝你的酒。",
+        "撞不了，他們有數。"
+       ],
+       "say_en": [
+        "Stop yelling, drink your wine.",
+        "It won't hit; they know what they're doing."
+       ],
+       "src": "the map (the man with a dish, drinking)"
+      },
+      {
+       "who": "west",
+       "say": [
+        "撞了，咱們這棚子也遭殃。",
+        "離這麼近，看得真切。"
+       ],
+       "say_en": [
+        "If it hits, this shed suffers too.",
+        "So close, you see everything."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "east",
+       "think": [
+        "好位子，邊吃邊看。",
+        "這頓飯吃得驚心。"
+       ],
+       "think_en": [
+        "Good seat: eat and watch.",
+        "A nerve-racking meal, this."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "beard",
+       "say": [
+        "我跟你們說，這橋是個兵想的。",
+        "這橋沒柱子，船才過得去。"
+       ],
+       "say_en": [
+        "Let me tell you: a soldier thought this bridge up.",
+        "No piers, that's why boats can get through."
+       ],
+       "src": "名画记 18; 《澠水燕談錄》卷八"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "dish",
+       "say": [
+        "店家，再燙一壺！",
+        "再來一碟！"
+       ],
+       "say_en": [
+        "Keeper, warm another pot!",
+        "Another dish!"
+       ],
+       "src": "the map (a dish on the table); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.bankwatch",
+   "title": "岸上仰看",
+   "title_en": "Looking Up from the Bank",
+   "group": "S3.grp.bank_watchers_under_arch",
+   "reading": "The map: people on the south bank under the arch's south foot, looking up at the bridge and the boat in trouble: the 'below' half of 余辉 2015's 上下呼救; 名画记 19 (boats one after another; ropes from the bridge).",
+   "gap": [
+    16,
+    32
+   ],
+   "roles": {
+    "vest": {
+     "fig": "bank_watcher_dark_vest_18945",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (dark vest, looking up)"
+    },
+    "hair": {
+     "fig": "bank_watcher_dark_hair_18905",
+     "name": "婦人",
+     "name_en": "woman",
+     "src": "map (a figure with dark hair, played as a woman)"
+    },
+    "robeh": {
+     "fig": "bank_watcher_dark_robe_18968",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (long dark robe and head-covering)"
+    },
+    "crouch": {
+     "fig": "bank_watcher_crouching_18960",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (crouching in front)"
+    },
+    "east": {
+     "fig": "robe_man_east_18893",
+     "name": "行人",
+     "name_en": "passer-by",
+     "src": "map (long robe, looking east)"
+    },
+    "post": {
+     "fig": "bank_watcher_at_end_post_18998",
+     "name": "老者",
+     "name_en": "old man",
+     "src": "map (dark robe at the end post)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "vest",
+       "say": [
+        "上頭拋繩了！",
+        "橋上的人都探出身子了。"
+       ],
+       "say_en": [
+        "They're throwing a rope from up there!",
+        "Everyone on the bridge is leaning out."
+       ],
+       "src": "名画记 19; 余辉 2015 (上下呼救)"
+      },
+      {
+       "who": "hair",
+       "say": [
+        "當心掉下來！",
+        "哎呀，看得我心慌。"
+       ],
+       "say_en": [
+        "Careful you don't fall!",
+        "Oh, it makes my heart race."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "robeh",
+       "say": [
+        "快放桅！快呀！",
+        "下頭的，撐開！"
+       ],
+       "say_en": [
+        "Lower the mast! Quick!",
+        "You down there, push off!"
+       ],
+       "src": "余辉 2015 (上下呼救)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "crouch",
+       "think": [
+        "蹲在這裏，看得最真。",
+        "腿蹲麻了也不肯走。"
+       ],
+       "think_en": [
+        "Squatting here, I see it best.",
+        "Legs gone numb and still I won't leave."
+       ],
+       "src": "the map (crouching in front of the watchers)"
+      },
+      {
+       "who": "east",
+       "say": [
+        "那邊又來一條船！",
+        "後頭的船也得等著。"
+       ],
+       "say_en": [
+        "Another boat coming over there!",
+        "The boats behind will have to wait."
+       ],
+       "src": "the map (looking east); 名画记 19 (boats one after another)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "post",
+       "say": [
+        "莫慌，船工有數。",
+        "放倒了桅，就過得去。"
+       ],
+       "say_en": [
+        "Don't panic, the crew know their job.",
+        "With the mast down, she'll pass."
+       ],
+       "src": "名画记 19 (the crew lowering the mast); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.bankwatch2",
+   "title": "岸上招手",
+   "title_en": "Waving from the Bank",
+   "group": "S3.grp.bank_watchers_under_arch_19600",
+   "reading": "The map: on the south bank under the arch, between the mat shed, two parasols and the moored boat, people watch the big boat struggle with its mast; one waves his arm high at it. 余辉 2015 (上下呼救), 2021 (a big passenger boat of two or three hundred).",
+   "gap": [
+    16,
+    32
+   ],
+   "roles": {
+    "waver": {
+     "fig": "bank_waver_19612",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (waving at the big boat)"
+    },
+    "watcher": {
+     "fig": "bank_watcher_19672",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (looking up at the boat)"
+    },
+    "capm": {
+     "fig": "parasol_capped_man_19652",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (dark cap, under the tilted parasol)"
+    },
+    "bender": {
+     "fig": "under_parasol_bender_19385",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (bending under the big parasol; stallholder is our reading)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "waver",
+       "say": [
+        "喂——當心橋梁！",
+        "這邊！往這邊撐！"
+       ],
+       "say_en": [
+        "Hey — mind the beam!",
+        "This way! Pole this way!"
+       ],
+       "src": "the map (waving at the big boat); 余辉 2015 (上下呼救)"
+      },
+      {
+       "who": "watcher",
+       "say": [
+        "喊破嗓子也沒用。",
+        "他們聽見了，你看。"
+       ],
+       "say_en": [
+        "Shout yourself hoarse, it won't help.",
+        "They heard, look."
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "capm",
+       "think": [
+        "這船要是撞了，可了不得。",
+        "滿船的人，可莫出事。"
+       ],
+       "think_en": [
+        "If that boat hits, it'll be a disaster.",
+        "A boat full of people; let nothing happen."
+       ],
+       "src": "余辉 2021 (a big passenger boat carries two or three hundred)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bender",
+       "say": [
+        "傘下的貨收一收！",
+        "人都擠過來了，貨收好。"
+       ],
+       "say_en": [
+        "Put away the goods under the parasol!",
+        "The crowd's pressing in; pack the goods."
+       ],
+       "src": "the map (bending under the big parasol); our proposal"
+      },
+      {
+       "who": "waver",
+       "say": [
+        "顧甚麼貨，看船！",
+        "等一會兒，船快過了。"
+       ],
+       "say_en": [
+        "Forget the goods, watch the boat!",
+        "Wait, the boat's almost through."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.handcart",
+   "title": "車上北岸",
+   "title_en": "Up the North Bank",
+   "group": "S3.grp.handcart_19862",
+   "reading": "The map: a two-wheeled handcart on the north bank north of the bridge's ramp, hauled west by one man at the shafts while a second leans on it at the wheel; the little tavern (名画记 21) stands just east.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "pull": {
+     "fig": "cart_puller_19870",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (pulling by the shafts)"
+    },
+    "push": {
+     "fig": "cart_pusher_19922",
+     "name": "車夫",
+     "name_en": "carter",
+     "src": "map (leaning on the cart at its wheel)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "pull",
+       "say": [
+        "上坡了，推緊些！",
+        "嘿——往上走！"
+       ],
+       "say_en": [
+        "Uphill now, push hard!",
+        "Hup — up we go!"
+       ],
+       "src": "the map (hauled up the north bank)"
+      },
+      {
+       "who": "push",
+       "say": [
+        "推著呢！你看路！",
+        "輪子卡住了，等等！"
+       ],
+       "say_en": [
+        "I'm pushing! Watch the road!",
+        "The wheel's stuck, wait!"
+       ],
+       "src": "the map (leaning on the cart at its wheel)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "push",
+       "think": [
+        "過了這段坡，就平了。",
+        "這車貨，送到哪家去？"
+       ],
+       "think_en": [
+        "Past this slope it's flat.",
+        "Where's this load going, anyway?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "pull",
+       "say": [
+        "橋上堵了，走河邊。",
+        "前頭那酒館，歇一歇再走。"
+       ],
+       "say_en": [
+        "The bridge is jammed; we'll take the riverside.",
+        "Rest at the tavern ahead, then go on."
+       ],
+       "src": "our proposal; 名画记 21 (the tavern by the bridge)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.smalltavern",
+   "title": "橋邊酒館",
+   "title_en": "The Tavern by the Bridge",
+   "mark": "bowl",
+   "group": "S3.grp.north_foot_stall_20013",
+   "reading": "名画记 21 (the little tavern at the bridge's north foot: a stall at its kitchen door like a takeaway window, several fire mouths under the stove, charcoal from the donkey train at the scroll's start); the map: the keeper at the low table of wares, the man in a black hat at the tavern's west end, the tables empty.",
+   "gap": [
+    16,
+    34
+   ],
+   "roles": {
+    "keeper": {
+     "fig": "stallkeeper_20030",
+     "name": "店家",
+     "name_en": "tavern keeper",
+     "src": "map (behind the low table)"
+    },
+    "hat": {
+     "fig": "dark_hat_figure_20070",
+     "name": "酒客",
+     "name_en": "drinker",
+     "src": "map (black hat, at the tavern's west end)"
+    }
+   },
+   "exchanges": [
+    {
+     "step": "charcoal.2",
+     "linked": true,
+     "beats": [
+      {
+       "who": "keeper",
+       "say": [
+        "灶下的炭，是驢馱進來的。",
+        "炭火旺，酒溫得快。"
+       ],
+       "say_en": [
+        "The charcoal under the stove came in on donkeys.",
+        "Hot charcoal warms the wine quickly."
+       ],
+       "src": "名画记 21; 名画记 1"
+      },
+      {
+       "who": "hat",
+       "say": [
+        "城外驢隊，就是送炭的？",
+        "這炭燒得好，沒煙。"
+       ],
+       "say_en": [
+        "The donkey trains from the country bring charcoal?",
+        "Good charcoal, no smoke."
+       ],
+       "src": "名画记 21 (the donkey train's charcoal feeds these taverns)"
+      },
+      {
+       "who": "keeper",
+       "say": [
+        "正是，一馱馱都送到酒店。",
+        "城外馱來的，好炭。"
+       ],
+       "say_en": [
+        "Just so; load after load goes to the taverns.",
+        "Brought in from the country: good charcoal."
+       ],
+       "src": "名画记 21"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "keeper",
+       "say": [
+        "熱酒熱菜，帶走也成！",
+        "客官，帶走麼？"
+       ],
+       "say_en": [
+        "Hot wine and food, to take away too!",
+        "Taking it with you, sir?"
+       ],
+       "src": "名画记 21 (a stall at the kitchen door like a takeaway window)"
+      },
+      {
+       "who": "hat",
+       "think": [
+        "靠河喝一角，正好。",
+        "桌子都空著，人都看船去了。"
+       ],
+       "think_en": [
+        "A measure by the river: just right.",
+        "The tables are empty; everyone's off watching the boat."
+       ],
+       "src": "the map (the tavern's tables stand empty); our proposal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.southshop",
+   "title": "岸邊茶店",
+   "title_en": "The Shop on the South Bank",
+   "group": "S3.grp.south_shop_19920",
+   "reading": "The map: an open-fronted shop under a big tiled roof on the south bank east of the bridge, a man seated drinking at a table with a bowl, a standing man, a faint figure on a bench, a faint figure at the slanted board, a head below it, a signboard by the door. What it sells is not painted; tea is our reading of the bowl and benches (《東京夢華錄》 names 點茶 and 煎點湯茶 among the town's trades).",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "standing": {
+     "fig": "shop_standing_man_19872",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (standing in the shop)"
+    },
+    "seated": {
+     "fig": "shop_seated_man_19772",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (seated at a table with a bowl)"
+    },
+    "bench": {
+     "fig": "shop_seated_on_bench_19905",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (faint, seated on the bench)"
+    },
+    "hat": {
+     "fig": "shop_figure_hat_19972",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (faint, at the slanted board's east end)"
+    },
+    "low": {
+     "fig": "shop_low_head_19940",
+     "name": "閒人",
+     "name_en": "onlooker",
+     "src": "map (a head showing above the front board)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "standing",
+       "say": [
+        "這裏離橋近，看得清楚。",
+        "方才橋下好一陣喧嚷。"
+       ],
+       "say_en": [
+        "Close to the bridge here; you can see it all.",
+        "Quite a din under the bridge just now."
+       ],
+       "src": "the map (east of the bridge); 名画记 20 (人声水声)"
+      },
+      {
+       "who": "seated",
+       "say": [
+        "坐下喝碗茶，莫跟著擠。",
+        "擠甚麼，這裏也看得見。"
+       ],
+       "say_en": [
+        "Sit and have a bowl of tea; don't join the crush.",
+        "Why push? You can see from here."
+       ],
+       "src": "the map (seated with a bowl at the table); our proposal (tea)"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "bench",
+       "think": [
+        "這板凳坐得舒坦。",
+        "打個盹再走。"
+       ],
+       "think_en": [
+        "This bench is comfortable.",
+        "A nap, then I'll go."
+       ],
+       "src": "the map (a faint figure seated on the bench)"
+      },
+      {
+       "who": "hat",
+       "say": [
+        "店家，再點一盞茶。",
+        "茶錢放桌上了。"
+       ],
+       "say_en": [
+        "Keeper, whisk another cup of tea.",
+        "Tea money's on the table."
+       ],
+       "src": "東京夢華錄 卷三 (煎點湯茶); our proposal"
+      }
+     ]
+    },
+    {
+     "beats": [
+      {
+       "who": "low",
+       "think": [
+        "坐在地上，倒也涼快。",
+        "看不見，只聽得喊。"
+       ],
+       "think_en": [
+        "Sitting on the ground is cool enough.",
+        "Can't see; I only hear shouting."
+       ],
+       "src": "the map (a head below the front board)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3.shopparasol",
+   "title": "傘下酒攤",
+   "title_en": "The Parasol Wine Stall",
+   "mark": "cup",
+   "group": "S3.grp.parasol_stall_20245",
+   "reading": "The map: a table under a big parasol in front of the south-bank shops east of the bridge, a seller seated behind it with his arms on the table, a customer on a stool at its west end drinking, jars and a small box about it. 名画记 23 (新酒).",
+   "gap": [
+    18,
+    36
+   ],
+   "roles": {
+    "cust": {
+     "fig": "seated_customer_20140",
+     "name": "客人",
+     "name_en": "customer",
+     "src": "map (on a stool, drinking, a jar beside him)"
+    },
+    "seller": {
+     "fig": "parasol_stall_seller_20290",
+     "name": "攤主",
+     "name_en": "stallholder",
+     "src": "map (seated behind the table, arms on it)"
+    }
+   },
+   "exchanges": [
+    {
+     "beats": [
+      {
+       "who": "cust",
+       "say": [
+        "這酒還過得去。",
+        "再倒一碗。"
+       ],
+       "say_en": [
+        "This wine's passable.",
+        "Pour another bowl."
+       ],
+       "src": "the map (the seated customer drinking, a jar beside him)"
+      },
+      {
+       "who": "seller",
+       "say": [
+        "罈裏還有，慢慢喝。",
+        "是新酒，香罷？"
+       ],
+       "say_en": [
+        "There's more in the jar, take your time.",
+        "New wine; fragrant, eh?"
+       ],
+       "src": "the map (jars about the stall); 名画记 23 (新酒)"
+      }
+     ]
+    },
+    {
+     "linked": true,
+     "beats": [
+      {
+       "who": "seller",
+       "say": [
+        "你說那大船，過去沒有？",
+        "橋那邊又吵甚麼？"
+       ],
+       "say_en": [
+        "That big boat: has it got through?",
+        "What's the row by the bridge now?"
+       ],
+       "src": "our proposal"
+      },
+      {
+       "who": "cust",
+       "say": [
+        "過去了，好險。",
+        "管他呢，喝酒。"
+       ],
+       "say_en": [
+        "It's through. Close call.",
+        "Never mind, drink."
+       ],
+       "src": "our proposal"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "id": "b3.waiter",
+   "who": {
+    "fig": "waiter_calling_17451",
+    "name": "酒保",
+    "name_en": "waiter",
+    "src": "the waiter in an apron walking out of 十千脚店's gate with a plate of buns, mouth open (map)"
+   },
+   "close": true,
+   "every": [
+    30,
+    70
+   ],
+   "say": [
+    "借過借過，熱點心來了！",
+    "外頭的客官，點心送到！"
+   ],
+   "say_en": [
+    "Coming through! Hot snacks!",
+    "Snacks for the guest outside!"
+   ],
+   "src": "the map (walking out of the gate with a plate, calling out); 余辉 2021 (the takeaway server)",
+   "as": {
+    "guan": [
+     "官人讓讓，點心燙手！"
+    ],
+    "fu": [
+     "娘子借過！"
+    ],
+    "tong": [
+     "小娃兒閃開，莫撞翻了！"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "By your leave, sir, the snacks are hot!"
+    ],
+    "fu": [
+     "Excuse me, madam!"
+    ],
+    "tong": [
+     "Out of the way, kid, don't knock it over!"
+    ]
+   }
+  },
+  {
+   "id": "b3.manhat",
+   "who": {
+    "fig": "man_dark_hat_18035",
+    "name": "攤主",
+    "name_en": "stallholder",
+    "src": "the man in a dark hat behind the round basket, big moustache, mouth open (map); a hawker is our reading"
+   },
+   "close": true,
+   "every": [
+    35,
+    80
+   ],
+   "say": [
+    "來看這筐！",
+    "好東西，便宜！"
+   ],
+   "say_en": [
+    "Come look in this basket!",
+    "Good stuff, cheap!"
+   ],
+   "src": "the map (behind the round basket, mouth open); our proposal (calling)",
+   "as": {
+    "guan": [
+     "官人，筐裏瞧瞧？"
+    ],
+    "fu": [
+     "娘子，挑幾個回去？"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Sir, a look in the basket?"
+    ],
+    "fu": [
+     "Madam, pick a few to take home?"
+    ]
+   }
+  },
+  {
+   "id": "b3.blackhat",
+   "who": {
+    "fig": "black_hat_man_18458",
+    "name": "小販",
+    "name_en": "hawker",
+    "src": "the man in a black hat holding a flat tray out to his side (map); a hawker is our reading"
+   },
+   "close": true,
+   "every": [
+    35,
+    80
+   ],
+   "say": [
+    "瞧一瞧，看一看！",
+    "好貨，托在手上給您看！"
+   ],
+   "say_en": [
+    "Have a look, have a look!",
+    "Fine goods, held up for you to see!"
+   ],
+   "src": "the map (holding a flat tray or board out, looking west); our proposal (a hawker)",
+   "as": {
+    "guan": [
+     "官人瞧瞧這個？"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Something here for you, sir?"
+    ]
+   }
+  },
+  {
+   "id": "b3.stick",
+   "who": {
+    "fig": "walker_with_stick_17884",
+    "name": "後生",
+    "name_en": "young man",
+    "src": "the young man with a topknot striding west with a long stick (map)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "讓讓，讓讓！",
+    "這邊走得通麼？"
+   ],
+   "say_en": [
+    "Make way, make way!",
+    "Can I get through this way?"
+   ],
+   "src": "the map (striding west across the open ground, head turned west)"
+  },
+  {
+   "id": "b3.baskets",
+   "who": {
+    "fig": "porter_two_baskets_18340",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "the porter with two round baskets walking east (map)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "借光，借光！",
+    "擔子來了，閃一閃！"
+   ],
+   "say_en": [
+    "Pardon me, pardon me!",
+    "Load coming, step aside!"
+   ],
+   "src": "the map (bent under a shoulder pole with two round baskets)"
+  },
+  {
+   "id": "b3.jar",
+   "who": {
+    "fig": "porter_jar_bundle_18483",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "the porter with a jar and a tall bundle on a shoulder pole (map)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "借過！罐子碰不得！",
+    "擔子大，讓一讓！"
+   ],
+   "say_en": [
+    "Coming through! Don't knock the jar!",
+    "Big load, make way!"
+   ],
+   "src": "the map (a jar in a rope sling and a tall netted bundle on his pole)"
+  },
+  {
+   "id": "b3.polesack",
+   "who": {
+    "fig": "porter_with_pole_20450",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "the man with a long sack and a staff hanging from his shoulder pole (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "這袋子不沉，就是長。",
+    "過了橋，再歇。"
+   ],
+   "think_en": [
+    "The sack's not heavy, just long.",
+    "I'll rest past the bridge."
+   ],
+   "src": "the map (a long pale sack and a staff hanging from his pole)"
+  },
+  {
+   "id": "b3.sack",
+   "who": {
+    "fig": "sack_porter_18915",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "the man walking down the deck with a big dark sack on his back (map)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "背著重貨，讓讓！",
+    "莫擠！袋子要掉了！"
+   ],
+   "say_en": [
+    "Heavy load on my back, make way!",
+    "Don't shove! The sack will fall!"
+   ],
+   "src": "the map (a large dark sack slung on his back, walking west down the deck)"
+  },
+  {
+   "id": "b3.whitesack",
+   "who": {
+    "fig": "white_sack_porter_18882",
+    "name": "腳夫",
+    "name_en": "porter",
+    "src": "the man in a white head-cloth with a big white sack on his shoulder (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "這橋上，比集市還擠。",
+    "下了橋就鬆快了。"
+   ],
+   "think_en": [
+    "This bridge is more crowded than a market.",
+    "Easier once I'm off the bridge."
+   ],
+   "src": "the map (walking down the ramp with a white sack); 名画记 20 (the crowded deck)"
+  },
+  {
+   "id": "b3.push",
+   "who": {
+    "fig": "leaning_man_arms_out_18703",
+    "name": "閒人",
+    "name_en": "onlooker",
+    "src": "the man leaning west with both arms out, pushing at the man before him (map)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "莫擠！前頭走不動了！",
+    "往前挪挪！"
+   ],
+   "say_en": [
+    "Stop shoving! Nothing's moving ahead!",
+    "Shift forward a bit!"
+   ],
+   "src": "the map (leaning forward with both arms stretched out); 名画记 20"
+  },
+  {
+   "id": "b3.bow",
+   "who": {
+    "fig": "bowing_man_18688",
+    "name": "閒人",
+    "name_en": "onlooker",
+    "src": "the man bent double to the west, bowing or stooping to pick something up (map)"
+   },
+   "every": [
+    45,
+    100
+   ],
+   "say": [
+    "對不住，對不住！",
+    "我的錢掉了……"
+   ],
+   "say_en": [
+    "Sorry, sorry!",
+    "I've dropped my money…"
+   ],
+   "src": "the map (bent double, as if bowing or stooping to pick something up)",
+   "when": [
+    "bow"
+   ]
+  },
+  {
+   "id": "b3.youth",
+   "who": {
+    "fig": "youth_round_face_18643",
+    "name": "後生",
+    "name_en": "young man",
+    "src": "the round-faced youth facing the viewer in the deck crowd (map)"
+   },
+   "every": [
+    50,
+    110
+   ],
+   "say": [
+    "好熱鬧！",
+    "那邊吵甚麼？"
+   ],
+   "say_en": [
+    "What a commotion!",
+    "What's the row over there?"
+   ],
+   "src": "the map (a youth in the crowd on the ramp); 名画记 20"
+  },
+  {
+   "id": "b3.folded",
+   "who": {
+    "fig": "light_jacket_man_18812",
+    "name": "閒人",
+    "name_en": "onlooker",
+    "src": "the man in a light jacket with his arms folded in the ramp crowd (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "看你們吵到幾時。",
+    "我就抱著手看。"
+   ],
+   "think_en": [
+    "Let's see how long you'll argue.",
+    "I'll just fold my arms and watch."
+   ],
+   "src": "the map (arms folded, facing the viewer); 余辉 2015 (车轿相争)"
+  },
+  {
+   "id": "b3.elder",
+   "who": {
+    "fig": "man_folded_arms_tall_cap_19270",
+    "name": "老者",
+    "name_en": "old man",
+    "src": "the man in a tall dark cap with folded arms at the crown, looking west toward the horse (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "文官武官，誰也不讓誰。",
+    "成何體統。"
+   ],
+   "think_en": [
+    "Civil and military, neither gives way.",
+    "What a disgrace."
+   ],
+   "src": "余辉 2015 (互不相让); the map (arms folded, looking toward the horse)"
+  },
+  {
+   "id": "b3.official",
+   "who": {
+    "fig": "official_black_robe_17940",
+    "name": "官人",
+    "name_en": "official",
+    "src": "the tall bearded man in a black 幞头 and long black robe (map: a scholar or official)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "think": [
+    "橋上亂成這樣，也無人管。",
+    "攤子佔了街，越發不像話。"
+   ],
+   "think_en": [
+    "Chaos on the bridge, and nobody in charge.",
+    "Stalls taking over the street, worse and worse."
+   ],
+   "src": "余辉 2015 看点十 (侵街; no one manages the street); the map (face turned east toward the bridge)"
+  },
+  {
+   "id": "b3.handhead",
+   "who": {
+    "fig": "hand_to_head_18752",
+    "name": "閒人",
+    "name_en": "onlooker",
+    "src": "the man with one hand raised to his head, looking east (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "日頭晃眼，看不清。",
+    "頭巾又鬆了。"
+   ],
+   "think_en": [
+    "The sun's in my eyes, can't see.",
+    "My headcloth's slipped again."
+   ],
+   "src": "the map (one hand raised to his head: shading his eyes or holding his cap)"
+  },
+  {
+   "id": "b3.apron",
+   "who": {
+    "fig": "robe_apron_man_18582",
+    "name": "行人",
+    "name_en": "passer-by",
+    "src": "the tall man in a long robe and apron looking up at the rider and the ramp (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "那騎馬的，好威風。",
+    "橋上又堵住了。"
+   ],
+   "think_en": [
+    "That rider: what airs.",
+    "The bridge is jammed again."
+   ],
+   "src": "the map (looking up east at the rider and the ramp)"
+  },
+  {
+   "id": "b3.water",
+   "who": {
+    "fig": "far_water_carrier_19720",
+    "name": "挑水的",
+    "name_en": "water carrier",
+    "src": "the man with a shoulder pole and two banded buckets (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "這兩桶水，送到酒館去。",
+    "水滿了，莫灑了。"
+   ],
+   "think_en": [
+    "These two buckets go to the tavern.",
+    "Full buckets; don't spill."
+   ],
+   "src": "the map (a water carrier with two buckets); our proposal (where to)"
+  },
+  {
+   "id": "b3.farcounter",
+   "who": {
+    "fig": "far_shopkeeper_19620",
+    "name": "店家",
+    "name_en": "shopkeeper",
+    "src": "the man leaning over the long counter on the north bank (map)"
+   },
+   "every": [
+    55,
+    120
+   ],
+   "think": [
+    "今日橋上，比廟會還熱鬧。",
+    "櫃上無事，看看熱鬧。"
+   ],
+   "think_en": [
+    "The bridge is busier than a temple fair today.",
+    "Nothing at the counter; I'll watch the fuss."
+   ],
+   "src": "the map (leaning over the long counter)"
+  },
+  {
+   "id": "b3.farvendor",
+   "who": {
+    "fig": "far_stall_vendor_19436",
+    "name": "攤主",
+    "name_en": "stallholder",
+    "src": "the vendor seated under the far-bank parasol (map)"
+   },
+   "close": true,
+   "every": [
+    35,
+    80
+   ],
+   "say": [
+    "傘下涼快，來坐坐！",
+    "看貨看貨！"
+   ],
+   "say_en": [
+    "Cool under the parasol, come and sit!",
+    "Look at the goods!"
+   ],
+   "src": "the map (seated behind a long table of goods under a big parasol)",
+   "as": {
+    "guan": [
+     "官人歇歇，傘下涼快。"
+    ]
+   },
+   "as_en": {
+    "guan": [
+     "Rest a while, sir; it's cool under the parasol."
+    ]
+   }
+  },
+  {
+   "id": "b3.fartray",
+   "who": {
+    "fig": "far_vendor_dark_19578",
+    "name": "攤主",
+    "name_en": "stallholder",
+    "src": "the man in dark clothes behind the basket stand (map)"
+   },
+   "every": [
+    50,
+    110
+   ],
+   "say": [
+    "筐裏的，新鮮的！",
+    "便宜賣了！"
+   ],
+   "say_en": [
+    "Fresh, in the basket!",
+    "Selling cheap!"
+   ],
+   "src": "the map (behind a flat basket of goods on a splayed stand)"
+  },
+  {
+   "id": "b3.farshed",
+   "who": {
+    "fig": "far_bank_seated_18318",
+    "name": "客人",
+    "name_en": "customer",
+    "src": "the man seated on a chair in the far-bank shed (map)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "think": [
+    "對岸好熱鬧。",
+    "一壺茶，坐半日。"
+   ],
+   "think_en": [
+    "Busy over the water.",
+    "One pot of tea, half a day's sitting."
+   ],
+   "src": "the map (seated at a table in a small open shed)"
+  },
+  {
+   "id": "b3.passenger",
+   "who": {
+    "fig": "passenger_door_16553",
+    "name": "船客",
+    "name_en": "passenger",
+    "src": "the faint figure in the passenger boat's cabin door (map)"
+   },
+   "every": [
+    60,
+    130
+   ],
+   "think": [
+    "幾時開船……",
+    "岸上倒熱鬧。"
+   ],
+   "think_en": [
+    "When do we sail…",
+    "Lively on shore."
+   ],
+   "src": "the map (in the cabin doorway of the long passenger boat moored at the far bank)"
+  },
+  {
+   "id": "b3.groom",
+   "who": {
+    "fig": "behind_lampbox_17090",
+    "name": "馬夫",
+    "name_en": "groom",
+    "src": "名画记 24 (the groom sits resting inside the fence); the map: the faint man seated behind the lamp-box (gen/life/q8_figures.md)"
+   },
+   "every": [
+    60,
+    120
+   ],
+   "think": [
+    "樓上那位，怕要喝到天黑。",
+    "坐得腿都麻了。",
+    "這馬倒比我自在。"
+   ],
+   "think_en": [
+    "The one upstairs will drink till dark, I fear.",
+    "My legs have gone numb from sitting.",
+    "The horse has an easier time than I do."
+   ],
+   "src": "名画记 24 (a horse tied outside the fence, some guest's upstairs; the groom rests inside); our proposal"
+  }
+ ]
+}

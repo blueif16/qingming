@@ -36,8 +36,10 @@ the GitHub repo and the generated-asset dataset.
 - **Meshy deletes API outputs after 3 days.** Download results into `gen/` right away.
 - **Blender export:** `export_scene.gltf` exports every scene in the .blend unless you pass `use_active_scene=True`.
   The live .blend holds `messenger_study`, and once that leaked into a GLB. `blender/street_b1.py:export` sets this.
-- **Foliage:** AI 3D generators turn willow strands into slabs. Use painted alpha cards (from shyfai images) for trees,
-  and Meshy for bodies and solid props.
+- **Foliage:** AI 3D generators turn willow strands into slabs, so a tree is never one generated mesh. Near you it is
+  3D (`web/src/trees3d.js`: Meshy trunks for the gnarled forms, wood from the card's strokes for thin ones, a crown of
+  painted clumps); its painted alpha card (from shyfai images) is the far level. Meshy for bodies and solid props.
+  On by default since the user's sign-off (2026-10-13); `?trees=cards` shows the cards alone.
 - **The scroll map** (`map/`; format and rules in `map/README.md`): every building, tree, figure, animal and prop,
   measured from the strokes. Read `map/text/<S>.md` to know where things are; don't re-read the scroll for that.
   Scenes, `people.json` and tests take positions only from `sections/<name>/layout.json` (`tools/map_layout.mjs`);

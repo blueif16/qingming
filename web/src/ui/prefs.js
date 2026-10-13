@@ -13,8 +13,10 @@ export const PREF_DEFAULTS = {
   helpSeen: false,           // the controls help has been shown once in full
   placeNotes: true,          // region banners and landmark toasts (settings 介面; settings agent)
   plaques: true,             // the white plaques hung over landmarks (settings 介面; settings agent)
+  chatter: true,             // the painted people talk among themselves and bark (chatter.js; settings 介面 街談; life pass)
   discovered: [],            // the 圖志 journal (lore agent, places.js): landmark map IDs reached, 'r:<region id>' entered,
-                             // 't:<talk scene id>' heard, in the order found; never a count on screen
+                             // 't:<talk scene id>' heard, 'h:<thread step id>' overheard (a plot line's step, life
+                             // pass), in the order found; never a count on screen
   lastPlace: null,           // the landmark reached last (its toast); J opens the journal there
 };
 
