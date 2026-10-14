@@ -10,6 +10,10 @@
 //   wins: revalidate). The rules are checked here against every file: a plain name that would come out immutable,
 //   or more than 100 rules (Cloudflare's cap), fails.
 // - / serves world.html (a 200 rewrite; the address stays /, so ?window= etc. reach the page).
+// - No analytics snippet here: the zone's automatic Cloudflare Web Analytics (site infinityopus.com, beacon token
+//   6619180a…) is injected at the edge into every HTML page a browser asks for (filter Host = qingming.infinityopus.com
+//   in the dashboard). A manual site, qingming.infinityopus.com (token 3890c7638c264a668128652cbaaae203), was made on
+//   2026-10-14 in case we ever want our own snippet; with both on, each page carries two beacons.
 import fs from 'node:fs';
 import path from 'node:path';
 
