@@ -17,6 +17,13 @@ analytics. **Before** (2026-10-12 to 10-14): Vercel Hobby, project `qingming` in
 name https://qingming-delta.vercel.app; Hobby's 1M requests a month meant only about 1,200-2,000 new visitors (a cold
 visit is about 490 requests, 30 MB). The Vercel steps are kept, commented out, in `tools/deploy_web.sh`.
 
+**Entry addresses** (`tools/cf_site.mjs` `ENTRIES`): `/bili` (Bilibili), `/xhs` (Rednote), `/dy` (Douyin), `/wx` (WeChat),
+`/yt` (YouTube), `/x` (X) all serve `world.html`. Post each platform's own address; Web Analytics (site infinityopus.com,
+filter Host = qingming.infinityopus.com) lists visits by Path, which is the only trace of where a visit came from when
+the app sends no referrer (Bilibili and Rednote texts mostly can't link out, so people copy the address). A new
+platform is one line in `ENTRIES`. **Icons:** the 「上河」 seal; `node tools/site_icons.mjs` re-renders the PNGs and
+`favicon.ico` in `web/public/` from `favicon.svg` and `assets/ui/seal.svg`.
+
 ## The one command
 
 From `qingming/`, once the new content is in `web/public/assets/` (`tools/export_web_scene.mjs`, `tools/character.mjs`,
