@@ -6,7 +6,9 @@
 //     at its left end), the seven regions, and the talk you have heard (見聞);
 //   - a region's leaf: its name, its long text, then its landmarks west to east, each with the painting's own crop
 //     (assets/ui/places/<id>.webp, tools/place_crops.mjs, fetched only as its leaf shows), the name, the short line, the
-//     long text, a quote and the sources. A place not reached yet is a faint empty leaf.
+//     long text, a quote and the sources. A place not reached yet is a faint empty leaf;
+//   - the 印譜, last: the things to do in the town (interact.js deeds(): the drum, the viewpoints, the poses), each a seal
+//     stamped the first time you do it (prefs.discovered x:<key>), a faint blank till then.
 // Everything it reads comes from places.json (already loaded), lore.json and talk.json; what you have found is in
 // prefs.discovered (places.js). A lazy chunk: index.js imports this file on the first J, tap or settings row, so the
 // first load carries none of it, and its words and long texts use the lazily fetched "lore" font subset.
@@ -43,6 +45,7 @@ export class Journal {
     const regions = Object.entries(this.lore?.regions || {}).map(([id, r]) => ({ id, ...r })).filter((r) => r.area).sort((a, b) => a.area[0] - b.area[0]);
     for (const r of regions) L.push({ kind: 'region', key: `r:${r.id}`, label: r.name, region: r });
     L.push({ kind: 'talk', key: 'talk', label: JW.talkTab });
+    if (this.deeds?.length) L.push({ kind: 'deeds', key: 'deeds', label: JW.deedsTab });
     return L;
   }
   regionOfLandmark(m) { return this.places?.regions?.[m.section]?.id || null; }
@@ -76,7 +79,7 @@ export class Journal {
 
   async open({ at = null } = {}) {
     const d = this.data?.(); // places.json and talk.json may have arrived after this chunk was made
-    if (d) { this.places = d.places || this.places; this.talkData = d.talk || this.talkData; }
+    if (d) { this.places = d.places || this.places; this.talkData = d.talk || this.talkData; this.deeds = d.deeds?.length ? d.deeds : this.deeds; }
     if (this.isOpen) { if (at) this.show(this.leafFor(at), at); return; }
     this.isOpen = true;
     this.relock = !!document.pointerLockElement;
@@ -108,7 +111,7 @@ export class Journal {
   leafFor(at) {
     const L = this.leaves();
     if (!L.length) return null;
-    if (at === 'col' || at === 'talk') return at;
+    if (at === 'col' || at === 'talk' || (at === 'deeds' && this.deeds?.length)) return at;
     const m = at && (this.places?.landmarks || []).find((x) => x.id === at);
     if (m) return `r:${this.regionOfLandmark(m)}`;
     if (at && L.some((l) => l.key === at)) return at;
@@ -124,6 +127,7 @@ export class Journal {
     const found = this.found;
     if (leaf.kind === 'region') this.renderRegion(leaf.region, found, focusId);
     else if (leaf.kind === 'talk') this.renderTalk(found);
+    else if (leaf.kind === 'deeds') this.renderDeeds(found);
     else this.renderColophons();
     this.leafEl.scrollTop = 0;
     if (focusId) {
@@ -226,6 +230,33 @@ export class Journal {
       lines,
       grid,
     ].filter(Boolean));
+  }
+
+  // the 印譜 (the user, 2026-10-13: the interactions recorded like a 成就系統): a seal for each thing done, in the data's
+  // order; one not done yet is a faint blank with 未至, and nothing counts them (STYLE.md §9, §15)
+  renderDeeds(found) {
+    const enOn = prefs.get('lang') === 'zh_en';
+    const en = (t) => (enOn && t ? h('span', 'qm-gloss qm-en', { text: t, lang: 'en' }) : null);
+    const grid = h('div', 'qm-jn-grid qm-jn-deeds');
+    for (const d of this.deeds) {
+      if (!found.has(`x:${d.key}`)) {
+        grid.append(h('article', 'qm-jn-entry qm-jn-empty', { 'aria-label': JW.notYet }, [h('div', 'qm-jn-fig qm-jn-blank'), h('p', 'qm-jn-not', { text: JW.notYet })]));
+        continue;
+      }
+      const region = this.places?.regions?.[d.section]?.name || '';
+      grid.append(h('article', 'qm-jn-entry', { 'data-id': `x:${d.key}` }, [
+        h('figure', 'qm-jn-fig qm-jn-deed-fig', {}, [seal(d.seal, 'qm-jn-deed-seal')]),
+        h('h4', 'qm-jn-ename', {}, [h('span', '', { text: d.name }), en(d.name_en)]),
+        h('p', 'qm-jn-eline', { text: d.line }, [en(d.line_en)]),
+        region ? h('p', 'qm-jn-deed-where', { text: region }) : null,
+      ]));
+    }
+    const [lead, leadEn] = JW.deedsLead;
+    this.leafEl.replaceChildren(
+      h('div', 'qm-jn-rhead', {}, [h('div', 'qm-jn-rname', {}, [h('span', 'qm-jn-rname-v', { text: JW.deedsTitle }), seal(JW.deedsSeal, 'qm-jn-rseal')]),
+        h('div', 'qm-jn-rtext', {}, [h('p', 'qm-jn-rsub', { text: lead }, [en(leadEn)])])]),
+      grid,
+    );
   }
 
   renderColophons() {

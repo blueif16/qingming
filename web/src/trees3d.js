@@ -66,7 +66,8 @@ varying float vQmRoot;`)
     vec3 qmDir = (transpose(qmM) * vec3(qmWindDir.x, 0.0, qmWindDir.y)) / qmS2; // the wind in the tree's frame
     vec3 qmSide = normalize(cross(vec3(0.0, 1.0, 0.0), qmDir) + 1e-5);
     float qmPh = fract(sin(dot(qmFoot.xz, vec2(12.9898, 78.233))) * 43758.5453) * 6.2831;
-    float qmW = qmWindAt(qmFoot.xz) * qmFar;
+    float qmShk = qmShakeAt(qmFoot.xz) * qmFar; // the drum's shake (wind.js): a shiver in the leaves, a little in the wood
+    float qmW = qmWindAt(qmFoot.xz) * qmFar + 0.2 * qmShk;
     float qmT = qmWindTime;
     // the trunk: a slow lean with the wind plus a sway round it, more toward the top; a little across the wind too
     float qmSway = qmW * (0.55 + 0.45 * sin(qmT * 1.1 + qmPh)) + 0.12 * qmW * sin(qmT * 2.3 + qmPh * 1.7);
@@ -79,7 +80,8 @@ varying float vQmRoot;`)
       float qmHang = step(1.0, qmWind.w), qmF = qmWind.w - qmHang;
       float qmCp = fract(sin(dot(qmWind.xyz, vec3(17.1, 31.7, 11.3))) * 43758.5453) * 6.2831;
       float qmSp = mix(1.0, 0.5, qmHang);
-      float qmFl = qmW * qmF * (0.10 * sin(qmT * 2.9 * qmSp + qmCp) + 0.05 * sin(qmT * 5.3 * qmSp + qmCp * 1.3) + 0.08) * mix(1.0, 2.4, qmHang);
+      float qmFl = qmW * qmF * (0.10 * sin(qmT * 2.9 * qmSp + qmCp) + 0.05 * sin(qmT * 5.3 * qmSp + qmCp * 1.3) + 0.08) * mix(1.0, 2.4, qmHang)
+        + qmShk * qmF * 0.09 * sin(qmT * 17.0 + qmCp * 3.0) * mix(1.0, 1.8, qmHang);
       transformed += (qmDir * qmFl + qmSide * qmFl * 0.6 * sin(qmT * 1.7 * qmSp + qmCp)) * length(qmRel) * 0.6;
       transformed.y -= abs(qmFl) * qmF * length(qmRel) * mix(0.15, 0.05, qmHang);
     }

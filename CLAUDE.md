@@ -37,6 +37,13 @@ the GitHub repo and the generated-asset dataset.
   `shots/<name>.json` (places from `tools/film_places.mjs`), then `tools/film_shot.mjs` (check → preview → final), then
   `gen/films/<name>/` (MP4, ProRes or PNG, plus the camera of every frame). The page is stepped a frame at a time on a
   film clock (`web/src/film.js`), so no frame drops. In the game, the 鳥瞰 view (C, `web/src/birdseye.js`) is its live kin.
+- **Interactions** (`web/src/interact.js`, data `web/public/assets/interact.json`, records `gen/interact/`): the gate
+  tower's drum you beat (birds burst from the crowns: ambient.js `startle`; leaves shiver: wind.js `shake`), glowing
+  viewpoint spots where E starts a 鳥瞰-style circle (birdseye.js `vista`; never a trigger underfoot, replay any time),
+  and joining the painted people's poses (the moat and Rainbow Bridge rails, the storyteller's ring). Each one, done the
+  first time, stamps its seal into the 圖志's 印譜 leaf (`prefs.discovered` `x:<key>`; no count, STYLE.md §9). The near
+  talk always wins E. On by default since the user's sign-off (2026-10-13); `?interact=0` turns it off
+  (interact.js `DEFAULT_ON`).
 - **Meshy deletes API outputs after 3 days.** Download results into `gen/` right away.
 - **Blender export:** `export_scene.gltf` exports every scene in the .blend unless you pass `use_active_scene=True`.
   The live .blend holds `messenger_study`, and once that leaked into a GLB. `blender/street_b1.py:export` sets this.

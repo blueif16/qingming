@@ -66,6 +66,11 @@ html[data-night] .qm-jn-mask { background: radial-gradient(ellipse at 50% 42%, r
 .qm-jn-empty .qm-jn-fig, .qm-jn-blank { background: rgba(42, 36, 32, 0.035); box-shadow: inset 0 0 0 1.4px rgba(42, 36, 32, 0.16); }
 .qm-jn-empty .qm-jn-not { text-align: center; }
 .qm-jn-talk .qm-jn-empty { min-height: 90px; display: grid; place-items: center; box-shadow: inset 0 0 0 1.4px rgba(42, 36, 32, 0.12); }
+/* the 印譜 (journal.js renderDeeds): a seal stamped on the paper for each thing done, a faint blank till then */
+.qm-jn-deeds .qm-jn-fig { aspect-ratio: 5 / 2; }
+.qm-jn-deed-fig { display: grid; place-items: center; background: var(--qm-paper-hi); box-shadow: 0 0 0 3px var(--qm-mount), 0 4px 10px rgba(30, 20, 10, 0.18); }
+.qm-jn-deed-seal { font-size: 44px; animation: qm-stamp 260ms var(--qm-ease) both 120ms; }
+.qm-jn-deed-where { margin: 0; font: 400 13px/1.3 var(--qm-font-text); color: var(--qm-ink-faint); letter-spacing: 0.3em; }
 /* where J opened it: the place you reached last */
 .qm-jn-here { box-shadow: 0 0 0 2px rgba(181, 50, 30, 0.55); background: rgba(181, 50, 30, 0.04); }
 .qm-jn-here::before { content: ''; position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; background: var(--qm-cinnabar); transform: rotate(45deg); }

@@ -47,6 +47,7 @@ import { createAmbient } from './ambient.js';
 import { Trees3D, trunkColliders } from './trees3d.js';
 import { Sound } from './sound.js';
 import { createUI } from './ui/index.js';
+import { Interact } from './interact.js';
 import { waitForStart } from './ui/start.js';
 
 const query = new URLSearchParams(location.search);
@@ -1002,6 +1003,7 @@ $('help').innerHTML = isTouch
 // the ink UI (web/src/ui/, gen/ui/STYLE.md): loading screen, place names, near conversations, help, the chrome's look.
 // It replaces the help above with its own; ?stats=1 shows the stats line; ?ui=0 leaves out notifications and talk.
 let birdseye = null; // 鳥瞰 (birdseye.js): made once you are in; the HUD's tile asks it from the start
+let interact = null, ambient = null; // the drum, the viewpoints, joining a pose (interact.js); ambient life (ambient.js)
 let film = null; // filmed shots (film.js; tools/film_shot.mjs, skill `film`): __test.film once you are in
 const ui = createUI({
   camera, player, query, hud,
@@ -1055,6 +1057,7 @@ function setView(mode) {
 }
 const turnTo = (cur, target, step) => cur + THREE.MathUtils.clamp(((target - cur + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI, -step, step);
 function updateAvatar(dt) {
+  if (interact?.drive(avatar, dt)) return; // a pose you joined, or the drum's stroke (interact.js)
   const v = player.velocity;
   let speed = Math.hypot(v.x, v.z);
   const first = player.mode === 'first' && !birdseye?.body; // 鳥瞰 shows the whole body, standing as it stood
@@ -1369,6 +1372,7 @@ function tick(now) {
   if (player.mode === 'third' && followCam) followCam.update(dt);
   birdseye?.update(dt); // 鳥瞰, over either view (birdseye.js)
   film?.apply(dt); // a shot's camera, playing or filmed (film.js)
+  if (!film?.active) interact?.update(dt); // the drum, the viewpoints, a pose's camera (interact.js)
   placeSun();
   shadowPolicy(dt);
   streamUpdate();
@@ -1520,7 +1524,7 @@ try {
   if (people.crowd) people.crowd.lodSplit = query.get('lodsplit') === '1'; // far people drawn apart (crowd.js; real-phone tests)
   player.pushOut = (pos, r) => { const moved = people.pushOut(pos, r); if (moved) sound?.bump(); return moved; };
   // ambient life (ambient.js): birds, sparrows, catkins, smoke and the cloth in the wind, placed from each loaded section's map
-  try { createAmbient({ scene, camera, player, sections, people: () => people, hour: () => s.hour, query }); } catch (err) { console.warn('ambient off:', err); }
+  try { ambient = createAmbient({ scene, camera, player, sections, people: () => people, hour: () => s.hour, query }); } catch (err) { console.warn('ambient off:', err); }
   const startAvatar = reg[s.avatar]?.file ? s.avatar : 'sightseer';
   const [first] = await Promise.all([fetchSection(start.name), ensureModels([startAvatar, ...PINNED.filter((n) => reg[n]?.file)], new Map([[startAvatar, AVATAR_CLIPS]]))]);
   ui.progress(0.65, 0.9);
@@ -1550,6 +1554,11 @@ try {
     sectionNames: () => index.map((e) => e.name), loaded: () => [...sections.keys()],
     people: () => people, boats: () => boats, avatar: () => avatar,
     colliders: () => [...sections.values()].flatMap((x) => [x.bvh, x.trunks]).filter(Boolean) });
+  try {
+    interact = new Interact({ scene, camera, player, sections: () => sections, views, people: () => people, avatar: () => avatar, birdseye,
+      ambient: () => ambient, sound: () => sound, ui, hour: () => s.hour, touch: player.isTouch, query,
+      blocked: () => hud.open || ui.hud.isOpen() || ui.journal.isOpen() });
+  } catch (err) { console.warn('interact off:', err); }
   if (!models[s.avatar]) s.avatar = 'sightseer';
   await setAvatar(s.avatar);
   view();
@@ -1575,6 +1584,7 @@ try {
     get sections() { return new Map(index.map((e) => [e.name, e.sec || { name: e.name, state: e.state }])); },
     loaded: sections, stream: { stats: streamStats, settle, internals: { index, models, modelUsers, stdByName, cardKinds, texCache, shaded, variants } },
     followCam, birdseye, film, get avatar() { return avatar; },
+    interact, // the drum, the viewpoints, joining a pose (interact.js: state(), strike(), join, ...)
     set: (k, v) => { s[k] = v; if (k === 'hour' || k === 'timeFlow') s.localTime = false; return onSettingChange(k); },
     gpuTimer: !!tq,
     gpuMem: () => gpuMem?.report() ?? null, gpuTextures: () => gpuMem?.textures() ?? null,

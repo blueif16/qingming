@@ -42,7 +42,7 @@ const SPECIES = [
   { A: [0.04, 0.009, 0.05, 0.055], B: [0.045, -0.008, 0.0, 0.0], F: [9, 1.3, 0.2, 0.3], a: '#f6f4ea', b: '#efe9cf' },
 ];
 const SP = { sparrow: 0, crow: 1, pigeon: 2, swallow: 3, egret: 4, bat: 5, butterfly: 6 };
-const PATH = { seg: 0, wheel: 1, skim: 2, pass: 3, flit: 4 };
+const PATH = { seg: 0, wheel: 1, skim: 2, pass: 3, flit: 4, burst: 5 };
 // when each species is about, by the hour: [rise from, risen at, fall from, gone at] (bats: dusk and dawn)
 const HOURS = [[5.3, 5.9, 18.7, 19.3], [5.8, 6.4, 18.4, 19.1], [5.8, 6.4, 18.4, 19.1], [5.6, 6.1, 18.9, 19.4], [6.0, 6.6, 18.2, 18.8], null, [8.8, 9.6, 16.8, 17.6]];
 const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
@@ -146,13 +146,30 @@ vec3 qmSeg(float t) {
   float up = iB.y > iA.y ? 1.0 : 0.25;
   return mix(iA.xyz, iB.xyz, e) + vec3(0.0, up * min(1.2, 0.25 * distance(iA.xyz, iB.xyz)) * sin(3.14159 * e), 0.0);
 }
+// a burst (startle(): the gate tower's drum, interact.js): out of a tree crown or off a roof and away (iC.w > 0), or
+// (iC.w < 0) the same flight backwards, from far off home into it; iA the crown (x, y, z), iB (heading x, heading z,
+// cruise speed m/s, start time s), iC (climb m, turn rad/s, seconds, way). From a standing start up to cruise speed,
+// climbing fast then levelling; a hard wheel round the tree first, the turn easing off (2.2 s) as it heads away.
+// The path is integrated in 10 steps (a few hundred vertices a frame, only while birds are out).
+vec3 qmBurst(float t) {
+  float e = clamp(t - iB.w, 0.0, iC.z), u = iC.w < 0.0 ? iC.z - e : e;
+  float h0 = atan(iB.y, iB.x), du = u / 10.0;
+  vec2 xz = vec2(0.0);
+  for (int i = 0; i < 10; i++) {
+    float s = (float(i) + 0.5) * du, hd = h0 + iC.y * 2.2 * (1.0 - exp(-s / 2.2));
+    xz += iB.z * (1.0 - exp(-2.5 * s)) * du * vec2(cos(hd), sin(hd));
+  }
+  float h = iC.x * (1.0 - exp(-1.6 * u)) + 0.5 * sin(u * 2.3 + iB.w);
+  return iA.xyz + vec3(xz.x, h, xz.y);
+}
 vec3 qmBirdAt(float path, float t) {
   vec3 p;
   if (path < 0.5) p = qmSeg(t);
   else if (path < 1.5) p = qmWheel(t);
   else if (path < 2.5) p = qmSkim(t);
   else if (path < 3.5) p = qmPass(t);
-  else p = qmFlit(t);
+  else if (path < 4.5) p = qmFlit(t);
+  else p = qmBurst(t);
   return p;
 }
 `;
@@ -163,11 +180,12 @@ const BIRD_MAIN = /* glsl */ `
   float qmSeed = qmBH(float(gl_InstanceID));
   float qmT = uT;
   // leaving with the hour (to roost, or out for the night): a bird whose turn it is flies off, it never blinks out
-  float qmAway = uForce > 0.5 ? 0.0 : 1.0 - smoothstep(qmSeed - 0.12, qmSeed, uPres[qmSp]);
+  float qmAway = uForce > 0.5 || qmPath > 4.5 ? 0.0 : 1.0 - smoothstep(qmSeed - 0.12, qmSeed, uPres[qmSp]); // a burst flies at any hour
   qmAwayG = qmAway;
   bool qmOn = qmAway < 0.999;
   if (qmPath > 0.5 && qmPath < 1.5) qmOn = qmOn && (mod(qmT + iC.y, iB.w) < iC.x * iB.w || uForce > 0.5);
   if (qmPath > 2.5 && qmPath < 3.5) qmOn = qmOn && (mod(qmT + iC.y, iC.x) * iB.w < iB.z);
+  if (qmPath > 4.5) qmOn = qmT >= iB.w && qmT <= iB.w + iC.z; // a burst: only while it flies (hidden in its crown before and after)
   if (qmPath < 0.5 && iC.y > 2.5 && iC.y < 3.5) qmOn = false;
   float qmDt = 0.05;
   vec3 qmP = qmBirdAt(qmPath, qmT), qmPa = qmBirdAt(qmPath, qmT - qmDt), qmPb = qmBirdAt(qmPath, qmT + qmDt);
@@ -225,6 +243,8 @@ const BIRD_MAIN = /* glsl */ `
   }
   // far birds a little larger, so a crow at 80 m stays a few pixels and doesn't shimmer away
   float qmK = qmPath < 0.5 ? 1.0 : clamp(distance(qmP, cameraPosition) / 35.0, 1.0, 2.2);
+  // a burst comes out of its crown and dwindles away at the far end (home again: the other way round), never blinks
+  if (qmPath > 4.5) { float qmE = qmT - iB.w; qmK *= iC.w > 0.0 ? smoothstep(0.0, 0.25, qmE) * smoothstep(0.0, 1.5, iC.z - qmE) : smoothstep(0.0, 1.5, qmE) * smoothstep(0.0, 0.35, iC.z - qmE); }
   vec3 transformed = qmP + (qmR * qmLp.x + qmU * qmLp.y + qmF * qmLp.z) * qmK;
   if (!qmOn) transformed = vec3(0.0, -1.0e5, 0.0);
   vBirdCol = qmCol;
@@ -473,6 +493,7 @@ export class Ambient {
     this.dirty = true;
     this.seen = new WeakMap(); // people near a sparrow group: where they were at the last tick
     this.events = []; // sparrow flushes (for a sound session to hook later; no sound here)
+    this.bursts = []; // startle(): flights out of the crowns and home again, { sp, a, b, c, end } (kept across rebuilds)
     this.lights = null;
     if (this.off) {
       this.unregister = register('ambient', { applyTier: () => {}, stats: () => ({ draws: 0, triangles: 0, instances: 0, textureMB: 0, cpuMs: 0, off: true }) });
@@ -611,6 +632,62 @@ export class Ambient {
     if (this.clothU.uQmSwayFar.value > 0) for (const c of this.cloth) if (c.mesh.material !== c.clone) this.dressCloth(c, renderer);
     this.birds.visible = this.birdGeo.instanceCount > 0;
     this.particles.visible = this.partGeo.instanceCount > 0;
+    if (this.bursts.length && this.bursts.every((x) => x.end < performance.now() / 1000)) this.dirty = true; // all home: compact
+  }
+
+  // ---- the gate tower's drum (interact.js): the birds living in the trees round `at` burst out of their crowns and
+  // fly off, the sparrows on the ground go up to their perches, and `sources` (a roof: { x, y, z, sp, n }) send theirs
+  // up too. Each startled bird then comes home on its own after `home` s, flying the same way back into its crown and
+  // vanishing there. All of it is on the GPU (the burst path): two instances a bird, written once, nothing per frame.
+  // The tier's bird count scales it (none on a tier without birds). Returns how many birds went up.
+  startle(at, { radius = 60, trees = 9, perTree = [2, 4], sources = [], home = [24, 48] } = {}) {
+    if (this.off || !(this.cfg.birds > 0)) return 0;
+    const T = performance.now() / 1000, k = Math.min(1, this.cfg.birds / 30);
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const out = [];
+    const fly = (sp, x, y, z, away) => {
+      const ang = Math.atan2(away[1], away[0]) + rnd(-0.7, 0.7);
+      const fast = sp === SP.pigeon ? rnd(8, 10) : sp === SP.crow ? rnd(6.5, 8) : rnd(6, 7.5);
+      const t0 = T + rnd(0.05, 0.9), secs = rnd(8, 11), climb = rnd(6, 14), turn = (Math.random() < 0.5 ? -1 : 1) * rnd(0.5, 1.3);
+      const a = [x + rnd(-0.6, 0.6), y + rnd(-0.5, 0.5), z + rnd(-0.6, 0.6)];
+      out.push({ sp, a, b: [Math.cos(ang), Math.sin(ang), fast, t0], c: [climb, turn, secs, 1], end: t0 + secs });
+      // home again: a new heading, from far off back into the same crown
+      const ang2 = ang + rnd(-1.2, 1.2), t1 = t0 + secs + rnd(...home), s2 = rnd(6, 8);
+      out.push({ sp, a, b: [Math.cos(ang2), Math.sin(ang2), fast * 0.85, t1], c: [climb * 0.8, -turn, s2, -1], end: t1 + s2 });
+    };
+    // the crowns in reach, nearest first: a tall tree holds crows as well as sparrows
+    const crowns = [];
+    for (const [, S] of this.secs) for (const t of S.sec.layout?.trees || []) {
+      if (!(t.height_m >= 3)) continue;
+      const x = t.X, z = -t.D, d = Math.hypot(x - at.x, z - at.z);
+      if (d < radius) crowns.push({ t, x, z, d });
+    }
+    crowns.sort((p, q) => p.d - q.d);
+    for (const c of crowns.slice(0, Math.max(2, Math.round(trees * k)))) {
+      const g = this.groundAt(c.x, c.z, (c.t.H || 0) + 2), y = g + c.t.height_m * 0.7;
+      const away = [c.x - at.x, c.z - at.z];
+      const n = Math.max(1, Math.round(rnd(...perTree) * k + (c.t.height_m > 9 ? 1 : 0)));
+      for (let i = 0; i < n; i++) fly(c.t.height_m >= 8 && i < 2 ? SP.crow : SP.sparrow, c.x, y, c.z, away);
+    }
+    for (const s of sources) for (let i = 0; i < Math.max(1, Math.round((s.n || 4) * k)); i++) fly(SP[s.sp] ?? SP.pigeon, s.x, s.y, s.z, [rnd(-1, 1), rnd(-1, 1)]);
+    // the sparrows pecking in reach go up to their perches (their own timers bring them down)
+    let flushed = 0;
+    for (const g of this.groups) if (g.state === 'ground' && Math.hypot(g.centre.x - at.x, g.centre.z - at.z) < radius) { this.flush(g, T, 0.5); flushed++; }
+    // write the new flights after everything drawn now (a rebuild keeps them: this.bursts)
+    const iA = this.birdGeo.attributes.iA, iB = this.birdGeo.attributes.iB, iC = this.birdGeo.attributes.iC;
+    let nb = this.birdGeo.instanceCount;
+    const from = nb;
+    for (const x of out) {
+      if (nb >= CAP_BIRDS) break;
+      iA.array.set([...x.a, PATH.burst * 16 + x.sp], nb * 4); iB.array.set(x.b, nb * 4); iC.array.set(x.c, nb * 4);
+      this.bursts.push(x);
+      nb++;
+    }
+    if (nb > from) { this.birdGeo.instanceCount = nb; this.birds.visible = true; }
+    if (nb > from || flushed) for (const a of [iA, iB, iC]) { a.clearUpdateRanges(); a.needsUpdate = true; } // the whole buffer (24 kB), once
+    this.events.push({ t: T, at: 'startle', n: nb - from, flushed });
+    if (this.events.length > 200) this.events.shift();
+    return (nb - from) / 2;
   }
 
   // ---- a section joins: its sites (ambient_sites.js) on the ground, its cloth
@@ -841,6 +918,10 @@ export class Ambient {
         }
       }
     }
+    // the startled birds still out or on their way home (startle()), after everyone else
+    const T = performance.now() / 1000;
+    this.bursts = this.bursts.filter((x) => x.end > T);
+    for (const x of this.bursts) bird(x.sp, PATH.burst, x.a, x.b, x.c);
     this.birdGeo.instanceCount = nb;
     this.partGeo.instanceCount = np;
     for (const k of ['iA', 'iB', 'iC']) { const a = this.birdGeo.attributes[k]; a.clearUpdateRanges(); a.addUpdateRange(0, Math.max(4, nb * 4)); a.needsUpdate = true; }

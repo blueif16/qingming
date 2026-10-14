@@ -17,6 +17,11 @@ export const JW = {
   threadsTitle: '街談巷議',
   threadSeal: '聞',
   colTab: '題跋',
+  // the things to do in the town (interact.js), a seal stamped for each the first time
+  deedsTab: '印譜',
+  deedsTitle: '印譜',
+  deedsSeal: '印',
+  deedsLead: ['城中幾件雅事，初做時各鈐一印。', 'A few things to do in the town: each is stamped with its seal the first time.'],
   strip: 'The scroll: tap a region',
   hintDesktop: ['← → 翻頁 · J 或 Esc 合上', 'arrows: turn the leaf · J or Esc: close'],
   hintTouch: ['點畫卷或上方的名字翻頁', 'tap the scroll or a name to turn the leaf'],

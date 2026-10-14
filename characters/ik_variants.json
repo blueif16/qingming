@@ -2373,5 +2373,321 @@
     }
    }
   ]
+ },
+ "player_crown_a": {
+  "why": "lean_over for the player at the Rainbow Bridge's downstream rail, slot player_crown_a (interactions round, 2026-10-13; gen/interact/slots.json): one spec for every playable adult, solved as fix_bridge/tools/rail_ik.mjs solved the painted watchers but free of any one body: root X 140.642, D 20.98, H 3.629 (the lower tread, at a riser), facing 319; the chest held at x 0.02, z 0.06 (no forward sway: the hips move under it); both palms laid on the top of the top rail (0.035 m in from its centre line, 0.015 m over it) where it passes each hand (x 0.24 / -0.21: the rail follows the ramp, each hand at its own height), elbows down; both soles pinned by leg IK, each centred on its own tread (x +-0.15; the lower at 0, the upper 0.182 up) (gen/interact/tools/crown_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0202,
+     "z": 0.06
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.238,
+      1.121,
+      0.286
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.212,
+      1.379,
+      0.284
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.15,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.15,
+     "y": 0.182
+    }
+   }
+  ]
+ },
+ "player_crown_b": {
+  "why": "lean_over for the player at the Rainbow Bridge's downstream rail, slot player_crown_b (interactions round, 2026-10-13; gen/interact/slots.json): one spec for every playable adult, solved as fix_bridge/tools/rail_ik.mjs solved the painted watchers but free of any one body: root X 133.818, D 13.219, H 2.943 (the lower tread, at a riser), facing 319; the chest held at x 0.02, z 0.06 (no forward sway: the hips move under it); both palms laid on the top of the top rail (0.035 m in from its centre line, 0.015 m over it) where it passes each hand (x 0.24 / -0.21: the rail follows the ramp, each hand at its own height), elbows down; both soles pinned by leg IK, each centred on its own tread (x +-0.15; the lower at 0, the upper 0.217 up) (gen/interact/tools/crown_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0204,
+     "z": 0.06
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.238,
+      1.397,
+      0.286
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.212,
+      1.099,
+      0.284
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.15,
+     "y": 0.217
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.15,
+     "y": 0
+    }
+   }
+  ]
+ },
+ "player_crown_a_child": {
+  "why": "look for the player's child avatar at the Rainbow Bridge crown slot player_crown_a (interactions round, 2026-10-13; gen/interact/slots.json): the child (1.15 m) can't lean its elbows or palms down on a rail 1.10 m over the ramp, so it holds the top rail with its downhill hand (palm_L) up, looking about: root X 140.628, D 20.873, H 3.811 (on one tread), facing 319; that palm laid on the top of the top rail (0.035 m in from its centre line, 0.015 m over it) where it passes the hand (x 0.1), elbow down, the hand carried on along its forearm (hand \"follow\": reaching up, a hanging hand can't land); the uphill hand as the clip has it (the rail rises 0.11 m between the hands on the 30 deg ramp: out of reach); both soles pinned on the tread at x +-0.1 (leg IK) (gen/interact/tools/crown_ik.mjs)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.099,
+      1.071,
+      0.226
+     ]
+    },
+    "elbow": "down",
+    "hand": "follow"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.1,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.1,
+     "y": 0
+    }
+   }
+  ]
+ },
+ "player_crown_b_child": {
+  "why": "look for the player's child avatar at the Rainbow Bridge crown slot player_crown_b (interactions round, 2026-10-13; gen/interact/slots.json): the child (1.15 m) can't lean its elbows or palms down on a rail 1.10 m over the ramp, so it holds the top rail with its downhill hand (palm_R) up, looking about: root X 133.764, D 13.066, H 2.943 (on one tread), facing 319; that palm laid on the top of the top rail (0.035 m in from its centre line, 0.015 m over it) where it passes the hand (x -0.1), elbow down, the hand carried on along its forearm (hand \"follow\": reaching up, a hanging hand can't land); the uphill hand as the clip has it (the rail rises 0.11 m between the hands on the 30 deg ramp: out of reach); both soles pinned on the tread at x +-0.1 (leg IK) (gen/interact/tools/crown_ik.mjs)",
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.101,
+      1.072,
+      0.224
+     ]
+    },
+    "elbow": "down",
+    "hand": "follow"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.1,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.1,
+     "y": 0
+    }
+   }
+  ]
+ },
+ "moat_rail_child": {
+  "why": "look for the player's child avatar at the gate's moat-bridge railings (interactions round, 2026-10-13; gen/interact/slots.json): the child (1.15 m) can't rest its elbows on the top rail 1.075 m over the deck (blender/gate_scene.py bridge: beam centred 1.02 m, 0.11 m tall, 0.12 m wide), so it holds the top rail with both hands up, looking about: the root 0.26 m from the rail's centre line, facing it square; both palms laid on the rail's top (1.075 + 0.015 m), 0.03 m in from its centre, x +-0.12, elbows down, each hand carried on along its forearm (hand follow: reaching up, a hanging hand cannot land); the feet and body as the clip has them (one spec for both rails: they are straight and level as built)",
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.12,
+      1.09,
+      0.23
+     ]
+    },
+    "elbow": "down",
+    "hand": "follow"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.12,
+      1.09,
+      0.23
+     ]
+    },
+    "elbow": "down",
+    "hand": "follow"
+   }
+  ]
+ },
+ "player_crown_a_official": {
+  "why": "lean_over for the player at the Rainbow Bridge's downstream rail, slot player_crown_a (interactions round, 2026-10-13; gen/interact/slots.json): the official's own spec (its lean_over can't take the shared one: its take holds the left (downhill) foot 8 cm up, so at the shared chest its left leg could not reach the lower tread (6.7 cm short on average): the chest held lower (y 1.06) and 2 cm further over the rail), solved as fix_bridge/tools/rail_ik.mjs solved the painted watchers but free of any one body: root X 140.642, D 20.98, H 3.629 (the lower tread, at a riser), facing 319; the chest held at x 0.02, y 1.06, z 0.08 (no forward sway: the hips move under it); both palms laid on the top of the top rail (0.035 m in from its centre line, 0.015 m over it) where it passes each hand (x 0.24 / -0.21: the rail follows the ramp, each hand at its own height), elbows down; both soles pinned by leg IK, each centred on its own tread (x +-0.15; the lower at 0, the upper 0.182 up) (gen/interact/tools/crown_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0206,
+     "y": 1.06,
+     "z": 0.08
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.238,
+      1.121,
+      0.286
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.212,
+      1.379,
+      0.284
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.15,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.15,
+     "y": 0.182
+    }
+   }
+  ]
+ },
+ "player_crown_b_soldier": {
+  "why": "lean_over for the player at the Rainbow Bridge's downstream rail, slot player_crown_b (interactions round, 2026-10-13; gen/interact/slots.json): the soldier's own spec (its lean_over can't take the shared one: its take sways the lower (right) hand out of reach of the rail at the shared chest (residual up to 7.7 cm): the chest held 4 cm further over the rail), solved as fix_bridge/tools/rail_ik.mjs solved the painted watchers but free of any one body: root X 133.818, D 13.219, H 2.943 (the lower tread, at a riser), facing 319; the chest held at x 0.02, z 0.1 (no forward sway: the hips move under it); both palms laid on the top of the top rail (0.035 m in from its centre line, 0.015 m over it) where it passes each hand (x 0.24 / -0.21: the rail follows the ramp, each hand at its own height), elbows down; both soles pinned by leg IK, each centred on its own tread (x +-0.15; the lower at 0, the upper 0.217 up) (gen/interact/tools/crown_ik.mjs)",
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0208,
+     "z": 0.1
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.238,
+      1.397,
+      0.286
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.212,
+      1.099,
+      0.284
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.15,
+     "y": 0.217
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.15,
+     "y": 0
+    }
+   }
+  ]
  }
 }

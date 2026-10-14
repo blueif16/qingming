@@ -1,0 +1,214 @@
+{
+ "player_crown_a": {
+  "spec": "player_crown_a",
+  "X": 140.642,
+  "D": 20.98,
+  "H": 3.629,
+  "ramp_H": 3.761,
+  "facing_deg": 319,
+  "s": 9,
+  "n": 0.32,
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0202,
+     "z": 0.06
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.238,
+      1.121,
+      0.286
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.212,
+      1.379,
+      0.284
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.15,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.15,
+     "y": 0.182
+    }
+   }
+  ],
+  "by_character": {
+   "official": "player_crown_a_official"
+  }
+ },
+ "player_crown_b": {
+  "spec": "player_crown_b",
+  "X": 133.818,
+  "D": 13.219,
+  "H": 2.943,
+  "ramp_H": 3.049,
+  "facing_deg": 319,
+  "s": -1.335,
+  "n": 0.32,
+  "ops": [
+   {
+    "site": "chest_front",
+    "via": "hips",
+    "to": {
+     "x": 0.0204,
+     "z": 0.06
+    },
+    "keep_soles": true
+   },
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.238,
+      1.397,
+      0.286
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.212,
+      1.099,
+      0.284
+     ]
+    },
+    "elbow": "down"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.15,
+     "y": 0.217
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.15,
+     "y": 0
+    }
+   }
+  ],
+  "by_character": {
+   "soldier": "player_crown_b_soldier"
+  }
+ },
+ "player_crown_a_child": {
+  "spec": "player_crown_a_child",
+  "hand": "palm_L",
+  "X": 140.628,
+  "D": 20.873,
+  "H": 3.811,
+  "ramp_H": 3.811,
+  "facing_deg": 319,
+  "s": 8.91,
+  "n": 0.26,
+  "ops": [
+   {
+    "site": "palm_L",
+    "via": "arm",
+    "to": {
+     "point": [
+      0.099,
+      1.071,
+      0.226
+     ]
+    },
+    "elbow": "down",
+    "hand": "follow"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.1,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.1,
+     "y": 0
+    }
+   }
+  ]
+ },
+ "player_crown_b_child": {
+  "spec": "player_crown_b_child",
+  "hand": "palm_R",
+  "X": 133.764,
+  "D": 13.066,
+  "H": 2.943,
+  "ramp_H": 2.949,
+  "facing_deg": 319,
+  "s": -1.485,
+  "n": 0.26,
+  "ops": [
+   {
+    "site": "palm_R",
+    "via": "arm",
+    "to": {
+     "point": [
+      -0.101,
+      1.072,
+      0.224
+     ]
+    },
+    "elbow": "down",
+    "hand": "follow"
+   },
+   {
+    "site": "sole_L",
+    "via": "leg",
+    "to": {
+     "x": 0.1,
+     "y": 0
+    }
+   },
+   {
+    "site": "sole_R",
+    "via": "leg",
+    "to": {
+     "x": -0.1,
+     "y": 0
+    }
+   }
+  ]
+ }
+}

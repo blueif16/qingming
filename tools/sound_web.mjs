@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const r = (p) => path.join(ROOT, p);
-const SETS = ['core', 'round2'];
+const SETS = ['core', 'round2', 'interact']; // interact: the drum you beat and the birds it startles (web/src/interact.js)
 const OUT = r('web/public/assets/sounds');
 const [step = 'ship', url = 'http://127.0.0.1:5190/world.html'] = process.argv.slice(2);
 

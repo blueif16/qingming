@@ -512,6 +512,21 @@
       "bone": "Hips",
       "at": "root",
       "texture_from": "child_red"
+    },
+    "drumstick": {
+      "bone": "RightHand",
+      "at": "hand",
+      "side": "right",
+      "grip": [
+        0,
+        0.08,
+        0
+      ],
+      "rot": [
+        -33,
+        0,
+        -34
+      ]
     }
   },
   "porter": {
@@ -654,12 +669,20 @@
       "along": 0.8,
       "lift": 0.08,
       "pitch": 70
+    },
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   },
   "monk": {
     "back_frame": {
       "clip": "back_load",
       "t": 1.0
+    },
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   },
   "child": {
@@ -672,12 +695,20 @@
       "clip": "back_load",
       "t": 1.0,
       "scale": 0.8
+    },
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   },
   "sightseer": {
     "fan_round": {
       "clip": "fan_walk",
       "t": 1.0
+    },
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   },
   "scholar": {
@@ -711,6 +742,10 @@
       "geom": "stick",
       "clip": "ride",
       "t": 2.0
+    },
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   },
   "elder": {
@@ -942,6 +977,10 @@
     "child_on_lap": {
       "clip": "sit_hold_child",
       "t": 5.0
+    },
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   },
   "hat_traveller": {
@@ -1258,6 +1297,18 @@
         0,
         0
       ]
+    }
+  },
+  "official": {
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
+    }
+  },
+  "soldier": {
+    "drumstick": {
+      "clip": "strike_drum",
+      "t": 1.2
     }
   }
 }

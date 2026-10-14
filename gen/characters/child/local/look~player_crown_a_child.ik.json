@@ -1,0 +1,44 @@
+{
+ "character": "child",
+ "base": "look",
+ "spec": "player_crown_a_child",
+ "frame": "proposed",
+ "sole_shift_m": 0.005,
+ "clip": "look~player_crown_a_child",
+ "frames": 226,
+ "duration": 11.25,
+ "verify_max_m": 0.001,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0.002,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "sole_L",
+   "via": "leg",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "sole_R",
+   "via": "leg",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  }
+ ],
+ "max_turn_deg": {
+  "LeftArm": 157,
+  "LeftForeArm": 38,
+  "LeftHand": 0,
+  "LeftUpLeg": 4,
+  "LeftLeg": 5,
+  "LeftFoot": 4,
+  "RightUpLeg": 3,
+  "RightLeg": 7,
+  "RightFoot": 4,
+  "Hips": 0
+ }
+}

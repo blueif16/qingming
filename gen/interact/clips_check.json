@@ -1,0 +1,8432 @@
+{
+ "about": "gen/interact/tools/clips_check.mjs: the player's join-the-pose clips per playable character x slot, PASS/FAIL by numbers (see the tool's header for each part).",
+ "date": "2026-10-14T04:33:15.077Z",
+ "tolerance_m": 0.03,
+ "summary": {
+  "checks": 88,
+  "PASS": 88,
+  "FAIL": 0,
+  "by_slot": {
+   "moat_near": {
+    "PASS": 24,
+    "FAIL": 0
+   },
+   "moat_far": {
+    "PASS": 24,
+    "FAIL": 0
+   },
+   "player_crown_a": {
+    "PASS": 8,
+    "FAIL": 0
+   },
+   "player_crown_b": {
+    "PASS": 8,
+    "FAIL": 0
+   },
+   "storyteller": {
+    "PASS": 8,
+    "FAIL": 0
+   },
+   "drum_east": {
+    "PASS": 8,
+    "FAIL": 0
+   },
+   "drum_west": {
+    "PASS": 8,
+    "FAIL": 0
+   }
+  },
+  "fails": []
+ },
+ "moat": {
+  "near": {
+   "rail_centre_D": 0.12,
+   "facing_deg": 270,
+   "top_H": 1.075,
+   "root_H": -0.01,
+   "dist_by_character": {
+    "official": 0.29,
+    "scholar": 0.3,
+    "monk": 0.26,
+    "woman": 0.3,
+    "child": 0.26,
+    "soldier": 0.27,
+    "porter": 0.29,
+    "sightseer": 0.28
+   },
+   "dist_why": {
+    "official": "contacts' worst 0.017 m, through 0 (-); the contact sites' median z 0.312",
+    "scholar": "contacts' worst 0.015 m, through 0 (-); the contact sites' median z 0.327",
+    "monk": "contacts' worst 0.01 m, through 0.006 (forearm_L); the contact sites' median z 0.292",
+    "woman": "contacts' worst 0.018 m, through 0 (-); the contact sites' median z 0.25",
+    "child": "contacts' worst 0.005 m, through 0 (-); the contact sites' median z 0.23",
+    "soldier": "contacts' worst 0.008 m, through 0 (-); the contact sites' median z 0.249",
+    "porter": "contacts' worst 0.016 m, through 0.024 (forearm_L); the contact sites' median z 0.254",
+    "sightseer": "contacts' worst 0.015 m, through 0.003 (forearm_L); the contact sites' median z 0.261"
+   },
+   "free": [
+    [
+     0.3,
+     3.8
+    ],
+    [
+     9.6,
+     12.1
+    ]
+   ],
+   "free_by_character": {
+    "official": [
+     [
+      0.3,
+      0.65
+     ],
+     [
+      0.75,
+      0.9
+     ],
+     [
+      1,
+      1.2
+     ],
+     [
+      1.35,
+      2.4
+     ],
+     [
+      2.5,
+      2.65
+     ],
+     [
+      2.75,
+      3.25
+     ],
+     [
+      3.4,
+      3.55
+     ],
+     [
+      3.65,
+      3.8
+     ],
+     [
+      9.6,
+      9.75
+     ],
+     [
+      9.9,
+      10
+     ],
+     [
+      10.1,
+      10.25
+     ],
+     [
+      10.4,
+      11.5
+     ],
+     [
+      11.6,
+      12.1
+     ]
+    ],
+    "scholar": [
+     [
+      0.3,
+      0.65
+     ],
+     [
+      0.75,
+      0.9
+     ],
+     [
+      1,
+      1.2
+     ],
+     [
+      1.35,
+      1.9
+     ],
+     [
+      2,
+      2.15
+     ],
+     [
+      2.25,
+      3
+     ],
+     [
+      3.1,
+      3.25
+     ],
+     [
+      3.4,
+      3.55
+     ],
+     [
+      3.65,
+      3.8
+     ],
+     [
+      9.6,
+      9.75
+     ],
+     [
+      9.9,
+      10
+     ],
+     [
+      10.1,
+      10.25
+     ],
+     [
+      10.35,
+      11
+     ],
+     [
+      11.1,
+      11.5
+     ],
+     [
+      11.6,
+      12.1
+     ]
+    ],
+    "monk": [
+     [
+      0.3,
+      0.4
+     ],
+     [
+      0.5,
+      0.65
+     ],
+     [
+      0.75,
+      0.9
+     ],
+     [
+      1,
+      2.4
+     ],
+     [
+      2.5,
+      2.65
+     ],
+     [
+      2.75,
+      2.95
+     ],
+     [
+      3.05,
+      3.8
+     ],
+     [
+      9.6,
+      11.25
+     ],
+     [
+      11.35,
+      11.8
+     ],
+     [
+      11.9,
+      12.1
+     ]
+    ],
+    "woman": [
+     [
+      0.3,
+      0.5
+     ],
+     [
+      0.6,
+      0.75
+     ],
+     [
+      1.15,
+      1.3
+     ],
+     [
+      1.55,
+      1.8
+     ],
+     [
+      1.9,
+      2
+     ],
+     [
+      2.15,
+      2.5
+     ],
+     [
+      2.65,
+      2.75
+     ],
+     [
+      3,
+      3.1
+     ],
+     [
+      3.3,
+      3.5
+     ],
+     [
+      9.8,
+      9.9
+     ],
+     [
+      10.6,
+      10.9
+     ],
+     [
+      11,
+      11.2
+     ],
+     [
+      11.45,
+      11.6
+     ]
+    ],
+    "child": [
+     [
+      0.3,
+      3.8
+     ],
+     [
+      9.6,
+      12.1
+     ]
+    ],
+    "soldier": [
+     [
+      0.3,
+      3.8
+     ],
+     [
+      9.6,
+      12.1
+     ]
+    ],
+    "porter": [
+     [
+      0.3,
+      3.75
+     ],
+     [
+      9.6,
+      12
+     ]
+    ],
+    "sightseer": [
+     [
+      0.3,
+      3.8
+     ],
+     [
+      9.6,
+      12.1
+     ]
+    ]
+   },
+   "free_all": [
+    [
+     0.3,
+     0.4
+    ],
+    [
+     1.55,
+     1.8
+    ],
+    [
+     2.25,
+     2.4
+    ],
+    [
+     3.4,
+     3.5
+    ],
+    [
+     10.6,
+     10.9
+    ],
+    [
+     11.1,
+     11.2
+    ]
+   ],
+   "blocked": {
+    "4": "official: bridge_sightseer 0.441",
+    "5": "official: rail_leaner_8665 0.311",
+    "6": "official: rail_watcher_2 0.572",
+    "7": "official: rail_watcher_2 0.433",
+    "8": "official: rail_watcher_3 0.3",
+    "9": "official: rail_watcher_4 0.054",
+    "0.45 monk": "palm_R 0.034 into the bridge at 0 s",
+    "0.55 woman": "palm_L 0.032 into the bridge at 7.6 s",
+    "0.7 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "0.7 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "0.7 monk": "palm_R 0.034 into the bridge at 0 s",
+    "0.8 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "0.85 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "0.9 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "0.95 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "0.95 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "0.95 monk": "palm_R 0.034 into the bridge at 0 s",
+    "1.05 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "1.1 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "1.25 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "1.25 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "1.3 official": "palm_R 0.043 into the bridge at 0 s",
+    "1.3 scholar": "palm_R 0.033 into the bridge at 0.2 s",
+    "1.35 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "1.4 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "1.5 woman": "elbow_R 0.032 into the bridge at 7.6 s",
+    "1.85 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "1.95 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "2.05 woman": "forearm_L 0.037 into the bridge at 7.8 s",
+    "2.1 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "2.2 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "2.45 official": "palm_R 0.033 into the bridge at 7.4 s",
+    "2.45 monk": "palm_R 0.034 into the bridge at 0 s",
+    "2.55 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "2.6 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "2.7 official": "palm_R 0.033 into the bridge at 7.4 s",
+    "2.7 monk": "palm_R 0.033 into the bridge at 0.8 s",
+    "2.8 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "2.95 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "3 monk": "palm_R 0.034 into the bridge at 0 s",
+    "3.05 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "3.15 woman": "elbow_L 0.037 into the bridge at 7.8 s",
+    "3.25 woman": "forearm_L 0.032 into the bridge at 7.4 s",
+    "3.3 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "3.3 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "3.35 official": "palm_R 0.043 into the bridge at 0 s",
+    "3.35 scholar": "palm_R 0.035 into the bridge at 0 s",
+    "3.55 woman": "elbow_R 0.032 into the bridge at 7.6 s",
+    "3.6 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "3.6 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "3.7 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "3.75 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "3.8 porter": "forearm_L 0.031 into the bridge at 7.4 s",
+    "3.85": "official: bridge_sightseer 0.591",
+    "3.9": "official: bridge_sightseer 0.541",
+    "3.95": "official: bridge_sightseer 0.491",
+    "4.05": "official: bridge_sightseer 0.391",
+    "4.1": "official: bridge_sightseer 0.341",
+    "4.15": "official: bridge_sightseer 0.292",
+    "4.2": "official: bridge_sightseer 0.242",
+    "4.25": "official: bridge_sightseer 0.192",
+    "4.3": "official: bridge_sightseer 0.143",
+    "4.35": "official: bridge_sightseer 0.095",
+    "4.4": "official: bridge_sightseer 0.05",
+    "4.45": "official: bridge_sightseer 0.032",
+    "4.5": "official: bridge_sightseer 0.067",
+    "4.55": "official: bridge_sightseer 0.114",
+    "4.6": "official: bridge_sightseer 0.163",
+    "4.65": "official: bridge_sightseer 0.212",
+    "4.7": "official: bridge_sightseer 0.262",
+    "4.75": "official: bridge_sightseer 0.311",
+    "4.8": "official: bridge_sightseer 0.361",
+    "4.85": "official: bridge_sightseer 0.411",
+    "4.9": "official: rail_leaner_8665 0.411",
+    "4.95": "official: rail_leaner_8665 0.361",
+    "5.05": "official: rail_leaner_8665 0.262",
+    "5.1": "official: rail_leaner_8665 0.212",
+    "5.15": "official: rail_leaner_8665 0.163",
+    "5.2": "official: rail_leaner_8665 0.114",
+    "5.25": "official: rail_leaner_8665 0.067",
+    "5.3": "official: rail_leaner_8665 0.032",
+    "5.35": "official: rail_leaner_8665 0.05",
+    "5.4": "official: rail_leaner_8665 0.095",
+    "5.45": "official: rail_leaner_8665 0.143",
+    "5.5": "official: rail_leaner_8665 0.192",
+    "5.55": "official: rail_leaner_8665 0.242",
+    "5.6": "official: rail_leaner_8665 0.292",
+    "5.65": "official: rail_leaner_8665 0.341",
+    "5.7": "official: rail_leaner_8665 0.391",
+    "5.75": "official: rail_leaner_8665 0.441",
+    "5.8": "official: rail_leaner_8665 0.491",
+    "5.85": "official: rail_leaner_8665 0.541",
+    "5.9": "official: rail_leaner_8665 0.591",
+    "6.05": "official: rail_watcher_2 0.522",
+    "6.1": "official: rail_watcher_2 0.473",
+    "6.15": "official: rail_watcher_2 0.423",
+    "6.2": "official: rail_watcher_2 0.373",
+    "6.25": "official: rail_watcher_2 0.324",
+    "6.3": "official: rail_watcher_2 0.275",
+    "6.35": "official: rail_watcher_2 0.226",
+    "6.4": "official: rail_watcher_2 0.177",
+    "6.45": "official: rail_watcher_2 0.13",
+    "6.5": "official: rail_watcher_2 0.086",
+    "6.55": "official: rail_watcher_2 0.054",
+    "6.6": "official: rail_watcher_2 0.058",
+    "6.65": "official: rail_watcher_2 0.094",
+    "6.7": "official: rail_watcher_2 0.139",
+    "6.75": "official: rail_watcher_2 0.187",
+    "6.8": "official: rail_watcher_2 0.235",
+    "6.85": "official: rail_watcher_2 0.284",
+    "6.9": "official: rail_watcher_2 0.334",
+    "6.95": "official: rail_watcher_2 0.383",
+    "7.05": "official: rail_watcher_2 0.483",
+    "7.1": "official: rail_watcher_2 0.532",
+    "7.15": "official: rail_watcher_3 0.55",
+    "7.2": "official: rail_watcher_3 0.5",
+    "7.25": "official: rail_watcher_3 0.45",
+    "7.3": "official: rail_watcher_3 0.4",
+    "7.35": "official: rail_watcher_3 0.35",
+    "7.4": "official: rail_watcher_3 0.3",
+    "7.45": "official: rail_watcher_3 0.25",
+    "7.5": "official: rail_watcher_3 0.2",
+    "7.55": "official: rail_watcher_3 0.15",
+    "7.6": "official: rail_watcher_3 0.1",
+    "7.65": "official: rail_watcher_3 0.051",
+    "7.7": "official: rail_watcher_3 0.01",
+    "7.75": "official: rail_watcher_3 0.051",
+    "7.8": "official: rail_watcher_3 0.1",
+    "7.85": "official: rail_watcher_3 0.15",
+    "7.9": "official: rail_watcher_3 0.2",
+    "7.95": "official: rail_watcher_3 0.25",
+    "8.05": "official: rail_watcher_3 0.35",
+    "8.1": "official: rail_watcher_3 0.4",
+    "8.15": "official: rail_watcher_3 0.45",
+    "8.2": "official: rail_watcher_3 0.5",
+    "8.25": "official: rail_watcher_3 0.55",
+    "8.3 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "8.4": "official: rail_watcher_4 0.582",
+    "8.45": "official: rail_watcher_4 0.532",
+    "8.5": "official: rail_watcher_4 0.483",
+    "8.55": "official: rail_watcher_4 0.433",
+    "8.6": "official: rail_watcher_4 0.383",
+    "8.65": "official: rail_watcher_4 0.334",
+    "8.7": "official: rail_watcher_4 0.284",
+    "8.75": "official: rail_watcher_4 0.235",
+    "8.8": "official: rail_watcher_4 0.187",
+    "8.85": "official: rail_watcher_4 0.139",
+    "8.9": "official: rail_watcher_4 0.094",
+    "8.95": "official: rail_watcher_4 0.058",
+    "9.05": "official: rail_watcher_4 0.086",
+    "9.1": "official: rail_watcher_4 0.13",
+    "9.15": "official: rail_watcher_4 0.177",
+    "9.2": "official: rail_watcher_4 0.226",
+    "9.25": "official: rail_watcher_4 0.275",
+    "9.3": "official: rail_watcher_4 0.324",
+    "9.35": "official: rail_watcher_4 0.373",
+    "9.4": "official: rail_watcher_4 0.423",
+    "9.45": "official: rail_watcher_4 0.473",
+    "9.5": "official: rail_watcher_4 0.522",
+    "9.55": "official: rail_watcher_4 0.572",
+    "9.6 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "9.65 woman": "elbow_L 0.037 into the bridge at 7.8 s",
+    "9.75 woman": "forearm_L 0.032 into the bridge at 7.4 s",
+    "9.8 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "9.8 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "9.85 official": "palm_R 0.043 into the bridge at 0 s",
+    "9.85 scholar": "palm_R 0.035 into the bridge at 0 s",
+    "9.95 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "10.05 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "10.05 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "10.05 woman": "elbow_R 0.032 into the bridge at 7.6 s",
+    "10.15 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "10.2 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "10.3 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "10.3 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "10.3 woman": "elbow_R 0.032 into the bridge at 7.6 s",
+    "10.35 official": "palm_R 0.041 into the bridge at 0.2 s",
+    "10.4 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "10.45 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "10.55 woman": "elbow_R 0.032 into the bridge at 7.6 s",
+    "10.95 woman": "forearm_L 0.03 into the bridge at 0.8 s",
+    "11.05 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "11.25 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "11.3 monk": "palm_R 0.034 into the bridge at 0 s",
+    "11.4 woman": "palm_L 0.032 into the bridge at 7.6 s",
+    "11.55 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "11.55 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "11.65 woman": "palm_L 0.036 into the bridge at 7.8 s",
+    "11.7 woman": "forearm_R 0.033 into the bridge at 7.8 s",
+    "11.8 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "11.85 monk": "palm_R 0.034 into the bridge at 0 s",
+    "11.95 woman": "palm_L 0.032 into the bridge at 7.6 s",
+    "12.05 porter": "forearm_L 0.031 into the bridge at 7.4 s",
+    "12.1 woman": "forearm_L 0.037 into the bridge at 7.6 s"
+   },
+   "points": {
+    "official": [
+     0.35,
+     10.95,
+     12.05
+    ],
+    "scholar": [
+     0.35,
+     2.625,
+     12.05
+    ],
+    "monk": [
+     0.35,
+     10.425,
+     12.05
+    ],
+    "woman": [
+     0.35,
+     2.325,
+     11.55
+    ],
+    "child": [
+     0.35,
+     2.05,
+     12.05
+    ],
+    "soldier": [
+     0.35,
+     2.05,
+     12.05
+    ],
+    "porter": [
+     0.35,
+     2.025,
+     11.95
+    ],
+    "sightseer": [
+     0.35,
+     2.05,
+     12.05
+    ]
+   }
+  },
+  "far": {
+   "rail_centre_D": 7.88,
+   "facing_deg": 90,
+   "top_H": 1.075,
+   "root_H": -0.01,
+   "dist_by_character": {
+    "official": 0.29,
+    "scholar": 0.3,
+    "monk": 0.26,
+    "woman": 0.3,
+    "child": 0.26,
+    "soldier": 0.27,
+    "porter": 0.29,
+    "sightseer": 0.28
+   },
+   "dist_why": {
+    "official": "contacts' worst 0.017 m, through 0 (-); the contact sites' median z 0.312",
+    "scholar": "contacts' worst 0.015 m, through 0 (-); the contact sites' median z 0.327",
+    "monk": "contacts' worst 0.01 m, through 0.006 (forearm_L); the contact sites' median z 0.292",
+    "woman": "contacts' worst 0.018 m, through 0 (-); the contact sites' median z 0.25",
+    "child": "contacts' worst 0.005 m, through 0 (-); the contact sites' median z 0.23",
+    "soldier": "contacts' worst 0.008 m, through 0 (-); the contact sites' median z 0.249",
+    "porter": "contacts' worst 0.016 m, through 0.024 (forearm_L); the contact sites' median z 0.254",
+    "sightseer": "contacts' worst 0.015 m, through 0.003 (forearm_L); the contact sites' median z 0.261"
+   },
+   "free": [
+    [
+     0.3,
+     1.05
+    ],
+    [
+     3.5,
+     3.8
+    ],
+    [
+     8.95,
+     9.05
+    ],
+    [
+     11.55,
+     12.1
+    ]
+   ],
+   "free_by_character": {
+    "official": [
+     [
+      0.4,
+      1.05
+     ],
+     [
+      3.5,
+      3.8
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.55,
+      12.1
+     ]
+    ],
+    "scholar": [
+     [
+      0.4,
+      0.5
+     ],
+     [
+      0.6,
+      0.75
+     ],
+     [
+      0.85,
+      1
+     ],
+     [
+      3.5,
+      3.65
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.7,
+      11.9
+     ],
+     [
+      12,
+      12.1
+     ]
+    ],
+    "monk": [
+     [
+      0.3,
+      1.05
+     ],
+     [
+      3.5,
+      3.8
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.55,
+      11.95
+     ]
+    ],
+    "woman": [
+     [
+      0.3,
+      0.6
+     ],
+     [
+      0.7,
+      0.85
+     ],
+     [
+      0.95,
+      1.05
+     ],
+     [
+      3.7,
+      3.8
+     ],
+     [
+      11.55,
+      11.75
+     ],
+     [
+      11.85,
+      12
+     ]
+    ],
+    "child": [
+     [
+      0.3,
+      1.05
+     ],
+     [
+      3.5,
+      3.8
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.55,
+      12.1
+     ]
+    ],
+    "soldier": [
+     [
+      0.3,
+      1.05
+     ],
+     [
+      3.5,
+      3.8
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.55,
+      12.1
+     ]
+    ],
+    "porter": [
+     [
+      0.3,
+      1.05
+     ],
+     [
+      3.65,
+      3.8
+     ],
+     [
+      11.55,
+      12.1
+     ]
+    ],
+    "sightseer": [
+     [
+      0.3,
+      1.05
+     ],
+     [
+      3.5,
+      3.8
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.55,
+      12.1
+     ]
+    ]
+   },
+   "free_all": [
+    [
+     0.4,
+     0.5
+    ]
+   ],
+   "blocked": {
+    "2": "official: far_rail_back_8615 0.341",
+    "3": "official: far_rail_white_8698 0.1",
+    "4": "official: far_rail_bending_8822 0.44",
+    "5": "official: far_rail_bending_8822 0.56",
+    "6": "official: far_rail_white_8955 0.444",
+    "7": "official: far_rail_reaching_9010 0.277",
+    "8": "official: far_rail_turned_9100 0.028",
+    "10": "official: far_rail_white_bent_9255 0.293",
+    "11": "official: far_rail_dark_9308 0.108",
+    "0.35 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "0.35 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "0.55 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "0.65 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "0.8 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "0.9 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "1.05 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "1.1": "official: far_rail_back_8615 0.561",
+    "1.15": "official: far_rail_back_8615 0.511",
+    "1.2": "official: far_rail_back_8615 0.461",
+    "1.25": "official: far_rail_back_8615 0.411",
+    "1.3": "official: far_rail_back_8615 0.361",
+    "1.35": "official: far_rail_back_8615 0.311",
+    "1.4": "official: far_rail_back_8615 0.262",
+    "1.45": "official: far_rail_back_8615 0.212",
+    "1.5": "official: far_rail_back_8615 0.163",
+    "1.55": "official: far_rail_back_8615 0.114",
+    "1.6": "official: far_rail_back_8615 0.067",
+    "1.65": "official: far_rail_back_8615 0.032",
+    "1.7": "official: far_rail_back_8615 0.05",
+    "1.75": "official: far_rail_back_8615 0.095",
+    "1.8": "official: far_rail_back_8615 0.143",
+    "1.85": "official: far_rail_back_8615 0.192",
+    "1.9": "official: far_rail_back_8615 0.242",
+    "1.95": "official: far_rail_back_8615 0.292",
+    "2.05": "official: far_rail_back_8615 0.391",
+    "2.1": "official: far_rail_back_8615 0.441",
+    "2.15": "official: far_rail_back_8615 0.491",
+    "2.2": "official: far_rail_back_8615 0.541",
+    "2.25": "official: far_rail_back_8615 0.591",
+    "2.3 official": "palm_R 0.049 into the bridge at 7.8 s",
+    "2.3 scholar": "palm_R 0.033 into the bridge at 7.6 s",
+    "2.3 monk": "palm_R 0.034 into the bridge at 0 s",
+    "2.35": "official: far_rail_white_8698 0.55",
+    "2.4": "official: far_rail_white_8698 0.5",
+    "2.45": "official: far_rail_white_8698 0.45",
+    "2.5": "official: far_rail_white_8698 0.4",
+    "2.55": "official: far_rail_white_8698 0.35",
+    "2.6": "official: far_rail_white_8698 0.3",
+    "2.65": "official: far_rail_white_8698 0.25",
+    "2.7": "official: far_rail_white_8698 0.2",
+    "2.75": "official: far_rail_white_8698 0.15",
+    "2.8": "official: far_rail_white_8698 0.1",
+    "2.85": "official: far_rail_white_8698 0.05",
+    "2.9": "official: far_rail_white_8698 0",
+    "2.95": "official: far_rail_white_8698 0.05",
+    "3.05": "official: far_rail_white_8698 0.15",
+    "3.1": "official: far_rail_white_8698 0.2",
+    "3.15": "official: far_rail_white_8698 0.25",
+    "3.2": "official: far_rail_white_8698 0.3",
+    "3.25": "official: far_rail_white_8698 0.35",
+    "3.3": "official: far_rail_white_8698 0.4",
+    "3.35": "official: far_rail_white_8698 0.45",
+    "3.4": "official: far_rail_white_8698 0.5",
+    "3.45": "official: far_rail_white_8698 0.55",
+    "3.55 woman": "forearm_L 0.037 into the bridge at 7.6 s",
+    "3.6 porter": "forearm_L 0.031 into the bridge at 7.4 s",
+    "3.65 woman": "elbow_L 0.037 into the bridge at 7.8 s",
+    "3.7 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "3.85": "official: far_rail_bending_8822 0.59",
+    "3.9": "official: far_rail_bending_8822 0.54",
+    "3.95": "official: far_rail_bending_8822 0.49",
+    "4.05": "official: far_rail_bending_8822 0.391",
+    "4.1": "official: far_rail_bending_8822 0.341",
+    "4.15": "official: far_rail_bending_8822 0.291",
+    "4.2": "official: far_rail_bending_8822 0.241",
+    "4.25": "official: far_rail_bending_8822 0.191",
+    "4.3": "official: far_rail_bending_8822 0.141",
+    "4.35": "official: far_rail_bending_8822 0.092",
+    "4.4": "official: far_rail_bending_8822 0.045",
+    "4.45": "official: far_rail_bending_8822 0.022",
+    "4.5": "official: far_rail_bending_8822 0.063",
+    "4.55": "official: far_rail_bending_8822 0.112",
+    "4.6": "official: far_rail_bending_8822 0.161",
+    "4.65": "official: far_rail_bending_8822 0.211",
+    "4.7": "official: far_rail_bending_8822 0.261",
+    "4.75": "official: far_rail_bending_8822 0.311",
+    "4.8": "official: far_rail_bending_8822 0.361",
+    "4.85": "official: far_rail_bending_8822 0.41",
+    "4.9": "official: far_rail_bending_8822 0.46",
+    "4.95": "official: far_rail_bending_8822 0.51",
+    "5.05": "official: far_rail_dark_robe_8902 0.546",
+    "5.1": "official: far_rail_dark_robe_8902 0.501",
+    "5.15": "official: far_rail_dark_robe_8902 0.458",
+    "5.2": "official: far_rail_dark_robe_8902 0.416",
+    "5.25": "official: far_rail_dark_robe_8902 0.376",
+    "5.3": "official: far_rail_dark_robe_8902 0.339",
+    "5.35": "official: far_rail_dark_robe_8902 0.306",
+    "5.4": "official: far_rail_dark_robe_8902 0.278",
+    "5.45": "official: far_rail_dark_robe_8902 0.256",
+    "5.5": "official: far_rail_dark_robe_8902 0.243",
+    "5.55": "official: far_rail_dark_robe_8902 0.24",
+    "5.6": "official: far_rail_dark_robe_8902 0.247",
+    "5.65": "official: far_rail_dark_robe_8902 0.264",
+    "5.7": "official: far_rail_dark_robe_8902 0.288",
+    "5.75": "official: far_rail_dark_robe_8902 0.319",
+    "5.8": "official: far_rail_dark_robe_8902 0.354",
+    "5.85": "official: far_rail_dark_robe_8902 0.392",
+    "5.9": "official: far_rail_dark_robe_8902 0.433",
+    "5.95": "official: far_rail_dark_robe_8902 0.475",
+    "6.05": "official: far_rail_white_8955 0.405",
+    "6.1": "official: far_rail_white_8955 0.368",
+    "6.15": "official: far_rail_white_8955 0.334",
+    "6.2": "official: far_rail_white_8955 0.305",
+    "6.25": "official: far_rail_white_8955 0.282",
+    "6.3": "official: far_rail_white_8955 0.267",
+    "6.35": "official: far_rail_white_8955 0.26",
+    "6.4": "official: far_rail_white_8955 0.263",
+    "6.45": "official: far_rail_white_8955 0.275",
+    "6.5": "official: far_rail_white_8955 0.295",
+    "6.55": "official: far_rail_white_8955 0.322",
+    "6.6": "official: far_rail_white_8955 0.354",
+    "6.65": "official: far_rail_white_8955 0.389",
+    "6.7": "official: far_rail_white_8955 0.428",
+    "6.75": "official: far_rail_reaching_9010 0.411",
+    "6.8": "official: far_rail_reaching_9010 0.375",
+    "6.85": "official: far_rail_reaching_9010 0.342",
+    "6.9": "official: far_rail_reaching_9010 0.314",
+    "6.95": "official: far_rail_reaching_9010 0.292",
+    "7.05": "official: far_rail_reaching_9010 0.27",
+    "7.1": "official: far_rail_reaching_9010 0.273",
+    "7.15": "official: far_rail_reaching_9010 0.285",
+    "7.2": "official: far_rail_reaching_9010 0.304",
+    "7.25": "official: far_rail_reaching_9010 0.33",
+    "7.3": "official: far_rail_reaching_9010 0.361",
+    "7.35": "official: far_rail_reaching_9010 0.396",
+    "7.4": "official: far_rail_reaching_9010 0.434",
+    "7.45": "official: far_rail_reaching_9010 0.474",
+    "7.5": "official: far_rail_reaching_9010 0.516",
+    "7.55": "official: far_rail_turned_9100 0.47",
+    "7.6": "official: far_rail_turned_9100 0.42",
+    "7.65": "official: far_rail_turned_9100 0.371",
+    "7.7": "official: far_rail_turned_9100 0.321",
+    "7.75": "official: far_rail_turned_9100 0.271",
+    "7.8": "official: far_rail_turned_9100 0.221",
+    "7.85": "official: far_rail_turned_9100 0.171",
+    "7.9": "official: far_rail_turned_9100 0.122",
+    "7.95": "official: far_rail_turned_9100 0.073",
+    "8.05": "official: far_rail_turned_9100 0.036",
+    "8.1": "official: far_rail_turned_9100 0.082",
+    "8.15": "official: far_rail_turned_9100 0.132",
+    "8.2": "official: far_rail_turned_9100 0.181",
+    "8.25": "official: far_rail_turned_9100 0.231",
+    "8.3": "official: far_rail_turned_9100 0.281",
+    "8.35": "official: far_rail_turned_9100 0.331",
+    "8.4": "official: far_rail_turned_9100 0.381",
+    "8.45": "official: far_rail_turned_9100 0.43",
+    "8.5": "official: far_rail_turned_9100 0.48",
+    "8.55": "official: far_rail_turned_9100 0.53",
+    "8.6": "official: beggar_boy_9138 0.53",
+    "8.65": "official: beggar_boy_9138 0.532",
+    "8.7": "official: beggar_boy_9138 0.538",
+    "8.75": "official: beggar_boy_9138 0.548",
+    "8.8": "official: beggar_boy_9138 0.563",
+    "8.85": "official: beggar_boy_9138 0.582",
+    "8.9": "scholar: beggar_boy_9138 0.595",
+    "8.95 porter": "forearm_L 0.031 into the bridge at 7.4 s",
+    "9 woman": "elbow_L 0.037 into the bridge at 7.8 s",
+    "9.1": "official: far_rail_long_robe_9200 0.569",
+    "9.15": "official: far_rail_long_robe_9200 0.528",
+    "9.2": "official: far_rail_long_robe_9200 0.489",
+    "9.25": "official: far_rail_long_robe_9200 0.453",
+    "9.3": "official: far_rail_long_robe_9200 0.419",
+    "9.35": "official: far_rail_long_robe_9200 0.388",
+    "9.4": "official: far_rail_long_robe_9200 0.362",
+    "9.45": "official: far_rail_long_robe_9200 0.342",
+    "9.5": "official: far_rail_long_robe_9200 0.328",
+    "9.55": "official: far_rail_long_robe_9200 0.321",
+    "9.6": "official: far_rail_long_robe_9200 0.321",
+    "9.65": "official: far_rail_long_robe_9200 0.33",
+    "9.7": "official: far_rail_long_robe_9200 0.345",
+    "9.75": "official: far_rail_long_robe_9200 0.367",
+    "9.8": "official: far_rail_long_robe_9200 0.394",
+    "9.85": "official: far_rail_long_robe_9200 0.425",
+    "9.9": "official: far_rail_white_bent_9255 0.392",
+    "9.95": "official: far_rail_white_bent_9255 0.342",
+    "10.05": "official: far_rail_white_bent_9255 0.243",
+    "10.1": "official: far_rail_white_bent_9255 0.194",
+    "10.15": "official: far_rail_white_bent_9255 0.146",
+    "10.2": "official: far_rail_white_bent_9255 0.098",
+    "10.25": "official: far_rail_white_bent_9255 0.057",
+    "10.3": "official: far_rail_white_bent_9255 0.041",
+    "10.35": "official: far_rail_white_bent_9255 0.072",
+    "10.4": "official: far_rail_white_bent_9255 0.117",
+    "10.45": "official: far_rail_white_bent_9255 0.165",
+    "10.5": "official: far_rail_white_bent_9255 0.214",
+    "10.55": "official: far_rail_white_bent_9255 0.263",
+    "10.6": "official: far_rail_white_bent_9255 0.313",
+    "10.65": "official: far_rail_dark_9308 0.267",
+    "10.7": "official: far_rail_dark_9308 0.218",
+    "10.75": "official: far_rail_dark_9308 0.171",
+    "10.8": "official: far_rail_dark_9308 0.125",
+    "10.85": "official: far_rail_dark_9308 0.085",
+    "10.9": "official: far_rail_dark_9308 0.061",
+    "10.95": "official: far_rail_dark_9308 0.072",
+    "11.05": "official: far_rail_dark_9308 0.152",
+    "11.1": "official: far_rail_dark_9308 0.199",
+    "11.15": "official: far_rail_dark_9308 0.247",
+    "11.2": "official: far_rail_dark_9308 0.296",
+    "11.25": "official: far_rail_dark_9308 0.345",
+    "11.3": "official: far_rail_dark_9308 0.395",
+    "11.35": "official: far_rail_dark_9308 0.444",
+    "11.4": "official: far_rail_dark_9308 0.494",
+    "11.45": "official: far_rail_dark_9308 0.543",
+    "11.5": "official: far_rail_dark_9308 0.593",
+    "11.65 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "11.8 woman": "forearm_L 0.037 into the bridge at 7.8 s",
+    "11.95 scholar": "palm_L 0.03 into the bridge at 5.2 s",
+    "12 monk": "palm_R 0.034 into the bridge at 0 s",
+    "12.05 woman": "forearm_L 0.034 into the bridge at 0 s",
+    "12.1 woman": "elbow_R 0.032 into the bridge at 7.6 s"
+   },
+   "points": {
+    "official": [
+     0.45,
+     0.725,
+     12.05
+    ],
+    "scholar": [
+     0.45,
+     11.8,
+     12.05
+    ],
+    "monk": [
+     0.35,
+     0.675,
+     11.9
+    ],
+    "woman": [
+     0.35,
+     0.45,
+     11.95
+    ],
+    "child": [
+     0.35,
+     0.675,
+     12.05
+    ],
+    "soldier": [
+     0.35,
+     0.675,
+     12.05
+    ],
+    "porter": [
+     0.35,
+     0.675,
+     12.05
+    ],
+    "sightseer": [
+     0.35,
+     0.675,
+     12.05
+    ]
+   }
+  }
+ },
+ "crown": {
+  "player_crown_a": {
+   "adults": {
+    "spec": "player_crown_a",
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "ramp_H": 3.761,
+    "facing_deg": 319,
+    "s": 9,
+    "n": 0.32,
+    "ops": [
+     {
+      "site": "chest_front",
+      "via": "hips",
+      "to": {
+       "x": 0.0202,
+       "z": 0.06
+      },
+      "keep_soles": true
+     },
+     {
+      "site": "palm_L",
+      "via": "arm",
+      "to": {
+       "point": [
+        0.238,
+        1.121,
+        0.286
+       ]
+      },
+      "elbow": "down"
+     },
+     {
+      "site": "palm_R",
+      "via": "arm",
+      "to": {
+       "point": [
+        -0.212,
+        1.379,
+        0.284
+       ]
+      },
+      "elbow": "down"
+     },
+     {
+      "site": "sole_L",
+      "via": "leg",
+      "to": {
+       "x": 0.15,
+       "y": 0
+      }
+     },
+     {
+      "site": "sole_R",
+      "via": "leg",
+      "to": {
+       "x": -0.15,
+       "y": 0.182
+      }
+     }
+    ],
+    "by_character": {
+     "official": "player_crown_a_official"
+    }
+   },
+   "child": {
+    "spec": "player_crown_a_child",
+    "hand": "palm_L",
+    "X": 140.628,
+    "D": 20.873,
+    "H": 3.811,
+    "ramp_H": 3.811,
+    "facing_deg": 319,
+    "s": 8.91,
+    "n": 0.26,
+    "ops": [
+     {
+      "site": "palm_L",
+      "via": "arm",
+      "to": {
+       "point": [
+        0.099,
+        1.071,
+        0.226
+       ]
+      },
+      "elbow": "down",
+      "hand": "follow"
+     },
+     {
+      "site": "sole_L",
+      "via": "leg",
+      "to": {
+       "x": 0.1,
+       "y": 0
+      }
+     },
+     {
+      "site": "sole_R",
+      "via": "leg",
+      "to": {
+       "x": -0.1,
+       "y": 0
+      }
+     }
+    ]
+   }
+  },
+  "player_crown_b": {
+   "adults": {
+    "spec": "player_crown_b",
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "ramp_H": 3.049,
+    "facing_deg": 319,
+    "s": -1.335,
+    "n": 0.32,
+    "ops": [
+     {
+      "site": "chest_front",
+      "via": "hips",
+      "to": {
+       "x": 0.0204,
+       "z": 0.06
+      },
+      "keep_soles": true
+     },
+     {
+      "site": "palm_L",
+      "via": "arm",
+      "to": {
+       "point": [
+        0.238,
+        1.397,
+        0.286
+       ]
+      },
+      "elbow": "down"
+     },
+     {
+      "site": "palm_R",
+      "via": "arm",
+      "to": {
+       "point": [
+        -0.212,
+        1.099,
+        0.284
+       ]
+      },
+      "elbow": "down"
+     },
+     {
+      "site": "sole_L",
+      "via": "leg",
+      "to": {
+       "x": 0.15,
+       "y": 0.217
+      }
+     },
+     {
+      "site": "sole_R",
+      "via": "leg",
+      "to": {
+       "x": -0.15,
+       "y": 0
+      }
+     }
+    ],
+    "by_character": {
+     "soldier": "player_crown_b_soldier"
+    }
+   },
+   "child": {
+    "spec": "player_crown_b_child",
+    "hand": "palm_R",
+    "X": 133.764,
+    "D": 13.066,
+    "H": 2.943,
+    "ramp_H": 2.949,
+    "facing_deg": 319,
+    "s": -1.485,
+    "n": 0.26,
+    "ops": [
+     {
+      "site": "palm_R",
+      "via": "arm",
+      "to": {
+       "point": [
+        -0.101,
+        1.072,
+        0.224
+       ]
+      },
+      "elbow": "down",
+      "hand": "follow"
+     },
+     {
+      "site": "sole_L",
+      "via": "leg",
+      "to": {
+       "x": 0.1,
+       "y": 0
+      }
+     },
+     {
+      "site": "sole_R",
+      "via": "leg",
+      "to": {
+       "x": -0.1,
+       "y": 0
+      }
+     }
+    ]
+   }
+  }
+ },
+ "storyteller": {
+  "official": {
+   "built": true,
+   "lower_sole_median": -0.003,
+   "status": "PASS"
+  },
+  "scholar": {
+   "built": true,
+   "lower_sole_median": 0,
+   "status": "PASS"
+  },
+  "monk": {
+   "built": true,
+   "lower_sole_median": 0,
+   "status": "PASS"
+  },
+  "woman": {
+   "built": true,
+   "lower_sole_median": -0.003,
+   "status": "PASS"
+  },
+  "child": {
+   "built": true,
+   "lower_sole_median": 0,
+   "status": "PASS"
+  },
+  "soldier": {
+   "built": true,
+   "lower_sole_median": 0,
+   "status": "PASS"
+  },
+  "porter": {
+   "built": true,
+   "lower_sole_median": 0,
+   "status": "PASS"
+  },
+  "sightseer": {
+   "built": true,
+   "lower_sole_median": 0,
+   "status": "PASS"
+  }
+ },
+ "drum": {
+  "skin": {
+   "owner": "S5.prop.tower_drum_6898",
+   "centre": [
+    -18.77,
+    5.93,
+    13.36
+   ],
+   "r": 0.62,
+   "floor": 12.06,
+   "east": {
+    "face": -18.4,
+    "facing": 180
+   },
+   "west": {
+    "face": -19.14,
+    "facing": 0
+   }
+  },
+  "about": "per character the root spot where the stick tip meets the drum face at hit_s (the face: the visible outer disc, the rope rim's cap, 2 cm proud of the drum skin)",
+  "spots": {
+   "east": {
+    "facing_deg": 180,
+    "face_X": -18.4,
+    "shared": null,
+    "spread_m": 0.162,
+    "by_character": {
+     "official": {
+      "X": -17.485,
+      "D": 6.123,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.14,
+      "tip_H": 13.152
+     },
+     "scholar": {
+      "X": -17.508,
+      "D": 6.218,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.14,
+      "tip_H": 13.14
+     },
+     "monk": {
+      "X": -17.578,
+      "D": 6.176,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.14,
+      "tip_H": 13.51
+     },
+     "woman": {
+      "X": -17.652,
+      "D": 6.259,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.13,
+      "tip_H": 13.329
+     },
+     "child": {
+      "X": -17.72,
+      "D": 6.107,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.14,
+      "tip_H": 12.879
+     },
+     "soldier": {
+      "X": -17.549,
+      "D": 6.154,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.14,
+      "tip_H": 13.33
+     },
+     "porter": {
+      "X": -17.549,
+      "D": 6.158,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.13,
+      "tip_H": 13.245
+     },
+     "sightseer": {
+      "X": -17.527,
+      "D": 6.161,
+      "H": 12.06,
+      "facing_deg": 180,
+      "hit_s": 1.14,
+      "tip_H": 13.431
+     }
+    }
+   },
+   "west": {
+    "facing_deg": 0,
+    "face_X": -19.14,
+    "shared": null,
+    "spread_m": 0.161,
+    "by_character": {
+     "official": {
+      "X": -20.055,
+      "D": 5.737,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.14,
+      "tip_H": 13.152
+     },
+     "scholar": {
+      "X": -20.032,
+      "D": 5.642,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.14,
+      "tip_H": 13.14
+     },
+     "monk": {
+      "X": -19.962,
+      "D": 5.684,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.14,
+      "tip_H": 13.51
+     },
+     "woman": {
+      "X": -19.888,
+      "D": 5.601,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.13,
+      "tip_H": 13.329
+     },
+     "child": {
+      "X": -19.82,
+      "D": 5.753,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.14,
+      "tip_H": 12.879
+     },
+     "soldier": {
+      "X": -19.991,
+      "D": 5.706,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.14,
+      "tip_H": 13.33
+     },
+     "porter": {
+      "X": -19.991,
+      "D": 5.702,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.13,
+      "tip_H": 13.245
+     },
+     "sightseer": {
+      "X": -20.012,
+      "D": 5.699,
+      "H": 12.06,
+      "facing_deg": 0,
+      "hit_s": 1.14,
+      "tip_H": 13.431
+     }
+    }
+   }
+  }
+ },
+ "results": [
+  {
+   "slot": "moat_near@0.35",
+   "character": "official",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.41,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.017,
+     "pen_q": 0.005,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.012,
+     "max": 0.037,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.096,
+     "clip_own": 0.11,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.015,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.004,
+    "site": "forearm_R",
+    "t": 7.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.738
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.17
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@10.95",
+   "character": "official",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 10.95,
+    "D": 0.41,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.017,
+     "pen_q": 0.005,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": -0.002,
+     "max": 0.029,
+     "deepest_pen": 0.01,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.033,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.077,
+     "clip_own": 0.11,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.033,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.008,
+    "site": "elbow_R",
+    "t": 3.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "porter_bundle_9011",
+     "d": 1.118
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.26
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@12.05",
+   "character": "official",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 0.41,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.017,
+     "pen_q": 0.004,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.012,
+     "max": 0.037,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.02,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.09,
+     "clip_own": 0.11,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.02,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.005,
+    "site": "forearm_R",
+    "t": 3,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.808
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.26
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "scholar",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.42,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.015,
+     "pen_q": 0.002,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.016,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.027,
+     "clip_own": 0.041,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.015,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.006,
+    "site": "forearm_R",
+    "t": 7.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.729
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.16
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@2.625",
+   "character": "scholar",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 2.625,
+    "D": 0.42,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.015,
+     "pen_q": 0.002,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0.005,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.046,
+     "clip_own": 0.041,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.006,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.006,
+    "site": "forearm_R",
+    "t": 6.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_sightseer",
+     "d": 1.815
+    },
+    "walker_path": {
+     "id": "bridge_porter",
+     "d": 1.67
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@12.05",
+   "character": "scholar",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 0.42,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.015,
+     "pen_q": 0.001,
+     "max": 0.019,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.021,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.02,
+     "clip_own": 0.041,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.02,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.007,
+    "site": "forearm_R",
+    "t": 3,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.817
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.25
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "monk",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.38,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.009,
+     "pen_q": 0.004,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.01,
+     "pen_q": 0.01,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.006,
+     "clip_own": 0.009,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.001,
+    "site": "forearm_R",
+    "t": 7.6,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.767
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.2
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@10.425",
+   "character": "monk",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 10.425,
+    "D": 0.38,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.009,
+     "pen_q": -0.002,
+     "max": 0.02,
+     "deepest_pen": 0.007,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.01,
+     "pen_q": 0.01,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.032,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.031,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.015,
+     "clip_own": 0.009,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.007,
+    "site": "elbow_L",
+    "t": 7.2,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "rail_watcher_4",
+     "d": 1.447
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.29
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@12.05",
+   "character": "monk",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 0.38,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.009,
+     "pen_q": 0.002,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.01,
+     "pen_q": 0.01,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.021,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.02,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.011,
+     "clip_own": 0.009,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.008,
+    "site": "forearm_R",
+    "t": 3.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.778
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.29
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "woman",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.42,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": 0.006,
+     "max": 0.04,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.018,
+     "pen_q": 0.003,
+     "max": 0.032,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.015,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.002,
+     "clip_own": 0.013,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.011,
+    "site": "forearm_R",
+    "t": 0,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.729
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.16
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@2.325",
+   "character": "woman",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 2.325,
+    "D": 0.42,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": 0.006,
+     "max": 0.04,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.018,
+     "pen_q": 0.003,
+     "max": 0.032,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0.004,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.005,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.019,
+     "clip_own": 0.013,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_sightseer",
+     "d": 2.115
+    },
+    "walker_path": {
+     "id": "bridge_porter",
+     "d": 1.67
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@11.55",
+   "character": "woman",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 11.55,
+    "D": 0.42,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": 0.006,
+     "max": 0.04,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.018,
+     "pen_q": -0.001,
+     "max": 0.032,
+     "deepest_pen": 0.009,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.016,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.015,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.002,
+     "clip_own": 0.013,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.009,
+    "site": "elbow_R",
+    "t": 3.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "porter_bundle_9011",
+     "d": 0.841
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.25
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "child",
+   "clip": "look~moat_rail_child",
+   "root": {
+    "X": 0.35,
+    "D": 0.38,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.014,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.013,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.012,
+     "clip_own": 0.003,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.767
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.2
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@2.05",
+   "character": "child",
+   "clip": "look~moat_rail_child",
+   "root": {
+    "X": 2.05,
+    "D": 0.38,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.002,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.001,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.004,
+     "clip_own": 0.003,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 2.12
+    },
+    "walker_path": {
+     "id": "bridge_porter",
+     "d": 1.71
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@12.05",
+   "character": "child",
+   "clip": "look~moat_rail_child",
+   "root": {
+    "X": 12.05,
+    "D": 0.38,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.005,
+     "pen_q": -0.003,
+     "max": 0.005,
+     "deepest_pen": 0.004,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.02,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.02,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.017,
+     "clip_own": 0.003,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.004,
+    "site": "palm_R",
+    "t": 0.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.778
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.29
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "soldier",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.39,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.003,
+     "max": 0.026,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.008,
+     "pen_q": 0.005,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.006,
+     "clip_own": 0.008,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.758
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.19
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@2.05",
+   "character": "soldier",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 2.05,
+    "D": 0.39,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.003,
+     "max": 0.026,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.008,
+     "pen_q": 0.008,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.003,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.002,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.001,
+     "clip_own": 0.008,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 2.112
+    },
+    "walker_path": {
+     "id": "bridge_porter",
+     "d": 1.7
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@12.05",
+   "character": "soldier",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 0.39,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.003,
+     "max": 0.026,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.008,
+     "pen_q": 0.008,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.021,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.02,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.012,
+     "clip_own": 0.008,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.012,
+    "site": "forearm_L",
+    "t": 1.2,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.788
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.28
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "porter",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.41,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.016,
+     "pen_q": 0.003,
+     "max": 0.031,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.003,
+     "max": 0.018,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.012,
+     "clip_own": 0.002,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.015,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.024,
+    "site": "forearm_L",
+    "t": 4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.738
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.17
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@2.025",
+   "character": "porter",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 2.025,
+    "D": 0.41,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.016,
+     "pen_q": 0.003,
+     "max": 0.031,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.009,
+     "pen_q": 0.003,
+     "max": 0.014,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.005,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0.002,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.006,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.024,
+    "site": "forearm_L",
+    "t": 4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 2.081
+    },
+    "walker_path": {
+     "id": "bridge_porter",
+     "d": 1.68
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@11.95",
+   "character": "porter",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 11.95,
+    "D": 0.41,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": -0.003,
+     "max": 0.017,
+     "deepest_pen": 0.031,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.003,
+     "max": 0.018,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.02,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.018,
+     "clip_own": 0.002,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.02,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.03,
+    "site": "elbow_L",
+    "t": 7.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.827
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.26
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@0.35",
+   "character": "sightseer",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 0.4,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.007,
+     "pen_q": 0.003,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.014,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.047,
+     "clip_own": 0.073,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.007,
+    "site": "forearm_L",
+    "t": 7.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 1.748
+    },
+    "walker_path": {
+     "id": "porter_7786",
+     "d": 1.18
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@2.05",
+   "character": "sightseer",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 2.05,
+    "D": 0.4,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.007,
+     "pen_q": 0.003,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.002,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.002,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.056,
+     "clip_own": 0.073,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.005,
+    "site": "forearm_L",
+    "t": 5.6,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridge_porter",
+     "d": 2.104
+    },
+    "walker_path": {
+     "id": "bridge_porter",
+     "d": 1.69
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_near@12.05",
+   "character": "sightseer",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 0.4,
+    "H": -0.01,
+    "facing_deg": 270,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.007,
+     "pen_q": 0.003,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.021,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.021,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.041,
+     "clip_own": 0.073,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.003,
+    "site": "forearm_R",
+    "t": 2.2,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "bridgehead_watcher_9172",
+     "d": 0.798
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 2.27
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.45",
+   "character": "official",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.45,
+    "D": 7.59,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.017,
+     "pen_q": 0.005,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.012,
+     "max": 0.037,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.004,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.11,
+     "clip_own": 0.11,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.004,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.21
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.17
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.725",
+   "character": "official",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.725,
+    "D": 7.59,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.017,
+     "pen_q": 0.005,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.012,
+     "max": 0.037,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.106,
+     "clip_own": 0.11,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.015,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 0.935
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.17
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@12.05",
+   "character": "official",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 7.59,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.017,
+     "pen_q": 0.005,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.012,
+     "max": 0.037,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.014,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.096,
+     "clip_own": 0.11,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.142
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.92
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.45",
+   "character": "scholar",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.45,
+    "D": 7.58,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.015,
+     "pen_q": 0.002,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.035,
+     "clip_own": 0.041,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.001,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.21
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.16
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@11.8",
+   "character": "scholar",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 11.8,
+    "D": 7.58,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.015,
+     "pen_q": 0.002,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.006,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.035,
+     "clip_own": 0.041,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.005,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.009,
+    "site": "forearm_R",
+    "t": 1.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 0.891
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.91
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@12.05",
+   "character": "scholar",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 7.58,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.015,
+     "pen_q": 0.002,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.027,
+     "clip_own": 0.041,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.141
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.91
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.35",
+   "character": "monk",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 7.62,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.006,
+     "pen_q": 0.002,
+     "max": 0.013,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.01,
+     "pen_q": 0.01,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.022,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.021,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.009,
+     "clip_own": 0.009,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.024,
+    "site": "palm_R",
+    "t": 3,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.311
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.2
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.675",
+   "character": "monk",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.675,
+    "D": 7.62,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.009,
+     "pen_q": 0.004,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.01,
+     "pen_q": 0.01,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.005,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.004,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.002,
+     "clip_own": 0.009,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.008,
+    "site": "forearm_R",
+    "t": 5.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 0.987
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.2
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@11.9",
+   "character": "monk",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 11.9,
+    "D": 7.62,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.009,
+     "pen_q": 0.004,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.01,
+     "pen_q": 0.01,
+     "max": 0.042,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.006,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.005,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.005,
+     "clip_own": 0.009,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 0.994
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.95
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.35",
+   "character": "woman",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 7.58,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": 0.006,
+     "max": 0.025,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.018,
+     "pen_q": -0.001,
+     "max": 0.032,
+     "deepest_pen": 0.014,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.001,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.013,
+     "clip_own": 0.013,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.014,
+    "site": "elbow_R",
+    "t": 3.2,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.31
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.16
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.45",
+   "character": "woman",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.45,
+    "D": 7.58,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": 0.006,
+     "max": 0.04,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.018,
+     "pen_q": 0.003,
+     "max": 0.032,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.001,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.013,
+     "clip_own": 0.013,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.21
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.16
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@11.95",
+   "character": "woman",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 11.95,
+    "D": 7.58,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.014,
+     "pen_q": 0.006,
+     "max": 0.04,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.018,
+     "pen_q": 0.003,
+     "max": 0.032,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.001,
+     "clip_own": 0.013,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.041
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.91
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.35",
+   "character": "child",
+   "clip": "look~moat_rail_child",
+   "root": {
+    "X": 0.35,
+    "D": 7.62,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.021,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.021,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.003,
+     "clip_own": 0.003,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.311
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.2
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.675",
+   "character": "child",
+   "clip": "look~moat_rail_child",
+   "root": {
+    "X": 0.675,
+    "D": 7.62,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.004,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.003,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.011,
+     "clip_own": 0.003,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 0.987
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.2
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@12.05",
+   "character": "child",
+   "clip": "look~moat_rail_child",
+   "root": {
+    "X": 12.05,
+    "D": 7.62,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.005,
+     "pen_q": -0.001,
+     "max": 0.005,
+     "deepest_pen": 0.002,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.005,
+     "pen_q": 0.001,
+     "max": 0.005,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.014,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.013,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.011,
+     "clip_own": 0.003,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.002,
+    "site": "palm_L",
+    "t": 2.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.144
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.95
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.35",
+   "character": "soldier",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 7.61,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.003,
+     "max": 0.026,
+     "deepest_pen": 0.001,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.008,
+     "pen_q": 0.008,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.022,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.021,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.008,
+     "clip_own": 0.008,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.025,
+    "site": "palm_L",
+    "t": 7.8,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.311
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.19
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.675",
+   "character": "soldier",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.675,
+    "D": 7.61,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.003,
+     "max": 0.026,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.008,
+     "pen_q": 0.008,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.005,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.004,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.006,
+     "clip_own": 0.008,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 0.986
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.19
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@12.05",
+   "character": "soldier",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 7.61,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.003,
+     "max": 0.026,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.008,
+     "pen_q": 0.008,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.015,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.006,
+     "clip_own": 0.008,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.143
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.94
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.35",
+   "character": "porter",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 7.59,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.008,
+     "pen_q": 0.001,
+     "max": 0.031,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.002,
+     "max": 0.018,
+     "deepest_pen": 0.004,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.002,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.019,
+     "clip_own": 0.002,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.004,
+    "site": "elbow_R",
+    "t": 7.4,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.31
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.17
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.675",
+   "character": "porter",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.675,
+    "D": 7.59,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.016,
+     "pen_q": 0.003,
+     "max": 0.031,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.003,
+     "max": 0.018,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.004,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.002,
+     "clip_own": 0.002,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.004,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.008,
+    "site": "forearm_R",
+    "t": 0,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 0.985
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.17
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@12.05",
+   "character": "porter",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 7.59,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.016,
+     "pen_q": 0.003,
+     "max": 0.031,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.013,
+     "pen_q": 0.003,
+     "max": 0.018,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.014,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.012,
+     "clip_own": 0.002,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.142
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.92
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.35",
+   "character": "sightseer",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.35,
+    "D": 7.6,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.006,
+     "pen_q": 0.002,
+     "max": 0.008,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.022,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.022,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.063,
+     "clip_own": 0.073,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 1.311
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.18
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@0.675",
+   "character": "sightseer",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 0.675,
+    "D": 7.6,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.007,
+     "pen_q": 0.003,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.004,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.004,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.047,
+     "clip_own": 0.073,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0.003,
+    "site": "forearm_R",
+    "t": 7.2,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_back_8615",
+     "d": 0.986
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 1.18
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "moat_far@12.05",
+   "character": "sightseer",
+   "clip": "lean_chin~moat_rail",
+   "root": {
+    "X": 12.05,
+    "D": 7.6,
+    "H": -0.01,
+    "facing_deg": 90,
+    "root_h": -0.01
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "elbow_L",
+     "gap_q": 0.007,
+     "pen_q": 0.003,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "elbow_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.016,
+     "deepest_pen": 0,
+     "with": [
+      "S5.str.moat_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.014,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.014,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0.048,
+     "clip_own": 0.073,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S5.str.moat_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "far_rail_dark_9308",
+     "d": 1.142
+    },
+    "walker_path": {
+     "id": "pole_servant_9318",
+     "d": 4.93
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "official",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.019,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.019,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0.182,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "scholar",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.006,
+     "pen_q": 0.006,
+     "max": 0.006,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.006,
+     "pen_q": 0.006,
+     "max": 0.006,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.016,
+     "clip_own": 0.166,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "monk",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0.001,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0.001,
+     "clip_own": 0.001,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0.182,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "woman",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.01,
+     "pen_q": 0.009,
+     "max": 0.01,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.013,
+     "pen_q": 0.009,
+     "max": 0.022,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.012,
+     "clip_own": 0.17,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "child",
+   "clip": "look~player_crown_a_child",
+   "root": {
+    "X": 140.628,
+    "D": 20.873,
+    "H": 3.811,
+    "facing_deg": 319,
+    "root_h": 3.811
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.021,
+     "pen_q": 0.021,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_rail_leaner_19715",
+     "d": 0.687
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.63
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "soldier",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.021,
+     "pen_q": 0.02,
+     "max": 0.037,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0.182,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "porter",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.011,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.011,
+     "pen_q": 0.011,
+     "max": 0.011,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": -0.011,
+     "clip_own": 0.171,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_a",
+   "character": "sightseer",
+   "clip": "lean_over~player_crown_a",
+   "root": {
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "facing_deg": 319,
+    "root_h": 3.629
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0.182,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "deck_stooping_hat_19765",
+     "d": 0.721
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 16.736
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "official",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.019,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.019,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0.217,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "scholar",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0.217,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "monk",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.041,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0.217,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "woman",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.034,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.02,
+     "max": 0.021,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0.217,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "child",
+   "clip": "look~player_crown_b_child",
+   "root": {
+    "X": 133.764,
+    "D": 13.066,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_R",
+     "gap_q": 0.02,
+     "pen_q": 0.019,
+     "max": 0.02,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.889
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.016
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "soldier",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.015,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.015,
+     "pen_q": 0.015,
+     "max": 0.04,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.001,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.006,
+     "clip_own": 0.211,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "porter",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.009,
+     "pen_q": 0.009,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.009,
+     "pen_q": 0.009,
+     "max": 0.009,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.002,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.013,
+     "clip_own": 0.204,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "player_crown_b",
+   "character": "sightseer",
+   "clip": "lean_over~player_crown_b",
+   "root": {
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "facing_deg": 319,
+    "root_h": 2.943
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "rail": "PASS",
+    "soles": "PASS",
+    "through": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "contacts": [
+    {
+     "site": "palm_L",
+     "gap_q": 0.001,
+     "pen_q": 0.001,
+     "max": 0.001,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    },
+    {
+     "site": "palm_R",
+     "gap_q": 0.001,
+     "pen_q": 0.001,
+     "max": 0.004,
+     "deepest_pen": 0,
+     "with": [
+      "S3.str.rainbow_bridge"
+     ],
+     "status": "PASS"
+    }
+   ],
+   "stance": {
+    "median": -0.001,
+    "status": "PASS"
+   },
+   "soles": {
+    "sole_L": {
+     "gap": -0.023,
+     "clip_own": 0.194,
+     "status": "PASS"
+    },
+    "sole_R": {
+     "gap": 0,
+     "clip_own": 0,
+     "status": "PASS"
+    },
+    "status": "PASS"
+   },
+   "through": {
+    "owner": "S3.str.rainbow_bridge",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "site_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "head_inside": {
+    "depth": 0,
+    "status": "PASS"
+   },
+   "body_cylinder": {
+    "overlap": 0,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "man_reaching_with_stick_18930",
+     "d": 0.738
+    },
+    "walker_path": {
+     "id": "porter_two_baskets_18340",
+     "d": 8.169
+    },
+    "status": "PASS"
+   },
+   "missing": [],
+   "other_fails": []
+  },
+  {
+   "slot": "storyteller",
+   "character": "official",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": -0.003
+  },
+  {
+   "slot": "storyteller",
+   "character": "scholar",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": 0
+  },
+  {
+   "slot": "storyteller",
+   "character": "monk",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": 0
+  },
+  {
+   "slot": "storyteller",
+   "character": "woman",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": -0.003
+  },
+  {
+   "slot": "storyteller",
+   "character": "child",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": 0
+  },
+  {
+   "slot": "storyteller",
+   "character": "soldier",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": 0
+  },
+  {
+   "slot": "storyteller",
+   "character": "porter",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": 0
+  },
+  {
+   "slot": "storyteller",
+   "character": "sightseer",
+   "clip": "crane",
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "soles": "PASS"
+   },
+   "lower_sole_median": 0
+  },
+  {
+   "slot": "drum_east",
+   "character": "official",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.485,
+    "D": 6.123,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -18.4,
+    "D": 5.93,
+    "H": 13.152,
+    "plane_m": 0,
+    "from_centre_m": 0.208
+   },
+   "tip_farthest_past_face_m": 0.001,
+   "tip_farthest_s": 1.12,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.223
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.419
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": -0.004,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "scholar",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.508,
+    "D": 6.218,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -18.399,
+    "D": 5.93,
+    "H": 13.14,
+    "plane_m": 0.001,
+    "from_centre_m": 0.22
+   },
+   "tip_farthest_past_face_m": 0.001,
+   "tip_farthest_s": 1.12,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.296
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.44
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "monk",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.578,
+    "D": 6.176,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -18.385,
+    "D": 5.93,
+    "H": 13.51,
+    "plane_m": 0.015,
+    "from_centre_m": 0.15
+   },
+   "tip_farthest_past_face_m": 0.015,
+   "tip_farthest_s": 1.3,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.226
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.511
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "woman",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.652,
+    "D": 6.259,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.13,
+   "tip_at_hit": {
+    "X": -18.384,
+    "D": 5.93,
+    "H": 13.329,
+    "plane_m": 0.016,
+    "from_centre_m": 0.031
+   },
+   "tip_farthest_past_face_m": 0.017,
+   "tip_farthest_s": 1.3,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.266
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.583
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "child",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.72,
+    "D": 6.107,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -18.396,
+    "D": 5.93,
+    "H": 12.879,
+    "plane_m": 0.004,
+    "from_centre_m": 0.481
+   },
+   "tip_farthest_past_face_m": 0.003,
+   "tip_farthest_s": 1.24,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.1
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.655
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "soldier",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.549,
+    "D": 6.154,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -18.398,
+    "D": 5.93,
+    "H": 13.33,
+    "plane_m": 0.002,
+    "from_centre_m": 0.031
+   },
+   "tip_farthest_past_face_m": 0.002,
+   "tip_farthest_s": 1.18,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.22
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.482
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": -0.001,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "porter",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.549,
+    "D": 6.158,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.13,
+   "tip_at_hit": {
+    "X": -18.399,
+    "D": 5.93,
+    "H": 13.245,
+    "plane_m": 0.001,
+    "from_centre_m": 0.116
+   },
+   "tip_farthest_past_face_m": 0.002,
+   "tip_farthest_s": 1.15,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.223
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.482
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0.004,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_east",
+   "character": "sightseer",
+   "clip": "strike_drum",
+   "root": {
+    "X": -17.527,
+    "D": 6.161,
+    "H": 12.06,
+    "facing_deg": 180
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -18.392,
+    "D": 5.93,
+    "H": 13.431,
+    "plane_m": 0.008,
+    "from_centre_m": 0.071
+   },
+   "tip_farthest_past_face_m": 0.007,
+   "tip_farthest_s": 1.24,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 5.236
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 10.46
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "official",
+   "clip": "strike_drum",
+   "root": {
+    "X": -20.055,
+    "D": 5.737,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -19.14,
+    "D": 5.93,
+    "H": 13.152,
+    "plane_m": 0,
+    "from_centre_m": 0.208
+   },
+   "tip_farthest_past_face_m": 0.001,
+   "tip_farthest_s": 1.12,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.198
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 13.003
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": -0.004,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "scholar",
+   "clip": "strike_drum",
+   "root": {
+    "X": -20.032,
+    "D": 5.642,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -19.141,
+    "D": 5.93,
+    "H": 13.14,
+    "plane_m": 0.001,
+    "from_centre_m": 0.22
+   },
+   "tip_farthest_past_face_m": 0.001,
+   "tip_farthest_s": 1.12,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.102
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.985
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "monk",
+   "clip": "strike_drum",
+   "root": {
+    "X": -19.962,
+    "D": 5.684,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -19.155,
+    "D": 5.93,
+    "H": 13.51,
+    "plane_m": 0.015,
+    "from_centre_m": 0.15
+   },
+   "tip_farthest_past_face_m": 0.015,
+   "tip_farthest_s": 1.3,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.144
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.913
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "woman",
+   "clip": "strike_drum",
+   "root": {
+    "X": -19.888,
+    "D": 5.601,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.13,
+   "tip_at_hit": {
+    "X": -19.156,
+    "D": 5.93,
+    "H": 13.329,
+    "plane_m": 0.016,
+    "from_centre_m": 0.031
+   },
+   "tip_farthest_past_face_m": 0.017,
+   "tip_farthest_s": 1.3,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.062
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.844
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "child",
+   "clip": "strike_drum",
+   "root": {
+    "X": -19.82,
+    "D": 5.753,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -19.144,
+    "D": 5.93,
+    "H": 12.879,
+    "plane_m": 0.004,
+    "from_centre_m": 0.481
+   },
+   "tip_farthest_past_face_m": 0.003,
+   "tip_farthest_s": 1.24,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.216
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.767
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "soldier",
+   "clip": "strike_drum",
+   "root": {
+    "X": -19.991,
+    "D": 5.706,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -19.142,
+    "D": 5.93,
+    "H": 13.33,
+    "plane_m": 0.002,
+    "from_centre_m": 0.031
+   },
+   "tip_farthest_past_face_m": 0.002,
+   "tip_farthest_s": 1.18,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.166
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.941
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": -0.001,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "porter",
+   "clip": "strike_drum",
+   "root": {
+    "X": -19.991,
+    "D": 5.702,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.13,
+   "tip_at_hit": {
+    "X": -19.141,
+    "D": 5.93,
+    "H": 13.245,
+    "plane_m": 0.001,
+    "from_centre_m": 0.116
+   },
+   "tip_farthest_past_face_m": 0.002,
+   "tip_farthest_s": 1.15,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.162
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.941
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0.004,
+    "status": "PASS"
+   }
+  },
+  {
+   "slot": "drum_west",
+   "character": "sightseer",
+   "clip": "strike_drum",
+   "root": {
+    "X": -20.012,
+    "D": 5.699,
+    "H": 12.06,
+    "facing_deg": 0
+   },
+   "status": "PASS",
+   "parts": {
+    "clip": "PASS",
+    "tip_on_skin": "PASS",
+    "tip_not_through": "PASS",
+    "body_out_of_drum": "PASS",
+    "soles": "PASS",
+    "body": "PASS",
+    "clear": "PASS"
+   },
+   "hit_s": 1.14,
+   "tip_at_hit": {
+    "X": -19.147,
+    "D": 5.93,
+    "H": 13.431,
+    "plane_m": 0.007,
+    "from_centre_m": 0.071
+   },
+   "tip_farthest_past_face_m": 0.008,
+   "tip_farthest_s": 1.24,
+   "body_in_drum": {
+    "owner": "S5.prop.tower_drum_6898",
+    "depth": 0,
+    "site": null,
+    "t": null,
+    "status": "PASS"
+   },
+   "clear": {
+    "nearest": {
+     "id": "tower_watchman",
+     "d": 4.159
+    },
+    "walker_path": {
+     "id": "luggage_servant_8002",
+     "d": 12.962
+    },
+    "status": "PASS"
+   },
+   "stance": {
+    "median": 0,
+    "status": "PASS"
+   }
+  }
+ ]
+}

@@ -52,14 +52,14 @@ export function createUI(o) {
 
   // the 圖志 journal (journal.js; lore agent, gen/ui/r2_lore.md): a lazy chunk, made on the first J, toast foot or settings
   // row. lore.json (the long texts) is fetched once, by the first unfolded toast or the journal, never at first load.
-  let loreP = null, jn = null, jnLoading = null, placesData = null, talkData = null;
+  let loreP = null, jn = null, jnLoading = null, placesData = null, talkData = null, deedsOf = null; // deedsOf: interact.js's eight (the 印譜 leaf)
   const lore = () => (loreP ??= json('assets/ui/lore.json'));
   const journal = {
     isOpen: () => !!jn?.isOpen,
     async open(opts = {}) {
       if (off || o.hudOpen() || dhud.isOpen()) return;
       await talkAll().catch(() => {}); // every section's talks, for the 見聞 leaf
-      jnLoading ??= import('./journal.js').then((m) => (jn = new m.Journal({ places: placesData, talk: talkData, data: () => ({ places: placesData, talk: talkData }), lore, player: o.player,
+      jnLoading ??= import('./journal.js').then((m) => (jn = new m.Journal({ places: placesData, talk: talkData, data: () => ({ places: placesData, talk: talkData, deeds: deedsOf?.() || [] }), lore, player: o.player,
         canvas: o.canvas || o.hud?.canvas, touch, sfx: o.sfx })));
       try { await jnLoading; } catch (err) { console.warn('journal failed to load:', err); jnLoading = null; return; }
       return jn.open(opts);
@@ -128,12 +128,25 @@ export function createUI(o) {
     if (!places || places.found.has(key)) return;
     places.discover(key);
     const th = (talkData?.threads || []).find((x) => x.steps.some((st) => st.id === step));
-    if (!th || !(prefs.get('placeNotes') ?? true)) return;
+    if (th) note(W.heard.seal, th.title, W.heard.line, th.titleEn && `${th.titleEn}: ${W.heard.lineEn}`);
+  };
+  // an interaction done the first time (interact.js: the drum, a viewpoint, a pose joined): its seal into the 圖志's
+  // 印譜 leaf, with the same ink note (the user, 2026-10-13: "recorded in ... 成就系統"; no counter, STYLE.md §9)
+  const stamp = (d) => {
+    const key = `x:${d.key}`;
+    if (!places || places.found.has(key)) return false;
+    places.discover(key);
+    note(d.seal, d.name, W.stamped.line, d.name_en && `${d.name_en}: ${W.stamped.lineEn}`);
+    return true;
+  };
+  // the small ink slip, bottom centre: a seal, a name, a line (中英: its gloss)
+  const note = (glyph, title, line, en) => {
+    if (!(prefs.get('placeNotes') ?? true)) return;
     heardEl?.remove();
     heardEl = h('div', 'qm-heard qm-slip', { role: 'status', 'aria-live': 'polite' }, [
-      h('span', 'qm-seal', { text: W.heard.seal, 'aria-hidden': 'true' }),
-      h('span', 'qm-heard-text', {}, [h('b', '', { text: th.title }), h('span', '', { text: W.heard.line }),
-        (prefs.get('lang') ?? 'zh') === 'zh_en' && th.titleEn ? h('i', '', { text: `${th.titleEn}: ${W.heard.lineEn}`, lang: 'en' }) : null]),
+      h('span', 'qm-seal', { text: glyph, 'aria-hidden': 'true' }),
+      h('span', 'qm-heard-text', {}, [h('b', '', { text: title }), h('span', '', { text: line }),
+        (prefs.get('lang') ?? 'zh') === 'zh_en' && en ? h('i', '', { text: en, lang: 'en' }) : null]),
     ]);
     root.append(heardEl);
     o.sfx('bubble_tap', 0.4);
@@ -243,6 +256,7 @@ export function createUI(o) {
   const lifeCost = { ms: 0, n: 0 }; // the life layer's share (talk, chatter, bubbles): detail.js stats, a running mean
   const ui = {
     root, places: () => places, talk: () => talk, chatter: () => chatter, help, hud: dhud, journal,
+    stamp, deeds: (fn) => { deedsOf = fn; },
     progress: (f) => loading.progress(f),
     loaded() {
       loading.done();

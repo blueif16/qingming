@@ -11,7 +11,8 @@
    "size_adjust": "118%",
    "no_always": true,
    "sources": [
-    "sections/*/places.json#name,sub,seal"
+    "sections/*/places.json#name,sub,seal",
+    "web/public/assets/interact.json#name,sub,seal,stand_seal,deed"
    ],
    "extra": "清明上河圖 汴京 東京 汴河 張擇端 宋 今靜緩常疾 歸 設定視角聲音介面畫面進階耗費 志 入畫 前路漸展",
    "core": "",
@@ -51,7 +52,8 @@
     "web/ui.html",
     "web/world.html",
     "web/src/scroll_hud.js",
-    "web/src/sound.js"
+    "web/src/sound.js",
+    "web/public/assets/interact.json#prompt,stand,vista_back,vista_prompt"
    ],
    "extra": "清明上河圖 汴京 東京 張擇端",
    "core": "清明上河圖汴京展卷載入中請稍候輕觸開始入城行走入畫",
@@ -62,7 +64,8 @@
     ],
     "talk": [
      "web/public/assets/ui/talk.json#lead,note,title",
-     "web/public/assets/ui/talk/*.json#text,alts,name,title,guan,shi,seng,fu,tong,jun,li,min"
+     "web/public/assets/ui/talk/*.json#text,alts,name,title,guan,shi,seng,fu,tong,jun,li,min",
+     "web/public/assets/interact.json#say"
     ],
     "settings": [
      "web/src/ui/settings_words.js"
@@ -71,7 +74,8 @@
      "sections/*/places.json#long,quote,quoteSrc,cite",
      "gen/ui/lore/colophons.json#title,lead,who,text,gloss",
      "web/src/ui/journal_words.js",
-     "web/src/ui/journal.js"
+     "web/src/ui/journal.js",
+     "web/public/assets/interact.json#deed_line"
     ],
     "hud": [
      "web/public/assets/*/scroll_index.json#n_zh"

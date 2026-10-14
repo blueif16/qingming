@@ -1,0 +1,59 @@
+{
+ "character": "soldier",
+ "base": "lean_over",
+ "spec": "player_crown_b_soldier",
+ "frame": "proposed",
+ "sole_shift_m": 0.013,
+ "clip": "lean_over~player_crown_b",
+ "frames": 160,
+ "duration": 7.95,
+ "verify_max_m": 0.001,
+ "locomotion": false,
+ "ops": [
+  {
+   "site": "chest_front",
+   "via": "hips",
+   "residual_max_m": 0,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_L",
+   "via": "arm",
+   "residual_max_m": 0.003,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "palm_R",
+   "via": "arm",
+   "residual_max_m": 0.043,
+   "residual_mean_m": 0.005
+  },
+  {
+   "site": "sole_L",
+   "via": "leg",
+   "residual_max_m": 0.031,
+   "residual_mean_m": 0
+  },
+  {
+   "site": "sole_R",
+   "via": "leg",
+   "residual_max_m": 0.036,
+   "residual_mean_m": 0.01
+  }
+ ],
+ "max_turn_deg": {
+  "Hips": 0,
+  "LeftUpLeg": 33,
+  "LeftLeg": 75,
+  "LeftFoot": 64,
+  "RightUpLeg": 24,
+  "RightLeg": 17,
+  "RightFoot": 24,
+  "LeftArm": 106,
+  "LeftForeArm": 108,
+  "LeftHand": 167,
+  "RightArm": 68,
+  "RightForeArm": 115,
+  "RightHand": 99
+ }
+}

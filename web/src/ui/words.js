@@ -17,6 +17,7 @@ export const W = {
   // the landmark toast's fold and its way to the journal (places.js; lore agent). The journal's own words: journal_words.js
   // a plot line's step overheard (the life pass): the note's seal and its line under the line's title
   heard: { seal: '聞', line: '記入圖志', lineEn: 'into the journal' },
+  stamped: { line: '鈐入圖志', lineEn: 'stamped into the journal' }, // an interaction's seal (interact.js, ui/index.js stamp)
   // the painting ahead still coming in (index.js: a section near you not loaded yet; its seam holds you till it is)
   ahead: { line: '前路漸展', en: 'the way ahead is unrolling' },
   lore: { more: '詳', moreAria: 'Tap or R: more about this place', cite: '據', journal: '圖志', journalAria: 'Journal of places (J)', journalSeal: '志' },

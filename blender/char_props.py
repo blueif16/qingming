@@ -1229,6 +1229,16 @@ PROPS.update({
     "hat_on_back": prop_hat_on_back, "back_chair_frame": prop_back_chair_frame, "veiled_hat": prop_veiled_hat,
     "back_bundle_pale": prop_back_bundle_pale,
 })
+
+def prop_drumstick(sb, k, rng):
+    """A drumstick (鼓槌) in the right fist for the gate tower's drum (interactions round, 2026-10-13: the player's
+    strike_drum): a turned wooden stick from 0.05 m behind the grip to 0.30 m out along +Z, thickening a little, and a
+    rounded dark head on it, the tip 0.36 m from the grip (the end that meets the skin). Origin: the fist."""
+    stube(sb, "wood", [V((0, 0, -0.05)), V((0, 0, 0.30))], [0.013, 0.016], segs=6)
+    sb.lathe("wood_dark", False, (0, 0, 0.30), [(0.016, 0), (0.025, 0.015), (0.024, 0.04), (0.012, 0.055), (0.0, 0.06)], segs=8)
+
+
+PROPS["drumstick"] = prop_drumstick
 # The carried children (child_on_back, child_on_shoulders, child_in_arms, child_on_lap) are no longer built here: since
 # 2026-10-13 they are the rigged child posed onto each carrier by IK (tools/carry_pose.mjs, gen/props/carry.json), and
 # a full rebuild here must not overwrite them. prop_child_* above are the old kit-primitive children, kept for the

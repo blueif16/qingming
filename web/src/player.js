@@ -152,7 +152,7 @@ export class Player {
 
   update(dt) {
     this.platforms?.step(dt);
-    if (this.frozen) { this.ride = null; return; }
+    if (this.frozen) { this.ride = null; this.eyes(); return; } // held still (a shot, a viewpoint): the eyes stay put
     const s = this.s;
     // carried by the deck you stand on: where its last step took the spot you stood on, turned as it turned
     // (a teleport since then, by the page or a tool, ends the ride)
@@ -224,9 +224,13 @@ export class Player {
       this.ride = { mover, local: (this.ride?.local || new THREE.Vector3()).copy(this.pos).applyMatrix4(_mi.copy(M).invert()), yaw: Math.atan2(-_e.z, _e.x), at: (this.ride?.at || new THREE.Vector3()).copy(this.pos) };
     } else this.ride = null;
 
-    if (this.mode === 'first') {
-      this.camera.position.set(this.pos.x, this.pos.y + s.eyeHeight, this.pos.z);
-      this.camera.rotation.set(this.pitch, this.yaw, 0, 'YXZ');
-    }
+    this.eyes();
+  }
+
+  // first person: the camera at the eyes, looking where you look
+  eyes() {
+    if (this.mode !== 'first') return;
+    this.camera.position.set(this.pos.x, this.pos.y + this.s.eyeHeight, this.pos.z);
+    this.camera.rotation.set(this.pitch, this.yaw, 0, 'YXZ');
   }
 }

@@ -1,0 +1,973 @@
+{
+ "about": "The player's join-the-pose spots (interactions round, 2026-10-13; gen/interact/brief_clips.md; written by gen/interact/tools/slots.mjs from gen/interact/clips_check.json, crown_slots.json and drum_tip.json; checks: gen/interact/clips_check.json). Map frame: X east, D north, H up (the page: x = X, y = H, z = -D); facing_deg as people.json (0 = +X, 90 = +D). A `line` / `lines` entry is where the ROOT stands (between the feet as people.js places a figure). Every clip name is the same on all 8 playable characters (official, scholar, monk, woman, child, soldier, porter, sightseer) except the child, which has its own (`child`). H is the root's own height, held as people.js holds a root_h figure, NOT the ground hook: the moat deck's planks lie at -0.023..+0.025, and the crown's visible treads sit under the smooth hidden ramp the player walks on (ramp_H).",
+ "default_avatar": "official",
+ "moat_bridge": {
+  "section": "gate",
+  "map_id": "S5.str.moat_bridge",
+  "H": -0.01,
+  "H_note": "hold the root at H -0.01 along both rails (the deck's nominal top; the rail's top is 1.075 over it): the clip puts the elbows on the rail there; grounded on a plank instead, they ride up to 2.5 cm off it or into it",
+  "rails": [
+   {
+    "id": "near",
+    "facing_deg": 270,
+    "clip": "lean_chin~moat_rail",
+    "rail_centre_D": 0.12,
+    "rail_top_H": 1.075,
+    "line": [
+     [
+      0.3,
+      0.41
+     ],
+     [
+      12.13,
+      0.41
+     ]
+    ],
+    "dist_from_rail_centre": {
+     "official": 0.29,
+     "scholar": 0.3,
+     "monk": 0.26,
+     "woman": 0.3,
+     "child": 0.26,
+     "soldier": 0.27,
+     "porter": 0.29,
+     "sightseer": 0.28
+    },
+    "lines": {
+     "official": [
+      [
+       0.3,
+       0.41
+      ],
+      [
+       12.13,
+       0.41
+      ]
+     ],
+     "scholar": [
+      [
+       0.3,
+       0.42
+      ],
+      [
+       12.13,
+       0.42
+      ]
+     ],
+     "monk": [
+      [
+       0.3,
+       0.38
+      ],
+      [
+       12.13,
+       0.38
+      ]
+     ],
+     "woman": [
+      [
+       0.3,
+       0.42
+      ],
+      [
+       12.13,
+       0.42
+      ]
+     ],
+     "child": [
+      [
+       0.3,
+       0.38
+      ],
+      [
+       12.13,
+       0.38
+      ]
+     ],
+     "soldier": [
+      [
+       0.3,
+       0.39
+      ],
+      [
+       12.13,
+       0.39
+      ]
+     ],
+     "porter": [
+      [
+       0.3,
+       0.41
+      ],
+      [
+       12.13,
+       0.41
+      ]
+     ],
+     "sightseer": [
+      [
+       0.3,
+       0.4
+      ],
+      [
+       12.13,
+       0.4
+      ]
+     ]
+    },
+    "free": [
+     [
+      0.3,
+      3.8
+     ],
+     [
+      9.6,
+      12.1
+     ]
+    ],
+    "free_by_character": {
+     "official": [
+      [
+       0.3,
+       0.65
+      ],
+      [
+       0.75,
+       0.9
+      ],
+      [
+       1,
+       1.2
+      ],
+      [
+       1.35,
+       2.4
+      ],
+      [
+       2.5,
+       2.65
+      ],
+      [
+       2.75,
+       3.25
+      ],
+      [
+       3.4,
+       3.55
+      ],
+      [
+       3.65,
+       3.8
+      ],
+      [
+       9.6,
+       9.75
+      ],
+      [
+       9.9,
+       10
+      ],
+      [
+       10.1,
+       10.25
+      ],
+      [
+       10.4,
+       11.5
+      ],
+      [
+       11.6,
+       12.1
+      ]
+     ],
+     "scholar": [
+      [
+       0.3,
+       0.65
+      ],
+      [
+       0.75,
+       0.9
+      ],
+      [
+       1,
+       1.2
+      ],
+      [
+       1.35,
+       1.9
+      ],
+      [
+       2,
+       2.15
+      ],
+      [
+       2.25,
+       3
+      ],
+      [
+       3.1,
+       3.25
+      ],
+      [
+       3.4,
+       3.55
+      ],
+      [
+       3.65,
+       3.8
+      ],
+      [
+       9.6,
+       9.75
+      ],
+      [
+       9.9,
+       10
+      ],
+      [
+       10.1,
+       10.25
+      ],
+      [
+       10.35,
+       11
+      ],
+      [
+       11.1,
+       11.5
+      ],
+      [
+       11.6,
+       12.1
+      ]
+     ],
+     "monk": [
+      [
+       0.3,
+       0.4
+      ],
+      [
+       0.5,
+       0.65
+      ],
+      [
+       0.75,
+       0.9
+      ],
+      [
+       1,
+       2.4
+      ],
+      [
+       2.5,
+       2.65
+      ],
+      [
+       2.75,
+       2.95
+      ],
+      [
+       3.05,
+       3.8
+      ],
+      [
+       9.6,
+       11.25
+      ],
+      [
+       11.35,
+       11.8
+      ],
+      [
+       11.9,
+       12.1
+      ]
+     ],
+     "woman": [
+      [
+       0.3,
+       0.5
+      ],
+      [
+       0.6,
+       0.75
+      ],
+      [
+       1.15,
+       1.3
+      ],
+      [
+       1.55,
+       1.8
+      ],
+      [
+       1.9,
+       2
+      ],
+      [
+       2.15,
+       2.5
+      ],
+      [
+       2.65,
+       2.75
+      ],
+      [
+       3,
+       3.1
+      ],
+      [
+       3.3,
+       3.5
+      ],
+      [
+       9.8,
+       9.9
+      ],
+      [
+       10.6,
+       10.9
+      ],
+      [
+       11,
+       11.2
+      ],
+      [
+       11.45,
+       11.6
+      ]
+     ],
+     "child": [
+      [
+       0.3,
+       3.8
+      ],
+      [
+       9.6,
+       12.1
+      ]
+     ],
+     "soldier": [
+      [
+       0.3,
+       3.8
+      ],
+      [
+       9.6,
+       12.1
+      ]
+     ],
+     "porter": [
+      [
+       0.3,
+       3.75
+      ],
+      [
+       9.6,
+       12
+      ]
+     ],
+     "sightseer": [
+      [
+       0.3,
+       3.8
+      ],
+      [
+       9.6,
+       12.1
+      ]
+     ]
+    },
+    "checked_at_X": {
+     "official": [
+      0.35,
+      10.95,
+      12.05
+     ],
+     "scholar": [
+      0.35,
+      2.625,
+      12.05
+     ],
+     "monk": [
+      0.35,
+      10.425,
+      12.05
+     ],
+     "woman": [
+      0.35,
+      2.325,
+      11.55
+     ],
+     "child": [
+      0.35,
+      2.05,
+      12.05
+     ],
+     "soldier": [
+      0.35,
+      2.05,
+      12.05
+     ],
+     "porter": [
+      0.35,
+      2.025,
+      11.95
+     ],
+     "sightseer": [
+      0.35,
+      2.05,
+      12.05
+     ]
+    }
+   },
+   {
+    "id": "far",
+    "facing_deg": 90,
+    "clip": "lean_chin~moat_rail",
+    "rail_centre_D": 7.88,
+    "rail_top_H": 1.075,
+    "line": [
+     [
+      0.3,
+      7.59
+     ],
+     [
+      12.13,
+      7.59
+     ]
+    ],
+    "dist_from_rail_centre": {
+     "official": 0.29,
+     "scholar": 0.3,
+     "monk": 0.26,
+     "woman": 0.3,
+     "child": 0.26,
+     "soldier": 0.27,
+     "porter": 0.29,
+     "sightseer": 0.28
+    },
+    "lines": {
+     "official": [
+      [
+       0.3,
+       7.59
+      ],
+      [
+       12.13,
+       7.59
+      ]
+     ],
+     "scholar": [
+      [
+       0.3,
+       7.58
+      ],
+      [
+       12.13,
+       7.58
+      ]
+     ],
+     "monk": [
+      [
+       0.3,
+       7.62
+      ],
+      [
+       12.13,
+       7.62
+      ]
+     ],
+     "woman": [
+      [
+       0.3,
+       7.58
+      ],
+      [
+       12.13,
+       7.58
+      ]
+     ],
+     "child": [
+      [
+       0.3,
+       7.62
+      ],
+      [
+       12.13,
+       7.62
+      ]
+     ],
+     "soldier": [
+      [
+       0.3,
+       7.61
+      ],
+      [
+       12.13,
+       7.61
+      ]
+     ],
+     "porter": [
+      [
+       0.3,
+       7.59
+      ],
+      [
+       12.13,
+       7.59
+      ]
+     ],
+     "sightseer": [
+      [
+       0.3,
+       7.6
+      ],
+      [
+       12.13,
+       7.6
+      ]
+     ]
+    },
+    "free": [
+     [
+      0.3,
+      1.05
+     ],
+     [
+      3.5,
+      3.8
+     ],
+     [
+      8.95,
+      9.05
+     ],
+     [
+      11.55,
+      12.1
+     ]
+    ],
+    "free_by_character": {
+     "official": [
+      [
+       0.4,
+       1.05
+      ],
+      [
+       3.5,
+       3.8
+      ],
+      [
+       8.95,
+       9.05
+      ],
+      [
+       11.55,
+       12.1
+      ]
+     ],
+     "scholar": [
+      [
+       0.4,
+       0.5
+      ],
+      [
+       0.6,
+       0.75
+      ],
+      [
+       0.85,
+       1
+      ],
+      [
+       3.5,
+       3.65
+      ],
+      [
+       8.95,
+       9.05
+      ],
+      [
+       11.7,
+       11.9
+      ],
+      [
+       12,
+       12.1
+      ]
+     ],
+     "monk": [
+      [
+       0.3,
+       1.05
+      ],
+      [
+       3.5,
+       3.8
+      ],
+      [
+       8.95,
+       9.05
+      ],
+      [
+       11.55,
+       11.95
+      ]
+     ],
+     "woman": [
+      [
+       0.3,
+       0.6
+      ],
+      [
+       0.7,
+       0.85
+      ],
+      [
+       0.95,
+       1.05
+      ],
+      [
+       3.7,
+       3.8
+      ],
+      [
+       11.55,
+       11.75
+      ],
+      [
+       11.85,
+       12
+      ]
+     ],
+     "child": [
+      [
+       0.3,
+       1.05
+      ],
+      [
+       3.5,
+       3.8
+      ],
+      [
+       8.95,
+       9.05
+      ],
+      [
+       11.55,
+       12.1
+      ]
+     ],
+     "soldier": [
+      [
+       0.3,
+       1.05
+      ],
+      [
+       3.5,
+       3.8
+      ],
+      [
+       8.95,
+       9.05
+      ],
+      [
+       11.55,
+       12.1
+      ]
+     ],
+     "porter": [
+      [
+       0.3,
+       1.05
+      ],
+      [
+       3.65,
+       3.8
+      ],
+      [
+       11.55,
+       12.1
+      ]
+     ],
+     "sightseer": [
+      [
+       0.3,
+       1.05
+      ],
+      [
+       3.5,
+       3.8
+      ],
+      [
+       8.95,
+       9.05
+      ],
+      [
+       11.55,
+       12.1
+      ]
+     ]
+    },
+    "checked_at_X": {
+     "official": [
+      0.45,
+      0.725,
+      12.05
+     ],
+     "scholar": [
+      0.45,
+      11.8,
+      12.05
+     ],
+     "monk": [
+      0.35,
+      0.675,
+      11.9
+     ],
+     "woman": [
+      0.35,
+      0.45,
+      11.95
+     ],
+     "child": [
+      0.35,
+      0.675,
+      12.05
+     ],
+     "soldier": [
+      0.35,
+      0.675,
+      12.05
+     ],
+     "porter": [
+      0.35,
+      0.675,
+      12.05
+     ],
+     "sightseer": [
+      0.35,
+      0.675,
+      12.05
+     ]
+    }
+   }
+  ],
+  "note": "The rails as BUILT are straight (blender/gate_scene.py: near centre D 0.12, far centre D 7.88), not the map's slanted far line (layout lines.rail_far 8.0 -> 7.77), so each character's standing D is one value along a rail. Each character stands at its own distance from the rail (its take's elbows reach forward by its own size; searched for the elbows nearest the rail with nothing through it, the feet clear of the bottom rail): `lines` per character, `line` for the default avatar. `free`: the X ranges where the root is at least 0.6 m from every painted watcher (for every character's line) and the body on the deck. `free_by_character`: within those, where that character also has nothing in a post, a post cap or through the rail (its hands come near the posts every 1.776 m): use these for the avatar in play.",
+  "child": "look~moat_rail_child",
+  "child_note": "The child (1.15 m) cannot rest its elbows on a 1.075 m rail: it holds the top rail with both hands up and looks about (look~moat_rail_child, characters/ik_variants.json moat_rail_child), standing on the child line (lines.child)."
+ },
+ "crown": {
+  "section": "rainbow_bridge",
+  "map_id": "S3.str.rainbow_bridge",
+  "slots": [
+   {
+    "id": "player_crown_a",
+    "X": 140.642,
+    "D": 20.98,
+    "H": 3.629,
+    "ramp_H": 3.761,
+    "facing_deg": 319,
+    "clip": "lean_over~player_crown_a",
+    "spec_by_character": {
+     "official": "player_crown_a_official",
+     "scholar": "player_crown_a",
+     "monk": "player_crown_a",
+     "woman": "player_crown_a",
+     "soldier": "player_crown_a",
+     "porter": "player_crown_a",
+     "sightseer": "player_crown_a"
+    },
+    "child": {
+     "X": 140.628,
+     "D": 20.873,
+     "H": 3.811,
+     "ramp_H": 3.811,
+     "facing_deg": 319,
+     "clip": "look~player_crown_a_child"
+    },
+    "rail_stations": {
+     "s": 9,
+     "n": 0.32
+    }
+   },
+   {
+    "id": "player_crown_b",
+    "X": 133.818,
+    "D": 13.219,
+    "H": 2.943,
+    "ramp_H": 3.049,
+    "facing_deg": 319,
+    "clip": "lean_over~player_crown_b",
+    "spec_by_character": {
+     "official": "player_crown_b",
+     "scholar": "player_crown_b",
+     "monk": "player_crown_b",
+     "woman": "player_crown_b",
+     "soldier": "player_crown_b_soldier",
+     "porter": "player_crown_b",
+     "sightseer": "player_crown_b"
+    },
+    "child": {
+     "X": 133.764,
+     "D": 13.066,
+     "H": 2.943,
+     "ramp_H": 2.949,
+     "facing_deg": 319,
+     "clip": "look~player_crown_b_child"
+    },
+    "rail_stations": {
+     "s": -1.335,
+     "n": 0.32
+    }
+   }
+  ],
+  "child": [
+   "look~player_crown_a_child",
+   "look~player_crown_b_child"
+  ],
+  "note": "The downstream rail is full near the crown (s 4.25 in the rail frame of gen/interact/tools/crown_ik.mjs): the painted rail figures stand 0.46-0.68 m apart from s -0.6 to s 8.23, so no spot within 0.6 m of none exists there. The nearest free spots: player_crown_a 4.75 m down the NE ramp (between deck_rail_leaner_19715 and deck_stooping_hat_19765), player_crown_b 5.6 m down the SW ramp (beyond man_reaching_with_stick_18930). H is the lower of the two treads the feet take (the root stands at a riser, one foot on each tread); the player walks on the smooth hidden ramp ramp_H, 0.1-0.13 m over it: set the root to H while the clip plays. The child stands on one tread (child.H), its hands up on the rail."
+ },
+ "storyteller": {
+  "section": "inner_city",
+  "view": [
+   -64,
+   7
+  ],
+  "clip": "crane",
+  "note": "No contact: the player stands in the ring and plays crane (every playable character has it)."
+ },
+ "drum": {
+  "section": "gate",
+  "map_id": "S5.prop.tower_drum_6898",
+  "clip": "strike_drum",
+  "length_s": 2.95,
+  "hit_s": 1.14,
+  "hit_s_by_character": {
+   "official": 1.14,
+   "scholar": 1.14,
+   "monk": 1.14,
+   "woman": 1.13,
+   "child": 1.14,
+   "soldier": 1.14,
+   "porter": 1.13,
+   "sightseer": 1.14
+  },
+  "prop": "drumstick",
+  "prop_note": "prop_drumstick (characters/props.json, bound in strike_drum): show it while strike_drum plays (people.json \"props\": [\"drumstick\"]), hide it otherwise.",
+  "drum": {
+   "centre": [
+    -18.77,
+    5.93,
+    13.36
+   ],
+   "radius": 0.62,
+   "axis": "X",
+   "faces_X": {
+    "east": -18.4,
+    "west": -19.14
+   },
+   "floor_H": 12.06
+  },
+  "sides": {
+   "east": {
+    "facing_deg": 180,
+    "face_X": -18.4,
+    "spot": null,
+    "spots": {
+     "official": {
+      "X": -17.485,
+      "D": 6.123,
+      "H": 12.06
+     },
+     "scholar": {
+      "X": -17.508,
+      "D": 6.218,
+      "H": 12.06
+     },
+     "monk": {
+      "X": -17.578,
+      "D": 6.176,
+      "H": 12.06
+     },
+     "woman": {
+      "X": -17.652,
+      "D": 6.259,
+      "H": 12.06
+     },
+     "child": {
+      "X": -17.72,
+      "D": 6.107,
+      "H": 12.06
+     },
+     "soldier": {
+      "X": -17.549,
+      "D": 6.154,
+      "H": 12.06
+     },
+     "porter": {
+      "X": -17.549,
+      "D": 6.158,
+      "H": 12.06
+     },
+     "sightseer": {
+      "X": -17.527,
+      "D": 6.161,
+      "H": 12.06
+     }
+    },
+    "spread_m": 0.162
+   },
+   "west": {
+    "facing_deg": 0,
+    "face_X": -19.14,
+    "spot": null,
+    "spots": {
+     "official": {
+      "X": -20.055,
+      "D": 5.737,
+      "H": 12.06
+     },
+     "scholar": {
+      "X": -20.032,
+      "D": 5.642,
+      "H": 12.06
+     },
+     "monk": {
+      "X": -19.962,
+      "D": 5.684,
+      "H": 12.06
+     },
+     "woman": {
+      "X": -19.888,
+      "D": 5.601,
+      "H": 12.06
+     },
+     "child": {
+      "X": -19.82,
+      "D": 5.753,
+      "H": 12.06
+     },
+     "soldier": {
+      "X": -19.991,
+      "D": 5.706,
+      "H": 12.06
+     },
+     "porter": {
+      "X": -19.991,
+      "D": 5.702,
+      "H": 12.06
+     },
+     "sightseer": {
+      "X": -20.012,
+      "D": 5.699,
+      "H": 12.06
+     }
+    },
+    "spread_m": 0.161
+   }
+  },
+  "note": "Each spot puts the stick's tip on the drum's face (the rope rim's cap, the outer visible disc) at hit_s; a spot per character where they differ by more than 5 cm (their reach differs), `spot` when one serves all. The swing comes down from beside the ear: let the clip play from its start."
+ }
+}

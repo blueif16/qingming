@@ -374,7 +374,8 @@ the thumbs, the view tiles, the scroll button, 談 and ›.
   unfold (or ahead when `expandDescriptions` is on); its glyphs live in the lazily fetched `*-lore.woff2` subsets
   (`roles.json` `lazy.lore`), so a folded toast costs no font and the first load does not grow.
 - **The journal.** A lazy chunk (`journal.js`, `journal.css`, `journal_words.js`). Leaves west to east as the strip
-  lies: 題跋 (the colophons, mounted after the painting, so at its left end), the seven regions, 見聞 (the talk heard).
+  lies: 題跋 (the colophons, mounted after the painting, so at its left end), the seven regions, 見聞 (the talk heard), 印譜 (the interactions: a seal stamped for each
+  the first time it is done, a faint blank till then; interact.js, 2026-10-13).
   A place not reached is a faint empty leaf with 未至; progress is only the strip inked in round each landmark reached.
   Crops: `tools/place_crops.mjs` (480 × 320 webp, about 19 KB, `loading="lazy"`).
 - **Discovery** is `prefs.discovered` (landmark IDs, `r:<region>`, `t:<scene>`) and `prefs.lastPlace`, kept even when

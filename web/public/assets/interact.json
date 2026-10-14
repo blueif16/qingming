@@ -1,0 +1,1113 @@
+{
+  "about": "Interactions (web/src/interact.js; the user, 2026-10-13; records gen/interact/). drum: the gate tower's drum (擊鼓); vistas: the glowing viewpoint spots (觀景; at: where the spot glows, around: what the camera circles, from_deg: the camera's side of it as a map bearing, 0 = +X, 90 = +D; el_deg, dist m, fov deg, spin x birdseye.js SPIN, seconds); join: the painted people's poses you can join (同姿; rails and slots from the clip round, gen/interact/slots.json). Places are map IDs, 'view:<scene.json view>' or [X, D, H]. Words are 繁體 with an _en gloss (shown under 中英). deed, deed_line (+ _en): the seal stamped into the 圖志 the first time you do it (journal.js 印譜 leaf; prefs.discovered x:drum, x:vista:<id>, x:join:<id>).",
+  "words": {
+    "stand": "起身",
+    "stand_en": "Stand up",
+    "stand_seal": "起",
+    "vista_back": "移步即返",
+    "vista_back_en": "walk on to come back",
+    "vista_prompt": "觀景",
+    "vista_prompt_en": "Take in the view"
+  },
+  "drum": {
+    "section": "gate",
+    "at": "S5.prop.tower_drum_6898",
+    "mesh": "g_drum__nocol",
+    "prompt": "擊鼓",
+    "prompt_en": "Beat the drum",
+    "seal": "鼓",
+    "sound": "drum_strike",
+    "startle": {
+      "radius": 60,
+      "trees": 9,
+      "again_s": 40,
+      "roof": {
+        "up": 4.5,
+        "sp": "pigeon",
+        "n": 10
+      },
+      "sound": "flock_burst",
+      "leaves": "wind_gust",
+      "more": "bird_takeoff"
+    },
+    "bark": {
+      "fig": "tower_watchman",
+      "name": "更夫",
+      "name_en": "watchman",
+      "src": "the tower's watchman (gate talk.json c5.tower; 余辉 2014 城上暮鼓); who beats the drum is our proposal",
+      "day": {
+        "say": [
+          "誰在擂鼓？還不到暮時哩！",
+          "鼓一響，滿城都聽見了。",
+          "莫亂擂，鳥兒都驚飛了。"
+        ],
+        "say_en": [
+          "Who's beating the drum? It isn't dusk yet!",
+          "One stroke and the whole city hears it.",
+          "Don't beat it for nothing, you've scared off the birds."
+        ]
+      },
+      "dusk": {
+        "say": [
+          "暮鼓了，城門要關啦。",
+          "擂得好，正是時候。"
+        ],
+        "say_en": [
+          "The dusk drum. The gates will close.",
+          "Well struck, right on time."
+        ]
+      },
+      "night": {
+        "say": [
+          "夜深了，莫亂擂！",
+          "幾更了？我還沒打更哩。"
+        ],
+        "say_en": [
+          "It's late, don't beat it now!",
+          "Which watch is it? I haven't called it yet."
+        ]
+      }
+    },
+    "stands": [
+      {
+        "side": "east",
+        "X": -17.72,
+        "D": 5.93,
+        "H": 12.06,
+        "facing_deg": 180,
+        "cam": {
+          "at": [
+            -16.3,
+            3.0,
+            13.9
+          ],
+          "look": [
+            -18.6,
+            5.9,
+            13.1
+          ]
+        },
+        "spots": {
+          "official": {
+            "X": -17.485,
+            "D": 6.123,
+            "H": 12.06
+          },
+          "scholar": {
+            "X": -17.508,
+            "D": 6.218,
+            "H": 12.06
+          },
+          "monk": {
+            "X": -17.578,
+            "D": 6.176,
+            "H": 12.06
+          },
+          "woman": {
+            "X": -17.652,
+            "D": 6.259,
+            "H": 12.06
+          },
+          "child": {
+            "X": -17.72,
+            "D": 6.107,
+            "H": 12.06
+          },
+          "soldier": {
+            "X": -17.549,
+            "D": 6.154,
+            "H": 12.06
+          },
+          "porter": {
+            "X": -17.549,
+            "D": 6.158,
+            "H": 12.06
+          },
+          "sightseer": {
+            "X": -17.527,
+            "D": 6.161,
+            "H": 12.06
+          }
+        }
+      },
+      {
+        "side": "west",
+        "X": -19.82,
+        "D": 5.93,
+        "H": 12.06,
+        "facing_deg": 0,
+        "cam": {
+          "at": [
+            -21.6,
+            3.0,
+            13.9
+          ],
+          "look": [
+            -19.0,
+            5.9,
+            13.1
+          ]
+        },
+        "spots": {
+          "official": {
+            "X": -20.055,
+            "D": 5.737,
+            "H": 12.06
+          },
+          "scholar": {
+            "X": -20.032,
+            "D": 5.642,
+            "H": 12.06
+          },
+          "monk": {
+            "X": -19.962,
+            "D": 5.684,
+            "H": 12.06
+          },
+          "woman": {
+            "X": -19.888,
+            "D": 5.601,
+            "H": 12.06
+          },
+          "child": {
+            "X": -19.82,
+            "D": 5.753,
+            "H": 12.06
+          },
+          "soldier": {
+            "X": -19.991,
+            "D": 5.706,
+            "H": 12.06
+          },
+          "porter": {
+            "X": -19.991,
+            "D": 5.702,
+            "H": 12.06
+          },
+          "sightseer": {
+            "X": -20.012,
+            "D": 5.699,
+            "H": 12.06
+          }
+        }
+      }
+    ],
+    "stands_why": "where you stand to beat each skin (the drum's axis runs along X: song_kit.drum; skins at X -19.12 and -18.42, centre D 5.93, H 13.36) and the camera inside the hall for each; the clip round refines X per character (gen/interact/slots.json drum)",
+    "react": {
+      "at": [
+        -6.5,
+        -13.5,
+        19.0
+      ],
+      "look": [
+        -16.5,
+        0.5,
+        11.5
+      ],
+      "after": 0.25,
+      "hold": 4.2,
+      "why": "the first stroke of a while cuts outside, south-east of the tower and above the trees at its foot (elm_6935, willow_6880, elm_7118 ...), to see the birds go; then back into the hall"
+    },
+    "strike": {
+      "clip": "strike_drum",
+      "length": 2.95,
+      "hit_s": 1.14,
+      "hit_by": {
+        "official": 1.14,
+        "scholar": 1.14,
+        "monk": 1.14,
+        "woman": 1.13,
+        "child": 1.14,
+        "soldier": 1.14,
+        "porter": 1.13,
+        "sightseer": 1.14
+      },
+      "prop": "drumstick"
+    },
+    "stands_src": "gen/interact/slots.json drum (a spot per character: the stick tip meets the face at hit_s)",
+    "deed": "擊鼓",
+    "deed_en": "Beat the drum",
+    "deed_line": "城樓上擊鼓，驚起滿城飛鳥",
+    "deed_line_en": "the gate tower's drum, and the birds burst from the trees"
+  },
+  "vistas": [
+    {
+      "id": "willows",
+      "section": "countryside",
+      "at": "view:great_willows",
+      "landmark": "S1.grd.bank_31660",
+      "name": "隋堤煙柳",
+      "sub": "郊野",
+      "seal": "柳",
+      "name_en": "Misty Willows on the Sui Dyke",
+      "sub_en": "the countryside",
+      "look_up": 2.5,
+      "el_deg": 34,
+      "dist": 32,
+      "fov": 42,
+      "spin": 0.7,
+      "from_deg": 250,
+      "seconds": 20,
+      "deed": "隋堤煙柳",
+      "deed_en": "Misty Willows on the Sui Dyke",
+      "deed_line": "郊野堤上，看柳色如煙",
+      "deed_line_en": "on the dyke, the willows like mist"
+    },
+    {
+      "id": "river",
+      "section": "canal",
+      "at": "view:towed_boat",
+      "name": "汴河",
+      "sub": "縴夫拉船",
+      "seal": "河",
+      "name_en": "The Bian River",
+      "sub_en": "trackers hauling a boat",
+      "look_up": 1.5,
+      "el_deg": 28,
+      "dist": 30,
+      "fov": 40,
+      "spin": 0.6,
+      "from_deg": 255,
+      "seconds": 20,
+      "deed": "汴河",
+      "deed_en": "The Bian River",
+      "deed_line": "岸邊看縴夫拉船上行",
+      "deed_line_en": "from the bank, trackers hauling a boat upstream"
+    },
+    {
+      "id": "crown",
+      "section": "rainbow_bridge",
+      "at": "view:crown",
+      "landmark": "S3.str.rainbow_bridge",
+      "name": "虹橋",
+      "sub": "橋下過船",
+      "seal": "橋",
+      "name_en": "The Rainbow Bridge",
+      "sub_en": "a boat passing under",
+      "look_up": 1.5,
+      "el_deg": 32,
+      "dist": 34,
+      "fov": 38,
+      "spin": 0.6,
+      "from_deg": 240,
+      "seconds": 22,
+      "deed": "虹橋",
+      "deed_en": "The Rainbow Bridge",
+      "deed_line": "橋頂看船過橋下",
+      "deed_line_en": "from the crown, a boat passing under"
+    },
+    {
+      "id": "tower",
+      "section": "gate",
+      "at": [
+        -16.0,
+        0.6,
+        10.1
+      ],
+      "around": "S5.str.gate_tower",
+      "landmark": "S5.str.gate_tower",
+      "name": "城樓",
+      "sub": "東角子門",
+      "seal": "樓",
+      "name_en": "The Gate Tower",
+      "sub_en": "the east corner gate",
+      "look_up": 2.0,
+      "el_deg": 24,
+      "dist": 38,
+      "fov": 40,
+      "spin": 0.6,
+      "from_deg": 255,
+      "seconds": 20,
+      "at_why": "the terrace on the wall top, east of the tower's stair (off the way up to the drum, open sky; probed walkable, gen/interact)",
+      "deed": "城樓",
+      "deed_en": "The Gate Tower",
+      "deed_line": "城頭望東角子門",
+      "deed_line_en": "from the wall top, the east corner gate"
+    }
+  ],
+  "join": [
+    {
+      "id": "moat_rail",
+      "section": "gate",
+      "kind": "rail",
+      "group": "S5.grp.near_rail_watchers",
+      "prompt": "憑欄",
+      "prompt_en": "Lean on the rail",
+      "seal": "憑",
+      "clip": "lean_chin~moat_rail",
+      "fallback": [
+        "lean_chin",
+        "lean_over"
+      ],
+      "rails": [
+        {
+          "id": "near",
+          "facing_deg": 270,
+          "clip": "lean_chin~moat_rail",
+          "H": -0.01,
+          "line": [
+            [
+              0.3,
+              0.41
+            ],
+            [
+              12.13,
+              0.41
+            ]
+          ],
+          "free": [
+            [
+              0.3,
+              3.8
+            ],
+            [
+              9.6,
+              12.1
+            ]
+          ],
+          "lines": {
+            "official": [
+              [
+                0.3,
+                0.41
+              ],
+              [
+                12.13,
+                0.41
+              ]
+            ],
+            "scholar": [
+              [
+                0.3,
+                0.42
+              ],
+              [
+                12.13,
+                0.42
+              ]
+            ],
+            "monk": [
+              [
+                0.3,
+                0.38
+              ],
+              [
+                12.13,
+                0.38
+              ]
+            ],
+            "woman": [
+              [
+                0.3,
+                0.42
+              ],
+              [
+                12.13,
+                0.42
+              ]
+            ],
+            "child": [
+              [
+                0.3,
+                0.38
+              ],
+              [
+                12.13,
+                0.38
+              ]
+            ],
+            "soldier": [
+              [
+                0.3,
+                0.39
+              ],
+              [
+                12.13,
+                0.39
+              ]
+            ],
+            "porter": [
+              [
+                0.3,
+                0.41
+              ],
+              [
+                12.13,
+                0.41
+              ]
+            ],
+            "sightseer": [
+              [
+                0.3,
+                0.4
+              ],
+              [
+                12.13,
+                0.4
+              ]
+            ]
+          },
+          "free_by": {
+            "official": [
+              [
+                0.3,
+                0.65
+              ],
+              [
+                0.75,
+                0.9
+              ],
+              [
+                1,
+                1.2
+              ],
+              [
+                1.35,
+                2.4
+              ],
+              [
+                2.5,
+                2.65
+              ],
+              [
+                2.75,
+                3.25
+              ],
+              [
+                3.4,
+                3.55
+              ],
+              [
+                3.65,
+                3.8
+              ],
+              [
+                9.6,
+                9.75
+              ],
+              [
+                9.9,
+                10
+              ],
+              [
+                10.1,
+                10.25
+              ],
+              [
+                10.4,
+                11.5
+              ],
+              [
+                11.6,
+                12.1
+              ]
+            ],
+            "scholar": [
+              [
+                0.3,
+                0.65
+              ],
+              [
+                0.75,
+                0.9
+              ],
+              [
+                1,
+                1.2
+              ],
+              [
+                1.35,
+                1.9
+              ],
+              [
+                2,
+                2.15
+              ],
+              [
+                2.25,
+                3
+              ],
+              [
+                3.1,
+                3.25
+              ],
+              [
+                3.4,
+                3.55
+              ],
+              [
+                3.65,
+                3.8
+              ],
+              [
+                9.6,
+                9.75
+              ],
+              [
+                9.9,
+                10
+              ],
+              [
+                10.1,
+                10.25
+              ],
+              [
+                10.35,
+                11
+              ],
+              [
+                11.1,
+                11.5
+              ],
+              [
+                11.6,
+                12.1
+              ]
+            ],
+            "monk": [
+              [
+                0.3,
+                0.4
+              ],
+              [
+                0.5,
+                0.65
+              ],
+              [
+                0.75,
+                0.9
+              ],
+              [
+                1,
+                2.4
+              ],
+              [
+                2.5,
+                2.65
+              ],
+              [
+                2.75,
+                2.95
+              ],
+              [
+                3.05,
+                3.8
+              ],
+              [
+                9.6,
+                11.25
+              ],
+              [
+                11.35,
+                11.8
+              ],
+              [
+                11.9,
+                12.1
+              ]
+            ],
+            "woman": [
+              [
+                0.3,
+                0.5
+              ],
+              [
+                0.6,
+                0.75
+              ],
+              [
+                1.15,
+                1.3
+              ],
+              [
+                1.55,
+                1.8
+              ],
+              [
+                1.9,
+                2
+              ],
+              [
+                2.15,
+                2.5
+              ],
+              [
+                2.65,
+                2.75
+              ],
+              [
+                3,
+                3.1
+              ],
+              [
+                3.3,
+                3.5
+              ],
+              [
+                9.8,
+                9.9
+              ],
+              [
+                10.6,
+                10.9
+              ],
+              [
+                11,
+                11.2
+              ],
+              [
+                11.45,
+                11.6
+              ]
+            ],
+            "child": [
+              [
+                0.3,
+                3.8
+              ],
+              [
+                9.6,
+                12.1
+              ]
+            ],
+            "soldier": [
+              [
+                0.3,
+                3.8
+              ],
+              [
+                9.6,
+                12.1
+              ]
+            ],
+            "porter": [
+              [
+                0.3,
+                3.75
+              ],
+              [
+                9.6,
+                12
+              ]
+            ],
+            "sightseer": [
+              [
+                0.3,
+                3.8
+              ],
+              [
+                9.6,
+                12.1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "far",
+          "facing_deg": 90,
+          "clip": "lean_chin~moat_rail",
+          "H": -0.01,
+          "line": [
+            [
+              0.3,
+              7.59
+            ],
+            [
+              12.13,
+              7.59
+            ]
+          ],
+          "free": [
+            [
+              0.3,
+              1.05
+            ],
+            [
+              3.5,
+              3.8
+            ],
+            [
+              8.95,
+              9.05
+            ],
+            [
+              11.55,
+              12.1
+            ]
+          ],
+          "lines": {
+            "official": [
+              [
+                0.3,
+                7.59
+              ],
+              [
+                12.13,
+                7.59
+              ]
+            ],
+            "scholar": [
+              [
+                0.3,
+                7.58
+              ],
+              [
+                12.13,
+                7.58
+              ]
+            ],
+            "monk": [
+              [
+                0.3,
+                7.62
+              ],
+              [
+                12.13,
+                7.62
+              ]
+            ],
+            "woman": [
+              [
+                0.3,
+                7.58
+              ],
+              [
+                12.13,
+                7.58
+              ]
+            ],
+            "child": [
+              [
+                0.3,
+                7.62
+              ],
+              [
+                12.13,
+                7.62
+              ]
+            ],
+            "soldier": [
+              [
+                0.3,
+                7.61
+              ],
+              [
+                12.13,
+                7.61
+              ]
+            ],
+            "porter": [
+              [
+                0.3,
+                7.59
+              ],
+              [
+                12.13,
+                7.59
+              ]
+            ],
+            "sightseer": [
+              [
+                0.3,
+                7.6
+              ],
+              [
+                12.13,
+                7.6
+              ]
+            ]
+          },
+          "free_by": {
+            "official": [
+              [
+                0.4,
+                1.05
+              ],
+              [
+                3.5,
+                3.8
+              ],
+              [
+                8.95,
+                9.05
+              ],
+              [
+                11.55,
+                12.1
+              ]
+            ],
+            "scholar": [
+              [
+                0.4,
+                0.5
+              ],
+              [
+                0.6,
+                0.75
+              ],
+              [
+                0.85,
+                1
+              ],
+              [
+                3.5,
+                3.65
+              ],
+              [
+                8.95,
+                9.05
+              ],
+              [
+                11.7,
+                11.9
+              ],
+              [
+                12,
+                12.1
+              ]
+            ],
+            "monk": [
+              [
+                0.3,
+                1.05
+              ],
+              [
+                3.5,
+                3.8
+              ],
+              [
+                8.95,
+                9.05
+              ],
+              [
+                11.55,
+                11.95
+              ]
+            ],
+            "woman": [
+              [
+                0.3,
+                0.6
+              ],
+              [
+                0.7,
+                0.85
+              ],
+              [
+                0.95,
+                1.05
+              ],
+              [
+                3.7,
+                3.8
+              ],
+              [
+                11.55,
+                11.75
+              ],
+              [
+                11.85,
+                12
+              ]
+            ],
+            "child": [
+              [
+                0.3,
+                1.05
+              ],
+              [
+                3.5,
+                3.8
+              ],
+              [
+                8.95,
+                9.05
+              ],
+              [
+                11.55,
+                12.1
+              ]
+            ],
+            "soldier": [
+              [
+                0.3,
+                1.05
+              ],
+              [
+                3.5,
+                3.8
+              ],
+              [
+                8.95,
+                9.05
+              ],
+              [
+                11.55,
+                12.1
+              ]
+            ],
+            "porter": [
+              [
+                0.3,
+                1.05
+              ],
+              [
+                3.65,
+                3.8
+              ],
+              [
+                11.55,
+                12.1
+              ]
+            ],
+            "sightseer": [
+              [
+                0.3,
+                1.05
+              ],
+              [
+                3.5,
+                3.8
+              ],
+              [
+                8.95,
+                9.05
+              ],
+              [
+                11.55,
+                12.1
+              ]
+            ]
+          }
+        }
+      ],
+      "cam": {
+        "bearing_deg": -35,
+        "dist": 4.4,
+        "up": 1.0,
+        "ahead": 0.0,
+        "look_h": 1.15,
+        "clear": 0.9
+      },
+      "clips": {
+        "child": "look~moat_rail_child"
+      },
+      "rails_src": "gen/interact/slots.json moat_bridge (H: the root held there, not grounded; lines/free_by per character)",
+      "deed": "憑欄看水",
+      "deed_en": "Leaning on the rail",
+      "deed_line": "護城河橋上，與人同倚欄杆",
+      "deed_line_en": "on the moat bridge, among the people looking down at the water"
+    },
+    {
+      "id": "crown_rail",
+      "section": "rainbow_bridge",
+      "kind": "slots",
+      "group": "the crown's rail watchers",
+      "prompt": "憑欄",
+      "prompt_en": "Lean over and watch the boat",
+      "seal": "看",
+      "clip": "lean_over",
+      "fallback": [
+        "lean_chin",
+        "look"
+      ],
+      "slots": [
+        {
+          "id": "player_crown_a",
+          "X": 140.642,
+          "D": 20.98,
+          "H": 3.629,
+          "facing_deg": 319,
+          "clip": "lean_over~player_crown_a",
+          "child": {
+            "X": 140.628,
+            "D": 20.873,
+            "H": 3.811,
+            "ramp_H": 3.811,
+            "facing_deg": 319,
+            "clip": "look~player_crown_a_child"
+          }
+        },
+        {
+          "id": "player_crown_b",
+          "X": 133.818,
+          "D": 13.219,
+          "H": 2.943,
+          "facing_deg": 319,
+          "clip": "lean_over~player_crown_b",
+          "child": {
+            "X": 133.764,
+            "D": 13.066,
+            "H": 2.943,
+            "ramp_H": 2.949,
+            "facing_deg": 319,
+            "clip": "look~player_crown_b_child"
+          }
+        }
+      ],
+      "cam": {
+        "bearing_deg": -35,
+        "dist": 5.0,
+        "up": 1.6,
+        "ahead": 0.0,
+        "look_h": 1.1,
+        "clear": 0.9
+      },
+      "slots_src": "gen/interact/slots.json crown (the rail crowd leaves no gap at the crown: a 4.75 m down the NE ramp, b 5.6 m down the SW ramp; H the lower tread, under the walked ramp)",
+      "deed": "虹橋看船",
+      "deed_en": "Watching the boat",
+      "deed_line": "與橋上眾人同看過船",
+      "deed_line_en": "with the crowd at the Rainbow Bridge's rail"
+    },
+    {
+      "id": "storyteller",
+      "section": "inner_city",
+      "kind": "slots",
+      "prompt": "聽書",
+      "prompt_en": "Listen to the story",
+      "seal": "聽",
+      "clip": "crane",
+      "fallback": [
+        "listen",
+        "look"
+      ],
+      "cam": {
+        "bearing_deg": -125,
+        "dist": 4.6,
+        "up": 2.6,
+        "ahead": 1.8,
+        "look_h": 1.0,
+        "clear": 0.3
+      },
+      "slots": [
+        {
+          "id": "ring_se",
+          "X": -62.69,
+          "D": 10.24,
+          "facing_deg": 150.0,
+          "clip": "crane"
+        },
+        {
+          "id": "ring_e",
+          "X": -62.21,
+          "D": 12.04,
+          "facing_deg": 180.0,
+          "clip": "crane"
+        },
+        {
+          "id": "ring_s",
+          "X": -64.16,
+          "D": 9.18,
+          "facing_deg": 120.0,
+          "clip": "crane"
+        }
+      ],
+      "slots_why": "the crowd's outer edge, facing him: points 3.3-3.9 m from him with 3-6 painted listeners within 1.6 m, 0.8 m+ clear of every figure and 3 m+ of the walkers' paths (the listeners stand to his north-east and east, 0.4-3.2 m off; gen/interact/progress.md); H: the ground there",
+      "deed": "街頭聽書",
+      "deed_en": "Listening to the storyteller",
+      "deed_line": "擠在人叢外聽說書",
+      "deed_line_en": "at the edge of his crowd"
+    }
+  ],
+  "join_cam_why": "cam: where the camera stands while you hold the pose: bearing_deg round you (0 in front of your face, 180 behind), dist and up m from the look point (ahead m in front of you, look_h m up); hits nearer than clear m (the rail you lean on) don't pull it in. Over the water looking back at the row of watchers, as the painter saw them; beside you at the storyteller"
+}

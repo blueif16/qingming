@@ -1,0 +1,22 @@
+{
+  "about": "The interactions round (2026-10-13; web/src/interact.js, gen/interact/): beating the gate tower's drum yourself, and the town answering. group/use as the other sets. Run: node tools/eleven.mjs sounds/interact.json sfx",
+  "units": {
+    "drum_strike": {
+      "kind": "sfx",
+      "group": "time",
+      "use": "your own stroke on the gate tower drum (S5.prop.tower_drum_6898), heard standing at it in the tower hall; drum_hit stays the far one for dusk and the watches",
+      "seconds": 4,
+      "prompt": "One single heavy stroke on a large barrel drum on a wooden stand, struck with a wooden beater, heard close inside a wooden tower hall: a deep boom with the slap of the skin and a long natural decay ringing in the timber room, no other sounds.",
+      "pick": 0
+    },
+    "flock_burst": {
+      "kind": "sfx",
+      "group": "animal",
+      "use": "the birds living in the trees round the gate tower bursting out of their crowns at the drum's boom (ambient.js startle), played at the nearest crowns",
+      "seconds": 4,
+      "prompt": "A flock of small birds bursting out of leafy trees all at once: a loud flurry and rush of many wings, branches and leaves shaking and rustling, a few alarmed chirps, then the flock flying off into the distance. Outdoors, close, dry, no music.",
+      "pick": 1
+    }
+  },
+  "picks_why": "drum_strike take 0: a clean boom, low band only, smooth 4 s decay; flock_burst take 1: builds in 0.6 s, a rush of wings and chirps for 1.5 s, then flies off (take 0 a slow soft flutter). Read from envelopes and band levels (gen/interact/progress.md)"
+}

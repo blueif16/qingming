@@ -280,7 +280,12 @@
    "reach_over_rail",
    "reach~child_at_table_12597",
    "hand_over",
-   "sit~soles"
+   "sit~soles",
+   "crane",
+   "strike_drum",
+   "look~moat_rail_child",
+   "look~player_crown_a_child",
+   "look~player_crown_b_child"
   ],
   "motion": [
    "play",
@@ -289,11 +294,14 @@
    "listen",
    "reach_over_rail",
    "hand_over",
+   "crane",
+   "strike_drum",
    "reach~child_at_table_12597"
   ],
   "props": {
    "back_boxes": "back_load",
-   "back_bundle": "back_load"
+   "back_bundle": "back_load",
+   "drumstick": "strike_drum"
   },
   "title": "Child in a short jacket (S6 boy_5050, running with his arms out; plays the street children, scaled to each painted height)"
  },
@@ -865,13 +873,28 @@
    "run",
    "idle",
    "back_load",
-   "talk"
+   "talk",
+   "crane",
+   "lean_chin",
+   "lean_over",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
-   "back_load"
+   "back_load",
+   "crane",
+   "lean_chin",
+   "lean_over",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "props": {
-   "back_frame": "back_load"
+   "back_frame": "back_load",
+   "drumstick": "strike_drum"
   },
   "title": "Itinerant monk (行脚僧, S6 itinerant_monk_2078; the back-frame is the prop prop_back_frame)"
  },
@@ -887,13 +910,29 @@
    "write",
    "sit_talk~soles",
    "write~office_desk",
-   "sit_talk~office_bench"
+   "sit_talk~office_bench",
+   "crane",
+   "lean_chin",
+   "lean_over",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
    "write",
-   "write~office_desk"
+   "crane",
+   "lean_chin",
+   "lean_over",
+   "strike_drum",
+   "write~office_desk",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
-  "props": {},
+  "props": {
+   "drumstick": "strike_drum"
+  },
   "title": "Tax official (税官), seated at his desk in the tax office, about to write the declaration"
  },
  "official_rider": {
@@ -951,7 +990,12 @@
    "rest_on_stick",
    "stand_pole~staff_foot",
    "reach_over_rail~man_bent_over_railing_19195",
-   "push_flank~donkey_man_east_18768"
+   "push_flank~donkey_man_east_18768",
+   "lean_chin",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
    "carry_pole",
@@ -973,9 +1017,14 @@
    "pole_boat",
    "fend_pole",
    "rest_on_stick",
+   "lean_chin",
+   "strike_drum",
    "stand_pole~staff_foot",
    "reach_over_rail~man_bent_over_railing_19195",
-   "push_flank~donkey_man_east_18768"
+   "push_flank~donkey_man_east_18768",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "props": {
    "pole_baskets": "carry_pole",
@@ -1008,7 +1057,8 @@
    "back_sack_carry": "sack_carry",
    "long_pole_low": "pole_boat",
    "long_pole_mid": "fend_pole",
-   "staff_on_shoulder": "idle"
+   "staff_on_shoulder": "idle",
+   "drumstick": "strike_drum"
   },
   "title": "Porter with a shoulder pole (B1 style test, 2026-10-09; views and mesh in gen/v1)"
  },
@@ -1122,7 +1172,11 @@
    "bridle~man_at_horse_head_24506",
    "lean_over~terrace_diner_leaning_23216",
    "lean_over~deck_rail_leaner_19538",
-   "lean_over~man_bending_to_donkey_13440"
+   "lean_over~man_bending_to_donkey_13440",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
    "fan",
@@ -1137,12 +1191,16 @@
    "bow",
    "reach_over_rail",
    "point_way",
+   "strike_drum",
    "listen~soles",
    "bridle~carter_24218",
    "bridle~man_at_horse_head_24506",
    "lean_over~terrace_diner_leaning_23216",
    "lean_over~deck_rail_leaner_19538",
-   "lean_over~man_bending_to_donkey_13440"
+   "lean_over~man_bending_to_donkey_13440",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "props": {
    "fan_round": "fan",
@@ -1150,7 +1208,8 @@
    "lidded_basket": "idle",
    "stick_bag": "idle",
    "hoe": "idle",
-   "stick_ride": "ride"
+   "stick_ride": "ride",
+   "drumstick": "strike_drum"
   },
   "title": "Scholar in a pale robe (赶考士人, S6 scholar_front_3240; plays 19 pale-robed men)"
  },
@@ -1178,7 +1237,10 @@
    "lean_over~rail_watcher_19923",
    "lean_over~deck_rail_leaner_19715",
    "lean_over~deck_rail_face_19350",
-   "lean_over~man_arms_on_railing_18982"
+   "lean_over~man_arms_on_railing_18982",
+   "strike_drum",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
    "lean_chin",
@@ -1190,16 +1252,20 @@
    "point",
    "listen",
    "lean_over",
+   "strike_drum",
    "lean_chin~moat_rail",
    "listen~soles",
    "lean_chin~man_at_railing_27650",
    "lean_over~rail_watcher_19923",
    "lean_over~deck_rail_leaner_19715",
    "lean_over~deck_rail_face_19350",
-   "lean_over~man_arms_on_railing_18982"
+   "lean_over~man_arms_on_railing_18982",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "props": {
-   "fan_round": "fan_walk"
+   "fan_round": "fan_walk",
+   "drumstick": "strike_drum"
   },
   "title": "Scholar sightseer leaning on the moat bridge railing, watching the fish"
  },
@@ -1215,16 +1281,32 @@
    "sit_one_knee",
    "squat_sleeves",
    "kneel_sleep",
-   "sit"
+   "sit",
+   "crane",
+   "lean_chin",
+   "lean_over",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
    "sleep_side",
    "doze_knees",
    "sit_one_knee",
    "squat_sleeves",
-   "kneel_sleep"
+   "kneel_sleep",
+   "crane",
+   "lean_chin",
+   "lean_over",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
-  "props": {},
+  "props": {
+   "drumstick": "strike_drum"
+  },
   "title": "Courier-post soldier (递铺, S4 soldier_knee_up_11792; plays the seven dozing soldiers)"
  },
  "storyteller": {
@@ -1399,7 +1481,13 @@
    "ride_side",
    "sit_hold_child",
    "hold_child~child",
-   "lean_chin~passenger_leaning_in_bay_23385"
+   "lean_chin~passenger_leaning_in_bay_23385",
+   "crane",
+   "lean_over",
+   "strike_drum",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "motion": [
    "hold_child",
@@ -1407,13 +1495,20 @@
    "tie_kerchief",
    "ride_side",
    "sit_hold_child",
+   "crane",
+   "lean_over",
+   "strike_drum",
    "hold_child~child",
-   "lean_chin~passenger_leaning_in_bay_23385"
+   "lean_chin~passenger_leaning_in_bay_23385",
+   "lean_chin~moat_rail",
+   "lean_over~player_crown_a",
+   "lean_over~player_crown_b"
   ],
   "props": {
    "child_in_arms": "hold_child~child",
    "veiled_hat": "ride_side",
-   "child_on_lap": "sit_hold_child"
+   "child_on_lap": "sit_hold_child",
+   "drumstick": "strike_drum"
   },
   "title": "Woman (the matchmaker in the sedan, S6 sedan_passenger_4362; her dress from a woman bringing a child to 赵太丞家, S7, scan u 1575-1655)"
  },

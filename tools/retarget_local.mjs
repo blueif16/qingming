@@ -15,10 +15,18 @@
 import { NodeIO } from '@gltf-transform/core';
 
 const args = process.argv.slice(2);
-const ci = args.indexOf('--clip');
+const ci = args.indexOf('--clip'), fi = args.indexOf('--fps'), ai = args.indexOf('--align');
 const clipName = ci >= 0 ? args[ci + 1] : 'clip';
-const [targetFile, sourceFile, outFile] = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--clip');
-if (!outFile) { console.log('usage: retarget_local.mjs <target_rigged.glb> <source_anim.glb> <out.glb> [--clip name]'); process.exit(1); }
+// --fps: output key rate (default 20; a clip copied from a video keeps the video's rate, e.g. 30, frame for frame)
+const outFps = fi >= 0 ? Number(args[fi + 1]) : 20;
+// --align limbs: match rest directions only on arms and legs (T-pose source onto an A-pose rig) and copy plain rotation
+// changes on the spine, neck, head and feet. Needed for video-extracted SMPL motion (skill `motion-copy`): SMPL's head
+// joint sits forward of the neck, so aligning that direction bows the head about 38 degrees at rest. Default `all`.
+const alignMode = ai >= 0 ? args[ai + 1] : 'all';
+const LIMBS = new Set(['LeftShoulder', 'LeftArm', 'LeftForeArm', 'LeftHand', 'RightShoulder', 'RightArm', 'RightForeArm',
+  'RightHand', 'LeftUpLeg', 'LeftLeg', 'RightUpLeg', 'RightLeg']);
+const [targetFile, sourceFile, outFile] = args.filter((a, i) => !a.startsWith('--') && !['--clip', '--fps', '--align'].includes(args[i - 1]));
+if (!outFile) { console.log('usage: retarget_local.mjs <target_rigged.glb> <source_anim.glb> <out.glb> [--clip name] [--fps 20] [--align all|limbs]'); process.exit(1); }
 
 // ---- math: quaternions [x, y, z, w], vectors [x, y, z], 4x4 matrices column-major (glTF)
 const qmul = (a, b) => [
@@ -116,6 +124,7 @@ const nameOfSrc = new Map([...S.byName].map(([name, b]) => [b.node, name]));
 const C = new Map();
 for (const name of T.order) {
   const ch = CHILD[name];
+  if (alignMode === 'limbs' && !LIMBS.has(name)) { C.set(name, [0, 0, 0, 1]); continue; }
   if (ch && S.byName.has(name) && S.byName.has(ch) && T.byName.has(ch)) {
     const ds = S.byName.get(ch).P.map((x, i) => x - S.byName.get(name).P[i]);
     const dt = T.byName.get(ch).P.map((x, i) => x - T.byName.get(name).P[i]);
@@ -138,7 +147,7 @@ for (const ch of anim.listChannels()) {
   if (ch.getTargetPath() === 'translation') posOf.set(node, sampler(s, 3));
 }
 dur -= start;
-const fps = 20, frames = Math.max(2, Math.round(dur * fps) + 1);
+const fps = outFps, frames = Math.max(2, Math.round(dur * fps) + 1);
 const times = Array.from({ length: frames }, (_, i) => Math.min(dur, i / fps));
 const hipsS = S.byName.get('Hips'), hipsT = T.byName.get('Hips');
 // hip heights above the feet at rest (world, Y up): the scale for the hips' travel
