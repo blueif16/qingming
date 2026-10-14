@@ -16,10 +16,10 @@
 .qm-view-tile svg { width: 24px; height: 24px; fill: currentColor; opacity: 0.62; transition: opacity var(--qm-t-fast) ease; }
 .qm-view-tile svg .qm-ic-hi { fill: var(--qm-ic-hole); }
 .qm-view-tile:hover svg, .qm-view-tile:focus-visible svg { opacity: 1; }
-.qm-view-tile[aria-checked="true"] { border: 0; border-image: none; background: var(--qm-seal); color: var(--qm-paper-hi); filter: none;
+.qm-view-tile[aria-checked="true"], .qm-view-tile[aria-pressed="true"] { border: 0; border-image: none; background: var(--qm-seal); color: var(--qm-paper-hi); filter: none;
   --qm-ic-hole: var(--qm-seal); transform: rotate(-3deg);
   -webkit-mask: var(--qm-seal-mask) center / 100% 100% no-repeat; mask: var(--qm-seal-mask) center / 100% 100% no-repeat; }
-.qm-view-tile[aria-checked="true"] svg { opacity: 1; width: 25px; height: 25px; }
+.qm-view-tile[aria-checked="true"] svg, .qm-view-tile[aria-pressed="true"] svg { opacity: 1; width: 25px; height: 25px; }
 .qm-view-tile[aria-checked="true"] + .qm-view-tile { transform: rotate(1.5deg); }
 .qm-view-tile:focus-visible { outline: 2px dashed var(--qm-cinnabar); outline-offset: 3px; }
 .qm-view-sm .qm-view-tile { width: 36px; height: 36px; border-width: 7px; }
@@ -37,12 +37,24 @@
   .qm-view { gap: 3px; }
   .qm-view-tile { width: 36px; height: 36px; border-width: 7px; }
   .qm-view-tile svg { width: 21px; height: 21px; }
-  .qm-view-tile[aria-checked="true"] svg { width: 22px; height: 22px; }
+  .qm-view-tile[aria-checked="true"] svg, .qm-view-tile[aria-pressed="true"] svg { width: 22px; height: 22px; }
   .qm-more { width: 36px; height: 36px; }
   .qm-more svg { width: 20px; height: 20px; }
+  /* with the 鳥瞰 tile, four in a row would run under the scroll button (top right): a 2 x 2 block beside the
+     instrument instead, the view tiles above, 鳥瞰 and › below */
+  .qm-hud:has(.qm-sky-tile) { display: grid; grid-template-columns: 36px 36px; gap: 3px; top: calc(var(--qm-top) + (var(--qm-dial-h, 72px) - 75px) / 2); }
+  .qm-hud:has(.qm-sky-tile) .qm-view { grid-column: 1 / -1; }
   /* landmark toasts below the instrument: a toast up to 100vw - 108px wide reaches under it */
   html.qm-touch .qm-toasts { top: calc(var(--qm-top) + max(58px, var(--qm-dial-h, 72px) + 10px)); }
 }
+
+/* 鳥瞰 (birdseye.js): while the camera circles above you the walking chrome steps back, the region banner, toasts and
+   bubbles too; the sealed 鳥瞰 tile stays, faint until pointed at, to come back down */
+html.qm-sky #dial, html.qm-sky .qm-hud > :not(.qm-sky-tile), html.qm-sky #help, html.qm-sky #crosshair, html.qm-sky .qm-ui,
+html.qm-sky .qm-jn-open, html.qm-sky .sh-open { opacity: 0; pointer-events: none; }
+html.qm-sky #help * { pointer-events: none; }
+html.qm-sky .qm-sky-tile { opacity: 0.55; transition: opacity var(--qm-t-mid) ease; }
+html.qm-sky .qm-sky-tile:hover, html.qm-sky .qm-sky-tile:focus-visible { opacity: 1; }
 
 /* the bell and the volume slip (sound.js #soundCtl) leave the street: they show only beside the painting (the scroll
    HUD), and in the settings screen's 聲音 page; M still mutes */

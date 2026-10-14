@@ -3,6 +3,8 @@
 //   - the time instrument, #dial (the time agent's; its box is --qm-dial-w x --qm-dial-h, set by time.css);
 //   - the view switch: two small ink tiles, an eye (first person) and a figure (third person); the active one is
 //     sealed (cinnabar ground, paper ink). One click switches; V still works;
+//   - the 鳥瞰 tile beside them (the user, 2026-10-13: a camera view you can switch on anywhere, "a shortcut on the main
+//     game UI"): the camera lifts over you and circles (birdseye.js); sealed while it does. C still works;
 //   - a › button that opens the settings screen (O; Esc goes back). The screen is a lazy chunk
 //     (settings_screen.js), fetched on first use or when the page is idle, so the first load doesn't grow.
 // Placement: under #dial on a desktop, right of it on a phone (where the time agent's region banner moves under the
@@ -37,14 +39,27 @@ export function viewTiles({ get, set, small = false }) {
   return { el: box, paint };
 }
 
-// o: { view: { get, set }, settings: ctx for the screen (settings_screen.js), hudOpen(), blocked() (another screen, the
-//      journal, is up), touch }
+// the 鳥瞰 tile: a toggle (aria-pressed) in the view tiles' paper, sealed while the camera circles above you
+function skyTile({ get, set }) {
+  const [zh, en] = W.sky;
+  const b = h('button', 'qm-view-tile qm-sky-tile', { type: 'button', 'aria-pressed': 'false', title: `${zh} · ${en} (C)`, 'aria-label': `${zh} (${en}, C)`, html: icons().sky });
+  const paint = () => b.setAttribute('aria-pressed', String(!!get()));
+  b.addEventListener('pointerdown', (e) => e.stopPropagation());
+  // a click or tap lets go of the focus (Space is the painting's and W walks; a focused button would take them)
+  b.addEventListener('click', (e) => { e.stopPropagation(); set(!get()); paint(); if (e.detail) b.blur(); });
+  paint();
+  return { el: b, paint };
+}
+
+// o: { view: { get, set }, sky: { get, set } (the 鳥瞰 tile; none on a page without it), settings: ctx for the screen
+//      (settings_screen.js), hudOpen(), blocked() (another screen, the journal, is up), touch }
 export function createHud(o) {
   const root = h('div', 'qm-hud', { id: 'qm-hud' });
   const view = viewTiles(o.view);
+  const sky = o.sky ? skyTile(o.sky) : null;
   const more = h('button', 'qm-ringbtn qm-more', { type: 'button', title: W.more.title, 'aria-label': W.more.aria, 'aria-haspopup': 'dialog', html: icons().more });
   more.addEventListener('pointerdown', (e) => e.stopPropagation());
-  root.append(view.el, more);
+  root.append(view.el, ...(sky ? [sky.el] : []), more);
   document.body.append(root);
 
   // the settings screen: a lazy chunk, made on first use
@@ -73,11 +88,11 @@ export function createHud(o) {
   let acc = 0;
   return {
     el: root,
-    view,
+    view, sky,
     open, close,
     isOpen: () => !!screen?.isOpen,
     screen: () => screen,
     // cheap: one attribute compare every half second (V and the tools change the view outside the tiles)
-    sync(dt) { acc += dt; if (acc > 0.5) { acc = 0; view.paint(); } },
+    sync(dt) { acc += dt; if (acc > 0.5) { acc = 0; view.paint(); sky?.paint(); } },
   };
 }

@@ -33,7 +33,8 @@ const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : null)).catch(() 
 //      hudOpen(), sfx(name, gain), hud (the ScrollHud, for its chrome), query (URLSearchParams),
 //      settings: { s, set(k, v), reset() } (world.js's tuning object and its one setter), time (the time agent's
 //      object, r2_time.md), sound() (sound.js, once built), canvas (for the pointer lock), tune: { get, set } (the
-//      lil-gui panel behind ?tune=1) }: the direct HUD and the settings screen (hud.js, settings_screen.js)
+//      lil-gui panel behind ?tune=1), sky: { get, set } (鳥瞰, birdseye.js) }: the direct HUD and the settings screen
+//      (hud.js, settings_screen.js)
 export function createUI(o) {
   const html = document.documentElement, query = o.query || new URLSearchParams(location.search);
   const touch = isTouchDevice();
@@ -89,6 +90,7 @@ export function createUI(o) {
   // the direct HUD (hud.js): the view tiles and the › to the settings screen, by the time instrument (#dial)
   const dhud = createHud({
     view: { get: () => o.settings?.s.view, set: (v) => o.settings?.set('view', v) },
+    sky: o.sky,
     hudOpen: () => o.hudOpen(),
     blocked: () => journal.isOpen(),
     settings: o.settings ? { world: o.settings, time: o.time, sound: o.sound, player: o.player, canvas: o.canvas || o.hud?.canvas,

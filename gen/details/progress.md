@@ -285,3 +285,7 @@ so 2e ran the checks and the deploy.
   (verify in the strokes first; map, cast and voice only what is painted).
 - **Commit:** everything of today but f1's (鳥瞰, film: its files and hunks, the list it sent), built in a temporary
   index.
+- **Done (2e, 2026-10-13 ~12:20):** commit 499735a on main (not pushed; the 鳥瞰/film session's files and hunks left
+  uncommitted for the user's call, checked hunk by hunk); the commit's own checkout passed check_deploy (8 sections,
+  34 boats). Deployed with f1's agreement (its film hooks went up as they were): world 211/211, people the two gate
+  stands, check PASS; live: the early-tap script and the new S6 owner lines.

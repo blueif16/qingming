@@ -33,6 +33,10 @@ the GitHub repo and the generated-asset dataset.
 - **Sound** follows the skill `sounds` (spec `sounds/<set>.json` → `tools/eleven.mjs` → `sound_check.mjs` → `sound_cut.mjs` →
   `sound_page.mjs`). ElevenLabs key: first line of `~/.elevenlabs_key` (free tier: non-commercial, credit elevenlabs.io).
   Its sound effects are approved; its Chinese voices are not (another provider later).
+- **Video shots** follow the skill `film`. Agents make them through CLIs; nobody records a screen. The steps: a spec
+  `shots/<name>.json` (places from `tools/film_places.mjs`), then `tools/film_shot.mjs` (check → preview → final), then
+  `gen/films/<name>/` (MP4, ProRes or PNG, plus the camera of every frame). The page is stepped a frame at a time on a
+  film clock (`web/src/film.js`), so no frame drops. In the game, the 鳥瞰 view (C, `web/src/birdseye.js`) is its live kin.
 - **Meshy deletes API outputs after 3 days.** Download results into `gen/` right away.
 - **Blender export:** `export_scene.gltf` exports every scene in the .blend unless you pass `use_active_scene=True`.
   The live .blend holds `messenger_study`, and once that leaked into a GLB. `blender/street_b1.py:export` sets this.

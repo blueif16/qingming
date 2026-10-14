@@ -1,0 +1,74 @@
+{
+  "name": "river_dive",
+  "about": "From high over the 汴河 east of the Rainbow Bridge, pushed fast down along the river to eye level on the water by the big boat lowering its mast to pass under the arch (上下呼救), the bridge and its crowd behind.",
+  "hour": 10,
+  "fps": 30,
+  "size": [
+    1920,
+    1080
+  ],
+  "ss": 2,
+  "blur": 4,
+  "shutter": 0.5,
+  "stand": "S3.veh.boat_mast_lowering_19518",
+  "camera": {
+    "kind": "move",
+    "ease": "inout",
+    "keys": [
+      {
+        "t": 0,
+        "pos": [
+          205,
+          10,
+          46
+        ],
+        "look": [
+          140,
+          15,
+          3
+        ],
+        "fov": 40
+      },
+      {
+        "t": 4,
+        "pos": [
+          178,
+          12,
+          22
+        ],
+        "look": [
+          142,
+          15,
+          3
+        ],
+        "fov": 42
+      },
+      {
+        "t": 7,
+        "pos": [
+          160,
+          13,
+          5
+        ],
+        "look": {
+          "at": "S3.veh.boat_mast_lowering_19518",
+          "up": 2.2
+        },
+        "fov": 44
+      },
+      {
+        "t": 9.5,
+        "pos": [
+          156,
+          12.5,
+          1.8
+        ],
+        "look": {
+          "at": "S3.veh.boat_mast_lowering_19518",
+          "up": 2.0
+        },
+        "fov": 46
+      }
+    ]
+  }
+}

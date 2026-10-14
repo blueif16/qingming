@@ -13,6 +13,7 @@ export const W = {
   // the direct HUD (hud.js): the view tiles and the › that opens the settings screen
   view: { aria: '視角 · view (V)', first: ['第一人稱', 'first person'], third: ['第三人稱', 'third person'] },
   more: { title: '設定 · settings (O)', aria: 'Settings (O)' },
+  sky: ['鳥瞰', "bird's-eye view"], // the 鳥瞰 tile (hud.js, birdseye.js)
   // the landmark toast's fold and its way to the journal (places.js; lore agent). The journal's own words: journal_words.js
   // a plot line's step overheard (the life pass): the note's seal and its line under the line's title
   heard: { seal: '聞', line: '記入圖志', lineEn: 'into the journal' },
@@ -27,6 +28,7 @@ export const W = {
     [['滑鼠'], '環顧', 'look'],
     [['滾輪'], '遠近', 'zoom'],
     [['V'], '視角', 'first / third person'],
+    [['C'], '鳥瞰', "bird's-eye view"],
     [['E'], '搭話', 'talk'],
     [['T'], '時辰', 'the time'],
     [['Space'], '展卷', 'the painting'],
@@ -40,6 +42,7 @@ export const W = {
     [['左手'], '拖動行走', 'left thumb: walk'],
     [['右手'], '拖動環顧', 'right thumb: look'],
     [['icon:view'], '視角', 'first / third person'],
+    [['icon:sky'], '鳥瞰', "bird's-eye view"],
     [['icon:scroll'], '展卷', 'the painting'],
     [['icon:seal'], '搭話', 'talk'],
     [['icon:more'], '設定', 'settings and sound'],

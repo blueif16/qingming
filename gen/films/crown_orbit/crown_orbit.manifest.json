@@ -1,0 +1,83 @@
+{
+ "shot": "crown_orbit",
+ "spec": "shots/crown_orbit.json",
+ "mode": "final",
+ "made": "2026-10-13T17:46:26.728Z",
+ "url": "http://127.0.0.1:5190/world.html?start=0&tier=high&adapt=0&sound=0&hour=15.5&spawn=crown",
+ "settings": {
+  "fps": 30,
+  "W": 1920,
+  "H": 1080,
+  "ss": 2,
+  "blur": 1,
+  "shutter": 0.5,
+  "warm": 3,
+  "crf": 14,
+  "formats": [
+   "mp4",
+   "prores"
+  ],
+  "from": 0,
+  "to": 20,
+  "frames": 600,
+  "seconds": 20
+ },
+ "page": {
+  "stand": [
+   134.4,
+   19.6,
+   5.3
+  ],
+  "drawn": [
+   3840,
+   2160
+  ],
+  "pixelRatio": 2,
+  "tier": "high",
+  "sections": [
+   "rainbow_bridge",
+   "canal",
+   "outer_road_2"
+  ]
+ },
+ "check": {
+  "ok": true,
+  "errors": [],
+  "warnings": [
+   {
+    "from": 12.7,
+    "to": 13.4,
+    "what": "the look point is hidden behind a solid surface",
+    "at": [
+     133.169,
+     19.331,
+     7.021
+    ]
+   },
+   {
+    "from": 18.9,
+    "to": 20,
+    "what": "the look point is hidden behind a solid surface",
+    "at": [
+     132.491,
+     18.518,
+     7.469
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "total_s": 244,
+  "render_s": 237.5,
+  "frames_per_s": 2.53,
+  "step_ms": 9.1,
+  "capture_ms": 384.4
+ },
+ "outputs": [
+  "gen/films/crown_orbit/crown_orbit.mp4",
+  "gen/films/crown_orbit/crown_orbit.mov",
+  "gen/films/crown_orbit/crown_orbit.camera.json",
+  "gen/films/crown_orbit/crown_orbit_sheet.jpg"
+ ],
+ "page_errors": []
+}

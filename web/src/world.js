@@ -31,6 +31,8 @@ import { DEFAULTS, loadSettings, buildGui, saveSettings } from './settings.js';
 import { loadCharacters, loadClips, People, CLIP_META } from './people.js';
 import { castClips, trafficClips, LATE_CLIPS } from './cast_clips.js';
 import { FollowCam } from './followcam.js';
+import { BirdsEye } from './birdseye.js';
+import { createFilm } from './film.js';
 import { lightAt, Sky, localHour } from './daylight.js';
 import { TimeScroll } from './ui/time.js';
 import { PACES, paceOf, hourWords } from './ui/time_words.js';
@@ -985,7 +987,7 @@ const ch = (k) => () => { saveSettings(s, KEY); onSettingChange(k); };
 you.add(s, 'view', { 'third person (Messenger)': 'third', 'first person': 'first' }).name('view (V)').onChange(ch('view')).listen();
 you.add(s, 'camDistance', 1.4, 7, 0.1).name('camera distance (wheel)').onChange(ch('camDistance')).listen();
 addEventListener('keydown', (e) => {
-  if (e.code === 'KeyV') { s.view = s.view === 'first' ? 'third' : 'first'; saveSettings(s, KEY); onSettingChange('view'); }
+  if (e.code === 'KeyV') { birdseye?.set(false); s.view = s.view === 'first' ? 'third' : 'first'; saveSettings(s, KEY); onSettingChange('view'); }
 });
 document.addEventListener('pointerlockchange', () => {
   $('crosshair').style.display = document.pointerLockElement ? 'block' : 'none';
@@ -999,6 +1001,8 @@ $('help').innerHTML = isTouch
   : 'Click to walk · WASD / arrows · Shift run · mouse look · wheel zoom · V first / third person · Esc release mouse · Space the painting · O settings · H help · M sound<br><small>Sound effects: ElevenLabs</small>';
 // the ink UI (web/src/ui/, gen/ui/STYLE.md): loading screen, place names, near conversations, help, the chrome's look.
 // It replaces the help above with its own; ?stats=1 shows the stats line; ?ui=0 leaves out notifications and talk.
+let birdseye = null; // 鳥瞰 (birdseye.js): made once you are in; the HUD's tile asks it from the start
+let film = null; // filmed shots (film.js; tools/film_shot.mjs, skill `film`): __test.film once you are in
 const ui = createUI({
   camera, player, query, hud,
   sections: () => sections,
@@ -1012,13 +1016,15 @@ const ui = createUI({
   sound: () => sound,
   canvas: renderer.domElement,
   tune: { get: () => hud.tune, set: setTune },
+  sky: { get: () => !!birdseye?.on, set: (on) => birdseye?.set(on) }, // the 鳥瞰 tile (birdseye.js)
   ahead: () => aheadLoading(), // the painting near you still coming in: the ink note 前路漸展 (ui/index.js)
 });
 hud.titleFor = (S, meta) => ui.regionTitle(meta?.folder);
 
 // ---------------------------------------------------------------- the player's body and view
 // third person (Messenger): FollowCam behind your own character. first person: the camera at the eyes, your body
-// still there below it (its head bone collapsed so the camera isn't inside it), without its shadow.
+// still there below it (its head bone collapsed so the camera isn't inside it), without its shadow. 鳥瞰 (C, the HUD's
+// tile; birdseye.js) lifts the camera from either view and circles above you; your whole body shows meanwhile.
 let avatar = null, avatarYaw = 0, followCam = null;
 async function setAvatar(name) {
   name = reg[name]?.file ? name : 'sightseer';
@@ -1045,12 +1051,14 @@ function setView(mode) {
   if (!avatar) return;
   avatar.head?.scale.setScalar(player.mode === 'first' ? 0.001 : 1);
   avatar.root.traverse((o) => { if (o.isMesh) o.castShadow = player.mode === 'third'; });
+  avatar.first = player.mode === 'first';
 }
 const turnTo = (cur, target, step) => cur + THREE.MathUtils.clamp(((target - cur + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI, -step, step);
 function updateAvatar(dt) {
   const v = player.velocity;
   let speed = Math.hypot(v.x, v.z);
-  const first = player.mode === 'first';
+  const first = player.mode === 'first' && !birdseye?.body; // 鳥瞰 shows the whole body, standing as it stood
+  if (avatar.first !== first) { avatar.first = first; avatar.head?.scale.setScalar(first ? 0.001 : 1); avatar.root.traverse((o) => { if (o.isMesh) o.castShadow = !first; }); }
   // a teleport (view(), tools): face the way the camera looks instead of turning round from the old spot
   if (avatar.root.position.distanceTo(player.pos) > 1.0) { avatarYaw = player.yaw + Math.PI; speed = 0; }
   // facing: where you move (third person), where you look (first person)
@@ -1068,8 +1076,8 @@ function updateAvatar(dt) {
   avatar.mixer.update(dt);
 }
 addEventListener('wheel', (e) => {
-  if (player.mode !== 'third') return;
-  s.camDistance = THREE.MathUtils.clamp(s.camDistance * (e.deltaY > 0 ? 1.1 : 0.9), 1.4, 7);
+  if (player.mode !== 'third' || birdseye?.on) return;
+  s.camDistance =THREE.MathUtils.clamp(s.camDistance * (e.deltaY > 0 ? 1.1 : 0.9), 1.4, 7);
   if (followCam) followCam.distance = s.camDistance;
 }, { passive: true });
 
@@ -1335,8 +1343,12 @@ function startSound() {
 const timer = new THREE.Timer();
 let lastTickMs = 0; // the last drawn frame's own CPU time (tiers.js: CPU- or GPU-bound)
 let measuring = null;
+// a film holds the loop and steps it a frame at a time on its own clock (film.js): a frame the browser asks for meanwhile
+// is skipped, and the loop parks until the film lets go
+const filmClock = { held: false, stepping: false, parked: false, resync: () => timer.reset() }; // resync: the real clock again, no jump
 
 function tick(now) {
+  if (filmClock.held && !filmClock.stepping) { filmClock.parked = true; return; }
   sound?.hud(hud.open);
   if (hud.open) { stream.lastTick = 0; requestAnimationFrame(tick); return; } // the scroll HUD is up: nothing to draw
   const t0 = performance.now();
@@ -1355,6 +1367,8 @@ function tick(now) {
   player.update(dt / 2);
   if (avatar) updateAvatar(dt);
   if (player.mode === 'third' && followCam) followCam.update(dt);
+  birdseye?.update(dt); // 鳥瞰, over either view (birdseye.js)
+  film?.apply(dt); // a shot's camera, playing or filmed (film.js)
   placeSun();
   shadowPolicy(dt);
   streamUpdate();
@@ -1405,7 +1419,7 @@ function tick(now) {
     if (measuring) { measuring.resolve(r); measuring = null; }
     Object.assign(acc, { frames: 0, time: 0, cpu: 0, anim: 0, gpu: 0, gpuN: 0 });
   }
-  requestAnimationFrame(tick);
+  if (!filmClock.stepping) requestAnimationFrame(tick); // a film's step is not a link of the loop (one loop, however many steps)
 }
 
 // The first frames of the world run under the loading paper, and the paper wipes away only once they come smoothly
@@ -1529,6 +1543,13 @@ try {
   const press = await pressed;
   ui.progress(0.92, 0.98);
   followCam = new FollowCam(camera, player, { distance: s.camDistance });
+  birdseye = new BirdsEye({ camera, player, dom: renderer.domElement, fov: () => s.fov, onChange: () => ui.hud.sky?.paint(),
+    blocked: () => hud.open || ui.hud.isOpen() || ui.journal.isOpen() });
+  film = createFilm({ renderer, scene, camera, player, post, sun, tiers, s, sky: sky.mesh, views, birdseye, goto, tick, clock: filmClock,
+    set: (k, v) => { s[k] = v; if (k === 'hour' || k === 'timeFlow') s.localTime = false; return onSettingChange(k); }, // as __test.set: not saved
+    sectionNames: () => index.map((e) => e.name), loaded: () => [...sections.keys()],
+    people: () => people, boats: () => boats, avatar: () => avatar,
+    colliders: () => [...sections.values()].flatMap((x) => [x.bvh, x.trunks]).filter(Boolean) });
   if (!models[s.avatar]) s.avatar = 'sightseer';
   await setAvatar(s.avatar);
   view();
@@ -1553,7 +1574,7 @@ try {
     // every section of the world (loaded or not): a loaded one is its section, the others { name, state }
     get sections() { return new Map(index.map((e) => [e.name, e.sec || { name: e.name, state: e.state }])); },
     loaded: sections, stream: { stats: streamStats, settle, internals: { index, models, modelUsers, stdByName, cardKinds, texCache, shaded, variants } },
-    followCam, get avatar() { return avatar; },
+    followCam, birdseye, film, get avatar() { return avatar; },
     set: (k, v) => { s[k] = v; if (k === 'hour' || k === 'timeFlow') s.localTime = false; return onSettingChange(k); },
     gpuTimer: !!tq,
     gpuMem: () => gpuMem?.report() ?? null, gpuTextures: () => gpuMem?.textures() ?? null,

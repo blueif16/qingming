@@ -797,7 +797,7 @@ export class People {
       if (cam) {
         const q = p.root.position, d = Math.hypot(cam.position.x - q.x, cam.position.z - q.z);
         _sph.center.set(q.x, q.y + 0.9, q.z);
-        every = !_fr.intersectsSphere(_sph) ? 8 : d < ANIM_LOD[0] ? 1 : d < ANIM_LOD[1] ? 2 : 4;
+        every = this.everyFrame ? 1 : !_fr.intersectsSphere(_sph) ? 8 : d < ANIM_LOD[0] ? 1 : d < ANIM_LOD[1] ? 2 : 4; // everyFrame: a film (film.js)
         if (d > INK_FAR) { if (!p.meshes) { p.meshes = []; p.root.traverse((o) => { if (o.isMesh) p.meshes.push(o); }); } this.farMeshes.push(...p.meshes); }
       }
       p.animDt += dt;

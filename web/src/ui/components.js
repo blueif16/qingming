@@ -125,6 +125,7 @@ const ICONS = {
   // the direct HUD's view tiles and its › (hud.js, icons.js), drawn as they look on screen
   get view() { const I = icons(); return `<span class="qm-help-ic">${I.eye}</span><span class="qm-help-ic qm-sealed">${I.figure}</span>`; },
   get more() { return `<span class="qm-help-ic">${icons().more}</span>`; },
+  get sky() { return `<span class="qm-help-ic">${icons().sky}</span>`; },
 };
 
 // the controls help: a paper slip (keys, 繁體, a small English gloss) that folds into a seal
