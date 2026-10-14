@@ -92,7 +92,7 @@ function addAbout(box, panel) {
     const m = a.maker;
     const maker = el('aside', 'ld-maker', [
       el('h4', '', [m.head, gloss(m.head_en)]),
-      el('p', 'ld-name', m.name),
+      el('p', 'ld-name', [m.name, gloss(m.name_en)]),
       el('p', '', [m.line, gloss(m.line_en)]),
       el('div', 'ld-links', m.links.map((l) => el('a', '', l.label, { href: l.href, target: '_blank', rel: 'noopener' }))),
     ]);

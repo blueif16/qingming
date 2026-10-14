@@ -145,20 +145,36 @@ export class Bubbles {
       pts.push({ e, x: clampX(s.x, e.w), y: clampY(s.y, e.h) });
     }
     // two bubbles must not overlap: push them apart along x; too far to share a row, stack the older one above; no
-    // room above (a phone), only the newer line shows
+    // room above (a phone), only the newer line shows. The layout (row, stack, hide) holds (the user, 2026-10-13:
+    // bubbles blinking while walking): it steps up at once when the bubbles would overlap, and steps back down only
+    // with ROOM px to spare and after HOLD_S in its layout, so a pair at a threshold doesn't flip every frame
     if (pts.length === 2) {
+      const ROOM = 24, HOLD_S = 0.6;
       const [a, b] = pts[0].x <= pts[1].x ? pts : [pts[1], pts[0]];
+      const older = pts[0], newer = pts[1], key = `${older.e.key}|${newer.e.key}`;
+      if (this.pair?.key !== key) this.pair = { key, mode: 'row', at: this.t };
+      const pair = this.pair;
+      // the row: pushed apart when they overlap by less than 260 px, eased in over the last ROOM px of height between
+      // them (no sideways jump as one head bobs past the other's line); overlap left after the push (> 0: they touch)
+      const vgap = (a.e.h + b.e.h) / 2 + 6 - Math.abs(a.y - b.y);
       const need = (a.e.w + b.e.w) / 2 + 34 - (b.x - a.x); // 34: room for the right one's name tag
-      const vert = Math.abs(a.y - b.y) < (a.e.h + b.e.h) / 2 + 6;
-      if (need > 0 && vert) {
-        if (need < 260) { a.x = clampX(a.x - need / 2, a.e.w); b.x = clampX(b.x + need / 2, b.e.w); }
-        if ((a.e.w + b.e.w) / 2 + 34 - (b.x - a.x) > 0) {
-          const older = pts[0], newer = pts[1], y = Math.min(older.y, newer.y) - (newer.e.h + 8);
-          if (y >= TOP + older.e.h) older.y = y;
-          else older.hide = true;
-        }
-      }
-    }
+      const k = Math.min(1, Math.max(0, (vgap + ROOM) / ROOM));
+      let ax = a.x, bx = b.x;
+      if (need > 0 && need < 260 && k > 0) { ax = clampX(a.x - (k * need) / 2, a.e.w); bx = clampX(b.x + (k * need) / 2, b.e.w); }
+      const rowLeft = Math.min((a.e.w + b.e.w) / 2 + 34 - (bx - ax), vgap); // > 0: the row overlaps
+      const stackY = Math.min(older.y, newer.y) - (newer.e.h + 8), stackRoom = stackY - (TOP + older.e.h); // >= 0: room above
+      const settled = this.t - pair.at >= HOLD_S;
+      let mode = pair.mode;
+      if (mode === 'row' && rowLeft > 0) mode = stackRoom >= 0 ? 'stack' : 'hide';
+      else if (mode === 'stack' && stackRoom < 0) mode = rowLeft > 0 ? 'hide' : 'row';
+      else if (mode === 'stack' && settled && rowLeft < -ROOM) mode = 'row';
+      else if (mode === 'hide' && this.t - pair.at >= 2 * HOLD_S && rowLeft < -2 * ROOM) mode = 'row'; // a hidden line comes back
+      else if (mode === 'hide' && this.t - pair.at >= 2 * HOLD_S && stackRoom >= 2 * ROOM) mode = 'stack'; // with more to spare
+      if (mode !== pair.mode) { pair.mode = mode; pair.at = this.t; }
+      if (mode === 'row') { a.x = ax; b.x = bx; }
+      else if (mode === 'stack') older.y = stackY;
+      else older.hide = true;
+    } else this.pair = null;
     for (const p of pts) {
       const anchor = p.e.anchor;
       if (p.hide) { if (anchor.style.visibility !== 'hidden') anchor.style.visibility = 'hidden'; p.e.box = null; continue; }

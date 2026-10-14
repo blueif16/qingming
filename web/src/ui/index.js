@@ -20,6 +20,7 @@ import { register as registerDetail } from '../detail.js';
 import { W } from './words.js';
 import { createHud } from './hud.js';
 import { prefs } from './prefs.js';
+import { Steady } from './steady.js';
 
 const THEMES = {
   day: { paper: '#efe4cc', bubble: '#f7efdc', ink: '#2a2420' },
@@ -28,6 +29,7 @@ const THEMES = {
 const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 
 // o: { camera, player, sections() (loaded: name -> sec), current() (your section's folder), night() (0..1),
+//      ahead() (a section you stand in or near still loading: the 前路漸展 note),
 //      hudOpen(), sfx(name, gain), hud (the ScrollHud, for its chrome), query (URLSearchParams),
 //      settings: { s, set(k, v), reset() } (world.js's tuning object and its one setter), time (the time agent's
 //      object, r2_time.md), sound() (sound.js, once built), canvas (for the pointer lock), tune: { get, set } (the
@@ -137,6 +139,34 @@ export function createUI(o) {
     const el = heardEl;
     heardTimer = setTimeout(() => { el.classList.add('qm-out'); setTimeout(() => el.remove(), 650); }, 3600);
   };
+  // the way ahead still coming in (the user, 2026-10-13: at the end of a section the walk sometimes stopped while the
+  // next one loaded): a small ink slip, bottom centre, a brush ring turning beside 前路漸展 (中英: its gloss under it).
+  // o.ahead() (world.js) is true while a section you stand in or near isn't in yet. The slip shows only when the wait is
+  // real (true for showAfter s: a section that comes in in time never flashes it) and stays a moment once up (steady.js).
+  const RING = '<svg viewBox="0 0 24 24"><circle class="qm-ahead-groove" cx="12" cy="12" r="8.6"/><circle class="qm-ahead-brush" cx="12" cy="12" r="8.6" pathLength="100"/></svg>';
+  const aheadSteady = new Steady({ max: 1, showAfter: 0.6, hideAfter: 0.4, minOn: 1.6, minOff: 1.0 });
+  let aheadEl = null, aheadAcc = 0, aheadT = 0;
+  const aheadNote = (dt) => {
+    aheadT += dt;
+    aheadAcc += dt;
+    if (aheadAcc < 0.25 || !o.ahead) return;
+    aheadAcc = 0;
+    const want = !!o.ahead();
+    const on = aheadSteady.update(aheadT, [{ key: 'ahead', score: 0, ok: want, keep: want }]).size > 0;
+    if (on && !aheadEl) {
+      aheadEl = h('div', 'qm-ahead qm-slip', { role: 'status', 'aria-live': 'polite' }, [
+        h('span', 'qm-ahead-ring', { html: RING, 'aria-hidden': 'true' }),
+        h('span', 'qm-ahead-text', {}, [h('b', '', { text: W.ahead.line }),
+          (prefs.get('lang') ?? 'zh') === 'zh_en' ? h('i', 'qm-gloss', { text: W.ahead.en, lang: 'en' }) : null]),
+      ]);
+      root.append(aheadEl);
+    } else if (!on && aheadEl) {
+      const el = aheadEl;
+      aheadEl = null;
+      el.classList.add('qm-out');
+      setTimeout(() => el.remove(), 650);
+    }
+  };
   const ready = json('assets/ui/places.json').then((pl) => {
     if (off) return;
     const where = () => { const p = o.player.pos; return { X: p.x, D: -p.z, H: p.y }; };
@@ -243,6 +273,7 @@ export function createUI(o) {
         last = { x: p.x, z: p.z };
         if ((helpT > HELP_MIN && walked > HELP_WALK) || helpT > HELP_MAX) help.set(false);
       }
+      aheadNote(dt);
       dhud.sync(dt);
       // lamp-lit paper after dark
       nightAcc += dt;
@@ -290,6 +321,7 @@ export function createUI(o) {
         select: (id) => { const sc = dhud.screen(), i = sc ? sc.specs.findIndex((r) => r.id === id) : -1; if (i >= 0) sc.select(i); return i; },
       },
       night: (on) => { theme = on ? 'night' : 'day'; applyInk(html, THEMES[theme]); if (on) html.dataset.night = ''; else delete html.dataset.night; nightAcc = -1e9; },
+      ahead: () => ({ loading: !!o.ahead?.(), shown: !!aheadEl }), // the 前路漸展 note: is a section near you loading, is the note up
       cost: (reset = false) => { const r = { msPerFrame: cost.n ? cost.ms / cost.n : 0, frames: cost.n }; if (reset) { cost.ms = 0; cost.n = 0; } return r; },
       state: () => ({ started, theme, places: places?.state() ?? null, talk: talk?.state() ?? null, help: help?.open ?? null, helpSeen: prefs.get('helpSeen'), settings: dhud.isOpen() }),
       scenes: () => talk?.scenes.map((s) => ({ id: s.id, section: s.section, host: s.roles[s.host].fig, X: s.X, D: s.D })) ?? [],

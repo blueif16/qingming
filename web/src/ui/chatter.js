@@ -33,6 +33,8 @@ export const DEFAULTS = {
 };
 const SLEEPY = /sleep|doze/;
 const MIN_NEW_S = 1.0; // calm: at most one new chat bubble this often
+const MIN_UP_S = 2.2; // a line stays up at least this long before a nearer speaker may take its place (no blinking)
+const SLEEP_PAD = 4; // a group wakes within wakeM and sleeps only past wakeM + SLEEP_PAD (no waking and sleeping at the line)
 const BURST = 3; // and the tier's perMin new exchanges a minute on screen, with a small burst (a token bucket)
 const v = new THREE.Vector3();
 const rnd = (a, b) => a + Math.random() * (b - a);
@@ -109,7 +111,7 @@ export class Chatter {
       const sec = secs.get(g.section);
       if (!live || !sec?.persons) { if (g.st) this.sleep(g); continue; }
       const d = Math.hypot(g.X - P.x, -g.D - P.z);
-      if (d > WAKE_M) { if (g.st) this.sleep(g); continue; }
+      if (d > WAKE_M + (g.st ? SLEEP_PAD : 0)) { if (g.st) this.sleep(g); continue; }
       if (!g.st) this.wake(g);
       awake++;
       this.step(g, silent);
@@ -254,7 +256,7 @@ export class Chatter {
         // moment gives way to a nearer speaker
         const chat = B.list.filter((e) => e.owner === 'chat');
         const far = chat.filter((e) => e.group === g).sort((a, b) => a.born - b.born)[0]
-          || chat.filter((e) => e.dist > dist + 1 && this.t - e.born > 1.2).sort((a, b) => b.dist - a.dist)[0];
+          || chat.filter((e) => e.dist > dist + 1 && this.t - e.born > MIN_UP_S).sort((a, b) => b.dist - a.dist)[0];
         if (!far) return;
         B.drop(far);
       }

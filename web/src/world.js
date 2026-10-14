@@ -1012,6 +1012,7 @@ const ui = createUI({
   sound: () => sound,
   canvas: renderer.domElement,
   tune: { get: () => hud.tune, set: setTune },
+  ahead: () => aheadLoading(), // the painting near you still coming in: the ink note 前路漸展 (ui/index.js)
 });
 hud.titleFor = (S, meta) => ui.regionTitle(meta?.folder);
 
@@ -1139,6 +1140,14 @@ function streamUpdate(force = false) {
     stream.hurry = false;
     for (const w of stream.waiters.splice(0)) w();
   }
+}
+// a section you stand in, or are within AHEAD_NOTE_M of, that isn't in yet (its seam is a wall until it is): the UI's
+// ink note that the way ahead is still coming in (the user, 2026-10-13: at the end of a section the walk sometimes
+// stopped while the next one loaded). A section that failed never comes, so it doesn't count.
+const AHEAD_NOTE_M = 12;
+function aheadLoading() {
+  const X = player.pos.x, D = -player.pos.z;
+  return index.some((e) => (e.state === 'out' || e.state === 'loading') && outside(e, X, D) < AHEAD_NOTE_M);
 }
 // one operation at a time; the longest frame while it runs (and the half second after, when its new things are
 // first drawn: uploads and shader compiles) is its stall

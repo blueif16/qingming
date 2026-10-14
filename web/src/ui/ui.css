@@ -249,6 +249,24 @@ html .lil-gui { --background-color: #efe4cc; --text-color: #2a2420; --title-back
   --widget-color: #e1d2b0; --hover-color: #d6c49d; --focus-color: #cdb88c; --number-color: #8a2a18; --string-color: #4e4033;
   --font-family: var(--qm-font-latin); --font-size: 12px; }
 
+/* ------------------------------------------------------------------ the way ahead still coming in (index.js aheadNote) */
+/* a small slip, bottom centre above the 聞 note's place: a brush ring turning beside 前路漸展, soft and brief */
+.qm-ahead { position: absolute; left: 50%; bottom: calc(var(--qm-bottom) + 62px); transform: translateX(-50%); display: flex; align-items: center;
+  gap: 8px; width: max-content; padding: 1px 12px 2px 6px; pointer-events: none; color: var(--qm-ink); opacity: 0.92;
+  animation: qm-bleed var(--qm-t-slow) ease both; }
+html.qm-touch .qm-ahead { bottom: calc(var(--qm-bottom) + 122px); }
+.qm-ahead-ring { flex: none; width: 22px; height: 22px; }
+.qm-ahead-ring svg { display: block; width: 100%; height: 100%; animation: qm-ahead-turn 1.8s linear infinite; }
+.qm-ahead-groove { fill: none; stroke: var(--qm-ink-faint); stroke-width: 1; opacity: 0.6; }
+.qm-ahead-brush { fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 62 38;
+  animation: qm-ahead-brush 1.8s var(--qm-ease) infinite alternate; }
+.qm-ahead-text { display: grid; gap: 1px; }
+.qm-ahead-text b { font: 400 17px/1.15 var(--qm-font-title); letter-spacing: 0.14em; font-weight: 400; }
+.qm-ahead-text i { font: italic 400 11.5px/1.2 var(--qm-font-latin); color: var(--qm-ink-soft); }
+@keyframes qm-ahead-turn { to { transform: rotate(360deg); } }
+@keyframes qm-ahead-brush { from { stroke-dasharray: 18 82; } to { stroke-dasharray: 72 28; } }
+@media (max-width: 640px) { .qm-ahead-text b { font-size: 15px; } .qm-ahead-ring { width: 19px; height: 19px; } }
+
 /* ------------------------------------------------------------------ reduced motion: fades only */
 @media (prefers-reduced-motion: reduce) {
   .qm-ui *, #help *, #loading, #loading * { animation-name: qm-fade-in !important; animation-duration: 150ms !important; animation-delay: 0s !important;

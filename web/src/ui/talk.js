@@ -9,12 +9,16 @@
 // `only` / `not` keep a beat for some kinds; talking to the same host again plays its next `again` set.
 // Read-only on the people: a figure is found by its slug in its loaded section's persons (people.js).
 // Per frame: nothing but the bubbles' placing (bubbles.js); the search for a host runs every SCAN_S.
+// The prompt holds still (steady.js; the user, 2026-10-13, labels blinking while walking): it rises inside TALK_M,
+// FACE_DEG and the view, and stays until you are past KEEP_M or KEEP_DEG for a moment; a second host about as near
+// doesn't take it over.
 import * as THREE from 'three';
 import { prompt as promptEl, h } from './components.js';
 import { headOf, headOfRole, castOf, readSecs, withEnglish } from './bubbles.js';
+import { Steady } from './steady.js';
 
 export { headOf };
-const TALK_M = 3.2, FACE_DEG = 60, LEAVE_M = 6.5, SCAN_S = 0.12, END_HOLD_S = 2.6, COOLDOWN_S = 1.0;
+const TALK_M = 3.2, FACE_DEG = 60, KEEP_M = 4.0, KEEP_DEG = 78, LEAVE_M = 6.5, SCAN_S = 0.12, END_HOLD_S = 2.6, COOLDOWN_S = 1.0;
 const v = new THREE.Vector3();
 
 // the beats a talk plays for who you are: the n-th visit's set, beats kept for your kind, lines in your kind's words
@@ -40,6 +44,7 @@ export class Talk {
     this.conv = null; // the conversation playing: { scene, beats, i, next, ending }
     this.cool = 0;
     this.promptEl = null;
+    this.steady = new Steady({ max: 1, showAfter: 0.1, hideAfter: 0.3, minOn: 0.6, minOff: 0.5, stick: 0.75 });
     this.visits = new Map(); // scene id -> times talked (this visit to the page)
     this.log = [];
   }
@@ -60,24 +65,27 @@ export class Talk {
     this.place();
   }
 
-  // the nearest host within reach that you face
+  // the nearest host within reach that you face (steady: tight gates to rise, loose ones to stay)
   scan() {
-    if (this.conv || this.cool > 0) { this.setHost(null); return; }
+    if (this.conv || this.cool > 0) { this.steady.reset(); this.setHost(null); return; }
     const P = this.player.pos, fx = -Math.sin(this.player.yaw), fz = -Math.cos(this.player.yaw);
-    let best = null, bd = Infinity;
+    const cands = [], hosts = new Map();
     for (const sc of this.scenes) {
       if (sc.X != null && Math.hypot(sc.X - P.x, -sc.D - P.z) > 30) continue;
       const rt = this.people(sc);
       const p = rt?.roles[sc.host]?.p;
       if (!p) continue;
-      const q = p.root.position, dx = q.x - P.x, dz = q.z - P.z, d = Math.hypot(dx, dz);
-      if (d > TALK_M || Math.abs(q.y - P.y) > 1.6 || d >= bd) continue;
+      const q = p.root.position, dx = q.x - P.x, dz = q.z - P.z, d = Math.hypot(dx, dz), dy = Math.abs(q.y - P.y);
+      if (d > KEEP_M || dy > 2) continue;
       const cos = d < 0.4 ? 1 : (dx * fx + dz * fz) / d;
-      if (cos < Math.cos((FACE_DEG * Math.PI) / 180)) continue;
-      if (!this.screen(headOf(p, v)).on) continue;
-      best = { scene: sc, p }; bd = d;
+      const s = this.screen(headOf(p, v));
+      const ok = d <= TALK_M && dy <= 1.6 && cos >= Math.cos((FACE_DEG * Math.PI) / 180) && s.on;
+      const keep = cos >= Math.cos((KEEP_DEG * Math.PI) / 180) && s.front;
+      cands.push({ key: sc, score: d, ok, keep });
+      hosts.set(sc, p);
     }
-    this.setHost(best);
+    const [sc] = this.steady.update(this.t, cands);
+    this.setHost(sc && hosts.has(sc) ? { scene: sc, p: hosts.get(sc) } : null);
   }
 
   setHost(hst) {

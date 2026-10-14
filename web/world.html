@@ -87,12 +87,21 @@
     .ld .ld-credit { font-size: 12px; color: rgba(42, 36, 32, 0.6); }
     .ld .ld-credit .ld-gloss { font-size: 11px; }
     .ld .ld-credit a { color: inherit; }
+    /* the maker's line (the user, 2026-10-13): its gloss on the same line where there is room */
+    @media (min-width: 600px) { .ld .ld-hope .ld-gloss { display: inline; margin-left: 0.7em; } }
+    /* a laptop's short landscape screen: a smaller logo and tighter gaps, so the credits and the 卷記 link stay above the band */
+    @media (min-aspect-ratio: 1/1) and (min-height: 561px) and (max-height: 1000px) {
+      .ld.ld-wait .ld-in { gap: 1.6vh; padding-top: 2vh; }
+      .ld.ld-wait .ld-logo { height: clamp(120px, 18vh, 300px); }
+      .ld.ld-wait .ld-start { gap: 1.3vh; }
+    }
     @media (max-height: 560px) and (min-aspect-ratio: 1/1) {
       .ld { --band: 22vh; --band-y: 2vh; }
       .ld.ld-wait .ld-in { flex-direction: row; gap: 5vw; padding-top: 2vh; }
       .ld.ld-wait .ld-logo { height: 56vh; }
       .ld .ld-start .ld-gloss { font-size: 11px; }
       .ld .ld-info { font-size: 13px; line-height: 1.45; }
+      .ld.ld-wait .ld-start { gap: 1vh; }
     }
     @media (max-aspect-ratio: 1/1) {
       .ld { --band: 16vh; --band-y: 2.5vh; }
@@ -109,6 +118,7 @@
       .ld .ld-lead { font-size: 16px; }
       .ld .ld-info { font-size: 13px; }
       .ld .ld-start .ld-gloss { font-size: 10.5px; }
+      .ld.ld-wait .ld-start { gap: 1vh; }
     }
     @media (prefers-reduced-motion: reduce) {
       .ld .ld-band-in { animation: none; }
@@ -128,6 +138,7 @@
     <div class="ld-start">
       <p class="ld-lead">畫中之城，可行可望，可遊可居。<span class="ld-gloss">A city inside a painting: walk it, look round it, wander and stay.</span></p>
       <p class="ld-info">北宋張擇端《清明上河圖》，全卷相連；畫中人物，各在其位，各忙其事。<span class="ld-gloss">Zhang Zeduan's <i>Along the River During the Qingming Festival</i> (Northern Song): the whole scroll, every painted figure in its place, at its work.</span></p>
+      <p class="ld-info ld-hope">王軾然 製作 · 希望大家喜歡。<span class="ld-gloss">Made by Shiran Wang · Hope you like it.</span></p>
       <p class="ld-info"><span class="ld-desk">點擊畫面行走 · WASD 移步 · 滑鼠環顧 · H 說明</span><span class="ld-touch">左手行走，右手環顧</span> · 宜開聲音<span class="ld-gloss"><span class="ld-desk">Click to walk · WASD · mouse to look · H for help</span><span class="ld-touch">Left thumb walks, right thumb looks</span> · best with sound on</span></p>
       <button class="ld-go" type="button"><span class="ld-go-zh">入畫</span><span class="ld-go-en">Enter the painting</span></button>
       <!-- the button shows before the script that answers it has loaded: a tap that early is kept, shown pressed, and

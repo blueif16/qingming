@@ -3,10 +3,15 @@
 // chatter's showM and within its wakeM, on screen, not behind a wall (one BVH ray per candidate per scan), at most the
 // tier's `marks` (detail.talk: 0 low, 4 mid, 6 high) nearest first. It tells you who is up to something across the
 // street; walk closer and their words appear. Data: a chatter group's `mark` (a pictogram below).
+// Steady (steady.js; the user, 2026-10-13, labels blinking while walking): a mark appears inside the tight gates and
+// stays inside the loose ones (a metre nearer, a few metres farther, a wider screen margin), through the pause between
+// two exchanges and a few scans behind a wall, and isn't swapped for a group about as near. It goes at once when its
+// group's words are up in a bubble (never a mark and a bubble over the same heads).
 // Per frame: one projection and one transform per mark shown; the choice runs with the chatter's scan.
 import * as THREE from 'three';
 import { h } from './components.js';
 import { headOfRole } from './bubbles.js';
+import { Steady } from './steady.js';
 
 // the pictograms: ink strokes on a 28-unit square (currentColor), each a painted thing of the scroll
 const S = (d, extra = '') => `<svg viewBox="0 0 28 28" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">${d}</g>${extra}</svg>`;
@@ -36,6 +41,8 @@ export class Marks {
   constructor({ layer, chatter, camera, player, bvh = () => null }) {
     Object.assign(this, { layer, chatter, camera, player, bvh });
     this.shown = new Map(); // group -> { el, role }
+    this.steady = new Steady({ max: Infinity, showAfter: 0.3, hideAfter: 1.6, minOn: 2.5, minOff: 1.5, stick: 0.8 });
+    this.t = 0;
   }
 
   hiddenBehindWall(at) {
@@ -51,30 +58,44 @@ export class Marks {
   // with the chatter's scan: which groups get a mark now
   choose(silent = false) {
     const C = this.chatter, n = C.cfg.marks || 0, P = this.player.pos;
-    const want = new Map();
+    this.t = C.t;
+    let show = new Set();
     if (n > 0 && !silent) {
+      this.steady.max = n;
       const cands = [];
       for (const g of C.groups) {
-        if (!g.mark || !g.st?.cur) continue;
-        const role = g.st.cur.role || Object.values(g.rt?.roles || {})[0];
+        if (!g.mark || !g.st) continue; // asleep: not a candidate (a mark showing goes after its dwell)
+        const playing = !!g.st.cur;
+        const role = g.st.cur?.role || this.shown.get(g)?.role || Object.values(g.rt?.roles || {})[0];
         if (!role || !headOfRole(role, v)) continue;
         const d = Math.hypot(v.x - P.x, v.z - P.z);
-        if (d <= C.cfg.showM + 1 || d > C.cfg.wakeM) continue;
-        if (!this.chatter.bubbles.screen(v).on) continue;
-        cands.push({ g, role, d, at: v.clone() });
+        if (d > C.cfg.wakeM + 3) continue;
+        const s = C.bubbles.screen(v);
+        // to appear: an exchange playing, beyond earshot, well inside the view; to stay: the loose gates, through the
+        // quiet between two exchanges (hideAfter)
+        const ok = playing && d > C.cfg.showM + 1 && d <= C.cfg.wakeM && s.on;
+        const keep = playing && d > C.cfg.showM && d <= C.cfg.wakeM + 3 && s.front && s.x > -60 && s.x < innerWidth + 60 && s.y > -60 && s.y < innerHeight + 60;
+        cands.push({ g, role, d, ok, keep, drop: C.bubbles.list.some((e) => e.group === g), at: v.clone() });
       }
+      // one wall ray each for the nearest few (the rest can't be among the n shown)
       cands.sort((a, b) => a.d - b.d);
-      for (const c of cands) {
-        if (want.size >= n) break;
-        if (this.hiddenBehindWall(c.at)) continue;
-        want.set(c.g, c.role);
-      }
+      cands.forEach((c, i) => { if ((c.ok || c.keep) && (i < 2 * n + 2 || this.shown.has(c.g)) && this.hiddenBehindWall(c.at)) c.ok = c.keep = false; });
+      show = this.steady.update(this.t, cands.map((c) => ({ key: c.g, score: c.d, ok: c.ok, keep: c.keep, drop: c.drop })));
+      for (const c of cands) if (show.has(c.g)) c.g._markRole = c.role;
+    } else this.steady.reset();
+    for (const [g, m] of this.shown) {
+      if (show.has(g)) continue;
+      m.el.classList.add('qm-out');
+      const el = m.el;
+      setTimeout(() => el.remove(), 600);
+      this.shown.delete(g);
     }
-    for (const [g, m] of this.shown) if (!want.has(g)) { m.el.classList.add('qm-out'); setTimeout(() => m.el.remove(), 600); this.shown.delete(g); }
-    for (const [g, role] of want) {
+    for (const g of show) {
+      const role = g._markRole;
       const m = this.shown.get(g);
-      if (m) { m.role = role; continue; }
-      const el = h('div', 'qm-anchor qm-mark-a', {}, [h('span', 'qm-mark', { html: PICTOS[g.mark] || PICTOS.voice, 'aria-hidden': 'true' })]);
+      if (m) { if (role) m.role = role; continue; }
+      if (!role) continue;
+      const el = h('div', 'qm-anchor qm-mark-a', { 'data-group': g.id }, [h('span', 'qm-mark', { html: PICTOS[g.mark] || PICTOS.voice, 'aria-hidden': 'true' })]);
       el.style.visibility = 'hidden';
       this.layer.append(el);
       this.shown.set(g, { el, role });
@@ -94,6 +115,6 @@ export class Marks {
     }
   }
 
-  clear() { for (const [, m] of this.shown) m.el.remove(); this.shown.clear(); }
+  clear() { for (const [, m] of this.shown) m.el.remove(); this.shown.clear(); this.steady.reset(); }
   state() { return [...this.shown.keys()].map((g) => ({ id: g.id, mark: g.mark })); }
 }

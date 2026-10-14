@@ -20,13 +20,17 @@ import './places.css';
 import { regionBanner, plaque, seal, h } from './components.js';
 import { prefs } from './prefs.js';
 import { W } from './words.js';
+import { Steady } from './steady.js';
 
 const REGION_AGAIN = 120, LANDMARK_AGAIN = 240;
 const BANNER_S = 3.8, TOAST_S = 9, FADE_MS = 600, CHECK_S = 0.25;
 // unfolded: long enough to read the long text (about 6 characters a second, never under 16 s or over 45 s)
 const openDur = (m) => Math.min(45, Math.max(16, 9 + [...(m.lore?.long || '')].length / 6));
-// plaques: the landmarks within PLAQUE_M of you that are in view, the nearest MAX_PLAQUES of them (anchored DOM, so few)
-const PLAQUE_M = 30, MAX_PLAQUES = 3;
+// plaques: the landmarks within PLAQUE_M of you that are in view, the nearest MAX_PLAQUES of them (anchored DOM, so few).
+// Steady (steady.js): a plaque appears inside the tight gates and stays inside the loose ones (PLAQUE_KEEP_M, a wider
+// screen margin, nearer under it), hidden behind a wall only after a few checks running, never swapped for a place
+// about as near: no blinking as you walk (the user, 2026-10-13)
+const PLAQUE_M = 30, PLAQUE_KEEP_M = 35, MAX_PLAQUES = 3;
 const pv = new THREE.Vector3(), ray = new THREE.Ray(), dir = new THREE.Vector3();
 const CINNABAR = '#b5321e';
 // the English under the Chinese when the viewer picks 中英 (prefs.lang; each text's `_en` sibling, tools/ui_data.mjs)
@@ -88,6 +92,7 @@ export class Places {
   constructor({ layer, data, current, where, sfx = () => {}, camera = null, bvh = () => null, lore = null, touch = false, blocked = () => false, journal = null }) {
     Object.assign(this, { layer, data, current, where, sfx, camera, bvh, loreFetch: lore, touch, blocked, journal });
     this.plaques = new Map(); // landmark -> { anchor, gone }
+    this.steady = new Steady({ max: MAX_PLAQUES, showAfter: 0.2, hideAfter: 0.6, minOn: 1.5, minOff: 1.2, stick: 0.8 });
     this.t = 0;
     this.acc = 0;
     this.region = null; // the region id you are in
@@ -173,16 +178,19 @@ export class Places {
   // the plaques worth hanging now: near, in front of the camera, nearest first
   choosePlaques(at) {
     if (!this.camera || !this.layer.anchors) return;
-    const want = [];
+    const cands = [];
     for (const m of this.lm) {
       const d = distTo(m, at.X, at.D);
-      if (d > PLAQUE_M || d < 1.5) continue; // standing under it you see its toast instead
+      if (d > PLAQUE_KEEP_M && !this.steady.isOn(m)) continue;
       const s = this.screen(m);
-      if (!s.on || this.hidden(m)) continue;
-      want.push([d, m]);
+      // to appear: within PLAQUE_M, not standing under it (you see its toast instead), well inside the view; to stay:
+      // the loose gates. Behind a wall only counts when it is in either band (one ray each).
+      const ok = d <= PLAQUE_M && d >= 1.5 && s.on;
+      const keep = d <= PLAQUE_KEEP_M && d >= 0.8 && s.front && s.x > -30 && s.x < innerWidth + 30 && s.y > 70 && s.y < innerHeight;
+      const hid = (ok || keep) && this.hidden(m);
+      cands.push({ key: m, score: d, ok: ok && !hid, keep: keep && !hid });
     }
-    want.sort((a, b) => a[0] - b[0]);
-    const keep = new Set(want.slice(0, MAX_PLAQUES).map(([, m]) => m));
+    const keep = this.steady.update(this.t, cands);
     for (const [m, p] of this.plaques) if (!keep.has(m) && !p.gone) { p.gone = true; p.el.classList.add('qm-gone'); setTimeout(() => { if (p.gone) { p.anchor.remove(); this.plaques.delete(m); } }, 400); }
     for (const m of keep) {
       const p = this.plaques.get(m);
@@ -197,7 +205,7 @@ export class Places {
     }
     this.place();
   }
-  dropPlaques() { for (const [, p] of this.plaques) p.anchor.remove(); this.plaques.clear(); }
+  dropPlaques() { for (const [, p] of this.plaques) p.anchor.remove(); this.plaques.clear(); this.steady.reset(); }
 
   // is the plaque's bead behind something solid (the city wall, a building) from where the camera is?
   hidden(m) {
@@ -226,7 +234,9 @@ export class Places {
     const B = this.banner && (this.banner.box ??= this.banner.el.getBoundingClientRect());
     for (const [m, p] of this.plaques) {
       const s = this.screen(m);
-      const under = B && s.x > B.left - 30 && s.x < B.right + 30 && s.y - 150 < B.bottom;
+      // once under the banner it stays hidden until the banner goes (no blinking at its edge as the view swings)
+      if (B && s.x > B.left - 30 && s.x < B.right + 30 && s.y - 150 < B.bottom) p.under = this.banner;
+      const under = !!this.banner && p.under === this.banner;
       if (!s.front || under) { p.anchor.style.visibility = 'hidden'; continue; }
       if (p.anchor.style.visibility) p.anchor.style.visibility = '';
       const tf = `translate3d(${s.x.toFixed(1)}px, ${s.y.toFixed(1)}px, 0)`;
