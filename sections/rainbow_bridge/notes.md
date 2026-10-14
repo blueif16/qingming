@@ -293,3 +293,13 @@ Details are in `gen/expand/round2/joins_report.md`, Stage 3.
   bark, b3.groom, was added.
 - The data is copied to `web/public/assets/rainbow_bridge/` (layout.json, people.json) and the scroll index was
   rebuilt. The GLB is unchanged.
+
+## The bridge pass: a way past the crowd at the south foot (2026-10-14, `gen/interact/passes/bridge.md`)
+
+- The user found the bridge's left (south-west) end too tight to pass. Off the foot eastward there was no way round the
+  near railing's end (the parasol crowd and the pack donkey stand against it), 0.79 m at the pack donkey's rump and one
+  1.05 m gap between the parasol crowd and the long-robed men onto the bank under the arch.
+- Three figures moved 0.3-0.5 m within their groups (`gen/sections/rainbow_bridge/choices/pass.json`):
+  `man_dark_cap_18812`, `stout_man_18750`, `donkey_walker_18481`. One lane of 1.3 m or more now runs from the foot round
+  the crowd's south edge onto the bank. Grids `bridge_before.txt` / `bridge_after.txt`; two walks added
+  ("the bridge pass, east/west"): walks.json 44/44 alone.

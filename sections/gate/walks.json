@@ -95,14 +95,189 @@
   ],
   "expect": {
    "D": [
-    2.1,
+    3.3,
     6.8
    ],
    "H": [
     11.9,
     12.3
    ]
+  },
+  "why": "since the tower pass (2026-10-14) the hall's floor is D 3.2..6.8 (its front 1.1 m north); the balcony's front walk at D ~2.7 no longer counts as in the hall"
+ },
+ {
+  "label": "lower flight top -> the landing -> east along the terrace to the 城樓 viewpoint",
+  "start": [
+   -19.15,
+   -1.6
+  ],
+  "legs": [
+   [
+    90,
+    1.3
+   ],
+   [
+    0,
+    1.4
+   ]
+  ],
+  "expect": {
+   "X": [
+    -16.7,
+    -15.3
+   ],
+   "D": [
+    -0.2,
+    1.2
+   ],
+   "H": [
+    9.9,
+    10.3
+   ]
+  },
+  "why": "the tower pass (2026-10-14, gen/interact/passes/tower.md): the tower moved 1.1 m north, so a 1.25 m landing lies between the lower flight's top (D -0.51) and the upper stair's foot (D 0.74); before, the stair began where the flight arrived and you could squeeze onto the terrace strip but not back out. Legs are timed: 1.3 s north from the flight puts you on the landing (D ~0.2)"
+ },
+ {
+  "label": "... and back: the 城樓 viewpoint -> west along the landing -> down the lower flight",
+  "start": [
+   -19.15,
+   -1.6
+  ],
+  "legs": [
+   [
+    90,
+    1.3
+   ],
+   [
+    0,
+    1.4
+   ],
+   [
+    180,
+    1.4
+   ],
+   [
+    270,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    -19.8,
+    -18.5
+   ],
+   "D": [
+    -9,
+    -2
+   ],
+   "H": [
+    1,
+    9.5
+   ]
+  },
+  "why": "the way out that was missing; ends on the lower flight going down"
+ },
+ {
+  "label": "lower flight top -> the landing -> west along the terrace to the strip's west end",
+  "start": [
+   -19.15,
+   -1.6
+  ],
+  "legs": [
+   [
+    90,
+    1.3
+   ],
+   [
+    180,
+    1.6
+   ]
+  ],
+  "expect": {
+   "X": [
+    -22.6,
+    -21.6
+   ],
+   "D": [
+    -0.2,
+    1.2
+   ],
+   "H": [
+    9.9,
+    10.3
+   ]
   }
+ },
+ {
+  "label": "... and back: the west end -> east along the landing -> down the lower flight",
+  "start": [
+   -19.15,
+   -1.6
+  ],
+  "legs": [
+   [
+    90,
+    1.3
+   ],
+   [
+    180,
+    1.6
+   ],
+   [
+    0,
+    1.45
+   ],
+   [
+    270,
+    3
+   ]
+  ],
+  "expect": {
+   "X": [
+    -19.8,
+    -18.5
+   ],
+   "D": [
+    -9,
+    -2
+   ],
+   "H": [
+    1,
+    9.5
+   ]
+  }
+ },
+ {
+  "label": "up both flights into the hall, then back down both",
+  "start": [
+   -18.9,
+   -1.2
+  ],
+  "legs": [
+   [
+    90,
+    5.5
+   ],
+   [
+    270,
+    6
+   ]
+  ],
+  "expect": {
+   "X": [
+    -19.8,
+    -18.5
+   ],
+   "D": [
+    -16,
+    -2
+   ],
+   "H": [
+    0,
+    9.5
+   ]
+  },
+  "why": "5.5 s north reaches the hall (D ~4.5; the steep upper stair is climbed at ~0.6 m/s), 6 s south brings you down the upper stair, across the landing and down the lower flight"
  },
  {
   "label": "tax office steps -> onto the floor, east of the official's desk",

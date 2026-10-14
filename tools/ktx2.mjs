@@ -158,7 +158,7 @@ const SPOTS = [
   ['trees_s4_road', 30, 5.4, 0, 0, 4], ['trees_gate_street', -30, 6.6, 0, 180, 4], ['trees_temple', 12, 21, 0, 80, 6], ['trees_well', -84, 9, 0, 150, 6],
   ['panel_west_s7', -82, 7, 0, 180, 2], ['panel_east_s4b', 45, 6, 0, 0, 2], ['panel_gate_east', -40, 6.5, 0, 0, 3], ['panel_gate_west', 22, 5.4, 0, 180, 3],
   ['kit_zhengdian', -50, 7.5, 0, 120, 6], ['kit_storyteller', -62, 9.5, 0, 90, 4], ['kit_temple', 12, 21, 0, 80, 6], ['kit_courier', 36, 9, 0, 75, 6],
-  ['kit_ground', -20, 5, 0, 0, -35], ['kit_tower_wall', -15.6, 1.4, 12.07, 175, -12],
+  ['kit_ground', -20, 5, 0, 0, -35], ['kit_tower_wall', -15.6, 2.5, 12.07, 175, -12],
   // characters: your own avatar seen from the front at 1.8 m, held still
   ['char_woman', -71, 8, 0, 0, -5, { avatar: 'woman' }], ['char_porter', -71, 8, 0, 0, -5, { avatar: 'porter' }],
   ['char_official', -71, 8, 0, 0, -5, { avatar: 'official' }], ['char_scholar', -71, 8, 0, 0, -5, { avatar: 'scholar' }],

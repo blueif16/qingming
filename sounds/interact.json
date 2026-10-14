@@ -16,7 +16,16 @@
       "seconds": 4,
       "prompt": "A flock of small birds bursting out of leafy trees all at once: a loud flurry and rush of many wings, branches and leaves shaking and rustling, a few alarmed chirps, then the flock flying off into the distance. Outdoors, close, dry, no music.",
       "pick": 1
+    },
+    "seal_press": {
+      "kind": "sfx",
+      "group": "ui",
+      "use": "the 圖志's seal pressed for an interaction done the first time (ui/index.js stamp: the 印譜 note slip); the HUD's own, not a thing in the street",
+      "seconds": 1,
+      "prompt": "A carved stone seal pressed firmly onto a sheet of paper lying on a wooden desk: one soft, muffled thud with a faint papery crush, close, dry, no other sounds.",
+      "pick": 0,
+      "slice": 2
     }
   },
-  "picks_why": "drum_strike take 0: a clean boom, low band only, smooth 4 s decay; flock_burst take 1: builds in 0.6 s, a rush of wings and chirps for 1.5 s, then flies off (take 0 a slow soft flutter). Read from envelopes and band levels (gen/interact/progress.md)"
+  "picks_why": "drum_strike take 0: a clean boom, low band only, smooth 4 s decay; flock_burst take 1: builds in 0.6 s, a rush of wings and chirps for 1.5 s, then flies off (take 0 a slow soft flutter). Read from envelopes and band levels (gen/interact/progress.md); seal_press take 0 cut into its two thuds (take 1 is five taps, too busy)"
 }

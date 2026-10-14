@@ -465,7 +465,9 @@ the porter from the map; the road from the map; the lower flight (马道) agains
 - the tax office is 4.3 m deep, with a courtyard wall behind (its back is hidden);
 - house depths where their backs are hidden; the low south roof sits just south of the big one;
 - the lower flight starts 15 m south of the block (its foot is below the silk's edge), on an earthen fill; the upper
-  stair takes the 1.4 m the strokes leave, so it is steep and its rails don't collide;
+  stair takes the 1.4 m the strokes leave, so it is steep and its rails don't collide; since the tower pass
+  (2026-10-14) the tower stands 1.1 m north of its painted place (a move in `build_choices.json`) so a 1.25 m landing
+  lies between the two flights, and the podium and hall are 1.1 m shallower (their back stays inside the terrace);
 - two trees whose bases are estimated at the silk's edge stand beside the lower flight, not on it; the knotted elm
   stands on the wing's slope (support `wing slope`, 1.5 m);
 - the reclining customer is nudged 1.07 m east to lean on the north wing (people.json).

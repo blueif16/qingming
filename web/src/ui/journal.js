@@ -112,6 +112,7 @@ export class Journal {
     const L = this.leaves();
     if (!L.length) return null;
     if (at === 'col' || at === 'talk' || (at === 'deeds' && this.deeds?.length)) return at;
+    if (typeof at === 'string' && at.startsWith('x:') && this.deeds?.length) return 'deeds'; // a seal in the 印譜
     const m = at && (this.places?.landmarks || []).find((x) => x.id === at);
     if (m) return `r:${this.regionOfLandmark(m)}`;
     if (at && L.some((l) => l.key === at)) return at;

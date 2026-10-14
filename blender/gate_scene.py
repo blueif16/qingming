@@ -50,6 +50,9 @@ TOP = 0.0
 EXTENT = {}
 CHANNEL_N = 14.0   # choice: the moat channel ends here; water is painted up to the tree crowns north of the bridge
 RAMP_RUN = 15.0    # choice: the lower flight's foot is below the silk's edge; 15 m gives about 34 degrees
+# choice: the upper stair's run (8 steps, about 53 degrees: its painted run of 1.0 m stretched). With the tower moved
+# 1.1 m north (build_choices.json, the tower pass 2026-10-14) it leaves a 1.25 m landing at the lower flight's top
+UPPER_RUN = 1.44
 
 
 def _fp(L, eid):
@@ -71,7 +74,8 @@ def derive(L):
     bsw, bse, bne, bnw = _fp(L, "S5.str.moat_bridge")
     BRIDGE.clear()
     BRIDGE.update(x0=(bsw[0] + bnw[0]) / 2, x1=(bse[0] + bne[0]) / 2, y0=bsw[1], y1=bnw[1])
-    # the tower: the podium's painted front on the terrace; choice: kept inside the terrace's balustrade
+    # the tower: the podium's painted front on the terrace (moved 1.1 m north for the landing, build_choices.json);
+    # choice: kept inside the terrace's balustrade, so its back (estimated) stays and the podium is 1.1 m shallower
     psw, pse, pne, pnw = _fp(L, "S5.str.tower_podium")
     POD.clear()
     POD.update(x0=max((psw[0] + pnw[0]) / 2, GB["xi1"] + 0.6), x1=min((pse[0] + pne[0]) / 2, GB["xo1"] - 0.6),
@@ -414,17 +418,17 @@ def _podium():
     # his elbows
     k.balustrade([(sx0 - 0.05, dy0 + 0.12), (dx0 + 0.12, dy0 + 0.12), (dx0 + 0.12, dy1 - 0.12), (dx1 - 0.12, dy1 - 0.12),
                   (dx1 - 0.12, dy0 + 0.12), (sx1 + 0.05, dy0 + 0.12)], FLOOR, h=1.075)
-    # choice: the stair's run is what the strokes leave between the terrace's edge and the deck (the tower is
-    # compressed in depth), so it is steep
+    # choice: the stair's run (UPPER_RUN) is what the strokes left between the terrace's edge and the deck before the
+    # tower pass (the tower is compressed in depth), so it is steep; its foot is 1.25 m north of the terrace's south
+    # edge, a landing where the lower flight arrives (the tower pass, 2026-10-14)
     with sb.entity("S5.str.tower_stair"):
-        _upper_stair(sx0, sx1, GB["y0"] + 0.15, dy0, z0)
+        _upper_stair(sx0, sx1, dy0 - UPPER_RUN, dy0, z0)
 
 
 def _upper_stair(sx0, sx1, ya, yb, z0):
     k.stairs(sx0, sx1, ya, yb, z0, FLOOR, 8, mat="stone")
     for x in (sx0 - 0.05, sx1 + 0.05):
-        # the bottom posts and the rails don't collide: the strokes leave almost no landing between the two flights,
-        # so one steps off the upper stair's side onto the terrace
+        # the bottom posts and the rails don't collide: nothing to snag on as you turn along the landing at its foot
         for y, z, col in ((ya, z0, False), (yb, FLOOR, True)):
             k.post("redwood", col, x, y, z, z + 1.1, 0.13, 0.02)
         k.beam("redwood", False, (x, ya, z0 + 1.0), (x, yb, FLOOR + 1.0), 0.09, 0.08, 0.015)

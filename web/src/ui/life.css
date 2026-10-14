@@ -8,6 +8,10 @@
 .qm-heard-text b { font: 400 20px/1.1 var(--qm-font-title); letter-spacing: 0.06em; font-weight: 400; animation: qm-wipe-x 420ms var(--qm-ease) both 120ms; }
 .qm-heard-text span { font: 400 13px/1.2 var(--qm-font-text); color: var(--qm-ink-soft); }
 html.qm-touch .qm-heard { bottom: calc(var(--qm-bottom) + 64px); }
+/* a seal stamped into the 印譜 (ui/index.js stamp): the note is a button, J or a tap opens the journal at it */
+button.qm-heard { margin: 0; font: inherit; color: inherit; text-align: left; background: none; } /* the slip's frame (.qm-slip border-image) stays */
+.qm-heard-act { pointer-events: auto; cursor: pointer; }
+.qm-heard-kbd { flex: none; font-size: 12px; margin-left: 2px; opacity: 0.75; }
 @media (max-width: 640px) { .qm-heard-text b { font-size: 16px; } .qm-heard .qm-seal { font-size: 15px; } }
 
 /* the English gloss under a bubble's Chinese line (prefs.lang 'zh_en'; the user, 2026-10-13: Chinese plus English) */

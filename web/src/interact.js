@@ -5,7 +5,9 @@
 //    touch screen) and you beat it. The drum booms (its own sound, the skin's swell, ink rings, a jolt of the camera)
 //    and the town answers: the birds living in the trees round the tower burst out of their crowns and the pigeons
 //    off its roof (ambient.js startle), the leaves shiver (wind.js shake) with the rush of wings, and the watchman
-//    calls out. The birds come home on their own after half a minute or so; till then another stroke only booms.
+//    calls out. The first stroke of a while plays in three beats (the user, 2026-10-13): on you through the hit, a cut
+//    outside to see the town answer, back to you. The birds come home on their own after half a minute or so; till
+//    then another stroke only booms, on you.
 //  - 觀景, viewpoints: a few soft glowing spots on the ground at the scroll's best places. Stand on one and E (the user,
 //    2026-10-13: an interaction, not a trigger underfoot; a walk across the Rainbow Bridge's crown must not take the
 //    camera) and the camera cranes up and circles that place (birdseye.js vista()) with its name in brush; a fresh
@@ -416,7 +418,8 @@ export class Interact {
     if (this.t - dr.birds > (D.startle?.again_s ?? DRUM.birdsAgain)) {
       dr.birds = this.t;
       setTimeout(() => this.startle(), 180);
-      // a cut outside to see them go (the hall's walls hide the trees), and back
+      // three beats (interact.json drum.react): on you through the hit for `after` s, a cut outside to see them go (the
+      // hall's walls hide the trees) for `hold` s, and back
       if (D.react && this.pose?.kind === 'drum') this.pose.react = { t: -(D.react.after ?? 0.2), dur: D.react.hold ?? 4 };
     }
     // the watchman calls out (after the first stroke of a while)

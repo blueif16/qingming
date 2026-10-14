@@ -7,7 +7,7 @@
  "crew_not_covered": 0,
  "fails": 37,
  "figures_failing": 21,
- "seconds": 3.661,
+ "seconds": 5.166,
  "results": [
   {
    "id": "parasol_stall_seller_20290",
@@ -247,16 +247,16 @@
    "map_id": "S3.fig.man_in_hatch_20172",
    "support": "boat deck: S3.veh.boat_moored_south_bank_19745",
    "root": [
-    152.1012,
-    0.0836,
-    -9.4752
+    152.1011,
+    0.0851,
+    -9.4747
    ],
    "checks": [
     {
      "class": "stance_soles",
      "median": -0.001,
      "max": 0.006,
-     "min": -0.008,
+     "min": -0.009,
      "clip_offset": 0,
      "no_surface": 0,
      "gap_m": 0.05,
@@ -495,9 +495,9 @@
    "map_id": "S3.fig.man_in_hatch_20148",
    "support": "boat deck: S3.veh.boat_moored_south_bank_19745",
    "root": [
-    151.8912,
-    0.084,
-    -9.4767
+    151.8911,
+    0.0854,
+    -9.4763
    ],
    "checks": [
     {
@@ -786,9 +786,9 @@
    "map_id": "S3.fig.man_reclining_waving_20060",
    "support": "boat roof: S3.veh.boat_moored_south_bank_19745",
    "root": [
-    150.7637,
-    1.6424,
-    -9.6901
+    150.7633,
+    1.6438,
+    -9.6887
    ],
    "checks": [
     {
@@ -829,7 +829,7 @@
     },
     {
      "class": "boat_body",
-     "overlap": 0.006,
+     "overlap": 0.005,
      "with": [
       "S3.veh.boat_moored_south_bank_19745|body"
      ],
@@ -997,16 +997,16 @@
    "map_id": "S3.fig.man_waving_on_boat_roof_19952",
    "support": "boat roof: S3.veh.boat_moored_south_bank_19745",
    "root": [
-    149.7137,
-    1.6561,
-    -9.51
+    149.7133,
+    1.6571,
+    -9.5086
    ],
    "checks": [
     {
      "class": "stance_soles",
      "median": 0.027,
      "max": 1.244,
-     "min": 0.004,
+     "min": 0.005,
      "clip_offset": -0.003,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -1085,9 +1085,9 @@
    "map_id": "S3.fig.boatman_stern_bending_20365",
    "support": "boat roof: S3.veh.boat_mast_lowering_19518",
    "root": [
-    148.0403,
-    2.6541,
-    -16.1886
+    148.0404,
+    2.6546,
+    -16.1898
    ],
    "checks": [
     {
@@ -1174,8 +1174,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     148.0488,
-    0.5885,
-    -15.2874
+    0.5893,
+    -15.2879
    ],
    "checks": [
     {
@@ -1190,10 +1190,10 @@
      "with": [
       "water"
      ],
-     "max": 1.998,
-     "mean": 1.998,
-     "gap_q": 1.998,
-     "pen_q": 1.998,
+     "max": 1.999,
+     "mean": 1.999,
+     "gap_q": 1.999,
+     "pen_q": 1.999,
      "deepest_pen": 0,
      "status": "FAIL"
     },
@@ -1259,7 +1259,7 @@
     },
     {
      "class": "head_through",
-     "frac": 0.667,
+     "frac": 0.683,
      "with": [
       "S3.veh.boat_mast_lowering_19518|body"
      ],
@@ -1312,7 +1312,7 @@
      "class": "contact:reach",
      "clip": "fend_pole~out",
      "site": "pole_far",
-     "value": 1.998,
+     "value": 1.999,
      "kind": "gap",
      "with": [
       "water"
@@ -1336,12 +1336,12 @@
     },
     {
      "class": "head_through",
-     "value": 0.667,
+     "value": 0.683,
      "with": [
       "S3.veh.boat_mast_lowering_19518|body"
      ],
      "clip": "fend_pole~out",
-     "note": "hips to head top crosses S3.veh.boat_mast_lowering_19518|body in 67% of the samples",
+     "note": "hips to head top crosses S3.veh.boat_mast_lowering_19518|body in 68% of the samples",
      "at": [
       "dump"
      ]
@@ -1462,9 +1462,9 @@
    "map_id": "S3.fig.boatman_stern_seated_20285",
    "support": "boat roof: S3.veh.boat_mast_lowering_19518",
    "root": [
-    147.2803,
-    2.6515,
-    -15.9886
+    147.2804,
+    2.6521,
+    -15.9898
    ],
    "checks": [
     {
@@ -1721,9 +1721,9 @@
    "map_id": "S3.fig.boatman_hauling_rope_20205",
    "support": "boat roof: S3.veh.boat_mast_lowering_19518",
    "root": [
-    146.3202,
-    2.1958,
-    -15.8002
+    146.3204,
+    2.1965,
+    -15.8012
    ],
    "checks": [
     {
@@ -1738,10 +1738,10 @@
      "with": [
       "S3.veh.boat_mast_lowering_19518|line_shroud_s"
      ],
-     "max": 0.771,
-     "mean": 0.556,
+     "max": 0.772,
+     "mean": 0.557,
      "gap_q": 0.592,
-     "pen_q": 0.544,
+     "pen_q": 0.545,
      "deepest_pen": 0,
      "status": "FAIL"
     },
@@ -1757,10 +1757,10 @@
      "with": [
       "S3.veh.boat_mast_lowering_19518|line_shroud_s"
      ],
-     "max": 0.795,
+     "max": 0.796,
      "mean": 0.625,
      "gap_q": 0.687,
-     "pen_q": 0.619,
+     "pen_q": 0.62,
      "deepest_pen": 0,
      "status": "FAIL"
     },
@@ -2185,8 +2185,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     145.0601,
-    0.0353,
-    -13.8775
+    0.0368,
+    -13.8778
    ],
    "checks": [
     {
@@ -2337,8 +2337,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     144.3501,
-    0.0082,
-    -13.5676
+    0.0098,
+    -13.5679
    ],
    "checks": [
     {
@@ -2427,8 +2427,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     143.9401,
-    -0.0069,
-    -13.4277
+    -0.0052,
+    -13.4279
    ],
    "checks": [
     {
@@ -2578,9 +2578,9 @@
    "map_id": "S3.fig.boatman_standing_pole_19892",
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
-    143.3,
-    -0.03,
-    -13.2477
+    143.3001,
+    -0.0282,
+    -13.248
    ],
    "checks": [
     {
@@ -2833,8 +2833,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     142.5801,
-    -0.0233,
-    -13.1277
+    -0.0215,
+    -13.128
    ],
    "checks": [
     {
@@ -2985,8 +2985,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     142.5401,
-    -0.0202,
-    -15.8177
+    -0.0193,
+    -15.818
    ],
    "checks": [
     {
@@ -3050,7 +3050,7 @@
      "class": "stance_soles",
      "median": -0.01,
      "max": 0.083,
-     "min": -0.224,
+     "min": -0.171,
      "clip_offset": -0.002,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -3449,8 +3449,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     141.7301,
-    -0.0101,
-    -15.4177
+    -0.0091,
+    -15.4179
    ],
    "checks": [
     {
@@ -3465,10 +3465,10 @@
      "with": [
       "water"
      ],
-     "max": 3.822,
-     "mean": 3.821,
-     "gap_q": 3.821,
-     "pen_q": 3.821,
+     "max": 3.823,
+     "mean": 3.822,
+     "gap_q": 3.822,
+     "pen_q": 3.822,
      "deepest_pen": 0,
      "status": "FAIL"
     },
@@ -3583,7 +3583,7 @@
      "class": "contact:reach",
      "clip": "fend_pole~up",
      "site": "pole_far",
-     "value": 3.821,
+     "value": 3.822,
      "kind": "gap",
      "with": [
       "water"
@@ -3635,8 +3635,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     141.4701,
-    0.0672,
-    -12.7874
+    0.0692,
+    -12.7877
    ],
    "checks": [
     {
@@ -3787,15 +3787,15 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     141.3401,
-    0.0291,
-    -15.0576
+    0.0303,
+    -15.0578
    ],
    "checks": [
     {
      "class": "stance_soles",
      "median": -0.005,
      "max": 0.015,
-     "min": -0.017,
+     "min": -0.018,
      "clip_offset": -0.003,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -3991,8 +3991,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     140.8601,
-    0.0644,
-    -15.2174
+    0.0656,
+    -15.2177
    ],
    "checks": [
     {
@@ -4007,10 +4007,10 @@
      "with": [
       "water"
      ],
-     "max": 3.896,
-     "mean": 3.896,
-     "gap_q": 3.895,
-     "pen_q": 3.895,
+     "max": 3.898,
+     "mean": 3.897,
+     "gap_q": 3.897,
+     "pen_q": 3.897,
      "deepest_pen": 0,
      "status": "FAIL"
     },
@@ -4125,7 +4125,7 @@
      "class": "contact:reach",
      "clip": "fend_pole~up",
      "site": "pole_far",
-     "value": 3.895,
+     "value": 3.897,
      "kind": "gap",
      "with": [
       "water"
@@ -4531,8 +4531,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     139.5901,
-    0.2066,
-    -13.3669
+    0.2085,
+    -13.3673
    ],
    "checks": [
     {
@@ -4602,7 +4602,7 @@
      "gap_m": 0.03,
      "pen_m": 0.04,
      "status": "PASS",
-     "cause": "placement"
+     "cause": "clip"
     },
     {
      "class": "deck_support",
@@ -4683,8 +4683,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     139.7101,
-    0.165,
-    -14.8571
+    0.1663,
+    -14.8574
    ],
    "checks": [
     {
@@ -5028,8 +5028,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     139.2201,
-    0.2077,
-    -14.707
+    0.2092,
+    -14.7073
    ],
    "checks": [
     {
@@ -5282,15 +5282,15 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     139.1101,
-    0.3133,
-    -12.9466
+    0.3154,
+    -12.9469
    ],
    "checks": [
     {
      "class": "stance_soles",
      "median": -0.001,
      "max": 0.009,
-     "min": -0.048,
+     "min": -0.047,
      "clip_offset": -0.003,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -5370,8 +5370,8 @@
    "support": "boat deck: S3.veh.boat_mast_lowering_19518",
    "root": [
     138.5901,
-    0.3961,
-    -13.3963
+    0.3981,
+    -13.3967
    ],
    "checks": [
     {
@@ -6320,8 +6320,8 @@
    "support": "boat deck: S3.veh.boat_cabin_under_arch_19225",
    "root": [
     136.6411,
-    -0.3479,
-    -20.2812
+    -0.348,
+    -20.2811
    ],
    "checks": [
     {
@@ -7407,8 +7407,8 @@
    "support": "boat deck: S3.veh.boat_cabin_under_arch_19225",
    "root": [
     136.0211,
-    -0.3443,
-    -19.7812
+    -0.3446,
+    -19.7811
    ],
    "checks": [
     {
@@ -9317,16 +9317,16 @@
    "map_id": "S3.fig.man_dark_cap_18812",
    "support": "ground",
    "root": [
-    133.84,
-    0.0033,
-    -7.12
+    133.89,
+    0.0056,
+    -7.42
    ],
    "checks": [
     {
      "class": "stance_soles",
-     "median": 0,
-     "max": 0.006,
-     "min": -0.007,
+     "median": -0.001,
+     "max": 0.005,
+     "min": -0.008,
      "clip_offset": 0,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -9338,7 +9338,7 @@
      "class": "support",
      "support": "ground",
      "on": "ground",
-     "root_H": 0.003,
+     "root_H": 0.006,
      "map_H": 0,
      "raise_m": 0.05,
      "kind": "ground",
@@ -10023,68 +10023,6 @@
    "notes": []
   },
   {
-   "id": "stout_man_18750",
-   "section": "rainbow_bridge",
-   "kind": "figure",
-   "model": "townsman",
-   "character": "townsman",
-   "map_id": "S3.fig.stout_man_18750",
-   "support": "ground",
-   "root": [
-    133.17,
-    0.0073,
-    -6.77
-   ],
-   "checks": [
-    {
-     "class": "stance_soles",
-     "median": 0.001,
-     "max": 0.006,
-     "min": -0.006,
-     "clip_offset": 0,
-     "no_surface": 0,
-     "gap_m": 0.03,
-     "pen_m": 0.04,
-     "status": "PASS",
-     "cause": "clip"
-    },
-    {
-     "class": "support",
-     "support": "ground",
-     "on": "ground",
-     "root_H": 0.007,
-     "map_H": 0,
-     "raise_m": 0.05,
-     "kind": "ground",
-     "status": "PASS"
-    },
-    {
-     "class": "body_cylinder",
-     "overlap": 0,
-     "with": [],
-     "fail_m": 0.1,
-     "status": "PASS"
-    },
-    {
-     "class": "head_inside",
-     "depth": 0,
-     "with": [],
-     "clip": null,
-     "pen_m": 0.02,
-     "status": "PASS"
-    },
-    {
-     "class": "site_inside",
-     "depth": 0,
-     "worst": [],
-     "pen_m": 0.02,
-     "status": "PASS"
-    }
-   ],
-   "fails": [],
-   "notes": []
-  },
-  {
    "id": "back_view_dark_hair_18340",
    "section": "rainbow_bridge",
    "kind": "figure",
@@ -10220,6 +10158,68 @@
      "map_H": 5.44,
      "raise_m": 0.05,
      "kind": "root_h",
+     "status": "PASS"
+    },
+    {
+     "class": "body_cylinder",
+     "overlap": 0,
+     "with": [],
+     "fail_m": 0.1,
+     "status": "PASS"
+    },
+    {
+     "class": "head_inside",
+     "depth": 0,
+     "with": [],
+     "clip": null,
+     "pen_m": 0.02,
+     "status": "PASS"
+    },
+    {
+     "class": "site_inside",
+     "depth": 0,
+     "worst": [],
+     "pen_m": 0.02,
+     "status": "PASS"
+    }
+   ],
+   "fails": [],
+   "notes": []
+  },
+  {
+   "id": "stout_man_18750",
+   "section": "rainbow_bridge",
+   "kind": "figure",
+   "model": "townsman",
+   "character": "townsman",
+   "map_id": "S3.fig.stout_man_18750",
+   "support": "ground",
+   "root": [
+    133.02,
+    0.0081,
+    -6.87
+   ],
+   "checks": [
+    {
+     "class": "stance_soles",
+     "median": 0.002,
+     "max": 0.007,
+     "min": -0.005,
+     "clip_offset": 0,
+     "no_surface": 0,
+     "gap_m": 0.03,
+     "pen_m": 0.04,
+     "status": "PASS",
+     "cause": "clip"
+    },
+    {
+     "class": "support",
+     "support": "ground",
+     "on": "ground",
+     "root_H": 0.008,
+     "map_H": 0,
+     "raise_m": 0.05,
+     "kind": "ground",
      "status": "PASS"
     },
     {
@@ -11748,14 +11748,14 @@
    "support": "ground",
    "root": [
     130.41,
-    0.0022,
-    -5.01
+    0.0048,
+    -4.51
    ],
    "checks": [
     {
      "class": "stance_soles",
-     "median": 0.003,
-     "max": 0.01,
+     "median": 0.004,
+     "max": 0.011,
      "min": -0.003,
      "clip_offset": 0,
      "no_surface": 0,
@@ -11768,7 +11768,7 @@
      "class": "support",
      "support": "ground",
      "on": "ground",
-     "root_H": 0.002,
+     "root_H": 0.005,
      "map_H": 0,
      "raise_m": 0.05,
      "kind": "ground",
@@ -14527,9 +14527,9 @@
    "map_id": "S3.fig.passenger_seated_18147",
    "support": "boat deck: S3.veh.boat_mat_cabin_18005",
    "root": [
-    117.0702,
-    -0.5746,
-    -23.7805
+    117.0703,
+    -0.5779,
+    -23.7806
    ],
    "checks": [
     {
@@ -14993,9 +14993,9 @@
    "map_id": "S3.fig.passenger_seated_18112",
    "support": "boat deck: S3.veh.boat_mat_cabin_18005",
    "root": [
-    116.5502,
-    -0.5736,
-    -23.7805
+    116.5503,
+    -0.5768,
+    -23.7806
    ],
    "checks": [
     {
@@ -15513,15 +15513,15 @@
    "map_id": "S3.fig.porter_carrying_17922",
    "support": "boat deck: S3.veh.boat_unloading_17705",
    "root": [
-    113.7056,
-    0.4461,
-    -18.015
+    113.7053,
+    0.4473,
+    -18.0143
    ],
    "checks": [
     {
      "class": "stance_soles",
      "median": 0,
-     "max": 0.005,
+     "max": 0.004,
      "min": -0.005,
      "clip_offset": 0,
      "no_surface": 0,
@@ -15534,7 +15534,7 @@
      "class": "deck_support",
      "boat": "S3.veh.boat_unloading_17705",
      "level": "boat deck",
-     "raise": -0.001,
+     "raise": 0,
      "on": "S3.veh.boat_unloading_17705|body",
      "mat": "deck__nocol",
      "raise_m": 0.05,
@@ -15601,9 +15601,9 @@
    "map_id": "S3.fig.porter_standing_17886",
    "support": "boat deck: S3.veh.boat_unloading_17705",
    "root": [
-    113.1956,
-    0.4567,
-    -18.035
+    113.1954,
+    0.4577,
+    -18.0344
    ],
    "checks": [
     {
@@ -15689,9 +15689,9 @@
    "map_id": "S3.fig.porter_standing_17860",
    "support": "boat deck: S3.veh.boat_unloading_17705",
    "root": [
-    112.7357,
-    0.4754,
-    -18.2151
+    112.7355,
+    0.4765,
+    -18.2144
    ],
    "checks": [
     {
@@ -15777,9 +15777,9 @@
    "map_id": "S3.fig.porter_standing_17833",
    "support": "boat deck: S3.veh.boat_unloading_17705",
    "root": [
-    112.2459,
-    0.5066,
-    -18.0752
+    112.2456,
+    0.5074,
+    -18.0746
    ],
    "checks": [
     {
@@ -15865,14 +15865,14 @@
    "map_id": "S3.fig.porter_hunched_17808",
    "support": "boat deck: S3.veh.boat_unloading_17705",
    "root": [
-    111.9061,
-    0.5467,
-    -18.4354
+    111.9058,
+    0.5477,
+    -18.4347
    ],
    "checks": [
     {
      "class": "stance_soles",
-     "median": -0.001,
+     "median": 0,
      "max": 0.012,
      "min": -0.007,
      "clip_offset": 0,
@@ -15953,9 +15953,9 @@
    "map_id": "S3.fig.porter_bending_17790",
    "support": "boat deck: S3.veh.boat_unloading_17705",
    "root": [
-    111.6861,
-    0.5498,
-    -17.9654
+    111.6858,
+    0.5505,
+    -17.9647
    ],
    "checks": [
     {
@@ -16103,9 +16103,9 @@
    "map_id": "S3.fig.passenger_seated_17632",
    "support": "boat deck: S3.veh.boat_awning_17442",
    "root": [
-    108.4906,
-    -0.4725,
-    -30.5711
+    108.4907,
+    -0.4759,
+    -30.5713
    ],
    "checks": [
     {
@@ -16435,9 +16435,9 @@
    "map_id": "S3.fig.awning_boatman_17435",
    "support": "boat deck: S3.veh.boat_awning_17442",
    "root": [
-    106.2206,
-    -0.4674,
-    -30.8312
+    106.2207,
+    -0.4705,
+    -30.8313
    ],
    "checks": [
     {
@@ -16717,9 +16717,9 @@
    "map_id": "S3.fig.boatman_poling_16198",
    "support": "boat deck: S3.veh.boat_towed_mast_16228",
    "root": [
-    103.3107,
-    0.6059,
-    -23.0561
+    103.311,
+    0.6048,
+    -23.0564
    ],
    "checks": [
     {
@@ -17137,8 +17137,8 @@
    "map_id": "S3.fig.sweep_man_15915",
    "support": "boat deck: S3.veh.boat_under_way_15595",
    "root": [
-    106.0346,
-    0.7455,
+    106.0344,
+    0.7445,
     -17.1917
    ],
    "checks": [
@@ -17282,9 +17282,9 @@
    "map_id": "S3.fig.boatman_on_cargo_16032",
    "support": "boat deck: S3.veh.boat_towed_mast_16228",
    "root": [
-    100.9804,
-    0.0343,
-    -24.3334
+    100.9805,
+    0.0334,
+    -24.3336
    ],
    "checks": [
     {
@@ -17370,9 +17370,9 @@
    "map_id": "S3.fig.boatman_on_cargo_15998",
    "support": "boat deck: S3.veh.boat_towed_mast_16228",
    "root": [
-    100.6104,
-    0.0679,
-    -24.3036
+    100.6106,
+    0.067,
+    -24.3037
    ],
    "checks": [
     {
@@ -17458,8 +17458,8 @@
    "map_id": "S3.fig.sweep_man_15888",
    "support": "boat deck: S3.veh.boat_under_way_15595",
    "root": [
-    105.8441,
-    0.7083,
+    105.8438,
+    0.7073,
     -17.0461
    ],
    "checks": [
@@ -17586,8 +17586,8 @@
    "map_id": "S3.fig.sweep_man_15862",
    "support": "boat deck: S3.veh.boat_under_way_15595",
    "root": [
-    105.6535,
-    0.6711,
+    105.6533,
+    0.67,
     -16.9006
    ],
    "checks": [
@@ -17633,7 +17633,7 @@
      "class": "stance_soles",
      "median": -0.025,
      "max": 0.091,
-     "min": -0.189,
+     "min": -0.183,
      "clip_offset": 0,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -17714,8 +17714,8 @@
    "map_id": "S3.fig.sweep_man_15855",
    "support": "boat deck: S3.veh.boat_under_way_15595",
    "root": [
-    105.4629,
-    0.6339,
+    105.4627,
+    0.6328,
     -16.7551
    ],
    "checks": [
@@ -17859,8 +17859,8 @@
    "map_id": "S3.fig.sweep_man_15838",
    "support": "boat deck: S3.veh.boat_under_way_15595",
    "root": [
-    105.2723,
-    0.5967,
+    105.2721,
+    0.5956,
     -16.6095
    ],
    "checks": [
@@ -18002,8 +18002,8 @@
    "map_id": "S3.fig.sweep_man_15810",
    "support": "boat deck: S3.veh.boat_under_way_15595",
    "root": [
-    105.0818,
-    0.5595,
+    105.0816,
+    0.5583,
     -16.464
    ],
    "checks": [
@@ -18477,7 +18477,7 @@
    "support": "boat bow deck: S3.veh.boat_under_way_15595",
    "root": [
     98.3789,
-    -0.3622,
+    -0.3645,
     -20.0683
    ],
    "checks": [
@@ -18590,8 +18590,8 @@
    "map_id": "S3.fig.boatman_bow_15664",
    "support": "boat bow deck: S3.veh.boat_under_way_15595",
    "root": [
-    96.5082,
-    -0.2312,
+    96.5081,
+    -0.2338,
     -21.5975
    ],
    "checks": [
@@ -18599,7 +18599,7 @@
      "class": "stance_soles",
      "median": 0.006,
      "max": 0.017,
-     "min": -0.196,
+     "min": -0.195,
      "clip_offset": -0.003,
      "no_surface": 0,
      "gap_m": 0.03,
@@ -18611,7 +18611,7 @@
      "class": "deck_support",
      "boat": "S3.veh.boat_under_way_15595",
      "level": "boat bow deck",
-     "raise": -0.003,
+     "raise": -0.004,
      "on": "S3.veh.boat_under_way_15595|body",
      "mat": "deck__nocol",
      "raise_m": 0.05,
@@ -18797,7 +18797,7 @@
    "support": "boat bow deck: S3.veh.boat_under_way_15595",
    "root": [
     96.4281,
-    -0.2211,
+    -0.2236,
     -21.5974
    ],
    "checks": [
@@ -18817,7 +18817,7 @@
      "class": "deck_support",
      "boat": "S3.veh.boat_under_way_15595",
      "level": "boat bow deck",
-     "raise": -0.004,
+     "raise": -0.003,
      "on": "S3.veh.boat_under_way_15595|body",
      "mat": "deck__nocol",
      "raise_m": 0.05,
@@ -19071,14 +19071,14 @@
    "support": "boat deck: S3.veh.boat_passenger_long_16398",
    "root": [
     92.2928,
-    -0.1275,
+    -0.1266,
     -28.9959
    ],
    "checks": [
     {
      "class": "stance_soles",
      "median": 0,
-     "max": 0.008,
+     "max": 0.007,
      "min": -0.012,
      "clip_offset": 0,
      "no_surface": 0,
@@ -19312,8 +19312,8 @@
    "map_id": "S3.fig.porter_with_pole_20450",
    "support": "ground",
    "root": [
-    157.4174,
-    -0.0263,
+    157.451,
+    -0.0256,
     3.51
    ],
    "checks": [
@@ -19396,9 +19396,9 @@
    "map_id": "S3.fig.porter_baskets_bottom_18175",
    "support": "ground",
    "root": [
-    132.2403,
+    132.2464,
     -0.015,
-    2.7357
+    2.7371
    ],
    "checks": [
     {
@@ -19438,9 +19438,9 @@
    "map_id": "S3.fig.porter_two_baskets_18340",
    "support": "ground",
    "root": [
-    128.51,
-    -0.0136,
-    -5.05
+    130.959,
+    0.0136,
+    -5.19
    ],
    "checks": [
     {
@@ -19481,7 +19481,7 @@
    "support": "ground",
    "root": [
     120.72,
-    -0.0322,
+    -0.0323,
     -3.28
    ],
    "checks": [

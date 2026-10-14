@@ -863,7 +863,7 @@
    "id": "tower_watchman",
    "map_id": "S5.fig.tower_watchman",
    "X": -19.39,
-   "D": 1.72,
+   "D": 2.82,
    "H": 12.1,
    "pose": "standing",
    "facing_deg": 200,
@@ -900,7 +900,7 @@
    "id": "tower_balcony_man_6600",
    "map_id": "S5.fig.tower_balcony_man_6600",
    "X": -22.56,
-   "D": 1.53,
+   "D": 2.63,
    "H": 12.1,
    "pose": "leaning",
    "facing_deg": 200,
@@ -1960,7 +1960,8 @@
     "front",
     "rear",
     "wheel0"
-   ]
+   ],
+   "what": "Large two-wheeled cart with a woven-mat barrel roof over a panelled body, a big spoked wheel near its middle, a basket hung at the rear and a rolled blind or round hamper at its front; it faces east, a driver seated on its footboard, one shaft running forward to its team of three oxen (S4.ani.ox_shaft_9972, ox_far_10045, ox_lead_10235). The first of the ox carts that continue into S4."
   },
   "S5.veh.cart_screen_8510": {
    "kind": "vehicle",
@@ -1980,7 +1981,8 @@
    "est": [
     "front",
     "rear"
-   ]
+   ],
+   "what": "串车 (a barrow with one big spoked wheel under the middle) heading east, out of the city. Its load is hidden under a huge domed sheet covered in cursive-script calligraphy (the screen used as a tarp), edged by a dark band (load spans about u 8290-8500, top v 1075). One carter pushes at the rear handles and another hauls at the front shafts; a long draught pole and trace run on east to a donkey at about u 8700-8880."
   },
   "S5.prop.basket_8968": {
    "kind": "prop",
@@ -2036,11 +2038,11 @@
   "S5.prop.tower_drum_6898": {
    "kind": "prop",
    "name": "tower drum (uncertain)",
-   "pos": [-18.91, 1.82],
+   "pos": [-18.91, 2.92],
    "H": 12.1,
    "support": "tower floor",
    "pts": {
-    "base": [-18.91, 1.82, 12.1]
+    "base": [-18.91, 2.92, 12.1]
    },
    "station": -6.2,
    "side": -2.3,
@@ -2534,6 +2536,14 @@
      [12.77, -0.19]
     ]
    },
+   "lines_H": {
+    "pile_feet": [
+     -1.5,
+     -1.5,
+     -1.5,
+     -1.5
+    ]
+   },
    "bays": [
     [9.49, 0.2],
     [10.05, -0.38],
@@ -2561,6 +2571,9 @@
      [1.19, 0.01],
      [2.93, -0.58]
     ]
+   },
+   "lines_H": {
+    "pile_feet": [-1.5, -1.5, -1.5]
    },
    "bays": [
     [0.26, -0.24],
@@ -2637,23 +2650,23 @@
   "S5.str.tower_stair": {
    "kind": "structure",
    "name": "stair from terrace to tower balcony",
-   "pos": [-19.14, 0.97],
+   "pos": [-19.14, 2.07],
    "H": 10,
    "support": "gate terrace",
    "facing_deg": 270,
    "pts": {
-    "sw": [-19.95, 0.45, 10],
-    "se": [-18.4, 0.45, 10],
-    "ne": [-18.56, 1.48, 10],
-    "nw": [-19.67, 1.48, 10],
-    "nw_top": [-19.67, 1.48, 12.06],
-    "ne_top": [-18.56, 1.48, 12.06]
+    "sw": [-19.95, 1.55, 10],
+    "se": [-18.4, 1.55, 10],
+    "ne": [-18.56, 2.58, 10],
+    "nw": [-19.67, 2.58, 10],
+    "nw_top": [-19.67, 2.58, 12.06],
+    "ne_top": [-18.56, 2.58, 12.06]
    },
    "footprint": [
-    [-19.95, 0.45],
-    [-18.4, 0.45],
-    [-18.56, 1.48],
-    [-19.67, 1.48]
+    [-19.95, 1.55],
+    [-18.4, 1.55],
+    [-18.56, 2.58],
+    [-19.67, 2.58]
    ],
    "heights": {
     "nw_top": 12.06,
@@ -2671,26 +2684,26 @@
   "S5.str.gate_tower": {
    "kind": "structure",
    "name": "gate tower hall (城楼)",
-   "pos": [-18.52, 3.33],
+   "pos": [-18.52, 4.43],
    "H": 12.1,
    "support": "tower floor",
    "facing_deg": 270,
    "pts": {
-    "sw": [-22.52, 1.82, 12.1],
-    "se": [-15.96, 1.82, 12.1],
-    "ne": [-14.52, 4.84, 12.1],
-    "nw": [-21.08, 4.84, 12.1],
-    "sw_top": [-22.52, 1.82, 14.09],
-    "se_top": [-15.96, 1.82, 14.07],
-    "sw_eave": [-22.52, 1.82, 15.5],
-    "se_eave": [-15.96, 1.82, 15.48],
-    "ne_eave": [-14.52, 4.84, 14.46]
+    "sw": [-22.52, 2.92, 12.1],
+    "se": [-15.96, 2.92, 12.1],
+    "ne": [-14.52, 5.94, 12.1],
+    "nw": [-21.08, 5.94, 12.1],
+    "sw_top": [-22.52, 2.92, 14.09],
+    "se_top": [-15.96, 2.92, 14.07],
+    "sw_eave": [-22.52, 2.92, 15.5],
+    "se_eave": [-15.96, 2.92, 15.48],
+    "ne_eave": [-14.52, 5.94, 14.46]
    },
    "footprint": [
-    [-22.52, 1.82],
-    [-15.96, 1.82],
-    [-14.52, 4.84],
-    [-21.08, 4.84]
+    [-22.52, 2.92],
+    [-15.96, 2.92],
+    [-14.52, 5.94],
+    [-21.08, 5.94]
    ],
    "heights": {
     "sw_top": 14.09,
@@ -2700,10 +2713,10 @@
     "ne_eave": 14.46
    },
    "bays": [
-    [-22.52, 1.82],
-    [-20.48, 1.82],
-    [-18.36, 1.82],
-    [-16, 1.82]
+    [-22.52, 2.92],
+    [-20.48, 2.92],
+    [-18.36, 2.92],
+    [-16, 2.92]
    ],
    "station": -5.8,
    "side": -0.8,
@@ -2719,23 +2732,23 @@
   "S5.str.tower_podium": {
    "kind": "structure",
    "name": "tower podium and balcony (平座)",
-   "pos": [-19.23, 4.45],
+   "pos": [-19.23, 5.55],
    "H": 10,
    "support": "gate terrace",
    "facing_deg": 270,
    "pts": {
-    "sw": [-22.75, 1.48, 10],
-    "se": [-15.34, 1.46, 10],
-    "ne": [-15.71, 7.41, 10],
-    "nw": [-23.12, 7.43, 10],
-    "sw_top": [-22.75, 1.48, 12.06],
-    "se_top": [-15.34, 1.46, 12.08]
+    "sw": [-22.75, 2.58, 10],
+    "se": [-15.34, 2.56, 10],
+    "ne": [-15.71, 8.51, 10],
+    "nw": [-23.12, 8.53, 10],
+    "sw_top": [-22.75, 2.58, 12.06],
+    "se_top": [-15.34, 2.56, 12.08]
    },
    "footprint": [
-    [-22.75, 1.48],
-    [-15.34, 1.46],
-    [-15.71, 7.41],
-    [-23.12, 7.43]
+    [-22.75, 2.58],
+    [-15.34, 2.56],
+    [-15.71, 8.51],
+    [-23.12, 8.53]
    ],
    "heights": {
     "sw_top": 12.06,
@@ -2951,6 +2964,14 @@
      [10, 10.02]
     ]
    },
+   "lines_H": {
+    "bridge_edge": [
+     -1.5,
+     -1.5,
+     -1.5,
+     -1.5
+    ]
+   },
    "station": 17.3,
    "side": 6.2,
    "station_range": [11.7, 22.6],
@@ -2979,6 +3000,11 @@
      [5.21, 1.57],
      [11.72, 1.53]
     ]
+   },
+   "lines_H": {
+    "shore_w": [-1.5, -1.5, -1.5],
+    "shore_e": [-1.5, -1.5, -1.5],
+    "bridge_edge": [-1.5, -1.5, -1.5]
    },
    "station": 19,
    "side": -4.1,
@@ -3098,6 +3124,30 @@
   "S5.tree.willow_shoots_6600": {
    "dX": 2.6,
    "why": "as elm_6580: base estimated at the silk's edge, on the line of the lower flight; it stands just east of the flight"
+  },
+  "S5.str.tower_podium": {
+   "dD": 1.1,
+   "why": "the tower pass (the user, 2026-10-14: on the wall-top terrace you could get in but not back out): the painted upper stair starts at the terrace's south edge, right where the lower flight (马道) arrives, so there was no landing to turn east or west along the 1 m strip in front of the podium. The podium's painted front, the hall, the upper stair and everything on them move 1.1 m north (the user's fix: 'push the top part away a little'): a 1.25 m landing opens at the flight's top with the stair's run unchanged. The podium's back (estimated, hidden) stays inside the terrace's north balustrade, so podium and hall are 1.1 m shallower (blender/gate_scene.py derive)"
+  },
+  "S5.str.gate_tower": {
+   "dD": 1.1,
+   "why": "moves with S5.str.tower_podium (the tower pass, 2026-10-14): the hall on the podium"
+  },
+  "S5.str.tower_stair": {
+   "dD": 1.1,
+   "why": "moves with S5.str.tower_podium (the tower pass, 2026-10-14): the stair up to the balcony"
+  },
+  "S5.prop.tower_drum_6898": {
+   "dD": 1.1,
+   "why": "moves with S5.str.tower_podium (the tower pass, 2026-10-14): the drum in the hall (the builder places it 0.9 m inside the hall's back wall, which does not move, so the built drum stays where it was)"
+  },
+  "S5.fig.tower_watchman": {
+   "dD": 1.1,
+   "why": "moves with S5.str.tower_podium (the tower pass, 2026-10-14): he stands on the balcony beside the hall door"
+  },
+  "S5.fig.tower_balcony_man_6600": {
+   "dD": 1.1,
+   "why": "moves with S5.str.tower_podium (the tower pass, 2026-10-14): he leans on the balcony's front railing"
   }
  }
 }

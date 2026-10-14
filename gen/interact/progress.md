@@ -103,3 +103,20 @@ after), and recorded in a 成就系統? Agreed and built:
   text lazy lore += `#deed_line`; main subsets 189.2 -> 191.0 KB.
 - Probe (gen/interact/tools/probe.mjs): on the 城樓 spot no view without E; E -> view; walk -> slip "城樓 鈐入圖志",
   x:vista:tower saved; E again -> the view again; journal 印譜: 1 stamped, 7 blank (then 3/5 with drum + moat rail).
+
+## Round 3 (2026-10-14 ~00:10): the drum in three beats, the seal note, the passes
+
+The user: the drum's cut outside came before you could see yourself strike; see yourself first, then the town's
+answer; and the 印譜 should get a simple notification. Also: the 城樓 viewpoint terrace could be entered but not left,
+and the Rainbow Bridge's left end is too tight to pass ("push some assets away a bit").
+- Drum (interact.json drum.react; code unchanged): on you through the hit (`after` 0.25 -> 1.2 s: the stick on the skin,
+  the swell, the ink ring, the jolt), then a cut outside to a low, close camera east of the tower (at [-8, -5, 13],
+  look [-16, 3, 13.5]: the hall fills the frame, the birds wheel over the ridge; the far SE camera showed specks) for
+  `hold` 3.2 s with the watchman's call, then back into the hall. Picked from three framings (screenshots in the
+  session scratchpad); the camera log is a steady 0.8 m push.
+- Seal note (ui/index.js stamp/note, life.css): shown even with the place notes off (a reward, not a place note), 6 s;
+  the seal lands with a new sound `seal_press` (sounds/interact.json, take 0 cut into its two thuds, 3.4 KB; ~20
+  credits); the note is a button with a J keycap: J or a tap opens the 圖志 at that seal (journal.leafFor x:<key> ->
+  印譜, the entry highlighted). Probe: 擊鼓 note -> J -> leaf deeds, here x:drum.
+- Passes: two helper agents, records gen/interact/passes/ (tower.md, bridge.md; the tower grid before:
+  grid_tower_before.txt).

@@ -103,7 +103,7 @@ export function createUI(o) {
     if ((e.key === '?' || (e.code === 'Slash' && e.shiftKey) || e.code === 'KeyH') && !o.hudOpen()) help?.toggle();
     if (o.hudOpen()) return;
     if (journal.isOpen()) return; // the journal takes its own keys (journal.js: J or Esc close it)
-    if (e.code === 'KeyJ') { journal.open(); return; }
+    if (e.code === 'KeyJ') { journal.open(stampAt ? { at: stampAt } : {}); return; } // a seal just stamped: the journal opens at it
     if (e.code === 'KeyE') talk?.interact();
     if (e.code === 'Escape') talk?.close();
   });
@@ -122,7 +122,7 @@ export function createUI(o) {
   const kind = () => (query.get('talk') !== '0' && talkData?.kinds?.[o.settings?.s?.avatar]) || 'min';
   // a plot line's step overheard (a chatter exchange, a bark or a near talk with a `step`): into the 圖志, with a small
   // ink note the first time (no counter, no quest log: STYLE.md §9, §15)
-  let heardEl = null, heardTimer = 0;
+  let heardEl = null, heardTimer = 0, stampAt = null; // stampAt: the 印譜 entry of the stamp note showing (J or a tap opens it)
   const heard = (step) => {
     const key = `h:${step}`;
     if (!places || places.found.has(key)) return;
@@ -131,28 +131,38 @@ export function createUI(o) {
     if (th) note(W.heard.seal, th.title, W.heard.line, th.titleEn && `${th.titleEn}: ${W.heard.lineEn}`);
   };
   // an interaction done the first time (interact.js: the drum, a viewpoint, a pose joined): its seal into the 圖志's
-  // 印譜 leaf, with the same ink note (the user, 2026-10-13: "recorded in ... 成就系統"; no counter, STYLE.md §9)
+  // 印譜 leaf, with the same ink note (the user, 2026-10-13: "recorded in ... 成就系統"; no counter, STYLE.md §9). A
+  // reward, not a place note: it shows even with the place notes off; the seal lands with its own sound, and J or a tap
+  // on the note opens the journal at that seal
   const stamp = (d) => {
     const key = `x:${d.key}`;
     if (!places || places.found.has(key)) return false;
     places.discover(key);
-    note(d.seal, d.name, W.stamped.line, d.name_en && `${d.name_en}: ${W.stamped.lineEn}`);
+    note(d.seal, d.name, W.stamped.line, d.name_en && `${d.name_en}: ${W.stamped.lineEn}`, { always: true, sfx: 'seal_press', at: key, secs: 6 });
     return true;
   };
-  // the small ink slip, bottom centre: a seal, a name, a line (中英: its gloss)
-  const note = (glyph, title, line, en) => {
-    if (!(prefs.get('placeNotes') ?? true)) return;
+  // the small ink slip, bottom centre: a seal, a name, a line (中英: its gloss); at: a journal entry to open from it
+  const note = (glyph, title, line, en, { always = false, sfx = 'bubble_tap', at = null, secs = 3.6 } = {}) => {
+    if (!always && !(prefs.get('placeNotes') ?? true)) return;
     heardEl?.remove();
-    heardEl = h('div', 'qm-heard qm-slip', { role: 'status', 'aria-live': 'polite' }, [
+    const enOn = (prefs.get('lang') ?? 'zh') === 'zh_en';
+    heardEl = h(at ? 'button' : 'div', `qm-heard qm-slip${at ? ' qm-heard-act' : ''}`, at ? { type: 'button', 'aria-label': `${title} ${line} (J)` } : { role: 'status', 'aria-live': 'polite' }, [
       h('span', 'qm-seal', { text: glyph, 'aria-hidden': 'true' }),
-      h('span', 'qm-heard-text', {}, [h('b', '', { text: title }), h('span', '', { text: line }),
-        (prefs.get('lang') ?? 'zh') === 'zh_en' && en ? h('i', '', { text: en, lang: 'en' }) : null]),
+      h('span', 'qm-heard-text', {}, [h('b', '', { text: title }), h('span', '', { text: line }), enOn && en ? h('i', '', { text: en, lang: 'en' }) : null]),
+      at && !touch ? h('kbd', 'qm-kbd qm-heard-kbd', { text: 'J' }) : null,
     ]);
+    if (at) {
+      heardEl.addEventListener('pointerdown', (e) => e.stopPropagation());
+      heardEl.addEventListener('touchstart', (e) => e.stopPropagation(), { passive: true });
+      heardEl.addEventListener('click', (e) => { e.stopPropagation(); journal.open({ at }); });
+    }
     root.append(heardEl);
-    o.sfx('bubble_tap', 0.4);
+    // the seal lands 240 ms in and is down at ~400 ms (life.css .qm-heard .qm-seal: qm-stamp)
+    if (sfx === 'seal_press') setTimeout(() => o.sfx(sfx, 0.7), 380); else o.sfx(sfx, 0.4);
+    stampAt = at;
     clearTimeout(heardTimer);
     const el = heardEl;
-    heardTimer = setTimeout(() => { el.classList.add('qm-out'); setTimeout(() => el.remove(), 650); }, 3600);
+    heardTimer = setTimeout(() => { if (stampAt === at) stampAt = null; el.classList.add('qm-out'); setTimeout(() => el.remove(), 650); }, secs * 1000);
   };
   // the way ahead still coming in (the user, 2026-10-13: at the end of a section the walk sometimes stopped while the
   // next one loaded): a small ink slip, bottom centre, a brush ring turning beside 前路漸展 (中英: its gloss under it).
