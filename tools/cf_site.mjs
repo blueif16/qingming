@@ -10,6 +10,10 @@
 //   wins: revalidate). The rules are checked here against every file: a plain name that would come out immutable,
 //   or more than 100 rules (Cloudflare's cap), fails.
 // - / serves world.html (a 200 rewrite; the address stays /, so ?window= etc. reach the page).
+// - Entry addresses, one per place we post a link: /bili, /xhs … serve world.html the same way. Web Analytics keeps no
+//   query strings or UTM tags, but it keeps the path, so a visit's path says where the link came from, even when the
+//   app sends no referrer (Bilibili and Rednote texts mostly can't link out: people copy the address). A trailing
+//   slash redirects to the bare path (from /bili/ the page's relative fetches would miss).
 // - No analytics snippet here: the zone's automatic Cloudflare Web Analytics (site infinityopus.com, beacon token
 //   6619180a…) is injected at the edge into every HTML page a browser asks for (filter Host = qingming.infinityopus.com
 //   in the dashboard). A manual site, qingming.infinityopus.com (token 3890c7638c264a668128652cbaaae203), was made on
@@ -66,8 +70,14 @@ for (const r of rules) lines.push(r.p, `  Cache-Control: ${IMMUTABLE}`);
 if (noCache.length) lines.push('# plain names with two dots match a rule above: revalidate everything in these directories');
 for (const d of noCache) lines.push(`${d}*`, '  Cache-Control: no-cache');
 fs.writeFileSync(path.join(site, '_headers'), lines.join('\n') + '\n');
-fs.writeFileSync(path.join(site, '_redirects'), '/ /world.html 200\n');
+// where each entry address is posted (the dashboard: Web Analytics, site infinityopus.com, Host
+// qingming.infinityopus.com, Path)
+const ENTRIES = {
+  bili: 'Bilibili (B站)', xhs: 'Rednote (小红书)', dy: 'Douyin (抖音)', wx: 'WeChat (微信)', yt: 'YouTube', x: 'X',
+};
+fs.writeFileSync(path.join(site, '_redirects'), ['/ /world.html 200',
+  ...Object.keys(ENTRIES).flatMap((k) => [`/${k}/ /${k} 301`, `/${k} /world.html 200`])].join('\n') + '\n');
 
 const slow = hashed.filter((f) => noCache.some((d) => f.startsWith(d))).length;
 console.log(`  _headers: ${rules.length} immutable rules (${hashed.length - slow} of ${hashed.length} hashed files)` +
-  `${noCache.length ? `, ${noCache.length} no-cache dir(s) (${noCache.join(' ')}; ${plain.length} plain names)` : ''}; _redirects: / -> /world.html`);
+  `${noCache.length ? `, ${noCache.length} no-cache dir(s) (${noCache.join(' ')}; ${plain.length} plain names)` : ''}; _redirects: / and /${Object.keys(ENTRIES).join(', /')} -> world.html`);
