@@ -94,6 +94,7 @@ function addAbout(box, panel) {
       el('h4', '', [m.head, gloss(m.head_en)]),
       el('p', 'ld-name', [m.name, gloss(m.name_en)]),
       el('p', '', [m.line, gloss(m.line_en)]),
+      m.hope ? el('p', 'ld-hope', [m.hope, gloss(m.hope_en)]) : null,
       el('div', 'ld-links', m.links.map((l) => el('a', '', l.label, { href: l.href, target: '_blank', rel: 'noopener' }))),
     ]);
     const about = el('div', 'ld-about', [main, maker], { id: 'ld-about' });

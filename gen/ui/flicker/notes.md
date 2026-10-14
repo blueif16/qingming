@@ -78,15 +78,16 @@ their next line, which is new words, not a blink. (`before.json`, `after.json`)
 
 ## 3. The maker's line
 
-- `world.html` start panel, after the intro: 王軾然 製作 · 希望大家喜歡。 with the gloss "Made by Shiran Wang · Hope
-  you like it." (on the same line where there is room).
-- 卷記 maker card (`ui/about.json`): the name is 王軾然, with Shiran Wang as its gloss (`start.js`, `start.css`).
+- The user, after the first deploy: "don't put my name on front page, only in second page in the made by section, as
+  well as the hope you like it part". So the start panel has no maker line. The 卷記's 製作 card (`ui/about.json`
+  `maker`, rendered by `start.js`) holds the name 王軾然 (Shiran Wang as its gloss), the line about the scroll, then
+  希望大家喜歡。 (Hope you like it.).
 - Written in 繁體 like the rest of the screen: 轼 → 軾, 欢 → 歡.
-- The line would have pushed the credits and the 卷記 link onto the painting band on laptop screens. Before it, they
-  already overlapped at 1280×800 and 1366×768. A short-landscape rule (561–1000 px tall) now sets a smaller logo
-  (18vh) and tighter gaps, and short portrait phones get tighter gaps. `start_fit.mjs` measures every viewport: all
-  clear the band except a landscape phone (844×390), where the link overlaps by a few pixels, as it did before.
-- Fonts: `uv run tools/font_subset.py`. The first load grows 3.5 KB (183.5 KB of the 250 KB budget).
+- The short-landscape fit rule in `world.html` stays (561–1000 px tall: a smaller logo, 18vh, and tighter gaps; also
+  tighter gaps on short portrait phones). Before it, the credits and the 卷記 link already overlapped the painting
+  band at 1280×800 and 1366×768 (`start_fit.mjs`).
+- Fonts: `uv run tools/font_subset.py` (the about subset's keys include `name` and `hope`; 前路漸展 is in the display
+  `extra`).
 
 Shots: `shots/` (start_desktop, start_phone, maker_desktop, maker_phone, ahead_desktop).
 
