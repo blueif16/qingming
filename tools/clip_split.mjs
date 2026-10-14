@@ -54,7 +54,7 @@ try { man = JSON.parse(fs.readFileSync(manFile, 'utf8')); } catch { /* none yet 
 // a clip name as a file name (IK variants carry "~", which URLs and file systems take as it is)
 // every file is named by its content (the first 8 hex of its sha256, as web/vite_asset_hashes.js names the files it
 // hashes): the build leaves such names out of its page map (world.html stays small), the CDN serves them immutable
-// (web/vercel.json), and a clip whose bytes didn't change keeps its name, so a visitor's cache keeps it across deploys
+// (tools/cf_site.mjs's _headers), and a clip whose bytes didn't change keeps its name, so a visitor's cache keeps it across deploys
 const fileOf = (name, clip, buf) => `assets/chars/clips/${name}/${clip.replace(/[^\w~-]/g, '_')}.${sha8(buf)}.glb`;
 const bodyOf = (name, buf) => `assets/chars/body/${name}.${sha8(buf)}.glb`;
 const nameOf = (f) => f.replace(/(\.[0-9a-f]{8})?\.glb$/, ''); // a body file's character

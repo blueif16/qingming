@@ -1,16 +1,21 @@
 ---
 name: deploy-web
-description: Put the qingming web world (qingming/web) live on Vercel, production, with one command - build -> guard what goes up -> headless load check -> deploy -> live check. Use when new content has landed (a section, characters, trees, people.json) and should go live, or when asked for the public URL or what is deployed.
+description: Put the qingming web world (qingming/web) live on Cloudflare, production, with one command - build -> guard what goes up -> headless load check -> deploy -> live check. Use when new content has landed (a section, characters, trees, people.json) and should go live, or when asked for the public URL or what is deployed.
 ---
 
 # Deploy the web world (qingming/)
 
 **Live:** https://qingming.infinityopus.com (`/` opens `world.html`, all eight sections from S7 to S1 since v1,
 2026-10-12; `gate.html`, `chars.html`, `creatures.html`, `boats.html` and `world.html?sections=…` work as on the dev
-server). Vercel project `qingming` in scope `blueif16s-projects`. The domain (since 2026-10-13) is a Cloudflare CNAME
-`qingming` → `1121220d54c2349a.vercel-dns-017.com`, DNS only (grey cloud), added in the Cloudflare dashboard; Vercel
-issues the certificate. https://qingming-delta.vercel.app (Vercel's own name for the project, since
-`qingming.vercel.app` belongs to someone else) serves the same deployment. Each deploy updates both.
+server). Since 2026-10-14 it is a Cloudflare Worker with static assets only, `qingming` (`deploy/wrangler.jsonc`), in
+the Cloudflare account that holds `infinityopus.com` (free plan; static-asset requests are free and unlimited, no
+bandwidth charge; caps 20,000 files a version and 25 MiB a file). The domain is the Worker's custom domain: Cloudflare
+owns its DNS record (proxied) and certificate. https://qingming.infinityopus.workers.dev serves the same version.
+**Traffic:** Cloudflare Web Analytics (dashboard → Analytics & Logs → Web Analytics, automatic setup on the proxied
+hostname: referrers, countries, devices, paths, Core Web Vitals; no query strings or UTM) and the zone's own traffic
+analytics. **Before** (2026-10-12 to 10-14): Vercel Hobby, project `qingming` in scope `blueif16s-projects`, its own
+name https://qingming-delta.vercel.app; Hobby's 1M requests a month meant only about 1,200-2,000 new visitors (a cold
+visit is about 490 requests, 30 MB). The Vercel steps are kept, commented out, in `tools/deploy_web.sh`.
 
 ## The one command
 
@@ -18,12 +23,14 @@ From `qingming/`, once the new content is in `web/public/assets/` (`tools/export
 `tools/tree_cards.mjs` … ship there) and looks right on the dev server:
 
 ```
-tools/deploy_web.sh            # about 35 s; --no-check skips the headless load
+tools/deploy_web.sh            # --no-check skips the headless load
 ```
 
 1. **Build:** `vite build` of `web/` (every page in `vite.config.js` plus all of `web/public/`) into
-   `deploy/.vercel/output/static`, outside `web/`, so the dev server on 5180 is never touched. `config.json` beside it
-   rewrites `/` to `world.html`.
+   `deploy/site`, outside `web/`, so the dev server on 5180 is never touched. `tools/cf_site.mjs` then writes
+   Cloudflare's `_headers` (content-hashed files cached for a year, immutable; Cloudflare matches with splats and
+   placeholders, not regexes, so it checks its rules against every file and gives a directory holding a plain name
+   with two dots, such as `assets/ui/places/`, a no-cache rule) and `_redirects` (`/` → `world.html`, a rewrite).
 2. **Guard:** stops on any path named reference, gen, messenger, .env or a key file, on any file byte-identical to a
    file in `reference/messenger_study/`, and on any Meshy or shyfai key in the files (it prints only file names).
    It prints the file count and size.
@@ -31,9 +38,11 @@ tools/deploy_web.sh            # about 35 s; --no-check skips the headless load
    (`tools/check_deploy.mjs`). It loads every section (`?window=all` unless the URL or `--window` says otherwise) and
    FAILs on any 4xx/5xx or failed request, any console error, or a section that never comes in (each section's state
    from `__test.sections`); it reports the boats loaded. A FAIL deploys nothing.
-4. **Deploy:** `vercel deploy --prebuilt --prod` from `deploy/`, which uploads only `deploy/.vercel/output`. It needs
-   Vercel CLI 47.2.2 or later. The CLI is the one Windows npm install on PATH (63.1.2 on 2026-10-12). From WSL the
-   script points it at the Windows login with `-Q`, unless WSL has a login of its own.
+4. **Deploy:** `wrangler deploy` from `deploy/` (`wrangler.jsonc`: assets `./site`, `html_handling: none` so
+   `/world.html` isn't redirected to `/world`), which uploads only the files of `deploy/site` whose bytes changed, then
+   switches all traffic to the new version. wrangler is the one WSL npm global install (4.151.0 on 2026-10-14), logged in
+   with `wrangler login --device` (the account holding infinityopus.com; the script checks the account ID). Its login
+   can't edit DNS, so a DNS change is a dashboard step.
 5. **Live:** curls `/`, `world.html`, `characters.json` and `gate.glb` on the production URL. Each must return 200.
 
 ## What goes up, and what never does
@@ -48,9 +57,9 @@ tools/deploy_web.sh            # about 35 s; --no-check skips the headless load
   81.9 MB (the morning's deploy was 118 files, 26.1 MB).
 - **Content-hashed copies** (perf batch 2, `web/vite_asset_hashes.js`): the build holds a hashed copy (hard link) of
   each file the pages fetch, `<name>.<8 hex>.<ext>`, and `asset_hashes.json` at its root; each page carries the map
-  inline and fetches through it. The guard's "N files, X MB" counts the links twice; Vercel uploads each set of bytes
+  inline and fetches through it. The guard's "N files, X MB" counts the links twice; wrangler uploads each set of bytes
   once. After the deploy, the live step also checks that `/assets/gate.<hash>.glb` is served `immutable` (it fails
-  after the deploy is live if the route didn't reach the CDN). The first visit after a deploy fetches changed files
+  after the deploy is live if the `_headers` rule didn't take). The first visit after a deploy fetches changed files
   under their new names; unchanged files keep their names and stay cached (the first hashed deploy, batch 2's,
   refetches everything once).
 - **Before deploying new content:** `node tools/ktx2.mjs check` must PASS. The page takes a texture's KTX2 copy by URL,
@@ -65,9 +74,11 @@ tools/deploy_web.sh            # about 35 s; --no-check skips the headless load
 
 - `node tools/check_deploy.mjs https://qingming.infinityopus.com/ [--shot out.png] [--window <n>]`: the same headless
   load against the live site, every section (v1: PASS, 8 sections, 34 boats, 897 people, 242 requests, 60.8 MB, 58 s).
-- The production URL is public. The per-deploy URLs the script also prints (`qingming-<hash>-blueif16s-projects…`)
-  sit behind Vercel login by default.
-- What Vercel holds: `vercel -Q /mnt/c/Users/ran/AppData/Roaming/com.vercel.cli/Data --scope blueif16s-projects api
-  /v6/deployments/<dpl_id>/files` (`.vercel/output/config.json` plus `static/`, nothing else).
-- Roll back: `vercel rollback` with the same `-Q … --scope …`, or promote an older deployment in the dashboard
-  (the script prints its inspect link).
+  Its Chrome runs with `--disable-quic`: from this WSL (mirrored networking), HTTP/3 transfers from Cloudflare break
+  off under load (`ERR_QUIC_PROTOCOL_ERROR`, on cdnjs as much as on ours), while Windows Chrome loads the world over
+  HTTP/3 cleanly (2026-10-14). Any other WSL browser tool aimed at the live site needs the same flag.
+  `performance` resource entries stop at 250, so its request count and MB are a floor; for the real cold-visit bytes
+  count CDP `Network.loadingFinished` (2026-10-14: `/` about 490 requests, 30 MB; `?window=all` about 830, 49 MB).
+- Versions and rollback: `wrangler versions list`, `wrangler deployments list`, `wrangler rollback [<version id>]`
+  (from `deploy/`), or the Worker's Deployments tab in the dashboard.
+- The Vercel project (Hobby) is no longer deployed to; https://qingming-delta.vercel.app redirects to the domain.

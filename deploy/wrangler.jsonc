@@ -1,0 +1,17 @@
+// The web world on Cloudflare: a Worker with static assets only (no script), so every request is a free static-asset
+// request. tools/deploy_web.sh builds web/ into ./site (plus _headers/_redirects from tools/cf_site.mjs) and runs
+// `wrangler deploy` here. Skill: .claude/skills/deploy-web/SKILL.md
+{
+  "name": "qingming",
+  "compatibility_date": "2026-10-14",
+  "assets": {
+    "directory": "./site",
+    // /world.html stays /world.html (the default would redirect it to /world); / is a rewrite in _redirects
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  // the public address; Cloudflare keeps its DNS record (proxied) and certificate
+  "routes": [{ "pattern": "qingming.infinityopus.com", "custom_domain": true }],
+  "workers_dev": true,
+  "preview_urls": false
+}

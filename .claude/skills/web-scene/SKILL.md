@@ -679,7 +679,7 @@ keeping the look. The RTX 4070 SUPER is only the measuring instrument: CPU throt
   play. Routines ask for all their clips while their section loads (`CrowdPerson.expect`), queued behind the clip each
   person starts with; a clip someone on screen starts goes to the queue's front and is baked before the next frame,
   alone (before, an urgent set baked its whole queue in one frame: up to 322 ms).
-- **Loading** (`world.js`, `tools/people_precompute.mjs`, `web/vercel.json`):
+- **Loading** (`world.js`, `tools/people_precompute.mjs`, `tools/cf_site.mjs`):
   - You walk once your section's ground, its kit and your character are in; its cast and trees are the first
     streaming operation after the loading screen (`stream.pending`), before any neighbour. The test hooks still wait
     for the window and your section's people (`settle()` always), so the tools see a settled world.
@@ -715,9 +715,10 @@ keeping the look. The RTX 4070 SUPER is only the measuring instrument: CPU throt
     exporter leaves names plain (the build hashes whatever is in `public/` when it runs), unless it keeps its own
     manifest of content-hashed names and deletes the old files (`assets/tex/`, `clip_split.mjs`; below). Code that
     needs the URL a built page will really fetch uses `window.__qmAsset(url)`. Don't map three's loaders with a
-    LoadingManager URL modifier: it bypasses the wrapper's 404 fallback. `web/vercel.json`'s routes carry the header
-    for `assets/*-<hash>.js|css|wasm` and for every `.<8 hex>.<ext>` name; `tools/deploy_web.sh` copies them into
-    `config.json` and checks a hashed GLB's header live. What still revalidates: images three loads through an `<img>`
+    LoadingManager URL modifier: it bypasses the wrapper's 404 fallback. The `_headers` file that `tools/cf_site.mjs`
+    writes into the build (Cloudflare, since 2026-10-14; `web/vercel.json` on Vercel before) carries the header for
+    `assets/*-<hash>.js|css|wasm` and for every `.<8 hex>.<ext>` name; `tools/deploy_web.sh` checks a hashed GLB's
+    header live. What still revalidates: images three loads through an `<img>`
     (Safari's TextureLoader) and fonts.css's fonts.
   - Tree cards come first at 256 px (`tools/tree_cards.mjs small`, also run after every ship:
     `assets/trees/small/<card>.webp`, `trees.json` `small`). They are swapped for the full card when the stream has
@@ -731,7 +732,7 @@ keeping the look. The RTX 4070 SUPER is only the measuring instrument: CPU throt
   and a plain mesh need different programs, and one material shared by both re-resolved its program at every switch).
   Batch 2 joined them across sections: one batch per material (below).
 - **Checking a change for every device** (`gen/perf/batch1/`): other agents edit `web/` all the time, so build the
-  step into the scratchpad (`vite build --outDir`) and serve the build statically (with `web/vercel.json`'s headers)
+  step into the scratchpad (`vite build --outDir`) and serve the build statically (with `tools/cf_site.mjs`'s headers)
   for the regression (`regress.sh` with `WORLD_URL` and `BOATS_URL` carrying `?tier=`, at all three tiers), the look
   (`look_tiers.sh`: one page load, time frozen, the old pipeline beside high, mid and low) and the numbers. Freeze
   everything that moves for a pixel comparison: routines, boats (the walker steps them: `player.update` too), your own

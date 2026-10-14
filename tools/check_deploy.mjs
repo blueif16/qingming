@@ -19,7 +19,9 @@ if (!target.searchParams.has('window')) target.searchParams.set('window', opt('-
 
 const browser = await chromium.launch({
   executablePath: '/usr/bin/google-chrome',
-  args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
+  // no HTTP/3: in this WSL (mirrored networking) QUIC transfers from Cloudflare break off under load
+  // (ERR_QUIC_PROTOCOL_ERROR, cdnjs as well as ours, 2026-10-14); Windows Chrome is fine. HTTP/2 tests the site.
+  args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--disable-quic'],
 });
 const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const bad = [];

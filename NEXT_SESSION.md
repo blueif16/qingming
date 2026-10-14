@@ -9,7 +9,7 @@ Paste the prompt below into a new session.
 ---
 
 We are continuing the 清明上河图 web world in `/home/ran/3d_director/qingming`. All eight sections of the scroll are
-live at https://qingming.infinityopus.com (v1, 2026-10-12; own domain since 2026-10-13, also https://qingming-delta.vercel.app). Since v1 went live, these have landed:
+live at https://qingming.infinityopus.com (v1, 2026-10-12; own domain since 2026-10-13, on Cloudflare since 2026-10-14: skill `deploy-web`). Since v1 went live, these have landed:
 - the adult-size fix: carried props had shrunk 643 adults to about 0.6; `people_check` now has a "sizes" check;
 - sound, built by a parallel session;
 - a new ink UI (`web/src/ui/`: HUD, settings, time instrument, journal), built by a parallel session;
@@ -55,7 +55,7 @@ The batch, in order (each step checked before the next):
    - per-clip animation files, fetched as routines ask;
    - 256 px tree cards first;
    - content-hashed GLB and JSON names, so they can be cached immutably too;
-   - a measurement of the live site on slow 4G (`node gen/perf/probe.mjs load https://qingming-delta.vercel.app/world.html --net slow4g`;
+   - a measurement of the live site on slow 4G (`node gen/perf/probe.mjs load https://qingming-delta.vercel.app/world.html --net slow4g` on Vercel, as it was then;
      it was 76 s to walk before batch 1).
 5. **`?window=ahead` for the low tier:** find why S3's under-arch shore walk and S2's hooded-bow boarding fail
    without the section behind (a wall or boat contact owned by the neighbour), fix it, and make it the low tier's
