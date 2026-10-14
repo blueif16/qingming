@@ -4,7 +4,7 @@ A walkable 清明上河图 in the browser. The quality bar is https://messenger.
 
 **Picking up the work:** `NEXT_SESSION.md` holds the current state, the user's latest asks and a prompt to start the next session with.
 
-**Live:** https://qingming-delta.vercel.app (the joined world). `tools/deploy_web.sh` builds, checks and redeploys it; skill `.claude/skills/deploy-web/SKILL.md`.
+**Live:** https://qingming.infinityopus.com (the joined world; also https://qingming-delta.vercel.app). `tools/deploy_web.sh` builds, checks and redeploys it; skill `.claude/skills/deploy-web/SKILL.md`.
 
 ## How it was made
 

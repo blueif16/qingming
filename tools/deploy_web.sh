@@ -6,7 +6,7 @@ set -euo pipefail
 Q="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)" # qingming/
 WEB="$Q/web" DEP="$Q/deploy"
 OUT="$DEP/.vercel/output" STATIC="$DEP/.vercel/output/static"
-SCOPE=blueif16s-projects PROJECT=qingming PROD=https://qingming-delta.vercel.app PORT="${PORT:-5182}"
+SCOPE=blueif16s-projects PROJECT=qingming PROD=https://qingming.infinityopus.com PORT="${PORT:-5182}"
 CHECK=1; [ "${1:-}" = "--no-check" ] && CHECK=0
 die() { echo "deploy_web: $*" >&2; exit 1; }
 
@@ -52,10 +52,10 @@ echo "== deploy ($SCOPE/$PROJECT, production)"
 cd "$DEP"
 [ -f .vercel/project.json ] || "${VC[@]}" link --yes --project "$PROJECT"
 out=$("${VC[@]}" deploy --prebuilt --prod --yes) || die "vercel deploy failed"
-# the CLI prints JSON when piped: the stable production URL, and this deployment's own (behind Vercel login) URL
+# the CLI prints JSON when piped: the stable production URL, and this deployment's own (behind Vercel login) URL.
+# The live check uses our own domain (PROD, Cloudflare CNAME -> Vercel), whatever production URL the CLI reports.
 mapfile -t d < <(node -e 'let j; try { j = JSON.parse(require("fs").readFileSync(0, "utf8")).deployment } catch { process.exit() }
   console.log(j.productionUrl || ""); console.log(j.url || ""); console.log(j.inspectorUrl || "")' <<<"$out")
-PROD="${d[0]:-$PROD}"
 echo "  deployment ${d[1]:-$out}"
 [ -n "${d[2]:-}" ] && echo "  inspect ${d[2]}"
 

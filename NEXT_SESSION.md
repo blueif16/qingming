@@ -9,7 +9,7 @@ Paste the prompt below into a new session.
 ---
 
 We are continuing the 清明上河图 web world in `/home/ran/3d_director/qingming`. All eight sections of the scroll are
-live at https://qingming-delta.vercel.app (v1, 2026-10-12). Since v1 went live, these have landed:
+live at https://qingming.infinityopus.com (v1, 2026-10-12; own domain since 2026-10-13, also https://qingming-delta.vercel.app). Since v1 went live, these have landed:
 - the adult-size fix: carried props had shrunk 643 adults to about 0.6; `people_check` now has a "sizes" check;
 - sound, built by a parallel session;
 - a new ink UI (`web/src/ui/`: HUD, settings, time instrument, journal), built by a parallel session;

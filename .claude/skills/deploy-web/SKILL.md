@@ -5,10 +5,12 @@ description: Put the qingming web world (qingming/web) live on Vercel, productio
 
 # Deploy the web world (qingming/)
 
-**Live:** https://qingming-delta.vercel.app (`/` opens `world.html`, all eight sections from S7 to S1 since v1,
+**Live:** https://qingming.infinityopus.com (`/` opens `world.html`, all eight sections from S7 to S1 since v1,
 2026-10-12; `gate.html`, `chars.html`, `creatures.html`, `boats.html` and `world.html?sections=…` work as on the dev
-server). Vercel project `qingming` in scope `blueif16s-projects`; Vercel
-gave the project `qingming-delta` because `qingming.vercel.app` belongs to someone else. Each deploy updates that URL.
+server). Vercel project `qingming` in scope `blueif16s-projects`. The domain (since 2026-10-13) is a Cloudflare CNAME
+`qingming` → `1121220d54c2349a.vercel-dns-017.com`, DNS only (grey cloud), added in the Cloudflare dashboard; Vercel
+issues the certificate. https://qingming-delta.vercel.app (Vercel's own name for the project, since
+`qingming.vercel.app` belongs to someone else) serves the same deployment. Each deploy updates both.
 
 ## The one command
 
@@ -61,7 +63,7 @@ tools/deploy_web.sh            # about 35 s; --no-check skips the headless load
 
 ## Checking the result
 
-- `node tools/check_deploy.mjs https://qingming-delta.vercel.app/ [--shot out.png] [--window <n>]`: the same headless
+- `node tools/check_deploy.mjs https://qingming.infinityopus.com/ [--shot out.png] [--window <n>]`: the same headless
   load against the live site, every section (v1: PASS, 8 sections, 34 boats, 897 people, 242 requests, 60.8 MB, 58 s).
 - The production URL is public. The per-deploy URLs the script also prints (`qingming-<hash>-blueif16s-projects…`)
   sit behind Vercel login by default.
